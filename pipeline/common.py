@@ -57,10 +57,30 @@ def claude(model, system, user, max_tokens=1500):
 
 
 def parse_json(text):
-    """Pull the first JSON object or array out of a model reply."""
+    """Pull the first JSON object or array out of a model reply. If the reply was cut off mid-list,
+    keep every complete item instead of failing."""
     text = re.sub(r"```(?:json)?", "", text).strip()
     m = re.search(r"(\{.*\}|\[.*\])", text, re.S)
-    return json.loads(m.group(1) if m else text)
+    try:
+        return json.loads(m.group(1) if m else text)
+    except json.JSONDecodeError:
+        start = text.find("[")
+        if start < 0:
+            raise
+        dec, out, i = json.JSONDecoder(), [], start + 1
+        while True:
+            while i < len(text) and text[i] in " \r\n\t,":
+                i += 1
+            if i >= len(text) or text[i] == "]":
+                break
+            try:
+                obj, i = dec.raw_decode(text, i)
+            except json.JSONDecodeError:
+                break
+            out.append(obj)
+        if not out:
+            raise
+        return out
 
 
 NUM = re.compile(r"\$?\d[\d,]*(?:\.\d+)?%?")

@@ -368,9 +368,17 @@ def main():
         save("seen.json", list(seen)[-6000:]); return
 
     recent = [s for s in live if s["date"] >= (dt.date.today() - dt.timedelta(days=14)).isoformat()][:60]
-    listing = ("RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent) +
-               "\n\nNEW ITEMS:\n" + "\n".join(f"{i}. [{b['src']}]{' (SUPPORTING SOURCE ONLY)' if b.get('support_only') else ''} {b['title']} :: {b['summary'][:250]}" for i, b in enumerate(batch)))
-    verdicts = parse_json(claude(MODEL_FAST, TRIAGE_SYSTEM, listing, max_tokens=4000))
+    head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent)
+    # screen in chunks of 20 so a long first run can't overflow one reply; item numbers stay global
+    verdicts = []
+    for c0 in range(0, len(batch), 20):
+        listing = head + "\n\nNEW ITEMS:\n" + "\n".join(
+            f"{i}. [{b['src']}]{' (SUPPORTING SOURCE ONLY)' if b.get('support_only') else ''} {b['title']} :: {b['summary'][:250]}"
+            for i, b in enumerate(batch) if c0 <= i < c0 + 20)
+        try:
+            verdicts += parse_json(claude(MODEL_FAST, TRIAGE_SYSTEM, listing, max_tokens=4000))
+        except Exception as e:
+            print(f"triage chunk {c0}-{c0 + 19} skipped: {e}")
     for b in batch:
         seen.add(h(b["url"]))
     by_id = {s["id"]: s for s in live}
