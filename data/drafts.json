@@ -1,6 +1,54 @@
 [
  {
   "status": "draft",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/10",
+  "story": {
+   "id": "wd3f98423dd2a",
+   "date": "2026-10-10",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Pricing & GRI",
+   "title": "OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page",
+   "sum": "OnTrac added four PDF files to its Surcharges and rates page: 2026 rates, 2026 AHS+LPS rates, an area surcharge ZIP code list and a 2024 rates file.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "OnTrac's own Surcharges and rates page now lists four newly posted PDF files. They are a 2026 rates file, a 2026 AHS+LPS rates file, an area surcharge ZIP codes file and a 2024 rates file. The changed lines show only the file links, not the contents. The page does not state any price, fee, ZIP code or effective date in the lines reviewed. It is unclear whether the files are new documents or re-listed versions of existing ones. Shippers can open the files on OnTrac's page to compare the figures.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "2026 OnTrac rates PDF (2026-OnTrac-Rates.pdf) listed as a new file on the Surcharges and rates page",
+    "old": "Not listed",
+    "new": "File posted",
+    "effective": null
+   },
+   {
+    "what": "2026 OnTrac AHS+LPS rates PDF (2026-OnTrac-AHS+LPSRates.pdf) listed as a new file",
+    "old": "Not listed",
+    "new": "File posted",
+    "effective": null
+   },
+   {
+    "what": "OnTrac area surcharge ZIP codes PDF (ontrac-area-surcharge-zip-codes.pdf) listed as a new file",
+    "old": "Not listed",
+    "new": "File posted",
+    "effective": null
+   },
+   {
+    "what": "OnTrac 2024 rates PDF (ontrac-2024-rates.pdf) listed as a new file",
+    "old": "Not listed",
+    "new": "File posted",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "draft",
   "issue": "https://github.com/wmaready/parcel-pigeon/issues/9",
   "story": {
    "id": "wb8dfb946a5b6",
