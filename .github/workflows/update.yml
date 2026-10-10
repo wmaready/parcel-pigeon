@@ -1,34 +1,36 @@
-name: Update Parcel Pigeon
-on:
-  schedule:
-    - cron: "17 10-23/2 * * *"   # every 2 hours, 6 a.m. to 8 p.m. Eastern
-    - cron: "17 4 * * *"         # one overnight sweep (midnight Eastern)
-  workflow_dispatch: {}          # "Run workflow" button for testing
-  push:
-    branches: [main]
-permissions:
-  contents: write
-  issues: write
-  pages: write
-  id-token: write
-concurrency: {group: parcel-pigeon, cancel-in-progress: false}
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: "3.12", cache: pip}
-      - run: pip install -r requirements.txt
-      - name: Make sure labels exist
-        env: {GH_TOKEN: "${{ github.token }}"}
-        run: |
-          gh label create draft --color FFD400 --force
-          gh label create publish --color 1D7044 --force
-          gh label create audit --color 5319E7 --description "Auditor found something to check" --force
-          gh label create first-to-report --color B60205 --force
-      - name: Run pipeline
-        if: github.event_name != 'push'
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+{
+ "name": "Update Parcel Pigeon",
+ "on": {
+  "schedule": [{"cron": "17 10-23/2 * * *"}, {"cron": "17 4 * * *"}],
+  "workflow_dispatch": {},
+  "push": {"branches": ["main"]}
+ },
+ "permissions": {"contents": "write", "issues": "write", "pages": "write", "id-token": "write"},
+ "concurrency": {"group": "parcel-pigeon", "cancel-in-progress": false},
+ "jobs": {
+  "update": {
+   "runs-on": "ubuntu-latest",
+   "environment": {"name": "github-pages", "url": "${{ steps.deploy.outputs.page_url }}"},
+   "steps": [
+    {"uses": "actions/checkout@v4"},
+    {"uses": "actions/setup-python@v5", "with": {"python-version": "3.12", "cache": "pip"}},
+    {"run": "pip install -r requirements.txt"},
+    {"name": "Make sure labels exist",
+     "env": {"GH_TOKEN": "${{ github.token }}"},
+     "run": "gh label create draft --color FFD400 --force\ngh label create publish --color 1D7044 --force\ngh label create audit --color 5319E7 --description \"Auditor found something to check\" --force\ngh label create first-to-report --color B60205 --force\n"},
+    {"name": "Run pipeline",
+     "if": "github.event_name != 'push'",
+     "env": {"ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}", "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}", "EIA_API_KEY": "${{ secrets.EIA_API_KEY }}", "OILPRICE_API_KEY": "${{ secrets.OILPRICE_API_KEY }}", "GITHUB_TOKEN": "${{ github.token }}"},
+     "working-directory": "pipeline",
+     "run": "python fuel.py || true\npython markets.py || true\npython news.py || echo \"::warning::news.py failed; saving the other updates anyway\"\nif [ \"$(date -u +%H)\" = \"12\" ] || [ \"${{ github.event_name }}\" = \"workflow_dispatch\" ]; then python brief.py || true; fi\npython publish.py || true\nnode export_seed.js ../index.html ../data/seed.json || true\nif [ \"$(date -u +%H)\" = \"04\" ]; then python audit.py || true; else python audit.py --offline || true; fi\n"},
+    {"name": "Save new data",
+     "if": "github.event_name != 'push'",
+     "run": "git config user.name \"parcel-pigeon-bot\"\ngit config user.email \"bot@users.noreply.github.com\"\ngit add data\ngit diff --cached --quiet || (git commit -m \"Update data $(date -u +%Y-%m-%dT%H:%MZ)\" && git pull --rebase && git push)\n"},
+    {"name": "Leave raw page copies out of the public site", "run": "rm -rf data/snapshots data/docwatch"},
+    {"uses": "actions/configure-pages@v5"},
+    {"uses": "actions/upload-pages-artifact@v3", "with": {"path": "."}},
+    {"id": "deploy", "uses": "actions/deploy-pages@v4"}
+   ]
+  }
+ }
+}
