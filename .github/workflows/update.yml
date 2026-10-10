@@ -1,0 +1,34 @@
+name: Update Parcel Pigeon
+on:
+  schedule:
+    - cron: "17 10-23/2 * * *"   # every 2 hours, 6 a.m. to 8 p.m. Eastern
+    - cron: "17 4 * * *"         # one overnight sweep (midnight Eastern)
+  workflow_dispatch: {}          # "Run workflow" button for testing
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+concurrency: {group: parcel-pigeon, cancel-in-progress: false}
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Make sure labels exist
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh label create draft --color FFD400 --force
+          gh label create publish --color 1D7044 --force
+          gh label create audit --color 5319E7 --description "Auditor found something to check" --force
+          gh label create first-to-report --color B60205 --force
+      - name: Run pipeline
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
