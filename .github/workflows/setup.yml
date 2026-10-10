@@ -7,14 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unpack parcel-pigeon.zip into the right folders
+      - name: Unpack the zip into the right folders
         run: |
           set -e
-          cp parcel-pigeon.zip /tmp/pp.zip
+          Z=$(ls *.zip 2>/dev/null | head -n 1 || true)
+          if [ -z "$Z" ]; then echo "::error::No .zip file found at the top of the repo. Upload parcel-pigeon.zip first."; exit 1; fi
+          echo "Using: $Z"
+          cp "$Z" /tmp/pp.zip
           find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github -exec rm -rf {} +
-          unzip -q /tmp/pp.zip -x '.github/*' -d .
+          unzip -q -o /tmp/pp.zip -x '.github/*' -d .
           git config user.name "parcel-pigeon-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A
-          git commit -m "Set up Parcel Pigeon from the zip"
+          git commit -m "Set up Parcel Pigeon from the zip" || echo "Nothing to change"
           git push
