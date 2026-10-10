@@ -1716,6 +1716,95 @@ a.pdoc:hover{background:color-mix(in srgb,var(--accent) 8%,var(--panel-2))}
 @media (max-width:420px){.logo .lstack{gap:10px}.logo .ltag{font-size:9px;letter-spacing:0}.top .wrap{min-height:64px}}
 @media (max-width:520px){.logo .ltag{white-space:normal;max-width:220px;line-height:1.3;font-size:9.5px}.logo .lstack{gap:8px}}
 @media (max-width:520px){.logo .ltag{max-width:258px;font-size:9.2px}}
+
+/* ===== Get the app / share ===== */
+.top .hshare{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid var(--grid-strong);border-radius:999px;background:rgba(255,255,255,.03);color:var(--ink);font:600 12px/1 inherit;font-family:inherit;cursor:pointer;flex:none}
+.top .hshare svg{width:15px;height:15px}
+.top .hshare:hover{border-color:var(--accent);color:var(--accent)}
+.top .hshare + .hcoop{margin-left:6px}
+@media (max-width:520px){.top .hshare{width:34px;height:34px;padding:0;justify-content:center}.top .hshare span{display:none}}
+body.standalone .top .hshare span{display:none}
+body.standalone .top .hshare{width:34px;padding:0;justify-content:center}
+.flink{background:none;border:0;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.shr{position:fixed;inset:0;z-index:400;display:grid;place-items:center;padding:16px}
+.shr[hidden]{display:none}
+.shr-bg{position:absolute;inset:0;background:rgba(3,5,8,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.shr-card{position:relative;width:min(460px,100%);max-height:calc(100dvh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--grid-strong);border-radius:18px;padding:22px 22px 18px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.shr-card h2{margin:0 0 4px;font-size:20px;letter-spacing:-.01em}
+.shr-sub{margin:0 0 16px;color:var(--ink-2);font-size:13px;line-height:1.45}
+.shr-x{position:absolute;top:10px;right:12px;width:32px;height:32px;border:0;background:none;color:var(--ink-2);font-size:24px;line-height:1;cursor:pointer;border-radius:8px}
+.shr-x:hover{color:var(--ink);background:var(--panel-2)}
+.shr-inst{background:var(--panel-2);border:1px solid var(--grid);border-radius:12px;padding:14px;margin-bottom:16px}
+.shr-inst h3{margin:0 0 8px;font-size:13px;font-weight:650}
+.shr-inst ol{margin:0;padding-left:20px;font-size:13px;line-height:1.6;color:var(--ink)}
+.shr-inst .ic{display:inline-block;vertical-align:-3px;width:15px;height:15px;color:var(--accent)}
+.shr-inst p{margin:0;font-size:13px;line-height:1.5;color:var(--ink-2)}
+.shr-inst .alt{margin-top:10px;font-size:12px;color:var(--ink-2)}
+.shr-share{display:flex;gap:16px;align-items:flex-start}
+.shr-qr{flex:none;width:128px;text-align:center;font-size:11px;color:var(--ink-2)}
+.shr-qr svg{display:block;width:128px;height:128px;border-radius:10px;margin-bottom:6px}
+.shr-act{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.shr-lbl{font-size:13px;font-weight:650}
+.shr-url{font-size:12px;color:var(--ink-2);word-break:break-all}
+.shr-b{height:36px;border-radius:10px;border:1px solid var(--grid-strong);background:var(--bg);color:var(--ink);font:600 13px/1 inherit;font-family:inherit;cursor:pointer}
+.shr-b:hover{border-color:var(--accent)}
+.shr-b.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.shr-ok{margin:0;min-height:16px;font-size:12px;color:var(--accent)}
+@media (max-width:420px){.shr-share{flex-direction:column;align-items:stretch}.shr-qr{width:auto}.shr-qr svg{margin:0 auto 6px}}
+
+/* ===== Installed app: keep the header clear of the iPhone status bar ===== */
+:root{--sat:env(safe-area-inset-top,0px)}
+.top{padding-top:var(--sat)}
+body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);background:var(--bg);z-index:60;pointer-events:none}
+.ticker{top:var(--sat)}
+@media (min-width:768px){nav.tabs{top:calc(var(--sat) + 37px)}}
+
+/* ===== 60-second brief: numbered, pulsing pins and a clear tap hint ===== */
+.cfhint{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--accent);background:rgba(94,194,219,.1);border:1px solid rgba(94,194,219,.28);padding:4px 10px 4px 8px;border-radius:999px;white-space:nowrap}
+.cfhint svg{width:14px;height:14px}
+.cstop{cursor:pointer}
+.cstop .csnum{font:700 7px/1 var(--font-ui);fill:#07090C;pointer-events:none}
+.cstop .cspulse{fill:none;stroke:var(--rc,#5EC2DB);stroke-width:1.2;opacity:0;transform-box:fill-box;transform-origin:center}
+.cfly.done .cstop .cspulse{animation:cspulse 2.2s ease-out infinite}
+.cfly.done .cstop:nth-of-type(2) .cspulse{animation-delay:.35s}
+.cfly.done .cstop:nth-of-type(3) .cspulse{animation-delay:.7s}
+@keyframes cspulse{0%{opacity:.85;transform:scale(1)}100%{opacity:0;transform:scale(2.3)}}
+.cstop:hover .csr,.cstop:focus-visible .csr{stroke:#fff;stroke-width:1.4}
+.ctaphint{position:absolute;left:50%;bottom:10px;transform:translate(-50%,6px);background:rgba(10,16,23,.9);border:1px solid var(--grid-strong);color:var(--ink);font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s}
+.cfly.done .ctaphint{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.cfly.done .cstop .cspulse{animation:none;opacity:.5;transform:scale(1.5)}}
+@media (max-width:520px){.cfh{flex-wrap:wrap;gap:6px}.cfhint{font-size:11px}}
+
+/* ===== Market map: line key on top ===== */
+.wkey{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding:10px 14px;border-top:var(--line) solid var(--grid);background:var(--panel-2)}
+.wkl{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-2)}
+.wkl b{color:var(--ink);font-weight:650}
+.wkl svg{width:52px;height:12px;flex:none}
+.wkh{margin-left:auto;font-size:12px;font-weight:600;color:var(--accent)}
+.wkh b{color:var(--ink)}
+.wmap .wfilt{border-top:var(--line) solid var(--grid);border-bottom:var(--line) solid var(--grid)}
+.wfilt::before{content:"Company type · tap to hide";font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-right:4px}
+.we.own{opacity:.95}
+@media (max-width:700px){.wkey{flex-direction:column;align-items:flex-start;gap:6px}.wkh{margin-left:0}.wfilt::before{width:100%}}
+.cstop .csr,.cstop[class*="r-"] .csr{fill:var(--rc,#8D99A6);stroke:#0A1017;stroke-width:.9;opacity:1}
+.cstop.on .csr{animation:none;stroke:#fff;stroke-width:1.4}
+.cstop.on .cspulse{animation:cspulse 1.8s ease-out infinite}
+.cstop .csnum,.cstop.on .csnum{fill:#07090C}
+@media (max-width:700px){
+  .wmap .wfilt{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:8px 12px}
+  .wmap .wfilt::-webkit-scrollbar{display:none}
+  .wmap .wfilt::before{content:"Type";width:auto;flex:none}
+  .wmap .wf{flex:none;white-space:nowrap}
+  .wmap .wmiss{display:none}
+  .wkey{padding:10px 12px}.wkl{font-size:11.5px}
+}
+
+.we.own.fm{stroke:#D9A55B;opacity:.95}
+.we.own.pd{stroke:#5EC2DB;opacity:.95}
+.pchip.pformer{border-style:dashed;border-color:#D9A55B66;color:var(--ink-2)}
+.pchip.pformer small{opacity:.7;margin-left:4px}
+.pfk{text-transform:none;letter-spacing:0;font-family:var(--font-ui);color:var(--ink-2);opacity:.8;margin-left:6px}
+@media (min-width:701px){.wkey{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}.wkh{grid-column:1/-1;margin-left:0}}
 </style>
 </head>
 <body>
@@ -1742,6 +1831,7 @@ a.pdoc:hover{background:color-mix(in srgb,var(--accent) 8%,var(--panel-2))}
 <circle cx="148" cy="76" r="8.5" fill="#3A3F48"/><circle cx="148" cy="76" r="7" fill="url(#lgI)"/><circle cx="149" cy="76" r="3.2" fill="#120C08"/><circle cx="151" cy="73.6" r="1.1" fill="#FFF4D6"/>
 <path d="M139 66 Q148 62.5 157 66.5" fill="none" stroke="#6E7886" stroke-width="2.2" stroke-linecap="round"/></svg>
 <rect x="15" y="15" width="70" height="70" fill="none" stroke="#B23A2E" stroke-width="1.6"/></svg></span><span class="lstack"><span class="lword">Parcel <em>Pigeon</em></span><span class="ltag">Small parcel news and resources, covering every carrier, deal and player.</span></span></a>
+  <button class="hshare" id="shareBtn" type="button" aria-haspopup="dialog" aria-label="Get the app or share Parcel Pigeon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7.5 7.5 12 3l4.5 4.5"/><path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg><span>Get app</span></button>
   <div class="hcoop" id="hdrCoop" aria-label="Search"><span hidden id="hdrDate"></span><span hidden id="hdrUpd"></span></div>
 </div></header>
 <div class="ticker" aria-label="Diesel, carrier fuel and carrier stocks"><div class="track" id="ticker"></div></div>
@@ -1798,8 +1888,15 @@ a.pdoc:hover{background:color-mix(in srgb,var(--accent) 8%,var(--panel-2))}
   <input id="mq" type="hidden"><div class="qon" data-qfor="mq" hidden></div>
   <div class="view" data-view="deals"><div class="cards" id="nDeals"></div></div>
   <div class="view" data-view="map">
-    <div class="panel wmap"><div class="ph"><h2>Where they are</h2><span class="lbl">Tap a company to see what it owns · tap a busy spot to zoom in</span></div>
-      <div class="wstage" id="wStage"></div><div class="wfilt" id="wFilt"></div></div>
+    <div class="panel wmap"><div class="ph"><h2>Where they are</h2><span class="lbl">Tap a busy spot to zoom in</span></div>
+      <div class="wkey" aria-label="How to read the map lines">
+        <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#DCE3EA" stroke-width="2"/><path d="M48 3l7 4-7 4z" fill="#DCE3EA"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Owns or bought</b> · line runs from the owner to the company it owns</span></div>
+        <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#DCE3EA" stroke-width="2" stroke-dasharray="5 4"/><path d="M48 3l7 4-7 4z" fill="#DCE3EA"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Merged</b> · the two combined into one company</span></div>
+        <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#D9A55B" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.5 4.5"/><path d="M48 3l7 4-7 4z" fill="#D9A55B"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Used to own</b> · sold or spun off, e.g. UPS → Coyote, now RXO’s</span></div>
+        <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#5EC2DB" stroke-width="2" stroke-dasharray="7 4"/><path d="M48 3l7 4-7 4z" fill="#5EC2DB"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Pending deal</b> · announced, not closed yet</span></div>
+        <div class="wkh" id="wKeyHint" role="status">Tap any dot to draw its ownership lines</div>
+      </div>
+      <div class="wfilt" id="wFilt"></div><div class="wstage" id="wStage"></div></div>
     <div class="mhead">
       <div class="mprog" id="mProg"></div>
     </div>
@@ -1863,8 +1960,20 @@ a.pdoc:hover{background:color-mix(in srgb,var(--accent) 8%,var(--panel-2))}
   </div>
 </section>
 
-<p class="foot">Original summaries, linked to their sources. Not affiliated with any carrier.</p>
+<p class="foot">Original summaries, linked to their sources. Not affiliated with any carrier. <button type="button" class="flink" data-share>Get the app · Share</button></p>
 </main>
+<div class="shr" id="shr" role="dialog" aria-modal="true" aria-labelledby="shrT" hidden><div class="shr-bg" data-shrx></div><div class="shr-card">
+  <button class="shr-x" data-shrx aria-label="Close">×</button>
+  <h2 id="shrT">Get Parcel Pigeon</h2>
+  <p class="shr-sub">Free. No App Store needed. It installs from the web and updates itself.</p>
+  <div class="shr-inst" id="shrInst"></div>
+  <div class="shr-share"><div class="shr-qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="qrsvg"><path fill="#f3ecdd" d="M0 0h33v33h-33z"/><path class="qrline" stroke="#0b0f14" d="M2 2.5h7m1 0h4m1 0h2m2 0h2m3 0h7m-29 1h1m5 0h1m2 0h1m1 0h4m1 0h2m2 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h5m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h4m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m1 0h2m3 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m3 0h1m1 0h1m2 0h2m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m1 0h1m-15 1h1m1 0h1m3 0h2m4 0h1m2 0h1m4 0h1m2 0h1m2 0h1m1 0h1m-28 1h1m1 0h2m2 0h1m2 0h2m1 0h1m1 0h3m1 0h2m1 0h2m3 0h2m-28 1h1m1 0h8m1 0h1m2 0h1m1 0h4m1 0h2m1 0h2m1 0h1m-28 1h3m1 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m3 0h1m-26 1h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m2 0h1m2 0h1m5 0h1m-25 1h1m4 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h2m-29 1h1m1 0h6m1 0h1m5 0h2m2 0h1m1 0h2m1 0h1m3 0h1m-27 1h1m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m2 0h1m-22 1h1m5 0h2m6 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h1m-22 1h3m2 0h2m1 0h3m1 0h2m1 0h2m2 0h3m-29 1h4m1 0h3m1 0h4m2 0h1m3 0h1m2 0h1m1 0h2m2 0h1m-26 1h2m3 0h2m2 0h1m1 0h1m1 0h1m1 0h3m2 0h2m-25 1h2m2 0h4m1 0h2m1 0h5m2 0h7m1 0h1m-20 1h1m1 0h3m2 0h2m1 0h1m1 0h1m3 0h3m1 0h1m-29 1h7m1 0h1m1 0h6m1 0h2m1 0h1m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m3 0h3m2 0h1m3 0h2m3 0h1m2 0h1m-28 1h1m1 0h3m1 0h1m2 0h2m2 0h4m2 0h7m1 0h1m-28 1h1m1 0h3m1 0h1m4 0h2m2 0h2m3 0h2m2 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m3 0h6m5 0h1m2 0h2m-29 1h1m5 0h1m3 0h2m2 0h2m2 0h1m1 0h1m1 0h4m-26 1h7m1 0h1m3 0h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h1"/></svg><span>Scan to open</span></div>
+    <div class="shr-act"><div class="shr-lbl">Share with someone</div><div class="shr-url" id="shrUrl"></div>
+      <button type="button" class="shr-b pri" id="shrNative" hidden>Share…</button>
+      <button type="button" class="shr-b" id="shrCopy">Copy link</button>
+      <button type="button" class="shr-b" id="shrMsg">Copy invite message</button>
+      <p class="shr-ok" id="shrOk" role="status"></p></div></div>
+</div></div>
 <div class="pop" id="pop" role="tooltip"></div>
 
 <script>
@@ -4017,6 +4126,12 @@ function renderSide(){
   const chain=[];let c=p;while(c&&c.parent&&PL[c.parent]&&chain.length<4){c=PL[c.parent];chain.unshift(c)}
   const kids=[...new Map(grp.own.filter(e=>e.a===p.id).map(e=>[e.b,PL[e.b]])).values()].filter(Boolean);
   const chip=k=>`<button class="pchip" data-pl="${k.id}">${esc(k.n)}</button>`;
+  const yrOf=e=>e.y?` <small class="mono">${esc(e.y)}</small>`:'';
+  const fx=[...new Map(PEDGES.filter(e=>FORMK.has(e.k)&&e.a===p.id&&PL[e.b]).map(e=>[e.b,e])).values()];
+  const fb=[...new Map(PEDGES.filter(e=>FORMK.has(e.k)&&e.b===p.id&&PL[e.a]).map(e=>[e.a,e])).values()];
+  const span=e=>{const b=PEDGES.filter(x=>x.a===e.a&&x.b===e.b&&OWNK.has(x.k)&&x.y).map(x=>x.y).sort()[0];return b&&e.y&&b!==e.y?` <small class="mono">${esc(b)}–${esc(e.y)}</small>`:yrOf(e)};
+  const fchip=(id,e)=>`<button class="pchip pformer" data-pl="${id}" title="${esc(e.t)}">${esc(PL[id].n)}${span(e)}</button>`;
+  const formerHtml=(fx.length?`<div class="lbl pkl">Used to own ${fx.length} <span class="pfk">sold or spun off</span></div><div class="rps">${fx.map(e=>fchip(e.b,e)).join('')}</div>`:'')+(fb.length?`<div class="lbl pkl">Formerly owned by <span class="pfk">sold or spun off</span></div><div class="rps">${fb.map(e=>fchip(e.a,e)).join('')}</div>`:'');
   const fact=(l,v)=>v?`<div class="pf"><span>${l}</span><b>${v}</b></div>`:'';
   const rows=(a,n)=>`<ul class="medges">${a.slice(0,n).map(e=>edgeRow(e,p.id)).join('')}</ul>${a.length>n?`<details class="pmore"><summary>${a.length-n} more</summary><ul class="medges">${a.slice(n).map(e=>edgeRow(e,p.id)).join('')}</ul></details>`:''}`;
   const sec=(t,n,body)=>`<section class="psec"><h4>${t}${n!=null?`<small>${n}</small>`:''}</h4>${body}</section>`;
@@ -4024,7 +4139,7 @@ function renderSide(){
   el.innerHTML=`<button class="mclose" data-mclose aria-label="Close">×</button>
     <header class="phd"><span class="prl r-${p.realm}"><i></i>${esc(RL[p.realm])}</span><h3>${esc(p.n)}</h3><p>${esc(p.s)}</p>${PSITE[p.id]?`<a class="psite" href="https://${PSITE[p.id]}" target="_blank" rel="noopener">${esc(PSITE[p.id].split('/')[0].replace(/^www\./,''))} ↗</a>`:''}</header>
     <div class="pfacts">${fact('Ownership',ownLine(p))}${fact('Headquarters',p.hq?esc(p.hq.replace(/, USA$/,'')):'')}${fact('Founded',p.yr?esc(p.yr):'')}${fact('Ticker',p.tk?esc(p.tk):'')}</div>
-    ${chain.length||kids.length?sec('Ownership family',null,`${chain.length?`<div class="pchain"><span class="lbl">Part of</span>${chain.map(chip).join('<span class="parr">›</span>')}<span class="parr">›</span><span class="pme">${esc(p.n)}</span></div>`:''}${kids.length?`<div class="lbl pkl">Owns ${kids.length}</div><div class="rps">${kids.map(chip).join('')}</div>`:''}`):''}
+    ${chain.length||kids.length||formerHtml?sec('Ownership family',null,`${chain.length?`<div class="pchain"><span class="lbl">Part of</span>${chain.map(chip).join('<span class="parr">›</span>')}<span class="parr">›</span><span class="pme">${esc(p.n)}</span></div>`:''}${kids.length?`<div class="lbl pkl">Owns ${kids.length}</div><div class="rps">${kids.map(chip).join('')}</div>`:''}${formerHtml}`):''}
     ${grp.deal.length?sec('Deals',grp.deal.length,rows(grp.deal,5)):''}
     ${others.length?`<details class="psec pfold"><summary><h4>Partners and investors<small>${others.length}</small></h4></summary>${rows(others,99)}</details>`:''}
     ${dc.length?sec('Documents',dc.length,`<div class="pdocs">${dc.slice(0,4).map(d=>`${d.u?`<a class="pdoc" href="${d.u}" target="_blank" rel="noopener">`:'<div class="pdoc">'}<span class="mono">${d.y||'—'}</span><span>${esc(d.n)}</span>${d.u?'<i>↗</i></a>':'</div>'}`).join('')}</div>${dc.length>4?`<button class="link pall" data-cdocs="${esc(p.n)}">All ${dc.length} documents</button>`:''}`):''}
@@ -4051,7 +4166,15 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-qclear]');
 const WM={vb:null,off:new Set(),hover:null,built:false,pts:{},miss:[],anim:null};
 const OWNK=new Set(['owns','acquired','merged']);
 // ownership family: parent chain up, everything owned or bought down (direct links only)
-function wmFamily(id){const out=new Map();PEDGES.forEach(e=>{if(!OWNK.has(e.k))return;if(e.a===id||e.b===id){const k=[e.a,e.b].sort().join('|');if(!out.has(k))out.set(k,e)}});
+// each pair gets one line: sold or spun off → former owner; every ownership link still pending → pending deal; else owns or merged
+const FORMK=new Set(['sold','spun']);
+function wmPair(es){const f=es.filter(e=>FORMK.has(e.k)).sort((x,y)=>(y.y||'').localeCompare(x.y||''))[0];
+  if(f){const buy=es.filter(e=>e.a===f.a&&OWNK.has(e.k)&&e.y).map(e=>e.y).sort()[0];return Object.assign({},f,{k:'former',t:f.t+(buy?` (owned ${buy}–${f.y||''})`:f.y?` (${f.y})`:'')})}
+  const o=es.filter(e=>OWNK.has(e.k));if(!o.length)return null;
+  if(o.every(e=>/pending|agrees to/i.test(e.t||'')))return Object.assign({},o[0],{k:'pending'});
+  return o.find(e=>e.k==='merged')||o.find(e=>e.k==='owns')||o[0]}
+function wmFamily(id){const by=new Map();PEDGES.forEach(e=>{if(!OWNK.has(e.k)&&!FORMK.has(e.k))return;if(e.a===id||e.b===id){const k=[e.a,e.b].sort().join('|');(by.get(k)||by.set(k,[]).get(k)).push(e)}});
+  const out=new Map();by.forEach((es,k)=>{const e=wmPair(es);if(e)out.set(k,e)});
   let c=PL[id];const seen=new Set([id]);while(c&&c.parent&&PL[c.parent]&&!seen.has(c.parent)){const par=PL[c.parent];seen.add(par.id);const k=[par.id,c.id].sort().join('|');if(!out.has(k))out.set(k,{a:par.id,b:c.id,k:'owns',t:`${par.n} owns ${c.n}`});c=par}
   return [...out.values()]}
 function wmUS(){const a=wmProj(-129,51),b=wmProj(-63,23);return [a[0],a[1],b[0]-a[0],(b[0]-a[0])*WGEO.H/WGEO.W]}
@@ -4069,7 +4192,7 @@ function wmScale(){const s=$('wSvg');return s?s.getBoundingClientRect().width/WM
 function wmXY(id){const p=WM.pts[id],k=3.2/Math.max(wmScale(),.0001);return [p.x+p.dx*k,p.y+p.dy*k]}
 function renderWorld(){
   const st=$('wStage');if(!st||st.offsetParent===null)return;wmBuild();if(!WM.vb){WM.vb=wmUS();wmClamp()}
-  if(!$('wSvg')){st.innerHTML=`<svg id="wSvg" class="wsvg" viewBox="${WM.vb.join(' ')}" role="img" aria-label="World map of company headquarters and their connections"><rect class="wsea" x="-500" y="-500" width="2000" height="1500"/><path class="wland" d="${WLAND}"/><path class="wbord" d="${WBORD}"/><g id="wEdges"></g><g id="wDots"></g><g id="wLbl"></g></svg>
+  if(!$('wSvg')){st.innerHTML=`<svg id="wSvg" class="wsvg" viewBox="${WM.vb.join(' ')}" role="img" aria-label="World map of company headquarters and their connections"><rect class="wsea" x="-500" y="-500" width="2000" height="1500"/><path class="wland" d="${WLAND}"/><path class="wbord" d="${WBORD}"/><defs><marker id="wArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#DCE3EA"/></marker><marker id="wArrF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#D9A55B"/></marker><marker id="wArrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#5EC2DB"/></marker></defs><g id="wEdges"></g><g id="wDots"></g><g id="wLbl"></g></svg>
      <div class="wtip" id="wTip" hidden></div><div class="wcard" id="wCard" hidden></div>
      <div class="wctl"><button data-wz="us">U.S.</button><button data-wz="world">World</button><span class="wsep"></span><button data-wz="in" aria-label="Zoom in">+</button><button data-wz="out" aria-label="Zoom out">−</button></div>`;
     wmEvents();$('wFilt').innerHTML=REALMS.map(([k,l])=>`<button class="wf r-${k}" data-wf="${k}" aria-pressed="true"><i></i>${esc(l)}</button>`).join('')+`<span class="lbl wmiss">${PLAYERS.length-WM.miss.length} of ${PLAYERS.length} companies placed by headquarters</span>`}
@@ -4078,16 +4201,18 @@ function renderWorld(){
   const fam=sel?wmFamily(sel):[],conn=new Set();fam.forEach(e=>{conn.add(e.a);conn.add(e.b)});conn.delete(sel);
   $('wEdges').innerHTML=fam.map((e,i)=>{if(!on(e.a)||!on(e.b)||e.a===e.b)return'';const hit=true;
     const [x1,y1]=wmXY(e.a),[x2,y2]=wmXY(e.b),dx=x2-x1,dy=y2-y1,d=Math.hypot(dx,dy);if(d<.01)return'';const bend=Math.min(.35,.12+20/(d+40));
-    const cx=(x1+x2)/2-dy*bend,cy=(y1+y2)/2+dx*bend;return `<path class="we own" d="M${x1.toFixed(2)} ${y1.toFixed(2)}Q${cx.toFixed(2)} ${cy.toFixed(2)} ${x2.toFixed(2)} ${y2.toFixed(2)}" style="stroke-width:${1.6*u}px"><title>${esc(e.t)}</title></path><circle class="wend" cx="${x2.toFixed(2)}" cy="${y2.toFixed(2)}" r="${(2.2*u).toFixed(2)}"/>`}).join('');
+    const cx=(x1+x2)/2-dy*bend,cy=(y1+y2)/2+dx*bend;const rr=((e.b===sel?6:PL[e.b]&&(PL[e.b].realm==='national'||PL[e.b].realm==='global')?4.2:3.2)+2.2)*u,ex=x2-cx,ey=y2-cy,el=Math.hypot(ex,ey)||1,tx=x2-ex/el*rr,ty=y2-ey/el*rr,mg=e.k==='merged',fm=e.k==='former',pd=e.k==='pending',kc=fm?' fm':pd?' pd':mg?' mg':'',da=fm?`;stroke-dasharray:${1.2*u} ${3.2*u}`:pd?`;stroke-dasharray:${6*u} ${3*u}`:mg?`;stroke-dasharray:${4*u} ${3*u}`:'';
+    return `<path class="we own${kc}" d="M${x1.toFixed(2)} ${y1.toFixed(2)}Q${cx.toFixed(2)} ${cy.toFixed(2)} ${tx.toFixed(2)} ${ty.toFixed(2)}" marker-end="url(#wArr${fm?'F':pd?'P':''})" style="stroke-width:${(fm?1.4:1.6)*u}px${da}"><title>${esc(e.t)}</title></path>`}).join('');
   $('wDots').innerHTML=PLAYERS.map(p=>{if(!on(p.id))return'';const [x,y]=wmXY(p.id),big=p.realm==='national'||p.realm==='global',r=(sel===p.id?6:big?4.2:3.2)*u,dim=sel&&sel!==p.id&&!conn.has(p.id);
     return `<circle class="wd r-${p.realm}${sel===p.id?' sel':''}${dim?' dim':''}${conn.has(p.id)?' con':''}" data-wpl="${p.id}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${r.toFixed(2)}" style="stroke-width:${(sel===p.id?2:1)*u}px"/>`}).join('');
   // labels: the selection and its connections, plus national carriers once zoomed in
   const zoomed=WM.vb[2]<WGEO.W/2.2,lab=PLAYERS.filter(p=>on(p.id)&&(p.id===sel||conn.has(p.id)||(zoomed&&!sel&&(p.realm==='national'))));
   // labels that would land on top of each other stack downward
   const used=[];$('wLbl').innerHTML=lab.sort((a,b)=>(b.id===sel)-(a.id===sel)).map(p=>{const [x,y0]=wmXY(p.id);let y=y0-5*u;while(used.some(([ux,uy])=>Math.abs(ux-x)<60*u&&Math.abs(uy-y)<11*u))y+=12*u;used.push([x,y]);return `<text class="wl${p.id===sel?' sel':''}" x="${(x+6*u).toFixed(2)}" y="${y.toFixed(2)}" style="font-size:${(p.id===sel?12:10)*u}px;stroke-width:${3*u}px">${esc(p.n)}</text>`}).join('');
+  const kh=$('wKeyHint');if(kh)kh.innerHTML=sel&&PL[sel]?(conn.size?`Showing <b>${esc(PL[sel].n)}</b>’s ownership links, past and present · ${conn.size}`:`<b>${esc(PL[sel].n)}</b> has no ownership links on file`):'Tap any dot to draw its ownership lines';
   const c=$('wCard');if(sel&&PL[sel]){const p=PL[sel],pt=WM.pts[sel],cs=[...conn].filter(id=>PL[id]).slice(0,10);
     c.innerHTML=`<button class="wx" data-wsel="" aria-label="Clear">×</button><span class="wcr r-${p.realm}"><i></i>${esc(RL[p.realm]||'')}</span><b>${esc(p.n)}</b><span class="wcc">${pt?esc(pt.via?`At ${pt.via.n}’s headquarters, ${pt.city}`:pt.city+(pt.approx?' (approximate)':'')):'Headquarters not listed'}</span>
-      <span class="wcn">${conn.size?`${conn.size} compan${conn.size===1?'y':'ies'} in its ownership family`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}"><i></i>${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
+      <span class="wcn">${conn.size?`${conn.size} compan${conn.size===1?'y':'ies'} linked by ownership, past or present`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}"><i></i>${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
 }
 function wmZoomTo(cx,cy,w){const h=w*WGEO.H/WGEO.W;wmTween([cx-w/2,cy-h/2,w,h])}
 // smooth camera moves
@@ -4388,10 +4513,10 @@ renderClocks();setInterval(renderClocks,10000);
   function shell(){
     const el=$('heroBody');if(!el)return;const S=stops();
     const route=S.map((s,k)=>{if(!k)return'';const a=S[k-1].p,b=s.p,mx=(a[0]+b[0])/2,my=Math.min(a[1],b[1])-28;return `<path d="M${a[0]} ${a[1]} Q${mx} ${my} ${b[0]} ${b[1]}" class="crt"/>`}).join('');
-    el.innerHTML=`<div class="cfly" id="cfly"><div class="cfh"><h2 class="cft">60-second brief</h2><span class="lbl">${BRIEF.length} stops · no detours</span></div>
+    el.innerHTML=`<div class="cfly" id="cfly"><div class="cfh"><h2 class="cft">60-second brief</h2><span class="cfhint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.8-2.4L4.5 15.5a1.6 1.6 0 0 1 2.4-2.1L9 15"/></svg>Tap a pin for its headline</span></div>
       <div class="cmap" id="cmap"><svg viewBox="0 0 ${W} ${H}" aria-hidden="true"><g class="cdots">${DOTS.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.2"/>`).join('')}</g>${route}
         ${S.map((s,k)=>{const y1=s.lab==='a'?s.p[1]-15:s.p[1]+12,lw=Math.max(s.c.length*4.4,s.city.length*3.8)/2+4,anc=s.p[0]-lw<0?'start':s.p[0]+lw>W?'end':'middle',xx=anc==='start'?s.p[0]-4:anc==='end'?s.p[0]+4:s.p[0];
-          return `<g class="cstop r-${s.realm}" id="cs${k}" data-k="${k}" role="button" tabindex="0" aria-label="${esc(s.c)}, ${esc(s.city)} (${esc(RL[s.realm]||'')}): open brief item ${k+1}"><title>${esc(s.c)} · ${esc(RL[s.realm]||'')} · ${esc(s.city)}</title><circle cx="${s.p[0]}" cy="${s.p[1]}" r="12" class="cshit"/><circle cx="${s.p[0]}" cy="${s.p[1]}" r="6" class="csr"/><circle cx="${s.p[0]}" cy="${s.p[1]}" r="2.6" class="csc"/><text x="${xx}" y="${y1}" text-anchor="${anc}"><tspan class="csn">${esc(s.c)}</tspan><tspan class="csy" x="${xx}" dy="7">${esc(s.city)}</tspan></text></g>`}).join('')}</svg>
+          return `<g class="cstop r-${s.realm}" id="cs${k}" data-k="${k}" role="button" tabindex="0" aria-label="${esc(s.c)}, ${esc(s.city)} (${esc(RL[s.realm]||'')}): open brief item ${k+1}"><title>${esc(s.c)} · ${esc(RL[s.realm]||'')} · ${esc(s.city)}</title><circle cx="${s.p[0]}" cy="${s.p[1]}" r="12" class="cshit"/><circle cx="${s.p[0]}" cy="${s.p[1]}" r="7" class="cspulse"/><circle cx="${s.p[0]}" cy="${s.p[1]}" r="6.4" class="csr"/><text x="${s.p[0]}" y="${s.p[1]+2.3}" class="csnum" text-anchor="middle">${k+1}</text><text x="${xx}" y="${y1}" text-anchor="${anc}"><tspan class="csn">${esc(s.c)}</tspan><tspan class="csy" x="${xx}" dy="7">${esc(s.city)}</tspan></text></g>`}).join('')}</svg>
         <div class="cfbird" id="cbird" aria-hidden="true"><div class="cbflip">${window.COOP_FLY||''}</div></div>
         <div class="clet" id="clet" aria-live="polite"></div></div>
       <div class="cbctl"><button class="cbbtn" data-cb="prev" aria-label="Previous stop">‹</button><span class="cbdots" id="cbdots"></span><button class="cbbtn" data-cb="next" aria-label="Next stop">›</button>
@@ -4587,6 +4712,49 @@ renderClocks();setInterval(renderClocks,10000);
   {const g=goTo;goTo=function(){g.apply(this,arguments);requestAnimationFrame(()=>place(false))}}
   document.body.appendChild(el);
   setTimeout(()=>place(true),RM()?0:900);
+})();
+
+/* ===== Get the app / share ===== */
+(function(){
+  const URL0='https://wmaready.github.io/parcel-pigeon/';
+  const $=id=>document.getElementById(id);
+  const dlg=$('shr');if(!dlg)return;
+  const ua=navigator.userAgent||'';
+  const iOS=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const android=/Android/i.test(ua);
+  const iosSafari=iOS&&!/CriOS|FxiOS|EdgiOS|OPiOS|GSA\//.test(ua);
+  const standalone=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+  if(standalone)document.body.classList.add('standalone');
+  const here=/github\.io$/.test(location.hostname)?location.origin+location.pathname.replace(/index\.html$/,''):URL0;
+  let deferred=null;
+  addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;if(!dlg.hidden)paint()});
+  addEventListener('appinstalled',()=>{deferred=null;if(!dlg.hidden)paint()});
+  const SH='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7.5 7.5 12 3l4.5 4.5"/><path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg>';
+  const DOTS='<svg class="ic" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>';
+  function paint(){
+    const box=$('shrInst');let h;
+    if(standalone){h='<h3>You’re all set</h3><p>Parcel Pigeon is installed on this device. Share it below.</p>'}
+    else if(deferred){h='<h3>Install on this device</h3><p>Adds Parcel Pigeon to your home screen or apps, full screen with no browser bar.</p><button type="button" class="shr-b pri" id="shrInstall" style="width:100%;margin-top:10px">Install Parcel Pigeon</button>'}
+    else if(iOS&&!iosSafari){h='<h3>Install on iPhone</h3><p>iPhone only installs web apps from <b>Safari</b>. Copy the link below, open it in Safari, then tap '+SH+' Share → <b>Add to Home Screen</b>.</p>'}
+    else if(iOS){h='<h3>Install on iPhone</h3><ol><li>Tap '+SH+' <b>Share</b> in Safari’s toolbar</li><li>Scroll down, tap <b>Add to Home Screen</b></li><li>Tap <b>Add</b></li></ol>'}
+    else if(android){h='<h3>Install on Android</h3><ol><li>In Chrome, tap '+DOTS+' (top right)</li><li>Tap <b>Install app</b> or <b>Add to Home screen</b></li><li>Tap <b>Install</b></li></ol>'}
+    else{h='<h3>Install on your phone</h3><p>Scan the code with your phone’s camera, then:</p><ol><li><b>iPhone</b> (Safari): '+SH+' Share → Add to Home Screen</li><li><b>Android</b> (Chrome): '+DOTS+' → Install app</li></ol><p class="alt">On this computer, Chrome and Edge show an install icon at the right end of the address bar.</p>'}
+    box.innerHTML=h;
+    const ib=$('shrInstall');if(ib)ib.onclick=async()=>{const d=deferred;if(!d)return;d.prompt();try{await d.userChoice}catch(e){}deferred=null;paint()};
+  }
+  const MSG='Parcel Pigeon: small parcel news, rate changes, fuel and the market map, updated through the day.\n'+URL0+'\niPhone: open in Safari → Share → Add to Home Screen. Android: open in Chrome → ⋮ → Install app.';
+  function ok(t){const o=$('shrOk');o.textContent=t;clearTimeout(ok.t);ok.t=setTimeout(()=>o.textContent='',2600)}
+  async function copy(t,m){try{await navigator.clipboard.writeText(t);ok(m)}catch(e){const a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');ok(m)}catch(_){ok('Copy failed. Press and hold the link to copy it.')}a.remove()}}
+  let last=null;
+  function open(){last=document.activeElement;paint();$('shrUrl').textContent=URL0.replace(/^https:\/\//,'');dlg.hidden=false;document.documentElement.style.overflow='hidden';setTimeout(()=>dlg.querySelector('.shr-x').focus(),0)}
+  function close(){dlg.hidden=true;document.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
+  document.addEventListener('click',e=>{const t=e.target.closest('#shareBtn,[data-share]');if(t){e.preventDefault();open();return}if(e.target.closest('[data-shrx]'))close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!dlg.hidden)close()});
+  if(navigator.share){const n=$('shrNative');n.hidden=false;n.onclick=async()=>{try{await navigator.share({title:'Parcel Pigeon',text:'Small parcel news and resources, covering every carrier, deal and player.',url:URL0})}catch(e){}}}
+  $('shrCopy').onclick=()=>copy(URL0,'Link copied.');
+  $('shrMsg').onclick=()=>copy(MSG,'Invite copied. Paste it into a text or email.');
+  if(/^#get$|^#install$/.test(location.hash))setTimeout(open,600);
+  if('serviceWorker' in navigator&&/github\.io$/.test(location.hostname)){addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
 })();
 
 </script>
