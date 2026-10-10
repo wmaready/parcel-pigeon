@@ -1,1 +1,206 @@
-[]
+[
+ {
+  "type": "first-to-report",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/8",
+  "story": {
+   "id": "ac323638c4d74",
+   "date": "2026-10-08",
+   "c": [
+    "Amazon"
+   ],
+   "cat": "Drones & robots",
+   "kind": "Analysis",
+   "title": "Amazon Prime Air advertises for Australia regulatory approvals head",
+   "sum": "Amazon is hiring a Head of Regulatory Approvals, Australia, for Prime Air, based in Sydney or Canberra, according to a job ad reported by The Register on September 28 and SmartCompany on October 6. The role covers CASA aircraft certification, airspace authorizations and land-use permissions. Amazon has not said where or when it would fly in Australia, and DroneXL's author reads the ad as a launch plan.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "No change to rates or service. Amazon has not said where in Australia it would fly or when, and the ad carries no posting date.",
+   "tie": "The ad follows Amazon ending its Italian program in December 2025 and Wing ending its DoorDash partnership in Australia on January 16, 2026, according to DroneXL.",
+   "act": null,
+   "dates": [],
+   "src": "DroneXL",
+   "url": "https://dronexl.co/2026/10/07/amazon-prime-air-australia-casa-regulatory-approvals-job/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/07/amazon-prime-air-australia-casa-regulatory-approvals-job/"
+    }
+   ],
+   "auto": true,
+   "_extras": {
+    "rels": [
+     {
+      "a": "Alphabet",
+      "b": "Wing",
+      "k": "owns",
+      "t": "Alphabet owns delivery drone company Wing"
+     }
+    ]
+   },
+   "exclusive": true
+  }
+ },
+ {
+  "type": "first-to-report",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/7",
+  "story": {
+   "id": "a96d31168e3d5",
+   "date": "2026-10-09",
+   "c": [
+    "Amazon"
+   ],
+   "cat": "Drones & robots",
+   "kind": "Analysis",
+   "title": "Amazon, FAA each point to other on North Myrtle Beach drone overflights",
+   "sum": "Amazon's Tareq Wafaie told the North Myrtle Beach Planning Commission on October 7 that overflights are an FAA decision. The FAA told WPDE the same day that operators and local community leaders have primary responsibility for community concerns. No vote was taken, and the commission takes up Amazon's drone paddock application again on October 20.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "No change to rates or service. Amazon drone delivery is not yet approved in North Myrtle Beach, and the commission can approve, deny or postpone the paddock application on October 20.",
+   "tie": "The workshop followed the commission's September 2026 withdrawal of an approval motion on the drone paddock behind Amazon's Water Tower Road warehouse.",
+   "act": null,
+   "dates": [
+    {
+     "d": "2026-10-20",
+     "w": "Planning Commission takes up Amazon drone paddock application",
+     "imp": "info",
+     "fx": null
+    },
+    {
+     "d": "2027-01-01",
+     "w": "South Carolina Act 150 takes effect, leaving takeoff and landing sites to municipalities",
+     "imp": "info",
+     "fx": null
+    }
+   ],
+   "src": "DroneXL",
+   "url": "https://dronexl.co/2026/10/08/amazon-north-myrtle-beach-drone-workshop-faa-noise-68-decibels/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/08/amazon-north-myrtle-beach-drone-workshop-faa-noise-68-decibels/"
+    }
+   ],
+   "auto": true,
+   "_extras": {},
+   "exclusive": true
+  }
+ },
+ {
+  "type": "first-to-report",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/6",
+  "story": {
+   "id": "ac306d0262dca",
+   "date": "2026-10-09",
+   "c": [
+    "Regional"
+   ],
+   "cat": "Drones & robots",
+   "kind": "News",
+   "title": "Zipline opens Round Rock drone delivery as FAA Austin comment period stays open",
+   "sum": "Zipline began drone delivery in the Austin area on Oct. 9, taking orders in Round Rock, Texas, through its First Flight early-access program for the first 5,000 residents who sign up, according to DroneXL. The FAA's draft environmental assessment for Zipline's Austin operations remains open for public comment until Oct. 11.",
+   "imp": "info",
+   "lvl": 1,
+   "plain": "Residents within 3 miles of the Round Rock site can order from the Zipline app, with members getting $10 off their first three orders and no service or delivery fees. No change to rates or service for other shippers.",
+   "tie": "Austin follows Zipline's Dallas-Fort Worth launch in August 2025 and Houston launch in April, and the FAA opened its draft Houston review for comment on Sept. 11.",
+   "act": "2026-10-09",
+   "dates": [
+    {
+     "d": "2026-10-11",
+     "w": "FAA comment period on Zipline's Austin draft assessment closes",
+     "imp": "info",
+     "fx": null
+    }
+   ],
+   "src": "DroneXL",
+   "url": "https://dronexl.co/2026/10/09/zipline-austin-round-rock-drone-delivery-launch/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/09/zipline-austin-round-rock-drone-delivery-launch/"
+    }
+   ],
+   "auto": true,
+   "_extras": {},
+   "exclusive": true
+  }
+ },
+ {
+  "type": "first-to-report",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/5",
+  "story": {
+   "id": "a55dd8acfcfb5",
+   "date": "2026-10-07",
+   "c": [
+    "FedEx"
+   ],
+   "cat": "Pricing & GRI",
+   "kind": "Analysis",
+   "title": "FedEx sets 5.9% average rate increase for Jan. 4, 2027, TransImpact says",
+   "sum": "TransImpact said FedEx announced an average 5.9% general rate increase effective Jan. 4, 2027, the fourth year in a row at that average. Individual increases range from 3.09% to 9.09%, with accessorials averaging 6.8%, according to TransImpact's analysis published Oct. 7, 2026.",
+   "imp": "up",
+   "lvl": 3,
+   "plain": "FedEx rates rise an average of 5.9% on Jan. 4, 2027, with increases by service from 3.09% to 9.09%. Accessorials rise an average of 6.8%, and DAS Extended Residential rises most at 9.09%.",
+   "tie": null,
+   "act": "2027-01-04",
+   "dates": [
+    {
+     "d": "2027-01-04",
+     "w": "FedEx 5.9% average GRI takes effect",
+     "imp": "up",
+     "fx": {
+      "t": "gri",
+      "car": "FedEx",
+      "pct": 5.9
+     }
+    },
+    {
+     "d": "2027-01-04",
+     "w": "FedEx updates DAS and Pickup Area ZIP code lists",
+     "imp": "info",
+     "fx": null
+    },
+    {
+     "d": "2027-01-18",
+     "w": "FedEx adds $25 Paper Document Fee, $5 Paper Air Waybill Fee",
+     "imp": "up",
+     "fx": {
+      "t": "fee",
+      "car": "FedEx",
+      "items": [
+       [
+        "Paper Document Fee, international shipments",
+        "$25.00",
+        25
+       ],
+       [
+        "Paper Air Waybill Fee, international shipments",
+        "$5.00",
+        5
+       ]
+      ]
+     }
+    },
+    {
+     "d": "2027-02-01",
+     "w": "FedEx reclassifies zones for select domestic ZIP pairs",
+     "imp": "info",
+     "fx": {
+      "t": "zone",
+      "car": "FedEx"
+     }
+    }
+   ],
+   "src": "TransImpact",
+   "url": "https://transimpact.com/blog/2027-fedex-gri-what-the-5.9-increase-means-for-your-parcel-costs",
+   "srcs": [
+    {
+     "src": "TransImpact",
+     "url": "https://transimpact.com/blog/2027-fedex-gri-what-the-5.9-increase-means-for-your-parcel-costs"
+    }
+   ],
+   "auto": true,
+   "_extras": {},
+   "exclusive": true
+  }
+ }
+]

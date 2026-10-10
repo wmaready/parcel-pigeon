@@ -1,1 +1,67 @@
-[]
+[
+ {
+  "title": "C.H. Robinson buys RXO for $5.8B",
+  "buyer": "C.H. Robinson Worldwide",
+  "target": "RXO",
+  "value": "$5.8 billion",
+  "status": "Announced",
+  "ann": "2026-10-05",
+  "closed": null,
+  "sum": "C.H. Robinson Worldwide plans to acquire RXO in a stock-and-cash transaction valued at $5.8 billion. The companies announced the deal in a news release on Monday.",
+  "who": [
+   [
+    "Buyer",
+    "C.H. Robinson Worldwide",
+    "Third-party logistics company offering global, multimodal services; Dave Bozeman is president and CEO."
+   ],
+   [
+    "Target",
+    "RXO",
+    "Provider of brokerage and transportation services, including expedited and last-mile services in North America; Drew Wilkerson is chairman and CEO."
+   ]
+  ],
+  "why": "According to the companies, the combination would create a third-party logistics company with over $25 billion in size, serving approximately 93,000 shippers and 600,000 carriers. C.H. Robinson said it would deploy its \"Lean AI\" operating model across RXO's workflows, targeting $300 million of net run-rate savings within two years of closing. According to an investor presentation, RXO has limited shipper overlap with C.H. Robinson. C.H. Robinson CFO Damon Lee said Navisphere would become the core system of record for RXO's overlapping truckload and less-than-truckload services.",
+  "parties": [
+   {
+    "name": "C.H. Robinson Worldwide",
+    "role": "Buyer",
+    "realm": "Contract logistics / 3PL",
+    "hq": null,
+    "founded": null,
+    "size": "2026 estimated gross revenue of $18.4 billion",
+    "history": []
+   },
+   {
+    "name": "RXO",
+    "role": "Target",
+    "realm": "Freight brokerage & parcel reselling",
+    "hq": null,
+    "founded": null,
+    "size": "2026 estimated gross revenue of $6.8 billion",
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "C.H. Robinson Worldwide",
+   "c": [
+    {
+     "n": "RXO",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
+  "d": "2026-10-05",
+  "story": "a3341a802bc1a",
+  "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/",
+  "srcs": [
+   {
+    "src": "Trucking Dive",
+    "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/"
+   }
+  ],
+  "checked": "2026-10-05",
+  "ties": []
+ }
+]
