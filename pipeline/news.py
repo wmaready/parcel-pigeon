@@ -400,82 +400,85 @@ def main():
     for key, members in groups.items():
         if written >= MAX_NEW_PER_RUN:
             break
-        texts, srcs = [], []
-        for item, v in members[:3]:
-            text, final_url = article_text(item["url"])
-            if text and len(text) >= 400:
-                texts.append((item, final_url, text))
-            srcs.append({"src": item["src"], "url": final_url})
-        if not texts:
-            item = members[0][0]
-            review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"],
-                              "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."})
-            continue
-        lead_item, lead_url, _ = texts[0]
-        v = members[0][1]
-        prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
-                               for n, (it, _, tx) in enumerate(texts))
         try:
-            s = parse_json(claude(MODEL_WRITE, WRITE_SYSTEM, prompt, max_tokens=1300))
-        except Exception as e:
-            print(f"  write failed: {e}", file=sys.stderr); continue
-        ordered = [{"src": it["src"], "url": u} for it, u, _ in texts] + [x for x in srcs if x["url"] not in {u for _, u, _ in texts}]
-        ordered = primary_first(ordered)
-        if not any(is_primary(x["url"]) for x in ordered):
-            # Look for the company's own announcement so the story can lead with it
-            prim = find_primary(" ".join(v.get("carriers") or []) + " " + lead_item["title"], v.get("carriers") or [])
-            if prim:
-                ordered.insert(0, prim)
-                ptext, _ = article_text(prim["url"])
-                if ptext:
-                    texts.insert(0, ({"src": prim["src"], "title": lead_item["title"], "date": lead_item["date"]}, prim["url"], ptext))
-        story = {"id": "a" + h(lead_url), "date": min(it["date"] for it, _, _ in texts), "c": s.get("carriers") or v.get("carriers") or ["Industry"],
-                 "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
-                 "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
-                 "act": s.get("act"), "dates": s.get("dates", []),
-                 "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
-        SHOW_IMAGES = False  # photos are off for now; flip to True to pull lead photos from company pages
-        for sx in (story["srcs"] if SHOW_IMAGES else []):
-            if is_primary(sx["url"]):
-                img = lead_image(sx["url"])
-                if img:
-                    story["img"], story["imgc"] = img, f"Image: {sx['src']}"
-                    break
-        alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
-        missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
-        # Price changes belong on the rate clock; a story without a date can't get there.
-        if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules") and story["imp"] == "up" and not story["act"] and not story["dates"]:
-            found = find_effective_date(story)
-            if found:
-                story["act"] = found["d"]; story["dates"] = [found]
-                story["srcs"].append({"src": found["src"], "url": found["url"]})
+            texts, srcs = [], []
+            for item, v in members[:3]:
+                text, final_url = article_text(item["url"])
+                if text and len(text) >= 400:
+                    texts.append((item, final_url, text))
+                srcs.append({"src": item["src"], "url": final_url})
+            if not texts:
+                item = members[0][0]
+                review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"],
+                                  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."})
+                continue
+            lead_item, lead_url, _ = texts[0]
+            v = members[0][1]
+            prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
+                                   for n, (it, _, tx) in enumerate(texts))
+            try:
+                s = parse_json(claude(MODEL_WRITE, WRITE_SYSTEM, prompt, max_tokens=2500))
+            except Exception as e:
+                print(f"  write failed: {e}", file=sys.stderr); continue
+            ordered = [{"src": it["src"], "url": u} for it, u, _ in texts] + [x for x in srcs if x["url"] not in {u for _, u, _ in texts}]
+            ordered = primary_first(ordered)
+            if not any(is_primary(x["url"]) for x in ordered):
+                # Look for the company's own announcement so the story can lead with it
+                prim = find_primary(" ".join(v.get("carriers") or []) + " " + lead_item["title"], v.get("carriers") or [])
+                if prim:
+                    ordered.insert(0, prim)
+                    ptext, _ = article_text(prim["url"])
+                    if ptext:
+                        texts.insert(0, ({"src": prim["src"], "title": lead_item["title"], "date": lead_item["date"]}, prim["url"], ptext))
+            story = {"id": "a" + h(lead_url), "date": min(it["date"] for it, _, _ in texts), "c": s.get("carriers") or v.get("carriers") or ["Industry"],
+                     "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
+                     "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
+                     "act": s.get("act"), "dates": s.get("dates", []),
+                     "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
+            SHOW_IMAGES = False  # photos are off for now; flip to True to pull lead photos from company pages
+            for sx in (story["srcs"] if SHOW_IMAGES else []):
+                if is_primary(sx["url"]):
+                    img = lead_image(sx["url"])
+                    if img:
+                        story["img"], story["imgc"] = img, f"Image: {sx['src']}"
+                        break
+            alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
+            missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
+            # Price changes belong on the rate clock; a story without a date can't get there.
+            if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules") and story["imp"] == "up" and not story["act"] and not story["dates"]:
+                found = find_effective_date(story)
+                if found:
+                    story["act"] = found["d"]; story["dates"] = [found]
+                    story["srcs"].append({"src": found["src"], "url": found["url"]})
+                else:
+                    review.insert(0, {"type": "missing-date", "story_id": story["id"], "title": story["title"],
+                                      "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."})
+            # Official documents found in the sources go into the library (data/docs.json), the single list agents use
+            story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels") if s.get(k)}
+            if missing:
+                story["unsupported_numbers"] = missing
+                review.insert(0, {"type": "fact-check", "story": story, "note": "Numbers not found in sources: " + ", ".join(missing)})
+                written += 1
+                continue
+            # First to report? Only stories that came from primary sources (company newsrooms, press wires, filings)
+            primary = not any(any(p in x["src"].lower() for p in PRESS) for x in ordered)
+            covered = is_covered(story["title"]) if primary else ["trade press source"]
+            if primary and not covered:
+                story["exclusive"] = True
+                body = (f"Nobody in the trade press has reported this yet (checked {', '.join(x['src'] for x in ordered)} against Google News).\n\n"
+                        f"### Draft story (edit any line, then add the `publish` label)\nTITLE: {story['title']}\nSUMMARY: {story['sum']}\n"
+                        f"EFFECT: {story['plain']}\n\nSources: " + ", ".join(x["url"] for x in ordered) +
+                        f"\n\nClose the issue to discard it.\n\n<!-- parcelwatch-data\n{json.dumps(story)}\n-->")
+                url = notify(f"[First to report] {story['title']}", body, link=story["url"])
+                review.insert(0, {"type": "first-to-report", "issue": url, "story": story})
+                print(f"  FIRST TO REPORT: {story['title']}")
             else:
-                review.insert(0, {"type": "missing-date", "story_id": story["id"], "title": story["title"],
-                                  "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."})
-        # Official documents found in the sources go into the library (data/docs.json), the single list agents use
-        story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels") if s.get(k)}
-        if missing:
-            story["unsupported_numbers"] = missing
-            review.insert(0, {"type": "fact-check", "story": story, "note": "Numbers not found in sources: " + ", ".join(missing)})
+                story.pop("_extras", None)
+                live.insert(0, story); by_id[story["id"]] = story
+                publish_extras(story, s, live)
             written += 1
-            continue
-        # First to report? Only stories that came from primary sources (company newsrooms, press wires, filings)
-        primary = not any(any(p in x["src"].lower() for p in PRESS) for x in ordered)
-        covered = is_covered(story["title"]) if primary else ["trade press source"]
-        if primary and not covered:
-            story["exclusive"] = True
-            body = (f"Nobody in the trade press has reported this yet (checked {', '.join(x['src'] for x in ordered)} against Google News).\n\n"
-                    f"### Draft story (edit any line, then add the `publish` label)\nTITLE: {story['title']}\nSUMMARY: {story['sum']}\n"
-                    f"EFFECT: {story['plain']}\n\nSources: " + ", ".join(x["url"] for x in ordered) +
-                    f"\n\nClose the issue to discard it.\n\n<!-- parcelwatch-data\n{json.dumps(story)}\n-->")
-            url = notify(f"[First to report] {story['title']}", body, link=story["url"])
-            review.insert(0, {"type": "first-to-report", "issue": url, "story": story})
-            print(f"  FIRST TO REPORT: {story['title']}")
-        else:
-            story.pop("_extras", None)
-            live.insert(0, story); by_id[story["id"]] = story
-            publish_extras(story, s, live)
-        written += 1
+        except Exception as e:
+            print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
     live.sort(key=lambda s: s["date"], reverse=True)
     save("news.json", live[:KEEP_LIVE]); save("review.json", review[:200]); save("seen.json", list(seen)[-6000:])
