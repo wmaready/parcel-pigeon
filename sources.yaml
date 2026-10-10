@@ -1,0 +1,140 @@
+# Parcel Pigeon sources. Add or remove lines freely; the pipeline skips any feed that fails.
+# "direct" feeds give full article text and produce the best stories.
+# "discovery" feeds are Google News searches: they catch everything else, but some links
+# can't be read automatically, so those headlines land in data/review.json for you to check.
+
+direct:
+  - {name: TransImpact, url: "https://transimpact.com/blog/rss.xml", house: true}   # our own posts: shown in the TransImpact feed
+  - {name: Supply Chain Dive, url: "https://www.supplychaindive.com/feeds/news/"}
+  - {name: Trucking Dive,     url: "https://www.truckingdive.com/feeds/news/"}
+  - {name: Retail Dive,       url: "https://www.retaildive.com/feeds/news/"}
+  - {name: FreightWaves,      url: "https://www.freightwaves.com/news/feed"}
+  - {name: FreightWaves Parcel, url: "https://www.freightwaves.com/news/category/news/trucking/parcel/feed"}
+  - {name: Modern Retail,     url: "https://www.modernretail.co/feed/"}
+  - {name: DroneXL,           url: "https://dronexl.co/feed/"}
+
+discovery:
+  # Trade outlets worth checking every run
+  - "site:parcelindustry.com"
+  - "site:freightwaves.com parcel OR UPS OR FedEx OR USPS OR Amazon"
+  - "site:supplychaindive.com parcel OR UPS OR FedEx OR USPS OR Amazon"
+  - "site:dcvelocity.com parcel"
+  - "site:logisticsmgmt.com parcel"
+  - "site:modernretail.co shipping OR delivery"
+  - "site:reuters.com UPS OR FedEx OR \"Postal Service\""
+  # Carriers and regulators
+  - "site:about.ups.com"
+  - "site:newsroom.fedex.com"
+  - "site:about.usps.com"
+  - "site:prc.gov"
+  - "OnTrac"
+  - "\"Amazon Shipping\""
+  - "\"DHL eCommerce\" OR \"DHL Express\" rates"
+  # Regional and alternative carriers, one search each
+  - "OnTrac"
+  - "\"Spee-Dee\" delivery"
+  - "\"GLS US\" OR \"GLS Group\" parcel"
+  - "UniUni"
+  - "\"LSO\" \"Lone Star Overnight\" OR LSO parcel"
+  - "Veho delivery"
+  - "\"Better Trucks\""
+  - "GOFO parcel OR \"GOFO Express\""
+  - "Jitsu delivery"
+  - "\"CDL Last Mile\" OR \"CDL\" courier"
+  - "\"DHL eCommerce\""
+  - "SpeedX OR \"Dragonfly Shipping\" OR \"United Delivery Service\""
+  - "\"Pitney Bowes\" parcel OR shipping"
+  # Mergers, acquisitions, funding
+  - "parcel carrier acquisition OR acquires OR merger"
+  - "courier acquires OR acquisition last mile"
+  - "last-mile delivery funding OR raises OR SPAC OR IPO"
+  - "shipping software acquisition OR acquires"
+  # Topics
+  - "UPS surcharge OR \"rate increase\""
+  - "FedEx surcharge OR \"rate increase\""
+  - "USPS price change OR \"Ground Advantage\""
+  - "\"demand surcharge\" OR \"peak surcharge\""
+  - "\"fuel surcharge\" parcel"
+  - "Teamsters UPS"
+  - "\"de minimis\" shipping"
+  - "parcel carrier news"
+  # Opinion, commentary and analysis
+  - "site:freightwaves.com commentary parcel OR UPS OR FedEx OR USPS"
+  - "site:supplychaindive.com opinion OR analysis parcel OR delivery"
+  - "parcel industry analyst OR opinion UPS FedEx Amazon"
+  - "last mile delivery industry news"
+  # Carrier technology
+  - 'UPS API OR "UPS developer" OR "UPS.com" new tool'
+  - 'FedEx API OR "FedEx developer" OR "FedEx Ship Manager"'
+  - 'USPS API OR "USPS Web Tools" OR "USPS Ship"'
+  - "carrier RFID OR robotics OR AI parcel"
+  - "shipping software carrier integration"
+  # Carrier strategy
+  - 'UPS strategy OR "Carol Tome" OR "investor day"'
+  - 'FedEx strategy OR "Network 2.0" OR "Raj Subramaniam"'
+  - '"Postmaster General" OR "USPS plan"'
+
+# Carrier pages and files watched every hour. Any change is compared word-for-word with the last copy;
+# if it matters to shippers, an agent drafts a Parcel Pigeon story and opens a GitHub issue for you to approve.
+# kind: page = web page (also catches newly posted PDF links), pdf = a rate guide or notice file.
+  # Same-day, gig platforms and retailer delivery partnerships
+  - "DoorDash retail delivery OR returns OR partnership"
+  - "\"Uber Eats\" OR \"Uber Direct\" retail delivery OR returns OR partnership"
+  - "Instacart OR Shipt OR Gopuff retailer partnership same-day delivery"
+  - "same-day delivery expansion Walmart OR Target OR \"Home Depot\" OR Lowe's OR \"Best Buy\" OR Costco OR Kroger OR \"Dollar General\""
+  - "Roadie OR Veho OR OnTrac OR \"Better Trucks\" partnership retailer"
+  - "\"Happy Returns\" OR \"FedEx Easy Returns\" OR \"no-box returns\" partnership"
+  - "USPS last-mile agreement OR contract parcel"
+  # 3PLs and special services
+  - "3PL acquisition OR raises e-commerce fulfillment"
+  - "cold chain parcel OR \"UPS Healthcare\" OR \"FedEx Life Sciences\" OR GLP-1 shipping"
+  - "AI agent shipping OR \"parcel audit\" OR \"rate shopping\" launch"
+  - "drone delivery Zipline OR Wing OR \"Prime Air\" OR \"Part 108\""
+  - "delivery robot Serve Robotics OR Starship OR Coco"
+  # UPS EZ Rates and other new pricing programs (no public UPS document as of Oct 2026)
+  - "UPS \"EZ Rates\" OR \"EZ pricing\""
+  - "site:ups.com rate guide OR \"rate changes\" 2027"
+  # Market reports and indexes (news when released; also saved to the library)
+  - "Pitney Bowes Parcel Shipping Index OR BOXpoll"
+  - "ShipMatrix parcel volume OR on-time OR peak capacity"
+  - "parcel market report OR index OR survey 2026 shipping"
+  - "holiday e-commerce forecast Adobe OR Deloitte OR NRF OR Salesforce"
+  - "returns report NRF OR Narvar OR \"Happy Returns\""
+  - "\"Logistics Managers' Index\" OR \"Cass Freight Index\""
+  - "USPS Inspector General report packages OR parcels"
+  # Legal
+  - "lawsuit UPS OR FedEx OR Amazon delivery drivers OR surcharge OR class action"
+  - "NLRB Amazon DSP OR Teamsters UPS grievance"
+  - "patent lawsuit delivery OR parcel OR logistics technology"
+  - "antitrust Amazon logistics OR fulfillment"
+
+watch:
+  # UPS
+  - {carrier: UPS,    kind: page, name: Rate and Service Guides,   url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"}
+  - {carrier: UPS,    kind: page, name: Rate updates and notices,  url: "https://ups.com/rateupdates"}
+  - {carrier: UPS,    kind: page, name: Fuel surcharges,           url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"}
+  - {carrier: UPS,    kind: page, name: Service alerts,            url: "https://www.ups.com/us/en/service-alerts"}
+  - {carrier: UPS,    kind: pdf,  name: Small Business Rates guide, url: "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf"}
+  - {carrier: UPS,    kind: page, name: Developer portal,          url: "https://developer.ups.com/"}
+  # FedEx
+  - {carrier: FedEx,  kind: page, name: Service Guide,             url: "https://www.fedex.com/en-us/service-guide.html"}
+  - {carrier: FedEx,  kind: page, name: Surcharges and fees,       url: "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html"}
+  - {carrier: FedEx,  kind: page, name: Demand surcharges,         url: "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"}
+  - {carrier: FedEx,  kind: page, name: Fuel surcharge,            url: "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"}
+  - {carrier: FedEx,  kind: page, name: Service alerts,            url: "https://www.fedex.com/en-us/service-alerts.html"}
+  - {carrier: FedEx,  kind: pdf,  name: 2026 Standard List Rates,  url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf"}
+  - {carrier: FedEx,  kind: page, name: Developer portal,          url: "https://developer.fedex.com/"}
+  # USPS
+  - {carrier: USPS,   kind: page, name: Price change center,       url: "https://pe.usps.com/PriceChange/Index"}
+  - {carrier: USPS,   kind: page, name: Newsroom releases,         url: "https://about.usps.com/newsroom/national-releases/"}
+  - {carrier: USPS,   kind: page, name: PRC daily filings,         url: "https://www.prc.gov/dockets/daily"}
+  # OnTrac
+  - {carrier: OnTrac, kind: page, name: Surcharges and rates,      url: "https://www.ontrac.com/surchargesandrates/"}
+  - {carrier: OnTrac, kind: page, name: Service alerts,            url: "https://www.ontrac.com/service-alerts/"}
+  - {carrier: OnTrac, kind: pdf,  name: 2026 list rates,           url: "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf"}
+  - {carrier: OnTrac, kind: pdf,  name: Delivery area ZIP list,    url: "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf"}
+  # Regional carriers
+  - {carrier: Spee-Dee, kind: page, name: Service updates,      url: "https://speedeedelivery.com/service-updates/"}
+  - {carrier: UniUni, kind: page, name: Newsroom,               url: "https://www.uniuni.com/news/"}
+  # Amazon
+  - {carrier: Amazon, kind: page, name: Peak surcharge notice,     url: "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026"}
