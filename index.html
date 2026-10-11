@@ -459,6 +459,7 @@ a.drow .dn{text-decoration:underline;text-decoration-color:var(--grid-strong);te
 @media (max-width:620px){.media.wide{float:none;width:100%;margin:0 0 var(--sp-3)}.media.wide.art-only{float:right;width:72px;margin:0 0 var(--sp-2) var(--sp-3)}}
 .cardbody::after{content:"";display:block;clear:both}
 .media.thumb{width:56px;height:56px;margin-top:var(--sp-2)}
+.media.ill{border-radius:10px}.media.ill.wide{width:176px;aspect-ratio:4/3;opacity:.82;filter:saturate(.7)}@media (max-width:620px){.media.ill.wide{float:right;width:96px;aspect-ratio:1;margin:2px 0 var(--sp-2) var(--sp-3)}}.media.ill svg{display:block;width:100%;height:100%}.media.ill figcaption{text-transform:none;font-family:var(--font-ui);font-size:10px;border-radius:5px;right:6px;bottom:6px;color:#fff;background:rgba(0,0,0,.5)}
 .media.thumb figcaption{display:none}
 .media.bthumb{width:72px;height:54px;flex:0 0 auto}
 .media.bthumb figcaption{display:none}
@@ -1853,6 +1854,290 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .shr-alerts b{font-size:13.5px}.shr-alerts small{font-size:12px;color:var(--ink-2)}
 .shr-alerts i{font-style:normal;color:var(--ink-2);font-size:18px}
 .pq-dev summary{font-size:11.5px;color:var(--ink-2);cursor:pointer}.pq-dev .pq-admin{margin-top:8px}
+
+/* ===== Before/after change table on carrier page and guide changes ===== */
+.chg{margin-top:12px;border:1px solid var(--grid-strong);border-radius:12px;overflow:hidden;background:var(--panel-2)}
+.chg-h{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--grid)}
+.chg-h b{font-size:13px}.chg-h span{font:600 10px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent);border:1px solid rgba(94,194,219,.4);padding:3px 6px;border-radius:6px}
+.chg table{width:100%;border-collapse:collapse;font-size:12.5px}
+.chg th{text-align:left;font:600 10px/1.2 var(--font-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);padding:8px 12px;border-bottom:1px solid var(--grid)}
+.chg td{padding:9px 12px;border-bottom:1px solid var(--grid);vertical-align:top;line-height:1.4}
+.chg tr:last-child td{border-bottom:0}
+.chg td small{display:block;color:var(--ink-2);font-size:11px;margin-top:2px}
+.chg-b{color:var(--ink-2);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.25)}
+.chg-b i{text-decoration:none;font-style:normal;color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.chg-a{color:var(--ink);font-weight:600}
+.chg-n{margin:0;padding:9px 12px;font-size:11.5px;color:var(--ink-2);border-top:1px solid var(--grid);line-height:1.45}
+@media (max-width:560px){.chg thead{display:none}.chg tr{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--grid)}.chg tr:last-child{border-bottom:0}
+  .chg td{border:0;padding:6px 12px}.chg td:first-child,.chg td:last-child{grid-column:1/-1}.chg td:first-child{padding-top:10px}.chg td:last-child{padding-bottom:10px}
+  .chg-b::before{content:"Before ";font:600 9.5px var(--font-mono);text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:block}
+  .chg-a::before{content:"After ";font:600 9.5px var(--font-mono);text-transform:uppercase;color:var(--ink-2);display:block;font-weight:600}}
+
+/* ===== Fuel calendar ===== */
+.fcal #fuelCal{padding:14px 16px 16px;display:flex;flex-direction:column;gap:14px}
+.fcal-top{display:flex;gap:14px;align-items:center}
+.fcal-day{flex:none;width:58px;border:1px solid var(--grid-strong);border-radius:12px;overflow:hidden;text-align:center;background:var(--panel-2)}
+.fcal-day span{display:block;font:600 10px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);padding:5px 0}
+.fcal-day span:first-child{background:var(--accent);color:var(--accent-ink)}
+.fcal-day b{display:block;font-size:22px;line-height:1.1}
+.fcal-why{display:flex;flex-direction:column;gap:3px;font-size:13px;line-height:1.45}
+.fcal-why span{color:var(--ink-2);font-size:12.5px}
+.fcal-rows{display:flex;flex-direction:column;border:1px solid var(--grid);border-radius:12px;overflow:hidden}
+.fcal-r{display:grid;grid-template-columns:100px 1fr 64px 18px 64px 66px;align-items:center;gap:6px;padding:9px 12px;border-top:1px solid var(--grid);font-size:13px}
+.fcal-r:first-child{border-top:0}
+.fcal-s{color:var(--ink-2)}
+.fcal-v{font-family:var(--font-mono);text-align:right}
+.fcal-v.nx{font-weight:700;color:var(--ink)}
+.fcal-arrow{color:var(--ink-2);text-align:center}
+.fcal-pend{grid-column:span 2;font-size:11.5px;color:var(--ink-2);text-align:right}
+.fcal-how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.fcal-step{border:1px solid var(--grid);border-radius:10px;padding:9px 10px;display:flex;flex-direction:column;gap:3px;font-size:12px;line-height:1.4;color:var(--ink-2);position:relative}
+.fcal-step b{color:var(--ink);font-size:12px}
+@media (max-width:560px){.fcal-r{grid-template-columns:70px 1fr 54px 14px 54px;font-size:12px;padding:8px 10px}.fcal-r .fchg{display:none}.fcal-pend{grid-column:span 1;font-size:10.5px}
+  .fcal-how{grid-template-columns:1fr}}
+.chg-b.none{text-decoration:none}
+.fcal-pend{white-space:nowrap}
+.chg td,.chg td b{font-family:var(--font-ui)}
+@media (min-width:900px){.fcal #fuelCal{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:start}
+  .fcal-top{grid-column:1/-1}.fcal-how{grid-template-columns:1fr}}
+
+/* ===== New on the map ===== */
+.mnewp{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 12px}
+.mnewp .lbl{margin-right:4px}
+.mnewp .pchip{display:inline-flex;align-items:center;gap:6px}
+.mnewp .rdot{width:8px;height:8px;border-radius:50%;background:var(--rc);display:inline-block}
+.mnewp .pchip.isnew::after{content:"New";font:700 9px/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent);padding:3px 5px;border-radius:5px}
+
+/* ===== Docs: carrier > kind of document ===== */
+.dcarp{margin-bottom:10px;padding:0}
+.dcarp>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;cursor:pointer;list-style:none}
+.dcarp>summary::-webkit-details-marker{display:none}
+.dcarp>summary h2{margin:0;font-size:16px}
+.dcarp[open]>summary{border-bottom:1px solid var(--grid)}
+.dgrp{border-top:1px solid var(--grid)}
+.dgrp:first-of-type{border-top:0}
+.dgrp>summary{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;cursor:pointer;list-style:none;font-size:13.5px}
+.dgrp>summary::-webkit-details-marker{display:none}
+.dgrp>summary b::before{content:"›";display:inline-block;width:14px;color:var(--ink-2);transition:transform .2s}
+.dgrp[open]>summary b::before{transform:rotate(90deg)}
+.drow2{display:flex;flex-direction:column;gap:3px;padding:10px 16px 10px 30px;border-top:1px solid var(--grid)}
+.drow2 .dn{color:var(--ink);font-weight:600;font-size:13.5px;text-decoration:none;line-height:1.35}
+.drow2 a.dn[href]:hover{color:var(--accent)}
+.drow2 .dm{font-size:11.5px;color:var(--ink-2);font-family:var(--font-mono)}
+.drow2 .dd{font-size:12px;color:var(--ink-2)}
+.drow2 .dwhy{font-size:12px;color:var(--ink-2);line-height:1.45}
+.drow2 .dwhy .link{font-size:12px;text-align:left}
+.drow2.pending .dn{color:var(--ink-2)}
+.tag.tnew{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.dgrp .dold{padding:0 16px 8px 30px}
+.dgrp .dold .drow2{padding-left:12px}
+.fexp{display:flex;justify-content:space-between;gap:8px;margin-top:8px;padding-top:8px;border-top:1px solid var(--grid);font-size:11.5px;color:var(--ink-2)}
+.fexp b{color:var(--ink);font-weight:600}
+.fexp{margin-top:0;padding:9px 12px 10px}
+
+/* ===== Coop reactions (top-right of each story) and comments (one quiet line, opens a thread) ===== */
+.card{position:relative}
+.cardhd .rxw{margin-left:auto;position:relative;display:inline-flex}
+.rxp{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 8px 0 4px;border-radius:999px;border:1px solid var(--grid-strong);background:transparent;color:var(--ink-2);font:600 11.5px/1 var(--font-ui);cursor:pointer;transition:border-color .15s,background .15s}
+.rxp .rxf{width:22px;height:22px}
+.rxp.empty{padding:0 4px;opacity:.55}
+.rxp.empty .rxf{filter:grayscale(1)}
+.rxp:hover{opacity:1;border-color:var(--accent)}
+.rxp.on{border-color:rgba(94,194,219,.55);background:rgba(94,194,219,.1);color:var(--ink)}
+.rxpop{position:absolute;right:0;top:calc(100% + 6px);z-index:30;display:flex;gap:2px;padding:6px;border-radius:14px;background:var(--panel);border:1px solid var(--grid-strong);box-shadow:0 14px 34px -12px rgba(0,0,0,.8);opacity:0;transform:translateY(-4px) scale(.96);transform-origin:top right;transition:opacity .15s,transform .15s}
+.rxpop.open{opacity:1;transform:none}
+.rxpop button{display:flex;flex-direction:column;align-items:center;gap:3px;width:64px;padding:6px 2px;border:0;border-radius:10px;background:transparent;color:var(--ink-2);font:600 10.5px/1.1 var(--font-ui);cursor:pointer}
+.rxpop button:hover,.rxpop button.on{background:var(--panel-2);color:var(--ink)}
+.rxpop button.on{box-shadow:inset 0 0 0 1px rgba(94,194,219,.5)}
+.rxpop .rxf.big{width:36px;height:36px;transition:transform .15s}
+.rxpop button:hover .rxf.big{transform:scale(1.12) translateY(-2px)}
+.cmt-t{display:inline-flex;align-items:center;gap:5px;margin-left:auto;border:0;background:none;color:var(--ink-2);font:600 12px/1 var(--font-ui);cursor:pointer;padding:4px 0}
+.cmt-t svg{width:15px;height:15px}
+.cmt-t:hover,.cmt-t[aria-expanded="true"]{color:var(--accent)}
+.cmt{border-top:1px solid var(--grid);padding:10px 16px 14px;display:flex;flex-direction:column;gap:10px;background:var(--panel-2)}
+.cmt-i{display:flex;flex-direction:column;gap:2px;padding:6px 0;border-bottom:1px solid var(--grid)}
+.cmt-h{display:flex;gap:8px;align-items:baseline;font-size:12.5px}.cmt-h span{color:var(--ink-2);font-size:11px}
+.cmt-i p{margin:0;font-size:13px;line-height:1.45;white-space:pre-wrap}
+.cmt-e{margin:0;font-size:12.5px;color:var(--ink-2)}
+.cmt-f{display:flex;flex-direction:column;gap:6px}
+.cmt-f input,.cmt-f textarea{font:13px/1.4 var(--font-ui);color:var(--ink);background:var(--bg);border:1px solid var(--grid-strong);border-radius:10px;padding:8px 10px;resize:vertical}
+.cmt-f input{max-width:220px}
+.cmt-f input:focus,.cmt-f textarea:focus{outline:none;border-color:var(--accent)}
+.cmt-fr{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cmt-msg{font-size:12px;color:var(--ink-2)}
+.cmt-post{height:32px;padding:0 14px;border-radius:9px;border:0;background:var(--accent);color:var(--accent-ink);font:600 12.5px/1 var(--font-ui);cursor:pointer}
+.cmt-post:disabled{opacity:.6}
+.cardhd{position:relative;padding-right:76px}
+.cardhd .rxw{position:absolute;right:12px;top:50%;transform:translateY(-50%);margin:0}
+.cardhd>.rxw::before{content:none!important}
+@media (max-width:560px){.cardhd{padding-right:70px}.cardhd .rxw{right:10px}}
+.cmt-t{align-self:center}
+
+/* ===== Ask Coop ===== */
+.cm-askbtn{display:flex;align-items:center;gap:10px;width:100%;margin:8px 0 4px;padding:10px 12px;border-radius:12px;border:1px solid rgba(158,51,38,.35);background:rgba(158,51,38,.06);color:var(--ink);text-align:left;cursor:pointer;font-family:inherit}
+.cm-askbtn .cm-askf{width:30px;height:30px;flex:none}
+.cm-askbtn span{display:flex;flex-direction:column;gap:2px}.cm-askbtn small{color:var(--ink-2);font-size:11.5px}
+.cm-askit b{color:var(--accent)}
+.ask{position:fixed;inset:0;z-index:420;display:grid;place-items:center;padding:16px}
+.ask-bg{position:absolute;inset:0;background:rgba(3,5,8,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.ask-card{position:relative;width:min(620px,100%);max-height:calc(100dvh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--grid-strong);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.ask-hd{display:flex;align-items:center;gap:12px;padding:16px 18px 10px}
+.ask-hd div{display:flex;flex-direction:column;gap:2px;flex:1}.ask-hd b{font-size:17px}.ask-hd small{color:var(--ink-2);font-size:12px}
+.ask-face{width:42px;height:42px;flex:none}.ask-face.sm{width:28px;height:28px;animation:askbob 1s ease-in-out infinite}
+@keyframes askbob{50%{transform:translateY(-3px) rotate(-4deg)}}
+.ask-x{width:32px;height:32px;border:0;background:none;color:var(--ink-2);font-size:24px;cursor:pointer;border-radius:8px}
+.ask-f{display:flex;gap:8px;padding:0 18px 12px;align-items:flex-end}
+.ask-f textarea{flex:1;font:14px/1.45 var(--font-ui);color:var(--ink);background:var(--bg);border:1px solid var(--grid-strong);border-radius:12px;padding:10px 12px;resize:none}
+.ask-f textarea:focus{outline:none;border-color:var(--accent)}
+.ask-go{height:42px;padding:0 16px;border-radius:12px;border:0;background:var(--accent);color:var(--accent-ink);font:700 13.5px/1 var(--font-ui);cursor:pointer}.ask-go:disabled{opacity:.6}
+.ask-out{padding:0 18px 18px}
+.ask-sug{display:flex;flex-wrap:wrap;gap:6px}
+.ask-sug button{font:12.5px/1.3 var(--font-ui);color:var(--ink-2);background:var(--panel-2);border:1px solid var(--grid);border-radius:999px;padding:7px 11px;cursor:pointer;text-align:left}
+.ask-sug button:hover{color:var(--ink);border-color:var(--accent)}
+.ask-think{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:13px;padding:8px 0}
+.ask-a{border-top:1px solid var(--grid);padding-top:12px;font-size:14px;line-height:1.55}
+.ask-a p{margin:0 0 10px}.ask-a ul{margin:0 0 10px;padding-left:18px}
+.ask-src{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.ask-src a{font-size:12px;color:var(--accent);border:1px solid rgba(94,194,219,.35);border-radius:999px;padding:4px 9px;text-decoration:none}
+.ask-ft{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:11.5px;color:var(--ink-2)}
+.ask-conf{color:#E8862A}
+/* explainers */
+.av{margin:12px 0 4px;padding:12px 14px;border:1px solid var(--grid-strong);border-radius:12px;background:var(--panel-2)}
+.av-t{font-size:12.5px;font-weight:650;margin-bottom:8px}
+.av [style*="--d"]{opacity:0;transform:translateY(4px);transition:opacity .45s ease var(--d),transform .45s ease var(--d)}
+.av.play [style*="--d"]{opacity:1;transform:none}
+.av-row{display:grid;grid-template-columns:minmax(80px,1fr) 2fr auto;gap:8px;align-items:center;font-size:12px;margin:6px 0}
+.av-bars{position:relative;height:18px}
+.av-bars i{position:absolute;left:0;height:8px;border-radius:4px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1) calc(var(--d,0s) + .2s)}
+.av-bars .b0{top:0;background:#3A4656}.av-bars .b1{top:10px;background:var(--accent)}
+.av.play .av-bars i{width:var(--w)}
+.av-v{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-2)}.av-v b{color:var(--ink)}
+.av-dim{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+.av-dim .av-t{grid-column:1/-1;margin:0}
+.av-box{width:150px}.av-box .av-draw path{stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.1s ease}
+.av.play .av-box .av-draw path{stroke-dashoffset:0}
+.av-dl{fill:var(--ink-2);font:10px var(--font-mono)}
+.av-steps{margin:0;padding-left:18px;font-size:12.5px;line-height:1.6}.av-steps .av-res{color:var(--accent)}
+.av-tl{position:relative}.av-tl .av-line{height:2px;background:var(--grid-strong);margin:4px 0 10px;position:relative}
+.av-tl .av-line i{position:absolute;left:0;top:0;height:2px;width:0;background:var(--accent);transition:width 1.6s ease}
+.av-tl.play .av-line i{width:100%}
+.av-tl ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.av-tl li{display:flex;flex-direction:column;gap:2px;font-size:12px}.av-tl li b{font-family:var(--font-mono);font-size:11px;color:var(--accent)}
+.av-stack{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--bg)}
+.av-stack i{width:0;background:var(--c);transition:width .7s ease calc(var(--d) + .2s)}
+.av-split.play .av-stack i{width:var(--w)}
+.av-split ul{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;font-size:12px}
+.av-split li i{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--c);margin-right:6px}
+.av-split .av-tot{grid-column:1/-1;border-top:1px solid var(--grid);padding-top:4px}
+@media (max-width:560px){.av-dim{grid-template-columns:1fr}.av-box{margin:0 auto}.ask{padding:0;place-items:end stretch}.ask-card{border-radius:18px 18px 0 0;max-height:92dvh}}
+.cm-askbtn{width:calc(100% - 24px);margin:8px 12px 4px}
+
+/* ===== Logos: small, uniform light tiles so brand colors stay contained ===== */
+.lgo{display:inline-flex;align-items:center;justify-content:center;flex:none;background:#F4F6F8;border-radius:5px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);overflow:hidden;vertical-align:middle}
+.lgo img{width:84%;height:84%;object-fit:contain;display:block}
+.lgo.lgx{width:15px;height:15px;border-radius:4px;margin-right:.35em;position:relative;top:-.06em}
+.lgo.lgs{width:20px;height:20px;margin-right:7px}
+.lgo.lgl{width:44px;height:44px;border-radius:10px}
+.car.hasl::before{display:none!important}
+.ticker .lgo{display:none}
+.phtl{display:flex;align-items:center;gap:12px}
+.wcnm{display:flex;align-items:center}
+.pln.hasl{display:inline-flex;align-items:center}
+.pchip .lgo.lgs{width:18px;height:18px;margin-right:6px}
+.ask-src a{display:inline-flex;align-items:center}
+/* ===== Story photos: thumbnails in lists, one wide image on the full story ===== */
+.media{margin:0;overflow:hidden;background:var(--panel-2)}
+.media img{display:block;width:100%;height:100%;object-fit:cover}
+.media.thumb{float:none;width:64px;height:64px;border-radius:10px;margin-top:8px}
+.media.wide{aspect-ratio:16/9;border-radius:12px;margin:0 0 12px;position:relative}
+.media.wide figcaption{position:absolute;right:8px;bottom:8px;font-size:10.5px;color:#fff;background:rgba(0,0,0,.55);padding:3px 7px;border-radius:6px}
+.wcl button{display:inline-flex;align-items:center}.wcl .lgo.lgs{width:16px;height:16px;margin-right:6px}
+/* fuel: official source links */
+.fch .fsrc{white-space:nowrap}
+.fch .car{display:inline-flex;align-items:center;gap:6px}
+.fsrcs{display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-4);align-items:center;padding:var(--sp-3) 0 0;font-size:var(--fs-sm)}
+.fsrcs a{color:var(--ink-2);text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
+.fsrcs a:hover{color:var(--accent)}
+.fch .car:has(.lgo)::before{display:none}
+.mkdots button{width:22px;height:22px;padding:8px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.mkdots button::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--grid-strong)}.mkdots button.on::before{background:var(--accent)}
+.mkh .lgo{align-self:center}
+.mktv{display:flex;flex-direction:column;cursor:default}.mktv:hover{transform:none;background:var(--panel)}
+.mktv .mkh .mke{margin-left:auto;white-space:nowrap}
+.mktv .tvw{height:168px;margin:var(--sp-2) calc(-1 * var(--sp-2)) 0}
+.mktv .tvfb{display:none}.mktv.tvfail .tvw{display:none}.mktv.tvfail .tvfb{display:block}
+.mktv .tvfb .mkc{border:0;padding:0;background:none}.mktv .tvfb .mkh{display:none}
+.mknote a{color:inherit}
+/* docs: years inside each carrier */
+.dyr{border-top:1px solid var(--grid)}
+.dyr:first-of-type{border-top:0}
+.dyr>summary{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;list-style:none;font-size:14.5px;background:var(--panel-2)}
+.dyr>summary::-webkit-details-marker{display:none}
+.dyr>summary b{font-family:var(--font-mono);font-weight:600;letter-spacing:.02em}
+.dyr>summary b::before{content:"›";display:inline-block;width:16px;color:var(--ink-2);transition:transform .2s}
+.dyr[open]>summary b::before{transform:rotate(90deg)}
+.dyr[open]>summary{border-bottom:1px solid var(--grid)}
+.dyrb{padding-left:12px;border-left:2px solid var(--grid);margin-left:22px}
+.dcarp>summary h2 .car{display:inline-flex;align-items:center}
+@media (max-width:560px){.dyrb{margin-left:10px;padding-left:4px}}
+.fsrcs{padding:var(--sp-3) var(--sp-4) 0}
+.mktv .tvfb .mke{display:none}
+/* landing from a notification */
+.landed{position:relative;animation:landp 1.4s ease-out 3;box-shadow:0 0 0 2px var(--accent),0 0 0 6px rgba(76,201,240,.18)!important;border-radius:var(--r-lg,12px)}
+.landed::after{content:attr(data-landlbl);position:absolute;top:-11px;left:16px;z-index:2;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
+@keyframes landp{0%{box-shadow:0 0 0 2px var(--accent),0 0 0 0 rgba(76,201,240,.55)}70%{box-shadow:0 0 0 2px var(--accent),0 0 0 14px rgba(76,201,240,0)}100%{box-shadow:0 0 0 2px var(--accent),0 0 0 6px rgba(76,201,240,.18)}}
+@media (prefers-reduced-motion:reduce){.landed{animation:none}}
+/* docs: earnings calls inside each carrier */
+.dcall{display:grid;gap:0;border-bottom:1px solid var(--grid);background:rgba(76,201,240,.04)}
+.dcr{display:grid;grid-template-columns:86px 1fr auto;gap:10px;align-items:center;padding:10px 16px;border-top:1px solid var(--grid)}
+.dcr:first-child{border-top:0}
+.dcr .dct{color:var(--accent)}
+.dcr b{font-weight:600}.dcr small{display:block;color:var(--ink-2);font-size:12px;margin-top:1px}
+.elinks{display:flex;flex-wrap:wrap;gap:4px 14px}.elinks .link{min-height:28px;font-size:11px}
+.erow2 .elinks{margin-top:2px}
+@media (max-width:560px){.dcr{grid-template-columns:1fr;gap:2px}}
+/* Coop: mute control and fun facts */
+.cbub .cmute{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:3px 10px;min-height:26px;border-radius:999px;border:1px solid var(--grid-strong);background:transparent;color:var(--ink-2);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+.cbub .cmute::before{content:"";width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M11 5L6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M11 5L6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6'/%3E%3C/svg%3E") center/contain no-repeat}
+.cbub .cmute:hover{color:var(--ink);border-color:var(--ink-2)}
+.cbub .csig{display:block}
+.cfact{display:block;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9E3326;margin-bottom:3px}
+.cm-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-top:1px solid var(--grid)}
+.cm-fact{border:0;background:none;color:var(--accent);font-size:13px;cursor:pointer;padding:6px 0;min-height:32px}
+.cm-mute{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2);cursor:pointer}
+.cm-mute input{position:absolute;opacity:0;width:1px;height:1px}
+.cm-mute i{width:34px;height:20px;border-radius:999px;background:var(--grid-strong);position:relative;transition:background .2s}
+.cm-mute i::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s}
+.cm-mute input:checked+i{background:var(--accent)}.cm-mute input:checked+i::after{transform:translateX(14px)}
+.cm-mute input:focus-visible+i{outline:2px solid var(--accent);outline-offset:2px}
+.cm-mute b{font-weight:600;color:var(--ink);min-width:44px}
+.cnav.muted .cbadge::after{content:"";position:absolute;inset:-2px;border-radius:50%;box-shadow:0 0 0 2px var(--bg)}
+
+/* story illustrations: postage stamps, centered and the same proportions everywhere */
+.media.ill.wide{width:128px;aspect-ratio:5/6;opacity:1;filter:drop-shadow(0 6px 12px rgba(0,0,0,.45));background:none;border:0;border-radius:0;overflow:visible;display:flex;align-items:center;justify-content:center;margin:2px 0 var(--sp-3) var(--sp-4)}
+.media.ill.wide svg{display:block;width:100%;height:100%}
+@media (max-width:620px){.media.ill.wide{float:right;width:84px;aspect-ratio:5/6;margin:2px 0 var(--sp-2) var(--sp-3)}}
+.landed::after{top:0;left:50%;transform:translateX(-50%);border-radius:0 0 8px 8px}
+.drow2.landed{padding-top:30px}
+
+/* connections: documents on stories, actions on documents, Coop's pointers */
+.rdocs{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:var(--sp-3);padding-top:var(--sp-3);border-top:1px dashed var(--grid-strong)}
+.rdocs>.lbl{flex:0 0 100%}
+.rdoc{display:inline-flex;align-items:center;gap:6px;max-width:100%;padding:5px 10px;border:1px solid var(--grid-strong);border-radius:999px;background:var(--panel-2);font-size:13px}
+.rdoc a{color:var(--ink);text-decoration:none;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38ch}
+.rdoc a:hover{color:var(--accent)}
+.rdoc small{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+.rdoc .link{min-height:24px;font-size:10.5px}
+.dacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.dact{display:inline-flex;align-items:center;gap:4px;min-height:30px;padding:0 12px;border:1px solid var(--grid-strong);border-radius:999px;background:transparent;color:var(--ink);font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap}
+.dact:hover{border-color:var(--accent);color:var(--accent)}
+.dact.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.dact.pri:hover{filter:brightness(1.08);color:var(--accent-ink)}
+.cbub .cacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.cbub .cacts a,.cbub .cacts button{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;border:1px solid #B23A2E;background:#B23A2E;color:#F3ECDD;font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.cbub .cacts button+button,.cbub .cacts a+button{background:transparent;color:#9E3326}
+@media (max-width:560px){.rdoc a{max-width:22ch}}
+@media (max-width:560px){.dact{min-height:28px;padding:0 10px;font-size:10.5px}}
 </style>
 </head>
 <body>
@@ -1936,6 +2221,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
   <input id="mq" type="hidden"><div class="qon" data-qfor="mq" hidden></div>
   <div class="view" data-view="deals"><div class="cards" id="nDeals"></div></div>
   <div class="view" data-view="map">
+    <div class="mnewp" id="mNewP" hidden></div>
     <div class="panel wmap"><div class="ph"><h2>Where they are</h2><span class="lbl">Tap a busy spot to zoom in</span></div>
       <div class="wkey" aria-label="How to read the map lines">
         <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#DCE3EA" stroke-width="2"/><path d="M48 3l7 4-7 4z" fill="#DCE3EA"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Owns or bought</b> · line runs from the owner to the company it owns</span></div>
@@ -1974,6 +2260,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
     <div class="panel"><div class="ph"><h2>This week</h2></div>
       <p class="fsum" id="fuelSum"></p>
       <div class="fcards" id="fuelNow"></div>
+      <div class="fsrcs" id="fuelSrcs"></div>
       <details class="about pb"><summary>How to read this</summary><p>Fuel surcharges are a percentage of transportation charges. Changes are in percentage points (diesel in dollars). Red means fuel costs went up, green means they went down. "—" means no published rate for that week.</p></details></div>
     <div class="panel"><div class="ph"><h2 id="fcTitle">Fuel surcharge over time</h2></div>
       <div class="pb fctl">
@@ -1992,12 +2279,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
   <div class="view" data-view="library"><div class="qon" data-qfor="dq" hidden></div>
     <div class="chips" id="docCar" role="group" aria-label="Carrier" style="margin-bottom:var(--sp-3)"></div>
     <div id="lib"></div>
-    <details class="about"><summary>About these documents</summary><p>Every link opens the carrier's, USPS's or the regulator's own copy. Each document is filed under the year it applies to; "Effective" and "Updated" dates are read from the document itself, checked Oct 9, 2026. Some carriers replace a file at the same address when they update it, so the dates show the version we last checked.</p></details>
-  </div>
-  <div class="view" data-view="earnings">
-    <div class="panel"><div class="ph"><h2>Next earnings reports</h2></div><div id="earnNext"></div></div>
-    <div id="earnList" style="margin-top:var(--sp-4)"></div>
-    <details class="about"><summary>About these numbers</summary><p>Revenue in billions as reported in each company's release; EPS is adjusted diluted. FedEx results through FY26 Q4 include FedEx Freight, which became a separate company in June 2026. UPS does not post call transcripts; its event pages hold the webcast and slides.</p></details>
+    <details class="about"><summary>About these documents</summary><p>Every link opens the carrier's, USPS's or the regulator's own copy. Each carrier opens to its next and last earnings call, then one drop-down per year with the documents and earnings reports for that year; "Effective" and "Updated" dates are read from the document itself, checked Oct 9, 2026. Some carriers replace a file at the same address when they update it, so the dates show the version we last checked.</p></details>
   </div>
   <div class="view" data-view="alerts">
     <div class="panel" style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Rate guide and terms changes</h2><span class="lbl" id="gcCount"></span></div><div id="gcList"></div></div>
@@ -3285,9 +3567,9 @@ const span=x=>x.end?`${fmtD(x.d)}–${fmtD(x.end).replace(/^[A-Za-z]+ /,m=>fmtD(
 /* carrier colors: one class per carrier, used everywhere a carrier is named */
 const CAR_CLS=[[/^FedEx Freight$/,'c-fdx'],[/^FedEx|^FDX$/,'c-fdx'],[/^UPS/,'c-ups'],[/^USPS$/,'c-usps'],[/^Amazon/,'c-amz'],[/^OnTrac/,'c-ontrac'],[/^DHL/,'c-dhl'],[/^(Regional|Spee-Dee|GLS US|LSO|Veho|UniUni|GOFO|Better Trucks|CDL|Jitsu)$/,'c-reg']];
 const carCls=n=>{const m=CAR_CLS.find(([r])=>r.test(String(n).trim()));return m?m[1]:''};
-const carSpan=n=>{const k=carCls(n);return k?`<span class="car ${k}">${esc(n)}</span>`:esc(n)};
+const carSpan=n=>{const k=carCls(n),lg=typeof logoImg==='function'?logoImg(n,'lgx'):'';return k||lg?`<span class="car ${k}${lg?' hasl':''}">${lg}${esc(n)}</span>`:esc(n)};
 const carList=(s,sep)=>String(s).split(/\s*(?:·|,)\s*/).filter(Boolean).map(carSpan).join(sep||' · ');
-const carChip=c=>{const k=carCls(c);return k?`<i class="sq ${k}" aria-hidden="true"></i>`:''};
+const carChip=c=>{const lg=typeof logoImg==='function'?logoImg(c,'lgx'):'';if(lg)return lg;const k=carCls(c);return k?`<i class="sq ${k}" aria-hidden="true"></i>`:''};
 const kindTag=n=>n.kind&&n.kind!=='News'?`<span class="tag">${esc(n.kind)}</span>`:'';
 const PRIMARY=['ups.com','fedex.com','usps.com','prc.gov','dhl.com','ontrac.com','amazon.com','aboutamazon.com','uniuni.com','gofo.com','speedeedelivery.com','gls-us.com','lso.com','shipveho.com','bettertrucks.com','jitsu.com','cdldelivery.com','sec.gov','federalregister.gov','congress.gov','uspsoig.gov','businesswire.com','prnewswire.com','globenewswire.com','wwex.com','uber.com','doordash.com','homedepot.com','instacart.com','descartes.com','zipline.com','serverobotics.com','starship.xyz','ship.com','shipbob.com','teamster.org','roadie.com','walmart.com','corporate.walmart.com','target.com','kroger.com','shipmatrix.com','pitneybowes.com','adobe.com','deloitte.com','salesforce.com','narvar.com','alixpartners.com','the-lmi.com','shipstation.com','nrf.com','oversight.gov','uspsoig.gov','census.gov'];
 const isPrimary=u=>{const h=String(u||'').replace(/^https?:\/\//,'').split('/')[0].toLowerCase();return PRIMARY.some(d=>h===d||h.endsWith('.'+d))};
@@ -3305,6 +3587,354 @@ DOCS.length=0;DOCLIB.forEach(d=>DOCS.push(d));
 const DOC_TC={'Rate guide':'--t-rates','Service guide':'--t-rates','Special program':'--t-strat','Peak':'--t-surch','GRI':'--t-surch','Fuel':'--t-fuel'};
 
 /* ================= helpers ================= */
+/* ===== Company logos: each company's own logo, unaltered, only to identify it (pipeline/media.py fills data/logos.json) ===== */
+var LOGOS={},LOGO_NAMES=null;
+const LOGO_CAR={'ups':'ups','fedex':'fedex','usps':'usps','amazon':'amzship','amazon shipping':'amzship','ontrac':'ontrac','dhl':'dhlexpress','dhl express':'dhlexpress','dhl ecommerce':'dhlecom'};
+function logoId(x){if(!x)return null;if(typeof x==='object')return x.id||logoId(x.name||x.n);
+  const k=String(x).toLowerCase().trim();if(LOGO_CAR[k])return LOGO_CAR[k];if(typeof PL!=='undefined'&&PL[k])return k;
+  if(!LOGO_NAMES&&typeof PLAYERS!=='undefined'){LOGO_NAMES={};PLAYERS.forEach(p=>[p.n,...(p.al||[])].forEach(n=>{LOGO_NAMES[String(n).toLowerCase()]=p.id}))}
+  return LOGO_NAMES&&LOGO_NAMES[k]||null}
+function logoImg(x,cls){const id=logoId(x),r=id&&LOGOS[id];if(!r||!r.f)return '';
+  return `<span class="lgo ${cls||''}" aria-hidden="true"><img src="${r.f}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`}
+fetch('data/logos.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Object.keys(j).length){LOGOS=j;LOGO_NAMES=null;if(typeof renderAll==='function')renderAll()}}).catch(()=>{});
+
+// Coop reaction faces: Like, Love, Dislike, Shocked (32x32, no ids so they can repeat on a page)
+const RX_HEAD='<circle cx="15" cy="17" r="11" fill="#A7B0BC" stroke="#6E7886" stroke-width="1"/><path d="M6.5 22.5 Q11 27.6 18.5 27.6" fill="none" stroke="#3E9C82" stroke-width="2.2" stroke-linecap="round"/><path d="M9.5 25.3 Q13 27.2 17 27.4" fill="none" stroke="#7E5AA6" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>';
+const RX_BEAK='<path d="M25.2 14 Q29.4 14.8 31 17.2 L25.2 18.4 Z" fill="#3A3F48"/><ellipse cx="25.6" cy="13.9" rx="1.6" ry="1.1" fill="#E6E9EE"/>';
+const RX_EYE='<circle cx="19.5" cy="15.3" r="3.3" fill="#3A3F48"/><circle cx="19.5" cy="15.3" r="2.6" fill="#E8862A"/><circle cx="19.8" cy="15.3" r="1.25" fill="#120C08"/><circle cx="20.5" cy="14.4" r=".55" fill="#FFF4D6"/>';
+const RX_FACES={
+  like:{l:'Like',svg:`${RX_HEAD}${RX_BEAK}${RX_EYE}<path d="M16 11.3 Q19.5 9.6 23 11.4" fill="none" stroke="#6E7886" stroke-width="1.2" stroke-linecap="round"/>
+    <g transform="translate(0.5 19.5)"><circle cx="5.5" cy="5.8" r="5.6" fill="#5EC2DB"/><path d="M3.4 6.2v3.3M5.2 9.5h3a1 1 0 0 0 1-.8l.6-2.6a1 1 0 0 0-1-1.2H6.9l.4-1.9a.9.9 0 0 0-1.7-.5L4.4 5.6v3.9" fill="none" stroke="#06121A" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/></g>`},
+  love:{l:'Love',svg:`${RX_HEAD}${RX_BEAK}<path d="M19.5 19.2 C13.6 15.3 15.2 10.8 17.7 11.2 C18.7 11.4 19.2 12.2 19.5 12.9 C19.8 12.2 20.3 11.4 21.3 11.2 C23.8 10.8 25.4 15.3 19.5 19.2 Z" fill="#E5484D" stroke="#9E1C25" stroke-width=".6"/>
+    <path d="M6.2 9.3 C3.7 7.6 4.4 5.7 5.5 5.9 C5.9 6 6.1 6.3 6.2 6.6 C6.3 6.3 6.5 6 6.9 5.9 C8 5.7 8.7 7.6 6.2 9.3 Z" fill="#E5484D" opacity=".85"/>`},
+  dislike:{l:'Dislike',svg:`${RX_HEAD}${RX_BEAK}${RX_EYE}<path d="M15.6 15.1 L23.4 12.4 L23.6 9.5 L15.4 11.2 Z" fill="#A7B0BC"/><path d="M15.4 13.2 L23.5 11.1" fill="none" stroke="#3A3F48" stroke-width="1.6" stroke-linecap="round"/>
+    <g transform="translate(0.5 19.5)"><circle cx="5.5" cy="5.8" r="5.6" fill="#8D99A6"/><path d="M7.6 5.4V2.1M5.8 2.1h-3a1 1 0 0 0-1 .8l-.6 2.6a1 1 0 0 0 1 1.2h1.9l-.4 1.9a.9.9 0 0 0 1.7.5L6.6 6V2.1" fill="none" stroke="#06121A" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/></g>`},
+  shocked:{l:'Shocked',svg:`${RX_HEAD}<path d="M25.2 13.4 Q29.6 13.6 31.2 15.4 L25.3 16.3 Z" fill="#3A3F48"/><path d="M25.3 18.4 L30.2 20.4 Q28 21.6 25.2 20.1 Z" fill="#2B2F36"/><ellipse cx="25.6" cy="13.3" rx="1.6" ry="1.1" fill="#E6E9EE"/>
+    <circle cx="19.4" cy="15" r="4.3" fill="#FFFFFF" stroke="#3A3F48" stroke-width="1"/><circle cx="19.7" cy="15" r="1.3" fill="#120C08"/><path d="M15.4 9.4 Q19.4 6.8 23.6 9" fill="none" stroke="#3A3F48" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M5.2 6.2v3.6" stroke="#FFC233" stroke-width="1.8" stroke-linecap="round"/><circle cx="5.2" cy="12.1" r="1" fill="#FFC233"/>`}};
+const rxFace=(k,cls)=>`<svg class="${cls||'rxf'}" viewBox="0 0 32 32" aria-hidden="true">${RX_FACES[k].svg}</svg>`;
+
+/* ===== Reactions and comments (live once config.json names the Parcel Pigeon API; reactions also work on this device without it) ===== */
+var RXN={api:null,mine:{},counts:{},loaded:{}};
+try{RXN.mine=JSON.parse(localStorage.getItem('pw-rx')||'{}')||{}}catch(e){}
+function rxDev(){try{let d=localStorage.getItem('pw-dev');if(!d){d=(crypto.randomUUID?crypto.randomUUID():String(Math.random()).slice(2)+Date.now());localStorage.setItem('pw-dev',d)}return d}catch(e){return 'anon'}}
+const RX_KEYS=['like','love','dislike','shocked'];
+function rxTotal(id){const c=RXN.counts[id]||{};return RX_KEYS.reduce((a,k)=>a+(c[k]||0),0)}
+function rxPill(n){const id=n.id,mine=RXN.mine[id],c=RXN.counts[id]||{},tot=rxTotal(id);
+  const top=mine||RX_KEYS.filter(k=>c[k]).sort((a,b)=>c[b]-c[a])[0];
+  return `<span class="rxw" data-rxw="${id}"><button type="button" class="rxp${mine?' on':''}${top?'':' empty'}" data-rx="${id}" aria-haspopup="true" aria-label="${mine?'Your reaction: '+RX_FACES[mine].l+'. Change it':'React to this story'}">${rxFace(top||'like')}${tot?`<b>${tot}</b>`:''}</button></span>`}
+function rxRefresh(id){document.querySelectorAll(`[data-rxw="${id}"]`).forEach(el=>{const n={id};el.outerHTML=rxPill(n)});
+  document.querySelectorAll(`[data-cmtc="${id}"]`).forEach(el=>{el.textContent=cmtLabel(id)})}
+function rxPop(btn){rxClose();const id=btn.dataset.rx,c=RXN.counts[id]||{},mine=RXN.mine[id];
+  const pop=document.createElement('div');pop.className='rxpop';pop.setAttribute('role','menu');
+  pop.innerHTML=RX_KEYS.map(k=>`<button type="button" role="menuitemradio" aria-checked="${mine===k}" class="${mine===k?'on':''}" data-rxk="${k}" data-rxid="${id}" title="${RX_FACES[k].l}">${rxFace(k,'rxf big')}<span>${RX_FACES[k].l}${c[k]?` · ${c[k]}`:''}</span></button>`).join('');
+  btn.parentNode.appendChild(pop);requestAnimationFrame(()=>pop.classList.add('open'))}
+function rxClose(){document.querySelectorAll('.rxpop').forEach(p=>p.remove())}
+function rxPick(id,k){const prev=RXN.mine[id],c=RXN.counts[id]=RXN.counts[id]||{};
+  if(prev)c[prev]=Math.max(0,(c[prev]||0)-1);
+  if(prev===k)delete RXN.mine[id];else{RXN.mine[id]=k;c[k]=(c[k]||0)+1}
+  try{localStorage.setItem('pw-rx',JSON.stringify(RXN.mine))}catch(e){}
+  if(RXN.api)fetch(RXN.api+'/react',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({story:id,kind:RXN.mine[id]||null,device:rxDev()})}).catch(()=>{});
+  rxClose();rxRefresh(id)}
+document.addEventListener('click',e=>{const k=e.target.closest('[data-rxk]');if(k){e.preventDefault();e.stopPropagation();rxPick(k.dataset.rxid,k.dataset.rxk);return}
+  const b=e.target.closest('[data-rx]');if(b){e.preventDefault();e.stopPropagation();const open=b.parentNode.querySelector('.rxpop');open?rxClose():rxPop(b);return}
+  if(!e.target.closest('.rxpop'))rxClose()},true);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')rxClose()});
+// counts for the stories on screen, one request
+function rxLoad(ids){if(!RXN.api)return;ids=ids.filter(id=>!RXN.loaded[id]).slice(0,80);if(!ids.length)return;ids.forEach(id=>RXN.loaded[id]=1);
+  fetch(RXN.api+'/counts?ids='+encodeURIComponent(ids.join(','))).then(r=>r.ok?r.json():null).then(j=>{if(!j)return;
+    Object.entries(j).forEach(([id,c])=>{RXN.counts[id]=c;rxRefresh(id)})}).catch(()=>{})}
+/* comments: one quiet line under each story; opens a short thread */
+function cmtLabel(id){const n=(RXN.counts[id]||{}).cc||0;return n?`${n} comment${n>1?'s':''}`:'Comment'}
+function cmtBar(n){if(!RXN.api)return '';return `<button type="button" class="cmt-t" data-cmt="${n.id}" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><span data-cmtc="${n.id}">${cmtLabel(n.id)}</span></button>`}
+function cmtAgo(ts){const m=Math.round((Date.now()-ts)/6e4);return m<1?'just now':m<60?m+'m':m<1440?Math.round(m/60)+'h':Math.round(m/1440)+'d'}
+function cmtOpen(btn){const id=btn.dataset.cmt,card=btn.closest('article,.wi')||btn.parentNode;let box=card.querySelector('.cmt');
+  if(box){box.remove();btn.setAttribute('aria-expanded','false');return}
+  btn.setAttribute('aria-expanded','true');box=document.createElement('div');box.className='cmt';box.innerHTML='<div class="cmt-list"><p class="cmt-e">Loading…</p></div>';card.appendChild(box);
+  let name='';try{name=localStorage.getItem('pw-name')||''}catch(e){}
+  const form=document.createElement('form');form.className='cmt-f';
+  form.innerHTML=`<input name="name" maxlength="40" placeholder="Display name" value="${esc(name)}" required><textarea name="body" maxlength="600" rows="2" placeholder="Add to the discussion" required></textarea><div class="cmt-fr"><span class="cmt-msg" role="status"></span><button class="cmt-post" type="submit">Post</button></div>`;
+  box.appendChild(form);
+  const paint=list=>{box.querySelector('.cmt-list').innerHTML=list.length?list.map(c=>`<div class="cmt-i"><div class="cmt-h"><b>${esc(c.name)}</b><span>${cmtAgo(c.ts)}</span></div><p>${esc(c.body)}</p></div>`).join(''):'<p class="cmt-e">No comments yet. Start the discussion.</p>'};
+  fetch(RXN.api+'/comments?story='+encodeURIComponent(id)).then(r=>r.ok?r.json():[]).then(paint).catch(()=>paint([]));
+  form.addEventListener('submit',async ev=>{ev.preventDefault();const f=new FormData(form),msg=form.querySelector('.cmt-msg'),b=form.querySelector('button');
+    const nm=String(f.get('name')).trim(),body=String(f.get('body')).trim();if(!nm||!body)return;try{localStorage.setItem('pw-name',nm)}catch(e){}
+    b.disabled=true;msg.textContent='Posting…';
+    try{const r=await fetch(RXN.api+'/comments',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({story:id,name:nm,body,device:rxDev()})}),j=await r.json();
+      if(j.ok){form.body.value='';msg.textContent='';const c=RXN.counts[id]=RXN.counts[id]||{};c.cc=(c.cc||0)+1;rxRefresh(id);
+        fetch(RXN.api+'/comments?story='+encodeURIComponent(id)).then(r=>r.json()).then(paint)}
+      else msg.textContent=j.reason||'Couldn’t post that.'}
+    catch(err){msg.textContent='Couldn’t reach the server. Try again.'}
+    b.disabled=false})}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-cmt]');if(!b)return;e.preventDefault();e.stopPropagation();cmtOpen(b)},true);
+// the API address lives in config.json at the top of the site (set once Cloudflare is ready)
+fetch('config.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.api){RXN.api=String(j.api).replace(/\/$/,'');window.PP_API=RXN.api;if(typeof renderAll==='function')renderAll();if(typeof askCoopReady==='function')askCoopReady()}}).catch(()=>{});
+
+/* ===== Ask Coop: a parcel expert grounded in this app (guides, stories, rate clock, fuel, docs, market map) =====
+   The app finds the relevant passages itself (it downloads a carrier's guide shelf only when asked about that carrier),
+   then sends the question and those passages to the Parcel Pigeon API. Coop answers only from them, cites sources,
+   and can play a short animated explainer. Needs config.json "api" (Cloudflare). */
+var ASK={busy:false,el:null,last:null};
+const ASK_STOP=new Set('the a an and or of to in on for with is are was be what how why when does do can will my our your their it this that as at by from about which who much many per vs than there any if should'.split(' '));
+const askTerms=q=>[...new Set(String(q).toLowerCase().replace(/[’']/g,'').match(/[a-z0-9$%.]{2,}/g)||[])].filter(w=>!ASK_STOP.has(w));
+const ASK_CARS=[['UPS',/\bups\b/i],['FedEx',/\bfed\s?ex\b/i],['USPS',/\busps\b|postal|post office|ground advantage|priority mail/i],['Amazon',/\bamazon\b/i],
+  ['OnTrac',/\bontrac\b|lasership/i],['DHL',/\bdhl\b/i],['GLS US',/\bgls\b/i],['LSO',/\blso\b/i],['Spee-Dee',/spee-?dee/i],['Veho',/\bveho\b/i]];
+function askScore(text,terms){const t=String(text).toLowerCase();let s=0;terms.forEach(w=>{if(t.includes(w))s+=w.length>4?2:1});return s}
+async function askShelf(q,terms){
+  // which carriers' guides to read: the ones named, else the big two
+  let cars=ASK_CARS.filter(([c,r])=>r.test(q)).map(x=>x[0]);if(!cars.length)cars=['UPS','FedEx'];
+  let idx=null;try{idx=await (await fetch('data/guides/index.json')).json()}catch(e){return []}
+  const out=[];
+  for(const c of cars.slice(0,3)){const m=idx&&idx[c];if(!m)continue;
+    try{const part=await (await fetch(m.file)).json();
+      part.chunks.forEach(([i,t])=>{const d=part.docs[i],s=askScore(t,terms)+askScore(d.n,terms)*.5;if(s>0)out.push({s,c,t,d})})}catch(e){}}
+  return out.sort((a,b)=>b.s-a.s).slice(0,5)}
+function askContext(q,terms){const L=[];
+  NEWS.map(n=>[askScore(n.title+' '+n.sum+' '+(n.plain||''),terms),n]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,4).forEach(([,n])=>
+    L.push(`STORY ${n.date} [${(n.c||[]).join(', ')}] ${n.title}. ${n.sum} Effect: ${n.plain||''} (source: ${n.url||''})`));
+  DATES.map(x=>[askScore(x.w+' '+x.c+' '+(x.note||'')+' '+JSON.stringify(x.fees||''),terms),x]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,4).forEach(([,x])=>
+    L.push(`RATE CLOCK ${x.d}${x.end?' to '+x.end:''} ${x.c}: ${x.w}.${x.note?' '+x.note:''}${x.fees?' Fees: '+x.fees.map(f=>f.join(' ')).join('; '):''}`));
+  DOCS.map(d=>[askScore(d.n+' '+d.t+' '+d.c+' '+(d.d||''),terms),d]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,5).forEach(([,d])=>
+    L.push(`DOCUMENT ${d.c} · ${d.t} · ${d.n}${d.eff?' · effective '+d.eff:''} (${d.u||'not public'})`));
+  if(/fuel|diesel|jet|surcharge %|fuel surcharge/i.test(q)){try{const u=fuelNow(1),f=fuelNow(2),ua=fuelNow(4),fa=fuelNow(5),dn=DIESEL.at(-1);
+    L.push(`FUEL week of ${FUEL.eff}: UPS ground ${u[1]}%, UPS domestic air ${ua[4]}%, FedEx ground ${f[2]}%, FedEx domestic air ${fa[5]}%, OnTrac ground ${FUEL.current.OnTrac.ground}%, U.S. diesel $${dn[1]} (${dn[0]}). Ground rates follow the EIA diesel price from two weeks earlier; air follows Gulf Coast jet fuel. New rates start each Monday.`)}catch(e){}}
+  PLAYERS.filter(p=>new RegExp('\\b'+p.n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i').test(q)).slice(0,3).forEach(p=>{
+    const own=PEDGES.filter(e=>(e.a===p.id||e.b===p.id)&&['owns','acquired','merged','sold','spun'].includes(e.k)).slice(0,6).map(e=>e.t).join('; ');
+    L.push(`COMPANY ${p.n}: ${p.s||''} HQ ${p.hq||'n/a'}. ${own?'Ownership: '+own:''}`)});
+  return L.join('\n').slice(0,4200)}
+/* ---------- explainers: small, animated, built from numbers in the answer ---------- */
+const askNum=v=>{const x=parseFloat(String(v).replace(/[^0-9.\-]/g,''));return isFinite(x)?x:null};
+function askViz(v){if(!v||typeof v!=='object')return '';const T=v.title?`<div class="av-t">${esc(v.title)}</div>`:'';
+  if(v.type==='compare'&&Array.isArray(v.items)){const it=v.items.slice(0,5).map(i=>({l:i.label,b:askNum(i.before),a:askNum(i.after)})).filter(i=>i.a!=null);
+    const mx=Math.max(...it.flatMap(i=>[i.a,i.b||0]))||1,u=v.unit||'',fm=x=>x==null?'—':(u==='$'?'$'+x.toFixed(2):x+(u&&u!=='$'?u:''));
+    return `<div class="av av-cmp">${T}${it.map((i,k)=>`<div class="av-row" style="--d:${k*.18}s"><span class="av-l">${esc(i.l)}</span><div class="av-bars"><i class="b0" style="--w:${(i.b||0)/mx*100}%"></i><i class="b1" style="--w:${i.a/mx*100}%"></i></div><span class="av-v">${fm(i.b)} → <b>${fm(i.a)}</b></span></div>`).join('')}</div>`}
+  if(v.type==='dim'){const l=askNum(v.l),w=askNum(v.w),h=askNum(v.h),dv=askNum(v.divisor)||139,act=askNum(v.actual);if(!l||!w||!h)return '';
+    const cube=l*w*h,dimw=Math.ceil(cube/dv),bill=Math.max(dimw,Math.ceil(act||0));
+    return `<div class="av av-dim">${T}<svg viewBox="0 0 160 110" class="av-box"><g class="av-draw"><path d="M30 40 L90 25 L140 40 L80 55 Z" fill="#1E2833" stroke="#5EC2DB"/><path d="M30 40 L80 55 L80 100 L30 85 Z" fill="#17202A" stroke="#5EC2DB"/><path d="M80 55 L140 40 L140 85 L80 100 Z" fill="#121A22" stroke="#5EC2DB"/></g>
+      <text x="36" y="108" class="av-dl">${l} in</text><text x="112" y="100" class="av-dl">${w} in</text><text x="2" y="62" class="av-dl" text-anchor="start">${h} in</text></svg>
+      <ol class="av-steps"><li style="--d:.3s">${l} × ${w} × ${h} = <b>${cube.toLocaleString()}</b> cubic in</li><li style="--d:.9s">÷ ${dv} = ${(cube/dv).toFixed(1)} → <b>${dimw} lb</b> dimensional weight (rounded up)</li>
+      ${act!=null?`<li style="--d:1.5s">Actual weight <b>${act} lb</b></li><li style="--d:2.1s" class="av-res">Billed as <b>${bill} lb</b>, the greater of the two</li>`:''}</ol></div>`}
+  if(v.type==='timeline'&&Array.isArray(v.steps)){const st=v.steps.slice(0,6);
+    return `<div class="av av-tl">${T}<div class="av-line"><i></i></div><ol>${st.map((s,k)=>`<li style="--d:${k*.35}s"><b>${esc(s.date||'')}</b><span>${esc(s.label||'')}</span></li>`).join('')}</ol></div>`}
+  if(v.type==='split'&&Array.isArray(v.parts)){const ps=v.parts.slice(0,6).map(p=>({l:p.label,v:askNum(p.value)})).filter(p=>p.v!=null&&p.v>=0),tot=ps.reduce((a,p)=>a+p.v,0)||1,cols=['#5EC2DB','#7E5AA6','#3E9C82','#E8862A','#F28DB2','#8D99A6'];
+    return `<div class="av av-split">${T}<div class="av-stack">${ps.map((p,k)=>`<i style="--w:${p.v/tot*100}%;--c:${cols[k]};--d:${k*.3}s" title="${esc(p.l)}"></i>`).join('')}</div><ul>${ps.map((p,k)=>`<li style="--c:${cols[k]};--d:${k*.3}s"><i></i>${esc(p.l)} <b>${v.unit==='%'?p.v+'%':'$'+p.v.toFixed(2)}</b></li>`).join('')}<li class="av-tot">Total <b>${v.unit==='%'?tot+'%':'$'+tot.toFixed(2)}</b></li></ul></div>`}
+  return ''}
+function askFmt(t){return esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').split(/\n{2,}/).map(p=>/^- /m.test(p)?`<ul>${p.split('\n').map(l=>`<li>${l.replace(/^- /,'')}</li>`).join('')}</ul>`:`<p>${p.replace(/\n/g,'<br>')}</p>`).join('')}
+/* ---------- the sheet ---------- */
+const ASK_SUGG=['How is dimensional weight calculated for UPS Ground?','When does the FedEx 2027 GRI take effect?','Why did ground fuel surcharges drop this week?','What triggers an additional handling surcharge?'];
+function askOpen(q){if(!window.PP_API)return;askClose();
+  const el=document.createElement('div');el.className='ask';el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');el.setAttribute('aria-label','Ask Coop');
+  el.innerHTML=`<div class="ask-bg" data-askx></div><div class="ask-card"><div class="ask-hd">${rxFace('like','ask-face')}<div><b>Ask Coop</b><small>Answers from the carriers' own guides and everything in Parcel Pigeon</small></div><button class="ask-x" data-askx aria-label="Close">×</button></div>
+    <form class="ask-f"><textarea name="q" rows="2" maxlength="400" placeholder="Ask a parcel question: surcharges, DIM weight, zones, fuel, contracts…" required></textarea><button class="ask-go" type="submit">Ask</button></form>
+    <div class="ask-out"><div class="ask-sug">${ASK_SUGG.map(s=>`<button type="button" data-asks="${esc(s)}">${esc(s)}</button>`).join('')}</div></div></div>`;
+  document.body.appendChild(el);ASK.el=el;document.documentElement.style.overflow='hidden';
+  const f=el.querySelector('form');f.addEventListener('submit',e=>{e.preventDefault();askRun(f.q.value)});
+  f.q.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askRun(f.q.value)}});
+  if(q){f.q.value=q;askRun(q)}else setTimeout(()=>f.q.focus(),50)}
+function askClose(){if(ASK.el){ASK.el.remove();ASK.el=null;document.documentElement.style.overflow=''}}
+async function askRun(q){q=String(q||'').trim();if(!q||ASK.busy||!ASK.el)return;ASK.busy=true;const out=ASK.el.querySelector('.ask-out'),btn=ASK.el.querySelector('.ask-go');btn.disabled=true;
+  out.innerHTML=`<div class="ask-think">${rxFace('shocked','ask-face sm')}<span>Checking the guides…</span></div>`;
+  try{const terms=askTerms(q),shelf=await askShelf(q,terms),ctx=askContext(q,terms);
+    const passages=shelf.map(x=>({c:x.c,doc:x.d.n,type:x.d.t,url:x.d.u,text:x.t.slice(0,1100)}));
+    const r=await fetch(window.PP_API+'/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({q,ctx,passages,device:rxDev()})});
+    const j=await r.json();
+    if(!j.ok){out.innerHTML=`<div class="ask-a"><p>${esc(j.reason||'Coop is out of the office right now. Try again later.')}</p></div>`}
+    else{const src=(j.sources||[]).filter(s=>s&&s.url).slice(0,5);
+      out.innerHTML=`<div class="ask-a">${askFmt(j.answer||'')}${askViz(j.viz)}
+        ${src.length?`<div class="ask-src"><span class="lbl">Sources</span>${src.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${logoImg(String(s.label||'').split(/[ :·]/)[0],'lgx')}${esc(s.label||'Source')}</a>`).join('')}</div>`:''}
+        <div class="ask-ft">${j.confidence&&j.confidence!=='high'?`<span class="ask-conf">${j.confidence==='low'?'Not enough in the guides to be sure':'Check the source for your contract'}</span>`:''}${j.left!=null?`<span>${j.left} question${j.left===1?'':'s'} left today</span>`:''}</div></div>`;
+      requestAnimationFrame(()=>out.querySelectorAll('.av').forEach(a=>a.classList.add('play')))}}
+  catch(e){out.innerHTML='<div class="ask-a"><p>Couldn’t reach Coop. Check your connection and try again.</p></div>'}
+  ASK.busy=false;btn.disabled=false}
+document.addEventListener('click',e=>{if(e.target.closest('[data-askx]')){askClose();return}const s=e.target.closest('[data-asks]');if(s){askRun(s.dataset.asks);const t=ASK.el&&ASK.el.querySelector('textarea');if(t)t.value=s.dataset.asks;return}
+  const o=e.target.closest('[data-askopen]');if(o){e.preventDefault();askOpen(o.dataset.askopen||'')}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ASK.el)askClose()});
+function askCoopReady(){document.body.classList.add('has-ask')}
+
+/* ===== Story illustrations: one clear subject per story, drawn in the browser (free, no files) =====
+   The headline picks the subject (a fuel gauge, a picket sign, two buildings changing hands). The story id then
+   varies that subject itself (colors, angle, proportions, details) plus the background, so no two stories match.
+   No badges or extra objects. Generic and unbranded on purpose: no logos, liveries, real places or people. */
+function artRng(seed){let h=1779033703^String(seed).length;for(const ch of String(seed)){h=Math.imul(h^ch.charCodeAt(0),3432918353);h=h<<13|h>>>19}
+  let a=h>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const ART_TINT={UPS:'#B07A4E',FedEx:'#8E6BC8',USPS:'#4F7FD6',Amazon:'#D98A1E',OnTrac:'#2AA89C',DHL:'#D4AA1C'};
+const A_W='#E9EDF1',A_W2='#C9D1DA',A_D='#1C2633',A_UP='#E2694A',A_DN='#3FBF8A',A_INK='#0E1620';
+const ART_KRAFT=[['#D7B184','#C49A6C','#A97E52'],['#DDBE95','#CDA574','#B0865A'],['#CFA878','#BB8F5E','#9C7348'],['#E2C9A4','#D0AF84','#B79264']];
+const ART_BLDG=[['#3A4E66','#4A6080'],['#3E4A5E','#56647C'],['#34505A','#466A74'],['#463F5C','#5C5478']];
+/* ---- subjects, drawn around (0,0), roughly 300 units tall; v = per-story variation helpers ---- */
+const ART_M={
+  parcel:(acc,v)=>{const k=v.pick(ART_KRAFT),w=v.int(100,130),h=v.int(110,150);
+    return `<path d="M${-w} -40 L0 ${-40-w/2} L${w} -40 L0 ${-40+w/2} Z" fill="${k[0]}"/><path d="M${-w} -40 L0 ${-40+w/2} L0 ${-40+w/2+h} L${-w} ${-40+h} Z" fill="${k[1]}"/><path d="M${w} -40 L0 ${-40+w/2} L0 ${-40+w/2+h} L${w} ${-40+h} Z" fill="${k[2]}"/>
+    <path d="M${-w*.5} ${-40-w/4} L${w*.5} ${-40+w/4} L${w*.5} ${-40+w/4+(v.r()<.5?h*.35:0)} L${-w*.5} ${-40-w/4}Z" fill="#F0E2C8" opacity=".55"/>
+    ${v.r()<.6?`<rect x="${w*.22}" y="${-10+w/2*.2+h*.35}" width="${w*.5}" height="${h*.22}" rx="4" transform="skewY(-26)" fill="#F4EEE2"/>`:''}`},
+  stack:(acc,v)=>{const n=v.int(2,4);let s='';const pos=[[-70,40],[70,40],[0,-60],[0,40]].slice(0,n);
+    pos.forEach(([x,y],i)=>{s+=`<g transform="translate(${x} ${y-40}) scale(${v.f(.5,.62)})">${ART_M.parcel(acc,v)}</g>`});return s},
+  pct:(acc,v,dir)=>{const col=dir>0?A_UP:dir<0?A_DN:acc,rot=v.f(-16,8);
+    return `<g transform="rotate(${rot})"><path d="M-140 -80 h180 q12 0 22 8 l84 64 q10 8 0 16 l-84 64 q-10 8 -22 8 h-180 q-14 0 -14 -14 v-132 q0 -14 14 -14z" fill="${A_W}"/><circle cx="64" cy="0" r="16" fill="${A_INK}"/>
+    <text x="-50" y="36" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="800" font-size="110" fill="${col}">${v.r()<.5?'%':'$'}</text></g>
+    <path d="M118 -20 q50 -40 ${v.int(70,110)} ${v.int(-100,-60)}" fill="none" stroke="${A_W2}" stroke-width="6" stroke-linecap="round" opacity=".5"/>`},
+  gauge:(acc,v,dir)=>{const lvl=dir<0?v.f(.2,.4):dir>0?v.f(.7,.88):v.f(.45,.6),a=Math.PI*(1-lvl),R=150,x=R*Math.cos(a),y=40-R*Math.sin(a),deg=(lvl-.5)*180,col=dir>0?A_UP:dir<0?A_DN:'#5EC2DB';
+    const ticks=Array.from({length:7},(_,i)=>{const t=Math.PI*(1-i/6);return `<line x1="${118*Math.cos(t)}" y1="${40-118*Math.sin(t)}" x2="${100*Math.cos(t)}" y2="${40-100*Math.sin(t)}" stroke="${A_W2}" stroke-width="6" stroke-linecap="round" opacity=".6"/>`}).join('');
+    return `<path d="M-150 40 A150 150 0 0 1 150 40" fill="none" stroke="${A_W2}" stroke-width="30" stroke-linecap="round" opacity=".25"/><path d="M-150 40 A150 150 0 0 1 ${x.toFixed(1)} ${y.toFixed(1)}" fill="none" stroke="${col}" stroke-width="30" stroke-linecap="round"/>${ticks}
+    <g transform="rotate(${deg.toFixed(1)} 0 40)"><path d="M-11 40 L0 -96 L11 40 Z" fill="${A_W}"/></g><circle cx="0" cy="40" r="24" fill="${A_W}"/><circle cx="0" cy="40" r="9" fill="${A_INK}"/>
+    `},
+  calendar:(acc,v)=>{const hr=v.int(0,2),hc=v.int(0,3),rot=v.f(-8,8);
+    return `<g transform="rotate(${rot})"><rect x="-120" y="-110" width="240" height="230" rx="22" fill="${A_W}"/><path d="M-120 -88 a22 22 0 0 1 22 -22 h196 a22 22 0 0 1 22 22 v42 h-240z" fill="${acc}"/><rect x="-70" y="-136" width="18" height="52" rx="9" fill="${A_D}"/><rect x="52" y="-136" width="18" height="52" rx="9" fill="${A_D}"/>
+    ${[0,1,2].map(r=>[0,1,2,3].map(c=>r===hr&&c===hc?`<circle cx="${-75+c*50}" cy="${-9+r*46}" r="22" fill="none" stroke="${A_UP}" stroke-width="7"/><rect x="${-92+c*50}" y="${-24+r*46}" width="34" height="30" rx="6" fill="${acc}"/>`:`<rect x="${-92+c*50}" y="${-24+r*46}" width="34" height="30" rx="6" fill="#D2DAE3"/>`).join('')).join('')}</g>`},
+  van:(acc,v,extra)=>{const body=v.pick([A_W,'#DCE2E8','#D6DDE4']),flip=v.r()<.5?-1:1,stripe=v.r()<.6;
+    return `<g transform="scale(${flip} 1)"><rect x="-170" y="-90" width="230" height="130" rx="16" fill="${body}"/><path d="M60 -70 h48 q18 0 28 22 l30 56 v32 h-106 z" fill="${A_W2}"/><path d="M72 -58 h32 q10 0 16 14 l16 34 h-64 z" fill="#2A3A4C"/>
+    ${stripe?`<rect x="-170" y="-4" width="336" height="18" fill="${acc}"/>`:`<rect x="-150" y="-70" width="${v.int(110,170)}" height="${v.int(36,60)}" rx="10" fill="${acc}" opacity=".85"/>`}
+    <circle cx="-108" cy="42" r="30" fill="${A_D}"/><circle cx="-108" cy="42" r="12" fill="#6B7684"/><circle cx="104" cy="42" r="30" fill="${A_D}"/><circle cx="104" cy="42" r="12" fill="#6B7684"/>
+    ${extra==='ticket'?`<g transform="translate(118 -40) rotate(${v.f(-14,4)})"><rect x="-22" y="-30" width="44" height="58" rx="3" fill="#F6E7A8"/><rect x="-14" y="-20" width="28" height="5" rx="2" fill="${A_UP}"/><rect x="-14" y="-8" width="22" height="4" rx="2" fill="#B9A86A"/><rect x="-14" y="2" width="26" height="4" rx="2" fill="#B9A86A"/></g>`:''}
+    ${extra==='clock'?`<path d="M-210 -40 h-40 M-200 -10 h-70 M-210 20 h-50" stroke="${A_W2}" stroke-width="8" stroke-linecap="round" opacity=".45"/>`:''}</g>`},
+  plane:(acc,v)=>{const rot=v.f(-20,-4),flip=v.r()<.5?-1:1;
+    return `<g transform="scale(${flip} 1) rotate(${rot})"><path d="M-200 0 q0 -30 50 -30 h230 q50 0 76 30 q-26 18 -76 18 h-230 q-50 0 -50 -18 z" fill="${A_W}"/><path d="M-30 -8 l-90 -96 h36 l118 96 z" fill="${A_W2}"/><path d="M-30 10 l-64 70 h32 l92 -70 z" fill="#B7C1CC"/><path d="M-176 -24 l-36 -58 h26 l52 58 z" fill="${acc}"/>${Array.from({length:7},(_,i)=>`<circle cx="${-110+i*30}" cy="-10" r="5" fill="#2A3A4C"/>`).join('')}
+    <path d="M-230 ${v.int(20,40)} h${-v.int(60,140)}" stroke="${A_W2}" stroke-width="6" stroke-linecap="round" opacity=".35"/></g>`},
+  globe:(acc,v)=>{const rot=v.f(-25,25),a=v.f(-1,1);
+    return `<g transform="rotate(${rot})"><circle r="130" fill="#20324A"/><ellipse rx="130" ry="46" fill="none" stroke="#3E5A7A" stroke-width="6"/><ellipse rx="56" ry="130" fill="none" stroke="#3E5A7A" stroke-width="6"/><line x1="-130" x2="130" stroke="#3E5A7A" stroke-width="6"/></g>
+    <path d="M-110 ${50+a*20} Q 0 ${-150+a*30} 110 ${-40-a*20}" fill="none" stroke="${acc}" stroke-width="10" stroke-dasharray="18 14" stroke-linecap="round"/><circle cx="-110" cy="${50+a*20}" r="14" fill="${A_W}"/><circle cx="110" cy="${-40-a*20}" r="14" fill="${acc}"/>`},
+  building:(acc,v,mode)=>{const b=v.pick(ART_BLDG),doors=v.int(3,5),w=v.int(140,170),gap=2*w/doors;
+    let s=`<path d="M${-w} -40 L0 ${-v.int(100,130)} L${w} -40 Z" fill="${b[0]}"/><rect x="${-w}" y="-40" width="${2*w}" height="170" fill="${b[1]}"/><rect x="${-w}" y="-40" width="${2*w}" height="16" fill="${b[0]}"/>`;
+    for(let i=0;i<doors;i++){const x=-w+gap*(i+.5),dw=Math.min(56,gap-18),shut=mode==='closed'&&(i%2===0);
+      s+=`<rect x="${x-dw/2}" y="40" width="${dw}" height="90" fill="${shut?'#6B7684':'#2A3A4C'}"/>${shut?[0,1,2,3,4].map(k=>`<rect x="${x-dw/2}" y="${48+k*16}" width="${dw}" height="3" fill="#56606C"/>`).join(''):`<rect x="${x-dw/2}" y="40" width="${dw}" height="8" fill="${acc}" opacity=".9"/>`}`}
+    if(mode==='auto')s+=`<g transform="translate(${w*.55} -10) scale(.32)">${ART_M.gearShape(A_W)}</g><path d="M${-w+20} 10 h${w}" stroke="${acc}" stroke-width="10" stroke-linecap="round"/><g fill="${A_W2}">${[0,1,2].map(i=>`<rect x="${-w+28+i*44}" y="-8" width="30" height="18" rx="3"/>`).join('')}</g>`;
+    return s},
+  gearShape:(col)=>{let p='';for(let i=0;i<8;i++)p+=`<rect x="-16" y="-120" width="32" height="44" rx="6" fill="${col}" transform="rotate(${i*45})"/>`;return p+`<circle r="88" fill="${col}"/><circle r="36" fill="${A_INK}"/>`},
+  laptop:(acc,v)=>{const bars=Array.from({length:4},()=>v.int(30,110));
+    return `<rect x="-160" y="-130" width="320" height="200" rx="16" fill="#2A3A4C"/><rect x="-144" y="-114" width="288" height="168" rx="8" fill="#16212E"/>
+    <rect x="-126" y="-96" width="${v.int(90,150)}" height="14" rx="7" fill="${acc}"/>${bars.map((h,i)=>`<rect x="${-120+i*40}" y="${40-h}" width="26" height="${h}" rx="4" fill="${i===3?acc:'#4A6080'}"/>`).join('')}
+    <g transform="translate(80 -10) scale(.42)">${ART_M.gearShape(A_W2)}</g><path d="M-200 70 h400 l-26 34 h-348z" fill="${A_W2}"/>`},
+  lock:(acc,v)=>{const open=v.r()<.3;return `<path d="M-60 -20 v-40 a60 60 0 0 1 120 0 v${open?-20:40}" fill="none" stroke="${A_W2}" stroke-width="26" transform="${open?'translate(0 -20)':''}"/><rect x="-100" y="-30" width="200" height="160" rx="24" fill="${acc}"/><circle cx="0" cy="30" r="20" fill="${A_INK}"/><rect x="-8" y="36" width="16" height="44" rx="6" fill="${A_INK}"/>`},
+  hardhat:(acc,v)=>{const col=v.pick(['#E3B23C','#E07B39',acc]),rot=v.f(-10,10);
+    return `<g transform="rotate(${rot})"><path d="M-150 40 h300 q0 26 -30 26 h-240 q-30 0 -30 -26 z" fill="${col}"/><path d="M-120 40 q0 -150 120 -150 q120 0 120 150 z" fill="${col}"/><rect x="-14" y="-108" width="28" height="148" rx="10" fill="#000" opacity=".12"/><path d="M-90 -10 q20 -60 60 -78" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".22"/></g>`},
+  crew:(acc,v)=>{const vest=v.pick(['#E3B23C','#E07B39',acc]),n=3;let s='';
+    for(let i=0;i<n;i++){const x=(i-1)*112,y=i===1?-14:10,sc=i===1?1.08:.94;
+      s+=`<g transform="translate(${x} ${y}) scale(${sc})"><circle cx="0" cy="-92" r="38" fill="#D9DEE4"/><path d="M-62 90 v-70 a62 62 0 0 1 124 0 v70 z" fill="#4A6080"/><path d="M-62 90 v-70 a62 62 0 0 1 40 -58 l22 40 l22 -40 a62 62 0 0 1 40 58 v70 z" fill="${vest}"/><rect x="-62" y="30" width="124" height="12" fill="#F4F6F8" opacity=".85"/></g>`}
+    return s},
+  sign:(acc,v)=>{const rot=v.f(-9,9),bg=v.pick([A_W,'#F2E6C2','#E6ECF2']),ls=[v.int(140,200),v.int(180,250),v.int(120,220)];
+    return `<g transform="rotate(${rot} 0 190)"><rect x="-14" y="-10" width="28" height="200" rx="8" fill="#8A6A4A"/><rect x="-160" y="-150" width="320" height="170" rx="16" fill="${bg}"/><rect x="-130" y="-120" width="${ls[0]}" height="26" rx="13" fill="${acc}"/><rect x="-130" y="-78" width="${ls[1]}" height="18" rx="9" fill="#AEB8C4"/><rect x="-130" y="-46" width="${ls[2]}" height="18" rx="9" fill="#AEB8C4"/></g>`},
+  mailbox:(acc,v)=>{const body=v.pick([['#4F6E94','#3E5A7A'],['#5A7896','#46617E'],['#4A6688','#3A5270']]),up=v.r()<.6;
+    return `<rect x="-16" y="40" width="32" height="140" fill="#5C6878"/><path d="M-130 60 v-90 a70 70 0 0 1 70 -70 h120 a70 70 0 0 1 70 70 v90 z" fill="${body[0]}"/><path d="M-130 60 v-90 a70 70 0 0 1 140 0 v90 z" fill="${body[1]}"/>
+    ${up?`<rect x="88" y="-120" width="16" height="80" fill="${acc}"/><rect x="88" y="-120" width="50" height="28" fill="${acc}"/>`:`<rect x="88" y="-40" width="80" height="16" fill="${acc}"/><rect x="140" y="-40" width="28" height="44" fill="${acc}"/>`}
+    ${v.r()<.5?`<g transform="translate(-60 -10) rotate(${v.f(-20,10)}) scale(.32)">${ART_M.envelope(acc,v)}</g>`:''}`},
+  envelope:(acc,v)=>`<rect x="-140" y="-90" width="280" height="180" rx="14" fill="${A_W}"/><path d="M-140 -80 L0 20 L140 -80" fill="none" stroke="#C9BFAE" stroke-width="12" stroke-linejoin="round"/><rect x="80" y="-70" width="40" height="46" rx="4" fill="${acc}"/>`,
+  doc:(acc,v,kind)=>{const rot=v.f(-8,8),ls=Array.from({length:5},()=>v.int(90,150));
+    const mark=kind==='law'?`<g transform="translate(40 70)"><rect x="-56" y="-14" width="112" height="28" rx="6" fill="${A_D}" transform="rotate(-30)"/><rect x="-14" y="10" width="28" height="70" rx="6" fill="${A_D}" transform="rotate(-30)"/></g>`
+      :kind==='rule'?`<circle cx="44" cy="80" r="38" fill="none" stroke="${acc}" stroke-width="10"/><path d="M28 80 l12 12 l22 -24" fill="none" stroke="${acc}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`
+      :`<rect x="0" y="50" width="90" height="56" rx="8" fill="none" stroke="${acc}" stroke-width="8" transform="rotate(-10 45 78)"/>`;
+    return `<g transform="rotate(${rot})"><rect x="-96" y="-136" width="220" height="290" rx="16" fill="${A_W2}" opacity=".5"/><rect x="-110" y="-150" width="220" height="290" rx="16" fill="${A_W}"/><rect x="-76" y="-122" width="${v.int(70,120)}" height="18" rx="9" fill="${acc}"/>${ls.map((w,i)=>`<rect x="-76" y="${-86+i*28}" width="${w}" height="12" rx="6" fill="#C9D1DA"/>`).join('')}${mark}</g>`},
+  ship:(acc,v)=>{const cols=['#8A6A4A','#4F6E94','#4B8A6A',acc,'#6E5A8A','#9A5A4A'],n=v.int(5,8),flip=v.r()<.5?-1:1;let s='';
+    for(let i=0;i<n;i++)s+=`<rect x="${-170+(i%4)*76}" y="${-40-Math.floor(i/4)*56}" width="70" height="50" rx="4" fill="${v.pick(cols)}"/>`;
+    return `<g transform="scale(${flip} 1)"><path d="M-200 30 h400 l-50 90 h-300 z" fill="#3A4E66"/><path d="M-200 30 h400" stroke="${acc}" stroke-width="8"/>${s}<rect x="140" y="-110" width="40" height="140" fill="${A_W}"/><rect x="146" y="-100" width="28" height="14" fill="#2A3A4C"/></g>
+    <path d="M-260 140 q30 -14 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#5E86B0" stroke-width="6" opacity=".45"/>`},
+  chart:(acc,v,dir)=>{const n=v.int(5,7);let ys=Array.from({length:n},(_,i)=>{const t=i/(n-1);return dir>0?150-t*120+v.f(-15,15):dir<0?30+t*110+v.f(-15,15):70+v.f(-35,35)});
+    const bw=200/n,line=v.r()<.5;return `<rect x="-160" y="-130" width="320" height="260" rx="22" fill="#20324A"/>`+(line
+      ?`<path d="M-120 100 H130" stroke="#3E5A7A" stroke-width="4"/><path d="${ys.map((y,i)=>`${i?'L':'M'}${(-110+i*(230/(n-1))).toFixed(1)} ${(y-60).toFixed(1)}`).join(' ')}" fill="none" stroke="${dir>0?A_UP:dir<0?A_DN:acc}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="120" cy="${(ys[n-1]-60).toFixed(1)}" r="14" fill="${A_W}"/>`
+      :ys.map((y,i)=>`<rect x="${(-120+i*(240/n)).toFixed(1)}" y="${(y-60).toFixed(1)}" width="${bw.toFixed(1)}" height="${(160-y).toFixed(1)}" rx="6" fill="${i===n-1?(dir>0?A_UP:dir<0?A_DN:acc):'#4A6080'}"/>`).join(''))},
+  drone:(acc,v)=>{const rot=v.f(-10,10);return `<g transform="rotate(${rot})"><rect x="-70" y="-24" width="140" height="44" rx="18" fill="${A_W}"/><path d="M-70 -10 L-150 -50 M70 -10 L150 -50" stroke="${A_W2}" stroke-width="10" stroke-linecap="round"/><ellipse cx="-150" cy="-58" rx="60" ry="9" fill="${A_W2}"/><ellipse cx="150" cy="-58" rx="60" ry="9" fill="${A_W2}"/><circle cx="0" cy="0" r="9" fill="${acc}"/><line x1="0" y1="20" x2="0" y2="62" stroke="${A_W2}" stroke-width="4"/><g transform="translate(0 100) scale(.4)">${ART_M.parcel(acc,v)}</g></g>`},
+  pin:(acc,v)=>{const rx=v.int(90,130);return `<ellipse cx="0" cy="150" rx="${rx}" ry="${rx*.28}" fill="none" stroke="${acc}" stroke-width="8" opacity=".45"/><ellipse cx="0" cy="150" rx="${rx*.55}" ry="${rx*.15}" fill="none" stroke="${acc}" stroke-width="6" opacity=".3"/><path d="M0 140 C -40 70 -110 20 -110 -40 a110 110 0 0 1 220 0 c0 60 -70 110 -110 180 z" fill="${acc}"/><circle cx="0" cy="-40" r="44" fill="${A_W}"/>`},
+  dims:(acc,v)=>{const k=v.pick(ART_KRAFT),w=v.int(100,140),h=v.int(70,100);
+    return `<rect x="${-w}" y="${-h}" width="${2*w}" height="${2*h}" rx="10" fill="${k[1]}"/><rect x="${-w}" y="${-h}" width="${2*w}" height="26" fill="#000" opacity=".08"/><rect x="-18" y="${-h}" width="36" height="${2*h}" fill="#F0E2C8" opacity=".55"/>
+    <path d="M${-w} ${h+40} H${w} M${-w} ${h+30} v20 M${w} ${h+30} v20 M${w+40} ${-h} V${h} M${w+30} ${-h} h20 M${w+30} ${h} h20" stroke="${A_W}" stroke-width="6" stroke-linecap="round"/>`},
+  ret:(acc,v)=>`<g transform="translate(0 30) scale(.8)">${ART_M.parcel(acc,v)}</g><path d="M120 -120 a150 150 0 1 0 40 150" fill="none" stroke="${acc}" stroke-width="16" stroke-linecap="round" opacity=".9"/><path d="M96 -150 l50 26 l-44 34z" fill="${acc}"/>`,
+  deal:(acc,v)=>`<g transform="translate(-170 20) scale(${v.f(.55,.68)})">${ART_M.building('#4F6E94',v)}</g><g transform="translate(170 20) scale(${v.f(.55,.68)})">${ART_M.building(acc,v)}</g>
+    <path d="M-80 -120 Q0 ${-v.int(170,200)} 80 -120" fill="none" stroke="${acc}" stroke-width="14" stroke-linecap="round"/><path d="M66 -142 L104 -112 L60 -100z" fill="${acc}"/>`,
+};
+/* ---- what the story is about -> one subject ---- */
+function artPlan(n){const T=n.title||'',c=n.cat||'',up=n.imp==='up',dn=n.imp==='down',dir=up?1:dn?-1:0;
+  const tdir=dir||(/eas(e|es|ing)|fall|drop|lower|cut|declin|down/i.test(T)?-1:/rise|climb|up\b|increase|jump|hike/i.test(T)?1:0);
+  if(/fuel|diesel|jet fuel/i.test(T)||c==='Fuel')return['gauge',tdir];
+  if(/hire|hiring|seasonal (?:work|job)/i.test(T))return['crew'];
+  if(/strike|teamster|union|walkout|contract talks/i.test(T)||c==='Labor')return['sign'];
+  if(/drone|part 108|uav|robot delivery/i.test(T))return['drone'];
+  if(/\bpin\b|lock|secure|theft|signature/i.test(T))return['lock'];
+  if(/robot|automat/i.test(T)&&!/clos/i.test(T))return['building','auto'];
+  if(/acqui|\bbuys?\b|sale of|\bsells?\b|merger|merge|spin|takeover/i.test(T)||c==='M&A')return['deal'];
+  if(/citation|ticket|fine|penalt/i.test(T))return['van','ticket'];
+  if(/lawsuit|sued|court|fraud|settle|judge|indict/i.test(T)||c==='Legal')return['doc','law'];
+  if(/clos|consolidat|facilit|hub|network|terminal/i.test(T))return['building',/clos|consolidat|cut/i.test(T)?'closed':''];
+  if(/import|export|international|cross-border|global/i.test(T)||c==='International')return[/export|global/i.test(T)?'globe':'plane'];
+  if(/tariff|customs|de minimis|trade/i.test(T)||c==='Regulation & trade')return['ship'];
+  if(/rule|regulat|faa|dot|congress|bill|law\b/i.test(T))return['doc','rule'];
+  if(/usps|postal|mail|post office/i.test(T)||c==='Postal')return['mailbox'];
+  if(/index|report|survey|forecast|earnings|revenue|quarter|volume/i.test(T)||/Market reports|Earnings/.test(c))return['chart',tdir];
+  if(/dimensional|\bdim\b|oversize|large package|additional handling|cube|density/i.test(T))return['dims'];
+  if(/peak|holiday|demand surcharge/i.test(T)||c==='Peak season')return['stack'];
+  if(/zone|delivery area|\bdas\b|zip|rural/i.test(T))return['pin'];
+  if(/return/i.test(T))return['ret'];
+  if(/not yet announced|effective|take effect|takes effect|starts|deadline|date/i.test(T))return['calendar'];
+  if(/gri|rate|price|fee|surcharge/i.test(T)||/Pricing|Fees/.test(c))return['pct',tdir];
+  if(/same-day|same day|gig|on-demand|courier/i.test(T))return['van','clock'];
+  if(/software|api|platform|\bai\b|tool|app\b/i.test(T)||/Technology/.test(c))return['laptop'];
+  return['van']}
+/* Drawn as a postage stamp to match the app's stamp logo: perforated cream paper, a thin red frame, the subject
+   centered in the window, the topic printed along the bottom like a denomination. Portrait 5:6, same at every size. */
+function storyArt(n,cls){
+  const r=artRng(n.id||n.title),v={r,f:(a,b)=>a+r()*(b-a),int:(a,b)=>a+Math.floor(r()*(b-a+1)),pick:x=>x[Math.floor(r()*x.length)]};
+  const W=400,H=480,uid='a'+Math.floor(r()*1e9);
+  const car=(n.c||[]).find(c=>ART_TINT[c]),acc=car?ART_TINT[car]:v.pick(['#5EC2DB','#7E9CC0','#6FB39E','#C08A6E']);
+  const bg=v.pick([['#0F1A28','#1C3048'],['#121B2A','#2A2F48'],['#0E1B22','#1B3A3E'],['#161A26','#33304A'],['#0F1820','#22384A'],['#18161F','#3A2E3A'],['#101A1A','#24403A']]);
+  const [k,arg]=artPlan(n),sub=ART_M[k](acc,v,arg);
+  // perforations: half-circles bitten out of every edge
+  const P=12,step=24,holes=[];
+  for(let x=step/2;x<W;x+=step)holes.push([x,0],[x,H]);
+  for(let y=step/2;y<H;y+=step)holes.push([0,y],[W,y]);
+  const ix=30,iy=30,iw=W-60,ih=H-60,label=String(n.cat||'Parcel').split(/ & | /)[0].toUpperCase().replace(/&/g,'&amp;');
+  const cx=ix+iw/2,cy=iy+(ih-46)/2+4;
+  return `<svg class="${cls||'sart'}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration"><defs>
+    <mask id="${uid}m"><rect width="${W}" height="${H}" fill="#fff"/>${holes.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="${P}" fill="#000"/>`).join('')}</mask>
+    <linearGradient id="${uid}b" gradientTransform="rotate(${v.int(60,120)} .5 .5)"><stop offset="0" stop-color="${bg[0]}"/><stop offset="1" stop-color="${bg[1]}"/></linearGradient>
+    <radialGradient id="${uid}g" cx=".5" cy=".45" r=".55"><stop offset="0" stop-color="${acc}" stop-opacity=".34"/><stop offset="1" stop-color="${acc}" stop-opacity="0"/></radialGradient>
+    <clipPath id="${uid}c"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}"/></clipPath></defs>
+    <rect width="${W}" height="${H}" fill="#F3ECDD" mask="url(#${uid}m)"/>
+    <g clip-path="url(#${uid}c)"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" fill="url(#${uid}b)"/>
+      <rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" fill="url(#${uid}g)"/>
+      <ellipse class="sa-sh" cx="${cx}" cy="${cy+118}" rx="112" ry="10" fill="#000" opacity=".3"/>
+      <g class="sa-s" data-box="${cx},${cy},${iw*.74},${(ih-46)*.72}" transform="translate(${cx} ${cy}) scale(.56)">${sub}</g>
+      <rect x="${ix}" y="${iy+ih-46}" width="${iw}" height="46" fill="#000" opacity=".28"/>
+      <text x="${cx}" y="${iy+ih-17}" text-anchor="middle" font-family="IBM Plex Mono,ui-monospace,monospace" font-size="22" letter-spacing="3" fill="#F3ECDD" opacity=".9">${label.length>22?label.slice(0,21)+'…':label}</text></g>
+    <rect x="${ix-7}" y="${iy-7}" width="${iw+14}" height="${ih+14}" fill="none" stroke="#B23A2E" stroke-width="2.4"/>
+  </svg>`}
+
+/* Optical centering: once a stamp is on screen, measure its subject and fit it to the window's middle,
+   so every drawing sits dead center at the same visual size whatever its shape. */
+function artFit(){document.querySelectorAll('g.sa-s:not([data-fit])').forEach(g=>{let b;try{b=g.getBBox()}catch(e){return}if(!b||!b.width)return;
+  const [cx,cy,w,h]=g.dataset.box.split(',').map(Number),sc=Math.min(w/b.width,h/b.height);
+  g.setAttribute('transform',`translate(${(cx-(b.x+b.width/2)*sc).toFixed(1)} ${(cy-(b.y+b.height/2)*sc).toFixed(1)}) scale(${sc.toFixed(3)})`);const sh=g.parentNode.querySelector('.sa-sh');if(sh){sh.setAttribute('cy',(cy+b.height*sc/2+8).toFixed(1));sh.setAttribute('rx',Math.min(120,b.width*sc*.42).toFixed(1))}g.dataset.fit='1'})}
+if(typeof MutationObserver!=='undefined'&&typeof document!=='undefined'&&document.body){let t=0;new MutationObserver(()=>{if(!t)t=requestAnimationFrame(()=>{t=0;artFit()})}).observe(document.body,{childList:true,subtree:true})}
+
+/* ===== Connections: every story knows its documents, every document knows its stories =====
+   Built from the links themselves (a story's sources, a document found in a story), so nothing is guessed. */
+const urlKey=u=>String(u||'').split('#')[0].split('?')[0].replace(/^https?:\/\/(www\.)?/i,'').replace(/\/$/,'').toLowerCase();
+let CX=null;
+function cxBuild(){if(CX&&CX.n===NEWS.length&&CX.d===DOCS.length)return CX;
+  const byUrl={};DOCS.forEach(d=>{if(d.u)byUrl[urlKey(d.u)]=d});
+  const docsOf={},storiesOf=new Map();
+  NEWS.forEach(n=>{const L=[];(n.srcs||[]).forEach(s=>{const d=byUrl[urlKey(s.url)];if(d&&!L.includes(d))L.push(d)});
+    DOCS.forEach(d=>{if(d.why&&d.why.story===n.id&&!L.includes(d))L.push(d)});
+    docsOf[n.id]=L;L.forEach(d=>{if(!storiesOf.has(d))storiesOf.set(d,[]);storiesOf.get(d).push(n)})});
+  CX={n:NEWS.length,d:DOCS.length,docsOf,storiesOf};return CX}
+const relDocs=n=>cxBuild().docsOf[n.id]||[];
+const docStories=d=>(cxBuild().storiesOf.get(d)||[]).slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+const docFile=d=>{const f=fmtOf(d.u);return f==='PDF'?'.pdf':f==='Excel'?'.xlsx':''};
+function docActs(d){if(!d.u&&!d.f)return '';
+  const f=fmtOf(d.u),isFile=f==='PDF'||f==='Excel',st=docStories(d);
+  const fname=(d.c+' '+d.n).replace(/[^\w\- .]+/g,'').replace(/\s+/g,' ').trim()+docFile(d);
+  const open=d.u?`<a class="dact pri" href="${d.u}" target="_blank" rel="noopener">${f==='PDF'?'Open PDF':f==='Excel'?'Open spreadsheet':'Open page'} <span aria-hidden="true">↗</span></a>`:'';
+  const dl=d.f?`<a class="dact" href="${d.f}" download="${esc(fname)}" title="Saved copy from ${esc(d.fat?fmtD(d.fat):'our archive')}">Download</a>`
+    :isFile?`<a class="dact" href="${d.u}" target="_blank" rel="noopener" download>Download</a>`:'';
+  return `<span class="dacts">${open}${dl}<button type="button" class="dact" data-dshare="${esc(d.u||d.f)}" data-dtitle="${esc(d.c+': '+d.n)}">Share</button>${st.length?`<button type="button" class="dact" data-open="${st[0].id}" title="${esc(st[0].title)}">${st.length===1?'In the news':`In ${st.length} stories`}</button>`:''}</span>`}
+function relDocRow(n){const L=relDocs(n).slice(0,3);if(!L.length)return '';
+  return `<div class="rdocs"><span class="lbl">From the library</span>${L.map(d=>`<span class="rdoc">${logoImg(d.c,'lgx')}<a href="${d.u||d.f}" target="_blank" rel="noopener">${esc(d.n)}</a><small>${fmtOf(d.u)}</small><button type="button" class="link" data-gdoc="${docDomId(d)}" aria-label="Show ${esc(d.n)} in Docs">In Docs ›</button></span>`).join('')}</div>`}
+function goDoc(id){const d=DOCS.find(x=>docDomId(x)===id);if(!d)return;docCar='All';store.set('pw-doccar','All');showTab('docs');setView.docs('library');renderDocs();
+  const el=$(id);if(el){for(let p=el.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;highlight(el,'Here it is')}}
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-gdoc]');if(g){e.preventDefault();e.stopPropagation();goDoc(g.dataset.gdoc);return}
+  const s=e.target.closest('[data-dshare]');if(s){e.preventDefault();e.stopPropagation();const url=s.dataset.dshare,title=s.dataset.dtitle;
+    const done=t=>{const o=s.textContent;s.textContent=t;setTimeout(()=>{s.textContent=o},1600)};
+    if(navigator.share)navigator.share({title,url}).catch(()=>{});
+    else if(navigator.clipboard)navigator.clipboard.writeText(url).then(()=>done('Link copied'),()=>done('Copy failed'))}},true);
+
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmtD=(d,o)=>new Date(d+'T12:00:00').toLocaleDateString('en-US',o||{month:'short',day:'numeric'});
@@ -3340,7 +3970,7 @@ const VIEWS={
   clock:[['list','List','<path d="M4 6h16M4 12h16M4 18h16"/>'],['calendar','Calendar','<rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/>']],
   fuel:[['chart','Chart','<path d="M3 20h18M5 16l4-6 4 3 6-8"/>'],['history','Over time','<path d="M3 20h18M4 17l5-3 4 1 7-10"/><path d="M17 5h3v3"/>'],['compare','Compare','<path d="M4 7h14M4 12h9M4 17h16"/>'],['table','Table','<rect x="3" y="4" width="18" height="16"/><path d="M3 10h18M3 15h18M10 4v16"/>'],['ytd','Since Jan','<path d="M4 20V10M10 20V6M16 20V13M22 20H2"/>']],
   mna:[['map','Market map','<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8.3 7.2l7.4.4M7 8.3l1.4 7.3M16.6 10l-5.8 6.3"/>'],['deals','M&A','<path d="M8 7h8l-3-3M16 17H8l3 3"/>'],['players','Players','<path d="M4 6h16M4 12h16M4 18h16"/>']],
-  docs:[['library','Library','<path d="M4 4h5v16H4zM10 4h5v16h-5zM16 5l4 1-3 14-4-1z"/>'],['earnings','Earnings','<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'],['alerts','Alerts','<path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/>']]
+  docs:[['library','Library','<path d="M4 4h5v16H4zM10 4h5v16h-5zM16 5l4 1-3 14-4-1z"/>'],['alerts','Alerts','<path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/>']]
 };
 const curView={}, setView={};
 function setupViews(section,onChange){
@@ -3360,7 +3990,8 @@ function showTab(t){
   document.querySelectorAll('[data-section]').forEach(s=>s.hidden=s.id!=='s-'+t);
   store.set('pw-tab',t);window.scrollTo(0,0);if(t!=='mna')document.body.classList.remove('msheet');
 }
-function goTo(t,v){showTab(t);if(v&&setView[t])setView[t](v)}
+function goTo(t,v){if(t==='docs'&&v==='earnings')return goEarnings();showTab(t);if(v&&setView[t])setView[t](v)}
+function goEarnings(c){docCar='All';showTab('docs');setView.docs('library');renderDocs();const p=document.querySelector(`.dcarp[data-car="${c||'UPS'}"]`);if(p){p.open=true;setTimeout(()=>(p.querySelector('.dcall')||p).scrollIntoView({block:'center'}),60)}}
 function goStory(id){
   if(!filtered().some(n=>n.id===id)){resetFilters()}
   goTo('news','list');
@@ -3398,9 +4029,11 @@ const artColor=n=>{const k=carCls((n.c||[]).find(x=>carCls(x))||'');return k?`va
 const artSVG=(n,cls)=>`<svg class="${cls||'art'}" viewBox="0 0 64 64" fill="none" stroke="${artColor(n)}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${ART[artKey(n)]}</svg>`;
 const SHOW_ART=false; // story photos and illustrations are off for now
 function media(n,size){
-  if(!SHOW_ART)return '';
-  if(n.img)return `<figure class="media ${size||''}"><img src="${n.img}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg');this.remove()">${artSVG(n,'art fb')}<figcaption>${esc(n.imgc||'')}</figcaption></figure>`;
-  return `<figure class="media art-only ${size||''}">${artSVG(n)}</figure>`}
+  if(size==='bthumb')return '';
+  const src=size==='thumb'?n.thumb:n.img;
+  if(src&&/^data\/img\//.test(src))return `<figure class="media ${size||''}"><img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()">${size==='wide'&&n.imgc?`<figcaption>${esc(n.imgc)}</figcaption>`:''}</figure>`;
+  if(size!=='wide'||typeof storyArt!=='function')return '';   // illustrations only on the full card, small
+  return `<figure class="media ill wide" title="Illustration">${storyArt(n)}</figure>`}
 function wireItem(n){
   return `<li class="wi" tabindex="0" role="button" aria-expanded="false" data-story="${n.id}">
     <span class="d">${fmtD(n.date)}${media(n,'thumb')}</span>
@@ -3423,12 +4056,12 @@ addEventListener('resize',()=>{clearTimeout(window._ft);window._ft=setTimeout(fi
 function renderToday(){
   renderMarkets();
   $('brief').innerHTML=BRIEF.map((t,i)=>{const s=BRIEF_IDS[i]&&NEWS.find(n=>n.id===BRIEF_IDS[i]);return `<li${s?` class="bl" data-open="${s.id}" role="button" tabindex="0"`:''}><span class="n">${i+1}</span>${s?media(s,'bthumb'):''}<span class="t">${t}</span></li>`}).join('');
-  // Top stories: newest developments first; routine follow-ups (peak start dates, weekly fuel, GRIs already announced) only fill gaps
+  // Top stories rotate: importance fades with age (about a level every three days), stories you've read sink,
+  // routine follow-ups rank lower, and every story from the last two days gets a look-in before older ones
   const pool=NEWS.filter(n=>!n.lead&&!n.bg&&daysTo(n.date)>=-21);
-  const fresh=pool.filter(n=>!n.routine&&(n.lvl>=2||n.exclusive)).sort((a,b)=>b.date.localeCompare(a.date)||b.lvl-a.lvl);
-  // take a deeper pool (older lvl-2 news fills in) and let fitTop trim it so both columns end on the same line
-  const pool2=NEWS.filter(n=>!n.lead&&!n.bg&&daysTo(n.date)>=-60&&n.lvl>=2&&!pool.includes(n)).sort((a,b)=>b.date.localeCompare(a.date));
-  const top=[...fresh,...pool.filter(n=>n.routine&&n.lvl>=2).sort((a,b)=>b.date.localeCompare(a.date)),...pool2].slice(0,12).sort((a,b)=>b.date.localeCompare(a.date));
+  const readSet=typeof MS!=='undefined'&&MS.read?MS.read:new Set();
+  const score=n=>{const age=Math.max(0,-daysTo(n.date));return (+n.lvl||1)+(n.exclusive?.7:0)+(n.kind==='Alert'?.3:0)-age*.35-(n.routine?.8:0)-(readSet.has(n.id)?1.2:0)};
+  const top=pool.map(n=>[score(n),n]).sort((a,b)=>b[0]-a[0]||b[1].date.localeCompare(a[1].date)).slice(0,12).map(x=>x[1]).sort((a,b)=>b.date.localeCompare(a.date)||(+b.lvl||1)-(+a.lvl||1));
   $('top').innerHTML=top.map(wireItem).join('');
   requestAnimationFrame(fitTop);
   renderNext();
@@ -3487,19 +4120,28 @@ function card(n){
   const eff=n.act?(()=>{const d=daysTo(n.act);return d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
   const cars=n.c.filter(c=>c!=='Industry');
   return `<article class="card" id="n-${n.id}">
-    <header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${statusTag0(n)}</header>
+    <header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${statusTag0(n)}${rxPill(n)}</header>
     <div class="cardbody">
       ${media(n,'wide')}
       <h3>${esc(n.title)}</h3>
       <p class="sum">${decode(n.sum)}</p>
       <div class="eff2 imp-${n.imp}"><span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span><p>${decode(n.plain)}${eff?` <b>${eff}.</b>`:''}</p></div>
+      ${chgTable(n)}
+      ${relDocRow(n)}
     </div>
-    <footer class="cardft">${srcDrop(n,n.tie)}${links.length?`<span class="clk">${links.map(x=>`<button class="datechip" data-clock="${x.id}" title="${esc(x.w)}">Rate clock ${fmtD(x.d)}</button>`).join('')}</span>`:''}</footer>
+    <footer class="cardft">${srcDrop(n,n.tie)}${cmtBar(n)}${links.length?`<span class="clk">${links.map(x=>`<button class="datechip" data-clock="${x.id}" title="${esc(x.w)}">Rate clock ${fmtD(x.d)}</button>`).join('')}</span>`:''}</footer>
   </article>`}
+/* Carrier page and guide changes: what changed, before and after, proven from both versions */
+function chgTable(n){const ch=(n.changes||[]).filter(c=>c&&typeof c==='object'&&c.after);if(!ch.length)return '';
+  const a=n.audit||{},cmp=(a.compared||[]).filter(x=>x.old&&x.new);
+  return `<div class="chg"><div class="chg-h"><b>What changed</b>${a.verdicts?`<span>${esc(String(a.verdicts).split(',')[0].replace(/\s*\(.*$/,''))}</span>`:''}</div>
+    <table><thead><tr><th>Item</th><th>Before</th><th>After</th><th>Effect</th></tr></thead><tbody>${ch.map(c=>`<tr><td><b>${esc(c.what||'')}</b>${c.who?`<small>${esc(c.who)}</small>`:''}</td><td class="chg-b${c.before?'':' none'}">${c.before?esc(c.before):'<i>new</i>'}</td><td class="chg-a">${esc(c.after)}</td><td>${c.impact?esc(c.impact):''}${c.effective?`<small>from ${fmtD(c.effective,{month:'short',day:'numeric',year:'numeric'})}</small>`:''}</td></tr>`).join('')}</tbody></table>
+    <p class="chg-n">Checked line by line against ${cmp.length?'the previous version'+(cmp.length>1?'s':''):'the carrier’s own text'}; every before and after is quoted from the documents.${a.dropped?` ${a.dropped} claim${a.dropped>1?'s':''} that couldn’t be proven ${a.dropped>1?'were':'was'} left out.`:''}${(n.unknowns||[]).length?` Not confirmed: ${esc(n.unknowns.join('; '))}.`:''}</p></div>`}
 function renderNews(){
   renderFilters();
   const L=filtered();
   $('nList').innerHTML=L.length?L.map(card).join(''):none;
+  rxLoad(L.slice(0,60).map(n=>n.id));
   const byDay={};L.forEach(n=>(byDay[n.date]=byDay[n.date]||[]).push(n));
   $('nTl').innerHTML=Object.keys(byDay).length?Object.keys(byDay).sort().reverse().map(d=>`<li><div class="day">${fmtD(d,{weekday:'short'})}<b>${new Date(d+'T12:00:00').getDate()}</b>${fmtD(d,{month:'short',year:'2-digit'})}</div><div class="items">${byDay[d].map(n=>`<button class="it" data-open="${n.id}"><h3>${esc(n.title)}</h3><span class="meta"><span>${esc(n.c.filter(c=>c!=='Industry').join(', ')||'Industry')}</span><span>${esc(n.cat)}</span>${kindTag(n)}${statusTag0(n)}</span></button>`).join('')}</div></li>`).join(''):`<li style="display:block">${none}</li>`;
 }
@@ -3562,7 +4204,7 @@ const REALM_KEY={'Ocean shipping & logistics':'global','Contract logistics / 3PL
 function partyPl(p){if(typeof mentions!=='function')return null;const ids=mentions(p.name);return ids.length?PL[ids.sort((a,b)=>PL[b].n.length-PL[a].n.length)[0]]:null}
 function partyRealm(p){const pl=partyPl(p);return pl?pl.realm:(REALM_KEY[p.realm]||'3pl')}
 function realmBox(p,role,cls){const k=partyRealm(p),r=REALMS.find(x=>x[0]===k)||[];return `<div class="realm r-${k} xrb ${cls||''}"><div class="rh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">${r[2]||''}</svg><span>${RL[k]||''}</span></div><div class="rps">${pchipX(p,role)}</div></div>`}
-function pchipX(p,role){const pl=partyPl(p),k=partyRealm(p);return `<button class="pchip r-${k}${pl?chipCls(pl):''}" ${pl?`data-pl="${pl.id}"`:'disabled'}>${esc(p.name)}${role?`<small>${esc(role)}</small>`:''}</button>`}
+function pchipX(p,role){const pl=partyPl(p),k=partyRealm(p);return `<button class="pchip r-${k}${pl?chipCls(pl):''}" ${pl?`data-pl="${pl.id}"`:'disabled'}>${logoImg(pl||p.name,'lgs')}${esc(p.name)}${role?`<small>${esc(role)}</small>`:''}</button>`}
 // news since the deal that involves its companies: keeps every walkthrough current
 function dealUpdates(x){if(typeof dealPlayers!=='function')return [];
   const ids=new Set(dealPlayers(x)),since=x.ann||x.d,tgt=new Set(mentions([x.target,...(x.parties||[]).filter(p=>/Target|Merged/.test(p.role)).map(p=>p.name)].join(' | ')));
@@ -3750,7 +4392,7 @@ function rcxVis(s){
       ${s.rows.map((r,i)=>`<path d="${path(r)}" class="sl ${carCls(r[0])}" pathLength="1" style="--d:${(i*.35).toFixed(2)}s"/>`).join('')}
       <line x1="${X(RX.x.d)}" x2="${X(RX.x.d)}" y1="2" y2="${Hd-12}" class="you"/><text x="${X(RX.x.d)}" y="${Hd-1}" class="yl">${fmtD(RX.x.d,{month:'short',day:'numeric'}).toUpperCase()}</text></svg>
       <div class="sleg">${s.rows.map(r=>`<span class="${carCls(r[0])}"><i></i>${r[0]}</span>`).join('')}</div></div>`}
-  if(s.k==='cards')return `<div class="xv rxcards">${s.rows.map((r,i)=>`<div class="rc2 ${carCls(r[0])}" style="--d:${i*.2}s"><span class="car ${carCls(r[0])}">${r[0]}</span><b>${rm2(r[6])}</b><small>from ${fmtD(r[2])}</small>${r[7]!==r[6]?`<em>${rm2(r[7])} <small>peak weeks</small></em>`:'<em class="flat">flat all season</em>'}</div>`).join('')}</div>`;
+  if(s.k==='cards')return `<div class="xv rxcards">${s.rows.map((r,i)=>`<div class="rc2 ${carCls(r[0])}" style="--d:${i*.2}s"><span class="car ${carCls(r[0])}">${logoImg(r[0],'lgx')}${r[0]}</span><b>${rm2(r[6])}</b><small>from ${fmtD(r[2])}</small>${r[7]!==r[6]?`<em>${rm2(r[7])} <small>peak weeks</small></em>`:'<em class="flat">flat all season</em>'}</div>`).join('')}</div>`;
   if(s.k==='season'){const mx=s.tot[0][1];return `<div class="xv rxbars rxseason"><div class="rsh">${s.vol.toLocaleString()} ${esc(s.unit)} a week, whole season</div>${s.tot.map(([c,v],i)=>`<div class="rb" style="--d:${i*.25}s"><span class="${carCls(c)}">${c}</span><i><u style="--w:${(v/mx*100).toFixed(1)}%" class="cc ${carCls(c)}"></u></i><b>${rm0(v)}</b></div>`).join('')}</div>`}
   if(s.k==='label')return `<div class="xv rxlabel"><div class="lbl4"><div class="l4h"><b>USPS GROUND ADVANTAGE</b><span>ZONE 6</span></div><div class="l4b"><div class="bc"></div><div class="l4p"><span>Postage</span><b id="rxpost">+$0.00</b></div><span class="l4n">Holiday price, built in. No separate fee line.</span></div></div></div>`;
   if(s.k==='grid'){const g=USPS_PEAK['Ground Advantage'],mx=g[3][1];return `<div class="xv rxgrid"><div class="gh"><span></span><b>Zones 1–4</b><b>Zones 5–9</b></div>${g.map((r,i)=>`<div class="gr"><span>${WTS[i]}</span>${r.map((v,j)=>`<i style="--a:${(.12+.88*v/mx).toFixed(2)};--d:${((i*2+j)*.18).toFixed(2)}s">+$${v.toFixed(2)}</i>`).join('')}</div>`).join('')}</div>`}
@@ -3821,11 +4463,16 @@ function renderFuel(){
 }
 // DHL Express posts its fuel surcharge every week (export and import, all time-definite services), usually a week or two ahead
 const DHLFUEL={'2026-09-21':[34.00,37.75],'2026-09-28':[35.00,38.75],'2026-10-05':[36.25,40.00],'2026-10-12':[37.00,40.75],'2026-10-19':[37.50,41.25]};
+const FUEL_SRCS={UPS:'https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges',FedEx:'https://www.fedex.com/en-us/shipping/fuel-surcharge.html',
+  OnTrac:'https://www.ontrac.com/west-coast-fuel-surcharge',diesel:'https://www.eia.gov/petroleum/gasdiesel/'};
+const FUEL_SRC_LIST=[['UPS fuel surcharges',FUEL_SRCS.UPS],['FedEx fuel surcharge',FUEL_SRCS.FedEx],['FedEx history','https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html'],['OnTrac fuel surcharge',FUEL_SRCS.OnTrac],
+  ['DHL Express fuel surcharge','https://www.dhl.com/us-en/home/express/products-and-solutions/products-and-services-overview/surcharges.html'],['EIA diesel prices (weekly)',FUEL_SRCS.diesel],
+  ['EIA jet fuel and crude spot prices','https://www.eia.gov/dnav/pet/pet_pri_spt_s1_w.htm']];
 const DHL_SRC='https://www.dhl.com/us-en/home/express/products-and-solutions/products-and-services-overview/surcharges.html';
 function dhlCard(chg,hd){const ks=Object.keys(DHLFUEL).sort(),past=ks.filter(k=>k<=TODAY),now=past.at(-1),prev=past.at(-2),next=ks.filter(k=>k>TODAY);if(!now)return'';
   const yago=ks.filter(k=>k<=addDays(now,-357)).at(-1);
   const row=(l,j)=>`<div class="frow"><span class="fsv">${l}</span><b class="fval">${pct(DHLFUEL[now][j])}</b>${chg(prev?DHLFUEL[now][j]-DHLFUEL[prev][j]:null)}${chg(yago?DHLFUEL[now][j]-DHLFUEL[yago][j]:null)}</div>`;
-  return `<div class="fcard c-dhl"><div class="fch"><span class="car c-dhl">DHL Express</span><a class="lbl fsrc" href="${DHL_SRC}" target="_blank" rel="noopener">Week of ${fmtD(now)}</a></div>${hd()}${row('Export',0)}${row('Import',1)}${next.length?`<div class="fnext lbl">Posted ahead: ${next.map(k=>`${fmtD(k)} ${pct(DHLFUEL[k][0])} / ${pct(DHLFUEL[k][1])}`).join(' · ')}</div>`:''}</div>`}
+  return `<div class="fcard c-dhl"><div class="fch"><span class="car c-dhl">${logoImg('DHL Express','lgx')}DHL Express</span><a class="lbl fsrc" href="${DHL_SRC}" target="_blank" rel="noopener">Week of ${fmtD(now)} ↗</a></div>${hd()}${row('Export',0)}${row('Import',1)}${next.length?`<div class="fnext lbl">Posted ahead: ${next.map(k=>`${fmtD(k)} ${pct(DHLFUEL[k][0])} / ${pct(DHLFUEL[k][1])}`).join(' · ')}</div>`:''}</div>`}
 function renderFuelNow(){
   const chg=(d,unit)=>d==null?'<span class="fchg">—</span>':`<span class="fchg ${d>0?'up':d<0?'down':'flat'}">${d>0?'▲':d<0?'▼':'■'} ${unit==='$'?'$'+Math.abs(d).toFixed(2):Math.abs(d).toFixed(2)}</span>`;
   const line=(l,i)=>{const n=fuelNow(i);if(!n)return'';
@@ -3833,18 +4480,24 @@ function renderFuelNow(){
     const ago=fuelAt(i,isoD(T0(n[0])-364*864e5));
     return `<div class="frow"><span class="fsv">${l}</span><b class="fval">${pct(n[i])}</b>${chg(prev==null?null:n[i]-prev)}${chg(ago==null?null:n[i]-ago)}</div>`};
   const hd=(u)=>`<div class="frow fhd"><span></span><span>${u||'Now'}</span><span>1 wk</span><span>1 yr</span></div>`;
-  const card=(c,cls,rows)=>`<div class="fcard ${cls}"><div class="fch"><span class="car ${cls}">${c}</span></div>${hd()}${rows}</div>`;
+  // when to expect the next rate: UPS, FedEx and OnTrac reset every Monday (set by fuel prices two weeks earlier)
+  const dow=new Date(TODAY+'T12:00:00').getDay(),nextMon=addDays(TODAY,dow===1?7:(8-dow)%7||7);
+  const expect=(i,f)=>{const nx=f?f(nextMon):((FUELDB.find(x=>x[0]===nextMon)||[])[i]);
+    return `<div class="fexp"><span>New rate every Monday</span><b>${nx!=null?`${fmtD(nextMon,{weekday:'short',month:'short',day:'numeric'})}: ${pct(nx)} posted`:`Next: ${fmtD(nextMon,{weekday:'short',month:'short',day:'numeric'})}`}</b></div>`};
+  const src=(u,l)=>`<a class="lbl fsrc" href="${u}" target="_blank" rel="noopener" title="Open the official source">${l} ↗</a>`;
+  const card=(c,cls,rows,ex,u)=>`<div class="fcard ${cls}"><div class="fch"><span class="car ${cls}">${logoImg(c,'lgx')}${c}</span>${u?src(u,'Official rates'):''}</div>${hd()}${rows}${ex||''}</div>`;
   const dn=DIESEL.at(-1),dp=DIESEL.at(-2);
   $('fuelNow').innerHTML=
-    card('UPS','c-ups',line('Ground',1)+line('Domestic air',4)+line('Intl export',7))+
-    card('FedEx','c-fdx',line('Ground',2)+line('Domestic air',5)+line('Intl export',8))+
-    card('OnTrac','c-ontrac',line('Ground',3))+dhlCard(chg,hd)+
-    `<div class="fcard c-dsl"><div class="fch"><span class="car">Diesel</span></div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. average</span><b class="fval">$${dn[1].toFixed(2)}</b>${chg(dp?dn[1]-dp[1]:null,'$')}${chg(dn[1]-DIESEL_YAGO.v,'$')}</div></div>`+
-    `<div class="fcard c-jet"><div class="fch"><span class="car">Jet fuel</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('jet')[0])}</a></div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. Gulf Coast</span><b class="fval">$${oilNow('jet')[1].toFixed(2)}</b>${chg(oilWk('jet'),'$')}${chg(oilYago('jet'),'$')}</div><p class="fnote">The index UPS and FedEx domestic air and international fuel surcharges are set from.</p></div>`+
-    `<div class="fcard c-oil"><div class="fch"><span class="car">Crude oil</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('wti')[0])}</a></div>${hd('$/bbl')}${['wti','brent'].map(k=>`<div class="frow"><span class="fsv">${k==='wti'?'WTI':'Brent'}</span><b class="fval">$${oilNow(k)[1].toFixed(2)}</b>${chg(oilWk(k),'$')}${chg(oilYago(k),'$')}</div>`).join('')}<p class="fnote">Crude sets the cost of diesel and jet fuel, so it moves first. The 1 yr change compares with the monthly average a year earlier.</p></div>`;
+    card('UPS','c-ups',line('Ground',1)+line('Domestic air',4)+line('Intl export',7),expect(1),FUEL_SRCS.UPS)+
+    card('FedEx','c-fdx',line('Ground',2)+line('Domestic air',5)+line('Intl export',8),expect(2),FUEL_SRCS.FedEx)+
+    card('OnTrac','c-ontrac',line('Ground',3),expect(3,d=>FUEL.ontracHist&&FUEL.ontracHist[d]!=null?FUEL.ontracHist[d]:null),FUEL_SRCS.OnTrac)+dhlCard(chg,hd)+
+    `<div class="fcard c-dsl"><div class="fch"><span class="car">Diesel</span>${src(FUEL_SRCS.diesel,'EIA · '+fmtD(dn[0]))}</div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. average</span><b class="fval">$${dn[1].toFixed(2)}</b>${chg(dp?dn[1]-dp[1]:null,'$')}${chg(dn[1]-DIESEL_YAGO.v,'$')}</div></div>`+
+    `<div class="fcard c-jet"><div class="fch"><span class="car">Jet fuel</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('jet')[0])} ↗</a></div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. Gulf Coast</span><b class="fval">$${oilNow('jet')[1].toFixed(2)}</b>${chg(oilWk('jet'),'$')}${chg(oilYago('jet'),'$')}</div><p class="fnote">The index UPS and FedEx domestic air and international fuel surcharges are set from.</p></div>`+
+    `<div class="fcard c-oil"><div class="fch"><span class="car">Crude oil</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('wti')[0])} ↗</a></div>${hd('$/bbl')}${['wti','brent'].map(k=>`<div class="frow"><span class="fsv">${k==='wti'?'WTI':'Brent'}</span><b class="fval">$${oilNow(k)[1].toFixed(2)}</b>${chg(oilWk(k),'$')}${chg(oilYago(k),'$')}</div>`).join('')}<p class="fnote">Crude sets the cost of diesel and jet fuel, so it moves first. The 1 yr change compares with the monthly average a year earlier.</p></div>`;
+  $('fuelSrcs')&&($('fuelSrcs').innerHTML='<span class="lbl">Sources</span>'+FUEL_SRC_LIST.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l} ↗</a>`).join(''));
   const u=fuelNow(1),f=fuelNow(2),ua=fuelAt(1,isoD(T0(u[0])-364*864e5)),fa=fuelAt(2,isoD(T0(f[0])-364*864e5));
   const hl=(a,b)=>`${Math.abs(a-b).toFixed(2)} points ${a>=b?'higher':'lower'} than a year ago (${pct(b)})`;
-  $('fuelSum').innerHTML=`<span class="car c-ups">UPS</span> Ground fuel is <b>${pct(u[1])}</b> this week, ${hl(u[1],ua)}. <span class="car c-fdx">FedEx</span> Ground is <b>${pct(f[2])}</b>, ${hl(f[2],fa)}. Diesel is <b>$${dn[1].toFixed(2)}</b> a gallon, ${Math.round(Math.abs(dn[1]/DIESEL_YAGO.v-1)*100)}% ${dn[1]>=DIESEL_YAGO.v?'above':'below'} a year ago. Jet fuel, which sets air fuel, is <b>$${oilNow('jet')[1].toFixed(2)}</b>, and WTI crude is <b>$${oilNow('wti')[1].toFixed(2)}</b> a barrel.`;
+  $('fuelSum').innerHTML=`${carSpan('UPS')} Ground fuel is <b>${pct(u[1])}</b> this week, ${hl(u[1],ua)}. ${carSpan('FedEx')} Ground is <b>${pct(f[2])}</b>, ${hl(f[2],fa)}. Diesel is <b>$${dn[1].toFixed(2)}</b> a gallon, ${Math.round(Math.abs(dn[1]/DIESEL_YAGO.v-1)*100)}% ${dn[1]>=DIESEL_YAGO.v?'above':'below'} a year ago. Jet fuel, which sets air fuel, is <b>$${oilNow('jet')[1].toFixed(2)}</b>, and WTI crude is <b>$${oilNow('wti')[1].toFixed(2)}</b> a barrel.`;
 }
 function fcStart(){const e=T0(FUEL.eff);return {w12:isoD(e-77*864e5),ytd:FUEL.eff.slice(0,4)+'-01-01',y1:isoD(e-364*864e5),all:FUELDB[0][0]}[fc.range]}
 function niceStep(span,n=5){const t=span/n,m=Math.pow(10,Math.floor(Math.log10(t)));return [1,2,2.5,5,10].map(k=>k*m).find(k=>k>=t)||10*m}
@@ -3964,28 +4617,69 @@ const DOC_CARS=['UPS','FedEx','USPS','OnTrac','Amazon','DHL','Regional','Reports
 const REG_DOC=d=>!['UPS','FedEx','USPS','OnTrac','Amazon','DHL','Reports'].includes(d.c);
 let docCar=store.get('pw-doccar','All');if(!['All',...DOC_CARS].includes(docCar))docCar='All';
 const fmtOf=u=>!u?'':/\.xlsx(\?|$)/i.test(u)?'Excel':/\.pdf(\?|$)/i.test(u)||/\/Mail-Innovations-Surcharges$/.test(u)?'PDF':/\.txt$/i.test(u)?'Text':'Web page';
+/* Docs: carrier first, then the kind of document, newest first; every row says why it's in the library */
+const DOC_GROUPS=[['Rate guides',['Rate guide']],['GRI announcements',['GRI notice']],['Peak announcements',['Peak']],
+  ['Special pricing programs',['Special program']],['Surcharges & fees',['Surcharges & fees']],['Fuel',['Fuel']],
+  ['Zones & delivery areas',['Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Filings',['Regulatory filing']],
+  ['Market reports',['Market report']]];
+const docGroup=d=>(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
+const DF=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});
+let DOC_CHANGES=null;   // url -> newest guide-change story about that document
+function docWhy(d){
+  if(!DOC_CHANGES){DOC_CHANGES={};NEWS.filter(n=>n.cat==='Guide changes'||n.audit).forEach(n=>(n.srcs||[]).forEach(s=>{const u=(s.url||'').split('?')[0];if(u&&(!DOC_CHANGES[u]||DOC_CHANGES[u].date<n.date))DOC_CHANGES[u]=n}))}
+  const ch=DOC_CHANGES[(d.u||'').split('?')[0]];
+  const w=d.why||{},when=w.when||d.added;let t='';
+  if(w.how==='new-file')t=`New file on ${esc(w.where||d.c+"'s site")}, spotted ${DF(when)}. It wasn't on that page before.`;
+  else if(w.how==='relisted')t=`Re-linked on ${esc(w.where||d.c+"'s site")} ${DF(when)}; it's an older file, not a new one.`;
+  else if(w.how==='replaced')t=`Posted ${DF(when)} on ${esc(w.where||d.c+"'s site")}, replacing ${esc(w.prev||'an earlier version')}.`;
+  else if(w.how==='story'||/^Found with:/.test(d.d||''))t=`Linked in ${w.story?`<button class="link" data-open="${w.story}">${esc(w.title||'a story')}</button>`:'“'+esc((d.d||'').replace(/^Found with:\s*/,''))+'”'}${when?`, ${DF(when)}`:''}.`;
+  else if(w.how==='editor'||/^Added from alert:/.test(d.d||''))t=`Added by the editor from an alert${when?`, ${DF(when)}`:''}.`;
+  else if(/^Posted on /.test(d.d||''))t=`${esc(d.d)}${when?`, ${DF(when)}`:''}.`;
+  else t='';
+  if(ch)t+=` <button class="link" data-open="${ch.id}">Changed ${fmtD(ch.date)}: ${esc(ch.title)}</button>`;
+  return t}
+const docDomId=d=>{let h=0;for(const ch of (d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
 function docRow(d){
-  const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':d.cur===false?'':'';
-  const F=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});const meta=[d.t,d.eff?'Effective '+F(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+F(d.upd):'',fmtOf(d.u)].filter(Boolean).join(' · ');
-  const inner=`<span class="dn">${esc(d.n)}${st?` <span class="tag">${st}</span>`:''}</span><span class="dm">${docCar==='Regional'?carSpan(d.c)+' · ':''}${esc(meta)}</span>${d.d?`<span class="dd">${esc(d.d)}</span>`:''}`;
-  return d.u?`<a class="drow" href="${d.u}" target="_blank" rel="noopener">${inner}</a>`:`<div class="drow pending">${inner}</div>`}
+  const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=d.added&&daysTo(d.added)>=-14;
+  const meta=[d.y?String(d.y):'',d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
+  const note=d.d&&!/^(Found with:|Added from alert:|Posted on )/.test(d.d)?`<span class="dd">${esc(d.d)}</span>`:'';
+  return `<div class="drow2${d.u?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${d.u?`href="${d.u}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
+    <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docActs(d)}</div>`}
 function renderDocs(){
+  DOC_CHANGES=null;
   $('docCar').innerHTML=['All',...DOC_CARS].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===docCar}">${carChip(c)}${c}</button>`).join('');
   const dq=($('dq')&&$('dq').value||'').trim().toLowerCase();
   const ds=DOCS.filter(d=>docCar==='All'||(docCar==='Regional'?REG_DOC(d):d.c===docCar)).filter(d=>!dq||[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(dq));
-  const groups=[...[...new Set(ds.filter(d=>d.y!=null).map(d=>d.y))].sort((x,y)=>y-x).map(y=>[String(y),ds.filter(d=>d.y===y)]),['No date published',ds.filter(d=>d.y==null)]];
   const order=c=>{const i=['UPS','FedEx','USPS','OnTrac','Amazon','DHL'].indexOf(c);return c==='Reports'?10:i<0?9:i};
-  const tOrder=['Market report','Rate guide','Service guide','GRI notice','Surcharges & fees','Peak','Fuel','Zones & DAS','Special program','Terms','Regulatory filing'];
-  const sorter=(x,y)=>order(x.c)-order(y.c)||x.c.localeCompare(y.c)||tOrder.indexOf(x.t)-tOrder.indexOf(y.t)||(y.eff||'').localeCompare(x.eff||'')||x.n.localeCompare(y.n);
-  const thisY=+TODAY.slice(0,4);
-  $('lib').innerHTML=groups.filter(g=>g[1].length).map(([g,list])=>{
-    const open=!!dq;   // years start closed; a search opens them
-    const block=ds2=>{const cur=ds2.filter(d=>d.cur!==false||(d.eff&&d.eff>TODAY)),old=ds2.filter(d=>!cur.includes(d));
-      return cur.sort(sorter).map(docRow).join('')+(old.length?`<details class="dold"><summary>Earlier versions (${old.length})</summary>${old.sort(sorter).map(docRow).join('')}</details>`:'')};
-    const byCar=docCar==='All'?[...new Set(list.sort(sorter).map(d=>d.c))].map(c=>`<div class="dcar ${carCls(c)}">${esc(c)}</div>`+block(list.filter(d=>d.c===c))).join(''):block(list);
-    return `<details class="panel dyear"${open?' open':''}><summary><h2>${g}</h2><span class="lbl">${list.length} document${list.length>1?'s':''}</span></summary><div class="dlist">${byCar}</div></details>`}).join('')||'<div class="empty">No documents for this carrier yet.</div>';
-  renderEarnings();renderGuideChanges();if(typeof renderQon==='function')renderQon();
+  const sorter=(x,y)=>(y.y||0)-(x.y||0)||(y.eff||'').localeCompare(x.eff||'')||x.n.localeCompare(y.n);
+  const ER=c=>EARN.filter(e=>e.company===c||(c==='FedEx'&&e.company==='FedEx Freight'));
+  const earnRow=e=>{const lk=(u,l)=>u?`<a class="link" href="${u}" target="_blank" rel="noopener">${l}</a>`:'';
+    return `<div class="drow2 erow2"><span class="dn">${esc(e.company==='FedEx Freight'?'FedEx Freight ':'')}${esc(e.q)} earnings</span>
+      <span class="dm">Reported ${DF(e.d)} · Revenue $${e.rev.toFixed(1)}B${e.revYoY!=null?` (${e.revYoY>0?'+':e.revYoY<0?'−':''}${Math.abs(e.revYoY)}% YoY)`:''} · Adj. EPS $${e.eps.toFixed(2)}</span>
+      ${e.take?`<span class="dd">${esc(e.take)}</span>`:''}<span class="elinks">${lk(e.release,'Release')}${lk(e.webcast,'Call recording')}${lk(e.transcript,'Transcript')}${lk(e.filing,'10-Q / 10-K')}</span></div>`};
+  const callStrip=c=>{const nx=EARN_NEXT.filter(x=>x.c===c||(c==='FedEx'&&x.c==='FedEx Freight')).filter(x=>x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d));
+    const last=ER(c).filter(e=>e.company===c).sort((a,b)=>b.d.localeCompare(a.d))[0];if(!nx.length&&!last)return'';
+    const lk=(u,l)=>u?`<a class="link" href="${u}" target="_blank" rel="noopener">${l}</a>`:'';
+    return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
+      ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue $${last.rev.toFixed(1)}B · Adj. EPS $${last.eps.toFixed(2)}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
+  const yearOf=d=>String(d.y||(d.eff||d.upd||d.added||'').slice(0,4)||'Undated');
+  const nNew=L=>L.filter(d=>d.added&&daysTo(d.added)>=-14).length;
+  const groupsOf=(list,open,earn)=>[...DOC_GROUPS.map(g=>g[0]),'Earnings reports','Other documents'].map(g=>[g,g==='Earnings reports'?(earn||[]):list.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length).map(([g,L])=>{
+      if(g==='Earnings reports')return `<details class="dgrp"${open?' open':''}><summary><b>${g}</b><span class="lbl">${L.length}</span></summary>${L.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</details>`;
+      const cur=L.filter(d=>d.cur!==false||(d.eff&&d.eff>TODAY)).sort(sorter),old=L.filter(d=>!cur.includes(d)).sort(sorter),nn=nNew(L);
+      return `<details class="dgrp"${open?' open':''}><summary><b>${g}</b><span class="lbl">${L.length}${nn?` · ${nn} new`:''}</span></summary>${cur.map(docRow).join('')}${old.length?`<details class="dold"><summary>Replaced versions (${old.length})</summary>${old.map(docRow).join('')}</details>`:''}</details>`}).join('');
+  // inside each carrier: one drop-down per year (newest first, the newest open), then the document types inside it
+  const yearsOf=(L,c)=>{const E=dq?[]:ER(c),ys=[...new Set([...L.map(yearOf),...E.map(e=>e.d.slice(0,4))])].sort((x,y)=>x==='Undated'?1:y==='Undated'?-1:y.localeCompare(x));
+    return (dq?'':callStrip(c))+ys.map((y,i)=>{const Y=L.filter(d=>yearOf(d)===y),YE=E.filter(e=>e.d.slice(0,4)===y),n=Y.length+YE.length,nn=nNew(Y);
+      return `<details class="dyr"${dq?' open':''}><summary><b>${y==='Undated'?'Ongoing / undated':y}</b><span class="lbl">${n} document${n>1?'s':''}${nn?` · ${nn} new`:''}</span></summary><div class="dyrb">${groupsOf(Y,!!dq,YE)}</div></details>`}).join('')};
+  const cars=[...new Set(ds.map(d=>d.c))].sort((a,b)=>order(a)-order(b)||a.localeCompare(b));
+  $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
+    docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}">${yearsOf(ds,docCar)}</div>`:
+    cars.map(c=>{const L=ds.filter(d=>d.c===c),nn=nNew(L);
+      return `<details class="panel dcarp" data-car="${esc(c)}"${dq?' open':''}><summary><h2><span class="car ${carCls(c)}">${logoImg(c,'lgx')}${esc(c)}</span></h2><span class="lbl">${L.length} document${L.length>1?'s':''}${nn?` · ${nn} new`:''}</span></summary>${yearsOf(L,c)}</details>`}).join('');
+  $('earnNext')&&renderEarnings();renderGuideChanges();if(typeof renderQon==='function')renderQon();
 }
+
 {let dqT;$('dq').addEventListener('input',()=>{clearTimeout(dqT);dqT=setTimeout(renderDocs,120)})}
 $('docCar').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;docCar=b.dataset.c;store.set('pw-doccar',docCar);renderDocs()});
 function renderEarnings(){
@@ -4001,16 +4695,28 @@ function renderEarnings(){
       ['UPS','FedEx'].filter(c=>list.some(e=>e.company===c)).map(c=>`<div class="dcar ${carCls(c)}">${c}<a class="link" style="float:right;min-height:0" href="${EARN_IR[c]}" target="_blank" rel="noopener">All releases</a></div>`+list.filter(e=>e.company===c).sort((a,b)=>b.d.localeCompare(a.d)).map(row).join('')).join('')}</div></details>`}).join('');
 }
 /* Stock watch: two cards side by side that roll through every company; pick any two, or show all */
+const MK_LOGO={UPS:'ups',FDX:'fedex',AMZN:'amazon',DHL:'dhl',FDXF:'FedEx Freight'};
+/* On the live site, quotes and charts come from TradingView's free widgets (official exchange data, delayed);
+   the preview and any blocked network fall back to our own cards from the pipeline's closes. */
+const TV_SYM={UPS:'NYSE:UPS',FDX:'NYSE:FDX',AMZN:'NASDAQ:AMZN',DHL:'XETR:DHL',FDXF:'NYSE:FDXF',DASH:'NASDAQ:DASH',UBER:'NYSE:UBER',PBI:'NYSE:PBI'};
+const TV_ON=/github\.io$/.test(location.hostname);
+function tvMount(el,sym){if(!el||el.dataset.tv===sym)return;el.dataset.tv=sym;el.innerHTML='<div class="tradingview-widget-container__widget"></div>';
+  const sc=document.createElement('script');sc.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';sc.async=true;
+  sc.textContent=JSON.stringify({symbol:sym,width:'100%',height:'100%',locale:'en',dateRange:'12M',colorTheme:'dark',isTransparent:true,autosize:true,largeChartUrl:'',
+    trendLineColor:'rgba(76,201,240,1)',underLineColor:'rgba(76,201,240,.18)',underLineBottomColor:'rgba(76,201,240,0)'});
+  sc.onerror=()=>{el.closest('.mktv')&&el.closest('.mktv').classList.add('tvfail')};el.appendChild(sc)}
 const MKS={mode:store.get('pw-mk-mode','auto'),pick:JSON.parse(store.get('pw-mk-pick','["UPS","FDX"]')),i:0,timer:null};
 function renderMarkets(){
   const nx={UPS:EARN_NEXT.find(x=>x.c==='UPS'),FDX:EARN_NEXT.find(x=>x.c==='FedEx')};
   const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>`};
   const pos=t=>Math.max(0,Math.min(100,(t.px-t.lo)/(t.hi-t.lo)*100)).toFixed(1);
   const card=t=>{const n=nx[t.s];return `<a class="mkc ${carCls(t.s)}" href="${t.src}" target="_blank" rel="noopener" title="Live quote for ${esc(t.n)}">
-      <div class="mkh"><b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span></div>
+      <div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs')}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span></div>
       <div class="mkp"><span class="mono mkpx">${money(t,t.px)}</span>${chg(t)}</div>
       <div class="rng" role="img" aria-label="52-week range ${money(t,t.lo)} to ${money(t,t.hi)}, now ${money(t,t.px)}"><i style="left:${pos(t)}%"></i></div>
       <div class="lbl mr"><span>52-wk ${money(t,t.lo).replace(/\.\d+$/,'')}</span>${n?`<span class="mke">Earnings ${fmtD(n.d)}</span>`:t.w?`<span class="mke mkw2">${esc(t.w)}</span>`:''}<span>${money(t,t.hi).replace(/\.\d+$/,'')}</span></div></a>`};
+  const tvCard=t=>{const n=nx[t.s];return `<div class="mkc mktv ${carCls(t.s)}"><div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs')}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span>${n?`<span class="mke lbl">Earnings ${fmtD(n.d)}</span>`:''}</div>
+      <div class="tvw tradingview-widget-container" data-sym="${TV_SYM[t.s]}"></div><div class="tvfb">${card(t)}</div></div>`};
   const pairs=[];for(let i=0;i<TICKERS.length;i+=2)pairs.push(TICKERS.slice(i,i+2));
   let shown;
   if(MKS.mode==='all')shown=TICKERS;
@@ -4018,18 +4724,19 @@ function renderMarkets(){
   else shown=pairs[MKS.i%pairs.length];
   const on=s=>MKS.mode==='pick'&&MKS.pick.includes(s);
   const asofs=[...new Set(TICKERS.map(t=>t.asof))];
-  $('mkToday').innerHTML=`<div class="ph"><h2>Stock watch</h2><button class="link" data-goto="docs:earnings">Earnings archive</button></div>
+  $('mkToday').innerHTML=`<div class="ph"><h2>Stock watch</h2><button class="link" data-goto="docs:earnings">Earnings calls</button></div>
     <div class="mkpick" role="group" aria-label="Choose stocks">
       <button class="chip" data-mk="auto" aria-pressed="${MKS.mode==='auto'}">Rotate</button>
       ${TICKERS.map(t=>`<button class="chip ${carCls(t.s)}" data-mk="${t.s}" aria-pressed="${on(t.s)}">${t.s}</button>`).join('')}
       <button class="chip" data-mk="all" aria-pressed="${MKS.mode==='all'}">All</button></div>
-    <div class="mkbig${MKS.mode==='all'?' mkall':''}${MKS.mode==='auto'?' mkroll':''}" aria-live="polite">${shown.map(card).join('')}</div>
-    ${MKS.mode==='auto'?`<div class="mkdots" aria-hidden="true">${pairs.map((p,i)=>`<i class="${i===MKS.i%pairs.length?'on':''}"></i>`).join('')}</div>`:''}
-    <p class="lbl mknote">${asofs.length===1?'As of '+esc(asofs[0]):'Latest closes'} · Not investment advice</p>`;
+    <div class="mkbig${MKS.mode==='all'?' mkall':''}${MKS.mode==='auto'&&!TV_ON?' mkroll':''}" aria-live="polite">${shown.map(TV_ON?tvCard:card).join('')}</div>
+    ${MKS.mode==='auto'?`<div class="mkdots">${pairs.map((p,i)=>`<button type="button" data-mki="${i}" class="${i===MKS.i%pairs.length?'on':''}" aria-label="Show ${p.map(t=>t.s).join(' and ')}"></button>`).join('')}</div>`:''}
+    <p class="lbl mknote">${TV_ON?'Charts and quotes by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>, delayed':asofs.length===1?'As of '+esc(asofs[0]):'Latest closes'} · Not investment advice</p>`;
+  if(TV_ON)$('mkToday').querySelectorAll('.tvw').forEach(el=>tvMount(el,el.dataset.sym));
   clearTimeout(MKS.timer);
-  if(MKS.mode==='auto'&&!reduceMotion())MKS.timer=setTimeout(()=>{if(!document.hidden&&!$('mkToday').matches(':hover'))MKS.i=(MKS.i+1)%pairs.length;renderMarkets()},6000);
+  if(MKS.mode==='auto'&&!TV_ON&&!reduceMotion())MKS.timer=setTimeout(()=>{if(!document.hidden&&!$('mkToday').matches(':hover'))MKS.i=(MKS.i+1)%pairs.length;renderMarkets()},6000);
 }
-$('mkToday').addEventListener('click',e=>{const b=e.target.closest('[data-mk]');if(!b)return;const k=b.dataset.mk;
+$('mkToday').addEventListener('click',e=>{const d=e.target.closest('[data-mki]');if(d){MKS.i=+d.dataset.mki;renderMarkets();return}const b=e.target.closest('[data-mk]');if(!b)return;const k=b.dataset.mk;
   if(k==='auto'||k==='all')MKS.mode=k;
   else{if(MKS.mode!=='pick'){MKS.mode='pick';MKS.pick=[k]}else if(MKS.pick.includes(k)){MKS.pick=MKS.pick.filter(s=>s!==k);if(!MKS.pick.length)MKS.mode='auto'}else MKS.pick=[...MKS.pick,k].slice(-2)}
   store.set('pw-mk-mode',MKS.mode);store.set('pw-mk-pick',JSON.stringify(MKS.pick));renderMarkets()});
@@ -4097,7 +4804,7 @@ if(PLIVE)pushCfg().then(()=>{renderPrefs();if(PUSH.app&&(!PIOS||PSTAND()))setTim
 function renderTicker(){
   const it=[['UPS ground fuel',pct(FUEL.current.UPS.ground),gDelta('UPS')],['FedEx ground fuel',pct(FUEL.current.FedEx.ground),gDelta('FedEx')],['OnTrac fuel',pct(FUEL.current.OnTrac.ground),ontracDelta()],
     ['UPS air fuel',pct(FUEL.current.UPS.air),null],['FedEx air fuel',pct(FUEL.current.FedEx.air),null],['Diesel /gal','$'+DIESEL.at(-1)[1].toFixed(2),DIESEL.at(-1)[1]-DIESEL.at(-2)[1]],['Jet fuel /gal','$'+oilNow('jet')[1].toFixed(2),oilWk('jet')],['WTI crude /bbl','$'+oilNow('wti')[1].toFixed(2),oilWk('wti')],['Brent crude /bbl','$'+oilNow('brent')[1].toFixed(2),oilWk('brent')],...TICKERS.map(t=>[t.s+' stock',(t.cur||'$')+t.px.toFixed(2),t.ch])];
-  const lbl=l=>{const m=l.match(/^(UPS|FedEx|OnTrac|FDX)\b(.*)$/);return m?`<span class="car ${carCls(m[1])}">${m[1]}</span>${m[2]}`:l};
+  const lbl=l=>{const m=l.match(/^(UPS|FedEx|OnTrac|FDX)\b(.*)$/);return m?`<span class="car ${carCls(m[1])}">${logoImg(m[1]==='FDX'?'FedEx':m[1],'lgx')}${m[1]}</span>${m[2]}`:l};
   const one=it.map(([l,v,d])=>{const stock=/ stock$/.test(l),c=d==null?'':stock?(d>0?'gain':d<0?'loss':'flat'):cls(d);
     return `<span><em>${lbl(l)}</em>${v}${d==null?'':`<b class="${c}">${arw(d)}${Math.abs(d).toFixed(2)}</b>`}</span>`}).join('');
   $('ticker').innerHTML=one+one;
@@ -4162,7 +4869,10 @@ function markRead(ids){let add=[];ids.forEach(id=>{if(!id||MS.read.has(id))retur
   found.forEach(p=>{if(!MS.met.has(p)){MS.met.add(p);MS.fresh.add(p);add.push(p)}})});
   store.set('pw-read',JSON.stringify([...MS.read]));store.set('pw-met',JSON.stringify([...MS.met]));store.set('pw-fresh',JSON.stringify([...MS.fresh]));
   if(add.length){navBadge();if(curView.mna==='map'&&!$('s-mna').hidden)renderMap()}}
-function navBadge(){const n=0,b=$('mnaNew');if(!b)return;b.hidden=!n;b.textContent=n>99?'99+':'+'+n;b.title=`${n} new on your market map`}
+/* companies added to the map in the last 14 days that this reader hasn't opened yet */
+const newPlayers=()=>PLAYERS.filter(p=>p.added&&daysTo(p.added)>=-14).sort((a,b)=>b.added.localeCompare(a.added));
+const seenNew=()=>{try{return new Set(JSON.parse(store.get('pw-seen-new','[]')))}catch(e){return new Set()}};
+function navBadge(){const n=newPlayers().filter(p=>!seenNew().has(p.id)).length,b=$('mnaNew');if(!b)return;b.hidden=!n;b.textContent=n>99?'99+':'+'+n;b.title=`${n} new on your market map`}
 const edgeMet=e=>MS.met.has(e.a)&&MS.met.has(e.b)&&(!e.story||MS.read.has(e.story)||e.k!=='partner');
 let readObs=null;
 function watchReading(){
@@ -4236,7 +4946,7 @@ function renderSide(){
   const sec=(t,n,body)=>`<section class="psec"><h4>${t}${n!=null?`<small>${n}</small>`:''}</h4>${body}</section>`;
   const others=[...grp.inv,...grp.part];
   el.innerHTML=`<button class="mclose" data-mclose aria-label="Close">×</button>
-    <header class="phd"><span class="prl r-${p.realm}"><i></i>${esc(RL[p.realm])}</span><h3>${esc(p.n)}</h3><p>${esc(p.s)}</p>${PSITE[p.id]?`<a class="psite" href="https://${PSITE[p.id]}" target="_blank" rel="noopener">${esc(PSITE[p.id].split('/')[0].replace(/^www\./,''))} ↗</a>`:''}</header>
+    <header class="phd"><span class="prl r-${p.realm}"><i></i>${esc(RL[p.realm])}</span><div class="phtl">${logoImg(p,'lgl')}<h3>${esc(p.n)}</h3></div><p>${esc(p.s)}</p>${PSITE[p.id]?`<a class="psite" href="https://${PSITE[p.id]}" target="_blank" rel="noopener">${esc(PSITE[p.id].split('/')[0].replace(/^www\./,''))} ↗</a>`:''}</header>
     <div class="pfacts">${fact('Ownership',ownLine(p))}${fact('Headquarters',p.hq?esc(p.hq.replace(/, USA$/,'')):'')}${fact('Founded',p.yr?esc(p.yr):'')}${fact('Ticker',p.tk?esc(p.tk):'')}</div>
     ${chain.length||kids.length||formerHtml?sec('Ownership family',null,`${chain.length?`<div class="pchain"><span class="lbl">Part of</span>${chain.map(chip).join('<span class="parr">›</span>')}<span class="parr">›</span><span class="pme">${esc(p.n)}</span></div>`:''}${kids.length?`<div class="lbl pkl">Owns ${kids.length}</div><div class="rps">${kids.map(chip).join('')}</div>`:''}${formerHtml}`):''}
     ${grp.deal.length?sec('Deals',grp.deal.length,rows(grp.deal,5)):''}
@@ -4257,7 +4967,7 @@ function renderPlayers(){
   $('plCount').textContent=`${L.length} of ${PLAYERS.length}`;
   $('plList').innerHTML=REALMS.map(([k,l])=>{const ps=L.filter(p=>p.realm===k).sort((a,b)=>a.n.localeCompare(b.n));if(!ps.length)return'';
     return `<div class="plg"><div class="lbl plh"><span class="rdot r-${k}"></span>${l} · ${ps.length}</div>${ps.map(p=>{const last=p.ed.filter(e=>e.k!=='owns'&&e.y).sort((a,b)=>b.y.localeCompare(a.y))[0];
-      return `<button class="plr" data-pl="${p.id}" data-goto-map><span class="pln${PCAR[p.id]?' car '+PCAR[p.id]:''}">${esc(p.n)}${MS.met.has(p.id)?'':'<i class="unread" title="Not on your map yet"></i>'}</span><span class="plo">${ownPlain(p)}</span><span class="pll">${last?`<span class="mono">${esc(last.y)}</span> ${esc(last.t)}`:''}</span></button>`}).join('')}</div>`}).join('')||'<div class="empty">No companies match.</div>';
+      return `<button class="plr" data-pl="${p.id}" data-goto-map><span class="pln${PCAR[p.id]?' car '+PCAR[p.id]:''}${LOGOS[p.id]?' hasl':''}">${logoImg(p,'lgs')}${esc(p.n)}${MS.met.has(p.id)?'':'<i class="unread" title="Not on your map yet"></i>'}</span><span class="plo">${ownPlain(p)}</span><span class="pll">${last?`<span class="mono">${esc(last.y)}</span> ${esc(last.t)}`:''}</span></button>`}).join('')}</div>`}).join('')||'<div class="empty">No companies match.</div>';
 }
 function renderQon(){document.querySelectorAll('.qon[data-qfor]').forEach(el=>{const v=($(el.dataset.qfor)||{}).value||'';el.hidden=!v;el.innerHTML=v?`<button class="chip" aria-pressed="true" data-qclear="${el.dataset.qfor}">“${esc(v)}” ×</button>`:''})}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-qclear]');if(!b)return;const i=$(b.dataset.qclear);i.value='';i.dispatchEvent(new Event('input'))});
@@ -4281,7 +4991,7 @@ function wmProj(lon,lat){const l=lon*Math.PI/180,p=lat*Math.PI/180,p2=p*p,p4=p2*
   const x=l*(0.8707-0.131979*p2+p4*(-0.013791+p4*(0.003971*p2-0.001529*p4))),y=p*(1.007226+p2*(0.015085+p4*(-0.044475+0.028874*p2-0.005916*p4)));
   return [WGEO.tx+WGEO.k*x,WGEO.ty-WGEO.k*y]}
 const wmKey=h=>{h=String(h||'');if(/Richmond, Canada/.test(h))return 'Richmond, Canada';if(/Cambridge, UK/.test(h))return 'Cambridge, UK';return h.split(',')[0].trim()};
-function wmLoc(p,d=0){if(!p)return null;const g=HQGEO_ID[p.id]||HQGEO[wmKey(p.hq)];if(g)return {g,via:null,approx:!!g[2]};
+function wmLoc(p,d=0){if(!p)return null;const g=HQGEO_ID[p.id]||HQGEO[wmKey(p.hq)]||(Array.isArray(p.geo)?p.geo:null);if(g)return {g,via:null,approx:!!g[2]};
   if(d<3&&p.parent){const r=wmLoc(PL[p.parent],d+1);if(r)return Object.assign({},r,{via:r.via||PL[p.parent]})}return null}
 function wmBuild(){if(WM.built)return;WM.built=true;const groups={};
   PLAYERS.forEach(p=>{const L=wmLoc(p);if(!L){WM.miss.push(p.id);return}const [x,y]=wmProj(L.g[0],L.g[1]),k=x.toFixed(1)+','+y.toFixed(1);(groups[k]=groups[k]||[]).push(p.id);WM.pts[p.id]={x,y,via:L.via,approx:L.approx,city:L.via?(L.via.hq||''):(p.hq||'')}});
@@ -4310,8 +5020,8 @@ function renderWorld(){
   const used=[];$('wLbl').innerHTML=lab.sort((a,b)=>(b.id===sel)-(a.id===sel)).map(p=>{const [x,y0]=wmXY(p.id);let y=y0-5*u;while(used.some(([ux,uy])=>Math.abs(ux-x)<60*u&&Math.abs(uy-y)<11*u))y+=12*u;used.push([x,y]);return `<text class="wl${p.id===sel?' sel':''}" x="${(x+6*u).toFixed(2)}" y="${y.toFixed(2)}" style="font-size:${(p.id===sel?12:10)*u}px;stroke-width:${3*u}px">${esc(p.n)}</text>`}).join('');
   const kh=$('wKeyHint');if(kh)kh.innerHTML=sel&&PL[sel]?(conn.size?`Showing <b>${esc(PL[sel].n)}</b>’s ownership links, past and present · ${conn.size}`:`<b>${esc(PL[sel].n)}</b> has no ownership links on file`):'Tap any dot to draw its ownership lines';
   const c=$('wCard');if(sel&&PL[sel]){const p=PL[sel],pt=WM.pts[sel],cs=[...conn].filter(id=>PL[id]).slice(0,10);
-    c.innerHTML=`<button class="wx" data-wsel="" aria-label="Clear">×</button><span class="wcr r-${p.realm}"><i></i>${esc(RL[p.realm]||'')}</span><b>${esc(p.n)}</b><span class="wcc">${pt?esc(pt.via?`At ${pt.via.n}’s headquarters, ${pt.city}`:pt.city+(pt.approx?' (approximate)':'')):'Headquarters not listed'}</span>
-      <span class="wcn">${conn.size?`${conn.size} compan${conn.size===1?'y':'ies'} linked by ownership, past or present`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}"><i></i>${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
+    c.innerHTML=`<button class="wx" data-wsel="" aria-label="Clear">×</button><span class="wcr r-${p.realm}"><i></i>${esc(RL[p.realm]||'')}</span><b class="wcnm">${logoImg(p,'lgs')}${esc(p.n)}</b><span class="wcc">${pt?esc(pt.via?`At ${pt.via.n}’s headquarters, ${pt.city}`:pt.city+(pt.approx?' (approximate)':'')):'Headquarters not listed'}</span>
+      <span class="wcn">${conn.size?`${conn.size} compan${conn.size===1?'y':'ies'} linked by ownership, past or present`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}">${logoImg(id,'lgs')||'<i></i>'}${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
 }
 function wmZoomTo(cx,cy,w){const h=w*WGEO.H/WGEO.W;wmTween([cx-w/2,cy-h/2,w,h])}
 // smooth camera moves
@@ -4344,9 +5054,12 @@ function wmHover(e){const t=e.target.closest&&e.target.closest('[data-wpl]'),tip
 {const f=renderMap;renderMap=function(){f.apply(this,arguments);renderWorld();requestAnimationFrame(renderWorld)}}
 {const g=showTab;showTab=function(t){g.apply(this,arguments);if(t==='mna')setTimeout(renderWorld,60)}}
 
-function renderMna(){renderQon();renderDeals();if(curView.mna==='map')renderMap();if(curView.mna==='players')renderPlayers();watchReading()}
+function renderNewPlayers(){const el=$('mNewP');if(!el)return;const L=newPlayers().slice(0,10),S=seenNew();
+  el.hidden=!L.length;if(!L.length)return;
+  el.innerHTML=`<span class="lbl">New on the map</span>${L.map(p=>`<button class="pchip${S.has(p.id)?'':' isnew'}" data-pl="${p.id}" title="${esc(p.s||'')}">${logoImg(p,'lgs')||`<i class="rdot r-${p.realm}"></i>`}${esc(p.n)}</button>`).join('')}`;navBadge()}
+function renderMna(){renderNewPlayers();renderQon();renderDeals();if(curView.mna==='map')renderMap();if(curView.mna==='players')renderPlayers();watchReading()}
 {const f=renderNews;renderNews=function(){f.apply(this,arguments);watchReading()}}
-function selectPlayer(id){MS.sel=MS.sel===id?null:id;MS.edge=null;if(MS.sel&&typeof wmFit==='function'&&$('wSvg'))setTimeout(()=>wmFit(MS.sel),30);if(MS.sel&&MS.fresh.delete(id)){store.set('pw-fresh',JSON.stringify([...MS.fresh]));navBadge()}renderMap()}
+function selectPlayer(id){try{const S=seenNew();if(id&&!S.has(id)){S.add(id);store.set('pw-seen-new',JSON.stringify([...S].slice(-300)))}}catch(e){}MS.sel=MS.sel===id?null:id;MS.edge=null;if(MS.sel&&typeof wmFit==='function'&&$('wSvg'))setTimeout(()=>wmFit(MS.sel),30);if(MS.sel&&MS.fresh.delete(id)){store.set('pw-fresh',JSON.stringify([...MS.fresh]));navBadge()}renderMap()}
 document.addEventListener('click',e=>{
   const pl=e.target.closest('[data-pl]');
   if(pl&&!e.target.closest('a')){e.preventDefault();e.stopPropagation();window.coopClose&&coopClose();
@@ -4398,9 +5111,20 @@ function deliverInfo(id){
   if(id==='demo'){const d=DOCS.find(x=>x.c==='FedEx'&&x.t==='Service guide'&&x.cur!==false)||DOCS[0];return {id:null,car:hqOf(d.c),doc:d.n,what:'Demo: how a change alert arrives',date:TODAY}}
   const n=NEWS.find(x=>x.id===id);if(!n)return null;const s=(n.srcs&&n.srcs[0]&&n.srcs[0].src)||'';
   return {id:n.id,car:hqOf(n.c),doc:s.includes(': ')?s.split(': ').slice(1).join(': '):n.title,what:n.title,date:n.date}}
+/* Opening a push: land on the story (or the document it's about), open everything around it and highlight it */
+function landOn(id){
+  const n=NEWS.find(x=>x.id===id);if(!n)return null;
+  const urls=(n.srcs||[]).map(s=>(s.url||'').split('?')[0]).filter(Boolean);
+  const d=(n.cat==='Guide changes'||n.cat==='Documents'||n.audit)&&DOCS.find(x=>x.u&&urls.includes(x.u.split('?')[0]));
+  if(d){docCar='All';store.set('pw-doccar','All');showTab('docs');setView.docs('library');renderDocs();
+    const el=$(docDomId(d));if(el){for(let p=el.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;return el}}
+  goStory(id);return $('n-'+id)}
+function highlight(el,lbl){if(!el)return;el.dataset.landlbl=lbl||'From your alert';setTimeout(()=>{el.scrollIntoView({block:'center',behavior:reduceMotion()?'auto':'smooth'});
+  el.classList.remove('landed');void el.offsetWidth;el.classList.add('landed');setTimeout(()=>el.classList.remove('landed'),6000)},80)}
 function coopDeliver(id){
   const D=deliverInfo(id);if(!D)return;
-  const go=()=>{goTo('docs','alerts');setTimeout(()=>dropOff(D),120)};
+  const go=()=>{if(!D.id){goTo('docs','alerts');setTimeout(()=>dropOff(D),120);return}
+    const t=landOn(D.id);if(t){t.scrollIntoView({block:'center'});setTimeout(()=>dropOff(D,t),260)}};
   if(reduceMotion()){go();return}
   document.querySelector('.cdlv')?.remove();
   const k=carCls(D.car)||'',H=HQ_CEO[D.car]||{co:D.car,ceo:null,title:null,city:HQ_CITY[D.car]},city=H.city;
@@ -4414,13 +5138,13 @@ function coopDeliver(id){
     ${[...Array(40)].map((_,i)=>`<circle cx="${(i*97)%640}" cy="${(i*53)%150}" r="${i%3?0.7:1.2}" fill="#fff" opacity="${.25+(i%4)*.15}"/>`).join('')}
     <g class="bgcity" fill="#0B121B">${[[0,230,60],[50,200,70],[120,250,50],[170,180,80],[255,215,60],[520,190,70],[585,235,55]].map(([x,y,w])=>`<rect x="${x}" y="${y}" width="${w}" height="${360-y}"/>`).join('')}</g>
     <g class="hq"><rect x="378" y="60" width="150" height="300" fill="#101B28" stroke="#1E2E40"/><rect x="378" y="60" width="150" height="14" class="hqband"/><rect x="378" y="318" width="150" height="12" class="hqband" opacity=".55"/><rect x="438" y="300" width="30" height="30" class="hqdoor"/>
-      <text x="453" y="50" text-anchor="middle" class="hqsign ${k}">${esc(H.co)}</text>${wins.join('')}
+      <text x="453" y="50" text-anchor="middle" class="hqsign ${k}">${esc(H.co)}</text>${(r=>r&&r.f?`<image href="${r.f}" x="439" y="8" width="28" height="28" preserveAspectRatio="xMidYMid meet"/>`:'')(typeof LOGOS!=='undefined'&&LOGOS[logoId(D.car)])}${wins.join('')}
       <circle cx="451" cy="198" r="34" fill="url(#dglow)" class="twg"/></g>
     <rect y="330" width="640" height="30" fill="#060A10"/>
    </svg>
    <div class="cdB" aria-hidden="true"><div class="room"><div class="rwin"></div><div class="lamp"></div><div class="desk"></div>
      <div class="nplate"><div class="np"><b>${esc(H.ceo||H.co)}</b><span>${esc(H.ceo?H.title:'Headquarters')}</span></div></div>
-     <div class="paper ${k}"><span class="pcar ${k}">${esc(H.co)}</span><b>${esc(D.doc)}</b><i>${D.id?'Changed':'Updated'} · ${fmtD(D.date)}</i><em>NEW</em></div>
+     <div class="paper ${k}"><span class="pcar ${k}">${logoImg(D.car,'lgx')}${esc(H.co)}</span><b>${esc(D.doc)}</b><i>${D.id?'Changed':'Updated'} · ${fmtD(D.date)}</i><em>NEW</em></div>
      <div class="cperch">${GUIDE}</div></div></div>
    <div class="cfly2" aria-hidden="true"><div class="cfl">${window.COOP_FLY||''}</div><div class="cpap"></div></div>
    <div class="cdcap"><span class="lbl">${esc(H.co)} HQ${city?' · '+esc(city):''}${H.ceo?`<span class="cdesk"> · desk of ${esc(H.ceo)}</span>`:''}</span><b>${esc(D.doc)}</b></div>
@@ -4442,17 +5166,20 @@ function coopDeliver(id){
   setTimeout(()=>{fly.style.opacity=1;fly.classList.add('carry');fly.animate([{left:'52%',top:'52%',transform:'scale(.9)'},{left:'110%',top:'8%',transform:'scale(1.1)'}],{duration:1200,easing:'ease-in',fill:'forwards'})},8200);
   setTimeout(finish,9400);
 }
-function dropOff(D){
-  const target=D.id&&$('gc-'+D.id)||$('gcList');if(!target)return;
+function dropOff(D,to){
+  const target=to||D.id&&$('gc-'+D.id)||$('gcList');if(!target)return;
   target.scrollIntoView({block:'center'});
-  setTimeout(()=>{const r=target.getBoundingClientRect(),p=document.createElement('div');p.className='cdrop';p.innerHTML=`<span class="${carCls(D.car)}">${esc(D.car)}</span>${esc(D.doc)}`;document.body.appendChild(p);
+  setTimeout(()=>{const r=target.getBoundingClientRect(),p=document.createElement('div');p.className='cdrop';p.innerHTML=`<span class="${carCls(D.car)}">${logoImg(D.car,'lgx')}${esc(D.car)}</span>${esc(D.doc)}`;document.body.appendChild(p);
     const x=r.left+Math.min(r.width-40,240),y=r.top+r.height/2;
     const an=p.animate([{left:innerWidth+40+'px',top:'-40px',transform:'rotate(18deg) scale(.8)'},{left:x+60+'px',top:y-90+'px',transform:'rotate(-8deg) scale(1)',offset:.7},{left:x+'px',top:y+'px',transform:'rotate(0) scale(.6)',opacity:.9}],{duration:900,easing:'cubic-bezier(.3,.6,.3,1)',fill:'forwards'});
-    an.onfinish=()=>{p.remove();target.classList.add('delivered');setTimeout(()=>target.classList.remove('delivered'),3600)}},380);
+    an.onfinish=()=>{p.remove();if(to)highlight(target);else{target.classList.add('delivered');setTimeout(()=>target.classList.remove('delivered'),3600)}}},380);
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-deliver]');if(!b)return;e.preventDefault();e.stopPropagation();coopDeliver(b.dataset.deliver)},true);
 // deep link from alerts: …/#alert=<story id>  (or #alert=demo)
-{const m=/^#alert=([\w-]+)/.exec(location.hash||'');if(m)setTimeout(()=>coopDeliver(m[1]),700)}
+// #alert=<id> is a big change (Coop delivers it, then it lands); #story=<id> just lands and highlights. Only from a notification link.
+{const m=/^#(alert|story)=([\w-]+)/.exec(location.hash||'');if(m){window.PP_LANDING=Date.now();try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+  let tries=0;const go=()=>{const id=m[2];if(id!=='demo'&&!NEWS.some(n=>n.id===id)&&tries++<20)return setTimeout(go,250);
+    if(m[1]==='alert')coopDeliver(id);else highlight(landOn(id))};setTimeout(go,600)}}
 // a change you haven't seen yet plays once when you open the alerts view
 {const seen=new Set(JSON.parse(store.get('pw-gc-seen','[]')));const chk=()=>{if(curTab()!=='docs'||curView.docs!=='alerts')return;
   const n=NEWS.filter(x=>x.cat==='Guide changes').sort((a,b)=>b.date.localeCompare(a.date))[0];
@@ -4533,6 +5260,11 @@ const startTab=(location.hash||'').slice(1)||store.get('pw-tab','today');
 showTab(['today','news','mna','clock','fuel','docs'].includes(startTab)?startTab:'today');
 
 /* ================= live data from the pipeline (data/*.json); works without it ================= */
+/* The rate clock is for cost changes and big events, not every date a story mentions (mirrors pipeline/common.py) */
+const CLOCK_CATS=new Set(['Pricing & GRI','Fees & rules','Peak season','Fuel','Guide changes','Postal','Regulation & trade','Network & operations','International','Amazon','Regional & alternative','Labor']);
+const NOT_CLOCK=/\b(sentenc\w*|prison|jail|court|trial|hearing|arraign\w*|plea|verdict|indict\w*|parole|lawsuit|testif\w*|deposition|funeral|birthday|anniversary|earnings call|conference|webinar|summit|expo|award)\b/i;
+function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.test(t))return false;const lvl=+n.lvl||1,imp=d&&d.imp||n.imp;
+  if(lvl>=3)return true;if(n.cat&&!CLOCK_CATS.has(n.cat))return false;return imp==='up'||imp==='down'||lvl>=2}
 (async function(){
   const j=async p=>{try{const r=await fetch(p,{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};
   const [news,fuel,brief,deals,audit,mk,docs,earn,pls]=await Promise.all([j('data/news.json'),j('data/fuel.json'),j('data/brief.json'),j('data/deals.json'),j('data/audit.json'),j('data/markets.json'),j('data/docs.json'),j('data/earnings.json'),j('data/players.json')]);
@@ -4544,7 +5276,7 @@ showTab(['today','news','mna','clock','fuel','docs'].includes(startTab)?startTab
     const sim=(a,b)=>{const A=words(a),B=words(b);let k=0;A.forEach(w=>{if(B.has(w))k++});return k/Math.max(1,Math.min(A.size,B.size))};
     news.forEach(n=>{if(!n||!n.url||seen.has(n.url))return;n.c=n.c||[];n.kind=n.kind||'News';if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];
       n.srcs.forEach(s=>seen.add(s.url));NEWS.push(n);ch=true;
-      (n.dates||[]).forEach((d,i)=>{if(!d||!d.d)return;
+      (n.dates||[]).forEach((d,i)=>{if(!d||!d.d||!clockWorthy(n,d))return;
         const near=DATES.find(x=>Math.abs(daysTo(x.d)-daysTo(d.d))<=3&&(sim(x.w,d.w)>=.5||n.c.some(c=>x.c.includes(c))&&sim(x.w,d.w)>=.3));
         if(near){near.news=near.news||[];if(!near.news.includes(n.id))near.news.push(n.id)}
         else DATES.push({id:'x'+n.id+i,d:d.d,w:d.w,c:n.c.join(' · '),imp:d.imp||'up',news:[n.id],...(d.fx&&d.fx.t?{fx:d.fx}:{})})})});
@@ -4564,12 +5296,12 @@ showTab(['today','news','mna','clock','fuel','docs'].includes(startTab)?startTab
   if(Array.isArray(earn)&&earn.length){earn.forEach(e=>{if(!e||!e.q)return;const k=EARN.find(x=>x.company===e.company&&x.q===e.q);if(k)Object.assign(k,e);else EARN.push(e)});ch=true}
   if(brief&&Array.isArray(brief.items)&&brief.items.length===3&&(!brief.week||brief.week>='2026-10-09')){BRIEF.length=0;brief.items.forEach(b=>BRIEF.push(b));BRIEF_IDS.length=0;(brief.ids||[]).forEach(i=>BRIEF_IDS.push(i));ch=true}
   if(audit){
-    (audit.clock_add||[]).forEach(x=>{if(x&&x.d&&!DATES.some(y=>y.id===x.id))DATES.push(x)});
+    (audit.clock_add||[]).forEach(x=>{if(!x||!x.d||DATES.some(y=>y.id===x.id))return;const st=(x.news||[]).map(id=>NEWS.find(n=>n.id===id)).find(Boolean);if(st&&!clockWorthy(st,{w:x.w,imp:x.imp}))return;DATES.push(x)});
     (audit.clock_link||[]).forEach(l=>{const c=DATES.find(y=>y.id===l.clock);if(c){c.news=c.news||[];if(!c.news.includes(l.story))c.news.push(l.story)}});
     (audit.clock_unlink||[]).forEach(l=>{const c=DATES.find(y=>y.id===l.clock);if(c)c.news=(c.news||[]).filter(s=>!l.stories.includes(s))});
     DATES.sort((a,b)=>a.d.localeCompare(b.d));ch=true}
   NEWS.forEach(n=>{if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];n.srcs=[...n.srcs].sort((a,b)=>(isPrimary(a.url)?0:1)-(isPrimary(b.url)?0:1));n.src=n.srcs[0].src;n.url=n.srcs[0].url});
-  if(pls&&Array.isArray(pls.players)){pls.players.forEach(p=>{if(p&&p.id&&!PL[p.id]&&REALMS.some(r=>r[0]===p.realm)){PLAYERS.push(p);PL[p.id]=p}});
+  if(pls&&Array.isArray(pls.players)){pls.players.forEach(p=>{if(p&&p.id&&!p.pending&&!PL[p.id]&&REALMS.some(r=>r[0]===p.realm)){PLAYERS.push(p);PL[p.id]=p;if(p.site&&typeof PSITE!=='undefined'&&!PSITE[p.id])PSITE[p.id]=p.site}});
     (pls.edges||[]).forEach(e=>{if(e&&PL[e.a]&&PL[e.b]&&!PEDGES.some(x=>x.a===e.a&&x.b===e.b&&x.k===e.k))PEDGES.push(e)});indexPlayers();ch=true}
   if(ch){renderAll();stampLabels();window.coopBrief&&coopBrief()}
 })();
@@ -4723,14 +5455,63 @@ renderClocks();setInterval(renderClocks,10000);
     clock:()=>{const k=DATES.filter(x=>daysTo(x.d)>=0&&x.imp==='up').length;return `${k} dated increases ahead. The GRI headline is an average; accessorials and light-weight ground usually move more. `+pick(['None of them are optional.','The clock only runs one direction.'])},
     fuel:()=>'Ground fuel follows the diesel average from about two weeks back; air and international follow Gulf Coast jet fuel. The table steps matter as much as the price. '+pick(['New tables have a funny way of never being cheaper.','It’s the only surcharge with its own weather forecast.']),
     docs:()=>'Check the revision date on each guide. Mid-year changes don’t always come with an announcement. '+pick(['The expensive part is never on page one.','I read the fine print so the fine print doesn’t read you.'])};
+  /* Fun facts: short, true, a little smug. One now and then, never more than three a visit. */
+  const FACTS=[
+    'UPS started in 1907 as a Seattle bike-messenger outfit funded by a $100 loan. Today that buys about one oversize fee.',
+    'UPS routing avoids left turns. Less idling, less fuel, fewer accidents. Your contract still turns left on accessorials.',
+    'FedEx’s first night in 1973 moved 186 packages. Peak season now does that in a blink.',
+    'Fred Smith says he once won about $27,000 at blackjack to make FedEx payroll. Today we call that a fuel surcharge.',
+    'Look between the E and the x in the FedEx logo. There’s an arrow. Been there the whole time.',
+    'UPS brown has a name: Pullman Brown. Like the old railcars. Nobody calls it Surcharge Brown, officially.',
+    'DHL is named for its founders: Dalsey, Hillblom and Lynn. Started in 1969 hand-carrying shipping papers to Hawaii.',
+    'U.S. parcel post began January 1, 1913. People promptly tried mailing their children. The Post Office objected.',
+    'USPS still delivers mail by mule to Supai, at the bottom of the Grand Canyon. Zero fuel surcharge on the mule.',
+    'ZIP stands for Zone Improvement Plan, launched in 1963. The zones have been improving carrier margins ever since.',
+    'Amazon Prime launched in 2005: free two-day shipping for $79 a year. Everyone’s delivery promise got shorter after that.',
+    'UPS and FedEx moved every ground package to dimensional weight pricing in 2015. Big light boxes have been paying for air ever since.',
+    'Arthur Pitney patented a postage meter in 1902. Pitney Bowes followed in 1920. Stamps never recovered.',
+    'Louisville is UPS’s air hub. Memphis is FedEx’s. Two cities that never sleep and never miss a sort.',
+    'Last-mile delivery is often pegged at about half the cost of getting a parcel to a door. The last mile is the expensive mile.',
+    'LaserShip bought OnTrac in 2021, then took the OnTrac name. Rare case of the acquirer changing jackets.',
+    'UPS first flew packages in 1929, then quit air in 1931 because of the Depression. It came back. They always come back.',
+    'Federal Express got its name partly because Fred Smith hoped to win Federal Reserve business. The Fed passed. The name stayed.',
+    'The lowest ZIP code in use, 00501, belongs to the IRS in Holtsville, New York. Fitting place to start counting.',
+    'In 1913, parcel post capped packages at 11 pounds. Today 11 pounds barely clears a dimensional-weight cube.',
+    'UPS doesn’t call them trucks. They’re package cars. Billing them is a whole other vocabulary.'];
+  const factLive=()=>{const L=[];try{const c={};NEWS.filter(n=>daysTo(n.date)>=-7).forEach(n=>(n.c||[]).forEach(x=>{if(x!=='Industry')c[x]=(c[x]||0)+1}));
+      const top=Object.entries(c).sort((a,b)=>b[1]-a[1])[0];if(top&&top[1]>2)L.push(`${top[0]} is in ${top[1]} stories this week. Somebody’s busy. Somebody’s invoice is about to be, too.`)}catch(e){}
+    try{const pl=PLAYERS.length;if(pl>50)L.push(`I’m tracking ${pl} companies on the market map. Most of them would like your parcels.`)}catch(e){}return L};
+  let factN=0;const factsSeen=new Set();
+  function funFact(){const pool=[...FACTS,...factLive()].filter(f=>!factsSeen.has(f));if(!pool.length)return null;const f=pick(pool);factsSeen.add(f);return f}
+  setInterval(()=>{if(quiet()||factN>=3||!menu.hidden||!bub.hidden||placing||document.hidden)return;if(Date.now()-lastAct>90000)return;
+    if(Math.random()<.5)return;const f=funFact();if(!f)return;factN++;say(`<span class="cfact">Fun fact</span>${f}`,8000)},150000);
+  /* Pointers: when a story you're reading has its source document, a dated change I can animate, or a deal walkthrough,
+     I offer to take you straight there. Once per story, a few per visit, never while muted. */
+  const offered=new Set();let offN=0,offAt=0;
+  function offerFor(n){
+    const ck=(typeof clockFor==='function'?clockFor(n.id):[]).find(x=>daysTo(x.d)>=0&&typeof rcxOf==='function'&&rcxOf(x));
+    const dl=DEALS.find(x=>x.story===n.id),D=relDocs(n)[0];
+    if(ck)return `${pick(['This one has a date on it.','There’s a clock on this one.'])} Want me to show what it does to an actual box?<span class="cacts"><button type="button" data-coopgo="clock:${ck.id}">Show me</button></span>`;
+    if(dl&&DEALS.indexOf(dl)>=0)return `${pick(['Deal on the table.','Somebody bought somebody.'])} I can walk you through who got what, and what it means for your parcels.<span class="cacts"><button type="button" data-coopgo="deal:${DEALS.indexOf(dl)}">Walk me through it</button></span>`;
+    if(D)return `This came straight from ${D.c==='Reports'||D.c==='Regional'?'the publisher’s':esc(D.c)+'’s'} own ${fmtOf(D.u)==='PDF'?'PDF':fmtOf(D.u)==='Excel'?'spreadsheet':'page'}: <b>${esc(D.n)}</b>. ${pick(['Skip the middleman?','Want the real thing?','Read it at the source?'])}<span class="cacts">${D.u?`<a href="${D.u}" target="_blank" rel="noopener">Open it ↗</a>`:''}<button type="button" data-coopgo="doc:${docDomId(D)}">Show in Docs</button></span>`;
+    return null}
+  if(typeof IntersectionObserver!=='undefined'){
+    const io=new IntersectionObserver(es=>es.forEach(en=>{const c=en.target,id=c.id.slice(2);clearTimeout(c._ot);
+      if(!en.isIntersecting||en.intersectionRatio<.55)return;
+      let tries=0;const tryIt=()=>{if(quiet()||offered.has(id)||offN>=4)return;
+        if(Date.now()-offAt<45000||!menu.hidden||!bub.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000){if(tries++<4)c._ot=setTimeout(tryIt,4000);return}
+        const n=NEWS.find(x=>x.id===id);if(!n)return;const t=offerFor(n);if(!t)return;offered.add(id);offN++;offAt=Date.now();say(t,11000)};
+      c._ot=setTimeout(tryIt,2600)}),{threshold:[0,.55]});
+    const watch=()=>document.querySelectorAll('#nList .card:not([data-cw])').forEach(c=>{c.dataset.cw='1';io.observe(c)});
+    if($('nList'))new MutationObserver(watch).observe($('nList'),{childList:true});watch()}
   const seen=new Set();let lastSec=null,lastAct=Date.now(),idled=false,pokes=[];
   function secNow(){const s=document.querySelector('[data-section]:not([hidden])');return s&&s.id.slice(2)}
   setInterval(()=>{const s=secNow();if(!s||s===lastSec)return;lastSec=s;
-    if(quiet()||seen.has(s)||!SEC_LINES[s]||!menu.hidden||placing)return;seen.add(s);
+    if(quiet()||seen.has(s)||!SEC_LINES[s]||!menu.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000)return;seen.add(s);
     setTimeout(()=>{if(secNow()===s&&menu.hidden&&bub.hidden)say(SEC_LINES[s](),7000)},1400)},900);
   ['pointerdown','keydown','scroll'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
   let bubT;
-  function say(t,ms){bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
+  function say(t,ms){bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span><button type="button" class="cmute" data-cmute aria-label="${quiet()?'Unmute':'Mute'} Coop’s notes">${quiet()?'Unmute':'Mute Coop'}</button>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
     bubT=setTimeout(()=>{el.classList.remove('talking')},Math.min(2400,t.length*40));setTimeout(()=>{if(bub.innerHTML.includes(t))bub.hidden=true},ms||7000)}
   function target(){const s=document.querySelector('[data-section]:not([hidden])');const i=s&&[...s.querySelectorAll('.sbar')].find(w=>{const i=w.querySelector('input');return i&&i.offsetParent!==null});if(!i)return hdrSlot();
     // once the search bar scrolls out of sight Coop moves to the corner, so he is always one tap away
@@ -4777,16 +5558,18 @@ renderClocks();setInterval(renderClocks,10000);
     const unread=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert').sort((x,y)=>y.date.localeCompare(x.date)).slice(0,2);
     menu.innerHTML=`<div class="cm-hd"><span class="xname">Coop</span><span>Where to?</span><button class="cm-x" data-cclose aria-label="Close">×</button></div>
       <label class="sr" for="cAsk">${sq?esc(sq.ph):'Search everything'}</label><input id="cAsk" class="cm-ask" type="search" placeholder="${sq?esc(sq.ph):'Search stories, companies, documents'}" value="${sq?esc($(sq.f).value):''}" autocomplete="off">
+      ${window.PP_API?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop a parcel question</b><small>Surcharges, DIM weight, zones, fuel, contract terms</small></span></button>`:''}
       <div class="cm-res" id="cRes"><div class="cm-q">${QUICK().map(([g,t,s])=>`<button class="cm-r" data-cgo="${g}"><b>${esc(t)}</b><small>${esc(s)}</small></button>`).join('')}</div>
       ${unread.length?`<div class="lbl cm-l">You haven’t read</div>${unread.map(n=>row({o:n.id,t:n.title,s:fmtD(n.date)})).join('')}`:''}</div>
-      <button class="cm-quiet" data-cquiet>${quiet()?'Coop is quiet. Let him talk again':'Quiet, Coop. Only talk when I tap'}</button>`;
+      <div class="cm-foot"><button class="cm-fact" data-cfact>Tell me a fun fact</button><label class="cm-mute" data-cquiet><span>Coop’s notes</span><input type="checkbox" role="switch" ${quiet()?'':'checked'} aria-label="Coop’s pop-up notes"><i aria-hidden="true"></i><b>${quiet()?'Muted':'On'}</b></label></div>`;
     menu.hidden=false;bird.setAttribute('aria-expanded','true');el.classList.add('menuopen');
     const ask=menu.querySelector('#cAsk'),res=menu.querySelector('#cRes'),home=res.innerHTML;
     const here=q=>{if(!sq)return'';const f=$(sq.f);f.value=q;if(sq.f==='q')F.q=q;f.dispatchEvent(new Event('input'));if(!q)return'';
       const n=sq.f==='q'?filtered().length:sq.f==='dq'?DOCS.filter(d=>[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(q.toLowerCase())).length:null;
       return `<button class="cm-r cm-here" data-cclose><b>Show ${n==null?'matches':n+' match'+(n===1?'':'es')} in ${esc(sq.w)}</b></button>`};
     ask.addEventListener('input',()=>{const q=ask.value.trim();const top=here(q.length>=2?q:'');if(q.length<2){res.innerHTML=home;return}const h=hits(q);
-      res.innerHTML=top+(h.length?(top?'<div class="lbl cm-l">Everywhere</div>':'')+h.map(row).join(''):top?'':`<p class="cm-none">Nothing for “${esc(q)}”. Even I can’t deliver that. Try a carrier, a fee or a company.</p>`);el.classList.add('talking');clearTimeout(ask._t);ask._t=setTimeout(()=>el.classList.remove('talking'),600)});
+      const askIt=window.PP_API&&(q.length>12||/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q))?`<button class="cm-r cm-askit" data-askopen="${esc(q)}" data-cclose><b>Ask Coop: “${esc(q.length>60?q.slice(0,58)+'…':q)}”</b><small>An answer from the carriers' guides</small></button>`:'';
+      res.innerHTML=askIt+top+(h.length?(top||askIt?'<div class="lbl cm-l">Everywhere</div>':'')+h.map(row).join(''):top||askIt?'':`<p class="cm-none">Nothing for “${esc(q)}”. Even I can’t deliver that. Try a carrier, a fee or a company.</p>`);el.classList.add('talking');clearTimeout(ask._t);ask._t=setTimeout(()=>el.classList.remove('talking'),600)});
     if(ask.value.trim().length>=2)ask.dispatchEvent(new Event('input'));
     if(innerWidth>=700||sq)setTimeout(()=>ask.focus({preventScroll:true}),40);
   }
@@ -4794,10 +5577,20 @@ renderClocks();setInterval(renderClocks,10000);
   bird.addEventListener('click',e=>{e.stopPropagation();if(placing)return;const now=Date.now();pokes=pokes.filter(x=>now-x<2500);pokes.push(now);
     if(pokes.length>=5){pokes=[];closeMenu();say(pick(['Five taps. In this industry that’s a re-delivery fee.','Keep that up and I’m adding an additional handling charge.']),4000);return}
     menu.hidden?openMenu():closeMenu()});
-  bub.addEventListener('click',e=>{e.stopPropagation();bub.hidden=true;el.classList.remove('talking')});
+  const setQuiet=q=>{store.set('pw-coop-quiet',q?'1':'');el.classList.toggle('muted',q);say(q?'Muted. I’ll only talk when you tap me.':'Notes are back on. Try to keep up.',3200)};
+  el.classList.toggle('muted',quiet());
+  bub.addEventListener('click',e=>{e.stopPropagation();if(e.target.closest('[data-cmute]')){setQuiet(!quiet());return}
+    const g=e.target.closest('[data-coopgo]');
+    if(g){const [k,v]=g.dataset.coopgo.split(':');bub.hidden=true;el.classList.remove('talking');
+      if(k==='clock'){goClock(v);setTimeout(()=>{const b=document.querySelector(`[data-rx="${v}"]`);b&&b.click()},350)}
+      else if(k==='deal'){goTo('mna','deals');setTimeout(()=>{const x=$('xs-'+v);if(x){x.scrollIntoView({block:'center'});const b=x.querySelector('[data-explain]');b&&b.click()}},120)}
+      else if(k==='doc')goDoc(v);return}
+    if(e.target.closest('a')){setTimeout(()=>{bub.hidden=true},60);return}
+    bub.hidden=true;el.classList.remove('talking')});
   menu.addEventListener('click',e=>{
     if(e.target.closest('[data-cclose]')){e.stopPropagation();closeMenu();return}
-    if(e.target.closest('[data-cquiet]')){e.stopPropagation();const q=!quiet();store.set('pw-coop-quiet',q?'1':'');closeMenu();say(q?'Got it. I’ll stay quiet until you tap me.':'Notes are back on.',3500);return}
+    if(e.target.closest('[data-cquiet]')){e.stopPropagation();e.preventDefault();const q=!quiet();closeMenu();setQuiet(q);return}
+    if(e.target.closest('[data-cfact]')){e.stopPropagation();closeMenu();const f=funFact()||pick(FACTS);say(`<span class="cfact">Fun fact</span>${f}`,9000);return}
     const g=e.target.closest('[data-cgo]');if(g){e.stopPropagation();const [t,v]=g.dataset.cgo.split(':');closeMenu();
       if(t==='clock'&&v!=='list'&&v!=='calendar'){goClock(v)}else goTo(t,v);return}
     const dc=e.target.closest('[data-cdoc]');if(dc){e.stopPropagation();closeMenu();goTo('docs','library');$('dq').value=dc.dataset.cdoc;renderDocs();return}

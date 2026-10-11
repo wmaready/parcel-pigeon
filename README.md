@@ -34,7 +34,7 @@ The Fuel tab charts every weekly carrier fuel rate since 2017 (UPS and FedEx gro
 Our own blog (transimpact.com/blog RSS) is part of the news sweep like any outlet: a post can become a story (usually Analysis) or be added as "TransImpact analysis" on a story it covers. Articles from other parcel consultancies and audit firms (`COMPETITOR_DOMAINS` in `news.py`) can only be added as extra sources on a story; they never become stories of their own.
 
 ### Document library (the source of truth)
-`data/docs.json` is the single list of official carrier, USPS and regulator documents: rate guides, service guides, surcharge and fuel tables, GRI notices, delivery-area ZIP lists, tariffs and filings, current and past. The Docs tab shows it by year and carrier. When the news agent finds a new official document in a story's sources it adds it here, and the auditor checks a rotating batch of these links every run. UPS EZ Rates has no public UPS document yet; it is listed as "Not public" and the agent searches for it.
+`data/docs.json` is the single list of official carrier, USPS and regulator documents: rate guides, service guides, surcharge and fuel tables, GRI notices, delivery-area ZIP lists, tariffs and filings, current and past. The Docs tab shows it by carrier, then year, then document type, every drop-down closed until a reader opens it; each carrier opens with its next and last earnings call, and its earnings reports sit inside each year. When the news agent finds a new official document in a story's sources it adds it here, and the auditor checks a rotating batch of these links every run. UPS EZ Rates has no public UPS document yet; it is listed as "Not public" and the agent searches for it.
 
 `data/earnings.json` holds the UPS and FedEx quarterly results archive (release, call recording, transcript, filing). `markets.py` refreshes the UPS and FedEx share prices on the Today tab every run (free, no key).
 
@@ -134,3 +134,80 @@ With no reply it goes out after 2 hours (`PP_AUTO_SEND_HOURS`), never overnight.
 Secrets: `ONESIGNAL_APP_ID`, `ONESIGNAL_API_KEY`, `PP_ADMIN_IDS` (your device ID: open the installed app,
 turn alerts on, then copy it from "Device ID" at the bottom of the Alerts panel). State lives in `data/alerts_state.json`;
 the first run only records what's already published, so nobody gets a backlog.
+
+**`send docs`**: reply `send docs` (or `send docs ontrac` to choose the carrier) on a major-alert issue and the next
+hourly run reads the story's sources, has Claude pick the official carrier documents (guides, notices, surcharge and
+fuel tables, terms, filings), and adds them to the Docs tab. It comments on the issue with what it added. `hold docs`
+adds the documents without sending the alert.
+
+**Automatic document collection**: every run, `alerts.py` reads the sources of up to 6 new stories that cite a carrier,
+USPS or regulator page (or are about pricing or guides), follows the document links one click deep, has Claude keep the
+real shipper documents, and adds them to the Docs tab under the carrier whose site hosts them. The first run after
+install sweeps the last 45 days (up to 40 stories). Everything added is also watched for later revisions.
+
+## What needs your OK (and what doesn't)
+
+Everything publishes on its own (stories, carrier-page and guide changes, documents, rate clock dates, deals, map links,
+regular phone alerts) **except**:
+
+| You're asked | Why | Reply |
+|---|---|---|
+| "Worth running?" | numbers not found in the sources, possibly off-topic for small parcel (triage `fit: edge`), or big and nobody else has reported it | `run` (publish, edits to TITLE/SUMMARY/EFFECT kept) or `skip`; no reply = stays off the site |
+| "Major alert" | big story already on the site; the phone push to everyone waits for you | `send`, `send docs`, `hold`; no reply = sends after 2 hours |
+
+A story you OK with `run` that is also big gets its phone alert without a second approval. Only the repo owner's
+replies count. Old `draft` issues work the same way (reply `run` or `skip`, or add the `publish` label).
+
+## Change audits (carrier pages and guides)
+
+`changeaudit.py` explains every change before anything is published: it pairs a newly posted file with the one it replaced
+(same name, different year), compares old and new text, and keeps a change only if its "before" is quoted from the old
+version and its "after" from the new one (numbers checked too; differences and % moves computed from proven pairs are
+allowed). Re-listings and cosmetic edits are filed quietly, not published. Cache-busting link stamps (`?v=...`) are ignored.
+Stories show a **What changed** before/after table. New files always join the Docs library and are watched from then on.
+
+## Rate clock
+
+Only cost changes and big events get dates (`clock_worthy` in common.py, mirrored in the app): never court dates,
+sentencing, hearings, conferences or earnings calls.
+
+## New players
+
+Stories nominate companies they're about (`orgs`); deals add their parties. `players.py` (run from alerts.py, 3 per run)
+researches each with web search, drops anything that isn't a parcel player, fills the profile (HQ with map coordinates,
+owner, site) and links it only to companies already on the map, each link with a source. New companies get a "New" chip
+on the Market map and a Deals alert.
+
+## Docs library
+
+Carrier first, then kind of document (rate guides, GRI announcements, peak, special pricing programs, surcharges, fuel,
+zones, service guides and terms, filings, other). Every document added by the pipeline records why (`why` field):
+a new file on a carrier page, a file that replaced an older one, a re-linked old file, linked in a story, or added by the
+editor. The app shows that line, plus any audited change to the document.
+
+## Reactions, comments and Ask Coop
+
+Built in the app; they switch on when `config.json` (`{"api": "..."}`) points at the Cloudflare worker in `cloudflare/`
+(see `cloudflare/SETUP.md`). Reactions are Coop faces (Like, Love, Dislike, Shocked). Comments use a display name and an
+automatic screen (spam, abuse, personal info, accusations, confidential contract rates), no approval queue.
+Ask Coop: `guides.py` (run from alerts.py) publishes the text of the library's guides as `data/guides/<carrier>.json`;
+the app picks the best passages plus matching stories, rate clock, fuel and company data and sends only those; the worker
+answers from them with sources, drops any source it wasn't given, caches repeats for 24 hours, and enforces per-reader,
+daily and monthly caps.
+
+## Logos and photos
+
+`media.py` (run from alerts.py) saves each company's own logo from its own website to `data/logos/` (re-checked monthly,
+shown unaltered on small light tiles: carrier tags, market map lists and cards, profiles, deal explainers, Ask Coop
+sources), and, for stories from company sources, the company's own announcement image to `data/img/` as a wide image for
+the full story and a square thumbnail for lists. Never trade-press photos; credited "Image: <source>". Needs Pillow
+(in requirements.txt).
+
+### Phone alerts: once each
+Every push carries a send-once key (OneSignal `idempotency_key`, plus a ledger in `data/alerts_state.json`), so the same story never goes out twice, even if two workflows overlap or a commit is lost. Each new story gets its own push (up to 8 a run; the rest bundle into one "+N more"). Copy is short: a headline of 45 characters or fewer and one sentence (written once by Claude Haiku). Tapping a push opens the story, or the document it's about, and highlights it; major alerts play Coop's delivery first.
+
+### Saved copies of documents
+`archive.py` (run by `alerts.py`) saves the carriers' openly published PDFs and spreadsheets from `data/docs.json` into `data/files/`, unaltered, so the Download button works in one tap and still works if a carrier moves or removes a file. Up to 8 MB a file and 150 MB in total, 6 per run, re-checked every 14 days; a changed file replaces the old copy. Every document still opens the carrier's own copy first. Turn it off with the repository variable or secret `PP_ARCHIVE=0`.
+
+### Connections
+Stories, documents, the rate clock and deals are linked from the links themselves: a story shows the library documents among its sources ("From the library"), each document shows the stories that cite it, and Coop offers to jump to the source document, a rate-clock walkthrough or a deal walkthrough when you're reading a story that has one (a few times a visit, never when muted).
