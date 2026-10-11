@@ -4049,10 +4049,10 @@ async function pushCfg(){if(PUSH.cfg)return PUSH.cfg;try{const r=await fetch('da
 function pushSDK(){if(PUSH.ready)return PUSH.ready;
   PUSH.ready=new Promise((res,rej)=>{window.OneSignalDeferred=window.OneSignalDeferred||[];
     OneSignalDeferred.push(async OS=>{try{const base=location.pathname.replace(/[^/]*$/,'');
-      await OS.init({appId:PUSH.app,serviceWorkerPath:base.slice(1)+'push/onesignal/OneSignalSDKWorker.js',serviceWorkerParam:{scope:base+'push/onesignal/'},notifyButton:{enable:false},autoResubscribe:true});
+      await OS.init({appId:PUSH.app,...(PUSH.cfg&&PUSH.cfg.safariId?{safari_web_id:PUSH.cfg.safariId}:{safari_web_id:'web.onesignal.auto.42caa6a9-1a36-4188-9a18-8fba4e08de54'}),serviceWorkerPath:base.slice(1)+'push/onesignal/OneSignalSDKWorker.js',serviceWorkerParam:{scope:base+'push/onesignal/'},notifyButton:{enable:false},autoResubscribe:true});
       PUSH.os=OS;try{OS.User.PushSubscription.addEventListener('change',()=>renderPrefs())}catch(e){}res(OS);renderPrefs()}catch(e){rej(e)}});
     const sc=document.createElement('script');sc.src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';sc.defer=true;sc.onerror=()=>rej(new Error('blocked'));document.head.appendChild(sc)});
-  PUSH.ready.catch(()=>{PUSH.msg='Alerts couldn’t load. A content blocker may be stopping them.';renderPrefs()});return PUSH.ready}
+  PUSH.ready.catch(e=>{PUSH.ready=null;PUSH.msg='Alerts couldn’t load. Details: '+String((e&&e.message)||e||'blocked').slice(0,160);renderPrefs()});return PUSH.ready}
 const pushOn=()=>{try{return !!(PUSH.os&&PUSH.os.User.PushSubscription.optedIn)}catch(e){return false}};
 const pushId=()=>{try{return PUSH.os&&PUSH.os.User.PushSubscription.id}catch(e){return null}};
 let pTagT;
@@ -4085,7 +4085,7 @@ $('prefs').addEventListener('click',async e=>{const t=e.target;
   const f=t.closest('[data-pf]');if(f){setPref('ft',f.dataset.pf);return}
   if(t.closest('#pushOnBtn')){PUSH.busy=true;PUSH.msg='';renderPrefs();
     try{const OS=PUSH.os||await pushSDK();await OS.Notifications.requestPermission();if(OS.Notifications.permission){await OS.User.PushSubscription.optIn();pushTags()}else PUSH.msg='Alerts weren’t allowed. You can turn them on any time.'}
-    catch(err){PUSH.msg='Couldn’t turn on alerts here. Try again from the installed app.'}
+    catch(err){PUSH.msg='Couldn’t turn on alerts. Details: '+String((err&&err.message)||err||'unknown').slice(0,160)}
     PUSH.busy=false;renderPrefs();return}
   if(t.closest('#pushOff')){try{await PUSH.os.User.PushSubscription.optOut()}catch(err){}renderPrefs();return}
   if(t.closest('#pushCopyId')){try{await navigator.clipboard.writeText(pushId()||'');t.textContent='Copied'}catch(err){}}});
