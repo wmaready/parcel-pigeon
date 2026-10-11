@@ -6,7 +6,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 import datetime as dt, difflib, json, re, sys, urllib.parse
 import feedparser, trafilatura, yaml
 from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first
-from scoop import is_covered, notify, PRESS
+from scoop import is_covered, notify, PRESS, ask, big
 
 MAX_NEW_PER_RUN = 10          # cost guard: stories written per run
 MAX_AGE_DAYS = 7
@@ -49,7 +49,9 @@ You also get RECENT STORIES already published (id: title). If an item covers the
 
 Reply with JSON only: a list of objects
 {{"i": index, "keep": true|false, "carriers": [subset of {CARRIERS}, or ["Industry"] if no specific carrier],
-"category": one of {CATEGORIES}, "kind": "News"|"Opinion"|"Analysis", "event": short key, "same_as": id or null}}."""
+"category": one of {CATEGORIES}, "kind": "News"|"Opinion"|"Analysis", "event": short key, "same_as": id or null,
+"fit": "core" if it is plainly small parcel news, "edge" if you are keeping it but it is only loosely tied to small parcel
+(general freight, trucking or ocean, broad retail or economy, tech not specific to shipping, a local story)}}."""
 
 WRITE_SYSTEM = f"""You write for Parcel Pigeon, a small parcel trade news service in the style of Supply Chain Dive and
 FreightWaves: neutral, factual, attributed. Use ONLY facts in the articles provided. Never invent numbers, dates or names;
@@ -417,7 +419,18 @@ def main():
             prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
                                    for n, (it, _, tx) in enumerate(texts))
             try:
-                s = parse_json(claude(MODEL_WRITE, WRITE_SYSTEM, prompt, max_tokens=2500))
+                s = None
+                for attempt in range(2):
+                    try:
+                        s = parse_json(claude(MODEL_WRITE, WRITE_SYSTEM, prompt if not attempt else prompt +
+                            "\n\nYour last reply was not valid JSON. Reply with ONE JSON object only. Escape any double quotes inside text values.", max_tokens=2500))
+                        if isinstance(s, dict) and s.get("title"):
+                            break
+                        s = None
+                    except Exception as e:
+                        print(f"  write attempt {attempt + 1} failed: {e}", file=sys.stderr)
+                if not s:
+                    continue
             except Exception as e:
                 print(f"  write failed: {e}", file=sys.stderr); continue
             ordered = [{"src": it["src"], "url": u} for it, u, _ in texts] + [x for x in srcs if x["url"] not in {u for _, u, _ in texts}]
@@ -455,27 +468,28 @@ def main():
                                       "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."})
             # Official documents found in the sources go into the library (data/docs.json), the single list agents use
             story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels") if s.get(k)}
+            # Only ask the editor when it matters: numbers that don't match the sources, a possibly off-topic item,
+            # or a big story nobody else has confirmed yet. Everything else publishes on its own.
+            reasons = []
             if missing:
                 story["unsupported_numbers"] = missing
-                review.insert(0, {"type": "fact-check", "story": story, "note": "Numbers not found in sources: " + ", ".join(missing)})
-                written += 1
-                continue
-            # First to report? Only stories that came from primary sources (company newsrooms, press wires, filings)
+                reasons.append("These numbers aren't in the sources: " + ", ".join(missing))
+            if v.get("fit") == "edge":
+                reasons.append("It may be off-topic for small parcel.")
             primary = not any(any(p in x["src"].lower() for p in PRESS) for x in ordered)
             covered = is_covered(story["title"]) if primary else ["trade press source"]
             if primary and not covered:
                 story["exclusive"] = True
-                body = (f"Nobody in the trade press has reported this yet (checked {', '.join(x['src'] for x in ordered)} against Google News).\n\n"
-                        f"### Draft story (edit any line, then add the `publish` label)\nTITLE: {story['title']}\nSUMMARY: {story['sum']}\n"
-                        f"EFFECT: {story['plain']}\n\nSources: " + ", ".join(x["url"] for x in ordered) +
-                        f"\n\nClose the issue to discard it.\n\n<!-- parcelwatch-data\n{json.dumps(story)}\n-->")
-                url = notify(f"[First to report] {story['title']}", body, link=story["url"])
-                review.insert(0, {"type": "first-to-report", "issue": url, "story": story})
-                print(f"  FIRST TO REPORT: {story['title']}")
-            else:
-                story.pop("_extras", None)
-                live.insert(0, story); by_id[story["id"]] = story
-                publish_extras(story, s, live)
+                if big(story):
+                    reasons.append("It's big and nobody else has reported it yet.")
+            if reasons:
+                url = ask(story, reasons, ordered)
+                review.insert(0, {"type": "needs-ok", "issue": url, "story": story, "note": " ".join(reasons)})
+                written += 1
+                continue
+            story.pop("_extras", None)
+            live.insert(0, story); by_id[story["id"]] = story
+            publish_extras(story, s, live)
             written += 1
         except Exception as e:
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)

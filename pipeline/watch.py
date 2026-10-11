@@ -8,7 +8,7 @@ import datetime as dt, difflib, io, json, os, re, sys, urllib.parse
 import requests, trafilatura, yaml
 from pypdf import PdfReader
 from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE
-from scoop import is_covered, notify
+from scoop import is_covered, notify, ask, big
 
 SNAP = DATA / "snapshots"
 MAX_DIFF_CHARS = 12000
@@ -157,12 +157,29 @@ def main():
         missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), "\n".join(added + removed))
         if missing:
             story["unsupported_numbers"] = missing
-        try:
-            url = open_issue(story, item, res.get("changes", []))
-        except Exception as e:
-            url = None; print(f"  issue failed: {e}", file=sys.stderr)
-        drafts.insert(0, {"status": "draft", "issue": url, "story": story, "changes": res.get("changes", [])})
-        print(f"  DRAFT ready: {story['title']}")
+        story["srcs"] = [{"src": story["src"], "url": item["url"]}]
+        story["auto"] = True
+        changes = res.get("changes", [])
+        reasons = []
+        if missing:
+            reasons.append("These numbers aren't in the page text: " + ", ".join(missing))
+        if not is_covered(story["title"]):
+            story["exclusive"] = True
+            if big(story):
+                reasons.append("It's big and nobody else has reported it yet.")
+        if reasons:
+            lines = "\n".join(f"- **{c.get('what','')}**: {c.get('old','—')} → {c.get('new','—')}" for c in changes)
+            try:
+                url = ask(story, reasons, story["srcs"], extra=f"Spotted on **{item['carrier']} — {item['name']}**:\n{lines}")
+            except Exception as e:
+                url = None; print(f"  issue failed: {e}", file=sys.stderr)
+            drafts.insert(0, {"status": "asked", "issue": url, "story": story, "changes": changes})
+            continue
+        live = load("news.json", [])
+        if not any(x.get("id") == story["id"] for x in live):
+            live.insert(0, story); save("news.json", live)
+        drafts.insert(0, {"status": "published", "story": story, "changes": changes})
+        print(f"  PUBLISHED: {story['title']}")
     save("watch_state.json", state); save("drafts.json", drafts[:200])
 
 

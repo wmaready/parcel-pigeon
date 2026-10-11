@@ -4,7 +4,7 @@ is_covered(): searches Google News for the event over the last few days and retu
 that already ran it. If none have, the story is a potential first-to-report ("scoop").
 notify(): opens a GitHub issue (GitHub mobile push) and, if NTFY_TOPIC is set, sends a free phone push via ntfy.sh.
 """
-import os, re, urllib.parse
+import json, os, re, urllib.parse
 import feedparser, requests
 from common import get
 
@@ -57,3 +57,47 @@ def notify(title, body, labels=("draft", "first-to-report"), link=None):
         except Exception:
             pass
     return out
+
+
+# ---------------------------------------------------------------- only ask the editor when it matters
+def ask(story, reasons, srcs=None, extra=""):
+    """Hold a story off the site and ask the editor: reply `run` to publish, `skip` to drop.
+    Used only for big stories nobody else has confirmed, numbers that don't match the sources, or possible off-topic items."""
+    token, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+    srcs = srcs or story.get("srcs") or [{"src": story.get("src"), "url": story.get("url")}]
+    owner = (repo or "/").split("/")[0]
+    body = (f"@{owner} **Worth running?** This one is held off the site until you say so.\n\n"
+            + "".join(f"- {r}\n" for r in reasons) + (f"\n{extra}\n" if extra else "") +
+            f"\n### Draft story (edit any line, then reply `run`)\nTITLE: {story['title']}\nSUMMARY: {story['sum']}\n"
+            f"EFFECT: {story['plain']}\n\nSources: " + ", ".join(x.get("url") or "" for x in srcs) +
+            "\n\n- Reply **`run`** to publish it (live on the next hourly update).\n- Reply **`skip`** to drop it.\n"
+            "If you don't reply, it stays off the site.\n\n"
+            f"<!-- parcelwatch-data\n{json.dumps(story)}\n-->")
+    out = None
+    if token and repo:
+        hdr = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+        try:
+            requests.post(f"https://api.github.com/repos/{repo}/labels", headers=hdr, timeout=15,
+                          json={"name": "needs-ok", "color": "FBCA04", "description": "Held story: reply run or skip"})
+        except Exception:
+            pass
+        r = requests.post(f"https://api.github.com/repos/{repo}/issues", headers=hdr, timeout=30,
+                          json={"title": f"Worth running? {story['title']}", "body": body, "labels": ["draft", "needs-ok"]})
+        if r.ok:
+            out = r.json().get("html_url")
+    try:
+        from alerts import push, ADMIN_IDS
+        if ADMIN_IDS and out:
+            push("Worth running? " + story["title"], reasons[0], out, ids=ADMIN_IDS, ttl=12 * 3600)
+    except Exception as e:
+        print("  editor push failed:", e)
+    print(f"  ASKING: {story['title']} ({'; '.join(reasons)})")
+    return out
+
+
+def big(story):
+    try:
+        from alerts import is_major
+        return is_major(story)
+    except Exception:
+        return int(story.get("lvl") or 1) >= 3

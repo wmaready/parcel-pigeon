@@ -25,8 +25,9 @@ import sys
 from zoneinfo import ZoneInfo
 
 import requests
+from urllib.parse import urljoin
 
-from common import load, save
+from common import load, save, get, claude, parse_json, is_primary, MODEL_FAST
 
 ET = ZoneInfo("America/New_York")
 AUTO_SEND_HOURS = float(os.environ.get("PP_AUTO_SEND_HOURS") or 2)
@@ -179,11 +180,15 @@ def open_review(s, test=False):
             f"### Title\n{title}\n\n### Message\n{msg}\n\n### Link\n{url}\n\n---\n"
             f"- Reply **`send`** to push it to everyone now.\n"
             f"- Reply **`hold`** to stop it (closing the issue does the same).\n"
-            f"- Want different wording? Edit the Title and Message above (··· menu > Edit), then reply `send`.\n\n"
+            f"- Want different wording? Edit the Title and Message above (··· menu > Edit), then reply `send`.\n"
+            f"- Reply **`send docs`** to also add the carrier documents from this story to the Docs tab "
+            f"(add a carrier to choose where they go, e.g. `send docs ontrac`).\n\n"
             f"If you don't reply, it goes out automatically at **{auto.strftime('%-I:%M %p ET, %a %b %-d')}**.\n\n"
             f"<!-- pp-alert {json.dumps({'auto_at': auto.isoformat(), 'story': s['id'], 'test': test})} -->")
     issue = gh("POST", "/issues", json={"title": f"{'TEST ' if test else ''}Major alert: {title}", "body": body, "labels": ["alert-review"]})
     link = issue.get("html_url", f"https://github.com/{REPO}/issues")
+    if not ADMIN_IDS:
+        print("  PP_ADMIN_IDS is empty, so no approval push to your phone (check the secret's name and that it's under Actions > Secrets)")
     if ADMIN_IDS:
         push(("[Test] " if test else "") + "Approve alert? " + title,
              "Tap to review. Test only: approving sends it to your phone, not readers." if test else
@@ -210,15 +215,26 @@ def review():
             continue
         n = it["number"]
         title, msg, url, meta = parse_issue(it.get("body"))
-        decision = None
-        for c in gh("GET", f"/issues/{n}/comments", params={"per_page": 100}):
+        decision, docs, said = None, None, set()
+        comments = gh("GET", f"/issues/{n}/comments", params={"per_page": 100})
+        for c in comments:
+            if (c.get("user") or {}).get("login") == "github-actions[bot]":
+                said.add((c.get("body") or "")[:40])
             if c.get("author_association") != "OWNER" and (c.get("user") or {}).get("login") != OWNER:
                 continue                 # public repo: only the owner's replies count
             w = (c.get("body") or "").strip().lower()
-            if re.match(r"^(send|approve|approved|yes|go)\b", w):
+            if re.match(r"^(send|approve|approved|yes|go|run|publish|ok|okay)\b", w):
                 decision = "send"
             elif re.match(r"^(hold|no|stop|skip|cancel)\b", w):
                 decision = "hold"
+            if re.search(r"\b(docs?|documents?)\b", w):
+                docs = doc_carrier(w) or ""          # "" = use the story's own carrier
+        def note_once(body):
+            if body[:40] not in said:
+                gh("POST", f"/issues/{n}/comments", json={"body": body}); said.add(body[:40])
+        extra = ["add-docs"] if docs is not None and not meta.get("test") else []
+        docs_note = (f" Adding its carrier documents to the Docs tab{' under ' + docs if docs else ''} on the next "
+                     f"hourly check; I'll comment here when they're in.") if extra else ""
         auto = dt.datetime.fromisoformat(meta["auto_at"]) if meta.get("auto_at") else None
         if decision is None and auto and now_et() >= auto and not quiet():
             decision = "auto"
@@ -226,28 +242,202 @@ def review():
             print(f"#{n} waiting" + (f" (auto at {auto:%-I:%M %p ET})" if auto else ""))
             continue
         if decision == "hold":
-            gh("POST", f"/issues/{n}/comments", json={"body": "Held. Nothing was sent to readers."})
-            gh("PATCH", f"/issues/{n}", json={"state": "closed", "labels": ["alert-held"]})
+            gh("POST", f"/issues/{n}/comments", json={"body": "Held. Nothing was sent to readers." + docs_note})
+            gh("PATCH", f"/issues/{n}", json={"state": "closed", "labels": ["alert-held"] + extra})
             print(f"#{n} held"); continue
         test = bool(meta.get("test"))
         if test and not ADMIN_IDS:
-            gh("POST", f"/issues/{n}/comments", json={"body": "Test not sent: add your Device ID as the PP_ADMIN_IDS secret first."})
+            note_once("Test not sent: add your Device ID as the PP_ADMIN_IDS secret (Settings > Secrets and variables > Actions), "
+                      "then reply `send` again.")
             continue
         r = push(("[Test] " if test else "") + title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400)
         if r is None:
-            gh("POST", f"/issues/{n}/comments", json={"body": "Couldn't send: the OneSignal keys aren't set in GitHub Secrets yet. "
-                                                              "Add them and reply `send` again."})
+            note_once("Couldn't send: the OneSignal keys aren't set in GitHub Secrets yet. Add them and reply `send` again.")
             continue
         ok = bool(r.get("id"))
         note = ("Test sent to your phone only. The approval flow works." if test and ok else
                 "Sent to everyone with alerts on." if decision == "send" else
                 f"Sent automatically (no reply within {AUTO_SEND_HOURS:g} hours).") if ok else \
                f"OneSignal didn't send it: `{json.dumps(r.get('errors') or r)[:300]}`"
-        gh("POST", f"/issues/{n}/comments", json={"body": note})
         if ok:
-            gh("PATCH", f"/issues/{n}", json={"state": "closed", "labels": ["alert-sent"]})
+            gh("POST", f"/issues/{n}/comments", json={"body": note + docs_note})
+            gh("PATCH", f"/issues/{n}", json={"state": "closed", "labels": ["alert-sent"] + extra})
+        else:
+            note_once(note)
         print(f"#{n} {decision}: {note}")
 
+
+
+# ---------------------------------------------------------------- "send docs": add a story's carrier documents to the Docs tab
+DOC_TYPES = ["Rate guide", "Service guide", "GRI notice", "Surcharges & fees", "Peak", "Fuel", "Zones & DAS",
+             "Special program", "Terms", "Regulatory filing"]
+DOC_WORDS = r"rate|guide|surcharge|fee|notice|tariff|terms|zone|das|fuel|peak|accessorial|service|pricing|price|filing|schedule|\.pdf"
+
+
+def doc_carriers():
+    names = {d.get("c") for d in load("docs.json", []) if d.get("c")} | {"UPS", "FedEx", "USPS", "Amazon", "OnTrac", "DHL", "LSO", "Veho", "Spee-Dee", "GLS US"}
+    return sorted(names - {"Reports"}, key=len, reverse=True)
+
+
+def doc_carrier(text):
+    t = re.sub(r"[^a-z0-9]", "", text.lower())
+    for c in doc_carriers():
+        if re.sub(r"[^a-z0-9]", "", c.lower()) in t:
+            return c
+    return None
+
+
+def page_links(url):
+    try:
+        html = get(url, timeout=25).text
+    except Exception as e:
+        print("  couldn't read", url, e); return []
+    out = []
+    for href, text in re.findall(r'<a\s[^>]*href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', html, re.I | re.S):
+        u = urljoin(url, href.strip())
+        t = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text)).strip()[:120]
+        if u.startswith("http") and is_primary(u) and re.search(DOC_WORDS, (u + " " + t).lower()):
+            out.append({"u": u, "t": t})
+    return out
+
+
+def find_docs(story, carrier):
+    cands, seen = [], set()
+    for sx in story.get("srcs") or [{"url": story.get("url")}]:
+        u = sx.get("url")
+        if not u:
+            continue
+        if is_primary(u) and u not in seen:
+            cands.append({"u": u, "t": sx.get("src") or story["title"]}); seen.add(u)
+        for l in page_links(u):
+            if l["u"] not in seen:
+                cands.append(l); seen.add(l["u"])
+    cands = cands[:80]
+    if not cands:
+        return []
+    picks = []
+    try:
+        listing = "\n".join(f"{i}. {c['t']} | {c['u']}" for i, c in enumerate(cands))
+        reply = claude(MODEL_FAST, "You pick official carrier documents for a shipping-document library. Keep only documents a "
+                       "shipper would file: rate guides, service guides, GRI or price-change notices, surcharge and fee tables, "
+                       "peak notices, fuel tables, zone or DAS lists, terms and conditions, regulatory filings. Skip home pages, "
+                       "login pages, tracking, news articles, careers, press-release lists and anything not from the carrier, USPS or a regulator. "
+                       f"Return JSON: a list of at most 8 objects {{\"i\": index, \"t\": one of {json.dumps(DOC_TYPES)}, "
+                       "\"n\": \"the document's own title, with year if known\", \"y\": year or null, \"eff\": \"YYYY-MM-DD\" or null}. [] if none.",
+                       f"Story: {story['title']}\nCarrier: {carrier}\n\nLinks:\n{listing}", max_tokens=1200)
+        for p in parse_json(reply) or []:
+            if isinstance(p, dict) and isinstance(p.get("i"), int) and 0 <= p["i"] < len(cands):
+                picks.append({**p, "u": cands[p["i"]]["u"]})
+    except Exception as e:
+        print("  doc picking fell back to simple rules:", e)
+        picks = [{"u": c["u"], "t": "Special program", "n": c["t"] or story["title"]} for c in cands if c["u"].lower().endswith(".pdf")][:8]
+    return picks
+
+
+DOMAIN_CARRIER = {"ups.com": "UPS", "fedex.com": "FedEx", "usps.com": "USPS", "prc.gov": "USPS", "uspsoig.gov": "USPS",
+                  "dhl.com": "DHL", "ontrac.com": "OnTrac", "amazon.com": "Amazon", "aboutamazon.com": "Amazon",
+                  "lso.com": "LSO", "gls-us.com": "GLS US", "speedeedelivery.com": "Spee-Dee", "shipveho.com": "Veho",
+                  "uniuni.com": "UniUni", "gofo.com": "GOFO", "bettertrucks.com": "Better Trucks", "jitsu.com": "Jitsu",
+                  "cdldelivery.com": "CDL"}
+HARVEST_PER_RUN = 6          # stories checked for documents each run (keeps runs quick)
+BACKFILL_DAYS, BACKFILL_MAX = 45, 40
+
+
+def carrier_of_url(u):
+    host = re.sub(r"^https?://", "", u or "").split("/")[0].lower()
+    for d, c in DOMAIN_CARRIER.items():
+        if host == d or host.endswith("." + d):
+            return c
+    return None
+
+
+def harvest(story, lib, carrier=None):
+    """Add the official documents linked from a story's sources to the library. Returns the new entries."""
+    have = {d.get("u") for d in lib}
+    fallback = carrier or next((c for c in story.get("c") or [] if c not in ("Industry", "Regional")), None)
+    added = []
+    for p in find_docs(story, carrier or fallback or "the carrier named in each link"):
+        if p["u"] in have:
+            continue
+        c = carrier or carrier_of_url(p["u"]) or fallback
+        if not c:
+            continue
+        d = {"c": c, "t": p.get("t") if p.get("t") in DOC_TYPES else "Special program", "n": short(p.get("n") or story["title"], 120),
+             "y": p.get("y"), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
+             "cur": True, "added": now_et().date().isoformat()}
+        lib.append(d); have.add(p["u"]); added.append(d)
+    return added
+
+
+def worth_harvesting(st):
+    return any(is_primary(x.get("url")) for x in st.get("srcs") or []) or st.get("cat") in PRICE_CATS | DOC_CATS
+
+
+def auto_harvest(state):
+    """Every new story with a carrier or regulator source gets its documents collected, plus a one-time sweep of recent ones."""
+    news = load("news.json", [])
+    lib = load("docs.json", [])
+    done = set(state.setdefault("harvested", []))
+    since = (now_et().date() - dt.timedelta(days=BACKFILL_DAYS if not state.get("backfilled") else FRESH_DAYS + 1)).isoformat()
+    todo = [st for st in news if st.get("id") not in done and (st.get("date") or "") >= since and worth_harvesting(st)]
+    todo.sort(key=lambda st: (st.get("date") or "", int(st.get("lvl") or 1)), reverse=True)   # newest first
+    limit = BACKFILL_MAX if not state.get("backfilled") else HARVEST_PER_RUN
+    total = 0
+    for st in todo[:limit]:
+        try:
+            new = harvest(st, lib)
+            total += len(new)
+            for d in new:
+                print(f"  doc added: [{d['c']}] {d['n']}")
+        except Exception as e:
+            print("  harvest failed for", st.get("id"), e, file=sys.stderr)
+        done.add(st["id"])
+    if not state.get("backfilled"):
+        state["backfilled"] = True
+    state["harvested"] = list(done)[-4000:]
+    if total:
+        save("docs.json", lib)
+    print(f"docs: checked {min(len(todo), limit)} stories, added {total} documents")
+
+
+def process_doc_requests():
+    if not GH:
+        return
+    try:
+        reqs = gh("GET", "/issues", params={"state": "all", "labels": "add-docs", "per_page": 20})
+    except Exception as e:
+        print("doc requests:", e); return
+    if not reqs:
+        return
+    news = {s["id"]: s for s in load("news.json", [])}
+    lib = load("docs.json", [])
+    for it in reqs:
+        n = it["number"]
+        _, _, _, meta = parse_issue(it.get("body"))
+        carrier = None
+        for c in gh("GET", f"/issues/{n}/comments", params={"per_page": 100}):
+            if c.get("author_association") == "OWNER" or (c.get("user") or {}).get("login") == OWNER:
+                w = (c.get("body") or "").lower()
+                if re.search(r"\b(docs?|documents?)\b", w):
+                    carrier = doc_carrier(w) or carrier
+        story = news.get(meta.get("story"))
+        labels = [l["name"] for l in it.get("labels", []) if l["name"] != "add-docs"]
+        if not story:
+            body = "Couldn't add documents: that story isn't in the live news anymore."
+        else:
+            carrier = carrier or next((c for c in story.get("c") or [] if c not in ("Industry", "Regional")), None)
+            if not carrier:
+                body = "Which carrier should these go under? Reply `docs ups` (or another carrier) and I'll add them."
+            else:
+                added = harvest(story, lib, carrier)
+                body = (f"Added {len(added)} document{'s' if len(added) != 1 else ''} to Docs under **{carrier}** "
+                        f"(live with this update):\n" + "\n".join(f"- [{d['n']}]({d['u']}) · {d['t']}" for d in added)) if added else \
+                       f"Checked the story's sources but found no new {carrier} documents to add (anything there is already in Docs)."
+                labels.append("docs-added")
+        gh("POST", f"/issues/{n}/comments", json={"body": body})
+        gh("PATCH", f"/issues/{n}", json={"labels": labels})
+        print(f"#{n} docs: {body.splitlines()[0]}")
+    save("docs.json", lib)
 
 # ---------------------------------------------------------------- regular events
 def fuel_value(v):
@@ -294,6 +484,10 @@ def collect(state, today):
 
 
 def run():
+    try:
+        process_doc_requests()
+    except Exception as e:
+        print("doc requests failed:", e, file=sys.stderr)
     state = load("alerts_state.json", None)
     today = now_et().date()
     if APP_ID:
@@ -302,6 +496,10 @@ def run():
     state = state or {}
     for k, d in (("stories", []), ("clock", []), ("fuel", {})):
         state.setdefault(k, d)
+    try:
+        auto_harvest(state)
+    except Exception as e:
+        print("document harvest failed:", e, file=sys.stderr)
     stories, rem, moves = collect(state, today)
     if first:
         # first run: remember what's already there so readers don't get a backlog
@@ -314,9 +512,16 @@ def run():
 
     # major stories: review issue for the editor (any hour; the issue waits)
     majors = sorted([s for s in stories if is_major(s)], key=lambda s: -int(s.get("lvl") or 1))[:MAX_MAJOR_PER_RUN]
+    approved = set(load("approved.json", []))
     for s in majors:
         try:
-            open_review(s)
+            if s["id"] in approved:
+                # you already OK'd this story with `run`, so the alert goes straight out (or at 7 a.m. if it's overnight)
+                if quiet():
+                    continue
+                push(s["title"], s.get("plain") or s.get("sum") or "", story_link(s), ttl=2 * 86400)
+            else:
+                open_review(s)
             state["stories"].append(s["id"])
         except Exception as e:
             print("review issue failed:", e, file=sys.stderr)

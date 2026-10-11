@@ -12,7 +12,7 @@ Usage: python docwatch.py [--batch 15]
 """
 import datetime as dt, difflib, gzip, io, json, os, re, sys
 from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE
-from scoop import is_covered, notify
+from scoop import is_covered, notify, ask, big
 
 SNAP = ROOT / "data" / "docwatch"
 PRIORITY = {"Rate guide": 0, "Service guide": 0, "Terms": 1, "Surcharges & fees": 1, "Peak": 1, "GRI notice": 2,
@@ -114,14 +114,12 @@ def main():
                  "plain": verdict.get("effect", ""), "imp": verdict.get("imp", "watch"), "lvl": int(verdict.get("lvl", 2)),
                  "changes": verdict.get("changes", [])[:8], "exclusive": not covered,
                  "src": d["c"], "url": u, "srcs": [{"src": f"{d['c']}: {d['n']}", "url": u}], "auto": True}
-        news.insert(0, story)
+        if not covered and big(story):
+            ask(story, ["It's big and nobody else has reported it yet."], story["srcs"],
+                extra="Changes:\n" + "\n".join(f"- {c}" for c in story["changes"]))
+            continue
+        news.insert(0, story)          # routine guide changes publish on their own; alerts.py handles the phone push
         alerts += 1
-        body = (f"{verdict['summary']}\n\nChanges:\n" + "\n".join(f"- {c}" for c in story["changes"]) +
-                f"\n\nDocument: {d['n']}\n{u}\n\n" + ("Nobody else has reported this yet." if not covered else "Already covered by: " + ", ".join(covered[:3])))
-        site = os.environ.get("SITE_URL") or ("https://{0}.github.io/{1}/".format(*os.environ["GITHUB_REPOSITORY"].split("/")) if os.environ.get("GITHUB_REPOSITORY") else "")
-        # the push opens the app on the alert, where Coop delivers it; the document link stays in the issue body
-        notify(("[First to report] " if not covered else "[Guide change] ") + verdict["title"], body,
-               labels=("guide-change", "first-to-report") if not covered else ("guide-change",), link=(site + "#alert=" + story["id"]) if site else u)
     save("docwatch.json", idx)
     if alerts:
         save("news.json", news)
