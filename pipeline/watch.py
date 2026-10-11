@@ -7,8 +7,9 @@ Needs: ANTHROPIC_API_KEY. For issues: GITHUB_TOKEN and GITHUB_REPOSITORY (set au
 import datetime as dt, difflib, io, json, os, re, sys, urllib.parse
 import requests, trafilatura, yaml
 from pypdf import PdfReader
-from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE
+from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls
 from scoop import is_covered, notify, ask, big
+from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
 
 SNAP = DATA / "snapshots"
 MAX_DIFF_CHARS = 12000
@@ -42,8 +43,9 @@ def page_text(url):
     if len(text) < 500:
         html = render(url) or html
         text = trafilatura.extract(html, include_tables=True) or re.sub(r"<[^>]+>", " ", html)
-    links = sorted({urllib.parse.urljoin(url, m) for m in re.findall(r'href="([^"]+\.pdf[^"]*)"', html, re.I)})
+    links = sorted({canon(urllib.parse.urljoin(url, m)) for m in re.findall(r'href="([^"]+\.pdf[^"]*)"', html, re.I)})
     return text, links
+
 
 
 def pdf_text(data):
@@ -110,7 +112,46 @@ Close the issue to discard it.
     return notify(f"[Draft] {story['title']}", body, labels=("draft", item["carrier"]), link=item["url"]) if (token and repo) else None
 
 
+def file_into_library(lib, item, fu, res):
+    """Every file a carrier posts goes into the Docs library (and is watched from then on)."""
+    if canon(fu) in known_doc_urls(lib):
+        return
+    name = fu.split("?")[0].rstrip("/").split("/")[-1]
+    low = name.lower()
+    kind = ("Surcharges & fees" if re.search(r"surcharge|ahs|lps|accessor|fee", low) and "zip" not in low else
+            "Zones & DAS" if re.search(r"zip|zone|area|das", low) else "Fuel" if "fuel" in low else
+            "Service guide" if "service" in low else "Terms" if re.search(r"terms|tariff|condition", low) else
+            "Rate guide" if re.search(r"rate|price", low) else "Special program")
+    yr = re.search(r"(20\d\d)", name)
+    year = int(yr.group(1)) if yr else None
+    pretty = re.sub(r"[-_]+", " ", re.sub(r"\.(pdf|xlsx?)$", "", name, flags=re.I)).strip()
+    lib.append({"c": item["carrier"], "t": kind, "n": f"{item['carrier']} {pretty}" if item["carrier"].lower() not in pretty.lower() else pretty,
+                "y": year, "eff": None, "u": fu, "d": f"Posted on {item['carrier']}'s {item['name']} page" +
+                (f" ({res.get('verdict')})" if res and res.get("verdict") else ""),
+                "cur": not (year and year < dt.date.today().year), "added": dt.date.today().isoformat(),
+                "why": {"how": "relisted" if res and res.get("verdict") == "relisting" else "replaced" if res and res.get("pred") else "new-file",
+                        "when": dt.date.today().isoformat(), "where": f"{item['carrier']}'s {item['name']} page",
+                        "prev": (res.get("pred") or "").split("?")[0].split("/")[-1] if res else None}})
+
+
+# Stories pulled after a re-check (id: reason). Removed from the live news on the next run.
+RETRACT = {"w8a582ba4f6eb": "Re-check: OnTrac's file links only gained a new cache-busting version stamp (?v=...); "
+                            "the rate and surcharge files themselves did not change."}
+
+
+def retract():
+    live = load("news.json", [])
+    keep = [x for x in live if x.get("id") not in RETRACT]
+    if len(keep) != len(live):
+        save("news.json", keep)
+        log = load("retracted.json", [])
+        log += [{"id": i, "why": w} for i, w in RETRACT.items() if i not in {x.get("id") for x in log}]
+        save("retracted.json", log)
+        print(f"retracted {len(live) - len(keep)} story(ies)")
+
+
 def main():
+    retract()
     cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
     SNAP.mkdir(parents=True, exist_ok=True)
     state, drafts = load("watch_state.json", {}), load("drafts.json", [])
@@ -126,7 +167,8 @@ def main():
         prev = state.get(item["url"], {})
         first = not snap.exists()
         old = snap.read_text().splitlines() if not first else []
-        new_pdfs = sorted(set(pdfs) - set(prev.get("pdfs", []))) if prev else []
+        prev_pdfs = {canon(x) for x in prev.get("pdfs", [])}
+        new_pdfs = sorted(set(pdfs) - prev_pdfs) if prev else []
 
         def accept():
             # the snapshot moves forward only once this change is handled, so a failed analysis is retried next run
@@ -135,51 +177,89 @@ def main():
         if first:
             accept(); print(f"baseline saved: {item['carrier']} {item['name']}"); continue
         removed, added = diff_lines(old, new)
-        if new_pdfs:
-            added += [f"NEW FILE POSTED: {u}" for u in new_pdfs]
-        if not removed and not added:
+        gone_pdfs = sorted(prev_pdfs - set(pdfs)) if prev else []
+        if not removed and not added and not new_pdfs:
             accept(); continue
-        payload = f"Carrier: {item['carrier']}\nPage: {item['name']} ({item['url']})\nDate noticed: {today}\n\nREMOVED LINES:\n" + \
-                  "\n".join(removed)[:MAX_DIFF_CHARS // 2] + "\n\nADDED LINES:\n" + "\n".join(added)[:MAX_DIFF_CHARS // 2]
-        try:
-            res = parse_json(claude(MODEL_WRITE, ANALYST, payload, max_tokens=1500))
-        except Exception as e:
-            print(f"  analysis failed, will retry next run: {e}", file=sys.stderr); continue
+        # Spotting a change is step one; the audit says exactly what changed, before and after, and proves it.
+        results, failed = [], False
+        lib = load("docs.json", [])
+        lib_urls = [d["u"] for d in lib if d.get("c") == item["carrier"] and d.get("u")]
+        for fu in new_pdfs[:6]:
+            try:
+                ftxt = file_text(fu)
+            except Exception as e:
+                print(f"  couldn't open {fu}: {e}", file=sys.stderr); continue
+            if not ftxt:
+                continue
+            pred = predecessor(fu, gone_pdfs + lib_urls)
+            otxt = None
+            if pred:
+                otxt = snapshot(pred)
+                if otxt is None:
+                    try:
+                        otxt = file_text(pred)
+                    except Exception:
+                        otxt = None
+            res = audit(item["carrier"], fu.split("/")[-1], fu, otxt, ftxt,
+                        note=f"Posted on {item['carrier']} {item['name']} ({item['url']})" + (f"; it appears to replace {pred}" if pred else ""))
+            if res is None:
+                failed = True; continue
+            res["file"], res["pred"] = fu, pred
+            results.append(res)
+            remember(fu, ftxt, fu.split("/")[-1])
+            file_into_library(lib, item, fu, res)
+        if removed or added:
+            res = audit(item["carrier"], item["name"], item["url"], "\n".join(old), "\n".join(new))
+            if res is None:
+                failed = True
+            else:
+                results.append(res)
+        if failed and not results:
+            print(f"  audit failed, will retry next run: {item['name']}", file=sys.stderr); continue
         accept()
-        if not res.get("material") or not res.get("story"):
-            print(f"  change not material: {item['name']}"); continue
-        s = res["story"]
-        story = {"id": "w" + h(item["url"] + today + s["title"]), "date": today, "c": [item["carrier"]],
-                 "cat": s.get("category", "Documents"), "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "watch"),
-                 "lvl": int(s.get("lvl", 2)), "plain": s["plain"], "act": s.get("act"),
-                 "dates": s.get("dates", []),
-                 "src": f"{item['carrier']} {item['name']} (spotted by Parcel Pigeon)", "url": item["url"]}
-        missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), "\n".join(added + removed))
-        if missing:
-            story["unsupported_numbers"] = missing
-        story["srcs"] = [{"src": story["src"], "url": item["url"]}]
-        story["auto"] = True
-        changes = res.get("changes", [])
+        save("docs.json", lib)
+        material = [r for r in results if r.get("material") and r.get("changes")]
+        verdicts = ", ".join(f"{r.get('verdict')}" + (f" ({r['file'].split('/')[-1]})" if r.get("file") else "") for r in results)
+        if not material:
+            drafts.insert(0, {"status": "not material", "date": today, "page": item["url"], "verdicts": verdicts})
+            print(f"  checked, nothing material: {item['name']} [{verdicts}]"); continue
+        material.sort(key=lambda r: (-int(r.get("lvl") or 1), -len(r["changes"])))
+        lead = material[0]
+        f = story_fields(lead, item["carrier"])
+        for r in material[1:]:
+            f["changes"] += [{k: c.get(k) for k in ("what", "before", "after", "effective", "who", "impact")} for c in r["changes"]]
+            f["sum"] += f" Also: {r.get('title')}."
+        f["changes"] = f["changes"][:12]
+        srcs = [{"src": f"{item['carrier']} {item['name']}", "url": item["url"]}] + \
+               [{"src": f"{item['carrier']}: {r['file'].split('/')[-1]}", "url": r["file"]} for r in material if r.get("file")]
+        story = {"id": "w" + h(item["url"] + today + f["title"]), "date": today, "c": [item["carrier"]], **f, "kind": "Alert",
+                 "src": f"{item['carrier']} {item['name']} (spotted by Parcel Pigeon)", "url": lead.get("file") or item["url"],
+                 "srcs": srcs, "auto": True,
+                 "audit": {"verdicts": verdicts, "dropped": sum(r.get("dropped", 0) for r in results),
+                           "compared": [{"new": r.get("file"), "old": r.get("pred")} for r in material if r.get("file")]}}
+        story["dates"] = [d for d in story["dates"] if clock_worthy(story, d)]
+        changes = story["changes"]
         reasons = []
-        if missing:
-            reasons.append("These numbers aren't in the page text: " + ", ".join(missing))
+        unsupported = sorted({x for r in material for x in r.get("unsupported") or []})
+        if unsupported:
+            reasons.append("These numbers aren't in the old or new text: " + ", ".join(unsupported))
         if not is_covered(story["title"]):
             story["exclusive"] = True
             if big(story):
                 reasons.append("It's big and nobody else has reported it yet.")
         if reasons:
-            lines = "\n".join(f"- **{c.get('what','')}**: {c.get('old','—')} → {c.get('new','—')}" for c in changes)
+            lines = "\n".join(f"- **{c.get('what','')}**: {c.get('before') or '(new)'} → {c.get('after')}" for c in changes)
             try:
-                url = ask(story, reasons, story["srcs"], extra=f"Spotted on **{item['carrier']} — {item['name']}**:\n{lines}")
+                url = ask(story, reasons, story["srcs"], extra=f"Spotted on **{item['carrier']} — {item['name']}** ({verdicts}):\n{lines}")
             except Exception as e:
                 url = None; print(f"  issue failed: {e}", file=sys.stderr)
-            drafts.insert(0, {"status": "asked", "issue": url, "story": story, "changes": changes})
+            drafts.insert(0, {"status": "asked", "issue": url, "story": story})
             continue
         live = load("news.json", [])
         if not any(x.get("id") == story["id"] for x in live):
             live.insert(0, story); save("news.json", live)
-        drafts.insert(0, {"status": "published", "story": story, "changes": changes})
-        print(f"  PUBLISHED: {story['title']}")
+        drafts.insert(0, {"status": "published", "story": story})
+        print(f"  PUBLISHED: {story['title']} [{verdicts}]")
     save("watch_state.json", state); save("drafts.json", drafts[:200])
 
 

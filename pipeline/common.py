@@ -64,8 +64,9 @@ def parse_json(text):
     try:
         return json.loads(m.group(1) if m else text)
     except json.JSONDecodeError:
+        # only salvage a reply that IS a list; never pull a list out of the middle of a broken object
         start = text.find("[")
-        if start < 0:
+        if start < 0 or (text.find("{") != -1 and text.find("{") < start):
             raise
         dec, out, i = json.JSONDecoder(), [], start + 1
         while True:
@@ -116,3 +117,45 @@ def is_primary(url):
 def primary_first(srcs):
     """Carrier or company sources first (stable order otherwise)."""
     return sorted(srcs, key=lambda s: 0 if is_primary(s.get("url")) else 1)
+
+
+# ---------------------------------------------------------------- what earns a spot on the rate clock
+# The rate clock is for cost changes and big events, not every date a story mentions.
+CLOCK_CATS = {"Pricing & GRI", "Fees & rules", "Peak season", "Fuel", "Guide changes", "Postal", "Regulation & trade",
+              "Network & operations", "International", "Amazon", "Regional & alternative", "Labor"}
+NOT_CLOCK = re.compile(r"\b(sentenc\w*|prison|jail|court|trial|hearing|arraign\w*|plea|verdict|indict\w*|parole|"
+                       r"lawsuit|testif\w*|deposition|funeral|birthday|anniversary|earnings call|conference|webinar|summit|"
+                       r"expo|award)\b", re.I)
+
+
+def clock_worthy(story, d):
+    """True if a story date belongs on the rate clock: a price, fee, surcharge, service or rule change taking effect,
+    or a big event (lvl 3). Court dates, sentencing, conferences and the like never qualify."""
+    text = f"{d.get('w', '')} {story.get('title', '')}" if isinstance(d, dict) else story.get("title", "")
+    if NOT_CLOCK.search(text):
+        return False
+    imp = d.get("imp") if isinstance(d, dict) else story.get("imp")
+    if int(story.get("lvl") or 1) >= 3:
+        return True
+    if story.get("cat") not in CLOCK_CATS:
+        return False
+    return imp in ("up", "down") or int(story.get("lvl") or 1) >= 2
+
+
+import urllib.parse
+
+CACHE_PARAMS = {"v", "ver", "version", "t", "ts", "time", "cb", "cache", "_", "rev", "updated", "dl", "download"}
+
+
+def canon(u):
+    """Drop cache-busting query parameters (e.g. ?v=20261011034200) so the same file isn't mistaken for a new one."""
+    p = urllib.parse.urlsplit(u)
+    q = [(k, v) for k, v in urllib.parse.parse_qsl(p.query, keep_blank_values=True) if k.lower() not in CACHE_PARAMS]
+    return urllib.parse.urlunsplit((p.scheme, p.netloc, p.path, urllib.parse.urlencode(q), ""))
+
+
+def known_doc_urls(lib=None):
+    """Every document already on file (the app's built-in list plus data/docs.json), with cache stamps removed."""
+    seed = load("seed.json", {})
+    docs = (seed.get("docs") or []) + (lib if lib is not None else load("docs.json", []))
+    return {canon(d.get("u") or "") for d in docs if d.get("u")}

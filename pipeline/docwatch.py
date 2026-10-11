@@ -11,8 +11,9 @@ data/news.json (category "Guide changes"). If no outlet has reported it yet, it 
 Usage: python docwatch.py [--batch 15]
 """
 import datetime as dt, difflib, gzip, io, json, os, re, sys
-from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE
+from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE, clock_worthy
 from scoop import is_covered, notify, ask, big
+from changeaudit import audit, story_fields
 
 SNAP = ROOT / "data" / "docwatch"
 PRIORITY = {"Rate guide": 0, "Service guide": 0, "Terms": 1, "Surcharges & fees": 1, "Peak": 1, "GRI notice": 2,
@@ -100,23 +101,28 @@ def main():
             rec.update({"hash": newhash, "changed": today})
         if len(diff) < 40:
             accept(); continue
-        try:
-            verdict = parse_json(claude(MODEL_WRITE, SYSTEM, f"DOCUMENT: {d['c']} — {d['n']}\nURL: {u}\n\nDIFF (- old, + new):\n{diff[:12000]}", max_tokens=900))
-        except Exception as e:
-            print(f"  {d['n']}: comparison failed, will retry next run: {e}", file=sys.stderr)
+        # strict audit: exact before/after for each change, proven by quotes from both versions
+        res = audit(d["c"], d["n"], u, old, new)
+        if res is None:
+            print(f"  {d['n']}: audit failed, will retry next run", file=sys.stderr)
             continue
         accept()
-        if not isinstance(verdict, dict) or not verdict.get("material"):
+        if not res.get("material") or not res.get("changes"):
+            print(f"  {d['n']}: checked, nothing material ({res.get('verdict')}, {res.get('dropped', 0)} unproven claims dropped)")
             continue
-        covered = is_covered(verdict["title"], days=7)
+        f = story_fields(res, d["c"])
+        covered = is_covered(f["title"], days=7)
         story = {"id": "w" + h(u + today), "date": today, "c": [d["c"]] if d["c"] in ("UPS", "FedEx", "USPS", "Amazon", "OnTrac", "DHL") else ["Regional"],
-                 "cat": "Guide changes", "kind": "Alert", "title": verdict["title"], "sum": verdict["summary"],
-                 "plain": verdict.get("effect", ""), "imp": verdict.get("imp", "watch"), "lvl": int(verdict.get("lvl", 2)),
-                 "changes": verdict.get("changes", [])[:8], "exclusive": not covered,
-                 "src": d["c"], "url": u, "srcs": [{"src": f"{d['c']}: {d['n']}", "url": u}], "auto": True}
+                 **f, "cat": "Guide changes", "kind": "Alert", "exclusive": not covered,
+                 "src": d["c"], "url": u, "srcs": [{"src": f"{d['c']}: {d['n']}", "url": u}], "auto": True,
+                 "audit": {"verdicts": res.get("verdict"), "dropped": res.get("dropped", 0), "compared": [{"new": u, "old": u + " (previous version)"}]}}
+        story["dates"] = [x for x in story["dates"] if clock_worthy(story, x)]
+        if res.get("unsupported"):
+            ask(story, ["These numbers aren't in the old or new text: " + ", ".join(res["unsupported"])], story["srcs"])
+            continue
         if not covered and big(story):
             ask(story, ["It's big and nobody else has reported it yet."], story["srcs"],
-                extra="Changes:\n" + "\n".join(f"- {c}" for c in story["changes"]))
+                extra="Changes:\n" + "\n".join(f"- {c.get('what')}: {c.get('before') or '(new)'} → {c.get('after')}" for c in story["changes"]))
             continue
         news.insert(0, story)          # routine guide changes publish on their own; alerts.py handles the phone push
         alerts += 1

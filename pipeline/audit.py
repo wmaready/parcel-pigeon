@@ -26,7 +26,7 @@ Checks
 Run: python pipeline/audit.py [--offline]   (--offline skips link checks and Claude checks)
 """
 import datetime as dt, difflib, hashlib, json, os, re, sys
-from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary
+from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary, clock_worthy
 from scoop import notify
 
 TODAY = dt.date.today()
@@ -74,7 +74,7 @@ def main():
     # pipeline stories turn their dates into clock entries in the app; mirror that here
     for s in stories.values():
         for i, d in enumerate(s.get("dates") or []):
-            if d.get("d") and not any(c["d"] == d["d"] and s["id"] in c.get("news", []) for c in clock):
+            if d.get("d") and clock_worthy(s, d) and not any(c["d"] == d["d"] and s["id"] in c.get("news", []) for c in clock):
                 clock.append({"id": f"x{s['id']}{i}", "d": d["d"], "w": d.get("w", ""), "c": " · ".join(s.get("c", [])), "imp": d.get("imp", "up"), "news": [s["id"]]})
 
     linked = {sid for c in clock for sid in c.get("news", [])}
@@ -87,7 +87,7 @@ def main():
     # 2. future effective date with no clock entry
     for s in stories.values():
         a = s.get("act")
-        if not a or a < ISO:
+        if not a or a < ISO or not clock_worthy(s, {"w": s.get("title", ""), "imp": s.get("imp")}):
             continue
         if any(s["id"] in c.get("news", []) and abs(days(c["d"], a)) <= 3 for c in clock):
             continue

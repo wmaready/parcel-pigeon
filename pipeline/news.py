@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, re, sys, urllib.parse
 import feedparser, trafilatura, yaml
-from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first
+from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy
 from scoop import is_covered, notify, PRESS, ask, big
 
 MAX_NEW_PER_RUN = 10          # cost guard: stories written per run
@@ -71,7 +71,10 @@ Return JSON only, with exactly these keys:
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
 "act": "YYYY-MM-DD" effective date if one is stated, else null;
-"dates": list of {{"d":"YYYY-MM-DD","w":"what changes that day, under 70 characters","imp":"up|down|info","fx":null}} for future dates in the source.
+"dates": list of {{"d":"YYYY-MM-DD","w":"what changes that day, under 70 characters","imp":"up|down|info","fx":null}} for future dates in the source
+         ONLY when shippers' prices, surcharges, fees, service levels or rules change that day, or for a big industry event that
+         shippers plan around (a network change, a regulation taking effect, a labor contract expiring). NEVER court dates,
+         sentencing, hearings, trials, earnings calls, conferences or other dates about a person or a case; [] if none.
          "fx" drives the rate clock's animated explainer. Fill it ONLY with figures stated in the sources, else null:
          {{"t":"gri","car":"FedEx","pct":5.9}} for a general rate increase; {{"t":"das","added":1200,"fee":"$4.70"}} for a
          delivery-area ZIP list change; {{"t":"fuel","car":"UPS","diesel":4.10,"old":22.5,"new":24.0}} for a fuel table change;
@@ -80,6 +83,9 @@ Return JSON only, with exactly these keys:
 "category": one of {CATEGORIES} (use "M&A" for mergers, acquisitions, sales, spin-offs, SPACs, IPOs and funding rounds);
 "kind": "News", "Opinion" or "Analysis";
 "carriers": subset of {CARRIERS}, or ["Industry"];
+"orgs": companies in the parcel world that the story is about (carriers, couriers, gig and last-mile networks, 3PLs, shipping
+  or returns software, drone/robot delivery firms, retailers' delivery arms, investors in these): [{{"name":"...","what":"one line on
+  what it does, from the sources","realm":"same realm names as deal parties"}}]; skip law firms, agencies, people and generic shippers; [] if none;
 "rels": every business relationship between named companies that the sources state, for ANY story (not just M&A):
   [{{"a":"Company A","b":"Company B","k":"partner|acquired|merged|sold|spun|invested|owns","t":"short plain label, e.g. 'DoorDash and Kroger expand delivery partnership'"}}];
   a = buyer/owner/investor/seller; b = target/unit. Only real, announced relationships; [] if none;
@@ -260,7 +266,7 @@ def update_market_map(deal, story):
             pid = slug(name)
             p = {"id": pid, "n": name, "realm": REALM_OF.get(party.get("realm"), "3pl"), "own": None, "tk": None, "parent": None,
                  "hq": party.get("hq"), "yr": party.get("founded"), "s": (who.get(name) or [None, None, ""])[2] or f"{party.get('realm') or 'Company'} named in {story['title']}.",
-                 "al": [], "src": story["url"], "auto": True}
+                 "al": [], "src": story["url"], "auto": True, "added": story["date"], "story": story["id"]}
             mp["players"].append(p)
             known.append(p)
         ids.setdefault(party.get("role", ""), []).append(pid)
@@ -285,6 +291,32 @@ def update_market_map(deal, story):
             if a != b and not any(e["a"] == b and e["b"] == a for e in seed.get("edges", []) + mp["edges"]):
                 mp["edges"].append({"a": b, "b": a, "k": "invested", "y": None, "t": f"Backs {deal.get('buyer')}", "url": story["url"], "story": story["id"]})
     save("players.json", mp)
+
+
+def add_candidates(orgs, story):
+    """Companies a story is about that aren't on the market map yet. They wait as candidates until players.py
+    researches them, confirms they're parcel players and links them to the map."""
+    seed = load("seed.json", {})
+    mp = load("players.json", {"players": [], "edges": []})
+    known = seed.get("players", []) + mp["players"]
+    names = {n.lower() for p in known for n in [p["n"]] + (p.get("al") or [])}
+    ids = {p["id"] for p in known}
+    changed = False
+    for o in orgs[:4]:
+        name = (o.get("name") or "").strip()
+        realm = REALM_OF.get(o.get("realm"))
+        if not name or not realm or name.lower() in names:
+            continue
+        base = re.sub(r"[^a-z0-9]+", "", name.lower())[:14] or "co"
+        pid, k = base, 2
+        while pid in ids:
+            pid, k = f"{base}{k}", k + 1
+        mp["players"].append({"id": pid, "n": name, "realm": realm, "own": None, "tk": None, "parent": None, "hq": None, "yr": None,
+                              "s": (o.get("what") or "")[:200], "al": [], "src": story["url"], "auto": True, "pending": True,
+                              "added": story["date"], "story": story["id"]})
+        names.add(name.lower()); ids.add(pid); changed = True
+    if changed:
+        save("players.json", mp)
 
 
 def add_relations(rels, story):
@@ -326,8 +358,13 @@ def publish_extras(story, s, live=()):
             if dd.get("u") in src_urls and (is_primary(dd["u"]) or report) and not any(x.get("u") == dd["u"] for x in lib):
                 lib.append({"c": "Reports" if report else (dd.get("c") or story["c"][0]), "t": "Market report" if report else (dd.get("t") or "Rate guide"), "n": dd.get("n") or story["title"],
                             "y": dd.get("y"), "eff": dd.get("eff"), "u": dd["u"], "d": f"Found with: {story['title']}",
-                            "cur": True, "added": story["date"]})
+                            "cur": True, "added": story["date"],
+                            "why": {"how": "story", "story": story["id"], "title": story["title"], "when": story["date"]}})
         save("docs.json", lib)
+    try:
+        add_candidates(s.get("orgs") or [], story)
+    except Exception as e:
+        print(f"  new players: {e}", file=sys.stderr)
     try:
         add_relations(s.get("rels") or [], story)
     except Exception as e:
@@ -446,15 +483,24 @@ def main():
             story = {"id": "a" + h(lead_url), "date": min(it["date"] for it, _, _ in texts), "c": s.get("carriers") or v.get("carriers") or ["Industry"],
                      "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
                      "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
-                     "act": s.get("act"), "dates": s.get("dates", []),
+                     "act": s.get("act"), "dates": s.get("dates") or [],
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
-            SHOW_IMAGES = False  # photos are off for now; flip to True to pull lead photos from company pages
-            for sx in (story["srcs"] if SHOW_IMAGES else []):
+            # photos: only the company's own announcement image (never trade press), saved with the site
+            for sx in story["srcs"]:
                 if is_primary(sx["url"]):
                     img = lead_image(sx["url"])
-                    if img:
-                        story["img"], story["imgc"] = img, f"Image: {sx['src']}"
+                    try:
+                        from media import story_photo
+                        got = story_photo(img, story["id"]) if img else None
+                    except Exception:
+                        got = None
+                    if got:
+                        story["img"], story["thumb"], story["imgc"] = got[0], got[1], f"Image: {sx['src']}"
                         break
+            # only cost changes and big events go on the rate clock
+            story["dates"] = [d for d in story["dates"] if isinstance(d, dict) and clock_worthy(story, d)]
+            if story.get("act") and not clock_worthy(story, {"w": story["title"], "imp": story.get("imp")}):
+                story["act"] = None
             alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
             missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
             # Price changes belong on the rate clock; a story without a date can't get there.
@@ -467,7 +513,7 @@ def main():
                     review.insert(0, {"type": "missing-date", "story_id": story["id"], "title": story["title"],
                                       "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."})
             # Official documents found in the sources go into the library (data/docs.json), the single list agents use
-            story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels") if s.get(k)}
+            story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels", "orgs") if s.get(k)}
             # Only ask the editor when it matters: numbers that don't match the sources, a possibly off-topic item,
             # or a big story nobody else has confirmed yet. Everything else publishes on its own.
             reasons = []

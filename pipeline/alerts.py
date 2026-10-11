@@ -22,17 +22,18 @@ import json
 import os
 import re
 import sys
+import uuid
 from zoneinfo import ZoneInfo
 
 import requests
 from urllib.parse import urljoin
 
-from common import load, save, get, claude, parse_json, is_primary, MODEL_FAST
+from common import load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls
 
 ET = ZoneInfo("America/New_York")
 AUTO_SEND_HOURS = float(os.environ.get("PP_AUTO_SEND_HOURS") or 2)
 QUIET_START, QUIET_END = 21, 7          # Eastern; regular and automatic alerts wait for morning
-MAX_REGULAR_SENDS = 6                    # per run, across all topics
+MAX_REGULAR_SENDS = 8                    # per run: one push per story up to this, the rest bundled into one
 MAX_MAJOR_PER_RUN = 3
 FRESH_DAYS = 2                           # only alert on stories from the last two days
 
@@ -103,12 +104,28 @@ def audience(extra, mask):
     return out
 
 
-def push(heading, body, url, filters=None, ids=None, ttl=86400):
+SENT = None                              # this run's ledger of send keys (alerts_state.json "sent"), set by run()/review()
+NS = uuid.UUID("6f1c0a52-3b7e-4a8e-9c1d-2f0b7d7e5a11")
+
+
+def norm(t):
+    return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
+
+
+def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None):
+    """One notification. `key` makes it send-once: OneSignal drops any repeat with the same idempotency key
+    (30 days), and the ledger in alerts_state.json skips it before that, so overlapping runs can't double-send."""
+    if key and SENT is not None and key in SENT:
+        print(f"  (already sent) {heading}")
+        return {"id": "dup"}
     if not (APP_ID and API_KEY):
         print(f"  (push skipped, OneSignal keys not set) {heading}: {body}")
         return None
-    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, 64)}, "contents": {"en": short(body, 180)},
+    # iOS shows the app name on top, then this title in bold, then the message
+    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, 60)}, "contents": {"en": short(body, 120)},
            "url": url, "chrome_web_icon": ICON, "firefox_icon": ICON, "ttl": ttl}
+    if key:
+        msg["idempotency_key"] = str(uuid.uuid5(NS, key))
     if ids:
         msg["include_subscription_ids"] = ids
     else:
@@ -120,6 +137,8 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400):
     except Exception:
         j = {"text": r.text[:300]}
     print(f"  push [{r.status_code}] {heading} -> {j}")
+    if key and SENT is not None and (j.get("id") or "not subscribed" in json.dumps(j.get("errors") or "")):
+        SENT.append(key)
     return j
 
 
@@ -141,8 +160,42 @@ def gh(method, path, **kw):
     return r.json() if r.text else {}
 
 
-def story_link(s):
-    return f"{SITE}#alert={s['id']}"
+def story_link(s, big=False):
+    """Opening a push lands on the story and highlights it; big ones get Coop's delivery animation first."""
+    return f"{SITE}#{'alert' if big else 'story'}={s['id']}"
+
+
+COPY_PROMPT = """Write phone notification text for each parcel-shipping news story. For each: "t" a short headline,
+at most 45 characters, plain and specific (carrier + what changed, e.g. "UPS adds $1.25 peak fee"); "m" one short sentence,
+at most 100 characters, saying what it means for shippers or when it starts. No emoji, no hype, no exclamation marks, no
+facts that aren't in the story. Reply with JSON only: {"<id>": {"t": "...", "m": "..."}}"""
+
+
+def push_copy(stories, state):
+    """Short title + message per story, written once (fast model, a fraction of a cent) and kept in state."""
+    cache = state.setdefault("copy", {})
+    need = [s for s in stories if s["id"] not in cache]
+    if need:
+        try:
+            got = parse_json(claude(MODEL_FAST, COPY_PROMPT, json.dumps(
+                [{"id": s["id"], "title": s["title"], "summary": short(s.get("plain") or s.get("sum") or "", 400)} for s in need]), 1200)) or {}
+            for s in need:
+                g = got.get(s["id"]) or {}
+                if g.get("t") and g.get("m"):
+                    cache[s["id"]] = {"t": short(g["t"], 50), "m": short(g["m"], 110)}
+        except Exception as e:
+            print("  short copy failed, using the headline:", e, file=sys.stderr)
+    out = {}
+    for s in stories:
+        c = cache.get(s["id"])
+        if not c:
+            first = re.split(r"(?<=[.!?])\s", short(s.get("plain") or s.get("sum") or "", 400))[0]
+            c = {"t": short(s["title"], 50), "m": short(first, 110)}
+        out[s["id"]] = c
+    if len(cache) > 1500:
+        for k in list(cache)[:-1500]:
+            cache.pop(k)
+    return out
 
 
 # ---------------------------------------------------------------- what counts as major
@@ -170,11 +223,28 @@ def topic_of(s):
 
 
 # ---------------------------------------------------------------- major: open a review issue
-def open_review(s, test=False):
+def already_reviewed(s):
+    """True if any review issue (open or closed) already covers this story or the same headline."""
+    try:
+        for it in gh("GET", "/issues", params={"state": "all", "per_page": 100, "sort": "created", "direction": "desc"}):
+            if not (it.get("title") or "").startswith(("Major alert:", "TEST Major alert:")):
+                continue
+            b = it.get("body") or ""
+            if f'"story": "{s["id"]}"' in b or norm(s["title"])[:50] in norm(b):
+                return True
+    except Exception as e:
+        print("  couldn't check earlier review issues:", e, file=sys.stderr)
+    return False
+
+
+def open_review(s, test=False, copy=None):
+    if not test and already_reviewed(s):
+        print("  review already exists for:", s["title"][:70]); return
     auto = now_et() + dt.timedelta(hours=AUTO_SEND_HOURS)
     if quiet(auto) and not test:
         auto = next_morning(auto)
-    title, msg, url = short(s["title"], 64), short(s.get("plain") or s.get("sum") or "", 180), story_link(s)
+    c = copy or {"t": short(s["title"], 50), "m": short(s.get("plain") or s.get("sum") or "", 110)}
+    title, msg, url = c["t"], c["m"], story_link(s, big=True)
     body = ((f"@{OWNER} **TEST ALERT.** This is a practice run of the approval flow. Replying `send` pushes it to "
              f"**your phone only**, never to readers.\n\n") if test else "") + (f"@{OWNER} a major alert is ready. **Nothing has gone to readers yet.**\n\n"
             f"### Title\n{title}\n\n### Message\n{msg}\n\n### Link\n{url}\n\n---\n"
@@ -184,16 +254,16 @@ def open_review(s, test=False):
             f"- Reply **`send docs`** to also add the carrier documents from this story to the Docs tab "
             f"(add a carrier to choose where they go, e.g. `send docs ontrac`).\n\n"
             f"If you don't reply, it goes out automatically at **{auto.strftime('%-I:%M %p ET, %a %b %-d')}**.\n\n"
-            f"<!-- pp-alert {json.dumps({'auto_at': auto.isoformat(), 'story': s['id'], 'test': test})} -->")
+            f"<!-- pp-alert {json.dumps({'auto_at': auto.isoformat(), 'story': s['id'], 'test': test, 'k': 'story:' + norm(s['title'])})} -->")
     issue = gh("POST", "/issues", json={"title": f"{'TEST ' if test else ''}Major alert: {title}", "body": body, "labels": ["alert-review"]})
     link = issue.get("html_url", f"https://github.com/{REPO}/issues")
     if not ADMIN_IDS:
         print("  PP_ADMIN_IDS is empty, so no approval push to your phone (check the secret's name and that it's under Actions > Secrets)")
     if ADMIN_IDS:
-        push(("[Test] " if test else "") + "Approve alert? " + title,
-             "Tap to review. Test only: approving sends it to your phone, not readers." if test else
-             f"Tap to review. Sends to everyone automatically in {AUTO_SEND_HOURS:g} h unless you hold it.",
-             link, ids=ADMIN_IDS, ttl=6 * 3600)
+        push(("Test: " if test else "Approve? ") + title,
+             "Practice run. Approving sends it to your phone only." if test else
+             f"Goes to everyone in {AUTO_SEND_HOURS:g} h unless you hold it. Tap to review.",
+             link, ids=ADMIN_IDS, ttl=6 * 3600, key=None if test else "review:" + s["id"])
     ntfy("Parcel Pigeon: approve alert?", title, link)
     print("  review issue:", link)
 
@@ -207,8 +277,20 @@ def parse_issue(body):
 
 
 def review():
+    global SENT
     if not GH:
         print("GITHUB_TOKEN not set"); return
+    st = load("alerts_state.json", None) or {}
+    SENT = st.setdefault("sent", [])
+    try:
+        _review()
+    finally:
+        cur = load("alerts_state.json", None) or {}
+        cur["sent"] = list(dict.fromkeys(cur.get("sent", []) + st["sent"]))[-4000:]
+        save("alerts_state.json", cur)
+
+
+def _review():
     issues = gh("GET", "/issues", params={"state": "open", "labels": "alert-review", "per_page": 30})
     for it in issues:
         if it.get("pull_request") or (it.get("user") or {}).get("login") not in ("github-actions[bot]", OWNER):
@@ -250,11 +332,13 @@ def review():
             note_once("Test not sent: add your Device ID as the PP_ADMIN_IDS secret (Settings > Secrets and variables > Actions), "
                       "then reply `send` again.")
             continue
-        r = push(("[Test] " if test else "") + title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400)
+        r = push(("Test: " if test else "") + title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400,
+                 key=None if test else (meta.get("k") or "major:" + str(meta.get("story"))))
         if r is None:
             note_once("Couldn't send: the OneSignal keys aren't set in GitHub Secrets yet. Add them and reply `send` again.")
             continue
-        ok = bool(r.get("id"))
+        nobody = "not subscribed" in json.dumps(r.get("errors") or "")
+        ok = bool(r.get("id")) or nobody
         note = ("Test sent to your phone only. The approval flow works." if test and ok else
                 "Sent to everyone with alerts on." if decision == "send" else
                 f"Sent automatically (no reply within {AUTO_SEND_HOURS:g} hours).") if ok else \
@@ -294,7 +378,7 @@ def page_links(url):
         print("  couldn't read", url, e); return []
     out = []
     for href, text in re.findall(r'<a\s[^>]*href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', html, re.I | re.S):
-        u = urljoin(url, href.strip())
+        u = canon(urljoin(url, href.strip()))
         t = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text)).strip()[:120]
         if u.startswith("http") and is_primary(u) and re.search(DOC_WORDS, (u + " " + t).lower()):
             out.append({"u": u, "t": t})
@@ -351,12 +435,13 @@ def carrier_of_url(u):
     return None
 
 
-def harvest(story, lib, carrier=None):
+def harvest(story, lib, carrier=None, editor=False):
     """Add the official documents linked from a story's sources to the library. Returns the new entries."""
-    have = {d.get("u") for d in lib}
+    have = known_doc_urls(lib)
     fallback = carrier or next((c for c in story.get("c") or [] if c not in ("Industry", "Regional")), None)
     added = []
     for p in find_docs(story, carrier or fallback or "the carrier named in each link"):
+        p["u"] = canon(p["u"])
         if p["u"] in have:
             continue
         c = carrier or carrier_of_url(p["u"]) or fallback
@@ -364,7 +449,9 @@ def harvest(story, lib, carrier=None):
             continue
         d = {"c": c, "t": p.get("t") if p.get("t") in DOC_TYPES else "Special program", "n": short(p.get("n") or story["title"], 120),
              "y": p.get("y"), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
-             "cur": True, "added": now_et().date().isoformat()}
+             "cur": True, "added": now_et().date().isoformat(),
+             "why": {"how": "editor" if editor else "story", "story": story.get("id"), "title": story.get("title"),
+                     "when": now_et().date().isoformat()}}
         lib.append(d); have.add(p["u"]); added.append(d)
     return added
 
@@ -429,7 +516,7 @@ def process_doc_requests():
             if not carrier:
                 body = "Which carrier should these go under? Reply `docs ups` (or another carrier) and I'll add them."
             else:
-                added = harvest(story, lib, carrier)
+                added = harvest(story, lib, carrier, editor=True)
                 body = (f"Added {len(added)} document{'s' if len(added) != 1 else ''} to Docs under **{carrier}** "
                         f"(live with this update):\n" + "\n".join(f"- [{d['n']}]({d['u']}) · {d['t']}" for d in added)) if added else \
                        f"Checked the story's sources but found no new {carrier} documents to add (anything there is already in Docs)."
@@ -455,7 +542,9 @@ def collect(state, today):
     """New events since the last run: (stories, clock reminders, fuel moves). Marks nothing; caller does."""
     news = load("news.json", [])
     fresh = (today - dt.timedelta(days=FRESH_DAYS)).isoformat()
-    stories = [s for s in news if s.get("id") and s["id"] not in state["stories"] and (s.get("date") or "") >= fresh]
+    seen_t = set(state.get("titles") or [])
+    stories = [s for s in news if s.get("id") and s["id"] not in state["stories"] and (s.get("date") or "") >= fresh
+               and norm(s.get("title"))[:60] not in seen_t]
     seed = load("seed.json", {})
     rem = []
     for e in seed.get("clock") or []:
@@ -484,6 +573,13 @@ def collect(state, today):
 
 
 def run():
+    global SENT
+    try:
+        import players                      # research new companies before alerting on them (3 per run keeps cost low)
+        sys.argv = [sys.argv[0], "--max", "3"]
+        players.main()
+    except Exception as e:
+        print("player research failed:", e, file=sys.stderr)
     try:
         process_doc_requests()
     except Exception as e:
@@ -494,8 +590,9 @@ def run():
         save("push.json", {"appId": APP_ID})
     first = state is None
     state = state or {}
-    for k, d in (("stories", []), ("clock", []), ("fuel", {})):
+    for k, d in (("stories", []), ("clock", []), ("fuel", {}), ("players", []), ("sent", []), ("titles", [])):
         state.setdefault(k, d)
+    SENT = state["sent"]
     try:
         auto_harvest(state)
     except Exception as e:
@@ -507,22 +604,28 @@ def run():
         state["clock"] += [k for k, _, _ in rem]
         for c, k, _, _ in moves:
             state["fuel"][c] = k
+        state["players"] = [p["id"] for p in load("players.json", {}).get("players", [])]
+        state["titles"] += [norm(s.get("title"))[:60] for s in stories]
         save("alerts_state.json", state)
         print("alerts: first run, recorded", len(stories), "stories as already seen"); return
 
     # major stories: review issue for the editor (any hour; the issue waits)
     majors = sorted([s for s in stories if is_major(s)], key=lambda s: -int(s.get("lvl") or 1))[:MAX_MAJOR_PER_RUN]
     approved = set(load("approved.json", []))
+    copy = push_copy([s for s in stories][:MAX_REGULAR_SENDS + MAX_MAJOR_PER_RUN], state)
+    def seen(s):
+        state["stories"].append(s["id"]); state["titles"].append(norm(s.get("title"))[:60])
     for s in majors:
         try:
+            c = copy.get(s["id"]) or {"t": s["title"], "m": s.get("plain") or ""}
             if s["id"] in approved:
                 # you already OK'd this story with `run`, so the alert goes straight out (or at 7 a.m. if it's overnight)
                 if quiet():
                     continue
-                push(s["title"], s.get("plain") or s.get("sum") or "", story_link(s), ttl=2 * 86400)
+                push(c["t"], c["m"], story_link(s, big=True), ttl=2 * 86400, key="story:" + norm(s["title"]))
             else:
-                open_review(s)
-            state["stories"].append(s["id"])
+                open_review(s, copy=c)
+            seen(s)
         except Exception as e:
             print("review issue failed:", e, file=sys.stderr)
     major_ids = {s["id"] for s in majors}
@@ -532,33 +635,32 @@ def run():
         print(f"alerts: quiet hours, {len(stories) - len(majors)} regular stories wait for morning"); return
 
     sends = 0
-    # stories, grouped by topic and carriers so each reader gets one push per group
-    groups = {}
-    for s in stories:
-        if s["id"] in major_ids:
-            continue
-        groups.setdefault((topic_of(s), mask_of(s.get("c"))), []).append(s)
-    for (topic, mask), ss in sorted(groups.items(), key=lambda kv: -max(int(x.get("lvl") or 1) for x in kv[1])):
-        if sends >= MAX_REGULAR_SENDS:
-            break
-        ss.sort(key=lambda x: -int(x.get("lvl") or 1))
-        who = "/".join(c for c in (ss[0].get("c") or []) if c != "Industry") or "Parcel"
-        if len(ss) == 1:
-            head, body, url = ss[0]["title"], ss[0].get("plain") or ss[0].get("sum") or "", story_link(ss[0])
+    # one push per story, biggest first, each to the readers who picked its topic and carriers;
+    # past MAX_REGULAR_SENDS the rest are bundled into one "+N more" per topic
+    regular = sorted([s for s in stories if s["id"] not in major_ids], key=lambda x: (-int(x.get("lvl") or 1), x.get("date") or ""))
+    rest = {}
+    for s in regular:
+        topic, mask = topic_of(s), mask_of(s.get("c"))
+        aud = audience([{"field": "tag", "key": TOPIC_TAG[topic], "relation": "=", "value": "1"}], mask)
+        if sends < MAX_REGULAR_SENDS:
+            c = copy.get(s["id"]) or push_copy([s], state)[s["id"]]
+            push(c["t"], c["m"], story_link(s), aud, key="story:" + norm(s["title"]))
+            sends += 1
         else:
-            head = f"{len(ss)} new {who} {TOPIC_WORDS[topic]}"
-            body, url = f"{ss[0]['title']} + {len(ss) - 1} more", SITE + "#news"
-        push(head, body, url, audience([{"field": "tag", "key": TOPIC_TAG[topic], "relation": "=", "value": "1"}], mask))
-        sends += 1
-    state["stories"] += [s["id"] for s in stories if s["id"] not in major_ids]
+            rest.setdefault(topic, []).append(s)
+        seen(s)
+    for topic, ss in rest.items():
+        push(f"{len(ss)} more {TOPIC_WORDS[topic]}", short(ss[0]["title"], 90) + (f" and {len(ss) - 1} more" if len(ss) > 1 else ""),
+             SITE + "#news", [{"field": "tag", "key": TOPIC_TAG[topic], "relation": "=", "value": "1"}],
+             key="more:" + ",".join(sorted(s["id"] for s in ss)))
 
     # rate clock reminders: 7 days and 1 day before a dated increase
     for key, e, left in rem:
         if sends >= MAX_REGULAR_SENDS:
             break
         when = "tomorrow" if left == 1 else "in 7 days"
-        push(f"Takes effect {when}: {short(e.get('c') or 'Carrier', 30)}", e.get("w", ""), SITE + "#clock",
-             audience([{"field": "tag", "key": "t_rates", "relation": "=", "value": "1"}], mask_of(carriers_in(e.get("c")))))
+        push(f"{short(e.get('c') or 'Carrier', 24)}: starts {when}", e.get("w", ""), SITE + "#clock",
+             audience([{"field": "tag", "key": "t_rates", "relation": "=", "value": "1"}], mask_of(carriers_in(e.get("c")))), key="clock:" + key)
         state["clock"].append(key); sends += 1
 
     # fuel: each reader picks a threshold (tag "ft"; 0 = off)
@@ -567,13 +669,44 @@ def run():
         state["fuel"][c] = k
         if mv <= 0:
             continue
-        push(f"{c} ground fuel {'up' if b > a else 'down'} {mv:g} pts",
-             f"{b:g}% for the week of {dt.date.fromisoformat(k[:10]).strftime('%b %-d')} (was {a:g}%).", SITE + "#fuel",
+        push(f"{c} ground fuel {'up' if b > a else 'down'} to {b:g}%",
+             f"Week of {dt.date.fromisoformat(k[:10]).strftime('%b %-d')}, from {a:g}% ({'+' if b > a else '−'}{mv:g} pts).", SITE + "#fuel",
              audience([{"field": "tag", "key": "ft", "relation": ">", "value": "0"},
-                       {"field": "tag", "key": "ft", "relation": "<", "value": str(mv + 0.001)}], BITS.get(c)))
+                       {"field": "tag", "key": "ft", "relation": "<", "value": str(mv + 0.001)}], BITS.get(c)), key=f"fuel:{c}:{k}")
         sends += 1
 
+    # new companies on the market map (researched and confirmed by players.py)
+    newp = [p for p in load("players.json", {}).get("players", []) if p.get("enriched") and not p.get("pending")
+            and p["id"] not in state["players"]]
+    if newp and sends < MAX_REGULAR_SENDS + 1:
+        if len(newp) == 1:
+            p = newp[0]
+            push(f"New on the map: {p['n']}", p.get("s") or "", SITE + "#mna",
+                 [{"field": "tag", "key": "t_deals", "relation": "=", "value": "1"}], key="player:" + p["id"])
+        else:
+            push(f"{len(newp)} new companies on the map", ", ".join(p["n"] for p in newp[:6]), SITE + "#mna",
+                 [{"field": "tag", "key": "t_deals", "relation": "=", "value": "1"}], key="players:" + ",".join(sorted(p["id"] for p in newp)))
+        sends += 1
+    state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
+    try:
+        import media                        # company logos (monthly) and company photos for recent stories
+        media.logos(25)
+        media.photos(6)
+    except Exception as e:
+        print("media failed:", e, file=sys.stderr)
+    try:
+        import archive                      # saved copies of carrier PDFs and spreadsheets for one-tap download
+        archive.main(6)
+    except Exception as e:
+        print("archive failed:", e, file=sys.stderr)
+    try:
+        import guides                       # refresh Coop's reference shelf (local, no API cost)
+        guides.main()
+    except Exception as e:
+        print("guides failed:", e, file=sys.stderr)
     state["stories"] = state["stories"][-3000:]
+    state["titles"] = state["titles"][-3000:]
+    state["sent"] = SENT[-4000:]
     state["clock"] = state["clock"][-500:]
     save("alerts_state.json", state)
     print(f"alerts: {len(majors)} for review, {sends} regular pushes")
