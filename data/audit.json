@@ -1,8 +1,49 @@
 {
- "run": "2026-10-11T04:21Z",
+ "run": "2026-10-11T04:37Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "issues": [],
- "open": []
+ "link_cursor": 40,
+ "doc_cursor": 30,
+ "checked_pairs": [
+  "06f70cfc2e04",
+  "5936d9a033d9",
+  "b7f069f3b72c",
+  "1e794304363e",
+  "e2001007f572",
+  "b53ba4ff0d99",
+  "94d1ac334f4e",
+  "fd4ca787d79a",
+  "89721d2fe326",
+  "ea84ade0e8eb",
+  "64785318fd71",
+  "339ddf859303",
+  "6fa442d69510",
+  "a886bd29d8b6",
+  "38c4c1688b44"
+ ],
+ "issues": [
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
+   "ids": [
+    "h426",
+    "h427"
+   ],
+   "fixed": false
+  }
+ ],
+ "open": [
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
+   "ids": [
+    "h426",
+    "h427"
+   ],
+   "fixed": false
+  }
+ ]
 }
