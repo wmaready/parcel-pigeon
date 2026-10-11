@@ -1,5 +1,59 @@
 [
  {
+  "status": "published",
+  "story": {
+   "id": "w8a582ba4f6eb",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Documents",
+   "title": "OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page",
+   "sum": "OnTrac's own Surcharges and rates page now shows four newly listed PDF files: 2026 rates, 2026 AHS and LPS rates, an area surcharge ZIP code list, and a 2024 rates file.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "OnTrac posted four new file links on its own Surcharges and rates page. They are a 2026 rates PDF, a 2026 AHS and LPS rates PDF, an area surcharge ZIP code PDF, and a 2024 rates PDF. The change record shows only the file links, not their contents. Whether any prices, surcharges or ZIP coverage differ from earlier versions is not stated in the page change, and the 2024 file may be a re-listing of an older document.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "srcs": [
+    {
+     "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+     "url": "https://www.ontrac.com/surchargesandrates/"
+    }
+   ],
+   "auto": true,
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "2026 OnTrac rate guide file listed on Surcharges and rates page",
+    "old": "not listed",
+    "new": "2026-OnTrac-Rates.pdf",
+    "effective": null
+   },
+   {
+    "what": "2026 AHS + LPS rates file listed on Surcharges and rates page",
+    "old": "not listed",
+    "new": "2026-OnTrac-AHS+LPSRates.pdf",
+    "effective": null
+   },
+   {
+    "what": "Area surcharge ZIP code list listed on Surcharges and rates page",
+    "old": "not listed",
+    "new": "ontrac-area-surcharge-zip-codes.pdf",
+    "effective": null
+   },
+   {
+    "what": "2024 rates file listed on Surcharges and rates page",
+    "old": "not listed",
+    "new": "ontrac-2024-rates.pdf",
+    "effective": null
+   }
+  ]
+ },
+ {
   "status": "draft",
   "issue": "https://github.com/wmaready/parcel-pigeon/issues/19",
   "story": {
