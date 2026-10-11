@@ -1,9 +1,79 @@
 {
- "run": "2026-10-11T19:19Z",
+ "run": "2026-10-11T20:20Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
  "issues": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate guide, AHS+LPS rates and area surcharge ZIP list\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w3d06a7fa766e"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac surcharges page now lists 2026 rate, AHS/LPS and area surcharge ZIP PDFs\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "wa0dc8b706733"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate files and area surcharge ZIP list on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w1a58abf8b69d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate and AHS/LPS files, area surcharge ZIP list on rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w49b3786a59a5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w150132868eae"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "wb612a77519f2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",
@@ -396,6 +466,76 @@
   }
  ],
  "open": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate guide, AHS+LPS rates and area surcharge ZIP list\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w3d06a7fa766e"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac surcharges page now lists 2026 rate, AHS/LPS and area surcharge ZIP PDFs\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "wa0dc8b706733"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate files and area surcharge ZIP list on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w1a58abf8b69d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate and AHS/LPS files, area surcharge ZIP list on rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w49b3786a59a5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w150132868eae"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "wb612a77519f2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts 2026 rate guides, AHS/LPS rates and area surcharge ZIP list\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wf225c9a3bf63",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",
