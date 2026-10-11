@@ -1,6 +1,54 @@
 [
  {
   "status": "draft",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/11",
+  "story": {
+   "id": "wb612a77519f2",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Documents",
+   "title": "OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page",
+   "sum": "OnTrac's Surcharges and rates page now lists four newly posted PDF files, including 2026 rate documents and an area surcharge ZIP code list. The posting appeared on the carrier's own page.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "OnTrac's own Surcharges and rates page now links to four PDF files that were not listed before. They are a 2026 rates document, a 2026 document covering AHS and LPS rates, an area surcharge ZIP code list, and a 2024 rates document. The change shows only the file links. It does not show the contents, so any price, surcharge or ZIP coverage changes, and any effective dates, would have to be confirmed by opening the files.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "New rate guide file posted: 2026 OnTrac Rates PDF",
+    "old": "Not previously listed on the page",
+    "new": "2026-OnTrac-Rates.pdf",
+    "effective": null
+   },
+   {
+    "what": "New file posted: 2026 AHS and LPS rates PDF",
+    "old": "Not previously listed on the page",
+    "new": "2026-OnTrac-AHS+LPSRates.pdf",
+    "effective": null
+   },
+   {
+    "what": "New file posted: area surcharge ZIP code list PDF",
+    "old": "Not previously listed on the page",
+    "new": "ontrac-area-surcharge-zip-codes.pdf",
+    "effective": null
+   },
+   {
+    "what": "New file posted: 2024 rates PDF",
+    "old": "Not previously listed on the page",
+    "new": "ontrac-2024-rates.pdf",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "draft",
   "issue": "https://github.com/wmaready/parcel-pigeon/issues/10",
   "story": {
    "id": "wd3f98423dd2a",
