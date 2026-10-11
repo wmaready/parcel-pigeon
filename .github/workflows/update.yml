@@ -1,35 +1,97 @@
 {
  "name": "Update Parcel Pigeon",
- "on": {
-  "schedule": [{"cron": "17 10-23/2 * * *"}, {"cron": "17 4 * * *"}],
-  "workflow_dispatch": {},
-  "push": {"branches": ["main"]}
+ "permissions": {
+  "contents": "write",
+  "issues": "write",
+  "pages": "write",
+  "id-token": "write"
  },
- "permissions": {"contents": "write", "issues": "write", "pages": "write", "id-token": "write"},
- "concurrency": {"group": "parcel-pigeon", "cancel-in-progress": false},
+ "concurrency": {
+  "group": "parcel-pigeon",
+  "cancel-in-progress": false
+ },
  "jobs": {
   "update": {
    "runs-on": "ubuntu-latest",
-   "environment": {"name": "github-pages", "url": "${{ steps.deploy.outputs.page_url }}"},
    "steps": [
-    {"uses": "actions/checkout@v4"},
-    {"uses": "actions/setup-python@v5", "with": {"python-version": "3.12", "cache": "pip"}},
-    {"run": "pip install -r requirements.txt"},
-    {"name": "Make sure labels exist",
-     "env": {"GH_TOKEN": "${{ github.token }}"},
-     "run": "gh label create draft --color FFD400 --force\ngh label create publish --color 1D7044 --force\ngh label create audit --color 5319E7 --description \"Auditor found something to check\" --force\ngh label create first-to-report --color B60205 --force\n"},
-    {"name": "Run pipeline",
+    {
+     "uses": "actions/checkout@v4"
+    },
+    {
+     "uses": "actions/setup-python@v5",
+     "with": {
+      "python-version": "3.12",
+      "cache": "pip"
+     }
+    },
+    {
+     "run": "pip install -r requirements.txt"
+    },
+    {
+     "name": "Make sure labels exist",
+     "env": {
+      "GH_TOKEN": "${{ github.token }}"
+     },
+     "run": "gh label create draft --color FFD400 --force\ngh label create publish --color 1D7044 --force\ngh label create audit --color 5319E7 --description \"Auditor found something to check\" --force\ngh label create first-to-report --color B60205 --force\ngh label create alert-review --color D93F0B --description \"Major alert waiting for your OK: reply send or hold\" --force\ngh label create alert-sent --color 0E8A16 --force\ngh label create alert-held --color BFD4F2 --force\n"
+    },
+    {
+     "name": "Run pipeline",
      "if": "github.event_name != 'push'",
-     "env": {"ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}", "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}", "EIA_API_KEY": "${{ secrets.EIA_API_KEY }}", "OILPRICE_API_KEY": "${{ secrets.OILPRICE_API_KEY }}", "GITHUB_TOKEN": "${{ github.token }}"},
+     "env": {
+      "ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}",
+      "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}",
+      "EIA_API_KEY": "${{ secrets.EIA_API_KEY }}",
+      "OILPRICE_API_KEY": "${{ secrets.OILPRICE_API_KEY }}",
+      "GITHUB_TOKEN": "${{ github.token }}",
+      "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
+      "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}",
+      "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}"
+     },
      "working-directory": "pipeline",
-     "run": "python fuel.py || true\npython markets.py || true\npython news.py || echo \"::warning::news.py failed; saving the other updates anyway\"\nif [ \"$(date -u +%H)\" = \"12\" ] || [ \"${{ github.event_name }}\" = \"workflow_dispatch\" ]; then python brief.py || true; fi\npython publish.py || true\nnode export_seed.js ../index.html ../data/seed.json || true\nif [ \"$(date -u +%H)\" = \"04\" ]; then python audit.py || true; else python audit.py --offline || true; fi\n"},
-    {"name": "Save new data",
+     "run": "python fuel.py || true\npython markets.py || true\npython news.py || echo \"::warning::news.py failed; saving the other updates anyway\"\n# the 60-second brief is written once a day, on the 8 a.m. Eastern run (or when run by hand)\nif [ \"$(date -u +%H)\" = \"12\" ] || [ \"${{ github.event_name }}\" = \"workflow_dispatch\" ]; then python brief.py || true; fi\npython publish.py || true\nnode export_seed.js ../index.html ../data/seed.json || true\n# phone alerts: regular ones go out now, major ones wait for your OK\npython alerts.py || echo \"::warning::alerts.py failed\"\n# full audit (link checks and Claude fact checks) once a day on the overnight run; quick offline checks otherwise\nif [ \"$(date -u +%H)\" = \"04\" ]; then python audit.py || true; else python audit.py --offline || true; fi\n"
+    },
+    {
+     "name": "Save new data",
      "if": "github.event_name != 'push'",
-     "run": "git config user.name \"parcel-pigeon-bot\"\ngit config user.email \"bot@users.noreply.github.com\"\ngit add data\ngit diff --cached --quiet || (git commit -m \"Update data $(date -u +%Y-%m-%dT%H:%MZ)\" && git pull --rebase && git push)\n"},
-    {"name": "Leave raw page copies out of the public site", "run": "rm -rf data/snapshots data/docwatch"},
-    {"uses": "actions/configure-pages@v5"},
-    {"uses": "actions/upload-pages-artifact@v3", "with": {"path": "."}},
-    {"id": "deploy", "uses": "actions/deploy-pages@v4"}
+     "run": "git config user.name \"parcel-pigeon-bot\"\ngit config user.email \"bot@users.noreply.github.com\"\ngit add data\ngit diff --cached --quiet || (git commit -m \"Update data $(date -u +%Y-%m-%dT%H:%MZ)\" && git pull --rebase && git push)\n"
+    },
+    {
+     "name": "Leave raw page copies out of the public site",
+     "run": "rm -rf data/snapshots data/docwatch"
+    },
+    {
+     "uses": "actions/configure-pages@v5"
+    },
+    {
+     "uses": "actions/upload-pages-artifact@v3",
+     "with": {
+      "path": "."
+     }
+    },
+    {
+     "id": "deploy",
+     "uses": "actions/deploy-pages@v4"
+    }
+   ],
+   "environment": {
+    "name": "github-pages",
+    "url": "${{ steps.deploy.outputs.page_url }}"
+   }
+  }
+ },
+ "on": {
+  "schedule": [
+   {
+    "cron": "17 10-23/2 * * *"
+   },
+   {
+    "cron": "17 4 * * *"
+   }
+  ],
+  "workflow_dispatch": {},
+  "push": {
+   "branches": [
+    "main"
    ]
   }
  }
