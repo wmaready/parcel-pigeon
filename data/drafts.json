@@ -1,6 +1,36 @@
 [
  {
   "status": "draft",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/12",
+  "story": {
+   "id": "wa0965bc8203b",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Pricing & GRI",
+   "title": "OnTrac lists 2026 rate and surcharge PDFs on its surcharges and rates page",
+   "sum": "OnTrac's own Surcharges and rates page now links four PDF files: a 2026 rates file, a 2026 AHS+LPS rates file, an area surcharge ZIP code list and a 2024 rates file.",
+   "imp": "info",
+   "lvl": 1,
+   "plain": "OnTrac posted the files on its own Surcharges and rates page at ontrac.com. The detected change shows only the file links, not their contents. It gives no prices, surcharge amounts or effective dates. The file names point to 2026 rate documents, a combined AHS+LPS rate file and an area surcharge ZIP code list. A 2024 rates file is also linked.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "New rate and surcharge PDF files listed on OnTrac's Surcharges and rates page: 2026 rates, 2026 AHS+LPS rates, area surcharge ZIP codes, and a 2024 rates file",
+    "old": "No file links detected in the prior version of the page",
+    "new": "Four file links: 2026-OnTrac-Rates.pdf, 2026-OnTrac-AHS+LPSRates.pdf, ontrac-area-surcharge-zip-codes.pdf, ontrac-2024-rates.pdf",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "draft",
   "issue": "https://github.com/wmaready/parcel-pigeon/issues/11",
   "story": {
    "id": "wb612a77519f2",
