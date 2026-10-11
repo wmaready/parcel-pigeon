@@ -1,6 +1,54 @@
 [
  {
   "status": "draft",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/14",
+  "story": {
+   "id": "wc1fa935ace5c",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Documents",
+   "title": "OnTrac posts new rate, surcharge and area ZIP code PDFs on its rates page",
+   "sum": "OnTrac added four PDF files to its Surcharges and Rates page, including 2026 rate documents and an area surcharge ZIP code list.",
+   "imp": "watch",
+   "lvl": 2,
+   "plain": "On its own Surcharges and Rates page, OnTrac listed four newly posted PDF files: a 2026 AHS+LPS rates document, a 2026 rates document, an area surcharge ZIP code list, and a rates document labeled 2024. The posted lines show only the file names, not their contents. Specific prices, surcharge amounts, ZIP code coverage and effective dates cannot be determined from this change alone and would need to be read from the documents themselves.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "New file posted: 2026 OnTrac AHS+LPS rates PDF",
+    "old": "Not listed on page",
+    "new": "2026-OnTrac-AHS+LPSRates.pdf listed",
+    "effective": null
+   },
+   {
+    "what": "New file posted: 2026 OnTrac rates PDF",
+    "old": "Not listed on page",
+    "new": "2026-OnTrac-Rates.pdf listed",
+    "effective": null
+   },
+   {
+    "what": "New file posted: OnTrac area surcharge ZIP codes PDF",
+    "old": "Not listed on page",
+    "new": "ontrac-area-surcharge-zip-codes.pdf listed",
+    "effective": null
+   },
+   {
+    "what": "New file posted: OnTrac 2024 rates PDF",
+    "old": "Not listed on page",
+    "new": "ontrac-2024-rates.pdf listed",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "draft",
   "issue": "https://github.com/wmaready/parcel-pigeon/issues/12",
   "story": {
    "id": "wa0965bc8203b",
