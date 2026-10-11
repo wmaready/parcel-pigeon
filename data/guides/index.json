@@ -1,0 +1,32 @@
+{
+ "Amazon": {
+  "file": "data/guides/amazon.json",
+  "docs": 2,
+  "passages": 44
+ },
+ "FedEx": {
+  "file": "data/guides/fedex.json",
+  "docs": 1,
+  "passages": 1
+ },
+ "OnTrac": {
+  "file": "data/guides/ontrac.json",
+  "docs": 2,
+  "passages": 19
+ },
+ "Spee-Dee": {
+  "file": "data/guides/spee-dee.json",
+  "docs": 4,
+  "passages": 28
+ },
+ "UPS": {
+  "file": "data/guides/ups.json",
+  "docs": 6,
+  "passages": 332
+ },
+ "USPS": {
+  "file": "data/guides/usps.json",
+  "docs": 5,
+  "passages": 168
+ }
+}
