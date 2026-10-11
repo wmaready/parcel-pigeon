@@ -2,6 +2,60 @@
  {
   "status": "published",
   "story": {
+   "id": "wbf2ef019cc6e",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Documents",
+   "title": "OnTrac posts four rate and surcharge PDFs on its Surcharges and rates page",
+   "sum": "OnTrac's own Surcharges and rates page now lists four PDF files: 2026 rates, a 2026 AHS+LPS rates file, an area surcharge ZIP code list and a 2024 rates file.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "A change detected on OnTrac's own Surcharges and rates page shows four newly listed PDF files. Their names are 2026-OnTrac-Rates, 2026-OnTrac-AHS+LPSRates, ontrac-area-surcharge-zip-codes and ontrac-2024-rates. The detected change contains only the file links, not the documents' contents. It does not show any prices, fees, surcharge amounts or effective dates, or whether any figures differ from earlier versions. Shippers who use OnTrac may want to read the files directly.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "srcs": [
+    {
+     "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+     "url": "https://www.ontrac.com/surchargesandrates/"
+    }
+   ],
+   "auto": true,
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "New file listed on OnTrac Surcharges and rates page: 2026-OnTrac-AHS+LPSRates.pdf",
+    "old": "Not listed on the page",
+    "new": "File posted (2026-OnTrac-AHS%2BLPSRates.pdf)",
+    "effective": null
+   },
+   {
+    "what": "New file listed on OnTrac Surcharges and rates page: 2026-OnTrac-Rates.pdf",
+    "old": "Not listed on the page",
+    "new": "File posted (2026-OnTrac-Rates.pdf)",
+    "effective": null
+   },
+   {
+    "what": "New file listed on OnTrac Surcharges and rates page: ontrac-area-surcharge-zip-codes.pdf",
+    "old": "Not listed on the page",
+    "new": "File posted (ontrac-area-surcharge-zip-codes.pdf)",
+    "effective": null
+   },
+   {
+    "what": "New file listed on OnTrac Surcharges and rates page: ontrac-2024-rates.pdf",
+    "old": "Not listed on the page",
+    "new": "File posted (ontrac-2024-rates.pdf)",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "published",
+  "story": {
    "id": "w49b3786a59a5",
    "date": "2026-10-11",
    "c": [
