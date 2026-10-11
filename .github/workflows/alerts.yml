@@ -1,0 +1,55 @@
+{
+ "name": "Alerts: approve and send",
+ "on": {
+  "issue_comment": {
+   "types": [
+    "created"
+   ]
+  },
+  "schedule": [
+   {
+    "cron": "*/15 * * * *"
+   }
+  ],
+  "workflow_dispatch": {}
+ },
+ "permissions": {
+  "contents": "read",
+  "issues": "write"
+ },
+ "concurrency": {
+  "group": "alerts",
+  "cancel-in-progress": false
+ },
+ "jobs": {
+  "review": {
+   "runs-on": "ubuntu-latest",
+   "if": "github.event_name != 'issue_comment' || (contains(github.event.issue.labels.*.name, 'alert-review') && github.event.comment.author_association == 'OWNER')",
+   "steps": [
+    {
+     "uses": "actions/checkout@v4"
+    },
+    {
+     "uses": "actions/setup-python@v5",
+     "with": {
+      "python-version": "3.12",
+      "cache": "pip"
+     }
+    },
+    {
+     "run": "pip install -r requirements.txt"
+    },
+    {
+     "name": "Send approved or overdue major alerts",
+     "working-directory": "pipeline",
+     "env": {
+      "GITHUB_TOKEN": "${{ github.token }}",
+      "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
+      "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}"
+     },
+     "run": "python alerts.py --review"
+    }
+   ]
+  }
+ }
+}
