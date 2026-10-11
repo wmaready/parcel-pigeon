@@ -1805,6 +1805,54 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .pchip.pformer small{opacity:.7;margin-left:4px}
 .pfk{text-transform:none;letter-spacing:0;font-family:var(--font-ui);color:var(--ink-2);opacity:.8;margin-left:6px}
 @media (min-width:701px){.wkey{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}.wkh{grid-column:1/-1;margin-left:0}}
+
+/* ===== Phone alerts settings ===== */
+#pushPanel #prefs{padding:14px 16px 16px;display:flex;flex-direction:column;gap:16px}
+.pq-off,.pq-on,.pq-ios{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;border:1px solid var(--grid-strong);background:var(--panel-2)}
+.pq-ios{flex-direction:column;align-items:flex-start;gap:6px}
+.pq-off span,.pq-on span:not(.pq-dot){display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.pq-off b,.pq-on b,.pq-ios b{font-size:14px}
+.pq-off small,.pq-on small,.pq-ios span{font-size:12px;color:var(--ink-2);line-height:1.45}
+.pq-on{border-color:rgba(94,194,219,.45)}
+.pq-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(94,194,219,.18);flex:none}
+.pq-b{height:36px;padding:0 14px;border-radius:10px;border:1px solid var(--grid-strong);background:var(--bg);color:var(--ink);font:600 13px/1 var(--font-ui);cursor:pointer;flex:none}
+.pq-b.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pq-b.ghost{background:transparent}
+.pq-b:disabled{opacity:.6}
+.pq-note{margin:0;font-size:12.5px;color:var(--ink-2);line-height:1.5;padding:10px 12px;border-radius:10px;background:var(--panel-2)}
+.pq-sec{display:flex;flex-direction:column;gap:8px}
+.pq-h{font-size:13px;font-weight:650;display:flex;align-items:center;gap:8px}
+.pq-tag{font:600 10px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent);border:1px solid rgba(94,194,219,.4);padding:3px 6px;border-radius:6px}
+.pq-p{margin:0;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.pq-chips{display:flex;flex-wrap:wrap;gap:6px}
+.pq-chip{height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--grid-strong);background:transparent;color:var(--ink-2);font:600 12.5px/1 var(--font-ui);cursor:pointer}
+.pq-chip[aria-pressed="true"]{background:rgba(94,194,219,.12);border-color:rgba(94,194,219,.55);color:var(--ink)}
+.pq-chip[aria-pressed="true"]::before{content:"✓ ";color:var(--accent)}
+.pq-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--grid);cursor:pointer}
+.pq-row:first-of-type{border-top:0}
+.pq-row span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.pq-row b{font-size:13.5px;font-weight:600}
+.pq-row small{font-size:12px;color:var(--ink-2);line-height:1.4}
+.pq-sw{appearance:none;-webkit-appearance:none;width:44px;height:26px;border-radius:999px;background:var(--grid-strong);position:relative;cursor:pointer;flex:none;transition:background .2s;margin:0}
+.pq-sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.pq-sw:checked{background:var(--accent)}
+.pq-sw:checked::after{transform:translateX(18px)}
+.pq-sw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pq-seg{display:inline-flex;border:1px solid var(--grid-strong);border-radius:10px;overflow:hidden;align-self:flex-start}
+.pq-seg button{height:34px;padding:0 14px;border:0;border-left:1px solid var(--grid-strong);background:transparent;color:var(--ink-2);font:600 12.5px/1 var(--font-ui);cursor:pointer}
+.pq-seg button:first-child{border-left:0}
+.pq-seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.pq-saved{margin:-6px 0 0;min-height:16px;font-size:12px;color:var(--accent);opacity:0;transition:opacity .3s}
+.pq-saved.on{opacity:1}
+.pq-admin{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border:1px dashed var(--grid-strong);border-radius:10px;font-size:12px}
+.pq-admin code{font-size:11.5px;word-break:break-all;flex:1;min-width:0}
+.pq-admin small{width:100%;color:var(--ink-2)}
+.shr-alerts{display:flex;align-items:center;gap:12px;width:100%;text-align:left;margin:0 0 14px;padding:12px 14px;border-radius:12px;border:1px solid rgba(94,194,219,.4);background:rgba(94,194,219,.08);color:var(--ink);cursor:pointer;font-family:inherit}
+.shr-alerts svg{width:20px;height:20px;color:var(--accent);flex:none}
+.shr-alerts span{display:flex;flex-direction:column;gap:2px;flex:1}
+.shr-alerts b{font-size:13.5px}.shr-alerts small{font-size:12px;color:var(--ink-2)}
+.shr-alerts i{font-style:normal;color:var(--ink-2);font-size:18px}
+.pq-dev summary{font-size:11.5px;color:var(--ink-2);cursor:pointer}.pq-dev .pq-admin{margin-top:8px}
 </style>
 </head>
 <body>
@@ -1953,10 +2001,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
   </div>
   <div class="view" data-view="alerts">
     <div class="panel" style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Rate guide and terms changes</h2><span class="lbl" id="gcCount"></span></div><div id="gcList"></div></div>
-    <div class="panel"><div class="ph"><h2>Alerts</h2></div><div id="prefs"></div>
-      <div class="pb"><label class="lbl" for="thresh">Alert me when ground fuel moves at least</label>
-        <div style="display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-top:var(--sp-2)"><select id="thresh" class="search" style="width:auto"><option value="0.25">0.25 pts</option><option value="0.5">0.50 pts</option><option value="1">1.00 pt</option></select><button class="btn" id="savePrefs">Save alerts</button></div>
-        <p class="note" id="savedMsg" role="status"></p></div></div>
+    <div class="panel" id="pushPanel"><div class="ph"><h2>Phone alerts</h2><span class="lbl" id="pushState"></span></div><div id="prefs"></div></div>
   </div>
 </section>
 
@@ -1966,6 +2011,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
   <button class="shr-x" data-shrx aria-label="Close">×</button>
   <h2 id="shrT">Get Parcel Pigeon</h2>
   <p class="shr-sub">Free. No App Store needed. It installs from the web and updates itself.</p>
+  <button type="button" class="shr-alerts" data-goto="docs:alerts" data-shrx><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span><b>Turn on phone alerts</b><small>Pick your carriers and topics after installing</small></span><i>›</i></button>
   <div class="shr-inst" id="shrInst"></div>
   <div class="shr-share"><div class="shr-qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="qrsvg"><path fill="#f3ecdd" d="M0 0h33v33h-33z"/><path class="qrline" stroke="#0b0f14" d="M2 2.5h7m1 0h4m1 0h2m2 0h2m3 0h7m-29 1h1m5 0h1m2 0h1m1 0h4m1 0h2m2 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h5m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m1 0h4m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m1 0h2m3 0h1m3 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h1m3 0h1m1 0h1m2 0h2m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h4m1 0h1m-15 1h1m1 0h1m3 0h2m4 0h1m2 0h1m4 0h1m2 0h1m2 0h1m1 0h1m-28 1h1m1 0h2m2 0h1m2 0h2m1 0h1m1 0h3m1 0h2m1 0h2m3 0h2m-28 1h1m1 0h8m1 0h1m2 0h1m1 0h4m1 0h2m1 0h2m1 0h1m-28 1h3m1 0h1m2 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h2m3 0h1m-26 1h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m3 0h1m2 0h1m2 0h1m5 0h1m-25 1h1m4 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m3 0h2m-29 1h1m1 0h6m1 0h1m5 0h2m2 0h1m1 0h2m1 0h1m3 0h1m-27 1h1m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h1m2 0h1m-22 1h1m5 0h2m6 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h1m-22 1h3m2 0h2m1 0h3m1 0h2m1 0h2m2 0h3m-29 1h4m1 0h3m1 0h4m2 0h1m3 0h1m2 0h1m1 0h2m2 0h1m-26 1h2m3 0h2m2 0h1m1 0h1m1 0h1m1 0h3m2 0h2m-25 1h2m2 0h4m1 0h2m1 0h5m2 0h7m1 0h1m-20 1h1m1 0h3m2 0h2m1 0h1m1 0h1m3 0h3m1 0h1m-29 1h7m1 0h1m1 0h6m1 0h2m1 0h1m1 0h1m1 0h1m3 0h1m-29 1h1m5 0h1m3 0h3m2 0h1m3 0h2m3 0h1m2 0h1m-28 1h1m1 0h3m1 0h1m2 0h2m2 0h4m2 0h7m1 0h1m-28 1h1m1 0h3m1 0h1m4 0h2m2 0h2m3 0h2m2 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m3 0h6m5 0h1m2 0h2m-29 1h1m5 0h1m3 0h2m2 0h2m2 0h1m1 0h1m1 0h4m-26 1h7m1 0h1m3 0h1m2 0h1m3 0h2m1 0h1m1 0h1m3 0h1"/></svg><span>Scan to open</span></div>
     <div class="shr-act"><div class="shr-lbl">Share with someone</div><div class="shr-url" id="shrUrl"></div>
@@ -3987,12 +4033,65 @@ $('mkToday').addEventListener('click',e=>{const b=e.target.closest('[data-mk]');
   if(k==='auto'||k==='all')MKS.mode=k;
   else{if(MKS.mode!=='pick'){MKS.mode='pick';MKS.pick=[k]}else if(MKS.pick.includes(k)){MKS.pick=MKS.pick.filter(s=>s!==k);if(!MKS.pick.length)MKS.mode='auto'}else MKS.pick=[...MKS.pick,k].slice(-2)}
   store.set('pw-mk-mode',MKS.mode);store.set('pw-mk-pick',JSON.stringify(MKS.pick));renderMarkets()});
-const PREF_KEY='parcelwatch-prefs',PCARS=['UPS','FedEx','USPS','Amazon','OnTrac','DHL','Regional carriers'],PTYPES=['Spotted first','Rate guide and terms changes','Market reports','Costs up','Costs down','Watch','Good to know'];
-function renderPrefs(){let p={};try{p=JSON.parse(store.get(PREF_KEY,'{}'))}catch(e){}const on=k=>p[k]!==undefined?p[k]:!['DHL','Good to know'].includes(k);
-  const grp=(t,ks)=>`<div class="lbl" style="padding:var(--sp-3) var(--sp-3) var(--sp-1)">${t}</div>`+ks.map((k,i)=>`<label class="toggle" for="pf-${t[0]}${i}"><span>${k}</span><input type="checkbox" id="pf-${t[0]}${i}" data-k="${esc(k)}" ${on(k)?'checked':''}></label>`).join('');
-  $('prefs').innerHTML=grp('Carriers I use',PCARS)+grp('Alert me about',PTYPES);$('thresh').value=p.thresh||'0.5'}
-$('savePrefs').addEventListener('click',()=>{const p={};document.querySelectorAll('#prefs [data-k]').forEach(i=>p[i.dataset.k]=i.checked);p.thresh=$('thresh').value;
-  try{localStorage.setItem(PREF_KEY,JSON.stringify(p));$('savedMsg').textContent='Saved on this device. Alerts start when the app launches.'}catch(e){$('savedMsg').textContent='This browser is blocking storage, so settings can\'t be saved here.'}});
+/* ===== Phone alerts (web push through OneSignal). Settings live on this device and in the reader's alert profile (6 tags). ===== */
+const PUSH={app:null,os:null,ready:null,cfg:null,busy:false,msg:''};
+const PKEY='pp-push-prefs',PDEF={cm:31,t_rates:1,t_docs:1,t_deals:1,t_news:0,ft:'0.5'};
+const PQCAR=[['UPS',1],['FedEx',2],['USPS',4],['Amazon',8],['OnTrac, DHL & regionals',16]];
+const PTOP=[['t_rates','Rate and surcharge changes','New GRIs, surcharges and fees, plus a reminder 7 days and 1 day before each takes effect'],
+  ['t_docs','Carrier guide changes','When a service guide or surcharge page is quietly revised'],
+  ['t_deals','Deals and M&A','Acquisitions, sales and spin-offs'],
+  ['t_news','Every new story','The busiest option: every story for your carriers, bundled each update']];
+const pprefs=()=>{let p={};try{p=JSON.parse(store.get(PKEY,'{}'))||{}}catch(e){}return Object.assign({},PDEF,p)};
+const PIOS=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const PSTAND=()=>(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true;
+const PLIVE=/github\.io$/.test(location.hostname);
+async function pushCfg(){if(PUSH.cfg)return PUSH.cfg;try{const r=await fetch('data/push.json',{cache:'no-store'});PUSH.cfg=r.ok?await r.json():{}}catch(e){PUSH.cfg={}}PUSH.app=PUSH.cfg.appId||null;return PUSH.cfg}
+function pushSDK(){if(PUSH.ready)return PUSH.ready;
+  PUSH.ready=new Promise((res,rej)=>{window.OneSignalDeferred=window.OneSignalDeferred||[];
+    OneSignalDeferred.push(async OS=>{try{const base=location.pathname.replace(/[^/]*$/,'');
+      await OS.init({appId:PUSH.app,serviceWorkerPath:base.slice(1)+'push/onesignal/OneSignalSDKWorker.js',serviceWorkerParam:{scope:base+'push/onesignal/'},notifyButton:{enable:false},autoResubscribe:true});
+      PUSH.os=OS;try{OS.User.PushSubscription.addEventListener('change',()=>renderPrefs())}catch(e){}res(OS);renderPrefs()}catch(e){rej(e)}});
+    const sc=document.createElement('script');sc.src='https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';sc.defer=true;sc.onerror=()=>rej(new Error('blocked'));document.head.appendChild(sc)});
+  PUSH.ready.catch(()=>{PUSH.msg='Alerts couldn’t load. A content blocker may be stopping them.';renderPrefs()});return PUSH.ready}
+const pushOn=()=>{try{return !!(PUSH.os&&PUSH.os.User.PushSubscription.optedIn)}catch(e){return false}};
+const pushId=()=>{try{return PUSH.os&&PUSH.os.User.PushSubscription.id}catch(e){return null}};
+let pTagT;
+function pushTags(){const p=pprefs();clearTimeout(pTagT);if(!pushOn())return;
+  pTagT=setTimeout(async()=>{try{await PUSH.os.User.addTags({cm:String(p.cm),t_rates:p.t_rates?'1':'0',t_docs:p.t_docs?'1':'0',t_deals:p.t_deals?'1':'0',t_news:p.t_news?'1':'0',ft:String(p.ft)});flashSaved()}catch(e){}},500)}
+function flashSaved(){const el=$('pushSaved');if(!el)return;el.textContent='Saved';el.classList.add('on');clearTimeout(flashSaved.t);flashSaved.t=setTimeout(()=>el.classList.remove('on'),1600)}
+function renderPrefs(){const el=$('prefs');if(!el)return;const p=pprefs(),on=pushOn(),cfgd=!!PUSH.app;
+  let top;
+  if(!PLIVE)top=`<div class="pq-note">Phone alerts work in the installed app at the live site. Your choices below are saved on this device.</div>`;
+  else if(PUSH.cfg&&!cfgd)top=`<div class="pq-note">Phone alerts are almost ready. Check back soon.</div>`;
+  else if(PIOS&&!PSTAND())top=`<div class="pq-ios"><b>On iPhone, alerts work from the installed app.</b><span>Add Parcel Pigeon to your Home Screen (Safari → Share → Add to Home Screen), open it from there, then turn alerts on here.</span><button type="button" class="pq-b" data-share>How to install</button></div>`;
+  else if(typeof Notification!=='undefined'&&Notification.permission==='denied')top=`<div class="pq-note">Notifications are blocked for this site. Allow them in your browser or phone settings, then come back.</div>`;
+  else top=on?`<div class="pq-on"><span class="pq-dot"></span><span><b>Alerts are on for this device</b><small>Changes below apply right away.</small></span><button type="button" class="pq-b ghost" id="pushOff">Turn off</button></div>`
+    :`<div class="pq-off"><span><b>Get alerts on this device</b><small>Only what you pick below. Nothing between 9 p.m. and 7 a.m. Eastern.</small></span><button type="button" class="pq-b pri" id="pushOnBtn"${PUSH.busy?' disabled':''}>${PUSH.busy?'Turning on…':'Turn on alerts'}</button></div>`;
+  const chips=PQCAR.map(([n,b])=>`<button type="button" class="pq-chip" data-pc="${b}" aria-pressed="${!!(p.cm&b)}">${esc(n)}</button>`).join('');
+  const tops=PTOP.map(([k,t,d])=>`<label class="pq-row"><span><b>${t}</b><small>${d}</small></span><input type="checkbox" class="pq-sw" data-pt="${k}" ${p[k]?'checked':''}></label>`).join('');
+  const ft=[['0','Off'],['0.25','0.25'],['0.5','0.50'],['1','1.00']].map(([v,l])=>`<button type="button" data-pf="${v}" aria-pressed="${String(p.ft)===v}">${l}</button>`).join('');
+  el.innerHTML=`${top}${PUSH.msg?`<p class="pq-note">${esc(PUSH.msg)}</p>`:''}
+    <div class="pq-sec"><div class="pq-h">Major alerts <span class="pq-tag">Always on</span></div><p class="pq-p">The biggest price changes and deals, checked by the editor before they go out. A few a month.</p></div>
+    <div class="pq-sec"><div class="pq-h">Carriers I ship with</div><div class="pq-chips">${chips}</div></div>
+    <div class="pq-sec"><div class="pq-h">Alert me about</div>${tops}</div>
+    <div class="pq-sec"><div class="pq-h">Ground fuel moves</div><p class="pq-p">When UPS, FedEx or OnTrac publish a weekly fuel change of at least (points)</p><div class="pq-seg" role="group" aria-label="Fuel alert threshold">${ft}</div></div>
+    <p class="pq-saved" id="pushSaved" role="status"></p>
+    ${on?`<details class="pq-dev"><summary>Device ID</summary><div class="pq-admin"><code>${esc(pushId()||'…')}</code><button type="button" class="pq-b ghost" id="pushCopyId">Copy</button><small>Only needed by the editor, to get approval alerts on this phone.</small></div></details>`:''}`;
+  $('pushState').textContent=on?'On':'';
+}
+function setPref(k,v){const p=pprefs();p[k]=v;try{store.set(PKEY,JSON.stringify(p))}catch(e){}renderPrefs();if(pushOn())pushTags();else flashSaved()}
+$('prefs').addEventListener('click',async e=>{const t=e.target;
+  const c=t.closest('[data-pc]');if(c){const p=pprefs(),b=+c.dataset.pc,n=p.cm^b;if(!n){PUSH.msg='Keep at least one carrier.';renderPrefs();PUSH.msg='';return}setPref('cm',n);return}
+  const f=t.closest('[data-pf]');if(f){setPref('ft',f.dataset.pf);return}
+  if(t.closest('#pushOnBtn')){PUSH.busy=true;PUSH.msg='';renderPrefs();
+    try{const OS=PUSH.os||await pushSDK();await OS.Notifications.requestPermission();if(OS.Notifications.permission){await OS.User.PushSubscription.optIn();pushTags()}else PUSH.msg='Alerts weren’t allowed. You can turn them on any time.'}
+    catch(err){PUSH.msg='Couldn’t turn on alerts here. Try again from the installed app.'}
+    PUSH.busy=false;renderPrefs();return}
+  if(t.closest('#pushOff')){try{await PUSH.os.User.PushSubscription.optOut()}catch(err){}renderPrefs();return}
+  if(t.closest('#pushCopyId')){try{await navigator.clipboard.writeText(pushId()||'');t.textContent='Copied'}catch(err){}}});
+$('prefs').addEventListener('change',e=>{const t=e.target.closest('[data-pt]');if(t)setPref(t.dataset.pt,t.checked?1:0)});
+// load the alert service in the background so "Turn on" works inside the tap (iPhone requires that)
+if(PLIVE)pushCfg().then(()=>{renderPrefs();if(PUSH.app&&(!PIOS||PSTAND()))setTimeout(()=>pushSDK().catch(()=>{}),1500)});
 
 /* ================= ticker + global clicks ================= */
 function renderTicker(){
@@ -4756,6 +4855,8 @@ renderClocks();setInterval(renderClocks,10000);
   if(/^#get$|^#install$/.test(location.hash))setTimeout(open,600);
   if('serviceWorker' in navigator&&/github\.io$/.test(location.hostname)){addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
 })();
+// …/#alerts opens the alert settings
+if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
 
 </script>
 </body>

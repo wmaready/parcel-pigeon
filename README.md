@@ -115,3 +115,22 @@ Each rate clock entry shows its effective date on a calendar tile, a plain "Take
 
 ### World map
 The market map opens on a U.S. map with every company at its headquarters city, colored by category. Tap a company and the map frames it with its ownership family (parents, subsidiaries and companies it bought), zooming out to the world only when one of them is abroad. Partnerships and investments stay off the map and are listed in the profile instead. Tap a crowded spot to zoom in. City coordinates live in `HQGEO` (per-company overrides in `HQGEO_ID`); a company with no listed city sits at its parent's headquarters, and one with neither stays off the map until a city is added.
+
+## Phone alerts
+
+Web push through OneSignal (free plan: no subscriber cap on web push, 10,000 per send, 6 tags per reader).
+
+**Regular alerts** go out after each run, filtered by each reader's settings in Docs & alerts > Alerts:
+carriers (tag `cm`, a 5-bit number: UPS 1, FedEx 2, USPS 4, Amazon 8, OnTrac/DHL/regionals 16), topics
+(`t_rates`, `t_docs`, `t_deals`, `t_news`), and a fuel threshold (`ft`, 0 = off). Nothing goes out between
+9 p.m. and 7 a.m. Eastern; those wait for the morning run. At most 6 pushes per run, bundled by topic and carrier.
+
+**Major alerts** (a dated price change for most shippers, a big-four GRI/surcharge, or M&A involving UPS, FedEx,
+USPS or Amazon) open a GitHub issue labeled `alert-review` that @mentions you (email) and push to your own phone
+(`PP_ADMIN_IDS`). Reply `send` to push it to everyone, `hold` to stop it, or edit the Title/Message first.
+With no reply it goes out after 2 hours (`PP_AUTO_SEND_HOURS`), never overnight. `alerts.yml` checks every
+15 minutes and right after you reply. Only the repo owner's replies count.
+
+Secrets: `ONESIGNAL_APP_ID`, `ONESIGNAL_API_KEY`, `PP_ADMIN_IDS` (your device ID: open the installed app,
+turn alerts on, then copy it from "Device ID" at the bottom of the Alerts panel). State lives in `data/alerts_state.json`;
+the first run only records what's already published, so nobody gets a backlog.
