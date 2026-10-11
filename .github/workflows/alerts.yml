@@ -11,7 +11,15 @@
     "cron": "*/15 * * * *"
    }
   ],
-  "workflow_dispatch": {}
+  "workflow_dispatch": {
+   "inputs": {
+    "test": {
+     "description": "Send me a test major alert to approve (goes to my phone only)",
+     "type": "boolean",
+     "default": false
+    }
+   }
+  }
  },
  "permissions": {
   "contents": "read",
@@ -40,12 +48,34 @@
      "run": "pip install -r requirements.txt"
     },
     {
+     "name": "Make sure labels exist",
+     "env": {
+      "GH_TOKEN": "${{ github.token }}"
+     },
+     "run": "gh label create alert-review --color D93F0B --description \"Major alert waiting for your OK: reply send or hold\" --force\ngh label create alert-sent --color 0E8A16 --force\ngh label create alert-held --color BFD4F2 --force\n"
+    },
+    {
+     "name": "Open a test alert",
+     "if": "github.event_name == 'workflow_dispatch' && inputs.test",
+     "working-directory": "pipeline",
+     "env": {
+      "GITHUB_TOKEN": "${{ github.token }}",
+      "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
+      "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}",
+      "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}",
+      "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}"
+     },
+     "run": "python alerts.py --test"
+    },
+    {
      "name": "Send approved or overdue major alerts",
      "working-directory": "pipeline",
      "env": {
       "GITHUB_TOKEN": "${{ github.token }}",
       "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
-      "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}"
+      "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}",
+      "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}",
+      "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}"
      },
      "run": "python alerts.py --review"
     }
