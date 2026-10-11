@@ -1,8 +1,30 @@
 {
- "run": "2026-10-11T07:22Z",
+ "run": "2026-10-11T08:21Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "issues": [],
- "open": []
+ "issues": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wb612a77519f2",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  }
+ ],
+ "open": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "wb612a77519f2",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  }
+ ]
 }
