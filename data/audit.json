@@ -1,9 +1,29 @@
 {
- "run": "2026-10-11T08:21Z",
+ "run": "2026-10-11T09:21Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
  "issues": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate and area surcharge ZIP code PDFs on its surcharges page\" and \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "w348418a9dc09",
+    "wb612a77519f2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate and area surcharge ZIP code PDFs on its surcharges page\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "w348418a9dc09",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",
@@ -16,6 +36,26 @@
   }
  ],
  "open": [
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate and area surcharge ZIP code PDFs on its surcharges page\" and \"OnTrac posts new rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "w348418a9dc09",
+    "wb612a77519f2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"OnTrac posts new rate and area surcharge ZIP code PDFs on its surcharges page\" and \"OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page\"",
+   "ids": [
+    "w348418a9dc09",
+    "w8a582ba4f6eb"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",
