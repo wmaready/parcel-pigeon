@@ -2,6 +2,60 @@
  {
   "status": "published",
   "story": {
+   "id": "w49b3786a59a5",
+   "date": "2026-10-11",
+   "c": [
+    "OnTrac"
+   ],
+   "cat": "Documents",
+   "title": "OnTrac posts 2026 rate and AHS/LPS files, area surcharge ZIP list on rates page",
+   "sum": "OnTrac's own surcharges and rates page now lists four PDF files: 2026 rates, 2026 AHS and LPS rates, an area surcharge ZIP code list, and a 2024 rates file. The page text does not show their contents.",
+   "imp": "watch",
+   "lvl": 1,
+   "plain": "OnTrac posted four new file links on its own surcharges and rates page. They are a 2026 rates PDF, a 2026 AHS and LPS rates PDF, an area surcharge ZIP code PDF, and a 2024 rates PDF. Only the file links were detected, with no removed lines and no figures, so the pricing, effective dates and any changes in the documents are not confirmed here. The files may have been newly added, or they may have been picked up for the first time.",
+   "act": null,
+   "dates": [],
+   "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+   "url": "https://www.ontrac.com/surchargesandrates/",
+   "srcs": [
+    {
+     "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
+     "url": "https://www.ontrac.com/surchargesandrates/"
+    }
+   ],
+   "auto": true,
+   "exclusive": true
+  },
+  "changes": [
+   {
+    "what": "Rate guide PDF listed on OnTrac surcharges and rates page: 2026 OnTrac Rates",
+    "old": "Not previously listed",
+    "new": "2026-OnTrac-Rates.pdf",
+    "effective": null
+   },
+   {
+    "what": "Rate guide PDF listed: 2026 AHS and LPS rates",
+    "old": "Not previously listed",
+    "new": "2026-OnTrac-AHS+LPSRates.pdf",
+    "effective": null
+   },
+   {
+    "what": "Area surcharge ZIP code list PDF listed",
+    "old": "Not previously listed",
+    "new": "ontrac-area-surcharge-zip-codes.pdf",
+    "effective": null
+   },
+   {
+    "what": "2024 rates PDF listed",
+    "old": "Not previously listed",
+    "new": "ontrac-2024-rates.pdf",
+    "effective": null
+   }
+  ]
+ },
+ {
+  "status": "published",
+  "story": {
    "id": "wbf2ef019cc6e",
    "date": "2026-10-11",
    "c": [
