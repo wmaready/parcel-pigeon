@@ -169,23 +169,26 @@ def topic_of(s):
 
 
 # ---------------------------------------------------------------- major: open a review issue
-def open_review(s):
+def open_review(s, test=False):
     auto = now_et() + dt.timedelta(hours=AUTO_SEND_HOURS)
-    if quiet(auto):
+    if quiet(auto) and not test:
         auto = next_morning(auto)
     title, msg, url = short(s["title"], 64), short(s.get("plain") or s.get("sum") or "", 180), story_link(s)
-    body = (f"@{OWNER} a major alert is ready. **Nothing has gone to readers yet.**\n\n"
+    body = ((f"@{OWNER} **TEST ALERT.** This is a practice run of the approval flow. Replying `send` pushes it to "
+             f"**your phone only**, never to readers.\n\n") if test else "") + (f"@{OWNER} a major alert is ready. **Nothing has gone to readers yet.**\n\n"
             f"### Title\n{title}\n\n### Message\n{msg}\n\n### Link\n{url}\n\n---\n"
             f"- Reply **`send`** to push it to everyone now.\n"
             f"- Reply **`hold`** to stop it (closing the issue does the same).\n"
             f"- Want different wording? Edit the Title and Message above (··· menu > Edit), then reply `send`.\n\n"
             f"If you don't reply, it goes out automatically at **{auto.strftime('%-I:%M %p ET, %a %b %-d')}**.\n\n"
-            f"<!-- pp-alert {json.dumps({'auto_at': auto.isoformat(), 'story': s['id']})} -->")
-    issue = gh("POST", "/issues", json={"title": f"Major alert: {title}", "body": body, "labels": ["alert-review"]})
+            f"<!-- pp-alert {json.dumps({'auto_at': auto.isoformat(), 'story': s['id'], 'test': test})} -->")
+    issue = gh("POST", "/issues", json={"title": f"{'TEST ' if test else ''}Major alert: {title}", "body": body, "labels": ["alert-review"]})
     link = issue.get("html_url", f"https://github.com/{REPO}/issues")
     if ADMIN_IDS:
-        push("Approve alert? " + title, "Tap to review. Sends to everyone automatically in "
-             f"{AUTO_SEND_HOURS:g} h unless you hold it.", link, ids=ADMIN_IDS, ttl=6 * 3600)
+        push(("[Test] " if test else "") + "Approve alert? " + title,
+             "Tap to review. Test only: approving sends it to your phone, not readers." if test else
+             f"Tap to review. Sends to everyone automatically in {AUTO_SEND_HOURS:g} h unless you hold it.",
+             link, ids=ADMIN_IDS, ttl=6 * 3600)
     ntfy("Parcel Pigeon: approve alert?", title, link)
     print("  review issue:", link)
 
@@ -226,13 +229,18 @@ def review():
             gh("POST", f"/issues/{n}/comments", json={"body": "Held. Nothing was sent to readers."})
             gh("PATCH", f"/issues/{n}", json={"state": "closed", "labels": ["alert-held"]})
             print(f"#{n} held"); continue
-        r = push(title, msg, url, ttl=2 * 86400)
+        test = bool(meta.get("test"))
+        if test and not ADMIN_IDS:
+            gh("POST", f"/issues/{n}/comments", json={"body": "Test not sent: add your Device ID as the PP_ADMIN_IDS secret first."})
+            continue
+        r = push(("[Test] " if test else "") + title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400)
         if r is None:
             gh("POST", f"/issues/{n}/comments", json={"body": "Couldn't send: the OneSignal keys aren't set in GitHub Secrets yet. "
                                                               "Add them and reply `send` again."})
             continue
         ok = bool(r.get("id"))
-        note = ("Sent to everyone with alerts on." if decision == "send" else
+        note = ("Test sent to your phone only. The approval flow works." if test and ok else
+                "Sent to everyone with alerts on." if decision == "send" else
                 f"Sent automatically (no reply within {AUTO_SEND_HOURS:g} hours).") if ok else \
                f"OneSignal didn't send it: `{json.dumps(r.get('errors') or r)[:300]}`"
         gh("POST", f"/issues/{n}/comments", json={"body": note})
@@ -366,5 +374,16 @@ def run():
     print(f"alerts: {len(majors)} for review, {sends} regular pushes")
 
 
+def test_alert():
+    """Open a practice review issue. Approving it pushes to the editor's phone only."""
+    open_review({"id": "demo", "title": "UPS adds a $1.25 test surcharge (practice alert)",
+                 "plain": "This is a test of Parcel Pigeon's approval flow. Reply send on the GitHub issue to get it on your phone."}, test=True)
+
+
 if __name__ == "__main__":
-    review() if "--review" in sys.argv else run()
+    if "--test" in sys.argv:
+        test_alert()
+    elif "--review" in sys.argv:
+        review()
+    else:
+        run()
