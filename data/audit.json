@@ -1,9 +1,27 @@
 {
- "run": "2026-10-12T00:33Z",
+ "run": "2026-10-12T01:07Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
  "issues": [
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS announces 2026 recommended holiday mailing and shipping dates\"",
+   "ids": [
+    "aad7e6789b34e"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"UPS adds RFID tracking and PIN delivery for holiday peak, plans ~100,000 hires\"",
+   "ids": [
+    "af8ee5ed067c6"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",
@@ -366,6 +384,24 @@
   }
  ],
  "open": [
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS announces 2026 recommended holiday mailing and shipping dates\"",
+   "ids": [
+    "aad7e6789b34e"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"UPS adds RFID tracking and PIN delivery for holiday peak, plans ~100,000 hires\"",
+   "ids": [
+    "af8ee5ed067c6"
+   ],
+   "fixed": false
+  },
   {
    "sev": "med",
    "type": "duplicate",

@@ -1,5 +1,190 @@
 {
- "players": [],
+ "players": [
+  {
+   "id": "westbengalpost",
+   "n": "West Bengal Postal Circle",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Kolkata, India",
+   "yr": null,
+   "s": "The India Post circle covering West Bengal, Sikkim and the Andaman & Nicobar Islands, which handles postal mail and parcels, including international shipments such as Shola art sent by air and sea through tie-ups with foreign postal services.",
+   "al": [
+    "Department of Posts, West Bengal Circle",
+    "India Post West Bengal Circle",
+    "WB Postal Circle"
+   ],
+   "src": "https://urbanacres.in/west-bengal-postal-circle-finds-new-life-in-logistics-and-public-services/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-12",
+   "story": "a78db2954da94",
+   "site": "westbengalpost.gov.in",
+   "geo": [
+    88.364,
+    22.573
+   ],
+   "enriched": "2026-10-12"
+  },
+  {
+   "id": "indiapostdepar",
+   "n": "India Post (Department of Posts)",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "New Delhi, India",
+   "yr": "1854",
+   "s": "India's government-run postal operator, which delivers parcels through a network of about 1.64 lakh post offices and has signed last-mile delivery agreements with private logistics and e-commerce companies.",
+   "al": [
+    "Department of Posts",
+    "DoP",
+    "India Post",
+    "Indian Posts"
+   ],
+   "src": "https://apacnewsnetwork.com/2026/10/india-post-blue-dart-join-hands-to-boost-parcel-deliveries-in-remote-areas/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-10",
+   "story": "a48c22a3f491c",
+   "site": "indiapost.gov.in",
+   "geo": [
+    77.209,
+    28.614
+   ],
+   "enriched": "2026-10-12"
+  },
+  {
+   "id": "bluedartexpres",
+   "n": "Blue Dart Express Limited",
+   "realm": "national",
+   "own": "sub",
+   "tk": "BLUEDART (NSE); 526612 (BSE)",
+   "parent": "dhl",
+   "hq": "Mumbai, India",
+   "yr": "1983",
+   "s": "Blue Dart is an Indian express air and ground courier and parcel carrier. It is majority-owned by DHL through DHL Express (Singapore) Pte. Ltd. and signed an agreement on 9 October 2026 to use India Post's network for parcel delivery.",
+   "al": [
+    "Blue Dart",
+    "Blue Dart Express",
+    "Blue Dart Express Ltd."
+   ],
+   "src": "https://apacnewsnetwork.com/2026/10/india-post-blue-dart-join-hands-to-boost-parcel-deliveries-in-remote-areas/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-10",
+   "story": "a48c22a3f491c",
+   "site": "bluedart.com",
+   "geo": [
+    72.878,
+    19.076
+   ],
+   "enriched": "2026-10-12"
+  },
+  {
+   "id": "coll8",
+   "n": "Coll-8",
+   "realm": "global",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Customs clearance business acquired by Evri in 2025",
+   "al": [],
+   "src": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-06",
+   "story": "aec10b9813ef5"
+  },
+  {
+   "id": "nationalcapita",
+   "n": "National Capital Region Transport Corporation (NCRTC)",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Operator of the Namo Bharat regional rail corridor linking Delhi, Ghaziabad and Meerut",
+   "al": [],
+   "src": "https://urbanacres.in/namo-bharats-parcel-plan-could-reshape-ncr-urban-logistics/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-06",
+   "story": "a0646e7665891"
+  },
+  {
+   "id": "trackingpackag",
+   "n": "TrackingPackage",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Parcel tracking service that identifies supported carriers and follows shipment updates across carrier changes",
+   "al": [],
+   "src": "https://www.manilatimes.net/2026/10/05/tmt-newswire/plentisoft/tracking-package-explains-why-international-shipments-change-carriers-after-customs-clearance/2438919",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-05",
+   "story": "a5b994e72962b"
+  },
+  {
+   "id": "21vekby",
+   "n": "21vek.by",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Online hypermarket in Belarus that launched its own parcel delivery service, operated by TOO Triovist",
+   "al": [],
+   "src": "https://nashaniva.com/en/406315",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-07",
+   "story": "adc86f608be44"
+  },
+  {
+   "id": "belposhta",
+   "n": "Belposhta",
+   "realm": "national",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Belarus postal operator that 21vek.by announced cooperation with in September 2024 on pick-up points",
+   "al": [],
+   "src": "https://nashaniva.com/en/406315",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-07",
+   "story": "adc86f608be44"
+  },
+  {
+   "id": "retailmerchant",
+   "n": "Retail Merchants of Hawaii",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Hawaii retail trade group",
+   "al": [],
+   "src": "https://www.hawaiipublicradio.org/local-news/2026-10-09/longer-delivery-time-for-mail-from-hawaii",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-09",
+   "story": "ab665e6db5daf"
+  }
+ ],
  "edges": [
   {
    "a": "stord",
@@ -36,6 +221,51 @@
    "t": "Citi led Stord's $400M credit facility",
    "url": "https://www.freightwaves.com/news/stord-400m-credit-facility-citi",
    "story": "a8f1e464edd85"
+  },
+  {
+   "a": "evri",
+   "b": "coll8",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Evri acquired Coll-8 in 2025",
+   "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html",
+   "story": "aec10b9813ef5"
+  },
+  {
+   "a": "21vekby",
+   "b": "belposhta",
+   "k": "partner",
+   "y": "2026",
+   "t": "21vek.by and Belposhta announce pick-up point cooperation (September 2024)",
+   "url": "https://nashaniva.com/en/406315",
+   "story": "adc86f608be44"
+  },
+  {
+   "a": "indiapostdepar",
+   "b": "flipkart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Last-mile parcel delivery agreement for Flipkart shipments",
+   "url": "https://www.postalstudy.in/2026/05/india-post-and-flipkart-join-hands-for.html",
+   "story": "a48c22a3f491c"
+  },
+  {
+   "a": "indiapostdepar",
+   "b": "amazon",
+   "k": "partner",
+   "y": "2024",
+   "t": "Amazon India MoU on nationwide parcel delivery (relationship dates to 2013)",
+   "url": "https://www.medianama.com/2026/05/223-amazon-india-post-flipkart-parcel-delivery-remote-areas/",
+   "story": "a48c22a3f491c"
+  },
+  {
+   "a": "dhlexpress",
+   "b": "bluedartexpres",
+   "k": "owns",
+   "y": "2004",
+   "t": "DHL Express invested in Blue Dart in 2004 and is its majority shareholder (via DHL Express Singapore, 75%)",
+   "url": "https://en.wikipedia.org/wiki/Blue_Dart_Express",
+   "story": "a48c22a3f491c"
   }
  ]
 }

@@ -1,5 +1,91 @@
 [
  {
+  "title": "Evri Group acquires Cross Border Connect",
+  "buyer": "Evri Group",
+  "target": "Cross Border Connect",
+  "value": "Undisclosed",
+  "status": "Announced",
+  "ann": "2026-10-06",
+  "closed": null,
+  "sum": "Evri Group has agreed to acquire Cross Border Connect, a US-based logistics enablement provider specializing in delivery and returns. Financial terms were not disclosed.",
+  "who": [
+   [
+    "Buyer",
+    "Evri Group",
+    "Parcel delivery group that said it serves customers moving parcels between the UK, Europe and the US."
+   ],
+   [
+    "Target",
+    "Cross Border Connect",
+    "Boca Raton, Florida-based platform for international merchants entering the US market, with six US ports of entry and end-to-end customs clearance."
+   ]
+  ],
+  "why": "Evri said the acquisition supports its ability to serve customers on the UK-US trade lane and expands solutions for retailers, marketplaces and logistics partners trading across borders. It follows Evri's 2025 acquisition of Coll-8. Evri said Coll-8's customs clearance expertise and CBC's US logistics and technology capabilities create a more comprehensive cross-border offering.",
+  "parties": [
+   {
+    "name": "Evri Group",
+    "role": "Buyer",
+    "realm": "Regional / last-mile carrier",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Acquired Coll-8"
+     }
+    ]
+   },
+   {
+    "name": "Cross Border Connect",
+    "role": "Target",
+    "realm": "Cross-border parcel platform",
+    "hq": "Boca Raton, Florida, US",
+    "founded": null,
+    "size": "Six US ports of entry",
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "Evri Group",
+   "c": [
+    {
+     "n": "Coll-8",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Cross Border Connect",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Chris Lentjes, CBC co-founder and CEO, will continue to lead the business.",
+  "d": "2026-10-06",
+  "story": "aec10b9813ef5",
+  "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html",
+  "srcs": [
+   {
+    "src": "Parcel and Postal Technology International",
+    "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html"
+   }
+  ],
+  "checked": "2026-10-06",
+  "ties": [
+   {
+    "d": "2026-10-08",
+    "t": "Connecticut man gets 2 years for $3.5M Amazon Relay fraud scheme",
+    "story": "a504bfb1748d7"
+   },
+   {
+    "d": "2025-05-14",
+    "t": "DHL eCommerce UK to merge with Evri",
+    "story": "h518"
+   }
+  ]
+ },
+ {
   "title": "C.H. Robinson buys RXO for $5.8B",
   "buyer": "C.H. Robinson Worldwide",
   "target": "RXO",
