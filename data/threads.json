@@ -213,12 +213,13 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing",
-  "s": "Local mail delays in Kansas City and Omaha are drawing complaints and oversight attention, while USPS service standards have been lengthened elsewhere, including Hawaii.",
+  "s": "USPS continues to adjust service standards and operations, with Hawaii delivery expectations lengthened and a local post office closure now in effect.",
   "ids": [
    "h410",
    "h505",
    "ab665e6db5daf",
-   "a9ecc86b6711f"
+   "a9ecc86b6711f",
+   "a9b2dacf6f727"
   ],
   "first": "2024-05-14",
   "last": "2026-10-12",
@@ -279,7 +280,17 @@
    "Amazon",
    "DHL",
    "USPS"
-  ]
+  ],
+  "cx": {
+   "sig": "e3902d701814",
+   "beats": {
+    "21": "Amazon's new USPS agreement trims its volume by about 20%, after reports it would cut by two-thirds.",
+    "g09": "DHL eCommerce and USPS sign an exclusive multi-year last-mile deal worth 'well over $10 billion'; the term wasn't disclosed.",
+    "09": "Amazon's same-day pilot starts with midday drops at select post offices for delivery by 8 p.m., capped at 200 packages a day per site."
+   },
+   "intro": "How USPS's deals with big shippers, from Amazon volume changes to a DHL eCommerce contract, are reshaping its network.",
+   "now": "USPS has an exclusive last-mile deal with DHL eCommerce and is piloting same-day for Amazon. Columbia, S.C. joins Oct 20 with a 500-package cap."
+  }
  },
  "amazon-network-buildout": {
   "n": "Amazon logistics buildout",

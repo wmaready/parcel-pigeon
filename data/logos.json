@@ -1842,5 +1842,55 @@
   "f": "data/logos/amzair.png",
   "ar": 5.583,
   "src": "https://cdn.amazonaircargo.com/dims4/default/29b0ef7/2147483647/strip/false/crop/6478x1160+0+0/resize/335x60!/quality/90/?url=https%3A%2F%2Famazon-k1-prod-aircargo.s3.us-west-2.amazonaws.com%2Fbrightspot%2F65%2Fe0%2F968e536e4096b8f4776c740488eb%2Famazon-aircargo-horizontallogo-rgb-dark-squidink-primeblue.png"
+ },
+ "amzfreight": {
+  "checked": "2026-10-12",
+  "host": "freight.amazon.com",
+  "f": "data/logos/amzfreight.svg",
+  "ar": 4.975,
+  "src": "https://cdn.transportation.brightspotcdn.com/45/ee/897a35f142668aaa6d60b87c33cb/logos.svg"
+ },
+ "amzfba": {
+  "checked": "2026-10-12",
+  "host": "sell.amazon.com",
+  "f": "data/logos/amzfba.svg",
+  "ar": 2.438,
+  "src": "https://m.media-amazon.com/images/G/01/sell/navigation/amazon-logo_white-menu.svg"
+ },
+ "ascs": {
+  "checked": "2026-10-12",
+  "host": "supplychain.amazon.com",
+  "f": "data/logos/ascs.svg",
+  "ar": 9.722,
+  "src": "https://static.amazon-supply-chain-assets.com/02/d4/caca6e2d484a996af978cd2c5101/amazon-supply-chain-services-primary-logo-two-color-dk-squid-ink-prime-blue.svg"
+ },
+ "dhlsc": {
+  "checked": "2026-10-12",
+  "host": "dhl.com"
+ },
+ "dhlgf": {
+  "checked": "2026-10-12",
+  "host": "dhl.com"
+ },
+ "walmartgolocal": {
+  "checked": "2026-10-12",
+  "host": "walmartgolocal.com",
+  "f": "data/logos/walmartgolocal.svg",
+  "ar": 3.051,
+  "src": "https://www.walmartgolocal.com/content/dam/go-local/wgl-redesign/logo-1.svg"
+ },
+ "sparkdriver": {
+  "checked": "2026-10-12",
+  "host": "sparkdriverapp.com",
+  "f": "data/logos/sparkdriver.svg",
+  "ar": 5.999,
+  "src": "https://sparkdriverapp.com/content/dam/sparkdriverapp/images/spark-driver-logo.svg"
+ },
+ "wfs": {
+  "checked": "2026-10-12",
+  "host": "marketplace.walmart.com",
+  "f": "data/logos/wfs.png",
+  "ar": 1.0,
+  "src": "https://marketplace.walmart.com/wp-content/uploads/2025/10/cropped-WMT-Marketplace-Spark_square-180x180.png"
  }
 }

@@ -88,6 +88,34 @@
   "exclusive": true
  },
  {
+  "id": "a4c7bcc13e662",
+  "date": "2026-10-12",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "SICK shows AI-enabled parcel scanning system at CeMAT 2026",
+  "sum": "SICK Australia New Zealand demonstrated its dimensioning, weighing and scanning (DWS) technology at CeMAT 2026, according to Logistics Magazine. The system pairs dimensioning, weighing and barcode scanning with AI-enabled single-item verification for freight and parcel operators.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The item describes sorting and measurement equipment for parcel operators.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Logistics Magazine - Australia",
+  "url": "https://mhdsupplychain.com.au/2026/10/13/watch-sick-showcases-ai-enabled-parcel-scanning-technology-at-cemat-2026/",
+  "srcs": [
+   {
+    "src": "Logistics Magazine - Australia",
+    "url": "https://mhdsupplychain.com.au/2026/10/13/watch-sick-showcases-ai-enabled-parcel-scanning-technology-at-cemat-2026/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a73a591c528d3",
   "date": "2026-10-12",
   "c": [
@@ -684,6 +712,36 @@
    }
   ],
   "auto": true
+ },
+ {
+  "id": "a9b2dacf6f727",
+  "date": "2026-10-09",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS temporarily closes Kekaha Post Office in Hawaii",
+  "sum": "USPS said in a Hawaii resident weather alert that the Kekaha Post Office at 8230 Kekaha Road is temporarily closed. Mail and retail services for its customers are available at the Lawai Post Office, 2-3675 Kaumualii Highway. No reopening date was given.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Kekaha customers must collect mail and packages and use retail services at the Lawai Post Office while the closure lasts. USPS said Lawai retail window hours are Monday through Friday, 9 a.m. to 1 p.m. and 1:30 p.m. to 3:30 p.m., and Saturday, 9 a.m. to 11 a.m., and that photo identification is needed for mail and package pickups.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "USPS",
+  "url": "https://about.usps.com/newsroom/service-alerts/residential/hawaii.htm",
+  "srcs": [
+   {
+    "src": "USPS",
+    "url": "https://about.usps.com/newsroom/service-alerts/residential/hawaii.htm"
+   }
+  ],
+  "auto": true,
+  "thread": "usps-service-network",
+  "upd": 5,
+  "new": "A weather-related temporary closure of the Kekaha Post Office in Hawaii shifts mail and retail services to the Lawai Post Office, a local change that does not alter rates or service standards for shippers.",
+  "exclusive": true
  },
  {
   "id": "ab665e6db5daf",
