@@ -65,13 +65,17 @@ Reply with JSON only: a list of objects
 "thread": the key of the ACTIVE STORYLINE it belongs to, or a new short lowercase key (e.g. "ups-teamsters-contract",
 "usps-delivering-for-america", "de-minimis-end", "fedex-network-2", "ups-amazon-glide-down", "2027-gri") when it is part of a
 subject likely to keep developing (labor talks, lawsuits and rulings, regulation, network overhauls, pending deals, a rate
-cycle, a carrier's ongoing strategy), or null for a one-off item}}."""
+cycle, a carrier's ongoing strategy), or null for a one-off item. Yearly events (holiday peak surcharges, the annual
+rate increase, USPS price changes) use the ACTIVE storyline for that subject; the app splits it by year on its own}}."""
 
 WRITE_SYSTEM = f"""You write for Parcel Pigeon, a small parcel trade news service in the style of Supply Chain Dive and
 FreightWaves: neutral, factual, attributed. Use ONLY facts in the articles provided. Never invent numbers, dates or names;
 every number must appear in the source text. Do not quote more than a few words. No advice, no recommendations, no
 predictions of your own, no adjectives that judge (no "good news", "pain", "win"). Attribute claims ("UPS said",
 "according to the filing"). If the source is an opinion or analysis, say whose view it is.
+
+Never name a parcel consultancy or audit firm (TransImpact, Reveel, Shipware, Transportation Insight, Intelligent Audit,
+Sifted, Lojistic, LJM Group, AFS and similar) in the title or text: call their work "an industry analysis".
 
 Return JSON only, with exactly these keys:
 "title": wire-style headline under 90 characters, subject first, present tense (e.g. "FedEx sets 5.9% average increase for 2027");
@@ -349,6 +353,15 @@ def update_market_map(deal, story):
             if a != b and not any(e["a"] == a and e["b"] == b and e["k"] == "sold" for e in seed.get("edges", []) + mp["edges"]):
                 mp["edges"].append({"a": a, "b": b, "k": "sold", "y": (deal.get("closed") or deal.get("ann") or story["date"])[:4],
                                     "t": f"{deal.get('title') or story['title']} (seller)", "url": story["url"], "story": story["id"]})
+    # a closed deal moves the target into the buyer's family tree (the app applies "moves" on top of the researched trees)
+    if str(deal.get("status") or "").lower() == "closed" and len(buyers) == 1:
+        byid = {p["id"]: p for p in known}
+        moves = mp.setdefault("moves", [])
+        for b in targets:
+            if b == buyers[0] or any(m["id"] == b and m.get("parent") == buyers[0] for m in moves):
+                continue
+            moves.append({"id": b, "k": "bought", "parent": buyers[0], "from": (byid.get(b) or {}).get("parent") or (ids.get("Seller") or [None])[0],
+                          "d": (deal.get("closed") or story["date"])[:10], "url": story["url"], "t": deal.get("title") or story["title"], "story": story["id"]})
     for b in ids.get("Backer", []):          # private equity or other backers of the buyer
         for a in buyers:
             if a != b and not any(e["a"] == b and e["b"] == a for e in seed.get("edges", []) + mp["edges"]):
@@ -457,6 +470,31 @@ Only group stories that are clearly about the same ongoing subject. Reply JSON o
 [{"key": "short-lowercase-key", "n": "storyline name under 40 characters", "s": "one sentence: where it stands now, from the titles only", "ids": ["id", ...]}]
 Every storyline needs at least 2 stories."""
 
+
+
+ANNUAL = [(re.compile(r"peak|holiday surcharge|demand surcharge", re.I), "peak"), (re.compile(r"\bgri\b|rate increase|general rate", re.I), "gri"),
+          (re.compile(r"usps.*(price|pricing)", re.I), "usps")]
+
+
+def cycle_of(kind, d):
+    """Same calendar as the app (stories.js thrCycle): peak runs into January; next year's rates start late summer."""
+    try:
+        y, m = int(str(d)[:4]), int(str(d)[5:7])
+    except ValueError:
+        return None
+    return (y - 1 if m <= 1 else y) if kind == "peak" else (y + 1 if m >= 8 else y) if kind == "gri" else (y + 1 if m >= 10 else y) if kind == "usps" else y
+
+
+def cycle_count(t, key, story, live):
+    """Earlier stories in the same storyline, counting only this year's cycle for yearly storylines, so a new peak
+    season starts again at 'First report' instead of 'Update 9'."""
+    ids = t.get("ids", [])
+    kind = next((k for rx, k in ANNUAL if rx.search(f"{key} {t.get('n') or ''}")), None)
+    if not kind:
+        return len(ids)
+    dates = {s["id"]: s.get("date") for s in load("seed.json", {}).get("news", []) + list(live)}
+    cur = cycle_of(kind, story.get("date"))
+    return sum(1 for i in ids if cycle_of(kind, dates.get(i)) == cur)
 
 def backfill_threads(live):
     """One time: group what's already published (and the app's built-in stories) into storylines."""
@@ -613,8 +651,9 @@ def main():
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
             if tkey:
                 story["thread"] = tkey
-                if prior:
-                    story["upd"] = len((threads.get(tkey) or {}).get("ids", [])) + 1
+                done_before = cycle_count(threads.get(tkey) or {}, tkey, story, live) if prior else 0
+                if done_before:
+                    story["upd"] = done_before + 1
                     if s.get("new"):
                         story["new"] = s["new"]
             # photos: only the company's own announcement image (never trade press), saved with the site
@@ -702,5 +741,62 @@ def main():
     print(f"wrote {written} stories; {len(live)} live; {len(review)} in review")
 
 
+BEATS = """You are Coop, the guide in a small-parcel news app, narrating one STORYLINE as an animated timeline. For each
+milestone you get its date, headline and summary. Write short lines that give context and connect the dots: what this step
+changed, why it followed from the one before, who in shipping it affects. Plain, neutral, a little conversational; no hype,
+no advice, no predictions of your own.
+Hard rules: use ONLY facts in the milestones below. Every number, date and name you write must appear in them. If a link
+between two steps isn't stated or plainly implied by the summaries, don't claim it. Never name a parcel consultancy or
+audit firm (say "an industry analysis").
+Reply with JSON only:
+{"intro": "one line, under 120 characters: what this storyline is about and why shippers care",
+ "beats": {"<milestone id>": "one line, under 130 characters, for that step", ...},
+ "now": "one line, under 140 characters: where it stands and what is next on the calendar, only if the milestones say so"}"""
+
+
+def write_beats(limit=6):
+    """Coop's narration for each storyline's timeline, rewritten when the storyline gets a new story. Every line is checked:
+    a line with a number that isn't in the milestones is dropped (the app falls back to a plain date cue)."""
+    threads = load("threads.json", {})
+    if not threads:
+        return
+    pool = {s["id"]: s for s in load("seed.json", {}).get("news", []) + load("news.json", []) if s.get("id")}
+    done = 0
+    for k, t in sorted(threads.items(), key=lambda kv: kv[1].get("last") or "", reverse=True):
+        if done >= limit:
+            break
+        ids = [i for i in t.get("ids", []) if i in pool]
+        if len(ids) < 2:
+            continue
+        sig = h(",".join(ids))
+        if (t.get("cx") or {}).get("sig") == sig:
+            continue
+        S = sorted((pool[i] for i in ids), key=lambda s: s.get("date") or "")
+        if len(S) > 6:
+            ix = sorted({0, *[round(i * (len(S) - 1) / 5) for i in range(1, 5)], len(S) - 1})
+            S = [S[i] for i in ix]
+        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\n" + "\n".join(
+            f"id={s['id']} | {s.get('date')} | {s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]}" for s in S)
+        done += 1
+        try:
+            got = parse_json(claude(MODEL_FAST, BEATS, text, 1200)) or {}
+        except Exception as e:
+            print(f"  storyline narration failed for {k}: {e}", file=sys.stderr); continue
+        ok = lambda line, n: isinstance(line, str) and 0 < len(line) <= n and not numbers_supported(line, text)
+        beats = {i: v.strip() for i, v in (got.get("beats") or {}).items() if i in ids and ok(v, 140)}
+        cx = {"sig": sig, "beats": beats}
+        if ok(got.get("intro"), 130):
+            cx["intro"] = got["intro"].strip()
+        if ok(got.get("now"), 150):
+            cx["now"] = got["now"].strip()
+        t["cx"] = cx
+        print(f"  storyline narration: {k} ({len(beats)} of {len(S)} steps)")
+    save("threads.json", threads)
+
+
 if __name__ == "__main__":
     main()
+    try:
+        write_beats()
+    except Exception as e:
+        print("storyline narration skipped:", e, file=sys.stderr)

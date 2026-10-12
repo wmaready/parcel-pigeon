@@ -7,6 +7,7 @@ with a source. Candidates that aren't parcel players are dropped. Newly confirme
 and a phone alert (alerts.py, Deals topic).
 
 Usage: python players.py [--max 6]
+Also keeps family trees current (family_check, one company per run, about weekly each).
 """
 import datetime as dt, json, os, re, sys
 import requests
@@ -129,6 +130,93 @@ def main():
         p.update({"enriched": today, "pending": False, "added": p.get("added") or today})
         byname[p["n"].lower()] = p["id"]
         print(f"  researched {p['n']}: {p.get('realm')}, {p.get('hq')}, {added} links")
+    save("players.json", mp)
+
+
+# ---------------------------------------------------------------- family trees: keep ownership current
+FAMILY_ROOTS = ["ups", "fedex", "amazon", "usps", "dhl", "walmart", "uber", "doordash", "instacart", "pitneybowes", "ontrac",
+                "canadapost", "purolator", "ids", "laposte", "japanpost", "maersk", "cmacgm", "dsv", "xpo", "gxo", "rxo",
+                "stord", "fdxfreight", "target", "shopify", "ryder", "jbhunt", "forwardair"]
+FAMILY_DAYS = 7                       # each family is re-checked about once a week, one family per run
+
+FAMILY_Q = """You keep the corporate family tree of a parcel and logistics company current for Parcel Pigeon's market map.
+Use web search. Report ONLY ownership changes that happened (or were officially announced) AFTER the date given:
+acquisitions that closed, sales that closed, spin-offs completed, units shut down or folded into another, deals agreed but not
+closed, and brand-new MAJOR arms (an operating company, airline, freight or logistics division, retail network, tech or
+capital unit). Ignore facilities, offices, drop-off points, products and service names, partnerships, rumors and minority stakes.
+Every change needs the company's own announcement or a filing or established trade press, with its URL. Never guess.
+Return JSON only:
+{"changes": [{"unit": "company or arm name", "k": "bought|sold|spun|closed|pending|new_arm",
+  "to": "new owner's name (for bought or sold) or null", "into": "company it was folded into, for closed, or null",
+  "d": "YYYY-MM-DD", "role": "under 60 characters: what the unit does", "url": "source URL", "t": "one neutral sentence"}]}
+Return {"changes": []} if nothing changed."""
+
+
+def family_check(limit=1):
+    """One family per run, each about weekly: ask what changed since it was last checked, and record each change as a
+    'move' in data/players.json. The app applies moves on top of the researched trees, so a sale shows up in the seller's
+    tree ("No longer part of"), the buyer's tree, the map lines and the company card at the same time."""
+    if not API_KEY:
+        return
+    seed, mp = load("seed.json", {}), load("players.json", {"players": [], "edges": []})
+    known = [p for p in seed.get("players", []) + mp["players"] if not p.get("pending")]
+    byid = {p["id"]: p for p in known}
+    for m in sorted(mp.get("moves") or [], key=lambda m: m.get("d") or ""):   # earlier changes already applied in the app
+        if m["id"] in byid and m["k"] != "pending":
+            byid[m["id"]]["parent"] = m.get("parent")
+    byname = {}
+    for p in known:
+        for nm in [p["n"]] + (p.get("al") or []):
+            byname[str(nm).lower()] = p["id"]
+    st = load("family_watch.json", {})
+    today = dt.date.today()
+    due = [r for r in FAMILY_ROOTS if r in byid and (today - dt.date.fromisoformat(st.get(r, "2026-10-01"))).days >= FAMILY_DAYS]
+    due.sort(key=lambda r: st.get(r, "2026-10-01"))
+    moves = mp.setdefault("moves", [])
+    for root in due[:limit]:
+        kids = [p for p in known if p.get("parent") == root]
+        tree = "\n".join(f"- {p['n']}" + "".join(f"\n  - {q['n']}" for q in known if q.get("parent") == p["id"]) for p in kids)
+        since = st.get(root, "2026-10-01")
+        try:
+            res = parse_json(ask(f"Company: {byid[root]['n']}\nChanges since: {since}\nIts arms on file today:\n{tree or '(none)'}", system=FAMILY_Q, max_tokens=1800)) or {}
+        except Exception as e:
+            print(f"  family check failed for {root}: {e}", file=sys.stderr); continue
+        st[root] = today.isoformat()
+        n = 0
+        for c in res.get("changes") or []:
+            if not isinstance(c, dict) or c.get("k") not in ("bought", "sold", "spun", "closed", "pending", "new_arm"):
+                continue
+            if not str(c.get("url") or "").startswith("http") or not re.match(r"^\d{4}-\d{2}-\d{2}$", str(c.get("d") or "")) or c["d"] < since:
+                continue
+            uid = byname.get(str(c.get("unit") or "").lower())
+            to = byname.get(str(c.get("to") or "").lower()) if c.get("to") else None
+            into = byname.get(str(c.get("into") or "").lower()) if c.get("into") else None
+            k = c["k"]
+            if not uid:
+                if k not in ("bought", "new_arm", "pending"):
+                    continue                              # a unit we never had can't leave the family
+                name = str(c.get("unit") or "").strip()[:60]
+                if not name:
+                    continue
+                uid = re.sub(r"[^a-z0-9]+", "", name.lower())[:14] or "co"
+                while uid in byid:
+                    uid += "x"
+                p = {"id": uid, "n": name, "realm": byid[root].get("realm") if k == "new_arm" else "3pl", "own": "sub", "tk": None,
+                     "parent": root if k != "pending" else None, "hq": None, "yr": None, "s": (c.get("role") or "")[:120], "role": (c.get("role") or "")[:60],
+                     "al": [], "src": c["url"], "auto": True, "added": today.isoformat()}
+                mp["players"].append(p); known.append(p); byid[uid] = p; byname[name.lower()] = uid
+            if any(m["id"] == uid and m["k"] == k and m.get("d") == c["d"] for m in moves):
+                continue
+            frm = byid[uid].get("parent") if k in ("sold", "spun", "closed") else None
+            par = root if k in ("bought", "new_arm") else to if k == "sold" else None
+            moves.append({"id": uid, "k": k, "parent": par, "from": frm or (root if k in ("sold", "spun", "closed") else None),
+                          "pend": root if k == "pending" else None, "into": into, "d": c["d"], "url": c["url"],
+                          "t": str(c.get("t") or "")[:160], "role": (c.get("role") or "")[:60] or None})
+            if k != "pending" and uid in byid:
+                byid[uid]["parent"] = par
+            n += 1
+        print(f"  family check: {byid[root]['n']} ({n} change{'s' if n != 1 else ''} since {since})")
+    save("family_watch.json", st)
     save("players.json", mp)
 
 

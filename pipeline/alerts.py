@@ -3,8 +3,10 @@
 Readers hear about each story on its own, as it comes in, but never a pile at once:
   Regular  every new story, rate clock reminder and new company joins a queue. Each run (every two hours) sends at most
            MAX_PER_RUN pushes. A quiet run (one or two items) sends each on its own, SPACING_MIN apart. A busy run
-           (three or more) sends the biggest story on its own and rolls the rest into ONE "N more" note, so bigger news
-           gets its own alert and small items never pile up. Regular pushes stay MIN_GAP_MIN apart across runs
+           (three or more) sends big news (level 3) on its own and lists the rest in ONE note, one bulleted line per story,
+           biggest first, so big news gets its own alert and small items never pile up.
+           Stories go out in two tiers: "Notable stories" (on by default: level 2+, or the livelier beats about a big
+           carrier, see notable()) and "Every new story" (opt-in). Regular pushes stay MIN_GAP_MIN apart across runs
            (alerts.py runs hourly from watch.yml too); big news skips the wait. No more than MAX_PER_DAY a day. Held overnight
            (9 p.m. to 7 a.m. Eastern). Weekly fuel moves go only to readers who set a threshold.
   Major    goes to the editor first: a GitHub issue (GitHub emails it) plus a push to the editor's own phone.
@@ -62,6 +64,9 @@ PRICE_CATS = {"Pricing & GRI", "Fees & rules", "Peak season", "Fuel"}
 DOC_CATS = {"Guide changes", "Documents"}
 DEAL_CATS = {"M&A", "Deals & partnerships"}
 TOPIC_TAG = {"rates": "t_rates", "docs": "t_docs", "deals": "t_deals", "news": "t_news"}
+# stories reach readers in two tiers through the one "t_news" tag: 1 = notable stories (the default), 2 = every story
+COOL_CATS = {"Drones & robots", "Technology & tools", "Network & operations", "Labor", "Same-day & gig delivery", "Amazon",
+             "Postal", "Carrier strategy", "Peak season", "Legal", "Regional & alternative", "International"}
 TOPIC_WORDS = {"rates": "rate changes", "docs": "carrier guide changes", "deals": "deals", "news": "stories"}
 
 
@@ -121,7 +126,7 @@ def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 
 
-def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=None):
+def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=None, lines=False):
     """One notification. `key` makes it send-once: OneSignal drops any repeat with the same idempotency key
     (30 days), and the ledger in alerts_state.json skips it before that, so overlapping runs can't double-send."""
     if key and SENT is not None and key in SENT:
@@ -131,7 +136,8 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=
         print(f"  (push skipped, OneSignal keys not set) {heading}: {body}")
         return None
     # iOS shows the app name on top, then this title in bold, then the message
-    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, 60)}, "contents": {"en": short(body, 120)},
+    text = body[:240] if lines else short(body, 120)       # a list keeps its line breaks: one story per line
+    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, 60)}, "contents": {"en": text},
            "url": url, "chrome_web_icon": ICON, "firefox_icon": ICON, "ttl": ttl}
     if key:
         msg["idempotency_key"] = str(uuid.uuid5(NS, key))
@@ -228,6 +234,20 @@ def is_major(s):
     if lvl >= 3:
         return True
     return False                         # only the biggest (lvl 3) wait for your OK; everything else alerts live
+
+
+def notable(s):
+    """Worth a buzz for most readers: real news (level 2+), or a level-1 story in the livelier beats about a big carrier."""
+    lvl = int(s.get("lvl") or 1)
+    return lvl >= 2 or (s.get("cat") in COOL_CATS and bool(set(s.get("c") or []) & (BIG4 | {"DHL", "OnTrac", "Walmart"})))
+
+
+def topic_filter(q):
+    """OneSignal tag condition for one queued item. Older devices tagged t_news=1 still get notable stories."""
+    if q["topic"] == "news":
+        return [{"field": "tag", "key": "t_news", "relation": ">", "value": "0"}] if q.get("notable", True) \
+            else [{"field": "tag", "key": "t_news", "relation": "=", "value": "2"}]
+    return [{"field": "tag", "key": TOPIC_TAG[q["topic"]], "relation": "=", "value": "1"}]
 
 
 def topic_of(s):
@@ -647,7 +667,7 @@ def send_queued(state):
     cutoff = now_et() - dt.timedelta(hours=QUEUE_HOURS)
     queue = [q for q in state.get("queue") or [] if q["key"] not in SENT
              and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff]
-    queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), q["kind"] != "story", q.get("at") or ""))
+    queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), not q.get("notable", True), q["kind"] != "story", q.get("at") or ""))
     room = max(0, min(MAX_PER_RUN, MAX_PER_DAY - count_today(state, 0)))
     # alerts.py runs hourly (watch) and every two hours (update): keep regular pushes about an hour apart across runs
     last = state.get("last_push")
@@ -663,23 +683,26 @@ def send_queued(state):
             after = now_et() + dt.timedelta(minutes=SPACING_MIN * n) if n else None
             if after and quiet(after):
                 break                                # don't schedule into the night; it goes in the morning
-            extra = [{"field": "tag", "key": TOPIC_TAG[q["topic"]], "relation": "=", "value": "1"}]
+            extra = topic_filter(q)
             r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after)
             if r is not None:
                 count_today(state); sent += 1; sent_times.append(after or now_et())
     else:
         # a busy run: the biggest story gets its own alert (if it's real news), everything else is one roll-up
-        lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 2) else None
+        lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 3) else None   # only big news stands alone
         rest = queue[1:] if lead else queue
         if lead:
-            extra = [{"field": "tag", "key": TOPIC_TAG[lead["topic"]], "relation": "=", "value": "1"}]
+            extra = topic_filter(lead)
             r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"])
             if r is not None:
                 count_today(state); sent += 1; sent_times.append(now_et())
         if rest and count_today(state, 0) < MAX_PER_DAY and (not lead or room > 1):
             words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
-            r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", " · ".join(q["t"] for q in rest[:3]) + (" …" if len(rest) > 3 else ""),
-                     SITE + "#news", audience([], union_mask(rest)) or None, key="more:" + ",".join(sorted(q["key"] for q in rest)),
+            # one bullet per story, biggest first, so a glance at the lock screen reads like a short list
+            shown = rest[:4]
+            body = "\n".join("• " + short(q["t"], 46) for q in shown) + (f"\n+{len(rest) - len(shown)} more in the app" if len(rest) > len(shown) else "")
+            r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", body,
+                     SITE + "#news", audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
             if r is not None:
                 SENT.extend(q["key"] for q in rest); count_today(state); sent += 1
@@ -705,6 +728,10 @@ def run():
         _pl.backfill_sites(8)                # websites for companies already on the map, so their logos can be found
     except Exception as e:
         print("site lookup failed:", e, file=sys.stderr)
+    try:
+        _pl.family_check(1)                  # one company's family tree re-checked for sales, buys and spin-offs
+    except Exception as e:
+        print("family check failed:", e, file=sys.stderr)
     try:
         process_doc_requests()
     except Exception as e:
@@ -748,7 +775,7 @@ def run():
         th = (load("threads.json", {}).get(s.get("thread") or "") or {}) if s.get("upd") else {}
         m = f"Update {s['upd']} · {th['n']}: {c['m']}" if th.get("n") else c["m"]
         return {"kind": "story", "key": "story:" + norm(s["title"]), "id": s["id"], "t": c["t"], "m": m, "big": big, "at": now_et().isoformat(),
-                "lvl": int(s.get("lvl") or 1), "topic": topic_of(s), "mask": mask_of(s.get("c")), "url": story_link(s, big)}
+                "lvl": int(s.get("lvl") or 1), "topic": topic_of(s), "notable": big or notable(s), "mask": mask_of(s.get("c")), "url": story_link(s, big)}
     def seen(s):
         state["stories"].append(s["id"]); state["titles"].append(norm(s.get("title"))[:60])
     for s in majors:
