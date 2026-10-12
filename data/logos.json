@@ -1,264 +1,271 @@
 {
+ "_v2": true,
  "ups": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "ups.com"
  },
  "fedex": {
-  "checked": "2026-10-11",
-  "host": "fedex.com"
+  "checked": "2026-10-12",
+  "host": "fedex.com",
+  "f": "data/logos/fedex.png",
+  "ar": 3.394,
+  "src": "https://fedex.com/waf/failover-objects/corp_logo.gif"
  },
  "usps": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "usps.com",
-  "f": "data/logos/usps.png",
-  "src": "https://usps.com/favicon.ico"
+  "f": "data/logos/usps.svg",
+  "ar": 8.298,
+  "src": "https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg"
  },
  "amzship": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "shipping.amazon.com",
-  "f": "data/logos/amzship.png",
-  "src": "https://shipping.amazon.com/favicon.ico"
+  "f": "data/logos/amzship.svg",
+  "ar": 5.217,
+  "src": "https://cdn.transportation.brightspotcdn.com/67/74/dcdd57674ad1a06ae440f77eec7f/amazon-shipping-logo.svg"
  },
  "dhlexpress": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "dhl.com",
-  "f": "data/logos/dhlexpress.png",
-  "src": "https://dhl.com/apple-touch-icon.png"
+  "f": "data/logos/dhlexpress.svg",
+  "ar": 7.175,
+  "src": "https://dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg"
  },
  "dhlecom": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "dhl.com",
-  "f": "data/logos/dhlecom.png",
-  "src": "https://dhl.com/apple-touch-icon.png"
+  "f": "data/logos/dhlexpress.svg",
+  "ar": 7.175,
+  "src": "https://dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg"
  },
  "canadapost": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "canadapost-postescanada.ca",
   "f": "data/logos/canadapost.png",
+  "ar": 1.0,
   "src": "https://canadapost-postescanada.ca/apple-touch-icon.png"
  },
  "purolator": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "purolator.com",
-  "f": "data/logos/purolator.png",
-  "src": "https://purolator.com/themes/custom/purolator_theme/src/img/favicons/apple-touch-icon.png"
+  "f": "data/logos/purolator.svg",
+  "ar": 7.2,
+  "src": "https://purolator.com/themes/custom/purolator_theme/logo.svg"
  },
  "ontrac": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "ontrac.com",
   "f": "data/logos/ontrac.png",
-  "src": "https://www.ontrac.com/wp-content/uploads/2023/03/cropped-cropped-faviconArtboard-1-180x180.png"
+  "ar": 4.068,
+  "src": "https://www.ontrac.com/wp-content/uploads/2023/03/cropped-wordmark_black-red.png"
  },
  "gls": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "gls-us.com",
   "f": "data/logos/gls.png",
+  "ar": 1.0,
   "src": "https://gls-group.eu/favicon.ico"
  },
  "lso": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "lso.com",
   "f": "data/logos/lso.png",
-  "src": "https://cdn.prod.website-files.com/610bd2c21f6eaa53c3ceab9f/611cb9181769a37f93e757d0_lso-icon-2.png"
+  "ar": 3.286,
+  "src": "https://cdn.prod.website-files.com/610bd2c21f6eaa53c3ceab9f/610bd2c21f6eaaaef0ceac29_logo1.jpg"
  },
  "speedee": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "speedeedelivery.com",
   "f": "data/logos/speedee.png",
+  "ar": 0.993,
   "src": "https://speedeedelivery.com/apple-touch-icon.png"
  },
  "cdl": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "cdldelivers.com",
   "f": "data/logos/cdl.png",
-  "src": "https://cdldelivers.com/favicon.ico"
+  "ar": 4.725,
+  "src": "https://cdl-spaces.nyc3.cdn.digitaloceanspaces.com/cdl-logo2x.png"
  },
  "bettertrucks": {
-  "checked": "2026-10-11",
-  "host": "bettertrucks.com"
+  "checked": "2026-10-12",
+  "host": "bettertrucks.com",
+  "f": "data/logos/bettertrucks.png",
+  "ar": 1.176,
+  "src": "https://www.bettertrucks.com/hs-fs/hubfs/lOGO@2x.png?width=479&amp;height=406&amp;name=lOGO@2x.png"
  },
  "veho": {
-  "checked": "2026-10-11",
-  "host": "shipveho.com"
+  "checked": "2026-10-12",
+  "host": "shipveho.com",
+  "f": "data/logos/veho.svg",
+  "ar": 2.912,
+  "src": "https://cdn.prod.website-files.com/64a643946cb644441bae82c9/64aba94fc638067da124e619_veho-logo.svg"
  },
  "uniuni": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "uniuni.com",
-  "f": "data/logos/uniuni.png",
-  "src": "https://uniuni.com/apple-touch-icon.png"
+  "f": "data/logos/uniuni.svg",
+  "ar": 1.688,
+  "src": "https://www.uniuni.com/wp-content/uploads/2026/08/woo.svg"
  },
  "roadie": {
-  "checked": "2026-10-11",
-  "host": "roadie.com"
+  "checked": "2026-10-12",
+  "host": "roadie.com",
+  "f": "data/logos/roadie.png",
+  "ar": 4.074,
+  "src": "https://46302491.fs1.hubspotusercontent-na1.net/hub/46302491/hubfs/raw_assets/public/Roadie-u4m/templates/images/Light-Logo.png?width=440&amp;name=Light-Logo.png"
  },
  "doordash": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "doordash.com"
  },
  "uber": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "uber.com",
   "f": "data/logos/uber.png",
+  "ar": 1.0,
   "src": "https://uber.com/favicon.ico"
  },
  "instacart": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "instacart.com",
-  "f": "data/logos/instacart.png",
-  "src": "https://d2guulkeunn7d8.cloudfront.net/assets/Icon-60@3x-73f80604373da67ef3fadbc54f4548b1.png"
+  "f": "data/logos/instacart.svg",
+  "ar": 6.25,
+  "src": "https://www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color-6678cb82d531f8910d5ba270a11a7e9b56fc261371bda42ea7a5abeff3492e1c.svg"
  },
  "shipt": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "shipt.com",
   "f": "data/logos/shipt.png",
-  "src": "https://shipt.com/icons/shipt-logo-512.png"
+  "ar": 3.903,
+  "src": "https://object-storage.shipt.com/stores/petsmart_b584d66c77b167231eacbf80781c2a1c.png"
  },
  "deliveroo": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "deliveroo.com",
   "f": "data/logos/deliveroo.png",
+  "ar": 1.0,
   "src": "https://cwa.roocdn.com/_next/static/apple-touch-icon.870581c7.png"
  },
  "gopuff": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "gopuff.com"
  },
  "grubhub": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "grubhub.com",
   "f": "data/logos/grubhub.png",
+  "ar": 1.0,
   "src": "https://grubhub.com/apple-touch-icon.png"
  },
  "amazon": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "amazon.com",
   "f": "data/logos/amazon.png",
+  "ar": 1.0,
   "src": "https://amazon.com/favicon.ico"
  },
  "walmart": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "walmart.com",
-  "f": "data/logos/walmart.png",
-  "src": "https://walmart.com/apple-touch-icon.png"
+  "f": "data/logos/walmart.svg",
+  "ar": 4.062,
+  "src": "https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg"
  },
  "target": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "target.com",
   "f": "data/logos/target.png",
+  "ar": 1.0,
   "src": "https://assets.targetimg1.com/static/images/apple-touch-icon-precomposed.png"
  },
  "homedepot": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "homedepot.com"
  },
  "lowes": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "lowes.com"
  },
  "costco": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "costco.com",
   "f": "data/logos/costco.png",
+  "ar": 1.0,
   "src": "https://costco.com/apple-touch-icon.png"
  },
  "kroger": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "kroger.com"
  },
  "dollargeneral": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "dollargeneral.com",
   "f": "data/logos/dollargeneral.png",
-  "src": "https://dollargeneral.com/etc.clientlibs/dollargeneral/clientlibs/clientlib-site/resources/images/favicons/favicon.ico"
+  "ar": 1.0,
+  "src": "https://dollargeneral.com/content/dam/dg/assets/header-navigation/mobile%20logo.png"
  },
  "macys": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "macys.com"
  },
  "tiktokshop": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "shop.tiktok.com"
  },
  "temu": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "temu.com",
   "f": "data/logos/temu.png",
+  "ar": 1.0,
   "src": "https://temu.com/favicon.ico"
  },
  "shein": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "shein.com",
   "f": "data/logos/shein.png",
-  "src": "https://sc.ltwebstatic.com/she_dist/images/touch-icon-ipad-144-47ceee2d97.png"
+  "ar": 4.688,
+  "src": "https://sc.ltwebstatic.com/she_dist/images/lazy_logo-ee79904d61.png"
  },
  "omahasteaks": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "omahasteaks.com"
  },
  "fdxsc": {
-  "checked": "2026-10-11",
-  "host": "fedex.com"
+  "checked": "2026-10-12",
+  "host": "fedex.com",
+  "f": "data/logos/fedex.png",
+  "ar": 3.394,
+  "src": "https://fedex.com/waf/failover-objects/corp_logo.gif"
  },
  "fdxfreight": {
-  "checked": "2026-10-11",
-  "host": "fedex.com"
+  "checked": "2026-10-12",
+  "host": "fedex.com",
+  "f": "data/logos/fedex.png",
+  "ar": 3.394,
+  "src": "https://fedex.com/waf/failover-objects/corp_logo.gif"
  },
  "ceva": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "cevalogistics.com"
  },
  "gxo": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "gxo.com",
   "f": "data/logos/gxo.png",
-  "src": "https://gxo.com/wp-content/uploads/2024/07/cropped-favicon-180x180.png"
+  "ar": 2.922,
+  "src": "https://gxo.com/wp-content/uploads/2021/06/GXO_Logistics.png"
  },
  "wincanton": {
-  "checked": "2026-10-11",
-  "host": "wincanton.co.uk"
+  "checked": "2026-10-12",
+  "host": "wincanton.co.uk",
+  "f": "data/logos/wincanton.svg",
+  "ar": 5.384,
+  "src": "https://wincanton.co.uk/application/images/wincanton-logo-gxo.svg"
  },
  "xpo": {
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "host": "xpo.com"
- },
- "rxo": {
-  "checked": "2026-10-11",
-  "host": "rxo.com"
- },
- "coyote": {
-  "checked": "2026-10-11",
-  "host": "coyote.com"
- },
- "stord": {
-  "checked": "2026-10-11",
-  "host": "stord.com",
-  "f": "data/logos/stord.png",
-  "src": "https://stord.com/apple-touch-icon.png"
- },
- "shipbob": {
-  "checked": "2026-10-11",
-  "host": "shipbob.com",
-  "f": "data/logos/shipbob.png",
-  "src": "https://www.shipbob.com/wp-content/themes/shipbob-2022/resources/icons/favicon.ico"
- },
- "shipmonk": {
-  "checked": "2026-10-11",
-  "host": "shipmonk.com",
-  "f": "data/logos/shipmonk.png",
-  "src": "https://www.shipmonk.com/wp-content/uploads/2025/01/cropped-shipmonk-symbol-green-180x180.png"
- },
- "veritiv": {
-  "checked": "2026-10-11",
-  "host": "veritivcorp.com"
- },
- "dhl": {
-  "checked": "2026-10-11",
-  "host": "group.dhl.com",
-  "f": "data/logos/dhl.png",
-  "src": "https://group.dhl.com/favicon.ico"
- },
- "cmacgm": {
-  "checked": "2026-10-11",
-  "host": "cma-cgm.com"
  }
 }
