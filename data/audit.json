@@ -1,25 +1,8 @@
 {
- "run": "2026-10-12T04:45Z",
+ "run": "2026-10-12T05:25Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 40,
- "doc_cursor": 30,
- "checked_pairs": [
-  "0b8aff140a01",
-  "94d1ac334f4e",
-  "d46a0aebc57e",
-  "62cb3ae5df27",
-  "b54077ea2f7b",
-  "dbb89994655f",
-  "0cae9f6a1079",
-  "4e8faef9252d",
-  "14a3d7429698",
-  "5f83fff4b0b8",
-  "457e37db5347",
-  "9047a4b56aa7",
-  "454e4f8f6a6b"
- ],
  "issues": [
   {
    "sev": "high",
@@ -37,30 +20,6 @@
    "ids": [
     "af8ee5ed067c6"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: No story mentions Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian' plan, 39,400 ZIP codes, or 99.9% of demand by 2029. None of the stories supports these figures or the USPS contingency context.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The UPS Protected Delivery PIN requirement and $10.70 fee are supported by the UPS stories. The FedEx Authenticated Delivery claim (QR code required, $20 per package on select express services) appears in no story.",
-   "ids": [],
    "fixed": false
   }
  ],
@@ -81,30 +40,6 @@
    "ids": [
     "af8ee5ed067c6"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: No story mentions Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian' plan, 39,400 ZIP codes, or 99.9% of demand by 2029. None of the stories supports these figures or the USPS contingency context.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The UPS Protected Delivery PIN requirement and $10.70 fee are supported by the UPS stories. The FedEx Authenticated Delivery claim (QR code required, $20 per package on select express services) appears in no story.",
-   "ids": [],
    "fixed": false
   }
  ]
