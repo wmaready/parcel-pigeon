@@ -112,54 +112,62 @@
   },
   {
    "id": "21vekby",
-   "n": "21vek.by",
+   "n": "21vek.by (Triovist)",
    "realm": "retail",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Online hypermarket in Belarus that launched its own parcel delivery service, operated by TOO Triovist",
-   "al": [],
+   "hq": "Minsk, Belarus",
+   "yr": "2004",
+   "s": "Belarus's largest online hypermarket, operated by Triovist, which received a postal licence in June 2026 and launched its own parcel delivery service, 21vek.by POST, with branches in Minsk and nearby suburbs.",
+   "al": [
+    "21vek",
+    "21vek.by POST",
+    "OOO Triovist",
+    "TOO Triovist",
+    "Triovist"
+   ],
    "src": "https://nashaniva.com/en/406315",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-07",
-   "story": "adc86f608be44"
+   "story": "adc86f608be44",
+   "site": "21vek.by",
+   "geo": [
+    27.559,
+    53.901
+   ],
+   "enriched": "2026-10-12"
   },
   {
    "id": "belposhta",
-   "n": "Belposhta",
+   "n": "Belposhta (RUE Belpochta)",
    "realm": "national",
-   "own": null,
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Belarus postal operator that 21vek.by announced cooperation with in September 2024 on pick-up points",
-   "al": [],
+   "hq": "Minsk, Belarus",
+   "yr": "1995",
+   "s": "Belposhta is the state-owned national postal operator of Belarus. It handles domestic and international mail, parcels, EMS express and courier delivery.",
+   "al": [
+    "Belarus Post",
+    "Belpochta",
+    "Belpost",
+    "Белпочта",
+    "Белпошта",
+    "РУП «Белпочта»"
+   ],
    "src": "https://nashaniva.com/en/406315",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-07",
-   "story": "adc86f608be44"
-  },
-  {
-   "id": "retailmerchant",
-   "n": "Retail Merchants of Hawaii",
-   "realm": "retail",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Hawaii retail trade group",
-   "al": [],
-   "src": "https://www.hawaiipublicradio.org/local-news/2026-10-09/longer-delivery-time-for-mail-from-hawaii",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-09",
-   "story": "ab665e6db5daf"
+   "story": "adc86f608be44",
+   "site": "belpost.by",
+   "geo": [
+    27.559,
+    53.901
+   ],
+   "enriched": "2026-10-12"
   }
  ],
  "edges": [
