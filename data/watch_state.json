@@ -2,57 +2,68 @@
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 3
+  "lines": 3,
+  "pend": "23da3de8664b"
  },
  "https://ups.com/rateupdates": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 3
+  "lines": 3,
+  "pend": "7fca4ea9544b"
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 3
+  "lines": 3,
+  "pend": "aa915a81a97a"
  },
  "https://www.ups.com/us/en/service-alerts": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 3
+  "lines": 3,
+  "pend": "d3190bf60d9a"
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 2680
+  "lines": 2680,
+  "told": []
  },
  "https://www.fedex.com/en-us/service-guide.html": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "pend": "c455ed3baa61"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "pend": "c39ae48dd754"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "pend": "867ffe6a8999"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "pend": "327bc00b9f1f"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "pend": "9d48f025d604"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 56
+  "lines": 56,
+  "told": []
  },
  "https://pe.usps.com/PriceChange/Index": {
   "checked": "2026-10-12",
@@ -64,12 +75,14 @@
    "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
    "https://pe.usps.com/resources/PriceChange/USPS SKU User Guide_July2026.pdf"
   ],
-  "lines": 13
+  "lines": 13,
+  "told": []
  },
  "https://about.usps.com/newsroom/national-releases/": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 45
+  "lines": 45,
+  "told": []
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "checked": "2026-10-12",
@@ -80,24 +93,28 @@
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf"
   ],
-  "lines": 109
+  "lines": 109,
+  "told": []
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-10-12",
   "pdfs": [
    "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf"
   ],
-  "lines": 8
+  "lines": 8,
+  "told": []
  },
  "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1245
+  "lines": 1245,
+  "told": []
  },
  "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 3527
+  "lines": 3527,
+  "told": []
  },
  "https://speedeedelivery.com/service-updates/": {
   "checked": "2026-10-12",
@@ -126,18 +143,21 @@
    "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf",
    "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf"
   ],
-  "lines": 27
+  "lines": 27,
+  "told": []
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-10-12",
   "pdfs": [],
-  "lines": 1
+  "lines": 1,
+  "told": []
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-10-12",
   "pdfs": [
    "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf"
   ],
-  "lines": 27
+  "lines": 27,
+  "told": []
  }
 }
