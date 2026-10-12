@@ -204,11 +204,7 @@ def is_major(s):
     lvl = int(s.get("lvl") or 1)
     if lvl >= 3:
         return True
-    if s.get("cat") in PRICE_CATS and s.get("imp") == "up" and lvl >= 2 and cs & BIG4:
-        return True
-    if s.get("cat") in DEAL_CATS and lvl >= 2 and cs & BIG4:
-        return True
-    return False
+    return False                         # only the biggest (lvl 3) wait for your OK; everything else alerts live
 
 
 def topic_of(s):
@@ -260,9 +256,10 @@ def open_review(s, test=False, copy=None):
     if not ADMIN_IDS:
         print("  PP_ADMIN_IDS is empty, so no approval push to your phone (check the secret's name and that it's under Actions > Secrets)")
     if ADMIN_IDS:
-        push(("Test: " if test else "Approve? ") + title,
-             "Practice run. Approving sends it to your phone only." if test else
-             f"Goes to everyone in {AUTO_SEND_HOURS:g} h unless you hold it. Tap to review.",
+        # short and plain: what it is, and when it goes out on its own
+        push("Test: approve this alert?" if test else "Approve this alert?",
+             f"{title} · Reply send on GitHub to get the reader version" if test else
+             f"{title} · Sends {auto.strftime('%-I:%M %p').lower()} unless you hold it",
              link, ids=ADMIN_IDS, ttl=6 * 3600, key=None if test else "review:" + s["id"])
     ntfy("Parcel Pigeon: approve alert?", title, link)
     print("  review issue:", link)
@@ -332,14 +329,15 @@ def _review():
             note_once("Test not sent: add your Device ID as the PP_ADMIN_IDS secret (Settings > Secrets and variables > Actions), "
                       "then reply `send` again.")
             continue
-        r = push(("Test: " if test else "") + title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400,
+        r = push(title, msg, url, ids=ADMIN_IDS if test else None, ttl=2 * 86400,
                  key=None if test else (meta.get("k") or "major:" + str(meta.get("story"))))
         if r is None:
             note_once("Couldn't send: the OneSignal keys aren't set in GitHub Secrets yet. Add them and reply `send` again.")
             continue
         nobody = "not subscribed" in json.dumps(r.get("errors") or "")
         ok = bool(r.get("id")) or nobody
-        note = ("Test sent to your phone only. The approval flow works." if test and ok else
+        note = (f"Test sent to your phone only, exactly as readers would see it: **{title}** / {msg} (OneSignal id `{r.get('id')}`). "
+                "If it didn't arrive, check that alerts are on in the app and that PP_ADMIN_IDS matches the Device ID shown there." if test and ok else
                 "Sent to everyone with alerts on." if decision == "send" else
                 f"Sent automatically (no reply within {AUTO_SEND_HOURS:g} hours).") if ok else \
                f"OneSignal didn't send it: `{json.dumps(r.get('errors') or r)[:300]}`"
@@ -581,6 +579,11 @@ def run():
     except Exception as e:
         print("player research failed:", e, file=sys.stderr)
     try:
+        import players as _pl
+        _pl.backfill_sites(8)                # websites for companies already on the map, so their logos can be found
+    except Exception as e:
+        print("site lookup failed:", e, file=sys.stderr)
+    try:
         process_doc_requests()
     except Exception as e:
         print("doc requests failed:", e, file=sys.stderr)
@@ -690,7 +693,7 @@ def run():
     state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
     try:
         import media                        # company logos (monthly) and company photos for recent stories
-        media.logos(25)
+        media.logos(40)
         media.photos(6)
     except Exception as e:
         print("media failed:", e, file=sys.stderr)
@@ -715,7 +718,8 @@ def run():
 def test_alert():
     """Open a practice review issue. Approving it pushes to the editor's phone only."""
     open_review({"id": "demo", "title": "UPS adds a $1.25 test surcharge (practice alert)",
-                 "plain": "This is a test of Parcel Pigeon's approval flow. Reply send on the GitHub issue to get it on your phone."}, test=True)
+                 "plain": "This is a test of Parcel Pigeon's approval flow."}, test=True,
+                copy={"t": "UPS adds $1.25 test surcharge", "m": "Practice alert. This is exactly how a story alert looks to readers."})
 
 
 if __name__ == "__main__":

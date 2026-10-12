@@ -8,7 +8,7 @@ import feedparser, trafilatura, yaml
 from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy
 from scoop import is_covered, notify, PRESS, ask, big
 
-MAX_NEW_PER_RUN = 10          # cost guard: stories written per run
+MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each)
 MAX_AGE_DAYS = 7
 KEEP_LIVE = 250
 
@@ -402,7 +402,7 @@ def main():
             continue
         batch.append(it)
     print(f"{len(raw)} new candidates, {len(batch)} distinct headlines")
-    batch = batch[:60]
+    batch = batch[:90]
     if not batch:
         save("seen.json", list(seen)[-6000:]); return
 
@@ -503,6 +503,17 @@ def main():
                 story["act"] = None
             alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
             missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
+            if missing:
+                # one rewrite that drops the figures the articles don't contain, instead of asking the editor
+                try:
+                    s2 = parse_json(claude(MODEL_WRITE, WRITE_SYSTEM, prompt + "\n\nYour draft used numbers that are not in the articles: "
+                                           + ", ".join(missing) + ". Rewrite the full JSON using only numbers that appear in the articles; "
+                                           "leave a figure out rather than estimate or convert it.", max_tokens=2500))
+                    if isinstance(s2, dict) and s2.get("title") and s2.get("sum") and s2.get("plain"):
+                        story.update({"title": s2["title"], "sum": s2["sum"], "plain": s2["plain"]})
+                        missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
+                except Exception as e:
+                    print(f"  rewrite failed: {e}", file=sys.stderr)
             # Price changes belong on the rate clock; a story without a date can't get there.
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules") and story["imp"] == "up" and not story["act"] and not story["dates"]:
                 found = find_effective_date(story)
@@ -514,20 +525,24 @@ def main():
                                       "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."})
             # Official documents found in the sources go into the library (data/docs.json), the single list agents use
             story["_extras"] = {k: s.get(k) for k in ("docs", "deal", "rels", "orgs") if s.get(k)}
-            # Only ask the editor when it matters: numbers that don't match the sources, a possibly off-topic item,
-            # or a big story nobody else has confirmed yet. Everything else publishes on its own.
+            # Everything publishes on its own. The only hold: a figure the sources still don't support after the rewrite,
+            # on a story that changes prices for most shippers (lvl 3). Loosely related items publish, marked "edge".
             reasons = []
             if missing:
                 story["unsupported_numbers"] = missing
-                reasons.append("These numbers aren't in the sources: " + ", ".join(missing))
+                if int(story.get("lvl") or 1) >= 3:
+                    reasons.append("These numbers aren't in the sources: " + ", ".join(missing))
+                else:
+                    print(f"  dropped (numbers not in sources: {', '.join(missing)}): {story['title'][:70]}")
+                    written += 1
+                    continue
             if v.get("fit") == "edge":
-                reasons.append("It may be off-topic for small parcel.")
+                story["edge"] = True
+                story["lvl"] = 1
             primary = not any(any(p in x["src"].lower() for p in PRESS) for x in ordered)
             covered = is_covered(story["title"]) if primary else ["trade press source"]
             if primary and not covered:
                 story["exclusive"] = True
-                if big(story):
-                    reasons.append("It's big and nobody else has reported it yet.")
             if reasons:
                 url = ask(story, reasons, ordered)
                 review.insert(0, {"type": "needs-ok", "issue": url, "story": story, "note": " ".join(reasons)})

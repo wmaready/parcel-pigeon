@@ -21,7 +21,7 @@ def _img(url, min_side=48):
     r = get(url, timeout=25)
     ctype = r.headers.get("content-type", "").lower()
     if "svg" in ctype or url.lower().split("?")[0].endswith(".svg"):
-        return None                                   # raster only (no SVG renderer in the runner)
+        return ("svg", r.text)
     im = Image.open(io.BytesIO(r.content))
     if getattr(im, "n_frames", 1) > 1 or im.format == "ICO":
         try:
@@ -31,23 +31,37 @@ def _img(url, min_side=48):
     im.load()
     if min(im.size) < min_side:
         return None
-    return im
+    return ("img", im)
 
 
 def logo_candidates(domain):
+    """Best first: the logo the site itself declares (JSON-LD), the header logo image (often a crisp SVG wordmark),
+    then the app icons. Wordmarks read far better than tiny round app icons."""
     host = domain.split("/")[0]
     base = f"https://{host}/"
     out = []
     try:
         html = get(base, timeout=20).text
+        for m in re.finditer(r'"logo"\s*:\s*(?:\{[^}]*?"url"\s*:\s*)?"([^"]+)"', html):
+            out.append((900, urllib.parse.urljoin(base, m.group(1))))
+        head = html[:200000]
+        for tag in re.findall(r"<img[^>]+>", head, re.I):
+            attrs = tag.lower()
+            if "logo" not in attrs:
+                continue
+            src = (re.search(r'(?:data-src|src)=["\']([^"\']+)', tag, re.I) or [None, ""])[1]
+            if not src or src.startswith("data:") and "svg" not in src[:30]:
+                continue
+            score = 800 + (60 if src.lower().split("?")[0].endswith(".svg") else 0) + (30 if re.search(r"header|nav|brand", attrs) else 0)
+            out.append((score, urllib.parse.urljoin(base, src)))
         for tag in re.findall(r"<link[^>]+>", html, re.I):
             rel = (re.search(r'rel=["\']([^"\']+)', tag, re.I) or [None, ""])[1].lower()
             href = (re.search(r'href=["\']([^"\']+)', tag, re.I) or [None, ""])[1]
             if not href or "icon" not in rel:
                 continue
             sz = re.search(r'sizes=["\'](\d+)x(\d+)', tag, re.I)
-            score = (int(sz.group(1)) if sz else 0) + (500 if "apple-touch" in rel else 0)
-            out.append((score, urllib.parse.urljoin(base, href)))
+            score = (int(sz.group(1)) if sz else 0) + (500 if "apple-touch" in rel else 0) + (300 if href.lower().endswith(".svg") else 0)
+            out.append((min(score, 700), urllib.parse.urljoin(base, href)))
     except Exception:
         pass
     out += [(400, base + "apple-touch-icon.png"), (1, base + "favicon.ico")]
@@ -58,17 +72,54 @@ def logo_candidates(domain):
     return ordered
 
 
-def save_logo(pid, im):
+def clean_svg(text):
+    """Keep only drawing: no scripts, event handlers or outside references. Returns (svg, aspect) or None."""
+    t = re.sub(r"<\?xml[^>]*>|<!DOCTYPE[^>]*>|<!--.*?-->", "", text or "", flags=re.S)
+    t = re.sub(r"<(script|foreignObject|iframe|object|embed)\b.*?</\1>", "", t, flags=re.S | re.I)
+    t = re.sub(r"\son\w+\s*=\s*(\"[^\"]*\"|'[^']*')", "", t, flags=re.I)
+    t = re.sub(r"(xlink:)?href\s*=\s*[\"'](?!#|data:image/(?:png|jpe?g|gif|webp))[^\"']*[\"']", "", t, flags=re.I)
+    m = re.search(r"<svg\b[^>]*>", t, re.I)
+    if not m or len(t) > 300000:
+        return None
+    vb = re.search(r'viewBox=["\']\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)', m.group(0), re.I)
+    if vb:
+        w, h = float(vb.group(1)), float(vb.group(2))
+    else:
+        w = re.search(r'width=["\']([\d.]+)', m.group(0)); h = re.search(r'height=["\']([\d.]+)', m.group(0))
+        if not (w and h):
+            return None
+        w, h = float(w.group(1)), float(h.group(1))
+        t = t.replace(m.group(0), m.group(0)[:-1] + f' viewBox="0 0 {w:g} {h:g}">', 1)
+    if not h:
+        return None
+    return t[t.lower().index("<svg"):], w / h
+
+
+def save_logo(pid, got):
+    """Save a logo trimmed to its edges, keeping its shape, and return its width/height ratio."""
     from PIL import Image
-    im = im.convert("RGBA")
-    bbox = im.getbbox()                               # trim empty transparent border
+    LOGO_DIR.mkdir(exist_ok=True)
+    kind, obj = got
+    if kind == "svg":
+        c = clean_svg(obj)
+        if not c:
+            return None
+        (LOGO_DIR / f"{pid}.svg").write_text(c[0])
+        return "svg", round(c[1], 3)
+    im = obj.convert("RGBA")
+    bg = Image.new("RGBA", im.size, (255, 255, 255, 0))
+    bbox = im.getbbox()                               # trim transparent border
     if bbox:
         im = im.crop(bbox)
-    im.thumbnail((112, 112), Image.LANCZOS)
-    canvas = Image.new("RGBA", (128, 128), (0, 0, 0, 0))
-    canvas.paste(im, ((128 - im.width) // 2, (128 - im.height) // 2), im)
-    LOGO_DIR.mkdir(exist_ok=True)
-    canvas.save(LOGO_DIR / f"{pid}.png", optimize=True)
+    # also trim a plain white border
+    from PIL import ImageChops
+    diff = ImageChops.difference(im.convert("RGB"), Image.new("RGB", im.size, (255, 255, 255)))
+    bb2 = diff.getbbox()
+    if bb2 and (bb2[2] - bb2[0]) > 8 and (bb2[3] - bb2[1]) > 8:
+        im = im.crop(bb2)
+    im.thumbnail((480, 160) if im.width > im.height * 1.6 else (160, 160), Image.LANCZOS)
+    im.save(LOGO_DIR / f"{pid}.png", optimize=True)
+    return "png", round(im.width / max(1, im.height), 3)
 
 
 def logos(limit=25):
@@ -77,10 +128,15 @@ def logos(limit=25):
     for p in mp.get("players", []):
         if p.get("site") and not p.get("pending"):
             sites.setdefault(p["id"], p["site"])
+    for pid, site in load("sites.json", {}).items():         # looked up by players.backfill_sites
+        if site:
+            sites.setdefault(pid, site)
     idx = load("logos.json", {})
+    if not idx.get("_v2"):
+        idx = {"_v2": True}                           # redo every logo once with the better finder
     by_host = {}
     for pid, rec in idx.items():
-        if rec.get("f") and rec.get("host"):
+        if isinstance(rec, dict) and rec.get("f") and rec.get("host"):
             by_host[rec["host"]] = rec
     due = [pid for pid in sites if pid not in idx or
            (dt.date.fromisoformat(idx[pid].get("checked", "2000-01-01")) < TODAY - dt.timedelta(days=30))]
@@ -90,27 +146,31 @@ def logos(limit=25):
             break
         host = sites[pid].split("/")[0].lower().removeprefix("www.")
         if host in by_host and by_host[host].get("checked") == TODAY.isoformat():   # same company site as one done today
-            src = LOGO_DIR / by_host[host]["f"].split("/")[-1]
-            (LOGO_DIR / f"{pid}.png").write_bytes(src.read_bytes())
-            idx[pid] = {**by_host[host], "f": f"data/logos/{pid}.png"}
-            continue
+            idx[pid] = dict(by_host[host]); continue
         done += 1
         rec = {"checked": TODAY.isoformat(), "host": host}
-        for u in logo_candidates(sites[pid])[:6]:
+        for u in logo_candidates(sites[pid])[:8]:
             try:
-                im = _img(u)
+                got = _img(u)
             except Exception:
                 continue
-            if im is not None:
-                save_logo(pid, im)
-                rec.update({"f": f"data/logos/{pid}.png", "src": u})
+            if got is None:
+                continue
+            res = save_logo(pid, got)
+            if res:
+                rec.update({"f": f"data/logos/{pid}.{res[0]}", "ar": res[1], "src": u})
                 break
         idx[pid] = rec
         if rec.get("f"):
             by_host[host] = rec
-        print(f"  logo {pid}: {'ok' if rec.get('f') else 'none found'}")
+        print(f"  logo {pid}: {'ok ' + rec['f'].rsplit('.',1)[1] if rec.get('f') else 'none found'}")
     save("logos.json", idx)
-    print(f"logos: {sum(1 for r in idx.values() if r.get('f'))} on file, checked {done} this run")
+    have = [k for k, r in idx.items() if isinstance(r, dict) and r.get("f")]
+    miss = sorted(k for k, r in idx.items() if isinstance(r, dict) and not r.get("f"))
+    allp = seed.get("players", []) + mp.get("players", [])
+    nosite = sorted({p["n"] for p in allp if p.get("id") not in sites and not p.get("pending")})
+    save("logos_missing.json", {"no_logo_found": miss, "no_website_on_file": nosite})
+    print(f"logos: {len(have)} on file, {len(miss)} not found, {len(nosite)} without a website; checked {done} this run")
 
 
 def story_photo(url, sid):

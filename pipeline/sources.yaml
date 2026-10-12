@@ -107,6 +107,22 @@ discovery:
   - "NLRB Amazon DSP OR Teamsters UPS grievance"
   - "patent lawsuit delivery OR parcel OR logistics technology"
   - "antitrust Amazon logistics OR fulfillment"
+  - "UPS news parcel"
+  - "FedEx news parcel OR shipping"
+  - "USPS packages OR \"Ground Advantage\" OR \"Priority Mail\" news"
+  - "\"Amazon Logistics\" OR \"Amazon Shipping\" OR \"Amazon delivery\""
+  - "\"Ground Saver\" OR \"SurePost\" OR \"Ground Economy\""
+  - "regional parcel carrier expansion OR launches OR new service"
+  - "UPS OR FedEx building OR hub OR facility closing OR opening"
+  - "e-commerce shipping costs shippers 2026"
+  - "parcel volume 2026 OR \"parcel volumes\""
+  - "\"FedEx Freight\" OR \"UPS Supply Chain\" parcel"
+  - "\"Canada Post\" OR Purolator parcel U.S."
+  - "\"Postal Regulatory Commission\" OR PRC price OR rates"
+  - "site:parcelandpostaltechnologyinternational.com"
+  - "site:theloadstar.com parcel OR express"
+  - "site:supplychainbrain.com parcel OR last mile"
+  - "site:retailtouchpoints.com shipping OR delivery OR returns"
 
 watch:
   # UPS

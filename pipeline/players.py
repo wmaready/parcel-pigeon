@@ -33,17 +33,45 @@ Return JSON only:
 Links only to companies in the KNOWN list, only real announced relationships, each with the URL where you found it."""
 
 
-def ask(user, use_search=True):
-    body = {"model": MODEL_WRITE, "max_tokens": 2500, "system": RESEARCH, "messages": [{"role": "user", "content": user}]}
+def ask(user, use_search=True, system=None, max_tokens=2500):
+    body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": system or RESEARCH, "messages": [{"role": "user", "content": user}]}
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}]
     r = requests.post("https://api.anthropic.com/v1/messages", timeout=180, json=body,
                       headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
     if r.status_code >= 400 and use_search:
         print(f"  web search unavailable ({r.status_code}); researching from the story only", file=sys.stderr)
-        return ask(user, use_search=False)
+        return ask(user, use_search=False, system=system, max_tokens=max_tokens)
     r.raise_for_status()
     return "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
+
+
+SITE_Q = """Find the official website of this company, so its logo can be shown next to its name. Use web search.
+Only the company's own site: never a news site, directory, LinkedIn, Crunchbase or Wikipedia. If it was acquired and its old
+site now redirects, give the domain it redirects to. If you can't confirm one, say null.
+Reply JSON only: {"site": "domain.com" or null}"""
+
+
+def backfill_sites(limit=8):
+    """Companies already on the map without a website on file get one looked up (a few per run), so media.py can fetch
+    their logo. Results go to data/sites.json; an empty value means 'looked, none found' so it isn't retried."""
+    if not API_KEY:
+        return
+    seed, mp = load("seed.json", {}), load("players.json", {"players": []})
+    sites, have = load("sites.json", {}), dict(seed.get("psite") or {})
+    allp = [p for p in seed.get("players", []) + mp.get("players", []) if not p.get("pending")]
+    todo = [p for p in allp if p["id"] not in have and not p.get("site") and p["id"] not in sites][:limit]
+    for p in todo:
+        try:
+            res = parse_json(ask(f"Company: {p['n']}\nAlso known as: {', '.join(p.get('al') or [])}\nWhat it does: {p.get('s') or ''}\nHQ: {p.get('hq') or ''}",
+                                 system=SITE_Q, max_tokens=400)) or {}
+        except Exception as e:
+            print(f"  site lookup failed for {p['n']}: {e}", file=sys.stderr); continue
+        site = re.sub(r"^https?://(www\.)?", "", str(res.get("site") or "")).strip("/ ").split("/")[0].lower()
+        sites[p["id"]] = site if re.match(r"^[a-z0-9.-]+\.[a-z]{2,}$", site) else ""
+        print(f"  site for {p['n']}: {sites[p['id']] or 'none found'}")
+    if todo:
+        save("sites.json", sites)
 
 
 def main():
