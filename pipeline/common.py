@@ -159,3 +159,48 @@ def known_doc_urls(lib=None):
     seed = load("seed.json", {})
     docs = (seed.get("docs") or []) + (lib if lib is not None else load("docs.json", []))
     return {canon(d.get("u") or "") for d in docs if d.get("u")}
+
+
+# ---------------------------------------------------------------- one story per event
+def _words(t):
+    return {w for w in re.findall(r"[a-z0-9$%]+", (t or "").lower()) if len(w) > 2 and w not in
+            {"the", "and", "for", "its", "with", "now", "new", "posts", "page", "files", "on", "list", "lists"}}
+
+
+def same_event(a, b):
+    """Two stories about the same thing: same carrier, a few days apart, and either the same source page or very
+    similar headlines. Catches a watcher re-describing one page change in new words every hour."""
+    if not set(a.get("c") or []) & set(b.get("c") or []):
+        return False
+    try:
+        import datetime as _dt
+        if abs((_dt.date.fromisoformat(a["date"][:10]) - _dt.date.fromisoformat(b["date"][:10])).days) > 4:
+            return False
+    except Exception:
+        return False
+    ua = canon(((a.get("srcs") or [{}])[0].get("url")) or a.get("url") or "")
+    ub = canon(((b.get("srcs") or [{}])[0].get("url")) or b.get("url") or "")
+    A, B = _words(a.get("title")), _words(b.get("title"))
+    sim = len(A & B) / max(1, min(len(A), len(B)))
+    return (ua and ua == ub and sim >= 0.34) or sim >= 0.7
+
+
+def dedupe_live(live):
+    """Keep the first story of each event (merging the others' sources into it); log the rest in retracted.json."""
+    out, gone = [], []
+    for s in sorted(live, key=lambda x: (x.get("date") or "", x.get("id") or "")):
+        twin = next((k for k in out if same_event(k, s)), None)
+        if twin is None:
+            out.append(s); continue
+        have = {canon(x.get("url") or "") for x in twin.get("srcs") or []}
+        for x in s.get("srcs") or []:
+            if canon(x.get("url") or "") not in have:
+                twin.setdefault("srcs", []).append(x)
+        gone.append({"id": s.get("id"), "why": f"Same event as {twin.get('id')}: {twin.get('title')}"})
+    if gone:
+        log = load("retracted.json", [])
+        known = {x.get("id") for x in log}
+        save("retracted.json", log + [g for g in gone if g["id"] not in known])
+        print(f"dedupe: merged {len(gone)} repeat stories into the first report of each event")
+    out.sort(key=lambda x: x.get("date") or "", reverse=True)
+    return out

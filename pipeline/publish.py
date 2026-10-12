@@ -55,7 +55,10 @@ def main():
             requests.patch(iss["url"], headers=hdr, json={"state": "closed", "state_reason": "not_planned"}, timeout=30)
             print(f"skipped: {iss.get('title')}")
             continue
-        story = json.loads(m.group(1))
+        try:
+            story = json.loads(m.group(1))
+        except Exception as e:
+            print(f"publish: draft #{iss.get('number')} has unreadable story data ({e}); skipped"); continue
         for label, key in FIELDS.items():
             f = re.search(rf"^{label}:\s*(.+)$", body, re.M)
             if f and f.group(1).strip():

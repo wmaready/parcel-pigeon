@@ -9,6 +9,7 @@ import requests, trafilatura, yaml
 from pypdf import PdfReader
 from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls
 from scoop import is_covered, notify, ask, big
+from common import dedupe_live, same_event
 from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
 
 SNAP = DATA / "snapshots"
@@ -173,13 +174,20 @@ def main():
         def accept():
             # the snapshot moves forward only once this change is handled, so a failed analysis is retried next run
             snap.write_text("\n".join(new))
-            state[item["url"]] = {"checked": today, "pdfs": pdfs, "lines": len(new)}
+            state[item["url"]] = {"checked": today, "pdfs": pdfs, "lines": len(new), "told": (state.get(item["url"]) or {}).get("told", [])}
         if first:
             accept(); print(f"baseline saved: {item['carrier']} {item['name']}"); continue
         removed, added = diff_lines(old, new)
         gone_pdfs = sorted(prev_pdfs - set(pdfs)) if prev else []
         if not removed and not added and not new_pdfs:
+            state.setdefault(item["url"], {}).pop("pend", None)
             accept(); continue
+        # a change has to show up on two runs in a row before it counts: some carrier pages load differently from one
+        # read to the next, and a page that flickers between two versions must not look like a new posting each hour
+        sig = h("\n".join(new) + "|" + ",".join(new_pdfs))
+        if (prev or {}).get("pend") != sig:
+            state.setdefault(item["url"], dict(prev or {}))["pend"] = sig
+            print(f"  change seen once, confirming next run: {item['name']}"); continue
         # Spotting a change is step one; the audit says exactly what changed, before and after, and proves it.
         results, failed = [], False
         lib = load("docs.json", [])
@@ -223,6 +231,17 @@ def main():
         if not material:
             drafts.insert(0, {"status": "not material", "date": today, "page": item["url"], "verdicts": verdicts})
             print(f"  checked, nothing material: {item['name']} [{verdicts}]"); continue
+        # drop changes this page has already been reported for (fingerprint: what + after), so a re-read never repeats a story
+        told = set(state.get(item["url"], {}).get("told", []))
+        fp = lambda c: h((c.get("what") or "").lower().strip() + "|" + re.sub(r"\s+", " ", (c.get("after") or "").lower()).strip())
+        for r in material:
+            r["changes"] = [c for c in r["changes"] if fp(c) not in told]
+        material = [r for r in material if r["changes"]]
+        if not material:
+            drafts.insert(0, {"status": "already reported", "date": today, "page": item["url"], "verdicts": verdicts})
+            print(f"  already reported, skipped: {item['name']}"); continue
+        st = state.setdefault(item["url"], {})
+        st["told"] = (st.get("told", []) + [fp(c) for r in material for c in r["changes"]])[-300:]
         material.sort(key=lambda r: (-int(r.get("lvl") or 1), -len(r["changes"])))
         lead = material[0]
         f = story_fields(lead, item["carrier"])
@@ -256,11 +275,19 @@ def main():
             drafts.insert(0, {"status": "asked", "issue": url, "story": story})
             continue
         live = load("news.json", [])
+        twin = next((x for x in live if same_event(x, story)), None)
+        if twin:
+            drafts.insert(0, {"status": "same as published", "story": story, "twin": twin.get("id")})
+            print(f"  same event already published ({twin.get('id')}), skipped: {story['title']}"); continue
         if not any(x.get("id") == story["id"] for x in live):
             live.insert(0, story); save("news.json", live)
         drafts.insert(0, {"status": "published", "story": story})
         print(f"  PUBLISHED: {story['title']} [{verdicts}]")
     save("watch_state.json", state); save("drafts.json", drafts[:200])
+    live = load("news.json", [])
+    clean = dedupe_live(live)
+    if len(clean) != len(live):
+        save("news.json", clean)
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, re, sys, urllib.parse
 import feedparser, trafilatura, yaml
-from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy
+from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy
 from scoop import is_covered, notify, PRESS, ask, big
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each)
@@ -43,15 +43,21 @@ and general industry news, even when there is no price change. Freight, ocean, L
 they state a direct effect on small parcel. Drop items that are not about parcel at all, pure stock tips, sponsored
 content, and anything about one private shipper's own contract.
 
-You also get RECENT STORIES already published (id: title). If an item covers the same event as a recent story, set
-"same_as" to that id. Items marked SUPPORTING SOURCE ONLY (other consultancies and audit firms) should get "same_as" when they cover a recent story and keep=false otherwise. Items in this batch that cover the same event as each other get the same short "event" key
+You also get RECENT STORIES already published (id: title) and ACTIVE STORYLINES (key: name). If an item reports the
+same event as a recent story and adds NO new development, set "same_as" to that id. A new development in an ongoing story
+(a new offer in labor talks, a ruling, a deal closing, a rate taking effect, a follow-up with new facts) is NOT same_as: keep
+it as its own item and put it in that storyline. Storylines are how a news desk follows a subject over weeks or months. Items marked SUPPORTING SOURCE ONLY (other consultancies and audit firms) should get "same_as" when they cover a recent story and keep=false otherwise. Items in this batch that cover the same event as each other get the same short "event" key
 (e.g. "ups-2027-gri"); every other kept item gets its own unique key.
 
 Reply with JSON only: a list of objects
 {{"i": index, "keep": true|false, "carriers": [subset of {CARRIERS}, or ["Industry"] if no specific carrier],
 "category": one of {CATEGORIES}, "kind": "News"|"Opinion"|"Analysis", "event": short key, "same_as": id or null,
 "fit": "core" if it is plainly small parcel news, "edge" if you are keeping it but it is only loosely tied to small parcel
-(general freight, trucking or ocean, broad retail or economy, tech not specific to shipping, a local story)}}."""
+(general freight, trucking or ocean, broad retail or economy, tech not specific to shipping, a local story),
+"thread": the key of the ACTIVE STORYLINE it belongs to, or a new short lowercase key (e.g. "ups-teamsters-contract",
+"usps-delivering-for-america", "de-minimis-end", "fedex-network-2", "ups-amazon-glide-down", "2027-gri") when it is part of a
+subject likely to keep developing (labor talks, lawsuits and rulings, regulation, network overhauls, pending deals, a rate
+cycle, a carrier's ongoing strategy), or null for a one-off item}}."""
 
 WRITE_SYSTEM = f"""You write for Parcel Pigeon, a small parcel trade news service in the style of Supply Chain Dive and
 FreightWaves: neutral, factual, attributed. Use ONLY facts in the articles provided. Never invent numbers, dates or names;
@@ -436,9 +442,49 @@ def publish_extras(story, s, live=()):
         except Exception as e:
             print(f"  market map: {e}", file=sys.stderr)
 
+BACKFILL = """You organize a parcel news desk's archive into storylines: subjects followed over weeks or months (labor talks,
+lawsuits and rulings, regulation, network overhauls, pending deals, rate cycles, a carrier's ongoing strategy).
+You get stories as "id | date | title". Group the stories that belong to the same storyline; skip one-off stories.
+Only group stories that are clearly about the same ongoing subject. Reply JSON only:
+[{"key": "short-lowercase-key", "n": "storyline name under 40 characters", "s": "one sentence: where it stands now, from the titles only", "ids": ["id", ...]}]
+Every storyline needs at least 2 stories."""
+
+
+def backfill_threads(live):
+    """One time: group what's already published (and the app's built-in stories) into storylines."""
+    pool = {s["id"]: s for s in load("seed.json", {}).get("news", []) + live if s.get("id")}
+    rows = sorted(pool.values(), key=lambda s: s.get("date") or "")[-220:]
+    if len(rows) < 4:
+        return {}
+    try:
+        res = parse_json(claude(MODEL_WRITE, BACKFILL, "\n".join(f"{s['id']} | {s.get('date')} | {s.get('title')}" for s in rows), max_tokens=6000)) or []
+    except Exception as e:
+        print("storyline backfill failed:", e, file=sys.stderr); return {}
+    threads = {}
+    for t in res if isinstance(res, list) else []:
+        key = re.sub(r"[^a-z0-9-]+", "-", str(t.get("key") or "").lower()).strip("-")[:60]
+        ids = sorted([i for i in t.get("ids") or [] if i in pool], key=lambda i: pool[i].get("date") or "")
+        if not key or len(ids) < 2:
+            continue
+        threads[key] = {"n": str(t.get("n") or key)[:60], "s": t.get("s"), "ids": ids, "first": pool[ids[0]].get("date"),
+                        "last": pool[ids[-1]].get("date"), "c": sorted({c for i in ids for c in pool[i].get("c") or []})}
+        for n, i in enumerate(ids):
+            if i in {x["id"] for x in live}:
+                st = next(x for x in live if x["id"] == i)
+                st["thread"] = key
+                if n:
+                    st["upd"] = n + 1
+    save("threads.json", threads)
+    print(f"storylines: grouped the archive into {len(threads)} storylines")
+    return threads
+
+
 def main():
     cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
     live, review, seen = load("news.json", []), load("review.json", []), set(load("seen.json", []))
+    threads = load("threads.json", {})
+    if not threads:
+        threads = backfill_threads(live)
     allitems = collect(cfg)
     week = (dt.date.today() - dt.timedelta(days=7)).isoformat()
     retry = [x for x in review if x.get("type") == "headline-only" and (x.get("date") or "") >= week and not x.get("retried")]
@@ -463,7 +509,10 @@ def main():
         save("seen.json", list(seen)[-6000:]); return
 
     recent = [s for s in live if s["date"] >= (dt.date.today() - dt.timedelta(days=14)).isoformat()][:60]
-    head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent)
+    active = sorted(((k, t) for k, t in threads.items() if (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
+                    key=lambda kt: kt[1].get("last") or "", reverse=True)[:60]
+    head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent) + \
+           "\n\nACTIVE STORYLINES:\n" + ("\n".join(f"{k}: {t.get('n')} (last {t.get('last')})" for k, t in active) or "(none yet)")
     # screen in chunks of 20 so a long first run can't overflow one reply; item numbers stay global
     verdicts = []
     for c0 in range(0, len(batch), 20):
@@ -477,6 +526,7 @@ def main():
     for b in batch:
         seen.add(h(b["url"]))
     by_id = {s["id"]: s for s in live}
+    archive = {**{x["id"]: x for x in load("seed.json", {}).get("news", []) if x.get("id")}, **by_id}   # storyline history
     groups, merged = {}, 0
     for v in verdicts:
         if not v.get("keep") or not (0 <= v.get("i", -1) < len(batch)):
@@ -511,6 +561,18 @@ def main():
             v = members[0][1]
             prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
                                    for n, (it, _, tx) in enumerate(texts))
+            tkey = (v.get("thread") or "").strip().lower()[:60] or None
+            if tkey and not re.match(r"^[a-z0-9][a-z0-9-]{2,59}$", tkey):
+                tkey = None
+            prior = [archive[i] for i in (threads.get(tkey) or {}).get("ids", []) if i in archive][-4:] if tkey else []
+            if tkey:
+                prompt += ("\n\nSTORYLINE: " + ((threads.get(tkey) or {}).get("n") or tkey) + "\n" +
+                    ("EARLIER COVERAGE (oldest first):\n" + "\n".join(f"- {x['date']}: {x['title']}. {x.get('sum','')}" for x in prior) +
+                     "\nThis article is the next update in this storyline. " if prior else "This article starts a storyline. ") +
+                    'Add three keys to your JSON: "thread_name": a short name for the storyline, under 40 characters '
+                    '(e.g. "UPS–Teamsters contract"); "status": one sentence on where the storyline stands now; "new": ' +
+                    ('one sentence on what is new compared with the earlier coverage and how that changes things for shippers '
+                     '(only facts from the articles).' if prior else 'null.'))
             try:
                 s = None
                 for attempt in range(2):
@@ -541,6 +603,12 @@ def main():
                      "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
                      "act": s.get("act"), "dates": s.get("dates") or [],
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
+            if tkey:
+                story["thread"] = tkey
+                if prior:
+                    story["upd"] = len((threads.get(tkey) or {}).get("ids", [])) + 1
+                    if s.get("new"):
+                        story["new"] = s["new"]
             # photos: only the company's own announcement image (never trade press), saved with the site
             for sx in story["srcs"]:
                 if is_primary(sx["url"]):
@@ -607,11 +675,21 @@ def main():
             story.pop("_extras", None)
             live.insert(0, story); by_id[story["id"]] = story
             publish_extras(story, s, live)
+            if tkey:
+                t = threads.setdefault(tkey, {"n": s.get("thread_name") or tkey.replace("-", " ").title(), "ids": [], "first": story["date"]})
+                if s.get("thread_name") and not prior:
+                    t["n"] = s["thread_name"][:60]
+                if s.get("status"):
+                    t["s"] = s["status"]
+                t["ids"] = [i for i in t["ids"] if i != story["id"]] + [story["id"]]
+                t["last"] = max(t.get("last") or "", story["date"])
+                t["c"] = sorted(set(t.get("c") or []) | set(story["c"]))
+                save("threads.json", threads)
             written += 1
         except Exception as e:
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
-    live.sort(key=lambda s: s["date"], reverse=True)
+    live = dedupe_live(live)
     save("news.json", live[:KEEP_LIVE]); save("review.json", review[:200]); save("seen.json", list(seen)[-6000:])
     print(f"wrote {written} stories; {len(live)} live; {len(review)} in review")
 

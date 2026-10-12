@@ -32,7 +32,12 @@ def main():
     text = "ALREADY BRIEFED:\n" + "\n".join(f"- {h}" for h in history) + "\n\nSTORIES:\n" + "\n".join(
         f"- id={s['id']} date={s['date']} [{s['cat']}] {'FIRST TO REPORT ' if s.get('exclusive') else ''}{'(routine follow-up) ' if s.get('routine') else ''}"
         f"{s['title']}: {s.get('sum','')} Effect: {s.get('plain','')}" for s in recent)
-    items = parse_json(claude(MODEL_WRITE, SYSTEM, text, max_tokens=900))[:3]
+    reply = claude(MODEL_WRITE, SYSTEM, text, max_tokens=900)
+    try:
+        items = parse_json(reply)[:3]
+    except Exception as e:
+        print(f"brief: couldn't read the reply ({e}); first 200 characters: {str(reply)[:200]!r}. Keeping the last brief.")
+        return
     if len(items) < 3:
         return
     leads = [i["text"].split("</b>")[0].replace("<b>", "") for i in items]

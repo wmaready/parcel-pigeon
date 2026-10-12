@@ -4,7 +4,8 @@ Readers hear about each story on its own, as it comes in, but never a pile at on
   Regular  every new story, rate clock reminder and new company joins a queue. Each run (every two hours) sends at most
            MAX_PER_RUN pushes. A quiet run (one or two items) sends each on its own, SPACING_MIN apart. A busy run
            (three or more) sends the biggest story on its own and rolls the rest into ONE "N more" note, so bigger news
-           gets its own alert and small items never pile up. No more than MAX_PER_DAY a day. Held overnight
+           gets its own alert and small items never pile up. Regular pushes stay MIN_GAP_MIN apart across runs
+           (alerts.py runs hourly from watch.yml too); big news skips the wait. No more than MAX_PER_DAY a day. Held overnight
            (9 p.m. to 7 a.m. Eastern). Weekly fuel moves go only to readers who set a threshold.
   Major    goes to the editor first: a GitHub issue (GitHub emails it) plus a push to the editor's own phone.
            Reply "send" on the issue to push it to everyone now, "hold" to stop it. With no reply it goes out
@@ -40,6 +41,7 @@ MAX_REGULAR_SENDS = 8                    # copy is written for at most this many
 MAX_PER_RUN = 2                          # separate story pushes per run (runs are two hours apart)
 SPACING_MIN = 55                         # minutes between pushes sent in the same run
 MAX_PER_DAY = 10                         # per day, all readers; anything past this stays in the app
+MIN_GAP_MIN = 50                         # minutes between regular pushes across runs (big news skips the wait)
 QUEUE_HOURS = 30                         # a story that hasn't gone out by then is old news; it stays in the app only
 MAX_MAJOR_PER_RUN = 3
 FRESH_DAYS = 2                           # only alert on stories from the last two days
@@ -641,11 +643,18 @@ def send_queued(state):
              key="fuel:" + ",".join(f"{c}:{v[0]}" for c, v in sorted(fq.items())))
         state["fuelq"] = {}
         sent += 1
+    sent_times = []
     cutoff = now_et() - dt.timedelta(hours=QUEUE_HOURS)
     queue = [q for q in state.get("queue") or [] if q["key"] not in SENT
              and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff]
     queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), q["kind"] != "story", q.get("at") or ""))
     room = max(0, min(MAX_PER_RUN, MAX_PER_DAY - count_today(state, 0)))
+    # alerts.py runs hourly (watch) and every two hours (update): keep regular pushes about an hour apart across runs
+    last = state.get("last_push")
+    if last and queue and not queue[0].get("big") and now_et() < dt.datetime.fromisoformat(last) + dt.timedelta(minutes=MIN_GAP_MIN):
+        state["queue"] = queue
+        print(f"  last alert went out under {MIN_GAP_MIN} minutes ago; {len(queue)} wait for the next run")
+        return sent
     if not room or not queue:
         pass
     elif len(queue) <= 2:
@@ -657,7 +666,7 @@ def send_queued(state):
             extra = [{"field": "tag", "key": TOPIC_TAG[q["topic"]], "relation": "=", "value": "1"}]
             r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after)
             if r is not None:
-                count_today(state); sent += 1
+                count_today(state); sent += 1; sent_times.append(after or now_et())
     else:
         # a busy run: the biggest story gets its own alert (if it's real news), everything else is one roll-up
         lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 2) else None
@@ -666,7 +675,7 @@ def send_queued(state):
             extra = [{"field": "tag", "key": TOPIC_TAG[lead["topic"]], "relation": "=", "value": "1"}]
             r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"])
             if r is not None:
-                count_today(state); sent += 1
+                count_today(state); sent += 1; sent_times.append(now_et())
         if rest and count_today(state, 0) < MAX_PER_DAY and (not lead or room > 1):
             words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
             r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", " · ".join(q["t"] for q in rest[:3]) + (" …" if len(rest) > 3 else ""),
@@ -674,7 +683,10 @@ def send_queued(state):
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
             if r is not None:
                 SENT.extend(q["key"] for q in rest); count_today(state); sent += 1
+                sent_times.append(now_et() + dt.timedelta(minutes=SPACING_MIN) if lead else now_et())
     state["queue"] = [q for q in queue if q["key"] not in SENT]
+    if sent_times:
+        state["last_push"] = max(sent_times).isoformat()
     if len(state["queue"]) > 0:
         print(f"  {len(state['queue'])} alert(s) wait for the next run")
     return sent
