@@ -42,7 +42,13 @@
   "last": "2026-10-11",
   "c": [
    "FedEx"
-  ]
+  ],
+  "cx": {
+   "sig": "ed8f6883916d",
+   "beats": {},
+   "intro": "FedEx's Network 2.0 effort to combine its Ground and Express networks, and the cost program behind it.",
+   "now": "Earlier coverage says FedEx expects the U.S. rollout of merged Ground and Express pickup and delivery to be complete by the end of 2027."
+  }
  },
  "usps-air-cargo": {
   "n": "USPS air cargo contract",
@@ -107,7 +113,15 @@
    "FedEx",
    "Industry",
    "UPS"
-  ]
+  ],
+  "cx": {
+   "sig": "dbe4c7321e1f",
+   "beats": {
+    "a771628a2eca4": "CBP began processing refunds for some finally liquidated entries, with 477 CAPE declarations covering 425,517 entries accepted so far."
+   },
+   "intro": "IEEPA tariff refunds: how the Supreme Court's February ruling is making its way back to shippers through carriers and customs.",
+   "now": "CBP is processing refunds, and FedEx, UPS and DHL are passing them to customers. UPS refunds arrive one to three months after Treasury reimburses it."
+  }
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
@@ -147,7 +161,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges",
-  "s": "Peak surcharges are now in effect on oversize packages, with home delivery surcharges due Oct. 24 to 26 and USPS holiday prices live.",
+  "s": "USPS holiday prices took effect Oct. 4 and carrier peak surcharges are phasing in through late October, and the carriers have now published their Christmas delivery deadlines.",
   "ids": [
    "h416",
    "h418",
@@ -156,10 +170,11 @@
    "h525",
    "h527",
    "06",
-   "01"
+   "01",
+   "a945e2139bb15"
   ],
   "first": "2024-07-26",
-  "last": "2026-10-08",
+  "last": "2026-10-12",
   "c": [
    "Amazon",
    "FedEx",
@@ -209,7 +224,12 @@
   "last": "2026-10-12",
   "c": [
    "USPS"
-  ]
+  ],
+  "cx": {
+   "sig": "a59373534973",
+   "beats": {},
+   "intro": "How USPS service standards and processing changes have affected mail speed, with shippers feeling the effects of each step."
+  }
  },
  "usps-finances": {
   "n": "USPS losses and package volume",

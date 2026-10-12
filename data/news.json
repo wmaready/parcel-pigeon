@@ -55,6 +55,39 @@
   "exclusive": true
  },
  {
+  "id": "a30530b988200",
+  "date": "2026-10-12",
+  "c": [
+   "Amazon",
+   "USPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "Amazon generally delivers on Columbus Day while USPS observes holiday",
+  "sum": "The Sunday Guardian reported on October 12, 2026 that Amazon deliveries generally continue on Columbus Day, while the US Postal Service observes the federal holiday and generally suspends regular mail delivery and retail services. The outlet said availability of Prime same-day and next-day delivery varies by location, item and carrier.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Amazon deliveries generally continue on Columbus Day, October 12, 2026, while regular USPS delivery is generally suspended. Packages that rely on USPS or third-party carriers may follow different schedules.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "About Amazon",
+  "url": "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion",
+  "srcs": [
+   {
+    "src": "About Amazon",
+    "url": "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion"
+   },
+   {
+    "src": "The Sunday Guardian",
+    "url": "https://sundayguardianlive.com/world/amazon-delivery-on-columbus-day-2026-does-amazon-deliver-today-check-amazon-prime-same-day-next-day-delivery-package-tracking-status-shipping-delays-holiday-schedule-304476/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a73a591c528d3",
   "date": "2026-10-12",
   "c": [
@@ -141,6 +174,38 @@
   "exclusive": true,
   "thread": "drone-delivery",
   "upd": 9
+ },
+ {
+  "id": "a945e2139bb15",
+  "date": "2026-10-12",
+  "c": [
+   "USPS",
+   "UPS",
+   "FedEx"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "USPS, UPS, FedEx publish 2026 holiday shipping deadlines",
+  "sum": "USPS, UPS and FedEx have released their 2026 holiday shipping deadlines for delivery by Christmas Day, according to Spectrum News. For the lower 48 states, USPS lists Dec. 17 for Ground Advantage and First-Class Mail, Dec. 18 for Priority Mail and Dec. 19 for Priority Mail Express. UPS Next Day Air is listed at Dec. 23 and FedEx SameDay at Dec. 24.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "The deadlines are last-ship dates for delivery by Christmas Day. They do not change rates or fees. For UPS Ground, FedEx Home Delivery and FedEx Ground, the article points to the carriers' calculators rather than a fixed date.",
+  "tie": "The deadlines follow the Oct. 4, 2026 start of USPS holiday prices and the peak surcharges at UPS, FedEx, OnTrac and Amazon Shipping covered in October 2026.",
+  "act": null,
+  "dates": [],
+  "src": "Spectrum News",
+  "url": "https://spectrumnews1.com/oh/columbus/news/2026/09/22/2026-holiday-shipping-deadlines",
+  "srcs": [
+   {
+    "src": "Spectrum News",
+    "url": "https://spectrumnews1.com/oh/columbus/news/2026/09/22/2026-holiday-shipping-deadlines"
+   }
+  ],
+  "auto": true,
+  "thread": "peak-surcharges",
+  "upd": 3,
+  "new": "The carriers' last-ship dates are now published: USPS Dec. 17 to 19 for its main products in the lower 48 states, UPS Dec. 21 to 23 for its air services, and FedEx Dec. 15 for Ground Economy and Dec. 21 to 24 for its express services. Shippers can set cutoffs against these dates, which apply while the holiday surcharges are in effect.",
+  "exclusive": true
  },
  {
   "id": "a9ecc86b6711f",

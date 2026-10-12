@@ -38,31 +38,35 @@
   "a1cfdcc1943ed",
   "ac1d01500ab14",
   "a2de36ed1ca48",
-  "a9ecc86b6711f"
+  "a9ecc86b6711f",
+  "a30530b988200",
+  "a945e2139bb15"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "w3d06a7fa766e",
-  "w1a58abf8b69d",
   "wf225c9a3bf63",
-  "w82629d496c23",
-  "w150132868eae",
-  "ac1d01500ab14",
   "aad7e6789b34e",
-  "afbf819454788",
+  "wbf2ef019cc6e",
+  "ae77827c0481e",
+  "af8ee5ed067c6",
+  "abf01a11b3d9e",
+  "a945e2139bb15",
+  "w150132868eae",
   "w348418a9dc09",
   "w49b3786a59a5",
-  "ae77827c0481e",
-  "a1785bbd2ecbb",
-  "wb612a77519f2",
-  "af8ee5ed067c6",
-  "wbf2ef019cc6e",
-  "wa0dc8b706733",
+  "w82629d496c23",
+  "afbf819454788",
   "w8a582ba4f6eb",
-  "abf01a11b3d9e"
+  "w1a58abf8b69d",
+  "w3d06a7fa766e",
+  "wa0dc8b706733",
+  "a1785bbd2ecbb",
+  "ac1d01500ab14",
+  "a30530b988200",
+  "wb612a77519f2"
  ],
  "backfilled": true,
  "players": [
@@ -139,7 +143,9 @@
   "fedex renames trucking units plans residential ground servic",
   "usps relocates coffee springs al post office operations to g",
   "gls us launches gls connect digital shipping platform",
-  "federal agents raid kansas city usps center arrest several e"
+  "federal agents raid kansas city usps center arrest several e",
+  "amazon generally delivers on columbus day while usps observe",
+  "usps ups fedex publish 2026 holiday shipping deadlines"
  ],
  "copy": {
   "a78db2954da94": {
@@ -205,6 +211,14 @@
   "a9ecc86b6711f": {
    "t": "Federal raid at Kansas City USPS center",
    "m": "Agents arrested several employees; rates and service are unchanged, and local mail delays have not been…"
+  },
+  "a30530b988200": {
+   "t": "Amazon delivers on Columbus Day 2026",
+   "m": "Amazon deliveries generally continue on October 12, while USPS delivery is generally suspended that day."
+  },
+  "a945e2139bb15": {
+   "t": "USPS, UPS, FedEx post 2026 holiday deadlines",
+   "m": "These are last-ship dates for Christmas delivery; they don't change rates or fees. UPS and FedEx Ground use…"
   }
  },
  "recent": [
@@ -546,9 +560,75 @@
      "url": "https://northplattebulletin.com/amid-mail-delays-federal-agents-raid-kansas-city-usps-distribution-center/"
     }
    ]
+  },
+  {
+   "id": "a30530b988200",
+   "title": "Amazon generally delivers on Columbus Day while USPS observes holiday",
+   "date": "2026-10-12",
+   "c": [
+    "Amazon",
+    "USPS"
+   ],
+   "url": "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion",
+   "srcs": [
+    {
+     "src": "About Amazon",
+     "url": "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion"
+    },
+    {
+     "src": "The Sunday Guardian",
+     "url": "https://sundayguardianlive.com/world/amazon-delivery-on-columbus-day-2026-does-amazon-deliver-today-check-amazon-prime-same-day-next-day-delivery-package-tracking-status-shipping-delays-holiday-schedule-304476/"
+    }
+   ]
+  },
+  {
+   "id": "a945e2139bb15",
+   "title": "USPS, UPS, FedEx publish 2026 holiday shipping deadlines",
+   "date": "2026-10-12",
+   "c": [
+    "USPS",
+    "UPS",
+    "FedEx"
+   ],
+   "url": "https://spectrumnews1.com/oh/columbus/news/2026/09/22/2026-holiday-shipping-deadlines",
+   "srcs": [
+    {
+     "src": "Spectrum News",
+     "url": "https://spectrumnews1.com/oh/columbus/news/2026/09/22/2026-holiday-shipping-deadlines"
+    }
+   ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:amazon generally delivers on columbus day while usps observes holiday",
+   "id": "a30530b988200",
+   "t": "Amazon delivers on Columbus Day 2026",
+   "m": "Amazon deliveries generally continue on October 12, while USPS delivery is generally suspended that day.",
+   "big": false,
+   "at": "2026-10-12T17:17:36.193209-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 12,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a30530b988200"
+  },
+  {
+   "kind": "story",
+   "key": "story:usps ups fedex publish 2026 holiday shipping deadlines",
+   "id": "a945e2139bb15",
+   "t": "USPS, UPS, FedEx post 2026 holiday deadlines",
+   "m": "Update 3 · Holiday peak surcharges: These are last-ship dates for Christmas delivery; they don't change rates or fees. UPS and FedEx Ground use…",
+   "big": false,
+   "at": "2026-10-12T17:17:36.193458-04:00",
+   "lvl": 1,
+   "topic": "rates",
+   "notable": true,
+   "mask": 7,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a945e2139bb15"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",
