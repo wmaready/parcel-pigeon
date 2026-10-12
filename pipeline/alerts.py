@@ -1,10 +1,13 @@
 """Phone alerts for Parcel Pigeon (web push through OneSignal).
 
-Two lanes:
-  Regular  sent live after each run, filtered by each reader's own settings in the app
-           (carriers, topics, fuel threshold). Held overnight (9 p.m. to 7 a.m. Eastern) and sent in the morning.
+Readers hear about each story on its own, as it comes in, but never a pile at once:
+  Regular  every new story, rate clock reminder and new company joins a queue. Each run (every two hours) sends at most
+           MAX_PER_RUN pushes. A quiet run (one or two items) sends each on its own, SPACING_MIN apart. A busy run
+           (three or more) sends the biggest story on its own and rolls the rest into ONE "N more" note, so bigger news
+           gets its own alert and small items never pile up. No more than MAX_PER_DAY a day. Held overnight
+           (9 p.m. to 7 a.m. Eastern). Weekly fuel moves go only to readers who set a threshold.
   Major    goes to the editor first: a GitHub issue (GitHub emails it) plus a push to the editor's own phone.
-           Reply "send" on the issue to push it to everyone, "hold" to stop it. With no reply it goes out
+           Reply "send" on the issue to push it to everyone now, "hold" to stop it. With no reply it goes out
            automatically after AUTO_SEND_HOURS (never overnight).
 
 Usage:
@@ -28,12 +31,16 @@ from zoneinfo import ZoneInfo
 import requests
 from urllib.parse import urljoin
 
-from common import load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls
+from common import same_event, load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls
 
 ET = ZoneInfo("America/New_York")
 AUTO_SEND_HOURS = float(os.environ.get("PP_AUTO_SEND_HOURS") or 2)
 QUIET_START, QUIET_END = 21, 7          # Eastern; regular and automatic alerts wait for morning
-MAX_REGULAR_SENDS = 8                    # per run: one push per story up to this, the rest bundled into one
+MAX_REGULAR_SENDS = 8                    # copy is written for at most this many stories per run
+MAX_PER_RUN = 2                          # separate story pushes per run (runs are two hours apart)
+SPACING_MIN = 55                         # minutes between pushes sent in the same run
+MAX_PER_DAY = 10                         # per day, all readers; anything past this stays in the app
+QUEUE_HOURS = 30                         # a story that hasn't gone out by then is old news; it stays in the app only
 MAX_MAJOR_PER_RUN = 3
 FRESH_DAYS = 2                           # only alert on stories from the last two days
 
@@ -112,7 +119,7 @@ def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 
 
-def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None):
+def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=None):
     """One notification. `key` makes it send-once: OneSignal drops any repeat with the same idempotency key
     (30 days), and the ledger in alerts_state.json skips it before that, so overlapping runs can't double-send."""
     if key and SENT is not None and key in SENT:
@@ -126,6 +133,8 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None):
            "url": url, "chrome_web_icon": ICON, "firefox_icon": ICON, "ttl": ttl}
     if key:
         msg["idempotency_key"] = str(uuid.uuid5(NS, key))
+    if after:
+        msg["send_after"] = after.astimezone(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S GMT+0000")
     if ids:
         msg["include_subscription_ids"] = ids
     else:
@@ -171,6 +180,16 @@ at most 100 characters, saying what it means for shippers or when it starts. No 
 facts that aren't in the story. Reply with JSON only: {"<id>": {"t": "...", "m": "..."}}"""
 
 
+def numbers_ok(text, s):
+    """Every figure in the alert text must appear in the story itself (title, summary or plain line)."""
+    src = " ".join(str(s.get(k) or "") for k in ("title", "sum", "plain")).replace(",", "")
+    for n in re.findall(r"\d[\d,]*(?:\.\d+)?", text or ""):
+        n = n.replace(",", "").rstrip(".")
+        if n and not re.search(r"(?<![\d.])" + re.escape(n) + r"(?![\d])", src):
+            return False
+    return True
+
+
 def push_copy(stories, state):
     """Short title + message per story, written once (fast model, a fraction of a cent) and kept in state."""
     cache = state.setdefault("copy", {})
@@ -181,8 +200,10 @@ def push_copy(stories, state):
                 [{"id": s["id"], "title": s["title"], "summary": short(s.get("plain") or s.get("sum") or "", 400)} for s in need]), 1200)) or {}
             for s in need:
                 g = got.get(s["id"]) or {}
-                if g.get("t") and g.get("m"):
+                if g.get("t") and g.get("m") and numbers_ok(g["t"] + " " + g["m"], s):
                     cache[s["id"]] = {"t": short(g["t"], 50), "m": short(g["m"], 110)}
+                elif g.get("t"):
+                    print(f"  push copy for {s['id']} had a figure that isn't in the story; using the headline instead")
         except Exception as e:
             print("  short copy failed, using the headline:", e, file=sys.stderr)
     out = {}
@@ -302,7 +323,9 @@ def _review():
             if c.get("author_association") != "OWNER" and (c.get("user") or {}).get("login") != OWNER:
                 continue                 # public repo: only the owner's replies count
             w = (c.get("body") or "").strip().lower()
-            if re.match(r"^(send|approve|approved|yes|go|run|publish|ok|okay)\b", w):
+            if re.match(r"^(send|approve|approved|yes|go|run|publish|ok|okay)\s+now\b", w):
+                decision = "now"
+            elif re.match(r"^(send|approve|approved|yes|go|run|publish|ok|okay)\b", w):
                 decision = "send"
             elif re.match(r"^(hold|no|stop|skip|cancel)\b", w):
                 decision = "hold"
@@ -338,7 +361,7 @@ def _review():
         ok = bool(r.get("id")) or nobody
         note = (f"Test sent to your phone only, exactly as readers would see it: **{title}** / {msg} (OneSignal id `{r.get('id')}`). "
                 "If it didn't arrive, check that alerts are on in the app and that PP_ADMIN_IDS matches the Device ID shown there." if test and ok else
-                "Sent to everyone with alerts on." if decision == "send" else
+                "Sent to everyone with alerts on." if decision in ("send", "now") else
                 f"Sent automatically (no reply within {AUTO_SEND_HOURS:g} hours).") if ok else \
                f"OneSignal didn't send it: `{json.dumps(r.get('errors') or r)[:300]}`"
         if ok:
@@ -543,6 +566,16 @@ def collect(state, today):
     seen_t = set(state.get("titles") or [])
     stories = [s for s in news if s.get("id") and s["id"] not in state["stories"] and (s.get("date") or "") >= fresh
                and norm(s.get("title"))[:60] not in seen_t]
+    # never alert twice on one event, even if it was written up again in different words
+    recent = state.setdefault("recent", [])
+    out = []
+    for s in stories:
+        if any(r.get("id") != s["id"] and same_event(s, r) for r in recent + out):
+            state["stories"].append(s["id"]); continue
+        out.append(s)
+    stories = out
+    have = {r.get("id") for r in recent}
+    state["recent"] = (recent + [{k: s.get(k) for k in ("id", "title", "date", "c", "url", "srcs")} for s in stories if s["id"] not in have])[-150:]
     seed = load("seed.json", {})
     rem = []
     for e in seed.get("clock") or []:
@@ -568,6 +601,83 @@ def collect(state, today):
             state["fuel"][c] = keys[-1]; continue
         moves.append((c, keys[-1], a, b))
     return stories, rem, moves
+
+
+def count_today(state, n=1):
+    d = now_et().date().isoformat()
+    day = state.setdefault("day", {})
+    if day.get("d") != d:
+        day.clear(); day.update({"d": d, "n": 0})
+    day["n"] += n
+    return day["n"]
+
+
+def union_mask(items):
+    """Carriers across several items, as one reader mask; None (everyone) if any item is industry-wide."""
+    m = 0
+    for q in items:
+        if q.get("mask") is None:
+            return None
+        m |= q["mask"]
+    return m or None
+
+
+def send_queued(state):
+    """Separate pushes for the most important queued items: MAX_PER_RUN per run, SPACING_MIN apart, MAX_PER_DAY a day.
+    Overnight they wait for morning. Returns how many pushes were sent or scheduled."""
+    sent = 0
+    fq = state.get("fuelq") or {}
+    if quiet():
+        return 0
+    if fq:
+        parts = [f"{c} {b:g}% ({'+' if b > a else '−'}{abs(b - a):g})" for c, (k, a, b) in sorted(fq.items())]
+        mv = max(round(abs(b - a), 2) for k, a, b in fq.values())
+        bits = 0
+        for c in fq:
+            bits |= BITS.get(c, 0)
+        push("Ground fuel this week", ", ".join(parts), SITE + "#fuel",
+             audience([{"field": "tag", "key": "ft", "relation": ">", "value": "0"},
+                       {"field": "tag", "key": "ft", "relation": "<", "value": str(mv + 0.001)}], bits or None),
+             key="fuel:" + ",".join(f"{c}:{v[0]}" for c, v in sorted(fq.items())))
+        state["fuelq"] = {}
+        sent += 1
+    cutoff = now_et() - dt.timedelta(hours=QUEUE_HOURS)
+    queue = [q for q in state.get("queue") or [] if q["key"] not in SENT
+             and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff]
+    queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), q["kind"] != "story", q.get("at") or ""))
+    room = max(0, min(MAX_PER_RUN, MAX_PER_DAY - count_today(state, 0)))
+    if not room or not queue:
+        pass
+    elif len(queue) <= 2:
+        # a quiet run: each item on its own, spaced out
+        for n, q in enumerate(queue[:room]):
+            after = now_et() + dt.timedelta(minutes=SPACING_MIN * n) if n else None
+            if after and quiet(after):
+                break                                # don't schedule into the night; it goes in the morning
+            extra = [{"field": "tag", "key": TOPIC_TAG[q["topic"]], "relation": "=", "value": "1"}]
+            r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after)
+            if r is not None:
+                count_today(state); sent += 1
+    else:
+        # a busy run: the biggest story gets its own alert (if it's real news), everything else is one roll-up
+        lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 2) else None
+        rest = queue[1:] if lead else queue
+        if lead:
+            extra = [{"field": "tag", "key": TOPIC_TAG[lead["topic"]], "relation": "=", "value": "1"}]
+            r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"])
+            if r is not None:
+                count_today(state); sent += 1
+        if rest and count_today(state, 0) < MAX_PER_DAY and (not lead or room > 1):
+            words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
+            r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", " · ".join(q["t"] for q in rest[:3]) + (" …" if len(rest) > 3 else ""),
+                     SITE + "#news", audience([], union_mask(rest)) or None, key="more:" + ",".join(sorted(q["key"] for q in rest)),
+                     after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
+            if r is not None:
+                SENT.extend(q["key"] for q in rest); count_today(state); sent += 1
+    state["queue"] = [q for q in queue if q["key"] not in SENT]
+    if len(state["queue"]) > 0:
+        print(f"  {len(state['queue'])} alert(s) wait for the next run")
+    return sent
 
 
 def run():
@@ -612,85 +722,61 @@ def run():
         save("alerts_state.json", state)
         print("alerts: first run, recorded", len(stories), "stories as already seen"); return
 
-    # major stories: review issue for the editor (any hour; the issue waits)
+    # major stories: review issue for the editor (any hour; the issue waits). Approved ones go out right away.
     majors = sorted([s for s in stories if is_major(s)], key=lambda s: -int(s.get("lvl") or 1))[:MAX_MAJOR_PER_RUN]
     approved = set(load("approved.json", []))
     copy = push_copy([s for s in stories][:MAX_REGULAR_SENDS + MAX_MAJOR_PER_RUN], state)
+    queue = state.setdefault("queue", [])
+    queued = {q.get("key") for q in queue}
+    def enqueue(item):
+        if item["key"] not in queued and item["key"] not in SENT:
+            queue.append(item); queued.add(item["key"])
+    def story_item(s, big=False):
+        c = copy.get(s["id"]) or push_copy([s], state)[s["id"]]
+        th = (load("threads.json", {}).get(s.get("thread") or "") or {}) if s.get("upd") else {}
+        m = f"Update {s['upd']} · {th['n']}: {c['m']}" if th.get("n") else c["m"]
+        return {"kind": "story", "key": "story:" + norm(s["title"]), "id": s["id"], "t": c["t"], "m": m, "big": big, "at": now_et().isoformat(),
+                "lvl": int(s.get("lvl") or 1), "topic": topic_of(s), "mask": mask_of(s.get("c")), "url": story_link(s, big)}
     def seen(s):
         state["stories"].append(s["id"]); state["titles"].append(norm(s.get("title"))[:60])
     for s in majors:
         try:
-            c = copy.get(s["id"]) or {"t": s["title"], "m": s.get("plain") or ""}
             if s["id"] in approved:
-                # you already OK'd this story with `run`, so the alert goes straight out (or at 7 a.m. if it's overnight)
+                # you already OK'd this story with `run`, so it goes out now (or first thing in the morning)
                 if quiet():
-                    continue
-                push(c["t"], c["m"], story_link(s, big=True), ttl=2 * 86400, key="story:" + norm(s["title"]))
+                    enqueue(story_item(s, big=True))
+                else:
+                    it = story_item(s, big=True)
+                    push(it["t"], it["m"], it["url"], ttl=2 * 86400, key=it["key"]); count_today(state)
             else:
-                open_review(s, copy=c)
+                open_review(s, copy=copy.get(s["id"]))
             seen(s)
         except Exception as e:
             print("review issue failed:", e, file=sys.stderr)
     major_ids = {s["id"] for s in majors}
-
-    if quiet():
-        save("alerts_state.json", state)
-        print(f"alerts: quiet hours, {len(stories) - len(majors)} regular stories wait for morning"); return
-
-    sends = 0
-    # one push per story, biggest first, each to the readers who picked its topic and carriers;
-    # past MAX_REGULAR_SENDS the rest are bundled into one "+N more" per topic
-    regular = sorted([s for s in stories if s["id"] not in major_ids], key=lambda x: (-int(x.get("lvl") or 1), x.get("date") or ""))
-    rest = {}
-    for s in regular:
-        topic, mask = topic_of(s), mask_of(s.get("c"))
-        aud = audience([{"field": "tag", "key": TOPIC_TAG[topic], "relation": "=", "value": "1"}], mask)
-        if sends < MAX_REGULAR_SENDS:
-            c = copy.get(s["id"]) or push_copy([s], state)[s["id"]]
-            push(c["t"], c["m"], story_link(s), aud, key="story:" + norm(s["title"]))
-            sends += 1
-        else:
-            rest.setdefault(topic, []).append(s)
-        seen(s)
-    for topic, ss in rest.items():
-        push(f"{len(ss)} more {TOPIC_WORDS[topic]}", short(ss[0]["title"], 90) + (f" and {len(ss) - 1} more" if len(ss) > 1 else ""),
-             SITE + "#news", [{"field": "tag", "key": TOPIC_TAG[topic], "relation": "=", "value": "1"}],
-             key="more:" + ",".join(sorted(s["id"] for s in ss)))
-
+    for s in stories:
+        if s["id"] not in major_ids:
+            enqueue(story_item(s)); seen(s)
     # rate clock reminders: 7 days and 1 day before a dated increase
     for key, e, left in rem:
-        if sends >= MAX_REGULAR_SENDS:
-            break
         when = "tomorrow" if left == 1 else "in 7 days"
-        push(f"{short(e.get('c') or 'Carrier', 24)}: starts {when}", e.get("w", ""), SITE + "#clock",
-             audience([{"field": "tag", "key": "t_rates", "relation": "=", "value": "1"}], mask_of(carriers_in(e.get("c")))), key="clock:" + key)
-        state["clock"].append(key); sends += 1
-
-    # fuel: each reader picks a threshold (tag "ft"; 0 = off)
+        enqueue({"kind": "clock", "key": "clock:" + key, "at": now_et().isoformat(), "t": f"{short(e.get('c') or 'Carrier', 24)}: starts {when}", "m": e.get("w", ""),
+                 "lvl": 2, "topic": "rates", "mask": mask_of(carriers_in(e.get("c"))), "url": SITE + "#clock"})
+        state["clock"].append(key)
+    # fuel: keep the latest weekly move per carrier until it goes out (it waits through quiet hours)
+    fq = state.setdefault("fuelq", {})
     for c, k, a, b in moves:
-        mv = round(abs(b - a), 2)
         state["fuel"][c] = k
-        if mv <= 0:
-            continue
-        push(f"{c} ground fuel {'up' if b > a else 'down'} to {b:g}%",
-             f"Week of {dt.date.fromisoformat(k[:10]).strftime('%b %-d')}, from {a:g}% ({'+' if b > a else '−'}{mv:g} pts).", SITE + "#fuel",
-             audience([{"field": "tag", "key": "ft", "relation": ">", "value": "0"},
-                       {"field": "tag", "key": "ft", "relation": "<", "value": str(mv + 0.001)}], BITS.get(c)), key=f"fuel:{c}:{k}")
-        sends += 1
-
+        if round(abs(b - a), 2) > 0:
+            fq[c] = [k, a, b]
     # new companies on the market map (researched and confirmed by players.py)
     newp = [p for p in load("players.json", {}).get("players", []) if p.get("enriched") and not p.get("pending")
             and p["id"] not in state["players"]]
-    if newp and sends < MAX_REGULAR_SENDS + 1:
-        if len(newp) == 1:
-            p = newp[0]
-            push(f"New on the map: {p['n']}", p.get("s") or "", SITE + "#mna",
-                 [{"field": "tag", "key": "t_deals", "relation": "=", "value": "1"}], key="player:" + p["id"])
-        else:
-            push(f"{len(newp)} new companies on the map", ", ".join(p["n"] for p in newp[:6]), SITE + "#mna",
-                 [{"field": "tag", "key": "t_deals", "relation": "=", "value": "1"}], key="players:" + ",".join(sorted(p["id"] for p in newp)))
-        sends += 1
+    for p in newp:
+        enqueue({"kind": "player", "key": "player:" + p["id"], "at": now_et().isoformat(), "t": f"New on the map: {p['n']}", "m": p.get("s") or "",
+                 "lvl": 0, "topic": "deals", "mask": None, "url": SITE + "#mna"})
     state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
+    sends = send_queued(state)
     try:
         import media                        # company logos (monthly) and company photos for recent stories
         media.logos(40)
@@ -712,7 +798,7 @@ def run():
     state["sent"] = SENT[-4000:]
     state["clock"] = state["clock"][-500:]
     save("alerts_state.json", state)
-    print(f"alerts: {len(majors)} for review, {sends} regular pushes")
+    print(f"alerts: {len(majors)} for review, {len(state.get('queue') or [])} waiting for the next run, {sends} pushes sent")
 
 
 def test_alert():
