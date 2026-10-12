@@ -36,31 +36,33 @@
   "aa120c825fdaf",
   "a1785bbd2ecbb",
   "a1cfdcc1943ed",
-  "ac1d01500ab14"
+  "ac1d01500ab14",
+  "a2de36ed1ca48",
+  "a9ecc86b6711f"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "w8a582ba4f6eb",
-  "ac1d01500ab14",
-  "afbf819454788",
-  "w49b3786a59a5",
-  "af8ee5ed067c6",
-  "aad7e6789b34e",
-  "abf01a11b3d9e",
-  "wf225c9a3bf63",
-  "ae77827c0481e",
   "w3d06a7fa766e",
-  "a1785bbd2ecbb",
-  "w150132868eae",
-  "wb612a77519f2",
   "w1a58abf8b69d",
+  "wf225c9a3bf63",
+  "w82629d496c23",
+  "w150132868eae",
+  "ac1d01500ab14",
+  "aad7e6789b34e",
+  "afbf819454788",
+  "w348418a9dc09",
+  "w49b3786a59a5",
+  "ae77827c0481e",
+  "a1785bbd2ecbb",
+  "wb612a77519f2",
+  "af8ee5ed067c6",
   "wbf2ef019cc6e",
   "wa0dc8b706733",
-  "w82629d496c23",
-  "w348418a9dc09"
+  "w8a582ba4f6eb",
+  "abf01a11b3d9e"
  ],
  "backfilled": true,
  "players": [
@@ -111,7 +113,9 @@
   "story:fedex renames trucking units plans residential ground service",
   "story:usps relocates coffee springs al post office operations to geneva",
   "player:rps",
-  "player:robertsexpress"
+  "player:robertsexpress",
+  "story:gls us launches gls connect digital shipping platform",
+  "story:federal agents raid kansas city usps center arrest several employees"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -133,7 +137,9 @@
   "walmart opens 900 000 sq ft automated fulfillment center in ",
   "usps restores mail delivery and retail service in alabama mi",
   "fedex renames trucking units plans residential ground servic",
-  "usps relocates coffee springs al post office operations to g"
+  "usps relocates coffee springs al post office operations to g",
+  "gls us launches gls connect digital shipping platform",
+  "federal agents raid kansas city usps center arrest several e"
  ],
  "copy": {
   "a78db2954da94": {
@@ -191,6 +197,14 @@
   "ac1d01500ab14": {
    "t": "USPS moves Coffee Springs AL service to Geneva",
    "m": "ZIP 36318 retail and delivery now run from Geneva until further notice. Geneva hours: 8:30-4:30 Mon-Wed and…"
+  },
+  "a2de36ed1ca48": {
+   "t": "GLS US launches GLS Connect portal",
+   "m": "GLS US customers can switch to the new portal now; address books, billing, settings and shipment history…"
+  },
+  "a9ecc86b6711f": {
+   "t": "Federal raid at Kansas City USPS center",
+   "m": "Agents arrested several employees; rates and service are unchanged, and local mail delays have not been…"
   }
  },
  "recent": [
@@ -502,13 +516,43 @@
      "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-coffee-springs-al-post-office-temporarily-relocating-to-geneva-al-post-office.htm"
     }
    ]
+  },
+  {
+   "id": "a2de36ed1ca48",
+   "title": "GLS US launches GLS Connect digital shipping platform",
+   "date": "2026-10-12",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.einpresswire.com/article/948054024/gls-launches-gls-connect-advancing-its-digital-shipping-experience",
+   "srcs": [
+    {
+     "src": "EIN Presswire",
+     "url": "https://www.einpresswire.com/article/948054024/gls-launches-gls-connect-advancing-its-digital-shipping-experience"
+    }
+   ]
+  },
+  {
+   "id": "a9ecc86b6711f",
+   "title": "Federal agents raid Kansas City USPS center, arrest several employees",
+   "date": "2026-10-12",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://northplattebulletin.com/amid-mail-delays-federal-agents-raid-kansas-city-usps-distribution-center/",
+   "srcs": [
+    {
+     "src": "North Platte Bulletin",
+     "url": "https://northplattebulletin.com/amid-mail-delays-federal-agents-raid-kansas-city-usps-distribution-center/"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",
-  "n": 5
+  "n": 7
  },
- "last_push": "2026-10-12T12:40:33.701959-04:00"
+ "last_push": "2026-10-12T17:35:48.381230-04:00"
 }
