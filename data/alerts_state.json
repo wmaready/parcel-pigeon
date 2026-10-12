@@ -29,7 +29,9 @@
   "ab665e6db5daf",
   "af8ee5ed067c6",
   "abf01a11b3d9e",
-  "a0bfa0d132415"
+  "a0bfa0d132415",
+  "a73a591c528d3",
+  "afbf819454788"
  ],
  "clock": [],
  "fuel": {
@@ -37,19 +39,20 @@
  },
  "harvested": [
   "af8ee5ed067c6",
-  "wf225c9a3bf63",
-  "w8a582ba4f6eb",
-  "w82629d496c23",
-  "w49b3786a59a5",
-  "w3d06a7fa766e",
-  "wbf2ef019cc6e",
-  "w1a58abf8b69d",
-  "abf01a11b3d9e",
   "w150132868eae",
-  "wa0dc8b706733",
-  "wb612a77519f2",
-  "w348418a9dc09",
+  "w3d06a7fa766e",
+  "w49b3786a59a5",
   "ae77827c0481e",
+  "wf225c9a3bf63",
+  "wbf2ef019cc6e",
+  "w348418a9dc09",
+  "w82629d496c23",
+  "wb612a77519f2",
+  "abf01a11b3d9e",
+  "afbf819454788",
+  "w1a58abf8b69d",
+  "w8a582ba4f6eb",
+  "wa0dc8b706733",
   "aad7e6789b34e"
  ],
  "backfilled": true,
@@ -60,7 +63,8 @@
   "coll8",
   "21vekby",
   "belposhta",
-  "dhlsupplychain"
+  "dhlsupplychain",
+  "gofofrance"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -98,7 +102,9 @@
   "usps lengthens delivery standards for priority mail ground a",
   "ups adds rfid tracking and pin delivery for holiday peak pla",
   "fedex adds duty and tax payment to import tool expands to ni",
-  "fedex closes calverton n y facility under network 2 0 consol"
+  "fedex closes calverton n y facility under network 2 0 consol",
+  "gofo france joins peoples post carrier network ahead of year",
+  "usps suspends mail delivery and retail in northern florida a"
  ],
  "copy": {
   "a78db2954da94": {
@@ -140,6 +146,14 @@
   "a0bfa0d132415": {
    "t": "FedEx closes Calverton, N.Y. facility",
    "m": "Customers who used the Calverton site can drop off at 750 Middle Country Rd. in Middle Island, N.Y. No rate…"
+  },
+  "a73a591c528d3": {
+   "t": "GOFO France added to Peoples Post network",
+   "m": "E-merchants using Peoples Post can now choose GOFO home delivery as an extra carrier in their shipping tool.…"
+  },
+  "afbf819454788": {
+   "t": "USPS suspends Northern Florida mail and retail",
+   "m": "Mail delivery and retail are suspended in listed Northern Florida ZIP codes, effective immediately. No…"
   }
  },
  "recent": [
@@ -346,9 +360,77 @@
      "url": "https://riverheadlocal.com/2026/10/12/fedex-closes-calverton-facility-as-part-of-nationwide-network-overhaul/"
     }
    ]
+  },
+  {
+   "id": "a73a591c528d3",
+   "title": "GOFO France joins Peoples Post carrier network ahead of year-end peak",
+   "date": "2026-10-12",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://finance.yahoo.com/small-business/articles/gofo-becomes-carrier-partner-peoples-090700461.html",
+   "srcs": [
+    {
+     "src": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/small-business/articles/gofo-becomes-carrier-partner-peoples-090700461.html"
+    }
+   ]
+  },
+  {
+   "id": "afbf819454788",
+   "title": "USPS suspends mail delivery and retail in Northern Florida after hurricane",
+   "date": "2026-10-12",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://about.usps.com/newsroom/local-releases/fl/2026/1011-usps-temporarily-suspends-mail-delivery-and-retail-operations.htm",
+   "srcs": [
+    {
+     "src": "USPS",
+     "url": "https://about.usps.com/newsroom/local-releases/fl/2026/1011-usps-temporarily-suspends-mail-delivery-and-retail-operations.htm"
+    }
+   ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:gofo france joins peoples post carrier network ahead of year end peak",
+   "id": "a73a591c528d3",
+   "t": "GOFO France added to Peoples Post network",
+   "m": "E-merchants using Peoples Post can now choose GOFO home delivery as an extra carrier in their shipping tool.…",
+   "big": false,
+   "at": "2026-10-12T09:05:33.592729-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "mask": 16,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a73a591c528d3"
+  },
+  {
+   "kind": "story",
+   "key": "story:usps suspends mail delivery and retail in northern florida after hurricane",
+   "id": "afbf819454788",
+   "t": "USPS suspends Northern Florida mail and retail",
+   "m": "Mail delivery and retail are suspended in listed Northern Florida ZIP codes, effective immediately. No…",
+   "big": false,
+   "at": "2026-10-12T09:05:33.592767-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "mask": 4,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=afbf819454788"
+  },
+  {
+   "kind": "player",
+   "key": "player:gofofrance",
+   "at": "2026-10-12T09:05:33.593010-04:00",
+   "t": "New on the map: GOFO France",
+   "m": "GOFO France is the French last-mile parcel delivery arm of GOFO, formerly CIRRO Parcel. It provides home delivery for e-commerce merchants and logistics providers across metropolitan France through its own sorting hubs and routing technology.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",

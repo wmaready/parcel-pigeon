@@ -194,6 +194,32 @@
     50.737
    ],
    "enriched": "2026-10-12"
+  },
+  {
+   "id": "gofofrance",
+   "n": "GOFO France",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": "gofo",
+   "hq": "Marly-la-Ville, France",
+   "yr": null,
+   "s": "GOFO France is the French last-mile parcel delivery arm of GOFO, formerly CIRRO Parcel. It provides home delivery for e-commerce merchants and logistics providers across metropolitan France through its own sorting hubs and routing technology.",
+   "al": [
+    "CIRRO Parcel (former name)",
+    "GOFO Express France"
+   ],
+   "src": "https://finance.yahoo.com/small-business/articles/gofo-becomes-carrier-partner-peoples-090700461.html",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-12",
+   "story": "a73a591c528d3",
+   "site": "gofo.com",
+   "geo": [
+    2.501,
+    49.089
+   ],
+   "enriched": "2026-10-12"
   }
  ],
  "edges": [
@@ -313,6 +339,24 @@
    "t": "Acquired e-commerce fulfillment provider",
    "url": "https://group.dhl.com/en/media-relations/press-releases/2025/dhl-supply-chain-acquires-ids-fulfillment.html",
    "story": "a197b1b8fe32d"
+  },
+  {
+   "a": "serve",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Serve Robotics has a longstanding relationship with Uber Eats",
+   "url": "https://hoodline.com/2026/10/glendale-caps-sidewalk-delivery-robots-at-60-after-months-of-ada-complaints/",
+   "story": "a98427817a41d"
+  },
+  {
+   "a": "gofo",
+   "b": "gofofrance",
+   "k": "owns",
+   "y": "2025",
+   "t": "GOFO Express acquired CIRRO Parcel (France, Netherlands, Italy) and unified operations under the GOFO brand",
+   "url": "https://www.globenewswire.com/news-release/2025/08/20/3136451/0/en/GOFO-Express-acquires-CIRRO-Parcel-unifying-operations-under-the-GOFO-Brand.html",
+   "story": "a73a591c528d3"
   }
  ]
 }
