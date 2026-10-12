@@ -220,6 +220,32 @@
     49.089
    ],
    "enriched": "2026-10-12"
+  },
+  {
+   "id": "gallantcapital",
+   "n": "Gallant Capital Partners",
+   "realm": "capital",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Los Angeles, CA, USA",
+   "yr": "2018",
+   "s": "Los Angeles private equity firm that owns Duncan Solutions (parking and tolling revenue management) and has invested in National Freight, a linehaul contractor carrying trailers for FedEx Ground.",
+   "al": [
+    "Gallant Capital",
+    "Gallant Capital Partners II"
+   ],
+   "src": "https://www.citybiz.co/article/916915/duncan-solutions-completes-divestitures-shifts-focus-to-ai-enabled-transportation-revenue-management/",
+   "auto": true,
+   "added": "2026-10-09",
+   "story": "ae77a9586e2bd",
+   "site": "gallantcapital.com",
+   "geo": [
+    -118.244,
+    34.052
+   ],
+   "enriched": "2026-10-12",
+   "pending": false
   }
  ],
  "edges": [
@@ -357,6 +383,33 @@
    "t": "GOFO Express acquired CIRRO Parcel (France, Netherlands, Italy) and unified operations under the GOFO brand",
    "url": "https://www.globenewswire.com/news-release/2025/08/20/3136451/0/en/GOFO-Express-acquires-CIRRO-Parcel-unifying-operations-under-the-GOFO-Brand.html",
    "story": "a73a591c528d3"
+  },
+  {
+   "a": "target",
+   "b": "shipt",
+   "k": "owns",
+   "y": "2026",
+   "t": "Target owns Shipt as an independently operated subsidiary",
+   "url": "https://massmarketretailers.com/raj-kapoor-returns-to-shipt-as-next-ceo/",
+   "story": "a08213a493737"
+  },
+  {
+   "a": "gallantcapital",
+   "b": "duncansolution",
+   "k": "owns",
+   "y": "2025",
+   "t": "Acquired via carve-out of Navient Government Services",
+   "url": "https://www.businesswire.com/news/home/20250224084699/en/Gallant-Capital-Completes-Acquisition-of-the-Government-Services-Business-of-Navient-Corporation",
+   "story": "ae77a9586e2bd"
+  },
+  {
+   "a": "gallantcapital",
+   "b": "pioneercreditr",
+   "k": "owns",
+   "y": "2025",
+   "t": "Acquired from Navient in 2025; Duncan has since sold it",
+   "url": "https://images.navient.com/Pioneer/web/Pioneer_NR_022125.pdf",
+   "story": "ae77a9586e2bd"
   }
  ]
 }

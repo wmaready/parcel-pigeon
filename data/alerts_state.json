@@ -31,29 +31,33 @@
   "abf01a11b3d9e",
   "a0bfa0d132415",
   "a73a591c528d3",
-  "afbf819454788"
+  "afbf819454788",
+  "a83608ad7515e",
+  "aa120c825fdaf",
+  "a1785bbd2ecbb"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "aad7e6789b34e",
-  "w8a582ba4f6eb",
-  "wbf2ef019cc6e",
-  "w49b3786a59a5",
-  "wf225c9a3bf63",
-  "w3d06a7fa766e",
-  "w82629d496c23",
-  "afbf819454788",
-  "wa0dc8b706733",
-  "abf01a11b3d9e",
   "af8ee5ed067c6",
-  "w150132868eae",
-  "w348418a9dc09",
+  "aad7e6789b34e",
   "wb612a77519f2",
+  "abf01a11b3d9e",
+  "wbf2ef019cc6e",
+  "a1785bbd2ecbb",
+  "w150132868eae",
+  "ae77827c0481e",
+  "w348418a9dc09",
+  "afbf819454788",
+  "wf225c9a3bf63",
+  "w8a582ba4f6eb",
+  "w49b3786a59a5",
   "w1a58abf8b69d",
-  "ae77827c0481e"
+  "wa0dc8b706733",
+  "w3d06a7fa766e",
+  "w82629d496c23"
  ],
  "backfilled": true,
  "players": [
@@ -64,7 +68,8 @@
   "21vekby",
   "belposhta",
   "dhlsupplychain",
-  "gofofrance"
+  "gofofrance",
+  "gallantcapital"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -91,7 +96,12 @@
   "more:player:gofofrance,story:gofo france joins peoples post carrier network ahead of year end peak,story:usps suspends mail delivery and retail in northern florida after hurricane",
   "story:gofo france joins peoples post carrier network ahead of year end peak",
   "story:usps suspends mail delivery and retail in northern florida after hurricane",
-  "player:gofofrance"
+  "player:gofofrance",
+  "more:player:gallantcapital,story:gastonia notifies residents of walmart drone deliveries at myrtle school road store,story:usps restores mail delivery and retail service in alabama mississippi district,story:walmart opens 900 000 sq ft automated fulfillment center in stockton california",
+  "story:gastonia notifies residents of walmart drone deliveries at myrtle school road store",
+  "story:walmart opens 900 000 sq ft automated fulfillment center in stockton california",
+  "story:usps restores mail delivery and retail service in alabama mississippi district",
+  "player:gallantcapital"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -108,7 +118,10 @@
   "fedex adds duty and tax payment to import tool expands to ni",
   "fedex closes calverton n y facility under network 2 0 consol",
   "gofo france joins peoples post carrier network ahead of year",
-  "usps suspends mail delivery and retail in northern florida a"
+  "usps suspends mail delivery and retail in northern florida a",
+  "gastonia notifies residents of walmart drone deliveries at m",
+  "walmart opens 900 000 sq ft automated fulfillment center in ",
+  "usps restores mail delivery and retail service in alabama mi"
  ],
  "copy": {
   "a78db2954da94": {
@@ -394,13 +407,58 @@
      "url": "https://about.usps.com/newsroom/local-releases/fl/2026/1011-usps-temporarily-suspends-mail-delivery-and-retail-operations.htm"
     }
    ]
+  },
+  {
+   "id": "a83608ad7515e",
+   "title": "Gastonia notifies residents of Walmart drone deliveries at Myrtle School Road store",
+   "date": "2026-10-12",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://dronexl.co/2026/10/12/gastonia-walmart-wing-drone-delivery-myrtle-school-road/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/12/gastonia-walmart-wing-drone-delivery-myrtle-school-road/"
+    }
+   ]
+  },
+  {
+   "id": "aa120c825fdaf",
+   "title": "Walmart opens 900,000-sq-ft automated fulfillment center in Stockton, California",
+   "date": "2026-10-12",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.supplychaindive.com/news/walmart-opens-next-gen-california-facility-to-boost-west-coast-fulfillmen/832631/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/walmart-opens-next-gen-california-facility-to-boost-west-coast-fulfillmen/832631/"
+    }
+   ]
+  },
+  {
+   "id": "a1785bbd2ecbb",
+   "title": "USPS restores mail delivery and retail service in Alabama-Mississippi District",
+   "date": "2026-10-11",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-usps-restores-mail-delivery-retail-operations.htm",
+   "srcs": [
+    {
+     "src": "USPS",
+     "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-usps-restores-mail-delivery-retail-operations.htm"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-10-12T09:38:39.902916-04:00"
+ "last_push": "2026-10-12T10:47:33.831870-04:00"
 }

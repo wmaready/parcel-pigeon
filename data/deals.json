@@ -1,5 +1,103 @@
 [
  {
+  "title": "Duncan Solutions sells Pioneer Credit Recovery",
+  "buyer": "Not named in source",
+  "target": "Pioneer Credit Recovery, Inc.",
+  "value": "Undisclosed",
+  "status": "Closed",
+  "ann": null,
+  "closed": null,
+  "sum": "Duncan Solutions completed the sale of Pioneer Credit Recovery, Inc. after earlier 2026 sales of Pioneer Customer Experience and Gila. The buyer was not named and financial terms were not disclosed.",
+  "who": [
+   [
+    "Seller",
+    "Duncan Solutions, LLC",
+    "Provider of technology and services for government parking, tolling and camera-enforcement programs, founded in 1936."
+   ],
+   [
+    "Target",
+    "Pioneer Credit Recovery, Inc.",
+    "Former affiliated business of Duncan that operated under Business Processing Solutions, LLC."
+   ],
+   [
+    "Backer",
+    "Gallant Capital Partners",
+    "Los Angeles-based private equity firm founded in 2018 that invests in technology, business services and industrial companies."
+   ]
+  ],
+  "why": "The sale is the final divestiture in a restructuring that separates Duncan's transportation technology operations from its former affiliated businesses. Duncan, Pioneer, PCX and Gila were acquired by affiliates of Gallant Capital Partners in February 2025 through a carve-out of Navient's Government Services business, and the four previously operated under Business Processing Solutions, LLC. Truist Securities served as exclusive financial advisor to BPS on the three divestitures, according to the announcement.",
+  "parties": [
+   {
+    "name": "Duncan Solutions, LLC",
+    "role": "Seller",
+    "realm": "Supply chain software",
+    "hq": null,
+    "founded": "1936",
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Acquired by affiliates of Gallant Capital Partners through a carve-out of Navient's Government Services business"
+     },
+     {
+      "y": "2026",
+      "t": "Launched MöbiHUB platform and completed divestitures of PCX, Gila and Pioneer Credit Recovery"
+     }
+    ]
+   },
+   {
+    "name": "Pioneer Credit Recovery, Inc.",
+    "role": "Target",
+    "realm": "Returns & reverse logistics",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Acquired by Gallant affiliates as part of the Navient Government Services carve-out"
+     }
+    ]
+   },
+   {
+    "name": "Gallant Capital Partners",
+    "role": "Backer",
+    "realm": "Private equity / investor",
+    "hq": "Los Angeles, United States",
+    "founded": "2018",
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Affiliates acquired Duncan, Pioneer, PCX and Gila from Navient"
+     }
+    ]
+   }
+  ],
+  "tree": {
+   "n": "Gallant Capital Partners",
+   "c": [
+    {
+     "n": "Duncan Solutions",
+     "nw": 0,
+     "c": []
+    }
+   ]
+  },
+  "note": "Buyer of Pioneer Credit Recovery not named; closing date not stated.",
+  "d": "2026-10-09",
+  "story": "ae77a9586e2bd",
+  "url": "https://www.citybiz.co/article/916915/duncan-solutions-completes-divestitures-shifts-focus-to-ai-enabled-transportation-revenue-management/",
+  "srcs": [
+   {
+    "src": "citybiz",
+    "url": "https://www.citybiz.co/article/916915/duncan-solutions-completes-divestitures-shifts-focus-to-ai-enabled-transportation-revenue-management/"
+   }
+  ],
+  "checked": "2026-10-09",
+  "ties": []
+ },
+ {
   "title": "Evri Group acquires Cross Border Connect",
   "buyer": "Evri Group",
   "target": "Cross Border Connect",
