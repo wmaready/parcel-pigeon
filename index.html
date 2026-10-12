@@ -2039,7 +2039,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .lgo.lgs{width:20px;height:20px;margin-right:7px}
 .lgo.lgl{width:44px;height:44px;border-radius:10px}
 .car.hasl::before{display:none!important}
-.ticker .lgo{display:none}
+.ticker .lgo{--h:16px;margin-right:6px}.ticker .tkr{text-transform:uppercase}
 .phtl{display:flex;align-items:center;gap:12px}
 .wcnm{display:flex;align-items:center}
 .pln.hasl{display:inline-flex;align-items:center}
@@ -2138,6 +2138,90 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .cbub .cacts button+button,.cbub .cacts a+button{background:transparent;color:#9E3326}
 @media (max-width:560px){.rdoc a{max-width:22ch}}
 @media (max-width:560px){.dact{min-height:28px;padding:0 10px;font-size:10.5px}}
+
+/* logos: white tiles sized to each logo's shape, clear at every size */
+.lgo{--h:18px;--lbg:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;flex:none;height:var(--h);width:calc(var(--h) * .74 * var(--ar,1) + var(--h) * .34);min-width:var(--h);
+  padding:0;background:var(--lbg);border-radius:calc(var(--h) * .24);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 1px 2px rgba(0,0,0,.35);overflow:hidden;vertical-align:middle;margin-right:.35em;position:relative;top:-.05em}
+.lgo svg{height:74%;width:calc(var(--h) * .74 * var(--ar,1));display:block}
+.lgo img{height:78%;width:auto;max-width:92%;object-fit:contain;display:block}
+.lgo .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lgo.lgx{--h:18px}.lgo.lgs{--h:22px;margin-right:7px}.lgo.lgm{--h:24px}.lgo.lgl{--h:44px;border-radius:10px}
+.lgo.lgx,.lgo.lgs,.lgo.lgm,.lgo.lgl{width:calc(var(--h) * .74 * var(--ar,1) + var(--h) * .34);height:var(--h)}
+.lgset{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px}
+.lgset .lgo{margin-right:0}
+.car.lonly::before{display:none!important}
+@media (max-width:620px){.lgo.lgm{--h:22px}}
+
+.cal .c .clg{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
+.cal .c .clg .lgo{--h:16px;margin:0}
+.cal .c .clg .car{font-size:9px;font-family:var(--font-mono)}
+@media (max-width:620px){.cal .c .clg .lgo{--h:15px;border-radius:4px}.cal .c .clg .lgo:nth-child(n+3){display:none}}
+.rtags .lgo{--h:22px;margin-right:2px}
+.cardhd .lgset{gap:5px}
+
+/* docs: new-document badges along the path */
+.nb{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;margin-left:8px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-family:var(--font-mono);font-size:11px;font-weight:700}
+.nb[hidden]{display:none}
+.dcarp>summary{gap:8px}.dcarp>summary h2{display:flex;align-items:center;gap:8px;flex:1}.dcarp>summary .lbl{margin-left:auto}
+.dcarp .dcn{font-size:15px}
+.dgrp>summary,.dyr>summary{gap:6px}.dgrp>summary .lbl,.dyr>summary .lbl{margin-left:auto}
+.dtb{padding-left:12px;border-left:2px solid var(--grid);margin-left:22px}
+.dyr>summary{background:transparent;font-size:13.5px;padding:10px 16px}
+@media (max-width:560px){.dtb{margin-left:10px;padding-left:4px}}
+
+/* reactions: a clear "React" pill; the picker floats above everything */
+.rxp{height:30px;padding:0 10px 0 5px;gap:2px;opacity:1!important;color:var(--ink)}
+.rxp .rxf{width:22px;height:22px;margin-right:-5px}.rxp .rxf:last-of-type{margin-right:2px}
+.rxp .rxl{font:600 12px/1 var(--font-ui);margin-left:3px}
+.rxp.empty{padding:0 10px 0 5px;opacity:1}.rxp.empty .rxf{filter:none;opacity:.9}
+.rxpop{position:fixed;right:auto;z-index:80}
+@media (hover:hover){.rxp:hover{background:rgba(94,194,219,.08)}}
+
+/* story context: one tap away so the headline and summary lead */
+.ctx{margin-top:var(--sp-3);border:1px solid var(--grid-strong);border-radius:12px;background:rgba(255,255,255,.015);clear:both}
+.ctx>summary{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:10px 12px;cursor:pointer;list-style:none}
+.ctx>summary::-webkit-details-marker{display:none}
+.ctx>summary::after{content:"›";margin-left:auto;color:var(--ink-2);font-size:18px;line-height:1;transition:transform .2s}
+.ctx[open]>summary::after{transform:rotate(90deg)}
+.ctx .ctxh{font-size:13px;color:var(--ink-2)}
+.ctx[open]>summary{border-bottom:1px solid var(--grid)}
+.ctx>.eff2,.ctx>.chg,.ctx>.rdocs{margin:12px}
+.ctx>.eff2{border:0;padding:0;background:none}
+.ctx>.eff2 p{margin:0}
+.cardhd{padding-right:110px!important}
+@media (max-width:560px){.cardhd{padding-right:104px!important}}
+
+/* comments: replies and @mentions */
+.cmt-r{margin-left:auto;border:0;background:none;color:var(--ink-2);font:600 11.5px/1 var(--font-ui);cursor:pointer;padding:4px 0}
+.cmt-r:hover{color:var(--accent)}
+.cmt-m{color:var(--accent);font-weight:600}
+.cmt-at{display:flex;flex-wrap:wrap;gap:6px}
+.cmt-at[hidden]{display:none}
+.cmt-at button{border:1px solid var(--grid-strong);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 10px;font:600 12px/1 var(--font-ui);cursor:pointer}
+.cmt-at button:hover{border-color:var(--accent)}
+
+.cardhd>span:has(.lgset)::before{display:none!important}
+.lgset .car.nlogo{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:6px;border:1px solid var(--grid-strong);font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+.lgset .car.nlogo::before{display:none}
+/* logos, uniform: every tile the same shape (2.3 : 1) with the mark centered and fitted inside */
+.lgo,.lgo.lgx,.lgo.lgs,.lgo.lgm,.lgo.lgl{width:calc(var(--h) * 2.3)!important;height:var(--h)}
+.lgo svg{width:80%!important;height:68%!important}
+.lgo img{width:80%;height:72%;max-width:none;object-fit:contain}
+.cal .c .clg .lgo{--h:15px}
+@media (max-width:620px){.cal .c .clg .lgo{--h:13px}}
+/* Coop's document drop */
+.coopdrop .cdenv{position:absolute;left:30px;top:44px;width:30px;height:20px;border-radius:3px;background:#F3ECDD;box-shadow:0 2px 6px rgba(0,0,0,.4);
+  background-image:repeating-linear-gradient(135deg,#B23A2E 0 4px,#F3ECDD 4px 8px,#2F5FA8 8px 12px,#F3ECDD 12px 16px);background-size:100% 3px;background-repeat:no-repeat}
+.coopdrop .cdenv::after{content:"";position:absolute;inset:5px 4px 3px;border-top:7px solid transparent;border-left:11px solid transparent;border-right:11px solid transparent;border-top-color:rgba(0,0,0,.15)}
+.dropin{animation:dropin 1.3s ease-out 2;box-shadow:0 0 0 2px var(--accent),0 0 22px rgba(76,201,240,.35)!important;border-radius:12px}
+@keyframes dropin{0%{box-shadow:0 0 0 2px var(--accent),0 0 0 0 rgba(76,201,240,.6)}60%{box-shadow:0 0 0 2px var(--accent),0 0 0 16px rgba(76,201,240,0)}100%{box-shadow:0 0 0 2px var(--accent),0 0 22px rgba(76,201,240,.35)}}
+.nbpop{animation:nbpop .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes nbpop{0%{transform:scale(.3)}60%{transform:scale(1.35)}100%{transform:scale(1)}}
+/* your display name */
+.pname{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px}
+.pname input{flex:1;min-width:180px;min-height:40px;padding:0 12px;border-radius:10px;border:1px solid var(--grid-strong);background:var(--panel-2);color:var(--ink);font:500 14px/1 var(--font-ui)}
+.pname button{min-height:40px;padding:0 16px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-ink);font:600 13px/1 var(--font-ui);cursor:pointer}
+.pname p{flex-basis:100%;margin:0;font-size:12.5px;color:var(--ink-2)}
 </style>
 </head>
 <body>
@@ -2283,6 +2367,9 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
   </div>
   <div class="view" data-view="alerts">
     <div class="panel" style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Rate guide and terms changes</h2><span class="lbl" id="gcCount"></span></div><div id="gcList"></div></div>
+    <div class="panel" id="namePanel" style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Your name for comments</h2><span class="lbl" id="nameState"></span></div>
+      <form class="pname" id="nameForm"><label class="sr" for="nameIn">Display name</label><input id="nameIn" maxlength="40" placeholder="Display name, e.g. Walter M" autocomplete="nickname"><button type="submit">Save</button>
+      <p>Shown on your comments. Others can @mention it, and with phone alerts on you'll get a push when they do. The first device to post with a name keeps it.</p></form></div>
     <div class="panel" id="pushPanel"><div class="ph"><h2>Phone alerts</h2><span class="lbl" id="pushState"></span></div><div id="prefs"></div></div>
   </div>
 </section>
@@ -3567,8 +3654,8 @@ const span=x=>x.end?`${fmtD(x.d)}–${fmtD(x.end).replace(/^[A-Za-z]+ /,m=>fmtD(
 /* carrier colors: one class per carrier, used everywhere a carrier is named */
 const CAR_CLS=[[/^FedEx Freight$/,'c-fdx'],[/^FedEx|^FDX$/,'c-fdx'],[/^UPS/,'c-ups'],[/^USPS$/,'c-usps'],[/^Amazon/,'c-amz'],[/^OnTrac/,'c-ontrac'],[/^DHL/,'c-dhl'],[/^(Regional|Spee-Dee|GLS US|LSO|Veho|UniUni|GOFO|Better Trucks|CDL|Jitsu)$/,'c-reg']];
 const carCls=n=>{const m=CAR_CLS.find(([r])=>r.test(String(n).trim()));return m?m[1]:''};
-const carSpan=n=>{const k=carCls(n),lg=typeof logoImg==='function'?logoImg(n,'lgx'):'';return k||lg?`<span class="car ${k}${lg?' hasl':''}">${lg}${esc(n)}</span>`:esc(n)};
-const carList=(s,sep)=>String(s).split(/\s*(?:·|,)\s*/).filter(Boolean).map(carSpan).join(sep||' · ');
+const carSpan=n=>{const k=carCls(n),lg=typeof logoImg==='function'?logoImg(n,'lgm'):'';return lg?`<span class="car lonly">${lg}</span>`:k?`<span class="car ${k}">${esc(n)}</span>`:esc(n)};
+const carList=(s,sep)=>{const L=[...new Set(String(s).split(/\s*(?:·|,)\s*/).filter(Boolean))];return `<span class="lgset">${L.map(c=>{const lg=typeof logoImg==='function'&&logoImg(c,'lgm');return lg?`<span class="car lonly">${lg}</span>`:`<span class="car nlogo ${carCls(c)}">${esc(c)}</span>`}).join('')}</span>`};
 const carChip=c=>{const lg=typeof logoImg==='function'?logoImg(c,'lgx'):'';if(lg)return lg;const k=carCls(c);return k?`<i class="sq ${k}" aria-hidden="true"></i>`:''};
 const kindTag=n=>n.kind&&n.kind!=='News'?`<span class="tag">${esc(n.kind)}</span>`:'';
 const PRIMARY=['ups.com','fedex.com','usps.com','prc.gov','dhl.com','ontrac.com','amazon.com','aboutamazon.com','uniuni.com','gofo.com','speedeedelivery.com','gls-us.com','lso.com','shipveho.com','bettertrucks.com','jitsu.com','cdldelivery.com','sec.gov','federalregister.gov','congress.gov','uspsoig.gov','businesswire.com','prnewswire.com','globenewswire.com','wwex.com','uber.com','doordash.com','homedepot.com','instacart.com','descartes.com','zipline.com','serverobotics.com','starship.xyz','ship.com','shipbob.com','teamster.org','roadie.com','walmart.com','corporate.walmart.com','target.com','kroger.com','shipmatrix.com','pitneybowes.com','adobe.com','deloitte.com','salesforce.com','narvar.com','alixpartners.com','the-lmi.com','shipstation.com','nrf.com','oversight.gov','uspsoig.gov','census.gov'];
@@ -3589,13 +3676,24 @@ const DOC_TC={'Rate guide':'--t-rates','Service guide':'--t-rates','Special prog
 /* ================= helpers ================= */
 /* ===== Company logos: each company's own logo, unaltered, only to identify it (pipeline/media.py fills data/logos.json) ===== */
 var LOGOS={},LOGO_NAMES=null;
-const LOGO_CAR={'ups':'ups','fedex':'fedex','usps':'usps','amazon':'amzship','amazon shipping':'amzship','ontrac':'ontrac','dhl':'dhlexpress','dhl express':'dhlexpress','dhl ecommerce':'dhlecom'};
+const LOGO_CAR={'ups':'ups','fedex':'fedex','fdx':'fedex','usps':'usps','amazon':'amzship','amazon shipping':'amzship','amzn':'amazon','ontrac':'ontrac','dhl':'dhlexpress','dhl express':'dhlexpress','dhl ecommerce':'dhlecom','dhl group':'dhl','fdxf':'fdxfreight','fedex freight':'fdxfreight','dash':'doordash','pbi':'pitneybowes'};
 function logoId(x){if(!x)return null;if(typeof x==='object')return x.id||logoId(x.name||x.n);
   const k=String(x).toLowerCase().trim();if(LOGO_CAR[k])return LOGO_CAR[k];if(typeof PL!=='undefined'&&PL[k])return k;
   if(!LOGO_NAMES&&typeof PLAYERS!=='undefined'){LOGO_NAMES={};PLAYERS.forEach(p=>[p.n,...(p.al||[])].forEach(n=>{LOGO_NAMES[String(n).toLowerCase()]=p.id}))}
   return LOGO_NAMES&&LOGO_NAMES[k]||null}
-function logoImg(x,cls){const id=logoId(x),r=id&&LOGOS[id];if(!r||!r.f)return '';
-  return `<span class="lgo ${cls||''}" aria-hidden="true"><img src="${r.f}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>`}
+/* One logo, as a small white tile sized to the logo's shape (wordmarks get wider tiles), with the name on hover.
+   Built-in brand marks first (always crisp), then the company's own logo saved by the pipeline. */
+const LOGO_NAME=id=>{try{const p=PLAYERS.find(p=>p.id===id);return p?p.n:id}catch(e){return id}};
+function logoImg(x,cls,label){const id=logoId(x);if(!id)return '';
+  const nm=label||(typeof x==='string'?x:LOGO_NAME(id)),B=typeof BRAND_SVG!=='undefined'&&BRAND_SVG[id];
+  if(B){const v=B.v.split(' ').map(Number),ar=Math.min(4.2,Math.max(.8,v[2]/v[3]));
+    return `<span class="lgo ${cls||''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}${B.bg?';--lbg:'+B.bg:''}"><svg viewBox="${B.v}" aria-hidden="true"><path fill="${B.c}" d="${B.d}"/></svg><span class="sr">${esc(nm)}</span></span>`}
+  const r=LOGOS[id];if(!r||!r.f)return '';
+  const ar=r.ar?Math.min(4.2,Math.max(.8,+r.ar)):1;
+  return `<span class="lgo lgi ${cls||''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}"><img src="${r.f}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span class="sr">${esc(nm)}</span></span>`}
+/* logo if there is one, otherwise the name */
+const who=(name,cls)=>logoImg(name,cls||'lgm')||`<span class="car ${typeof carCls==='function'?carCls(name):''}">${esc(name)}</span>`;
+const whoList=(s,cls,max)=>{const L=[...new Set(String(s||'').split(/\s*(?:·|,)\s*/).filter(c=>c&&c!=='Industry'))];return L.slice(0,max||9).map(c=>who(c,cls)).join('')};
 fetch('data/logos.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Object.keys(j).length){LOGOS=j;LOGO_NAMES=null;if(typeof renderAll==='function')renderAll()}}).catch(()=>{});
 
 // Coop reaction faces: Like, Love, Dislike, Shocked (32x32, no ids so they can repeat on a page)
@@ -3622,13 +3720,16 @@ const RX_KEYS=['like','love','dislike','shocked'];
 function rxTotal(id){const c=RXN.counts[id]||{};return RX_KEYS.reduce((a,k)=>a+(c[k]||0),0)}
 function rxPill(n){const id=n.id,mine=RXN.mine[id],c=RXN.counts[id]||{},tot=rxTotal(id);
   const top=mine||RX_KEYS.filter(k=>c[k]).sort((a,b)=>c[b]-c[a])[0];
-  return `<span class="rxw" data-rxw="${id}"><button type="button" class="rxp${mine?' on':''}${top?'':' empty'}" data-rx="${id}" aria-haspopup="true" aria-label="${mine?'Your reaction: '+RX_FACES[mine].l+'. Change it':'React to this story'}">${rxFace(top||'like')}${tot?`<b>${tot}</b>`:''}</button></span>`}
+  return `<span class="rxw" data-rxw="${id}"><button type="button" class="rxp${mine?' on':''}${top?'':' empty'}" data-rx="${id}" aria-haspopup="true" aria-label="${mine?'Your reaction: '+RX_FACES[mine].l+'. Change it':'React to this story'}">${tot?RX_KEYS.filter(k=>c[k]).sort((a,b)=>c[b]-c[a]).slice(0,3).map(k=>rxFace(k)).join(''):rxFace(mine||'like')}<span class="rxl">${tot?tot:mine?RX_FACES[mine].l:'React'}</span></button></span>`}
 function rxRefresh(id){document.querySelectorAll(`[data-rxw="${id}"]`).forEach(el=>{const n={id};el.outerHTML=rxPill(n)});
   document.querySelectorAll(`[data-cmtc="${id}"]`).forEach(el=>{el.textContent=cmtLabel(id)})}
 function rxPop(btn){rxClose();const id=btn.dataset.rx,c=RXN.counts[id]||{},mine=RXN.mine[id];
   const pop=document.createElement('div');pop.className='rxpop';pop.setAttribute('role','menu');
   pop.innerHTML=RX_KEYS.map(k=>`<button type="button" role="menuitemradio" aria-checked="${mine===k}" class="${mine===k?'on':''}" data-rxk="${k}" data-rxid="${id}" title="${RX_FACES[k].l}">${rxFace(k,'rxf big')}<span>${RX_FACES[k].l}${c[k]?` · ${c[k]}`:''}</span></button>`).join('');
-  btn.parentNode.appendChild(pop);requestAnimationFrame(()=>pop.classList.add('open'))}
+  // fixed to the screen and kept inside it, so nothing on the card can cover it
+  document.body.appendChild(pop);pop._btn=btn;const r=btn.getBoundingClientRect(),w=pop.offsetWidth,h=pop.offsetHeight;
+  let x=Math.min(innerWidth-w-8,Math.max(8,r.right-w)),y=r.bottom+6;if(y+h>innerHeight-8)y=Math.max(8,r.top-h-6);
+  pop.style.left=x+'px';pop.style.top=y+'px';requestAnimationFrame(()=>pop.classList.add('open'))}
 function rxClose(){document.querySelectorAll('.rxpop').forEach(p=>p.remove())}
 function rxPick(id,k){const prev=RXN.mine[id],c=RXN.counts[id]=RXN.counts[id]||{};
   if(prev)c[prev]=Math.max(0,(c[prev]||0)-1);
@@ -3637,7 +3738,7 @@ function rxPick(id,k){const prev=RXN.mine[id],c=RXN.counts[id]=RXN.counts[id]||{
   if(RXN.api)fetch(RXN.api+'/react',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({story:id,kind:RXN.mine[id]||null,device:rxDev()})}).catch(()=>{});
   rxClose();rxRefresh(id)}
 document.addEventListener('click',e=>{const k=e.target.closest('[data-rxk]');if(k){e.preventDefault();e.stopPropagation();rxPick(k.dataset.rxid,k.dataset.rxk);return}
-  const b=e.target.closest('[data-rx]');if(b){e.preventDefault();e.stopPropagation();const open=b.parentNode.querySelector('.rxpop');open?rxClose():rxPop(b);return}
+  const b=e.target.closest('[data-rx]');if(b){e.preventDefault();e.stopPropagation();const open=[...document.querySelectorAll('.rxpop')].some(p=>p._btn===b);open?rxClose():rxPop(b);return}
   if(!e.target.closest('.rxpop'))rxClose()},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')rxClose()});
 // counts for the stories on screen, one request
@@ -3653,15 +3754,27 @@ function cmtOpen(btn){const id=btn.dataset.cmt,card=btn.closest('article,.wi')||
   btn.setAttribute('aria-expanded','true');box=document.createElement('div');box.className='cmt';box.innerHTML='<div class="cmt-list"><p class="cmt-e">Loading…</p></div>';card.appendChild(box);
   let name='';try{name=localStorage.getItem('pw-name')||''}catch(e){}
   const form=document.createElement('form');form.className='cmt-f';
-  form.innerHTML=`<input name="name" maxlength="40" placeholder="Display name" value="${esc(name)}" required><textarea name="body" maxlength="600" rows="2" placeholder="Add to the discussion" required></textarea><div class="cmt-fr"><span class="cmt-msg" role="status"></span><button class="cmt-post" type="submit">Post</button></div>`;
+  form.innerHTML=`<input name="name" maxlength="40" placeholder="Display name" value="${esc(name)}" required><textarea name="body" maxlength="600" rows="2" placeholder="Add to the discussion. Type @ to mention someone" required></textarea><div class="cmt-at" hidden></div><div class="cmt-fr"><span class="cmt-msg" role="status"></span><button class="cmt-post" type="submit">Post</button></div>`;
   box.appendChild(form);
-  const paint=list=>{box.querySelector('.cmt-list').innerHTML=list.length?list.map(c=>`<div class="cmt-i"><div class="cmt-h"><b>${esc(c.name)}</b><span>${cmtAgo(c.ts)}</span></div><p>${esc(c.body)}</p></div>`).join(''):'<p class="cmt-e">No comments yet. Start the discussion.</p>'};
+  let names=[];
+  const hl=(t,L)=>{let h=esc(t);[...L].sort((a,b)=>b.length-a.length).forEach(n=>{const e=esc(n).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');h=h.replace(new RegExp('@'+e+'(?![\\w])','gi'),m=>`<b class="cmt-m">${m}</b>`)});return h};
+  const paint=list=>{names=[...new Set(list.map(c=>c.name))];box.querySelector('.cmt-list').innerHTML=list.length?list.map(c=>`<div class="cmt-i"><div class="cmt-h"><b>${esc(c.name)}</b><span>${cmtAgo(c.ts)}</span><button type="button" class="cmt-r" data-cmtr="${esc(c.name)}">Reply</button></div><p>${hl(c.body,names)}</p></div>`).join(''):'<p class="cmt-e">No comments yet. Start the discussion.</p>'};
+  // @mentions: suggest the people in this thread as you type, and Reply drops their name in
+  const ta=form.querySelector('textarea'),at=form.querySelector('.cmt-at');
+  const insert=n=>{const v=ta.value,pos=ta.selectionStart,start=v.lastIndexOf('@',pos-1);ta.value=v.slice(0,start<0?pos:start)+'@'+n+' '+v.slice(pos);ta.focus();at.hidden=true};
+  ta.addEventListener('input',()=>{const v=ta.value.slice(0,ta.selectionStart),m=/@([^@\n]{0,30})$/.exec(v);const me=(form.name.value||'').toLowerCase();
+    const L=m?names.filter(n=>n.toLowerCase()!==me&&n.toLowerCase().startsWith(m[1].toLowerCase())).slice(0,6):[];
+    at.innerHTML=L.map(n=>`<button type="button" data-atn="${esc(n)}">@${esc(n)}</button>`).join('');at.hidden=!L.length});
+  at.addEventListener('click',e=>{const b=e.target.closest('[data-atn]');if(b){e.preventDefault();e.stopPropagation();insert(b.dataset.atn)}});
+  box.addEventListener('click',e=>{const r=e.target.closest('[data-cmtr]');if(!r)return;e.preventDefault();e.stopPropagation();const n=r.dataset.cmtr;if(!ta.value.includes('@'+n))ta.value=('@'+n+' '+ta.value).trimEnd()+' ';ta.focus()});
   fetch(RXN.api+'/comments?story='+encodeURIComponent(id)).then(r=>r.ok?r.json():[]).then(paint).catch(()=>paint([]));
   form.addEventListener('submit',async ev=>{ev.preventDefault();const f=new FormData(form),msg=form.querySelector('.cmt-msg'),b=form.querySelector('button');
     const nm=String(f.get('name')).trim(),body=String(f.get('body')).trim();if(!nm||!body)return;try{localStorage.setItem('pw-name',nm)}catch(e){}
     b.disabled=true;msg.textContent='Posting…';
-    try{const r=await fetch(RXN.api+'/comments',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({story:id,name:nm,body,device:rxDev()})}),j=await r.json();
-      if(j.ok){form.body.value='';msg.textContent='';const c=RXN.counts[id]=RXN.counts[id]||{};c.cc=(c.cc||0)+1;rxRefresh(id);
+    // your alert ID, so people can @mention you and you get the push (only if alerts are on for this device)
+    let sub=null;try{if(typeof pushCfg==='function'){await pushCfg();if(PUSH.app&&/github\.io$/.test(location.hostname)){await Promise.race([pushSDK(),new Promise(r=>setTimeout(r,2500))]);sub=pushId()||null}}}catch(e){}
+    try{const r=await fetch(RXN.api+'/comments',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({story:id,name:nm,body,device:rxDev(),sub})}),j=await r.json();
+      if(j.ok){form.body.value='';msg.textContent=j.notified?`Notified ${j.notified} ${j.notified>1?'people':'person'}.`:'';const c=RXN.counts[id]=RXN.counts[id]||{};c.cc=(c.cc||0)+1;rxRefresh(id);
         fetch(RXN.api+'/comments?story='+encodeURIComponent(id)).then(r=>r.json()).then(paint)}
       else msg.textContent=j.reason||'Couldn’t post that.'}
     catch(err){msg.textContent='Couldn’t reach the server. Try again.'}
@@ -3670,86 +3783,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-cmt]');if(
 // the API address lives in config.json at the top of the site (set once Cloudflare is ready)
 fetch('config.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.api){RXN.api=String(j.api).replace(/\/$/,'');window.PP_API=RXN.api;if(typeof renderAll==='function')renderAll();if(typeof askCoopReady==='function')askCoopReady()}}).catch(()=>{});
 
-/* ===== Ask Coop: a parcel expert grounded in this app (guides, stories, rate clock, fuel, docs, market map) =====
-   The app finds the relevant passages itself (it downloads a carrier's guide shelf only when asked about that carrier),
-   then sends the question and those passages to the Parcel Pigeon API. Coop answers only from them, cites sources,
-   and can play a short animated explainer. Needs config.json "api" (Cloudflare). */
-var ASK={busy:false,el:null,last:null};
-const ASK_STOP=new Set('the a an and or of to in on for with is are was be what how why when does do can will my our your their it this that as at by from about which who much many per vs than there any if should'.split(' '));
-const askTerms=q=>[...new Set(String(q).toLowerCase().replace(/[’']/g,'').match(/[a-z0-9$%.]{2,}/g)||[])].filter(w=>!ASK_STOP.has(w));
-const ASK_CARS=[['UPS',/\bups\b/i],['FedEx',/\bfed\s?ex\b/i],['USPS',/\busps\b|postal|post office|ground advantage|priority mail/i],['Amazon',/\bamazon\b/i],
-  ['OnTrac',/\bontrac\b|lasership/i],['DHL',/\bdhl\b/i],['GLS US',/\bgls\b/i],['LSO',/\blso\b/i],['Spee-Dee',/spee-?dee/i],['Veho',/\bveho\b/i]];
-function askScore(text,terms){const t=String(text).toLowerCase();let s=0;terms.forEach(w=>{if(t.includes(w))s+=w.length>4?2:1});return s}
-async function askShelf(q,terms){
-  // which carriers' guides to read: the ones named, else the big two
-  let cars=ASK_CARS.filter(([c,r])=>r.test(q)).map(x=>x[0]);if(!cars.length)cars=['UPS','FedEx'];
-  let idx=null;try{idx=await (await fetch('data/guides/index.json')).json()}catch(e){return []}
-  const out=[];
-  for(const c of cars.slice(0,3)){const m=idx&&idx[c];if(!m)continue;
-    try{const part=await (await fetch(m.file)).json();
-      part.chunks.forEach(([i,t])=>{const d=part.docs[i],s=askScore(t,terms)+askScore(d.n,terms)*.5;if(s>0)out.push({s,c,t,d})})}catch(e){}}
-  return out.sort((a,b)=>b.s-a.s).slice(0,5)}
-function askContext(q,terms){const L=[];
-  NEWS.map(n=>[askScore(n.title+' '+n.sum+' '+(n.plain||''),terms),n]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,4).forEach(([,n])=>
-    L.push(`STORY ${n.date} [${(n.c||[]).join(', ')}] ${n.title}. ${n.sum} Effect: ${n.plain||''} (source: ${n.url||''})`));
-  DATES.map(x=>[askScore(x.w+' '+x.c+' '+(x.note||'')+' '+JSON.stringify(x.fees||''),terms),x]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,4).forEach(([,x])=>
-    L.push(`RATE CLOCK ${x.d}${x.end?' to '+x.end:''} ${x.c}: ${x.w}.${x.note?' '+x.note:''}${x.fees?' Fees: '+x.fees.map(f=>f.join(' ')).join('; '):''}`));
-  DOCS.map(d=>[askScore(d.n+' '+d.t+' '+d.c+' '+(d.d||''),terms),d]).filter(x=>x[0]>1).sort((a,b)=>b[0]-a[0]).slice(0,5).forEach(([,d])=>
-    L.push(`DOCUMENT ${d.c} · ${d.t} · ${d.n}${d.eff?' · effective '+d.eff:''} (${d.u||'not public'})`));
-  if(/fuel|diesel|jet|surcharge %|fuel surcharge/i.test(q)){try{const u=fuelNow(1),f=fuelNow(2),ua=fuelNow(4),fa=fuelNow(5),dn=DIESEL.at(-1);
-    L.push(`FUEL week of ${FUEL.eff}: UPS ground ${u[1]}%, UPS domestic air ${ua[4]}%, FedEx ground ${f[2]}%, FedEx domestic air ${fa[5]}%, OnTrac ground ${FUEL.current.OnTrac.ground}%, U.S. diesel $${dn[1]} (${dn[0]}). Ground rates follow the EIA diesel price from two weeks earlier; air follows Gulf Coast jet fuel. New rates start each Monday.`)}catch(e){}}
-  PLAYERS.filter(p=>new RegExp('\\b'+p.n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i').test(q)).slice(0,3).forEach(p=>{
-    const own=PEDGES.filter(e=>(e.a===p.id||e.b===p.id)&&['owns','acquired','merged','sold','spun'].includes(e.k)).slice(0,6).map(e=>e.t).join('; ');
-    L.push(`COMPANY ${p.n}: ${p.s||''} HQ ${p.hq||'n/a'}. ${own?'Ownership: '+own:''}`)});
-  return L.join('\n').slice(0,4200)}
-/* ---------- explainers: small, animated, built from numbers in the answer ---------- */
-const askNum=v=>{const x=parseFloat(String(v).replace(/[^0-9.\-]/g,''));return isFinite(x)?x:null};
-function askViz(v){if(!v||typeof v!=='object')return '';const T=v.title?`<div class="av-t">${esc(v.title)}</div>`:'';
-  if(v.type==='compare'&&Array.isArray(v.items)){const it=v.items.slice(0,5).map(i=>({l:i.label,b:askNum(i.before),a:askNum(i.after)})).filter(i=>i.a!=null);
-    const mx=Math.max(...it.flatMap(i=>[i.a,i.b||0]))||1,u=v.unit||'',fm=x=>x==null?'—':(u==='$'?'$'+x.toFixed(2):x+(u&&u!=='$'?u:''));
-    return `<div class="av av-cmp">${T}${it.map((i,k)=>`<div class="av-row" style="--d:${k*.18}s"><span class="av-l">${esc(i.l)}</span><div class="av-bars"><i class="b0" style="--w:${(i.b||0)/mx*100}%"></i><i class="b1" style="--w:${i.a/mx*100}%"></i></div><span class="av-v">${fm(i.b)} → <b>${fm(i.a)}</b></span></div>`).join('')}</div>`}
-  if(v.type==='dim'){const l=askNum(v.l),w=askNum(v.w),h=askNum(v.h),dv=askNum(v.divisor)||139,act=askNum(v.actual);if(!l||!w||!h)return '';
-    const cube=l*w*h,dimw=Math.ceil(cube/dv),bill=Math.max(dimw,Math.ceil(act||0));
-    return `<div class="av av-dim">${T}<svg viewBox="0 0 160 110" class="av-box"><g class="av-draw"><path d="M30 40 L90 25 L140 40 L80 55 Z" fill="#1E2833" stroke="#5EC2DB"/><path d="M30 40 L80 55 L80 100 L30 85 Z" fill="#17202A" stroke="#5EC2DB"/><path d="M80 55 L140 40 L140 85 L80 100 Z" fill="#121A22" stroke="#5EC2DB"/></g>
-      <text x="36" y="108" class="av-dl">${l} in</text><text x="112" y="100" class="av-dl">${w} in</text><text x="2" y="62" class="av-dl" text-anchor="start">${h} in</text></svg>
-      <ol class="av-steps"><li style="--d:.3s">${l} × ${w} × ${h} = <b>${cube.toLocaleString()}</b> cubic in</li><li style="--d:.9s">÷ ${dv} = ${(cube/dv).toFixed(1)} → <b>${dimw} lb</b> dimensional weight (rounded up)</li>
-      ${act!=null?`<li style="--d:1.5s">Actual weight <b>${act} lb</b></li><li style="--d:2.1s" class="av-res">Billed as <b>${bill} lb</b>, the greater of the two</li>`:''}</ol></div>`}
-  if(v.type==='timeline'&&Array.isArray(v.steps)){const st=v.steps.slice(0,6);
-    return `<div class="av av-tl">${T}<div class="av-line"><i></i></div><ol>${st.map((s,k)=>`<li style="--d:${k*.35}s"><b>${esc(s.date||'')}</b><span>${esc(s.label||'')}</span></li>`).join('')}</ol></div>`}
-  if(v.type==='split'&&Array.isArray(v.parts)){const ps=v.parts.slice(0,6).map(p=>({l:p.label,v:askNum(p.value)})).filter(p=>p.v!=null&&p.v>=0),tot=ps.reduce((a,p)=>a+p.v,0)||1,cols=['#5EC2DB','#7E5AA6','#3E9C82','#E8862A','#F28DB2','#8D99A6'];
-    return `<div class="av av-split">${T}<div class="av-stack">${ps.map((p,k)=>`<i style="--w:${p.v/tot*100}%;--c:${cols[k]};--d:${k*.3}s" title="${esc(p.l)}"></i>`).join('')}</div><ul>${ps.map((p,k)=>`<li style="--c:${cols[k]};--d:${k*.3}s"><i></i>${esc(p.l)} <b>${v.unit==='%'?p.v+'%':'$'+p.v.toFixed(2)}</b></li>`).join('')}<li class="av-tot">Total <b>${v.unit==='%'?tot+'%':'$'+tot.toFixed(2)}</b></li></ul></div>`}
-  return ''}
-function askFmt(t){return esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').split(/\n{2,}/).map(p=>/^- /m.test(p)?`<ul>${p.split('\n').map(l=>`<li>${l.replace(/^- /,'')}</li>`).join('')}</ul>`:`<p>${p.replace(/\n/g,'<br>')}</p>`).join('')}
-/* ---------- the sheet ---------- */
-const ASK_SUGG=['How is dimensional weight calculated for UPS Ground?','When does the FedEx 2027 GRI take effect?','Why did ground fuel surcharges drop this week?','What triggers an additional handling surcharge?'];
-function askOpen(q){if(!window.PP_API)return;askClose();
-  const el=document.createElement('div');el.className='ask';el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');el.setAttribute('aria-label','Ask Coop');
-  el.innerHTML=`<div class="ask-bg" data-askx></div><div class="ask-card"><div class="ask-hd">${rxFace('like','ask-face')}<div><b>Ask Coop</b><small>Answers from the carriers' own guides and everything in Parcel Pigeon</small></div><button class="ask-x" data-askx aria-label="Close">×</button></div>
-    <form class="ask-f"><textarea name="q" rows="2" maxlength="400" placeholder="Ask a parcel question: surcharges, DIM weight, zones, fuel, contracts…" required></textarea><button class="ask-go" type="submit">Ask</button></form>
-    <div class="ask-out"><div class="ask-sug">${ASK_SUGG.map(s=>`<button type="button" data-asks="${esc(s)}">${esc(s)}</button>`).join('')}</div></div></div>`;
-  document.body.appendChild(el);ASK.el=el;document.documentElement.style.overflow='hidden';
-  const f=el.querySelector('form');f.addEventListener('submit',e=>{e.preventDefault();askRun(f.q.value)});
-  f.q.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();askRun(f.q.value)}});
-  if(q){f.q.value=q;askRun(q)}else setTimeout(()=>f.q.focus(),50)}
-function askClose(){if(ASK.el){ASK.el.remove();ASK.el=null;document.documentElement.style.overflow=''}}
-async function askRun(q){q=String(q||'').trim();if(!q||ASK.busy||!ASK.el)return;ASK.busy=true;const out=ASK.el.querySelector('.ask-out'),btn=ASK.el.querySelector('.ask-go');btn.disabled=true;
-  out.innerHTML=`<div class="ask-think">${rxFace('shocked','ask-face sm')}<span>Checking the guides…</span></div>`;
-  try{const terms=askTerms(q),shelf=await askShelf(q,terms),ctx=askContext(q,terms);
-    const passages=shelf.map(x=>({c:x.c,doc:x.d.n,type:x.d.t,url:x.d.u,text:x.t.slice(0,1100)}));
-    const r=await fetch(window.PP_API+'/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({q,ctx,passages,device:rxDev()})});
-    const j=await r.json();
-    if(!j.ok){out.innerHTML=`<div class="ask-a"><p>${esc(j.reason||'Coop is out of the office right now. Try again later.')}</p></div>`}
-    else{const src=(j.sources||[]).filter(s=>s&&s.url).slice(0,5);
-      out.innerHTML=`<div class="ask-a">${askFmt(j.answer||'')}${askViz(j.viz)}
-        ${src.length?`<div class="ask-src"><span class="lbl">Sources</span>${src.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${logoImg(String(s.label||'').split(/[ :·]/)[0],'lgx')}${esc(s.label||'Source')}</a>`).join('')}</div>`:''}
-        <div class="ask-ft">${j.confidence&&j.confidence!=='high'?`<span class="ask-conf">${j.confidence==='low'?'Not enough in the guides to be sure':'Check the source for your contract'}</span>`:''}${j.left!=null?`<span>${j.left} question${j.left===1?'':'s'} left today</span>`:''}</div></div>`;
-      requestAnimationFrame(()=>out.querySelectorAll('.av').forEach(a=>a.classList.add('play')))}}
-  catch(e){out.innerHTML='<div class="ask-a"><p>Couldn’t reach Coop. Check your connection and try again.</p></div>'}
-  ASK.busy=false;btn.disabled=false}
-document.addEventListener('click',e=>{if(e.target.closest('[data-askx]')){askClose();return}const s=e.target.closest('[data-asks]');if(s){askRun(s.dataset.asks);const t=ASK.el&&ASK.el.querySelector('textarea');if(t)t.value=s.dataset.asks;return}
-  const o=e.target.closest('[data-askopen]');if(o){e.preventDefault();askOpen(o.dataset.askopen||'')}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ASK.el)askClose()});
-function askCoopReady(){document.body.classList.add('has-ask')}
+/* ===== Built-in brand logos (Simple Icons, CC0 path data; trademarks belong to their owners). Shown only to identify the company. ===== */
+const BRAND_SVG={"ups":{"v":"1.48 -0.40 21.04 24.80","d":"M11.668 14.544l-.028-5.226c.138-.055.387-.111.608-.111.995 0 1.41.774 1.41 2.682 0 1.853-.47 2.765-1.438 2.765-.22 0-.441-.055-.552-.11zM3.124 7.438c4.203-3.843 9.29-4.866 14.018-4.866 1.3 0 2.544.083 3.76.194h-.028v11.253c0 2.184-.774 3.926-2.295 5.171-1.355 1.134-5.447 2.959-6.581 3.456-1.161-.525-5.253-2.378-6.581-3.456-1.493-1.244-2.295-3.014-2.295-5.171V7.438zm12.664 2.599c.028.912.276 1.576 1.687 2.406.747.442 1.051.747 1.051 1.272 0 .581-.387.94-1.023.94-.553 0-1.189-.304-1.631-.691v1.576c.553.304 1.217.525 1.88.525 1.687 0 2.433-1.189 2.461-2.267.028-.995-.249-1.742-1.659-2.571-.608-.387-1.134-.636-1.106-1.244 0-.581.525-.802.995-.802.581 0 1.161.332 1.521.691V8.378c-.304-.221-.94-.581-1.88-.553-1.135.028-2.296.829-2.296 2.212zm-5.834 9.484h1.714l-.028-3.594c.166.028.415.083.774.083 1.908 0 2.986-1.687 2.986-4.175 0-2.461-1.106-4.009-3.152-4.009-.94 0-1.687.221-2.295.608v11.087zm-5.945-6.166c0 1.797.829 2.71 2.516 2.71 1.051 0 1.908-.249 2.571-.691V7.991H7.41v6.387c-.194.138-.47.221-.802.221-.774 0-.885-.719-.885-1.189V7.991H4.009v5.364zM22.12 2.295v11.723c0 2.516-.94 4.645-2.765 6.111-1.549 1.3-6.332 3.429-7.355 3.871-1.023-.442-5.806-2.571-7.355-3.843-1.797-1.465-2.765-3.594-2.765-6.111V2.295C4.756.747 8.074 0 12 0s7.244.747 10.12 2.295zm-.304.221c-2.71-1.465-6-2.184-9.788-2.184s-7.079.746-9.788 2.184v11.502c0 2.433.912 4.452 2.627 5.862 1.576 1.3 6.581 3.484 7.161 3.76.581-.249 5.585-2.433 7.161-3.733 1.714-1.41 2.627-3.429 2.627-5.862V2.516zm-2.433 20.295c0 .47-.387.829-.829.829a.831.831 0 0 1-.829-.829c0-.47.387-.829.829-.829.441 0 .801.359.829.829zm-.166 0a.679.679 0 0 0-.664-.691c-.359 0-.664.332-.664.691 0 .359.304.664.664.664a.673.673 0 0 0 .664-.664zm-.553.055c.028.055.304.442.304.442h-.221s-.276-.387-.276-.415h-.028v.415h-.194v-.995l.304-.028c.249 0 .332.166.332.304s-.083.25-.221.277zm.027-.276c0-.055 0-.138-.166-.138h-.083v.304h.028c.194 0 .221-.083.221-.166z","c":"#351C15"},"fedex":{"v":"-0.40 8.34 24.80 7.32","d":"M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z","c":"#4D148C"},"fdxsc":{"v":"-0.40 8.34 24.80 7.32","d":"M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z","c":"#4D148C"},"fdxfreight":{"v":"-0.40 8.34 24.80 7.32","d":"M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z","c":"#4D148C"},"usps":{"v":"-0.40 4.18 24.80 15.65","d":"M3.145 4.577L0 19.423h20.855L24 4.577H3.145zm-.157 3.806h9.436c.157 0 5.064 0 5.159.975H9.09l1.321 4.026c1.51-.723 5.222-2.233 7.455-2.328.944-.031 1.321.126 1.132.252-.126.063-1.038.189-1.761.377-1.258.315-1.321.315-2.642.755-1.478.503-2.705 1.069-4.53 1.919L.723 18.983l2.265-10.6zm16.483 1.698c-.535-.094-2.768.063-3.334.063-.126 0-.472.031-.472-.063 0-.063.126-.063.377-.094s1.006-.157 1.258-.283c.063-.063.22-.157.315-.252.031-.063.063-.094.157-.094h1.164c.755 0 1.195.094 1.132.723-.031.315-.472 1.132-.629 1.384-.063.094-.189.189-.157 0 .126-.503.597-1.321.189-1.384zm.88 8.902H2.076s17.363-6.794 17.552-6.92c0 0 1.541-2.076.629-2.925-.283-.283-.692-.283-2.265-.283 0 0-.063-.598-2.485-1.164-.283-.063-11.858-2.517-11.858-2.517h19.628l-2.926 13.809zm2.925-.695c0-.195-.114-.293-.358-.293h-.406v1.008h.146v-.439h.179l.276.455h.179L23 18.564c.162-.016.276-.097.276-.276zm-.455.146h-.163v-.341h.211c.114 0 .228.016.228.163 0 .162-.13.178-.276.178zm.016-.829a.868.868 0 0 0-.894.878c0 .504.406.894.894.894s.894-.39.894-.894a.878.878 0 0 0-.894-.878zm0 1.642c-.423 0-.731-.325-.731-.764 0-.423.325-.748.731-.748.406 0 .731.325.731.748 0 .439-.325.764-.731.764z","c":"#333366"},"amazon":{"v":"-0.40 0.70 24.80 22.60","d":"M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z","c":"#FF9900"},"amzship":{"v":"-0.40 0.70 24.80 22.60","d":"M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z","c":"#FF9900"},"primeair":{"v":"-0.40 0.70 24.80 22.60","d":"M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z","c":"#FF9900"},"dhlexpress":{"v":"-0.40 9.90 24.80 4.20","d":"M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z","c":"#D40511","bg":"#FFCC00"},"dhlecom":{"v":"-0.40 9.90 24.80 4.20","d":"M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z","c":"#D40511","bg":"#FFCC00"},"dhl":{"v":"-0.40 9.90 24.80 4.20","d":"M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z","c":"#D40511","bg":"#FFCC00"},"doordash":{"v":"-0.40 4.78 24.80 14.44","d":"M23.071 8.409a6.09 6.09 0 00-5.396-3.228H.584A.589.589 0 00.17 6.184L3.894 9.93a1.752 1.752 0 001.242.516h12.049a1.554 1.554 0 11.031 3.108H8.91a.589.589 0 00-.415 1.003l3.725 3.747a1.75 1.75 0 001.242.516h3.757c4.887 0 8.584-5.225 5.852-10.413","c":"#FF3008"},"uber":{"v":"-0.40 7.57 24.80 8.86","d":"M0 7.97v4.958c0 1.867 1.302 3.101 3 3.101.826 0 1.562-.316 2.094-.87v.736H6.27V7.97H5.082v4.888c0 1.257-.85 2.106-1.947 2.106-1.11 0-1.946-.827-1.946-2.106V7.971H0zm7.44 0v7.925h1.13v-.725c.521.532 1.257.86 2.06.86a3.006 3.006 0 0 0 3.034-3.01 3.01 3.01 0 0 0-3.033-3.024 2.86 2.86 0 0 0-2.049.861V7.971H7.439zm9.869 2.038c-1.687 0-2.965 1.37-2.965 3 0 1.72 1.334 3.01 3.066 3.01 1.053 0 1.913-.463 2.49-1.233l-.826-.611c-.43.577-.996.847-1.664.847-.973 0-1.753-.7-1.912-1.64h4.697v-.373c0-1.72-1.222-3-2.886-3zm6.295.068c-.634 0-1.098.294-1.381.758v-.713h-1.131v5.774h1.142V12.61c0-.894.544-1.47 1.291-1.47H24v-1.065h-.396zm-6.319.928c.85 0 1.564.588 1.756 1.47H15.52c.203-.882.916-1.47 1.765-1.47zm-6.732.012c1.086 0 1.98.883 1.98 2.004a1.993 1.993 0 0 1-1.98 2.001A1.989 1.989 0 0 1 8.56 13.02a1.99 1.99 0 0 1 1.992-2.004z","c":"#000000"},"uberfreight":{"v":"-0.40 7.57 24.80 8.86","d":"M0 7.97v4.958c0 1.867 1.302 3.101 3 3.101.826 0 1.562-.316 2.094-.87v.736H6.27V7.97H5.082v4.888c0 1.257-.85 2.106-1.947 2.106-1.11 0-1.946-.827-1.946-2.106V7.971H0zm7.44 0v7.925h1.13v-.725c.521.532 1.257.86 2.06.86a3.006 3.006 0 0 0 3.034-3.01 3.01 3.01 0 0 0-3.033-3.024 2.86 2.86 0 0 0-2.049.861V7.971H7.439zm9.869 2.038c-1.687 0-2.965 1.37-2.965 3 0 1.72 1.334 3.01 3.066 3.01 1.053 0 1.913-.463 2.49-1.233l-.826-.611c-.43.577-.996.847-1.664.847-.973 0-1.753-.7-1.912-1.64h4.697v-.373c0-1.72-1.222-3-2.886-3zm6.295.068c-.634 0-1.098.294-1.381.758v-.713h-1.131v5.774h1.142V12.61c0-.894.544-1.47 1.291-1.47H24v-1.065h-.396zm-6.319.928c.85 0 1.564.588 1.756 1.47H15.52c.203-.882.916-1.47 1.765-1.47zm-6.732.012c1.086 0 1.98.883 1.98 2.004a1.993 1.993 0 0 1-1.98 2.001A1.989 1.989 0 0 1 8.56 13.02a1.99 1.99 0 0 1 1.992-2.004z","c":"#000000"},"instacart":{"v":"0.85 -0.40 22.30 24.80","d":"M15.629 9.619c1.421 1.429 2.58 3.766 1.917 5.152-1.778 3.715-15.04 10.226-16.169 9.1C.252 22.746 6.768 9.476 10.481 7.697c1.388-.66 3.724.51 5.152 1.92l-.005.014v-.012zm7.028-1.566c-.231-.855-.821-1.717-1.7-1.82-1.61-.186-4.151 2.663-3.971 3.339.181.69 3.766 1.875 5.1.915.691-.494.781-1.56.556-2.414l.015-.02zM17.666.158c1.198.324 2.407 1.148 2.551 2.382.261 2.259-3.732 5.819-4.68 5.564-.948-.251-2.618-5.284-1.269-7.162.695-.972 2.201-1.106 3.399-.788v.004h-.001z","c":"#43B02A"},"postmates":{"v":"-0.40 3.01 24.80 17.98","d":"M2.545 14.954l.44-1.284-1.138.692-1.08-.88.342 1.35-1.109.74 1.35.143.396 1.338.492-1.263 1.352.087zm5.308-2.61l-1.14.692-1.08-.88.342 1.349-1.108.74 1.35.144.396 1.336.493-1.261 1.352.087-1.046-.924zm-1.328 4.864l-1.139.692-1.08-.881.342 1.35-1.108.74 1.35.144.396 1.338.492-1.263 1.353.087-1.046-.924zM15.95 6.744l.72.041a.123.122 0 0 0 .092-.032l1.78-1.67a.032.032 0 0 0-.02-.056l-.7-.04a.189.189 0 0 0-.14.05l-1.754 1.646a.035.035 0 0 0 .022.06zm7.55 3.377a3.1 3.098 0 0 0-4.976-.342l-1.108-.83c.277-.113.857-.368.896-.525.022-.093-.273-.158-.727-.187l2.079-1.896a.047.047 0 0 0 .009-.053l-.529-.996a.04.04 0 0 0-.063-.01l-2.163 1.97c-.646 0-1.796.085-2.127-.123-.528-.333-.59-.822-.785-.997-.195-.176-.415-.197-.462-.346a.015.015 0 0 1 .011-.019c.102-.026.67-.186.8-.58.129-.396-.135-.932-.18-1.016a.018.018 0 0 1 0-.02l.604-.527a.018.018 0 0 0-.013-.03l-.886.108a.015.015 0 0 1-.015 0c-.047-.062-.4-.484-1.121-.189-.842.34-.687 1.068-.687 1.068.112.753.374.902.8 1.148.012 0 .017.02 0 .027-.274.228-3.035 2.494-5.585 3.378a.05.05 0 0 0 0 .093c.738.32 2.952.147 3.606-.232a.016.016 0 0 1 .025.018c-.072.273-.458 1.873.147 2.37l.034.026-.82.578a.21.21 0 0 0 .147.38l.422-.047a1.216 1.216 0 0 0 .725-.34l.148-.14 1.193.886-.158 1.261a3.1 3.098 0 1 0 2.56 1.623l.305-.195a.748.748 0 0 0 1.218-.756l1.262-.37a.205.205 0 0 0 .147-.24l-.008-.041a.207.207 0 0 0-.203-.164h-1.071a.018.018 0 0 1-.015-.01l-.322-.727.64-3.762 1.034.767a3.1 3.098 0 1 0 5.224 0zm-8.594-2.228l1.46-.025.192.361c-.338.012-.69.039-1.033.082-.247.03-.545-.287-.634-.387a.02.02 0 0 1 .015-.03zm-2.214 2.185c.122-.204.831-1.384.92-1.787a.018.018 0 0 1 .03-.007c.471.55 1.468.866 1.545.885a.009.009 0 0 0 .008 0l1.28-.394.287.213-1.34 1.229a.918.918 0 0 0-.52-.228c-.77-.098-1.975.076-2.194.11a.016.016 0 0 1-.006-.021zm3.31 4.029a.76.76 0 0 0-.249.074l-.915-.7a.015.015 0 0 1 0-.019l.458-.948a.016.016 0 0 1 .03 0l.752 1.18zm-1.942-1.025l-.626-.468 1.2-1.1zm0-1.623l-.974.894-.977-.727a11.265 11.258 0 0 0 1.97-.16zm-.778 1.553l.643.478-.077.211a.286.286 0 0 0 .172.369l1.34.488.04.03a.753.752 0 0 0-.019.473l-.295.192a3.09 3.088 0 0 0-1.919-1.217zm-.208 1.661a2.46 2.458 0 0 1 1.465.925l-1.717 1.092zm.822 4.48a2.46 2.46 0 1 1-1.235-4.53l-.309 2.456a.214.214 0 0 0 .096.203.207.207 0 0 0 .223 0l2.089-1.328a2.462 2.46 0 0 1-.866 3.198zm1.83-8.045a.01.01 0 0 1 0-.01 1.329 1.328 0 0 0-.063-.518l1.133-1.033-.49 2.875zm6.486 2.751a2.46 2.458 0 0 1-3.418-3.362l1.95 1.452a.207.207 0 0 0 .237.008.196.196 0 0 0 .054-.05.208.208 0 0 0-.043-.295l-1.953-1.45a2.385 2.384 0 0 1 .526-.443 2.46 2.46 0 1 1 2.644 4.147Z","c":"#000000","bg":"#FFDF18"},"deliveroo":{"v":"0.61 -0.40 22.79 24.80","d":"M16.861 0l-1.127 10.584L13.81 1.66 7.777 2.926l1.924 8.922-8.695 1.822 1.535 7.127L17.832 24l3.498-7.744L22.994.636 16.861 0zM11.39 13.61a.755.755 0 01.322.066c.208.093.56.29.63.592.103.434.004.799-.312 1.084v.002c-.315.284-.732.258-1.174.113-.441-.145-.637-.672-.47-1.309.124-.473.71-.544 1.004-.549zm4.142.548c.447-.012.832.186 1.05.543.217.357.107.75-.122 1.143h-.002c-.229.392-.83.445-1.422.16-.399-.193-.397-.684-.353-.983a.922.922 0 01.193-.447c.142-.177.381-.408.656-.416Z","c":"#00CCBC"},"grubhub":{"v":"-0.40 9.08 24.80 5.83","d":"M16.708 9.556h-.84c-.048 0-.072.048-.072.072v1.828h-.84V9.628c0-.048-.048-.072-.072-.072h-.84c-.048 0-.072.048-.072.072v4.692c0 .048.048.072.072.072h.84c.048 0 .072-.048.072-.072v-1.876h.84v1.876c0 .048.048.072.072.072h.84c.048 0 .072-.048.072-.072V9.628c0-.024-.024-.072-.072-.072m-7.08 0h-.84c-.048 0-.072.024-.072.072v3.324a.61.61 0 0 1-.12.384c-.072.096-.168.12-.288.12a.405.405 0 0 1-.288-.12.61.61 0 0 1-.12-.384V9.628c0-.048-.048-.072-.072-.072h-.84c-.048 0-.072.024-.072.072v3.348c0 .432.096.84.36 1.108.264.264.624.408 1.036.408.432 0 .796-.144 1.036-.408.264-.264.36-.648.36-1.108V9.628c-.004-.024-.028-.072-.08-.072m-8.232-.072c-.432 0-.796.144-1.036.408C.096 10.156 0 10.54 0 11v2c0 .432.096.84.36 1.108.264.264.624.408 1.036.408.432 0 .796-.144 1.036-.408.264-.264.36-.648.36-1.108v-1.104a.102.102 0 0 0-.096-.096H1.468a.102.102 0 0 0-.096.096v.82c0 .048.048.096.096.096h.316v.192a.676.676 0 0 1-.12.408c-.072.096-.168.12-.288.12a.405.405 0 0 1-.288-.12.69.69 0 0 1-.12-.408v-1.976c0-.168.048-.316.12-.408.072-.096.168-.12.288-.12.116 0 .216.048.288.12.072.096.12.24.12.408v.192c0 .048.048.072.072.072h.84c.048 0 .072-.024.072-.072v-.192c0-.432-.096-.84-.36-1.108-.216-.292-.604-.436-1.012-.436m10.832 3.828c-.072.096-.168.12-.316.12h-.48v-1.016h.48c.12 0 .216.048.288.12.079.104.121.23.12.36.008.2-.016.316-.092.416zm-.364-2.768c.12 0 .216.024.288.12.072.072.096.192.096.34s-.024.264-.096.36a.385.385 0 0 1-.264.12h-.432v-.94h.408zm.964 1.372c.144-.144.408-.48.408-.916 0-.508-.192-.82-.34-.988-.264-.288-.624-.432-1.036-.432h-1.316c-.048 0-.072.048-.072.072v4.696c0 .048.048.072.072.072h1.396c.432 0 .84-.168 1.108-.508.144-.192.316-.508.316-.988-.028-.576-.388-.916-.536-1.008zm-7.652-.46c-.072.096-.192.144-.34.144h-.408v-1.056h.408c.144 0 .264.048.34.144.096.096.12.216.12.384s-.02.288-.12.384zm.532.868c.096-.072.168-.12.24-.216.168-.192.384-.532.384-1.06 0-.508-.192-.84-.384-1.036-.24-.288-.6-.432-1.012-.456H3.54c-.048 0-.072.048-.072.072v4.692c0 .048.048.072.072.072h.84c.048 0 .072-.048.072-.072v-1.736h.288l.532 1.78c0 .024.048.048.072.048h.888c.024 0 .048-.024.072-.024s.024-.048.024-.072l-.62-1.992zm17.136.988c-.072.096-.168.12-.316.12h-.48v-1.016h.48c.12 0 .216.048.288.12.079.104.121.23.12.36.028.2-.016.316-.092.416zm-.34-2.768c.12 0 .216.024.288.12.072.072.096.192.096.34s-.024.264-.096.36a.385.385 0 0 1-.264.12h-.432v-.94h.408zm.964 1.372c.144-.144.408-.48.408-.916 0-.508-.192-.82-.34-.988-.264-.288-.624-.432-1.036-.432h-1.328c-.048 0-.072.048-.072.072v4.696c0 .048.048.072.072.072h1.404c.432 0 .84-.168 1.108-.508.144-.192.316-.508.316-.988a1.442 1.442 0 0 0-.532-1.008zm-3.224-2.36h-.84c-.048 0-.072.024-.072.072v3.324a.61.61 0 0 1-.12.384c-.072.096-.168.12-.288.12a.405.405 0 0 1-.288-.12.61.61 0 0 1-.12-.384V9.628c0-.048-.048-.072-.072-.072H17.6c-.048 0-.072.024-.072.072v3.348c0 .432.096.84.36 1.108.264.264.624.408 1.036.408.432 0 .796-.144 1.036-.408.264-.264.36-.648.36-1.108V9.628c.024-.024-.024-.072-.076-.072","c":"#F63440"},"walmart":{"v":"-0.40 8.70 24.80 6.60","d":"M21.41818 9.10219c-.22048 0-.39583.12308-.39583.27297l.13393 1.51627c.01478.09132.12669.16185.26197.16185.13555-.00017.24705-.07065.26214-.16185l.13424-1.51627c0-.1499-.17555-.27297-.39645-.27297zM-.00002 10.3184s.59713 2.44699.69242 2.84417c.11123.46362.3117.63419.88954.51913l.37291-1.51718c.0945-.37683.1579-.64553.21866-1.02883h.01065c.04269.3871.10354.65314.18131 1.03017 0 0 .15176.68869.22949 1.05042.07795.36163.29482.5895.86083.46542l.88851-3.3633h-.71735l-.30339 1.45411c-.08155.42325-.15544.75396-.21251 1.14117h-.01022c-.05189-.38347-.11777-.70096-.20072-1.11331l-.31586-1.48197h-.7474l-.3378 1.44462c-.09569.43899-.18528.79337-.2422 1.16745h-.01023c-.05832-.35224-.13599-.7977-.22006-1.22261 0 0-.20074-1.03328-.27115-1.38946zm6.83845 0v3.3633h.68299v-3.3633zm9.6188 0v2.48118c0 .34202.0644.5817.20213.72811.12033.12806.31854.21094.55604.21094.20193 0 .40062-.0383.49426-.07317l-.0088-.53367c-.06968.01711-.1498.03078-.25942.03078-.23265 0-.31068-.149-.31068-.45611v-.94921h.59479v-.64351h-.59481v-.79533zm2.77885 0c-.11446.0027-.24452.08936-.32723.23277-.11062.19096-.09105.40434.03838.47923l1.3799.64254c.0862.03205.20323-.02912.27103-.14597.06814-.11745.0629-.2496-.0088-.3082l-1.24635-.8741c-.03237-.01874-.06877-.02717-.10693-.02627zm4.36427 0c-.03815-.0009-.0745.0075-.1068.02628l-1.2464.8741c-.07112.05846-.07653.1901-.0092.30734.00006.00013.00015.00023.00025.00036.00009.00016.00015.00033.00024.00049.06804.11686.18472.17803.27091.14598l1.38004-.64254c.12997-.0749.14861-.28827.03874-.47923-.08309-.1434-.21333-.23006-.32777-.23277zM5.312 11.0981c-.42444 0-.76136.11916-.94501.22529l.13442.46019c.16808-.10595.43566-.19366.68907-.19366.41954-.0011.48817.23728.48817.39012v.03613c-.9142-.0014-1.49164.31493-1.49164.9598 0 .3937.29399.76266.80512.76266.31466 0 .57778-.12554.73548-.32662h.01545s.10445.4367.67982.26969c-.03022-.18174-.04002-.37546-.04002-.60884v-.89849c0-.57263-.24452-1.07627-1.07086-1.07627zm4.08552 0c-.42739 0-.61944.2166-.7359.40034h-.01016v-.34335h-.65173v2.5266h.68658V12.2c0-.06945.00799-.1429.03223-.2068.05689-.1492.19565-.3237.41725-.3237.27704 0 .40667.2342.40667.57222v1.44h.68585v-1.4996c0-.06636.0091-.14622.02859-.20486.05639-.16969.20602-.30776.41201-.30776.28086 0 .41567.23012.41567.62788v1.38434h.68633v-1.48805c0-.78478-.39845-1.09555-.8483-1.09555-.19922 0-.35646.04996-.49863.13722-.1195.07334-.22655.17753-.32006.3147h-.0101c-.10853-.27228-.36375-.45192-.6963-.45192zm3.7702 0c-.42435 0-.76113.11916-.94495.22529l.13454.46019c.16792-.10595.43572-.19366.689-.19366.41926-.0011.48806.23728.48806.39012v.03613c-.91407-.0014-1.49164.31494-1.49164.9598 0 .3937.29418.76266.8056.76266.31441 0 .57759-.12554.735-.32662h.01557s.10437.4367.67982.26969c-.03027-.18174-.03996-.37546-.03996-.60884v-.89849c0-.57263-.24458-1.07627-1.07104-1.07627zm2.85129 0c-.26292 0-.56205.1697-.68761.53354h-.0191v-.47655h-.6181v2.5266h.70453V12.388c0-.06985.0042-.1307.01527-.1865.0521-.27102.25945-.44425.55696-.44425.08167 0 .1401.0088.20333.018v-.66151c-.05302-.0107-.0893-.01563-.15528-.01563zm4.35946 1.22067c-.01785-.00025-.03513.0026-.05134.0087l-1.3799.6418c-.12943.07519-.149.28868-.03838.47984.11028.1906.30469.28118.43415.20644l1.24634-.87349c.0717-.05929.07696-.19127.0088-.30862l.0006.00025c-.05507-.09558-.14292-.15388-.22027-.15492zm2.07955 0c-.07727.001-.1649.05934-.22012.15491l.00049-.00025c-.06781.11735-.06254.24934.0088.30862l1.2464.87349c.12921.07474.3238-.01584.43458-.20644.10986-.19116.09122-.40466-.03875-.47983l-1.38012-.64181c-.0162-.0061-.03344-.0089-.05128-.0087zm-16.75741.14518v.31519c0 .0466-.00406.09467-.01697.13673-.05286.17506-.23415.32303-.46086.32303-.18901 0-.33916-.1073-.33916-.33422 0-.34707.38204-.443.81699-.44073zm7.85577 0v.31519c0 .0466-.0041.09467-.0169.13673-.05287.17506-.23421.32303-.46093.32303-.18905 0-.3392-.1073-.3392-.33422 0-.34707.38209-.443.81703-.44073zm7.86138.48324c-.13506.00016-.24672.07024-.26148.16137l-.13393 1.5162c0 .15015.17535.27304.39583.27304.2209 0 .39645-.12289.39645-.27303l-.13424-1.51621c-.01509-.09113-.12659-.1612-.26214-.16137z","c":"#0071CE"},"walmartasr":{"v":"-0.40 8.70 24.80 6.60","d":"M21.41818 9.10219c-.22048 0-.39583.12308-.39583.27297l.13393 1.51627c.01478.09132.12669.16185.26197.16185.13555-.00017.24705-.07065.26214-.16185l.13424-1.51627c0-.1499-.17555-.27297-.39645-.27297zM-.00002 10.3184s.59713 2.44699.69242 2.84417c.11123.46362.3117.63419.88954.51913l.37291-1.51718c.0945-.37683.1579-.64553.21866-1.02883h.01065c.04269.3871.10354.65314.18131 1.03017 0 0 .15176.68869.22949 1.05042.07795.36163.29482.5895.86083.46542l.88851-3.3633h-.71735l-.30339 1.45411c-.08155.42325-.15544.75396-.21251 1.14117h-.01022c-.05189-.38347-.11777-.70096-.20072-1.11331l-.31586-1.48197h-.7474l-.3378 1.44462c-.09569.43899-.18528.79337-.2422 1.16745h-.01023c-.05832-.35224-.13599-.7977-.22006-1.22261 0 0-.20074-1.03328-.27115-1.38946zm6.83845 0v3.3633h.68299v-3.3633zm9.6188 0v2.48118c0 .34202.0644.5817.20213.72811.12033.12806.31854.21094.55604.21094.20193 0 .40062-.0383.49426-.07317l-.0088-.53367c-.06968.01711-.1498.03078-.25942.03078-.23265 0-.31068-.149-.31068-.45611v-.94921h.59479v-.64351h-.59481v-.79533zm2.77885 0c-.11446.0027-.24452.08936-.32723.23277-.11062.19096-.09105.40434.03838.47923l1.3799.64254c.0862.03205.20323-.02912.27103-.14597.06814-.11745.0629-.2496-.0088-.3082l-1.24635-.8741c-.03237-.01874-.06877-.02717-.10693-.02627zm4.36427 0c-.03815-.0009-.0745.0075-.1068.02628l-1.2464.8741c-.07112.05846-.07653.1901-.0092.30734.00006.00013.00015.00023.00025.00036.00009.00016.00015.00033.00024.00049.06804.11686.18472.17803.27091.14598l1.38004-.64254c.12997-.0749.14861-.28827.03874-.47923-.08309-.1434-.21333-.23006-.32777-.23277zM5.312 11.0981c-.42444 0-.76136.11916-.94501.22529l.13442.46019c.16808-.10595.43566-.19366.68907-.19366.41954-.0011.48817.23728.48817.39012v.03613c-.9142-.0014-1.49164.31493-1.49164.9598 0 .3937.29399.76266.80512.76266.31466 0 .57778-.12554.73548-.32662h.01545s.10445.4367.67982.26969c-.03022-.18174-.04002-.37546-.04002-.60884v-.89849c0-.57263-.24452-1.07627-1.07086-1.07627zm4.08552 0c-.42739 0-.61944.2166-.7359.40034h-.01016v-.34335h-.65173v2.5266h.68658V12.2c0-.06945.00799-.1429.03223-.2068.05689-.1492.19565-.3237.41725-.3237.27704 0 .40667.2342.40667.57222v1.44h.68585v-1.4996c0-.06636.0091-.14622.02859-.20486.05639-.16969.20602-.30776.41201-.30776.28086 0 .41567.23012.41567.62788v1.38434h.68633v-1.48805c0-.78478-.39845-1.09555-.8483-1.09555-.19922 0-.35646.04996-.49863.13722-.1195.07334-.22655.17753-.32006.3147h-.0101c-.10853-.27228-.36375-.45192-.6963-.45192zm3.7702 0c-.42435 0-.76113.11916-.94495.22529l.13454.46019c.16792-.10595.43572-.19366.689-.19366.41926-.0011.48806.23728.48806.39012v.03613c-.91407-.0014-1.49164.31494-1.49164.9598 0 .3937.29418.76266.8056.76266.31441 0 .57759-.12554.735-.32662h.01557s.10437.4367.67982.26969c-.03027-.18174-.03996-.37546-.03996-.60884v-.89849c0-.57263-.24458-1.07627-1.07104-1.07627zm2.85129 0c-.26292 0-.56205.1697-.68761.53354h-.0191v-.47655h-.6181v2.5266h.70453V12.388c0-.06985.0042-.1307.01527-.1865.0521-.27102.25945-.44425.55696-.44425.08167 0 .1401.0088.20333.018v-.66151c-.05302-.0107-.0893-.01563-.15528-.01563zm4.35946 1.22067c-.01785-.00025-.03513.0026-.05134.0087l-1.3799.6418c-.12943.07519-.149.28868-.03838.47984.11028.1906.30469.28118.43415.20644l1.24634-.87349c.0717-.05929.07696-.19127.0088-.30862l.0006.00025c-.05507-.09558-.14292-.15388-.22027-.15492zm2.07955 0c-.07727.001-.1649.05934-.22012.15491l.00049-.00025c-.06781.11735-.06254.24934.0088.30862l1.2464.87349c.12921.07474.3238-.01584.43458-.20644.10986-.19116.09122-.40466-.03875-.47983l-1.38012-.64181c-.0162-.0061-.03344-.0089-.05128-.0087zm-16.75741.14518v.31519c0 .0466-.00406.09467-.01697.13673-.05286.17506-.23415.32303-.46086.32303-.18901 0-.33916-.1073-.33916-.33422 0-.34707.38204-.443.81699-.44073zm7.85577 0v.31519c0 .0466-.0041.09467-.0169.13673-.05287.17506-.23421.32303-.46093.32303-.18905 0-.3392-.1073-.3392-.33422 0-.34707.38209-.443.81703-.44073zm7.86138.48324c-.13506.00016-.24672.07024-.26148.16137l-.13393 1.5162c0 .15015.17535.27304.39583.27304.2209 0 .39645-.12289.39645-.27303l-.13424-1.51621c-.01509-.09113-.12659-.1612-.26214-.16137z","c":"#0071CE"},"target":{"v":"-0.40 -0.40 24.80 24.80","d":"M12.0005 0C18.627 0 24 5.373 24 12.0005 24 18.627 18.627 24 11.9995 24 5.373 24 0 18.627 0 11.9995 0 5.373 5.373 0 12.0005 0zm0 19.826a7.8265 7.8265 0 10-.001-15.652C7.7133 4.2246 4.2653 7.7136 4.2653 12c0 4.2864 3.448 7.7754 7.7342 7.826h.001zm0-3.9853a3.8402 3.8402 0 110-7.6803c2.1204.0006 3.839 1.7197 3.839 3.8401s-1.7186 3.8396-3.839 3.8402z","c":"#CC0000"},"macys":{"v":"-0.40 0.22 24.80 23.56","d":"M12.015.624L9.19 9.293H0l7.445 5.384-2.819 8.673L12 17.986l7.422 5.393-2.835-8.713L24 9.292h-9.162L12.015.622v.002z","c":"#E21A2C"},"shopify":{"v":"1.05 -0.40 21.90 24.80","d":"M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z","c":"#7AB55C"},"flipkart":{"v":"1.43 -0.40 21.13 24.80","d":"M3.833 1.333a.993.993 0 0 0-.333.061V1c0-.551.449-1 1-1h14.667c.551 0 1 .449 1 1v.333H3.833zm17.334 2.334H2.833c-.551 0-1 .449-1 1V23c0 .551.449 1 1 1h7.3l1.098-5.645h-2.24c-.051 0-5.158-.241-5.158-.241l4.639-.327-.078-.366-1.978-.285 1.882-.158-.124-.449-3.075-.467s3.341-.373 3.392-.373h3.232l.247-1.331c.289-1.616.945-2.807 1.973-3.693 1.033-.892 2.344-1.332 3.937-1.332.643 0 1.053.151 1.231.463.118.186.201.516.279.859.074.352.14.671.095.903-.057.345-.461.465-1.197.465h-.253c-1.327 0-2.134.763-2.405 2.31l-.243 1.355h1.54c.574 0 .781.402.622 1.306-.17.941-.539 1.36-1.111 1.36H14.9L13.804 24h7.362c.551 0 1-.449 1-1V4.667a1 1 0 0 0-.999-1zM20.5 2.333A.334.334 0 0 0 20.167 2H3.833a.334.334 0 0 0-.333.333V3h17v-.667z","c":"#2874F0"},"dpd":{"v":"1.30 -0.40 21.40 24.80","d":"M16.01 10.71a.364.364 0 01-.343-.006l-.558-.331a.43.43 0 01-.182-.312l-.014-.65a.363.363 0 01.165-.3l6.7-3.902L12.377.085A.799.799 0 0012 0a.798.798 0 00-.377.085l-9.4 5.124 10.53 6.13c.098.054.172.181.172.295v8.944c0 .112-.08.241-.178.294l-.567.315c-.171.062-.256.043-.361 0l-.569-.315a.362.362 0 01-.175-.294v-7.973a.223.223 0 00-.095-.156L1.702 7.048v10.579c0 .236.167.528.371.648l9.556 5.636c.102.06.237.09.371.089a.745.745 0 00.371-.09l9.557-5.635a.835.835 0 00.37-.648V7.047Z","c":"#DC0032"},"ebay":{"v":"-0.40 6.81 24.80 10.38","d":"M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z","c":"#E53238"}};
 
 /* ===== Story illustrations: one clear subject per story, drawn in the browser (free, no files) =====
    The headline picks the subject (a fuel gauge, a picket sign, two buildings changing hands). The story id then
@@ -3934,6 +3969,46 @@ document.addEventListener('click',e=>{
     const done=t=>{const o=s.textContent;s.textContent=t;setTimeout(()=>{s.textContent=o},1600)};
     if(navigator.share)navigator.share({title,url}).catch(()=>{});
     else if(navigator.clipboard)navigator.clipboard.writeText(url).then(()=>done('Link copied'),()=>done('Copy failed'))}},true);
+
+/* ===== Coop delivers new documents: flies in, drops the envelope into the folder that holds it, the folder lights up
+   and its "new" count pops. Plays when you open a document alert, and once for each new document the first time you
+   open the Docs library after it arrives. ===== */
+function coopDrop(target,done){
+  if(!target){done&&done();return}
+  target.scrollIntoView({block:'center',behavior:reduceMotion()?'auto':'smooth'});
+  const land=()=>{target.classList.remove('dropin');void target.offsetWidth;target.classList.add('dropin');
+    const b=target.querySelector(':scope>summary .nb');if(b&&!b.hidden){b.classList.remove('nbpop');void b.offsetWidth;b.classList.add('nbpop')}
+    setTimeout(()=>target.classList.remove('dropin'),2600)};
+  if(reduceMotion()||!window.COOP_FLY){land();done&&done();return}
+  setTimeout(()=>{const r=target.getBoundingClientRect(),f=document.createElement('div');f.className='coopfly coopdrop rtl';
+    f.innerHTML=`<div class="fy-flip">${window.COOP_FLY}</div><div class="cdenv" aria-hidden="true"></div>`;document.body.appendChild(f);
+    const x1=Math.max(8,Math.min(innerWidth-100,r.left+r.width*.55-42)),y1=Math.max(8,r.top-58),x0=innerWidth+60,y0=Math.max(10,y1-180);
+    const kf=[];for(let k=0;k<=10;k++){const t=k/10,e=1-Math.pow(1-t,2.2);kf.push({transform:`translate(${x0+(x1-x0)*e}px,${y0+(y1-y0)*e-Math.sin(Math.PI*t)*40}px) scale(${.75+.25*e})`})}
+    const a=f.animate(kf,{duration:1150,easing:'linear',fill:'forwards'});
+    a.onfinish=()=>{const env=f.querySelector('.cdenv');
+      env.animate([{transform:'translate(0,0) rotate(0)',opacity:1},{transform:'translate(-6px,64px) rotate(-14deg) scale(.6)',opacity:0}],{duration:520,easing:'cubic-bezier(.5,0,.8,.4)',fill:'forwards'});
+      setTimeout(land,420);
+      f.animate([{transform:`translate(${x1}px,${y1}px)`},{transform:`translate(${x1-80}px,${y1-40}px)`,offset:.35},{transform:`translate(-160px,${y1-260}px) scale(.85)`}],{duration:1100,delay:420,easing:'ease-in',fill:'forwards'}).onfinish=()=>{f.remove();done&&done()}}},reduceMotion()?0:420)}
+/* the folder a new document lives in: its type folder inside its carrier (opened so the type folder is on screen) */
+function dropTargetFor(d){const id=docDomId(d),car=document.querySelector(`#lib .dcarp[data-car="${CSS.escape(d.c)}"]`);if(!car)return null;
+  if(car.tagName==='DETAILS')car.open=true;
+  const g=[...car.querySelectorAll('.dgrp[data-dids]')].find(x=>(x.dataset.dids||'').split(',').includes(id));return g||car}
+const DROPPED=new Set((()=>{try{return JSON.parse(store.get('pw-docs-dropped','[]'))}catch(e){return []}})());
+function dropNewDocs(){if(curTab()!=='docs'||curView.docs!=='library'||document.querySelector('.coopdrop'))return;
+  const fresh=DOCS.filter(d=>{const w=d.added||(d.why&&d.why.when);const id=docDomId(d);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(id)&&!DROPPED.has(id)});
+  if(!fresh.length)return;
+  renderDocs();
+  fresh.forEach(d=>DROPPED.add(docDomId(d)));store.set('pw-docs-dropped',JSON.stringify([...DROPPED].slice(-2000)));
+  // one flight per folder, newest first, a beat apart
+  const seenT=new Set(),targets=[];fresh.sort((a,b)=>String(b.added||'').localeCompare(a.added||'')).forEach(d=>{const t=dropTargetFor(d);if(t&&!seenT.has(t)){seenT.add(t);targets.push(t)}});
+  const next=()=>{const t=targets.shift();if(t)coopDrop(t,()=>setTimeout(next,250))};setTimeout(next,500)}
+setTimeout(()=>{let last='';setInterval(()=>{const k=curTab()+':'+(curView.docs||'');if(k!==last){last=k;if(k==='docs:library')setTimeout(dropNewDocs,300)}},700)},0);
+
+/* display name, shared with the comment box */
+setTimeout(()=>{const f=$('nameForm'),i=$('nameIn'),st=$('nameState');if(f&&i){try{i.value=localStorage.getItem('pw-name')||''}catch(e){}
+  const show=()=>{st.textContent=i.value.trim()?'Saved on this device':''};show();
+  f.addEventListener('submit',e=>{e.preventDefault();const v=i.value.trim().slice(0,40);try{localStorage.setItem('pw-name',v)}catch(x){}
+    document.querySelectorAll('.cmt-f input[name="name"]').forEach(x=>{x.value=v});st.textContent=v?'Saved':'Cleared';setTimeout(show,1500)})}},0);
 
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -4125,9 +4200,10 @@ function card(n){
       ${media(n,'wide')}
       <h3>${esc(n.title)}</h3>
       <p class="sum">${decode(n.sum)}</p>
-      <div class="eff2 imp-${n.imp}"><span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span><p>${decode(n.plain)}${eff?` <b>${eff}.</b>`:''}</p></div>
-      ${chgTable(n)}
-      ${relDocRow(n)}
+      <details class="ctx imp-${n.imp}"><summary><span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span><span class="ctxh">${eff?esc(eff):'What it means'}${n.changes&&n.changes.length?' · what changed':''}${relDocs(n).length?' · source docs':''}</span></summary>
+        <div class="eff2 imp-${n.imp}"><p>${decode(n.plain)}${eff?` <b>${eff}.</b>`:''}</p></div>
+        ${chgTable(n)}
+        ${relDocRow(n)}</details>
     </div>
     <footer class="cardft">${srcDrop(n,n.tie)}${cmtBar(n)}${links.length?`<span class="clk">${links.map(x=>`<button class="datechip" data-clock="${x.id}" title="${esc(x.w)}">Rate clock ${fmtD(x.d)}</button>`).join('')}</span>`:''}</footer>
   </article>`}
@@ -4173,8 +4249,8 @@ function renderGuideChanges(){
   const ws=NEWS.filter(n=>n.cat==='Guide changes').sort((a,b)=>b.date.localeCompare(a.date));
   const watched=DOCS.filter(d=>d.u&&d.t!=='Market report'&&d.cur!==false&&!/\.xlsx?(\?|$)/i.test(d.u)).length;
   $('gcCount').textContent=`Watching ${watched} documents`;
-  $('gcList').innerHTML=ws.length?ws.map(n=>`<div class="gcwrap" id="gc-${n.id}"><button class="gcplay" data-deliver="${n.id}" title="Watch Coop deliver it" aria-label="Watch Coop deliver this change">▶</button><button class="drow" data-open="${n.id}" style="width:100%;text-align:left;background:none;border-left:0;border-right:0;border-bottom:0;cursor:pointer;font:inherit"><span class="dn">${esc(n.title)}${n.exclusive?' <span class="tag">First to report</span>':''}</span><span class="dm">${fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})} · ${carList(n.c.join(' · '))}</span><span class="dd">${esc(n.sum)}</span></button></div>`).join('')
-    :`<div class="empty">No wording or trigger changes yet. <button class="link" data-deliver="demo">See how an alert arrives</button><details class="about"><summary>What's watched</summary><p>Every current rate guide, service guide, tariff and surcharge notice in the library. New or changed surcharges, thresholds, amounts and contract language (including "EZ", density or cube terms) are flagged. Changes nobody else has reported are marked First to report and sent to you right away.</p></details></div>`;
+  $('gcList').innerHTML=ws.length?ws.map(n=>`<div class="gcwrap" id="gc-${n.id}"><button class="drow" data-open="${n.id}" style="width:100%;text-align:left;background:none;border-left:0;border-right:0;border-bottom:0;cursor:pointer;font:inherit"><span class="dn">${esc(n.title)}${n.exclusive?' <span class="tag">First to report</span>':''}</span><span class="dm">${fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})} · ${carList(n.c.join(' · '))}</span><span class="dd">${esc(n.sum)}</span></button></div>`).join('')
+    :`<div class="empty">No wording or trigger changes yet. <details class="about"><summary>What's watched</summary><p>Every current rate guide, service guide, tariff and surcharge notice in the library. New or changed surcharges, thresholds, amounts and contract language (including "EZ", density or cube terms) are flagged. Changes nobody else has reported are marked First to report and sent to you right away.</p></details></div>`;
 }
 
 
@@ -4307,7 +4383,7 @@ function renderCalendar(){
   $('calTitle').textContent=first.toLocaleDateString('en-US',{month:'long',year:'numeric'});
   let h=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d=>`<div class="dow lbl">${d}</div>`).join('');
   for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=isoOf(d),ev=DATES.filter(x=>x.d===iso);
-    h+=`<button class="c ${d.getMonth()!==m?'out':''} ${iso===TODAY?'now':''}" data-day="${iso}" aria-pressed="${calSel===iso}" aria-label="${fmtD(iso,{month:'long',day:'numeric'})}: ${ev.length} change${ev.length===1?'':'s'}"><span class="dn">${d.getDate()}</span><span class="mk">${ev.map(x=>`<i style="background:var(${impVar(x.imp)})"></i>`).join('')}</span>${ev.slice(0,2).map(x=>`<span class="tx">${esc(x.w.length>44?x.w.slice(0,42)+'…':x.w)}</span>`).join('')}</button>`}
+    h+=`<button class="c ${d.getMonth()!==m?'out':''} ${iso===TODAY?'now':''}" data-day="${iso}" aria-pressed="${calSel===iso}" aria-label="${fmtD(iso,{month:'long',day:'numeric'})}: ${ev.length} change${ev.length===1?'':'s'}"><span class="dn">${d.getDate()}</span><span class="mk">${ev.map(x=>`<i style="background:var(${impVar(x.imp)})"></i>`).join('')}</span>${ev.length?`<span class="clg">${whoList(ev.map(x=>x.c).join(' · '),'lgx',3)}</span>`:''}${ev.slice(0,2).map(x=>`<span class="tx">${esc(x.w.length>44?x.w.slice(0,42)+'…':x.w)}</span>`).join('')}</button>`}
   $('calGrid').innerHTML=h;
 }
 $('calPrev').onclick=()=>{calM=new Date(calM.getFullYear(),calM.getMonth()-1,1);renderCalendar()};
@@ -4329,7 +4405,7 @@ function renderClockList(){
       <span class="rtile" aria-hidden="true"><i>${MON(x.d)}</i><b>${+x.d.slice(8)}</b><small>${fmtD(x.d,{weekday:'short'})}</small></span>
       <span class="rmain"><span class="w"><span class="${impCls(x.imp)}">${IMPACT[x.imp].s}</span> ${esc(x.w)}</span>
         <span class="reff">${eff} <b>${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}</b>${x.end?` <span class="rrng">· ${span(x)}</span>`:''}</span>
-        <span class="rtags">${String(x.c).split(/\s*(?:·|,)\s*/).filter(Boolean).map(c=>`<span class="rchip ${carCls(c)}">${esc(c)}</span>`).join('')}${fx?`<span class="rtype">${RCX_T[fx.t]}</span>`:''}${x.fees?`<span class="rmeta">${x.fees.length} fees</span>`:''}${st.length?`<span class="rmeta">${st.length} ${st.length>1?'stories':'story'}</span>`:''}</span></span>
+        <span class="rtags">${String(x.c).split(/\s*(?:·|,)\s*/).filter(Boolean).map(c=>logoImg(c,'lgm')||`<span class="rchip ${carCls(c)}">${esc(c)}</span>`).join('')}${fx?`<span class="rtype">${RCX_T[fx.t]}</span>`:''}${x.fees?`<span class="rmeta">${x.fees.length} fees</span>`:''}${st.length?`<span class="rmeta">${st.length} ${st.length>1?'stories':'story'}</span>`:''}</span></span>
       <span class="cdn">${cd}</span></summary>
       <div class="drbody">${fx?`<button class="rshow" data-rx="${x.id}"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>Show me what this does</b><small>${RCX_T[fx.t]} · Coop walks you through it</small></span></button><div class="xstage rcx" id="rcx-${x.id}" hidden></div>`:''}
       ${x.note?`<p class="note">${esc(x.note)}</p>`:''}${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}
@@ -4640,11 +4716,18 @@ function docWhy(d){
   return t}
 const docDomId=d=>{let h=0;for(const ch of (d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
 function docRow(d){
-  const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=d.added&&daysTo(d.added)>=-14;
+  const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=(w=>w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d)))(d.added||(d.why&&d.why.when));
   const meta=[d.y?String(d.y):'',d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
   const note=d.d&&!/^(Found with:|Added from alert:|Posted on )/.test(d.d)?`<span class="dd">${esc(d.d)}</span>`:'';
   return `<div class="drow2${d.u?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${d.u?`href="${d.u}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
     <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docActs(d)}</div>`}
+/* documents seen on this device: opening the folder that holds a new document clears it */
+const DOC_SEEN=new Set((()=>{try{return JSON.parse(store.get('pw-docs-seen','[]'))}catch(e){return []}})());
+function docBadges(){document.querySelectorAll('#lib [data-dids]').forEach(el=>{const L=(el.dataset.dids||'').split(',').filter(x=>x&&!DOC_SEEN.has(x)),b=el.querySelector(':scope>summary .nb');
+  if(b){b.textContent=L.length;b.hidden=!L.length}})}
+document.addEventListener('toggle',e=>{const el=e.target;if(!el.open||!el.closest||!el.closest('#lib'))return;
+  const rows=[...el.querySelectorAll(':scope>.drows>.drow2,:scope>.dtb>.drows>.drow2,:scope>.dyrb>.drows>.drow2')];if(!rows.length)return;
+  setTimeout(()=>{if(!el.open)return;rows.forEach(r=>{if(r.id)DOC_SEEN.add(r.id)});store.set('pw-docs-seen',JSON.stringify([...DOC_SEEN].slice(-2000)));docBadges()},900)},true);
 function renderDocs(){
   DOC_CHANGES=null;
   $('docCar').innerHTML=['All',...DOC_CARS].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===docCar}">${carChip(c)}${c}</button>`).join('');
@@ -4663,21 +4746,33 @@ function renderDocs(){
     return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
       ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue $${last.rev.toFixed(1)}B · Adj. EPS $${last.eps.toFixed(2)}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
   const yearOf=d=>String(d.y||(d.eff||d.upd||d.added||'').slice(0,4)||'Undated');
-  const nNew=L=>L.filter(d=>d.added&&daysTo(d.added)>=-14).length;
-  const groupsOf=(list,open,earn)=>[...DOC_GROUPS.map(g=>g[0]),'Earnings reports','Other documents'].map(g=>[g,g==='Earnings reports'?(earn||[]):list.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length).map(([g,L])=>{
-      if(g==='Earnings reports')return `<details class="dgrp"${open?' open':''}><summary><b>${g}</b><span class="lbl">${L.length}</span></summary>${L.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</details>`;
-      const cur=L.filter(d=>d.cur!==false||(d.eff&&d.eff>TODAY)).sort(sorter),old=L.filter(d=>!cur.includes(d)).sort(sorter),nn=nNew(L);
-      return `<details class="dgrp"${open?' open':''}><summary><b>${g}</b><span class="lbl">${L.length}${nn?` · ${nn} new`:''}</span></summary>${cur.map(docRow).join('')}${old.length?`<details class="dold"><summary>Replaced versions (${old.length})</summary>${old.map(docRow).join('')}</details>`:''}</details>`}).join('');
-  // inside each carrier: one drop-down per year (newest first, the newest open), then the document types inside it
-  const yearsOf=(L,c)=>{const E=dq?[]:ER(c),ys=[...new Set([...L.map(yearOf),...E.map(e=>e.d.slice(0,4))])].sort((x,y)=>x==='Undated'?1:y==='Undated'?-1:y.localeCompare(x));
-    return (dq?'':callStrip(c))+ys.map((y,i)=>{const Y=L.filter(d=>yearOf(d)===y),YE=E.filter(e=>e.d.slice(0,4)===y),n=Y.length+YE.length,nn=nNew(Y);
-      return `<details class="dyr"${dq?' open':''}><summary><b>${y==='Undated'?'Ongoing / undated':y}</b><span class="lbl">${n} document${n>1?'s':''}${nn?` · ${nn} new`:''}</span></summary><div class="dyrb">${groupsOf(Y,!!dq,YE)}</div></details>`}).join('')};
+  const ysort=(x,y)=>x==='Undated'?1:y==='Undated'?-1:y.localeCompare(x);
+  // "new" = added in the last 30 days and not yet seen on this device; the count shows on every folder on the way to it
+  const isNew=d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))};
+  const ids=L=>L.filter(isNew).map(docDomId).join(',');
+  const badge=L=>{const n=L.filter(isNew).length;return `<span class="nb"${n?'':' hidden'}>${n}</span>`};
+  const fold=(cls,title,L,inner,extra)=>`<details class="${cls}" data-dids="${ids(L)}"${dq?' open':''}><summary><b>${title}</b>${badge(L)}<span class="lbl">${extra||L.length}</span></summary>${inner}</details>`;
+  const rowsOf=L=>{const cur=L.filter(d=>d.cur!==false||(d.eff&&d.eff>TODAY)).sort(sorter),old=L.filter(d=>!cur.includes(d)).sort(sorter);
+    return `<div class="drows">${cur.map(docRow).join('')}</div>${old.length?`<details class="dold" data-dids="${ids(old)}"><summary>Replaced versions (${old.length})${badge(old)}</summary><div class="drows">${old.map(docRow).join('')}</div></details>`:''}`};
+  // a type folder splits by year only when that helps: more than 3 documents spread over more than one year
+  const typeBody=L=>{const ys=[...new Set(L.map(yearOf))].sort(ysort);
+    if(dq||L.length<=3||ys.length<2)return `<div class="dtb">${rowsOf(L)}</div>`;
+    return `<div class="dtb">${ys.map(y=>{const Y=L.filter(d=>yearOf(d)===y);return fold('dyr',y==='Undated'?'Ongoing / undated':y,Y,`<div class="dyrb">${rowsOf(Y)}</div>`)}).join('')}</div>`};
+  const earnFolder=c=>{const E=dq?[]:ER(c);if(!E.length&&!EARN_NEXT.some(x=>x.c===c))return '';
+    const ys=[...new Set(E.map(e=>e.d.slice(0,4)))].sort(ysort);
+    const inner=callStrip(c)+(ys.length>1?ys.map(y=>{const Y=E.filter(e=>e.d.slice(0,4)===y).sort((a,b)=>b.d.localeCompare(a.d));
+      return `<details class="dyr"><summary><b>${y}</b><span class="lbl">${Y.length}</span></summary><div class="dyrb"><div class="drows">${Y.map(earnRow).join('')}</div></div></details>`}).join('')
+      :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
+    const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
+    return `<details class="dgrp"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
+  const typesOf=(L,c)=>[...DOC_GROUPS.map(g=>g[0]),'Other documents'].map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
+      .map(([g,G])=>fold('dgrp',g,G,typeBody(G))).join('')+earnFolder(c);
   const cars=[...new Set(ds.map(d=>d.c))].sort((a,b)=>order(a)-order(b)||a.localeCompare(b));
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
-    docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}">${yearsOf(ds,docCar)}</div>`:
-    cars.map(c=>{const L=ds.filter(d=>d.c===c),nn=nNew(L);
-      return `<details class="panel dcarp" data-car="${esc(c)}"${dq?' open':''}><summary><h2><span class="car ${carCls(c)}">${logoImg(c,'lgx')}${esc(c)}</span></h2><span class="lbl">${L.length} document${L.length>1?'s':''}${nn?` · ${nn} new`:''}</span></summary>${yearsOf(L,c)}</details>`}).join('');
-  $('earnNext')&&renderEarnings();renderGuideChanges();if(typeof renderQon==='function')renderQon();
+    docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
+    cars.map(c=>{const L=ds.filter(d=>d.c===c);
+      return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(c)}</span>`}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
+  docBadges();$('earnNext')&&renderEarnings();renderGuideChanges();if(typeof renderQon==='function')renderQon();
 }
 
 {let dqT;$('dq').addEventListener('input',()=>{clearTimeout(dqT);dqT=setTimeout(renderDocs,120)})}
@@ -4699,7 +4794,7 @@ const MK_LOGO={UPS:'ups',FDX:'fedex',AMZN:'amazon',DHL:'dhl',FDXF:'FedEx Freight
 /* On the live site, quotes and charts come from TradingView's free widgets (official exchange data, delayed);
    the preview and any blocked network fall back to our own cards from the pipeline's closes. */
 const TV_SYM={UPS:'NYSE:UPS',FDX:'NYSE:FDX',AMZN:'NASDAQ:AMZN',DHL:'XETR:DHL',FDXF:'NYSE:FDXF',DASH:'NASDAQ:DASH',UBER:'NYSE:UBER',PBI:'NYSE:PBI'};
-const TV_ON=/github\.io$/.test(location.hostname);
+const TV_ON=false;   // TradingView's mini charts were hard to read on phones; our own cards are clearer
 function tvMount(el,sym){if(!el||el.dataset.tv===sym)return;el.dataset.tv=sym;el.innerHTML='<div class="tradingview-widget-container__widget"></div>';
   const sc=document.createElement('script');sc.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';sc.async=true;
   sc.textContent=JSON.stringify({symbol:sym,width:'100%',height:'100%',locale:'en',dateRange:'12M',colorTheme:'dark',isTransparent:true,autosize:true,largeChartUrl:'',
@@ -4804,7 +4899,7 @@ if(PLIVE)pushCfg().then(()=>{renderPrefs();if(PUSH.app&&(!PIOS||PSTAND()))setTim
 function renderTicker(){
   const it=[['UPS ground fuel',pct(FUEL.current.UPS.ground),gDelta('UPS')],['FedEx ground fuel',pct(FUEL.current.FedEx.ground),gDelta('FedEx')],['OnTrac fuel',pct(FUEL.current.OnTrac.ground),ontracDelta()],
     ['UPS air fuel',pct(FUEL.current.UPS.air),null],['FedEx air fuel',pct(FUEL.current.FedEx.air),null],['Diesel /gal','$'+DIESEL.at(-1)[1].toFixed(2),DIESEL.at(-1)[1]-DIESEL.at(-2)[1]],['Jet fuel /gal','$'+oilNow('jet')[1].toFixed(2),oilWk('jet')],['WTI crude /bbl','$'+oilNow('wti')[1].toFixed(2),oilWk('wti')],['Brent crude /bbl','$'+oilNow('brent')[1].toFixed(2),oilWk('brent')],...TICKERS.map(t=>[t.s+' stock',(t.cur||'$')+t.px.toFixed(2),t.ch])];
-  const lbl=l=>{const m=l.match(/^(UPS|FedEx|OnTrac|FDX)\b(.*)$/);return m?`<span class="car ${carCls(m[1])}">${logoImg(m[1]==='FDX'?'FedEx':m[1],'lgx')}${m[1]}</span>${m[2]}`:l};
+  const lbl=l=>{const m=l.match(/^(UPS|FedEx|OnTrac|FDX)\b(.*)$/);if(!m)return l;const lg=logoImg(m[1]==='FDX'?'FedEx':m[1],'lgx');return lg?`${lg}<span class="tkr">${m[2].trim()}</span>`:`<span class="car ${carCls(m[1])}">${m[1]}</span>${m[2]}`};
   const one=it.map(([l,v,d])=>{const stock=/ stock$/.test(l),c=d==null?'':stock?(d>0?'gain':d<0?'loss':'flat'):cls(d);
     return `<span><em>${lbl(l)}</em>${v}${d==null?'':`<b class="${c}">${arw(d)}${Math.abs(d).toFixed(2)}</b>`}</span>`}).join('');
   $('ticker').innerHTML=one+one;
@@ -5117,7 +5212,7 @@ function landOn(id){
   const urls=(n.srcs||[]).map(s=>(s.url||'').split('?')[0]).filter(Boolean);
   const d=(n.cat==='Guide changes'||n.cat==='Documents'||n.audit)&&DOCS.find(x=>x.u&&urls.includes(x.u.split('?')[0]));
   if(d){docCar='All';store.set('pw-doccar','All');showTab('docs');setView.docs('library');renderDocs();
-    const el=$(docDomId(d));if(el){for(let p=el.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;return el}}
+    const p=document.querySelector(`#lib .dcarp[data-car="${CSS.escape(d.c)}"]`);if(p){p.dataset.landlbl2='1';return p}}
   goStory(id);return $('n-'+id)}
 function highlight(el,lbl){if(!el)return;el.dataset.landlbl=lbl||'From your alert';setTimeout(()=>{el.scrollIntoView({block:'center',behavior:reduceMotion()?'auto':'smooth'});
   el.classList.remove('landed');void el.offsetWidth;el.classList.add('landed');setTimeout(()=>el.classList.remove('landed'),6000)},80)}
@@ -5177,14 +5272,14 @@ function dropOff(D,to){
 document.addEventListener('click',e=>{const b=e.target.closest('[data-deliver]');if(!b)return;e.preventDefault();e.stopPropagation();coopDeliver(b.dataset.deliver)},true);
 // deep link from alerts: …/#alert=<story id>  (or #alert=demo)
 // #alert=<id> is a big change (Coop delivers it, then it lands); #story=<id> just lands and highlights. Only from a notification link.
-{const m=/^#(alert|story)=([\w-]+)/.exec(location.hash||'');if(m){window.PP_LANDING=Date.now();try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+{const H0=location.hash||'',m=/^#(alert|story)=([\w-]+)/.exec(H0);if(m){window.PP_LANDING=Date.now();try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
   let tries=0;const go=()=>{const id=m[2];if(id!=='demo'&&!NEWS.some(n=>n.id===id)&&tries++<20)return setTimeout(go,250);
-    if(m[1]==='alert')coopDeliver(id);else highlight(landOn(id))};setTimeout(go,600)}}
-// a change you haven't seen yet plays once when you open the alerts view
-{const seen=new Set(JSON.parse(store.get('pw-gc-seen','[]')));const chk=()=>{if(curTab()!=='docs'||curView.docs!=='alerts')return;
-  const n=NEWS.filter(x=>x.cat==='Guide changes').sort((a,b)=>b.date.localeCompare(a.date))[0];
-  if(n&&!seen.has(n.id)&&daysTo(n.date)>=-14){seen.add(n.id);store.set('pw-gc-seen',JSON.stringify([...seen]));coopDeliver(n.id)}};
-  document.addEventListener('click',()=>setTimeout(chk,200))}
+    const el=landOn(id);
+      if(el&&el.dataset.landlbl2){const n=NEWS.find(x=>x.id===id),urls=(n.srcs||[]).map(s=>(s.url||'').split('?')[0]),d=DOCS.find(x=>x.u&&urls.includes(x.u.split('?')[0]));
+        const t=d&&dropTargetFor(d)||el;if(d)DROPPED.add(docDomId(d));coopDrop(t,()=>highlight(t,'New document inside'));return}
+      highlight(el,/[&?]c=1/.test(H0)?'Someone mentioned you':'From your alert');
+      if(el&&/[&?]c=1/.test(H0))setTimeout(()=>{const b=el.querySelector('[data-cmt]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click()},700)};setTimeout(go,600)}}
+// (Coop's delivery animation is retired: new documents now show as badges on the Docs folders)
 
 /* Coop's gradients live once in an always-rendered SVG, so every copy of him paints correctly even when another copy sits in a hidden section */
 {const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('width','0');s.setAttribute('height','0');s.setAttribute('aria-hidden','true');s.style.cssText='position:absolute;width:0;height:0;overflow:hidden';s.innerHTML=`<defs><linearGradient id="cJacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26385E"/><stop offset="1" stop-color="#15213A"/></linearGradient><filter id="cGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter> <linearGradient id="cBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A7B0BC"/><stop offset=".6" stop-color="#8A94A2"/><stop offset="1" stop-color="#6E7886"/></linearGradient> <linearGradient id="cWing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#99A3B0"/><stop offset="1" stop-color="#7E8896"/></linearGradient> <linearGradient id="cNeck" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3E9C82"/><stop offset=".5" stop-color="#4E78A8"/><stop offset="1" stop-color="#7E5AA6"/></linearGradient> <radialGradient id="cHead" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#B3BCC7"/><stop offset="1" stop-color="#8A94A2"/></radialGradient> <radialGradient id="cIris" cx=".4" cy=".4" r=".6"><stop offset="0" stop-color="#FFC233"/><stop offset="1" stop-color="#C2410C"/></radialGradient> <linearGradient id="cBag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EC2DB"/><stop offset="1" stop-color="#1C2228"/></linearGradient> <linearGradient id="fyBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A7B0BC"/><stop offset="1" stop-color="#7E8896"/></linearGradient>
@@ -5327,9 +5422,19 @@ renderClocks();setInterval(renderClocks,10000);
   // logistics operators only: carriers, last-mile, gig, retail networks, 3PLs and global logistics (no investors, software or tech)
   const MAPREALMS=['national','regional','gig','retail','3pl','global'];
   const POOL=(typeof PLAYERS!=='undefined'?PLAYERS:[]).filter(p=>MAPREALMS.includes(p.realm)&&/USA$/.test(p.hq||'')&&GEO[cityOf(p.hq)]).map(p=>({id:p.id,c:p.n,city:cityOf(p.hq).replace(' (Atlanta)','').replace('Minneapolis-St. Paul','Minneapolis'),realm:p.realm,p:px(GEO[cityOf(p.hq)])}));
-  let STOPS=[];
-  function drawStops(){const n=Math.max(1,BRIEF.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
-    const out=[],realms=new Set(),far=s=>out.every(o=>Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
+  let STOPS=[],LV=[];
+  function liveStories(){const read=typeof MS!=='undefined'&&MS.read?MS.read:new Set();
+    for(const days of [4,10,30]){const L=NEWS.filter(n=>n.kind!=='Alert'&&n.title&&daysTo(n.date)>=-days).sort((a,b)=>(+b.lvl||1)-(+a.lvl||1)||String(b.date).localeCompare(a.date));
+      if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,3)}
+    return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,3)}
+  const homeOf=n=>{for(const c of (n.c||[])){if(c==='Industry')continue;const id=typeof logoId==='function'&&logoId(c),p=id&&PLAYERS.find(x=>x.id===id);
+      if(p&&/USA$/.test(p.hq||'')&&GEO[cityOf(p.hq)])return {id:p.id,c:p.n,city:cityOf(p.hq).replace(' (Atlanta)','').replace('Minneapolis-St. Paul','Minneapolis'),realm:p.realm,p:px(GEO[cityOf(p.hq)])}}return null};
+  function drawStops(){LV=liveStories();const n=Math.max(1,LV.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+    const out=[],realms=new Set(),far=s=>out.every(o=>!o||Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
+    // each story at its carrier's headquarters when there's room; otherwise a nearby-looking market-map stop
+    LV.forEach((st0,k)=>{const h=homeOf(st0);out[k]=h&&far(h)?Object.assign(h,{story:st0.id}):null});
+    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>!out.includes(s)&&far(s));out[k]=Object.assign({},s||pool[k],{story:LV[k]&&LV[k].id})}
+    STOPS=out.slice(0,n).map(s=>Object.assign({},s)).sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign(s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}));return;
     // prefer different realms, then fill; keep stops far enough apart for their labels
     for(const s of pool){if(out.length>=n)break;if(!realms.has(s.realm)&&far(s)){out.push(s);realms.add(s.realm)}}
     for(const s of pool){if(out.length>=n)break;if(!out.includes(s)&&far(s))out.push(s)}
@@ -5338,8 +5443,8 @@ renderClocks();setInterval(renderClocks,10000);
   const st={i:0,open:false,timer:null,paused:false,anim:null,done:false,hide:null};
   const plain=h=>{const d=document.createElement('div');d.innerHTML=h;return d.textContent};
   const headline=h=>{const m=/<b>(.*?)<\/b>/.exec(h);return m?plain(m[1]):plain(h).split(/(?<=\.)\s/)[0]};
-  const item=i=>{const s=BRIEF_IDS[i]&&NEWS.find(n=>n.id===BRIEF_IDS[i]);return {html:BRIEF[i],id:s&&s.id}};
-  const stops=()=>STOPS.slice(0,Math.max(1,BRIEF.length));
+  const item=i=>{const sid=STOPS[i]&&STOPS[i].story,s=sid&&NEWS.find(n=>n.id===sid);return {html:s?`<b>${esc(s.title)}</b>`:'',id:s&&s.id}};
+  const stops=()=>STOPS.slice(0,Math.max(1,LV.length));
   const pct=([x,y])=>[x/W*100,y/H*100];
   function shell(){
     const el=$('heroBody');if(!el)return;const S=stops();
@@ -5364,18 +5469,18 @@ renderClocks();setInterval(renderClocks,10000);
     $('cfly').addEventListener('click',e=>{const b=e.target.closest('[data-cb]');if(!b)return;e.stopPropagation();const k=b.dataset.cb;
       if(k==='all'){st.open=!st.open;b.setAttribute('aria-expanded',st.open);b.textContent=st.open?'Just this one':'All three';$('cfly').classList.toggle('showall',st.open);return}
       go(st.i+(k==='next'?1:-1))});
-    $('cblist').innerHTML=BRIEF.map((h,k)=>{const x=item(k),s=stops()[k];return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}</span></span></li>`}).join('');
+    $('cblist').innerHTML=stops().map((_,k)=>{const x=item(k),s=stops()[k],h=x.html;return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}</span></span></li>`}).join('');
   }
   function place(k){const [l,t]=pct(stops()[k].p),b=$('cbird');b.style.left=l+'%';b.style.top=t+'%'}
   function letter(k){
     const it=item(k),S=stops(),[l,t]=pct(S[k].p),L=$('clet');
     L.className='clet';void L.offsetWidth;
     const cw=$('cmap').clientWidth||300,lw=Math.min(cw*(innerWidth<=620?.86:.78),innerWidth<=620?260:300),half=lw/2/cw*100+1;L.style.setProperty('--lx',Math.min(Math.max(l,half),100-half)+'%');L.style.setProperty('--ly',t+'%');L.dataset.side=t>50?'up':'down';
-    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${BRIEF.length}</span><span>${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
+    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${stops().length}</span><span>${logoImg(S[k].c,'lgx')}${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
     requestAnimationFrame(()=>L.classList.add('open'));
     document.querySelectorAll('#cmap .cstop').forEach((g,n)=>g.classList.toggle('on',n===k));
     document.querySelectorAll('#cblist li').forEach((li,n)=>li.classList.toggle('on',n===k));
-    $('cbdots').innerHTML=BRIEF.map((_,n)=>`<i class="${n===k?'on':''}"></i>`).join('');
+    $('cbdots').innerHTML=stops().map((_,n)=>`<i class="${n===k?'on':''}"></i>`).join('');
   }
   function fly(from,to,done){
     const b=$('cbird'),S=stops();if(!b||reduceMotion()||(from===to&&!st.rest)){st.rest=false;place(to);done();return}
@@ -5558,7 +5663,7 @@ renderClocks();setInterval(renderClocks,10000);
     const unread=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert').sort((x,y)=>y.date.localeCompare(x.date)).slice(0,2);
     menu.innerHTML=`<div class="cm-hd"><span class="xname">Coop</span><span>Where to?</span><button class="cm-x" data-cclose aria-label="Close">×</button></div>
       <label class="sr" for="cAsk">${sq?esc(sq.ph):'Search everything'}</label><input id="cAsk" class="cm-ask" type="search" placeholder="${sq?esc(sq.ph):'Search stories, companies, documents'}" value="${sq?esc($(sq.f).value):''}" autocomplete="off">
-      ${window.PP_API?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop a parcel question</b><small>Surcharges, DIM weight, zones, fuel, contract terms</small></span></button>`:''}
+      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop a parcel question</b><small>Surcharges, DIM weight, zones, fuel, contract terms</small></span></button>`:''}
       <div class="cm-res" id="cRes"><div class="cm-q">${QUICK().map(([g,t,s])=>`<button class="cm-r" data-cgo="${g}"><b>${esc(t)}</b><small>${esc(s)}</small></button>`).join('')}</div>
       ${unread.length?`<div class="lbl cm-l">You haven’t read</div>${unread.map(n=>row({o:n.id,t:n.title,s:fmtD(n.date)})).join('')}`:''}</div>
       <div class="cm-foot"><button class="cm-fact" data-cfact>Tell me a fun fact</button><label class="cm-mute" data-cquiet><span>Coop’s notes</span><input type="checkbox" role="switch" ${quiet()?'':'checked'} aria-label="Coop’s pop-up notes"><i aria-hidden="true"></i><b>${quiet()?'Muted':'On'}</b></label></div>`;
@@ -5568,7 +5673,7 @@ renderClocks();setInterval(renderClocks,10000);
       const n=sq.f==='q'?filtered().length:sq.f==='dq'?DOCS.filter(d=>[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(q.toLowerCase())).length:null;
       return `<button class="cm-r cm-here" data-cclose><b>Show ${n==null?'matches':n+' match'+(n===1?'':'es')} in ${esc(sq.w)}</b></button>`};
     ask.addEventListener('input',()=>{const q=ask.value.trim();const top=here(q.length>=2?q:'');if(q.length<2){res.innerHTML=home;return}const h=hits(q);
-      const askIt=window.PP_API&&(q.length>12||/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q))?`<button class="cm-r cm-askit" data-askopen="${esc(q)}" data-cclose><b>Ask Coop: “${esc(q.length>60?q.slice(0,58)+'…':q)}”</b><small>An answer from the carriers' guides</small></button>`:'';
+      const askIt=window.PP_ASK&&(q.length>12||/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q))?`<button class="cm-r cm-askit" data-askopen="${esc(q)}" data-cclose><b>Ask Coop: “${esc(q.length>60?q.slice(0,58)+'…':q)}”</b><small>An answer from the carriers' guides</small></button>`:'';
       res.innerHTML=askIt+top+(h.length?(top||askIt?'<div class="lbl cm-l">Everywhere</div>':'')+h.map(row).join(''):top||askIt?'':`<p class="cm-none">Nothing for “${esc(q)}”. Even I can’t deliver that. Try a carrier, a fee or a company.</p>`);el.classList.add('talking');clearTimeout(ask._t);ask._t=setTimeout(()=>el.classList.remove('talking'),600)});
     if(ask.value.trim().length>=2)ask.dispatchEvent(new Event('input'));
     if(innerWidth>=700||sq)setTimeout(()=>ask.focus({preventScroll:true}),40);

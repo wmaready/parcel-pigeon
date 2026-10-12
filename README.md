@@ -204,10 +204,16 @@ the full story and a square thumbnail for lists. Never trade-press photos; credi
 (in requirements.txt).
 
 ### Phone alerts: once each
-Every push carries a send-once key (OneSignal `idempotency_key`, plus a ledger in `data/alerts_state.json`), so the same story never goes out twice, even if two workflows overlap or a commit is lost. Each new story gets its own push (up to 8 a run; the rest bundle into one "+N more"). Copy is short: a headline of 45 characters or fewer and one sentence (written once by Claude Haiku). Tapping a push opens the story, or the document it's about, and highlights it; major alerts play Coop's delivery first.
+Every push carries a send-once key (OneSignal `idempotency_key`, plus a ledger in `data/alerts_state.json`), so the same story never goes out twice, even if two workflows overlap or a commit is lost. Each new story gets its own push (up to 8 a run; the rest bundle into one "+N more"). Copy is short: a headline of 45 characters or fewer and one sentence (written once by Claude Haiku). Tapping a push opens the story and highlights it; a document change opens Docs on that carrier's folder, with "new" counts on each folder down to the document.
 
 ### Saved copies of documents
 `archive.py` (run by `alerts.py`) saves the carriers' openly published PDFs and spreadsheets from `data/docs.json` into `data/files/`, unaltered, so the Download button works in one tap and still works if a carrier moves or removes a file. Up to 8 MB a file and 150 MB in total, 6 per run, re-checked every 14 days; a changed file replaces the old copy. Every document still opens the carrier's own copy first. Turn it off with the repository variable or secret `PP_ARCHIVE=0`.
 
 ### Connections
 Stories, documents, the rate clock and deals are linked from the links themselves: a story shows the library documents among its sources ("From the library"), each document shows the stories that cite it, and Coop offers to jump to the source document, a rate-clock walkthrough or a deal walkthrough when you're reading a story that has one (a few times a visit, never when muted).
+
+### Logos
+UPS, FedEx, USPS, Amazon, DHL and a few big retail and gig names use built-in brand marks (Simple Icons path data) so they are always crisp. Every other company's logo is fetched by `media.py` from its own website, preferring the wordmark the site declares or shows in its header (SVG kept as is, sanitized). Companies without a website on file get one looked up by `players.py` (8 per run, `data/sites.json`). `data/logos_missing.json` lists any company still without a logo.
+
+### Hands-off publishing
+Up to 18 stories a run from 8 feeds and about 90 Google News searches. Stories publish on their own, including loosely related ones (marked edge, low impact) and ones nobody else has reported yet (marked Spotted first). If a draft uses a number the sources don't contain, the writer gets one rewrite; if the number is still unsupported, a lower-impact story is dropped and only a story that changes prices for most shippers (impact 3) waits for your OK. Phone alerts: only impact-3 stories wait for approval; everything else goes out live.
