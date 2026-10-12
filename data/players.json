@@ -168,6 +168,23 @@
     53.901
    ],
    "enriched": "2026-10-12"
+  },
+  {
+   "id": "dhlsupplychain",
+   "n": "DHL Supply Chain",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "DHL's contract logistics division, which recently entered Romania through an extended partnership with Pepco",
+   "al": [],
+   "src": "https://dataportuaria.com/en/internacional/logistics/dhl-group-plans-more-than-eur-400-million-investment-to-support-growth-and-supply-chain-resilience-in-central-and-eastern-europe-0696d4",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-10",
+   "story": "a197b1b8fe32d"
   }
  ],
  "edges": [
@@ -251,6 +268,15 @@
    "t": "DHL Express invested in Blue Dart in 2004 and is its majority shareholder (via DHL Express Singapore, 75%)",
    "url": "https://en.wikipedia.org/wiki/Blue_Dart_Express",
    "story": "a48c22a3f491c"
+  },
+  {
+   "a": "uber",
+   "b": "footlocker",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber Eats announced a Foot Locker partnership in July",
+   "url": "https://www.fibre2fashion.com/news/prime-content/retail-marketi-intelligence-news/macy-s-anthropologie-vans-turn-stores-into-1-hour-hubs-via-doordash-314047-newsdetails.htm",
+   "story": "a63ee22ebda65"
   }
  ]
 }
