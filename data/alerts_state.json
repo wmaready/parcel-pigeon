@@ -38,22 +38,22 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "af8ee5ed067c6",
-  "w150132868eae",
-  "w3d06a7fa766e",
-  "w49b3786a59a5",
-  "ae77827c0481e",
-  "wf225c9a3bf63",
   "wbf2ef019cc6e",
-  "w348418a9dc09",
-  "w82629d496c23",
-  "wb612a77519f2",
-  "abf01a11b3d9e",
+  "ae77827c0481e",
   "afbf819454788",
-  "w1a58abf8b69d",
-  "w8a582ba4f6eb",
   "wa0dc8b706733",
-  "aad7e6789b34e"
+  "af8ee5ed067c6",
+  "w49b3786a59a5",
+  "w1a58abf8b69d",
+  "w3d06a7fa766e",
+  "w150132868eae",
+  "wb612a77519f2",
+  "w8a582ba4f6eb",
+  "aad7e6789b34e",
+  "abf01a11b3d9e",
+  "wf225c9a3bf63",
+  "w82629d496c23",
+  "w348418a9dc09"
  ],
  "backfilled": true,
  "players": [
@@ -87,7 +87,11 @@
   "player:coll8",
   "player:21vekby",
   "player:belposhta",
-  "player:dhlsupplychain"
+  "player:dhlsupplychain",
+  "more:player:gofofrance,story:gofo france joins peoples post carrier network ahead of year end peak,story:usps suspends mail delivery and retail in northern florida after hurricane",
+  "story:gofo france joins peoples post carrier network ahead of year end peak",
+  "story:usps suspends mail delivery and retail in northern florida after hurricane",
+  "player:gofofrance"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -392,49 +396,11 @@
    ]
   }
  ],
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:gofo france joins peoples post carrier network ahead of year end peak",
-   "id": "a73a591c528d3",
-   "t": "GOFO France added to Peoples Post network",
-   "m": "E-merchants using Peoples Post can now choose GOFO home delivery as an extra carrier in their shipping tool.…",
-   "big": false,
-   "at": "2026-10-12T09:05:33.592729-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "mask": 16,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a73a591c528d3"
-  },
-  {
-   "kind": "story",
-   "key": "story:usps suspends mail delivery and retail in northern florida after hurricane",
-   "id": "afbf819454788",
-   "t": "USPS suspends Northern Florida mail and retail",
-   "m": "Mail delivery and retail are suspended in listed Northern Florida ZIP codes, effective immediately. No…",
-   "big": false,
-   "at": "2026-10-12T09:05:33.592767-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "mask": 4,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=afbf819454788"
-  },
-  {
-   "kind": "player",
-   "key": "player:gofofrance",
-   "at": "2026-10-12T09:05:33.593010-04:00",
-   "t": "New on the map: GOFO France",
-   "m": "GOFO France is the French last-mile parcel delivery arm of GOFO, formerly CIRRO Parcel. It provides home delivery for e-commerce merchants and logistics providers across metropolitan France through its own sorting hubs and routing technology.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-10-12T08:18:32.218505-04:00"
+ "last_push": "2026-10-12T09:38:39.902916-04:00"
 }
