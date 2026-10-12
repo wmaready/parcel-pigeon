@@ -36,12 +36,14 @@ def _img(url, min_side=48):
 
 def logo_candidates(domain):
     """Best first: the logo the site itself declares (JSON-LD), the header logo image (often a crisp SVG wordmark),
-    then the app icons. Wordmarks read far better than tiny round app icons."""
+    then the app icons. Wordmarks read far better than tiny round app icons. A unit with its own page on a parent's
+    site (fedex.com/freight) is read from that page, so it finds the unit's own mark, not the parent's."""
     host = domain.split("/")[0]
     base = f"https://{host}/"
+    page = f"https://{domain.rstrip('/')}/" if "/" in domain.strip("/") else base
     out = []
     try:
-        html = get(base, timeout=20).text
+        html = get(page, timeout=20).text
         for m in re.finditer(r'"logo"\s*:\s*(?:\{[^}]*?"url"\s*:\s*)?"([^"]+)"', html):
             out.append((900, urllib.parse.urljoin(base, m.group(1))))
         head = html[:200000]
@@ -60,11 +62,13 @@ def logo_candidates(domain):
             if not href or "icon" not in rel:
                 continue
             sz = re.search(r'sizes=["\'](\d+)x(\d+)', tag, re.I)
+            if sz and int(sz.group(1)) < 96:
+                continue                                  # tiny tab icons look blurry in the app
             score = (int(sz.group(1)) if sz else 0) + (500 if "apple-touch" in rel else 0) + (300 if href.lower().endswith(".svg") else 0)
             out.append((min(score, 700), urllib.parse.urljoin(base, href)))
     except Exception:
         pass
-    out += [(400, base + "apple-touch-icon.png"), (1, base + "favicon.ico")]
+    out += [(400, base + "apple-touch-icon.png")]          # no favicon.ico: too small to look sharp
     seen, ordered = set(), []
     for _, u in sorted(out, reverse=True):
         if u not in seen:
@@ -93,6 +97,15 @@ def clean_svg(text):
     if not h:
         return None
     return t[t.lower().index("<svg"):], w / h
+
+
+def looks_like_photo(got, url):
+    """Social and banner images sometimes sit where a logo should: wide photos with no 'logo' in the name."""
+    kind, obj = got
+    if kind != "img" or "logo" in url.lower():
+        return False
+    w, h = obj.size
+    return min(w, h) >= 400 and 1.2 < w / h < 2.4
 
 
 def save_logo(pid, got):
@@ -134,10 +147,18 @@ def logos(limit=25):
     idx = load("logos.json", {})
     if not idx.get("_v2"):
         idx = {"_v2": True}                           # redo every logo once with the better finder
-    by_host = {}
-    for pid, rec in idx.items():
-        if isinstance(rec, dict) and rec.get("f") and rec.get("host"):
-            by_host[rec["host"]] = rec
+    if not idx.get("_v3"):
+        # one-time cleanup: a logo file named for another company was copied from a shared site (a unit showing its
+        # parent's logo); drop those, and recheck everything with the stricter finder, keeping good logos meanwhile
+        for pid, rec in list(idx.items()):
+            if isinstance(rec, dict):
+                src = (rec.get("src") or "").lower()
+                photo_like = rec.get("f", "").endswith(".png") and not re.search(r"logo|icon|brand|mark", src) and 1.2 < float(rec.get("ar") or 0) < 2.4
+                if rec.get("f") and (rec["f"].rsplit("/", 1)[-1].rsplit(".", 1)[0] != pid or photo_like):
+                    for k in ("f", "ar", "src"):
+                        rec.pop(k, None)
+                rec["checked"] = "2000-01-01"
+        idx["_v3"] = True
     due = [pid for pid in sites if pid not in idx or
            (dt.date.fromisoformat(idx[pid].get("checked", "2000-01-01")) < TODAY - dt.timedelta(days=30))]
     done = 0
@@ -145,24 +166,29 @@ def logos(limit=25):
         if done >= limit:
             break
         host = sites[pid].split("/")[0].lower().removeprefix("www.")
-        if host in by_host and by_host[host].get("checked") == TODAY.isoformat():   # same company site as one done today
-            idx[pid] = dict(by_host[host]); continue
         done += 1
+        old = idx.get(pid) if isinstance(idx.get(pid), dict) else {}
         rec = {"checked": TODAY.isoformat(), "host": host}
+        rejected = set()
+        taken = {r.get("src") for k, r in idx.items() if k != pid and isinstance(r, dict) and r.get("src")}
         for u in logo_candidates(sites[pid])[:8]:
+            if u in taken:
+                continue                                  # another company's logo (usually the parent's): not this one's
             try:
                 got = _img(u)
             except Exception:
                 continue
             if got is None:
                 continue
+            if looks_like_photo(got, u):
+                rejected.add(u); continue
             res = save_logo(pid, got)
             if res:
                 rec.update({"f": f"data/logos/{pid}.{res[0]}", "ar": res[1], "src": u})
                 break
+        if not rec.get("f") and old.get("f") and old.get("src") not in rejected and old.get("src") not in taken:
+            rec.update({k: old[k] for k in ("f", "ar", "src") if k in old})   # keep a good logo we already had
         idx[pid] = rec
-        if rec.get("f"):
-            by_host[host] = rec
         print(f"  logo {pid}: {'ok ' + rec['f'].rsplit('.',1)[1] if rec.get('f') else 'none found'}")
     save("logos.json", idx)
     have = [k for k, r in idx.items() if isinstance(r, dict) and r.get("f")]

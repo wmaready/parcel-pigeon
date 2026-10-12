@@ -30,7 +30,9 @@ Return JSON only:
  "s": "one neutral sentence: what the company does in parcel",
  "links": [{"other": "a name EXACTLY as written in the KNOWN list", "k": "owns|acquired|invested|partner|merged|sold|spun",
             "dir": "this>other" or "other>this", "y": "year or null", "t": "short label", "url": "source URL"}]}
-Links only to companies in the KNOWN list, only real announced relationships, each with the URL where you found it."""
+Links only to companies in the KNOWN list, only real announced relationships, each with the URL where you found it.
+Set "is_player" false for small non-U.S. carriers and couriers with no U.S. operations or U.S. customers (a local courier in
+one foreign country); keep national posts, global carriers and logistics groups, and any company that serves U.S. shippers."""
 
 
 def ask(user, use_search=True, system=None, max_tokens=2500):

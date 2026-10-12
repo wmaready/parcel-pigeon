@@ -188,6 +188,11 @@ def same_event(a, b):
 def dedupe_live(live):
     """Keep the first story of each event (merging the others' sources into it); log the rest in retracted.json."""
     out, gone = [], []
+    # data/drop.json: story ids the editor took off the site (small foreign items, off-topic pieces)
+    drop = {d if isinstance(d, str) else d.get("id") for d in load("drop.json", [])}
+    for s in [x for x in live if x.get("id") in drop]:
+        gone.append({"id": s.get("id"), "why": "Removed by the editor: " + (s.get("title") or "")})
+    live = [x for x in live if x.get("id") not in drop]
     for s in sorted(live, key=lambda x: (x.get("date") or "", x.get("id") or "")):
         twin = next((k for k in out if same_event(k, s)), None)
         if twin is None:
@@ -201,6 +206,6 @@ def dedupe_live(live):
         log = load("retracted.json", [])
         known = {x.get("id") for x in log}
         save("retracted.json", log + [g for g in gone if g["id"] not in known])
-        print(f"dedupe: merged {len(gone)} repeat stories into the first report of each event")
+        print(f"dedupe: removed or merged {len(gone)} stories (repeats of one event, or taken off by the editor)")
     out.sort(key=lambda x: x.get("date") or "", reverse=True)
     return out

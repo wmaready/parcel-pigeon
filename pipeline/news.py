@@ -43,6 +43,14 @@ and general industry news, even when there is no price change. Freight, ocean, L
 they state a direct effect on small parcel. Drop items that are not about parcel at all, pure stock tips, sponsored
 content, and anything about one private shipper's own contract.
 
+International items: this is a U.S. parcel news service. Keep a non-U.S. item ONLY if (a) it affects U.S. shipping or
+U.S. shippers (tariffs, de minimis, customs, cross-border lanes into or out of the U.S., carriers or platforms that serve
+U.S. shippers, U.S. carriers' international networks), or (b) it is a big move by a national post or a global carrier
+or logistics group (India Post, Canada Post, Royal Mail, Deutsche Post/DHL, Japan Post and similar): a major partnership,
+a major acquisition or sale, a new service, a network overhaul, a strike. DROP small local or regional foreign items
+(a state government's shipment of local goods, a small foreign courier's new depot, local festival or crop shipments,
+one city's delivery tweak) and small foreign carriers' routine news. When unsure, drop it.
+
 You also get RECENT STORIES already published (id: title) and ACTIVE STORYLINES (key: name). If an item reports the
 same event as a recent story and adds NO new development, set "same_as" to that id. A new development in an ongoing story
 (a new offer in labor talks, a ruling, a deal closing, a rate taking effect, a follow-up with new facts) is NOT same_as: keep
