@@ -217,3 +217,6 @@ UPS, FedEx, USPS, Amazon, DHL and a few big retail and gig names use built-in br
 
 ### Hands-off publishing
 Up to 18 stories a run from 8 feeds and about 90 Google News searches. Stories publish on their own, including loosely related ones (marked edge, low impact) and ones nobody else has reported yet (marked Spotted first). If a draft uses a number the sources don't contain, the writer gets one rewrite; if the number is still unsupported, a lower-impact story is dropped and only a story that changes prices for most shippers (impact 3) waits for your OK. Phone alerts: only impact-3 stories wait for approval; everything else goes out live.
+
+### Google News links
+Google News search results no longer redirect to the article, so `news.py` asks Google for the real address first (googlenewsdecoder, with a built-in fallback) and reads articles with a normal browser header. Items that still can't be read go to `data/review.json` as headline-only and get one more try on the next run.
