@@ -215,20 +215,32 @@
    ],
    "cat": "Peak season",
    "lead": true,
-   "title": "Peak surcharges hit oversize packages now and all home deliveries from Oct 24",
-   "sum": "Peak fees on additional handling, large and over-max packages have billed since Sep 26 to 28 at OnTrac, UPS and FedEx. Per-package fees start next: OnTrac $1.00 on Oct 24, UPS and Amazon Shipping $0.50 on Oct 25, FedEx $0.50 on Oct 26, rising to $0.75 to $0.80 in the late-November peak weeks. Amazon charges its fee on business deliveries too, and its handling fees wait until Oct 25.",
+   "title": "Peak surcharges hit oversize packages now and home deliveries from Oct 24 to 26",
+   "sum": "Peak fees on additional handling, large and over-max packages have billed since Sep 26 to 28 at OnTrac, UPS and FedEx. Per-package fees start next: OnTrac $1.00 on Oct 24, UPS and Amazon Shipping $0.50 on Oct 25, FedEx $0.50 on Oct 26. UPS and Amazon rise to $0.75 from Nov 22 to Dec 26, FedEx to $0.80 from Nov 23 to Dec 27. Amazon charges per package with no separate residential surcharge, and its handling fees wait until Oct 25.",
    "imp": "up",
    "lvl": 3,
-   "plain": "Per-package peak fees add $0.50 to $1.00 to most residential packages from late October, rising to $0.75 to $0.80 at UPS, FedEx and Amazon in the late-November peak weeks.",
+   "plain": "Standard peak fees add $0.50 to $1.00 to residential ground packages from late October, rising to $0.75 to $0.80 at UPS, FedEx and Amazon in the late-November to December peak weeks. UPS and FedEx shippers above 20,000 residential packages a week pay higher tiered charges.",
    "who": [
     "Residential",
     "Oversize",
     "B2B on Amazon"
    ],
    "act": "2026-10-24",
-   "src": "FedEx demand surcharges",
-   "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html",
+   "src": "FedEx",
+   "url": "https://www.fedex.com/en-us/shipping/rate-changes/peak-surcharges.html",
    "srcs": [
+    {
+     "src": "FedEx",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes/peak-surcharges.html"
+    },
+    {
+     "src": "Amazon Shipping",
+     "url": "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026"
+    },
+    {
+     "src": "OnTrac",
+     "url": "https://www.ontrac.com/surcharges/"
+    },
     {
      "src": "FedEx demand surcharges",
      "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
@@ -240,10 +252,6 @@
     {
      "src": "OnTrac surcharges and rates",
      "url": "https://www.ontrac.com/surchargesandrates/"
-    },
-    {
-     "src": "Amazon Shipping peak surcharge",
-     "url": "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026"
     },
     {
      "src": "Transportation Insight",
@@ -421,21 +429,21 @@
     "USPS"
    ],
    "cat": "Postal",
-   "title": "USPS holiday prices take effect, averaging about 6%",
-   "sum": "USPS raised commercial prices on Priority Mail Express, Priority Mail, Ground Advantage and Parcel Select for the season, averaging about 6%. Ground Advantage under 3 lb rises $0.40 in Zones 1–4 and $0.55 in Zones 5–9. The change is subject to regulator review.",
+   "title": "USPS holiday prices take effect on four package products",
+   "sum": "USPS raised prices on Priority Mail Express, Priority Mail and Ground Advantage (retail and commercial) and Parcel Select (commercial) from Oct 4 through Jan 16; trade press puts the average near 6%. Commercial Ground Advantage under 3 lb rises $0.40 in Zones 1–4 and $0.55 in Zones 5–9.",
    "imp": "up",
    "lvl": 2,
-   "plain": "USPS builds the increase into the label price rather than a separate fee. Long-zone packages carry the largest increases at every weight.",
+   "plain": "USPS builds the increase into the label price rather than a separate fee. On zoned products the farther zones rise more; Parcel Select rises by the same amount in every zone.",
    "who": [
     "USPS shippers",
     "Long-zone packages"
    ],
    "act": "2026-10-04",
-   "src": "USPS Newsroom",
+   "src": "USPS",
    "url": "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm",
    "srcs": [
     {
-     "src": "USPS Newsroom",
+     "src": "USPS",
      "url": "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm"
     },
     {
@@ -544,10 +552,10 @@
    ],
    "cat": "Technology & tools",
    "title": "UPS and FedEx add paid theft and fraud protection, including a $20 QR-code delivery check",
-   "sum": "UPS bundled insurance, theft-reducing label options and checkout fraud screening into Secure Commerce. FedEx added Authenticated Delivery, where the recipient shows a QR code before handover, at $20 a package on select U.S. express services; those shipments can't be redirected or held and return after three attempts.",
+   "sum": "UPS bundled insurance, theft-reducing label options and checkout fraud screening into Secure Commerce. FedEx added Authenticated Delivery, where the recipient shows a QR code before handover, at $20 on select express services in the U.S. and Canada. Hold at Location and redirects aren't available on those shipments, and they go back to the sender after up to three delivery attempts.",
    "imp": "info",
    "lvl": 1,
-   "plain": "Optional paid services. FedEx Authenticated Delivery costs $20 per package on select U.S. express services.",
+   "plain": "Optional paid services. FedEx Authenticated Delivery costs $20 on select express services in the U.S. and Canada.",
    "who": [
     "High-value orders",
     "Online sellers"
@@ -576,10 +584,10 @@
    ],
    "cat": "M&A",
    "title": "FedEx completes $1.4B sale of FedEx Supply Chain to CMA CGM",
-   "sum": "FedEx Supply Chain, its warehousing and distribution unit, now belongs to CMA CGM and folds into Ceva Logistics. The unit was under 2% of FedEx revenue; FedEx says it will focus on parcel delivery and freight transportation. FedEx Logistics, its customs and forwarding unit, was not part of the sale.",
+   "sum": "FedEx Supply Chain, its warehousing and distribution unit, now belongs to CMA CGM and folds into CEVA Logistics. CEVA says the deal nearly triples its North American contract logistics business, and CMA CGM becomes a preferred ocean carrier for FedEx under a non-exclusive agreement.",
    "imp": "info",
    "lvl": 1,
-   "plain": "No change to FedEx parcel service. FedEx Supply Chain warehousing contracts move to Ceva Logistics.",
+   "plain": "No change to FedEx parcel service. FedEx Supply Chain warehousing contracts move to CEVA Logistics.",
    "who": [
     "FedEx warehousing customers"
    ],
@@ -605,7 +613,7 @@
    ],
    "cat": "Regulation & trade",
    "title": "NYC coalition maps 14,000+ citations on Amazon-linked delivery vans",
-   "sum": "A labor and community coalition mapped more than 14,000 traffic and parking citations on Amazon-linked delivery vehicles from mid-2021 to mid-2025. It backs a proposed city law that would license last-mile delivery stations and require them to directly employ the drivers they control.",
+   "sum": "A labor and community coalition mapped more than 14,000 traffic and parking citations on Amazon-linked delivery vehicles from mid-2021 to mid-2025. It backs a proposed city law, the Delivery Protection Act, that would license last-mile delivery stations and require them to directly employ their core warehouse workers.",
    "imp": "watch",
    "lvl": 1,
    "plain": "No current rule change. The coalition backs a proposed city law to license last-mile delivery stations.",
@@ -636,10 +644,10 @@
    ],
    "cat": "Postal",
    "title": "USPS pilots same-day delivery for Amazon with a midday drop",
-   "sum": "Amazon drops a second batch at select post offices between noon and 1 p.m. for delivery by 8 p.m. It started in two small cities at 200 packages a day each; Columbia, S.C., joins Oct 20.",
+   "sum": "Amazon drops a second batch at select post offices between noon and 1 p.m. for delivery by 8 p.m. The pilot was set to start Sep 29 in two small cities, capped at 200 packages a day per site. Columbia, S.C., joins Oct 20 with a 500-package cap.",
    "imp": "info",
    "lvl": 1,
-   "plain": "The pilot covers Amazon volume only. It runs in three cities, with Columbia, S.C., added Oct 20.",
+   "plain": "The pilot carries Amazon packages, in two cities now, with Columbia, S.C., added Oct 20.",
    "who": [
     "Amazon sellers"
    ],
@@ -661,10 +669,10 @@
    ],
    "cat": "Amazon",
    "title": "Amazon adds LTL labels and regional pricing for bulky orders",
-   "sum": "Sellers can now buy less-than-truckload labels through Amazon Buy Shipping at Amazon-negotiated rates with late-delivery protection. Regional delivery pricing for heavy and bulky items arrives in early 2027, and Amazon will connect sellers with local carriers for same- or next-day delivery within 100 miles.",
+   "sum": "Starting in October, sellers can buy less-than-truckload labels through Amazon Buy Shipping at Amazon-negotiated rates with late-delivery protection. Regional delivery pricing for heavy and bulky items arrives in early 2027, and Amazon will connect sellers with local carriers for same- or next-day delivery within 100 miles.",
    "imp": "down",
    "lvl": 1,
-   "plain": "Amazon sellers can buy LTL labels through Buy Shipping now. Regional pricing for heavy and bulky items starts in early 2027.",
+   "plain": "Amazon sellers can buy LTL labels through Buy Shipping starting in October. Regional pricing for heavy and bulky items starts in early 2027.",
    "who": [
     "Bulky-item sellers",
     "Amazon sellers"
@@ -752,11 +760,11 @@
     "Industry"
    ],
    "cat": "Drones & robots",
-   "title": "DoorDash begins flying delivery drones it designed in-house",
-   "sum": "DoorDash is running its own drone service with six-rotor aircraft it designed and built for its DoorDash Air service, while keeping its Wing and Flytrex partnerships. Trial flights in Northern California average under five minutes per delivery. DoorDash says about 80% of typical restaurant orders fit the aircraft's size and weight limits.",
+   "title": "DoorDash unveils delivery drones it designed in-house",
+   "sum": "DoorDash unveiled six-rotor aircraft it designed and built for its DoorDash Air service and plans pilot deliveries with them, while keeping its Wing and Flytrex partnerships. Test flights in Northern California average under five minutes. DoorDash says about 80% of its U.S. restaurant orders fit the aircraft's size and weight limits, before distance and weather.",
    "imp": "watch",
    "lvl": 2,
-   "plain": "A large gig platform now operates its own aircraft rather than relying only on third-party drone operators.",
+   "plain": "A large gig platform is moving to fly its own aircraft rather than rely only on third-party drone operators.",
    "tie": "Announced the same day as DoorDash's $7.99 returns service.",
    "srcs": [
     {
@@ -861,34 +869,6 @@
    "routine": true
   },
   {
-   "id": "32",
-   "date": "2026-09-24",
-   "c": [
-    "USPS"
-   ],
-   "cat": "Postal",
-   "title": "USPS lost $163M as fulfillment centers refuse undeliverable returns",
-   "sum": "An inspector general audit found undeliverable packages in USPS's lost-and-found rose 45% in a year, largely because fulfillment centers refuse Parcel Select returns to avoid paying return postage. The watchdog has pushed USPS to automate how it collects postage due.",
-   "imp": "watch",
-   "lvl": 1,
-   "plain": "The inspector general recommends USPS automate collection of return postage, which would apply to Parcel Select shippers.",
-   "who": [
-    "Parcel Select shippers",
-    "Consolidators"
-   ],
-   "src": "FreightWaves",
-   "url": "https://www.freightwaves.com/news/e-commerce-shippers-exploit-usps-to-dispose-of-undelivered-packages",
-   "srcs": [
-    {
-     "src": "FreightWaves",
-     "url": "https://www.freightwaves.com/news/e-commerce-shippers-exploit-usps-to-dispose-of-undelivered-packages"
-    }
-   ],
-   "kind": "News",
-   "img": "https://www.freightwaves.com/wp-content/uploads/2026/09/25/USPS-OIG-on-Lost-Found_1.jpg",
-   "imgc": "Photo: USPS Office of Inspector General"
-  },
-  {
    "id": "62",
    "date": "2026-09-24",
    "c": [
@@ -896,10 +876,10 @@
    ],
    "cat": "Regional & alternative",
    "title": "GOFO reports 47-state network, 12,000+ ZIP codes",
-   "sum": "GOFO, a Los Angeles last-mile carrier founded in 2023, says it operates 300+ hubs and stations covering over 75% of the U.S. population. Its white paper, citing ShipMatrix, puts 2025 U.S. parcel volume at 23.9 billion, with carriers outside UPS, FedEx and USPS handling about 2.5 billion, up roughly 13%.",
+   "sum": "GOFO, a last-mile carrier founded in Los Angeles in 2023, says it operates 300+ hubs and stations covering over 75% of the U.S. population. Its white paper, citing ShipMatrix, puts 2025 U.S. parcel volume at 23.9 billion, with carriers outside UPS, FedEx and USPS handling about 2.5 billion, up roughly 13%.",
    "imp": "info",
    "lvl": 1,
-   "plain": "GOFO reached its stated 12,000-ZIP coverage goal for 2026. Earlier this year it acquired Cirro E-Commerce.",
+   "plain": "GOFO says it reached its 12,000-ZIP coverage goal; its population coverage, over 75%, is still short of the roughly 82% in that goal. It announced the Cirro E-Commerce acquisition in February.",
    "srcs": [
     {
      "src": "PR Newswire",
@@ -951,17 +931,21 @@
    ],
    "cat": "Labor",
    "title": "Teamsters signal possible UPS strike in 2028",
-   "sum": "Teamsters president Sean O'Brien has said a strike is likely when the UPS contract ends July 31, 2028, and has floated coordinating with the West Coast dockworkers, whose contract expires at the same time.",
+   "sum": "Teamsters president Sean O'Brien has said a strike is likely when the UPS contract ends July 31, 2028, and has floated coordinating with West Coast dockworkers, whose contract expires a month earlier, on July 1, 2028.",
    "imp": "watch",
    "lvl": 2,
-   "plain": "The UPS contract and the West Coast port labor contract both expire in mid-2028.",
+   "plain": "The UPS–Teamsters contract ends July 31, 2028; the West Coast port contract ends July 1, 2028.",
    "who": [
     "UPS shippers",
     "Importers"
    ],
    "src": "FreightWaves",
-   "url": "https://www.freightwaves.com/news/teamsters-president-throws-down-gauntlet-to-ups-strike-coming-in-2028",
+   "url": "https://www.freightwaves.com/?p=581424",
    "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/?p=581424"
+    },
     {
      "src": "FreightWaves",
      "url": "https://www.freightwaves.com/news/teamsters-president-throws-down-gauntlet-to-ups-strike-coming-in-2028"
@@ -979,7 +963,7 @@
    ],
    "cat": "Partnerships",
    "title": "Dollar General and Instacart start no-markup delivery, targeting 20,000 stores",
-   "sum": "Dollar General and Instacart began no-markup same-day delivery at about 7,000 stores in six states, with plans to cover all roughly 20,000 stores this fall. Dollar General said delivery added 40 basis points to comparable sales and brought in more than a million new customers. It plans to pilot a delivery subscription before year-end.",
+   "sum": "Dollar General and Instacart are rolling out no-markup same-day delivery, now at about 7,000 stores, with plans to cover all roughly 20,000 stores in 48 states this fall. Dollar General said delivery added 40 basis points to comparable sales and brought in more than a million new customers. It plans to pilot a delivery subscription before year-end.",
    "imp": "down",
    "lvl": 2,
    "plain": "Extends on-demand delivery into rural ZIP codes that national carriers often serve with residential and delivery-area surcharges.",
@@ -1026,17 +1010,21 @@
    ],
    "cat": "Fuel",
    "title": "Diesel hits a record $6.53 a gallon",
-   "sum": "The national average diesel price set records three weeks running, reaching $6.53 for the week of Sep 21, up from $5.60 at the end of August, per federal energy data. It is roughly 70% higher than a year ago.",
+   "sum": "The national average diesel price reached $6.53 a gallon for the week of Sep 21, up from $5.60 at the end of August and above the previous weekly high of $5.81 set in June 2022, per U.S. Energy Information Administration data.",
    "imp": "up",
    "lvl": 2,
-   "plain": "Ground fuel surcharges follow diesel with about a two-week lag. September's rise preceded the late-September fuel peak.",
+   "plain": "Ground fuel surcharges follow diesel with a short lag; UPS uses the EIA price from the week before. September's rise preceded the late-September fuel peak.",
    "who": [
     "All ground shippers"
    ],
-   "src": "Automotive Fleet (EIA data)",
-   "url": "https://www.automotive-fleet.com/videos/fuel-prices-surge-in-september-september-fuel-update",
+   "src": "U.S. EIA",
+   "url": "https://www.eia.gov/petroleum/gasdiesel/",
    "kind": "News",
    "srcs": [
+    {
+     "src": "U.S. EIA",
+     "url": "https://www.eia.gov/petroleum/gasdiesel/"
+    },
     {
      "src": "Automotive Fleet (EIA data)",
      "url": "https://www.automotive-fleet.com/videos/fuel-prices-surge-in-september-september-fuel-update"
@@ -1080,19 +1068,27 @@
    ],
    "cat": "International",
    "title": "FedEx adds per-pound demand fees on U.S. imports, raises export fees",
-   "sum": "FedEx now charges new per-pound demand surcharges on imports into the U.S. from Canada, Latin America and the Caribbean, Europe and Israel, up to $0.25 a pound. Its export demand fee to Canada, Latin America, Europe, Australia and New Zealand rose from $0.20 to $0.30 a pound. Both run until further notice.",
+   "sum": "FedEx now charges per-pound demand surcharges on imports into the U.S. from Canada ($0.14), Latin America and the Caribbean ($0.12), and Europe and Israel ($0.25). Its export demand fee to Canada, Latin America, Europe, Australia and New Zealand rose from $0.20 to $0.30 a pound. Both run until further notice.",
    "imp": "up",
    "lvl": 2,
-   "plain": "Fees run up to $0.25 per pound on imports and $0.30 per pound on exports, plus fuel, until further notice.",
+   "plain": "New import fees of $0.12 to $0.25 a pound from those regions; imports from Asia rose the same day, to $0.54 to $0.91. Exports to those regions now pay $0.30 a pound. FedEx lists demand surcharges among the charges its fuel surcharge applies to.",
    "who": [
     "Importers",
     "Exporters"
    ],
    "act": "2026-09-21",
-   "src": "Supply Chain Dive",
-   "url": "https://supplychaindive.com/news/fedex-levies-fees-on-us-imports-from-canada-europe-and-others/830797",
+   "src": "FedEx",
+   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf",
    "kind": "News",
    "srcs": [
+    {
+     "src": "FedEx",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
+    },
+    {
+     "src": "FedEx",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf"
+    },
     {
      "src": "Supply Chain Dive",
      "url": "https://supplychaindive.com/news/fedex-levies-fees-on-us-imports-from-canada-europe-and-others/830797"
@@ -1107,19 +1103,23 @@
    ],
    "cat": "Pricing & GRI",
    "title": "FedEx sets 5.9% average increase for Jan 4, 2027",
-   "sum": "Light ground weights rise faster than the average, most extra fees rise more, a paper-documents fee starts Jan 18, and ground zones get reclassified Feb 1.",
+   "sum": "Light Ground weights rise faster than the average (about 6.5% for 1–5 lb, per an analysis by Loop), many surcharges rise more, two paper-document fees start Jan 18, and zones change for select U.S. ZIP code pairs on Feb 1.",
    "imp": "up",
    "lvl": 2,
-   "plain": "List rates rise an average 5.9%, with light Ground weights and most surcharges rising faster. A paper-documents fee starts Jan 18 and Ground zones change Feb 1.",
+   "plain": "List rates rise an average 5.9% on Jan 4. A $25 Paper Document Fee and a $5 Paper Air Waybill Fee start Jan 18, and zone classifications change for select U.S. ZIP code pairs Feb 1.",
    "who": [
     "Light ground",
     "Remote areas"
    ],
    "act": "2027-01-04",
-   "src": "FedEx rate changes",
-   "url": "https://www.fedex.com/en-us/shipping/rate-changes.html#fedex-package-rates",
+   "src": "FedEx",
+   "url": "https://www.fedex.com/en-us/shipping/rate-changes.html",
    "kind": "News",
    "srcs": [
+    {
+     "src": "FedEx",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes.html"
+    },
     {
      "src": "FedEx rate changes",
      "url": "https://www.fedex.com/en-us/shipping/rate-changes.html#fedex-package-rates"
@@ -4395,7 +4395,7 @@
     ],
     [
      "FedEx",
-     "Unauthorized package",
+     "Unauthorized",
      "$535.00"
     ],
     [
@@ -4408,13 +4408,13 @@
   {
    "id": "e03",
    "d": "2026-10-04",
-   "w": "USPS holiday prices start: about 6% higher on average",
+   "w": "USPS holiday prices take effect on four package products",
    "c": "USPS",
    "imp": "up",
    "news": [
     "06"
    ],
-   "note": "Commercial prices, built into the label rate. Pending regulator review.",
+   "note": "Retail and commercial, built into the label price. Runs through Jan 16. Trade press puts the average near 6%. Amounts below are commercial.",
    "fees": [
     [
      "USPS",
@@ -4467,7 +4467,7 @@
    "news": [
     "01"
    ],
-   "note": "OnTrac Oct 24, UPS and Amazon Oct 25, FedEx Oct 26. Amazon's fee also applies to business deliveries.",
+   "note": "OnTrac Oct 24, UPS and Amazon Oct 25, FedEx Oct 26. Amazon charges per package, with no separate residential surcharge. UPS and FedEx shippers above 20,000 residential packages a week pay higher tiered charges.",
    "fees": [
     [
      "OnTrac",
@@ -4526,7 +4526,7 @@
    "news": [
     "16"
    ],
-   "note": "UPS Q3 before the open Oct 27. FedEx fiscal Q1 after the close Oct 28, call 5:30 p.m. ET."
+   "note": "Expected dates from earnings calendars: UPS third quarter before the open Oct 27; FedEx the quarter ended Sep 30, after the close Oct 28. FedEx moved to a calendar fiscal year on June 1. Check each company's investor site for confirmation."
   },
   {
    "id": "e08",
@@ -4636,27 +4636,29 @@
     "01",
     "06"
    ],
-   "note": "Last day: OnTrac Jan 15, UPS and Amazon Jan 16, FedEx and USPS holiday prices Jan 17."
+   "note": "Last day: OnTrac Jan 15, UPS, Amazon and USPS holiday prices Jan 16, FedEx Jan 17."
   },
   {
    "id": "e12",
    "d": "2027-01-18",
-   "w": "FedEx adds a fee for international shipments sent with paper trade documents",
+   "w": "FedEx paper document fees start",
    "c": "FedEx",
    "imp": "up",
    "news": [
     "12"
-   ]
+   ],
+   "note": "$25 Paper Document Fee when international trade documents aren't sent electronically; $5 Paper Air Waybill Fee on U.S. and export shipments started on a paper airbill."
   },
   {
    "id": "e13",
    "d": "2027-02-01",
-   "w": "FedEx Ground zone chart changes take effect",
+   "w": "FedEx zone changes for select U.S. ZIP code pairs",
    "c": "FedEx",
    "imp": "up",
    "news": [
     "12"
-   ]
+   ],
+   "note": "FedEx reclassifies zones for select U.S. domestic origin-destination ZIP code pairs."
   },
   {
    "id": "e14",
@@ -4668,7 +4670,7 @@
     "35",
     "50"
    ],
-   "note": "The West Coast port labor contract expires at the same time."
+   "note": "The West Coast port labor contract expires a month earlier, July 1, 2028."
   }
  ],
  "deals": [
@@ -4693,15 +4695,15 @@
     [
      "Seller",
      "FedEx",
-     "Selling a unit it says made up under 2% of revenue."
+     "Keeps its parcel network; FedEx parcel service is not part of the sale."
     ],
     [
      "Target",
      "FedEx Supply Chain",
-     "Warehousing, distribution, fulfillment and returns for healthcare, tech, retail and industrial companies. About 10,000 employees at roughly 150 facilities. Formerly GENCO."
+     "Warehousing, distribution, fulfillment and returns for healthcare, tech, retail and industrial companies. About 10,000 employees. Formerly GENCO."
     ]
    ],
-   "why": "The sale is FedEx's second major separation this year, after the June spinoff of FedEx Freight, and narrows the company to parcel and freight transportation. CEVA says the deal nearly triples its North American contract logistics business. As part of the deal, CMA CGM becomes FedEx's preferred ocean carrier under a non-exclusive, multiyear agreement, and the two will work together on air cargo capacity. FedEx parcel service is not part of the sale.",
+   "why": "The sale is FedEx's second major separation this year, after the June spinoff of FedEx Freight, and narrows the company to parcel and freight transportation. CEVA says the deal nearly triples its North American contract logistics business. As part of the deal, CMA CGM becomes a preferred ocean carrier for FedEx under a non-exclusive, multiyear agreement, and the two will work together on air cargo capacity. FedEx parcel service is not part of the sale.",
    "ties": [
     {
      "d": "2015-01-01",
@@ -5328,7 +5330,7 @@
      "Last-mile carrier for e-commerce based in Richmond, B.C., founded in 2019. Reports more than 1 million parcels a day; Shein and Temu are customers."
     ]
    ],
-   "why": "UniUni says the proceeds will fund automated sort centers to raise capacity to as many as 3 million packages a day. A listing would make it one of the few publicly traded U.S. last-mile carriers outside the national networks. Closing was expected in the second half of 2026; no closing had been announced as of Oct. 9. On Sept. 24, 2026, MAK sent UniUni a notice of material breach, saying UniUni's losses had exceeded agreed limits, and said it would terminate if the breach is not cured within 15 business days. UniUni separately announced a term sheet for a new private round.",
+   "why": "UniUni says the proceeds will fund automated sort centers to raise capacity to as many as 3 million packages a day. A listing would make it one of the few publicly traded U.S. last-mile carriers outside the national networks. Closing was expected in the second half of 2026; no closing had been announced as of Oct. 9. On Sept. 24, 2026, MAK sent UniUni a notice of material breach, saying UniUni's financial performance had breached operating limits in the agreement, and said it would terminate if the breach is not cured within 15 days. UniUni separately announced a term sheet for a new private round.",
    "ties": [
     {
      "d": "2026-03-03",
@@ -5414,9 +5416,9 @@
    "note": "MAK sent UniUni a notice of material breach on Sept. 24, 2026, starting a 15-business-day cure period. The deal had not been terminated as of Oct. 10."
   },
   {
-   "d": "2026-02-11",
-   "ann": "2026-02-11",
-   "closed": "2026-02-11",
+   "d": "2026-02-09",
+   "ann": "2026-02-09",
+   "closed": "2026-02-09",
    "buyer": "GOFO",
    "target": "Cirro E-Commerce",
    "value": "Undisclosed",
@@ -5424,7 +5426,7 @@
    "checked": "2026-10-09",
    "story": "63",
    "title": "GOFO buys Cirro E-Commerce",
-   "sum": "Los Angeles last-mile carrier GOFO bought Cirro E-Commerce, a parcel shipping platform with retail and e-commerce integrations in the U.S., Europe and Oceania. GOFO kept Cirro's executive team.",
+   "sum": "GOFO, a last-mile carrier founded in Los Angeles, bought Cirro E-Commerce, a parcel shipping platform with retail and e-commerce integrations in the U.S., Europe and Oceania. Members of Cirro's leadership team joined GOFO.",
    "who": [
     [
      "Buyer",
@@ -5642,7 +5644,7 @@
      "Truckload brokerage, expedited and last-mile provider spun off from XPO in 2022. Bought Coyote Logistics from UPS in 2024."
     ]
    ],
-   "why": "The deal puts RXO's brokerage, expedited and last-mile business, including the former UPS-owned Coyote, inside C.H. Robinson's North American truckload division. The companies expect about $300 million a year in cost savings within two years. RXO's largest holders, including MFN Partners with about 17%, back the deal.",
+   "why": "The deal puts RXO's brokerage, expedited and last-mile business, including the former UPS-owned Coyote, inside C.H. Robinson's North American Surface Transportation division. The companies expect about $300 million a year in cost savings within two years. Its largest holder, MFN Partners (about 17%), has agreed to vote in favor.",
    "ties": [
     {
      "d": "2022-11-01",
@@ -5728,8 +5730,8 @@
    "value": "€7.8B",
    "status": "Closed",
    "checked": "2026-10-10",
-   "title": "FedEx-led group takes InPost private",
-   "sum": "A consortium of FedEx, private equity firm Advent, founder Rafał Brzoska's A&R and PPF bought European parcel-locker company InPost for €15.60 a share, about €7.8 billion. The offer settled Sept. 30, 2026.",
+   "title": "FedEx-led group buys control of InPost",
+   "sum": "A consortium of FedEx, private equity firm Advent, founder Rafał Brzoska's A&R and PPF offered €15.60 a share for European parcel-locker company InPost, about €7.8 billion. The offer settled Sept. 30, 2026, with about 89.8% of shares tendered.",
    "who": [
     [
      "Buyer",
