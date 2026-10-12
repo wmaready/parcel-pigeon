@@ -27,27 +27,29 @@
   "a631927b5eb1f",
   "a7472fdbe56d7",
   "ab665e6db5daf",
-  "af8ee5ed067c6"
+  "af8ee5ed067c6",
+  "abf01a11b3d9e"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "w1a58abf8b69d",
   "wa0dc8b706733",
-  "af8ee5ed067c6",
+  "wf225c9a3bf63",
+  "w1a58abf8b69d",
   "w150132868eae",
-  "w49b3786a59a5",
   "w3d06a7fa766e",
   "w348418a9dc09",
-  "ae77827c0481e",
-  "wbf2ef019cc6e",
-  "aad7e6789b34e",
   "wb612a77519f2",
-  "wf225c9a3bf63",
-  "w82629d496c23",
-  "w8a582ba4f6eb"
+  "wbf2ef019cc6e",
+  "af8ee5ed067c6",
+  "w8a582ba4f6eb",
+  "w49b3786a59a5",
+  "ae77827c0481e",
+  "aad7e6789b34e",
+  "abf01a11b3d9e",
+  "w82629d496c23"
  ],
  "backfilled": true,
  "players": [
@@ -71,7 +73,8 @@
   "usps closes all post offices oct 12 for columbus day deliver",
   "telangana cyber bureau warns of parcel delivery fraud on wor",
   "usps lengthens delivery standards for priority mail ground a",
-  "ups adds rfid tracking and pin delivery for holiday peak pla"
+  "ups adds rfid tracking and pin delivery for holiday peak pla",
+  "fedex adds duty and tax payment to import tool expands to ni"
  ],
  "copy": {
   "a78db2954da94": {
@@ -105,6 +108,10 @@
   "a1d096a3e1205": {
    "t": "Amazon seeks approval for North Haven drones",
    "m": "Proposal for about 1,000 daily drone deliveries within 7.5 miles of the North Haven, CT warehouse, with a…"
+  },
+  "abf01a11b3d9e": {
+   "t": "FedEx adds duty payment to Import Tool",
+   "m": "Importers in nine Asia Pacific markets can now pay duties and taxes in the online tool, with no change to…"
   }
  },
  "recent": [
@@ -279,6 +286,21 @@
     {
      "src": "Yahoo Finance",
      "url": "https://finance.yahoo.com/markets/stocks/articles/ups-holiday-rfid-secure-delivery-161219200.html"
+    }
+   ]
+  },
+  {
+   "id": "abf01a11b3d9e",
+   "title": "FedEx adds duty and tax payment to Import Tool, expands to nine APAC markets",
+   "date": "2026-10-12",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-across-asia-pacific-with-customs-clearance-and-payment-functionality",
+   "srcs": [
+    {
+     "src": "FedEx newsroom",
+     "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-across-asia-pacific-with-customs-clearance-and-payment-functionality"
     }
    ]
   }
@@ -503,6 +525,19 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "story",
+   "key": "story:fedex adds duty and tax payment to import tool expands to nine apac markets",
+   "id": "abf01a11b3d9e",
+   "t": "FedEx adds duty payment to Import Tool",
+   "m": "Importers in nine Asia Pacific markets can now pay duties and taxes in the online tool, with no change to…",
+   "big": false,
+   "at": "2026-10-12T00:36:50.697365-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=abf01a11b3d9e"
   }
  ],
  "fuelq": {}
