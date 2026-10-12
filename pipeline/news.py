@@ -128,10 +128,59 @@ def collect(cfg):
     return items
 
 
+BROWSER = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
+           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language": "en-US,en;q=0.9"}
+_GN = {}
+_GN_CTX = [["X", "X", ["X", "X"], None, None, 1, 1, "US:en", None, 1, None, None, None, None, None, 0, 1], "X", "X", 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0]
+
+
+def gnews_decode(url):
+    """Google News links no longer redirect to the article: ask Google for the real address (the same two calls the
+    Google News page makes). Uses the googlenewsdecoder package when installed, with this as the fallback."""
+    m = re.search(r"news\.google\.com/(?:rss/)?(?:articles|read)/([^?/#]+)", url or "")
+    if not m:
+        return None
+    aid = m.group(1)
+    if aid in _GN:
+        return _GN[aid]
+    real = None
+    try:
+        from googlenewsdecoder import gnewsdecoder
+        r = gnewsdecoder(url, timeout=15)
+        if r.get("success"):
+            real = r["decoded_url"]
+    except Exception:
+        pass
+    if not real:
+        try:
+            import requests, time
+            page = requests.get(f"https://news.google.com/rss/articles/{aid}?hl=en-US&gl=US&ceid=US:en", headers=BROWSER, timeout=15).text
+            sg, ts = re.search(r'data-n-a-sg="([^"]+)"', page), re.search(r'data-n-a-ts="([^"]+)"', page)
+            if sg and ts:
+                inner = ["garturlreq", _GN_CTX, aid, int(ts.group(1)) if ts.group(1).isdigit() else ts.group(1), sg.group(1)]
+                body = "f.req=" + urllib.parse.quote(json.dumps([[["Fbv4je", json.dumps(inner, separators=(",", ":")), None, "generic"]]], separators=(",", ":")))
+                r = requests.post("https://news.google.com/_/DotsSplashUi/data/batchexecute", data=body, timeout=15,
+                                  headers={**BROWSER, "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"})
+                hit = re.search(r'\\"garturlres\\",\\"(https?://[^"\\]+)', r.text)
+                if hit:
+                    real = hit.group(1)
+            time.sleep(0.3)
+        except Exception:
+            pass
+    _GN[aid] = real
+    return real
+
+
 def article_text(url):
     try:
-        r = get(url)
-        if "news.google.com" in r.url:
+        if "news.google.com" in (url or ""):
+            real = gnews_decode(url)
+            if not real:
+                return None, url
+            url = real
+        import requests
+        r = requests.get(url, headers=BROWSER, timeout=25, allow_redirects=True)
+        if "news.google.com" in r.url or r.status_code >= 400:
             return None, r.url
         return trafilatura.extract(r.text, include_comments=False) or None, r.url
     except Exception:
@@ -391,7 +440,14 @@ def main():
     cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
     live, review, seen = load("news.json", []), load("review.json", []), set(load("seen.json", []))
     allitems = collect(cfg)
-    raw = [i for i in allitems if i["url"] and h(i["url"]) not in seen and (i.get("house") or PREFILTER.search(i["title"] + " " + i["summary"]))]
+    week = (dt.date.today() - dt.timedelta(days=7)).isoformat()
+    retry = [x for x in review if x.get("type") == "headline-only" and (x.get("date") or "") >= week and not x.get("retried")]
+    if retry:
+        review = [x for x in review if x not in retry]
+        allitems += [{"title": x["title"], "url": x["url"], "summary": "", "date": x["date"], "src": x.get("src") or "News",
+                      "direct": False, "house": False, "retry": True} for x in retry]
+        print(f"retrying {len(retry)} items that couldn't be read before")
+    raw = [i for i in allitems if i["url"] and (i.get("retry") or h(i["url"]) not in seen) and (i.get("house") or PREFILTER.search(i["title"] + " " + i["summary"]))]
     for i in raw:
         # TransImpact posts go through the sweep like any outlet (as a story or a source); competitors only back up a story
         i["support_only"] = is_competitor(i["url"])
@@ -448,7 +504,7 @@ def main():
                 srcs.append({"src": item["src"], "url": final_url})
             if not texts:
                 item = members[0][0]
-                review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"],
+                review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"], "retried": bool(item.get("retry")),
                                   "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."})
                 continue
             lead_item, lead_url, _ = texts[0]
