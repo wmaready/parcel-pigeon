@@ -34,30 +34,33 @@
   "afbf819454788",
   "a83608ad7515e",
   "aa120c825fdaf",
-  "a1785bbd2ecbb"
+  "a1785bbd2ecbb",
+  "a1cfdcc1943ed",
+  "ac1d01500ab14"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
+  "w3d06a7fa766e",
+  "ae77827c0481e",
+  "w150132868eae",
   "abf01a11b3d9e",
+  "w49b3786a59a5",
   "aad7e6789b34e",
   "af8ee5ed067c6",
-  "w3d06a7fa766e",
-  "afbf819454788",
   "w1a58abf8b69d",
-  "w348418a9dc09",
-  "w82629d496c23",
   "wa0dc8b706733",
-  "wf225c9a3bf63",
   "a1785bbd2ecbb",
-  "ae77827c0481e",
-  "w8a582ba4f6eb",
-  "wbf2ef019cc6e",
+  "afbf819454788",
   "wb612a77519f2",
-  "w49b3786a59a5",
-  "w150132868eae"
+  "ac1d01500ab14",
+  "wbf2ef019cc6e",
+  "wf225c9a3bf63",
+  "w82629d496c23",
+  "w8a582ba4f6eb",
+  "w348418a9dc09"
  ],
  "backfilled": true,
  "players": [
@@ -69,7 +72,9 @@
   "belposhta",
   "dhlsupplychain",
   "gofofrance",
-  "gallantcapital"
+  "gallantcapital",
+  "rps",
+  "robertsexpress"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -101,7 +106,12 @@
   "story:gastonia notifies residents of walmart drone deliveries at myrtle school road store",
   "story:walmart opens 900 000 sq ft automated fulfillment center in stockton california",
   "story:usps restores mail delivery and retail service in alabama mississippi district",
-  "player:gallantcapital"
+  "player:gallantcapital",
+  "more:player:robertsexpress,player:rps,story:fedex renames trucking units plans residential ground service,story:usps relocates coffee springs al post office operations to geneva",
+  "story:fedex renames trucking units plans residential ground service",
+  "story:usps relocates coffee springs al post office operations to geneva",
+  "player:rps",
+  "player:robertsexpress"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -121,7 +131,9 @@
   "usps suspends mail delivery and retail in northern florida a",
   "gastonia notifies residents of walmart drone deliveries at m",
   "walmart opens 900 000 sq ft automated fulfillment center in ",
-  "usps restores mail delivery and retail service in alabama mi"
+  "usps restores mail delivery and retail service in alabama mi",
+  "fedex renames trucking units plans residential ground servic",
+  "usps relocates coffee springs al post office operations to g"
  ],
  "copy": {
   "a78db2954da94": {
@@ -171,6 +183,14 @@
   "afbf819454788": {
    "t": "USPS suspends Northern Florida mail and retail",
    "m": "Mail delivery and retail are suspended in listed Northern Florida ZIP codes, effective immediately. No…"
+  },
+  "a1cfdcc1943ed": {
+   "t": "FedEx renames trucking units, adds home delivery",
+   "m": "FedEx Home Delivery, a residential service through FedEx Ground, is slated to start in March. Current rates…"
+  },
+  "ac1d01500ab14": {
+   "t": "USPS moves Coffee Springs AL service to Geneva",
+   "m": "ZIP 36318 retail and delivery now run from Geneva until further notice. Geneva hours: 8:30-4:30 Mon-Wed and…"
   }
  },
  "recent": [
@@ -452,13 +472,43 @@
      "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-usps-restores-mail-delivery-retail-operations.htm"
     }
    ]
+  },
+  {
+   "id": "a1cfdcc1943ed",
+   "title": "FedEx renames trucking units, plans residential ground service",
+   "date": "2026-10-11",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries",
+   "srcs": [
+    {
+     "src": "Heavy Duty Trucking",
+     "url": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries"
+    }
+   ]
+  },
+  {
+   "id": "ac1d01500ab14",
+   "title": "USPS relocates Coffee Springs, AL Post Office operations to Geneva",
+   "date": "2026-10-11",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-coffee-springs-al-post-office-temporarily-relocating-to-geneva-al-post-office.htm",
+   "srcs": [
+    {
+     "src": "USPS",
+     "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-coffee-springs-al-post-office-temporarily-relocating-to-geneva-al-post-office.htm"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",
-  "n": 4
+  "n": 5
  },
- "last_push": "2026-10-12T10:47:33.831870-04:00"
+ "last_push": "2026-10-12T12:40:33.701959-04:00"
 }

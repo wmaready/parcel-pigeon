@@ -246,6 +246,60 @@
    ],
    "enriched": "2026-10-12",
    "pending": false
+  },
+  {
+   "id": "rps",
+   "n": "Roadway Package System (RPS)",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": "fedex",
+   "hq": "Moon Township, PA, USA",
+   "yr": "1985",
+   "s": "RPS was the ground small-package carrier started in 1985 by Roadway Services (later Caliber System) and rebranded FedEx Ground in 2000 after FedEx acquired Caliber in 1998.",
+   "al": [
+    "FedEx Ground",
+    "FedEx Ground Package System, Inc.",
+    "RPS",
+    "Roadway Package System, Inc."
+   ],
+   "src": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "a1cfdcc1943ed",
+   "site": "fedex.com",
+   "geo": [
+    -80.212,
+    40.52
+   ],
+   "enriched": "2026-10-12"
+  },
+  {
+   "id": "robertsexpress",
+   "n": "FedEx Custom Critical",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": "fedex",
+   "hq": "Uniontown, OH, USA",
+   "yr": "1948",
+   "s": "FedEx subsidiary, formerly Roberts Express, that provides exclusive-use expedited ground and air freight across North America for urgent, high-value, hazardous and temperature-controlled shipments.",
+   "al": [
+    "FedEx Custom Critical, Inc.",
+    "Roberts Express"
+   ],
+   "src": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "a1cfdcc1943ed",
+   "site": "customcritical.fedex.com",
+   "geo": [
+    -81.408,
+    40.974
+   ],
+   "enriched": "2026-10-12"
   }
  ],
  "edges": [
@@ -410,6 +464,24 @@
    "t": "Acquired from Navient in 2025; Duncan has since sold it",
    "url": "https://images.navient.com/Pioneer/web/Pioneer_NR_022125.pdf",
    "story": "ae77a9586e2bd"
+  },
+  {
+   "a": "fedex",
+   "b": "rps",
+   "k": "owns",
+   "y": "1998",
+   "t": "FedEx acquired RPS's parent Caliber System; RPS rebranded FedEx Ground in 2000",
+   "url": "https://en.wikipedia.org/wiki/FedEx_Ground",
+   "story": "a1cfdcc1943ed"
+  },
+  {
+   "a": "fedex",
+   "b": "robertsexpress",
+   "k": "acquired",
+   "y": "1998",
+   "t": "FedEx bought Roberts Express's parent Caliber System; the unit was renamed FedEx Custom Critical in 2000",
+   "url": "https://www.fedex.com/en-us/about/history.html",
+   "story": "a1cfdcc1943ed"
   }
  ]
 }

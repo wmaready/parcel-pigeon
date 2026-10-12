@@ -225,6 +225,37 @@
   "exclusive": true
  },
  {
+  "id": "a1cfdcc1943ed",
+  "date": "2026-10-11",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "FedEx renames trucking units, plans residential ground service",
+  "sum": "FedEx Corp., formerly FDX Corp., unveiled new names for its trucking subsidiaries, according to Heavy Duty Trucking. RPS becomes FedEx Ground, Roberts Express becomes FedEx Custom Critical, and FDX Logistics becomes FedEx Global Logistics. Federal Express keeps its name with a FedEx Express logo, and Viking Freight keeps its identity.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to current rates or service is stated. The article says a new residential delivery service, FedEx Home Delivery, is slated to start in March through the FedEx Ground network, without giving a year. Each company continues to operate independently.",
+  "tie": "The article describes an earlier-era rebranding, while FedEx's June 2024 consolidation of Express, Ground and Services into Federal Express Corp. is covered in the storyline.",
+  "act": null,
+  "dates": [],
+  "src": "Heavy Duty Trucking",
+  "url": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries",
+  "srcs": [
+   {
+    "src": "Heavy Duty Trucking",
+    "url": "https://www.truckinginfo.com/news/fedex-renames-trucking-subsidiaries"
+   }
+  ],
+  "auto": true,
+  "thread": "fedex-network-2",
+  "upd": 4,
+  "new": "The article covers a renaming of FedEx subsidiaries and a planned residential service, with no new rate or service change for shippers and no connection to the Network 2.0 timeline.",
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a5a4a6c9a9a91",
   "date": "2026-10-11",
   "c": [
@@ -280,6 +311,34 @@
    }
   ],
   "auto": true,
+  "exclusive": true
+ },
+ {
+  "id": "ac1d01500ab14",
+  "date": "2026-10-11",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS relocates Coffee Springs, AL Post Office operations to Geneva",
+  "sum": "USPS said the Coffee Springs, AL Post Office at 147 Main Street sustained structural damage due to Hurricane Isaias. Postal operations are temporarily relocated to the Geneva Post Office at 800 East Church Ave. Retail and delivery operations for Coffee Springs also move to Geneva, USPS said in an Oct. 11, 2026 notice.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Retail and delivery service for Coffee Springs, AL (ZIP 36318) is handled from the Geneva Post Office until further notice. Geneva retail hours are 8:30 a.m.-4:30 p.m. Monday, Tuesday, Wednesday and Friday, 8:30 a.m.-12:00 p.m. Thursday and Saturday, and closed Sunday. No change to postage rates.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "USPS",
+  "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-coffee-springs-al-post-office-temporarily-relocating-to-geneva-al-post-office.htm",
+  "srcs": [
+   {
+    "src": "USPS",
+    "url": "https://about.usps.com/newsroom/local-releases/al/2026/1011-coffee-springs-al-post-office-temporarily-relocating-to-geneva-al-post-office.htm"
+   }
+  ],
+  "auto": true,
+  "edge": true,
   "exclusive": true
  },
  {
@@ -1009,6 +1068,34 @@
    {
     "src": "WXYZ 7 News Detroit",
     "url": "https://www.wxyz.com/videos/latest-videos/fake-amazon-delivery-texts-are-everywhere-heres-how-to-spot-them"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a8cb0983f7c66",
+  "date": "2026-10-07",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "Amazon is giving delivery drivers smart glasses, Yahoo Tech video says",
+  "sum": "A Yahoo Tech video said Amazon is giving its delivery drivers smart glasses that are always watching. A linked article asks whether the glasses will snap pictures of everything. The video also covers the Paramount and Warner Bros. merger and OpenAI's ad plan for ChatGPT.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is stated. The item concerns equipment for Amazon's delivery drivers.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Yahoo Tech",
+  "url": "https://tech.yahoo.com/videos/skydance-media-giant-chatgpt-ads-183257274.html",
+  "srcs": [
+   {
+    "src": "Yahoo Tech",
+    "url": "https://tech.yahoo.com/videos/skydance-media-giant-chatgpt-ads-183257274.html"
    }
   ],
   "auto": true,
