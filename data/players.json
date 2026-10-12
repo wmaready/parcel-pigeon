@@ -173,18 +173,27 @@
    "id": "dhlsupplychain",
    "n": "DHL Supply Chain",
    "realm": "3pl",
-   "own": null,
+   "own": "sub",
    "tk": null,
-   "parent": null,
-   "hq": null,
+   "parent": "dhl",
+   "hq": "Bonn, Germany",
    "yr": null,
-   "s": "DHL's contract logistics division, which recently entered Romania through an extended partnership with Pepco",
-   "al": [],
+   "s": "DHL Supply Chain is DHL Group's contract logistics division. It provides warehousing, transport, e-commerce fulfillment and returns management, and describes itself as the world's leading contract logistics provider.",
+   "al": [
+    "DHL Supply Chain North America",
+    "Exel (former North America name, until January 2016)"
+   ],
    "src": "https://dataportuaria.com/en/internacional/logistics/dhl-group-plans-more-than-eur-400-million-investment-to-support-growth-and-supply-chain-resilience-in-central-and-eastern-europe-0696d4",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-10",
-   "story": "a197b1b8fe32d"
+   "story": "a197b1b8fe32d",
+   "site": "dhl.com",
+   "geo": [
+    7.098,
+    50.737
+   ],
+   "enriched": "2026-10-12"
   }
  ],
  "edges": [
@@ -277,6 +286,33 @@
    "t": "Uber Eats announced a Foot Locker partnership in July",
    "url": "https://www.fibre2fashion.com/news/prime-content/retail-marketi-intelligence-news/macy-s-anthropologie-vans-turn-stores-into-1-hour-hubs-via-doordash-314047-newsdetails.htm",
    "story": "a63ee22ebda65"
+  },
+  {
+   "a": "dhl",
+   "b": "dhlsupplychain",
+   "k": "owns",
+   "y": null,
+   "t": "DHL Group division",
+   "url": "https://www.dhl.com/us-en/home/about-us.html",
+   "story": "a197b1b8fe32d"
+  },
+  {
+   "a": "dhlsupplychain",
+   "b": "inmarscs",
+   "k": "acquired",
+   "y": "2025",
+   "t": "Acquired Inmar's returns/reverse logistics division",
+   "url": "https://www.supplychaindive.com/news/dhl-supply-chain-acquires-inmar-supply-chain-solutions/737413/",
+   "story": "a197b1b8fe32d"
+  },
+  {
+   "a": "dhlsupplychain",
+   "b": "idsfulfillment",
+   "k": "acquired",
+   "y": "2025",
+   "t": "Acquired e-commerce fulfillment provider",
+   "url": "https://group.dhl.com/en/media-relations/press-releases/2025/dhl-supply-chain-acquires-ids-fulfillment.html",
+   "story": "a197b1b8fe32d"
   }
  ]
 }
