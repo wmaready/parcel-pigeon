@@ -811,7 +811,7 @@ def run():
     # new companies on the market map (researched and confirmed by players.py)
     newp = [p for p in load("players.json", {}).get("players", []) if p.get("enriched") and not p.get("pending")
             and p["id"] not in state["players"]]
-    for p in newp:
+    for p in [x for x in newp if not x.get("seeded")]:      # companies added by the sweep fill in the map quietly: no alert, no badge
         enqueue({"kind": "player", "key": "player:" + p["id"], "at": now_et().isoformat(), "t": f"New on the map: {p['n']}", "m": p.get("s") or "",
                  "lvl": 0, "topic": "deals", "mask": None, "url": SITE + "#mna"})
     state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
