@@ -53,29 +53,29 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "abf01a11b3d9e",
-  "ac1d01500ab14",
-  "w150132868eae",
-  "w8a582ba4f6eb",
-  "w49b3786a59a5",
-  "w82629d496c23",
-  "af8ee5ed067c6",
-  "a89d7e4beebd9",
   "wbf2ef019cc6e",
-  "ae77827c0481e",
-  "w1a58abf8b69d",
-  "wf225c9a3bf63",
   "w348418a9dc09",
-  "wb612a77519f2",
-  "wa0dc8b706733",
-  "aad7e6789b34e",
-  "a30530b988200",
   "w3d06a7fa766e",
+  "w150132868eae",
   "afbf819454788",
-  "a1785bbd2ecbb",
+  "w1a58abf8b69d",
+  "w49b3786a59a5",
+  "ae77827c0481e",
+  "wa0dc8b706733",
   "a945e2139bb15",
+  "w82629d496c23",
   "a9b2dacf6f727",
-  "aee6669d325da"
+  "wb612a77519f2",
+  "abf01a11b3d9e",
+  "w8a582ba4f6eb",
+  "aee6669d325da",
+  "wf225c9a3bf63",
+  "a30530b988200",
+  "a89d7e4beebd9",
+  "af8ee5ed067c6",
+  "ac1d01500ab14",
+  "a1785bbd2ecbb",
+  "aad7e6789b34e"
  ],
  "backfilled": true,
  "players": [
@@ -156,7 +156,9 @@
   "more:player:ebay,player:mercari,player:poshmark",
   "player:poshmark",
   "player:mercari",
-  "player:ebay"
+  "player:ebay",
+  "player:etsy",
+  "player:ecomlogistics"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -749,34 +751,11 @@
    ]
   }
  ],
- "queue": [
-  {
-   "kind": "player",
-   "key": "player:etsy",
-   "at": "2026-10-13T15:33:58.683283-04:00",
-   "t": "New on the map: Etsy, Inc.",
-   "m": "Etsy operates an online marketplace for handmade, vintage and creative goods, and sells discounted USPS, UPS, FedEx and other carrier shipping labels to its U.S. sellers.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "player",
-   "key": "player:ecomlogistics",
-   "at": "2026-10-13T15:33:58.683303-04:00",
-   "t": "New on the map: Ecom Logistics",
-   "m": "Ecom Logistics is a Canadian 3PL that combines ecommerce fulfillment, its own last-mile delivery fleet, freight and technology, and it recently launched Ecom NOW same-day delivery for Shopify merchants.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-13",
-  "n": 4
+  "n": 6
  },
- "last_push": "2026-10-13T14:50:33.218663-04:00"
+ "last_push": "2026-10-13T17:28:02.917838-04:00"
 }
