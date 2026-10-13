@@ -69,6 +69,9 @@ def logo_candidates(domain):
     except Exception:
         pass
     out += [(400, base + "apple-touch-icon.png")]          # no favicon.ico: too small to look sharp
+    # sites that block page readers still publish their icon: the largest one the site declares, via the public
+    # favicon services (anything under 48px, including their blank default, is rejected by _img)
+    out += [(300, f"https://www.google.com/s2/favicons?domain={host}&sz=256"), (250, f"https://icons.duckduckgo.com/ip3/{host}.ico")]
     seen, ordered = set(), []
     for _, u in sorted(out, reverse=True):
         if u not in seen:
@@ -159,6 +162,11 @@ def logos(limit=25):
                         rec.pop(k, None)
                 rec["checked"] = "2000-01-01"
         idx["_v3"] = True
+    if not idx.get("_v4"):
+        for pid, rec in idx.items():                  # one-time: retry every company still without a logo, with the new sources
+            if isinstance(rec, dict) and not rec.get("f"):
+                rec["checked"] = "2000-01-01"
+        idx["_v4"] = True
     due = [pid for pid in sites if pid not in idx or
            (dt.date.fromisoformat(idx[pid].get("checked", "2000-01-01")) < TODAY - dt.timedelta(days=30))]
     done = 0
