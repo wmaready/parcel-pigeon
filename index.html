@@ -6215,6 +6215,27 @@ var LOGOS_SNAP={
   "f": "data/logos/fwdfinalmile.svg",
   "ar": 2.071,
   "src": "https://www.hubgroup.com/wp-content/themes/HUBG-23/logo.svg"
+ },
+ "sereact": {
+  "checked": "2026-10-13",
+  "host": "sereact.ai",
+  "f": "data/logos/sereact.svg",
+  "ar": 1.462,
+  "src": "https://sereact.ai/assets/images/logos/rohlik.svg"
+ },
+ "zalando": {
+  "checked": "2026-10-13",
+  "host": "corporate.zalando.com",
+  "f": "data/logos/zalando.png",
+  "ar": 1.495,
+  "src": "https://corporate.zalando.com/public/styles/teaser_hero_extra_extra_small/public/media/Zalando-SE_x_DFB_no-logos_1.jpg?VersionId=45.D_kzhJXDLJ10z4WToBT0o5b.bt9jU&amp;h=b8884246&amp;itok=8znxZLWk"
+ },
+ "universalposta": {
+  "checked": "2026-10-13",
+  "host": "upu.int",
+  "f": "data/logos/universalposta.png",
+  "ar": 3.867,
+  "src": "https://upu.int/Content/images/logo/logo-white.png"
  }
 };
 
@@ -8012,7 +8033,7 @@ function markRead(ids){let add=[];ids.forEach(id=>{if(!id||MS.read.has(id))retur
 /* companies added to the map in the last 14 days that this reader hasn't opened yet */
 // newly found companies worth flagging: U.S.-based ones, and national posts and global logistics groups anywhere.
 // Small foreign carriers still join the map and the players list, just without a "new" flag.
-const newPlayers=()=>PLAYERS.filter(p=>p.added&&daysTo(p.added)>=-14&&(/USA$/.test(p.hq||'')||['national','global'].includes(p.realm))).sort((a,b)=>b.added.localeCompare(a.added));
+const newPlayers=()=>PLAYERS.filter(p=>p.added&&!p.seeded&&daysTo(p.added)>=-14&&(/USA$/.test(p.hq||'')||['national','global'].includes(p.realm))).sort((a,b)=>b.added.localeCompare(a.added));
 const seenNew=()=>{try{return new Set(JSON.parse(store.get('pw-seen-new','[]')))}catch(e){return new Set()}};
 function navBadge(){const n=newPlayers().filter(p=>!seenNew().has(p.id)).length,b=$('mnaNew');
   const v=document.querySelector('#vs-mna button[data-v="players"]');if(v){let i=v.querySelector('.vnew');if(!i&&n){i=document.createElement('i');i.className='vnew';v.appendChild(i)}if(i){i.hidden=!n;i.textContent=n}}
@@ -8074,10 +8095,11 @@ function famMoves(M){if(!Array.isArray(M))return;
   const unown=(a,b)=>{for(let i=PEDGES.length-1;i>=0;i--){const e=PEDGES[i];if(e.a===a&&e.b===b&&(e.k==='owns'||e.k==='acquired'))PEDGES.splice(i,1)}};
   [...M].sort((x,y)=>String(x.d||'').localeCompare(String(y.d||''))).forEach(m=>{const p=m&&PL[m.id];if(!p)return;const y=String(m.d||'').slice(0,4)||null;
     if(m.role)p.role=m.role;
+    if(m.k==='renamed'){if(m.new){if(m.old&&!(p.al||[]).includes(m.old))p.al=[...(p.al||[]),m.old];p.n=m.new}return}
     if(m.k==='pending'){if(PL[m.pend])add(m.pend,m.id,'acquired',y,/agree|pending/i.test(m.t||'')?m.t:`${PL[m.pend].n} agrees to buy ${p.n} (pending)`,m.url,m.story);return}
     const old=m.from&&PL[m.from]&&m.from!==m.parent?m.from:null;
     if(old){unown(old,m.id);p.was=old;p.wasY=y;add(old,m.id,m.k==='closed'?'folded':m.k==='spun'?'spun':'sold',y,m.t||`${PL[old].n} no longer owns ${p.n}`,m.url,m.story)}
-    if(m.k==='closed'){p.parent=null;p.into=PL[m.into]?m.into:null;return}
+    if(m.k==='closed'){p.parent=null;p.into=PL[m.into]?m.into:null;p.gone=y||'1';return}
     p.parent=PL[m.parent]?m.parent:(m.k==='sold'||m.k==='spun'?null:p.parent);
     if(p.parent)add(p.parent,m.id,m.k==='new_arm'?'owns':'acquired',y,m.t||`${PL[p.parent].n} owns ${p.n}`,m.url,m.story)})}
 function famKids(id){return PLAYERS.filter(x=>x.parent===id&&!x.svc).sort((a,b)=>REALMS.findIndex(r=>r[0]===a.realm)-REALMS.findIndex(r=>r[0]===b.realm)||famName(a).localeCompare(famName(b)))}
@@ -8134,7 +8156,7 @@ function renderSide(){
   const others=[...grp.inv,...grp.part];
   el.innerHTML=`<button class="mclose" data-mclose aria-label="Close">×</button>
     <header class="phd"><span class="prl r-${p.realm}"><i></i>${esc(RL[p.realm])}</span><div class="phtl">${logoImg(p,'lgl')}<h3>${esc(p.n)}</h3></div><p>${esc(p.s)}</p>${PSITE[p.id]?`<a class="psite" href="https://${PSITE[p.id]}" target="_blank" rel="noopener">${esc(PSITE[p.id].split('/')[0].replace(/^www\./,''))} ↗</a>`:''}</header>
-    <div class="pfacts">${fact('Ownership',ownLine(p))}${fact('Headquarters',p.hq?esc(p.hq.replace(/, USA$/,'')):'')}${fact('Founded',p.yr?esc(p.yr):'')}${fact('Ticker',p.tk?esc(p.tk):'')}</div>
+    <div class="pfacts">${fact('Ownership',ownLine(p))}${fact('Headquarters',p.hq?esc(p.hq.replace(/, USA$/,'')):'')}${fact('Founded',p.yr?esc(p.yr):'')}${fact('Ticker',p.tk?esc(p.tk):'')}${fact('Status',p.gone?esc('Closed'+(p.gone.length===4?' '+p.gone:'')+(p.into&&PL[p.into]?', folded into '+PL[p.into].n:'')):'')}</div>
     ${famTree(p)||(chain.length||kids.length||formerHtml?sec('Ownership family',null,`${chain.length?`<div class="pchain"><span class="lbl">Part of</span>${chain.map(chip).join('<span class="parr">›</span>')}<span class="parr">›</span><span class="pme">${esc(p.n)}</span></div>`:''}${kids.length?`<div class="lbl pkl">Owns ${kids.length}</div><div class="rps">${kids.map(chip).join('')}</div>`:''}${formerHtml}`):'')}
     ${grp.deal.length?sec('Deals',grp.deal.length,rows(grp.deal,5)):''}
     ${others.length?`<details class="psec pfold"><summary><h4>Partners and investors<small>${others.length}</small></h4></summary>${rows(others,99)}</details>`:''}
@@ -8142,7 +8164,7 @@ function renderSide(){
     <div class="pacts">${dl.map(x=>`<button class="pact" data-deal="${DEALS.indexOf(x)}"><span class="xstamp">${COOP_STAMP}</span><span><b>${esc(x.title||x.target)}</b><small>Deal walkthrough</small></span></button>`).join('')}
       ${nst?`<button class="pact plain" data-newsq="${esc(p.n)}"><span><b>Stories in News</b><small>${nst} mention${nst===1?'':'s'}, newest first</small></span><span class="pgo">›</span></button>`:''}
       ${ern?`<button class="pact plain" data-goto="docs:earnings"><span><b>Earnings</b><small>Releases, calls and filings</small></span><span class="pgo">›</span></button>`:''}</div>
-    ${p.src?`<p class="lbl msrc"><a href="${p.src}" target="_blank" rel="noopener">Profile source</a></p>`:''}`;
+    ${p.src?`<p class="lbl msrc">${(p.srcs&&p.srcs.length>1?p.srcs.slice(0,3):[p.src]).map((u,i,a)=>`<a href="${u}" target="_blank" rel="noopener">${a.length>1?'Source '+(i+1):'Profile source'}</a>`).join(' · ')}${p.chk?` · Checked ${fmtD(p.chk,{month:'short',day:'numeric',year:'numeric'})}`:''}</p>`:''}`;
 }
 // every stored document that belongs to or names a company: filed under it, or its name/aliases in the title
 function pDocs(p){const names=[p.n,...(p.al||[])].filter(n=>n&&n.length>2),re=new RegExp('(^|[^A-Za-z0-9])('+names.map(reEsc).join('|')+')(?![A-Za-z0-9])','i');
@@ -8619,7 +8641,7 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   if(typeof peerLabels==='function')peerLabels(NEWS);
   if(typeof thrSplit==='function'&&THR_RAW){thrSplit();thrIndex()}   // yearly storylines re-cut once live stories are in
   if(pls&&Array.isArray(pls.players)){pls.players.forEach(p=>{if(p&&p.id&&!p.pending&&!PL[p.id]&&REALMS.some(r=>r[0]===p.realm)){PLAYERS.push(p);PL[p.id]=p;if(p.site&&typeof PSITE!=='undefined'&&!PSITE[p.id])PSITE[p.id]=p.site}});
-    (pls.edges||[]).forEach(e=>{if(e&&PL[e.a]&&PL[e.b]&&!PEDGES.some(x=>x.a===e.a&&x.b===e.b&&x.k===e.k))PEDGES.push(e)});famMoves(pls.moves);indexPlayers();ch=true}
+    (pls.edges||[]).forEach(e=>{if(e&&PL[e.a]&&PL[e.b]&&!PEDGES.some(x=>x.a===e.a&&x.b===e.b&&x.k===e.k))PEDGES.push(e)});famMoves(pls.moves);if(pls.checks)PLAYERS.forEach(p=>{if(pls.checks[p.id])p.chk=pls.checks[p.id]});indexPlayers();ch=true}
   if(ch){renderAll();stampLabels();window.coopBrief&&coopBrief()}
 })();
 
