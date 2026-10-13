@@ -44,35 +44,38 @@
   "a4c7bcc13e662",
   "abe2fa039ab25",
   "a392500587e33",
-  "a89d7e4beebd9"
+  "a89d7e4beebd9",
+  "adb625d22e170",
+  "aee6669d325da"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "af8ee5ed067c6",
-  "wa0dc8b706733",
-  "w150132868eae",
-  "a30530b988200",
-  "afbf819454788",
-  "a89d7e4beebd9",
-  "w3d06a7fa766e",
   "a1785bbd2ecbb",
-  "wf225c9a3bf63",
-  "abf01a11b3d9e",
+  "a30530b988200",
+  "ac1d01500ab14",
   "wbf2ef019cc6e",
-  "w1a58abf8b69d",
-  "w49b3786a59a5",
   "a945e2139bb15",
+  "aee6669d325da",
+  "w8a582ba4f6eb",
+  "wf225c9a3bf63",
   "w82629d496c23",
   "w348418a9dc09",
-  "aad7e6789b34e",
-  "a9b2dacf6f727",
+  "wb612a77519f2",
+  "w49b3786a59a5",
+  "afbf819454788",
+  "af8ee5ed067c6",
   "ae77827c0481e",
-  "w8a582ba4f6eb",
-  "ac1d01500ab14",
-  "wb612a77519f2"
+  "a89d7e4beebd9",
+  "w150132868eae",
+  "aad7e6789b34e",
+  "abf01a11b3d9e",
+  "a9b2dacf6f727",
+  "w1a58abf8b69d",
+  "w3d06a7fa766e",
+  "wa0dc8b706733"
  ],
  "backfilled": true,
  "players": [
@@ -90,7 +93,8 @@
   "myflexbox",
   "sereact",
   "zalando",
-  "universalposta"
+  "universalposta",
+  "gobolt"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -141,7 +145,9 @@
   "player:myflexbox",
   "player:sereact",
   "player:zalando",
-  "player:universalposta"
+  "player:universalposta",
+  "story:q4 freight index projects record ground and express parcel rates",
+  "story:gofo adds 4 emergency fuel surcharge from oct 26"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -171,7 +177,9 @@
   "sick shows ai enabled parcel scanning system at cemat 2026",
   "westborough zba to hear amazon drone pad appeal nov 2 town m",
   "class action accuses google ups of sharing tracking data",
-  "analysis 2026 peak shipping season starts earlier and spread"
+  "analysis 2026 peak shipping season starts earlier and spread",
+  "q4 freight index projects record ground and express parcel r",
+  "gofo adds 4 emergency fuel surcharge from oct 26"
  ],
  "copy": {
   "a78db2954da94": {
@@ -699,13 +707,44 @@
      "url": "https://www.globaltrademag.com/peak-shipping-season-2026-higher-volumes-and-shipments-more-spread-over-time/"
     }
    ]
+  },
+  {
+   "id": "adb625d22e170",
+   "title": "Q4 freight index projects record ground and express parcel rates",
+   "date": "2026-10-13",
+   "c": [
+    "FedEx",
+    "Industry"
+   ],
+   "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season",
+   "srcs": [
+    {
+     "src": "American Journal of Transportation",
+     "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season"
+    }
+   ]
+  },
+  {
+   "id": "aee6669d325da",
+   "title": "GOFO adds 4% emergency fuel surcharge from Oct. 26",
+   "date": "2026-10-13",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season",
+   "srcs": [
+    {
+     "src": "TransImpact",
+     "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-13",
-  "n": 1
+  "n": 3
  },
- "last_push": "2026-10-13T07:23:35.052354-04:00"
+ "last_push": "2026-10-13T13:39:07.698555-04:00"
 }

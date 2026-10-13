@@ -87,7 +87,14 @@
    "UPS",
    "USPS"
   ],
-  "rv": "bbbb22f9753d"
+  "rv": "bbbb22f9753d",
+  "cx": {
+   "sig": "bbbb22f9753d",
+   "v": 2,
+   "beats": {},
+   "intro": "USPS moved its domestic air cargo from FedEx to UPS, a shift that hit FedEx's profit outlook and reshuffled who flies the mail.",
+   "now": "The handover is done. Next on the clock: UPS reports earnings Oct. 27 and FedEx Oct. 28."
+  }
  },
  "de-minimis": {
   "n": "End of the de minimis exemption",
@@ -193,11 +200,22 @@
   "c": [
    "USPS"
   ],
-  "rv": "e040dd275a8f"
+  "rv": "e040dd275a8f",
+  "cx": {
+   "sig": "e040dd275a8f",
+   "v": 2,
+   "beats": {
+    "h402": "The year opened with a Jan. 21 increase: Ground Advantage rose 5.4%, Priority Mail 5.7% and Express 5.9%. None of them changed in July.",
+    "h409": "In May, USPS proposed a 25% average Parcel Select jump for July 14, while Ground Advantage, Priority Mail and Express stayed flat.",
+    "h430": "By November, USPS proposed another round for Jan. 19, 2025: Ground Advantage 3.9%, and Parcel Select 9.2% on top of July's 25%.",
+    "h516": "In May 2025, governors approved July 13 hikes: Ground Advantage 7.1%, Priority Mail 6.3%, Parcel Select 7.6%. Express held flat."
+   },
+   "intro": "USPS has raised package prices in steps since 2024, and holiday pricing is the latest layer shippers have to budget for."
+  }
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "USPS holiday prices took effect Oct. 4 and carrier peak surcharges are phasing in through late October, and the carriers have now published their Christmas delivery deadlines.",
+  "s": "USPS holiday prices are in effect on four package products through Jan. 17, 2027, per this report; per earlier coverage, per-package fees at other carriers begin Oct. 24 to 26.",
   "ids": [
    "h416",
    "h418",
@@ -209,10 +227,11 @@
    "01"
   ],
   "first": "2024-07-26",
-  "last": "2026-10-12",
+  "last": "2026-10-13",
   "c": [
    "Amazon",
    "FedEx",
+   "Industry",
    "OnTrac",
    "UPS",
    "USPS"
@@ -459,5 +478,18 @@
    "Regional"
   ],
   "rv": "e00613a8e8ec"
+ },
+ "fuel-surcharge-2026": {
+  "n": "2026 diesel fuel surcharges",
+  "ids": [
+   "aee6669d325da"
+  ],
+  "first": "2026-10-13",
+  "s": "GOFO's 4% emergency fuel surcharge takes effect Oct. 26, 2026 and remains while diesel stays above the $5.46 August baseline.",
+  "last": "2026-10-13",
+  "c": [
+   "Regional"
+  ],
+  "rv": "dc267a55a604"
  }
 }

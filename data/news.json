@@ -61,6 +61,76 @@
   "exclusive": true
  },
  {
+  "id": "adb625d22e170",
+  "date": "2026-10-13",
+  "c": [
+   "FedEx",
+   "Industry"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "Q4 freight index projects record ground and express parcel rates",
+  "sum": "A quarterly freight index released Oct. 13 projects ground parcel rates per package at 43.3% above the January 2018 baseline in Q4 2026, up 5.8% year over year. It projects express at 20.3%, up 13.8%, a record for the fifth straight quarter. The accompanying analysis says carrier changes to fuel surcharge tables account for 72% of the rise in the surcharge since Q1 2021.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "The index projects record parcel costs for holiday shippers in Q4 2026. According to the analysis, packages to 2,533 ZIP codes that FedEx moves from extended to remote delivery area status face a $17.75 DAS fee from Jan. 4, 2027.",
+  "tie": "The projection follows October 2026 coverage of peak surcharges, including USPS holiday prices from Oct. 4 and per-package peak fees starting Oct. 24 to 26.",
+  "act": null,
+  "dates": [],
+  "src": "American Journal of Transportation",
+  "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season",
+  "srcs": [
+   {
+    "src": "American Journal of Transportation",
+    "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season"
+   }
+  ],
+  "auto": true,
+  "new": "A Q4 2026 industry index projects record ground and express parcel costs and says 72% of the fuel surcharge increase since Q1 2021 comes from table changes, which adds a cost context to the peak fees already scheduled for shippers.",
+  "exclusive": true
+ },
+ {
+  "id": "aee6669d325da",
+  "date": "2026-10-13",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Fuel",
+  "kind": "News",
+  "title": "GOFO adds 4% emergency fuel surcharge from Oct. 26",
+  "sum": "GOFO will apply a 4% emergency fuel surcharge to base delivery rates across all U.S. regions from Oct. 26, 2026, according to a notice to partners described in an industry analysis. GOFO said U.S. on-highway diesel prices have risen about 40% since July. The carrier is not adding peak surcharges this year.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "Shippers sending volume through GOFO pay 4% more on base delivery rates from Oct. 26, 2026. The surcharge stays while the national diesel average is above $5.46 per gallon, and GOFO has said it will add no peak surcharges.",
+  "tie": "The industry analysis notes that the UPS international air import fuel surcharge reached 47.75% in September, citing the same fuel market.",
+  "act": "2026-10-26",
+  "dates": [
+   {
+    "d": "2026-10-25",
+    "w": "UPS and Amazon Shipping begin per-package residential demand fees",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-10-26",
+    "w": "GOFO 4% emergency fuel surcharge takes effect; FedEx demand fees begin",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "src": "TransImpact",
+  "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season",
+  "srcs": [
+   {
+    "src": "TransImpact",
+    "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season"
+   }
+  ],
+  "auto": true,
+  "thread": "fuel-surcharge-2026",
+  "exclusive": true
+ },
+ {
   "id": "a0bfa0d132415",
   "date": "2026-10-12",
   "c": [
