@@ -15,7 +15,18 @@
    "Amazon",
    "UPS"
   ],
-  "rv": "8754e0e28dbf"
+  "rv": "8754e0e28dbf",
+  "cx": {
+   "sig": "8754e0e28dbf",
+   "v": 2,
+   "beats": {
+    "h403": "UPS opened 2024 with 12,000 job cuts aimed at about $1 billion in savings, after fourth-quarter revenue fell 7.8%.",
+    "h503": "Then came the big one: UPS would cut Amazon volume by more than half. Amazon was its largest customer, at nearly 12% of revenue.",
+    "h511": "In April, UPS put numbers on the Amazon pullback: about 20,000 jobs and 73 buildings, aiming for another $1 billion in savings."
+   },
+   "intro": "UPS is shrinking its Amazon business and its own network at once. Shippers should know what that means for capacity and costs.",
+   "now": "The cutback is complete. UPS reports quarterly earnings Oct. 27, and its Teamsters contract runs until July 31, 2028."
+  }
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
@@ -29,7 +40,17 @@
   "c": [
    "FedEx"
   ],
-  "rv": "27596ef51563"
+  "rv": "27596ef51563",
+  "cx": {
+   "sig": "27596ef51563",
+   "v": 2,
+   "beats": {
+    "h433": "Freight is the largest U.S. LTL carrier, with $9.4B in fiscal 2024 revenue. FedEx had been reviewing its fit since June 2024.",
+    "h519": "John A. Smith is future CEO and R. Brad Martin chairman; a confidential Form 10 went in Aug. 2025, with FDXF as the ticker."
+   },
+   "intro": "FedEx is spinning off FedEx Freight, the largest U.S. LTL carrier, into its own public company.",
+   "now": "Leaders are named and the separation is still expected by June 2026, with FDXF as the planned ticker."
+  }
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
@@ -86,11 +107,21 @@
    "UPS",
    "USPS"
   ],
-  "rv": "f405d49cdc56"
+  "rv": "f405d49cdc56",
+  "cx": {
+   "sig": "f405d49cdc56",
+   "v": 2,
+   "beats": {
+    "h420": "The idea started with volume: the White House said de minimis shipments grew from about 140 million to over 1 billion a year.",
+    "h504": "USPS stopped taking China and Hong Kong parcels, then reversed a day later and said it would work with CBP on collecting the new duties."
+   },
+   "intro": "The $800 duty-free exemption for small imports is gone, so low-value parcels now face duties and new paperwork.",
+   "now": "De minimis is closed to every country. FedEx reports quarterly earnings on Oct. 28 and UPS on Oct. 27, so there may be more to learn about the impact."
+  }
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds",
-  "s": "CBP has started processing tariff refunds, and FedEx, UPS and DHL have begun passing them to customers.",
+  "s": "Refunds are reaching importers, and some, such as Levi's, are now disclosing how they will spend the money.",
   "ids": [
    "g31",
    "a771628a2eca4"
@@ -269,7 +300,13 @@
   "c": [
    "USPS"
   ],
-  "rv": "3ceee99aa69e"
+  "rv": "3ceee99aa69e",
+  "cx": {
+   "sig": "3ceee99aa69e",
+   "v": 2,
+   "beats": {},
+   "intro": "USPS lost billions while its package business shifted; shippers watch it because USPS also does last-mile for other carriers."
+  }
  },
  "parcel-volume-amazon": {
   "n": "Amazon's rise to top U.S. parcel carrier",
@@ -402,7 +439,13 @@
   "c": [
    "Amazon"
   ],
-  "rv": "04a401fa9e96"
+  "rv": "04a401fa9e96",
+  "cx": {
+   "sig": "04a401fa9e96",
+   "v": 2,
+   "beats": {},
+   "intro": "Fights over who employs Amazon's delivery drivers could shape labor costs and risk across the delivery network shippers rely on."
+  }
  },
  "delivery-robot-rules": {
   "n": "San Jose delivery robot rules",
