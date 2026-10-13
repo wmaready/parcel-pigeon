@@ -2492,6 +2492,65 @@ html.ptlock,html.ptlock body{overflow:hidden;overscroll-behavior:none}
 .xplay .xpt,.rshow .xpt{opacity:1;width:auto;text-align:left}
 .xplay{background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 14%,var(--panel-2)),var(--panel-2) 70%);box-shadow:inset 3px 0 0 var(--accent)}
 .xplay .xpt small,.rshow .xpt small{color:var(--accent)}
+.nmore{display:block;margin:16px auto;padding:10px 16px}
+/* cards off screen skip layout and paint until they're near */
+#nList>.card,#nDeals>.card{content-visibility:auto;contain-intrinsic-size:auto 420px}
+/* ===== Smoother scrolling =====
+   1) the bars that stay on screen use solid backgrounds instead of a live blur (blur re-renders every scrolled frame)
+   2) Coop in the corner rests between moments: his idle loops run only while he's awake (just landed, tapped, talking)
+   3) looping decorations pause while you're scrolling */
+.top{background:rgba(8,11,16,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
+.ticker{background:rgb(13,18,24);backdrop-filter:none;-webkit-backdrop-filter:none;contain:content}
+nav.tabs{background:rgba(10,14,19,.98);backdrop-filter:none;-webkit-backdrop-filter:none}
+.ticker .track{will-change:transform}
+.cnav:not(.awake):not(.talking) .coop-body,.cnav:not(.awake):not(.talking) .coop-head,.cnav:not(.awake):not(.talking) .coop-look,
+.cnav:not(.awake):not(.talking) .coop-wing,.cnav:not(.awake):not(.talking) .coop-tail,.cnav:not(.awake):not(.talking) .coop-lid{animation:none}
+html.scrolling .ticker .track,html.scrolling .crt,html.scrolling .cspulse,html.scrolling .csr,html.scrolling #pwave,html.scrolling .cnav .coop *{animation-play-state:paused!important}
+.ptbar{height:3px;border-radius:2px;background:var(--grid-strong);margin:-2px 0 10px;overflow:hidden}.ptbar i{display:block;height:100%;background:var(--accent);transition:width .3s var(--ease,ease)}
+/* storyline walkthrough: one picture per step */
+.tlfig{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;background:color-mix(in srgb,var(--accent) 8%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.tlfig b{font:700 22px/1 var(--font-mono);color:var(--accent);letter-spacing:-.01em}
+.tlfig span{font-size:12px;line-height:1.35;color:var(--ink-2)}
+.tlfig.deal i{font-style:normal;color:var(--accent);font-weight:700}
+.tlfig.deal span{margin-left:auto;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.04em;font-size:11px}
+.tlfig .tlday{display:flex;flex-direction:column;align-items:center;min-width:42px;padding:4px 6px;border-radius:6px;background:var(--panel);border:1px solid var(--grid-strong)}
+.tlfig .tlday small{font:600 10px/1.2 var(--font-mono);text-transform:uppercase;color:#E2584A}
+.tlfig .tlday b{font-size:18px;color:var(--ink)}
+.tlfig.stat{align-self:flex-start;padding:4px 10px}
+.tlfig{font:inherit;text-align:left;width:100%;color:inherit}button.tlfig{cursor:pointer}button.tlfig:hover{border-color:var(--accent)}.tlfig.stat{width:auto}
+/* ===== Market map: bubbles, shapes, fans, edge markers ===== */
+.wd{fill:var(--rc,#8D99A6);stroke:#0A1017;cursor:pointer;transition:opacity .2s}
+.wd.con{stroke:#DCE3EA}
+.wd.sel{stroke:#fff;filter:drop-shadow(0 0 3px rgba(255,255,255,.45))}
+.wd.dim,.wcl.dim,.wl.dim{opacity:.16;pointer-events:none}
+.wcl{cursor:pointer}
+.wcl circle{fill:#0F1720;stroke:rgba(220,227,234,.18);stroke-width:.4}
+.wcl text{fill:var(--ink);font-family:var(--font-mono);font-weight:700;text-anchor:middle;pointer-events:none}
+.wcl:hover circle{fill:#16212D}
+.wseg{fill:none;stroke:var(--rc);stroke-linecap:butt;pointer-events:none}
+.wring{fill:#DCE3EA;opacity:.6}
+.wspoke{stroke:rgba(220,227,234,.35);fill:none}
+.woff{cursor:pointer}
+.woff path{stroke:#DCE3EA;fill:none;stroke-linecap:round}
+.woff text{fill:#DCE3EA;font-family:var(--font-ui);font-weight:600;paint-order:stroke;stroke:#0A1017}
+.wl{font-weight:600}
+/* shape key in the filter chips */
+.wf.sh-s i{border-radius:2px}
+.wf.sh-d i{border-radius:1px;transform:rotate(45deg) scale(.85)}
+/* map panel order: map, status line, a city's companies, type chips, then the line key (folded) */
+.wmap>.wkh{display:block;margin:0;padding:9px 14px;border-top:var(--line) solid var(--grid);font-size:12.5px;font-weight:600;color:var(--accent);background:var(--panel)}
+.wlist{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;border-top:var(--line) solid var(--grid);background:var(--panel-2)}
+.wlist .lbl{width:100%;margin-bottom:2px}
+.wli{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;border:var(--line) solid var(--grid-strong);background:var(--panel);color:var(--ink);font:inherit;font-size:12.5px;cursor:pointer;min-height:32px}
+.wli>i{width:8px;height:8px;border-radius:50%;background:var(--rc)}
+.wli:hover{border-color:var(--accent)}
+.wkeyd{border-top:var(--line) solid var(--grid)}
+.wkeyd>summary{list-style:none;cursor:pointer;padding:9px 14px;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.wkeyd>summary::-webkit-details-marker{display:none}
+.wkeyd>summary::after{content:" +";color:var(--accent)}
+.wkeyd[open]>summary::after{content:" −"}
+.wkeyd .wkey{border-top:0}
+@media (max-width:959px){.mside{max-height:40vh}body.msheet{padding-bottom:calc(42vh + 80px)}}
 </style>
 </head>
 <body>
@@ -2577,15 +2636,18 @@ html.ptlock,html.ptlock body{overflow:hidden;overscroll-behavior:none}
   <div class="view" data-view="deals"><div class="cards" id="nDeals"></div></div>
   <div class="view" data-view="map">
     <div class="mnewp" id="mNewP" hidden></div>
-    <div class="panel wmap"><div class="ph"><h2>Where they are</h2><span class="lbl">Tap a busy spot to zoom in</span></div>
-      <div class="wkey" aria-label="How to read the map lines">
+    <div class="panel wmap"><div class="ph"><h2>Where they are</h2><span class="lbl">Tap a bubble to zoom in</span></div>
+      <div class="wstage" id="wStage"></div>
+      <div class="wkh" id="wKeyHint" role="status">Tap a bubble to zoom into an area, or a company to see its ownership links</div>
+      <div class="wlist" id="wList" hidden></div>
+      <div class="wfilt" id="wFilt"></div>
+      <details class="wkeyd"><summary>How to read the lines</summary><div class="wkey" aria-label="How to read the map lines">
         <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#DCE3EA" stroke-width="2"/><path d="M48 3l7 4-7 4z" fill="#DCE3EA"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Owns or bought</b> · line runs from the owner to the company it owns</span></div>
         <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#DCE3EA" stroke-width="2" stroke-dasharray="5 4"/><path d="M48 3l7 4-7 4z" fill="#DCE3EA"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Merged</b> · the two combined into one company</span></div>
         <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#D9A55B" stroke-width="2" stroke-linecap="round" stroke-dasharray="0.5 4.5"/><path d="M48 3l7 4-7 4z" fill="#D9A55B"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Used to own</b> · sold or spun off, e.g. UPS → Coyote, now RXO’s</span></div>
         <div class="wkl"><svg viewBox="0 0 64 14" aria-hidden="true"><circle cx="5" cy="7" r="4" fill="#8D99A6"/><path d="M10 7H50" stroke="#5EC2DB" stroke-width="2" stroke-dasharray="7 4"/><path d="M48 3l7 4-7 4z" fill="#5EC2DB"/><circle cx="59" cy="7" r="4" fill="#8D99A6"/></svg><span><b>Pending deal</b> · announced, not closed yet</span></div>
-        <div class="wkh" id="wKeyHint" role="status">Tap any dot to draw its ownership lines</div>
       </div>
-      <div class="wfilt" id="wFilt"></div><div class="wstage" id="wStage"></div></div>
+      </details></div>
     <div class="mhead">
       <div class="mprog" id="mProg"></div>
     </div>
@@ -4042,6 +4104,2118 @@ const PEDGES=[{"a":"amazon","b":"primeair","k":"owns","y":null,"t":"Amazon owns 
 (function(){const have=new Set(NEWS.map(n=>n.id));NEWS.push(...[{"id": "nrc72492", "date": "2026-10-06", "c": ["Uber", "ezCater"], "cat": "M&A", "kind": "News", "title": "Uber agrees to buy catering platform ezCater for $2.3 billion", "sum": "Uber agreed on Oct. 6 to acquire Boston-based ezCater in an all-cash deal valued at $2.3 billion, expected to close in the coming months pending regulatory approval. ezCater works with more than 140,000 restaurants and logged over $2.5 billion in gross bookings over the past 12 months; it will be brought onto Uber Eats and offered through Uber for Business.", "imp": "info", "lvl": 2, "plain": "Businesses that order catering through ezCater may see it fold into Uber Eats and Uber for Business once the deal closes.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Nation's Restaurant News", "url": "https://www.nrn.com/restaurant-technology/uber-to-acquire-ezcater-for-2-3b"}, {"src": "FSR Magazine", "url": "https://www.fsrmagazine.com/feature/uber-to-acquire-ezcater-for-2-3-billion/"}], "bf": "nr"}, {"id": "nr2b7ec9", "date": "2026-09-24", "c": ["Maersk", "Puma"], "cat": "3PL & fulfillment", "kind": "News", "title": "Maersk takes over Puma's three U.S. DCs, will open Torrance site to other brands in 2027", "sum": "Maersk now manages Puma's AutoStore-equipped distribution centers in Torrance, California, Phoenix and Whitestown, Indiana, totaling about 2.3 million square feet, under an agreement announced Sept. 24. Starting in 2027 the Torrance site, rated at about 20 million units of throughput a year, will take on other brands as Maersk's first multi-client AutoStore operation in North America.", "imp": "info", "lvl": 1, "plain": "Brands seeking automated fulfillment near Southern California ports could have a shared-capacity option at Torrance from 2027.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/puma-taps-maersk-to-manage-north-america-distribution-network/831623/"}, {"src": "FreightWaves", "url": "https://www.freightwaves.com/?p=581796"}], "bf": "nr"}, {"id": "nr1b61b3", "date": "2026-09-24", "c": ["Amazon"], "cat": "3PL & fulfillment", "kind": "News", "title": "Amazon to let sellers reach eight countries from one inbound shipment", "sum": "Amazon said its Global Warehousing and Distribution service, live in the U.S., will add the UK, Japan, Germany, France, Italy, Spain and Canada by year-end so one manufacturing run shipped to an Amazon facility near the factory can serve all eight markets. Amazon said storage costs run up to 45% lower than AWD in the U.S. and FBA replenishment up to five days faster, and it also extended AWD to the EU, UK and Australia.", "imp": "info", "lvl": 2, "plain": "Amazon sellers can hold one pool of inventory near the factory and move it into a given country's FBA network only when demand appears there.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Amazon", "url": "https://www.aboutamazon.com/news/innovation-at-amazon/amazon-sellers-global-expansion-tools"}, {"src": "FreightWaves", "url": "https://www.freightwaves.com/?p=581745"}], "bf": "nr"}, {"id": "nr59b2c5", "date": "2026-09-21", "c": ["Amazon"], "cat": "Labor", "kind": "News", "title": "Amazon adds $1.9 billion to its delivery partner program for 2027", "sum": "Amazon said it will invest another $1.9 billion in its Delivery Service Partner program in 2027, aimed at lifting delivery associate pay to a national average of nearly $24 an hour. It also outlined safety and AI tools, including more than 20,000 Smart Delivery Glasses expected in use by the end of 2027, and said its eight-year DSP investment totals $21.7 billion.", "imp": "info", "lvl": 2, "plain": "Higher DSP labor spending is a cost Amazon carries in its own delivery network; the announcement does not change shipper rates.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Amazon (Business Wire)", "url": "https://www.businesswire.com/news/home/20260921920176/en/Amazon-Invests-Another-%241.9-Billion-in-the-Delivery-Service-Partner-Program-with-New-Safety-Initiatives-and-AI-Powered-Technology"}, {"src": "The Next Web", "url": "https://thenextweb.com/news/amazon-dsp-1-9bn-investment-delivery-driver-pay"}], "bf": "nr"}, {"id": "nr8c9c60", "date": "2026-09-29", "c": ["Nordstrom"], "cat": "Same-day & gig delivery", "kind": "News", "title": "Nordstrom looks for carriers to add seven-day delivery, tests same-day beauty in Los Angeles", "sum": "Nordstrom executives said at Parcel Forum '26 the retailer is weighing new entrant carriers to offer weekend delivery at scale, adding to its next-business-day and two-business-day options. A Los Angeles same-day pilot for beauty products delivers orders placed by 3 p.m. by 9 p.m., and the company plans to expand it to more markets this fall.", "imp": "info", "lvl": 1, "plain": "Large retailers are using carrier mix, including newer entrants, to add weekend coverage the national carriers do not fully provide.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/nordstrom-eyes-weekend-delivery-faster-shipping/831511/"}], "bf": "nr"}, {"id": "nr4f8ee6", "date": "2026-09-25", "c": ["UniUni", "MAK Acquisition"], "cat": "Regional & alternative", "kind": "News", "title": "SPAC sends UniUni breach notice; UniUni lines up new private funding", "sum": "MAK Acquisition Corp., the SPAC that agreed in May to take UniUni public, notified the carrier that its deteriorating finances breached merger conditions, giving it 15 business days to resolve the issue. UniUni announced a term sheet for a private round led by an undisclosed existing investor, saying the money would strengthen its finances ahead of peak.", "imp": "info", "lvl": 2, "plain": "Shippers using UniUni for peak may want to watch whether the merger survives and the new funding closes.", "tie": "UniUni agreed in May to go public through MAK Acquisition.", "act": null, "dates": [], "srcs": [{"src": "BetaKit", "url": "https://betakit.com/?p=410314"}, {"src": "The Logic", "url": "https://thelogic.co/?p=2139172"}], "bf": "nr"}, {"id": "nr8c0659", "date": "2026-09-22", "c": ["DHL", "Teamsters"], "cat": "Labor", "kind": "News", "title": "Drivers at two DHL Express delivery contractors in Dallas join the Teamsters", "sum": "Fifty-five drivers at DeliverOL and Driven-Force Inc., two contractors delivering for DHL Express from the same facility outside Dallas, voted unanimously to join Teamsters Local 745. The union said it wants to extend protections held by DHL Express's directly employed Teamsters, who ratified a four-year contract this spring.", "imp": "info", "lvl": 1, "plain": "The vote is small but extends union organizing to contracted DHL Express delivery routes.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/?p=581364"}], "bf": "nr"}, {"id": "nrb0158b", "date": "2026-09-22", "c": ["DoorDash"], "cat": "Same-day & gig delivery", "kind": "News", "title": "DoorDash to pay $131.5 million to settle New York City courier pay claims", "sum": "New York City said DoorDash will pay $131.5 million, including more than $115 million to over 260,000 workers and over $16 million in penalties and costs, after a city investigation found unpaid and late pay between April 2022 and June 2026. Workers will receive about 200% of what they were underpaid, and the settlement adds three years of monitoring and data reporting.", "imp": "info", "lvl": 2, "plain": "Courier pay enforcement in New York adds compliance costs for app-based delivery platforms operating there.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "NYC Mayor's Office", "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-wins-record--131-5-million-from-doordash-for-deliv"}, {"src": "TheGrio", "url": "https://thegrio.com/2026/09/22/doordash-131-5-million-settlement-nyc-workers/"}], "bf": "nr"}, {"id": "nr72199b", "date": "2026-09-16", "c": ["USPS"], "cat": "Postal", "kind": "News", "title": "Watchdog: USPS transportation overhaul slowed package service from rural ZIP codes", "sum": "A Sept. 8 USPS inspector general report found on-time rates for Priority Mail and Ground Advantage were lower on average in ZIP codes under the Regional Transportation Optimization program than elsewhere from October 2024 to April 2026. The program, which adds a transit day for parcels from post offices more than 50 miles from regional plants, is expected to reach 72% of contiguous U.S. ZIP codes; USPS generally agreed with the findings.", "imp": "info", "lvl": 2, "plain": "Shippers picking up or inducting at rural post offices may see an extra day in transit, especially on Priority Mail.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "USPS OIG", "url": "https://www.uspsoig.gov/sites/default/files/reports/2026-09/26-042-r26.pdf"}, {"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/usps-network-revamp-challenges-on-time-delivery-from-rural-areas/830507/"}], "bf": "nr"}, {"id": "nrabcf99", "date": "2026-09-08", "c": ["DHL"], "cat": "Carrier strategy", "kind": "News", "title": "DHL Express launches Heavy Weight Express for U.S. shippers", "sum": "DHL Express introduced Heavy Weight Express for U.S. businesses, handling up to 2,200 pounds per piece and 6,600 pounds per shipment across more than 220 countries and territories. The service uses DHL's own aircraft and hubs, all-in pricing with no add-on handling surcharges, and dedicated heavyweight desks.", "imp": "info", "lvl": 1, "plain": "International shippers of heavy pieces get an express option priced without separate handling surcharges.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "AJOT", "url": "https://www.ajot.com/news/dhl-express-launches-new-heavy-weight-express-service"}, {"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/dhl-express-rolls-out-heavyweight-air-cargo-service/830311"}], "bf": "nr"}, {"id": "nr4a7d43", "date": "2026-09-10", "c": ["Shein"], "cat": "3PL & fulfillment", "kind": "News", "title": "Shein opens 737,000-square-foot automated fulfillment center in Lebanon, Indiana", "sum": "Shein held a grand opening Sept. 10 for an automated fulfillment facility in Lebanon, Indiana, with a goods-to-person system, scheduled to begin operations in September. The site brings Shein's Indiana footprint to more than 2.5 million square feet.", "imp": "info", "lvl": 1, "plain": "More Shein inventory held in the U.S. means more orders ship domestically rather than directly from overseas.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Shein (Cision)", "url": "https://digital-release.wowktv.com/business/press-releases/cision/20260910CN45128/shein-celebrates-grand-opening-of-new-distribution-warehouse-in-lebanon-indiana"}, {"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/shein-opens-automated-distribution-center-indiana/830190"}], "bf": "nr"}, {"id": "nrb55540", "date": "2026-09-15", "c": ["DoorDash", "Grubhub", "Wonder"], "cat": "M&A", "kind": "News", "title": "DoorDash to buy Grubhub's campus dining unit for $300 million and invest $125 million in Wonder", "sum": "DoorDash said it will invest $125 million in Wonder, Grubhub's owner, and buy Grubhub's campus dining business, live at upwards of 450 campuses, for $300 million. The acquisition is expected to close in early 2027, subject to regulatory approval.", "imp": "info", "lvl": 1, "plain": "The deal expands DoorDash's reach into campus food delivery; it does not affect parcel shipping directly.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Restaurant Dive", "url": "https://www.restaurantdive.com/news/doordash-wonder-grubhub-college-campus-division-acquisition/830396/"}], "bf": "nr"}, {"id": "nr67a5e2", "date": "2026-09-09", "c": ["FedEx"], "cat": "Technology & tools", "kind": "News", "title": "FedEx launches Global Trade Navigator tools for international shipping", "sum": "FedEx introduced Global Trade Navigator, including a free Trade Planner on fedex.com for HS codes and duty and tax estimates without a login, plus Ship Manager updates, a Duty and Tax app for Shopify and Global Trade APIs. FedEx cited its 2026 Small Business Trade Index, which found 68% of small and medium businesses regularly see customers surprised by duties at delivery.", "imp": "info", "lvl": 1, "plain": "Cross-border shippers can estimate duties and check classifications before creating a FedEx label.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FedEx", "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-introduces-global-trade-navigator-to-simplify-international-shipping"}], "bf": "nr"}, {"id": "nr4d2b30", "date": "2026-09-06", "c": ["Amazon"], "cat": "Network & operations", "kind": "News", "title": "Amazon-contracted cargo jet overruns Miami runway, killing five", "sum": "A Boeing 767-300 freighter operated for Amazon by 21 Air overran Runway 30 at Miami International Airport on Sept. 6 after a flight from San Juan, striking vehicles and catching fire. Five people were killed and five injured, and the NTSB sent a go team to investigate.", "imp": "info", "lvl": 2, "plain": "The NTSB investigation covers a freighter flying in Amazon's air network.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "STAT Times", "url": "https://www.stattimes.com/air-cargo/amazon-cargo-jet-overruns-miami-runway-five-dead-1360557"}], "bf": "nr"}, {"id": "nr878db7", "date": "2026-08-28", "c": ["FarEye"], "cat": "Network & operations", "kind": "News", "title": "FarEye survey: U.S. last-mile cost per delivery up 12% for a second year", "sum": "FarEye's Eye on the Last Mile America 2026 survey of more than 500 U.S. delivery operators found median cost-per-delivery inflation of 12% in 2026, matching 2025, and 88% said delivery costs are growing as fast as or faster than revenue. Operators with more control over their networks reported 95% on-time performance and 8.3% cost inflation, versus 65.5% and 14.5% for low-control operators.", "imp": "up", "lvl": 1, "plain": "Last-mile cost growth is running at double digits for many operators, which feeds into delivery pricing.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "AJOT", "url": "https://www.ajot.com/news/u.s-last-mile-cost-inflation-holds-at-12-as-network-control-emerges-as-key-performance-differentiator"}, {"src": "FreightWaves", "url": "https://www.freightwaves.com/news/last-mile-costs-rise-12-percent"}], "bf": "nr"}, {"id": "nr8d9ba9", "date": "2026-09-01", "c": ["ShipStation", "Worldwide Express", "Unishippers"], "cat": "Technology & tools", "kind": "News", "title": "ShipStation adds LTL freight booking to its parcel shipping platform", "sum": "ShipStation added less-than-truckload rating, booking, tracking and invoice management alongside parcel shipments, using ShipStation Global's carrier network. Merchants with negotiated LTL rates through Worldwide Express or Unishippers can use them in the platform, and new users can open a freight account without an existing carrier relationship.", "imp": "info", "lvl": 1, "plain": "Small merchants that ship both parcels and pallets can manage both in one system.", "tie": "Thoma Bravo combined WWEX Group with Auctane to form ShipStation Global.", "act": null, "dates": [], "srcs": [{"src": "Logistics Management", "url": "https://www.logisticsmgmt.com/article/shipstation_adds_ltl_freight_capabilities_shipping_to_its_parcel_platform"}], "bf": "nr"}, {"id": "nrf79508", "date": "2026-08-27", "c": ["GOFO"], "cat": "Regional & alternative", "kind": "News", "title": "GOFO doubles Dallas hub capacity to 800,000 parcels a day", "sum": "GOFO added about 200,000 square feet to its Dallas-area hub, doubling daily capacity to 800,000 parcels with a sorter handling 45,000 parcels an hour. The carrier said its network has grown to 300 hubs and stations serving more than 12,000 ZIP codes, about 75% of the U.S. population.", "imp": "info", "lvl": 1, "plain": "GOFO is adding sort capacity in Texas ahead of peak.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/news/gofo-parcel-network-quickly-mushrooms-in-2026"}, {"src": "Dallas Innovates", "url": "https://dallasinnovates.com/last-mile-delivery-provider-gofo-doubles-dfw-capacity-ahead-of-holiday-shipping-crush/"}], "bf": "nr"}, {"id": "nra3b222", "date": "2026-08-18", "c": ["Amazon"], "cat": "Network & operations", "kind": "News", "title": "Amazon plans 1-million-square-foot first-mile facility in Norwich, Connecticut", "sum": "Amazon confirmed early planning for a 1-million-square-foot facility in Norwich, Connecticut, that would receive goods and send them to middle-mile sortation centers on a 24/7 basis. No opening date has been set; it is one of two early-stage Amazon projects in the state, along with a fulfillment facility in Killingly.", "imp": "info", "lvl": 1, "plain": "Amazon continues to add Northeast capacity; no timeline yet.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/amazon-preps-1m-square-foot-distribution-center-in-connecticut/828085/"}], "bf": "nr"}, {"id": "nr17e0ad", "date": "2026-08-13", "c": ["Amazon", "AutoStore"], "cat": "Drones & robots", "kind": "News", "title": "AutoStore signs global supply agreement with Amazon", "sum": "AutoStore said it signed a framework agreement setting terms for Amazon to procure AutoStore storage and retrieval systems on a global basis. The agreement contains no purchasing commitments at this time.", "imp": "info", "lvl": 1, "plain": "The agreement sets terms but commits Amazon to no purchases yet.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "AutoStore", "url": "https://www.autostoresystem.com/investors/press-releases/autostore-holdings-ltd-strategic-supply-agreement-with-amazon-ab6bb"}], "bf": "nr"}, {"id": "nr996b4a", "date": "2026-08-12", "c": ["ClearJet", "OnTrac", "Veho"], "cat": "Regional & alternative", "kind": "News", "title": "ClearJet raises $25 million to expand parcel network using commercial flight cargo space", "sum": "ClearJet raised a $25 million growth investment led by Edison Partners, bringing total funding past $40 million. The company moves parcels in unused cargo space on commercial flights across 95 U.S. airports, ships more than 30 million packages a year and works with carriers including OnTrac and Veho.", "imp": "info", "lvl": 1, "plain": "Air-based zone skipping through partners like OnTrac and Veho is another option for faster ground-priced delivery.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Edison Partners", "url": "https://www.edisonpartners.com/blog/clearjet-secures-25m-growth-investment-led-by-edison-partners-to-scale-its-supercarrier-network-for-package-deliveries"}], "bf": "nr"}, {"id": "nr4a6618", "date": "2026-08-14", "c": ["Walmart", "Symbotic"], "cat": "Drones & robots", "kind": "News", "title": "Symbotic installing robotic e-commerce fulfillment system in a Walmart store", "sum": "Symbotic CEO Richard Cohen said the company is installing its SymMicro system in the back of an unnamed Walmart store, expected to come to life in about six months to support pickup and delivery orders. Each station supports 550 picks an hour, and a second site is planned shortly after the first.", "imp": "info", "lvl": 1, "plain": "Walmart is adding automation to store-based fulfillment that powers its fast delivery.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/walmart-equipping-a-store-with-symbotic-fulfillment-system/827794"}], "bf": "nr"}, {"id": "nr1227e6", "date": "2026-08-06", "c": ["USPS"], "cat": "Postal", "kind": "News", "title": "Senate committee advances bill tying USPS executive bonuses to 95% on-time delivery", "sum": "The Senate Homeland Security and Governmental Affairs Committee approved the No Bonuses for Bad Service Act, which would bar extra pay for the postmaster general and deputy in any fiscal year USPS misses a 95% on-time rate for market-dominant mail. A House measure from the Alabama delegation, the PERFORM Act, would also bar bonuses after missed service targets, net losses or adverse audits.", "imp": "info", "lvl": 1, "plain": "The bills target USPS executive pay, not prices or service standards.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Sen. Josh Hawley", "url": "https://www.hawley.senate.gov/hawley-bill-banning-bonuses-for-postmaster-general-passes-committee/"}, {"src": "FreightWaves", "url": "https://www.freightwaves.com/?p=577905"}], "bf": "nr"}, {"id": "nr5e8aee", "date": "2026-08-07", "c": ["USPS"], "cat": "Earnings & markets", "kind": "News", "title": "USPS posts $2.5 billion fiscal Q3 loss as package revenue rises 7.7%", "sum": "USPS reported a $2.5 billion net loss for April through June, down from $3.1 billion a year earlier, on operating revenue of $19.9 billion, up 6.1%. Shipping and packages revenue rose 7.7% to $8.25 billion while volume fell 3.4% to 1.554 billion pieces, and USPS said it still faces a severe liquidity crisis.", "imp": "info", "lvl": 2, "plain": "Package revenue is growing on price, not volume, at USPS.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "USPS", "url": "https://about.usps.com/newsroom/national-releases/2026/0807-usps-reports-third-quarter-fiscal-year-2026-results.htm"}], "bf": "nr"}, {"id": "nr38a494", "date": "2026-07-23", "c": ["RXO", "Ryder", "J.B. Hunt"], "cat": "3PL & fulfillment", "kind": "News", "title": "Report: big-and-bulky last-mile market growth slows to 5.1% a year", "sum": "Armstrong & Associates and the National Home Delivery Association forecast the U.S. 3PL market for delivering oversized items to homes will grow 5.1% a year to $12.3 billion through 2027, down from 10.6% over the past eight years. The report ties the slowdown to weak home sales and higher appliance costs, and ranks RXO, Ryder and J.B. Hunt as the largest providers.", "imp": "info", "lvl": 1, "plain": "Slower demand for heavy home goods is easing growth in white-glove delivery.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/?p=576336"}], "bf": "nr"}, {"id": "nr50543e", "date": "2026-08-10", "c": ["FedEx", "Amazon", "Dexterity"], "cat": "Drones & robots", "kind": "News", "title": "FedEx and Amazon expand robotic arms for loading packages", "sum": "FedEx is expanding Dexterity's dual-arm trailer loading robots at its Hagerstown, Maryland, hub and aims to automate loading and unloading across more than 20 U.S. hubs over the next few years. Amazon said on its July 30 earnings call it plans to more than double its fleet of robotic arms, such as Cardinal and Sparrow, in 2026.", "imp": "info", "lvl": 1, "plain": "Both carriers are automating dock and sort work that drives handling costs.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/fedex-amazon-pursue-expanded-use-of-robotic-arms/827221"}], "bf": "nr"}, {"id": "nrf76152", "date": "2026-08-04", "c": ["Amazon"], "cat": "Network & operations", "kind": "News", "title": "Amazon Business adds branded trucks for consolidated business deliveries in 13 states", "sum": "Amazon Business introduced dedicated, branded delivery trucks for organizations that need consolidated drop-offs and palletized delivery at loading docks. The service covers 13 states, including Arizona, California, Florida, Illinois, New York and Ohio.", "imp": "info", "lvl": 1, "plain": "Business buyers on Amazon Business in those states can receive consolidated dock deliveries.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/amazon-taps-fulfillment-model-for-dedicated-branded-delivery-trucks/826726"}], "bf": "nr"}, {"id": "nr76537f", "date": "2026-08-03", "c": ["Amazon"], "cat": "Regulation & trade", "kind": "News", "title": "Amazon to refund some customers after recovering about $600 million in tariffs", "sum": "Amazon said it received about $600 million in refunds of IEEPA tariffs struck down by the Supreme Court in February and will automatically refund customers in a limited set of cases where it can trace costs it passed on. It said it is not the importer of record for most items sold in its store and will use the remaining funds to benefit shoppers, including through lower prices.", "imp": "info", "lvl": 1, "plain": "Most tariff refunds flow to the importer of record, so sellers who imported their own goods are the ones positioned to recover them.", "tie": "FedEx, UPS and DHL also began passing tariff refunds to customers in August.", "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/amazon-to-issue-tariff-refunds-in-limited-set-of-circumstances/826815/"}], "bf": "nr"}, {"id": "nr32d5a8", "date": "2026-08-03", "c": ["Walmart", "Wing"], "cat": "Drones & robots", "kind": "News", "title": "Walmart and Wing launch drone delivery in Orlando", "sum": "Walmart and Wing began drone delivery from Apopka and Clermont Supercenters near Orlando, covering more than 50,000 homes and businesses, with three more stores planned in the coming weeks. Walmart said the partnership will reach nearly 20 U.S. markets and more than 270 drone locations in 2027.", "imp": "info", "lvl": 1, "plain": "Drone delivery of small store items is expanding across Walmart's Sun Belt markets.", "tie": "Walmart and Wing later said they would add Denver and Seattle in 2027.", "act": null, "dates": [], "srcs": [{"src": "Chain Store Age", "url": "https://chainstoreage.com/walmart-brings-drone-delivery-florida"}], "bf": "nr"}, {"id": "nr59e32f", "date": "2026-07-30", "c": ["Amazon"], "cat": "Earnings & markets", "kind": "News", "title": "Amazon Q2 sales rise 20% to $200.6 billion as faster delivery and robotics expand", "sum": "Amazon's second-quarter net sales rose 20% to $200.6 billion and operating income rose 43% to $27.5 billion. The company said it partially offset higher transportation costs with an FBA fuel and logistics surcharge introduced in April, and that its 30-minute Amazon Now service reached 80 U.S. cities and towns.", "imp": "info", "lvl": 2, "plain": "Amazon is passing part of its fuel and linehaul costs to FBA sellers through the April surcharge.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/news/amazon-ramps-up-delivery-speed-robotics-roll-out"}], "bf": "nr"}, {"id": "nrfe9e1b", "date": "2026-08-04", "c": ["UPS", "Amazon", "FedEx"], "cat": "Fuel", "kind": "News", "title": "UPS, Amazon and FedEx say fuel surcharges are offsetting higher fuel costs", "sum": "UPS said its fuel costs rose 60.4% in Q2 but surcharges passed them to shippers, leaving a minimal profit impact, while Amazon cited the 3.5% fuel and logistics surcharge it applies to FBA since April. FedEx said fuel surcharges added 5 percentage points to Federal Express segment revenue growth in the quarter ended May 31.", "imp": "up", "lvl": 1, "plain": "Fuel surcharges, not base rates, are carrying most of this year's fuel cost increase to shippers.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://supplychaindive.com/news/ups-amazon-fuel-surcharges-help-blunt-higher-costs/826840"}], "bf": "nr"}, {"id": "nr1dab23", "date": "2026-07-27", "c": ["DHL", "Venipak"], "cat": "International", "kind": "News", "title": "DHL eCommerce agrees to buy Baltic parcel carrier Venipak", "sum": "DHL Group signed a definitive agreement for DHL eCommerce to acquire Venipak Group's companies in Lithuania, Latvia and Estonia, which run about 800 parcel lockers and a pickup point network. Terms were not disclosed, and the deal is subject to regulatory approvals.", "imp": "info", "lvl": 1, "plain": "The deal extends DHL's own last-mile and locker network in the Baltics.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "DHL Group", "url": "https://group.dhl.com/en/media-relations/press-releases/2026/dhl-ecommerce-to-acquire-venipak-strengthening-its-position-across-the-baltic-region.html"}], "bf": "nr"}, {"id": "nrfb305a", "date": "2026-07-15", "c": ["USPS"], "cat": "Postal", "kind": "News", "title": "USPS launches Local XChange locker handoffs for local marketplace sales for $5.51", "sum": "USPS introduced Local XChange, which lets local buyers and sellers swap marketplace purchases through post office smart lockers for $5.51 per package. Buyers get five days to pick up by QR code, after which the item is held at the counter for 10 more days before returning to the seller.", "imp": "info", "lvl": 1, "plain": "Peer-to-peer sellers have a USPS option that avoids in-person meetups.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/usps-launches-smart-locker-service-for-local-transactions/825787/"}], "bf": "nr"}, {"id": "nrb01db6", "date": "2026-07-20", "c": ["FedEx"], "cat": "Fees & rules", "kind": "News", "title": "FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee", "sum": "FedEx reclassified 239 ZIP codes into higher delivery area tiers on July 20, including 63 moved from extended to remote, the highest-cost tier. For those, FreightWaves lists the delivery area charge at $11.20 per commercial and $7.95 per residential package. FedEx also extended its inbound processing fee to shipments into the 27 EU countries from outside the bloc, effective Aug. 3.", "imp": "up", "lvl": 2, "plain": "Shipments to the reclassified ZIP codes cost more in surcharges.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/news/fedex-spreads-shipping-fees-to-eu-more-zip-codes"}], "bf": "nr"}, {"id": "nr094bbb", "date": "2026-07-16", "c": ["USPS"], "cat": "Legal", "kind": "News", "title": "Woman sentenced in $150 million counterfeit postage scheme against USPS", "sum": "Lijuan Chen was sentenced to two years and six months in prison and ordered to pay more than $158 million in restitution for a scheme that mailed more than 34 million parcels with counterfeit postage labels from 2020 to 2023. The City of Industry shipping business moved parcels for China-based logistics companies and caused more than $150 million in lost revenue for USPS.", "imp": "info", "lvl": 1, "plain": "USPS continues to pursue postage fraud by package consolidators.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "FreightWaves", "url": "https://www.freightwaves.com/news/woman-in-150m-counterfeit-postage-shipping-scheme-sentenced-to-prison"}], "bf": "nr"}, {"id": "nr0ee0b5", "date": "2026-07-15", "c": ["Maersk"], "cat": "3PL & fulfillment", "kind": "News", "title": "Maersk opens $100 million fulfillment hub in Hopedale, Massachusetts, for one e-commerce client", "sum": "Maersk said it is investing $100 million in a 617,000-square-foot fulfillment center in Hopedale, Massachusetts, serving a single large e-commerce customer and creating about 1,000 jobs. The site was set to open in late August with peak throughput of up to 330,000 units a day.", "imp": "info", "lvl": 1, "plain": "Adds high-volume fulfillment capacity in the Northeast ahead of peak.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "Maersk", "url": "https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity"}, {"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/maersk-to-open-100m-fulfillment-hub-in-massachusetts/825544/"}], "bf": "nr"}, {"id": "nr5795a7", "date": "2026-07-12", "c": ["USPS"], "cat": "Postal", "kind": "News", "title": "USPS mailing price increase takes effect; Forever stamp rises to 82 cents", "sum": "USPS mailing services prices rose about 4.8% on July 12, including a 4-cent increase in the Forever stamp from 78 cents to 82 cents. USPS filed the changes with the Postal Regulatory Commission in April.", "imp": "up", "lvl": 1, "plain": "Letter mail costs more; this filing covered mailing services, with package services adjusted separately.", "tie": null, "act": null, "dates": [], "srcs": [{"src": "USPS", "url": "https://about.usps.com/newsroom/national-releases/2026/0409-usps-recommends-new-prices-for-july.htm"}, {"src": "National Newspaper Association", "url": "https://nna.org/usps-announces-new-rates-for-july-2026"}], "bf": "nr"}, {"id": "nrfe5182", "date": "2026-07-14", "c": ["USPS", "UPS"], "cat": "Postal", "kind": "News", "title": "Inspector general questions USPS air cargo contract as half of long-distance mail moves by air", "sum": "A July 1 USPS inspector general report found the share of three-to-five-day First-Class Mail flown rose from 2% in fiscal 2025 to 50% by mid-fiscal 2026, as USPS filled minimum volumes in its air cargo contract after Priority Mail volume fell 24.1%. The OIG recommended an updated cost-benefit analysis; USPS said flying First-Class Mail has helped manage air network costs.", "imp": "info", "lvl": 2, "plain": "USPS is filling air capacity under its UPS-operated contract with mail as Priority Mail volume declines.", "tie": "UPS became the Postal Service's primary air cargo carrier in 2024.", "act": null, "dates": [], "srcs": [{"src": "USPS OIG", "url": "https://www.uspsoig.gov/sites/default/files/reports/2026-07/26-033-r26.pdf"}, {"src": "Supply Chain Dive", "url": "https://www.supplychaindive.com/news/should-the-postal-service-reassess-its-ups-air-contract/825073/"}, {"src": "FreightWaves", "url": "https://www.freightwaves.com/news/postal-service-moves-half-of-long-distance-mail-by-air-just-to-satisfy-ups-contract"}], "bf": "nr"}].filter(n=>!have.has(n.id)));
   if(!DEALS.some(x=>x.target==='ezCater'))DEALS.push({"d": "2026-10-06", "ann": "2026-10-06", "buyer": "Uber", "target": "ezCater", "value": "$2.3B", "status": "Pending", "checked": "2026-10-12", "story": "nrc72492", "title": "Uber agrees to buy ezCater", "sum": "Uber agreed to buy Boston-based workplace catering platform ezCater in an all-cash deal valued at $2.3 billion. It is expected to close in the coming months, pending regulatory approval.", "who": [["Buyer", "Uber", "Ride-hailing and delivery company. Runs Uber Eats, Uber for Business and Uber Freight."], ["Target", "ezCater", "Workplace catering marketplace working with more than 140,000 restaurants."]], "why": "ezCater logged over $2.5 billion in gross bookings over the past 12 months. Uber plans to bring it onto Uber Eats and offer it through Uber for Business, pushing deeper into business-to-business food delivery.", "ties": [{"d": "2026-10-06", "t": "Uber announces the $2.3B all-cash deal for ezCater", "url": "https://www.nrn.com/restaurant-technology/uber-to-acquire-ezcater-for-2-3b"}], "srcs": [{"src": "Nation's Restaurant News", "url": "https://www.nrn.com/restaurant-technology/uber-to-acquire-ezcater-for-2-3b"}, {"src": "FSR Magazine", "url": "https://www.fsrmagazine.com/feature/uber-to-acquire-ezcater-for-2-3-billion/"}]})})();
 
+var LOGOS_SNAP={
+ "_v2": true,
+ "ups": {
+  "checked": "2026-10-12",
+  "host": "ups.com"
+ },
+ "fedex": {
+  "checked": "2026-10-12",
+  "host": "fedex.com",
+  "f": "data/logos/fedex.png",
+  "ar": 3.394,
+  "src": "https://fedex.com/waf/failover-objects/corp_logo.gif"
+ },
+ "usps": {
+  "checked": "2026-10-12",
+  "host": "usps.com",
+  "f": "data/logos/usps.svg",
+  "ar": 8.298,
+  "src": "https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg"
+ },
+ "amzship": {
+  "checked": "2026-10-12",
+  "host": "shipping.amazon.com",
+  "f": "data/logos/amzship.svg",
+  "ar": 5.217,
+  "src": "https://cdn.transportation.brightspotcdn.com/67/74/dcdd57674ad1a06ae440f77eec7f/amazon-shipping-logo.svg"
+ },
+ "dhlexpress": {
+  "checked": "2026-10-12",
+  "host": "dhl.com",
+  "f": "data/logos/dhlexpress.png",
+  "ar": 1.0,
+  "src": "https://dhl.com/apple-touch-icon.png"
+ },
+ "dhlecom": {
+  "checked": "2026-10-12",
+  "host": "dhl.com"
+ },
+ "canadapost": {
+  "checked": "2026-10-12",
+  "host": "canadapost-postescanada.ca",
+  "f": "data/logos/canadapost.png",
+  "ar": 1.0,
+  "src": "https://canadapost-postescanada.ca/apple-touch-icon.png"
+ },
+ "purolator": {
+  "checked": "2026-10-12",
+  "host": "purolator.com",
+  "f": "data/logos/purolator.svg",
+  "ar": 7.2,
+  "src": "https://purolator.com/themes/custom/purolator_theme/logo.svg"
+ },
+ "ontrac": {
+  "checked": "2026-10-12",
+  "host": "ontrac.com",
+  "f": "data/logos/ontrac.png",
+  "ar": 4.068,
+  "src": "https://www.ontrac.com/wp-content/uploads/2023/03/cropped-wordmark_black-red.png"
+ },
+ "gls": {
+  "checked": "2026-10-12",
+  "host": "gls-us.com",
+  "f": "data/logos/gls.png",
+  "ar": 1.0,
+  "src": "https://gls-group.eu/favicon.ico"
+ },
+ "lso": {
+  "checked": "2026-10-12",
+  "host": "lso.com",
+  "f": "data/logos/lso.png",
+  "ar": 3.286,
+  "src": "https://cdn.prod.website-files.com/610bd2c21f6eaa53c3ceab9f/610bd2c21f6eaaaef0ceac29_logo1.jpg"
+ },
+ "speedee": {
+  "checked": "2026-10-12",
+  "host": "speedeedelivery.com",
+  "f": "data/logos/speedee.png",
+  "ar": 0.993,
+  "src": "https://speedeedelivery.com/apple-touch-icon.png"
+ },
+ "cdl": {
+  "checked": "2026-10-12",
+  "host": "cdldelivers.com",
+  "f": "data/logos/cdl.png",
+  "ar": 4.725,
+  "src": "https://cdl-spaces.nyc3.cdn.digitaloceanspaces.com/cdl-logo2x.png"
+ },
+ "bettertrucks": {
+  "checked": "2026-10-12",
+  "host": "bettertrucks.com",
+  "f": "data/logos/bettertrucks.png",
+  "ar": 1.176,
+  "src": "https://www.bettertrucks.com/hs-fs/hubfs/lOGO@2x.png?width=479&amp;height=406&amp;name=lOGO@2x.png"
+ },
+ "veho": {
+  "checked": "2026-10-12",
+  "host": "shipveho.com",
+  "f": "data/logos/veho.svg",
+  "ar": 2.912,
+  "src": "https://cdn.prod.website-files.com/64a643946cb644441bae82c9/64aba94fc638067da124e619_veho-logo.svg"
+ },
+ "uniuni": {
+  "checked": "2026-10-12",
+  "host": "uniuni.com",
+  "f": "data/logos/uniuni.svg",
+  "ar": 1.688,
+  "src": "https://www.uniuni.com/wp-content/uploads/2026/08/woo.svg"
+ },
+ "roadie": {
+  "checked": "2026-10-12",
+  "host": "roadie.com",
+  "f": "data/logos/roadie.png",
+  "ar": 4.074,
+  "src": "https://46302491.fs1.hubspotusercontent-na1.net/hub/46302491/hubfs/raw_assets/public/Roadie-u4m/templates/images/Light-Logo.png?width=440&amp;name=Light-Logo.png"
+ },
+ "doordash": {
+  "checked": "2026-10-12",
+  "host": "doordash.com"
+ },
+ "uber": {
+  "checked": "2026-10-12",
+  "host": "uber.com",
+  "f": "data/logos/uber.png",
+  "ar": 1.0,
+  "src": "https://uber.com/favicon.ico"
+ },
+ "instacart": {
+  "checked": "2026-10-12",
+  "host": "instacart.com",
+  "f": "data/logos/instacart.svg",
+  "ar": 6.25,
+  "src": "https://www.instacart.com/assets/beetstrap/brand/2022/instacart-logo-color-6678cb82d531f8910d5ba270a11a7e9b56fc261371bda42ea7a5abeff3492e1c.svg"
+ },
+ "shipt": {
+  "checked": "2026-10-12",
+  "host": "shipt.com",
+  "f": "data/logos/shipt.png",
+  "ar": 1.0,
+  "src": "https://object-storage.shipt.com/cms/ShiptLogoBadge1774899014022-1778016132113.png?fio=true&amp;auto=webp&amp;format=pjpg&amp;quality=75%2C75&amp;width=96"
+ },
+ "deliveroo": {
+  "checked": "2026-10-12",
+  "host": "deliveroo.com",
+  "f": "data/logos/deliveroo.png",
+  "ar": 1.0,
+  "src": "https://cwa.roocdn.com/_next/static/apple-touch-icon.870581c7.png"
+ },
+ "gopuff": {
+  "checked": "2026-10-12",
+  "host": "gopuff.com"
+ },
+ "grubhub": {
+  "checked": "2026-10-12",
+  "host": "grubhub.com",
+  "f": "data/logos/grubhub.png",
+  "ar": 1.0,
+  "src": "https://grubhub.com/apple-touch-icon.png"
+ },
+ "amazon": {
+  "checked": "2026-10-12",
+  "host": "amazon.com",
+  "f": "data/logos/amazon.png",
+  "ar": 1.0,
+  "src": "https://amazon.com/favicon.ico"
+ },
+ "walmart": {
+  "checked": "2026-10-12",
+  "host": "walmart.com",
+  "f": "data/logos/walmart.svg",
+  "ar": 4.062,
+  "src": "https://i5.walmartimages.com/dfw/63fd9f59-b3e1/7a569e53-f29a-4c3d-bfaf-6f7a158bfadd/v1/walmartLogo.svg"
+ },
+ "target": {
+  "checked": "2026-10-12",
+  "host": "target.com",
+  "f": "data/logos/target.png",
+  "ar": 1.0,
+  "src": "https://assets.targetimg1.com/static/images/apple-touch-icon-precomposed.png"
+ },
+ "homedepot": {
+  "checked": "2026-10-12",
+  "host": "homedepot.com"
+ },
+ "lowes": {
+  "checked": "2026-10-12",
+  "host": "lowes.com"
+ },
+ "costco": {
+  "checked": "2026-10-12",
+  "host": "costco.com",
+  "f": "data/logos/costco.png",
+  "ar": 1.0,
+  "src": "https://costco.com/apple-touch-icon.png"
+ },
+ "kroger": {
+  "checked": "2026-10-12",
+  "host": "kroger.com"
+ },
+ "dollargeneral": {
+  "checked": "2026-10-12",
+  "host": "dollargeneral.com",
+  "f": "data/logos/dollargeneral.png",
+  "ar": 1.0,
+  "src": "https://dollargeneral.com/content/dam/dg/assets/header-navigation/mobile%20logo.png"
+ },
+ "macys": {
+  "checked": "2026-10-12",
+  "host": "macys.com"
+ },
+ "tiktokshop": {
+  "checked": "2026-10-12",
+  "host": "shop.tiktok.com"
+ },
+ "temu": {
+  "checked": "2026-10-12",
+  "host": "temu.com",
+  "f": "data/logos/temu.png",
+  "ar": 1.0,
+  "src": "https://temu.com/favicon.ico"
+ },
+ "shein": {
+  "checked": "2026-10-12",
+  "host": "shein.com",
+  "f": "data/logos/shein.png",
+  "ar": 4.688,
+  "src": "https://sc.ltwebstatic.com/she_dist/images/lazy_logo-ee79904d61.png"
+ },
+ "omahasteaks": {
+  "checked": "2026-10-12",
+  "host": "omahasteaks.com"
+ },
+ "fdxsc": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "fdxfreight": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "ceva": {
+  "checked": "2026-10-12",
+  "host": "cevalogistics.com"
+ },
+ "gxo": {
+  "checked": "2026-10-12",
+  "host": "gxo.com",
+  "f": "data/logos/gxo.svg",
+  "ar": 2.938,
+  "src": "https://gxo.com/wp-content/uploads/2021/04/logo.svg"
+ },
+ "wincanton": {
+  "checked": "2026-10-12",
+  "host": "wincanton.co.uk",
+  "f": "data/logos/wincanton.svg",
+  "ar": 5.384,
+  "src": "https://wincanton.co.uk/application/images/wincanton-logo-gxo.svg"
+ },
+ "xpo": {
+  "checked": "2026-10-12",
+  "host": "xpo.com"
+ },
+ "rxo": {
+  "checked": "2026-10-12",
+  "host": "rxo.com",
+  "f": "data/logos/rxo.svg",
+  "ar": 2.85,
+  "src": "https://rxo.com/wp-content/uploads/2022/07/RXO.svg"
+ },
+ "coyote": {
+  "checked": "2026-10-12",
+  "host": "coyote.com",
+  "f": "data/logos/coyote.png",
+  "ar": 2.852,
+  "src": "https://rxo.com/wp-content/uploads/2022/09/RXO.png"
+ },
+ "stord": {
+  "checked": "2026-10-12",
+  "host": "stord.com",
+  "f": "data/logos/stord.png",
+  "ar": 1.122,
+  "src": "https://stord.com/apple-touch-icon.png"
+ },
+ "shipbob": {
+  "checked": "2026-10-12",
+  "host": "shipbob.com",
+  "f": "data/logos/shipbob.png",
+  "ar": 0.917,
+  "src": "https://www.shipbob.com/wp-content/themes/shipbob-2022/resources/icons/favicon.ico"
+ },
+ "shipmonk": {
+  "checked": "2026-10-12",
+  "host": "shipmonk.com",
+  "f": "data/logos/shipmonk.png",
+  "ar": 1.0,
+  "src": "https://www.shipmonk.com/wp-content/uploads/2025/01/cropped-shipmonk-symbol-green-180x180.png"
+ },
+ "veritiv": {
+  "checked": "2026-10-12",
+  "host": "veritivcorp.com"
+ },
+ "dhl": {
+  "checked": "2026-10-12",
+  "host": "group.dhl.com",
+  "f": "data/logos/dhl.svg",
+  "ar": 3.781,
+  "src": "https://group.dhl.com/content/dam/deutschepostdhl/en/logos/DHL_Group_logo_rgb_BG.svg"
+ },
+ "cmacgm": {
+  "checked": "2026-10-12",
+  "host": "cma-cgm.com"
+ },
+ "dsv": {
+  "checked": "2026-10-12",
+  "host": "dsv.com",
+  "f": "data/logos/dsv.svg",
+  "ar": 1.0,
+  "src": "https://dsv.com/resource/crblob/2848296/c58192baf1d2571e6013e540d6253b8d/favicon-dsv-svg-data.svg"
+ },
+ "schenker": {
+  "checked": "2026-10-12",
+  "host": "dbschenker.com",
+  "f": "data/logos/schenker.svg",
+  "ar": 1.0,
+  "src": "https://dbschenker.com/resource/crblob/2848296/c58192baf1d2571e6013e540d6253b8d/favicon-dsv-svg-data.svg"
+ },
+ "kn": {
+  "checked": "2026-10-12",
+  "host": "kuehne-nagel.com"
+ },
+ "flexport": {
+  "checked": "2026-10-12",
+  "host": "flexport.com",
+  "f": "data/logos/flexport.svg",
+  "ar": 4.295,
+  "src": "https://cdn.sanity.io/images/ynj1yl20/development/9f37e70ef11a76f16b732f365d3f3d3cbf3fed43-481x112.svg"
+ },
+ "ids": {
+  "checked": "2026-10-12",
+  "host": "internationaldistributionservices.com",
+  "f": "data/logos/ids.png",
+  "ar": 3.097,
+  "src": "https://internationaldistributionservices.com/images/logos/ids-logo5-blk.png?cb=1"
+ },
+ "happyreturns": {
+  "checked": "2026-10-12",
+  "host": "happyreturns.com",
+  "f": "data/logos/happyreturns.png",
+  "ar": 1.0,
+  "src": "https://images.squarespace-cdn.com/content/v1/5e1c37cf9b245f360f07ee55/1579089139130-7ZOFZBWUBLJ6D8RFHAVA/favicon.ico?format=100w"
+ },
+ "returnpro": {
+  "checked": "2026-10-12",
+  "host": "returnpro.com",
+  "f": "data/logos/returnpro.svg",
+  "ar": 6.667,
+  "src": "https://cdn.prod.website-files.com/66e4840793eefa46a54dbf9a/67c756c3258755e36d6e9e2f_rp-wordmark-color-RGB.svg"
+ },
+ "loop": {
+  "checked": "2026-10-12",
+  "host": "loopreturns.com",
+  "f": "data/logos/loop.png",
+  "ar": 1.0,
+  "src": "https://loopreturns.com/apple-icon.png?apple-icon.1-laiep-qb9et.png"
+ },
+ "narvar": {
+  "checked": "2026-10-12",
+  "host": "narvar.com",
+  "f": "data/logos/narvar.svg",
+  "ar": 3.925,
+  "src": "https://cdn.prod.website-files.com/67925857df43acae16e8d057/67a9df0cae9bb5e5d2f70e79_narvar-logo-2025.svg"
+ },
+ "shipstationg": {
+  "checked": "2026-10-12",
+  "host": "shipstation.com",
+  "f": "data/logos/shipstationg.svg",
+  "ar": 6.489,
+  "src": "https://www.shipstation.com/wp-content/uploads/2026/02/logo-ss-primary-rgb-1-1.svg"
+ },
+ "auctane": {
+  "checked": "2026-10-12",
+  "host": "auctane.com",
+  "f": "data/logos/auctane.svg",
+  "ar": 9.5,
+  "src": "https://www.shipstationglobal.com/wp-content/uploads/2026/05/sg-logo-with-TM-RGB_1-line-deepindigo-1.svg"
+ },
+ "wwex": {
+  "checked": "2026-10-12",
+  "host": "wwex.com",
+  "f": "data/logos/wwex.png",
+  "ar": 1.135,
+  "src": "https://www.wwex.com/wp-content/uploads/sites/4/2025/11/cropped-wwex-favicon-180x180.png"
+ },
+ "descartes": {
+  "checked": "2026-10-12",
+  "host": "descartes.com",
+  "f": "data/logos/descartes.png",
+  "ar": 7.944,
+  "src": "https://descartes.com/themes/descartes/logo-dark.png"
+ },
+ "extensiv": {
+  "checked": "2026-10-12",
+  "host": "extensiv.com",
+  "f": "data/logos/extensiv.png",
+  "ar": 2.344,
+  "src": "https://www.extensiv.com/hs-fs/hubfs/DSG+Extensiv_Three_Color_Logo_RGB-300.png?width=300&amp;height=128&amp;name=DSG+Extensiv_Three_Color_Logo_RGB-300.png"
+ },
+ "easypost": {
+  "checked": "2026-10-12",
+  "host": "easypost.com",
+  "f": "data/logos/easypost.svg",
+  "ar": 2.917,
+  "src": "https://www.easypost.com/wp-content/uploads/2026/08/hp-Nexus-Logo.svg"
+ },
+ "shippo": {
+  "checked": "2026-10-12",
+  "host": "goshippo.com",
+  "f": "data/logos/shippo.svg",
+  "ar": 3.871,
+  "src": "https://cdn.prod.website-files.com/6462967bbf70fa5b5b227351/646bd3ac70ee08fca9869afe_shippo-logo-dark.svg"
+ },
+ "pitneybowes": {
+  "checked": "2026-10-12",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pitneybowes.svg",
+  "ar": 4.883,
+  "src": "https://pitneybowes.com/etc.clientlibs/pitneybowes/clientlibs/clientlib-site/resources/images/SVG/logo-color.svg"
+ },
+ "shopify": {
+  "checked": "2026-10-12",
+  "host": "shopify.com",
+  "f": "data/logos/shopify.svg",
+  "ar": 3.508,
+  "src": "https://cdn.shopify.com/shopifycloud/brochure/assets/brand-assets/shopify-logo-primary-logo-456baa801ee66a0a435671082365958316831c9960c480451dd0330bcdae304f.svg"
+ },
+ "andlauer": {
+  "checked": "2026-10-12",
+  "host": "andlauerhealthcare.com",
+  "f": "data/logos/andlauer.png",
+  "ar": 3.647,
+  "src": "https://andlauerhealthcare.com/wp-content/uploads/2020/01/logo.png"
+ },
+ "mnx": {
+  "checked": "2026-10-12",
+  "host": "mnx.com",
+  "f": "data/logos/mnx.svg",
+  "ar": 5.607,
+  "src": "https://marken-logistics.files.svdcdn.com/production/assets/Globals/UPS-Healhcare-logo-English.svg?dm=1771618567"
+ },
+ "cryoport": {
+  "checked": "2026-10-12",
+  "host": "cryoport.com",
+  "f": "data/logos/cryoport.svg",
+  "ar": 3.12,
+  "src": "https://www.cryoport.com/wp-content/uploads/2022/10/logo.svg"
+ },
+ "wing": {
+  "checked": "2026-10-12",
+  "host": "wing.com",
+  "f": "data/logos/wing.png",
+  "ar": 0.984,
+  "src": "https://framerusercontent.com/images/aJrZFeMy0FOD9F5mVAXjExENx0.png"
+ },
+ "zipline": {
+  "checked": "2026-10-12",
+  "host": "flyzipline.com",
+  "f": "data/logos/zipline.svg",
+  "ar": 3.502,
+  "src": "https://flyzipline.com/images/ui/logomark-single-outline.svg?dpl=dpl_3FGf9oi3xXe7ZyPQiuqggSeJtx7S"
+ },
+ "serve": {
+  "checked": "2026-10-12",
+  "host": "serverobotics.com",
+  "f": "data/logos/serve.png",
+  "ar": 0.647,
+  "src": "https://serverobotics.com/apple-touch-icon.png"
+ },
+ "primeair": {
+  "checked": "2026-10-12",
+  "host": "aboutamazon.com",
+  "f": "data/logos/primeair.png",
+  "ar": 1.0,
+  "src": "https://aboutamazon.com/_next/static/media/apple-touch-icon.706b1b87.png"
+ },
+ "starship": {
+  "checked": "2026-10-12",
+  "host": "starship.xyz",
+  "f": "data/logos/starship.png",
+  "ar": 2.723,
+  "src": "https://www.starship.xyz/wp-content/uploads/2026/07/Sodexo_HomepageLogo-300x203.avif"
+ },
+ "flytrex": {
+  "checked": "2026-10-12",
+  "host": "flytrex.com",
+  "f": "data/logos/flytrex.png",
+  "ar": 0.986,
+  "src": "https://flytrex.com/favicon.ico"
+ },
+ "thomabravo": {
+  "checked": "2026-10-12",
+  "host": "thomabravo.com",
+  "f": "data/logos/thomabravo.svg",
+  "ar": 7.425,
+  "src": "https://thomabravo.com/images/logos/thoma-bravo-organization-logo.svg"
+ },
+ "trident": {
+  "checked": "2026-10-12",
+  "host": "tridentmanagement.com"
+ },
+ "amsec": {
+  "checked": "2026-10-12",
+  "host": "american-securities.com",
+  "f": "data/logos/amsec.png",
+  "ar": 0.965,
+  "src": "https://american-securities.com/favicon/apple-touch-icon.png"
+ },
+ "cdr": {
+  "checked": "2026-10-12",
+  "host": "cdr-inc.com",
+  "f": "data/logos/cdr.png",
+  "ar": 1.0,
+  "src": "https://www.cdr.com/apple-touch-icon.png?ybqgys"
+ },
+ "cvc": {
+  "checked": "2026-10-12",
+  "host": "cvc.com",
+  "f": "data/logos/cvc.png",
+  "ar": 1.0,
+  "src": "https://cvc.com/apple-touch-icon.png"
+ },
+ "tfi": {
+  "checked": "2026-10-12",
+  "host": "tfiintl.com"
+ },
+ "tforcefreight": {
+  "checked": "2026-10-12",
+  "host": "tforcefreight.com",
+  "f": "data/logos/tforcefreight.png",
+  "ar": 2.033,
+  "src": "https://tforcefreight.com/ltl/TForce_Favicon.png"
+ },
+ "marken": {
+  "checked": "2026-10-12",
+  "host": "marken.com",
+  "f": "data/logos/marken.svg",
+  "ar": 3.269,
+  "src": "https://marken-logistics.files.svdcdn.com/production/assets/Globals/mobile-logo.svg?dm=1771618559"
+ },
+ "bomi": {
+  "checked": "2026-10-12",
+  "host": "bomigroup.com"
+ },
+ "estafeta": {
+  "checked": "2026-10-12",
+  "host": "estafeta.com",
+  "f": "data/logos/estafeta.svg",
+  "ar": 6.222,
+  "src": "https://estafeta.com/documents/d/guest/logo-estafeta-svg-1?download=true"
+ },
+ "nimble": {
+  "checked": "2026-10-12",
+  "host": "nimble.ai",
+  "f": "data/logos/nimble.svg",
+  "ar": 2.554,
+  "src": "https://cdn.prod.website-files.com/63cea45f9503665b6df9dc1a/66a1626be3229f9ac5db70eb_MORI_Logo-01.svg"
+ },
+ "berkshiregrey": {
+  "checked": "2026-10-12",
+  "host": "berkshiregrey.com",
+  "f": "data/logos/berkshiregrey.png",
+  "ar": 4.486,
+  "src": "https://www.berkshiregrey.com/wp-content/uploads/2026/02/BerkshireGrey-Black.png"
+ },
+ "onerail": {
+  "checked": "2026-10-12",
+  "host": "onerail.com",
+  "f": "data/logos/onerail.png",
+  "ar": 4.612,
+  "src": "https://www.onerail.com/wp-content/themes/customtheme/images/logo.png"
+ },
+ "rivian": {
+  "checked": "2026-10-12",
+  "host": "rivian.com",
+  "f": "data/logos/rivian.png",
+  "ar": 1.039,
+  "src": "https://rivian.com/apple-touch-icon-180x180.png"
+ },
+ "stonepeak": {
+  "checked": "2026-10-12",
+  "host": "stonepeak.com",
+  "f": "data/logos/stonepeak.png",
+  "ar": 4.486,
+  "src": "https://stonepeak.com/wp-content/uploads/2021/12/Stonepeak_logo_sq.png"
+ },
+ "atsg": {
+  "checked": "2026-10-12",
+  "host": "atsginc.com",
+  "f": "data/logos/atsg.png",
+  "ar": 5.161,
+  "src": "https://atsginc.com/~/media/Images/A/ATSG/ATSGINC/logos/TriFactor-Logopng.webp?iar=0"
+ },
+ "apollo": {
+  "checked": "2026-10-12",
+  "host": "apollo.com",
+  "f": "data/logos/apollo.svg",
+  "ar": 6.544,
+  "src": "https://d1io3yog0oux5.cloudfront.net/_89a8fecd520bcfa7f96361eee84d6d4f/apollo/files/theme/images/logo-sm.svg"
+ },
+ "evri": {
+  "checked": "2026-10-12",
+  "host": "evri.com"
+ },
+ "inmarscs": {
+  "checked": "2026-10-12",
+  "host": "inmar.com",
+  "f": "data/logos/inmarscs.png",
+  "ar": 3.371,
+  "src": "https://inmar.com/themes/custom/inmar/logo.png"
+ },
+ "cryopdp": {
+  "checked": "2026-10-12",
+  "host": "cryopdp.com",
+  "f": "data/logos/cryopdp.svg",
+  "ar": 5.442,
+  "src": "https://cryopdp.com/wp-content/uploads/2025/06/CRYOPDP-DHL.svg"
+ },
+ "hillebrand": {
+  "checked": "2026-10-12",
+  "host": "hillebrandgori.com"
+ },
+ "gefco": {
+  "checked": "2026-10-12",
+  "host": "cevalogistics.com"
+ },
+ "maersk": {
+  "checked": "2026-10-12",
+  "host": "maersk.com"
+ },
+ "livingston": {
+  "checked": "2026-10-12",
+  "host": "livingstonintl.com",
+  "f": "data/logos/livingston.svg",
+  "ar": 3.354,
+  "src": "https://www.livingstonintl.com/assets/logo/livingston.svg"
+ },
+ "greenbriar": {
+  "checked": "2026-10-12",
+  "host": "greenbriar.com",
+  "f": "data/logos/greenbriar.png",
+  "ar": 0.875,
+  "src": "https://www.greenbriar.com/wp-content/uploads/favicon-1.png"
+ },
+ "tigerglobal": {
+  "checked": "2026-10-12",
+  "host": "tigerglobal.com",
+  "f": "data/logos/tigerglobal.png",
+  "ar": 1.905,
+  "src": "https://tigerglobal.com/Templates/TigerGlobal/media/favicon_160x160.png"
+ },
+ "softbankvf": {
+  "checked": "2026-10-12",
+  "host": "visionfund.com",
+  "f": "data/logos/softbankvf.png",
+  "ar": 8.727,
+  "src": "https://sb-vf-assets.s3.amazonaws.com/assets/olaelectric.png"
+ },
+ "bessemer": {
+  "checked": "2026-10-12",
+  "host": "bvp.com",
+  "f": "data/logos/bessemer.png",
+  "ar": 1.0,
+  "src": "https://bvp.com/favicon.ico?favicon.2rmsoxim8swnj.ico"
+ },
+ "alibaba": {
+  "checked": "2026-10-12",
+  "host": "alibabagroup.com"
+ },
+ "cainiao": {
+  "checked": "2026-10-12",
+  "host": "cainiao.com",
+  "f": "data/logos/cainiao.png",
+  "ar": 0.993,
+  "src": "https://img.alicdn.com/imgextra/i1/O1CN01LVMCKo1JF89bzI5ZG_!!6000000000998-2-tps-150-151.png"
+ },
+ "revgrowth": {
+  "checked": "2026-10-12",
+  "host": "revolution.com",
+  "f": "data/logos/revgrowth.svg",
+  "ar": 1.0,
+  "src": "https://cdn.prod.website-files.com/68ee49dad6c54c9f5bcd9106/6909e24718f66c2ff2abacbd_Group.svg"
+ },
+ "jtexpress": {
+  "checked": "2026-10-12",
+  "host": "jtexpress.com",
+  "f": "data/logos/jtexpress.png",
+  "ar": 1.0,
+  "src": "https://jtexpress.com/favicon.ico"
+ },
+ "dropoff": {
+  "checked": "2026-10-12",
+  "host": "dropoff.com",
+  "f": "data/logos/dropoff.svg",
+  "ar": 3.465,
+  "src": "https://www.dropoff.com/wp-content/uploads/2020/04/dropoff-logo.svg"
+ },
+ "wolt": {
+  "checked": "2026-10-12",
+  "host": "wolt.com",
+  "f": "data/logos/wolt.png",
+  "ar": 3.504,
+  "src": "https://images.ctfassets.net/23u853certza/3vf7EZiJDD4oFACE24usAy/55d0577983db196fe6c81773feee0235/WoltForWork.png"
+ },
+ "ulta": {
+  "checked": "2026-10-12",
+  "host": "ulta.com",
+  "f": "data/logos/ulta.png",
+  "ar": 1.0,
+  "src": "https://ulta.com/favicon.ico"
+ },
+ "bestbuy": {
+  "checked": "2026-10-12",
+  "host": "bestbuy.com"
+ },
+ "avride": {
+  "checked": "2026-10-12",
+  "host": "avride.ai",
+  "f": "data/logos/avride.svg",
+  "ar": 0.818,
+  "src": "https://cdn.prod.website-files.com/650dd89f9d632d99c3f3ec7a/650dd89f9d632d99c3f3ecd6_logo-s.svg"
+ },
+ "jet": {
+  "checked": "2026-10-12",
+  "host": "justeattakeaway.com",
+  "f": "data/logos/jet.png",
+  "ar": 8.276,
+  "src": "https://s3.eu-central-1.amazonaws.com/takeaway-corporatewebsite-dev/_600x60_fit_center-center_82_none/753/logo_white.jpg?mtime=1632816909"
+ },
+ "wonder": {
+  "checked": "2026-10-12",
+  "host": "wonder.com"
+ },
+ "droneup": {
+  "checked": "2026-10-12",
+  "host": "droneup.com",
+  "f": "data/logos/droneup.png",
+  "ar": 6.4,
+  "src": "https://images.squarespace-cdn.com/content/v1/6617fe32ebffba3de422429c/f8712442-f348-4868-b394-3bb0e8bc6272/DroneUp-Logo.png?format=1500w"
+ },
+ "symbotic": {
+  "checked": "2026-10-12",
+  "host": "symbotic.com",
+  "f": "data/logos/symbotic.svg",
+  "ar": 1.496,
+  "src": "https://exqkm9d8zzi.exactdn.com/wp-content/uploads/2025/10/Giant-Tiger-Logo.svg"
+ },
+ "flipkart": {
+  "checked": "2026-10-12",
+  "host": "flipkart.com"
+ },
+ "srs": {
+  "checked": "2026-10-12",
+  "host": "srsdistribution.com",
+  "f": "data/logos/srs.png",
+  "ar": 1.603,
+  "src": "https://www.srsdistribution.com/siteassets/srs/header-and-mega-menu/srs-logo.png"
+ },
+ "gms": {
+  "checked": "2026-10-12",
+  "host": "gms.com",
+  "f": "data/logos/gms.png",
+  "ar": 2.825,
+  "src": "https://images.ctfassets.net/xxfpaerweo8n/18fbjaYAbmx1yXuGE3Fi9J/8083d3dddd0938226eb50d2ce84c339c/PRO_PORTAL_LOGO_white_2026__1_.png"
+ },
+ "chrobinson": {
+  "checked": "2026-10-12",
+  "host": "chrobinson.com",
+  "f": "data/logos/chrobinson.png",
+  "ar": 4.464,
+  "src": "https://www.chrobinson.com/en-US/-/media/ChRobinson/Logos/CHR_Logo.png"
+ },
+ "pfsweb": {
+  "checked": "2026-10-12",
+  "host": "pfsweb.com",
+  "f": "data/logos/pfsweb.png",
+  "ar": 2.922,
+  "src": "https://gxo.com/wp-content/uploads/2021/06/GXO_Logistics.png"
+ },
+ "stg": {
+  "checked": "2026-10-12",
+  "host": "stgusa.com",
+  "f": "data/logos/stg.svg",
+  "ar": 3.014,
+  "src": "https://www.stgusa.com/wp-content/uploads/2024/02/STG-logistics-logo.svg"
+ },
+ "ryder": {
+  "checked": "2026-10-12",
+  "host": "ryder.com",
+  "f": "data/logos/ryder.svg",
+  "ar": 4.085,
+  "src": "https://ryder.com/globalassets/media/logo/logo-ryder.svg"
+ },
+ "whiplash": {
+  "checked": "2026-10-12",
+  "host": "getwhiplash.com",
+  "f": "data/logos/whiplash.png",
+  "ar": 1.0,
+  "src": "https://getwhiplash.com/apple-touch-icon.png"
+ },
+ "cardinal": {
+  "checked": "2026-10-12",
+  "host": "cardlog.com"
+ },
+ "bcv": {
+  "checked": "2026-10-12",
+  "host": "baincapitalventures.com",
+  "f": "data/logos/bcv.png",
+  "ar": 1.0,
+  "src": "https://baincapitalventures.com/apple-touch-icon.png"
+ },
+ "summit": {
+  "checked": "2026-10-12",
+  "host": "summitpartners.com",
+  "f": "data/logos/summit.svg",
+  "ar": 5.156,
+  "src": "https://cdn.prod.website-files.com/654370a6dee9bc89637af1eb/65439735c0bb177dded47bea_Logo.svg"
+ },
+ "dat": {
+  "checked": "2026-10-12",
+  "host": "dat.com",
+  "f": "data/logos/dat.png",
+  "ar": 1.0,
+  "src": "https://www.dat.com/wp-content/uploads/2020/12/favicon-150x150.png"
+ },
+ "a16z": {
+  "checked": "2026-10-12",
+  "host": "a16z.com",
+  "f": "data/logos/a16z.png",
+  "ar": 1.0,
+  "src": "https://d1lamhf6l6yk6d.cloudfront.net/uploads/2025/06/Favicon-%E2%80%94-270x270px.png"
+ },
+ "bpost": {
+  "checked": "2026-10-12",
+  "host": "bpostgroup.com",
+  "f": "data/logos/bpost.svg",
+  "ar": 3.188,
+  "src": "https://bpostgroup.com/themes/custom/bpost/bpostgroup_logo.svg"
+ },
+ "radial": {
+  "checked": "2026-10-12",
+  "host": "radial.com",
+  "f": "data/logos/radial.svg",
+  "ar": 6.252,
+  "src": "https://www.radial.com/wp-content/uploads/2025/07/Radial-Fast-Track-Logo-Menu-1.svg"
+ },
+ "greenmile": {
+  "checked": "2026-10-12",
+  "host": "greenmile.com",
+  "f": "data/logos/greenmile.svg",
+  "ar": 4.054,
+  "src": "https://greenmile.com/wp-content/uploads/2025/10/greenmile_white-logo_150x37.svg"
+ },
+ "groundcloud": {
+  "checked": "2026-10-12",
+  "host": "groundcloud.io",
+  "f": "data/logos/groundcloud.png",
+  "ar": 3.962,
+  "src": "https://www.groundcloud.io/static/dashboard/icons/logo.a577f788f99f.png"
+ },
+ "sellercloud": {
+  "checked": "2026-10-12",
+  "host": "sellercloud.com",
+  "f": "data/logos/sellercloud.svg",
+  "ar": 3.348,
+  "src": "https://sellercloud.com/wp-content/uploads/2025/04/Descartes_Sellercloud_Final_RGB_White.svg"
+ },
+ "finale": {
+  "checked": "2026-10-12",
+  "host": "finaleinventory.com",
+  "f": "data/logos/finale.svg",
+  "ar": 2.0,
+  "src": "https://www.finaleinventory.com/wp-content/uploads/partners/color-logo_trellis.svg"
+ },
+ "wisetech": {
+  "checked": "2026-10-12",
+  "host": "wisetechglobal.com",
+  "f": "data/logos/wisetech.svg",
+  "ar": 3.229,
+  "src": "https://wisetechglobal.com/media/tegdefie/wisetech-global-logo.svg"
+ },
+ "e2open": {
+  "checked": "2026-10-12",
+  "host": "e2open.com",
+  "f": "data/logos/e2open.png",
+  "ar": 3.9,
+  "src": "https://www.e2open.com/media/ywxdftlu/e2open-logo.png"
+ },
+ "blueyonder": {
+  "checked": "2026-10-12",
+  "host": "blueyonder.com",
+  "f": "data/logos/blueyonder.png",
+  "ar": 1.0,
+  "src": "https://cdn.blueyonder.com/global/images/apple-touch-icon-180x180.png"
+ },
+ "optoro": {
+  "checked": "2026-10-12",
+  "host": "optoro.com",
+  "f": "data/logos/optoro.svg",
+  "ar": 4.884,
+  "src": "https://www.optoro.com/wp-content/uploads/2025/09/Optoro-BY-Logo-Web.svg"
+ },
+ "sendle": {
+  "checked": "2026-10-12",
+  "host": "sendle.com",
+  "f": "data/logos/sendle.png",
+  "ar": 0.644,
+  "src": "https://hercules-cdn.com/file_02zZARt3snK4mSzFu98Qa6me"
+ },
+ "firstmile": {
+  "checked": "2026-10-12",
+  "host": "firstmile.com",
+  "f": "data/logos/firstmile.svg",
+  "ar": 5.207,
+  "src": "https://assets-global.website-files.com/64cd224f52d06dbfde1bb90f/64cd224f52d06dbfde1bba25_firstmile-logo-only%20(1)1.svg"
+ },
+ "acilogistix": {
+  "checked": "2026-10-12",
+  "host": "acilogistix.com"
+ },
+ "polarspeed": {
+  "checked": "2026-10-12",
+  "host": "polarspeed.com"
+ },
+ "boyle": {
+  "checked": "2026-10-12",
+  "host": "boyletransportation.com"
+ },
+ "cencora": {
+  "checked": "2026-10-12",
+  "host": "cencora.com",
+  "f": "data/logos/cencora.png",
+  "ar": 6.944,
+  "src": "https://www.cencora.com/-/media/assets/corporate/global/logos/cencora-logo.png?h=60&w=250&la=en&hash=0463B9CEBA8D3A73118B6C4951E55D03"
+ },
+ "worldcourier": {
+  "checked": "2026-10-12",
+  "host": "worldcourier.com",
+  "f": "data/logos/worldcourier.svg",
+  "ar": 5.714,
+  "src": "https://worldcourier.com/-/media/assets/ab-new-brand-logos/cencora-world-courier-web.svg?h=60&amp;w=250&amp;la=en&amp;hash=C446765409A48168702E79EAFCFA4B81"
+ },
+ "geopost": {
+  "checked": "2026-10-12",
+  "host": "geopost.com",
+  "f": "data/logos/geopost.svg",
+  "ar": 0.978,
+  "src": "https://www.geopost.com/wp-content/uploads/sites/286/2023/09/Logo_X-svg1.svg"
+ },
+ "biocair": {
+  "checked": "2026-10-12",
+  "host": "biocair.com",
+  "f": "data/logos/biocair.svg",
+  "ar": 2.934,
+  "src": "https://www.biocair.com/hubfs/Biocair%20Logo%20black%20logotype.svg"
+ },
+ "thermosafe": {
+  "checked": "2026-10-12",
+  "host": "thermosafe.com",
+  "f": "data/logos/thermosafe.png",
+  "ar": 5.357,
+  "src": "https://thermosafe.com/wp-content/themes/thermosafe/img/thermosafe-logo2025-white.png"
+ },
+ "pelibiothermal": {
+  "checked": "2026-10-12",
+  "host": "pelibiothermal.com",
+  "f": "data/logos/pelibiothermal.png",
+  "ar": 1.0,
+  "src": "https://pelibiothermwp-prod.s3.us-west-1.amazonaws.com/wp-content/uploads/2024/12/19202617/pelibiothermal-google.jpg"
+ },
+ "envirotainer": {
+  "checked": "2026-10-12",
+  "host": "envirotainer.com",
+  "f": "data/logos/envirotainer.png",
+  "ar": 0.906,
+  "src": "https://www.envirotainer.com/V2/Static/dist/webmanifest/apple-touch-icon-180x180.png"
+ },
+ "nuro": {
+  "checked": "2026-10-12",
+  "host": "nuro.ai",
+  "f": "data/logos/nuro.png",
+  "ar": 3.478,
+  "src": "https://www.nuro.ai/nuro_logo_dark.png"
+ },
+ "gatik": {
+  "checked": "2026-10-12",
+  "host": "gatik.ai",
+  "f": "data/logos/gatik.svg",
+  "ar": 1.0,
+  "src": "https://gatik.ai/favicon.svg"
+ },
+ "brightdrop": {
+  "checked": "2026-10-12",
+  "host": "gobrightdrop.com"
+ },
+ "workhorse": {
+  "checked": "2026-10-12",
+  "host": "workhorse.com",
+  "f": "data/logos/workhorse.png",
+  "ar": 1.0,
+  "src": "https://workhorse.com/wp-content/uploads/2026/04/cropped-favicon-512x512-1-1.png"
+ },
+ "motiv": {
+  "checked": "2026-10-12",
+  "host": "motivps.com"
+ },
+ "xos": {
+  "checked": "2026-10-12",
+  "host": "xostrucks.com",
+  "f": "data/logos/xos.png",
+  "ar": 2.962,
+  "src": "https://images.squarespace-cdn.com/content/v1/6334c9da00f79124428d327f/885b3e16-da3b-4cb8-88da-b43dc425727f/Xos_WordmarkLogo_BlackHD.png?format=1500w"
+ },
+ "atlasair": {
+  "checked": "2026-10-12",
+  "host": "atlasairworldwide.com",
+  "f": "data/logos/atlasair.svg",
+  "ar": 4.024,
+  "src": "https://www.atlasairworldwide.com/wp-content/themes/aaww/images/svg/logo_polar-air_footer.svg"
+ },
+ "blackstone": {
+  "checked": "2026-10-12",
+  "host": "blackstone.com",
+  "f": "data/logos/blackstone.png",
+  "ar": 2.556,
+  "src": "https://www.blackstone.com/wp-content/uploads/sites/2/2020/07/Blackstone-PRESS-QUALITY-6312.png"
+ },
+ "softbank": {
+  "checked": "2026-10-12",
+  "host": "visionfund.com",
+  "f": "data/logos/softbank.png",
+  "ar": 4.407,
+  "src": "https://sb-vf-assets.s3.amazonaws.com/assets/mapbox.png"
+ },
+ "foundersfund": {
+  "checked": "2026-10-12",
+  "host": "foundersfund.com",
+  "f": "data/logos/foundersfund.png",
+  "ar": 1.0,
+  "src": "https://foundersfund.com/apple-touch-icon-152x152.png"
+ },
+ "arsenal": {
+  "checked": "2026-10-12",
+  "host": "arsenalcapital.com",
+  "f": "data/logos/arsenal.png",
+  "ar": 1.193,
+  "src": "https://arsenalcapital.com/favicon/apple-touch-icon.png"
+ },
+ "platinum": {
+  "checked": "2026-10-12",
+  "host": "platinumequity.com",
+  "f": "data/logos/platinum.png",
+  "ar": 4.324,
+  "src": "https://www.platinumequity.com/wp-content/uploads/2022/09/platinum-equity-logo-black.png"
+ },
+ "eqt": {
+  "checked": "2026-10-12",
+  "host": "eqtgroup.com",
+  "f": "data/logos/eqt.svg",
+  "ar": 3.4,
+  "src": "https://eqtgroup.com/_next/static/media/eqt-logo-white.1c0p74ev5q03p.svg?dpl=1791553199784"
+ },
+ "inpost": {
+  "checked": "2026-10-12",
+  "host": "inpost.eu",
+  "f": "data/logos/inpost.svg",
+  "ar": 1.658,
+  "src": "https://inpost.eu/themes/custom/inpost/public/build/images/logo-inpost.svg"
+ },
+ "advent": {
+  "checked": "2026-10-12",
+  "host": "adventinternational.com",
+  "f": "data/logos/advent.png",
+  "ar": 1.0,
+  "src": "https://www.adventinternational.com/wp-content/uploads/2024/11/serp-icon.jpg"
+ },
+ "ppf": {
+  "checked": "2026-10-12",
+  "host": "ppf.eu",
+  "f": "data/logos/ppf.svg",
+  "ar": 3.509,
+  "src": "https://www.datocms-assets.com/40359/1737461674-cetin-logo-cz-ba-la-pro-obrazovku.svg"
+ },
+ "yodel": {
+  "checked": "2026-10-12",
+  "host": "yodel.co.uk"
+ },
+ "sending": {
+  "checked": "2026-10-12",
+  "host": "sending.es",
+  "f": "data/logos/sending.png",
+  "ar": 1.538,
+  "src": "https://www.sending.es/wp-content/uploads/2025/07/SENDING-BY-INPOST-LOGO-light.png"
+ },
+ "venipak": {
+  "checked": "2026-10-12",
+  "host": "venipak.com",
+  "f": "data/logos/venipak.png",
+  "ar": 5.275,
+  "src": "https://venipak.com/wp-content/uploads/venipak-logo-hd.png"
+ },
+ "paack": {
+  "checked": "2026-10-12",
+  "host": "paack.co",
+  "f": "data/logos/paack.svg",
+  "ar": 2.952,
+  "src": "https://paack.co/wp-content/themes/paack/dist/images/logo-paack.svg"
+ },
+ "schneider": {
+  "checked": "2026-10-12",
+  "host": "schneider.com",
+  "f": "data/logos/schneider.svg",
+  "ar": 5.137,
+  "src": "https://images.contentstack.io/v3/assets/blt19eee321227f0eda/blt7f78af5b59613ecd/5ea90c6255c7570a2503b918/schneider-logo.svg"
+ },
+ "cowan": {
+  "checked": "2026-10-12",
+  "host": "cowansystems.com",
+  "f": "data/logos/cowan.png",
+  "ar": 1.687,
+  "src": "https://www.cowansystems.com/wp-content/uploads/2019/08/CowanLogo3.png"
+ },
+ "routesmart": {
+  "checked": "2026-10-12",
+  "host": "routesmart.com",
+  "f": "data/logos/routesmart.svg",
+  "ar": 3.61,
+  "src": "https://www.routesmart.com/wp-content/uploads/2023/06/RS-AFC_Website_Logos_Orange-White.svg"
+ },
+ "uberfreight": {
+  "checked": "2026-10-12",
+  "host": "uberfreight.com",
+  "f": "data/logos/uberfreight.png",
+  "ar": 1.0,
+  "src": "https://images.ctfassets.net/ysln10zw0yzg/4FgD53b8MsvW2n7IOOszFg/073903fde7664b384e54febd3196bf63/uf_black_small_logo.png"
+ },
+ "servicenow": {
+  "checked": "2026-10-12",
+  "host": "servicenow.com"
+ },
+ "fareye": {
+  "checked": "2026-10-12",
+  "host": "fareye.com",
+  "f": "data/logos/fareye.png",
+  "ar": 3.179,
+  "src": "https://fareye.com/uploads/generic/images/Logo_FarEye.png"
+ },
+ "stasher": {
+  "checked": "2026-10-12",
+  "host": "stasher.com",
+  "f": "data/logos/stasher.svg",
+  "ar": 4.034,
+  "src": "https://dzwi4va4czwms.cloudfront.net/logos/new-logo.svg"
+ },
+ "advanceauto": {
+  "checked": "2026-10-12",
+  "host": "advanceautoparts.com"
+ },
+ "gap": {
+  "checked": "2026-10-12",
+  "host": "gapinc.com",
+  "f": "data/logos/gap.svg",
+  "ar": 1.109,
+  "src": "https://gapinc.com/_assets/images/svg/logo-vertical.svg"
+ },
+ "kohls": {
+  "checked": "2026-10-12",
+  "host": "kohls.com"
+ },
+ "urbanoutfitters": {
+  "checked": "2026-10-12",
+  "host": "urbn.com"
+ },
+ "stevemadden": {
+  "checked": "2026-10-12",
+  "host": "stevemadden.com"
+ },
+ "dicks": {
+  "checked": "2026-10-12",
+  "host": "dickssportinggoods.com"
+ },
+ "footlocker": {
+  "checked": "2026-10-12",
+  "host": "footlocker.com"
+ },
+ "acehardware": {
+  "checked": "2026-10-12",
+  "host": "acehardware.com"
+ },
+ "rbc": {
+  "checked": "2026-10-12",
+  "host": "rbc.com"
+ },
+ "citi": {
+  "checked": "2026-10-12",
+  "host": "citigroup.com",
+  "f": "data/logos/citi.png",
+  "ar": 1.694,
+  "src": "https://www.citigroup.com/rcs/citigpa/storage/public/citi-logo-rgb.jpg"
+ },
+ "ware2go": {
+  "checked": "2026-10-12",
+  "host": "ware2go.co"
+ },
+ "colisprive": {
+  "checked": "2026-10-12",
+  "host": "colisprive.com",
+  "f": "data/logos/colisprive.png",
+  "ar": 1.863,
+  "src": "https://colisprive.fr/wp-content/themes/colis-prive-newlook/assets/images/logo-colis-prive-fr-horizontal.png"
+ },
+ "bollorelog": {
+  "checked": "2026-10-12",
+  "host": "cevalogistics.com"
+ },
+ "clipper": {
+  "checked": "2026-10-12",
+  "host": "gxo.com",
+  "f": "data/logos/clipper.png",
+  "ar": 2.808,
+  "src": "https://gxo.com/wp-content/uploads/2024/07/cropped-favicon-180x180.png"
+ },
+ "ingramcls": {
+  "checked": "2026-10-12",
+  "host": "ingrammicro.com"
+ },
+ "agilitygil": {
+  "checked": "2026-10-12",
+  "host": "dsv.com"
+ },
+ "lflogistics": {
+  "checked": "2026-10-12",
+  "host": "lflogistics.com"
+ },
+ "pilot": {
+  "checked": "2026-10-12",
+  "host": "pilotdelivers.com"
+ },
+ "atlas": {
+  "checked": "2026-10-12",
+  "host": "atlasairworldwide.com",
+  "f": "data/logos/atlas.svg",
+  "ar": 2.922,
+  "src": "https://www.atlasairworldwide.com/wp-content/themes/aaww/images/svg/logo_atlas-air_main.svg"
+ },
+ "deliverysolutions": {
+  "checked": "2026-10-12",
+  "host": "deliverysolutions.co",
+  "f": "data/logos/deliverysolutions.svg",
+  "ar": 6.0,
+  "src": "https://deliverysolutions.co/hubfs/sally-logo.svg"
+ },
+ "harbinger": {
+  "checked": "2026-10-12",
+  "host": "harbingermotors.com",
+  "f": "data/logos/harbinger.png",
+  "ar": 9.057,
+  "src": "https://harbingermotors.com/wp-content/uploads/2025/02/Harbinger-Logo-Blue-and-White-scaled.png"
+ },
+ "westbengalpost": {
+  "checked": "2026-10-12",
+  "host": "westbengalpost.gov.in"
+ },
+ "indiapostdepar": {
+  "checked": "2026-10-12",
+  "host": "indiapost.gov.in",
+  "f": "data/logos/indiapostdepar.svg",
+  "ar": 1.543,
+  "src": "https://indiapost.gov.in/images/home/logo/indiapostlogo.svg"
+ },
+ "bluedartexpres": {
+  "checked": "2026-10-12",
+  "host": "bluedart.com",
+  "f": "data/logos/bluedartexpres.png",
+  "ar": 7.071,
+  "src": "https://bluedart.com/image/layout_set_logo?img_id=1414225&amp;t=1791736020291"
+ },
+ "coll8": {
+  "checked": "2026-10-12",
+  "host": "coll-8.com",
+  "f": "data/logos/coll8.png",
+  "ar": 2.295,
+  "src": "https://www.coll-8.com/wp-content/uploads/2021/07/coll-8-logo.png"
+ },
+ "21vekby": {
+  "checked": "2026-10-12",
+  "host": "21vek.by",
+  "f": "data/logos/21vekby.png",
+  "ar": 3.529,
+  "src": "https://21vek.by/img/up/b-logo_original.png"
+ },
+ "belposhta": {
+  "checked": "2026-10-12",
+  "host": "belpost.by"
+ },
+ "dhlsupplychain": {
+  "checked": "2026-10-12",
+  "host": "dhl.com",
+  "f": "data/logos/dhlsupplychain.svg",
+  "ar": 7.175,
+  "src": "https://dhl.com/content/dam/dhl/global/core/images/logos/dhl-logo.svg"
+ },
+ "jitsu": {
+  "checked": "2026-10-12",
+  "host": "gojitsu.com",
+  "f": "data/logos/jitsu.svg",
+  "ar": 3.472,
+  "src": "https://gojitsu.com/hubfs/jitsu-2024/image/logo-jitsu.svg"
+ },
+ "gofo": {
+  "checked": "2026-10-12",
+  "host": "gofo.com",
+  "f": "data/logos/gofo.png",
+  "ar": 1.0,
+  "src": "https://gofo.com/favicon.png"
+ },
+ "pce": {
+  "checked": "2026-10-12",
+  "host": "priority.com",
+  "f": "data/logos/pce.png",
+  "ar": 2.247,
+  "src": "https://priority.com/images/pce-logo-182-81.png"
+ },
+ "pridispatch": {
+  "checked": "2026-10-12",
+  "host": "prioritydispatch.com",
+  "f": "data/logos/pridispatch.png",
+  "ar": 5.854,
+  "src": "https://b3896692.assetcdn.net/2.0/3896692/wp-content/uploads/2024/12/site-logo-white.png?lossy=1&strip=1&webp=1"
+ },
+ "diamond": {
+  "checked": "2026-10-12",
+  "host": "diamondexpedited.com"
+ },
+ "inpax": {
+  "checked": "2026-10-12",
+  "host": "shipinpax.com",
+  "f": "data/logos/inpax.svg",
+  "ar": 5.643,
+  "src": "https://www.shipinpax.com/wp-content/uploads/2021/10/logo.svg"
+ },
+ "postmates": {
+  "checked": "2026-10-12",
+  "host": "postmates.com",
+  "f": "data/logos/postmates.png",
+  "ar": 1.006,
+  "src": "https://postmates.com/_static/615772106d253a08.png"
+ },
+ "deliverr": {
+  "checked": "2026-10-12",
+  "host": "flexport.com",
+  "f": "data/logos/deliverr.png",
+  "ar": 1.0,
+  "src": "https://flexport.com/apple-touch-icon.png"
+ },
+ "cirro": {
+  "checked": "2026-10-12",
+  "host": "cirroecommerce.com"
+ },
+ "ifreturns": {
+  "checked": "2026-10-12",
+  "host": "ifreturns.com",
+  "f": "data/logos/ifreturns.png",
+  "ar": 1.404,
+  "src": "https://ifreturns.com/favicon.png"
+ },
+ "tai": {
+  "checked": "2026-10-12",
+  "host": "tai-software.com",
+  "f": "data/logos/tai.png",
+  "ar": 1.863,
+  "src": "https://tai-software.com/wp-content/uploads/2024/02/Logo-01-1.png"
+ },
+ "shipcom": {
+  "checked": "2026-10-12",
+  "host": "ship.com",
+  "f": "data/logos/shipcom.png",
+  "ar": 1.819,
+  "src": "https://cdn.prod.website-files.com/63d31af91b63e95aeff555ad/688bdde38a552ccb720c04f7_Logo%20with%20tagline.jpg.png"
+ },
+ "bluejay": {
+  "checked": "2026-10-12",
+  "host": "bluejay-capital.com",
+  "f": "data/logos/bluejay.svg",
+  "ar": 3.434,
+  "src": "https://bluejay-capital.com/wp-content/uploads/2025/02/Bluejay-Capital_Primary-Logo_White@2x.svg"
+ },
+ "mak": {
+  "checked": "2026-10-12",
+  "host": "makacquisitioncorp.com",
+  "f": "data/logos/mak.png",
+  "ar": 1.0,
+  "src": "https://makacquisitioncorp.com/wp-content/uploads/2025/10/makiconons-300x300.png"
+ },
+ "epg": {
+  "checked": "2026-10-12",
+  "host": "epgroup.eu",
+  "f": "data/logos/epg.png",
+  "ar": 2.167,
+  "src": "https://epgroup.eu/_ipx/f_png&amp;s_86x36/images/logos/eph-2x.png"
+ },
+ "frigotrans": {
+  "checked": "2026-10-12",
+  "host": "frigo-trans.de",
+  "f": "data/logos/frigotrans.png",
+  "ar": 1.0,
+  "src": "https://www.frigo-trans.de/wp-content/uploads/2022/04/Logo-Pharma-Logistics-Excellence.png"
+ },
+ "bpl": {
+  "checked": "2026-10-12",
+  "host": "bplogistics.de",
+  "f": "data/logos/bpl.png",
+  "ar": 1.0,
+  "src": "https://www.bplogistics.de/wp-content/uploads/2019/08/apple-iphone-retina-icon.png"
+ },
+ "cbc": {
+  "checked": "2026-10-12",
+  "host": "crossborderconnect.com",
+  "f": "data/logos/cbc.png",
+  "ar": 4.92,
+  "src": "https://img1.wsimg.com/isteam/ip/a2a75022-8b02-415b-a0f1-49e8174980a3/blob-0001.png/:/rs=h:90,cg:true,m/qt=q:95"
+ },
+ "idsfulfillment": {
+  "checked": "2026-10-12",
+  "host": "idsfulfillment.com",
+  "f": "data/logos/idsfulfillment.png",
+  "ar": 4.769,
+  "src": "https://idsfulfillment.com/wp-content/uploads/2025/06/Powered-by-DHL.webp"
+ },
+ "apex": {
+  "checked": "2026-10-12",
+  "host": "apexglobe.com",
+  "f": "data/logos/apex.png",
+  "ar": 4.328,
+  "src": "https://apexglobe.com/repository/portal-local/ngc202303030003/cms/image/a15d5578-7dfe-4692-9ff8-4841169329c3.png"
+ },
+ "imc": {
+  "checked": "2026-10-12",
+  "host": "imcc.com",
+  "f": "data/logos/imc.png",
+  "ar": 2.897,
+  "src": "https://www.imcc.com/images/imc-logo.png"
+ },
+ "visiblescm": {
+  "checked": "2026-10-12",
+  "host": "maersk.com"
+ },
+ "performanceteam": {
+  "checked": "2026-10-12",
+  "host": "performanceteam.net",
+  "f": "data/logos/performanceteam.png",
+  "ar": 5.714,
+  "src": "https://performanceteam.net/wp-content/themes/yootheme/cache/5d/PT_PrimaryLogo_RGB-5df43ac0.png"
+ },
+ "clearjet": {
+  "checked": "2026-10-12",
+  "host": "clearjet.com",
+  "f": "data/logos/clearjet.svg",
+  "ar": 3.2,
+  "src": "https://clearjet.com/ClearJet%20Horizontal%20Logo%20Dark.svg"
+ },
+ "shipwise": {
+  "checked": "2026-10-12",
+  "host": "shipwise.com",
+  "f": "data/logos/shipwise.svg",
+  "ar": 5.072,
+  "src": "https://cdn.prod.website-files.com/6682f50d327a4c7a1fec7aec/66bae469d37e493d8bae995b_logo-color-dark.svg"
+ },
+ "ocelot": {
+  "checked": "2026-10-12",
+  "host": "ocelotcapital.com"
+ },
+ "seacoast": {
+  "checked": "2026-10-12",
+  "host": "seacoastcapital.com",
+  "f": "data/logos/seacoast.png",
+  "ar": 3.0,
+  "src": "https://www.seacoastcapital.com/wp-content/uploads/2026/08/lynch-leahy-combined.png"
+ },
+ "dclogistics": {
+  "checked": "2026-10-12",
+  "host": "dc-logistics.com",
+  "f": "data/logos/dclogistics.png",
+  "ar": 1.0,
+  "src": "https://images.squarespace-cdn.com/content/v1/66c8db9b0e75617d0ea5024e/891bfd2c-1f44-4d36-a561-3087d54bc313/favicon.ico?format=100w"
+ },
+ "glsfreight": {
+  "checked": "2026-10-12",
+  "host": "mountainvalleyexpress.com",
+  "f": "data/logos/glsfreight.png",
+  "ar": 9.231,
+  "src": "https://images.squarespace-cdn.com/content/v1/66c8db9b0e75617d0ea5024e/04970842-cb02-4296-a492-a45a07fec8f6/mve_logo_header.png?format=1500w"
+ },
+ "lobbycap": {
+  "checked": "2026-10-12",
+  "host": "lobby.vc",
+  "f": "data/logos/lobbycap.png",
+  "ar": 4.486,
+  "src": "https://lobby.vc/media/lobby-portfolio-logo-waffarx@2x-1024x437.png"
+ },
+ "constructcap": {
+  "checked": "2026-10-12",
+  "host": "constructcap.com",
+  "f": "data/logos/constructcap.svg",
+  "ar": 3.504,
+  "src": "https://cdn.prod.website-files.com/66b4d36c4dff9a9bfd7a3b85/6ac684da21ba73ec0c0e5bf1_Atomic_Logo_Cream.svg"
+ },
+ "zongteng": {
+  "checked": "2026-10-12",
+  "host": "ztn.com",
+  "f": "data/logos/zongteng.svg",
+  "ar": 3.17,
+  "src": "https://ztn.com/static/index/img/logo.svg?2024080701216261112273"
+ },
+ "dcm": {
+  "checked": "2026-10-12",
+  "host": "dcm.com",
+  "f": "data/logos/dcm.svg",
+  "ar": 0.952,
+  "src": "https://cdn.prod.website-files.com/675da450cea357cd67a26b3d/675daf682a7f8682951c5ca2_logo.svg"
+ },
+ "celtichouse": {
+  "checked": "2026-10-12",
+  "host": "celticvc.com",
+  "f": "data/logos/celtichouse.png",
+  "ar": 1.781,
+  "src": "https://celticvc.com/wp-content/themes/understrap/img/celtic-house-logo-white.png"
+ },
+ "pandion": {
+  "checked": "2026-10-12",
+  "host": "pandion.com"
+ },
+ "speedx": {
+  "checked": "2026-10-12",
+  "host": "speedx.io",
+  "f": "data/logos/speedx.png",
+  "ar": 1.0,
+  "src": "https://speedx.io/wp-content/uploads/favicon-180x180-1.png"
+ },
+ "ags": {
+  "checked": "2026-10-12",
+  "host": "accgs.com",
+  "f": "data/logos/ags.png",
+  "ar": 1.006,
+  "src": "https://accgs.com/wp-content/uploads/2024/01/cropped-Air-Freight-Forwarding-Icon-Red.png"
+ },
+ "proship": {
+  "checked": "2026-10-12",
+  "host": "proshipinc.com",
+  "f": "data/logos/proship.png",
+  "ar": 2.898,
+  "src": "https://proshipinc.com/wp-content/uploads/2025/11/28_gxo_c-logo.png"
+ },
+ "swiftx": {
+  "checked": "2026-10-12",
+  "host": "swiftx-express.com",
+  "f": "data/logos/swiftx.png",
+  "ar": 6.154,
+  "src": "https://swiftx-express.com/logo.png"
+ },
+ "pbgec": {
+  "checked": "2026-10-12",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pbgec.png",
+  "ar": 1.159,
+  "src": "https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/wwe-championship-logo-v2.png/_jcr_content/renditions/wwe-championship-logo-v2.400.webp"
+ },
+ "hilco": {
+  "checked": "2026-10-12",
+  "host": "hilcoglobal.com",
+  "f": "data/logos/hilco.svg",
+  "ar": 3.308,
+  "src": "https://hilcoglobal.com/wp-content/themes/hilco-child/assets/images/hilco-orix-logo.svg"
+ },
+ "rightaway": {
+  "checked": "2026-10-12",
+  "host": "rightawaydelivery.com",
+  "f": "data/logos/rightaway.png",
+  "ar": 3.816,
+  "src": "https://rightawaydelivery.com/wp-content/uploads/2026/08/rad-20-year-logo-1.png"
+ },
+ "nowcourier": {
+  "checked": "2026-10-12",
+  "host": "nowcourier.com",
+  "f": "data/logos/nowcourier.png",
+  "ar": 1.0,
+  "src": "https://static.wixstatic.com/media/43c0e9_e29103c6d70144bea1e683929c728f1a%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/43c0e9_e29103c6d70144bea1e683929c728f1a%7Emv2.png"
+ },
+ "coco": {
+  "checked": "2026-10-12",
+  "host": "cocodelivery.com",
+  "f": "data/logos/coco.png",
+  "ar": 1.0,
+  "src": "https://framerusercontent.com/images/2JasMSXSb6P2bV29nccn4CS0VfM.png"
+ },
+ "drizly": {
+  "checked": "2026-10-12",
+  "host": "drizly.com"
+ },
+ "walmartasr": {
+  "checked": "2026-10-12",
+  "host": "alertinnovation.com"
+ },
+ "ifs": {
+  "checked": "2026-10-12",
+  "host": "impactfs.com"
+ },
+ "propack": {
+  "checked": "2026-10-12",
+  "host": "propack.com"
+ },
+ "strikecap": {
+  "checked": "2026-10-12",
+  "host": "strikecapital.com",
+  "f": "data/logos/strikecap.png",
+  "ar": 1.0,
+  "src": "https://cdn.prod.website-files.com/696e8794929f5d1090d2fdba/69978a53353e992c129bda20_favicon%40256x256.png"
+ },
+ "rubyhas": {
+  "checked": "2026-10-12",
+  "host": "shipmonk.com",
+  "f": "data/logos/rubyhas.png",
+  "ar": 1.0,
+  "src": "https://www.shipmonk.com/wp-content/uploads/2025/01/cropped-shipmonk-symbol-green-192x192.png"
+ },
+ "convoy": {
+  "checked": "2026-10-12",
+  "host": "convoy.com",
+  "f": "data/logos/convoy.svg",
+  "ar": 2.966,
+  "src": "https://convoy.com/wp-content/uploads/2021/12/fill.svg"
+ },
+ "ops": {
+  "checked": "2026-10-12",
+  "host": "veritiv.com",
+  "f": "data/logos/ops.png",
+  "ar": 1.612,
+  "src": "https://veritiv.com/etc.clientlibs/veritiv/clientlibs/clientlib-react/resources/logo192.png"
+ },
+ "shiptrack": {
+  "checked": "2026-10-12",
+  "host": "descartes.com",
+  "f": "data/logos/shiptrack.png",
+  "ar": 0.833,
+  "src": "https://descartes.com/themes/descartes/favicon.ico"
+ },
+ "xps": {
+  "checked": "2026-10-12",
+  "host": "xpsship.com",
+  "f": "data/logos/xps.svg",
+  "ar": 1.818,
+  "src": "https://xpsship.com/wp-content/uploads/2025/04/CabotCreameryWhite-1.svg"
+ },
+ "foxtrot": {
+  "checked": "2026-10-12",
+  "host": "foxtrotsystems.com",
+  "f": "data/logos/foxtrot.svg",
+  "ar": 0.845,
+  "src": "https://foxtrotsystems.com/images/headermblLogo.svg"
+ },
+ "localz": {
+  "checked": "2026-10-12",
+  "host": "localz.com",
+  "f": "data/logos/localz.svg",
+  "ar": 3.569,
+  "src": "https://www.localz.com/wp-content/uploads/2025/10/localz_white-logo_207x58.svg"
+ },
+ "3gtms": {
+  "checked": "2026-10-12",
+  "host": "3gtms.com"
+ },
+ "packageroute": {
+  "checked": "2026-10-12",
+  "host": "packageroute.com",
+  "f": "data/logos/packageroute.png",
+  "ar": 1.58,
+  "src": "https://packageroute.com/wp-content/uploads/2023/11/logo-icon.png"
+ },
+ "blujay": {
+  "checked": "2026-10-12",
+  "host": "e2open.com",
+  "f": "data/logos/blujay.svg",
+  "ar": 4.108,
+  "src": "https://e2open.com/media/wp-content/uploads/2026/03/Signify_logo.svg?rmode=max&amp;width=296&amp;height=72"
+ },
+ "logistyx": {
+  "checked": "2026-10-12",
+  "host": "logistyx.com",
+  "f": "data/logos/logistyx.png",
+  "ar": 2.081,
+  "src": "https://logistyx.com/wp-content/uploads/2019/08/cropped-Logistyx_logo_trim-white.png"
+ },
+ "wonderment": {
+  "checked": "2026-10-12",
+  "host": "wonderment.com"
+ },
+ "skeltonusa": {
+  "checked": "2026-10-12",
+  "host": "skeltontruck.com",
+  "f": "data/logos/skeltonusa.png",
+  "ar": 2.75,
+  "src": "https://www.skeltontruck.com/wp-content/uploads/2026/01/Transition-Logo_Skelton_v2.png"
+ },
+ "sdsrx": {
+  "checked": "2026-10-12",
+  "host": "sds-rx.com",
+  "f": "data/logos/sdsrx.svg",
+  "ar": 6.196,
+  "src": "https://www.sds-rx.com/wp-content/themes/sdsrx/img/sdsrx_dhl_white.svg"
+ },
+ "quick": {
+  "checked": "2026-10-12",
+  "host": "quick.aero",
+  "f": "data/logos/quick.png",
+  "ar": 5.106,
+  "src": "https://assets.kuehne-nagel.com/f/311321/595x116/b7d7679a47/kuehne-nagel-logo-blue.png/m/0x0/filters:format(webp):quality(90)"
+ },
+ "grubhubcampus": {
+  "checked": "2026-10-12",
+  "host": "grubhub.com",
+  "f": "data/logos/grubhubcampus.svg",
+  "ar": 1.0,
+  "src": "https://grubhub.com/icon.svg"
+ },
+ "rocketscap": {
+  "checked": "2026-10-12",
+  "host": "rocketscap.com"
+ },
+ "lfx": {
+  "checked": "2026-10-12",
+  "host": "lfxvp.com",
+  "f": "data/logos/lfx.png",
+  "ar": 3.582,
+  "src": "https://lfxvp.com/wp-content/uploads/2023/07/cropped-LFX_512.png"
+ },
+ "shipwire": {
+  "checked": "2026-10-12",
+  "host": "shipwire.com",
+  "f": "data/logos/shipwire.png",
+  "ar": 3.077,
+  "src": "https://www.shipwire.com/wp-content/uploads/2026/01/Shipwire_StordCompany_Black.png"
+ },
+ "_v3": true,
+ "gofofrance": {
+  "checked": "2026-10-12",
+  "host": "gofo.com"
+ },
+ "gallantcapital": {
+  "checked": "2026-10-12",
+  "host": "gallantcapital.com",
+  "f": "data/logos/gallantcapital.png",
+  "ar": 1.688,
+  "src": "https://gallantcapital.com/app/uploads/2023/02/Vertical-logo.png"
+ },
+ "rps": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "robertsexpress": {
+  "checked": "2026-10-12",
+  "host": "customcritical.fedex.com"
+ },
+ "upsairlines": {
+  "checked": "2026-10-12",
+  "host": "ups.com"
+ },
+ "upsscs": {
+  "checked": "2026-10-12",
+  "host": "ups.com"
+ },
+ "upshealthcare": {
+  "checked": "2026-10-12",
+  "host": "ups.com"
+ },
+ "upsstore": {
+  "checked": "2026-10-12",
+  "host": "theupsstore.com",
+  "f": "data/logos/upsstore.png",
+  "ar": 5.984,
+  "src": "https://theupsstore.com/Image%20Library/template-images/logo.png"
+ },
+ "upscapital": {
+  "checked": "2026-10-12",
+  "host": "upscapital.com"
+ },
+ "parcelpro": {
+  "checked": "2026-10-12",
+  "host": "parcelpro.com"
+ },
+ "fdxexpress": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "fdxground": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "fdxlogistics": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "fdxoffice": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "fdxdataworks": {
+  "checked": "2026-10-12",
+  "host": "fedexdataworks.com",
+  "f": "data/logos/fdxdataworks.png",
+  "ar": 0.918,
+  "src": "https://cdn.bfldr.com/I22OPSFM/at/jfgn7ft6bs9vb7pgmsgzhcw4/Gradient_Global_Connectivity_Icon_Large_v2.png?auto=webp&amp;fit=bounds&amp;format=png&amp;width=180&amp;height=180"
+ },
+ "shoprunner": {
+  "checked": "2026-10-12",
+  "host": "shoprunner.com"
+ },
+ "fdxcustomcritical": {
+  "checked": "2026-10-12",
+  "host": "fedex.com"
+ },
+ "amzlogistics": {
+  "checked": "2026-10-12",
+  "host": "logistics.amazon.com",
+  "f": "data/logos/amzlogistics.png",
+  "ar": 1.0,
+  "src": "https://www.amazon.com/favicon.ico"
+ },
+ "amzflex": {
+  "checked": "2026-10-12",
+  "host": "flex.amazon.com"
+ },
+ "amzair": {
+  "checked": "2026-10-12",
+  "host": "amazonaircargo.com",
+  "f": "data/logos/amzair.png",
+  "ar": 5.583,
+  "src": "https://cdn.amazonaircargo.com/dims4/default/29b0ef7/2147483647/strip/false/crop/6478x1160+0+0/resize/335x60!/quality/90/?url=https%3A%2F%2Famazon-k1-prod-aircargo.s3.us-west-2.amazonaws.com%2Fbrightspot%2F65%2Fe0%2F968e536e4096b8f4776c740488eb%2Famazon-aircargo-horizontallogo-rgb-dark-squidink-primeblue.png"
+ },
+ "amzfreight": {
+  "checked": "2026-10-12",
+  "host": "freight.amazon.com",
+  "f": "data/logos/amzfreight.svg",
+  "ar": 4.975,
+  "src": "https://cdn.transportation.brightspotcdn.com/45/ee/897a35f142668aaa6d60b87c33cb/logos.svg"
+ },
+ "amzfba": {
+  "checked": "2026-10-12",
+  "host": "sell.amazon.com",
+  "f": "data/logos/amzfba.svg",
+  "ar": 2.438,
+  "src": "https://m.media-amazon.com/images/G/01/sell/navigation/amazon-logo_white-menu.svg"
+ },
+ "ascs": {
+  "checked": "2026-10-12",
+  "host": "supplychain.amazon.com",
+  "f": "data/logos/ascs.svg",
+  "ar": 9.722,
+  "src": "https://static.amazon-supply-chain-assets.com/02/d4/caca6e2d484a996af978cd2c5101/amazon-supply-chain-services-primary-logo-two-color-dk-squid-ink-prime-blue.svg"
+ },
+ "dhlsc": {
+  "checked": "2026-10-12",
+  "host": "dhl.com"
+ },
+ "dhlgf": {
+  "checked": "2026-10-12",
+  "host": "dhl.com"
+ },
+ "walmartgolocal": {
+  "checked": "2026-10-12",
+  "host": "walmartgolocal.com",
+  "f": "data/logos/walmartgolocal.svg",
+  "ar": 3.051,
+  "src": "https://www.walmartgolocal.com/content/dam/go-local/wgl-redesign/logo-1.svg"
+ },
+ "sparkdriver": {
+  "checked": "2026-10-12",
+  "host": "sparkdriverapp.com",
+  "f": "data/logos/sparkdriver.svg",
+  "ar": 5.999,
+  "src": "https://sparkdriverapp.com/content/dam/sparkdriverapp/images/spark-driver-logo.svg"
+ },
+ "wfs": {
+  "checked": "2026-10-12",
+  "host": "marketplace.walmart.com",
+  "f": "data/logos/wfs.png",
+  "ar": 1.0,
+  "src": "https://marketplace.walmart.com/wp-content/uploads/2025/10/cropped-WMT-Marketplace-Spark_square-180x180.png"
+ },
+ "ubereats": {
+  "checked": "2026-10-12",
+  "host": "ubereats.com",
+  "f": "data/logos/ubereats.png",
+  "ar": 1.0,
+  "src": "https://ubereats.com/_static/9d965730ecb40206.png"
+ },
+ "uberdirect": {
+  "checked": "2026-10-12",
+  "host": "uber.com"
+ },
+ "ezcater": {
+  "checked": "2026-10-12",
+  "host": "ezcater.com",
+  "f": "data/logos/ezcater.png",
+  "ar": 0.992,
+  "src": "https://static.cdn-ezcater.com/store-next/_next/static/media/ezcater-vertical-lg.fb1794f8.png"
+ },
+ "ddrive": {
+  "checked": "2026-10-12",
+  "host": "doordash.com"
+ },
+ "dddot": {
+  "checked": "2026-10-12",
+  "host": "doordash.com"
+ },
+ "pbsendtech": {
+  "checked": "2026-10-12",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pbsendtech.png",
+  "ar": 4.775,
+  "src": "https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/wake-forest-university-logo-new.png/_jcr_content/renditions/wake-forest-university-logo-new.400.webp"
+ },
+ "pbpresort": {
+  "checked": "2026-10-12",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pbpresort.png",
+  "ar": 4.878,
+  "src": "https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/ubs-arena-logo.png/_jcr_content/renditions/ubs-arena-logo.400.webp"
+ },
+ "pbbank": {
+  "checked": "2026-10-12",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pbbank.png",
+  "ar": 1.039,
+  "src": "https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/new-york-islanders-logo.png/_jcr_content/renditions/new-york-islanders-logo.400.webp"
+ },
+ "pbecomfulfill": {
+  "checked": "2026-10-13",
+  "host": "pitneybowes.com",
+  "f": "data/logos/pbecomfulfill.png",
+  "ar": 1.29,
+  "src": "https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/mastercard-logo.png/_jcr_content/renditions/mastercard-logo.400.webp"
+ },
+ "scigroup": {
+  "checked": "2026-10-13",
+  "host": "metroscg.com",
+  "f": "data/logos/scigroup.svg",
+  "ar": 4.091,
+  "src": "https://www.metroscg.com/hubfs/Media%20Centre/Logos/SVG%20Logos/Metro%20Supply%20Chain%20Primary%20Logo_Full%20Colour_EN%20-%20Tight%20Crop.svg"
+ },
+ "royalmail": {
+  "checked": "2026-10-13",
+  "host": "royalmail.com"
+ },
+ "glsgroup": {
+  "checked": "2026-10-13",
+  "host": "gls-group.com"
+ },
+ "laposte": {
+  "checked": "2026-10-13",
+  "host": "lapostegroupe.com",
+  "f": "data/logos/laposte.svg",
+  "ar": 1.602,
+  "src": "https://le-groupe-laposte.cdn.prismic.io/le-groupe-laposte/8312d45c-311b-4dab-aee5-12b140882197_Logo.svg"
+ },
+ "dpd": {
+  "checked": "2026-10-13",
+  "host": "dpd.com",
+  "f": "data/logos/dpd.svg",
+  "ar": 2.179,
+  "src": "https://www.dpd.com/wp-content/themes/DPD_NoLogin/images/DPD_logo_redgrad_rgb_responsive.svg"
+ },
+ "chronopost": {
+  "checked": "2026-10-13",
+  "host": "chronopost.fr",
+  "f": "data/logos/chronopost.png",
+  "ar": 4.618,
+  "src": "https://chronopost.fr/sites/chronopost/themes/custom/chronopost/images/chronopost_logo.png"
+ },
+ "brt": {
+  "checked": "2026-10-13",
+  "host": "brt.it",
+  "f": "data/logos/brt.svg",
+  "ar": 0.978,
+  "src": "https://www.brt.it/wp-content/uploads/sites/275/2023/09/Logo_X-svg.svg"
+ },
+ "myflexbox": {
+  "checked": "2026-10-13",
+  "host": "myflexbox.com",
+  "f": "data/logos/myflexbox.svg",
+  "ar": 4.962,
+  "src": "https://www.myflexbox.com/wp-content/uploads/2026/01/mediamarktsaturn.svg"
+ },
+ "seur": {
+  "checked": "2026-10-13",
+  "host": "seur.com",
+  "f": "data/logos/seur.svg",
+  "ar": 3.012,
+  "src": "https://seur.com/images/svg/logo-visa-white.svg"
+ },
+ "asendia": {
+  "checked": "2026-10-13",
+  "host": "asendia.com",
+  "f": "data/logos/asendia.png",
+  "ar": 2.667,
+  "src": "https://www.asendia.com/hs-fs/hubfs/e-PAQ_logo-1-png.png?width=400&amp;height=150&amp;name=e-PAQ_logo-1-png.png"
+ },
+ "japanpost": {
+  "checked": "2026-10-13",
+  "host": "japanpost.jp"
+ },
+ "toll": {
+  "checked": "2026-10-13",
+  "host": "tollgroup.com",
+  "f": "data/logos/toll.svg",
+  "ar": 4.333,
+  "src": "https://cms.tollgroup.com/sites/default/files/2022-09/toll-logo.svg"
+ },
+ "tollglobalexpress": {
+  "checked": "2026-10-13",
+  "host": "teamglobalexp.com",
+  "f": "data/logos/tollglobalexpress.png",
+  "ar": 3.877,
+  "src": "https://teamglobalexp.com/image/layout_set_logo?img_id=5087020&amp;t=1791544240354"
+ },
+ "dsvairsea": {
+  "checked": "2026-10-13",
+  "host": "dsv.com"
+ },
+ "dsvroad": {
+  "checked": "2026-10-13",
+  "host": "dsv.com"
+ },
+ "dsvsolutions": {
+  "checked": "2026-10-13",
+  "host": "dsv.com"
+ },
+ "xpointermodal": {
+  "checked": "2026-10-13",
+  "host": "stgusa.com",
+  "f": "data/logos/xpointermodal.png",
+  "ar": 1.0,
+  "src": "https://www.stgusa.com/wp-content/uploads/2024/02/cropped-STG-favicon-200x200.png"
+ },
+ "rxolastmile": {
+  "checked": "2026-10-13",
+  "host": "rxo.com",
+  "f": "data/logos/rxolastmile.svg",
+  "ar": 2.85,
+  "src": "https://rxo.com/wp-content/themes/rxo/images/rxo-logo-white.svg"
+ },
+ "ryderlastmile": {
+  "checked": "2026-10-13",
+  "host": "ryder.com",
+  "f": "data/logos/ryderlastmile.png",
+  "ar": 1.006,
+  "src": "https://ryder.com/assets/images/favicon.png"
+ },
+ "costcologistics": {
+  "checked": "2026-10-13",
+  "host": "logistics.costco.com"
+ },
+ "hdsupply": {
+  "checked": "2026-10-13",
+  "host": "hdsupplysolutions.com",
+  "f": "data/logos/hdsupply.png",
+  "ar": 1.0,
+  "src": "https://hdsupplysolutions.com/wcsstore/HDSB2BV2StorefrontAssetStore/images/hdsupply-icon-152px.png"
+ },
+ "jbhunt": {
+  "checked": "2026-10-13",
+  "host": "jbhunt.com",
+  "f": "data/logos/jbhunt.png",
+  "ar": 3.934,
+  "src": "https://www.jbhunt.com/dam/jbhunt/jbh/style-guide/jbh_logo_hires.png"
+ },
+ "jbhuntfms": {
+  "checked": "2026-10-13",
+  "host": "jbhunt.com",
+  "f": "data/logos/jbhuntfms.svg",
+  "ar": 1.0,
+  "src": "https://jbhunt.com/content/dam/jbhunt/brand/logos---icons/Social_LinkedIn-Rev-05.svg"
+ },
+ "forwardair": {
+  "checked": "2026-10-13",
+  "host": "forwardair.com",
+  "f": "data/logos/forwardair.png",
+  "ar": 1.143,
+  "src": "https://forwardair.com/static/android-chrome-192x192.png?v=9fa48afe077ef79556042801d51ed43a"
+ },
+ "omni": {
+  "checked": "2026-10-13",
+  "host": "omnilogistics.com",
+  "f": "data/logos/omni.png",
+  "ar": 6.4,
+  "src": "https://omnilogistics.com/wp-content/uploads/2020/02/omni_logo_horizontal_rev-1024x161.png"
+ },
+ "fwdfinalmile": {
+  "checked": "2026-10-13",
+  "host": "hubgroup.com",
+  "f": "data/logos/fwdfinalmile.svg",
+  "ar": 2.071,
+  "src": "https://www.hubgroup.com/wp-content/themes/HUBG-23/logo.svg"
+ }
+};
+
 /* ================= constants ================= */
 const LEVEL=['','Slight','Moderate','Major'];
 const IMPACT={up:{w:'Costs up',s:'▲'},down:{w:'Costs down',s:'▼'},watch:{w:'Developing',s:'◆'},info:{w:'Context',s:'●'}};
@@ -4084,7 +6258,7 @@ const DOC_TC={'Rate guide':'--t-rates','Service guide':'--t-rates','Special prog
 
 /* ================= helpers ================= */
 /* ===== Company logos: each company's own logo, unaltered, only to identify it (pipeline/media.py fills data/logos.json) ===== */
-var LOGOS={},LOGO_NAMES=null;
+var LOGOS=(typeof LOGOS_SNAP!=='undefined'&&LOGOS_SNAP)||{},LOGO_NAMES=null;   // a copy ships inside the page, so logos show even if the live list is slow
 const LOGO_CAR={'ups':'ups','fedex':'fedex','fdx':'fedex','usps':'usps','amazon':'amzship','amazon shipping':'amzship','amzn':'amazon','ontrac':'ontrac','dhl':'dhlexpress','dhl express':'dhlexpress','dhl ecommerce':'dhlecom','dhl group':'dhl','fdxf':'fdxfreight','fedex freight':'fdxfreight','dash':'doordash','pbi':'pitneybowes'};
 function logoId(x){if(!x)return null;if(typeof x==='object')return x.id||logoId(x.name||x.n);
   const k=String(x).toLowerCase().trim();if(LOGO_CAR[k])return LOGO_CAR[k];if(typeof PL!=='undefined'&&PL[k])return k;
@@ -4104,7 +6278,7 @@ function logoImg(x,cls,label){const id=logoId(x);if(!id)return '';
     return `<span class="lgo ${cls||''}${ar<1.6?' sq':''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}${B.bg?';--lbg:'+B.bg:''}"><svg viewBox="${B.v}" aria-hidden="true">${logoLayers(id,B)}</svg><span class="sr">${esc(nm)}</span></span>`}
   const r=LOGOS[id];if(!r||!r.f)return '';
   const ar=r.ar?Math.min(4.2,Math.max(.8,+r.ar)):1;
-  return `<span class="lgo lgi ${cls||''}${ar<1.6?' sq':''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}"><img src="${r.f}" alt="" loading="lazy" decoding="async" onload="lgTone(this)" onerror="this.parentNode.remove()"><span class="sr">${esc(nm)}</span></span>`}
+  return `<span class="lgo lgi ${cls||''}${ar<1.6?' sq':''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}"><img src="${r.f}" alt="" loading="lazy" decoding="async" onload="lgTone(this)" onerror="lgErr(this)"><span class="sr">${esc(nm)}</span></span>`}
 /* A logo drawn in white or very light colors on a transparent background vanishes on a white tile: those get a dark
    tile instead. Checked once per logo file in the browser (same-site images, so the pixels can be read). */
 const LGTONE={};
@@ -4114,10 +6288,14 @@ function lgTone(img){const k=img.getAttribute('src'),t=img.closest('.lgo');if(!t
       // light marks on a see-through background: too few dark pixels to read on white
       LGTONE[k]=op>0&&op<W*H*.95&&dark/op<.15}catch(e){LGTONE[k]=false}}
   t.classList.toggle('lgdk',!!LGTONE[k])}
+/* a logo image that fails to load (a dropped connection) gets one more try a moment later before it's taken off */
+function lgErr(img){if(!img.dataset.r){img.dataset.r='1';const u=img.getAttribute('src').split('?')[0];setTimeout(()=>{img.src=u+'?r='+Date.now()},1500);return}
+  const t=img.closest('.lgo');if(t)t.remove()}
 /* logo if there is one, otherwise the name */
 const who=(name,cls)=>logoImg(name,cls||'lgm')||`<span class="car ${typeof carCls==='function'?carCls(name):''}">${esc(name)}</span>`;
 const whoList=(s,cls,max)=>{const L=[...new Set(String(s||'').split(/\s*(?:·|,)\s*/).filter(c=>c&&c!=='Industry'))];return L.slice(0,max||9).map(c=>who(c,cls)).join('')};
-fetch('data/logos.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Object.keys(j).length){LOGOS=j;LOGO_NAMES=null;if(typeof renderAll==='function')renderAll()}}).catch(()=>{});
+(function lgLoad(n){fetch('data/logos.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(r.status)).then(j=>{if(j&&Object.keys(j).length){LOGOS=j;LOGO_NAMES=null;if(typeof renderAll==='function')renderAll()}})
+  .catch(()=>{if(n<3)setTimeout(()=>lgLoad(n+1),2000*(n+1))})})(0);
 
 /* ===== Coop's rig: GSAP drives his idle life (breathing, blinks, glances, the pigeon head-bob), a beak that moves with
    the words he's saying, a nod on the figures he stresses, and a pose for each scene. Falls back to the CSS loops if GSAP
@@ -4645,6 +6823,11 @@ function thrIndex(){THR_IDX={};Object.entries(THREADS).forEach(([k,t])=>(t.ids||
 const thrOf=n=>{const x=n&&(THR_IDX[n.id]||(n.thread&&THREADS[n.thread]?{k:n.thread,i:(THREADS[n.thread].ids||[]).indexOf(n.id)}:null));return x&&THREADS[x.k]?{k:x.k,t:THREADS[x.k],i:x.i}:null};
 const thrStories=k=>((THREADS[k]||{}).ids||[]).map(id=>NEWS.find(n=>n.id===id)).filter(Boolean).sort((a,b)=>String(a.date).localeCompare(b.date));
 fetch('data/threads.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&typeof j==='object'){THR_RAW=j;THREADS=j;thrSplit();thrIndex();if(typeof renderAll==='function')renderAll()}}).catch(()=>{});
+/* stories the editor took off (data/drop.json, written by the pipeline's editor pass) leave the app too, built-in ones included */
+fetch('data/drop.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!Array.isArray(j))return;const ids=new Set(j.map(d=>typeof d==='string'?d:d&&d.id));
+  for(let i=NEWS.length-1;i>=0;i--)if(ids.has(NEWS[i].id))NEWS.splice(i,1);
+  if(THR_RAW){Object.values(THR_RAW).forEach(t=>{if(t.ids)t.ids=t.ids.filter(x=>!ids.has(x))});thrSplit();thrIndex()}
+  if(typeof renderAll==='function')renderAll()}).catch(()=>{});
 function storyChip(n){const x=thrOf(n);if(!x)return '';const S=thrStories(x.k);if(S.length<2&&!n.upd)return '';const k=S.findIndex(s=>s.id===n.id);
   return `<div class="stwrap"><a href="#" role="button" class="stchip" data-thread="${x.k}" title="See the whole storyline"><span class="stdot" aria-hidden="true"></span>${esc(x.t.n||'Storyline')}${k>0?` <span style="white-space:nowrap">· Update ${k+1}</span>`:S.length>1?' <span style="white-space:nowrap">· First report</span>':''}</a></div>`}
 function storyNew(n){return n.new?`<p class="snew"><b>What's new</b>${esc(n.new)}</p>`:''}
@@ -4680,7 +6863,7 @@ function openStory(id){const n=NEWS.find(x=>x.id===id);if(!n)return;
 function closeStory(silent,nav){const sh=$('storySheet');if(!sh||STORY_OPEN==null)return;const was=STORY_OPEN;STORY_OPEN=null;
   sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220);
   if(!silent&&history.state&&history.state.story){try{history.back()}catch(e){}}
-  const c=$('n-'+was);if(c&&!silent&&!nav){const r=c.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)c.scrollIntoView({block:'center'})}}
+  if(typeof newsEnsure==='function')newsEnsure(was);const c=$('n-'+was);if(c&&!silent&&!nav){const r=c.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)c.scrollIntoView({block:'center'})}}
 addEventListener('popstate',()=>{if(STORY_OPEN!=null){const keep=STORY_OPEN;STORY_OPEN=null;const sh=$('storySheet');if(sh){sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220)}}});
 document.addEventListener('click',e=>{if(e.target.closest('[data-ssclose]')){e.preventDefault();closeStory()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&STORY_OPEN!=null)closeStory()});
@@ -4712,15 +6895,25 @@ function thxScenes(k){const t=THREADS[k]||{},S=thrStories(k);if(S.length<2)retur
   return {pick,sc}}
 // what a milestone connects to elsewhere in the app: its rate clock date and the carrier document behind it
 function thxLinks(s){const out=[];const d=(typeof DATES!=='undefined'?DATES:[]).find(x=>(x.news||[]).includes(s.id));
-  if(d)out.push(`<button type="button" class="tlx" data-clock="${d.id}"><span class="lbl">Rate clock</span>${esc(fmtD(d.d,{month:'short',day:'numeric',year:'numeric'}))}</button>`);
+  if(d&&!/data-clock/.test(thxFig(s)))out.push(`<button type="button" class="tlx" data-clock="${d.id}"><span class="lbl">Rate clock</span>${esc(fmtD(d.d,{month:'short',day:'numeric',year:'numeric'}))}</button>`);
   const doc=typeof relDocs==='function'&&relDocs(s)[0];if(doc)out.push(`<button type="button" class="tlx" data-gdoc="${docDomId(doc)}"><span class="lbl">Document</span>${esc(doc.n.length>40?doc.n.slice(0,38)+'…':doc.n)}</button>`);
   return out.length?`<div class="tlxs">${out.join('')}</div>`:''}
+/* a picture for each step, from the app's own data: the rate change (carrier, %, date), the deal (buyer → target),
+   a dated change on the rate clock, or the headline's key figure */
+function thxFig(s){const D=(typeof DATES!=='undefined'?DATES:[]).find(x=>(x.news||[]).includes(s.id)),fx=D&&typeof rcxOf==='function'&&rcxOf(D);
+  const fd=d=>fmtD(d,{month:'short',day:'numeric',year:'numeric'});
+  if(fx&&fx.t==='gri'&&fx.pct)return `<button type="button" class="tlfig rate" data-clock="${D.id}" title="Open on the rate clock">${who(fx.car,'lgm')}<b>+${esc(String(fx.pct))}%</b><span>average increase<br>from ${esc(fd(D.d))}</span></button>`;
+  const dl=(typeof DEALS!=='undefined'?DEALS:[]).find(x=>x.story===s.id);
+  if(dl)return `<div class="tlfig deal">${who(dl.buyer,'lgm')}<i aria-hidden="true">→</i>${who(dl.target,'lgm')}<span>${esc([dl.value&&!/undisclosed/i.test(dl.value)?dl.value:'',dl.status].filter(Boolean).join(' · '))}</span></div>`;
+  if(D)return `<button type="button" class="tlfig clock" data-clock="${D.id}" title="Open on the rate clock"><span class="tlday"><small>${esc(fmtD(D.d,{month:'short'}))}</small><b>${new Date(D.d+'T12:00:00').getDate()}</b></span><span>${esc(D.w.length>70?D.w.slice(0,68)+'…':D.w)}</span></button>`;
+  const m=/(?:\b(over|more than|about|nearly|up to|almost)\s)?(\$\d[\d.,]*\s?(?:billion|million|B|M)\b|\b\d+(?:\.\d+)?%)/i.exec(s.title||'');
+  return m?`<div class="tlfig stat">${m[1]?`<span>${esc(m[1])}</span>`:''}<b>${esc(m[2])}</b></div>`:''}
 function thxVis(sc,pick){const N=pick.length+(sc.fut?1:0),pos=i=>N<2?50:4+i*(92/(N-1)),cur=Math.max(0,Math.min(sc.i,pick.length-1));
   const nodes=pick.map((p,i)=>`<button type="button" class="tln${(sc.k==='tl'&&i<sc.i)||sc.k==='now'?' done':''}${i===sc.i&&sc.k==='tl'?' on':''}" style="left:${pos(i).toFixed(1)}%" data-thxj="${i}" aria-label="${esc(fmtD(p.date))}"><i></i><span>${esc(myShort(p.date))}</span></button>`).join('')
     +(sc.fut?`<span class="tln fut" style="left:${pos(pick.length).toFixed(1)}%"><i></i><span>${esc(myShort(sc.fut.d))}</span></span>`:'');
   const t=THREADS[THX.k]||{};let card='';
   if(sc.k==='intro')card=`<div class="tlcard intro"><div class="lbl">Storyline · ${sc.S.length} stories · ${esc(fmtD(sc.S[0].date,{month:'short',year:'numeric'}))} to ${esc(fmtD(sc.S.at(-1).date,{month:'short',year:'numeric'}))}</div><b>${esc(t.n||'Storyline')}</b>${sc.cars.length?`<span class="lgset">${sc.cars.slice(0,6).map(c=>who(c,'lgx')).join('')}</span>`:''}</div>`;
-  else if(sc.k==='tl'){const s=sc.s;card=`<div class="tlcard"><div class="lbl">${esc(fmtD(s.date,{month:'long',day:'numeric',year:'numeric'}))}${sc.i>0?` · Update ${S_IDX(s)}`:' · First report'}</div><b>${esc(s.title)}</b>${(s.c||[]).filter(c=>c!=='Industry').length?`<span class="lgset">${(s.c||[]).filter(c=>c!=='Industry').slice(0,4).map(c=>who(c,'lgx')).join('')}</span>`:''}${thxLinks(s)}<button type="button" class="link" data-open="${s.id}">Read the story ›</button></div>`}
+  else if(sc.k==='tl'){const s=sc.s;card=`<div class="tlcard"><div class="lbl">${esc(fmtD(s.date,{month:'long',day:'numeric',year:'numeric'}))}${sc.i>0?` · Update ${S_IDX(s)}`:' · First report'}</div><b>${esc(s.title)}</b>${thxFig(s)}${!thxFig(s).includes('tlfig rate')&&!thxFig(s).includes('tlfig deal')&&(s.c||[]).filter(c=>c!=='Industry').length?`<span class="lgset">${(s.c||[]).filter(c=>c!=='Industry').slice(0,4).map(c=>who(c,'lgx')).join('')}</span>`:''}${thxLinks(s)}<button type="button" class="link" data-open="${s.id}">Read the story ›</button></div>`}
   else card=`<div class="tlcard now"><div class="lbl">Today</div><b>${esc(t.n||'Where it stands')}</b>${t.s?`<p class="tlnow">${esc(t.s)}</p>`:''}${sc.fut?`<p class="tlnext"><span class="lbl">Next on the calendar</span><button type="button" class="link" data-clock="${sc.fut.id}">${esc(fmtD(sc.fut.d,{month:'long',day:'numeric',year:'numeric'}))}: ${esc(sc.fut.w)}</button></p>`:''}</div>`;
   const fillTo=sc.k==='intro'?0:sc.k==='now'?pos(pick.length-1):pos(cur);
   return `<div class="xv thtl"><div class="tlrail"><span class="tlbase"></span><span class="tlfill" style="width:${fillTo.toFixed(1)}%"></span>${nodes}</div>${card}</div>`}
@@ -4804,6 +6997,8 @@ function setupViews(section,onChange){
   apply(cur);
 }
 
+/* while a finger or wheel is scrolling, looping decorations pause (html.scrolling), so every frame goes to the scroll */
+{let st;addEventListener('scroll',()=>{const h=document.documentElement;if(!h.classList.contains('scrolling'))h.classList.add('scrolling');clearTimeout(st);st=setTimeout(()=>h.classList.remove('scrolling'),180)},{passive:true})}
 /* ================= navigation ================= */
 /* The bottom bar always starts a section fresh: at the top, on its first view, filters cleared, folders closed, any
    open story or pop-up closed. Tapping the section you're already in does the same, like any phone app. Links inside
@@ -4814,7 +7009,7 @@ function navTap(t){
   try{if(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)closeStory(true,true)}catch(e){}
   try{window.coopClose&&coopClose();typeof rxClose==='function'&&rxClose();typeof rcxClose==='function'&&rcxClose();typeof xClose==='function'&&xClose();typeof thxClose==='function'&&thxClose()}catch(e){}
   document.body.classList.remove('msheet');
-  if(t==='mna'&&typeof WM!=='undefined'){MS.sel=null;WM.mode='us';WM.lastSel=null;if(WM.vb)WM.vb=wmUS()}
+  if(t==='mna'&&typeof WM!=='undefined'){MS.sel=null;WM.mode='us';WM.lastSel=null;WM.spider=null;WM.cl=null;if(WM.vb)WM.vb=wmUS()}
   const same=CUR_T===t;delete TABMEM[t];if(CUR_T&&!same)delete TABMEM[CUR_T];showTab(t);if(CUR_T)delete TABMEM[CUR_T];
   if(VIEWS[t]&&setView[t])setView[t](VIEWS[t][0][0]);
   resetTab(t);if(t==='clock'&&typeof rcxClose==='function')document.querySelectorAll('#clockList details[open]').forEach(d=>d.open=false);
@@ -4834,7 +7029,7 @@ function goEarnings(c){docCar='All';showTab('docs');setView.docs('library');rend
 function goStory(id){
   if(!filtered().some(n=>n.id===id)){resetFilters()}
   goTo('news','list');
-  const el=$('n-'+id);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),40);
+  newsEnsure(id);const el=$('n-'+id);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),40);
 }
 function goClock(cid){goTo('clock','list');const el=$(cid);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'center'}),40)}}
 
@@ -5001,12 +7196,23 @@ function chgTable(n){const ch=(n.changes||[]).filter(c=>c&&typeof c==='object'&&
   return `<div class="chg"><div class="chg-h"><b>What changed</b>${a.verdicts?`<span>${esc(String(a.verdicts).split(',')[0].replace(/\s*\(.*$/,''))}</span>`:''}</div>
     <table><thead><tr><th>Item</th><th>Before</th><th>After</th><th>Effect</th></tr></thead><tbody>${ch.map(c=>`<tr><td><b>${esc(c.what||'')}</b>${c.who?`<small>${esc(c.who)}</small>`:''}</td><td class="chg-b${c.before?'':' none'}">${c.before?esc(c.before):'<i>new</i>'}</td><td class="chg-a">${esc(c.after)}</td><td>${c.impact?esc(c.impact):''}${c.effective?`<small>from ${fmtD(c.effective,{month:'short',day:'numeric',year:'numeric'})}</small>`:''}</td></tr>`).join('')}</tbody></table>
     <p class="chg-n">Checked line by line against ${cmp.length?'the previous version'+(cmp.length>1?'s':''):'the carrier’s own text'}; every before and after is quoted from the documents.${a.dropped?` ${a.dropped} claim${a.dropped>1?'s':''} that couldn’t be proven ${a.dropped>1?'were':'was'} left out.`:''}${(n.unknowns||[]).length?` Not confirmed: ${esc(n.unknowns.join('; '))}.`:''}</p></div>`}
+const NFEED={list:[],shown:0,page:20,io:null};
+function newsMore(k){const el=$('nList');if(!el)return;el.querySelector('.nmore')?.remove();
+  const next=NFEED.list.slice(NFEED.shown,NFEED.shown+k);if(!next.length)return;
+  el.insertAdjacentHTML('beforeend',next.map(n=>card(n)).join(''));NFEED.shown+=next.length;
+  if(typeof rxLoad==='function')rxLoad(next.map(n=>n.id));
+  if(NFEED.shown<NFEED.list.length){el.insertAdjacentHTML('beforeend',`<button type="button" class="nmore link" data-nmore>More stories (${NFEED.list.length-NFEED.shown})</button>`);
+    if('IntersectionObserver' in window){NFEED.io=NFEED.io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)newsMore(NFEED.page)}),{rootMargin:'900px 0px'});NFEED.io.observe(el.querySelector('.nmore'))}}}
+/* make sure a story's card is on the page before jumping to it */
+function newsEnsure(id){const i=NFEED.list.findIndex(n=>n.id===id);if(i>=NFEED.shown)newsMore(i-NFEED.shown+5)}
+document.addEventListener('click',e=>{if(e.target.closest('[data-nmore]')){e.preventDefault();newsMore(NFEED.page)}});
 function renderNews(){
   renderFilters();
   const L=filtered();
-  $('nList').innerHTML=L.length?(F.th&&THREADS[F.th]?L.slice().reverse():L).map(n=>card(n)).join(''):none;
+  // the feed renders in pages of 20 as you scroll (a long list of illustrated cards is what made scrolling heavy)
+  NFEED.list=L.length?(F.th&&THREADS[F.th]?L.slice().reverse():L):[];NFEED.shown=0;
+  $('nList').innerHTML=L.length?'':none;if(L.length)newsMore(NFEED.page);
   if(typeof renderStorylines==='function')renderStorylines();
-  rxLoad(L.slice(0,60).map(n=>n.id));
   const byDay={};L.forEach(n=>(byDay[n.date]=byDay[n.date]||[]).push(n));
   $('nTl').innerHTML=Object.keys(byDay).length?Object.keys(byDay).sort().reverse().map(d=>`<li><div class="day">${fmtD(d,{weekday:'short'})}<b>${new Date(d+'T12:00:00').getDate()}</b>${fmtD(d,{month:'short',year:'2-digit'})}</div><div class="items">${byDay[d].map(n=>`<button class="it" data-open="${n.id}"><h3>${esc(n.title)}</h3><span class="meta"><span>${esc(n.c.filter(c=>c!=='Industry').join(', ')||'Industry')}</span><span>${esc(n.cat)}</span>${kindTag(n)}${statusTag0(n)}</span></button>`).join('')}</div></li>`).join(''):`<li style="display:block">${none}</li>`;
 }
@@ -5966,71 +8172,163 @@ function wmProj(lon,lat){const l=lon*Math.PI/180,p=lat*Math.PI/180,p2=p*p,p4=p2*
 const wmKey=h=>{h=String(h||'');if(/Richmond, Canada/.test(h))return 'Richmond, Canada';if(/Cambridge, UK/.test(h))return 'Cambridge, UK';return h.split(',')[0].trim()};
 function wmLoc(p,d=0){if(!p)return null;const g=HQGEO_ID[p.id]||HQGEO[wmKey(p.hq)]||(Array.isArray(p.geo)?p.geo:null);if(g)return {g,via:null,approx:!!g[2]};
   if(d<3&&p.parent){const r=wmLoc(PL[p.parent],d+1);if(r)return Object.assign({},r,{via:r.via||PL[p.parent]})}return null}
-function wmBuild(){if(WM.built)return;WM.built=true;const groups={};
-  PLAYERS.forEach(p=>{const L=wmLoc(p);if(!L){WM.miss.push(p.id);return}const [x,y]=wmProj(L.g[0],L.g[1]),k=x.toFixed(1)+','+y.toFixed(1);(groups[k]=groups[k]||[]).push(p.id);WM.pts[p.id]={x,y,via:L.via,approx:L.approx,city:L.via?(L.via.hq||''):(p.hq||'')}});
-  // companies sharing a city fan out in a small spiral so each one stays clickable
-  Object.values(groups).forEach(ids=>ids.forEach((id,i)=>{const a=i*2.4,r=i?Math.sqrt(i)*1:0;WM.pts[id].dx=Math.cos(a)*r;WM.pts[id].dy=Math.sin(a)*r}))}
+/* ---- Market map layout. Everything is laid out in screen pixels for the current zoom, so the map reads the same on a
+   phone and a desktop:
+   - nearby companies merge into one counted bubble (tap it to zoom into that area; companies in the same city fan out
+     around it with their names)
+   - shapes say what kind of company it is: circles for carriers and delivery networks, squares for 3PL, retail and cold
+     chain, diamonds for software, automation and investors; colour follows the realm
+   - a selected company shows its ownership family: the camera frames where most of the family is, members in the same
+     city fan out so each line and name is readable, and family members far away get a labelled marker at the map's edge */
+const WM_SHAPE={national:'o',global:'o',regional:'o',gig:'o','3pl':'s',retail:'s',cold:'s',software:'d',auto:'d',capital:'d'};
+const wmW=p=>(p.realm==='national'||p.realm==='global'?40:0)+Math.min(30,(p.ed||[]).length*2)+(PCAR[p.id]?20:0);   // importance
+function wmBuild(){if(WM.built)return;WM.built=true;
+  PLAYERS.forEach(p=>{const L=wmLoc(p);if(!L){WM.miss.push(p.id);return}const [x,y]=wmProj(L.g[0],L.g[1]);
+    WM.pts[p.id]={x,y,via:L.via,approx:L.approx,city:L.via?(L.via.hq||''):(p.hq||'')}})}
 function wmScale(){const s=$('wSvg');return s?s.getBoundingClientRect().width/WM.vb[2]:1}
-function wmXY(id){const p=WM.pts[id],k=3.2/Math.max(wmScale(),.0001);return [p.x+p.dx*k,p.y+p.dy*k]}
+function wmXY(id){const p=WM.pts[id];return [p.x,p.y]}
+// one shape, centred on x,y (map units), r in map units
+function wmMark(shape,x,y,r){if(shape==='s'){const a=r*.86;return `M${(x-a).toFixed(2)} ${(y-a).toFixed(2)}h${(2*a).toFixed(2)}v${(2*a).toFixed(2)}h${(-2*a).toFixed(2)}z`}
+  if(shape==='d'){const a=r*1.18;return `M${x.toFixed(2)} ${(y-a).toFixed(2)}L${(x+a).toFixed(2)} ${y.toFixed(2)}L${x.toFixed(2)} ${(y+a).toFixed(2)}L${(x-a).toFixed(2)} ${y.toFixed(2)}z`}
+  return `M${(x-r).toFixed(2)} ${y.toFixed(2)}a${r.toFixed(2)} ${r.toFixed(2)} 0 1 0 ${(2*r).toFixed(2)} 0a${r.toFixed(2)} ${r.toFixed(2)} 0 1 0 ${(-2*r).toFixed(2)} 0z`}
+// fan ids that sit within `near` px of each other into a ring around their centre (screen px → map units via s)
+function wmFan(ids,pos,s,near,keep){const left=new Set(ids),out={},ang={};
+  ids.slice().sort((a,b)=>(b===keep)-(a===keep)||wmW(PL[b])-wmW(PL[a])).forEach(id=>{if(!left.has(id))return;left.delete(id);
+    const g=[id,...[...left].filter(o=>Math.hypot(pos[o][0]-pos[id][0],pos[o][1]-pos[id][1])*s<near)];g.forEach(o=>left.delete(o));
+    if(g.length===1){out[id]=pos[id];return}
+    const cx=pos[g[0]][0],cy=pos[g[0]][1],centre=g[0]===keep||g.length<=8,ring=centre?g.slice(1):g;
+    if(centre)out[g[0]]=[cx,cy];
+    // up to 8 on one ring; more go on a second, wider ring
+    const r1=ring.slice(0,8),r2=ring.slice(8),place=(L,R,off)=>L.forEach((o,i)=>{const a=-Math.PI/2+off+i*2*Math.PI/L.length;ang[o]=a;out[o]=[cx+Math.cos(a)*R/s,cy+Math.sin(a)*R/s]});
+    place(r1,r1.length<=4?34:42,0);if(r2.length)place(r2,74,Math.PI/r2.length);
+    out._c=(out._c||[]).concat([[cx,cy,ring.map(o=>out[o])]])});
+  out._a=ang;return out}
+// greedy clustering of the visible, unselected companies (heaviest first, so big carriers stay at their real HQ)
+function wmCluster(ids,s,R){const C=[];ids.slice().sort((a,b)=>wmW(PL[b])-wmW(PL[a])).forEach(id=>{const p=WM.pts[id];
+  const c=C.find(c=>Math.hypot(c.x-p.x,c.y-p.y)*s<R);if(c)c.ids.push(id);else C.push({x:p.x,y:p.y,ids:[id]})});return C}
+// labels without overlaps: try right, left, above, below; skip if all collide (screen-space boxes)
+function wmLabels(items,s,vb,maxN){const boxes=[],out=[];
+  for(const it of items){if(out.length>=maxN)break;const fs=it.fs,w=it.t.length*fs*.56+4,h=fs+3,px=(it.x-vb[0])*s,py=(it.y-vb[1])*s,g=it.gap;
+    let cand=[[px+g,py-h/2,'start'],[px-g-w,py-h/2,'end'],[px-w/2,py-g-h,'middle'],[px-w/2,py+g,'middle']];
+    if(it.a!=null){const c=Math.cos(it.a),sn=Math.sin(it.a),pi=Math.abs(sn)>.85?(sn<0?2:3):(c>=0?0:1);cand=[cand[pi],...cand.filter((_,k)=>k!==pi)]}
+    const ok=cand.find(([x,y])=>x>2&&y>2&&x+w<vb[2]*s-2&&y+h<vb[3]*s-2&&!boxes.some(b=>x<b[0]+b[2]&&x+w>b[0]&&y<b[1]+b[3]&&y+h>b[1]));
+    if(!ok)continue;boxes.push([ok[0],ok[1],w,h]);
+    const tx=ok[2]==='start'?ok[0]:ok[2]==='end'?ok[0]+w:ok[0]+w/2;out.push(Object.assign({},it,{lx:vb[0]+tx/s,ly:vb[1]+(ok[1]+h-3)/s,anchor:ok[2]}))}
+  return out}
 function renderWorld(){
   const st=$('wStage');if(!st||st.offsetParent===null)return;wmBuild();if(!WM.vb){WM.vb=wmUS();wmClamp()}
-  if(!$('wSvg')){st.innerHTML=`<svg id="wSvg" class="wsvg" viewBox="${WM.vb.join(' ')}" role="img" aria-label="World map of company headquarters and their connections"><rect class="wsea" x="-500" y="-500" width="2000" height="1500"/><path class="wland" d="${WLAND}"/><path class="wbord" d="${WBORD}"/>${typeof WSTATES!=='undefined'?`<path class="wstate" d="${WSTATES}"/>`:''}<defs><marker id="wArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#DCE3EA"/></marker><marker id="wArrF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#D9A55B"/></marker><marker id="wArrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#5EC2DB"/></marker></defs><g id="wEdges"></g><g id="wDots"></g><g id="wLbl"></g></svg>
+  if(!$('wSvg')){st.innerHTML=`<svg id="wSvg" class="wsvg" viewBox="${WM.vb.join(' ')}" role="img" aria-label="Map of company headquarters and their ownership links"><rect class="wsea" x="-500" y="-500" width="2000" height="1500"/><path class="wland" d="${WLAND}"/><path class="wbord" d="${WBORD}"/>${typeof WSTATES!=='undefined'?`<path class="wstate" d="${WSTATES}"/>`:''}<defs><marker id="wArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#DCE3EA"/></marker><marker id="wArrF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#D9A55B"/></marker><marker id="wArrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#5EC2DB"/></marker></defs><g id="wFan"></g><g id="wEdges"></g><g id="wDots"></g><g id="wLbl"></g><g id="wOff"></g></svg>
      <div class="wtip" id="wTip" hidden></div><div class="wcard" id="wCard" hidden></div>
      <div class="wctl"><button data-wz="us">U.S.</button><button data-wz="world">World</button><span class="wsep"></span><button data-wz="in" aria-label="Zoom in">+</button><button data-wz="out" aria-label="Zoom out">−</button></div>`;
-    wmEvents();$('wFilt').innerHTML=REALMS.map(([k,l])=>`<button class="wf r-${k}" data-wf="${k}" aria-pressed="true"><i></i>${esc(l)}</button>`).join('')+`<span class="lbl wmiss">${PLAYERS.length-WM.miss.length} of ${PLAYERS.length} companies placed by headquarters</span>`}
+    wmEvents();$('wFilt').innerHTML=REALMS.map(([k,l])=>`<button class="wf r-${k} sh-${WM_SHAPE[k]}" data-wf="${k}" aria-pressed="true"><i></i>${esc(l)}</button>`).join('')+`<span class="lbl wmiss">${PLAYERS.length-WM.miss.length} of ${PLAYERS.length} companies placed by headquarters</span>`}
   const svg=$('wSvg');svg.setAttribute('viewBox',WM.vb.join(' '));
-  // with nothing selected the map settles back on the U.S. (unless the reader picked World): right after a company is
-  // cleared, and a few seconds after zooming around with nothing picked
-  if(!MS.sel&&WM.mode!=='world'){if(WM.lastSel)wmHome(500);else if(!WM.anim0)wmHome(8000)}else{clearTimeout(WM.home);WM.homeAt=0}
+  // with nothing selected the map settles back on the U.S. (unless the reader picked World)
+  if(!MS.sel&&WM.mode!=='world'&&!WM.spider){if(WM.lastSel)wmHome(500);else if(!WM.anim0)wmHome(8000)}else{clearTimeout(WM.home);WM.homeAt=0}
   WM.lastSel=MS.sel;
-  const s=wmScale(),u=1/s,sel=MS.sel,on=id=>PL[id]&&!WM.off.has(PL[id].realm)&&WM.pts[id];
-  const fam=sel?wmFamily(sel):[],conn=new Set();fam.forEach(e=>{conn.add(e.a);conn.add(e.b)});conn.delete(sel);
-  $('wEdges').innerHTML=fam.map((e,i)=>{if(!on(e.a)||!on(e.b)||e.a===e.b)return'';const hit=true;
-    const [x1,y1]=wmXY(e.a),[x2,y2]=wmXY(e.b),dx=x2-x1,dy=y2-y1,d=Math.hypot(dx,dy);if(d<.01)return'';const bend=Math.min(.35,.12+20/(d+40));
-    const cx=(x1+x2)/2-dy*bend,cy=(y1+y2)/2+dx*bend;const rr=((e.b===sel?6:PL[e.b]&&(PL[e.b].realm==='national'||PL[e.b].realm==='global')?4.2:3.2)+2.2)*u,ex=x2-cx,ey=y2-cy,el=Math.hypot(ex,ey)||1,tx=x2-ex/el*rr,ty=y2-ey/el*rr,mg=e.k==='merged',fm=e.k==='former',pd=e.k==='pending',kc=fm?' fm':pd?' pd':mg?' mg':'',da=fm?`;stroke-dasharray:${1.2*u} ${3.2*u}`:pd?`;stroke-dasharray:${6*u} ${3*u}`:mg?`;stroke-dasharray:${4*u} ${3*u}`:'';
-    return `<path class="we own${kc}" d="M${x1.toFixed(2)} ${y1.toFixed(2)}Q${cx.toFixed(2)} ${cy.toFixed(2)} ${tx.toFixed(2)} ${ty.toFixed(2)}" marker-end="url(#wArr${fm?'F':pd?'P':''})" style="stroke-width:${(fm?1.4:1.6)*u}px${da}"><title>${esc(e.t)}</title></path>`}).join('');
-  $('wDots').innerHTML=PLAYERS.map(p=>{if(!on(p.id))return'';const [x,y]=wmXY(p.id),big=p.realm==='national'||p.realm==='global',r=(sel===p.id?6:big?4.2:3.2)*u,dim=sel&&sel!==p.id&&!conn.has(p.id);
-    return `<circle class="wd r-${p.realm}${sel===p.id?' sel':''}${dim?' dim':''}${conn.has(p.id)?' con':''}" data-wpl="${p.id}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${r.toFixed(2)}" style="stroke-width:${(sel===p.id?2:1)*u}px"/>`}).join('');
-  // labels: the selection and its connections, plus national carriers once zoomed in
-  const zoomed=WM.vb[2]<WGEO.W/2.2,lab=PLAYERS.filter(p=>on(p.id)&&(p.id===sel||conn.has(p.id)||(zoomed&&!sel&&(p.realm==='national'))));
-  // labels that would land on top of each other stack downward
-  const used=[];$('wLbl').innerHTML=lab.sort((a,b)=>(b.id===sel)-(a.id===sel)).map(p=>{const [x,y0]=wmXY(p.id);let y=y0-5*u;while(used.some(([ux,uy])=>Math.abs(ux-x)<60*u&&Math.abs(uy-y)<11*u))y+=12*u;used.push([x,y]);return `<text class="wl${p.id===sel?' sel':''}" x="${(x+6*u).toFixed(2)}" y="${y.toFixed(2)}" style="font-size:${(p.id===sel?12:10)*u}px;stroke-width:${3*u}px">${esc(p.n)}</text>`}).join('');
-  const kh=$('wKeyHint');if(kh)kh.innerHTML=sel&&PL[sel]?(conn.size?`Showing <b>${esc(PL[sel].n)}</b>’s ownership links, past and present · ${conn.size}`:`<b>${esc(PL[sel].n)}</b> has no ownership links on file`):'Tap any dot to draw its ownership lines';
-  const c=$('wCard');if(sel&&PL[sel]){const p=PL[sel],pt=WM.pts[sel],cs=[...conn].filter(id=>PL[id]).slice(0,10);
+  const s=wmScale(),u=1/s,vb=WM.vb,sel=MS.sel&&WM.pts[MS.sel]?MS.sel:null,small=innerWidth<700;
+  const on=id=>PL[id]&&!WM.off.has(PL[id].realm)&&WM.pts[id];
+  const fam=sel?wmFamily(sel).filter(e=>on(e.a)&&on(e.b)&&e.a!==e.b):[],F=new Set(sel?[sel]:[]);fam.forEach(e=>{F.add(e.a);F.add(e.b)});
+  // where each company is drawn: family members (or an opened city) fan out; everyone else sits at their HQ
+  const base={};Object.keys(WM.pts).forEach(id=>{base[id]=[WM.pts[id].x,WM.pts[id].y]});
+  let pos=Object.assign({},base),rings=[];
+  let ANG={};if(sel){const f=wmFan([...F],base,s,18,sel);rings=f._c||[];ANG=f._a||{};delete f._c;delete f._a;Object.assign(pos,f)}
+  else if(WM.spider){const sp=WM.spider.filter(on),f=wmFan(sp,base,s,40,null);rings=f._c||[];ANG=f._a||{};delete f._c;delete f._a;Object.assign(pos,f)}
+  const fanned=new Set(sel?[...F]:WM.spider||[]);
+  // the rest cluster (frozen while the camera moves, so bubbles don't flicker mid-zoom)
+  const rest=PLAYERS.map(p=>p.id).filter(id=>on(id)&&!fanned.has(id));
+  if(!WM.anim0||!WM.cl)WM.cl=wmCluster(rest,s,small?34:28);
+  const CL=WM.cl.map(c=>({x:base[c.ids[0]][0],y:base[c.ids[0]][1],ids:c.ids.filter(id=>on(id)&&!fanned.has(id))})).filter(c=>c.ids.length);
+  const dim=!!sel||!!WM.spider;
+  // spokes from a fan's centre to each member, so a fanned group still points at its real city
+  $('wFan').innerHTML=rings.map(([cx,cy,pts])=>`<circle class="wring" cx="${cx.toFixed(2)}" cy="${cy.toFixed(2)}" r="${(3*u).toFixed(2)}"/>`+pts.map(([x,y])=>`<path class="wspoke" d="M${cx.toFixed(2)} ${cy.toFixed(2)}L${x.toFixed(2)} ${y.toFixed(2)}" style="stroke-width:${u.toFixed(3)}px"/>`).join('')).join('');
+  $('wEdges').innerHTML=fam.map(e=>{const [x1,y1]=pos[e.a],[x2,y2]=pos[e.b],dx=x2-x1,dy=y2-y1,d=Math.hypot(dx,dy);if(d<.01)return'';const bend=Math.min(.28,.08+14/(d*s+40));
+    const cx=(x1+x2)/2-dy*bend,cy=(y1+y2)/2+dx*bend,rr=(e.b===sel?8:6.5)*u,ex=x2-cx,ey=y2-cy,el=Math.hypot(ex,ey)||1,tx=x2-ex/el*rr,ty=y2-ey/el*rr,fm=e.k==='former',pd=e.k==='pending',mg=e.k==='merged',kc=fm?' fm':pd?' pd':mg?' mg':'',da=fm?`;stroke-dasharray:${1.2*u} ${3.2*u}`:pd?`;stroke-dasharray:${6*u} ${3*u}`:mg?`;stroke-dasharray:${4*u} ${3*u}`:'';
+    return `<path class="we own${kc}" d="M${x1.toFixed(2)} ${y1.toFixed(2)}Q${cx.toFixed(2)} ${cy.toFixed(2)} ${tx.toFixed(2)} ${ty.toFixed(2)}" marker-end="url(#wArr${fm?'F':pd?'P':''})" style="stroke-width:${(fm?1.4:1.7)*u}px${da}"><title>${esc(e.t)}</title></path>`}).join('');
+  const rOf=p=>(p.id===sel?7.5:PCAR[p.id]||p.realm==='national'||p.realm==='global'?5.6:(p.ed||[]).length>5?4.6:3.8);
+  const dot=(p,x,y,cls)=>`<path class="wd r-${p.realm}${cls}" data-wpl="${p.id}" d="${wmMark(WM_SHAPE[p.realm]||'o',x,y,rOf(p)*u)}" style="stroke-width:${(p.id===sel?2.2:1.2)*u}px"/>`;
+  let dots='';
+  WM.clIdx=[];
+  CL.forEach(c=>{if(c.ids.length===1){const p=PL[c.ids[0]];dots+=dot(p,c.x,c.y,dim?' dim':'');return}
+    const n=c.ids.length,r=(8+Math.min(7,Math.sqrt(n)*1.6))*u,top=PL[c.ids[0]],i=WM.clIdx.push(c.ids)-1;
+    // the ring shows the mix of realms in the bubble
+    const by={};c.ids.forEach(id=>{const k=PL[id].realm;by[k]=(by[k]||0)+1});let a0=-Math.PI/2;
+    const segs=Object.entries(by).sort((a,b)=>b[1]-a[1]).map(([k,m])=>{const a1=a0+m/n*Math.PI*2,big=a1-a0>Math.PI?1:0,rr=r+1.4*u,p0=[c.x+Math.cos(a0)*rr,c.y+Math.sin(a0)*rr],p1=[c.x+Math.cos(a1-.0001)*rr,c.y+Math.sin(a1-.0001)*rr];a0=a1;
+      return `<path class="wseg r-${k}" d="M${p0[0].toFixed(2)} ${p0[1].toFixed(2)}A${rr.toFixed(2)} ${rr.toFixed(2)} 0 ${big} 1 ${p1[0].toFixed(2)} ${p1[1].toFixed(2)}" style="stroke-width:${(2.6*u).toFixed(3)}px"/>`}).join('');
+    dots+=`<g class="wcl${dim?' dim':''}" data-wcl="${i}" role="button" aria-label="${n} companies near ${esc(top.n)}"><circle cx="${c.x.toFixed(2)}" cy="${c.y.toFixed(2)}" r="${r.toFixed(2)}"/>${segs}<text x="${c.x.toFixed(2)}" y="${(c.y+3.6*u).toFixed(2)}" style="font-size:${10.5*u}px">${n}</text></g>`});
+  // the family / the opened city, on top
+  [...fanned].filter(on).sort((a,b)=>(a===sel)-(b===sel)).forEach(id=>{const [x,y]=pos[id];dots+=dot(PL[id],x,y,(id===sel?' sel':'')+(F.has(id)&&id!==sel?' con':''))});
+  $('wDots').innerHTML=dots;
+  // labels: the family (or the opened city) first, then single companies by importance; never overlapping
+  const zoomIn=vb[2]<wmUS()[2]*.55,L=[];
+  [...fanned].filter(on).sort((a,b)=>(b===sel)-(a===sel)||wmW(PL[b])-wmW(PL[a])).forEach(id=>L.push({id,t:PL[id].n,x:pos[id][0],y:pos[id][1],fs:id===sel?12.5:10.5,gap:(rOf(PL[id])+4),cls:id===sel?' sel':'',a:ANG[id]}));
+  if(!sel)CL.filter(c=>c.ids.length===1||wmW(PL[c.ids[0]])>=60).sort((a,b)=>wmW(PL[b.ids[0]])-wmW(PL[a.ids[0]])).forEach(c=>{const p=PL[c.ids[0]];
+    if(c.ids.length>1||zoomIn||wmW(p)>=40)L.push({id:p.id,t:c.ids.length>1?p.n:p.n,x:c.x,y:c.y,fs:10,gap:c.ids.length>1?(8+Math.min(7,Math.sqrt(c.ids.length)*1.6)+4):(rOf(p)+4),cls:dim?' dim':''})});
+  const LB=wmLabels(L,s,vb,sel?(small?14:40):WM.spider?(small?8:14):small?10:22);
+  $('wLbl').innerHTML=LB.map(l=>`<text class="wl${l.cls}" x="${l.lx.toFixed(2)}" y="${l.ly.toFixed(2)}" text-anchor="${l.anchor}" style="font-size:${l.fs*u}px;stroke-width:${3*u}px">${esc(l.t)}</text>`).join('');
+  // family members off screen: a small labelled marker on the edge, pointing the way
+  let off='';if(sel){const [sx,sy]=pos[sel],m=14*u,X0=vb[0]+m,Y0=vb[1]+m,X1=vb[0]+vb[2]-m-(innerWidth>=960?330*u:0),Y1=vb[1]+vb[3]-m,seenA=[];
+    [...F].filter(id=>id!==sel&&on(id)).forEach(id=>{const [x,y]=pos[id];if(x>=X0&&x<=X1&&y>=Y0&&y<=Y1)return;
+      const dx=x-sx,dy=y-sy,t=Math.min(dx>0?(X1-sx)/dx:dx<0?(X0-sx)/dx:Infinity,dy>0?(Y1-sy)/dy:dy<0?(Y0-sy)/dy:Infinity);if(!isFinite(t)||t<=0)return;
+      let ex=sx+dx*t,ey=sy+dy*t;const step=(ey>vb[1]+vb[3]/2?-14:14)*u;for(let n=0;n<12&&seenA.some(([a,b])=>Math.abs(a-ex)<70*u&&Math.abs(b-ey)<14*u);n++)ey+=step;seenA.push([ex,ey]);
+      const ang=Math.atan2(dy,dx),nm=PL[id].n.length>18?PL[id].n.slice(0,17)+'…':PL[id].n,w=(nm.length*5.6+20)*u,left=ex>vb[0]+vb[2]/2;
+      off+=`<g class="woff" data-wpl="${id}"><path d="M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang-.5)*7*u).toFixed(2)} ${(-Math.sin(ang-.5)*7*u).toFixed(2)}M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang+.5)*7*u).toFixed(2)} ${(-Math.sin(ang+.5)*7*u).toFixed(2)}" style="stroke-width:${1.6*u}px"/><text x="${(left?ex-10*u:ex+10*u).toFixed(2)}" y="${(ey+3.5*u).toFixed(2)}" text-anchor="${left?'end':'start'}" style="font-size:${10*u}px;stroke-width:${3*u}px">${esc(nm)}</text></g>`})}
+  $('wOff').innerHTML=off;
+  const wl=$('wList');if(wl){const ids=!sel&&WM.spider?WM.spider.filter(on).sort((a,b)=>wmW(PL[b])-wmW(PL[a])):[];wl.hidden=!ids.length;
+    wl.innerHTML=ids.length?`<span class="lbl">${ids.length} companies here${WM.pts[ids[0]]&&WM.pts[ids[0]].city?' · '+esc(String(WM.pts[ids[0]].city).replace(/, USA$/,'')):''}</span>${ids.map(id=>`<button type="button" class="wli r-${PL[id].realm}" data-wsel="${id}">${logoImg(id,'lgs')||'<i></i>'}${esc(PL[id].n)}</button>`).join('')}`:''}
+  const kh=$('wKeyHint');if(kh)kh.innerHTML=sel&&PL[sel]?(F.size>1?`Showing <b>${esc(PL[sel].n)}</b>’s ownership links, past and present · ${F.size-1}`:`<b>${esc(PL[sel].n)}</b> has no ownership links on file`):WM.spider?'Companies in this city · tap one, or tap the map to close':'Tap a bubble to zoom into an area, or a company to see its ownership links';
+  const c=$('wCard');if(sel&&PL[sel]){const p=PL[sel],pt=WM.pts[sel],cs=[...F].filter(id=>id!==sel&&PL[id]).sort((a,b)=>wmW(PL[b])-wmW(PL[a])).slice(0,10),conn=F.size-1;
     c.innerHTML=`<button class="wx" data-wsel="" aria-label="Clear">×</button><span class="wcr r-${p.realm}"><i></i>${esc(RL[p.realm]||'')}</span><b class="wcnm">${logoImg(p,'lgs')}${esc(p.n)}</b><span class="wcc">${pt?esc(pt.via?`At ${pt.via.n}’s headquarters, ${pt.city}`:pt.city+(pt.approx?' (approximate)':'')):'Headquarters not listed'}</span>
-      <span class="wcn">${conn.size?`${conn.size} compan${conn.size===1?'y':'ies'} linked by ownership, past or present`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}">${logoImg(id,'lgs')||'<i></i>'}${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
+      <span class="wcn">${conn?`${conn} compan${conn===1?'y':'ies'} linked by ownership, past or present`:'No ownership links on file'}</span><div class="wcl">${cs.map(id=>`<button data-wsel="${id}" class="r-${PL[id].realm}">${logoImg(id,'lgs')||'<i></i>'}${esc(PL[id].n)}</button>`).join('')}</div><button class="link" data-wdet>Full profile below ↓</button>`;c.hidden=false}else c.hidden=true;
 }
 function wmAtHome(){const u=wmUS();return WM.vb&&Math.abs(WM.vb[0]-u[0])<1&&Math.abs(WM.vb[2]-u[2])<1}
-function wmHome(ms){if(wmAtHome())return;const at=Date.now()+ms;if(WM.homeAt&&WM.homeAt>Date.now()&&WM.homeAt<=at)return;clearTimeout(WM.home);WM.homeAt=at;WM.home=setTimeout(()=>{WM.homeAt=0;if(!MS.sel&&WM.mode!=='world'&&!wmAtHome()&&$('wSvg')&&$('wSvg').isConnected)wmTween(wmUS())},ms)}
+function wmHome(ms){if(wmAtHome())return;const at=Date.now()+ms;if(WM.homeAt&&WM.homeAt>Date.now()&&WM.homeAt<=at)return;clearTimeout(WM.home);WM.homeAt=at;WM.home=setTimeout(()=>{WM.homeAt=0;if(!MS.sel&&!WM.spider&&WM.mode!=='world'&&!wmAtHome()&&$('wSvg')&&$('wSvg').isConnected)wmTween(wmUS())},ms)}
 function wmZoomTo(cx,cy,w){const h=w*WGEO.H/WGEO.W;wmTween([cx-w/2,cy-h/2,w,h])}
 // smooth camera moves
 function wmTween(to){const from=WM.vb.slice(),v=to.slice();const save=WM.vb;WM.vb=v;wmClamp();const tgt=WM.vb.slice();WM.vb=save;cancelAnimationFrame(WM.anim);
-  if(reduceMotion()){WM.vb=tgt;renderWorld();return}const t0=performance.now(),D=520;WM.anim0=true;
-  const step=t=>{const k=Math.min(1,(t-t0)/D),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;WM.vb=from.map((f,i)=>f+(tgt[i]-f)*e);if(k>=1)WM.anim0=false;renderWorld();if(k<1)WM.anim=requestAnimationFrame(step)};WM.anim=requestAnimationFrame(step)}
-// fit the camera to a company and its ownership family; stays on the U.S. when everyone is domestic
-function wmFit(id){wmBuild();const ids=[id,...new Set(wmFamily(id).flatMap(e=>[e.a,e.b]))].filter(x=>WM.pts[x]);if(!ids.length)return;
-  const xs=ids.map(x=>WM.pts[x].x),ys=ids.map(x=>WM.pts[x].y);let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
-  const R=WGEO.W/WGEO.H;let w=Math.max(240,(x1-x0)*1.3),h=Math.max(w/R,(y1-y0)*1.45);w=Math.max(w,h*R);
-  // on wide screens the info card covers the right third, so frame the family in the left two-thirds
-  const wide=innerWidth>=960,W2=wide?w*1.5:w,cx=(x0+x1)/2+(wide?W2*.17:0);wmTween([cx-W2/2,(y0+y1)/2-W2/R/2,W2,W2/R])}
-function wmClamp(){const v=WM.vb;v[2]=Math.min(WGEO.W,Math.max(40,v[2]));v[3]=v[2]*WGEO.H/WGEO.W;v[0]=Math.min(WGEO.W-v[2],Math.max(0,v[0]));v[1]=Math.min(WGEO.H-v[3],Math.max(0,v[1]))}
+  WM.cl=null;if(reduceMotion()){WM.vb=tgt;renderWorld();return}const t0=performance.now(),D=520;WM.anim0=true;
+  const step=t=>{const k=Math.min(1,(t-t0)/D),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;WM.vb=from.map((f,i)=>f+(tgt[i]-f)*e);if(k>=1){WM.anim0=false;WM.cl=null}renderWorld();if(k<1)WM.anim=requestAnimationFrame(step)};WM.anim=requestAnimationFrame(step)}
+// frame a box of map points, with a minimum size (a whole region, never a street) and room for the card on wide screens
+function wmFrame(xs,ys,minW){const R=WGEO.W/WGEO.H;let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  let w=Math.max(minW,(x1-x0)*1.35),h=Math.max(w/R,(y1-y0)*1.5);w=Math.max(w,h*R);
+  const wide=innerWidth>=960,W2=wide?w*1.45:w,cx=(x0+x1)/2+(wide?W2*.16:0);wmTween([cx-W2/2,(y0+y1)/2-W2/R/2,W2,W2/R])}
+// fit a company's ownership family: frame where most of the family is; a few far-flung members stay off screen,
+// marked at the edge with their line running toward them
+function wmFit(id){wmBuild();WM.spider=null;const ids=[...new Set([id,...wmFamily(id).flatMap(e=>[e.a,e.b])])].filter(x=>WM.pts[x]&&PL[x]&&!WM.off.has(PL[x].realm));if(!ids.length)return;
+  const P=ids.map(x=>WM.pts[x]),me=WM.pts[id],U=wmUS()[2],box=L=>{const xs=L.map(p=>p.x),ys=L.map(p=>p.y);return {xs,ys,w:Math.max(...xs)-Math.min(...xs),h:Math.max(...ys)-Math.min(...ys)}};
+  let use=P;const all=box(P);
+  if(P.length>2&&(all.w>U*.9||all.h>U*.45)){
+    // nearest-first from the selected company: grow the set while the frame stays region-sized
+    const near=P.slice().sort((a,b)=>Math.hypot(a.x-me.x,a.y-me.y)-Math.hypot(b.x-me.x,b.y-me.y));let k=1;
+    while(k<near.length){const b=box(near.slice(0,k+1));if(b.w>U*1.05||b.h>U*.5)break;k++}
+    use=near.slice(0,k)}   // the selected company always stays in view
+  const b=box(use);wmFrame(b.xs,b.ys,U*(innerWidth<700?.32:.24))}
+function wmClamp(){const v=WM.vb;v[2]=Math.min(WGEO.W,Math.max(24,v[2]));v[3]=v[2]*WGEO.H/WGEO.W;v[0]=Math.min(WGEO.W-v[2],Math.max(0,v[0]));v[1]=Math.min(WGEO.H-v[3],Math.max(0,v[1]))}
 function wmEvents(){const svg=$('wSvg'),st=$('wStage');
-  const toMap=(cx,cy)=>{const r=svg.getBoundingClientRect();return [WM.vb[0]+(cx-r.left)/r.width*WM.vb[2],WM.vb[1]+(cy-r.top)/r.height*WM.vb[3]]};
-  // no dragging or scroll-zoom: the page scrolls normally. Tap a company to frame its ownership family; tap a crowded spot to zoom in.
+  // no dragging or scroll-zoom: the page scrolls normally. Bubbles zoom into an area; a city's bubble fans its companies out.
   svg.addEventListener('pointermove',wmHover);svg.addEventListener('pointerleave',()=>{$('wTip').hidden=true});
-  svg.addEventListener('click',e=>{const t=e.target,d=t&&t.closest&&t.closest('[data-wpl]');
-    const [mx,my]=toMap(e.clientX,e.clientY),s=wmScale(),near=Object.keys(WM.pts).filter(id=>{if(!PL[id]||WM.off.has(PL[id].realm))return false;const [x,y]=wmXY(id);return Math.hypot(x-mx,y-my)*s<16}).length;
-    if(near>=4&&WM.vb[2]>90){wmZoomTo(mx,my,WM.vb[2]/2.8)}else if(d){selectPlayer(d.dataset.wpl)}else if(MS.sel){MS.sel=null;renderMap()}});
-  st.addEventListener('click',e=>{const z=e.target.closest('[data-wz]');if(z){const k=z.dataset.wz,v=WM.vb;
+  svg.addEventListener('click',e=>{const t=e.target,d=t&&t.closest&&t.closest('[data-wpl]'),g=t&&t.closest&&t.closest('[data-wcl]');$('wTip').hidden=true;
+    if(d){WM.spider=null;selectPlayer(d.dataset.wpl);return}
+    if(g){const ids=(WM.clIdx||[])[+g.dataset.wcl]||[];if(!ids.length)return;const xs=ids.map(id=>WM.pts[id].x),ys=ids.map(id=>WM.pts[id].y),s=wmScale(),
+        spread=Math.max(Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys))*s;
+      if(MS.sel){MS.sel=null;renderMap()}
+      // spread out on screen → zoom to them; all in one spot → fan them out right here
+      if(spread>26&&WM.vb[2]>30){WM.spider=null;wmFrame(xs,ys,Math.max(24,wmUS()[2]*.12))}else{WM.spider=ids;WM.cl=null;renderWorld()}return}
+    if(WM.spider){WM.spider=null;WM.cl=null;renderWorld();return}
+    if(MS.sel){MS.sel=null;renderMap()}});
+  st.addEventListener('click',e=>{const z=e.target.closest('[data-wz]');if(z){const k=z.dataset.wz,v=WM.vb;WM.spider=null;
       if(k==='in')wmZoomTo(v[0]+v[2]/2,v[1]+v[3]/2,v[2]/1.6);else if(k==='out')wmZoomTo(v[0]+v[2]/2,v[1]+v[3]/2,v[2]*1.6);
       else if(k==='world'){WM.mode='world';wmTween([0,0,WGEO.W,WGEO.H])}else if(k==='us'){WM.mode='us';wmTween(wmUS())}
       st.querySelectorAll('[data-wz="us"],[data-wz="world"]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.wz===(WM.mode||'us')));return}
     const s=e.target.closest('[data-wsel]');if(s){e.stopPropagation();const id=s.dataset.wsel;if(!id){MS.sel=null;renderMap()}else{MS.sel=null;selectPlayer(id)}return}
     if(e.target.closest('[data-wdet]')){const m=$('mSide');m&&m.scrollIntoView({behavior:'smooth',block:'start'})}});
-  $('wFilt').addEventListener('click',e=>{const b=e.target.closest('[data-wf]');if(!b)return;const k=b.dataset.wf;WM.off.has(k)?WM.off.delete(k):WM.off.add(k);b.setAttribute('aria-pressed',!WM.off.has(k));renderWorld()});
-  addEventListener('resize',()=>{clearTimeout(WM._r);WM._r=setTimeout(renderWorld,150)})}
-function wmHover(e){const t=e.target.closest&&e.target.closest('[data-wpl]'),tip=$('wTip');if(!t){tip.hidden=true;return}const p=PL[t.dataset.wpl],pt=WM.pts[p.id],r=$('wStage').getBoundingClientRect();
-  tip.innerHTML=`<b>${esc(p.n)}</b><span>${esc(RL[p.realm]||'')} · ${esc(pt.via?pt.via.n+' HQ':pt.city.replace(/, USA$/,''))}</span>`;tip.style.left=(e.clientX-r.left+12)+'px';tip.style.top=(e.clientY-r.top+12)+'px';tip.hidden=false}
+  const wl=$('wList');if(wl)wl.addEventListener('click',e=>{const b=e.target.closest('[data-wsel]');if(!b)return;WM.spider=null;MS.sel=null;selectPlayer(b.dataset.wsel)});
+  $('wFilt').addEventListener('click',e=>{const b=e.target.closest('[data-wf]');if(!b)return;const k=b.dataset.wf;WM.off.has(k)?WM.off.delete(k):WM.off.add(k);b.setAttribute('aria-pressed',!WM.off.has(k));WM.cl=null;renderWorld()});
+  addEventListener('resize',()=>{clearTimeout(WM._r);WM._r=setTimeout(()=>{WM.cl=null;renderWorld()},150)})}
+function wmHover(e){if(e.pointerType==='touch'){$('wTip').hidden=true;return}const tip=$('wTip'),r=$('wStage').getBoundingClientRect(),t=e.target.closest&&e.target.closest('[data-wpl]'),g=e.target.closest&&e.target.closest('[data-wcl]');
+  if(t){const p=PL[t.dataset.wpl],pt=WM.pts[p.id];tip.innerHTML=`<b>${esc(p.n)}</b><span>${esc(RL[p.realm]||'')} · ${esc(pt.via?pt.via.n+' HQ':pt.city.replace(/, USA$/,''))}</span>`}
+  else if(g){const ids=(WM.clIdx||[])[+g.dataset.wcl]||[];tip.innerHTML=`<b>${ids.length} companies</b><span>${esc(ids.slice(0,4).map(id=>PL[id].n).join(', '))}${ids.length>4?'…':''}</span>`}
+  else{tip.hidden=true;return}
+  tip.style.left=(e.clientX-r.left+12)+'px';tip.style.top=(e.clientY-r.top+12)+'px';tip.hidden=false}
 {const f=renderMap;renderMap=function(){f.apply(this,arguments);renderWorld();requestAnimationFrame(renderWorld)}}
 {const g=showTab;showTab=function(t){g.apply(this,arguments);if(t==='mna')setTimeout(renderWorld,60)}}
 
@@ -6039,7 +8337,7 @@ function renderNewPlayers(){const el=$('mNewP');if(el)el.hidden=true;navBadge();
   el.innerHTML=`<span class="lbl">New on the map</span>${L.map(p=>`<button class="pchip${S.has(p.id)?'':' isnew'}" data-pl="${p.id}" title="${esc(p.s||'')}">${logoImg(p,'lgs')||`<i class="rdot r-${p.realm}"></i>`}${esc(p.n)}</button>`).join('')}`;navBadge()}
 function renderMna(){renderNewPlayers();renderQon();renderDeals();if(curView.mna==='map')renderMap();if(curView.mna==='players')renderPlayers();watchReading()}
 {const f=renderNews;renderNews=function(){f.apply(this,arguments);watchReading()}}
-function selectPlayer(id){try{const S=seenNew();if(id&&!S.has(id)){S.add(id);store.set('pw-seen-new',JSON.stringify([...S].slice(-300)));navBadge()}}catch(e){}MS.sel=MS.sel===id?null:id;MS.edge=null;if(MS.sel&&typeof wmFit==='function'&&$('wSvg'))setTimeout(()=>wmFit(MS.sel),30);if(MS.sel&&MS.fresh.delete(id)){store.set('pw-fresh',JSON.stringify([...MS.fresh]));navBadge()}renderMap()}
+function selectPlayer(id){if(typeof WM!=='undefined')WM.spider=null;try{const S=seenNew();if(id&&!S.has(id)){S.add(id);store.set('pw-seen-new',JSON.stringify([...S].slice(-300)));navBadge()}}catch(e){}MS.sel=MS.sel===id?null:id;MS.edge=null;if(MS.sel&&typeof wmFit==='function'&&$('wSvg'))setTimeout(()=>wmFit(MS.sel),30);if(MS.sel&&innerWidth<960&&curView.mna==='map'&&$('wStage')){const st=$('wStage'),top=document.querySelector('.top'),h=top?top.getBoundingClientRect().bottom:0,r=st.getBoundingClientRect();if(r.top<h||r.bottom>innerHeight*.56)window.scrollTo({top:scrollY+r.top-h-8,behavior:reduceMotion()?'auto':'smooth'})}if(MS.sel&&MS.fresh.delete(id)){store.set('pw-fresh',JSON.stringify([...MS.fresh]));navBadge()}renderMap()}
 document.addEventListener('click',e=>{
   const pl=e.target.closest('[data-pl]');
   if(pl&&!e.target.closest('a')){e.preventDefault();e.stopPropagation();window.coopClose&&coopClose();
@@ -6071,7 +8369,7 @@ function renderBack(){let b=$('navBack');if(!b){b=document.createElement('button
   b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Back to <b>${esc(where)}</b></span>`;
   b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
 function goBack(){const p=NAVBACK.pop();if(!p)return;navRestoring=true;showTab(p.t);if(p.v&&setView[p.t])setView[p.t](p.v);navRestoring=false;renderBack();
-  if(p.el&&/^d-/.test(p.el)&&typeof openStory==='function'){const id=p.el.slice(2),c=$('n-'+id);if(c)c.scrollIntoView({block:'center'});setTimeout(()=>openStory(id),80);return}
+  if(p.el&&/^d-/.test(p.el)&&typeof openStory==='function'){const id=p.el.slice(2);newsEnsure(id);const c=$('n-'+id);if(c)c.scrollIntoView({block:'center'});setTimeout(()=>openStory(id),80);return}
   setTimeout(()=>{const el=p.el&&$(p.el);if(el)el.scrollIntoView({block:'center',behavior:'smooth'});else scrollTo({top:p.y,behavior:'smooth'})},60)}
 document.addEventListener('keydown',e=>{if(e.key==='Backspace'&&NAVBACK.length&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();goBack()}});
 
@@ -6532,7 +8830,8 @@ renderClocks();setInterval(renderClocks,10000);
   // one Coop voice at a time: no pop-up notes while one of his explainers is on screen or a story page is open
   const busy=()=>{const x=[...document.querySelectorAll('.xstage:not([hidden]) .xscene, .xstage .xscene')].some(e=>{const r=e.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.width>0});
     return x||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)||!!document.querySelector('.cdlv,.coopdrop,.ptour,.ptoffer')};
-  function say(t,ms,force){if(!force&&busy())return;bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span><button type="button" class="cmute" data-cmute aria-label="${quiet()?'Unmute':'Mute'} Coop’s notes">${quiet()?'Unmute':'Mute Coop'}</button>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
+  function wake(ms){el.classList.add('awake');clearTimeout(wake.t);wake.t=setTimeout(()=>el.classList.remove('awake'),ms||9000)}
+  function say(t,ms,force){if(!force&&busy())return;wake((ms||7000)+2000);bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span><button type="button" class="cmute" data-cmute aria-label="${quiet()?'Unmute':'Mute'} Coop’s notes">${quiet()?'Unmute':'Mute Coop'}</button>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
     bubT=setTimeout(()=>{el.classList.remove('talking')},Math.min(2400,t.length*40));setTimeout(()=>{if(bub.innerHTML.includes(t))bub.hidden=true},ms||7000)}
   function target(){const s=document.querySelector('[data-section]:not([hidden])');const i=s&&[...s.querySelectorAll('.sbar')].find(w=>{const i=w.querySelector('input');return i&&i.offsetParent!==null});if(!i)return hdrSlot();
     // once the search bar scrolls out of sight Coop moves to the corner, so he is always one tap away
@@ -6558,7 +8857,7 @@ renderClocks();setInterval(renderClocks,10000);
     if(w){w.appendChild(el);el.classList.remove('corner');el.classList.add('perch');el.classList.toggle('hdr',w.id==='hdrCoop')}else{document.body.appendChild(el);el.classList.remove('perch','hdr');el.classList.add('corner')}
     const r1=bird.getBoundingClientRect();
     el.classList.add('away');placing=true;
-    flight(r0,r1,()=>{el.classList.remove('away');el.classList.add('land');setTimeout(()=>el.classList.remove('land'),700);placing=false;setTimeout(()=>{if(menu.hidden)place(false)},120);
+    flight(r0,r1,()=>{el.classList.remove('away');el.classList.add('land');wake(6000);if(el._openAfter){el._openAfter=false;setTimeout(openMenu,60)}setTimeout(()=>el.classList.remove('land'),700);placing=false;setTimeout(()=>{if(menu.hidden)place(false)},120);
       if(first&&!store.get('pw-coop-met','')){store.set('pw-coop-met','1');setTimeout(()=>say('Coop. Tap me to search stories, companies and documents.',4000),250)}
       else if(first&&!quiet()&&!sessionStorage.getItem('pw-coop-hi')){try{sessionStorage.setItem('pw-coop-hi','1')}catch(e){}setTimeout(()=>say(greet(),7000),400)}
       else if(w&&!store.get('pw-coop-perch','')){store.set('pw-coop-perch','1');setTimeout(()=>say('I’ll sit here while you search...',3500),200)}});
@@ -6597,7 +8896,7 @@ renderClocks();setInterval(renderClocks,10000);
     if(innerWidth>=700||sq)setTimeout(()=>ask.focus({preventScroll:true}),40);
   }
   function closeMenu(){if(menu.hidden)return;menu.hidden=true;bird.setAttribute('aria-expanded','false');el.classList.remove('menuopen')}
-  bird.addEventListener('click',e=>{e.stopPropagation();if(placing)return;const now=Date.now();pokes=pokes.filter(x=>now-x<2500);pokes.push(now);
+  bird.addEventListener('click',e=>{e.stopPropagation();if(placing){el._openAfter=true;return}wake();const now=Date.now();pokes=pokes.filter(x=>now-x<2500);pokes.push(now);
     if(pokes.length>=5){pokes=[];closeMenu();say(pick(['Five taps. In this industry that’s a re-delivery fee.','Keep that up and I’m adding an additional handling charge.']),4000,true);return}
     menu.hidden?openMenu():closeMenu()});
   const setQuiet=q=>{store.set('pw-coop-quiet',q?'1':'');el.classList.toggle('muted',q);say(q?'Muted. I’ll only talk when you tap me.':'Notes are back on. Try to keep up.',3200,true)};
@@ -6680,19 +8979,23 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
   const KEY='pw-tour';
   const first=!store.get(KEY,'')&&!store.get('pw-coop-met','');
   const STEPS=[
-    {sel:'#coop .cbird',t:'Meet Coop',x:'Tap him any time to search stories, companies and documents, or jump to any section.'},
-    {tab:'today',v:'brief',sel:'#todayHero',t:'Today',x:'The 60-second brief: what changed, what’s next on the rate clock, and where it’s happening.'},
-    {tab:'news',v:'list',sel:'#vs-news',t:'News and storylines',x:'Every story links its sources. Storylines line up the chapters of a bigger story, and Coop can walk you through them.'},
+    {sel:'#coop .cbird',t:'Meet Coop',x:'Tap him to search stories, companies and documents, or jump anywhere. He also pops up with context now and then; you can mute him.'},
+    {tab:'today',v:'brief',sel:'#todayHero',t:'Today',x:'The 60-second brief: the day’s top stories on a map, what’s next on the rate clock, and the markets.'},
+    {tab:'news',v:'list',sel:['#nList .card','#vs-news'],t:'News',x:'Every story says what happened and what it means for shippers, with its sources. Tap one for the full story.'},
+    {tab:'news',v:'storylines',sel:['#nStory .stl','#vs-news'],t:'Storylines',x:'Ongoing subjects followed over months. A new development moves its storyline to the top, and Coop can walk you through the whole thing.'},
     {tab:'mna',v:'map',sel:'#wStage',t:'Market map',x:'Who owns whom in U.S. parcel. Tap a company for its family tree, its deals and its stories.'},
-    {tab:'clock',v:'list',sel:'#clockList',t:'Rate clock',x:'Every dated price change ahead. Many have a “Show me” that plays out what it does to a real box.'},
-    {tab:'fuel',v:'chart',sel:'#fuelNow',t:'Fuel',x:'This week’s fuel surcharges by carrier, with the diesel and jet fuel prices behind them.'},
-    {tab:'docs',v:'alerts',sel:'#pushPanel',t:'Alerts',x:'Turn on phone alerts. Big news arrives as it breaks, two at most at once, and never overnight.'}];
+    {tab:'mna',v:'players',sel:['#plList .plnew','#plList'],t:'New players',x:'Companies that show up in the news are researched and added here. New ones get a badge on the Market map tab.'},
+    {tab:'mna',v:'deals',sel:['#nDeals .card','#vs-mna'],t:'Deals',x:'Every acquisition, sale and spin-off, with what changes for parcel. Coop explains each one in a few pictures.'},
+    {tab:'clock',v:'list',sel:['#clockList>details','#clockList'],t:'Rate clock',x:'Every dated cost change ahead: rate increases, surcharges, fees. Many have a “Show me” that plays out what it does to a real box.'},
+    {tab:'fuel',v:'chart',sel:'#fuelNow',t:'Fuel',x:'This week’s fuel surcharges by carrier, next to the diesel and jet fuel prices behind them.'},
+    {tab:'docs',v:'library',sel:['#lib .dcarp','#lib'],t:'Docs',x:'Every carrier rate guide, service guide and notice. New and revised documents are flagged, and you can suggest one with “Drop it here.”'},
+    {tab:'docs',v:'alerts',sel:'#pushPanel',t:'Alerts',x:'Turn on phone alerts and pick your carriers. Big news arrives as it breaks, two at most at once, and never overnight.'}];
   let ov,spot,card,i=0,onKey,onResize;
   const RMo=()=>typeof reduceMotion==='function'&&reduceMotion();
   function offer(){
     if(document.querySelector('.ptour,.ptoffer'))return;
     const o=document.createElement('div');o.className='ptoffer';o.setAttribute('role','dialog');o.setAttribute('aria-label','Quick tour');
-    o.innerHTML=`<div class="pto-tx"><b>New here?</b><span>A 30-second look around.</span></div><div class="pto-b"><button type="button" class="pto-no">No thanks</button><button type="button" class="pto-go">Show me</button></div>`;
+    o.innerHTML=`<div class="pto-tx"><b>New here?</b><span>A one-minute look at what’s here.</span></div><div class="pto-b"><button type="button" class="pto-no">No thanks</button><button type="button" class="pto-go">Show me</button></div>`;
     document.body.appendChild(o);requestAnimationFrame(()=>o.classList.add('pton'));
     const gone=()=>{o.classList.remove('pton');setTimeout(()=>o.remove(),250)};
     o.querySelector('.pto-no').onclick=()=>{store.set(KEY,'skip');gone()};
@@ -6714,11 +9017,11 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
     ov.addEventListener('wheel',stop,{passive:false});ov.addEventListener('touchmove',stop,{passive:false});
     show(0);
   }
-  function target(){const s=STEPS[i];const el=document.querySelector(s.sel);return el&&el.getBoundingClientRect().width?el:null}
+  function target(){const s=STEPS[i];for(const q of [].concat(s.sel)){const el=document.querySelector(q);if(el&&el.getBoundingClientRect().width)return el}return null}
   function show(n){
     if(n>=STEPS.length)return end(true);if(n<0)return;i=n;const s=STEPS[i];
     if(s.tab){try{navTap(s.tab);if(s.v&&setView[s.tab])setView[s.tab](s.v)}catch(e){}}
-    card.innerHTML=`<div class="ptk">${i+1} of ${STEPS.length}</div><h3>${esc(s.t)}</h3><p>${esc(s.x)}</p>
+    card.innerHTML=`<div class="ptbar" aria-hidden="true"><i style="width:${Math.round((i+1)/STEPS.length*100)}%"></i></div><div class="ptk">${i+1} of ${STEPS.length}</div><h3>${esc(s.t)}</h3><p>${esc(s.x)}</p>
       <div class="ptb"><button type="button" data-pt="skip" class="ptskip">Skip tour</button><span>${i?'<button type="button" data-pt="back" class="ptback">Back</button>':''}<button type="button" data-pt="next" class="ptnext">${i===STEPS.length-1?'Done':'Next'}</button></span></div>`;
     ov.classList.remove('on');
     setTimeout(()=>{const el=target();if(el){const r=el.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight-90){if(r.height>innerHeight*.44)window.scrollBy({top:r.top-(innerWidth<700?72:140),behavior:'instant'});else el.scrollIntoView({block:'center',behavior:'instant'})}}
