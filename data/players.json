@@ -377,6 +377,40 @@
     46.948
    ],
    "enriched": "2026-10-13"
+  },
+  {
+   "id": "gobolt",
+   "n": "GoBolt",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "parent": "belposhta",
+   "hq": "Toronto, Canada",
+   "yr": "2017",
+   "s": "Toronto-based tech-enabled 3PL that combines e-commerce fulfillment, an electric-vehicle last-mile delivery fleet and returns processing for DTC brands in Canada and the U.S.",
+   "al": [
+    "Bolt Logistics",
+    "Bolt Technologies Inc.",
+    "GoBolt Parcel",
+    "Second Closet"
+   ],
+   "auto": true,
+   "seeded": true,
+   "sweep": true,
+   "site": "gobolt.com",
+   "geo": [
+    -79.383,
+    43.653
+   ],
+   "src": "https://www.prnewswire.com/news-releases/gobolt-expands-unique-supply-chain-network-to-the-us-introducing-a-sustainable-vertically-integrated-approach-to-merchants-301538144.html",
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/gobolt-expands-unique-supply-chain-network-to-the-us-introducing-a-sustainable-vertically-integrated-approach-to-merchants-301538144.html",
+    "https://www.freightwaves.com/news/canadas-gobolt-expands-electric-last-mile-network-to-us",
+    "https://www.gobolt.com/faq/"
+   ],
+   "enriched": "2026-10-13",
+   "pending": false,
+   "added": "2026-10-13"
   }
  ],
  "edges": [
@@ -694,6 +728,33 @@
    "t": "India Post and Blue Dart partner on nationwide parcel services",
    "url": "https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
    "story": "a5e5d0db945cf"
+  },
+  {
+   "a": "lso",
+   "b": "gobolt",
+   "k": "partner",
+   "y": null,
+   "t": "LSO listed in GoBolt's carrier network",
+   "url": "https://www.gobolt.com/faq/",
+   "story": null
+  },
+  {
+   "a": "cirro",
+   "b": "gobolt",
+   "k": "partner",
+   "y": null,
+   "t": "Cirro listed in GoBolt's carrier network",
+   "url": "https://www.gobolt.com/faq/",
+   "story": null
+  },
+  {
+   "a": "pitneybowes",
+   "b": "gobolt",
+   "k": "partner",
+   "y": null,
+   "t": "Pitney Bowes listed in GoBolt's carrier network",
+   "url": "https://www.gobolt.com/faq/",
+   "story": null
   }
  ],
  "moves": [
@@ -745,6 +806,19 @@
    "url2": "https://www.ccjdigital.com/business/article/15826430/fedex-completes-freight-spinoff",
    "t": "FedEx completed the spin-off of its less-than-truckload unit as FedEx Freight Holding Company, Inc., an independent public company trading as FDXF, and kept a 1",
    "role": null
+  },
+  {
+   "id": "gls",
+   "k": "sold",
+   "parent": "dclogistics",
+   "from": "glsgroup",
+   "pend": null,
+   "into": null,
+   "d": "2024-08-12",
+   "url": "https://ti-insight.com/gls-group-announces-strategic-sale-of-us-freight-division-to-dc-logistics/",
+   "url2": "https://www.ajbell.co.uk/news/articles/brief-gls-sells-us-freight-operations-ahead-ids-takeover",
+   "t": "GLS Group announced the sale of its US freight divisions, GLS US Freight Inc. and GLS US Business Solutions Inc., to DC Logistics LLC, with closing expected on ",
+   "role": null
   }
  ],
  "checks": {
@@ -753,6 +827,13 @@
   "usps": "2026-10-13",
   "amzship": "2026-10-13",
   "dhlexpress": "2026-10-13",
-  "dhlecom": "2026-10-13"
+  "dhlecom": "2026-10-13",
+  "canadapost": "2026-10-13",
+  "purolator": "2026-10-13",
+  "ontrac": "2026-10-13",
+  "gls": "2026-10-13",
+  "lso": "2026-10-13",
+  "speedee": "2026-10-13",
+  "gobolt": "2026-10-13"
  }
 }

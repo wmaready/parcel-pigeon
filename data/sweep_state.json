@@ -1,24 +1,49 @@
 {
  "day": "2026-10-13",
- "calls": 2,
+ "calls": 8,
  "seg": {
-  "0": "2026-10-13"
+  "0": "2026-10-13",
+  "1": "2026-10-13"
  },
  "queue": [
   {
-   "n": "TForce Logistics (TForce Final Mile)",
-   "what": "TFI International's final-mile unit, which delivers e-commerce, B2B and big-and-bulky parcels same-day and next-day through a network of U.S. and Canadian facilities and contracted delivery partners.",
-   "url": "https://www.tforcelogistics.com/",
+   "n": "Onfleet",
+   "what": "San Francisco-based last-mile delivery management software for route optimization, dispatch, driver apps and tracking, used with in-house fleets or third-party delivery partners.",
+   "url": "https://onfleet.com/home",
    "realm": "regional",
-   "seg": 0,
+   "seg": 1,
    "found": "2026-10-13"
   },
   {
-   "n": "GoBolt",
-   "what": "Regional last-mile carrier that e-commerce brands use for next-day residential delivery; one source groups it with OnTrac and LSO, and I did not confirm the size of its U.S. footprint.",
-   "url": "https://www.gobolt.com/blog/last-mile-carriers-guide/",
+   "n": "Bringg",
+   "what": "Delivery management platform that lets retailers and logistics providers run their own fleets or tap 250+ integrated carriers, including parcel and same-day, with branded tracking.",
+   "url": "https://console.cloud.google.com/marketplace/product/bringg-public/bringg-delivery-management-platform",
    "realm": "regional",
-   "seg": 0,
+   "seg": 1,
+   "found": "2026-10-13"
+  },
+  {
+   "n": "Nash",
+   "what": "API-based delivery orchestration platform that aggregates local and national same-day delivery providers, such as DoorDash Drive and Uber, behind one integration. It has raised $27.8M, led by Andreess",
+   "url": "https://www.nash.ai/blog/nash-raises-20m-series-a-to-make-local-delivery-fast-reliable-and-efficient-for-businesses",
+   "realm": "regional",
+   "seg": 1,
+   "found": "2026-10-13"
+  },
+  {
+   "n": "Burq",
+   "what": "Delivery API and dashboard that connects businesses to multiple on-demand and same-day delivery providers, with dispatch, tracking and routing.",
+   "url": "https://www.burqup.com/",
+   "realm": "regional",
+   "seg": 1,
+   "found": "2026-10-13"
+  },
+  {
+   "n": "Curri",
+   "what": "Los Angeles-based on-demand and scheduled last-mile courier platform with a nationwide 1099 driver fleet of cars, trucks and flatbeds. It serves construction and industrial suppliers.",
+   "url": "https://www.ycombinator.com/companies/curri",
+   "realm": "regional",
+   "seg": 1,
    "found": "2026-10-13"
   }
  ]
