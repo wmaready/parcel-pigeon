@@ -41,34 +41,36 @@
   "a9ecc86b6711f",
   "a30530b988200",
   "a945e2139bb15",
-  "a4c7bcc13e662"
+  "a4c7bcc13e662",
+  "abe2fa039ab25",
+  "a392500587e33"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "ae77827c0481e",
+  "w49b3786a59a5",
+  "w82629d496c23",
+  "aad7e6789b34e",
+  "wb612a77519f2",
+  "a1785bbd2ecbb",
+  "abf01a11b3d9e",
+  "w348418a9dc09",
   "a945e2139bb15",
   "wbf2ef019cc6e",
-  "a9b2dacf6f727",
+  "w1a58abf8b69d",
+  "wf225c9a3bf63",
+  "ac1d01500ab14",
   "afbf819454788",
+  "a9b2dacf6f727",
   "wa0dc8b706733",
   "a30530b988200",
-  "abf01a11b3d9e",
-  "wf225c9a3bf63",
-  "w49b3786a59a5",
-  "wb612a77519f2",
-  "w3d06a7fa766e",
-  "aad7e6789b34e",
-  "w348418a9dc09",
-  "ac1d01500ab14",
-  "w82629d496c23",
-  "af8ee5ed067c6",
   "w8a582ba4f6eb",
-  "w150132868eae",
-  "w1a58abf8b69d",
-  "a1785bbd2ecbb"
+  "w3d06a7fa766e",
+  "af8ee5ed067c6",
+  "ae77827c0481e",
+  "w150132868eae"
  ],
  "backfilled": true,
  "players": [
@@ -153,7 +155,9 @@
   "federal agents raid kansas city usps center arrest several e",
   "amazon generally delivers on columbus day while usps observe",
   "usps ups fedex publish 2026 holiday shipping deadlines",
-  "sick shows ai enabled parcel scanning system at cemat 2026"
+  "sick shows ai enabled parcel scanning system at cemat 2026",
+  "westborough zba to hear amazon drone pad appeal nov 2 town m",
+  "class action accuses google ups of sharing tracking data"
  ],
  "copy": {
   "a78db2954da94": {
@@ -231,6 +235,14 @@
   "a4c7bcc13e662": {
    "t": "SICK shows AI parcel scanning at CeMAT",
    "m": "SICK showed AI-enabled scanning and measurement gear for parcel sorting at CeMAT 2026; rates and service are…"
+  },
+  "abe2fa039ab25": {
+   "t": "Amazon drone pad faces Westborough appeal",
+   "m": "No rate or service change for shippers; the zoning appeal hearing is set for Nov. 2 and FAA site approvals…"
+  },
+  "a392500587e33": {
+   "t": "Class action accuses Google, UPS of data sharing",
+   "m": "No change to UPS rates or service; the proposed class action's claims are allegations and have not been…"
   }
  },
  "recent": [
@@ -624,6 +636,36 @@
      "url": "https://mhdsupplychain.com.au/2026/10/13/watch-sick-showcases-ai-enabled-parcel-scanning-technology-at-cemat-2026/"
     }
    ]
+  },
+  {
+   "id": "abe2fa039ab25",
+   "title": "Westborough ZBA to hear Amazon drone pad appeal Nov. 2; town meeting votes on bylaw",
+   "date": "2026-10-13",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://dronexl.co/2026/10/12/amazon-westborough-drone-appeal-zba-november-2-town-meeting-bylaw/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/12/amazon-westborough-drone-appeal-zba-november-2-town-meeting-bylaw/"
+    }
+   ]
+  },
+  {
+   "id": "a392500587e33",
+   "title": "Class action accuses Google, UPS of sharing tracking data",
+   "date": "2026-10-12",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.dailyjournal.com/article/395253-google-ups-sued-over-alleged-data-sharing-through-package-tracking-tool",
+   "srcs": [
+    {
+     "src": "Daily Journal",
+     "url": "https://www.dailyjournal.com/article/395253-google-ups-sued-over-alleged-data-sharing-through-package-tracking-tool"
+    }
+   ]
   }
  ],
  "queue": [
@@ -637,6 +679,34 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "story",
+   "key": "story:westborough zba to hear amazon drone pad appeal nov 2 town meeting votes on bylaw",
+   "id": "abe2fa039ab25",
+   "t": "Amazon drone pad faces Westborough appeal",
+   "m": "Update 13 · Drone delivery expansion: No rate or service change for shippers; the zoning appeal hearing is set for Nov. 2 and FAA site approvals…",
+   "big": false,
+   "at": "2026-10-13T00:38:59.691950-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=abe2fa039ab25"
+  },
+  {
+   "kind": "story",
+   "key": "story:class action accuses google ups of sharing tracking data",
+   "id": "a392500587e33",
+   "t": "Class action accuses Google, UPS of data sharing",
+   "m": "No change to UPS rates or service; the proposed class action's claims are allegations and have not been…",
+   "big": false,
+   "at": "2026-10-13T00:38:59.691995-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a392500587e33"
   }
  ],
  "fuelq": {},

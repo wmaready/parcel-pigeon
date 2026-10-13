@@ -199,17 +199,25 @@
  },
  "usps-leadership": {
   "n": "USPS leadership turnover",
-  "s": "A report says the Postmaster General has told associates he wants to resign, after Steiner succeeded DeJoy and Tulino.",
+  "s": "Steiner remains Postmaster General and addressed postal customer councils in an official USPS video in early October 2026.",
   "ids": [
    "h506",
    "h515",
-   "36"
+   "36",
+   "a935631934704"
   ],
   "first": "2025-03-24",
-  "last": "2026-09-16",
+  "last": "2026-10-07",
   "c": [
    "USPS"
-  ]
+  ],
+  "cx": {
+   "sig": "7d27a3c09ed4",
+   "beats": {
+    "h506": "Postmaster General Louis DeJoy announced his exit; Deputy PMG Doug Tulino took over as acting head until the Board names a successor.",
+    "h515": "The Board of Governors picked former Waste Management CEO David Steiner as the 76th Postmaster General, with a July 2025 start expected."
+   }
+  }
  },
  "usps-service-network": {
   "n": "USPS service standards and processing",
@@ -227,9 +235,9 @@
    "USPS"
   ],
   "cx": {
-   "sig": "a59373534973",
+   "sig": "b077508d623a",
    "beats": {},
-   "intro": "How USPS service standards and processing changes have affected mail speed, with shippers feeling the effects of each step."
+   "intro": "How USPS service standards and processing changes have unfolded, and what each step means for shippers and customers."
   }
  },
  "usps-finances": {
@@ -315,7 +323,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery expansion",
-  "s": "Retailers and operators are adding drone delivery sites in US metros, with regulatory and local steps continuing.",
+  "s": "Amazon's Westborough, Massachusetts drone pad faces a Nov. 2 Zoning Board of Appeals hearing and a Nov. 10 Planning Board date, while other towns and retailers add or review drone sites.",
   "ids": [
    "h507",
    "g29",
@@ -328,10 +336,11 @@
    "a8c2f572b5ab7",
    "a60770e8e9c32",
    "a83608ad7515e",
-   "af1f31a54a5cb"
+   "af1f31a54a5cb",
+   "abe2fa039ab25"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-12",
+  "last": "2026-10-13",
   "c": [
    "Amazon",
    "Industry",
@@ -350,6 +359,18 @@
   "last": "2026-06-05",
   "c": [
    "Amazon"
+  ]
+ },
+ "delivery-robot-rules": {
+  "n": "San Jose delivery robot rules",
+  "ids": [
+   "a965bfb9edb0f"
+  ],
+  "first": "2026-10-07",
+  "s": "San Jose approved delivery robot regulations, and officials will evaluate fleet data over nine months before returning to the council next fall to decide on the rules' future.",
+  "last": "2026-10-07",
+  "c": [
+   "Regional"
   ]
  }
 }
