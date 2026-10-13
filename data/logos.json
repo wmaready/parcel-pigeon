@@ -1899,8 +1899,11 @@
   "src": "https://www.amazon.com/favicon.ico"
  },
  "amzflex": {
-  "checked": "2000-01-01",
-  "host": "flex.amazon.com"
+  "checked": "2026-10-13",
+  "host": "flex.amazon.com",
+  "f": "data/logos/amzflex.png",
+  "ar": 1.0,
+  "src": "https://www.google.com/s2/favicons?domain=flex.amazon.com&sz=256"
  },
  "amzair": {
   "checked": "2026-10-12",
@@ -1931,11 +1934,11 @@
   "src": "https://static.amazon-supply-chain-assets.com/02/d4/caca6e2d484a996af978cd2c5101/amazon-supply-chain-services-primary-logo-two-color-dk-squid-ink-prime-blue.svg"
  },
  "dhlsc": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "dhl.com"
  },
  "dhlgf": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "dhl.com"
  },
  "walmartgolocal": {
@@ -1967,8 +1970,11 @@
   "src": "https://ubereats.com/_static/9d965730ecb40206.png"
  },
  "uberdirect": {
-  "checked": "2000-01-01",
-  "host": "uber.com"
+  "checked": "2026-10-13",
+  "host": "uber.com",
+  "f": "data/logos/uberdirect.png",
+  "ar": 1.0,
+  "src": "https://www.google.com/s2/favicons?domain=uber.com&sz=256"
  },
  "ezcater": {
   "checked": "2026-10-12",
@@ -1978,11 +1984,11 @@
   "src": "https://static.cdn-ezcater.com/store-next/_next/static/media/ezcater-vertical-lg.fb1794f8.png"
  },
  "ddrive": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "doordash.com"
  },
  "dddot": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "doordash.com"
  },
  "pbsendtech": {
@@ -2021,12 +2027,18 @@
   "src": "https://www.metroscg.com/hubfs/Media%20Centre/Logos/SVG%20Logos/Metro%20Supply%20Chain%20Primary%20Logo_Full%20Colour_EN%20-%20Tight%20Crop.svg"
  },
  "royalmail": {
-  "checked": "2000-01-01",
-  "host": "royalmail.com"
+  "checked": "2026-10-13",
+  "host": "royalmail.com",
+  "f": "data/logos/royalmail.png",
+  "ar": 1.5,
+  "src": "https://www.google.com/s2/favicons?domain=royalmail.com&sz=256"
  },
  "glsgroup": {
-  "checked": "2000-01-01",
-  "host": "gls-group.com"
+  "checked": "2026-10-13",
+  "host": "gls-group.com",
+  "f": "data/logos/glsgroup.png",
+  "ar": 1.0,
+  "src": "https://icons.duckduckgo.com/ip3/gls-group.com.ico"
  },
  "laposte": {
   "checked": "2026-10-13",
@@ -2078,7 +2090,7 @@
   "src": "https://www.asendia.com/hs-fs/hubfs/e-PAQ_logo-1-png.png?width=400&amp;height=150&amp;name=e-PAQ_logo-1-png.png"
  },
  "japanpost": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "japanpost.jp"
  },
  "toll": {
@@ -2096,15 +2108,15 @@
   "src": "https://teamglobalexp.com/image/layout_set_logo?img_id=5087020&amp;t=1791544240354"
  },
  "dsvairsea": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "dsv.com"
  },
  "dsvroad": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "dsv.com"
  },
  "dsvsolutions": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "dsv.com"
  },
  "xpointermodal": {
@@ -2129,7 +2141,7 @@
   "src": "https://ryder.com/assets/images/favicon.png"
  },
  "costcologistics": {
-  "checked": "2000-01-01",
+  "checked": "2026-10-13",
   "host": "logistics.costco.com"
  },
  "hdsupply": {
@@ -2220,5 +2232,19 @@
   "f": "data/logos/ebay.png",
   "ar": 1.0,
   "src": "https://ebay.com/apple-touch-icon.png"
+ },
+ "etsy": {
+  "checked": "2026-10-13",
+  "host": "etsy.com",
+  "f": "data/logos/etsy.png",
+  "ar": 1.0,
+  "src": "https://etsy.com/apple-touch-icon.png"
+ },
+ "ecomlogistics": {
+  "checked": "2026-10-13",
+  "host": "shipecom.com",
+  "f": "data/logos/ecomlogistics.png",
+  "ar": 3.179,
+  "src": "https://shipecom.com/images/brand/ecom-logo-dark.png"
  }
 }

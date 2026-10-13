@@ -510,37 +510,68 @@
   },
   {
    "id": "etsy",
-   "n": "Etsy",
+   "n": "Etsy, Inc.",
    "realm": "retail",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Online marketplace that did not offer fee protection",
-   "al": [],
-   "src": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/",
+   "own": "public",
+   "tk": "ETSY",
+   "parent": "mercari",
+   "hq": "Brooklyn, NY, USA",
+   "yr": "2005",
+   "s": "Etsy operates an online marketplace for handmade, vintage and creative goods, and sells discounted USPS, UPS, FedEx and other carrier shipping labels to its U.S. sellers.",
+   "al": [
+    "Etsy",
+    "Etsy.com",
+    "Indieco, Inc."
+   ],
+   "src": "https://investors.etsy.com/news-events/press-releases/detail/221/etsy-inc-reports-first-quarter-2026-results",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-06",
-   "story": "a2b81ad721cb8"
+   "story": "a2b81ad721cb8",
+   "site": "etsy.com",
+   "geo": [
+    -73.99,
+    40.693
+   ],
+   "srcs": [
+    "https://investors.etsy.com/news-events/press-releases/detail/221/etsy-inc-reports-first-quarter-2026-results",
+    "https://www.sec.gov/Archives/edgar/data/0001370637/000137063726000071/exhibit99173026.htm",
+    "https://help.etsy.com/hc/en-us/articles/360001967188-How-to-Purchase-Shipping-Labels-on-Etsy"
+   ],
+   "enriched": "2026-10-13"
   },
   {
    "id": "ecomlogistics",
    "n": "Ecom Logistics",
-   "realm": "regional",
-   "own": null,
+   "realm": "3pl",
+   "own": "private",
    "tk": null,
-   "parent": null,
-   "hq": null,
+   "parent": "mercari",
+   "hq": "Woodbridge, Canada",
    "yr": null,
-   "s": "Provides fulfillment and last-mile delivery through a connected order-to-door network in Canada",
-   "al": [],
-   "src": "https://finance.yahoo.com/small-business/articles/ecom-logistics-launches-ecom-now-121200418.html",
+   "s": "Ecom Logistics is a Canadian 3PL that combines ecommerce fulfillment, its own last-mile delivery fleet, freight and technology, and it recently launched Ecom NOW same-day delivery for Shopify merchants.",
+   "al": [
+    "Ecom Express",
+    "Ecom Logistics Canada",
+    "eCom Logistics",
+    "eCom Logistics Inc."
+   ],
+   "src": "https://www.newswire.ca/news-releases/ecom-logistics-launches-ecom-now-bringing-same-day-delivery-to-shopify-merchants-own-storefronts-851441415.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-08",
-   "story": "aa819079ba882"
+   "story": "aa819079ba882",
+   "site": "shipecom.com",
+   "geo": [
+    -79.598,
+    43.787
+   ],
+   "srcs": [
+    "https://www.newswire.ca/news-releases/ecom-logistics-launches-ecom-now-bringing-same-day-delivery-to-shopify-merchants-own-storefronts-851441415.html",
+    "https://shipecom.com/",
+    "https://www.3plhub.co/canada/ontario/vaughan/ecom-logistics"
+   ],
+   "enriched": "2026-10-13"
   }
  ],
  "edges": [
@@ -984,6 +1015,51 @@
    "t": "Cross-border shipping partner for the Global Shipping Program and eBay International Shipping",
    "url": "https://www.freightwaves.com/news/pitney-bowes-ebay-extend-cross-border-shipping-partnership",
    "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "etsy",
+   "b": "ebay",
+   "k": "sold",
+   "y": "2026",
+   "t": "Sold Depop to eBay for about $1.4B cash; closed July 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001370637/000137063726000071/exhibit99173026.htm",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "etsy",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Sells USPS shipping labels to U.S. sellers",
+   "url": "https://www.etsy.com/legal/shipping/",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "etsy",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "Offers UPS shipping labels to sellers",
+   "url": "https://help.etsy.com/hc/en-us/articles/360001967188-How-to-Purchase-Shipping-Labels-on-Etsy",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "etsy",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "Offers FedEx shipping labels to sellers",
+   "url": "https://help.etsy.com/hc/en-us/articles/360001967188-How-to-Purchase-Shipping-Labels-on-Etsy",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "etsy",
+   "b": "canadapost",
+   "k": "partner",
+   "y": null,
+   "t": "Offers Canada Post shipping labels to sellers",
+   "url": "https://help.etsy.com/hc/en-us/articles/360001967188-How-to-Purchase-Shipping-Labels-on-Etsy",
+   "story": "a2b81ad721cb8"
   }
  ],
  "moves": [
@@ -1066,6 +1142,8 @@
   "gobolt": "2026-10-13",
   "poshmark": "2026-10-13",
   "mercari": "2026-10-13",
-  "ebay": "2026-10-13"
+  "ebay": "2026-10-13",
+  "etsy": "2026-10-13",
+  "ecomlogistics": "2026-10-13"
  }
 }
