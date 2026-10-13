@@ -51,28 +51,28 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "a30530b988200",
-  "w3d06a7fa766e",
-  "aad7e6789b34e",
-  "a945e2139bb15",
-  "afbf819454788",
-  "a9b2dacf6f727",
-  "wbf2ef019cc6e",
-  "w348418a9dc09",
-  "wa0dc8b706733",
-  "wb612a77519f2",
-  "ae77827c0481e",
-  "a89d7e4beebd9",
-  "w1a58abf8b69d",
-  "abf01a11b3d9e",
-  "ac1d01500ab14",
-  "a1785bbd2ecbb",
-  "w8a582ba4f6eb",
-  "wf225c9a3bf63",
   "af8ee5ed067c6",
+  "w8a582ba4f6eb",
+  "a89d7e4beebd9",
+  "wbf2ef019cc6e",
+  "afbf819454788",
+  "w348418a9dc09",
+  "a945e2139bb15",
+  "wb612a77519f2",
+  "wf225c9a3bf63",
+  "ac1d01500ab14",
+  "wa0dc8b706733",
+  "abf01a11b3d9e",
+  "a30530b988200",
+  "a1785bbd2ecbb",
+  "a9b2dacf6f727",
+  "ae77827c0481e",
+  "w82629d496c23",
   "w150132868eae",
+  "w3d06a7fa766e",
+  "w1a58abf8b69d",
   "w49b3786a59a5",
-  "w82629d496c23"
+  "aad7e6789b34e"
  ],
  "backfilled": true,
  "players": [
@@ -133,7 +133,15 @@
   "more:story:amazon generally delivers on columbus day while usps observes holiday,story:sick shows ai enabled parcel scanning system at cemat 2026,story:usps ups fedex publish 2026 holiday shipping deadlines",
   "story:amazon generally delivers on columbus day while usps observes holiday",
   "story:usps ups fedex publish 2026 holiday shipping deadlines",
-  "story:sick shows ai enabled parcel scanning system at cemat 2026"
+  "story:sick shows ai enabled parcel scanning system at cemat 2026",
+  "more:player:myflexbox,player:sereact,player:universalposta,player:zalando,story:analysis 2026 peak shipping season starts earlier and spreads over more weeks,story:class action accuses google ups of sharing tracking data,story:westborough zba to hear amazon drone pad appeal nov 2 town meeting votes on bylaw",
+  "story:westborough zba to hear amazon drone pad appeal nov 2 town meeting votes on bylaw",
+  "story:class action accuses google ups of sharing tracking data",
+  "story:analysis 2026 peak shipping season starts earlier and spreads over more weeks",
+  "player:myflexbox",
+  "player:sereact",
+  "player:zalando",
+  "player:universalposta"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -693,98 +701,11 @@
    ]
   }
  ],
- "queue": [
-  {
-   "kind": "player",
-   "key": "player:myflexbox",
-   "at": "2026-10-12T21:25:17.062781-04:00",
-   "t": "New on the map: myflexbox",
-   "m": "Operates a carrier-neutral network of roughly 3,000 open parcel lockers in Germany and Austria, used by several parcel carriers for delivery, pickup, shipping and returns.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "story",
-   "key": "story:westborough zba to hear amazon drone pad appeal nov 2 town meeting votes on bylaw",
-   "id": "abe2fa039ab25",
-   "t": "Amazon drone pad faces Westborough appeal",
-   "m": "Update 13 · Drone delivery expansion: No rate or service change for shippers; the zoning appeal hearing is set for Nov. 2 and FAA site approvals…",
-   "big": false,
-   "at": "2026-10-13T00:38:59.691950-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": true,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=abe2fa039ab25"
-  },
-  {
-   "kind": "story",
-   "key": "story:class action accuses google ups of sharing tracking data",
-   "id": "a392500587e33",
-   "t": "Class action accuses Google, UPS of data sharing",
-   "m": "No change to UPS rates or service; the proposed class action's claims are allegations and have not been…",
-   "big": false,
-   "at": "2026-10-13T00:38:59.691995-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": true,
-   "mask": 1,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a392500587e33"
-  },
-  {
-   "kind": "player",
-   "key": "player:sereact",
-   "at": "2026-10-13T03:18:53.452092-04:00",
-   "t": "New on the map: Sereact GmbH",
-   "m": "Sereact develops Cortex, a physical-AI software platform that runs warehouse picking and dual-arm returns-handling robots at 3PLs and retailers, and it is sold under a Robotics-as-a-Service model.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "player",
-   "key": "player:zalando",
-   "at": "2026-10-13T03:18:53.452106-04:00",
-   "t": "New on the map: Zalando SE",
-   "m": "European online fashion retailer and marketplace that runs its own fulfillment and returns network (Zalando Fulfillment Solutions) for itself and Partner Program brands, using third-party logistics providers and national carriers for warehousing and last-mile delivery.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "player",
-   "key": "player:universalposta",
-   "at": "2026-10-13T03:18:53.452111-04:00",
-   "t": "New on the map: Universal Postal Union",
-   "m": "The UN specialized agency for postal cooperation, it sets the rules and standards that let its 192 member countries exchange international mail and parcels, and it provides shared postal systems such as the Customs Declaration System and a delivered-duty-paid landed-cost tool.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "story",
-   "key": "story:analysis 2026 peak shipping season starts earlier and spreads over more weeks",
-   "id": "a89d7e4beebd9",
-   "t": "Peak season starting earlier, analysts say",
-   "m": "No carrier price or service change announced; shippers are sending volume earlier and some freight lanes…",
-   "big": false,
-   "at": "2026-10-13T06:43:33.384156-04:00",
-   "lvl": 1,
-   "topic": "rates",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a89d7e4beebd9"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-10-12",
-  "n": 8
+  "d": "2026-10-13",
+  "n": 1
  },
- "last_push": "2026-10-12T18:37:54.006207-04:00"
+ "last_push": "2026-10-13T07:23:35.052354-04:00"
 }
