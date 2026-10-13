@@ -132,7 +132,21 @@
    "FedEx",
    "UPS"
   ],
-  "rv": "4418fe805c66"
+  "rv": "4418fe805c66",
+  "cx": {
+   "sig": "4418fe805c66",
+   "v": 2,
+   "beats": {
+    "h401": "FedEx's 2024 increase averaged 5.9%, matching UPS, which started Dec. 26, 2023. Both were down from 6.9% the year before.",
+    "h424": "DHL Express matched the 5.9% for U.S. accounts, effective Jan. 1, 2025, with some service and surcharge changes too.",
+    "h426": "UPS matched FedEx at 5.9% but started two weeks earlier than the year before, on Dec. 23, 2024.",
+    "h529": "FedEx stayed at 5.9% for 2026. Surcharges rose too: residential delivery went to $6.95 from $6.55.",
+    "02": "DHL Express matches the 5.9% again, effective Jan 1, 2027. It will change a limited number of services and surcharges but did not list them.",
+    "07": "UPS hasn't announced yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline."
+   },
+   "intro": "Carriers raise list rates every January, and 5.9% has been the average headline figure for years. Shippers care what's beneath it.",
+   "now": "DHL starts Jan. 1 and FedEx Jan. 4; UPS has yet to announce. UPS reports earnings Oct. 27 and FedEx Oct. 28."
+  }
  },
  "usps-pricing": {
   "n": "USPS shipping price changes",
@@ -147,10 +161,11 @@
   "last": "2025-05-09",
   "c": [
    "USPS"
-  ]
+  ],
+  "rv": "e040dd275a8f"
  },
  "peak-surcharges": {
-  "n": "Holiday peak surcharges",
+  "n": "Holiday peak surcharges, 2024–2026",
   "s": "USPS holiday prices took effect Oct. 4 and carrier peak surcharges are phasing in through late October, and the carriers have now published their Christmas delivery deadlines.",
   "ids": [
    "h416",
@@ -170,7 +185,8 @@
    "OnTrac",
    "UPS",
    "USPS"
-  ]
+  ],
+  "rv": "51da35db195e"
  },
  "import-export-fees": {
   "n": "Per-pound import and export fees",
@@ -193,16 +209,16 @@
    },
    "intro": "Per-pound surcharges on international parcels, first from UPS peak fees, then FedEx demand fees. Shippers pay by weight.",
    "now": "FedEx's import and export demand fees run until further notice, and the milestones give no end date for them."
-  }
+  },
+  "rv": "c246f9c59438"
  },
  "usps-leadership": {
-  "n": "USPS leadership turnover",
+  "n": "USPS Postmaster General turnover",
   "s": "Steiner remains Postmaster General and addressed postal customer councils in an official USPS video in early October 2026.",
   "ids": [
    "h506",
    "h515",
-   "36",
-   "a935631934704"
+   "36"
   ],
   "first": "2025-03-24",
   "last": "2026-10-07",
@@ -210,21 +226,23 @@
    "USPS"
   ],
   "cx": {
-   "sig": "7d27a3c09ed4",
+   "sig": "7d2b47d4740d",
+   "v": 2,
    "beats": {
-    "h506": "Postmaster General Louis DeJoy announced his exit; Deputy PMG Doug Tulino took over as acting head until the Board names a successor.",
-    "h515": "The Board of Governors picked former Waste Management CEO David Steiner as the 76th Postmaster General, with a July 2025 start expected."
-   }
-  }
+    "h506": "DeJoy announced his exit, and Deputy Postmaster General Doug Tulino stepped in as acting chief while the Board of Governors searched.",
+    "h515": "The Board picked former Waste Management CEO David Steiner, a FedEx board member who said he'd leave that board before joining USPS."
+   },
+   "now": "Steiner is still Postmaster General and spoke to postal customer councils by video in early October 2026. The Amazon same-day pilot expands Oct. 20."
+  },
+  "rv": "7d2b47d4740d"
  },
  "usps-service-network": {
-  "n": "USPS service standards and processing",
+  "n": "USPS service standards and processing changes",
   "s": "USPS continues to adjust service standards and operations, with Hawaii delivery expectations lengthened and a local post office closure now in effect.",
   "ids": [
    "h410",
    "h505",
-   "ab665e6db5daf",
-   "a9ecc86b6711f"
+   "ab665e6db5daf"
   ],
   "first": "2024-05-14",
   "last": "2026-10-12",
@@ -232,11 +250,14 @@
    "USPS"
   ],
   "cx": {
-   "sig": "a59373534973",
+   "sig": "4dc7f5395e75",
    "v": 2,
-   "beats": {},
-   "intro": "USPS keeps reshaping how and how fast mail moves, and shippers feel it in delivery windows and processing hubs."
-  }
+   "beats": {
+    "h410": "DeJoy paused consolidation after senators cited Atlanta's Palmetto center, where only 36% of inbound mail was on time in February."
+   },
+   "now": "Hawaii's longer standards are the latest change. Next on the rate clock: the Amazon same-day pilot reaches Columbia, S.C. on Oct. 20."
+  },
+  "rv": "4dc7f5395e75"
  },
  "usps-finances": {
   "n": "USPS losses and package volume",
@@ -249,15 +270,15 @@
   "last": "2026-05-21",
   "c": [
    "USPS"
-  ]
+  ],
+  "rv": "3ceee99aa69e"
  },
  "parcel-volume-amazon": {
-  "n": "U.S. parcel volume and Amazon's rise",
+  "n": "Amazon's rise to top U.S. parcel carrier",
   "s": "Amazon is now the largest U.S. carrier by volume, in a market of about 23 to 24 billion parcels in 2025.",
   "ids": [
    "h408",
    "h522",
-   "19",
    "r01",
    "r03"
   ],
@@ -270,10 +291,11 @@
    "Regional",
    "UPS",
    "USPS"
-  ]
+  ],
+  "rv": "7045e15542ff"
  },
  "usps-big-shipper-deals": {
-  "n": "USPS deals with big shippers",
+  "n": "USPS deals with Amazon and DHL eCommerce",
   "s": "USPS signed an exclusive last-mile deal with DHL eCommerce and is piloting same-day delivery for Amazon.",
   "ids": [
    "21",
@@ -296,7 +318,8 @@
    },
    "intro": "How USPS's deals with big shippers, from Amazon volume changes to a DHL eCommerce contract, are reshaping its network.",
    "now": "USPS has an exclusive last-mile deal with DHL eCommerce and is piloting same-day for Amazon. Columbia, S.C. joins Oct 20 with a 500-package cap."
-  }
+  },
+  "rv": "e3902d701814"
  },
  "amazon-network-buildout": {
   "n": "Amazon logistics buildout",
@@ -307,8 +330,7 @@
    "34",
    "05",
    "acd4fc0450fe6",
-   "ae52ac3f8c7a2",
-   "acac77f0044d4"
+   "ae52ac3f8c7a2"
   ],
   "first": "2025-04-30",
   "last": "2026-10-08",
@@ -319,21 +341,19 @@
    "USPS"
   ],
   "cx": {
-   "sig": "d2a72360be7b",
+   "sig": "38d118f62d98",
    "v": 2,
    "beats": {
-    "h512": "Amazon put $4 billion behind rural delivery, aiming for more than 200 rural delivery stations and 100,000+ jobs by the end of 2026.",
-    "34": "Amazon is adding LTL labels for sellers in October, with regional pricing for heavy, bulky items due in early 2027.",
-    "05": "Business Insider reported a backup plan to reach about 95% of U.S. ZIP codes by 2029, drawn up in case the USPS deal fell through.",
-    "ae52ac3f8c7a2": "In North Carolina, a robotics fulfillment center with 1,000+ employees opened beside a new delivery station, running at 25% to 30% capacity.",
-    "acac77f0044d4": "Local TV in western North Dakota says the new Amazon delivery stations are speeding up packages, though no figures were given."
+    "h512": "Amazon set aside $4 billion through 2026 to push past 200 rural delivery stations and add more than 100,000 jobs.",
+    "34": "Sellers can buy LTL labels through Buy Shipping from October, and regional pricing for heavy items follows in early 2027."
    },
-   "now": "Amazon's peak fees for FBA and Multi-Channel Fulfillment start Oct. 15, and UPS and FedEx report earnings Oct. 27 and 28."
+   "intro": "Amazon keeps building its own delivery reach, from rural stations to services for outside shippers. Here's how it's stacked up.",
+   "now": "Amazon's peak fees for FBA and Multi-Channel Fulfillment start Oct. 15, and the USPS same-day pilot expands to Columbia, S.C. on Oct. 20."
   }
  },
  "drone-delivery": {
   "n": "Drone delivery expansion",
-  "s": "Amazon's Westborough, Massachusetts drone pad faces a Nov. 2 Zoning Board of Appeals hearing and a Nov. 10 Planning Board date, while other towns and retailers add or review drone sites.",
+  "s": "Drone delivery operators are widening US coverage, and Amazon is now recruiting for an Australian approvals role while Wing has left Australia.",
   "ids": [
    "h507",
    "g29",
@@ -354,7 +374,20 @@
    "Amazon",
    "Industry",
    "Regional"
-  ]
+  ],
+  "cx": {
+   "sig": "845437e74784",
+   "v": 2,
+   "beats": {
+    "h507": "Amazon's pause was short: the FAA approved the altitude-sensor software fix, and flights resumed in Texas and Arizona.",
+    "g27": "Amazon's plan goes from 11 US locations to almost 500 towns, with fees of $2.99 for Prime members and $4.99 for others.",
+    "g28": "Lowe's joins in through the DoorDash app on Wing drones. Wing also flies for Walmart, which is adding to more than 270 stores in 2026.",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, taking them to nearly 20 metros after giving over three million customers access.",
+    "af1f31a54a5cb": "Lowe's Matthews pilot is reported again here: Wing and DoorDash already fly in the Charlotte area, and the aim is 20-minute delivery.",
+    "abe2fa039ab25": "In Westborough, Mass., residents are appealing Amazon's drone pad, with a Nov. 2 hearing and an Oct. 19 town meeting on a drone bylaw."
+   },
+   "now": "Next up: the FCC's Oct. 29 vote, Westborough's Oct. 19 town meeting and Nov. 2 hearing, and the still-unpublished Part 108 rule."
+  }
  },
  "amazon-labor": {
   "n": "Amazon labor and driver disputes",

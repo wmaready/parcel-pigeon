@@ -43,34 +43,36 @@
   "a945e2139bb15",
   "a4c7bcc13e662",
   "abe2fa039ab25",
-  "a392500587e33"
+  "a392500587e33",
+  "a89d7e4beebd9"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "a945e2139bb15",
-  "ac1d01500ab14",
-  "af8ee5ed067c6",
   "a30530b988200",
-  "ae77827c0481e",
-  "abf01a11b3d9e",
-  "aad7e6789b34e",
-  "w82629d496c23",
-  "afbf819454788",
-  "w8a582ba4f6eb",
-  "a9b2dacf6f727",
-  "a1785bbd2ecbb",
-  "wbf2ef019cc6e",
-  "w1a58abf8b69d",
-  "w150132868eae",
   "w3d06a7fa766e",
-  "wf225c9a3bf63",
-  "wa0dc8b706733",
-  "w49b3786a59a5",
+  "aad7e6789b34e",
+  "a945e2139bb15",
+  "afbf819454788",
+  "a9b2dacf6f727",
+  "wbf2ef019cc6e",
   "w348418a9dc09",
-  "wb612a77519f2"
+  "wa0dc8b706733",
+  "wb612a77519f2",
+  "ae77827c0481e",
+  "a89d7e4beebd9",
+  "w1a58abf8b69d",
+  "abf01a11b3d9e",
+  "ac1d01500ab14",
+  "a1785bbd2ecbb",
+  "w8a582ba4f6eb",
+  "wf225c9a3bf63",
+  "af8ee5ed067c6",
+  "w150132868eae",
+  "w49b3786a59a5",
+  "w82629d496c23"
  ],
  "backfilled": true,
  "players": [
@@ -160,7 +162,8 @@
   "usps ups fedex publish 2026 holiday shipping deadlines",
   "sick shows ai enabled parcel scanning system at cemat 2026",
   "westborough zba to hear amazon drone pad appeal nov 2 town m",
-  "class action accuses google ups of sharing tracking data"
+  "class action accuses google ups of sharing tracking data",
+  "analysis 2026 peak shipping season starts earlier and spread"
  ],
  "copy": {
   "a78db2954da94": {
@@ -246,6 +249,10 @@
   "a392500587e33": {
    "t": "Class action accuses Google, UPS of data sharing",
    "m": "No change to UPS rates or service; the proposed class action's claims are allegations and have not been…"
+  },
+  "a89d7e4beebd9": {
+   "t": "Peak season starting earlier, analysts say",
+   "m": "No carrier price or service change announced; shippers are sending volume earlier and some freight lanes…"
   }
  },
  "recent": [
@@ -669,6 +676,21 @@
      "url": "https://www.dailyjournal.com/article/395253-google-ups-sued-over-alleged-data-sharing-through-package-tracking-tool"
     }
    ]
+  },
+  {
+   "id": "a89d7e4beebd9",
+   "title": "Analysis: 2026 peak shipping season starts earlier and spreads over more weeks",
+   "date": "2026-10-13",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.globaltrademag.com/peak-shipping-season-2026-higher-volumes-and-shipments-more-spread-over-time/",
+   "srcs": [
+    {
+     "src": "Global Trade Magazine",
+     "url": "https://www.globaltrademag.com/peak-shipping-season-2026-higher-volumes-and-shipments-more-spread-over-time/"
+    }
+   ]
   }
  ],
  "queue": [
@@ -743,6 +765,20 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "story",
+   "key": "story:analysis 2026 peak shipping season starts earlier and spreads over more weeks",
+   "id": "a89d7e4beebd9",
+   "t": "Peak season starting earlier, analysts say",
+   "m": "No carrier price or service change announced; shippers are sending volume earlier and some freight lanes…",
+   "big": false,
+   "at": "2026-10-13T06:43:33.384156-04:00",
+   "lvl": 1,
+   "topic": "rates",
+   "notable": false,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a89d7e4beebd9"
   }
  ],
  "fuelq": {},

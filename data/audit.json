@@ -1,5 +1,5 @@
 {
- "run": "2026-10-13T10:24Z",
+ "run": "2026-10-13T10:43Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -19,6 +19,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Analysis: 2026 peak shipping season starts earlier and spreads over more weeks\"",
+   "ids": [
+    "a89d7e4beebd9"
    ],
    "fixed": false
   },
@@ -57,6 +66,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Analysis: 2026 peak shipping season starts earlier and spreads over more weeks\"",
+   "ids": [
+    "a89d7e4beebd9"
    ],
    "fixed": false
   },
