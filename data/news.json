@@ -1,5 +1,60 @@
 [
  {
+  "id": "a1b456d5a5205",
+  "date": "2026-10-13",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx orders 2,000 electric trucks from Harbinger in $300M-plus deal",
+  "sum": "FedEx ordered 2,000 all-electric trucks from EV startup Harbinger in a deal worth over $300 million, according to Environment America. The order is part of FedEx's effort to fully electrify its vehicle fleet by 2040. The group said the trucks are expected to cut emissions by 1.7 million tons and save $800 million in fuel costs over their life.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The order concerns FedEx's own vehicle fleet.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Environment America",
+  "url": "https://environmentamerica.org/updates/fedex-makes-record-setting-electric-vehicle-investment/",
+  "srcs": [
+   {
+    "src": "Environment America",
+    "url": "https://environmentamerica.org/updates/fedex-makes-record-setting-electric-vehicle-investment/"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
+ },
+ {
+  "id": "a5d45f26f2219",
+  "date": "2026-10-13",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Fuel",
+  "kind": "Analysis",
+  "title": "Diesel futures jump 20 cents in two hours on CME, FreightWaves reports",
+  "sum": "Ultra-low sulfur diesel futures on the CME rose roughly 20 cents in about two hours Tuesday morning after briefly trading negative the day before, according to FreightWaves. FreightWaves energy markets analyst John Kingston said inventories have been drawn down and that prices could push back above $6 per gallon.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No carrier has changed rates in this item. Kingston said the diesel move is a concern for anyone exposed to diesel costs, and he warned of possible further price increases.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis"
+   }
+  ],
+  "auto": true,
+  "new": "Earlier coverage covered GOFO's 4% emergency fuel surcharge; this adds the roughly 20-cent futures jump and Kingston's view that depleted inventories and renewed Strait of Hormuz disruption could push diesel higher, though no new carrier surcharge is announced.",
+  "edge": true
+ },
+ {
   "id": "a89d7e4beebd9",
   "date": "2026-10-13",
   "c": [
@@ -127,7 +182,6 @@
    }
   ],
   "auto": true,
-  "thread": "fuel-surcharge-2026",
   "exclusive": true
  },
  {
@@ -350,6 +404,34 @@
   ],
   "auto": true,
   "exclusive": true
+ },
+ {
+  "id": "a2f399daa6200",
+  "date": "2026-10-10",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "CWU pauses further rollout of Royal Mail's Delivery Model 26",
+  "sum": "The Communication Workers Union announced a pause to any further rollout of Royal Mail's Delivery Model 26 (DM26). The union is calling for an agreed plan to address delivery offices where the new working arrangements are not operating as intended.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or prices. The union's pause applies to further rollout of DM26 at Royal Mail delivery offices; no new dates were given in the source.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Post & Parcel",
+  "url": "https://postandparcel.info/163070/news/e-commerce/royal-mail-delivery-model-rollout-paused/",
+  "srcs": [
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163070/news/e-commerce/royal-mail-delivery-model-rollout-paused/"
+   }
+  ],
+  "auto": true,
+  "thread": "royal-mail-dm26",
+  "edge": true
  },
  {
   "id": "a6054840e4166",
@@ -1189,6 +1271,34 @@
   "exclusive": true
  },
  {
+  "id": "abc292bc10d49",
+  "date": "2026-10-06",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Royal Mail raises parcel prices by up to £1.45 from Oct. 6",
+  "sum": "Royal Mail's parcel price increases took effect Tuesday, Oct. 6, across Standard, Tracked, Special Delivery and Signed For services, according to the Chester Standard. Increases run up to £1.45. The largest is on 1st Class medium parcels up to 20kg, which rise from £15.45 to £16.90. The smallest listed is 25p, on Tracked 48 small parcels up to 2kg (£4.45 to £4.70).",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "Royal Mail customers pay more for Standard, Tracked and Signed For parcels from Oct. 6. Listed rises range from 25p to £1.45 depending on service and weight band. The article gives no figures for Special Delivery.",
+  "tie": null,
+  "act": "2026-10-06",
+  "dates": [],
+  "src": "Chester Standard",
+  "url": "https://www.chesterstandard.co.uk/news/26613752.royal-mail-parcel-delivery-prices-increase-1-45/",
+  "srcs": [
+   {
+    "src": "Chester Standard",
+    "url": "https://www.chesterstandard.co.uk/news/26613752.royal-mail-parcel-delivery-prices-increase-1-45/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "aec10b9813ef5",
   "date": "2026-10-06",
   "c": [
@@ -1332,6 +1442,34 @@
   ],
   "auto": true,
   "new": "Amazon opened a robotics fulfillment center and a nearby delivery station in the Wilmington, N.C., region, operating at 25% to 30% capacity with a ramp-up planned for the holidays; no rate or service change for outside shippers was stated.",
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "adae683e43adb",
+  "date": "2026-09-28",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Diocese of Fort Worth presses FedEx on mifepristone shipping risk",
+  "sum": "At FedEx's annual meeting on Sept. 28, the Diocese of Fort Worth, Texas, sponsored a shareholder proposal asking the company to report on legal, regulatory and reputational risks of shipping mifepristone into states where abortion is illegal, the National Catholic Register reported. The board opposed the proposal, and final votes had not been tallied when the diocese spoke with EWTN News.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to FedEx rates or service. The proposal asked the board to report within a year on risk oversight and did not ask the company to stop shipping the drug.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "National Catholic Register",
+  "url": "https://www.ncregister.com/cna/fort-worth-diocese-presses-fedex-on-risk-of-shipping-mifepristone",
+  "srcs": [
+   {
+    "src": "National Catholic Register",
+    "url": "https://www.ncregister.com/cna/fort-worth-diocese-presses-fedex-on-risk-of-shipping-mifepristone"
+   }
+  ],
+  "auto": true,
   "edge": true,
   "exclusive": true
  }

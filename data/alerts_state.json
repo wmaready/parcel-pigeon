@@ -46,36 +46,39 @@
   "a392500587e33",
   "a89d7e4beebd9",
   "adb625d22e170",
-  "aee6669d325da"
+  "aee6669d325da",
+  "a1b456d5a5205",
+  "a5d45f26f2219"
  ],
  "clock": [],
  "fuel": {
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "wbf2ef019cc6e",
-  "w348418a9dc09",
-  "w3d06a7fa766e",
-  "w150132868eae",
-  "afbf819454788",
-  "w1a58abf8b69d",
   "w49b3786a59a5",
-  "ae77827c0481e",
-  "wa0dc8b706733",
-  "a945e2139bb15",
   "w82629d496c23",
-  "a9b2dacf6f727",
-  "wb612a77519f2",
-  "abf01a11b3d9e",
-  "w8a582ba4f6eb",
-  "aee6669d325da",
-  "wf225c9a3bf63",
+  "w1a58abf8b69d",
+  "ae77827c0481e",
+  "w150132868eae",
+  "w348418a9dc09",
   "a30530b988200",
-  "a89d7e4beebd9",
-  "af8ee5ed067c6",
-  "ac1d01500ab14",
+  "a945e2139bb15",
+  "w8a582ba4f6eb",
+  "wbf2ef019cc6e",
+  "a5d45f26f2219",
+  "a9b2dacf6f727",
+  "aee6669d325da",
+  "afbf819454788",
+  "wb612a77519f2",
   "a1785bbd2ecbb",
-  "aad7e6789b34e"
+  "aad7e6789b34e",
+  "w3d06a7fa766e",
+  "a89d7e4beebd9",
+  "abf01a11b3d9e",
+  "af8ee5ed067c6",
+  "wf225c9a3bf63",
+  "wa0dc8b706733",
+  "ac1d01500ab14"
  ],
  "backfilled": true,
  "players": [
@@ -190,7 +193,9 @@
   "class action accuses google ups of sharing tracking data",
   "analysis 2026 peak shipping season starts earlier and spread",
   "q4 freight index projects record ground and express parcel r",
-  "gofo adds 4 emergency fuel surcharge from oct 26"
+  "gofo adds 4 emergency fuel surcharge from oct 26",
+  "fedex orders 2 000 electric trucks from harbinger in 300m pl",
+  "diesel futures jump 20 cents in two hours on cme freightwave"
  ],
  "copy": {
   "a78db2954da94": {
@@ -280,6 +285,14 @@
   "a89d7e4beebd9": {
    "t": "Peak season starting earlier, analysts say",
    "m": "No carrier price or service change announced; shippers are sending volume earlier and some freight lanes…"
+  },
+  "a1b456d5a5205": {
+   "t": "FedEx orders 2,000 electric trucks",
+   "m": "The $300M-plus Harbinger order covers FedEx's own fleet, with no change to rates or service for shippers."
+  },
+  "a5d45f26f2219": {
+   "t": "Diesel futures jump 20 cents on CME",
+   "m": "Shippers exposed to diesel costs should expect pressure, as analyst Kingston warned of possible further…"
   }
  },
  "recent": [
@@ -749,9 +762,68 @@
      "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season"
     }
    ]
+  },
+  {
+   "id": "a1b456d5a5205",
+   "title": "FedEx orders 2,000 electric trucks from Harbinger in $300M-plus deal",
+   "date": "2026-10-13",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://environmentamerica.org/updates/fedex-makes-record-setting-electric-vehicle-investment/",
+   "srcs": [
+    {
+     "src": "Environment America",
+     "url": "https://environmentamerica.org/updates/fedex-makes-record-setting-electric-vehicle-investment/"
+    }
+   ]
+  },
+  {
+   "id": "a5d45f26f2219",
+   "title": "Diesel futures jump 20 cents in two hours on CME, FreightWaves reports",
+   "date": "2026-10-13",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis"
+    }
+   ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:fedex orders 2 000 electric trucks from harbinger in 300m plus deal",
+   "id": "a1b456d5a5205",
+   "t": "FedEx orders 2,000 electric trucks",
+   "m": "The $300M-plus Harbinger order covers FedEx's own fleet, with no change to rates or service for shippers.",
+   "big": false,
+   "at": "2026-10-13T16:56:46.824033-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a1b456d5a5205"
+  },
+  {
+   "kind": "story",
+   "key": "story:diesel futures jump 20 cents in two hours on cme freightwaves reports",
+   "id": "a5d45f26f2219",
+   "t": "Diesel futures jump 20 cents on CME",
+   "m": "Shippers exposed to diesel costs should expect pressure, as analyst Kingston warned of possible further…",
+   "big": false,
+   "at": "2026-10-13T16:56:46.824083-04:00",
+   "lvl": 1,
+   "topic": "rates",
+   "notable": false,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a5d45f26f2219"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-13",
