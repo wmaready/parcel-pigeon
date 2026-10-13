@@ -51,10 +51,29 @@ a major acquisition or sale, a new service, a network overhaul, a strike. DROP s
 (a state government's shipment of local goods, a small foreign courier's new depot, local festival or crop shipments,
 one city's delivery tweak) and small foreign carriers' routine news. When unsure, drop it.
 
+Local items: DROP routine hyper-local U.S. items: one post office's hours or temporary closure, one facility's hours, local
+holiday-deadline reminders, a petty local crime. KEEP local items that are news for the industry: a new service reaching a
+town (drone or robot delivery starting somewhere), a federal raid or fraud or theft ring, a facility closure under a named
+national program, a first-of-its-kind service. Those are fine as stories; they just don't join storylines.
+Late reports: DROP an item from a smaller or local outlet that reports, as if new, an event that happened weeks earlier and
+that the major parcel and freight outlets already covered (check RECENT STORIES and the dates in the summary). DROP non-stories
+(a site adding its own guides or directories, listicles, SEO explainers, product promotions). A "not yet announced" item IS a
+story when the wait itself matters to shippers (e.g. UPS announcing its general rate increase later than FedEx, leaving
+shippers less time to prepare).
+Discussion pieces: KEEP well-made commentary, columns, interviews and explainers from the parcel and freight trade press
+(PARCEL magazine / parcelindustry.com, FreightWaves, Supply Chain Dive, DC Velocity, Logistics Management, SupplyChainBrain,
+Post & Parcel) when they are about small parcel; mark kind "Opinion" (a view or argument) or "Analysis" (informational).
+
 You also get RECENT STORIES already published (id: title) and ACTIVE STORYLINES (key: name). If an item reports the
 same event as a recent story and adds NO new development, set "same_as" to that id. A new development in an ongoing story
 (a new offer in labor talks, a ruling, a deal closing, a rate taking effect, a follow-up with new facts) is NOT same_as: keep
-it as its own item and put it in that storyline. Storylines are how a news desk follows a subject over weeks or months. Items marked SUPPORTING SOURCE ONLY (other consultancies and audit firms) should get "same_as" when they cover a recent story and keep=false otherwise. Items in this batch that cover the same event as each other get the same short "event" key
+it as its own item and put it in that storyline. Storylines are how a news desk follows a subject over weeks or months. Be strict: an item joins a storyline only when it is directly about that
+same subject (same company or program AND the same issue), not merely the same company or a loosely related theme. Only
+small-parcel subjects get storylines (carrier pricing and surcharges, carrier networks and service, carrier labor, postal
+policy and finances, parcel regulation and trade rules, deals that reshape who delivers parcels, delivery tech rolling out at
+scale). No storylines for general finance (a private-equity firm selling a tech unit, stock moves), local events,
+or opinion pieces; give those "thread": null. A storyline is a clear arc of real developments (announced, changed, ruled,
+closed, took effect, or a confirmed wait for one), not a pile of related articles; when unsure, "thread": null. Items marked SUPPORTING SOURCE ONLY (other consultancies and audit firms) should get "same_as" when they cover a recent story and keep=false otherwise. Items in this batch that cover the same event as each other get the same short "event" key
 (e.g. "ups-2027-gri"); every other kept item gets its own unique key.
 
 Reply with JSON only: a list of objects
@@ -88,6 +107,7 @@ Return JSON only, with exactly these keys:
 "tie": one sentence linking this to earlier related news that the sources themselves mention (with month/year), or null;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
+"event_date": "YYYY-MM-DD" the day the event itself happened or was announced, if the sources say and it is earlier than the article, else null;
 "act": "YYYY-MM-DD" effective date if one is stated, else null;
 "dates": list of {{"d":"YYYY-MM-DD","w":"what changes that day, under 70 characters","imp":"up|down|info","fx":null}} for future dates in the source
          ONLY when shippers' prices, surcharges, fees, service levels or rules change that day, or for a big industry event that
@@ -644,7 +664,11 @@ def main():
                     ptext, _ = article_text(prim["url"])
                     if ptext:
                         texts.insert(0, ({"src": prim["src"], "title": lead_item["title"], "date": lead_item["date"]}, prim["url"], ptext))
-            story = {"id": "a" + h(lead_url), "date": min(it["date"] for it, _, _ in texts), "c": s.get("carriers") or v.get("carriers") or ["Industry"],
+            pub = min(it["date"] for it, _, _ in texts)
+            ev = str(s.get("event_date") or "")
+            # a late report keeps the date the event happened, so it files in its place instead of topping the feed
+            sdate = ev if re.match(r"^\d{4}-\d{2}-\d{2}$", ev) and ev < pub else pub
+            story = {"id": "a" + h(lead_url), "date": sdate, "c": s.get("carriers") or v.get("carriers") or ["Industry"],
                      "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
                      "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
                      "act": s.get("act"), "dates": s.get("dates") or [],
@@ -741,26 +765,71 @@ def main():
     print(f"wrote {written} stories; {len(live)} live; {len(review)} in review")
 
 
-BEATS = """You are Coop, the guide in a small-parcel news app, narrating one STORYLINE as an animated timeline. For each
-milestone you get its date, headline and summary. Write short lines that give context and connect the dots: what this step
-changed, why it followed from the one before, who in shipping it affects. Plain, neutral, a little conversational; no hype,
-no advice, no predictions of your own.
-Hard rules: use ONLY facts in the milestones below. Every number, date and name you write must appear in them. If a link
-between two steps isn't stated or plainly implied by the summaries, don't claim it. Never name a parcel consultancy or
-audit firm (say "an industry analysis").
+BEATS = """You are Coop, the guide in a small-parcel news app, narrating one STORYLINE as an animated timeline. Each line
+is read in a small speech bubble under a picture of that step (the rate change, the deal, the date), so be brief: one
+sentence, sometimes two. Make every line earn its place: give the reader context they wouldn't get
+from the headline alone. Connect the dots between steps, and use the CONTEXT section to add a real angle where it genuinely
+fits: who owns whom, how big a player is, a related deal, what's next on the rate clock, what else that company is doing.
+Plain, neutral, a little conversational; no hype, no advice, no predictions of your own.
+Hard rules: use ONLY facts in the MILESTONES and CONTEXT below. Every number, date and name you write must appear there. Never
+claim a cause or link that isn't stated or plainly implied; "meanwhile" is fine, "because" needs support. Don't restate the
+headline. Never name a parcel consultancy or audit firm (say "an industry analysis").
 Reply with JSON only:
 {"intro": "one line, under 120 characters: what this storyline is about and why shippers care",
  "beats": {"<milestone id>": "one line, under 130 characters, for that step", ...},
- "now": "one line, under 140 characters: where it stands and what is next on the calendar, only if the milestones say so"}"""
+ "now": "one line, under 140 characters: where it stands and what's next, only if the milestones or the rate clock say so"}"""
+BEATS_V = 2
+
+
+def thread_context(S, seed, live):
+    """Facts from the rest of the app that can give a storyline context: the companies' profiles and owners, deals they're
+    in, dated cost changes ahead on the rate clock, and other recent headlines about them."""
+    players = seed.get("players", []) + load("players.json", {}).get("players", [])
+    byname = {}
+    for p in players:
+        for nm in [p.get("n")] + (p.get("al") or []):
+            if nm:
+                byname[str(nm).lower()] = p
+    byid = {p["id"]: p for p in players}
+    names = {c for st in S for c in (st.get("c") or []) if c not in ("Industry", "Regional")}
+    for st in S:
+        for o in st.get("orgs") or []:
+            if isinstance(o, dict) and o.get("name"):
+                names.add(o["name"])
+    out, seen = [], set()
+    for nm in sorted(names)[:8]:
+        p = byname.get(nm.lower())
+        if not p or p["id"] in seen:
+            continue
+        seen.add(p["id"])
+        par = byid.get(p.get("parent") or "")
+        out.append(f"COMPANY {p['n']}: {(p.get('role') or p.get('s') or '')[:160]}" + (f" Part of {par['n']}." if par else "") +
+                   (f" HQ {p['hq']}." if p.get("hq") else "") + (f" Founded {p['yr']}." if p.get("yr") else ""))
+    words = {w.lower() for nm in names for w in re.findall(r"[A-Za-z][A-Za-z&]{2,}", nm)}
+    hit = lambda txt: any(re.search(r"\b" + re.escape(w) + r"\b", (txt or "").lower()) for w in words)
+    for d in (seed.get("deals", []) + load("deals.json", []))[:200]:
+        if hit(f"{d.get('buyer')} {d.get('target')}"):
+            out.append(f"DEAL {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
+    today = dt.date.today().isoformat()
+    for c in seed.get("clock", []):
+        if (c.get("d") or "") >= today and hit(f"{c.get('c')} {c.get('w')}"):
+            out.append(f"RATE CLOCK {c['d']}: {c.get('w')} ({c.get('c')})")
+    ids = {st["id"] for st in S}
+    recent = (dt.date.today() - dt.timedelta(days=60)).isoformat()
+    others = [n for n in live + seed.get("news", []) if n.get("id") not in ids and (n.get("date") or "") >= recent and hit(n.get("title"))]
+    for n in sorted(others, key=lambda n: n.get("date") or "", reverse=True)[:5]:
+        out.append(f"ALSO IN THE NEWS {n.get('date')}: {n.get('title')}")
+    return "\n".join(out[:24])
 
 
 def write_beats(limit=6):
     """Coop's narration for each storyline's timeline, rewritten when the storyline gets a new story. Every line is checked:
-    a line with a number that isn't in the milestones is dropped (the app falls back to a plain date cue)."""
+    a line with a number that isn't in the milestones or context is dropped (the app falls back to a plain date cue)."""
     threads = load("threads.json", {})
     if not threads:
         return
-    pool = {s["id"]: s for s in load("seed.json", {}).get("news", []) + load("news.json", []) if s.get("id")}
+    seed, live = load("seed.json", {}), load("news.json", [])
+    pool = {s["id"]: s for s in seed.get("news", []) + live if s.get("id")}
     done = 0
     for k, t in sorted(threads.items(), key=lambda kv: kv[1].get("last") or "", reverse=True):
         if done >= limit:
@@ -769,22 +838,24 @@ def write_beats(limit=6):
         if len(ids) < 2:
             continue
         sig = h(",".join(ids))
-        if (t.get("cx") or {}).get("sig") == sig:
+        if (t.get("cx") or {}).get("sig") == sig and (t.get("cx") or {}).get("v") == BEATS_V:
             continue
         S = sorted((pool[i] for i in ids), key=lambda s: s.get("date") or "")
-        if len(S) > 6:
-            ix = sorted({0, *[round(i * (len(S) - 1) / 5) for i in range(1, 5)], len(S) - 1})
+        if len(S) > 8:
+            ix = sorted({0, *[round(i * (len(S) - 1) / 7) for i in range(1, 7)], len(S) - 1})
             S = [S[i] for i in ix]
-        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\n" + "\n".join(
-            f"id={s['id']} | {s.get('date')} | {s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]}" for s in S)
+        ctx = thread_context(S, seed, live)
+        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\nMILESTONES:\n" + "\n".join(
+            f"id={s['id']} | {s.get('date')} | {s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]} {(s.get('tie') or '')[:200]}" for s in S) + \
+            f"\n\nCONTEXT (from the rest of the app):\n{ctx or '(none)'}"
         done += 1
         try:
-            got = parse_json(claude(MODEL_FAST, BEATS, text, 1200)) or {}
+            got = parse_json(claude(MODEL_WRITE, BEATS, text, 1400)) or {}
         except Exception as e:
             print(f"  storyline narration failed for {k}: {e}", file=sys.stderr); continue
         ok = lambda line, n: isinstance(line, str) and 0 < len(line) <= n and not numbers_supported(line, text)
         beats = {i: v.strip() for i, v in (got.get("beats") or {}).items() if i in ids and ok(v, 140)}
-        cx = {"sig": sig, "beats": beats}
+        cx = {"sig": sig, "v": BEATS_V, "beats": beats}
         if ok(got.get("intro"), 130):
             cx["intro"] = got["intro"].strip()
         if ok(got.get("now"), 150):
@@ -794,8 +865,112 @@ def write_beats(limit=6):
     save("threads.json", threads)
 
 
+# ---------------------------------------------------------------- editor passes: what stays on the site, what's a storyline
+CURATE = """You are the editor of Parcel Pigeon, a U.S. small-parcel news app for shippers and industry people. For each
+published story decide:
+"keep"  - real small-parcel news or a worthwhile discussion piece;
+"drop"  - routine hyper-local items (one post office's hours or temporary closure, local deadline reminders, a petty
+          local crime), a non-story (a site adding its own guides, a listicle, a promotion), a late re-report of an older
+          event already covered, or not really about parcel.
+Keep local stories that are industry news (a service like drone delivery starting in a town, a federal raid, a fraud or theft
+ring, a closure under a named national program). A "not yet announced" story stays when the wait matters to shippers (a
+carrier announcing its rate increase late). When genuinely unsure, keep.
+Reply with JSON only: [{"id": "...", "v": "keep"|"drop", "why": "under 10 words"}]"""
+
+REVIEW = """You review one STORYLINE in a small-parcel news app: a subject followed over weeks or months. Decide:
+- "parcel": true if the subject is squarely small parcel (carrier pricing and surcharges, carrier networks and service,
+  carrier labor, postal policy and finances, parcel regulation and trade rules, deals that reshape who delivers parcels,
+  delivery tech rolling out at scale); false for general finance (a fund selling a tech unit), local events, or loose themes.
+- "drop": ids of stories that don't belong in a tight arc: a different subject, a loose tie (same company, different issue),
+  a local item (it stays on the site, just not in the storyline), an opinion piece, a repeat that adds nothing new, or a
+  side note. Keep each step a real development: announced, changed, ruled, closed, took effect, or a confirmed wait for one
+  (e.g. one carrier still hasn't announced its increase). The result should read as one clear story in order.
+- "n": a clear storyline name under 45 characters (keep the current one if it's good).
+If fewer than two real developments remain, set "parcel": false.
+Reply with JSON only: {"parcel": true|false, "drop": ["id", ...], "n": "..."}"""
+
+
+def curate(limit=40):
+    """Editor pass over published stories (each looked at once): hyper-local items, non-stories and stale re-reports are
+    taken off (logged in data/drop.json with the reason, which dedupe_live honors)."""
+    live = load("news.json", [])
+    done = set(load("curated.json", []))
+    since = (dt.date.today() - dt.timedelta(days=120)).isoformat()
+    pool = live + [x for x in load("seed.json", {}).get("news", []) if (x.get("date") or "") >= since]   # built-in stories too
+    todo = [x for x in pool if x.get("id") not in done][:limit]
+    if not todo:
+        return
+    text = "\n".join(f"id={x['id']} | {x.get('date')} | {x.get('src')} | {x.get('title')} :: {(x.get('sum') or '')[:260]}" for x in todo)
+    try:
+        res = parse_json(claude(MODEL_WRITE, CURATE, text, 2500)) or []
+    except Exception as e:
+        print("  curate failed:", e, file=sys.stderr); return
+    drop = load("drop.json", [])
+    have = {d if isinstance(d, str) else d.get("id") for d in drop}
+    n = 0
+    for r in res if isinstance(res, list) else []:
+        if isinstance(r, dict) and r.get("v") == "drop" and r.get("id") in {x["id"] for x in todo} and r["id"] not in have:
+            drop.append({"id": r["id"], "why": "Editor pass: " + str(r.get("why") or "")[:80]}); n += 1
+    save("drop.json", drop)
+    save("curated.json", sorted(done | {x["id"] for x in todo})[-5000:])
+    if n:
+        save("news.json", dedupe_live(live))
+    print(f"curate: looked at {len(todo)} stories, took off {n}")
+
+
+def review_threads(limit=8):
+    """Each storyline is reviewed whenever its stories change: off-topic stories leave it, and storylines that aren't
+    really about small parcel are dissolved (their stories stay on the site, just not threaded)."""
+    threads = load("threads.json", {})
+    if not threads:
+        return
+    seed, live = load("seed.json", {}), load("news.json", [])
+    pool = {s["id"]: s for s in seed.get("news", []) + live if s.get("id")}
+    dropped = {d if isinstance(d, str) else d.get("id") for d in load("drop.json", [])}
+    done, changed = 0, False
+    for k, t in list(threads.items()):
+        ids = [i for i in t.get("ids", []) if i not in dropped]
+        if ids != t.get("ids"):
+            t["ids"] = ids; changed = True
+        sig = h(",".join(ids))
+        if t.get("rv") == sig or done >= limit:
+            continue
+        S = [pool[i] for i in ids if i in pool]
+        if len(S) < 2:
+            t["rv"] = sig; continue
+        done += 1
+        text = f"STORYLINE: {t.get('n') or k}\n" + "\n".join(f"id={x['id']} | {x.get('date')} | {x.get('title')} :: {(x.get('sum') or '')[:240]}" for x in S)
+        try:
+            r = parse_json(claude(MODEL_WRITE, REVIEW, text, 800)) or {}
+        except Exception as e:
+            print(f"  storyline review failed for {k}: {e}", file=sys.stderr); continue
+        out = {i for i in (r.get("drop") or []) if i in ids}
+        if r.get("parcel") is False:
+            out = set(ids)
+        for x in live:
+            if x.get("id") in out and x.get("thread") == k:
+                x.pop("thread", None); x.pop("upd", None)
+        if out == set(ids):
+            del threads[k]; changed = True
+            print(f"  storyline dissolved (not a small-parcel subject): {t.get('n')}"); continue
+        t["ids"] = [i for i in ids if i not in out]
+        if isinstance(r.get("n"), str) and 3 < len(r["n"]) <= 60:
+            t["n"] = r["n"]
+        t["rv"] = h(",".join(t["ids"]))
+        changed = True
+        if out:
+            print(f"  storyline {t.get('n')}: took out {len(out)} stories that didn't belong")
+    if changed:
+        save("threads.json", threads); save("news.json", live)
+
+
 if __name__ == "__main__":
     main()
+    for step in (curate, review_threads):     # editor passes first, so Coop narrates the cleaned-up storylines
+        try:
+            step()
+        except Exception as e:
+            print(f"{step.__name__} skipped:", e, file=sys.stderr)
     try:
         write_beats()
     except Exception as e:

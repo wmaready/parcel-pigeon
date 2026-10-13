@@ -12,10 +12,15 @@ direct:
   - {name: FreightWaves Parcel, url: "https://www.freightwaves.com/news/category/news/trucking/parcel/feed"}
   - {name: Modern Retail,     url: "https://www.modernretail.co/feed/"}
   - {name: DroneXL,           url: "https://dronexl.co/feed/"}
+  - {name: DC Velocity,       url: "https://www.dcvelocity.com/feeds/feed.rss"}
+  - {name: Post & Parcel,     url: "https://postandparcel.info/feed/"}   # global postal news; triage keeps only what matters to U.S. shippers
 
 discovery:
   # Trade outlets worth checking every run
   - "site:parcelindustry.com"
+  - "site:parcelindustry.com carrier OR parcel OR shipping OR UPS OR FedEx"
+  - "site:parcelindustry.com column OR opinion OR negotiation OR audit"
+  - "site:logisticsmgmt.com parcel OR express OR \"small package\""
   - "site:freightwaves.com parcel OR UPS OR FedEx OR USPS OR Amazon"
   - "site:supplychaindive.com parcel OR UPS OR FedEx OR USPS OR Amazon"
   - "site:dcvelocity.com parcel"

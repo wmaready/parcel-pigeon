@@ -11,7 +11,7 @@ Also keeps family trees current (family_check, one company per run, about weekly
 """
 import datetime as dt, json, os, re, sys
 import requests
-from common import load, save, parse_json, API_KEY, MODEL_WRITE
+from common import load, save, parse_json, API_KEY, MODEL_WRITE, cached_system, track
 
 REALMS = ["national", "regional", "gig", "retail", "3pl", "global", "software", "cold", "auto", "capital"]
 KINDS = {"owns", "acquired", "invested", "partner", "merged", "sold", "spun"}
@@ -37,7 +37,7 @@ one foreign country); keep national posts, global carriers and logistics groups,
 
 
 def ask(user, use_search=True, system=None, max_tokens=2500):
-    body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": system or RESEARCH, "messages": [{"role": "user", "content": user}]}
+    body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}]
     r = requests.post("https://api.anthropic.com/v1/messages", timeout=180, json=body,
@@ -46,7 +46,8 @@ def ask(user, use_search=True, system=None, max_tokens=2500):
         print(f"  web search unavailable ({r.status_code}); researching from the story only", file=sys.stderr)
         return ask(user, use_search=False, system=system, max_tokens=max_tokens)
     r.raise_for_status()
-    return "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
+    j = r.json(); track(j)
+    return "".join(b.get("text", "") for b in j.get("content", []) if b.get("type") == "text")
 
 
 SITE_Q = """Find the official website of this company, so its logo can be shown next to its name. Use web search.

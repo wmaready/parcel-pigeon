@@ -36,6 +36,33 @@ def get(url, timeout=20):
     return r
 
 
+USAGE = {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0}
+
+
+def _usage_report():
+    if USAGE["calls"]:
+        print(f"claude usage this step: {USAGE['calls']} calls, {USAGE['in'] + USAGE['cached'] + USAGE['written']} input tokens "
+              f"({USAGE['cached']} read from cache), {USAGE['out']} output tokens")
+
+
+import atexit
+atexit.register(_usage_report)
+
+
+def cached_system(system):
+    """The instructions go out with a cache marker: the same instructions sent again within a few minutes (every story
+    in a run, every storyline in a pass) are read from Anthropic's prompt cache at a tenth of the price. Replies are
+    identical; only the bill changes. Short instructions below the cache minimum are simply not cached."""
+    return [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}] if system else system
+
+
+def track(j):
+    u = (j or {}).get("usage") or {}
+    USAGE["calls"] += 1
+    USAGE["in"] += u.get("input_tokens", 0); USAGE["out"] += u.get("output_tokens", 0)
+    USAGE["cached"] += u.get("cache_read_input_tokens", 0) or 0; USAGE["written"] += u.get("cache_creation_input_tokens", 0) or 0
+
+
 def claude(model, system, user, max_tokens=1500):
     """Call the Claude Messages API and return the text reply."""
     if not API_KEY:
@@ -44,7 +71,7 @@ def claude(model, system, user, max_tokens=1500):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": model, "max_tokens": max_tokens, "system": system,
+            json={"model": model, "max_tokens": max_tokens, "system": cached_system(system),
                   "messages": [{"role": "user", "content": user}]},
             timeout=120,
         )
@@ -52,7 +79,8 @@ def claude(model, system, user, max_tokens=1500):
             time.sleep(5 * (attempt + 1))
             continue
         r.raise_for_status()
-        return "".join(b.get("text", "") for b in r.json().get("content", []))
+        j = r.json(); track(j)
+        return "".join(b.get("text", "") for b in j.get("content", []))
     raise RuntimeError("Claude API unavailable after retries")
 
 
