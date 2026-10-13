@@ -300,6 +300,22 @@
     40.974
    ],
    "enriched": "2026-10-12"
+  },
+  {
+   "id": "myflexbox",
+   "n": "myflexbox",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "parent": "dhl",
+   "hq": null,
+   "yr": null,
+   "s": "Carrier-neutral parcel locker network in Germany and Austria",
+   "role": "Carrier-neutral parcel locker network in Germany and Austria",
+   "al": [],
+   "src": "https://logistik-heute.de/en/news/parcel-logistics-dhl-significantly-expands-automated-network-myflexbox-286585.html",
+   "auto": true,
+   "added": "2026-10-13"
   }
  ],
  "edges": [
@@ -493,5 +509,18 @@
    "story": "a2de36ed1ca48"
   }
  ],
- "moves": []
+ "moves": [
+  {
+   "id": "myflexbox",
+   "k": "bought",
+   "parent": "dhl",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-10-01",
+   "url": "https://logistik-heute.de/en/news/parcel-logistics-dhl-significantly-expands-automated-network-myflexbox-286585.html",
+   "t": "Deutsche Post announced it has completed the purchase of Salzburg-based myflexbox from STAR Capital and will merge it with its DeinFach locker subsidiary.",
+   "role": "Carrier-neutral parcel locker network in Germany and Austria"
+  }
+ ]
 }
