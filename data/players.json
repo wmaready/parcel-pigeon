@@ -1,33 +1,6 @@
 {
  "players": [
   {
-   "id": "westbengalpost",
-   "n": "West Bengal Postal Circle",
-   "realm": "national",
-   "own": "sub",
-   "tk": null,
-   "parent": null,
-   "hq": "Kolkata, India",
-   "yr": null,
-   "s": "The India Post circle covering West Bengal, Sikkim and the Andaman & Nicobar Islands, which handles postal mail and parcels, including international shipments such as Shola art sent by air and sea through tie-ups with foreign postal services.",
-   "al": [
-    "Department of Posts, West Bengal Circle",
-    "India Post West Bengal Circle",
-    "WB Postal Circle"
-   ],
-   "src": "https://urbanacres.in/west-bengal-postal-circle-finds-new-life-in-logistics-and-public-services/",
-   "auto": true,
-   "pending": false,
-   "added": "2026-10-12",
-   "story": "a78db2954da94",
-   "site": "westbengalpost.gov.in",
-   "geo": [
-    88.364,
-    22.573
-   ],
-   "enriched": "2026-10-12"
-  },
-  {
    "id": "indiapostdepar",
    "n": "India Post (Department of Posts)",
    "realm": "national",
@@ -759,6 +732,27 @@
    "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/",
    "t": "C.H. Robinson agreed to acquire all of RXO, including Coyote Logistics and RXO Last Mile, in a cash-and-stock deal valued at about $5.8 billion, expected to clo",
    "role": "Asset-light truck brokerage, last mile and managed transport"
+  },
+  {
+   "id": "fedex",
+   "k": "spun",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-06-01",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+   "url2": "https://www.ccjdigital.com/business/article/15826430/fedex-completes-freight-spinoff",
+   "t": "FedEx completed the spin-off of its less-than-truckload unit as FedEx Freight Holding Company, Inc., an independent public company trading as FDXF, and kept a 1",
+   "role": null
   }
- ]
+ ],
+ "checks": {
+  "ups": "2026-10-13",
+  "fedex": "2026-10-13",
+  "usps": "2026-10-13",
+  "amzship": "2026-10-13",
+  "dhlexpress": "2026-10-13",
+  "dhlecom": "2026-10-13"
+ }
 }
