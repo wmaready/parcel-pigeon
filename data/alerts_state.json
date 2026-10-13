@@ -48,27 +48,27 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "wa0dc8b706733",
-  "af8ee5ed067c6",
-  "afbf819454788",
+  "w8a582ba4f6eb",
   "a945e2139bb15",
-  "a30530b988200",
-  "a9b2dacf6f727",
-  "w1a58abf8b69d",
-  "ae77827c0481e",
-  "w150132868eae",
-  "wbf2ef019cc6e",
-  "aad7e6789b34e",
-  "abf01a11b3d9e",
-  "wf225c9a3bf63",
-  "w3d06a7fa766e",
-  "w348418a9dc09",
+  "afbf819454788",
+  "ac1d01500ab14",
   "w49b3786a59a5",
+  "w348418a9dc09",
+  "a9b2dacf6f727",
+  "wf225c9a3bf63",
+  "w150132868eae",
   "w82629d496c23",
   "a1785bbd2ecbb",
-  "w8a582ba4f6eb",
+  "w1a58abf8b69d",
   "wb612a77519f2",
-  "ac1d01500ab14"
+  "wa0dc8b706733",
+  "w3d06a7fa766e",
+  "a30530b988200",
+  "abf01a11b3d9e",
+  "aad7e6789b34e",
+  "ae77827c0481e",
+  "af8ee5ed067c6",
+  "wbf2ef019cc6e"
  ],
  "backfilled": true,
  "players": [
@@ -82,7 +82,8 @@
   "gofofrance",
   "gallantcapital",
   "rps",
-  "robertsexpress"
+  "robertsexpress",
+  "myflexbox"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -625,7 +626,19 @@
    ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "player",
+   "key": "player:myflexbox",
+   "at": "2026-10-12T21:25:17.062781-04:00",
+   "t": "New on the map: myflexbox",
+   "m": "Operates a carrier-neutral network of roughly 3,000 open parcel lockers in Germany and Austria, used by several parcel carriers for delivery, pickup, shipping and returns.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-12",

@@ -304,18 +304,29 @@
   {
    "id": "myflexbox",
    "n": "myflexbox",
-   "realm": "3pl",
+   "realm": "regional",
    "own": "sub",
    "tk": null,
    "parent": "dhl",
-   "hq": null,
-   "yr": null,
-   "s": "Carrier-neutral parcel locker network in Germany and Austria",
+   "hq": "Salzburg, Austria",
+   "yr": "2018",
+   "s": "Operates a carrier-neutral network of roughly 3,000 open parcel lockers in Germany and Austria, used by several parcel carriers for delivery, pickup, shipping and returns.",
    "role": "Carrier-neutral parcel locker network in Germany and Austria",
-   "al": [],
+   "al": [
+    "DeinFach (merging into myflexbox)",
+    "MYFLEXBOX Austria GmbH",
+    "MYFLEXBOX Germany GmbH"
+   ],
    "src": "https://logistik-heute.de/en/news/parcel-logistics-dhl-significantly-expands-automated-network-myflexbox-286585.html",
    "auto": true,
-   "added": "2026-10-13"
+   "added": "2026-10-13",
+   "site": "myflexbox.com",
+   "geo": [
+    13.055,
+    47.809
+   ],
+   "enriched": "2026-10-13",
+   "pending": false
   }
  ],
  "edges": [
@@ -507,6 +518,69 @@
    "t": "GLS US is part of GLS Group",
    "url": "https://www.einpresswire.com/article/948054024/gls-launches-gls-connect-advancing-its-digital-shipping-experience",
    "story": "a2de36ed1ca48"
+  },
+  {
+   "a": "dhl",
+   "b": "myflexbox",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Deutsche Post (DHL Group) acquiring myflexbox from Star Capital and merging it with DeinFach, announced Oct 1, 2026",
+   "url": "https://www.cep-research.com/2026/10/01/dhl-buys-myflexbox-locker-network-in-major-ooh-expansion/",
+   "story": null
+  },
+  {
+   "a": "dpd",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": "2025",
+   "t": "DPD delivers to myflexbox lockers; took about 25% of Austrian locker capacity",
+   "url": "https://www.cep-research.com/2025/09/15/dpd-snaps-up-25-of-myflexbox-austria-locker-capacity/",
+   "story": null
+  },
+  {
+   "a": "glsgroup",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": null,
+   "t": "GLS is an integrated carrier partner in Germany and Austria",
+   "url": "https://www.myflexbox.com/en-de/parcel-locker/",
+   "story": null
+  },
+  {
+   "a": "ups",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": null,
+   "t": "UPS is an integrated carrier partner in Germany and Austria",
+   "url": "https://www.myflexbox.com/en-de/parcel-locker/",
+   "story": null
+  },
+  {
+   "a": "fedex",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx is an integrated carrier partner in Germany and Austria",
+   "url": "https://www.myflexbox.com/en-de/parcel-locker/",
+   "story": null
+  },
+  {
+   "a": "dhlexpress",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": null,
+   "t": "DHL Express is a carrier partner at myflexbox lockers in Austria",
+   "url": "https://www.myflexbox.com/en-de/parcel-locker/",
+   "story": null
+  },
+  {
+   "a": "amazon",
+   "b": "myflexbox",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon began delivering to myflexbox lockers in summer 2026",
+   "url": "https://www.trendingtopics.eu/myflexbox-deutsche-post-en/",
+   "story": null
   }
  ],
  "moves": [
