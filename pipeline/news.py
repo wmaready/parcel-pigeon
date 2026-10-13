@@ -104,12 +104,13 @@ Return JSON only, with exactly these keys:
 "docs": list of official carrier, USPS or regulator documents (or, for Market reports, the report itself) linked in the sources (rate guides, service guides,
   surcharge or fuel tables, notices, tariffs, filings), each {{"c":"carrier","t":"Rate guide|Service guide|GRI notice|Surcharges & fees|Peak|Fuel|Zones & DAS|Special program|Terms|Regulatory filing",
   "n":"the document's own title with year","y":year it applies to or null,"eff":"YYYY-MM-DD or null","u":"exact URL from the sources"}}; [] if none;
-"tie": one sentence linking this to earlier related news that the sources themselves mention (with month/year), or null;
+"tie": one sentence linking this to earlier related news ABOUT THE SAME COMPANY that the sources themselves mention (with month/year), or null. Never tie a story to another carrier's news;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
 "event_date": "YYYY-MM-DD" the day the event itself happened or was announced, if the sources say and it is earlier than the article, else null;
 "act": "YYYY-MM-DD" effective date if one is stated, else null;
 "dates": list of {{"d":"YYYY-MM-DD","w":"what changes that day, under 70 characters","imp":"up|down|info","fx":null}} for future dates in the source
+         about THIS story's own company only (never other carriers' events the article mentions in passing; one event per entry)
          ONLY when shippers' prices, surcharges, fees, service levels or rules change that day, or for a big industry event that
          shippers plan around (a network change, a regulation taking effect, a labor contract expiring). NEVER court dates,
          sentencing, hearings, trials, earnings calls, conferences or other dates about a person or a case; [] if none.
@@ -140,6 +141,50 @@ own announcement or filing, it is the source of truth: take every figure and dat
 for context it does not cover. Where they conflict, use the company's figure."""
 
 
+
+
+_NAMES = None
+
+
+def _names():
+    """Every company on the map as (id, regex), longest names first, so 'FedEx Ground' wins over 'FedEx'."""
+    global _NAMES
+    if _NAMES is None:
+        allp = load("seed.json", {}).get("players", []) + load("players.json", {}).get("players", [])
+        out = []
+        for p in allp:
+            for nm in [p.get("n")] + (p.get("al") or []):
+                if nm and len(str(nm)) > 2:
+                    out.append((p["id"], p.get("parent"), str(nm)))
+        out.sort(key=lambda x: -len(x[2]))
+        _NAMES = [(i, par, re.compile(r"(?<![A-Za-z0-9])" + re.escape(nm) + r"(?![A-Za-z0-9])")) for i, par, nm in out]
+    return _NAMES
+
+
+def _cos(text):
+    return {i for i, _, rx in _names() if rx.search(text or "")}
+
+
+def own_only(story):
+    """Keep a story's dates and context line about its own companies (tagged carriers and companies in the headline, with
+    their parents and arms). A clause naming only other companies is dropped; stories with no company of their own keep all."""
+    fam = {i: par for i, par, _ in _names()}
+    tags = {str(c).lower() for c in story.get("c") or [] if c not in ("Industry", "Regional")}
+    own = _cos(story.get("title", "")) | {i for i, _, rx in _names() if any(rx.pattern and rx.search(c) for c in (story.get("c") or []) if c not in ("Industry", "Regional"))}
+    if not own and not tags:
+        return
+    own |= {fam.get(i) for i in own if fam.get(i)} | {i for i, par in fam.items() if par in own}
+    foreign = lambda t: bool(_cos(t)) and not (_cos(t) & own)
+    keep = []
+    for d in story.get("dates") or []:
+        if not isinstance(d, dict) or not d.get("w"):
+            continue
+        parts = [x for x in re.split(r"\s*;\s*", str(d["w"])) if x and not foreign(x)]
+        if parts:
+            keep.append(dict(d, w="; ".join(parts)))
+    story["dates"] = keep
+    if story.get("tie") and foreign(story["tie"]):
+        story["tie"] = None
 
 def gnews(q):
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-US&gl=US&ceid=US:en"
@@ -692,6 +737,8 @@ def main():
                     if got:
                         story["img"], story["thumb"], story["imgc"] = got[0], got[1], f"Image: {sx['src']}"
                         break
+            # only the story's own company's dates and context: other carriers' events mentioned in passing are dropped
+            own_only(story)
             # only cost changes and big events go on the rate clock
             story["dates"] = [d for d in story["dates"] if isinstance(d, dict) and clock_worthy(story, d)]
             if story.get("act") and not clock_worthy(story, {"w": story["title"], "imp": story.get("imp")}):
