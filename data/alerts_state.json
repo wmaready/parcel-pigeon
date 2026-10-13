@@ -50,27 +50,27 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "wbf2ef019cc6e",
-  "af8ee5ed067c6",
-  "w3d06a7fa766e",
+  "w150132868eae",
+  "wa0dc8b706733",
+  "wf225c9a3bf63",
   "w49b3786a59a5",
-  "a945e2139bb15",
   "a1785bbd2ecbb",
-  "w8a582ba4f6eb",
-  "a30530b988200",
   "a9b2dacf6f727",
-  "ae77827c0481e",
+  "w82629d496c23",
+  "wb612a77519f2",
+  "w3d06a7fa766e",
+  "af8ee5ed067c6",
+  "a945e2139bb15",
+  "w8a582ba4f6eb",
   "aad7e6789b34e",
   "w1a58abf8b69d",
-  "afbf819454788",
-  "w348418a9dc09",
-  "wf225c9a3bf63",
-  "wb612a77519f2",
-  "abf01a11b3d9e",
-  "wa0dc8b706733",
-  "w150132868eae",
+  "wbf2ef019cc6e",
+  "ae77827c0481e",
   "ac1d01500ab14",
-  "w82629d496c23"
+  "a30530b988200",
+  "abf01a11b3d9e",
+  "afbf819454788",
+  "w348418a9dc09"
  ],
  "backfilled": true,
  "players": [
@@ -85,7 +85,10 @@
   "gallantcapital",
   "rps",
   "robertsexpress",
-  "myflexbox"
+  "myflexbox",
+  "sereact",
+  "zalando",
+  "universalposta"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -707,6 +710,39 @@
    "notable": true,
    "mask": 1,
    "url": "https://wmaready.github.io/parcel-pigeon/#story=a392500587e33"
+  },
+  {
+   "kind": "player",
+   "key": "player:sereact",
+   "at": "2026-10-13T03:18:53.452092-04:00",
+   "t": "New on the map: Sereact GmbH",
+   "m": "Sereact develops Cortex, a physical-AI software platform that runs warehouse picking and dual-arm returns-handling robots at 3PLs and retailers, and it is sold under a Robotics-as-a-Service model.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "player",
+   "key": "player:zalando",
+   "at": "2026-10-13T03:18:53.452106-04:00",
+   "t": "New on the map: Zalando SE",
+   "m": "European online fashion retailer and marketplace that runs its own fulfillment and returns network (Zalando Fulfillment Solutions) for itself and Partner Program brands, using third-party logistics providers and national carriers for warehousing and last-mile delivery.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "player",
+   "key": "player:universalposta",
+   "at": "2026-10-13T03:18:53.452111-04:00",
+   "t": "New on the map: Universal Postal Union",
+   "m": "The UN specialized agency for postal cooperation, it sets the rules and standards that let its 192 member countries exchange international mail and parcels, and it provides shared postal systems such as the Customs Declaration System and a delivered-duty-paid landed-cost tool.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
   }
  ],
  "fuelq": {},

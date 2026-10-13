@@ -14,7 +14,8 @@
   "c": [
    "Amazon",
    "UPS"
-  ]
+  ],
+  "rv": "8754e0e28dbf"
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
@@ -27,7 +28,8 @@
   "last": "2025-05-19",
   "c": [
    "FedEx"
-  ]
+  ],
+  "rv": "27596ef51563"
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
@@ -35,8 +37,7 @@
   "ids": [
    "h411",
    "h413",
-   "43",
-   "a1cfdcc1943ed"
+   "43"
   ],
   "first": "2024-06-01",
   "last": "2026-10-11",
@@ -44,14 +45,15 @@
    "FedEx"
   ],
   "cx": {
-   "sig": "ed8f6883916d",
+   "sig": "51288bc858e6",
+   "v": 2,
    "beats": {},
-   "intro": "FedEx's Network 2.0 effort to combine its Ground and Express networks, and the cost program behind it.",
-   "now": "Earlier coverage says FedEx expects the U.S. rollout of merged Ground and Express pickup and delivery to be complete by the end of 2027."
-  }
+   "intro": "FedEx is folding Ground and Express into one network, and shippers feel it in service, pickup routes and pricing."
+  },
+  "rv": "51288bc858e6"
  },
  "usps-air-cargo": {
-  "n": "USPS air cargo contract",
+  "n": "USPS air cargo shifts from FedEx to UPS",
   "s": "UPS took over USPS domestic air cargo from FedEx as the FedEx contract expired.",
   "ids": [
    "h407",
@@ -63,30 +65,16 @@
    "FedEx",
    "UPS",
    "USPS"
-  ]
- },
- "ups-usps-handoff": {
-  "n": "UPS ends USPS final-mile handoffs",
-  "s": "UPS ended SurePost and Ground Saver handoffs to USPS and now makes those deliveries itself.",
-  "ids": [
-   "h434",
-   "h501"
   ],
-  "first": "2024-12-31",
-  "last": "2025-01-01",
-  "c": [
-   "UPS",
-   "USPS"
-  ]
+  "rv": "bbbb22f9753d"
  },
  "de-minimis": {
-  "n": "De minimis exemption ends",
+  "n": "End of the de minimis exemption",
   "s": "De minimis has ended for all countries, and carriers report a trade hit while postal services suspended U.S. shipments.",
   "ids": [
    "h420",
    "h504",
    "h513",
-   "h524",
    "h526",
    "h532"
   ],
@@ -97,7 +85,8 @@
    "Industry",
    "UPS",
    "USPS"
-  ]
+  ],
+  "rv": "f405d49cdc56"
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds",
@@ -116,12 +105,12 @@
   ],
   "cx": {
    "sig": "dbe4c7321e1f",
-   "beats": {
-    "a771628a2eca4": "CBP began processing refunds for some finally liquidated entries, with 477 CAPE declarations covering 425,517 entries accepted so far."
-   },
-   "intro": "IEEPA tariff refunds: how the Supreme Court's February ruling is making its way back to shippers through carriers and customs.",
-   "now": "CBP is processing refunds, and FedEx, UPS and DHL are passing them to customers. UPS refunds arrive one to three months after Treasury reimburses it."
-  }
+   "v": 2,
+   "beats": {},
+   "intro": "After the Supreme Court struck down IEEPA tariffs, refunds are starting to flow, and shippers want to know who gets paid and when.",
+   "now": "CBP's current capability covers roughly $11.4 billion, or 6.9%, of IEEPA tariffs; UPS reports earnings Oct. 27 and FedEx Oct. 28."
+  },
+  "rv": "dbe4c7321e1f"
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
@@ -142,7 +131,8 @@
    "DHL",
    "FedEx",
    "UPS"
-  ]
+  ],
+  "rv": "4418fe805c66"
  },
  "usps-pricing": {
   "n": "USPS shipping price changes",
@@ -170,8 +160,7 @@
    "h525",
    "h527",
    "06",
-   "01",
-   "a945e2139bb15"
+   "01"
   ],
   "first": "2024-07-26",
   "last": "2026-10-12",
@@ -235,8 +224,7 @@
    "h410",
    "h505",
    "ab665e6db5daf",
-   "a9ecc86b6711f",
-   "a9b2dacf6f727"
+   "a9ecc86b6711f"
   ],
   "first": "2024-05-14",
   "last": "2026-10-12",
@@ -244,9 +232,10 @@
    "USPS"
   ],
   "cx": {
-   "sig": "b077508d623a",
+   "sig": "a59373534973",
+   "v": 2,
    "beats": {},
-   "intro": "How USPS service standards and processing changes have unfolded, and what each step means for shippers and customers."
+   "intro": "USPS keeps reshaping how and how fast mail moves, and shippers feel it in delivery windows and processing hubs."
   }
  },
  "usps-finances": {
@@ -331,11 +320,15 @@
   ],
   "cx": {
    "sig": "d2a72360be7b",
+   "v": 2,
    "beats": {
-    "h512": "Amazon said it would invest $4 billion by the end of 2026 to grow its rural network to more than 200 delivery stations.",
-    "34": "Starting in October, sellers can buy LTL labels through Amazon Buy Shipping. Regional pricing for bulky items follows in early 2027.",
-    "acac77f0044d4": "KFYR-TV reported that new Amazon delivery stations are speeding up packages in western North Dakota, though it gave no figures."
-   }
+    "h512": "Amazon put $4 billion behind rural delivery, aiming for more than 200 rural delivery stations and 100,000+ jobs by the end of 2026.",
+    "34": "Amazon is adding LTL labels for sellers in October, with regional pricing for heavy, bulky items due in early 2027.",
+    "05": "Business Insider reported a backup plan to reach about 95% of U.S. ZIP codes by 2029, drawn up in case the USPS deal fell through.",
+    "ae52ac3f8c7a2": "In North Carolina, a robotics fulfillment center with 1,000+ employees opened beside a new delivery station, running at 25% to 30% capacity.",
+    "acac77f0044d4": "Local TV in western North Dakota says the new Amazon delivery stations are speeding up packages, though no figures were given."
+   },
+   "now": "Amazon's peak fees for FBA and Multi-Channel Fulfillment start Oct. 15, and UPS and FedEx report earnings Oct. 27 and 28."
   }
  },
  "drone-delivery": {
@@ -350,7 +343,6 @@
    "g26",
    "a1d096a3e1205",
    "ac39181d4b6af",
-   "a8c2f572b5ab7",
    "a60770e8e9c32",
    "a83608ad7515e",
    "af1f31a54a5cb",

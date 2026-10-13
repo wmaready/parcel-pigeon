@@ -327,6 +327,83 @@
    ],
    "enriched": "2026-10-13",
    "pending": false
+  },
+  {
+   "id": "sereact",
+   "n": "Sereact GmbH",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Stuttgart, Germany",
+   "yr": "2021",
+   "s": "Sereact develops Cortex, a physical-AI software platform that runs warehouse picking and dual-arm returns-handling robots at 3PLs and retailers, and it is sold under a Robotics-as-a-Service model.",
+   "al": [
+    "Sereact"
+   ],
+   "src": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-07",
+   "story": "a6af45469a9a9",
+   "site": "sereact.ai",
+   "geo": [
+    9.183,
+    48.776
+   ],
+   "enriched": "2026-10-13"
+  },
+  {
+   "id": "zalando",
+   "n": "Zalando SE",
+   "realm": "retail",
+   "own": "public",
+   "tk": "ZAL",
+   "parent": null,
+   "hq": "Berlin, Germany",
+   "yr": "2008",
+   "s": "European online fashion retailer and marketplace that runs its own fulfillment and returns network (Zalando Fulfillment Solutions) for itself and Partner Program brands, using third-party logistics providers and national carriers for warehousing and last-mile delivery.",
+   "al": [
+    "Zalando",
+    "Zalando Fulfillment Solutions (ZFS)"
+   ],
+   "src": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-07",
+   "story": "a6af45469a9a9",
+   "site": "corporate.zalando.com",
+   "geo": [
+    13.405,
+    52.52
+   ],
+   "enriched": "2026-10-13"
+  },
+  {
+   "id": "universalposta",
+   "n": "Universal Postal Union",
+   "realm": "national",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Bern, Switzerland",
+   "yr": "1874",
+   "s": "The UN specialized agency for postal cooperation, it sets the rules and standards that let its 192 member countries exchange international mail and parcels, and it provides shared postal systems such as the Customs Declaration System and a delivered-duty-paid landed-cost tool.",
+   "al": [
+    "UPU",
+    "Union postale universelle"
+   ],
+   "src": "https://postandparcel.info/163064/news/parcel/upu-we-need-decision-makers-to-respond-with-coordinated-agile-policy/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-12",
+   "story": "a55fa30af35c9",
+   "site": "upu.int",
+   "geo": [
+    7.447,
+    46.948
+   ],
+   "enriched": "2026-10-13"
   }
  ],
  "edges": [
@@ -581,6 +658,60 @@
    "t": "Amazon began delivering to myflexbox lockers in summer 2026",
    "url": "https://www.trendingtopics.eu/myflexbox-deutsche-post-en/",
    "story": null
+  },
+  {
+   "a": "ceva",
+   "b": "sereact",
+   "k": "partner",
+   "y": "2026",
+   "t": "CEVA deploys Sereact robotic returns system for Zalando",
+   "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "story": "a6af45469a9a9"
+  },
+  {
+   "a": "ceva",
+   "b": "zalando",
+   "k": "partner",
+   "y": "2026",
+   "t": "CEVA handles Zalando returns inventory with automated system",
+   "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "story": "a6af45469a9a9"
+  },
+  {
+   "a": "zalando",
+   "b": "sereact",
+   "k": "invested",
+   "y": "2026",
+   "t": "Zalando joins Sereact's $116 million Series B as strategic investor",
+   "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "story": "a6af45469a9a9"
+  },
+  {
+   "a": "zalando",
+   "b": "ceva",
+   "k": "partner",
+   "y": null,
+   "t": "CEVA runs AI robotic returns handling for Zalando in Greven, Germany and Świebodzin, Poland",
+   "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
+   "story": "a6af45469a9a9"
+  },
+  {
+   "a": "zalando",
+   "b": "dhlsupplychain",
+   "k": "partner",
+   "y": "2018",
+   "t": "DHL Supply Chain operates Zalando fulfillment sites in Poland (2018) and Spain (2020/21)",
+   "url": "https://www.dhl.com/cz-en/home/press/press-archive/2022/dhl-will-support-zalando-with-delivering-beauty-samples-via-its-dhl-fulfillment-network.html",
+   "story": "a6af45469a9a9"
+  },
+  {
+   "a": "zalando",
+   "b": "glsgroup",
+   "k": "partner",
+   "y": null,
+   "t": "GLS Germany is a listed logistics provider for Zalando Connected Retail partners",
+   "url": "https://partner.zalando.com/university/article/logistics-and-gls-germany",
+   "story": "a6af45469a9a9"
   }
  ],
  "moves": [
