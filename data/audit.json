@@ -1,5 +1,5 @@
 {
- "run": "2026-10-13T18:35Z",
+ "run": "2026-10-13T18:54Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -37,6 +37,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"UPS adds RFID tracking and PIN delivery for holiday peak, plans ~100,000 hires\"",
    "ids": [
     "af8ee5ed067c6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19\"",
+   "ids": [
+    "a2b81ad721cb8"
    ],
    "fixed": false
   },
@@ -84,6 +93,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"UPS adds RFID tracking and PIN delivery for holiday peak, plans ~100,000 hires\"",
    "ids": [
     "af8ee5ed067c6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19\"",
+   "ids": [
+    "a2b81ad721cb8"
    ],
    "fixed": false
   },

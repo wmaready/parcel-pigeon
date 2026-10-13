@@ -1117,6 +1117,50 @@
   "exclusive": true
  },
  {
+  "id": "a2b81ad721cb8",
+  "date": "2026-10-06",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19",
+  "sum": "Poshmark will stop covering any part of the $50 USPS hazardous materials noncompliance fee on October 19, Value Added Resource reported. Sellers have paid $5 since August 1, after the marketplace covered the full $50 when USPS introduced the charge on July 12. Poshmark is directing sellers to remove or cover old HAZMAT markings on reused packaging.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "From October 19, Poshmark sellers whose shipments are flagged for HAZMAT noncompliance will pay the full $50 USPS fee instead of $5.",
+  "tie": "The change follows USPS's July 12 launch of the $50 fee and Poshmark's August 1 move to charge sellers $5 while absorbing $45.",
+  "act": "2026-10-19",
+  "dates": [
+   {
+    "d": "2026-10-19",
+    "w": "Poshmark sellers pay full $50 USPS HAZMAT fee",
+    "imp": "up",
+    "fx": {
+     "t": "fee",
+     "car": "USPS",
+     "items": [
+      [
+       "HAZMAT noncompliance fee on commercial packages",
+       "$50.00",
+       50
+      ]
+     ]
+    }
+   }
+  ],
+  "src": "Value Added Resource",
+  "url": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/",
+  "srcs": [
+   {
+    "src": "Value Added Resource",
+    "url": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
+ },
+ {
   "id": "a2def09bc43bb",
   "date": "2026-10-06",
   "c": [

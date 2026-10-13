@@ -53,29 +53,29 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "aad7e6789b34e",
-  "wb612a77519f2",
-  "abf01a11b3d9e",
   "wf225c9a3bf63",
-  "wa0dc8b706733",
+  "w8a582ba4f6eb",
   "a30530b988200",
   "ac1d01500ab14",
-  "w150132868eae",
-  "afbf819454788",
   "a89d7e4beebd9",
-  "w49b3786a59a5",
-  "w3d06a7fa766e",
-  "ae77827c0481e",
-  "a945e2139bb15",
-  "w82629d496c23",
-  "aee6669d325da",
-  "af8ee5ed067c6",
-  "w348418a9dc09",
-  "a9b2dacf6f727",
-  "w8a582ba4f6eb",
   "w1a58abf8b69d",
   "a1785bbd2ecbb",
-  "wbf2ef019cc6e"
+  "w49b3786a59a5",
+  "a9b2dacf6f727",
+  "wa0dc8b706733",
+  "aee6669d325da",
+  "w82629d496c23",
+  "w348418a9dc09",
+  "wbf2ef019cc6e",
+  "ae77827c0481e",
+  "w3d06a7fa766e",
+  "aad7e6789b34e",
+  "afbf819454788",
+  "a945e2139bb15",
+  "w150132868eae",
+  "abf01a11b3d9e",
+  "wb612a77519f2",
+  "af8ee5ed067c6"
  ],
  "backfilled": true,
  "players": [
@@ -94,7 +94,10 @@
   "sereact",
   "zalando",
   "universalposta",
-  "gobolt"
+  "gobolt",
+  "poshmark",
+  "mercari",
+  "ebay"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -147,7 +150,11 @@
   "player:zalando",
   "player:universalposta",
   "story:q4 freight index projects record ground and express parcel rates",
-  "story:gofo adds 4 emergency fuel surcharge from oct 26"
+  "story:gofo adds 4 emergency fuel surcharge from oct 26",
+  "more:player:ebay,player:mercari,player:poshmark",
+  "player:poshmark",
+  "player:mercari",
+  "player:ebay"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -744,7 +751,7 @@
  "fuelq": {},
  "day": {
   "d": "2026-10-13",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-10-13T13:39:07.698555-04:00"
+ "last_push": "2026-10-13T14:50:33.218663-04:00"
 }

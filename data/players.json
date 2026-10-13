@@ -411,6 +411,136 @@
    "enriched": "2026-10-13",
    "pending": false,
    "added": "2026-10-13"
+  },
+  {
+   "id": "poshmark",
+   "n": "Poshmark",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Redwood City, CA, USA",
+   "yr": "2011",
+   "s": "Poshmark is a resale marketplace that issues sellers a prepaid, pre-addressed USPS shipping label on every sale and handles carrier claims for its buyers and sellers.",
+   "al": [
+    "GoshPosh",
+    "Poshmark, Inc."
+   ],
+   "src": "https://www.prnewswire.com/news-releases/naver-completes-acquisition-of-poshmark-301714299.html",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-06",
+   "story": "a2b81ad721cb8",
+   "site": "poshmark.com",
+   "geo": [
+    -122.236,
+    37.485
+   ],
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/naver-completes-acquisition-of-poshmark-301714299.html",
+    "https://support-us.poshmark.com/articlesDescriptionPage?id=ka03u000000oXeaAAE",
+    "https://www.cbinsights.com/company/poshmark"
+   ],
+   "enriched": "2026-10-13"
+  },
+  {
+   "id": "mercari",
+   "n": "Mercari, Inc.",
+   "realm": "retail",
+   "own": "public",
+   "tk": "4385",
+   "parent": "belposhta",
+   "hq": "Tokyo, Japan",
+   "yr": "2013",
+   "s": "Mercari is a Tokyo-based C2C marketplace that sells U.S. sellers prepaid USPS, UPS and FedEx shipping labels and offers a UPS Store Pack and Ship service, and it runs anonymous parcel shipping in Japan.",
+   "al": [
+    "Mercari",
+    "Mercari US",
+    "メルカリ株式会社"
+   ],
+   "src": "https://www.mercari.com/us/help_center/article/6000/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-06",
+   "story": "a2b81ad721cb8",
+   "site": "mercari.com",
+   "geo": [
+    139.729,
+    35.661
+   ],
+   "srcs": [
+    "https://www.mercari.com/us/help_center/article/6000/",
+    "https://www.prnewswire.com/news-releases/selling-your-stuff-online-gets-even-easier-with-mercari-pack-and-ship-300751189.html",
+    "https://en.wikipedia.org/wiki/Mercari"
+   ],
+   "enriched": "2026-10-13"
+  },
+  {
+   "id": "ebay",
+   "n": "eBay Inc.",
+   "realm": "retail",
+   "own": "public",
+   "tk": "EBAY",
+   "parent": "belposhta",
+   "hq": "San Jose, CA, USA",
+   "yr": "1995",
+   "s": "Online marketplace that sells discounted USPS, UPS and FedEx shipping labels to its sellers through eBay Labels and runs the eBay International Shipping cross-border program.",
+   "al": [
+    "AuctionWeb",
+    "eBay",
+    "eBay International Shipping",
+    "eBay Labels"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/1065088/000106508826000027/ebay-20251231.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-06",
+   "story": "a2b81ad721cb8",
+   "site": "ebay.com",
+   "geo": [
+    -121.886,
+    37.338
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/1065088/000106508826000027/ebay-20251231.htm",
+    "https://www.ebay.com/sellercenter/shipping/choosing-a-carrier-and-service",
+    "https://en.wikipedia.org/wiki/EBay"
+   ],
+   "enriched": "2026-10-13"
+  },
+  {
+   "id": "etsy",
+   "n": "Etsy",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Online marketplace that did not offer fee protection",
+   "al": [],
+   "src": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-06",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "id": "ecomlogistics",
+   "n": "Ecom Logistics",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Provides fulfillment and last-mile delivery through a connected order-to-door network in Canada",
+   "al": [],
+   "src": "https://finance.yahoo.com/small-business/articles/ecom-logistics-launches-ecom-now-121200418.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-08",
+   "story": "aa819079ba882"
   }
  ],
  "edges": [
@@ -755,6 +885,105 @@
    "t": "Pitney Bowes listed in GoBolt's carrier network",
    "url": "https://www.gobolt.com/faq/",
    "story": null
+  },
+  {
+   "a": "ecomlogistics",
+   "b": "shopify",
+   "k": "partner",
+   "y": "2026",
+   "t": "Ecom NOW connects Shopify storefronts to Ecom's same-day delivery network",
+   "url": "https://finance.yahoo.com/small-business/articles/ecom-logistics-launches-ecom-now-121200418.html",
+   "story": "aa819079ba882"
+  },
+  {
+   "a": "poshmark",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Prepaid USPS shipping labels for all Poshmark sales",
+   "url": "https://support-us.poshmark.com/articlesDescriptionPage?id=ka03u000000oXeaAAE",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "mercari",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "USPS prepaid labels for Mercari sellers",
+   "url": "https://www.mercari.com/us/help_center/article/6000/",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "mercari",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "UPS prepaid labels for Mercari sellers",
+   "url": "https://www.mercari.com/us/help_center/article/6000/",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "mercari",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx prepaid labels for Mercari sellers",
+   "url": "https://www.mercari.com/us/help_center/article/6000/",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "mercari",
+   "b": "upsstore",
+   "k": "partner",
+   "y": "2018",
+   "t": "Mercari Pack and Ship service",
+   "url": "https://www.prnewswire.com/news-releases/selling-your-stuff-online-gets-even-easier-with-mercari-pack-and-ship-300751189.html",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "ebay",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx services offered through eBay Labels",
+   "url": "https://www.ebay.com/sellercenter/shipping/choosing-a-carrier-and-service/fedex-and-ebay-labels",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "ebay",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "UPS services offered through eBay Labels",
+   "url": "https://www.ebay.com/sellercenter/shipping/choosing-a-carrier-and-service",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "ebay",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "USPS postage and labels through eBay",
+   "url": "https://faq.usps.com/s/article/eBay",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "ebay",
+   "b": "radial",
+   "k": "sold",
+   "y": "2015",
+   "t": "Sold eBay Enterprise (ex-GSI Commerce), which became Radial, to a Permira-led group",
+   "url": "https://techcrunch.com/2016/04/19/ebay-enterprise-merges-with-innotrac-to-become-radial/",
+   "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "ebay",
+   "b": "pitneybowes",
+   "k": "partner",
+   "y": "2022",
+   "t": "Cross-border shipping partner for the Global Shipping Program and eBay International Shipping",
+   "url": "https://www.freightwaves.com/news/pitney-bowes-ebay-extend-cross-border-shipping-partnership",
+   "story": "a2b81ad721cb8"
   }
  ],
  "moves": [
@@ -834,6 +1063,9 @@
   "gls": "2026-10-13",
   "lso": "2026-10-13",
   "speedee": "2026-10-13",
-  "gobolt": "2026-10-13"
+  "gobolt": "2026-10-13",
+  "poshmark": "2026-10-13",
+  "mercari": "2026-10-13",
+  "ebay": "2026-10-13"
  }
 }
