@@ -195,7 +195,16 @@
   "c": [
    "FedEx",
    "UPS"
-  ]
+  ],
+  "cx": {
+   "sig": "c246f9c59438",
+   "beats": {
+    "h530": "UPS adds peak surge fees: $0.23/lb Europe-to-U.S. express, $0.47/lb from India, $0.20/lb on most U.S. export express. China is excluded.",
+    "31": "FedEx follows with per-pound demand fees on U.S. imports and raises its export demand fee from $0.20 to $0.30 a pound."
+   },
+   "intro": "Per-pound surcharges on international parcels, first from UPS peak fees, then FedEx demand fees. Shippers pay by weight.",
+   "now": "FedEx's import and export demand fees run until further notice, and the milestones give no end date for them."
+  }
  },
  "usps-leadership": {
   "n": "USPS leadership turnover",
@@ -319,7 +328,15 @@
    "FedEx",
    "UPS",
    "USPS"
-  ]
+  ],
+  "cx": {
+   "sig": "d2a72360be7b",
+   "beats": {
+    "h512": "Amazon said it would invest $4 billion by the end of 2026 to grow its rural network to more than 200 delivery stations.",
+    "34": "Starting in October, sellers can buy LTL labels through Amazon Buy Shipping. Regional pricing for bulky items follows in early 2027.",
+    "acac77f0044d4": "KFYR-TV reported that new Amazon delivery stations are speeding up packages in western North Dakota, though it gave no figures."
+   }
+  }
  },
  "drone-delivery": {
   "n": "Drone delivery expansion",
