@@ -6236,6 +6236,13 @@ var LOGOS_SNAP={
   "f": "data/logos/universalposta.png",
   "ar": 3.867,
   "src": "https://upu.int/Content/images/logo/logo-white.png"
+ },
+ "gobolt": {
+  "checked": "2026-10-13",
+  "host": "gobolt.com",
+  "f": "data/logos/gobolt.png",
+  "ar": 2.725,
+  "src": "https://www.gobolt.com/wp-content/uploads/2024/11/cropped-GoBolt-All-Logos_GoBolt-Primary-for-White-Bg-3.png"
  }
 };
 
@@ -6299,9 +6306,15 @@ function logoImg(x,cls,label){const id=logoId(x);if(!id)return '';
   const nm=label||(typeof x==='string'?x:LOGO_NAME(id)),B=typeof BRAND_SVG!=='undefined'&&BRAND_SVG[id];
   if(B){const v=B.v.split(' ').map(Number),ar=Math.min(4.2,Math.max(.8,v[2]/v[3]));
     return `<span class="lgo ${cls||''}${ar<1.6?' sq':''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}${B.bg?';--lbg:'+B.bg:''}"><svg viewBox="${B.v}" aria-hidden="true">${logoLayers(id,B)}</svg><span class="sr">${esc(nm)}</span></span>`}
-  const r=LOGOS[id];if(!r||!r.f)return '';
+  const r=LOGOS[id];if(!r||!r.f)return logoParent(id,cls,nm);
   const ar=r.ar?Math.min(4.2,Math.max(.8,+r.ar)):1;
   return `<span class="lgo lgi ${cls||''}${ar<1.6?' sq':''}" title="${esc(nm)}" style="--ar:${ar.toFixed(2)}"><img src="${r.f}" alt="" loading="lazy" decoding="async" onload="lgTone(this)" onerror="lgErr(this)"><span class="sr">${esc(nm)}</span></span>`}
+/* An arm named for its parent's brand (FedEx Freight, UPS Airlines, DHL eCommerce, Uber Direct, GLS US) carries the parent's
+   mark, so with no logo of its own on file it shows the parent's, still labelled with its own name. Only when the names match. */
+function logoParent(id,cls,nm){if(typeof PL==='undefined')return '';const p=PL[id];if(!p)return '';
+  for(const q of [PL[p.parent],PL[p.was]]){if(!q||q.id===id)continue;const brand=String(q.n||'').split(/\s+/)[0].toLowerCase();
+    if(brand.length>1&&String(p.n||'').toLowerCase().startsWith(brand+' ')){const h=logoImg(q,cls,nm);if(h)return h}}
+  return ''}
 /* A logo drawn in white or very light colors on a transparent background vanishes on a white tile: those get a dark
    tile instead. Checked once per logo file in the browser (same-site images, so the pixels can be read). */
 const LGTONE={};
@@ -7097,7 +7110,7 @@ function media(n,size){
 function wireItem(n){
   return `<li class="wi" tabindex="0" role="button" aria-expanded="false" data-story="${n.id}">
     <span class="d">${fmtD(n.date)}${media(n,'thumb')}</span>
-    <div><h3>${esc(n.title)}</h3><div class="meta">${impTag(n.lvl)}${statusTag(n)}<span>${carList(n.c.join(' · '))}</span><span>${esc(n.cat)}</span>${(x=>x&&thrStories(x.k).length>1?`<button type="button" class="stmini" data-thread="${x.k}">${esc(x.t.n)}${x.i>0?` · update ${x.i+1}`:''}</button>`:'')(typeof thrOf==='function'&&thrOf(n))}</div>
+    <div><h3>${esc(n.title)}</h3><div class="meta">${impTag(n.lvl)}${statusTag(n)}<span>${carList((storyCars(n).length?storyCars(n):n.c).join(' · '))}</span><span>${esc(n.cat)}</span>${(x=>x&&thrStories(x.k).length>1?`<button type="button" class="stmini" data-thread="${x.k}">${esc(x.t.n)}${x.i>0?` · update ${x.i+1}`:''}</button>`:'')(typeof thrOf==='function'&&thrOf(n))}</div>
       <div class="eff"><div class="lbl">Effect · ${IMPACT[n.imp].w}</div>${esc(n.plain)}
         <div class="row" style="display:flex;gap:var(--sp-3);flex-wrap:wrap;align-items:center"><span class="lbl">${srcLinks(n)}</span><button class="link" data-open="${n.id}">Full story</button></div></div></div></li>`}
 function nextChange(){return DATES.filter(x=>daysTo(x.d)>=0&&x.imp==='up'&&!x.verify)[0]}
@@ -7159,7 +7172,7 @@ function passes(n,skip={}){
 const filtered=(skip)=>NEWS.filter(n=>passes(n,skip)).sort((a,b)=>b.date.localeCompare(a.date));
 function renderFilters(){
   const cnt=(skip,fn)=>NEWS.filter(n=>passes(n,skip)&&fn(n)).length;
-  $('fCarS').innerHTML=['All',...CARS].map(c=>`<option value="${c}"${c===F.car?' selected':''}>${c==='All'?'All carriers':c} (${c==='All'?cnt({car:1},()=>true):cnt({car:1},n=>hasCar(n,c))})</option>`).join('');
+  $('fCarS').innerHTML=['All',...CARS].map(c=>`<option value="${c}"${c===F.car?' selected':''}>${c==='All'?'All carriers':c==='Regional'?'Other regionals':c} (${c==='All'?cnt({car:1},()=>true):cnt({car:1},n=>hasCar(n,c))})</option>`).join('');
   const yrs=[...new Set(NEWS.map(n=>n.date.slice(0,4)))].sort().reverse();
   const W=[['all','Any time'],['7','Past week'],['30','Past 30 days'],['90','Past 90 days'],...yrs.map(y=>[y,y])];
   $('fWhen').innerHTML=W.map(([v,l])=>`<option value="${v}"${v===F.when?' selected':''}>${l} (${cnt({when:1},n=>v==='all'||(/^\d{4}$/.test(v)?n.date.startsWith(v):n.date>=addDays(TODAY,-(+v))))})</option>`).join('');
@@ -7181,7 +7194,7 @@ const none='<div class="empty">No stories match these filters. <button class="li
 function card(n,full){
   const links=clockFor(n.id).filter(x=>daysTo(x.d)>=0).slice(0,4);
   const eff=n.act?(()=>{const d=daysTo(n.act);return d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
-  const cars=n.c.filter(c=>c!=='Industry');
+  const cars=storyCars(n);
   const hd=`<header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${statusTag0(n)}${rxPill(n)}</header>`;
   const tag=`<span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span>`;
   if(!full){
@@ -7752,7 +7765,7 @@ const REPORT_CATS=[['Parcel volume & service',/parcel volume|parcels in|package 
   ['Shoppers & returns',/shopper|consumer|returns|customers/i],
   ['Shipper & merchant surveys',/merchant|brands|retailers|sellers|survey|small business/i]];
 const reportCat=d=>(REPORT_CATS.find(([,re])=>re.test(d.n||''))||['Other reports'])[0];
-const DOC_LABEL=c=>c==='Reports'?'Market reports':c;
+const DOC_LABEL=c=>c==='Reports'?'Market reports':c==='Regional'?'Other regionals':c;
 const docGroup=d=>d.c==='Reports'?reportCat(d):(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
 const DF=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});
 let DOC_CHANGES=null;   // url -> newest guide-change story about that document
@@ -8003,6 +8016,22 @@ function indexPlayers(){
   PEDGES.forEach((e,i)=>{e.i=i;if(PL[e.a]&&PL[e.b]){PL[e.a].ed.push(e);PL[e.b].ed.push(e)}});
 }
 const storyText=n=>[n.title,n.sum,n.plain||'',n.tie||''].join(' ');
+/* The companies a story is about, most relevant first: its tagged carriers, then companies named in the headline (in headline
+   order), then companies named in the body (in order of first mention). titleOnly keeps just the tagged and headline ones. */
+function storyCos(n,titleOnly){if(!n)return [];const k=titleOnly?'_cosT':'_cos';if(n[k]&&n[k+'P']===PRE)return n[k];
+  const at=(id,t)=>{const e=PRE.find(x=>x[0]===id);if(!e)return -1;const m=e[1].exec(t);return m?m.index+m[1].length:-1};
+  const tag=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional').map(c=>logoId(c)).filter(Boolean);
+  const T=String(n.title||''),hd=mentions(T).map(id=>[id,at(id,T)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  let L=[...tag,...hd];
+  if(!titleOnly){const B=storyText(n);L=L.concat(mentions(B).map(id=>[id,at(id,B)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]))}
+  L=[...new Set(L)].filter(id=>typeof PL==='undefined'||PL[id]||tag.includes(id));n[k]=L;n[k+'P']=PRE;return L}
+/* what a story card shows as its companies: tagged carriers plus anyone named in the headline, so a story about GOFO shows
+   GOFO (and its logo) instead of a generic "Regional" */
+function storyCars(n){const base=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional'),have=new Set(base.map(c=>logoId(c)).filter(Boolean));
+  // headline companies, minus investors and minus names already shown in another form ("Amazon" vs "Amazon Shipping", "GLS" vs "GLS US")
+  const L=base.slice(),lo=x=>String(x).toLowerCase(),dup=nm=>L.some(x=>lo(x).includes(lo(nm))||lo(nm).includes(lo(x)));
+  storyCos(n,true).forEach(id=>{const p=PL[id];if(!p||have.has(id)||p.realm==='capital')return;const nm=famName(p);if(nm&&!dup(nm))L.push(nm)});
+  L.splice(3);return L.length?L:(n.c||[]).filter(c=>c!=='Industry')}
 // which companies a text mentions: hundreds of name patterns per text, so each text is matched once and remembered
 const MENT={pre:null,m:new Map()};
 const mentions=t=>{if(MENT.pre!==PRE){MENT.pre=PRE;MENT.m.clear()}let r=MENT.m.get(t);if(!r){r=PRE.filter(([,re])=>re.test(t)).map(([id])=>id);if(MENT.m.size>4000)MENT.m.clear();MENT.m.set(t,r)}return r};
@@ -8668,7 +8697,7 @@ renderClocks();setInterval(renderClocks,10000);
   // a short calling card for each kind of company on the map
   const CARD={national:'National carrier',regional:'Last-mile',gig:'Gig delivery',retail:'Retail','3pl':'3PL',global:'Global logistics',software:'Shipping tech',cold:'Cold chain',auto:'Drones & robots',capital:'Investor'};
   const stop=p=>{const c=cityOf(p.hq),own=/,\s*([A-Z]{2}),\s*USA$/.exec(p.hq||''),st=own?own[1]:ST[c],name=c.replace(' (Atlanta)','').replace('Minneapolis-St. Paul','Minneapolis');
-    return {id:p.id,c:p.n,city:/^Washington/.test(c)?'Washington, DC':name+(st?', '+st:''),realm:p.realm,p:px(GEO[c])}};
+    return {id:p.id,c:p.n,city:/^Washington/.test(c)?'Washington, DC':name+(st?', '+st:''),realm:p.realm,p:GEO[c]?px(GEO[c]):[0,0]}};
   // logistics operators only: carriers, last-mile, gig, retail networks, 3PLs and global logistics (no investors, software or tech)
   const MAPREALMS=['national','regional','gig','retail','3pl','global'];
   const POOL=(typeof PLAYERS!=='undefined'?PLAYERS:[]).filter(p=>MAPREALMS.includes(p.realm)&&/USA$/.test(p.hq||'')&&GEO[cityOf(p.hq)]).map(stop);
@@ -8678,9 +8707,9 @@ renderClocks();setInterval(renderClocks,10000);
       if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,3)}
     return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,3)}
   // the stop for a story: its carrier's headquarters, else the headquarters of a company the story names
-  const homeOf=n=>{const ids=[...(n.c||[]).filter(c=>c!=='Industry').map(c=>typeof logoId==='function'&&logoId(c)),
-      ...(typeof mentions==='function'&&typeof storyText==='function'?mentions(storyText(n)):[])].filter(Boolean);
-    for(const id of [...new Set(ids)]){const p=PLAYERS.find(x=>x.id===id);if(p&&/USA$/.test(p.hq||'')&&GEO[cityOf(p.hq)])return stop(p)}return null};
+  const homeOf=n=>{const ids=typeof storyCos==='function'?storyCos(n):[];
+    for(const id of ids){const p=PL[id];if(!p||!/USA$/.test(p.hq||''))continue;if(GEO[cityOf(p.hq)])return stop(p);
+      const g=typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const s=stop(p);s.p=px(g.g);return s}}return null};
   function drawStops(){LV=liveStories();const n=Math.max(1,LV.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     const out=[],realms=new Set(),far=s=>out.every(o=>!o||Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
     // each story at its carrier's headquarters when there's room; otherwise a nearby-looking market-map stop
