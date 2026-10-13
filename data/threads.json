@@ -203,12 +203,10 @@
   ],
   "cx": {
    "sig": "c246f9c59438",
-   "beats": {
-    "h530": "UPS adds peak surge fees: $0.23/lb Europe-to-U.S. express, $0.47/lb from India, $0.20/lb on most U.S. export express. China is excluded.",
-    "31": "FedEx follows with per-pound demand fees on U.S. imports and raises its export demand fee from $0.20 to $0.30 a pound."
-   },
-   "intro": "Per-pound surcharges on international parcels, first from UPS peak fees, then FedEx demand fees. Shippers pay by weight.",
-   "now": "FedEx's import and export demand fees run until further notice, and the milestones give no end date for them."
+   "v": 2,
+   "beats": {},
+   "intro": "UPS and FedEx are now both adding per-pound fees on international express, which raises the cost of heavier imports and exports.",
+   "now": "FedEx's fees run until further notice. UPS reports earnings Oct. 27 and FedEx Oct. 28, and peak surcharges at major carriers end Jan. 15, 2027."
   },
   "rv": "c246f9c59438"
  },
@@ -292,7 +290,18 @@
    "UPS",
    "USPS"
   ],
-  "rv": "7045e15542ff"
+  "rv": "7045e15542ff",
+  "cx": {
+   "sig": "7045e15542ff",
+   "v": 2,
+   "beats": {
+    "h408": "Amazon Logistics grew 15.7% to 5.9 billion parcels in 2023, passing UPS at 4.6 billion. USPS still led at 6.6 billion.",
+    "h522": "In 2024, USPS held 31% of volume and Amazon 28%. Pitney Bowes projected Amazon would pass USPS by 2028.",
+    "r03": "Pitney Bowes also has Amazon first, at 6.9 billion parcels to USPS's 6.2 billion. By revenue, UPS (31.6%) and FedEx (30.8%) lead."
+   },
+   "intro": "How Amazon climbed to No. 1 in U.S. parcel volume, while UPS and FedEx still lead on revenue.",
+   "now": "Amazon leads on volume, UPS and FedEx on revenue. Peak fees start Oct. 24, and UPS and FedEx report earnings Oct. 27 and 28."
+  }
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
@@ -311,26 +320,25 @@
   ],
   "cx": {
    "sig": "e3902d701814",
+   "v": 2,
    "beats": {
-    "21": "Amazon's new USPS agreement trims its volume by about 20%, after reports it would cut by two-thirds.",
-    "g09": "DHL eCommerce and USPS sign an exclusive multi-year last-mile deal worth 'well over $10 billion'; the term wasn't disclosed.",
-    "09": "Amazon's same-day pilot starts with midday drops at select post offices for delivery by 8 p.m., capped at 200 packages a day per site."
+    "21": "Reports said Amazon would cut its USPS volume by two-thirds; the new agreement trims it by about 20% instead.",
+    "g09": "DHL eCommerce's 19 automated hubs feed USPS's 170 million-plus delivery points, and Amazon's roughly 80% stays in that network.",
+    "09": "Amazon drops a second batch at select post offices between noon and 1 p.m. for delivery by 8 p.m., capped at 200 packages a day per site."
    },
-   "intro": "How USPS's deals with big shippers, from Amazon volume changes to a DHL eCommerce contract, are reshaping its network.",
-   "now": "USPS has an exclusive last-mile deal with DHL eCommerce and is piloting same-day for Amazon. Columbia, S.C. joins Oct 20 with a 500-package cap."
+   "intro": "USPS is reshaping its two big parcel relationships, with Amazon and DHL eCommerce, and shippers rely on its network.",
+   "now": "The same-day pilot adds Columbia, S.C. on Oct 20 with a 500-package cap; USPS holiday prices end Jan 15."
   },
   "rv": "e3902d701814"
  },
  "amazon-network-buildout": {
-  "n": "Amazon logistics buildout",
+  "n": "Amazon's logistics network expansion",
   "s": "Amazon is extending its own delivery and logistics network, and local reports now describe new delivery stations in western North Dakota.",
   "ids": [
    "h512",
    "17",
    "34",
-   "05",
-   "acd4fc0450fe6",
-   "ae52ac3f8c7a2"
+   "05"
   ],
   "first": "2025-04-30",
   "last": "2026-10-08",
@@ -341,32 +349,26 @@
    "USPS"
   ],
   "cx": {
-   "sig": "38d118f62d98",
+   "sig": "ce498ee4d3ad",
    "v": 2,
    "beats": {
-    "h512": "Amazon set aside $4 billion through 2026 to push past 200 rural delivery stations and add more than 100,000 jobs.",
-    "34": "Sellers can buy LTL labels through Buy Shipping from October, and regional pricing for heavy items follows in early 2027."
+    "h512": "Amazon committed $4 billion through 2026 to push into rural areas, aiming for more than 200 rural delivery stations and 100,000+ jobs.",
+    "34": "Sellers can buy LTL labels at Amazon-negotiated rates starting in October, with regional pricing for heavy, bulky items due in early 2027."
    },
-   "intro": "Amazon keeps building its own delivery reach, from rural stations to services for outside shippers. Here's how it's stacked up.",
-   "now": "Amazon's peak fees for FBA and Multi-Channel Fulfillment start Oct. 15, and the USPS same-day pilot expands to Columbia, S.C. on Oct. 20."
-  }
+   "now": "Amazon's FBA peak fees start Oct. 15, and UPS and FedEx report earnings Oct. 27 and 28, their first since the market reaction."
+  },
+  "rv": "ce498ee4d3ad"
  },
  "drone-delivery": {
-  "n": "Drone delivery expansion",
+  "n": "Drone delivery expansion and FAA rules",
   "s": "Drone delivery operators are widening US coverage, and Amazon is now recruiting for an Australian approvals role while Wing has left Australia.",
   "ids": [
    "h507",
-   "g29",
    "g27",
    "g28",
    "g02",
    "g26",
-   "a1d096a3e1205",
-   "ac39181d4b6af",
-   "a60770e8e9c32",
-   "a83608ad7515e",
-   "af1f31a54a5cb",
-   "abe2fa039ab25"
+   "a60770e8e9c32"
   ],
   "first": "2025-03-31",
   "last": "2026-10-13",
@@ -376,21 +378,19 @@
    "Regional"
   ],
   "cx": {
-   "sig": "845437e74784",
+   "sig": "f88c6c14fee7",
    "v": 2,
    "beats": {
-    "h507": "Amazon's pause was short: the FAA approved the altitude-sensor software fix, and flights resumed in Texas and Arizona.",
-    "g27": "Amazon's plan goes from 11 US locations to almost 500 towns, with fees of $2.99 for Prime members and $4.99 for others.",
-    "g28": "Lowe's joins in through the DoorDash app on Wing drones. Wing also flies for Walmart, which is adding to more than 270 stores in 2026.",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, taking them to nearly 20 metros after giving over three million customers access.",
-    "af1f31a54a5cb": "Lowe's Matthews pilot is reported again here: Wing and DoorDash already fly in the Charlotte area, and the aim is 20-minute delivery.",
-    "abe2fa039ab25": "In Westborough, Mass., residents are appealing Amazon's drone pad, with a Nov. 2 hearing and an Oct. 19 town meeting on a drone bylaw."
-   },
-   "now": "Next up: the FCC's Oct. 29 vote, Westborough's Oct. 19 town meeting and Nov. 2 hearing, and the still-unpublished Part 108 rule."
-  }
+    "h507": "Amazon paused Prime Air in January to fix an altitude sensor issue, then restarted in Texas and Arizona once the FAA approved the fix.",
+    "g27": "Amazon says Prime Air will reach almost 500 towns and 30 million people, up from 11 US locations, with fees of $2.99 or $4.99.",
+    "g28": "Lowe's is testing drones near Charlotte through DoorDash, using Wing aircraft that carry about 2.5 pounds, so this suits small items.",
+    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, which brings them to nearly 20 US metros and more than 270 stores."
+   }
+  },
+  "rv": "f88c6c14fee7"
  },
  "amazon-labor": {
-  "n": "Amazon labor and driver disputes",
+  "n": "Amazon driver labor and NLRB disputes",
   "s": "An NLRB judge approved an Amazon DSP settlement without a joint-employer finding, and former drivers have sued Amazon and a closed contractor.",
   "ids": [
    "h509",
@@ -401,7 +401,8 @@
   "last": "2026-06-05",
   "c": [
    "Amazon"
-  ]
+  ],
+  "rv": "04a401fa9e96"
  },
  "delivery-robot-rules": {
   "n": "San Jose delivery robot rules",
@@ -413,6 +414,7 @@
   "last": "2026-10-07",
   "c": [
    "Regional"
-  ]
+  ],
+  "rv": "e00613a8e8ec"
  }
 }

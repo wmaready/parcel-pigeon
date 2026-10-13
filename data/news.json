@@ -51,8 +51,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 13,
   "new": "Westborough has set the Nov. 2 zoning appeal hearing and scheduled an Oct. 19 town meeting vote on a drone bylaw, after Amazon asked for its Planning Board hearing to wait; this does not change prices or service for shippers.",
   "edge": true,
   "exclusive": true
@@ -164,8 +162,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 11,
   "new": "Walmart finished a drone site at its Gastonia, North Carolina store, which the city announced to residents; the FAA review covering the area allows up to 400 deliveries a day per hub, though no start date was given.",
   "exclusive": true
  },
@@ -333,9 +329,7 @@
    }
   ],
   "auto": true,
-  "exclusive": true,
-  "thread": "drone-delivery",
-  "upd": 7
+  "exclusive": true
  },
  {
   "id": "a329e9a49b9a4",
@@ -368,6 +362,35 @@
   "auto": true,
   "exclusive": true,
   "updated": "2026-10-09"
+ },
+ {
+  "id": "a5e5d0db945cf",
+  "date": "2026-10-09",
+  "c": [
+   "DHL",
+   "Regional"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "India Post and Blue Dart sign nationwide parcel services agreement",
+  "sum": "The Department of Posts and Blue Dart Express Limited signed an agreement in New Delhi on October 9 to collaborate on India Post Parcel services. Blue Dart will gain access to the Department's network of 1.64 lakh post offices, according to the report.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. The agreement covers prepaid and cash-on-delivery parcels with OTP-based delivery authentication and real-time tracking, with no start date or pricing stated.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Indiablooms",
+  "url": "https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
+  "srcs": [
+   {
+    "src": "Indiablooms",
+    "url": "https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a6a8a347cefa5",
@@ -487,9 +510,7 @@
     "url": "https://dronexl.co/2026/10/09/fcc-800-mhz-cellular-band-drones-october-29-vote/"
    }
   ],
-  "auto": true,
-  "thread": "drone-delivery",
-  "upd": 8
+  "auto": true
  },
  {
   "id": "af1f31a54a5cb",
@@ -516,8 +537,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 12,
   "new": "Lowe's has started a drone delivery pilot in Matthews, North Carolina with Wing and DoorDash, adding a home improvement retailer to the drone delivery sites reported earlier; shippers see no change in rates, and the service covers small items of about 2.5 pounds.",
   "exclusive": true
  },
@@ -765,9 +784,7 @@
   ],
   "auto": true,
   "edge": true,
-  "exclusive": true,
-  "thread": "amazon-network-buildout",
-  "upd": 5
+  "exclusive": true
  },
  {
   "id": "a065c14c4ccd7",
@@ -1195,8 +1212,6 @@
    }
   ],
   "auto": true,
-  "thread": "amazon-network-buildout",
-  "upd": 6,
   "new": "Amazon opened a robotics fulfillment center and a nearby delivery station in the Wilmington, N.C., region, operating at 25% to 30% capacity with a ramp-up planned for the holidays; no rate or service change for outside shippers was stated.",
   "edge": true,
   "exclusive": true
