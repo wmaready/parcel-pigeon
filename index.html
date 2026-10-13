@@ -2551,6 +2551,8 @@ html.scrolling .ticker .track,html.scrolling .crt,html.scrolling .cspulse,html.s
 .wkeyd[open]>summary::after{content:" −"}
 .wkeyd .wkey{border-top:0}
 @media (max-width:959px){.mside{max-height:40vh}body.msheet{padding-bottom:calc(42vh + 80px)}}
+#wLbl,#wOff,#wFan{transition:opacity .15s}.wsvg.moving #wLbl,.wsvg.moving #wOff,.wsvg.moving #wFan{opacity:0}
+.wstage{overflow:hidden}.wsvg{will-change:transform}
 </style>
 </head>
 <body>
@@ -6950,7 +6952,9 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-thx]');
 
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const fmtD=(d,o)=>new Date(d+'T12:00:00').toLocaleDateString('en-US',o||{month:'short',day:'numeric'});
+// date formatting reuses one formatter per style (building a new one for every date was a big share of start-up time)
+const FMT=new Map();
+const fmtD=(d,o)=>{o=o||{month:'short',day:'numeric'};const k=JSON.stringify(o);let f=FMT.get(k);if(!f){f=new Intl.DateTimeFormat('en-US',o);FMT.set(k,f)}const t=new Date(d+'T12:00:00');return isNaN(t)?'':f.format(t)};
 const day0=()=>{const n=new Date();return new Date(n.getFullYear(),n.getMonth(),n.getDate())};
 const isoOf=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const TODAY=isoOf(day0());
@@ -7017,6 +7021,7 @@ function navTap(t){
 document.addEventListener('visibilitychange',()=>{if(document.hidden){AWAY_AT=Date.now();return}
   if(AWAY_AT&&Date.now()-AWAY_AT>FRESH_MS){closeStory(true);resetTab(curTab());window.scrollTo(0,0)}AWAY_AT=0});
 function showTab(t){
+  if(typeof STALE!=='undefined'&&STALE.has(t)){document.querySelectorAll('[data-section]').forEach(x=>x.hidden=x.id!=='s-'+t);renderSection(t)}
   if(CUR_T&&CUR_T!==t)TABMEM[CUR_T]={y:window.scrollY,at:Date.now()};
   document.querySelectorAll('nav.tabs button').forEach(b=>{if(b.dataset.tab===t)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
   document.querySelectorAll('[data-section]').forEach(s=>s.hidden=s.id!=='s-'+t);
@@ -7221,7 +7226,7 @@ function renderNews(){
 const dealAct=x=>{const u=dealUpdates(x)[0];return [x.d,x.closed,u&&u.date].filter(Boolean).sort().pop()||''};
 function renderDeals(){
   const qq=($('mq').value||'').trim().toLowerCase(),fd=d=>fmtD(d,{month:'short',day:'numeric',year:'numeric'});
-  const rows=DEALS.filter(x=>!qq||[x.buyer,x.target,x.note,x.status,x.title,x.sum,x.why,...(x.who||[]).flat()].join(' ').toLowerCase().includes(qq)).sort((a,b)=>dealAct(b).localeCompare(dealAct(a)));
+  const rows=DEALS.filter(x=>!qq||[x.buyer,x.target,x.note,x.status,x.title,x.sum,x.why,...(x.who||[]).flat()].join(' ').toLowerCase().includes(qq)).map(x=>[dealAct(x),x]).sort((a,b)=>b[0].localeCompare(a[0])).map(r=>r[1]);
   const tieD=t=>t.y?t.d.slice(0,4):t.m?fmtD(t.d,{month:'short',year:'numeric'}):fd(t.d);
   const tie=t=>`<li><span class="mono">${tieD(t)}</span><span>${esc(t.t)}${t.story&&NEWS.some(n=>n.id===t.story)?` <button class="link" data-open="${t.story}">Story</button>`:t.url?` <a class="link" href="${t.url}" target="_blank" rel="noopener">Source</a>`:''}</span></li>`;
   $('nDeals').innerHTML=rows.map(x=>{
@@ -7279,7 +7284,9 @@ function partyRealm(p){const pl=partyPl(p);return pl?pl.realm:(REALM_KEY[p.realm
 function realmBox(p,role,cls){const k=partyRealm(p),r=REALMS.find(x=>x[0]===k)||[];return `<div class="realm r-${k} xrb ${cls||''}"><div class="rh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">${r[2]||''}</svg><span>${RL[k]||''}</span></div><div class="rps">${pchipX(p,role)}</div></div>`}
 function pchipX(p,role){const pl=partyPl(p),k=partyRealm(p);return `<button class="pchip r-${k}${pl?chipCls(pl):''}" ${pl?`data-pl="${pl.id}"`:'disabled'}>${logoImg(pl||p.name,'lgs')}${esc(p.name)}${role?`<small>${esc(role)}</small>`:''}</button>`}
 // news since the deal that involves its companies: keeps every walkthrough current
-function dealUpdates(x){if(typeof dealPlayers!=='function')return [];
+const DUP={k:null,m:new Map()};
+function dealUpdates(x){const k=NEWS.length+'|'+(NEWS[0]&&NEWS[0].id)+'|'+PRE.length;if(DUP.k!==k){DUP.k=k;DUP.m.clear()}if(DUP.m.has(x))return DUP.m.get(x);const r=dealUpdates0(x);DUP.m.set(x,r);return r}
+function dealUpdates0(x){if(typeof dealPlayers!=='function')return [];
   const ids=new Set(dealPlayers(x)),since=x.ann||x.d,tgt=new Set(mentions([x.target,...(x.parties||[]).filter(p=>/Target|Merged/.test(p.role)).map(p=>p.name)].join(' | ')));
   return NEWS.filter(n=>n.id!==x.story&&n.date>=since&&(()=>{const m=mentions(storyText(n));return m.some(i=>tgt.has(i))&&(m.filter(i=>ids.has(i)).length>1||n.cat==='M&A')})()).sort((a,b)=>b.date.localeCompare(a.date))}
 function dealScenes(x){
@@ -7975,8 +7982,12 @@ function indexPlayers(){
   PEDGES.forEach((e,i)=>{e.i=i;if(PL[e.a]&&PL[e.b]){PL[e.a].ed.push(e);PL[e.b].ed.push(e)}});
 }
 const storyText=n=>[n.title,n.sum,n.plain||'',n.tie||''].join(' ');
-const mentions=t=>PRE.filter(([,re])=>re.test(t)).map(([id])=>id);
-const pStories=id=>{const re=(PRE.find(x=>x[0]===id)||[])[1];return re?NEWS.filter(n=>re.test(storyText(n))).sort((a,b)=>b.date.localeCompare(a.date)):[]};
+// which companies a text mentions: hundreds of name patterns per text, so each text is matched once and remembered
+const MENT={pre:null,m:new Map()};
+const mentions=t=>{if(MENT.pre!==PRE){MENT.pre=PRE;MENT.m.clear()}let r=MENT.m.get(t);if(!r){r=PRE.filter(([,re])=>re.test(t)).map(([id])=>id);if(MENT.m.size>4000)MENT.m.clear();MENT.m.set(t,r)}return r};
+const PST={k:null,m:new Map()};
+const pStories=id=>{const k=PRE.length+'|'+NEWS.length+'|'+(NEWS[0]&&NEWS[0].id);if(PST.k!==k||PST.pre!==PRE){PST.k=k;PST.pre=PRE;PST.m.clear()}
+  let r=PST.m.get(id);if(!r){const re=(PRE.find(x=>x[0]===id)||[])[1];r=re?NEWS.filter(n=>re.test(storyText(n))).sort((a,b)=>b.date.localeCompare(a.date)):[];PST.m.set(id,r)}return r.slice()};
 const dealPlayers=x=>mentions([x.buyer,x.target,...(x.who||[]).map(w=>w[1]),...(x.parties||[]).map(p=>p.name)].join(' | '));
 const ownLine=p=>{const par=p.parent&&PL[p.parent];
   if(!p.own)return 'Ownership not checked yet';
@@ -8207,7 +8218,7 @@ function wmFan(ids,pos,s,near,keep){const left=new Set(ids),out={},ang={};
 function wmCluster(ids,s,R){const C=[];ids.slice().sort((a,b)=>wmW(PL[b])-wmW(PL[a])).forEach(id=>{const p=WM.pts[id];
   const c=C.find(c=>Math.hypot(c.x-p.x,c.y-p.y)*s<R);if(c)c.ids.push(id);else C.push({x:p.x,y:p.y,ids:[id]})});return C}
 // labels without overlaps: try right, left, above, below; skip if all collide (screen-space boxes)
-function wmLabels(items,s,vb,maxN){const boxes=[],out=[];
+function wmLabels(items,s,vb,maxN,taken){const boxes=(taken||[]).slice(),out=[];
   for(const it of items){if(out.length>=maxN)break;const fs=it.fs,w=it.t.length*fs*.56+4,h=fs+3,px=(it.x-vb[0])*s,py=(it.y-vb[1])*s,g=it.gap;
     let cand=[[px+g,py-h/2,'start'],[px-g-w,py-h/2,'end'],[px-w/2,py-g-h,'middle'],[px-w/2,py+g,'middle']];
     if(it.a!=null){const c=Math.cos(it.a),sn=Math.sin(it.a),pi=Math.abs(sn)>.85?(sn<0?2:3):(c>=0?0:1);cand=[cand[pi],...cand.filter((_,k)=>k!==pi)]}
@@ -8220,8 +8231,11 @@ function renderWorld(){
   if(!$('wSvg')){st.innerHTML=`<svg id="wSvg" class="wsvg" viewBox="${WM.vb.join(' ')}" role="img" aria-label="Map of company headquarters and their ownership links"><rect class="wsea" x="-500" y="-500" width="2000" height="1500"/><path class="wland" d="${WLAND}"/><path class="wbord" d="${WBORD}"/>${typeof WSTATES!=='undefined'?`<path class="wstate" d="${WSTATES}"/>`:''}<defs><marker id="wArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#DCE3EA"/></marker><marker id="wArrF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#D9A55B"/></marker><marker id="wArrP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0 0L10 5L0 10z" fill="#5EC2DB"/></marker></defs><g id="wFan"></g><g id="wEdges"></g><g id="wDots"></g><g id="wLbl"></g><g id="wOff"></g></svg>
      <div class="wtip" id="wTip" hidden></div><div class="wcard" id="wCard" hidden></div>
      <div class="wctl"><button data-wz="us">U.S.</button><button data-wz="world">World</button><span class="wsep"></span><button data-wz="in" aria-label="Zoom in">+</button><button data-wz="out" aria-label="Zoom out">−</button></div>`;
-    wmEvents();$('wFilt').innerHTML=REALMS.map(([k,l])=>`<button class="wf r-${k} sh-${WM_SHAPE[k]}" data-wf="${k}" aria-pressed="true"><i></i>${esc(l)}</button>`).join('')+`<span class="lbl wmiss">${PLAYERS.length-WM.miss.length} of ${PLAYERS.length} companies placed by headquarters</span>`}
+    WM.drawn=false;    wmEvents();$('wFilt').innerHTML=REALMS.map(([k,l])=>`<button class="wf r-${k} sh-${WM_SHAPE[k]}" data-wf="${k}" aria-pressed="true"><i></i>${esc(l)}</button>`).join('')+`<span class="lbl wmiss">${PLAYERS.length-WM.miss.length} of ${PLAYERS.length} companies placed by headquarters</span>`}
   const svg=$('wSvg');svg.setAttribute('viewBox',WM.vb.join(' '));
+  // mid-move: just move the camera; dots and lines are redrawn once when it stops, names fade back in
+  if(WM.anim0&&WM.drawn){svg.classList.add('moving');return}
+  svg.classList.remove('moving');WM.drawn=true;
   // with nothing selected the map settles back on the U.S. (unless the reader picked World)
   if(!MS.sel&&WM.mode!=='world'&&!WM.spider){if(WM.lastSel)wmHome(500);else if(!WM.anim0)wmHome(8000)}else{clearTimeout(WM.home);WM.homeAt=0}
   WM.lastSel=MS.sel;
@@ -8258,21 +8272,22 @@ function renderWorld(){
   // the family / the opened city, on top
   [...fanned].filter(on).sort((a,b)=>(a===sel)-(b===sel)).forEach(id=>{const [x,y]=pos[id];dots+=dot(PL[id],x,y,(id===sel?' sel':'')+(F.has(id)&&id!==sel?' con':''))});
   $('wDots').innerHTML=dots;
+  // family members off screen: a small labelled marker on the edge, pointing the way
+  let off='';const OFFB=[];if(sel){const [sx,sy]=pos[sel],m=14*u,X0=vb[0]+m,Y0=vb[1]+m,X1=vb[0]+vb[2]-m-(innerWidth>=960?330*u:0),Y1=vb[1]+vb[3]-m,seenA=[];
+    [...F].filter(id=>id!==sel&&on(id)).forEach(id=>{const [x,y]=pos[id];if(x>=X0&&x<=X1&&y>=Y0&&y<=Y1)return;
+      const dx=x-sx,dy=y-sy,t=Math.min(dx>0?(X1-sx)/dx:dx<0?(X0-sx)/dx:Infinity,dy>0?(Y1-sy)/dy:dy<0?(Y0-sy)/dy:Infinity);if(!isFinite(t)||t<=0)return;
+      let ex=sx+dx*t,ey=sy+dy*t;const step=(ey>vb[1]+vb[3]/2?-14:14)*u;for(let n=0;n<12&&seenA.some(([a,b])=>Math.abs(a-ex)<70*u&&Math.abs(b-ey)<14*u);n++)ey+=step;seenA.push([ex,ey]);
+      const ang=Math.atan2(dy,dx),nm=PL[id].n.length>(small?14:18)?PL[id].n.slice(0,small?13:17)+'…':PL[id].n,w=(nm.length*5.6+20)*u,left=ex>vb[0]+vb[2]/2;
+      OFFB.push([((left?ex-10*u:ex+10*u)-(left?w:0)-vb[0])*s,(ey-9*u-vb[1])*s,w*s,13]);off+=`<g class="woff" data-wpl="${id}"><path d="M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang-.5)*7*u).toFixed(2)} ${(-Math.sin(ang-.5)*7*u).toFixed(2)}M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang+.5)*7*u).toFixed(2)} ${(-Math.sin(ang+.5)*7*u).toFixed(2)}" style="stroke-width:${1.6*u}px"/><text x="${(left?ex-10*u:ex+10*u).toFixed(2)}" y="${(ey+3.5*u).toFixed(2)}" text-anchor="${left?'end':'start'}" style="font-size:${10*u}px;stroke-width:${3*u}px">${esc(nm)}</text></g>`})}
+  $('wOff').innerHTML=off;
   // labels: the family (or the opened city) first, then single companies by importance; never overlapping
   const zoomIn=vb[2]<wmUS()[2]*.55,L=[];
   [...fanned].filter(on).sort((a,b)=>(b===sel)-(a===sel)||wmW(PL[b])-wmW(PL[a])).forEach(id=>L.push({id,t:PL[id].n,x:pos[id][0],y:pos[id][1],fs:id===sel?12.5:10.5,gap:(rOf(PL[id])+4),cls:id===sel?' sel':'',a:ANG[id]}));
   if(!sel)CL.filter(c=>c.ids.length===1||wmW(PL[c.ids[0]])>=60).sort((a,b)=>wmW(PL[b.ids[0]])-wmW(PL[a.ids[0]])).forEach(c=>{const p=PL[c.ids[0]];
     if(c.ids.length>1||zoomIn||wmW(p)>=40)L.push({id:p.id,t:c.ids.length>1?p.n:p.n,x:c.x,y:c.y,fs:10,gap:c.ids.length>1?(8+Math.min(7,Math.sqrt(c.ids.length)*1.6)+4):(rOf(p)+4),cls:dim?' dim':''})});
-  const LB=wmLabels(L,s,vb,sel?(small?14:40):WM.spider?(small?8:14):small?10:22);
+  const LB=wmLabels(L,s,vb,sel?(small?14:40):WM.spider?(small?8:14):small?10:22,OFFB);
   $('wLbl').innerHTML=LB.map(l=>`<text class="wl${l.cls}" x="${l.lx.toFixed(2)}" y="${l.ly.toFixed(2)}" text-anchor="${l.anchor}" style="font-size:${l.fs*u}px;stroke-width:${3*u}px">${esc(l.t)}</text>`).join('');
-  // family members off screen: a small labelled marker on the edge, pointing the way
-  let off='';if(sel){const [sx,sy]=pos[sel],m=14*u,X0=vb[0]+m,Y0=vb[1]+m,X1=vb[0]+vb[2]-m-(innerWidth>=960?330*u:0),Y1=vb[1]+vb[3]-m,seenA=[];
-    [...F].filter(id=>id!==sel&&on(id)).forEach(id=>{const [x,y]=pos[id];if(x>=X0&&x<=X1&&y>=Y0&&y<=Y1)return;
-      const dx=x-sx,dy=y-sy,t=Math.min(dx>0?(X1-sx)/dx:dx<0?(X0-sx)/dx:Infinity,dy>0?(Y1-sy)/dy:dy<0?(Y0-sy)/dy:Infinity);if(!isFinite(t)||t<=0)return;
-      let ex=sx+dx*t,ey=sy+dy*t;const step=(ey>vb[1]+vb[3]/2?-14:14)*u;for(let n=0;n<12&&seenA.some(([a,b])=>Math.abs(a-ex)<70*u&&Math.abs(b-ey)<14*u);n++)ey+=step;seenA.push([ex,ey]);
-      const ang=Math.atan2(dy,dx),nm=PL[id].n.length>18?PL[id].n.slice(0,17)+'…':PL[id].n,w=(nm.length*5.6+20)*u,left=ex>vb[0]+vb[2]/2;
-      off+=`<g class="woff" data-wpl="${id}"><path d="M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang-.5)*7*u).toFixed(2)} ${(-Math.sin(ang-.5)*7*u).toFixed(2)}M${ex.toFixed(2)} ${ey.toFixed(2)}l${(-Math.cos(ang+.5)*7*u).toFixed(2)} ${(-Math.sin(ang+.5)*7*u).toFixed(2)}" style="stroke-width:${1.6*u}px"/><text x="${(left?ex-10*u:ex+10*u).toFixed(2)}" y="${(ey+3.5*u).toFixed(2)}" text-anchor="${left?'end':'start'}" style="font-size:${10*u}px;stroke-width:${3*u}px">${esc(nm)}</text></g>`})}
-  $('wOff').innerHTML=off;
+
   const wl=$('wList');if(wl){const ids=!sel&&WM.spider?WM.spider.filter(on).sort((a,b)=>wmW(PL[b])-wmW(PL[a])):[];wl.hidden=!ids.length;
     wl.innerHTML=ids.length?`<span class="lbl">${ids.length} companies here${WM.pts[ids[0]]&&WM.pts[ids[0]].city?' · '+esc(String(WM.pts[ids[0]].city).replace(/, USA$/,'')):''}</span>${ids.map(id=>`<button type="button" class="wli r-${PL[id].realm}" data-wsel="${id}">${logoImg(id,'lgs')||'<i></i>'}${esc(PL[id].n)}</button>`).join('')}`:''}
   const kh=$('wKeyHint');if(kh)kh.innerHTML=sel&&PL[sel]?(F.size>1?`Showing <b>${esc(PL[sel].n)}</b>’s ownership links, past and present · ${F.size-1}`:`<b>${esc(PL[sel].n)}</b> has no ownership links on file`):WM.spider?'Companies in this city · tap one, or tap the map to close':'Tap a bubble to zoom into an area, or a company to see its ownership links';
@@ -8284,9 +8299,21 @@ function wmAtHome(){const u=wmUS();return WM.vb&&Math.abs(WM.vb[0]-u[0])<1&&Math
 function wmHome(ms){if(wmAtHome())return;const at=Date.now()+ms;if(WM.homeAt&&WM.homeAt>Date.now()&&WM.homeAt<=at)return;clearTimeout(WM.home);WM.homeAt=at;WM.home=setTimeout(()=>{WM.homeAt=0;if(!MS.sel&&!WM.spider&&WM.mode!=='world'&&!wmAtHome()&&$('wSvg')&&$('wSvg').isConnected)wmTween(wmUS())},ms)}
 function wmZoomTo(cx,cy,w){const h=w*WGEO.H/WGEO.W;wmTween([cx-w/2,cy-h/2,w,h])}
 // smooth camera moves
-function wmTween(to){const from=WM.vb.slice(),v=to.slice();const save=WM.vb;WM.vb=v;wmClamp();const tgt=WM.vb.slice();WM.vb=save;cancelAnimationFrame(WM.anim);
-  WM.cl=null;if(reduceMotion()){WM.vb=tgt;renderWorld();return}const t0=performance.now(),D=520;WM.anim0=true;
-  const step=t=>{const k=Math.min(1,(t-t0)/D),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;WM.vb=from.map((f,i)=>f+(tgt[i]-f)*e);if(k>=1){WM.anim0=false;WM.cl=null}renderWorld();if(k<1)WM.anim=requestAnimationFrame(step)};WM.anim=requestAnimationFrame(step)}
+function wmTween(to){if(WM.glide){const t=WM.glideTgt;WM.glide.cancel();WM.glide=null;WM.anim0=false;if(t){WM.vb=t;renderWorld()}}
+  const from=WM.vb.slice(),v=to.slice();const save=WM.vb;WM.vb=v;wmClamp();const tgt=WM.vb.slice();WM.vb=save;cancelAnimationFrame(WM.anim);
+  WM.cl=null;const svg=$('wSvg');
+  if(reduceMotion()||!svg||!svg.isConnected){WM.vb=tgt;WM.anim0=false;renderWorld();return}
+  // the camera glides by scaling the already-drawn map (handled by the graphics chip, so it stays smooth on phones),
+  // then the map is redrawn once, sharp, at its new position
+  // the map is drawn 'meet' (whole view fits, centred), so on a phone's taller box there's a margin top and bottom:
+  // work out exactly where each view sits on screen so the glide lands precisely where the redraw will be
+  const r=svg.getBoundingClientRect(),W=r.width,H=r.height,fit=v=>{const sc=Math.min(W/v[2],H/v[3]);return [sc,(W-v[2]*sc)/2,(H-v[3]*sc)/2]};
+  const [s0,ox0,oy0]=fit(from),[s1,ox1,oy1]=fit(tgt),k=s1/s0,tx=ox1+(from[0]-tgt[0])*s1-k*ox0,ty=oy1+(from[1]-tgt[1])*s1-k*oy0;
+  if(WM.glide)WM.glide.cancel();WM.anim0=true;svg.classList.add('moving');svg.style.transformOrigin='0 0';
+  const g=svg.animate([{transform:'translate(0px,0px) scale(1)'},{transform:`translate(${tx}px,${ty}px) scale(${k})`}],{duration:480,easing:'cubic-bezier(.45,0,.2,1)',fill:'forwards'});WM.glide=g;WM.glideTgt=tgt;
+  // drop the glide's scaling BEFORE redrawing (sizes are measured from the map's on-screen width); same task, so no flash
+  g.onfinish=()=>{if(WM.glide!==g)return;WM.glide=null;g.cancel();WM.vb=tgt;WM.anim0=false;WM.cl=null;renderWorld()};
+  g.oncancel=()=>{}}
 // frame a box of map points, with a minimum size (a whole region, never a street) and room for the card on wide screens
 function wmFrame(xs,ys,minW){const R=WGEO.W/WGEO.H;let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
   let w=Math.max(minW,(x1-x0)*1.35),h=Math.max(w/R,(y1-y0)*1.5);w=Math.max(w,h*R);
@@ -8525,12 +8552,21 @@ function fxStart(){if(FX.started||!$('fuelX'))return;FX.started=true;FX.playing=
   if(box()){if(io)io.observe(box());else fxStart();FX.i=0;fxRender();FX.playing=false;clearTimeout(FX.timer);clearInterval(FX.typing)}}
 
 /* ================= boot ================= */
-function renderAll(){renderTicker();renderToday();renderNews();renderMna();renderClock();renderFuel();renderDocs();renderPrefs()}
+/* Rendering: only the section on screen is drawn right away; the others are drawn in the gaps when the phone is idle,
+   or the moment you open them. Several data files arriving together cause one redraw, not one each. */
+const SECT={today:()=>renderToday(),news:()=>renderNews(),mna:()=>renderMna(),clock:()=>renderClock(),fuel:()=>renderFuel(),docs:()=>{renderDocs();renderPrefs()}};
+const STALE=new Set();let RA_T=0;
+function renderSection(t){if(!STALE.has(t))return;STALE.delete(t);try{SECT[t]()}catch(e){console.error(e)}}
+function renderIdle(){const next=[...STALE][0];if(!next)return;const run=()=>{renderSection(next);renderIdle()};
+  'requestIdleCallback' in window?requestIdleCallback(run,{timeout:1500}):setTimeout(run,60)}
+function renderAllNow(){cancelAnimationFrame(RA_T);RA_T=0;renderTicker();Object.keys(SECT).forEach(t=>STALE.add(t));
+  const cur=(document.querySelector('[data-section]:not([hidden])')||{}).id;renderSection(cur?cur.slice(2):'today');renderIdle()}
+function renderAll(){if(RA_T)return;RA_T=requestAnimationFrame(renderAllNow)}
 $('hdrDate').textContent=day0().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 function stampLabels(){const last=NEWS.reduce((m,n)=>n.date>m?n.date:m,''),chk=[last,...DEALS.map(x=>x.checked||'')].reduce((m,d)=>d>m?d:m,'');$('hdrUpd').textContent='Data as of '+fmtD(chk,{month:'short',day:'numeric',year:'numeric'});
   const d=new Date(last+'T12:00:00');d.setDate(d.getDate()-((d.getDay()+6)%7));$('briefwk').textContent='Week of '+fmtD(d.toISOString().slice(0,10))}
 stampLabels();
-renderAll();
+renderAllNow();
 ['today','news','clock','docs'].forEach(s=>setupViews(s,null));
 setupViews('mna',v=>{renderMna();if(v==='map'){setTimeout(drawLines,60);setTimeout(()=>{MS.fresh.clear();store.set('pw-fresh','[]');navBadge()},6000)}});navBadge();
 // opening the app fresh (after it was closed) always starts on Today; a link to a section still goes there.
@@ -8926,7 +8962,8 @@ renderClocks();setInterval(renderClocks,10000);
   addEventListener('hashchange',()=>requestAnimationFrame(()=>place(false)));
   {const g=goTo;goTo=function(){g.apply(this,arguments);requestAnimationFrame(()=>place(false))}}
   document.body.appendChild(el);
-  setTimeout(()=>place(true),RM()?0:900);
+  // Coop flies in once the page has finished its start-up work, so his flight is smooth
+  setTimeout(()=>{const go=()=>place(true);'requestIdleCallback' in window?requestIdleCallback(go,{timeout:2500}):go()},RM()?0:900);
 })();
 
 /* ===== Get the app / share ===== */
