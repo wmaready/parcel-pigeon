@@ -2553,6 +2553,7 @@ html.scrolling .ticker .track,html.scrolling .crt,html.scrolling .cspulse,html.s
 @media (max-width:959px){.mside{max-height:40vh}body.msheet{padding-bottom:calc(42vh + 80px)}}
 #wLbl,#wOff,#wFan{transition:opacity .15s}.wsvg.moving #wLbl,.wsvg.moving #wOff,.wsvg.moving #wFan{opacity:0}
 .wstage{overflow:hidden}.wsvg{will-change:transform}
+.newtag{background:var(--accent,#c8501e);color:#fff;font:700 10px/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border-radius:4px;margin-left:6px}
 </style>
 </head>
 <body>
@@ -2602,7 +2603,7 @@ html.scrolling .ticker .track,html.scrolling .crt,html.scrolling .cspulse,html.s
     <div class="stack two">
       <div class="col">
         <div hidden><span id="briefwk"></span><ol id="brief"></ol></div>
-        <div class="panel o1"><div class="ph"><h2>Top stories</h2><button class="link" data-goto="news:list">All news</button></div><ul class="wire" id="top"></ul></div>
+        <div class="panel o1"><div class="ph"><h2>Latest</h2><button class="link" data-goto="news:list">All news</button></div><ul class="wire" id="top"></ul></div>
       </div>
       <aside class="col">
         <div class="panel mini next o4"><div class="ph"><h2>Coming up</h2><button class="link" data-goto="clock:list">Rate clock</button></div><div id="next"></div><div id="upcoming"></div></div>
@@ -7195,7 +7196,7 @@ function media(n,size){
 function wireItem(n){
   return `<li class="wi" tabindex="0" role="button" aria-expanded="false" data-story="${n.id}">
     <span class="d">${fmtD(n.date)}${media(n,'thumb')}</span>
-    <div><h3>${esc(n.title)}</h3><div class="meta">${impTag(n.lvl)}${statusTag(n)}<span>${carList((storyCars(n).length?storyCars(n):n.c).join(' · '))}</span><span>${esc(n.cat)}</span>${(x=>x&&thrStories(x.k).length>1?`<button type="button" class="stmini" data-thread="${x.k}">${esc(x.t.n)}${x.i>0?` · update ${x.i+1}`:''}</button>`:'')(typeof thrOf==='function'&&thrOf(n))}</div>
+    <div><h3>${FRESHSET.has(n.id)&&!MS.read.has(n.id)?'<span class="newtag">New</span> ':''}${esc(n.title)}</h3><div class="meta">${impTag(n.lvl)}${statusTag(n)}<span>${carList((storyCars(n).length?storyCars(n):n.c).join(' · '))}</span><span>${esc(n.cat)}</span>${(x=>x&&thrStories(x.k).length>1?`<button type="button" class="stmini" data-thread="${x.k}">${esc(x.t.n)}${x.i>0?` · update ${x.i+1}`:''}</button>`:'')(typeof thrOf==='function'&&thrOf(n))}</div>
       <div class="eff"><div class="lbl">Effect · ${IMPACT[n.imp].w}</div>${esc(n.plain)}
         <div class="row" style="display:flex;gap:var(--sp-3);flex-wrap:wrap;align-items:center"><span class="lbl">${srcLinks(n)}</span><button class="link" data-open="${n.id}">Full story</button></div></div></div></li>`}
 function nextChange(){return DATES.filter(x=>daysTo(x.d)>=0&&x.imp==='up'&&!x.verify)[0]}
@@ -7219,7 +7220,11 @@ function renderToday(){
   const pool=NEWS.filter(n=>!n.lead&&!n.bg&&daysTo(n.date)>=-21);
   const readSet=typeof MS!=='undefined'&&MS.read?MS.read:new Set();
   const score=n=>{const age=Math.max(0,-daysTo(n.date));return (+n.lvl||1)+(n.exclusive?.7:0)+(n.kind==='Alert'?.3:0)-age*.35-(n.routine?.8:0)-(readSet.has(n.id)?1.2:0)};
-  const top=pool.map(n=>[score(n),n]).sort((a,b)=>b[0]-a[0]||b[1].date.localeCompare(a[1].date)).slice(0,12).map(x=>x[1]).sort((a,b)=>b.date.localeCompare(a.date)||(+b.lvl||1)-(+a.lvl||1));
+  const top=pool.map(n=>[score(n),n]).sort((a,b)=>b[0]-a[0]||b[1].date.localeCompare(a[1].date)).slice(0,12).map(x=>x[1]);
+  // like the News tab: anything you haven't seen yet leads (newest found first), the rest follow by importance-ranked, then date
+  const fr=NEWS.filter(n=>FRESHSET.has(n.id)&&!n.bg&&!n.lead).sort(feedCmp).slice(0,12),fi=new Set(fr.map(n=>n.id));
+  const rest=top.filter(n=>!fi.has(n.id)).sort((a,b)=>b.date.localeCompare(a.date)||(+b.lvl||1)-(+a.lvl||1));
+  top.length=0;top.push(...fr,...rest.slice(0,Math.max(6,12-fr.length)));
   $('top').innerHTML=top.map(wireItem).join('');
   requestAnimationFrame(fitTop);
   renderNext();
@@ -7238,7 +7243,7 @@ function renderNext(){
       ${x.fees?`<div class="fees">${x.fees.slice(0,4).map(feeDiv).join('')}</div>`:''}</button>`;
 }
 function renderCompact(){
-  const list=[...NEWS].sort((a,b)=>b.date.localeCompare(a.date));
+  const list=[...NEWS].sort(feedCmp);
   $('ccount').textContent=list.length+' stories';
   $('compact').innerHTML=list.map(n=>`<li data-open="${n.id}" title="${esc(n.title)}"><span class="lbl">${fmtD(n.date)}</span><span class="${impCls(n.imp)} mono" aria-label="${IMPACT[n.imp].w}">${IMPACT[n.imp].s}</span><span class="h"><b>${esc((n.c[0]||'').toUpperCase())}</b>${n.exclusive?'<span class="tag spot">Spotted</span> ':''}${esc(n.title)}</span></li>`).join('');
 }
@@ -7254,7 +7259,13 @@ function passes(n,skip={}){
   if(!skip.when&&F.when!=='all'&&!(/^\d{4}$/.test(F.when)?n.date.startsWith(F.when):n.date>=addDays(TODAY,-(+F.when))))return false;
   if(qq&&![n.title,n.sum,n.plain,n.c.join(' '),n.cat,n.kind,(n.who||[]).join(' '),n.srcs.map(s=>s.src).join(' ')].join(' ').toLowerCase().includes(qq))return false;
   return true}
-const filtered=(skip)=>NEWS.filter(n=>passes(n,skip)).sort((a,b)=>b.date.localeCompare(a.date));
+/* news-app ordering: stories you haven't seen yet (new this visit, including older ones a sweep just found) sit on top, newest-found first.
+   Seen stories fall back to publication-date order. The set is fixed when the page loads so the feed doesn't reshuffle while you read. */
+const FRESHSET=(()=>{const s=new Set();try{const rd=JSON.parse(store.get('pw-read','[]'));const seen=new Set(rd);
+  NEWS.forEach(n=>{if(seen.has(n.id)||n.kind==='Alert')return;const ok=n.added?(Date.now()-Date.parse(n.added))<3*864e5:daysTo(n.date)>=-2;if(ok)s.add(n.id)})}catch(e){}return s})();
+const stamp=n=>n.added||n.date;
+const feedCmp=(a,b)=>{const fa=FRESHSET.has(a.id),fb=FRESHSET.has(b.id);if(fa!==fb)return fa?-1:1;if(fa)return stamp(b).localeCompare(stamp(a))||b.date.localeCompare(a.date);return b.date.localeCompare(a.date)};
+const filtered=(skip)=>NEWS.filter(n=>passes(n,skip)).sort(feedCmp);
 function renderFilters(){
   const cnt=(skip,fn)=>NEWS.filter(n=>passes(n,skip)&&fn(n)).length;
   $('fCarS').innerHTML=['All',...CARS].map(c=>`<option value="${c}"${c===F.car?' selected':''}>${c==='All'?'All carriers':c==='Regional'?'Other regionals':c} (${c==='All'?cnt({car:1},()=>true):cnt({car:1},n=>hasCar(n,c))})</option>`).join('');
@@ -7280,7 +7291,7 @@ function card(n,full){
   const links=clockFor(n.id).filter(x=>daysTo(x.d)>=0).slice(0,4);
   const eff=n.act?(()=>{const d=daysTo(n.act);return d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
   const cars=storyCars(n);
-  const hd=`<header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${statusTag0(n)}${rxPill(n)}</header>`;
+  const hd=`<header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${FRESHSET.has(n.id)&&!MS.read.has(n.id)?'<span class="newtag">New</span>':''}${statusTag0(n)}${rxPill(n)}</header>`;
   const tag=`<span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span>`;
   if(!full){
     const extra=[n.new?'what’s new':'',(n.changes||[]).length?'what changed':'',relDocs(n).length?'source docs':''].filter(Boolean);
