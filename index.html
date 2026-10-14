@@ -2554,6 +2554,8 @@ html.scrolling .ticker .track,html.scrolling .crt,html.scrolling .cspulse,html.s
 #wLbl,#wOff,#wFan{transition:opacity .15s}.wsvg.moving #wLbl,.wsvg.moving #wOff,.wsvg.moving #wFan{opacity:0}
 .wstage{overflow:hidden}.wsvg{will-change:transform}
 .newtag{background:var(--accent,#c8501e);color:#fff;font:700 10px/1 var(--mono,monospace);letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border-radius:4px;margin-left:6px}
+
+.cdopen{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:5;background:var(--accent,#4CC9F0);color:#04121a;font-weight:700;border-radius:999px;padding:10px 20px;text-decoration:none;max-width:88vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 6px 24px rgba(0,0,0,.45)}
 </style>
 </head>
 <body>
@@ -6868,19 +6870,33 @@ const DROPPED=new Set((()=>{try{return JSON.parse(store.get('pw-docs-dropped','[
    to drop them in. Tap "Show me" and he flies each one into its folder. */
 function dropFresh(){return DOCS.filter(d=>{const w=d.added||(d.why&&d.why.when);const id=docDomId(d);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(id)&&!DROPPED.has(id)})}
 function dropMark(L){L.forEach(d=>DROPPED.add(docDomId(d)));store.set('pw-docs-dropped',JSON.stringify([...DROPPED].slice(-2000)))}
-function dropNewDocs(){if(curTab()!=='docs'||curView.docs!=='library'||document.querySelector('.coopdrop'))return;
+/* One pass: Coop flies by once and drops a letter for each new document, each falling into its company's row. Nothing is
+   opened or scrolled; the count on the row pops and the row glows. */
+function coopMail(fresh){
+  const by=new Map();fresh.forEach(d=>by.set(d.c,(by.get(d.c)||0)+1));
+  const rows=[...by].map(([c,n])=>{const el=document.querySelector(`#lib .dcarp[data-car="${CSS.escape(c)}"]`),sm=el&&el.querySelector(':scope>summary');if(!sm)return null;
+    const r=sm.getBoundingClientRect();return r.bottom>50&&r.top<innerHeight-30?{el,sm,r,n:Math.min(n,5)}:null}).filter(Boolean).sort((a,b)=>a.r.top-b.r.top);
+  const land=row=>{const b=row.sm.querySelector('.nb');row.el.classList.remove('dropin');void row.el.offsetWidth;row.el.classList.add('dropin');
+    if(b&&!b.hidden){b.classList.remove('nbpop');void b.offsetWidth;b.classList.add('nbpop')}setTimeout(()=>row.el.classList.remove('dropin'),2600)};
+  if(!rows.length)return;
+  if(reduceMotion()||!window.COOP_FLY){rows.forEach(land);return}
+  const f=document.createElement('div');f.className='coopfly rtl';f.innerHTML=`<div class="fy-flip">${window.COOP_FLY}</div>`;document.body.appendChild(f);
+  const x0=innerWidth+60,x1=-200,y0=Math.max(10,rows[0].r.top-100),y1=Math.max(y0+30,rows[rows.length-1].r.top-60),dur=Math.min(5200,1700+rows.length*500);
+  f.animate([{transform:`translate(${x0}px,${y0}px)`},{transform:`translate(${x1}px,${y1}px)`}],{duration:dur,easing:'linear',fill:'forwards'});
+  rows.forEach((row,i)=>{const p=rows.length===1?.5:.15+.7*i/(rows.length-1),cx=x0+(x1-x0)*p+30,cy=y0+(y1-y0)*p+44,
+      tx=row.r.left+Math.min(row.r.width-50,row.r.width*.55),ty=row.r.top+row.r.height/2-10;
+    for(let k=0;k<row.n;k++)setTimeout(()=>{const e=document.createElement('div');
+      e.style.cssText='position:fixed;left:0;top:0;z-index:81;width:30px;height:20px;border-radius:3px;background:#F3ECDD;box-shadow:0 2px 6px rgba(0,0,0,.4);pointer-events:none';
+      document.body.appendChild(e);const dx=(k-(row.n-1)/2)*16;
+      const a=e.animate([{transform:`translate(${cx}px,${cy}px) rotate(0)`,opacity:1},{transform:`translate(${(cx+tx)/2+dx}px,${cy+30}px) rotate(-18deg)`,opacity:1,offset:.45},
+        {transform:`translate(${tx+dx}px,${ty}px) rotate(8deg) scale(.55)`,opacity:.15}],{duration:650,easing:'cubic-bezier(.4,0,.7,.5)',fill:'forwards'});
+      a.onfinish=()=>{e.remove();if(k===0||k===row.n-1)land(row)}},dur*p+k*150)});
+  setTimeout(()=>f.remove(),dur+250)}
+function dropNewDocs(){if(curTab()!=='docs'||curView.docs!=='library'||document.querySelector('.coopfly'))return;
   const fresh=dropFresh(),lib=$('lib');document.querySelectorAll('.droffer').forEach(x=>x.remove());
   if(!fresh.length||!lib)return;
-  // quiet highlight in place: no scrolling, no folders opened
   const cars=new Set(fresh.map(d=>d.c));document.querySelectorAll('#lib .dcarp').forEach(c=>c.classList.toggle('dnew',cars.has(c.dataset.car)));
-  const o=document.createElement('div');o.className='droffer';
-  o.innerHTML=`<button type="button" class="xplay drgo"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>${fresh.length} new document${fresh.length>1?'s':''} for you</b><small>Coop can drop ${fresh.length>1?'them':'it'} in the right folder</small></span></button><button type="button" class="drx" aria-label="Not now">×</button>`;
-  lib.parentNode.insertBefore(o,lib);
-  o.querySelector('.drx').onclick=()=>{dropMark(fresh);o.remove();document.querySelectorAll('#lib .dcarp.dnew').forEach(c=>c.classList.remove('dnew'))};
-  o.querySelector('.drgo').onclick=()=>{dropMark(fresh);o.remove();renderDocs();
-    // one flight per folder, newest first, a beat apart
-    const seenT=new Set(),targets=[];fresh.sort((a,b)=>String(b.added||'').localeCompare(a.added||'')).forEach(d=>{const t=dropTargetFor(d);if(t&&!seenT.has(t)){seenT.add(t);targets.push(t)}});
-    const next=()=>{const t=targets.shift();if(t)coopDrop(t,()=>setTimeout(next,250))};setTimeout(next,200)}}
+  dropMark(fresh);setTimeout(()=>coopMail(fresh),500)}
 setTimeout(()=>{let last='';setInterval(()=>{const k=curTab()+':'+(curView.docs||'');if(k!==last){last=k;if(k==='docs:library')setTimeout(dropNewDocs,300)}},700)},0);
 
 /* display name, shared with the comment box */
@@ -8574,10 +8590,10 @@ function landOn(id){
   goStory(id);return $('n-'+id)}
 function highlight(el,lbl){if(!el)return;el.dataset.landlbl=lbl||'From your alert';setTimeout(()=>{el.scrollIntoView({block:'center',behavior:reduceMotion()?'auto':'smooth'});
   el.classList.remove('landed');void el.offsetWidth;el.classList.add('landed');setTimeout(()=>el.classList.remove('landed'),6000)},80)}
-function coopDeliver(id){
-  const D=deliverInfo(id);if(!D)return;
-  const go=()=>{if(!D.id){goTo('docs','alerts');setTimeout(()=>dropOff(D),120);return}
-    const t=landOn(D.id);if(t){t.scrollIntoView({block:'center'});setTimeout(()=>dropOff(D,t),260)}};
+function coopDeliver(id,opts){
+  const D=opts&&opts.D||deliverInfo(id);if(!D)return;
+  const go=opts&&opts.go||(()=>{if(!D.id){goTo('docs','alerts');setTimeout(()=>dropOff(D),120);return}
+    const t=landOn(D.id);if(t){t.scrollIntoView({block:'center'});setTimeout(()=>dropOff(D,t),260)}});
   if(reduceMotion()){go();return}
   document.querySelector('.cdlv')?.remove();
   const k=carCls(D.car)||'',H=HQ_CEO[D.car]||{co:D.car,ceo:null,title:null,city:HQ_CITY[D.car]},city=H.city;
@@ -8603,8 +8619,11 @@ function coopDeliver(id){
    <div class="cdcap"><span class="lbl">${esc(H.co)} HQ${city?' · '+esc(city):''}${H.ceo?`<span class="cdesk"> · desk of ${esc(H.ceo)}</span>`:''}</span><b>${esc(D.doc)}</b></div>
    <button class="cdskip">Skip ›</button></div>`;
   document.body.appendChild(el);
-  let done=false;const finish=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>el.remove(),450);go()};
-  el.querySelector('.cdskip').addEventListener('click',e=>{e.stopPropagation();finish()});
+  let done=false;const finish=()=>{if(done)return;done=true;
+    if(opts&&opts.link){const ln=document.createElement('a');ln.className='cdopen';ln.href=opts.link;ln.target='_blank';ln.rel='noopener';ln.textContent='Open '+D.doc+' ›';
+      ln.addEventListener('click',()=>{el.classList.add('out');setTimeout(()=>el.remove(),450)});el.appendChild(ln);return}
+    el.classList.add('out');setTimeout(()=>el.remove(),450);go()};
+  el.querySelector('.cdskip').addEventListener('click',e=>{e.stopPropagation();if(opts&&opts.link){done=true;el.classList.add('out');setTimeout(()=>el.remove(),450);window.open(opts.link,'_blank','noopener');return}finish()});
   document.addEventListener('keydown',function esc_(e){if(e.key==='Escape'){document.removeEventListener('keydown',esc_);finish()}});
   const fly=el.querySelector('.cfly2'),st=el.querySelector('.cdst');
   // 1) fly across the skyline into the lit window
@@ -8627,6 +8646,12 @@ function dropOff(D,to){
     const an=p.animate([{left:innerWidth+40+'px',top:'-40px',transform:'rotate(18deg) scale(.8)'},{left:x+60+'px',top:y-90+'px',transform:'rotate(-8deg) scale(1)',offset:.7},{left:x+'px',top:y+'px',transform:'rotate(0) scale(.6)',opacity:.9}],{duration:900,easing:'cubic-bezier(.3,.6,.3,1)',fill:'forwards'});
     an.onfinish=()=>{p.remove();if(to)highlight(target);else{target.classList.add('delivered');setTimeout(()=>target.classList.remove('delivered'),3600)}}},380);
 }
+/* Opening a document from the Docs library: the first time for each one, Coop swipes it off the CEO's desk first */
+const HEIST=new Set((()=>{try{return JSON.parse(store.get('pw-heist','[]'))}catch(e){return[]}})());
+document.addEventListener('click',e=>{const l=e.target.closest('#lib .drow2 a.dn[href]');if(!l||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||reduceMotion())return;
+  const row=l.closest('.drow2'),d=DOCS.find(x=>docDomId(x)===row.id);if(!d||!d.u||HEIST.has(row.id))return;
+  HEIST.add(row.id);store.set('pw-heist',JSON.stringify([...HEIST].slice(-2000)));e.preventDefault();e.stopPropagation();
+  coopDeliver(null,{D:{id:null,car:hqOf(d.c),doc:d.n,what:d.n,date:TODAY},link:d.u,go:()=>window.open(d.u,'_blank','noopener')})},true);
 document.addEventListener('click',e=>{const b=e.target.closest('[data-deliver]');if(!b)return;e.preventDefault();e.stopPropagation();coopDeliver(b.dataset.deliver)},true);
 // deep link from alerts: …/#alert=<story id>  (or #alert=demo)
 // #alert=<id> is a big change (Coop delivers it, then it lands); #story=<id> just lands and highlights. Only from a notification link.
