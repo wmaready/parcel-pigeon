@@ -1,5 +1,5 @@
 {
- "run": "2026-10-14T20:09Z",
+ "run": "2026-10-14T20:33Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -30,6 +30,55 @@
     "a2b81ad721cb8"
    ],
    "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)) https://developer.ups.com/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Surcharge and fee changes (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Delivery Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Pickup Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -58,6 +107,55 @@
    "ids": [
     "a2b81ad721cb8"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)) https://developer.ups.com/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Surcharge and fee changes (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Delivery Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2027 Pickup Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
+   "ids": [],
    "fixed": false
   }
  ]
