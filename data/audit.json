@@ -1,8 +1,28 @@
 {
- "run": "2026-10-14T04:34Z",
+ "run": "2026-10-14T04:52Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
+ "link_cursor": 40,
+ "doc_cursor": 30,
+ "checked_pairs": [
+  "0cae9f6a1079",
+  "62cb3ae5df27",
+  "9047a4b56aa7",
+  "457e37db5347",
+  "4d5dedc8cd29",
+  "dd1c7372cb2a",
+  "d46a0aebc57e",
+  "b54077ea2f7b",
+  "0b8aff140a01",
+  "dbb89994655f",
+  "5f83fff4b0b8",
+  "4e8faef9252d",
+  "14a3d7429698",
+  "6bef0a5868e5",
+  "454e4f8f6a6b",
+  "94d1ac334f4e"
+ ],
  "issues": [
   {
    "sev": "high",
@@ -56,6 +76,37 @@
    "ids": [
     "a2def09bc43bb"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
+   "ids": [
+    "h426",
+    "h427"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon's 95% ZIP-code coverage, Project Aurelian, the 39,400 ZIP-code contingency plan, the 99.9% demand target, or the USPS deal falling through.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, its $10.70 PIN fee, FedEx Authenticated Delivery, its $20 QR-code fee, or the AJC source. The UPS PIN-delivery story gives no price or fee.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie or VF participation, or DoorDash's self-designed drones.",
+   "ids": [],
    "fixed": false
   }
  ],
@@ -112,6 +163,37 @@
    "ids": [
     "a2def09bc43bb"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
+   "ids": [
+    "h426",
+    "h427"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon's 95% ZIP-code coverage, Project Aurelian, the 39,400 ZIP-code contingency plan, the 99.9% demand target, or the USPS deal falling through.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, its $10.70 PIN fee, FedEx Authenticated Delivery, its $20 QR-code fee, or the AJC source. The UPS PIN-delivery story gives no price or fee.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie or VF participation, or DoorDash's self-designed drones.",
+   "ids": [],
    "fixed": false
   }
  ]

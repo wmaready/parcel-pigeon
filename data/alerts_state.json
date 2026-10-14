@@ -48,7 +48,8 @@
   "adb625d22e170",
   "aee6669d325da",
   "a1b456d5a5205",
-  "a5d45f26f2219"
+  "a5d45f26f2219",
+  "a4f6519fdbb1c"
  ],
  "clock": [
   "e04:1"
@@ -57,30 +58,30 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "wa0dc8b706733",
-  "w348418a9dc09",
-  "aad7e6789b34e",
-  "ae77827c0481e",
   "a30530b988200",
-  "w150132868eae",
-  "w1a58abf8b69d",
-  "w8a582ba4f6eb",
+  "a1785bbd2ecbb",
+  "afbf819454788",
   "w82629d496c23",
   "a9b2dacf6f727",
+  "a945e2139bb15",
+  "a5d45f26f2219",
   "ac1d01500ab14",
   "wb612a77519f2",
-  "af8ee5ed067c6",
-  "wbf2ef019cc6e",
-  "w3d06a7fa766e",
-  "aee6669d325da",
-  "a1785bbd2ecbb",
-  "a89d7e4beebd9",
-  "abf01a11b3d9e",
   "wf225c9a3bf63",
-  "a5d45f26f2219",
-  "afbf819454788",
-  "a945e2139bb15",
-  "w49b3786a59a5"
+  "w49b3786a59a5",
+  "wbf2ef019cc6e",
+  "af8ee5ed067c6",
+  "wa0dc8b706733",
+  "aee6669d325da",
+  "abf01a11b3d9e",
+  "ae77827c0481e",
+  "w348418a9dc09",
+  "aad7e6789b34e",
+  "w8a582ba4f6eb",
+  "w1a58abf8b69d",
+  "w150132868eae",
+  "w3d06a7fa766e",
+  "a89d7e4beebd9"
  ],
  "backfilled": true,
  "players": [
@@ -104,7 +105,8 @@
   "mercari",
   "ebay",
   "etsy",
-  "ecomlogistics"
+  "ecomlogistics",
+  "brokfillbroads"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -199,7 +201,8 @@
   "q4 freight index projects record ground and express parcel r",
   "gofo adds 4 emergency fuel surcharge from oct 26",
   "fedex orders 2 000 electric trucks from harbinger in 300m pl",
-  "diesel futures jump 20 cents in two hours on cme freightwave"
+  "diesel futures jump 20 cents in two hours on cme freightwave",
+  "brokfill adds usps final mile delivery for fulfilled orders"
  ],
  "copy": {
   "a78db2954da94": {
@@ -297,6 +300,10 @@
   "a5d45f26f2219": {
    "t": "Diesel futures jump 20 cents on CME",
    "m": "Shippers exposed to diesel costs should expect pressure, as analyst Kingston warned of possible further…"
+  },
+  "a4f6519fdbb1c": {
+   "t": "Brokfill adds USPS final-mile delivery",
+   "m": "Eligible fulfilled orders can be routed to USPS for last-mile delivery, including P.O. Boxes, for Brokfill…"
   }
  },
  "recent": [
@@ -796,6 +803,21 @@
      "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis"
     }
    ]
+  },
+  {
+   "id": "a4f6519fdbb1c",
+   "title": "Brokfill adds USPS final-mile delivery for fulfilled orders",
+   "date": "2026-10-13",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://finance.yahoo.com/small-business/articles/brokfill-expands-nationwide-delivery-coverage-222400699.html",
+   "srcs": [
+    {
+     "src": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/small-business/articles/brokfill-expands-nationwide-delivery-coverage-222400699.html"
+    }
+   ]
   }
  ],
  "queue": [
@@ -809,6 +831,31 @@
    "topic": "rates",
    "mask": 8,
    "url": "https://wmaready.github.io/parcel-pigeon/#clock"
+  },
+  {
+   "kind": "story",
+   "key": "story:brokfill adds usps final mile delivery for fulfilled orders",
+   "id": "a4f6519fdbb1c",
+   "t": "Brokfill adds USPS final-mile delivery",
+   "m": "Eligible fulfilled orders can be routed to USPS for last-mile delivery, including P.O. Boxes, for Brokfill…",
+   "big": false,
+   "at": "2026-10-14T00:49:20.242440-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": false,
+   "mask": 4,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a4f6519fdbb1c"
+  },
+  {
+   "kind": "player",
+   "key": "player:brokfillbroads",
+   "at": "2026-10-14T00:49:20.242822-04:00",
+   "t": "New on the map: Brokfill (Broadscale Fulfillment LLC)",
+   "m": "Broadscale Fulfillment LLC operates Brokfill, an ecommerce and distribution order-fulfillment platform (warehousing, order processing, shipping management) that on Oct. 13, 2026 announced it routes eligible orders to USPS for final-mile delivery to residential, rural and P.O. Box addresses nationwide.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
   }
  ],
  "fuelq": {},

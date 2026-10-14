@@ -572,6 +572,32 @@
     "https://www.3plhub.co/canada/ontario/vaughan/ecom-logistics"
    ],
    "enriched": "2026-10-13"
+  },
+  {
+   "id": "brokfillbroads",
+   "n": "Brokfill (Broadscale Fulfillment LLC)",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "Broadscale Fulfillment LLC operates Brokfill, an ecommerce and distribution order-fulfillment platform (warehousing, order processing, shipping management) that on Oct. 13, 2026 announced it routes eligible orders to USPS for final-mile delivery to residential, rural and P.O. Box addresses nationwide.",
+   "al": [
+    "Broadscale Fulfillment",
+    "Broadscale Fulfillment LLC",
+    "Brokfill"
+   ],
+   "src": "https://www.globenewswire.com/news-release/2026/10/13/3380278/0/en/brokfill-expands-nationwide-delivery-coverage-with-usps-shipping-integration.html",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-13",
+   "story": "a4f6519fdbb1c",
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/10/13/3380278/0/en/brokfill-expands-nationwide-delivery-coverage-with-usps-shipping-integration.html",
+    "https://www.manilatimes.net/2026/10/14/tmt-newswire/globenewswire/brokfill-expands-nationwide-delivery-coverage-with-usps-shipping-integration/2445146"
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1060,6 +1086,15 @@
    "t": "Offers Canada Post shipping labels to sellers",
    "url": "https://help.etsy.com/hc/en-us/articles/360001967188-How-to-Purchase-Shipping-Labels-on-Etsy",
    "story": "a2b81ad721cb8"
+  },
+  {
+   "a": "brokfillbroads",
+   "b": "usps",
+   "k": "partner",
+   "y": "2026",
+   "t": "USPS final-mile delivery partnership for fulfilled orders",
+   "url": "https://www.globenewswire.com/news-release/2026/10/13/3380278/0/en/brokfill-expands-nationwide-delivery-coverage-with-usps-shipping-integration.html",
+   "story": "a4f6519fdbb1c"
   }
  ],
  "moves": [
@@ -1144,6 +1179,7 @@
   "mercari": "2026-10-13",
   "ebay": "2026-10-13",
   "etsy": "2026-10-13",
-  "ecomlogistics": "2026-10-13"
+  "ecomlogistics": "2026-10-13",
+  "brokfillbroads": "2026-10-14"
  }
 }
