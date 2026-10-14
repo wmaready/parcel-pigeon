@@ -29,6 +29,33 @@
   "exclusive": true
  },
  {
+  "id": "a66617050d4e9",
+  "date": "2026-10-14",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "Analysis",
+  "title": "Industry voices debate UPS parcel strategy and 2028 Teamsters talks",
+  "sum": "A FreightWaves analysis reports that analysts and consultant Satish Jindel disagree over UPS's stated shift toward premium and logistics services. Jindel argues UPS does not intend to leave parcel delivery, while UPS officials told the outlet privately that small package is not going away. The piece also covers views on the Teamsters contract that expires in 2028.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. UPS officials told FreightWaves small package is not going away, and the outlet's reporting on the labor contract and strategy is commentary on possible future changes.",
+  "tie": "The piece follows UPS's Aug. 31 news release describing a new global operating model and naming Matt Guffey chief U.S. domestic officer.",
+  "act": null,
+  "dates": [],
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse"
+   }
+  ],
+  "auto": true,
+  "thread": "ups-parcel-pivot"
+ },
+ {
   "id": "a6c2418bed0a7",
   "date": "2026-10-14",
   "c": [
@@ -138,6 +165,34 @@
   "auto": true,
   "new": "Earlier coverage covered GOFO's 4% emergency fuel surcharge; this adds the roughly 20-cent futures jump and Kingston's view that depleted inventories and renewed Strait of Hormuz disruption could push diesel higher, though no new carrier surcharge is announced.",
   "edge": true
+ },
+ {
+  "id": "a6a52b69d2dfc",
+  "date": "2026-10-13",
+  "c": [
+   "Industry",
+   "FedEx",
+   "DHL"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "Parcel costs near record in 2026 as fuel surcharges and fees climb, analysis says",
+  "sum": "An industry analysis released Tuesday by investment bank TD Cowen and a parcel analytics firm says 2026 is on track to be the most expensive year on record for parcel shipping. It says the average fuel surcharge rose from 7.75% of the transportation rate in the first quarter of 2021 to 30% in September, when diesel peaked at $6.53 per gallon. The ground parcel rate index is projected at 43.3% above its January 2018 baseline in the fourth quarter.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "According to the analysis, shippers face higher fuel surcharges and more accessorial fees across the large carriers. The article says FedEx's 5.9% average general rate increase is effective Jan. 4, and that the delivery area surcharge for ZIP codes moved from extended to remote rises to $17.75.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up"
+   }
+  ],
+  "auto": true
  },
  {
   "id": "a89d7e4beebd9",
@@ -1013,6 +1068,69 @@
    }
   ],
   "auto": true
+ },
+ {
+  "id": "a55e20dc9f8f3",
+  "date": "2026-10-08",
+  "c": [
+   "USPS",
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "CBP proposes earlier filing deadlines for low-value imports, postal entries",
+  "sum": "U.S. Customs and Border Protection proposed in an Oct. 8 Federal Register filing that entry type 11 imports be filed on or before arrival rather than within 15 days, and that postal entry type 13 require more data. Public comments are due Dec. 7.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "If adopted, importers of goods valued at $2,500 or less would face earlier filing deadlines and additional data requirements. CBP said the changes would result in higher shipping costs for imports under both entry types; no effective date is stated.",
+  "tie": null,
+  "act": null,
+  "dates": [
+   {
+    "d": "2026-12-07",
+    "w": "Public comment deadline on CBP low-value import proposal",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/cbp-eyes-earlier-filing-deadlines-for-low-cost-imports-postal-changes/832877/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/cbp-eyes-earlier-filing-deadlines-for-low-cost-imports-postal-changes/832877/"
+   }
+  ],
+  "auto": true,
+  "thread": "cbp-low-value-import-filing"
+ },
+ {
+  "id": "a5da325d3b048",
+  "date": "2026-10-08",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "Opinion",
+  "title": "Amazon targets 5,000 drivers in smart glasses by end of 2026",
+  "sum": "Amazon aims to have 5,000 delivery drivers wearing AI smart glasses by the end of 2026 and more than 20,000 by the end of 2027, according to a Bloomberg opinion piece by Dave Lee that cites Amazon executive Viraj Chatterjee. Amazon says the glasses track a driver's shift from start to finish, give hands-free guidance and are meant to speed deliveries and cut errors. Lee wrote that the company risks another privacy controversy.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates, fees or service terms for shippers. The item concerns equipment for Amazon's own delivery drivers.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Science, Public Health Policy and the Law",
+  "url": "https://publichealthpolicyjournal.com/amazon-delivery-driver-smart-glasses-will-snap-pictures-of-everything-more/",
+  "srcs": [
+   {
+    "src": "Science, Public Health Policy and the Law",
+    "url": "https://publichealthpolicyjournal.com/amazon-delivery-driver-smart-glasses-will-snap-pictures-of-everything-more/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a673b7f464607",

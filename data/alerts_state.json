@@ -54,7 +54,9 @@
   "a6c2418bed0a7",
   "a95a909440075",
   "ae72963e7f424",
-  "af4d09d3e8033"
+  "af4d09d3e8033",
+  "a66617050d4e9",
+  "a6a52b69d2dfc"
  ],
  "clock": [
   "e04:1"
@@ -63,31 +65,31 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "wa0dc8b706733",
+  "a89d7e4beebd9",
   "ae77827c0481e",
-  "ac1d01500ab14",
-  "a945e2139bb15",
+  "w49b3786a59a5",
   "a6c2418bed0a7",
+  "wb612a77519f2",
+  "af8ee5ed067c6",
+  "aad7e6789b34e",
+  "wf225c9a3bf63",
+  "a945e2139bb15",
+  "wbf2ef019cc6e",
+  "w150132868eae",
+  "ac1d01500ab14",
+  "a9b2dacf6f727",
+  "w82629d496c23",
+  "w8a582ba4f6eb",
   "abf01a11b3d9e",
   "a30530b988200",
-  "afbf819454788",
-  "aee6669d325da",
   "w3d06a7fa766e",
-  "wb612a77519f2",
-  "w348418a9dc09",
-  "w49b3786a59a5",
-  "a89d7e4beebd9",
   "w1a58abf8b69d",
-  "w82629d496c23",
-  "aad7e6789b34e",
-  "a5d45f26f2219",
-  "af8ee5ed067c6",
-  "w8a582ba4f6eb",
-  "a9b2dacf6f727",
-  "wbf2ef019cc6e",
+  "w348418a9dc09",
   "a1785bbd2ecbb",
-  "wf225c9a3bf63",
-  "w150132868eae"
+  "a5d45f26f2219",
+  "aee6669d325da",
+  "wa0dc8b706733",
+  "afbf819454788"
  ],
  "backfilled": true,
  "players": [
@@ -113,7 +115,8 @@
   "etsy",
   "ecomlogistics",
   "brokfillbroads",
-  "linnworks"
+  "linnworks",
+  "theupsstores"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -184,7 +187,11 @@
   "story:survey 37 of sri lankan e commerce exporters lack full de minimis awareness",
   "story:fedex europe launches online portal for temperature controlled pharma shipments",
   "player:brokfillbroads",
-  "player:linnworks"
+  "player:linnworks",
+  "more:player:theupsstores,story:industry voices debate ups parcel strategy and 2028 teamsters talks,story:parcel costs near record in 2026 as fuel surcharges and fees climb analysis says",
+  "story:parcel costs near record in 2026 as fuel surcharges and fees climb analysis says",
+  "story:industry voices debate ups parcel strategy and 2028 teamsters talks",
+  "player:theupsstores"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -224,7 +231,9 @@
   "gofo launches mailbox parcel letterbox service in the nether",
   "earthjustice analyst urges new york action on amazon deliver",
   "survey 37 of sri lankan e commerce exporters lack full de mi",
-  "fedex europe launches online portal for temperature controll"
+  "fedex europe launches online portal for temperature controll",
+  "industry voices debate ups parcel strategy and 2028 teamster",
+  "parcel costs near record in 2026 as fuel surcharges and fees"
  ],
  "copy": {
   "a78db2954da94": {
@@ -920,13 +929,45 @@
      "url": "https://www.indexbox.io/blog/fedex-europe-launches-online-portal-for-temperature-controlled-pharma-shipments/"
     }
    ]
+  },
+  {
+   "id": "a66617050d4e9",
+   "title": "Industry voices debate UPS parcel strategy and 2028 Teamsters talks",
+   "date": "2026-10-14",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse"
+    }
+   ]
+  },
+  {
+   "id": "a6a52b69d2dfc",
+   "title": "Parcel costs near record in 2026 as fuel surcharges and fees climb, analysis says",
+   "date": "2026-10-13",
+   "c": [
+    "Industry",
+    "FedEx",
+    "DHL"
+   ],
+   "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-14",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-10-14T07:34:48.475131-04:00"
+ "last_push": "2026-10-14T10:55:49.221868-04:00"
 }

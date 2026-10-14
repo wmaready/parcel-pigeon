@@ -630,6 +630,40 @@
     "https://www.linnworks.com/news/linnworks-shippo-partnership-to-streamline-ecommerce-shipping/"
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "theupsstores",
+   "n": "The UPS Store",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": "ups",
+   "hq": "San Diego, CA, USA",
+   "yr": "1980",
+   "s": "The UPS Store, Inc. is the franchisor of a network of more than 5,000 franchised retail locations in the U.S., Canada and Puerto Rico that offer packing, shipping, postal, printing and business services, and it is a wholly owned subsidiary of UPS.",
+   "al": [
+    "MBE",
+    "Mail Boxes Etc.",
+    "Mail Boxes Etc., Inc.",
+    "The UPS Store, Inc.",
+    "The UPS Stores"
+   ],
+   "src": "https://www.theupsstore.com/about/history",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-14",
+   "story": "a66617050d4e9",
+   "site": "theupsstore.com",
+   "geo": [
+    -117.161,
+    32.716
+   ],
+   "srcs": [
+    "https://www.theupsstore.com/about/history",
+    "https://about.ups.com/us/en/our-company/our-history.html",
+    "https://sdbj.com/retail/independent-owners-big-brand-drive-ups-store/"
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1145,6 +1179,51 @@
    "t": "3PL fulfillment integration with order routing",
    "url": "https://www.linnworks.com/solutions/shipping-management/",
    "story": "a59aef18724ff"
+  },
+  {
+   "a": "ups",
+   "b": "roadie",
+   "k": "acquired",
+   "y": "2026",
+   "t": "UPS bought Roadie in 2021 for $548 million",
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "story": "a66617050d4e9"
+  },
+  {
+   "a": "ups",
+   "b": "happyreturns",
+   "k": "owns",
+   "y": "2026",
+   "t": "Happy Returns is a non-union UPS subsidiary",
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "story": "a66617050d4e9"
+  },
+  {
+   "a": "wonder",
+   "b": "grubhub",
+   "k": "owns",
+   "y": "2026",
+   "t": "Grubhub is part of Wonder",
+   "url": "https://www.tradingview.com/news/eqs:9dbeeaad1094b:0-sauce-partners-with-grubhub-on-direct-ordering-and-delivery/",
+   "story": "ae65ee3ea50db"
+  },
+  {
+   "a": "theupsstores",
+   "b": "ups",
+   "k": "acquired",
+   "y": "2001",
+   "t": "UPS acquired Mail Boxes Etc. (later The UPS Store)",
+   "url": "https://www.theupsstore.com/about/history",
+   "story": "a66617050d4e9"
+  },
+  {
+   "a": "theupsstores",
+   "b": "ups",
+   "k": "owns",
+   "y": "2003",
+   "t": "The UPS Store, Inc. is a wholly owned UPS subsidiary",
+   "url": "https://sdbj.com/retail/independent-owners-big-brand-drive-ups-store/",
+   "story": "a66617050d4e9"
   }
  ],
  "moves": [
@@ -1231,6 +1310,7 @@
   "etsy": "2026-10-13",
   "ecomlogistics": "2026-10-13",
   "brokfillbroads": "2026-10-14",
-  "linnworks": "2026-10-14"
+  "linnworks": "2026-10-14",
+  "theupsstores": "2026-10-14"
  }
 }
