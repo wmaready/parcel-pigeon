@@ -63,31 +63,31 @@
   "OnTrac": "2026-10-12"
  },
  "harvested": [
-  "ac1d01500ab14",
-  "w348418a9dc09",
-  "abf01a11b3d9e",
-  "w3d06a7fa766e",
-  "a6c2418bed0a7",
-  "af8ee5ed067c6",
-  "wa0dc8b706733",
-  "aee6669d325da",
-  "a9b2dacf6f727",
+  "afbf819454788",
   "a5d45f26f2219",
-  "a1785bbd2ecbb",
+  "a9b2dacf6f727",
+  "aad7e6789b34e",
   "w8a582ba4f6eb",
-  "a945e2139bb15",
-  "w150132868eae",
   "a30530b988200",
-  "a89d7e4beebd9",
-  "w82629d496c23",
-  "wbf2ef019cc6e",
   "w49b3786a59a5",
   "wf225c9a3bf63",
+  "wbf2ef019cc6e",
+  "abf01a11b3d9e",
+  "w150132868eae",
+  "ac1d01500ab14",
+  "w348418a9dc09",
   "wb612a77519f2",
-  "ae77827c0481e",
-  "afbf819454788",
+  "a1785bbd2ecbb",
+  "a6c2418bed0a7",
+  "af8ee5ed067c6",
+  "w3d06a7fa766e",
+  "a89d7e4beebd9",
+  "a945e2139bb15",
+  "wa0dc8b706733",
   "w1a58abf8b69d",
-  "aad7e6789b34e"
+  "ae77827c0481e",
+  "w82629d496c23",
+  "aee6669d325da"
  ],
  "backfilled": true,
  "players": [
@@ -112,7 +112,8 @@
   "ebay",
   "etsy",
   "ecomlogistics",
-  "brokfillbroads"
+  "brokfillbroads",
+  "linnworks"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -173,7 +174,17 @@
   "player:etsy",
   "player:ecomlogistics",
   "story:fedex orders 2 000 electric trucks from harbinger in 300m plus deal",
-  "story:diesel futures jump 20 cents in two hours on cme freightwaves reports"
+  "story:diesel futures jump 20 cents in two hours on cme freightwaves reports",
+  "more:clock:e04:1,player:brokfillbroads,player:linnworks,story:brokfill adds usps final mile delivery for fulfilled orders,story:earthjustice analyst urges new york action on amazon delivery,story:fedex europe launches online portal for temperature controlled pharma shipments,story:gofo launches mailbox parcel letterbox service in the netherlands,story:lithuanian regulator approves dhl purchase of venipak baltic units,story:survey 37 of sri lankan e commerce exporters lack full de minimis awareness",
+  "clock:e04:1",
+  "story:brokfill adds usps final mile delivery for fulfilled orders",
+  "story:lithuanian regulator approves dhl purchase of venipak baltic units",
+  "story:gofo launches mailbox parcel letterbox service in the netherlands",
+  "story:earthjustice analyst urges new york action on amazon delivery",
+  "story:survey 37 of sri lankan e commerce exporters lack full de minimis awareness",
+  "story:fedex europe launches online portal for temperature controlled pharma shipments",
+  "player:brokfillbroads",
+  "player:linnworks"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -911,118 +922,11 @@
    ]
   }
  ],
- "queue": [
-  {
-   "kind": "clock",
-   "key": "clock:e04:1",
-   "at": "2026-10-14T00:34:16.495389-04:00",
-   "t": "Amazon: starts tomorrow",
-   "m": "Amazon FBA and Multi-Channel Fulfillment peak fees start for sellers",
-   "lvl": 2,
-   "topic": "rates",
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#clock"
-  },
-  {
-   "kind": "story",
-   "key": "story:brokfill adds usps final mile delivery for fulfilled orders",
-   "id": "a4f6519fdbb1c",
-   "t": "Brokfill adds USPS final-mile delivery",
-   "m": "Eligible fulfilled orders can be routed to USPS for last-mile delivery, including P.O. Boxes, for Brokfill…",
-   "big": false,
-   "at": "2026-10-14T00:49:20.242440-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": 4,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a4f6519fdbb1c"
-  },
-  {
-   "kind": "player",
-   "key": "player:brokfillbroads",
-   "at": "2026-10-14T00:49:20.242822-04:00",
-   "t": "New on the map: Brokfill (Broadscale Fulfillment LLC)",
-   "m": "Broadscale Fulfillment LLC operates Brokfill, an ecommerce and distribution order-fulfillment platform (warehousing, order processing, shipping management) that on Oct. 13, 2026 announced it routes eligible orders to USPS for final-mile delivery to residential, rural and P.O. Box addresses nationwide.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "story",
-   "key": "story:lithuanian regulator approves dhl purchase of venipak baltic units",
-   "id": "a5769daef0e14",
-   "t": "Lithuanian regulator approves DHL purchase of…",
-   "m": "No change to rates or service has been announced.",
-   "big": false,
-   "at": "2026-10-14T06:56:27.746004-04:00",
-   "lvl": 1,
-   "topic": "deals",
-   "notable": false,
-   "mask": 16,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a5769daef0e14"
-  },
-  {
-   "kind": "story",
-   "key": "story:gofo launches mailbox parcel letterbox service in the netherlands",
-   "id": "a6c2418bed0a7",
-   "t": "GOFO launches Mailbox Parcel letterbox service…",
-   "m": "Shippers in the Netherlands with small, lightweight orders can use a new GOFO letterbox delivery option from…",
-   "big": false,
-   "at": "2026-10-14T06:56:27.746070-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": 16,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a6c2418bed0a7"
-  },
-  {
-   "kind": "story",
-   "key": "story:earthjustice analyst urges new york action on amazon delivery",
-   "id": "a95a909440075",
-   "t": "Earthjustice analyst urges New York action on…",
-   "m": "No change to rates or service.",
-   "big": false,
-   "at": "2026-10-14T06:56:27.746090-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a95a909440075"
-  },
-  {
-   "kind": "story",
-   "key": "story:survey 37 of sri lankan e commerce exporters lack full de minimis awareness",
-   "id": "ae72963e7f424",
-   "t": "Survey: 37% of Sri Lankan e-commerce exporters…",
-   "m": "No change to rates or service.",
-   "big": false,
-   "at": "2026-10-14T06:56:27.746102-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=ae72963e7f424"
-  },
-  {
-   "kind": "story",
-   "key": "story:fedex europe launches online portal for temperature controlled pharma shipments",
-   "id": "af4d09d3e8033",
-   "t": "FedEx Europe launches online portal for…",
-   "m": "Pharma and life sciences shippers in the 26 covered European markets can onboard, order pre-conditioned…",
-   "big": false,
-   "at": "2026-10-14T06:56:27.746115-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": 2,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=af4d09d3e8033"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-10-13",
-  "n": 8
+  "d": "2026-10-14",
+  "n": 1
  },
- "last_push": "2026-10-13T19:24:07.765351-04:00"
+ "last_push": "2026-10-14T07:34:48.475131-04:00"
 }

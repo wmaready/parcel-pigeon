@@ -600,55 +600,36 @@
    "enriched": "2026-10-14"
   },
   {
-   "id": "venipaklatvija",
-   "n": "Venipak Latvija",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Parcel delivery and freight transport company in Latvia",
-   "al": [],
-   "src": "https://www.mlex.com/mlex/amp/articles/2537626",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-14",
-   "story": "a5769daef0e14"
-  },
-  {
-   "id": "venipakeesti",
-   "n": "Venipak Eesti",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Parcel delivery and freight transport company in Estonia",
-   "al": [],
-   "src": "https://www.mlex.com/mlex/amp/articles/2537626",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-14",
-   "story": "a5769daef0e14"
-  },
-  {
    "id": "linnworks",
    "n": "Linnworks",
    "realm": "software",
-   "own": null,
+   "own": "pe",
    "tk": null,
    "parent": null,
-   "hq": null,
+   "hq": "Chichester, United Kingdom",
    "yr": null,
-   "s": "Published the report 'Lost in transit: Why peak season shipping costs are so hard to track' using its transactional shipping data",
-   "al": [],
-   "src": "https://www.insightdiy.co.uk/news/linnworks-report-highlights-hidden-cost-of-peak-season-shipping-for-retailers/16908.htm",
+   "s": "Linnworks is a multichannel commerce operations software platform whose shipping management tools let online sellers rate-shop carriers, print labels, track parcels and route orders to 3PLs.",
+   "al": [
+    "Linn Systems",
+    "Linn Systems Limited",
+    "Linnworks Ltd"
+   ],
+   "src": "https://www.marlinequity.com/news/marlin-completes-growth-investment-in-linnworks/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-07",
-   "story": "a59aef18724ff"
+   "story": "a59aef18724ff",
+   "site": "linnworks.com",
+   "geo": [
+    -0.779,
+    50.837
+   ],
+   "srcs": [
+    "https://www.marlinequity.com/news/marlin-completes-growth-investment-in-linnworks/",
+    "https://www.crunchbase.com/organization/linnworks",
+    "https://www.linnworks.com/news/linnworks-shippo-partnership-to-streamline-ecommerce-shipping/"
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1146,6 +1127,24 @@
    "t": "USPS final-mile delivery partnership for fulfilled orders",
    "url": "https://www.globenewswire.com/news-release/2026/10/13/3380278/0/en/brokfill-expands-nationwide-delivery-coverage-with-usps-shipping-integration.html",
    "story": "a4f6519fdbb1c"
+  },
+  {
+   "a": "linnworks",
+   "b": "shippo",
+   "k": "partner",
+   "y": "2025",
+   "t": "Native Shippo shipping integration (40+ carriers) inside Linnworks",
+   "url": "https://www.linnworks.com/news/linnworks-shippo-partnership-to-streamline-ecommerce-shipping/",
+   "story": "a59aef18724ff"
+  },
+  {
+   "a": "linnworks",
+   "b": "shipbob",
+   "k": "partner",
+   "y": null,
+   "t": "3PL fulfillment integration with order routing",
+   "url": "https://www.linnworks.com/solutions/shipping-management/",
+   "story": "a59aef18724ff"
   }
  ],
  "moves": [
@@ -1231,6 +1230,7 @@
   "ebay": "2026-10-13",
   "etsy": "2026-10-13",
   "ecomlogistics": "2026-10-13",
-  "brokfillbroads": "2026-10-14"
+  "brokfillbroads": "2026-10-14",
+  "linnworks": "2026-10-14"
  }
 }
