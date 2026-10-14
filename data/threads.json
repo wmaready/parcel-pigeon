@@ -417,12 +417,13 @@
  },
  "drone-delivery": {
   "n": "Drone delivery growth and FAA Part 108 rule",
-  "s": "Walmart and Wing are extending drone delivery to Seattle and Denver, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9.",
+  "s": "Amazon has begun drone deliveries in Chicago's south suburbs, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9, per earlier coverage.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
-   "a94cd39741afc"
+   "a94cd39741afc",
+   "aa4c45051038a"
   ],
   "first": "2025-03-31",
   "last": "2026-10-14",
@@ -432,16 +433,12 @@
    "Regional"
   ],
   "cx": {
-   "sig": "314167040eb9",
+   "sig": "58b4950b8b66",
    "v": 2,
-   "beats": {
-    "g27": "Amazon says Prime Air will launch from sites near Chicago, Atlanta, Cleveland and Syracuse by year-end, up from 11 U.S. locations.",
-    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, reaching nearly 20 metros and 270+ stores. Carrier rates and service don't change."
-   },
-   "intro": "Drone delivery is scaling fast while the FAA rule meant to govern it sits unpublished, and local pushback is growing.",
-   "now": "Lawmakers want a site-specific review of Amazon's Westborough hub, with answers due Oct. 29; the Part 108 rule is still unpublished."
+   "beats": {},
+   "intro": "Drone delivery is spreading fast, but the FAA rule that would make it routine is still unpublished. Here's how that plays out."
   },
-  "rv": "219aee58415d"
+  "rv": "e7f0531f002a"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",

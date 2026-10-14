@@ -731,6 +731,43 @@
     "https://en.wikipedia.org/wiki/Alphabet_Inc."
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "targetcorp",
+   "n": "Target Corporation",
+   "realm": "retail",
+   "own": "public",
+   "tk": "TGT",
+   "parent": "mercari",
+   "hq": "Minneapolis, MN, USA",
+   "yr": "1902",
+   "s": "U.S. general-merchandise retailer that uses its nearly 2,000 stores as fulfillment hubs for Order Pickup, Drive Up and same-day delivery (via its wholly owned subsidiary Shipt), and for parcels shipped through common carriers.",
+   "al": [
+    "Dayton Company",
+    "Dayton Corporation",
+    "Dayton's Dry Goods Company",
+    "Dayton-Hudson Corporation",
+    "Goodfellow Dry Goods",
+    "Target",
+    "Target Corp.",
+    "Target Stores"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/27419/000002741925000018/tgt-20250201.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-14",
+   "story": "af43fd5ad3188",
+   "site": "target.com",
+   "geo": [
+    -93.265,
+    44.978
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/27419/000002741925000018/tgt-20250201.htm",
+    "https://corporate.target.com/press/release/2017/12/target-to-acquire-same-day-delivery-platform-shipt,-inc-to-bolster-fulfillment-capabilities",
+    "https://www.fundinguniverse.com/company-histories/target-corporation-history/"
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1300,6 +1337,24 @@
    "t": "Alphabet owns drone delivery subsidiary Wing",
    "url": "https://newstalk870.am/ixp/1135/p/walmart-drones-arrive-pacific-northwest/",
    "story": "a94cd39741afc"
+  },
+  {
+   "a": "targetcorp",
+   "b": "shipt",
+   "k": "owns",
+   "y": "2026",
+   "t": "Target Corp. owns Shipt",
+   "url": "https://www.supermarketperimeter.com/articles/14656-sprouts-partners-with-shipt-to-offer-same-day-delivery",
+   "story": "af43fd5ad3188"
+  },
+  {
+   "a": "targetcorp",
+   "b": "shipt",
+   "k": "acquired",
+   "y": "2017",
+   "t": "Acquired Shipt for $550M cash; now a wholly owned subsidiary",
+   "url": "https://corporate.target.com/press/release/2017/12/target-to-acquire-same-day-delivery-platform-shipt,-inc-to-bolster-fulfillment-capabilities",
+   "story": "af43fd5ad3188"
   }
  ],
  "moves": [
@@ -1389,6 +1444,7 @@
   "linnworks": "2026-10-14",
   "theupsstores": "2026-10-14",
   "crimsonlogic": "2026-10-14",
-  "alphabet": "2026-10-14"
+  "alphabet": "2026-10-14",
+  "targetcorp": "2026-10-14"
  }
 }
