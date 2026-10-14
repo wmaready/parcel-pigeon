@@ -416,30 +416,31 @@
   "rv": "ce498ee4d3ad"
  },
  "drone-delivery": {
-  "n": "Drone delivery expansion and FAA Part 108 rule",
-  "s": "Drone delivery is expanding across several companies while the FAA's Part 108 BVLOS final rule remains unpublished.",
+  "n": "Drone delivery growth and FAA Part 108 rule",
+  "s": "Amazon's Westborough drone hub faces calls from state and federal lawmakers for a site-specific environmental review, with answers requested by Oct. 29.",
   "ids": [
    "g27",
-   "g02",
    "g26",
    "a60770e8e9c32"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-13",
+  "last": "2026-10-14",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "32b184653430",
+   "sig": "314167040eb9",
    "v": 2,
    "beats": {
-    "g27": "Amazon is growing from 11 U.S. drone locations to almost 500 towns, with a $2.99 fee for Prime members (free on $50+ orders).",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, reaching nearly 20 metros and more than 270 stores, with no change to parcel carrier rates."
-   }
+    "g27": "Amazon says Prime Air will launch from sites near Chicago, Atlanta, Cleveland and Syracuse by year-end, up from 11 U.S. locations.",
+    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, reaching nearly 20 metros and 270+ stores. Carrier rates and service don't change."
+   },
+   "intro": "Drone delivery is scaling fast while the FAA rule meant to govern it sits unpublished, and local pushback is growing.",
+   "now": "Lawmakers want a site-specific review of Amazon's Westborough hub, with answers due Oct. 29; the Part 108 rule is still unpublished."
   },
-  "rv": "32b184653430"
+  "rv": "314167040eb9"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
@@ -499,7 +500,8 @@
   "c": [
    "Industry",
    "USPS"
-  ]
+  ],
+  "rv": "073ada236f49"
  },
  "ups-parcel-pivot": {
   "n": "UPS parcel strategy pivot",
@@ -507,10 +509,24 @@
    "a66617050d4e9"
   ],
   "first": "2026-10-14",
-  "s": "UPS says it is focusing on premium segments and has put its parcel units under one U.S. domestic executive, while analysts dispute whether it is reducing parcel exposure ahead of 2028 Teamsters talks.",
+  "s": "Analysts and consultants disagree over UPS's parcel direction while UPS officials say small package remains, with Teamsters talks set for 2028.",
   "last": "2026-10-14",
   "c": [
    "UPS"
-  ]
+  ],
+  "rv": "32a902935643"
+ },
+ "de-minimis-end": {
+  "n": "De minimis suspension",
+  "ids": [
+   "aeb508490eee1"
+  ],
+  "first": "2026-10-14",
+  "s": "De minimis is suspended for all countries since August 2025, and the commercial shipment exemption is set to be repealed from July 1, 2027, according to the article.",
+  "last": "2026-10-14",
+  "c": [
+   "Industry"
+  ],
+  "rv": "dcf71660fcf1"
  }
 }

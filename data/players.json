@@ -664,6 +664,40 @@
     "https://sdbj.com/retail/independent-owners-big-brand-drive-ups-store/"
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "crimsonlogic",
+   "n": "CrimsonLogic",
+   "realm": "software",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Singapore, Singapore",
+   "yr": "1988",
+   "s": "Singapore-based trade-technology company, a wholly-owned subsidiary of PSA International, that provides customs filing and clearance software and managed services for U.S. e-commerce and low-value parcel imports (Section 321/Type 86, ACE eManifest) used by brokers, forwarders and importers.",
+   "al": [
+    "CrimsonLogic North America",
+    "CrimsonLogic Pte Ltd",
+    "GeTS",
+    "Global eTrade Services",
+    "Singapore Network Services"
+   ],
+   "src": "https://crimsonlogic-northamerica.com/easy-clearance-for-us-ecommerce-shipments/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-14",
+   "story": "aeb508490eee1",
+   "site": "crimsonlogic.com",
+   "geo": [
+    103.82,
+    1.352
+   ],
+   "srcs": [
+    "https://crimsonlogic-northamerica.com/easy-clearance-for-us-ecommerce-shipments/",
+    "https://crimsonlogic-northamerica.com/section-321-all-you-need-to-know/",
+    "https://www.sgpbusiness.com/company/Crimsonlogic-Pte-Ltd"
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1311,6 +1345,7 @@
   "ecomlogistics": "2026-10-13",
   "brokfillbroads": "2026-10-14",
   "linnworks": "2026-10-14",
-  "theupsstores": "2026-10-14"
+  "theupsstores": "2026-10-14",
+  "crimsonlogic": "2026-10-14"
  }
 }

@@ -1,5 +1,37 @@
 [
  {
+  "id": "a54805bbe5d65",
+  "date": "2026-10-14",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Lawmakers ask FAA, Amazon for separate review of Westborough drone hub",
+  "sum": "Sens. Ed Markey and Elizabeth Warren and Reps. Jim McGovern and Lori Trahan asked Amazon and the FAA on Oct. 14 to put Prime Air's proposed Westborough, Massachusetts, drone hub through its own environmental assessment with a public comment period. Separate letters went to Amazon CEO Andy Jassy and FAA Administrator Bryan Bedford, and both ask for a written answer by Oct. 29.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. Amazon is hoping to start drone deliveries from the Westborough fulfillment center by the end of the year, and the lawmakers want a site-specific assessment first.",
+  "tie": "In August 2026 Amazon said Prime Air would start drone deliveries by the end of 2026 from new sites, and on Sept. 28 state lawmakers from the Westborough area asked the company to pause its plans there.",
+  "act": null,
+  "dates": [],
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/10/14/amazon-westborough-markey-warren-faa-site-specific-environmental-review/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/10/14/amazon-westborough-markey-warren-faa-site-specific-environmental-review/"
+   },
+   {
+    "src": "NBC Boston",
+    "url": "https://www.nbcboston.com/news/local/amazons-westborough-drone-delivery-facility-draws-opposition-from-federal-lawmakers/4030945/"
+   }
+  ],
+  "auto": true,
+  "new": "Federal lawmakers have joined state lawmakers in pressing for a separate FAA environmental assessment of the Westborough hub, which could bear on Amazon's hoped-for start of drone deliveries there by the end of 2026.",
+  "exclusive": true
+ },
+ {
   "id": "a5769daef0e14",
   "date": "2026-10-14",
   "c": [
@@ -36,12 +68,12 @@
   ],
   "cat": "Carrier strategy",
   "kind": "Analysis",
-  "title": "Industry voices debate UPS parcel strategy and 2028 Teamsters talks",
-  "sum": "A FreightWaves analysis reports that analysts and consultant Satish Jindel disagree over UPS's stated shift toward premium and logistics services. Jindel argues UPS does not intend to leave parcel delivery, while UPS officials told the outlet privately that small package is not going away. The piece also covers views on the Teamsters contract that expires in 2028.",
+  "title": "UPS parcel pivot draws split views from analysts ahead of 2028 Teamsters talks",
+  "sum": "A FreightWaves analysis reports that analysts and consultant Satish Jindel disagree on whether UPS's stated focus on premium and logistics services means it will leave parts of parcel delivery. Jindel said UPS does not intend to exit parcel, while UPS officials told the outlet privately that small package is not going away. UPS's Aug. 31 release also named Matt Guffey chief U.S. domestic officer over all parcel and delivery units.",
   "imp": "watch",
   "lvl": 1,
-  "plain": "No change to rates or service. UPS officials told FreightWaves small package is not going away, and the outlet's reporting on the labor contract and strategy is commentary on possible future changes.",
-  "tie": "The piece follows UPS's Aug. 31 news release describing a new global operating model and naming Matt Guffey chief U.S. domestic officer.",
+  "plain": "No change to rates or service has been announced. The piece is a debate over UPS's strategy and the Teamsters contract that expires in 2028.",
+  "tie": "UPS's Aug. 31 news release, issued in August 2026, described a new global operating model built around integrated logistics and named Matt Guffey to lead its U.S. parcel units.",
   "act": null,
   "dates": [],
   "src": "FreightWaves",
@@ -53,7 +85,9 @@
    }
   ],
   "auto": true,
-  "thread": "ups-parcel-pivot"
+  "thread": "ups-parcel-pivot",
+  "upd": 2,
+  "new": "The analysis adds the Aug. 31 reorganization under Guffey, Jindel's view that the shift is meant to mislead competitors and the Teamsters, and the Package Shippers Association chief's expectation that a strike will not occur; no shipper rates or service levels change as a result."
  },
  {
   "id": "a6c2418bed0a7",
@@ -80,6 +114,35 @@
    }
   ],
   "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "aeb508490eee1",
+  "date": "2026-10-14",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "Opinion",
+  "title": "CrimsonLogic exec: importers need consistent customs data after de minimis",
+  "sum": "In an opinion piece in Supply Chain Brain, Siddharth Priyesh of CrimsonLogic says importers must make sure information from suppliers, logistics providers and customs brokers is complete and consistent now that de minimis is suspended. The piece says the suspension was extended to shipments from all countries in August 2025 and that Congress has legislated repeal of the commercial shipment exemption from July 1, 2027.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Formerly eligible shipments valued at $800 or less must follow the applicable Customs entry process and provide the required information. The author says the information may include a 10-digit Harmonized Tariff Schedule classification, Customs value and country of origin.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Supply Chain Brain",
+  "url": "https://www.supplychainbrain.com/blogs/1-think-tank/post/44830-beyond-de-minimis-why-importers-need-defensible-shipment-data",
+  "srcs": [
+   {
+    "src": "Supply Chain Brain",
+    "url": "https://www.supplychainbrain.com/blogs/1-think-tank/post/44830-beyond-de-minimis-why-importers-need-defensible-shipment-data"
+   }
+  ],
+  "auto": true,
+  "thread": "de-minimis-end",
   "edge": true,
   "exclusive": true
  },
@@ -575,6 +638,34 @@
   ],
   "auto": true,
   "edge": true
+ },
+ {
+  "id": "a029653b40c6e",
+  "date": "2026-10-11",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "USPS suspends mail delivery and retail service in 60 Northwest Florida ZIP codes",
+  "sum": "The USPS Florida 1 District said on Sunday, Oct. 11, 2026, that it suspended mail delivery and retail services in 60 ZIP codes in Northwest Florida after severe weather tied to Hurricane Isaias. The suspension took effect immediately, and USPS has not given a reopening date.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Mail and package delivery and post office retail services are suspended in the 60 affected ZIP codes, and USPS has given no date for resuming them. USPS said no alternative postal locations are available for affected customers.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "WIOD",
+  "url": "https://wiod.iheart.com/featured/florida-news/content/2026-10-11-usps-suspends-mail-delivery-in-60-northwest-florida-zip-codes/",
+  "srcs": [
+   {
+    "src": "WIOD",
+    "url": "https://wiod.iheart.com/featured/florida-news/content/2026-10-11-usps-suspends-mail-delivery-in-60-northwest-florida-zip-codes/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a5a4a6c9a9a91",
