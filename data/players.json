@@ -698,6 +698,39 @@
     "https://www.sgpbusiness.com/company/Crimsonlogic-Pte-Ltd"
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "alphabet",
+   "n": "Alphabet Inc.",
+   "realm": "auto",
+   "own": "public",
+   "tk": "GOOGL",
+   "parent": "mercari",
+   "hq": "Mountain View, CA, USA",
+   "yr": null,
+   "s": "Alphabet is the publicly traded holding company of Google and the Other Bets. It is the parent of Wing, the drone delivery company that flies Walmart orders to U.S. customers.",
+   "al": [
+    "Alphabet",
+    "GOOG",
+    "GOOGL",
+    "Google parent"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-05",
+   "story": "a94cd39741afc",
+   "site": "abc.xyz",
+   "geo": [
+    -122.084,
+    37.386
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+    "https://www.forbes.com/companies/alphabet/",
+    "https://en.wikipedia.org/wiki/Alphabet_Inc."
+   ],
+   "enriched": "2026-10-14"
   }
  ],
  "edges": [
@@ -1258,6 +1291,15 @@
    "t": "The UPS Store, Inc. is a wholly owned UPS subsidiary",
    "url": "https://sdbj.com/retail/independent-owners-big-brand-drive-ups-store/",
    "story": "a66617050d4e9"
+  },
+  {
+   "a": "alphabet",
+   "b": "wing",
+   "k": "owns",
+   "y": "2026",
+   "t": "Alphabet owns drone delivery subsidiary Wing",
+   "url": "https://newstalk870.am/ixp/1135/p/walmart-drones-arrive-pacific-northwest/",
+   "story": "a94cd39741afc"
   }
  ],
  "moves": [
@@ -1346,6 +1388,7 @@
   "brokfillbroads": "2026-10-14",
   "linnworks": "2026-10-14",
   "theupsstores": "2026-10-14",
-  "crimsonlogic": "2026-10-14"
+  "crimsonlogic": "2026-10-14",
+  "alphabet": "2026-10-14"
  }
 }
