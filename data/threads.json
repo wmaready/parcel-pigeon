@@ -416,12 +416,10 @@
   "rv": "ce498ee4d3ad"
  },
  "drone-delivery": {
-  "n": "Drone delivery expansion and FAA rules",
-  "s": "Drone delivery operators are widening US coverage, and Amazon is now recruiting for an Australian approvals role while Wing has left Australia.",
+  "n": "Drone delivery expansion and FAA Part 108 rule",
+  "s": "Drone delivery is expanding across several companies while the FAA's Part 108 BVLOS final rule remains unpublished.",
   "ids": [
-   "h507",
    "g27",
-   "g28",
    "g02",
    "g26",
    "a60770e8e9c32"
@@ -434,16 +432,14 @@
    "Regional"
   ],
   "cx": {
-   "sig": "f88c6c14fee7",
+   "sig": "32b184653430",
    "v": 2,
    "beats": {
-    "h507": "Amazon paused Prime Air in January to fix an altitude sensor issue, then restarted in Texas and Arizona once the FAA approved the fix.",
-    "g27": "Amazon says Prime Air will reach almost 500 towns and 30 million people, up from 11 US locations, with fees of $2.99 or $4.99.",
-    "g28": "Lowe's is testing drones near Charlotte through DoorDash, using Wing aircraft that carry about 2.5 pounds, so this suits small items.",
-    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, which brings them to nearly 20 US metros and more than 270 stores."
+    "g27": "Amazon is growing from 11 U.S. drone locations to almost 500 towns, with a $2.99 fee for Prime members (free on $50+ orders).",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, reaching nearly 20 metros and more than 270 stores, with no change to parcel carrier rates."
    }
   },
-  "rv": "f88c6c14fee7"
+  "rv": "32b184653430"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",

@@ -1,5 +1,124 @@
 [
  {
+  "title": "DHL eCommerce buys Venipak Baltic companies",
+  "buyer": "DHL eCommerce International Holdings",
+  "target": "Venipak Lietuva, Venipak Latvija and Venipak Eesti",
+  "value": "Undisclosed",
+  "status": "Pending",
+  "ann": null,
+  "closed": null,
+  "sum": "DHL eCommerce International Holdings is acquiring Venipak's Lithuanian, Latvian and Estonian companies. Lithuania's competition authority approved the deal on Wednesday, according to MLex.",
+  "who": [
+   [
+    "Buyer",
+    "DHL eCommerce International Holdings",
+    "Acquiring entity in the deal, part of the DHL eCommerce business."
+   ],
+   [
+    "Target",
+    "Venipak Lietuva",
+    "Parcel delivery and freight transport company in Lithuania."
+   ],
+   [
+    "Target",
+    "Venipak Latvija",
+    "Parcel delivery and freight transport company in Latvia."
+   ],
+   [
+    "Target",
+    "Venipak Eesti",
+    "Parcel delivery and freight transport company in Estonia."
+   ]
+  ],
+  "why": "The deal covers parcel delivery and freight transport companies in all three Baltic states. Lithuania's competition authority has approved it. The source summary does not give a price, a closing date or the status of other regulatory approvals.",
+  "parties": [
+   {
+    "name": "DHL eCommerce International Holdings",
+    "role": "Buyer",
+    "realm": "National parcel carrier",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Venipak Lietuva",
+    "role": "Target",
+    "realm": "Regional / last-mile carrier",
+    "hq": "Lithuania",
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Venipak Latvija",
+    "role": "Target",
+    "realm": "Regional / last-mile carrier",
+    "hq": "Latvia",
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Venipak Eesti",
+    "role": "Target",
+    "realm": "Regional / last-mile carrier",
+    "hq": "Estonia",
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "DHL eCommerce International Holdings",
+   "c": [
+    {
+     "n": "Venipak Lietuva",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Venipak Latvija",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Venipak Eesti",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Based on a brief MLex summary; the full article was behind a paywall.",
+  "d": "2026-10-14",
+  "story": "a5769daef0e14",
+  "url": "https://www.mlex.com/mlex/amp/articles/2537626",
+  "srcs": [
+   {
+    "src": "MLex",
+    "url": "https://www.mlex.com/mlex/amp/articles/2537626"
+   }
+  ],
+  "checked": "2026-10-14",
+  "ties": [
+   {
+    "d": "2026-05-28",
+    "t": "DHL eCommerce and USPS sign exclusive last-mile deal worth over $10 billion",
+    "story": "g09"
+   },
+   {
+    "d": "2025-05-14",
+    "t": "DHL eCommerce UK to merge with Evri",
+    "story": "h518"
+   },
+   {
+    "d": "2026-07-27",
+    "t": "DHL eCommerce agrees to buy Baltic parcel carrier Venipak",
+    "story": "nr1dab23"
+   }
+  ]
+ },
+ {
   "title": "Duncan Solutions sells Pioneer Credit Recovery",
   "buyer": "Not named in source",
   "target": "Pioneer Credit Recovery, Inc.",
