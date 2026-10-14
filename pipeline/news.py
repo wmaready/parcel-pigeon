@@ -717,6 +717,7 @@ def main():
                      "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
                      "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
                      "act": s.get("act"), "dates": s.get("dates") or [],
+                     "added": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
             if tkey:
                 story["thread"] = tkey
