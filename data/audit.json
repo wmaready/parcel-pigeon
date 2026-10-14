@@ -1,5 +1,5 @@
 {
- "run": "2026-10-14T20:53Z",
+ "run": "2026-10-14T21:33Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -29,6 +29,34 @@
    "ids": [
     "a2b81ad721cb8"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts",
+   "ids": [],
    "fixed": false
   },
   {
@@ -107,6 +135,34 @@
    "ids": [
     "a2b81ad721cb8"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts",
+   "ids": [],
    "fixed": false
   },
   {
