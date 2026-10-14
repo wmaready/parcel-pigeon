@@ -26,7 +26,7 @@ Checks
 Run: python pipeline/audit.py [--offline]   (--offline skips link checks and Claude checks)
 """
 import datetime as dt, difflib, hashlib, json, os, re, sys
-from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary, clock_worthy
+from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary, primary_first, clock_worthy
 from scoop import notify
 
 TODAY = dt.date.today()
@@ -81,7 +81,7 @@ def main():
 
     # 1. price story with no date
     for s in stories.values():
-        if s.get("cat") in PRICE_CATS and s.get("imp") == "up" and not s.get("act") and not s.get("dates") and s["id"] not in linked:
+        if s.get("cat") in PRICE_CATS and s.get("imp") == "up" and not s.get("act") and not s.get("dates") and not s.get("inferred") and s["id"] not in linked:
             issue("high", "price-no-date", f"Price increase has no effective date, so it is not on the rate clock: \"{s['title']}\"", [s["id"]])
 
     # 2. future effective date with no clock entry
@@ -111,14 +111,38 @@ def main():
             issue("low", "clock-no-story", f"Rate clock entry {c['d']} \"{c['w']}\" has no story or note explaining it", [c["id"]])
 
     # 4b. source of truth: the carrier's own site
+    live = load("news.json", [])
+    live_ids = {x["id"]: x for x in live}
+    relinked = []
     for s in stories.values():
         srcs = s.get("srcs") or [{"src": s.get("src"), "url": s.get("url")}]
         prim = [x for x in srcs if is_primary(x.get("url"))]
         recent = days(s["date"], ISO) <= 180   # older history may rest on press reports; recent price news must have the carrier's own source
-        if not prim and recent and s.get("cat") in PRICE_CATS and not PENDING_RE.search(s.get("title", "")):
+        if not prim and recent and s.get("cat") in PRICE_CATS and not PENDING_RE.search(s.get("title", "")) \
+                and s.get("kind") != "Analysis" and (s.get("imp") in ("up", "down") or s.get("act") or s.get("dates")):
+            # (analysis and forecast pieces with no carrier price or date in them don't need a carrier source)
+            # a carrier-site detection for the same carrier near this date is the primary source: attach it
+            mine = set(s.get("c", [])) - {"Industry"}
+            cand = [t for t in stories.values() if t is not s and t.get("cat") == "Guide changes" and is_primary(t.get("url"))
+                    and mine & set(t.get("c", [])) and abs(days(t["date"], s["date"])) <= 21]
+            if cand and s["id"] in live_ids:
+                t = cand[0]
+                live_ids[s["id"]].setdefault("srcs", []).insert(0, {"src": t.get("src") or "Carrier", "url": t["url"]})
+                live_ids[s["id"]]["srcs"] = primary_first(live_ids[s["id"]]["srcs"])
+                relinked.append(s["id"])
+                issue("med", "primary-attached", f"Attached carrier-site source {t['url']} to \"{s['title']}\"", [s["id"]], fixed=True)
+                continue
             issue("high", "no-primary", f"No carrier source for a price story; figures rest on press reports: \"{s['title']}\"", [s["id"]])
         elif prim and not is_primary(srcs[0].get("url")):
             issue("low", "primary-not-first", f"Carrier source {prim[0]['src']} moved ahead of press coverage on \"{s['title']}\"", [s["id"]], fixed=True)
+
+    # 4c. carrier-page coverage: every watched page should have been read successfully within the last day
+    for u, hh in load("watch_health.json", {}).items():
+        last = hh.get("last_ok")
+        if hh.get("fails", 0) >= 6 or (last and days(last, ISO) > 1) or (not last and hh.get("last_try") and hh.get("fails", 0) >= 2):
+            issue("med", "watch-stale", f"Carrier page not read in over a day: {hh.get('carrier')} {hh.get('name')} ({hh.get('err') or 'no readable text'}) {u}", [])
+        elif hh.get("thin", 0) >= 3:
+            issue("med", "watch-thin", f"Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): {hh.get('carrier')} {hh.get('name')} {u}", [])
 
     # 5. duplicates
     lst = sorted(stories.values(), key=lambda s: s["date"])
@@ -224,6 +248,8 @@ def main():
             except Exception as e:
                 print(f"brief check failed: {e}", file=sys.stderr)
 
+    if relinked:
+        save("news.json", live)
     out = {"run": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), **fix,
            "issues": issues, "open": [i for i in issues if not i["fixed"]]}
     save("audit.json", out)

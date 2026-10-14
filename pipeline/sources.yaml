@@ -143,6 +143,11 @@ watch:
   - {carrier: FedEx,  kind: page, name: Demand surcharges,         url: "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"}
   - {carrier: FedEx,  kind: page, name: Fuel surcharge,            url: "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"}
   - {carrier: FedEx,  kind: page, name: Service alerts,            url: "https://www.fedex.com/en-us/service-alerts.html"}
+  - {carrier: FedEx,  kind: page, name: Rate changes hub,          url: "https://www.fedex.com/en-us/shipping/rate-changes.html"}
+  - {carrier: FedEx,  kind: pdf,  name: 2027 Surcharge and fee changes, url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf"}
+  - {carrier: FedEx,  kind: pdf,  name: 2027 Standard List Rates,  url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf"}
+  - {carrier: FedEx,  kind: pdf,  name: 2027 Delivery Area Surcharge ZIPs, url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf"}
+  - {carrier: FedEx,  kind: pdf,  name: 2027 Pickup Area Surcharge ZIPs, url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf"}
   - {carrier: FedEx,  kind: pdf,  name: 2026 Standard List Rates,  url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf"}
   - {carrier: FedEx,  kind: page, name: Developer portal,          url: "https://developer.fedex.com/"}
   # USPS

@@ -177,9 +177,17 @@ def audit(carrier, name, url, old, new, note=""):
 def story_fields(res, carrier):
     """Turn a verified audit into story fields (changes become a before/after table in the app)."""
     ch = [{k: c.get(k) for k in ("what", "before", "after", "effective", "who", "impact")} for c in res["changes"][:10]]
-    return {"title": res.get("title") or f"{carrier} change", "sum": res.get("summary") or "", "plain": res.get("effect") or "",
+    # A carrier doc we just saw change, with no effective date printed in it, is almost always live already (ZIP/zone lists,
+    # rate guides and fee pages are updated when they take effect). Date it from first sighting and say so plainly.
+    import datetime as _dt
+    seen = _dt.date.today().isoformat()
+    inferred = not res.get("act") and not any(c.get("effective") for c in ch)
+    act = res.get("act") or (seen if inferred else None)
+    note = (" The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on "
+            + seen + ", so it is treated as in effect from then.") if inferred else ""
+    return {"title": res.get("title") or f"{carrier} change", "sum": (res.get("summary") or "") + note, "plain": res.get("effect") or "",
             "imp": res.get("imp") if res.get("imp") in ("up", "down", "watch", "info") else "watch",
-            "lvl": int(res.get("lvl") or 2), "cat": res.get("category") or "Guide changes", "act": res.get("act"),
+            "lvl": int(res.get("lvl") or 2), "cat": res.get("category") or "Guide changes", "act": act, "inferred": inferred or None, "detected": seen,
             "changes": ch, "verdict": res.get("verdict"), "unknowns": (res.get("unknowns") or [])[:4],
             "dates": [{"d": c["effective"], "w": f"{carrier}: {c.get('what', '')}"[:70], "imp": res.get("imp") if res.get("imp") in ("up", "down") else "info"}
                       for c in ch if c.get("effective")][:3]}

@@ -120,10 +120,7 @@ def main():
         if res.get("unsupported"):
             ask(story, ["These numbers aren't in the old or new text: " + ", ".join(res["unsupported"])], story["srcs"])
             continue
-        if not covered and big(story):
-            ask(story, ["It's big and nobody else has reported it yet."], story["srcs"],
-                extra="Changes:\n" + "\n".join(f"- {c.get('what')}: {c.get('before') or '(new)'} → {c.get('after')}" for c in story["changes"]))
-            continue
+        # found on the carrier's own site before anyone reported it: publish as first-to-report (the audit above already proved every number)
         news.insert(0, story)          # routine guide changes publish on their own; alerts.py handles the phone push
         alerts += 1
     save("docwatch.json", idx)

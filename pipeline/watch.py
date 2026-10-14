@@ -41,7 +41,8 @@ def page_text(url):
         return pdf_text(r.content), []
     html = r.text
     text = trafilatura.extract(html, include_tables=True, include_comments=False) or ""
-    if len(text) < 500:
+    hidden = 'aria-expanded="false"' in html or "<details" in html
+    if len(text) < 500 or hidden:
         html = render(url) or html
         text = trafilatura.extract(html, include_tables=True) or re.sub(r"<[^>]+>", " ", html)
     links = sorted({canon(urllib.parse.urljoin(url, m)) for m in re.findall(r'href="([^"]+\.pdf[^"]*)"', html, re.I)})
@@ -64,6 +65,10 @@ def render(url):
             b = p.chromium.launch()
             pg = b.new_page()
             pg.goto(url, wait_until="networkidle", timeout=45000)
+            # carriers (FedEx especially) tuck notices under drop-downs; open every one so the text is in the page we read
+            pg.evaluate("""() => { document.querySelectorAll('details').forEach(d => d.open = true);
+                [...document.querySelectorAll('[aria-expanded="false"]')].slice(0, 80).forEach(b => { try { b.click(); } catch (e) {} }); }""")
+            pg.wait_for_timeout(1500)
             html = pg.content()
             b.close()
             return html
@@ -157,13 +162,19 @@ def main():
     SNAP.mkdir(parents=True, exist_ok=True)
     state, drafts = load("watch_state.json", {}), load("drafts.json", [])
     today = dt.date.today().isoformat()
+    health = load("watch_health.json", {})
     for item in cfg.get("watch", []):
         key = h(item["url"])
+        hh = health.setdefault(item["url"], {"carrier": item["carrier"], "name": item["name"], "fails": 0, "thin": 0})
         try:
             text, pdfs = page_text(item["url"])
         except Exception as e:
+            hh["fails"] = hh.get("fails", 0) + 1; hh["err"] = str(e)[:120]; hh["last_try"] = today
             print(f"skip {item['name']}: {e}", file=sys.stderr); continue
         new = norm(text)
+        # coverage record: the audit flags any source we haven't read successfully in the last day or so, or that reads back nearly empty
+        hh.update({"fails": 0, "err": None, "last_try": today, "chars": len(text or ""), "last_ok": today if len(text or "") >= 300 else hh.get("last_ok")})
+        hh["thin"] = hh.get("thin", 0) + 1 if len(text or "") < 300 else 0
         snap = SNAP / f"{key}.txt"
         prev = state.get(item["url"], {})
         first = not snap.exists()
@@ -283,7 +294,7 @@ def main():
             live.insert(0, story); save("news.json", live)
         drafts.insert(0, {"status": "published", "story": story})
         print(f"  PUBLISHED: {story['title']} [{verdicts}]")
-    save("watch_state.json", state); save("drafts.json", drafts[:200])
+    save("watch_state.json", state); save("drafts.json", drafts[:200]); save("watch_health.json", health)
     live = load("news.json", [])
     clean = dedupe_live(live)
     if len(clean) != len(live):
