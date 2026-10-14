@@ -7289,7 +7289,7 @@ const none='<div class="empty">No stories match these filters. <button class="li
    story page: what's new, what it means, what changed, documents, earlier coverage, sources and comments. */
 function card(n,full){
   const links=clockFor(n.id).filter(x=>daysTo(x.d)>=0).slice(0,4);
-  const eff=n.act?(()=>{const d=daysTo(n.act);return d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
+  const eff=n.act?(()=>{const d=daysTo(n.act);return n.inferred?`First seen on the carrier’s site ${fmtD(n.act)}`:d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
   const cars=storyCars(n);
   const hd=`<header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${FRESHSET.has(n.id)&&!MS.read.has(n.id)?'<span class="newtag">New</span>':''}${statusTag0(n)}${rxPill(n)}</header>`;
   const tag=`<span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span>`;
