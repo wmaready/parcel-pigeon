@@ -40,15 +40,15 @@
   ],
   "cat": "Regulation & trade",
   "kind": "Opinion",
-  "title": "DHL eCommerce manager argues policy is reshaping parcel competition",
-  "sum": "In a FreightWaves opinion piece, Daniil Davydoff, a senior manager at DHL eCommerce Americas, argues that labor rules, geopolitics and data-security scrutiny may shape which parcel carriers succeed. He writes that his views are not those of his employer or FreightWaves. He cites a $131.5 million DoorDash and Uber settlement with New York City's consumer and worker protection department, and an industry analysis putting UPS and FedEx fuel surcharges above 23%, against about 9% in 2021.",
+  "title": "Opinion: Labor, trade and security policy reshape parcel competition",
+  "sum": "In an opinion piece for FreightWaves, Daniil Davydoff of DHL eCommerce Americas argues that labor rules, geopolitics and data security may shape which parcel carriers succeed as much as operations do. He cites a $131.5 million settlement by DoorDash and Uber with New York City's Department of Consumer and Worker Protection. He also cites an industry analysis showing UPS and FedEx fuel surcharges above 23%, up from about 9% in 2021, and a SpeedX incident that exposed 840 million customer records.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service. The piece is one author's view of how labor, trade and security policy could affect carriers and shippers.",
+  "plain": "No change to rates or service. The piece is one author's view of policy pressures on carriers, and it says fuel surcharges for UPS and FedEx are above 23% according to an industry analysis.",
   "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-10-15T14:53:55Z",
+  "added": "2026-10-15T16:55:43Z",
   "src": "FreightWaves",
   "url": "https://www.freightwaves.com/news/opinion-how-politics-and-policy-are-rewriting-the-rules-of-parcel-delivery",
   "srcs": [
@@ -227,6 +227,35 @@
    {
     "src": "PR Newswire",
     "url": "https://www.prnewswire.com/news-releases/gofo-launches-mailbox-parcel-delivery-service-in-the-netherlands-setting-a-new-standard-for-letterbox-delivery-302908340.html"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a8610083df980",
+  "date": "2026-10-14",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "CBS News report questions USPS heat-safety program after Texas carrier's death",
+  "sum": "A CBS News Texas I-Team investigation reviewed federal audits, OSHA records and USPS vehicle data after the death of Dallas mail carrier Eugene Gates Jr., whose medical examiner found hyperthermia contributed to his death. The report said records showed 10,337 of 18,153 active delivery vehicles in Texas lack air conditioning, and cited a USPS Office of Inspector General audit that found heat training was not always properly certified. USPS declined an interview; spokesperson Carol Hunt said in a statement that employee safety is a top priority and that the Heat Illness Prevention Program applies to all employees.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to USPS rates or service. The report concerns heat-safety conditions for postal employees in Texas.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-15T16:56:25Z",
+  "src": "CBS News",
+  "url": "https://www.cbsnews.com/texas/news/usps-heat-safety-texas-mail-carrier-deaths-investigation/",
+  "srcs": [
+   {
+    "src": "CBS News",
+    "url": "https://www.cbsnews.com/texas/news/usps-heat-safety-texas-mail-carrier-deaths-investigation/"
    }
   ],
   "auto": true,
