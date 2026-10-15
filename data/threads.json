@@ -417,13 +417,13 @@
  },
  "drone-delivery": {
   "n": "Drone delivery growth and FAA Part 108 rule",
-  "s": "Amazon has begun drone deliveries in Chicago's south suburbs, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9, per earlier coverage.",
+  "s": "Walmart and Wing plan to reach nearly 20 U.S. markets with Seattle and Denver in 2027, while Amazon builds its own drone network and the FAA's Part 108 rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
-   "aa4c45051038a"
+   "af529411b3b18"
   ],
   "first": "2025-03-31",
   "last": "2026-10-14",
@@ -433,12 +433,16 @@
    "Regional"
   ],
   "cx": {
-   "sig": "58b4950b8b66",
+   "sig": "314167040eb9",
    "v": 2,
-   "beats": {},
-   "intro": "Drone delivery is spreading fast, but the FAA rule that would make it routine is still unpublished. Here's how that plays out."
+   "beats": {
+    "g27": "Amazon's Prime Air plan jumps from 11 U.S. locations to almost 500 towns, with a $2.99 fee for Prime members, waived on $50+ orders.",
+    "a60770e8e9c32": "Wing and Walmart already give over three million customers drone access; Denver and Seattle would take them to 270+ stores."
+   },
+   "intro": "Drone delivery is spreading across U.S. metros while the FAA rule that would standardize it is still unpublished.",
+   "now": "Part 108 was still unpublished as of Oct. 9. Meanwhile, the FCC plans an Oct. 29 vote on 800 MHz drone use."
   },
-  "rv": "e7f0531f002a"
+  "rv": "7342104a4926"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
