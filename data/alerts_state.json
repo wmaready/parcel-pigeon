@@ -68,7 +68,9 @@
   "afcfcdd33fb44",
   "ab3283b22bb4f",
   "a9b8fc0d53f23",
-  "a8610083df980"
+  "a8610083df980",
+  "a66cca6df5c3c",
+  "a25504a8149d3"
  ],
  "clock": [
   "e04:1"
@@ -77,33 +79,33 @@
   "OnTrac": "2026-10-19"
  },
  "harvested": [
-  "aee6669d325da",
-  "a773d361dac4e",
+  "afbf819454788",
+  "ae77827c0481e",
+  "a89d7e4beebd9",
+  "a945e2139bb15",
+  "w82629d496c23",
+  "w3d06a7fa766e",
+  "a1785bbd2ecbb",
+  "a6c2418bed0a7",
   "a9b2dacf6f727",
   "wf225c9a3bf63",
-  "a6c2418bed0a7",
-  "a1785bbd2ecbb",
-  "wa0dc8b706733",
-  "w8a582ba4f6eb",
-  "aad7e6789b34e",
-  "w1a58abf8b69d",
-  "w150132868eae",
-  "wb612a77519f2",
-  "ae77827c0481e",
-  "w82629d496c23",
-  "w348418a9dc09",
-  "a89d7e4beebd9",
-  "ac1d01500ab14",
-  "w49b3786a59a5",
-  "a6cc2420ad66e",
   "wbf2ef019cc6e",
   "a30530b988200",
-  "afbf819454788",
-  "af8ee5ed067c6",
+  "ac1d01500ab14",
+  "w8a582ba4f6eb",
+  "w150132868eae",
+  "a6cc2420ad66e",
+  "a5d45f26f2219",
   "abf01a11b3d9e",
-  "a945e2139bb15",
-  "w3d06a7fa766e",
-  "a5d45f26f2219"
+  "wb612a77519f2",
+  "w49b3786a59a5",
+  "aad7e6789b34e",
+  "aee6669d325da",
+  "wa0dc8b706733",
+  "af8ee5ed067c6",
+  "w348418a9dc09",
+  "a773d361dac4e",
+  "w1a58abf8b69d"
  ],
  "backfilled": true,
  "players": [
@@ -133,7 +135,8 @@
   "theupsstores",
   "crimsonlogic",
   "alphabet",
-  "targetcorp"
+  "targetcorp",
+  "cyanrobotics"
  ],
  "sent": [
   "story:usps lengthens delivery standards for priority mail ground advantage to and from hawaii",
@@ -226,7 +229,11 @@
   "story:dhl ecommerce manager argues policy is reshaping parcel competition",
   "story:veho names ex ebanx executive henrik nilsmo chief revenue officer",
   "story:nyc advocates rally for three last mile delivery facility bills",
-  "story:cbs news report questions usps heat safety program after texas carrier s death"
+  "story:cbs news report questions usps heat safety program after texas carrier s death",
+  "more:player:cyanrobotics,story:industry analysis projects record parcel prices for q4 2026,story:serve robotics cyan robotics hit with illinois biometric suits",
+  "story:industry analysis projects record parcel prices for q4 2026",
+  "story:serve robotics cyan robotics hit with illinois biometric suits",
+  "player:cyanrobotics"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -280,7 +287,9 @@
   "veho names ex ebanx executive henrik nilsmo chief revenue of",
   "massachusetts lawmakers seek added review of amazon westboro",
   "nyc advocates rally for three last mile delivery facility bi",
-  "cbs news report questions usps heat safety program after tex"
+  "cbs news report questions usps heat safety program after tex",
+  "serve robotics cyan robotics hit with illinois biometric sui",
+  "industry analysis projects record parcel prices for q4 2026"
  ],
  "copy": {
   "a78db2954da94": {
@@ -430,6 +439,14 @@
   "a8610083df980": {
    "t": "CBS questions USPS heat-safety program",
    "m": "Report examines heat conditions for Texas postal workers after a carrier's death. No change to USPS rates or…"
+  },
+  "a66cca6df5c3c": {
+   "t": "Serve Robotics, Cyan sued over biometric data",
+   "m": "The Illinois suits are unproven allegations in proposed class actions; no rate or service changes are…"
+  },
+  "a25504a8149d3": {
+   "t": "Parcel prices seen at record highs in Q4 2026",
+   "m": "Ground and express costs seen at records; FedEx area reclassification starts Jan. 4, 2027."
   }
  },
  "recent": [
@@ -1246,13 +1263,44 @@
      "url": "https://www.cbsnews.com/texas/news/usps-heat-safety-texas-mail-carrier-deaths-investigation/"
     }
    ]
+  },
+  {
+   "id": "a66cca6df5c3c",
+   "title": "Serve Robotics, Cyan Robotics hit with Illinois biometric suits",
+   "date": "2026-10-15",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+   "srcs": [
+    {
+     "src": "Bloomberg Law News",
+     "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans"
+    }
+   ]
+  },
+  {
+   "id": "a25504a8149d3",
+   "title": "Industry analysis projects record parcel prices for Q4 2026",
+   "date": "2026-10-13",
+   "c": [
+    "Industry",
+    "FedEx"
+   ],
+   "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html",
+   "srcs": [
+    {
+     "src": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-15",
-  "n": 4
+  "n": 5
  },
- "last_push": "2026-10-15T12:56:50.970348-04:00"
+ "last_push": "2026-10-15T15:03:49.600812-04:00"
 }

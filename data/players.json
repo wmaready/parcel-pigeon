@@ -768,6 +768,34 @@
     "https://www.fundinguniverse.com/company-histories/target-corporation-history/"
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "cyanrobotics",
+   "n": "Coco Robotics",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "Coco Robotics (corporate name Cyan Robotics Inc.) operates remotely supervised sidewalk delivery robots that carry restaurant and local orders in U.S. cities such as Los Angeles, Chicago and Miami, and in Helsinki, including through Uber Eats and DoorDash.",
+   "al": [
+    "Coco",
+    "Coco Delivery",
+    "Cyan Robotics",
+    "Cyan Robotics Inc."
+   ],
+   "src": "https://www.investing.com/news/company-news/altmanbacked-robot-delivery-startup-coco-raises-80-million--bloomberg-93CH-4091186",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-15",
+   "story": "a66cca6df5c3c",
+   "srcs": [
+    "https://www.investing.com/news/company-news/altmanbacked-robot-delivery-startup-coco-raises-80-million--bloomberg-93CH-4091186",
+    "https://www.restaurantdive.com/news/doordash-coco-delivery-robot-deal-chicago-los-angeles/744986/",
+    "https://www.therobotreport.com/uber-eats-rolls-out-coco-sidewalk-delivery-robots-in-la/"
+   ],
+   "enriched": "2026-10-15"
   }
  ],
  "edges": [
@@ -1355,6 +1383,42 @@
    "t": "Acquired Shipt for $550M cash; now a wholly owned subsidiary",
    "url": "https://corporate.target.com/press/release/2017/12/target-to-acquire-same-day-delivery-platform-shipt,-inc-to-bolster-fulfillment-capabilities",
    "story": "af43fd5ad3188"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Cyan Robotics operates delivery robots for Uber Eats in Chicago",
+   "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Cyan Robotics operates delivery robots for DoorDash in Chicago",
+   "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2024",
+   "t": "Coco robots deliver on Uber Eats (LA, later Miami and Chicago)",
+   "url": "https://www.therobotreport.com/uber-eats-rolls-out-coco-sidewalk-delivery-robots-in-la/",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "wolt",
+   "k": "partner",
+   "y": null,
+   "t": "Helsinki robot delivery partnership via DoorDash's Wolt",
+   "url": "https://www.restaurantdive.com/news/doordash-coco-delivery-robot-deal-chicago-los-angeles/744986/",
+   "story": "a66cca6df5c3c"
   }
  ],
  "moves": [
@@ -1445,6 +1509,7 @@
   "theupsstores": "2026-10-14",
   "crimsonlogic": "2026-10-14",
   "alphabet": "2026-10-14",
-  "targetcorp": "2026-10-14"
+  "targetcorp": "2026-10-14",
+  "cyanrobotics": "2026-10-15"
  }
 }

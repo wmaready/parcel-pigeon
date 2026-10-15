@@ -1,5 +1,34 @@
 [
  {
+  "id": "a66cca6df5c3c",
+  "date": "2026-10-15",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Serve Robotics, Cyan Robotics hit with Illinois biometric suits",
+  "sum": "Two robotics companies face separate proposed class actions alleging their camera-equipped delivery robots scanned and stored consumers' facial and hand geometry without notice or consent, in violation of the Illinois Biometric Information Privacy Act, Bloomberg Law reported. Serve Robotics has operated robots for Uber Eats and Grubhub in 14 Chicago-area neighborhoods since September 2025, according to a suit filed by lead plaintiff Barry Schain in Cook County Circuit Court. Cyan Robotics has operated robots for Uber Eats and DoorDash in Chicago neighborhoods since late 2024, according to a similar proposed class action.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is reported. The suits are allegations in proposed class actions and have not been decided.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-15T19:02:38Z",
+  "src": "Bloomberg Law News",
+  "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+  "srcs": [
+   {
+    "src": "Bloomberg Law News",
+    "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans"
+   }
+  ],
+  "auto": true,
+  "thread": "delivery-robot-biometric-suits",
+  "edge": true
+ },
+ {
   "id": "a773d361dac4e",
   "date": "2026-10-15",
   "c": [
@@ -401,6 +430,36 @@
    }
   ],
   "auto": true,
+  "exclusive": true
+ },
+ {
+  "id": "a25504a8149d3",
+  "date": "2026-10-13",
+  "c": [
+   "Industry",
+   "FedEx"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "Industry analysis projects record parcel prices for Q4 2026",
+  "sum": "An industry analysis released Oct. 13, 2026 projects the ground parcel rate per package index at 43.3% above its January 2018 baseline in Q4, up 5.8% year over year. It projects the express index at 20.3%, up 13.8%. The analysis ties the rise to fuel surcharges, peak fees and constrained capacity.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "According to the analysis, ground and express parcel costs are projected to reach record highs in Q4 2026. Shippers also face a FedEx delivery-area reclassification that takes effect Jan. 4, 2027.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-15T19:02:25Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
+   }
+  ],
+  "auto": true,
+  "new": "An industry analysis projects the ground parcel index at 43.3% above its January 2018 baseline and the express index at 20.3% in Q4 2026, both records. It says the fuel surcharge reached 30% in September 2026 with diesel at $6.53 per gallon, so shippers face higher peak-period costs on top of the dated surcharges already filed.",
   "exclusive": true
  },
  {
