@@ -70,7 +70,8 @@
   "a9b8fc0d53f23",
   "a8610083df980",
   "a66cca6df5c3c",
-  "a25504a8149d3"
+  "a25504a8149d3",
+  "a5eceb35769a4"
  ],
  "clock": [
   "e04:1"
@@ -79,33 +80,33 @@
   "OnTrac": "2026-10-19"
  },
  "harvested": [
-  "a6cc2420ad66e",
-  "w348418a9dc09",
-  "w82629d496c23",
+  "wbf2ef019cc6e",
+  "wa0dc8b706733",
+  "aee6669d325da",
+  "af8ee5ed067c6",
+  "a89d7e4beebd9",
+  "w8a582ba4f6eb",
   "a773d361dac4e",
-  "wf225c9a3bf63",
-  "abf01a11b3d9e",
-  "w3d06a7fa766e",
+  "w1a58abf8b69d",
   "a30530b988200",
   "ac1d01500ab14",
-  "a6c2418bed0a7",
+  "a9b2dacf6f727",
   "a945e2139bb15",
-  "aee6669d325da",
-  "a1785bbd2ecbb",
-  "a5d45f26f2219",
-  "wa0dc8b706733",
-  "wbf2ef019cc6e",
-  "ae77827c0481e",
-  "af8ee5ed067c6",
   "wb612a77519f2",
-  "aad7e6789b34e",
-  "w1a58abf8b69d",
-  "a89d7e4beebd9",
+  "abf01a11b3d9e",
   "w150132868eae",
-  "afbf819454788",
-  "w8a582ba4f6eb",
+  "w348418a9dc09",
+  "aad7e6789b34e",
+  "w82629d496c23",
+  "w3d06a7fa766e",
   "w49b3786a59a5",
-  "a9b2dacf6f727"
+  "wf225c9a3bf63",
+  "a6cc2420ad66e",
+  "a5d45f26f2219",
+  "afbf819454788",
+  "ae77827c0481e",
+  "a6c2418bed0a7",
+  "a1785bbd2ecbb"
  ],
  "backfilled": true,
  "players": [
@@ -233,7 +234,8 @@
   "more:player:cyanrobotics,story:industry analysis projects record parcel prices for q4 2026,story:serve robotics cyan robotics hit with illinois biometric suits",
   "story:industry analysis projects record parcel prices for q4 2026",
   "story:serve robotics cyan robotics hit with illinois biometric suits",
-  "player:cyanrobotics"
+  "player:cyanrobotics",
+  "story:zipline starts drone delivery for teriyaki madness in texas"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -289,7 +291,8 @@
   "nyc advocates rally for three last mile delivery facility bi",
   "cbs news report questions usps heat safety program after tex",
   "serve robotics cyan robotics hit with illinois biometric sui",
-  "industry analysis projects record parcel prices for q4 2026"
+  "industry analysis projects record parcel prices for q4 2026",
+  "zipline starts drone delivery for teriyaki madness in texas"
  ],
  "copy": {
   "a78db2954da94": {
@@ -447,6 +450,10 @@
   "a25504a8149d3": {
    "t": "Parcel prices seen at record highs in Q4 2026",
    "m": "Ground and express costs seen at records; FedEx area reclassification starts Jan. 4, 2027."
+  },
+  "a5eceb35769a4": {
+   "t": "Zipline starts drone delivery in Denton, TX",
+   "m": "From Oct. 15, Teriyaki Madness Denton customers can order drone delivery via the Zipline app; no carrier…"
   }
  },
  "recent": [
@@ -1294,13 +1301,28 @@
      "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
     }
    ]
+  },
+  {
+   "id": "a5eceb35769a4",
+   "title": "Zipline starts drone delivery for Teriyaki Madness in Texas",
+   "date": "2026-10-15",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.restaurantnews.com/teriyaki-madness-partners-with-zipline-for-drone-delivery-dallas-fort-worth-101526/",
+   "srcs": [
+    {
+     "src": "RestaurantNews.com",
+     "url": "https://www.restaurantnews.com/teriyaki-madness-partners-with-zipline-for-drone-delivery-dallas-fort-worth-101526/"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-15",
-  "n": 5
+  "n": 6
  },
- "last_push": "2026-10-15T15:03:49.600812-04:00"
+ "last_push": "2026-10-15T16:53:06.684786-04:00"
 }
