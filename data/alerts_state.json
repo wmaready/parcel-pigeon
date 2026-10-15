@@ -71,7 +71,8 @@
   "a8610083df980",
   "a66cca6df5c3c",
   "a25504a8149d3",
-  "a5eceb35769a4"
+  "a5eceb35769a4",
+  "adbb397a01d7f"
  ],
  "clock": [
   "e04:1"
@@ -80,33 +81,33 @@
   "OnTrac": "2026-10-19"
  },
  "harvested": [
-  "w150132868eae",
-  "wb612a77519f2",
+  "a30530b988200",
+  "aad7e6789b34e",
+  "w8a582ba4f6eb",
+  "wa0dc8b706733",
+  "afbf819454788",
+  "abf01a11b3d9e",
   "w1a58abf8b69d",
-  "w82629d496c23",
+  "w49b3786a59a5",
+  "w150132868eae",
+  "a6c2418bed0a7",
+  "wb612a77519f2",
+  "a945e2139bb15",
+  "af8ee5ed067c6",
   "aee6669d325da",
-  "wf225c9a3bf63",
+  "w82629d496c23",
   "w348418a9dc09",
+  "ac1d01500ab14",
   "a1785bbd2ecbb",
   "a9b2dacf6f727",
-  "afbf819454788",
-  "a945e2139bb15",
-  "w3d06a7fa766e",
-  "w49b3786a59a5",
-  "a5d45f26f2219",
-  "a6c2418bed0a7",
-  "a6cc2420ad66e",
-  "af8ee5ed067c6",
   "a773d361dac4e",
-  "w8a582ba4f6eb",
+  "wbf2ef019cc6e",
   "ae77827c0481e",
-  "a30530b988200",
-  "ac1d01500ab14",
-  "wa0dc8b706733",
-  "abf01a11b3d9e",
-  "a89d7e4beebd9",
-  "aad7e6789b34e",
-  "wbf2ef019cc6e"
+  "wf225c9a3bf63",
+  "w3d06a7fa766e",
+  "a6cc2420ad66e",
+  "a5d45f26f2219",
+  "a89d7e4beebd9"
  ],
  "backfilled": true,
  "players": [
@@ -235,7 +236,8 @@
   "story:industry analysis projects record parcel prices for q4 2026",
   "story:serve robotics cyan robotics hit with illinois biometric suits",
   "player:cyanrobotics",
-  "story:zipline starts drone delivery for teriyaki madness in texas"
+  "story:zipline starts drone delivery for teriyaki madness in texas",
+  "story:cook county suits allege coco serve robots collect biometric data"
  ],
  "titles": [
   "west bengal postal circle ships rs 1 crore of shola art abro",
@@ -292,7 +294,8 @@
   "cbs news report questions usps heat safety program after tex",
   "serve robotics cyan robotics hit with illinois biometric sui",
   "industry analysis projects record parcel prices for q4 2026",
-  "zipline starts drone delivery for teriyaki madness in texas"
+  "zipline starts drone delivery for teriyaki madness in texas",
+  "cook county suits allege coco serve robots collect biometric"
  ],
  "copy": {
   "a78db2954da94": {
@@ -454,6 +457,10 @@
   "a5eceb35769a4": {
    "t": "Zipline starts drone delivery in Denton, TX",
    "m": "From Oct. 15, Teriyaki Madness Denton customers can order drone delivery via the Zipline app; no carrier…"
+  },
+  "adbb397a01d7f": {
+   "t": "Cook County sues Coco, Serve over robots",
+   "m": "Suits allege the sidewalk delivery robots collect biometric data; shipping rates and service are unchanged."
   }
  },
  "recent": [
@@ -1316,13 +1323,28 @@
      "url": "https://www.restaurantnews.com/teriyaki-madness-partners-with-zipline-for-drone-delivery-dallas-fort-worth-101526/"
     }
    ]
+  },
+  {
+   "id": "adbb397a01d7f",
+   "title": "Cook County suits allege Coco, Serve robots collect biometric data",
+   "date": "2026-10-15",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://abc7chicago.com/post/food-delivery-robot-lawsuit-chicago-claims-coco-serve-robotics-are-collecting-biometric-data-consent/19941835/",
+   "srcs": [
+    {
+     "src": "ABC7 Chicago",
+     "url": "https://abc7chicago.com/post/food-delivery-robot-lawsuit-chicago-claims-coco-serve-robotics-are-collecting-biometric-data-consent/19941835/"
+    }
+   ]
   }
  ],
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-15",
-  "n": 6
+  "n": 7
  },
- "last_push": "2026-10-15T16:53:06.684786-04:00"
+ "last_push": "2026-10-15T18:48:51.017517-04:00"
 }
