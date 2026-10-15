@@ -61,40 +61,44 @@
   "aeb508490eee1",
   "a53ebb883a9c8",
   "af62a412d9e27",
-  "aa4c45051038a"
+  "aa4c45051038a",
+  "a773d361dac4e",
+  "a6cc2420ad66e"
  ],
  "clock": [
   "e04:1"
  ],
  "fuel": {
-  "OnTrac": "2026-10-12"
+  "OnTrac": "2026-10-19"
  },
  "harvested": [
-  "wbf2ef019cc6e",
-  "wb612a77519f2",
-  "abf01a11b3d9e",
-  "afbf819454788",
-  "a945e2139bb15",
-  "ac1d01500ab14",
-  "a89d7e4beebd9",
   "a5d45f26f2219",
-  "w348418a9dc09",
-  "aad7e6789b34e",
-  "w1a58abf8b69d",
-  "ae77827c0481e",
-  "w49b3786a59a5",
-  "w3d06a7fa766e",
-  "a1785bbd2ecbb",
-  "a6c2418bed0a7",
-  "wa0dc8b706733",
-  "wf225c9a3bf63",
-  "w8a582ba4f6eb",
-  "a30530b988200",
+  "wbf2ef019cc6e",
   "aee6669d325da",
+  "ae77827c0481e",
+  "wa0dc8b706733",
+  "a30530b988200",
+  "a6c2418bed0a7",
+  "a773d361dac4e",
   "w82629d496c23",
-  "af8ee5ed067c6",
+  "a945e2139bb15",
+  "w348418a9dc09",
   "w150132868eae",
-  "a9b2dacf6f727"
+  "af8ee5ed067c6",
+  "afbf819454788",
+  "a89d7e4beebd9",
+  "a9b2dacf6f727",
+  "w3d06a7fa766e",
+  "wf225c9a3bf63",
+  "w1a58abf8b69d",
+  "aad7e6789b34e",
+  "wb612a77519f2",
+  "w8a582ba4f6eb",
+  "a6cc2420ad66e",
+  "abf01a11b3d9e",
+  "ac1d01500ab14",
+  "a1785bbd2ecbb",
+  "w49b3786a59a5"
  ],
  "backfilled": true,
  "players": [
@@ -256,7 +260,9 @@
   "crimsonlogic exec importers need consistent customs data aft",
   "doordash starts on demand delivery from all us skims stores",
   "happy returns integrates with tiktok shop for box free retur",
-  "amazon prime air starts drone deliveries in chicago s south "
+  "amazon prime air starts drone deliveries in chicago s south ",
+  "ups opens 80m international air hub at clark airport in the ",
+  "usps sets dec 17 ground advantage deadline for christmas del"
  ],
  "copy": {
   "a78db2954da94": {
@@ -378,6 +384,14 @@
   "aa4c45051038a": {
    "t": "Amazon starts Chicago suburb drone delivery",
    "m": "Prime Air drones now deliver packages up to 5 pounds to customers near the Markham center; other orders…"
+  },
+  "a773d361dac4e": {
+   "t": "UPS opens $80M air hub in Philippines",
+   "m": "Expected to cut transit times up to two days on selected Eastern China, Southeast Asia and India routes; no…"
+  },
+  "a6cc2420ad66e": {
+   "t": "USPS Dec. 17 send-by date for Christmas",
+   "m": "Ground Advantage and First-Class should ship by Dec. 17, Priority Mail by Dec. 18, Express by Dec. 19; no…"
   }
  },
  "recent": [
@@ -1083,9 +1097,72 @@
      "url": "https://www.cbsnews.com/chicago/news/amazon-prime-air-drones-south-suburbs/"
     }
    ]
+  },
+  {
+   "id": "a773d361dac4e",
+   "title": "UPS opens $80M international air hub at Clark airport in the Philippines",
+   "date": "2026-10-15",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html",
+   "srcs": [
+    {
+     "src": "UPS",
+     "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html"
+    },
+    {
+     "src": "Daily Tribune",
+     "url": "https://tribune.net.ph/2026/10/15/marcos-joins-grand-opening-of-ups-international-air-hub-in-crk"
+    }
+   ]
+  },
+  {
+   "id": "a6cc2420ad66e",
+   "title": "USPS sets Dec. 17 Ground Advantage deadline for Christmas delivery",
+   "date": "2026-10-13",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html",
+   "srcs": [
+    {
+     "src": "AOL.com",
+     "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html"
+    }
+   ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:ups opens 80m international air hub at clark airport in the philippines",
+   "id": "a773d361dac4e",
+   "t": "UPS opens $80M air hub in Philippines",
+   "m": "Expected to cut transit times up to two days on selected Eastern China, Southeast Asia and India routes; no…",
+   "big": false,
+   "at": "2026-10-15T00:47:04.858318-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a773d361dac4e"
+  },
+  {
+   "kind": "story",
+   "key": "story:usps sets dec 17 ground advantage deadline for christmas delivery",
+   "id": "a6cc2420ad66e",
+   "t": "USPS Dec. 17 send-by date for Christmas",
+   "m": "Ground Advantage and First-Class should ship by Dec. 17, Priority Mail by Dec. 18, Express by Dec. 19; no…",
+   "big": false,
+   "at": "2026-10-15T00:47:04.858364-04:00",
+   "lvl": 2,
+   "topic": "rates",
+   "notable": true,
+   "mask": 4,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a6cc2420ad66e"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-14",

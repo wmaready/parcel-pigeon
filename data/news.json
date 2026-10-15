@@ -1,5 +1,38 @@
 [
  {
+  "id": "a773d361dac4e",
+  "date": "2026-10-15",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "UPS opens $80M international air hub at Clark airport in the Philippines",
+  "sum": "UPS opened its International Air Hub at Clark International Airport in Pampanga on 15 October 2026, with President Ferdinand R. Marcos Jr. attending the grand opening, according to the Daily Tribune. The US$80 million, 30,000-square-meter facility can process up to 15,000 packages per hour and is expected to support 170 weekly flight segments.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to UPS rates or fees was announced. The hub is expected to cut transit times by up to two days on selected routes serving Eastern China, Southeast Asia and India, with some shipments arriving in as little as one business day.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-15T04:46:21Z",
+  "src": "UPS",
+  "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html",
+  "srcs": [
+   {
+    "src": "UPS",
+    "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-boosts-service-on-over-1-100-global-trade-lanes-with-opening.html"
+   },
+   {
+    "src": "Daily Tribune",
+    "url": "https://tribune.net.ph/2026/10/15/marcos-joins-grand-opening-of-ups-international-air-hub-in-crk"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a53ebb883a9c8",
   "date": "2026-10-14",
   "c": [
@@ -342,6 +375,65 @@
    }
   ],
   "auto": true
+ },
+ {
+  "id": "a6cc2420ad66e",
+  "date": "2026-10-13",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "USPS sets Dec. 17 Ground Advantage deadline for Christmas delivery",
+  "sum": "USPS has released its 2026 holiday shipping deadlines, WSYR-TV reported. For delivery before Dec. 25 in the lower 48 states, Ground Advantage and First-Class items are to be sent by Dec. 17, Priority Mail by Dec. 18 and Priority Mail Express by Dec. 19.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "Shippers using USPS face recommended send-by dates of Dec. 17 (Ground Advantage, First-Class), Dec. 18 (Priority Mail) and Dec. 19 (Priority Mail Express) for delivery before Dec. 25 in the lower 48 states. No change to rates is reported.",
+  "tie": null,
+  "act": null,
+  "dates": [
+   {
+    "d": "2026-12-09",
+    "w": "USPS international First-Class and Priority Mail Intl deadline",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-16",
+    "w": "USPS Ground Advantage deadline for AK, HI, PR, territories",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-17",
+    "w": "USPS Ground Advantage and First-Class deadline, lower 48",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-18",
+    "w": "USPS Priority Mail deadline, lower 48",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-19",
+    "w": "USPS Priority Mail Express deadline, lower 48",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "added": "2026-10-15T04:46:44Z",
+  "src": "AOL.com",
+  "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html",
+  "srcs": [
+   {
+    "src": "AOL.com",
+    "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
  },
  {
   "id": "a89d7e4beebd9",
@@ -923,6 +1015,34 @@
   "auto": true,
   "exclusive": true,
   "updated": "2026-10-09"
+ },
+ {
+  "id": "a57e28d9138b3",
+  "date": "2026-10-09",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "Analysis",
+  "title": "Dollar General expands Instacart same-day delivery at in-store prices",
+  "sum": "Dollar General is expanding same-day delivery through Instacart and letting customers pay the same product prices online as in its stores, according to a Yahoo Finance article. The service initially covers about 7,000 locations, with plans to reach roughly 20,000 stores this fall.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Dollar General customers ordering through Instacart pay in-store product prices, and coverage is set to grow from about 7,000 to roughly 20,000 stores this fall. No change to parcel carrier rates or service.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-15T04:46:31Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/economy/articles/dollar-general-makes-surprisingly-affordable-033300268.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/articles/dollar-general-makes-surprisingly-affordable-033300268.html"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
  },
  {
   "id": "a5e5d0db945cf",
