@@ -3,40 +3,40 @@
   "carrier": "UPS",
   "name": "Rate and Service Guides",
   "fails": 0,
-  "thin": 9,
+  "thin": 10,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 149,
+  "chars": 150,
   "last_ok": null
  },
  "https://ups.com/rateupdates": {
   "carrier": "UPS",
   "name": "Rate updates and notices",
   "fails": 0,
-  "thin": 9,
+  "thin": 10,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 109,
+  "chars": 110,
   "last_ok": null
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
   "carrier": "UPS",
   "name": "Fuel surcharges",
   "fails": 0,
-  "thin": 9,
+  "thin": 10,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 165,
+  "chars": 166,
   "last_ok": null
  },
  "https://www.ups.com/us/en/service-alerts": {
   "carrier": "UPS",
   "name": "Service alerts",
   "fails": 0,
-  "thin": 9,
+  "thin": 10,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 118,
+  "chars": 119,
   "last_ok": null
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
@@ -52,7 +52,7 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)",
   "last_try": "2026-10-15"
@@ -64,7 +64,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
@@ -74,7 +74,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
@@ -84,7 +84,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
@@ -94,7 +94,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
@@ -104,7 +104,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
@@ -114,13 +114,13 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-10-15",
-  "chars": 315,
+  "chars": 314,
   "last_ok": "2026-10-15"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Surcharge and fee changes",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
   "last_try": "2026-10-15"
@@ -128,7 +128,7 @@
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Standard List Rates",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
   "last_try": "2026-10-15"
@@ -136,7 +136,7 @@
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Delivery Area Surcharge ZIPs",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
   "last_try": "2026-10-15"
@@ -144,7 +144,7 @@
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Pickup Area Surcharge ZIPs",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
   "last_try": "2026-10-15"
@@ -152,7 +152,7 @@
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
   "carrier": "FedEx",
   "name": "2026 Standard List Rates",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
   "last_try": "2026-10-15"
@@ -190,7 +190,7 @@
  "https://www.prc.gov/dockets/daily": {
   "carrier": "USPS",
   "name": "PRC daily filings",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily",
   "last_try": "2026-10-15"
