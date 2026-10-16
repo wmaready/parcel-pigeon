@@ -1,5 +1,132 @@
 [
  {
+  "id": "wacb825361479",
+  "date": "2026-10-16",
+  "c": [
+   "Amazon"
+  ],
+  "title": "Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
+  "sum": "The old page only said 'Download our Service Guide here'. The new page shows the full Amazon Shipping Service Guide inline, marked effective July 9, 2026. It includes zone definitions, billable weight rules and a List Rates table by weight (1 lb up to at least 43 lbs in the text provided) and zone (2-8). No earlier rates are in the texts, so no price increase or decrease can be measured.",
+  "plain": "Shippers using Amazon Shipping at list rates (no custom pricing) now have a published rate card and rules to check against. The size of any change from earlier rates cannot be determined from these texts.",
+  "imp": "info",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-07-09",
+  "inferred": null,
+  "detected": "2026-10-16",
+  "changes": [
+   {
+    "what": "Service Guide effective date",
+    "before": null,
+    "after": "Guide marked effective July 9, 2026",
+    "effective": "2026-07-09",
+    "who": "All Amazon Shipping shippers",
+    "impact": null
+   },
+   {
+    "what": "List rate, lightest package, lowest and highest zone",
+    "before": null,
+    "after": "Up to 1 lb: $11.99 (Zone 2) to $15.01 (Zone 8)",
+    "effective": "2026-07-09",
+    "who": "Shippers paying list rates, not custom or third-channel rates",
+    "impact": null
+   },
+   {
+    "what": "List rate at 41 lbs",
+    "before": null,
+    "after": "Up to 41 lbs: $27.39 (Zone 2) to $79.12 (Zone 8)",
+    "effective": "2026-07-09",
+    "who": "Shippers paying list rates on heavier parcels",
+    "impact": null
+   },
+   {
+    "what": "Billable weight rule",
+    "before": null,
+    "after": "Billable weight is the greater of actual and dimensional weight, always rounded up to the next pound",
+    "effective": "2026-07-09",
+    "who": "All shippers",
+    "impact": null
+   },
+   {
+    "what": "Zone definitions by distance",
+    "before": null,
+    "after": "Zone 2 is 0-150 miles; Zone 8 is 1,801 miles and over",
+    "effective": "2026-07-09",
+    "who": "All shippers",
+    "impact": null
+   },
+   {
+    "what": "Coverage exclusions",
+    "before": null,
+    "after": "Zones exclude AK, HI, PR and US Territories; no delivery outside the contiguous US",
+    "effective": "2026-07-09",
+    "who": "Shippers with parcels to or from non-contiguous locations",
+    "impact": null
+   },
+   {
+    "what": "Service days and area",
+    "before": null,
+    "after": "Operates 7 days a week for eligible shippers in the contiguous US",
+    "effective": "2026-07-09",
+    "who": "Eligible shippers",
+    "impact": null
+   },
+   {
+    "what": "Support hours",
+    "before": null,
+    "after": "Phone and chat 5 am to 11 pm Pacific Time; email 24/7",
+    "effective": "2026-07-09",
+    "who": "Shippers using Shipper Central",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "The old text held no guide content, so earlier rates, zones and fees cannot be compared.",
+   "The rate table is cut off at 44 lbs, so rates above 43 lbs are not visible.",
+   "Section 4 (Additional Fees) and the sections on billing, claims and restrictions are not in the text provided.",
+   "Whether the July 9, 2026 guide changes any rates or rules from the previous version is not confirmed."
+  ],
+  "dates": [
+   {
+    "d": "2026-07-09",
+    "w": "Amazon: Service Guide effective date",
+    "imp": "info"
+   },
+   {
+    "d": "2026-07-09",
+    "w": "Amazon: List rate, lightest package, lowest and highest zone",
+    "imp": "info"
+   },
+   {
+    "d": "2026-07-09",
+    "w": "Amazon: List rate at 41 lbs",
+    "imp": "info"
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "Amazon",
+  "url": "https://ship.amazon.com/service-guide",
+  "srcs": [
+   {
+    "src": "Amazon: Amazon Shipping service guide page",
+    "url": "https://ship.amazon.com/service-guide"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://ship.amazon.com/service-guide",
+     "old": "https://ship.amazon.com/service-guide (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "a5eceb35769a4",
   "date": "2026-10-15",
   "c": [

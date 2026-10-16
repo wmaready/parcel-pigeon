@@ -72,7 +72,8 @@
   "a66cca6df5c3c",
   "a25504a8149d3",
   "a5eceb35769a4",
-  "adbb397a01d7f"
+  "adbb397a01d7f",
+  "wacb825361479"
  ],
  "clock": [
   "e04:1"
@@ -81,33 +82,34 @@
   "OnTrac": "2026-10-19"
  },
  "harvested": [
-  "afbf819454788",
-  "w8a582ba4f6eb",
-  "a89d7e4beebd9",
-  "aee6669d325da",
-  "a9b2dacf6f727",
-  "a5d45f26f2219",
-  "a773d361dac4e",
-  "af8ee5ed067c6",
-  "a945e2139bb15",
-  "w82629d496c23",
-  "aad7e6789b34e",
-  "ac1d01500ab14",
-  "wb612a77519f2",
-  "wbf2ef019cc6e",
-  "a1785bbd2ecbb",
-  "wf225c9a3bf63",
-  "w348418a9dc09",
+  "ae77827c0481e",
   "w1a58abf8b69d",
   "a6cc2420ad66e",
-  "w49b3786a59a5",
-  "ae77827c0481e",
-  "wa0dc8b706733",
-  "w3d06a7fa766e",
   "a6c2418bed0a7",
+  "wf225c9a3bf63",
+  "aee6669d325da",
+  "wb612a77519f2",
   "abf01a11b3d9e",
+  "a945e2139bb15",
+  "a1785bbd2ecbb",
+  "w49b3786a59a5",
+  "w3d06a7fa766e",
+  "w8a582ba4f6eb",
+  "a773d361dac4e",
+  "afbf819454788",
+  "a9b2dacf6f727",
+  "aad7e6789b34e",
+  "a5d45f26f2219",
+  "w82629d496c23",
+  "wacb825361479",
+  "wbf2ef019cc6e",
+  "w348418a9dc09",
+  "ac1d01500ab14",
+  "af8ee5ed067c6",
+  "a89d7e4beebd9",
   "a30530b988200",
-  "w150132868eae"
+  "w150132868eae",
+  "wa0dc8b706733"
  ],
  "backfilled": true,
  "players": [
@@ -295,7 +297,8 @@
   "serve robotics cyan robotics hit with illinois biometric sui",
   "industry analysis projects record parcel prices for q4 2026",
   "zipline starts drone delivery for teriyaki madness in texas",
-  "cook county suits allege coco serve robots collect biometric"
+  "cook county suits allege coco serve robots collect biometric",
+  "amazon shipping posts full service guide with list rates eff"
  ],
  "copy": {
   "a78db2954da94": {
@@ -461,6 +464,10 @@
   "adbb397a01d7f": {
    "t": "Cook County sues Coco, Serve over robots",
    "m": "Suits allege the sidewalk delivery robots collect biometric data; shipping rates and service are unchanged."
+  },
+  "wacb825361479": {
+   "t": "Amazon Shipping posts list-rate guide",
+   "m": "Shippers on Amazon Shipping list rates now have a published rate card and rules, effective July 9, 2026."
   }
  },
  "recent": [
@@ -1338,9 +1345,39 @@
      "url": "https://abc7chicago.com/post/food-delivery-robot-lawsuit-chicago-claims-coco-serve-robotics-are-collecting-biometric-data-consent/19941835/"
     }
    ]
+  },
+  {
+   "id": "wacb825361479",
+   "title": "Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
+   "date": "2026-10-16",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://ship.amazon.com/service-guide",
+   "srcs": [
+    {
+     "src": "Amazon: Amazon Shipping service guide page",
+     "url": "https://ship.amazon.com/service-guide"
+    }
+   ]
   }
  ],
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:amazon shipping posts full service guide with list rates effective july 9 2026",
+   "id": "wacb825361479",
+   "t": "Amazon Shipping posts list-rate guide",
+   "m": "Shippers on Amazon Shipping list rates now have a published rate card and rules, effective July 9, 2026.",
+   "big": false,
+   "at": "2026-10-15T22:34:49.900293-04:00",
+   "lvl": 2,
+   "topic": "docs",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=wacb825361479"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-15",
