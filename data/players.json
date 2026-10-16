@@ -882,23 +882,35 @@
   },
   {
    "id": "expeditorsinternationalo",
-   "n": "Expeditors International of Washington",
-   "s": "Global freight forwarder and customs broker",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "n": "Expeditors International of Washington, Inc.",
+   "s": "Expeditors is a non-asset-based global logistics company that provides air and ocean freight forwarding, customs brokerage and related warehousing and distribution services.",
+   "al": [
+    "EXPD",
+    "Expeditors",
+    "Expeditors International"
+   ],
+   "src": "https://www.expeditors.com/about-us/company",
    "auto": true,
    "added": "2026-10-16",
-   "from": "ranking"
-  },
-  {
-   "id": "kuehnenagelnorthamerica",
-   "n": "Kuehne + Nagel (North America)",
-   "s": "Global air, ocean and contract logistics forwarder",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
-   "auto": true,
-   "added": "2026-10-16",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "public",
+   "tk": "EXPD",
+   "hq": "Bellevue, WA, USA",
+   "yr": "1979",
+   "site": "expeditors.com",
+   "realm": "global",
+   "geo": [
+    -122.201,
+    47.61
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.expeditors.com/about-us/company",
+    "https://www.sec.gov/Archives/edgar/data/746515/000119312526071569/expd-20251231.htm",
+    "https://finance.yahoo.com/quote/EXPD/profile/"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
   },
   {
    "id": "dsvasnorthamerica",
@@ -1746,6 +1758,7 @@
   "alphabet": "2026-10-14",
   "targetcorp": "2026-10-14",
   "cyanrobotics": "2026-10-15",
-  "zipline": "2026-10-16"
+  "zipline": "2026-10-16",
+  "expeditorsinternationalo": "2026-10-16"
  }
 }
