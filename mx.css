@@ -170,3 +170,29 @@ section#s-mna .view[data-view="map"] > #mNewP{display:none!important}
 .mx-big.lgo{--h:34px}.mx-big.lgmono{width:44px;height:34px;font-size:13px}
 .mx-link .lgo,.mx-link .lgmono{margin-right:2px}
 .mx-back{background:var(--accent)!important;color:var(--bg)!important;font-weight:600}
+
+/* Family identity uses the same verified logo renderer as company profiles. */
+.mx{--mx-own:var(--ink-2);--mx-deal:var(--accent);--mx-invest:var(--ink-2);--mx-partner:var(--accent)}
+.mx-orb{background:var(--bg);border:0;padding:0;border-radius:0}
+.mx-family{position:relative;aspect-ratio:1;isolation:isolate}
+.mx-family>svg{position:absolute;inset:0;width:100%;height:100%;opacity:.6;pointer-events:none}
+.mx-family-node,.mx-family-root{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;background:var(--bg);color:var(--ink);font:inherit;min-width:0}
+.mx-family-node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);width:18%;min-height:90px;padding:6px 2px;border:0;cursor:pointer;border-radius:4px}
+.mx-family-name{font-size:13px;line-height:1.25;overflow-wrap:anywhere;width:100%}
+.mx-family-node small{font-size:10px;line-height:1.3;color:var(--ink-2)}
+.mx-family-root{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:26%;padding:8px}
+.mx-family-root b{font-size:16px;line-height:1.25;overflow-wrap:anywhere}
+.mx-family .lgo,.mx-family .lgmono{margin:0;max-width:100%}
+.mx-family-node:hover{background:var(--panel-2)}
+.mx-family-node:focus-visible,.mx-retry:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mx-family-more{text-align:center;margin:10px 0}
+.mx-retry{border:1px solid var(--grid-strong);border-radius:4px;background:var(--panel);color:var(--ink);font:inherit;min-height:40px;padding:6px 12px;cursor:pointer}
+@media(max-width:620px){
+ .mx-family{aspect-ratio:auto;display:flex;flex-direction:column;align-items:center;gap:18px;padding:14px 0}
+ .mx-family>svg{display:none}
+ .mx-family-root{position:static;transform:none;width:100%;padding:0 0 16px;border-bottom:1px solid var(--grid-strong)}
+ .mx-family-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:12px 16px}
+ .mx-family-node{position:relative;left:auto;top:auto;transform:none;width:100%;min-height:100px;padding:8px 4px;border-top:2px solid var(--mx-relation)}
+ .mx-family-name{font-size:14px}
+ .mx-family-node small{font-size:11px}
+}

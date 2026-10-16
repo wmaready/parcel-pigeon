@@ -1,7 +1,7 @@
 // Parcel Pigeon service worker: network first, so readers always get the latest news.
 // The cached copy is only used when the phone is offline. Pages fall back to the saved app; images and data fall back
 // to their own saved copy (never the app page, which would make a logo look broken).
-const C='pp-v27';
+const C='pp-v28';
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{

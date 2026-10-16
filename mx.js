@@ -3,6 +3,7 @@
 (function(){
 'use strict';
 if(typeof PLAYERS==='undefined'||typeof PEDGES==='undefined'||typeof REALMS==='undefined')return;
+const assetBase=new URL('./',document.currentScript?.src||document.baseURI);
 const host=document.querySelector('#s-mna .view[data-view="map"]');if(!host)return;
 const COL={national:'#5B8DEF',regional:'#F28DB2',gig:'#FF9B42',retail:'#FF9900',
   '3pl':'#2EC4B6',global:'#FFCC00',software:'#A57BE0',cold:'#4CC9F0',auto:'#9BE15D',capital:'#B9875A'};
@@ -225,13 +226,12 @@ function list(){
 $('mxList').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){mode('graph');select(b.dataset.go,true)}});
 let curM='home',curSec=null,curCo=null,origin='geo',LMAP=null,LLAY=null,lfP=null,geoResetPending=false;
 function leaflet(){if(window.L&&L.map&&L.markerClusterGroup)return Promise.resolve();if(lfP)return lfP;
-  const style=href=>{if(document.querySelector(`link[data-mx-style="${href}"]`))return;const c=document.createElement('link');c.rel='stylesheet';c.href=href;c.dataset.mxStyle=href;document.head.appendChild(c)};
-  const script=src=>new Promise((ok,no)=>{const j=document.createElement('script');j.src=src;j.onload=ok;j.onerror=()=>{j.remove();no(new Error('Map library unavailable'))};document.head.appendChild(j)});
-  style('vendor/leaflet.css');style('vendor/MarkerCluster.css');
-  lfP=(window.L&&L.map?Promise.resolve():script('vendor/leaflet.js')).then(()=>script('vendor/leaflet.markercluster.js')).catch(e=>{lfP=null;throw e});return lfP}
-(window.requestIdleCallback||setTimeout)(()=>{try{leaflet().catch(()=>{})}catch(e){}},{timeout:4000});
+  const style=path=>new Promise((ok,no)=>{const href=new URL(path,assetBase).href;const old=document.querySelector(`link[data-mx-style="${path}"]`);if(old?.sheet){ok();return}if(old)old.remove();const c=document.createElement('link');c.rel='stylesheet';c.href=href;c.dataset.mxStyle=path;c.onload=ok;c.onerror=()=>{c.remove();no(new Error('Map styles unavailable'))};document.head.appendChild(c)});
+  const script=path=>new Promise((ok,no)=>{const j=document.createElement('script');j.src=new URL(path,assetBase).href;j.onload=ok;j.onerror=()=>{j.remove();no(new Error('Map library unavailable'))};document.head.appendChild(j)});
+  lfP=Promise.all([style('map-assets/leaflet.css'),style('map-assets/MarkerCluster.css'),(window.L&&L.map?Promise.resolve():script('map-assets/leaflet.js')).then(()=>script('map-assets/leaflet.markercluster.js'))]).then(()=>{if(!window.L?.markerClusterGroup)throw new Error('Map clustering unavailable')}).catch(e=>{lfP=null;throw e});return lfP}
 function resetGeo(){if(!LMAP)return;if(!$('mxGeo').offsetWidth){geoResetPending=true;return}geoResetPending=false;LMAP.invalidateSize();LMAP.fitBounds([[24,-125],[50,-66]],{padding:[22,22],animate:false});}
-function geo(){leaflet().then(()=>{
+function geo(){if(curM!=='geo'||!$('mxGeo').offsetWidth)return;
+  $('mxGnote').textContent='Loading map…';leaflet().then(()=>{
   if(!LMAP){LMAP=L.map('mxGeo',{worldCopyJump:true,minZoom:2,maxZoom:12,zoomControl:true,attributionControl:true});
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Tiles &copy; Esri'}).addTo(LMAP);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,className:'mx-ref'}).addTo(LMAP);
@@ -239,7 +239,8 @@ function geo(){leaflet().then(()=>{
     const Reset=L.Control.extend({options:{position:'topright'},onAdd(){const c=L.DomUtil.create('div','leaflet-bar mx-map-reset');const b=L.DomUtil.create('button','',c);b.type='button';b.title='Reset to U.S. view';b.setAttribute('aria-label','Reset to U.S. view');b.textContent='↺';L.DomEvent.disableClickPropagation(c);L.DomEvent.disableScrollPropagation(c);b.addEventListener('click',resetGeo);return c}});new Reset().addTo(LMAP);
     new ResizeObserver(()=>{if(!$('mxGeo').offsetWidth)return;if(geoResetPending)resetGeo();else LMAP.invalidateSize();labels()}).observe($('mxGeo'))}
   if(curM!=='geo')return;
-  resetGeo();drawGeo();setTimeout(()=>{if(curM==='geo'){LMAP.invalidateSize();labels()}},400)}).catch(()=>{$('mxGnote').textContent='The map could not load. Use Sectors or search instead.'})}
+  resetGeo();geoSig='';drawGeo();setTimeout(()=>{if(curM==='geo'){LMAP.invalidateSize();labels()}},400)}).catch(()=>{$('mxGnote').innerHTML='Map unavailable. <button class="mx-retry" type="button">Retry map</button>'})}
+$('mxGnote').addEventListener('click',e=>{if(e.target.closest('.mx-retry'))geo()});
 let geoSig='';
 function drawGeo(){if(!LMAP||typeof wmLoc!=='function')return;
   const big=N.filter(n=>(n.tier<=2||n.deg>=3)&&filt.has(n.p.realm)).map(n=>({n,loc:wmLoc(n.p)})).filter(({loc})=>loc&&!loc.via&&Array.isArray(loc.g)&&loc.g.length===2&&loc.g.every(Number.isFinite));
@@ -317,7 +318,7 @@ function openSec(r){curSec=r;curCo=null;
   mode('sec');top()}
 $('mxSect').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)openCo(b.dataset.go)});
 const GRP=[['up','Owned by'],['down','Owns'],['deal','Deals'],['invBy','Backed by'],['inv','Invested in'],['part','Partners']];
-const GCOL={up:'#DCE3EA',down:'#DCE3EA',deal:'#D9A55B',invBy:'#B9875A',inv:'#B9875A',part:'#5EC2DB'};
+const GCOL={up:'var(--mx-own)',down:'var(--mx-own)',deal:'var(--mx-deal)',invBy:'var(--mx-invest)',inv:'var(--mx-invest)',part:'var(--mx-partner)'};
 function explain(n,r){const nm=esc(n.p.n),dl=typeof DEALS!=='undefined'&&typeof dealPlayers==='function'?DEALS.filter(d=>dealPlayers(d).some(id=>byId[id]===n)).length:0,L=a=>a.slice(0,3).map(x=>esc(x.o.p.n)).join(', ')+(a.length>3?' +'+(a.length-3):'');
   const lines=[];if(r.up.length)lines.push(['Players',`Owned by <b>${L(r.up)}</b>`]);if(r.down.length)lines.push(['Players',`Owns <b>${r.down.length}</b> compan${r.down.length>1?'ies':'y'}: ${L(r.down)}`]);
   if(r.deal.length||dl)lines.push(['M&A',`${r.deal.length?`Deals with ${L(r.deal)}`:''}${dl?`${r.deal.length?' · ':''}<b>${dl}</b> deal walkthrough${dl>1?'s':''} below`:''}`]);
@@ -329,17 +330,17 @@ let DH=[];
 function openCo(id){const n=byId[id];if(!n)return;curCo=n.id;curSec=n.p.realm;
   if(typeof seenNew==='function'&&typeof store!=='undefined'){const seen=seenNew();seen.add(n.id);store.set('pw-seen-new',JSON.stringify([...seen].slice(-300)));if(typeof navBadge==='function')navBadge()}
   const r=rel(n),ring=[];GRP.forEach(([g])=>r[g].forEach(it=>ring.push({...it,g})));
-  const MAX=12,shown=ring.slice(0,MAX),cx=200,cy=190,RR=shown.length<=6?120:145;
-  const short=t=>t.length>16?t.slice(0,15)+'…':t;
+  const MAX=12,shown=ring.slice(0,MAX),cx=320,cy=320,RR=235;
   const nodes=shown.map((it,i)=>{const a=-Math.PI/2+i/shown.length*Math.PI*2,x=cx+Math.cos(a)*RR,y=cy+Math.sin(a)*RR;
-    return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${GCOL[it.g]}" stroke-width="1.5" ${it.g==='part'?'stroke-dasharray="2 4" stroke-linecap="round"':it.g.startsWith('inv')?'stroke-dasharray="5 4"':''} opacity=".6"/>
-    <g class="mx-on" data-go="${esc(it.o.id)}" tabindex="0" role="button" aria-label="${esc(it.o.p.n)}"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="26" fill="transparent"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="13" fill="${COL[it.o.p.realm]}"/><text x="${x.toFixed(1)}" y="${(y+28).toFixed(1)}" text-anchor="middle">${esc(short(it.o.p.n))}</text></g>`}).join('');
-  $('mxCo').innerHTML=`<div class="mx-cowrap"><div class="mx-orb">${shown.length?`<svg viewBox="0 0 400 390" role="img" aria-label="${esc(n.p.n)} and its connections">${nodes}<circle cx="${cx}" cy="${cy}" r="30" fill="${COL[n.p.realm]}"/><text class="mx-ct" x="${cx}" y="${cy+50}" text-anchor="middle">${esc(short(n.p.n))}</text></svg>
-    <div class="mx-leg">${GRP.filter(([g])=>r[g].length).map(([g,l])=>`<span><i style="background:${GCOL[g]}"></i>${l} ${r[g].length}</span>`).join('')}</div>${ring.length>MAX?`<div class="mx-empty" style="text-align:center">Showing 12 of ${ring.length}. Full list in the details.</div>`:''}`:'<p class="mx-empty" style="padding:40px;text-align:center">No connections tracked yet.</p>'}</div>
+    return {it,x,y};});
+  const lines=nodes.map(({it,x,y})=>`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${GCOL[it.g]}" stroke-width="1.5" ${it.g==='part'?'stroke-dasharray="2 4"':it.g.startsWith('inv')?'stroke-dasharray="5 4"':''}/>`).join('');
+  const badges=nodes.map(({it,x,y})=>`<button class="mx-family-node" data-go="${esc(it.o.id)}" style="--x:${(x/640*100).toFixed(2)}%;--y:${(y/640*100).toFixed(2)}%;--mx-relation:${GCOL[it.g]}">${LG(it.o.p,'lgm')}<span class="mx-family-name">${esc(it.o.p.n)}</span><small>${esc(GRP.find(([g])=>g===it.g)?.[1]||'')}${it.yr?' · '+esc(it.yr):''}</small></button>`).join('');
+  $('mxCo').innerHTML=`<div class="mx-cowrap"><div class="mx-orb">${shown.length?`<div class="mx-family" aria-label="${esc(n.p.n)} and its connections"><svg viewBox="0 0 640 640" aria-hidden="true">${lines}</svg><div class="mx-family-root">${LG(n.p,'lgl')}<b>${esc(n.p.n)}</b></div><div class="mx-family-branches">${badges}</div></div>
+    <div class="mx-leg">${GRP.filter(([g])=>r[g].length).map(([g,l])=>`<span><i style="background:${GCOL[g]}"></i>${l} ${r[g].length}</span>`).join('')}</div>${ring.length>MAX?`<div class="mx-empty mx-family-more">Showing 12 of ${ring.length}. Full list in the details.</div>`:''}`:'<p class="mx-empty">No connections tracked yet.</p>'}</div>
     <div class="mx-det">${(DH=detailOf(n).split('<!--rel-->'))[0]}${explain(n,r)}<div class="pacts"><button class="pact plain" data-mx-players="${esc(n.id)}"><span><b>View in Players</b></span><span class="pgo">›</span></button>${typeof DEALS!=='undefined'&&typeof dealPlayers==='function'?DEALS.filter(d=>dealPlayers(d).some(id=>byId[id]===n)).map(d=>`<button class="pact" data-deal="${DEALS.indexOf(d)}"><span><b>${esc(d.title||d.target)}</b><small>M&A walkthrough</small></span><span class="pgo">›</span></button>`).join(''):''}<button class="pact plain" data-newsq="${esc(n.p.n)}"><span><b>Related news</b></span><span class="pgo">›</span></button></div>${DH[1]||''}</div></div>`;
   mode('co');top()}
 $('mxCo').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)openCo(b.dataset.go)});
-$('mxCo').addEventListener('keydown',e=>{if(e.key==='Enter'){const b=e.target.closest('[data-go]');if(b)openCo(b.dataset.go)}});
+
 // All entry points resolve through the same canonical company profile.
 document.addEventListener('click',e=>{const players=e.target.closest('[data-mx-players]');if(players){$('mq').value=byId[players.dataset.mxPlayers]?.p.n||'';goTo('mna','players');renderPlayers();return}
   const b=e.target.closest('[data-pl]');if(!b||!byId[b.dataset.pl])return;e.preventDefault();e.stopImmediatePropagation();window.coopClose&&window.coopClose();goTo('mna','map');openCo(b.dataset.pl)},true);
@@ -353,9 +354,9 @@ function refresh(){
   requestAnimationFrame(()=>fit());
 }
 refresh();home();mode('geo');
-if(typeof renderMap==='function'){const rm=renderMap;renderMap=function(){try{rm.apply(this,arguments)}catch(e){console.warn(e)}refresh();requestAnimationFrame(()=>{size();if(W&&!T._fit){T._fit=1;fit()}})}}
+if(typeof renderMap==='function'){const rm=renderMap;renderMap=function(){try{rm.apply(this,arguments)}catch(e){console.warn(e)}refresh();if(curM==='geo')geo();requestAnimationFrame(()=>{size();if(W&&!T._fit){T._fit=1;fit()}})}}
 new ResizeObserver(()=>{const w=W;size();if(W&&!w)fit()}).observe(stage);
 setTimeout(()=>{const h=$('mxHint');if(h)h.style.display='none'},9000);
-})();
-
 document.addEventListener('keydown',e=>{if(e.key!=='Backspace'||!HIST.length||/INPUT|TEXTAREA|SELECT/.test((e.target.tagName||''))||e.target.isContentEditable)return;const w=document.querySelector('.mx');if(!w||!w.offsetParent||w.dataset.m==='geo')return;e.preventDefault();goBack()});
+
+})();
