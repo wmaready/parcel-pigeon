@@ -1039,6 +1039,37 @@
     "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/358/pitney-bowes-and-pirate-ship-team-to-offer-free-usps-shipping-software"
    ],
    "enriched": "2026-10-16"
+  },
+  {
+   "id": "stripe",
+   "n": "Stripe",
+   "realm": "capital",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "South San Francisco, CA, USA",
+   "yr": null,
+   "s": "Stripe is a payments and financial-infrastructure company. Its Stripe Capital lending product will use FedEx Dataworks shipment signals to finance small businesses that ship with FedEx, and Stripe also offers shipping-rate lookups through EasyPost and Shippo.",
+   "al": [
+    "Stripe, Inc.",
+    "Stripe, LLC"
+   ],
+   "src": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-12",
+   "story": "a3b2062870616",
+   "site": "stripe.com",
+   "geo": [
+    -122.408,
+    37.655
+   ],
+   "srcs": [
+    "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+    "https://thepaypers.com/payments/news/fedex-dataworks-and-stripe-partner-on-smb-financing-and-payments",
+    "https://stripe.com/blog/native-support-for-taxes-and-shipping"
+   ],
+   "enriched": "2026-10-16"
   }
  ],
  "edges": [
@@ -1779,6 +1810,60 @@
    "t": "UPS-certified software selling discounted UPS labels",
    "url": "https://www.pirateship.com/ups/ground",
    "story": "a408078d40f01"
+  },
+  {
+   "a": "cmacgm",
+   "b": "ceva",
+   "k": "owns",
+   "y": "2026",
+   "t": "CMA CGM is the parent of CEVA Logistics",
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/ai-robots-are-ready-for-whatever-shoppers-send-back/",
+   "story": "a3da056a73eb1"
+  },
+  {
+   "a": "fdxdataworks",
+   "b": "stripe",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx Dataworks and Stripe partner on SMB financing and payments",
+   "url": "https://thepaypers.com/payments/news/fedex-dataworks-and-stripe-partner-on-smb-financing-and-payments",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "fdxdataworks",
+   "k": "partner",
+   "y": "2026",
+   "t": "Long-term collaboration on SMB financing via Stripe Capital",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2026",
+   "t": "Stripe becomes a FedEx payment processing option",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "easypost",
+   "k": "partner",
+   "y": null,
+   "t": "Shipping cost lookup integration",
+   "url": "https://stripe.com/blog/native-support-for-taxes-and-shipping",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "shippo",
+   "k": "partner",
+   "y": null,
+   "t": "Shipping cost lookup integration",
+   "url": "https://stripe.com/blog/native-support-for-taxes-and-shipping",
+   "story": "a3b2062870616"
   }
  ],
  "moves": [
@@ -1886,6 +1971,7 @@
   "nfi": "2026-10-16",
   "geodisnorthamerica": "2026-10-16",
   "forwardairomnilogistics": "2026-10-16",
-  "pirateship": "2026-10-16"
+  "pirateship": "2026-10-16",
+  "stripe": "2026-10-16"
  }
 }

@@ -286,11 +286,11 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
-  "s": "USPS continues to adjust service standards and operations, with Hawaii delivery expectations lengthened and a local post office closure now in effect.",
+  "s": "USPS has lengthened delivery estimates for Priority Mail and Ground Advantage to and from Alaska, Hawaii, U.S. territories and several Pacific nations, effective Oct. 1, 2026.",
   "ids": [
    "h410",
    "h505",
-   "ab665e6db5daf"
+   "a4af485c67766"
   ],
   "first": "2024-05-14",
   "last": "2026-10-12",
@@ -298,14 +298,12 @@
    "USPS"
   ],
   "cx": {
-   "sig": "4dc7f5395e75",
+   "sig": "1eced18a2ca4",
    "v": 2,
-   "beats": {
-    "h410": "DeJoy paused consolidation after senators cited Atlanta's Palmetto center, where only 36% of inbound mail was on time in February."
-   },
-   "now": "Hawaii's longer standards are the latest change. Next on the rate clock: the Amazon same-day pilot reaches Columbia, S.C. on Oct. 20."
+   "beats": {},
+   "now": "The longer estimates took effect Oct. 1. Separately, USPS has set a Dec. 17 Ground Advantage deadline for Christmas delivery."
   },
-  "rv": "4dc7f5395e75"
+  "rv": "1eced18a2ca4"
  },
  "usps-finances": {
   "n": "USPS losses and package volume",

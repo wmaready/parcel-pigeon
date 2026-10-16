@@ -14,7 +14,10 @@
   "aa4c45051038a",
   "ab3283b22bb4f",
   "aeb508490eee1",
-  "af62a412d9e27"
+  "af62a412d9e27",
+  "a8095404a5ccb",
+  "a09965083cc7c",
+  "a81cb824398de"
  ],
  "clock": [],
  "fuel": {
@@ -59,10 +62,16 @@
   "geodisnorthamerica",
   "maersklogisticsnorthamer",
   "forwardairomnilogistics",
-  "pirateship"
+  "pirateship",
+  "stripe"
  ],
  "sent": [
-  "player:pirateship"
+  "player:pirateship",
+  "more:player:stripe,story:dhl group raises 2026 ebit outlook to above 7 0 billion euros,story:fbi usps inspectors probe suspicious mailings to election officials,story:fedex retirees pension class action advances in district court",
+  "story:fbi usps inspectors probe suspicious mailings to election officials",
+  "story:fedex retirees pension class action advances in district court",
+  "story:dhl group raises 2026 ebit outlook to above 7 0 billion euros",
+  "player:stripe"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -79,20 +88,23 @@
   "amazon prime air starts drone deliveries in chicago s south ",
   "massachusetts lawmakers seek added review of amazon westboro",
   "crimsonlogic exec importers need consistent customs data aft",
-  "happy returns integrates with tiktok shop for box free retur"
+  "happy returns integrates with tiktok shop for box free retur",
+  "dhl group raises 2026 ebit outlook to above 7 0 billion euro",
+  "fedex retirees pension class action advances in district cou",
+  "fbi usps inspectors probe suspicious mailings to election of"
  ],
  "harvested": [
-  "a2b81ad721cb8",
-  "a2def09bc43bb",
-  "a6cc2420ad66e",
   "w150132868eae",
-  "a5d45f26f2219",
-  "a773d361dac4e",
+  "a2b81ad721cb8",
   "wacb825361479",
-  "af8ee5ed067c6",
-  "aee6669d325da",
   "a6c2418bed0a7",
-  "a89d7e4beebd9"
+  "aee6669d325da",
+  "a773d361dac4e",
+  "a6cc2420ad66e",
+  "a89d7e4beebd9",
+  "a2def09bc43bb",
+  "af8ee5ed067c6",
+  "a5d45f26f2219"
  ],
  "backfilled": true,
  "recent": [
@@ -329,14 +341,76 @@
      "url": "https://www.supplychaindive.com/news/ups-happy-returns-comes-to-tiktok-shop/832990/"
     }
    ]
+  },
+  {
+   "id": "a8095404a5ccb",
+   "title": "DHL Group raises 2026 EBIT outlook to above 7.0 billion euros",
+   "date": "2026-10-16",
+   "c": [
+    "DHL"
+   ],
+   "url": "https://qz.com/dhl-raises-2026-earnings-guidance-ebit-101626",
+   "srcs": [
+    {
+     "src": "Quartz",
+     "url": "https://qz.com/dhl-raises-2026-earnings-guidance-ebit-101626"
+    },
+    {
+     "src": "TradingView",
+     "url": "https://www.tradingview.com/news/eqs:e63e07ed9094b:0-dhl-ag-dhl-ag-raises-full-year-2026-earnings-guidance/"
+    }
+   ]
+  },
+  {
+   "id": "a09965083cc7c",
+   "title": "FedEx retirees' pension class action advances in district court",
+   "date": "2026-10-15",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://news.bloomberglaw.com/daily-labor-report/fedex-retirees-get-green-light-for-pension-shortchanging-lawsuit",
+   "srcs": [
+    {
+     "src": "Bloomberg Law News",
+     "url": "https://news.bloomberglaw.com/daily-labor-report/fedex-retirees-get-green-light-for-pension-shortchanging-lawsuit"
+    }
+   ]
+  },
+  {
+   "id": "a81cb824398de",
+   "title": "FBI, USPS inspectors probe suspicious mailings to election officials",
+   "date": "2026-10-15",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.aol.com/articles/us-postal-outlines-plans-handle-152104000.html",
+   "srcs": [
+    {
+     "src": "AOL.com",
+     "url": "https://www.aol.com/articles/us-postal-outlines-plans-handle-152104000.html"
+    }
+   ]
   }
  ],
- "copy": {},
+ "copy": {
+  "a8095404a5ccb": {
+   "t": "DHL raises 2026 EBIT outlook above 7.0B",
+   "m": "DHL Group's earnings and cash-flow outlook is raised; rates and service are unchanged."
+  },
+  "a09965083cc7c": {
+   "t": "FedEx retiree pension suit advances in court",
+   "m": "A district court ruling in the pension dispute with retirees; no change to rates or service."
+  },
+  "a81cb824398de": {
+   "t": "FBI, USPS probe suspicious election mailings",
+   "m": "Inspectors are investigating mailings sent to election officials; no shipping rate or service changes."
+  }
+ },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-16",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-10-16T07:34:31.488693-04:00"
+ "last_push": "2026-10-16T15:02:12.237863-04:00"
 }
