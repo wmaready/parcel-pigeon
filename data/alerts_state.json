@@ -61,7 +61,9 @@
   "forwardairomnilogistics",
   "pirateship"
  ],
- "sent": [],
+ "sent": [
+  "player:pirateship"
+ ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
   "zipline starts drone delivery for teriyaki madness in texas",
@@ -80,17 +82,17 @@
   "happy returns integrates with tiktok shop for box free retur"
  ],
  "harvested": [
+  "wacb825361479",
   "a2def09bc43bb",
   "af8ee5ed067c6",
+  "a89d7e4beebd9",
+  "a773d361dac4e",
   "a2b81ad721cb8",
+  "aee6669d325da",
   "w150132868eae",
-  "a6cc2420ad66e",
   "a6c2418bed0a7",
   "a5d45f26f2219",
-  "wacb825361479",
-  "a773d361dac4e",
-  "a89d7e4beebd9",
-  "aee6669d325da"
+  "a6cc2420ad66e"
  ],
  "backfilled": true,
  "recent": [
@@ -330,18 +332,11 @@
   }
  ],
  "copy": {},
- "queue": [
-  {
-   "kind": "player",
-   "key": "player:pirateship",
-   "at": "2026-10-16T00:55:18.947291-04:00",
-   "t": "New on the map: Pirate Ship",
-   "m": "Pirate Ship is a free web-based shipping software platform that lets small businesses and e-commerce sellers buy and print discounted USPS and UPS labels, with no monthly fee or markup.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  }
- ],
- "fuelq": {}
+ "queue": [],
+ "fuelq": {},
+ "day": {
+  "d": "2026-10-16",
+  "n": 1
+ },
+ "last_push": "2026-10-16T07:34:31.488693-04:00"
 }
