@@ -328,5 +328,63 @@ def family_check(limit=1):
     save("players.json", mp)
 
 
+# ---------------------------------------------------------------- ranking lists: build the base from market movers, not only news
+RANKINGS = [
+    "https://www.ttnews.com/logistics/rankings/2026",          # Transport Topics Top 100 Logistics
+    "https://www.ttnews.com/top100/for-hire/2026",             # Top 100 For-Hire Carriers
+    "https://www.ttnews.com/top50/ltl/2026",                   # Top 50 LTL
+    "https://www.ttnews.com/top100/private/2026",              # Top 100 Private Carriers (retail fleets)
+]
+RANK_DAYS = 30                       # each list is read about once a month
+RANK_MAX = 8                         # at most this many new candidates per month (then researched by main())
+
+RANK_Q = """From this ranking-list page text, list the companies that are real MARKET MOVERS for parcel shipping and logistics:
+national and big regional carriers, posts, parcel and LTL networks, large 3PLs, freight forwarders and brokers with parcel or
+final-mile arms, and major retail delivery fleets. Skip private-equity firms, small local couriers, and anything not in the list.
+Return JSON only: {"companies": [{"n": "company name as listed", "rank": number, "why": "under 80 characters: what it does"}]}"""
+
+
+def rankings_pull():
+    import datetime as _dt
+    st = load("rankings_state.json", {})
+    today = _dt.date.today()
+    mp, seed = load("players.json", {"players": [], "edges": []}), load("seed.json", {})
+    have = set()
+    for p in seed.get("players", []) + mp["players"]:
+        for nm in [p["n"]] + (p.get("al") or []):
+            have.add(norm(nm))
+    added = 0
+    for url in RANKINGS:
+        last = st.get(url)
+        if last and (today - _dt.date.fromisoformat(last)).days < RANK_DAYS:
+            continue
+        try:
+            import trafilatura
+            text = trafilatura.extract(requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"}).text) or ""
+        except Exception as e:
+            print(f"  rankings: {url} failed: {e}", file=sys.stderr); continue
+        st[url] = today.isoformat()
+        if len(text) < 500:
+            continue
+        try:
+            res = parse_json(ask(text[:60000], use_search=False, system=RANK_Q, max_tokens=3000))
+        except Exception as e:
+            print(f"  rankings: read failed for {url}: {e}", file=sys.stderr); continue
+        for c in sorted((res or {}).get("companies") or [], key=lambda c: c.get("rank") or 999):
+            nm = (c.get("n") or "").strip()
+            if not nm or norm(nm) in have or added >= RANK_MAX:
+                continue
+            pid = re.sub(r"[^a-z0-9]", "", nm.lower())[:24]
+            mp["players"].append({"id": pid, "n": nm, "s": c.get("why") or "", "al": [], "src": url, "auto": True,
+                                  "added": today.isoformat(), "from": "ranking"})
+            have.add(norm(nm)); added += 1
+            print(f"  rankings: candidate {nm} (#{c.get('rank')})")
+    save("rankings_state.json", st)
+    if added:
+        save("players.json", mp)
+    print(f"rankings: {added} new candidates")
+
+
 if __name__ == "__main__":
-    main()
+    rankings_pull()             # monthly: new market movers from ranking lists become candidates
+    main()                      # research candidates (from news and from rankings)
