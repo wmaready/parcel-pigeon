@@ -1203,36 +1203,70 @@
   {
    "id": "vanderlandeind",
    "n": "Vanderlande Industries",
-   "realm": "software",
-   "own": null,
+   "realm": "auto",
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Named as a representative participant in the low-floor sortation wheel module market",
-   "al": [],
-   "src": "https://www.indexbox.io/blog/low-floor-sortation-wheel-modules-market-to-accelerate-on-e-commerce-parcel-boom-forecast-points-higher-toward-2035/",
+   "hq": "Veghel, Netherlands",
+   "yr": "1949",
+   "s": "Vanderlande designs, builds and services automated parcel and postal sorting systems, along with airport baggage handling and warehouse automation, for parcel carriers, postal operators and e-commerce companies.",
+   "al": [
+    "Machinefabriek Van der Lande N.V.",
+    "Rapistan Van der Lande N.V.",
+    "Vanderlande",
+    "Vanderlande Industries B.V.",
+    "Vanderlande Industries Holding B.V."
+   ],
+   "src": "https://www.toyota-industries.com/news/2017/03/23/004984/index.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-16",
-   "story": "a177dec15405b"
+   "story": "a177dec15405b",
+   "site": "vanderlande.com",
+   "geo": [
+    5.547,
+    51.617
+   ],
+   "srcs": [
+    "https://www.toyota-industries.com/news/2017/03/23/004984/index.html",
+    "https://www.toyota-industries.com/news/2025/11/11/008891/index.html",
+    "https://www.vanderlande.com/about-vanderlande/toyota-automated-logistics-group/"
+   ],
+   "enriched": "2026-10-16"
   },
   {
    "id": "tgwlogisticsgr",
    "n": "TGW Logistics Group",
-   "realm": "software",
-   "own": null,
+   "realm": "auto",
+   "own": "private",
    "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Named as a representative participant in the low-floor sortation wheel module market",
-   "al": [],
-   "src": "https://www.indexbox.io/blog/low-floor-sortation-wheel-modules-market-to-accelerate-on-e-commerce-parcel-boom-forecast-points-higher-toward-2035/",
+   "parent": "mercari",
+   "hq": "Marchtrenk, Austria",
+   "yr": "1969",
+   "s": "Foundation-owned Austrian systems integrator that designs, builds and maintains automated warehouse and fulfillment systems, including parcel and carton sortation (SmartPocket, Natrix sorters), for e-commerce and omnichannel retailers in Europe, Asia and North America.",
+   "al": [
+    "TGW",
+    "TGW Logistics",
+    "TGW Logistics Group GmbH",
+    "TGW Systems, Inc.",
+    "Transportgeräte Wels"
+   ],
+   "src": "https://www.tgw-group.com/us/our-portfolio/products/sorting-systems/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-16",
-   "story": "a177dec15405b"
+   "story": "a177dec15405b",
+   "site": "tgw-group.com",
+   "geo": [
+    14.11,
+    48.19
+   ],
+   "srcs": [
+    "https://www.tgw-group.com/us/our-portfolio/products/sorting-systems/",
+    "https://en.wikipedia.org/wiki/TGW_Logistics_Group",
+    "https://www.mhi.org/members/16465"
+   ],
+   "enriched": "2026-10-16"
   }
  ],
  "edges": [
@@ -2081,6 +2115,24 @@
    "t": "Automation project for two Americold temperature-controlled warehouses",
    "url": "https://www.kiongroup.com/en/News-Stories/Press-Releases/Press-Releases-Detail.html?id=31424",
    "story": "a177dec15405b"
+  },
+  {
+   "a": "tgwlogisticsgr",
+   "b": "urbanoutfitters",
+   "k": "partner",
+   "y": "2021",
+   "t": "Automation supplier for Kansas City fulfillment center (FlashPick)",
+   "url": "https://www.supplychain247.com/company/tgw_systems",
+   "story": "a177dec15405b"
+  },
+  {
+   "a": "tgwlogisticsgr",
+   "b": "gap",
+   "k": "partner",
+   "y": null,
+   "t": "Warehouse automation supplier (North America)",
+   "url": "https://www.mhi.org/members/16465",
+   "story": "a177dec15405b"
   }
  ],
  "moves": [
@@ -2193,6 +2245,8 @@
   "northstarlogis": "2026-10-16",
   "cazarlogistics": "2026-10-16",
   "dematic": "2026-10-16",
-  "honeywellintel": "2026-10-16"
+  "honeywellintel": "2026-10-16",
+  "vanderlandeind": "2026-10-16",
+  "tgwlogisticsgr": "2026-10-16"
  }
 }

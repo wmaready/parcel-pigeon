@@ -72,7 +72,9 @@
   "northstarlogis",
   "cazarlogistics",
   "dematic",
-  "honeywellintel"
+  "honeywellintel",
+  "vanderlandeind",
+  "tgwlogisticsgr"
  ],
  "sent": [
   "player:pirateship",
@@ -119,17 +121,17 @@
   "kirkwood council kills walmart wing drone delivery proposal"
  ],
  "harvested": [
-  "a2b81ad721cb8",
+  "af8ee5ed067c6",
+  "a6cc2420ad66e",
   "wacb825361479",
-  "a5d45f26f2219",
-  "a6c2418bed0a7",
+  "a89d7e4beebd9",
+  "a2b81ad721cb8",
   "a2def09bc43bb",
   "a773d361dac4e",
-  "a89d7e4beebd9",
-  "a6cc2420ad66e",
-  "w150132868eae",
-  "af8ee5ed067c6",
-  "aee6669d325da"
+  "aee6669d325da",
+  "a5d45f26f2219",
+  "a6c2418bed0a7",
+  "w150132868eae"
  ],
  "backfilled": true,
  "recent": [
@@ -527,7 +529,30 @@
    "m": "The proposed drone launchpad at the Kirkwood Walmart cannot be built under this proposal; shipping rates and…"
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "player",
+   "key": "player:tgwlogisticsgr",
+   "at": "2026-10-16T19:29:36.953935-04:00",
+   "t": "New on the map: TGW Logistics Group",
+   "m": "Foundation-owned Austrian systems integrator that designs, builds and maintains automated warehouse and fulfillment systems, including parcel and carton sortation (SmartPocket, Natrix sorters), for e-commerce and omnichannel retailers in Europe, Asia and North America.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "player",
+   "key": "player:vanderlandeind",
+   "at": "2026-10-16T19:29:36.953916-04:00",
+   "t": "New on the map: Vanderlande Industries",
+   "m": "Vanderlande designs, builds and services automated parcel and postal sorting systems, along with airport baggage handling and warehouse automation, for parcel carriers, postal operators and e-commerce companies.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-16",
