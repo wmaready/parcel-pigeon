@@ -215,7 +215,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Peak surcharges are billing at UPS, FedEx and OnTrac, and per-package fees start Oct. 24 to 26. An industry analysis now projects record parcel prices for Q4 2026.",
+  "s": "USPS seasonal prices are in effect and, per Kiplinger, scheduled to end Jan. 17, 2027, while UPS, FedEx, OnTrac and Amazon peak fees continue.",
   "ids": [
    "h416",
    "h418",
@@ -434,12 +434,11 @@
    "Regional"
   ],
   "cx": {
-   "sig": "7ca31261b30e",
+   "sig": "a5603fe1225d",
    "v": 2,
-   "beats": {
-    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, which would bring them to nearly 20 metros and more than 270 Walmart stores."
-   },
-   "now": "The FAA's comment period on Zipline's Austin draft closes October 11, and the FCC is set to vote on 800 MHz drone use on Oct. 29."
+   "beats": {},
+   "intro": "Drone delivery is spreading to more metros while the FAA's key BVLOS rule remains unpublished, which shapes how fast it scales.",
+   "now": "Part 108 was still unpublished as of Oct. 9, and the Austin comment window closes October 11."
   },
   "rv": "7b7102e574bf"
  },
@@ -510,9 +509,11 @@
    "a66617050d4e9"
   ],
   "first": "2026-10-14",
-  "s": "Analysts and consultants disagree over UPS's parcel direction while UPS officials say small package remains, with Teamsters talks set for 2028.",
+  "s": "Analysts and consultants remain split on whether UPS's logistics focus signals a retreat from B2C parcels, with UPS officials saying small package is not going away.",
   "last": "2026-10-14",
   "c": [
+   "Amazon",
+   "FedEx",
    "UPS"
   ],
   "rv": "32a902935643"
@@ -544,5 +545,18 @@
    "Regional"
   ],
   "rv": "a2935cf33be5"
+ },
+ "uniuni-delivery-complaints": {
+  "n": "UniUni delivery complaints",
+  "ids": [
+   "accf814d7d663"
+  ],
+  "first": "2026-10-10",
+  "s": "UniUni said it is working with local Tacoma delivery service providers after residents' complaints, which a group of neighbors has also sent to the Washington Attorney General's office.",
+  "last": "2026-10-10",
+  "c": [
+   "Regional"
+  ],
+  "rv": "91ef4948cff0"
  }
 }

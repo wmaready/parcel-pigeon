@@ -944,44 +944,101 @@
    "pending": false
   },
   {
-   "id": "cevalogisticsnorthameric",
-   "n": "Ceva Logistics (North America)",
-   "s": "Contract logistics, forwarding and ground parcel services",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
-   "auto": true,
-   "added": "2026-10-16",
-   "from": "ranking"
-  },
-  {
    "id": "geodisnorthamerica",
-   "n": "Geodis (North America)",
-   "s": "Forwarding, contract logistics and distribution/express delivery",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "n": "GEODIS (North America)",
+   "s": "GEODIS's North American arm, run from Brentwood, Tennessee, provides freight forwarding, contract logistics and warehousing and distribution services for shippers in the U.S. and across North America.",
+   "al": [
+    "GEODIS America, Inc.",
+    "GEODIS Americas",
+    "GEODIS Logistics LLC",
+    "GEODIS USA, Inc.",
+    "OHL",
+    "Ozburn-Hessey Logistics"
+   ],
+   "src": "https://www.williamsonscene.com/business/geodis-unveils-expansion-project-at-brentwood-headquarters/article_e1fa71d6-061c-11ee-af4f-8f748b5d3bc7.html",
    "auto": true,
    "added": "2026-10-16",
-   "from": "ranking"
-  },
-  {
-   "id": "maersklogisticsnorthamer",
-   "n": "Maersk Logistics (North America)",
-   "s": "Integrated forwarding, warehousing and last-mile logistics",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
-   "auto": true,
-   "added": "2026-10-16",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "sub",
+   "hq": "Brentwood, TN, USA",
+   "site": "geodis.com",
+   "realm": "3pl",
+   "geo": [
+    -86.783,
+    36.033
+   ],
+   "srcs": [
+    "https://www.williamsonscene.com/business/geodis-unveils-expansion-project-at-brentwood-headquarters/article_e1fa71d6-061c-11ee-af4f-8f748b5d3bc7.html",
+    "https://geodis.com/us-en/history",
+    "https://nashvillechamber.com/investors/geodis-logistics-llc/"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
   },
   {
    "id": "forwardairomnilogistics",
-   "n": "Forward Air/Omni Logistics",
-   "s": "Airport-to-airport LTL, final-mile and forwarding",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "n": "Forward Air Corporation",
+   "s": "Forward Air is an asset-light freight company that runs expedited LTL and airport-to-airport ground services, intermodal drayage, and, through its Omni Logistics segment, air and ocean forwarding, customs brokerage and contract logistics for U.S. shippers.",
+   "al": [
+    "Forward",
+    "Forward Air",
+    "Forward Air/Omni Logistics",
+    "Omni Logistics",
+    "Omni Newco, LLC"
+   ],
+   "src": "https://www.forwardair.com/about",
    "auto": true,
    "added": "2026-10-16",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "public",
+   "tk": "FWRD",
+   "hq": "Dallas, TX, USA",
+   "site": "forwardair.com",
+   "realm": "national",
+   "geo": [
+    -96.797,
+    32.777
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.forwardair.com/about",
+    "https://www.sec.gov/Archives/edgar/data/0000912728/000110465926051599/tm2613007d1_ars.pdf",
+    "https://ir.forwardaircorp.com/news-events/press-releases/detail/367/forward-air-announces-closing-of-omni-logistics-transaction"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
+  },
+  {
+   "id": "pirateship",
+   "n": "Pirate Ship",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Jackson, WY, USA",
+   "yr": "2014",
+   "s": "Pirate Ship is a free web-based shipping software platform that lets small businesses and e-commerce sellers buy and print discounted USPS and UPS labels, with no monthly fee or markup.",
+   "al": [
+    "Pirate Ship LLC",
+    "PirateShip",
+    "pirateship.com"
+   ],
+   "src": "https://www.pirateship.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-04",
+   "story": "a408078d40f01",
+   "site": "pirateship.com",
+   "geo": [
+    -110.762,
+    43.48
+   ],
+   "srcs": [
+    "https://www.pirateship.com/",
+    "https://www.pirateship.com/ups/ground",
+    "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/358/pitney-bowes-and-pirate-ship-team-to-offer-free-usps-shipping-software"
+   ],
+   "enriched": "2026-10-16"
   }
  ],
  "edges": [
@@ -1677,6 +1734,51 @@
    "t": "ShipBob offers USPS Ground Advantage through its USPS partnership",
    "url": "https://www.shipbob.com/blog/usps-ground-advantage/",
    "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "ups",
+   "b": "theupsstores",
+   "k": "owns",
+   "y": "2026",
+   "t": "The UPS Stores sits under UPS's U.S. domestic unit",
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "story": "a66617050d4e9"
+  },
+  {
+   "a": "forwardairomnilogistics",
+   "b": "omni",
+   "k": "acquired",
+   "y": "2024",
+   "t": "Forward Air completed its acquisition of Omni Logistics, closing Jan 25, 2024",
+   "url": "https://ir.forwardaircorp.com/news-events/press-releases/detail/367/forward-air-announces-closing-of-omni-logistics-transaction",
+   "story": null
+  },
+  {
+   "a": "pirateship",
+   "b": "pitneybowes",
+   "k": "partner",
+   "y": "2019",
+   "t": "Integrated Pitney Bowes Pure Post for USPS shipping services",
+   "url": "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/358/pitney-bowes-and-pirate-ship-team-to-offer-free-usps-shipping-software",
+   "story": "a408078d40f01"
+  },
+  {
+   "a": "pirateship",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Licensed USPS Connect eCommerce Platform",
+   "url": "https://www.pirateship.com/",
+   "story": "a408078d40f01"
+  },
+  {
+   "a": "pirateship",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "UPS-certified software selling discounted UPS labels",
+   "url": "https://www.pirateship.com/ups/ground",
+   "story": "a408078d40f01"
   }
  ],
  "moves": [
@@ -1741,6 +1843,16 @@
    "url2": "https://www.ajbell.co.uk/news/articles/brief-gls-sells-us-freight-operations-ahead-ids-takeover",
    "t": "GLS Group announced the sale of its US freight divisions, GLS US Freight Inc. and GLS US Business Solutions Inc., to DC Logistics LLC, with closing expected on ",
    "role": null
+  },
+  {
+   "id": "auctane",
+   "k": "bought",
+   "parent": "wwex",
+   "from": "shipstationg",
+   "d": "2026-10-14",
+   "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
+   "t": "WWEX Group and Auctane merge as ShipStation Global",
+   "story": "a386e5fed7984"
   }
  ],
  "checks": {
@@ -1771,6 +1883,9 @@
   "cyanrobotics": "2026-10-15",
   "zipline": "2026-10-16",
   "expeditorsinternationalo": "2026-10-16",
-  "nfi": "2026-10-16"
+  "nfi": "2026-10-16",
+  "geodisnorthamerica": "2026-10-16",
+  "forwardairomnilogistics": "2026-10-16",
+  "pirateship": "2026-10-16"
  }
 }

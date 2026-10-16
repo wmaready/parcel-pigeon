@@ -273,6 +273,34 @@
   "exclusive": true
  },
  {
+  "id": "a386e5fed7984",
+  "date": "2026-10-14",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "WWEX Group and Auctane merge to form ShipStation Global",
+  "sum": "WWEX Group and Auctane have completed a merger to form ShipStation Global, a shipping platform for small and mid-size shippers, Dealroom reported. Terms were not disclosed. The company has added less-than-truckload (LTL) freight booking to the ShipStation platform.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or fees. ShipStation platform customers can now get LTL quotes and book pallet shipments, according to Dealroom, with no minimum volume commitments or existing carrier accounts required.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-16T04:50:28Z",
+  "src": "Dealroom",
+  "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
+  "srcs": [
+   {
+    "src": "Dealroom",
+    "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
+ },
+ {
   "id": "a54805bbe5d65",
   "date": "2026-10-14",
   "c": [
@@ -337,18 +365,21 @@
   "id": "a66617050d4e9",
   "date": "2026-10-14",
   "c": [
-   "UPS"
+   "UPS",
+   "FedEx",
+   "Amazon"
   ],
   "cat": "Carrier strategy",
   "kind": "Analysis",
-  "title": "UPS parcel pivot draws split views from analysts ahead of 2028 Teamsters talks",
-  "sum": "A FreightWaves analysis reports that analysts and consultant Satish Jindel disagree on whether UPS's stated focus on premium and logistics services means it will leave parts of parcel delivery. Jindel said UPS does not intend to exit parcel, while UPS officials told the outlet privately that small package is not going away. UPS's Aug. 31 release also named Matt Guffey chief U.S. domestic officer over all parcel and delivery units.",
+  "title": "UPS parcel pivot draws split views as analysts weigh 2028 Teamsters talks",
+  "sum": "A FreightWaves analysis reports that analysts and an industry consultant disagree on whether UPS's stated focus on premium and logistics services means it will leave parts of parcel delivery. Satish Jindel said UPS does not intend to exit any part of parcel, while UPS officials told the outlet privately that small package is not going away. UPS's Aug. 31 release described a new global operating model and named Matt Guffey chief U.S. domestic officer over all parcel and delivery units.",
   "imp": "watch",
   "lvl": 1,
-  "plain": "No change to rates or service has been announced. The piece is a debate over UPS's strategy and the Teamsters contract that expires in 2028.",
-  "tie": "UPS's Aug. 31 news release, issued in August 2026, described a new global operating model built around integrated logistics and named Matt Guffey to lead its U.S. parcel units.",
+  "plain": "No change to UPS rates or service is announced. The piece reflects analyst and consultant views on UPS's strategy and on the next Teamsters contract, which it places in 2028.",
+  "tie": "UPS's Aug. 31 release described a new global operating model built around integrated logistics and put all parcel and delivery units under Matt Guffey, according to the article.",
   "act": null,
   "dates": [],
+  "added": "2026-10-16T04:49:17Z",
   "src": "FreightWaves",
   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
   "srcs": [
@@ -360,7 +391,7 @@
   "auto": true,
   "thread": "ups-parcel-pivot",
   "upd": 2,
-  "new": "The analysis adds the Aug. 31 reorganization under Guffey, Jindel's view that the shift is meant to mislead competitors and the Teamsters, and the Package Shippers Association chief's expectation that a strike will not occur; no shipper rates or service levels change as a result."
+  "new": "The piece adds specifics beyond the earlier coverage: UPS has cut 150 sort centers, 30,000 positions and 50 million labor hours and plans to invest over $8 billion over four years in automation. It also cites labor-cost comparisons of about $65 per hour for Teamsters drivers against $35 to $39 for FedEx drivers, and mixed views on a 2028 strike. No shipper rates or services change as a result."
  },
  {
   "id": "a6c2418bed0a7",
@@ -584,6 +615,10 @@
    {
     "src": "Yahoo Finance",
     "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
+   },
+   {
+    "src": "American Journal of Transportation",
+    "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season"
    }
   ],
   "auto": true,
@@ -1288,6 +1323,44 @@
   "exclusive": true
  },
  {
+  "id": "accf814d7d663",
+  "date": "2026-10-10",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Regional & alternative",
+  "kind": "News",
+  "title": "UniUni responds to Tacoma complaints of packages left at wrong addresses",
+  "sum": "KIRO 7 reported that several Tacoma residents, particularly in North and West Tacoma, said UniUni packages marked delivered did not arrive at their addresses. UniUni said the practices described are not consistent with its standards and that it is speaking with local delivery service providers. A group of neighbors has filed complaints with the Washington Attorney General's office, according to the report.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to UniUni rates or service terms. Shippers using UniUni in the Tacoma area may see delivery-confirmation problems like those residents described.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-16T04:50:11Z",
+  "src": "KIRO 7 News Seattle",
+  "url": "https://www.kiro7.com/news/local/uniuni-under-investigation-bad-deliveries/58e38468-e11f-49b0-8ba2-e8b180969f90/",
+  "srcs": [
+   {
+    "src": "KIRO 7 News Seattle",
+    "url": "https://www.kiro7.com/news/local/uniuni-under-investigation-bad-deliveries/58e38468-e11f-49b0-8ba2-e8b180969f90/"
+   },
+   {
+    "src": "KIRO 7 News Seattle",
+    "url": "https://www.kiro7.com/news/local/dumped-dirt-tacoma-residents-reporting-issues-with-one-delivery-company/2DD3R7NZKNGWZCKWEOYTDAOWHE/"
+   },
+   {
+    "src": "Tacoma News Tribune",
+    "url": "https://www.thenewstribune.com/news/local/article317609638.html"
+   }
+  ],
+  "auto": true,
+  "thread": "uniuni-delivery-complaints",
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a1d096a3e1205",
   "date": "2026-10-09",
   "c": [
@@ -1397,34 +1470,6 @@
    {
     "src": "Indiablooms",
     "url": "https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a6a8a347cefa5",
-  "date": "2026-10-09",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "Analysis",
-  "title": "FedEx electric truck order, Stripe tie-up feature in Simply Wall Street analysis",
-  "sum": "Simply Wall Street's analysis of FedEx cites a US$300 million order for 2,000 electric trucks and a new Stripe partnership aimed at small businesses. It says shares were down 7.1% over 30 days at US$291.73, and notes the company's US$2b Network 2.0 savings target by the end of 2027.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The article is investor commentary and gives no shipper pricing, surcharge or service dates.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Simply Wall Street",
-  "url": "https://simplywall.st/stocks/us/transportation/nyse-fdx/fedex/news/fedex-fdx-puts-electrification-and-stripe-growth-on-its-valu",
-  "srcs": [
-   {
-    "src": "Simply Wall Street",
-    "url": "https://simplywall.st/stocks/us/transportation/nyse-fdx/fedex/news/fedex-fdx-puts-electrification-and-stripe-growth-on-its-valu"
    }
   ],
   "auto": true,
@@ -1581,32 +1626,6 @@
   "auto": true,
   "new": "Lowe's has started a drone delivery pilot in Matthews, North Carolina with Wing and DoorDash, adding a home improvement retailer to the drone delivery sites reported earlier; shippers see no change in rates, and the service covers small items of about 2.5 pounds.",
   "exclusive": true
- },
- {
-  "id": "af60a1952b6fb",
-  "date": "2026-10-09",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "News",
-  "title": "NRF: US container import peak winding down, August likely busiest month",
-  "sum": "The National Retail Federation's Global Port Tracker, produced with Hackett Associates, indicates August was likely the busiest month of 2026 for U.S. container imports, replacing September as the anticipated peak. Ports covered handled 2.3 million TEUs in August, up 0.4% from July and down 0.7% from August 2025. NRF forecasts full-year imports of 25.8 million TEUs, up 1.4% from 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to carrier rates or service. The report covers import container volumes, and NRF expects imports to ease through the rest of 2026.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/retailers-say-extended-peak-shipping-season-winding-down",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/retailers-say-extended-peak-shipping-season-winding-down"
-   }
-  ],
-  "auto": true
  },
  {
   "id": "af8ee5ed067c6",
@@ -1884,39 +1903,6 @@
   ],
   "auto": true,
   "new": "Amazon said it is adding Tracy to a 500-city Prime Air expansion, with fees of $2.99 to $4.99 on smaller orders, so shippers and retailers in the area face another drone delivery competitor operating under existing waivers or certificates.",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "acd4fc0450fe6",
-  "date": "2026-10-08",
-  "c": [
-   "Amazon",
-   "USPS"
-  ],
-  "cat": "Amazon",
-  "kind": "News",
-  "title": "Amazon opens Bismarck delivery center to speed local deliveries",
-  "sum": "Amazon held a ribbon-cutting at its Bismarck delivery center, which opened in August, according to The Bismarck Tribune. Site leader Charlyrae Nissen said the station is expected to cut delivery time in half by delivering directly from Amazon fulfillment centers instead of relying on the U.S. Postal Service for the last mile.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or fees. Amazon said shipments to Bismarck-area customers are expected to arrive sooner as the new station ramps up.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "The Bismarck Tribune",
-  "url": "https://bismarcktribune.com/news/local/article_1503c0ef-0399-4e8c-bfeb-0865477ad823.html",
-  "srcs": [
-   {
-    "src": "The Bismarck Tribune",
-    "url": "https://bismarcktribune.com/news/local/article_1503c0ef-0399-4e8c-bfeb-0865477ad823.html"
-   },
-   {
-    "src": "KX News",
-    "url": "https://www.kxnet.com/news/local-news/amazon-delivery-station-opens-in-bismarck/"
-   }
-  ],
-  "auto": true,
   "edge": true,
   "exclusive": true
  },
@@ -2455,6 +2441,45 @@
   ],
   "auto": true,
   "new": "Amazon opened a robotics fulfillment center and a nearby delivery station in the Wilmington, N.C., region, operating at 25% to 30% capacity with a ramp-up planned for the holidays; no rate or service change for outside shippers was stated.",
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a408078d40f01",
+  "date": "2026-10-04",
+  "c": [
+   "USPS",
+   "UPS",
+   "FedEx"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "USPS holiday rates run Oct. 4 to Jan. 17, 2027, Kiplinger reports",
+  "sum": "Kiplinger reported on Oct. 9, 2026 that USPS raised prices on Ground Advantage, Priority Mail and Priority Mail Express for the holiday season, from Oct. 4, 2026 through Jan. 17, 2027. It cited an extra $0.80 for a five-pound Priority Mail package in Zones 1-4 and $2.10 for a Priority Mail Large Flat Rate Box. A Kiplinger price check dated Oct. 9 found USPS cheapest for small and medium packages and UPS cheapest for a large one.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "Shippers using USPS Ground Advantage, Priority Mail and Priority Mail Express pay seasonal surcharges from Oct. 4, 2026 to Jan. 17, 2027, according to Kiplinger. Kiplinger's sample lowest-cost carrier varied by package size.",
+  "tie": "USPS holiday prices took effect on Oct. 4, 2026 on four package products, as covered earlier that month.",
+  "act": "2026-10-04",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS seasonal price increases scheduled to end, per Kiplinger",
+    "imp": "down",
+    "fx": null
+   }
+  ],
+  "added": "2026-10-16T04:51:02Z",
+  "src": "Kiplinger",
+  "url": "https://www.kiplinger.com/personal-finance/online-shopping/usps-holiday-shipping-rates-are-up-how-to-save",
+  "srcs": [
+   {
+    "src": "Kiplinger",
+    "url": "https://www.kiplinger.com/personal-finance/online-shopping/usps-holiday-shipping-rates-are-up-how-to-save"
+   }
+  ],
+  "auto": true,
+  "new": "Kiplinger gave example USPS surcharges ($0.80 on a five-pound Priority Mail package in Zones 1-4, $2.10 on a Large Flat Rate Box, $20.80 on heavy Priority Mail Express in Zones 5-9) and an Oct. 9 comparison in which USPS was cheapest for 1 lb and 5 lb packages and UPS for 20 lb; it gives an end date of Jan. 17, 2027, a day later than the Jan. 16 in earlier coverage.",
   "edge": true,
   "exclusive": true
  },

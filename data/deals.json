@@ -1,5 +1,81 @@
 [
  {
+  "title": "WWEX Group and Auctane merge as ShipStation Global",
+  "buyer": "WWEX Group",
+  "target": "Auctane",
+  "value": "Undisclosed",
+  "status": "Closed",
+  "ann": null,
+  "closed": null,
+  "sum": "WWEX Group and Auctane completed a merger to create ShipStation Global, combining a freight brokerage and carrier network with parcel software. Terms were not disclosed.",
+  "who": [
+   [
+    "Merged with",
+    "WWEX Group",
+    "Freight brokerage and carrier network."
+   ],
+   [
+    "Merged with",
+    "Auctane",
+    "Parcel software company behind the ShipStation brand."
+   ]
+  ],
+  "why": "The deal joins a freight brokerage with parcel software under the ShipStation brand. Dealroom said the combined company describes itself as the first multi-modal shipping platform for small and mid-size shippers and scaling enterprises. The network moves more than 3 billion shipments a year, according to Dealroom. In October 2026 ShipStation Global was named to FreightWaves' 2027 FreightTech 100 list.",
+  "parties": [
+   {
+    "name": "WWEX Group",
+    "role": "Merged with",
+    "realm": "Freight brokerage & parcel reselling",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Auctane",
+    "role": "Merged with",
+    "realm": "Shipping software",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "ShipStation Global",
+   "c": [
+    {
+     "n": "WWEX Group",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Auctane",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Merger completion date and terms not stated in the source.",
+  "d": "2026-10-14",
+  "story": "a386e5fed7984",
+  "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
+  "srcs": [
+   {
+    "src": "Dealroom",
+    "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform"
+   }
+  ],
+  "checked": "2026-10-14",
+  "ties": [
+   {
+    "d": "2026-03-03",
+    "t": "Thoma Bravo combines WWEX Group with Auctane",
+    "story": "64"
+   }
+  ]
+ },
+ {
   "title": "DHL eCommerce buys Venipak Baltic companies",
   "buyer": "DHL eCommerce International Holdings",
   "target": "Venipak Lietuva, Venipak Latvija and Venipak Eesti",
