@@ -228,7 +228,9 @@ let curM='home',curSec=null,curCo=null,origin='geo',LMAP=null,LLAY=null,lfP=null
 function leaflet(){if(window.L&&L.map&&L.markerClusterGroup)return Promise.resolve();if(lfP)return lfP;
   const style=path=>new Promise((ok,no)=>{const href=new URL(path,assetBase).href;const old=document.querySelector(`link[data-mx-style="${path}"]`);if(old?.sheet){ok();return}if(old)old.remove();const c=document.createElement('link');c.rel='stylesheet';c.href=href;c.dataset.mxStyle=path;c.onload=ok;c.onerror=()=>{c.remove();no(new Error('Map styles unavailable'))};document.head.appendChild(c)});
   const script=path=>new Promise((ok,no)=>{const j=document.createElement('script');j.src=new URL(path,assetBase).href;j.onload=ok;j.onerror=()=>{j.remove();no(new Error('Map library unavailable'))};document.head.appendChild(j)});
-  lfP=Promise.all([style('map-assets/leaflet.css'),style('map-assets/MarkerCluster.css'),(window.L&&L.map?Promise.resolve():script('map-assets/leaflet.js')).then(()=>script('map-assets/leaflet.markercluster.js'))]).then(()=>{if(!window.L?.markerClusterGroup)throw new Error('Map clustering unavailable')}).catch(e=>{lfP=null;throw e});return lfP}
+  // map files normally live in map-assets/; fall back to the site's top level in case an upload flattened the folder
+  const any=(load,name)=>load('map-assets/'+name).catch(()=>load(name));
+  lfP=Promise.all([any(style,'leaflet.css'),any(style,'MarkerCluster.css'),(window.L&&L.map?Promise.resolve():any(script,'leaflet.js')).then(()=>any(script,'leaflet.markercluster.js'))]).then(()=>{if(!window.L?.markerClusterGroup)throw new Error('Map clustering unavailable')}).catch(e=>{lfP=null;throw e});return lfP}
 function resetGeo(){if(!LMAP)return;if(!$('mxGeo').offsetWidth){geoResetPending=true;return}geoResetPending=false;LMAP.invalidateSize();LMAP.fitBounds([[24,-125],[50,-66]],{padding:[22,22],animate:false});}
 function geo(){if(curM!=='geo'||!$('mxGeo').offsetWidth)return;
   $('mxGnote').textContent='Loading map…';leaflet().then(()=>{
