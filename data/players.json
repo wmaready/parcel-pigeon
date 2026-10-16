@@ -1130,6 +1130,109 @@
     "https://vetbiznyc.cityofnewyork.us/profiles/2236/"
    ],
    "enriched": "2026-10-16"
+  },
+  {
+   "id": "dematic",
+   "n": "Dematic",
+   "realm": "auto",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Atlanta, GA, USA",
+   "yr": "1819",
+   "s": "Dematic is a KION Group brand that designs, installs and supports warehouse and distribution-center automation (conveyors, sortation, AS/RS, robotics and software), and it lists parcel as one of the industries it serves.",
+   "al": [
+    "Dematic Corp.",
+    "Dematic GmbH & Co. KG",
+    "Mannesmann Demag Fördertechnik",
+    "Mannesmann Demag Fördertechnik AG",
+    "Mannesmann Dematic AG",
+    "Mechanische Werkstätten Harkort & Co.",
+    "Siemens Dematic AG"
+   ],
+   "src": "https://www.dematic.com/en-us/about/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "dematic.com",
+   "geo": [
+    -84.388,
+    33.749
+   ],
+   "srcs": [
+    "https://www.dematic.com/en-us/about/",
+    "https://www.kiongroup.com/en/About-us/KION-at-a-glance/",
+    "https://pitchbook.com/profiles/company/54598-69"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "honeywellintel",
+   "n": "Intelligrated",
+   "realm": "auto",
+   "own": "pe",
+   "tk": null,
+   "parent": null,
+   "hq": "Mason, OH, USA",
+   "yr": "2001",
+   "s": "Intelligrated designs, builds and services warehouse automation (conveyor, sortation, robotics, AS/RS, palletizing and software) for retail, e-commerce, distribution and parcel operations.",
+   "al": [
+    "Honeywell Intelligrated",
+    "Honeywell Warehouse and Workflow Solutions",
+    "Intelligrated, Inc.",
+    "WWS"
+   ],
+   "src": "https://www.honeywell.com/us/en/news/press-releases/2026/07/honeywell-technologies-completes-sale-of-warehouse-and-workflow-solutions-business-to-american-industrial-partners",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "intelligrated.com",
+   "geo": [
+    -84.31,
+    39.36
+   ],
+   "srcs": [
+    "https://www.honeywell.com/us/en/news/press-releases/2026/07/honeywell-technologies-completes-sale-of-warehouse-and-workflow-solutions-business-to-american-industrial-partners",
+    "https://www.morningstar.com/news/pr-newswire/20260727cl12582/intelligrated-trew-and-transnorm-unite-to-create-leading-warehouse-automation-provider",
+    "https://www.dcvelocity.com/supply-chain/other-services/systems-integration-services/warehouse-automation-trio-merger-fills-out-its-starting-lineup"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "vanderlandeind",
+   "n": "Vanderlande Industries",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Named as a representative participant in the low-floor sortation wheel module market",
+   "al": [],
+   "src": "https://www.indexbox.io/blog/low-floor-sortation-wheel-modules-market-to-accelerate-on-e-commerce-parcel-boom-forecast-points-higher-toward-2035/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-16",
+   "story": "a177dec15405b"
+  },
+  {
+   "id": "tgwlogisticsgr",
+   "n": "TGW Logistics Group",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Named as a representative participant in the low-floor sortation wheel module market",
+   "al": [],
+   "src": "https://www.indexbox.io/blog/low-floor-sortation-wheel-modules-market-to-accelerate-on-e-commerce-parcel-boom-forecast-points-higher-toward-2035/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-16",
+   "story": "a177dec15405b"
   }
  ],
  "edges": [
@@ -1969,6 +2072,15 @@
    "t": "Amazon Delivery Service Partner (contract last-mile delivery for Amazon)",
    "url": "https://cazarnyc.com/",
    "story": "abf7a28de14a5"
+  },
+  {
+   "a": "dematic",
+   "b": "americold",
+   "k": "partner",
+   "y": "2020",
+   "t": "Automation project for two Americold temperature-controlled warehouses",
+   "url": "https://www.kiongroup.com/en/News-Stories/Press-Releases/Press-Releases-Detail.html?id=31424",
+   "story": "a177dec15405b"
   }
  ],
  "moves": [
@@ -2079,6 +2191,8 @@
   "pirateship": "2026-10-16",
   "stripe": "2026-10-16",
   "northstarlogis": "2026-10-16",
-  "cazarlogistics": "2026-10-16"
+  "cazarlogistics": "2026-10-16",
+  "dematic": "2026-10-16",
+  "honeywellintel": "2026-10-16"
  }
 }

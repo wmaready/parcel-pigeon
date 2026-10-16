@@ -20,7 +20,9 @@
   "a81cb824398de",
   "a709757714d80",
   "abf7a28de14a5",
-  "af85980b179b5"
+  "af85980b179b5",
+  "a666569771590",
+  "a33c3c3ba8e14"
  ],
  "clock": [],
  "fuel": {
@@ -68,7 +70,9 @@
   "pirateship",
   "stripe",
   "northstarlogis",
-  "cazarlogistics"
+  "cazarlogistics",
+  "dematic",
+  "honeywellintel"
  ],
  "sent": [
   "player:pirateship",
@@ -82,7 +86,12 @@
   "story:bronx amazon dsp operators oppose nyc delivery protection act",
   "story:two cook county suits accuse coco serve robots of biometric scans",
   "player:cazarlogistics",
-  "player:northstarlogis"
+  "player:northstarlogis",
+  "more:player:dematic,player:honeywellintel,story:kirkwood council kills walmart wing drone delivery proposal,story:oregon lawmakers press usps on mail delivery problems on state s north coast",
+  "story:oregon lawmakers press usps on mail delivery problems on state s north coast",
+  "story:kirkwood council kills walmart wing drone delivery proposal",
+  "player:honeywellintel",
+  "player:dematic"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -105,20 +114,22 @@
   "fbi usps inspectors probe suspicious mailings to election of",
   "two cook county suits accuse coco serve robots of biometric ",
   "bronx amazon dsp operators oppose nyc delivery protection ac",
-  "ups launches secure commerce suite for shipping fraud and lo"
+  "ups launches secure commerce suite for shipping fraud and lo",
+  "oregon lawmakers press usps on mail delivery problems on sta",
+  "kirkwood council kills walmart wing drone delivery proposal"
  ],
  "harvested": [
   "a2b81ad721cb8",
-  "a6cc2420ad66e",
-  "w150132868eae",
+  "wacb825361479",
   "a5d45f26f2219",
   "a6c2418bed0a7",
   "a2def09bc43bb",
-  "a89d7e4beebd9",
   "a773d361dac4e",
-  "aee6669d325da",
+  "a89d7e4beebd9",
+  "a6cc2420ad66e",
+  "w150132868eae",
   "af8ee5ed067c6",
-  "wacb825361479"
+  "aee6669d325da"
  ],
  "backfilled": true,
  "recent": [
@@ -450,6 +461,36 @@
      "url": "https://theatlanta100.com/business/business-news/2026/10/16/ups-strengthens-shipping-security-with-new-commerce-platform/17863"
     }
    ]
+  },
+  {
+   "id": "a666569771590",
+   "title": "Oregon lawmakers press USPS on mail delivery problems on state's north coast",
+   "date": "2026-10-16",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/",
+   "srcs": [
+    {
+     "src": "Merkley (.gov)",
+     "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/"
+    }
+   ]
+  },
+  {
+   "id": "a33c3c3ba8e14",
+   "title": "Kirkwood council kills Walmart-Wing drone delivery proposal",
+   "date": "2026-10-15",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.stltoday.com/news/local/government-politics/article_46703613-b7e8-48c3-b09b-264ed468d0ae.html",
+   "srcs": [
+    {
+     "src": "St. Louis Post-Dispatch",
+     "url": "https://www.stltoday.com/news/local/government-politics/article_46703613-b7e8-48c3-b09b-264ed468d0ae.html"
+    }
+   ]
   }
  ],
  "copy": {
@@ -476,13 +517,21 @@
   "af85980b179b5": {
    "t": "UPS launches Secure Commerce suite",
    "m": "UPS bundles InsureShield, Parcel Pro and CommerceShield into Secure Commerce for fraud and loss protection;…"
+  },
+  "a666569771590": {
+   "t": "Oregon lawmakers press USPS on delivery gaps",
+   "m": "No USPS rate or service change announced; some north coast businesses and residents get irregular or no mail."
+  },
+  "a33c3c3ba8e14": {
+   "t": "Kirkwood council rejects Walmart-Wing drones",
+   "m": "The proposed drone launchpad at the Kirkwood Walmart cannot be built under this proposal; shipping rates and…"
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-16",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-10-16T16:55:11.253895-04:00"
+ "last_push": "2026-10-16T18:52:24.627290-04:00"
 }
