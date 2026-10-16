@@ -796,6 +796,169 @@
     "https://www.therobotreport.com/uber-eats-rolls-out-coco-sidewalk-delivery-robots-in-la/"
    ],
    "enriched": "2026-10-15"
+  },
+  {
+   "id": "zipline",
+   "n": "Zipline",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "South San Francisco, CA, USA",
+   "yr": "2014",
+   "s": "Zipline designs, manufactures and operates autonomous delivery drones and the distribution hubs behind them, carrying medical supplies, retail goods and restaurant orders to customers in the U.S. and several other countries.",
+   "al": [
+    "Romotive",
+    "Zipline International Inc."
+   ],
+   "src": "https://en.wikipedia.org/wiki/Zipline_(drone_delivery_company)",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-09",
+   "story": "ac306d0262dca",
+   "site": "zipline.com",
+   "geo": [
+    -122.408,
+    37.655
+   ],
+   "srcs": [
+    "https://en.wikipedia.org/wiki/Zipline_(drone_delivery_company)",
+    "https://www.cbinsights.com/company/romotive",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "walmart",
+   "n": "Walmart",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Retailer among nine restaurant and retail partners at Zipline's Houston launch",
+   "al": [],
+   "src": "https://dronexl.co/2026/10/09/zipline-austin-round-rock-drone-delivery-launch/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-09",
+   "story": "ac306d0262dca"
+  },
+  {
+   "id": "usps",
+   "n": "United States Postal Service",
+   "realm": "national",
+   "own": "public",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Washington, DC, USA",
+   "yr": null,
+   "s": "The USPS is the independent federal postal operator of the United States, and it delivers mail and packages to more than 170 million addresses and runs retail post office services.",
+   "al": [
+    "Post Office",
+    "Postal Service",
+    "U.S. Mail",
+    "U.S. Postal Service",
+    "USPS",
+    "United States Post Office Department"
+   ],
+   "src": "https://about.usps.com/newsroom/national-releases/2026/0727-board-of-governors-to-meet-aug-7.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "a1785bbd2ecbb",
+   "site": "usps.com",
+   "geo": [
+    -77.037,
+    38.907
+   ],
+   "srcs": [
+    "https://about.usps.com/newsroom/national-releases/2026/0727-board-of-governors-to-meet-aug-7.htm",
+    "https://www.britannica.com/topic/United-States-Postal-Service",
+    "https://federalnewsnetwork.com/agency-oversight/2026/03/usps-cutting-delivery-days-on-the-table-as-agency-runs-out-of-cash-postmaster-general-tells-lawmakers/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "expeditorsinternationalo",
+   "n": "Expeditors International of Washington",
+   "s": "Global freight forwarder and customs broker",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "kuehnenagelnorthamerica",
+   "n": "Kuehne + Nagel (North America)",
+   "s": "Global air, ocean and contract logistics forwarder",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "dsvasnorthamerica",
+   "n": "DSV A/S (North America)",
+   "s": "Global forwarder; absorbed Schenker; air, sea and road",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "nfi",
+   "n": "NFI",
+   "s": "Warehousing, dedicated trucking, intermodal and final-mile",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "cevalogisticsnorthameric",
+   "n": "Ceva Logistics (North America)",
+   "s": "Contract logistics, forwarding and ground parcel services",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "geodisnorthamerica",
+   "n": "Geodis (North America)",
+   "s": "Forwarding, contract logistics and distribution/express delivery",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "maersklogisticsnorthamer",
+   "n": "Maersk Logistics (North America)",
+   "s": "Integrated forwarding, warehousing and last-mile logistics",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
+  },
+  {
+   "id": "forwardairomnilogistics",
+   "n": "Forward Air/Omni Logistics",
+   "s": "Airport-to-airport LTL, final-mile and forwarding",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking"
   }
  ],
  "edges": [
@@ -1428,6 +1591,69 @@
    "t": "Zipline serves U.S. communities through partnerships including Walmart",
    "url": "https://www.restaurantnews.com/teriyaki-madness-partners-with-zipline-for-drone-delivery-dallas-fort-worth-101526/",
    "story": "a5eceb35769a4"
+  },
+  {
+   "a": "uber",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2026",
+   "t": "Strategic investment (undisclosed) tied to Uber Eats drone partnership",
+   "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "zipline",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2026",
+   "t": "Drone delivery on Uber Eats, target 1M deliveries a day by end of 2029",
+   "url": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "a16z",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2016",
+   "t": "Series B participant",
+   "url": "https://venturebeat.com/business/drone-delivery-startup-zipline-raises-25-million-from-sequoia-andreessen-horowitz/",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "usps",
+   "b": "universalposta",
+   "k": "partner",
+   "y": null,
+   "t": "USPS is a UPU member",
+   "url": "https://facts.usps.com/universal-postal-union-upu/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "ups",
+   "k": "partner",
+   "y": "2024",
+   "t": "UPS became USPS's primary air cargo provider, replacing FedEx",
+   "url": "https://parcelpath.com/fedex-and-usps-partnership/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx Ground Economy uses USPS final-mile delivery. The FedEx–USPS air cargo contract ended in Sept 2024.",
+   "url": "https://parcelpath.com/fedex-and-usps-partnership/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "shipbob",
+   "k": "partner",
+   "y": null,
+   "t": "ShipBob offers USPS Ground Advantage through its USPS partnership",
+   "url": "https://www.shipbob.com/blog/usps-ground-advantage/",
+   "story": "a1785bbd2ecbb"
   }
  ],
  "moves": [
@@ -1497,7 +1723,7 @@
  "checks": {
   "ups": "2026-10-13",
   "fedex": "2026-10-13",
-  "usps": "2026-10-13",
+  "usps": "2026-10-16",
   "amzship": "2026-10-13",
   "dhlexpress": "2026-10-13",
   "dhlecom": "2026-10-13",
@@ -1519,6 +1745,7 @@
   "crimsonlogic": "2026-10-14",
   "alphabet": "2026-10-14",
   "targetcorp": "2026-10-14",
-  "cyanrobotics": "2026-10-15"
+  "cyanrobotics": "2026-10-15",
+  "zipline": "2026-10-16"
  }
 }

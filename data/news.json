@@ -245,35 +245,6 @@
   "auto": true
  },
  {
-  "id": "adbb397a01d7f",
-  "date": "2026-10-15",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Cook County suits allege Coco, Serve robots collect biometric data",
-  "sum": "Two lawsuits filed in Cook County allege that food delivery robots operated by Coco and Serve Robotics collect hand and facial data without consent, ABC7 Chicago reported. Serve said it will defend against the complaint. Coco said it has not collected biometric data in Chicago.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The suits concern sidewalk delivery robots used for food delivery in Chicago.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-15T22:48:23Z",
-  "src": "ABC7 Chicago",
-  "url": "https://abc7chicago.com/post/food-delivery-robot-lawsuit-chicago-claims-coco-serve-robotics-are-collecting-biometric-data-consent/19941835/",
-  "srcs": [
-   {
-    "src": "ABC7 Chicago",
-    "url": "https://abc7chicago.com/post/food-delivery-robot-lawsuit-chicago-claims-coco-serve-robotics-are-collecting-biometric-data-consent/19941835/"
-   }
-  ],
-  "auto": true,
-  "new": "ABC7 Chicago reports that the suits name Coco and Serve Robotics, and both companies responded: Serve said it will defend against the complaint, and Coco said it has not collected biometric data in Chicago. The earlier Bloomberg Law-based coverage named Serve Robotics and Cyan Robotics, and the two accounts differ on the second company. There is no direct change to shipper prices or service.",
-  "exclusive": true
- },
- {
   "id": "afcfcdd33fb44",
   "date": "2026-10-15",
   "c": [
@@ -296,34 +267,6 @@
    {
     "src": "citybiz",
     "url": "https://www.citybiz.co/article/919215/veho-appoints-former-ebanx-executive-henrik-nilsmo-as-chief-revenue-officer/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a53ebb883a9c8",
-  "date": "2026-10-14",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "News",
-  "title": "DoorDash starts on-demand delivery from all US Skims stores",
-  "sum": "DoorDash now offers on-demand delivery from all Skims retail stores in the US, with an average delivery time under an hour, according to Page Six. Skims co-founder Kim Kardashian showed the service in a video on Wednesday.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Consumers can order Skims products from its US retail stores through DoorDash for delivery in under an hour on average. No change to parcel carrier rates or service.",
-  "tie": "Skims ran a pilot in 2022 offering two-hour delivery in Southern California, Page Six reported.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-14T20:52:27Z",
-  "src": "Page Six",
-  "url": "https://pagesix.com/2026/10/14/style/doordash-now-delivers-skims/",
-  "srcs": [
-   {
-    "src": "Page Six",
-    "url": "https://pagesix.com/2026/10/14/style/doordash-now-delivers-skims/"
    }
   ],
   "auto": true,
@@ -1546,6 +1489,37 @@
   "exclusive": true,
   "thread": "usps-service-network",
   "upd": 3
+ },
+ {
+  "id": "ac306d0262dca",
+  "date": "2026-10-09",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Zipline opens Round Rock drone delivery as FAA Austin comment window runs",
+  "sum": "Zipline opened drone delivery in the Austin area on October 9 through its First Flight early-access program in Round Rock, Texas, open to the first 5,000 residents who sign up. The FAA's draft environmental assessment for Zipline's Austin operations remains open for public comment until October 11. The draft sets an Austin ceiling of 30 Chargers, 600 Dropbox kiosks and 30,000 deliveries a day across 2,498 square miles, DroneXL reported.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Customers within 3 miles of 3000 E. Palm Valley Blvd. in Round Rock can order from the Zipline app, with a delivery weight limit of about 5 pounds reported. Early-access members get $10 off their first three orders and no service or delivery fees. No change to rates or service for other shippers.",
+  "tie": "DroneXL reports Zipline began flying in Houston's Cypress area on April 29 and named Austin as its next Texas market in June 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-16T03:16:39Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/10/09/zipline-austin-round-rock-drone-delivery-launch/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/10/09/zipline-austin-round-rock-drone-delivery-launch/"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 6,
+  "new": "Zipline started Round Rock deliveries on October 9, with the FAA comment period closing October 11; the draft would cap Austin at 30,000 deliveries a day, and the item adds a Zipline Texas launch to the expansion news from Wing and Walmart.",
+  "exclusive": true
  },
  {
   "id": "ac39181d4b6af",

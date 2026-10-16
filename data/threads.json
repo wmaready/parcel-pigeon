@@ -416,14 +416,15 @@
   "rv": "ce498ee4d3ad"
  },
  "drone-delivery": {
-  "n": "Drone delivery growth and FAA Part 108 rule",
-  "s": "Drone delivery is expanding through retailer and restaurant partnerships, while earlier coverage said the FAA's Part 108 rule had not been published as of Oct. 9.",
+  "n": "Drone delivery expansion and FAA oversight",
+  "s": "Zipline has begun Austin-area drone deliveries while the FAA's draft environmental assessment for its Texas operations is still in public comment.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
-   "af529411b3b18"
+   "af529411b3b18",
+   "ac306d0262dca"
   ],
   "first": "2025-03-31",
   "last": "2026-10-15",
@@ -433,16 +434,14 @@
    "Regional"
   ],
   "cx": {
-   "sig": "314167040eb9",
+   "sig": "7ca31261b30e",
    "v": 2,
    "beats": {
-    "g27": "Amazon's Prime Air plan jumps from 11 U.S. locations to almost 500 towns, with a $2.99 fee for Prime members, waived on $50+ orders.",
-    "a60770e8e9c32": "Wing and Walmart already give over three million customers drone access; Denver and Seattle would take them to 270+ stores."
+    "a60770e8e9c32": "Wing and Walmart are adding Denver and Seattle in 2027, which would bring them to nearly 20 metros and more than 270 Walmart stores."
    },
-   "intro": "Drone delivery is spreading across U.S. metros while the FAA rule that would standardize it is still unpublished.",
-   "now": "Part 108 was still unpublished as of Oct. 9. Meanwhile, the FCC plans an Oct. 29 vote on 800 MHz drone use."
+   "now": "The FAA's comment period on Zipline's Austin draft closes October 11, and the FCC is set to vote on 800 MHz drone use on Oct. 29."
   },
-  "rv": "7342104a4926"
+  "rv": "7b7102e574bf"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
