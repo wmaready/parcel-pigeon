@@ -530,19 +530,26 @@
   "rv": "dcf71660fcf1"
  },
  "last-mile-facility-legislation": {
-  "n": "NYC last-mile facility bills",
+  "n": "NYC Delivery Protection Act fight",
   "ids": [
-   "a9b8fc0d53f23"
+   "a9b8fc0d53f23",
+   "abf7a28de14a5"
   ],
   "first": "2026-10-13",
-  "s": "Advocates rallied Oct. 13 for three bills; the Clean Deliveries Act has passed the state Senate and awaits Assembly approval.",
-  "last": "2026-10-13",
+  "s": "The Delivery Protection Act has supermajority council support but has not been called for a vote amid Amazon lobbying.",
+  "last": "2026-10-16",
   "c": [
    "Amazon",
    "FedEx",
    "Regional"
   ],
-  "rv": "a2935cf33be5"
+  "rv": "3b6486d52dbd",
+  "cx": {
+   "sig": "3b6486d52dbd",
+   "v": 2,
+   "beats": {},
+   "now": "The Delivery Protection Act has supermajority council support but hasn't been called for a vote, amid Amazon lobbying."
+  }
  },
  "uniuni-delivery-complaints": {
   "n": "UniUni delivery complaints",
@@ -556,5 +563,18 @@
    "Regional"
   ],
   "rv": "91ef4948cff0"
+ },
+ "robot-biometric-suits": {
+  "n": "Chicago robot biometric lawsuits",
+  "ids": [
+   "a709757714d80"
+  ],
+  "first": "2026-10-16",
+  "s": "Two Cook County lawsuits filed against Coco Robotics and Serve Robotics over alleged biometric scanning; both companies dispute the claims.",
+  "last": "2026-10-16",
+  "c": [
+   "Industry"
+  ],
+  "rv": "e0904019c7b2"
  }
 }

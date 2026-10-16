@@ -1,5 +1,5 @@
 {
- "run": "2026-10-16T20:31Z",
+ "run": "2026-10-16T20:55Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -126,6 +126,16 @@
     "ab3283b22bb4f"
    ],
    "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"NYC advocates rally for three last-mile delivery facility bills\" may be out of date: newer story \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\"",
+   "ids": [
+    "a9b8fc0d53f23",
+    "abf7a28de14a5"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -249,6 +259,16 @@
    "ids": [
     "a54805bbe5d65",
     "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"NYC advocates rally for three last-mile delivery facility bills\" may be out of date: newer story \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\"",
+   "ids": [
+    "a9b8fc0d53f23",
+    "abf7a28de14a5"
    ],
    "fixed": false
   }

@@ -1070,6 +1070,66 @@
     "https://stripe.com/blog/native-support-for-taxes-and-shipping"
    ],
    "enriched": "2026-10-16"
+  },
+  {
+   "id": "northstarlogis",
+   "n": "NorthStar Logistics NYC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "South Bronx-based Amazon Delivery Service Partner that runs last-mile package delivery for Amazon's DYN9 delivery station in Hunts Point, using Amazon-branded cargo vans.",
+   "al": [
+    "NorthStar Logistics",
+    "Northstar Logistics LLC",
+    "Northstar Logistics LLC DBA Northstar Logistics NYC"
+   ],
+   "src": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "abf7a28de14a5",
+   "site": "northstarlogisticsnyc.com",
+   "srcs": [
+    "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+    "https://thegrio.com/2026/09/30/nyc-delivery-worker-bill-could-put-thousands-of-jobs-at-risk-analysis-finds/",
+    "https://www.northstarlogisticsnyc.com/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "cazarlogistics",
+   "n": "Cazar Logistics LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Bronx, NY, USA",
+   "yr": "2019",
+   "s": "Veteran-owned Amazon Delivery Service Provider that delivers Amazon packages in the Bronx and Queens, NY, from Amazon's DYY5 delivery station in Morris Park.",
+   "al": [
+    "Cazar",
+    "Cazar Logistics",
+    "Cazar NYC"
+   ],
+   "src": "https://cazarnyc.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "abf7a28de14a5",
+   "site": "cazarnyc.com",
+   "geo": [
+    -73.865,
+    40.845
+   ],
+   "srcs": [
+    "https://cazarnyc.com/",
+    "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+    "https://vetbiznyc.cityofnewyork.us/profiles/2236/"
+   ],
+   "enriched": "2026-10-16"
   }
  ],
  "edges": [
@@ -1864,6 +1924,51 @@
    "t": "Shipping cost lookup integration",
    "url": "https://stripe.com/blog/native-support-for-taxes-and-shipping",
    "story": "a3b2062870616"
+  },
+  {
+   "a": "amazon",
+   "b": "northstarlogis",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon contracts NorthStar Logistics as a delivery service provider",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "amazon",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon contracts Cazar Logistics as a delivery service provider",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "fedex",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx contracts Cazar Logistics at a Nassau County location",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "northstarlogis",
+   "b": "amzlogistics",
+   "k": "partner",
+   "y": null,
+   "t": "Amazon Delivery Service Partner (Bronx, DYN9)",
+   "url": "https://www.northstarlogisticsnyc.com/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "amzlogistics",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": null,
+   "t": "Amazon Delivery Service Partner (contract last-mile delivery for Amazon)",
+   "url": "https://cazarnyc.com/",
+   "story": "abf7a28de14a5"
   }
  ],
  "moves": [
@@ -1972,6 +2077,8 @@
   "geodisnorthamerica": "2026-10-16",
   "forwardairomnilogistics": "2026-10-16",
   "pirateship": "2026-10-16",
-  "stripe": "2026-10-16"
+  "stripe": "2026-10-16",
+  "northstarlogis": "2026-10-16",
+  "cazarlogistics": "2026-10-16"
  }
 }
