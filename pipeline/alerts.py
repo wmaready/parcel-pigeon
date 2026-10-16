@@ -46,7 +46,7 @@ MAX_PER_DAY = 10                         # per day, all readers; anything past t
 MIN_GAP_MIN = 50                         # minutes between regular pushes across runs (big news skips the wait)
 QUEUE_HOURS = 30                         # a story that hasn't gone out by then is old news; it stays in the app only
 MAX_MAJOR_PER_RUN = 3
-FRESH_DAYS = 2                           # only alert on stories from the last two days
+FRESH_DAYS = 1                           # only alert on stories from the last day
 
 APP_ID = os.environ.get("ONESIGNAL_APP_ID", "").strip()
 API_KEY = os.environ.get("ONESIGNAL_API_KEY", "").strip()
@@ -667,7 +667,9 @@ def send_queued(state):
     cutoff = now_et() - dt.timedelta(hours=QUEUE_HOURS)
     queue = [q for q in state.get("queue") or [] if q["key"] not in SENT
              and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff]
-    queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), not q.get("notable", True), q["kind"] != "story", q.get("at") or ""))
+    # newest first inside each importance tier: a fresh story never waits behind a queued older one
+    queue.sort(key=lambda q: q.get("at") or "", reverse=True)
+    queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), not q.get("notable", True), q["kind"] != "story"))
     room = max(0, min(MAX_PER_RUN, MAX_PER_DAY - count_today(state, 0)))
     # alerts.py runs hourly (watch) and every two hours (update): keep regular pushes about an hour apart across runs
     last = state.get("last_push")
