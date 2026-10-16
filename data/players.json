@@ -913,24 +913,35 @@
    "pending": false
   },
   {
-   "id": "dsvasnorthamerica",
-   "n": "DSV A/S (North America)",
-   "s": "Global forwarder; absorbed Schenker; air, sea and road",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
-   "auto": true,
-   "added": "2026-10-16",
-   "from": "ranking"
-  },
-  {
    "id": "nfi",
    "n": "NFI",
-   "s": "Warehousing, dedicated trucking, intermodal and final-mile",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "s": "NFI is a family-owned North American 3PL that runs warehousing and distribution, eCommerce fulfillment with parcel shipping, dedicated trucking, port drayage, intermodal and freight brokerage.",
+   "al": [
+    "NFI Industries",
+    "NFI Industries, Inc.",
+    "NFI eCom"
+   ],
+   "src": "https://www.nfiindustries.com/about-nfi/news/nfi-expands-capabilities-with-new-west-coast-fulfillment-node/",
    "auto": true,
    "added": "2026-10-16",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "private",
+   "hq": "Camden, NJ, USA",
+   "yr": "1932",
+   "site": "nfiindustries.com",
+   "realm": "3pl",
+   "geo": [
+    -75.12,
+    39.926
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.nfiindustries.com/about-nfi/news/nfi-expands-capabilities-with-new-west-coast-fulfillment-node/",
+    "https://www.forbes.com/companies/nfi-industries/",
+    "https://www.ttnews.com/logistics/companies/nfi/2026"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
   },
   {
    "id": "cevalogisticsnorthameric",
@@ -1759,6 +1770,7 @@
   "targetcorp": "2026-10-14",
   "cyanrobotics": "2026-10-15",
   "zipline": "2026-10-16",
-  "expeditorsinternationalo": "2026-10-16"
+  "expeditorsinternationalo": "2026-10-16",
+  "nfi": "2026-10-16"
  }
 }
