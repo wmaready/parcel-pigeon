@@ -23,7 +23,8 @@
   "af85980b179b5",
   "a666569771590",
   "a33c3c3ba8e14",
-  "a0f38605e4132"
+  "a0f38605e4132",
+  "a168f88090691"
  ],
  "clock": [
   "e06:7"
@@ -123,20 +124,21 @@
   "ups launches secure commerce suite for shipping fraud and lo",
   "oregon lawmakers press usps on mail delivery problems on sta",
   "kirkwood council kills walmart wing drone delivery proposal",
-  "shipt adds more than 500 sprouts locations to its marketplac"
+  "shipt adds more than 500 sprouts locations to its marketplac",
+  "amazon warns it may close 15 new york city warehouses over d"
  ],
  "harvested": [
-  "a2def09bc43bb",
-  "aee6669d325da",
-  "w150132868eae",
-  "wacb825361479",
+  "a5d45f26f2219",
   "a6c2418bed0a7",
+  "aee6669d325da",
+  "a2def09bc43bb",
+  "w150132868eae",
   "a773d361dac4e",
   "a6cc2420ad66e",
-  "a89d7e4beebd9",
-  "a2b81ad721cb8",
   "af8ee5ed067c6",
-  "a5d45f26f2219"
+  "a89d7e4beebd9",
+  "wacb825361479",
+  "a2b81ad721cb8"
  ],
  "backfilled": true,
  "recent": [
@@ -513,6 +515,21 @@
      "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t"
     }
    ]
+  },
+  {
+   "id": "a168f88090691",
+   "title": "Amazon warns it may close 15 New York City warehouses over delivery bill",
+   "date": "2026-10-17",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york",
+   "srcs": [
+    {
+     "src": "Vietnam.vn",
+     "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york"
+    }
+   ]
   }
  ],
  "copy": {
@@ -551,6 +568,10 @@
   "a0f38605e4132": {
    "t": "Shipt adds 500+ Sprouts stores",
    "m": "Shoppers can now order from more than 500 added Sprouts locations on Shipt's same-day delivery marketplace;…"
+  },
+  "a168f88090691": {
+   "t": "Amazon may close 15 NYC warehouses",
+   "m": "No vote date set; if closed, some same-day orders could shift to next-day delivery."
   }
  },
  "queue": [
@@ -589,6 +610,20 @@
    "notable": false,
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#story=a0f38605e4132"
+  },
+  {
+   "kind": "story",
+   "key": "story:amazon warns it may close 15 new york city warehouses over delivery bill",
+   "id": "a168f88090691",
+   "t": "Amazon may close 15 NYC warehouses",
+   "m": "No vote date set; if closed, some same-day orders could shift to next-day delivery.",
+   "big": false,
+   "at": "2026-10-17T06:47:39.216764-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": false,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a168f88090691"
   }
  ],
  "fuelq": {},
