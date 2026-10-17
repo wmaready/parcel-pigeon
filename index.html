@@ -2407,6 +2407,18 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .tlrail.route .tln{z-index:2}.tlrail.route .tln span{margin-top:14px}
 .tlcard{position:relative}.tlstamp{position:absolute;right:10px;top:8px;font:800 12px/1 var(--font-mono,monospace);letter-spacing:.08em;color:#E8772E;border:2px solid #E8772E;border-radius:4px;padding:4px 6px;transform:rotate(-12deg);opacity:.9;pointer-events:none}
 @media (prefers-reduced-motion:reduce){.rd-dash{animation:none}}
+.akwrap{position:fixed;inset:0;z-index:9000;background:rgba(5,9,14,.72);display:flex;align-items:flex-start;justify-content:center;padding:6vh 14px 14px;backdrop-filter:blur(3px)}
+.akwrap[hidden]{display:none}
+.akpanel{width:min(640px,100%);max-height:86vh;overflow:auto;background:var(--panel);border:var(--line) solid var(--grid-strong);border-radius:var(--r-lg);box-shadow:0 30px 60px -20px rgba(0,0,0,.9);padding:16px 18px;animation:rise .3s var(--ease) both}
+.akhd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.akhd small{color:var(--ink-2);flex:1}.akhd .cm-x{margin-left:auto}
+.akform{display:flex;gap:8px;margin:12px 0 8px}.akform input{flex:1;min-width:0;font:inherit;padding:11px 12px;border-radius:8px;border:var(--line) solid var(--grid-strong);background:var(--panel-2,#121A23);color:var(--ink)}
+.akform button{font:700 14px/1 inherit;padding:0 16px;border-radius:8px;border:0;background:#2EC4B6;color:#06231f;cursor:pointer;min-height:44px}
+.akchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.akchips button{font:inherit;font-size:12.5px;padding:7px 10px;border-radius:999px;border:var(--line) solid var(--grid-strong);background:none;color:var(--ink-2);cursor:pointer}
+.akout p{margin:6px 0;line-height:1.5}.ak-lead{font-size:16px}.ak-wait{color:var(--ink-2);font-style:italic}
+.ak-box{margin:10px 0;padding:10px 12px;border-left:3px solid #2EC4B6;background:var(--panel-2,#121A23);border-radius:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.ak-box .link{text-align:left}.ak-guide{border-left-color:#E8772E}.ak-guide p{font-size:13.5px;color:var(--ink-2)}
+.ak-src{font-size:12.5px;color:var(--ink-2)}.ak-src .lbl{margin-right:6px}.ak-ai{margin-top:10px;padding:10px 12px;border:1px dashed var(--grid-strong);border-radius:6px}
+body.akopen{overflow:hidden}@media (max-width:620px){.akwrap.answered .akchips{display:none}}
 .tlcard{background:var(--panel-2,#121A23);border:1px solid var(--grid-strong,#2A3644);border-left:3px solid #2EC4B6;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tlcard b{font-size:var(--fs-md,15px);line-height:1.35;color:var(--ink)}
 .tlcard .link{align-self:flex-start}
@@ -9704,5 +9716,6 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
 </script>
 <link rel="stylesheet" href="mx.css">
 <script src="mx.js"></script>
+<script src="ask.js"></script>
 </body>
 </html>
