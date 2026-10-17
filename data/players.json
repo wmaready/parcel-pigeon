@@ -1284,6 +1284,30 @@
     "https://www.mhi.org/members/16465"
    ],
    "enriched": "2026-10-16"
+  },
+  {
+   "id": "walmartmarketp",
+   "n": "Walmart Marketplace",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": "walmart",
+   "hq": null,
+   "yr": "2009",
+   "s": "Walmart's third-party seller platform on Walmart.com, which offers sellers Walmart Fulfillment Services and, through partners such as ShipStation, Walmart-negotiated shipping rates (Ship with Walmart) for U.S. domestic parcels.",
+   "al": [],
+   "src": "https://www.shipstation.com/press/ship-with-walmart/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "ac0d92b34ccce",
+   "site": "marketplace.walmart.com",
+   "srcs": [
+    "https://www.shipstation.com/press/ship-with-walmart/",
+    "https://www.pymnts.com/shipping/2026/shipstation-delivers-walmart-shipping-discounts-to-marketplace-sellers/",
+    "https://talkbusiness.net/2025/04/the-supply-side-walmarts-e-commerce-profitability-achievement-took-decades/"
+   ],
+   "enriched": "2026-10-17"
   }
  ],
  "edges": [
@@ -2159,6 +2183,51 @@
    "t": "Walmart's 2018 investment in Flipkart",
    "url": "https://corpdigest.com/company/walmart/company-history",
    "story": "ac306d0262dca"
+  },
+  {
+   "a": "auctane",
+   "b": "walmartmarketp",
+   "k": "partner",
+   "y": "2026",
+   "t": "ShipStation launches Ship with Walmart for Walmart Marketplace sellers",
+   "url": "https://www.marketscale.com/industries/retail/shipstation-now-offers-walmart-shipping-rates-with-up-to-100-lost-package-protection",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmart",
+   "b": "walmartmarketp",
+   "k": "owns",
+   "y": null,
+   "t": "Walmart owns and operates Walmart Marketplace",
+   "url": "https://www.sellerapp.com/blog/walmart-marketplace/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "shipstationg",
+   "k": "partner",
+   "y": "2026",
+   "t": "Ship with Walmart rates and seller protection launched inside ShipStation",
+   "url": "https://www.shipstation.com/press/ship-with-walmart/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "usps",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart-negotiated USPS rates in Ship with Walmart",
+   "url": "https://www.shipstation.com/partners/walmart/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart-negotiated FedEx rates in Ship with Walmart",
+   "url": "https://www.shipstation.com/partners/walmart/",
+   "story": "ac0d92b34ccce"
   }
  ],
  "moves": [
@@ -2274,6 +2343,7 @@
   "honeywellintel": "2026-10-16",
   "vanderlandeind": "2026-10-16",
   "tgwlogisticsgr": "2026-10-16",
-  "walmart": "2026-10-17"
+  "walmart": "2026-10-17",
+  "walmartmarketp": "2026-10-17"
  }
 }

@@ -216,7 +216,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "USPS seasonal prices are in effect and, per Kiplinger, scheduled to end Jan. 17, 2027, while UPS, FedEx, OnTrac and Amazon peak fees continue.",
+  "s": "Peak surcharges are billing at the major carriers, and an industry analysis now projects record-high parcel rates for Q4 2026.",
   "ids": [
    "h416",
    "h418",
@@ -416,14 +416,13 @@
  },
  "drone-delivery": {
   "n": "Drone delivery expansion and FAA Part 108",
-  "s": "Zipline has opened its first Austin-area site in Round Rock while the FAA's Part 108 rule remains unpublished.",
+  "s": "Amazon's drone expansion faces its first local pushback in Portland while the FAA's Part 108 rule remains unpublished.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
-   "af529411b3b18",
-   "ac306d0262dca"
+   "af529411b3b18"
   ],
   "first": "2025-03-31",
   "last": "2026-10-15",
@@ -433,13 +432,12 @@
    "Regional"
   ],
   "cx": {
-   "sig": "a5603fe1225d",
+   "sig": "314167040eb9",
    "v": 2,
    "beats": {},
-   "intro": "Drone delivery is spreading to more metros while the FAA's key BVLOS rule remains unpublished, which shapes how fast it scales.",
-   "now": "Part 108 was still unpublished as of Oct. 9, and the Austin comment window closes October 11."
+   "now": "Part 108 had not been published as of Oct. 9, and the FCC plans an Oct. 29 vote on 800 MHz drone use. Amazon has also sought a Portland permit."
   },
-  "rv": "7b7102e574bf"
+  "rv": "7342104a4926"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
