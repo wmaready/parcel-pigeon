@@ -2396,6 +2396,17 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .tln.on i{width:19px;height:19px;margin-top:3px;background:#2EC4B6;border-color:#E6FBF8;box-shadow:0 0 0 5px rgba(46,196,182,.18)}
 .tln.on{color:var(--ink)}
 .tln.fut i{border-style:dashed;border-color:#F2A65A}.tln.fut{color:#F2A65A;cursor:default}
+.tlrail.route{height:66px}.tlrail.route .tlbase,.tlrail.route .tlfill{display:none}
+.tlsvg{position:absolute;inset:0;width:100%;height:58px;overflow:visible;pointer-events:none}
+.tlsvg path{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.rd-base{stroke:var(--grid-strong,#2A3644);stroke-width:7}.rd-dash{stroke:color-mix(in srgb,var(--ink-2,#9aa) 40%,transparent);stroke-width:1.5;stroke-dasharray:6 9;animation:rdmove 1.6s linear infinite}
+.rd-done{stroke:#2EC4B6;stroke-width:4;filter:drop-shadow(0 0 4px rgba(46,196,182,.55))}
+@keyframes rdmove{to{stroke-dashoffset:-30}}
+.tlpkg{position:absolute;width:22px;height:22px;z-index:3;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.45))}
+.tlpkg svg{width:100%;height:100%;fill:#C98A4B;stroke:#5a3a1c;stroke-width:1.2;stroke-linejoin:round}
+.tlrail.route .tln{z-index:2}.tlrail.route .tln span{margin-top:14px}
+.tlcard{position:relative}.tlstamp{position:absolute;right:10px;top:8px;font:800 12px/1 var(--font-mono,monospace);letter-spacing:.08em;color:#E8772E;border:2px solid #E8772E;border-radius:4px;padding:4px 6px;transform:rotate(-12deg);opacity:.9;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.rd-dash{animation:none}}
 .tlcard{background:var(--panel-2,#121A23);border:1px solid var(--grid-strong,#2A3644);border-left:3px solid #2EC4B6;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tlcard b{font-size:var(--fs-md,15px);line-height:1.35;color:var(--ink)}
 .tlcard .link{align-self:flex-start}
@@ -7192,6 +7203,8 @@ setTimeout(()=>{const f=$('dropBox');if(!f)return;let kind='article';const w=$('
    USPS's network plan, de minimis). Each update says what's new; every story shows the thread so far.
    pipeline/news.py writes data/threads.json: {key: {n: name, s: where it stands, ids: [story ids, oldest first], first, last, c}} ===== */
 var THREADS={},THR_IDX={};
+/* a storyline is shown only once it has at least this many stories; smaller groups stay single news items */
+const THR_MIN=4;
 /* Yearly storylines (holiday peak surcharges, the annual rate increase, USPS price changes) run on a cycle: each year is its
    own storyline, labeled with its year, so the 2026 peak season doesn't open with 2024 articles. A cycle follows the business
    calendar: peak runs into January; next year's rates are announced from late summer (USPS from October). */
@@ -7249,16 +7262,16 @@ fetch('data/drop.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{
   for(let i=NEWS.length-1;i>=0;i--)if(ids.has(NEWS[i].id))NEWS.splice(i,1);
   if(THR_RAW){Object.values(THR_RAW).forEach(t=>{if(t.ids)t.ids=t.ids.filter(x=>!ids.has(x))});thrSplit();thrIndex()}
   if(typeof renderAll==='function')renderAll()}).catch(()=>{});
-function storyChip(n){const x=thrOf(n);if(!x)return '';const S=thrStories(x.k);if(S.length<2&&!n.upd)return '';const k=S.findIndex(s=>s.id===n.id);
+function storyChip(n){const x=thrOf(n);if(!x)return '';const S=thrStories(x.k);if(S.length<THR_MIN)return '';const k=S.findIndex(s=>s.id===n.id);
   return `<div class="stwrap"><a href="#" role="button" class="stchip" data-thread="${x.k}" title="See the whole storyline"><span class="stdot" aria-hidden="true"></span>${esc(x.t.n||'Storyline')}${k>0?` <span style="white-space:nowrap">· Update ${k+1}</span>`:S.length>1?' <span style="white-space:nowrap">· First report</span>':''}</a></div>`}
 function storyNew(n){return n.new?`<p class="snew"><b>What's new</b>${esc(n.new)}</p>`:''}
-function storySoFar(n){const x=thrOf(n);if(!x)return '';const S=thrStories(x.k);if(S.length<2)return '';
+function storySoFar(n){const x=thrOf(n);if(!x)return '';const S=thrStories(x.k);if(S.length<THR_MIN)return '';
   return `<div class="stline"><div class="lbl">The story so far · ${esc(x.t.n||'')}</div>${thxButton(x.k,S.length)}${x.t.s?`<p class="sts"><b>Where it stands:</b> ${esc(x.t.s)}</p>`:''}
     <ol>${S.slice(-6).map(s=>`<li class="${s.id===n.id?'on':''}"><span class="d">${fmtD(s.date)}</span>${s.id===n.id?`<b>${esc(s.title)}</b>`:`<button type="button" class="link" data-open="${s.id}">${esc(s.title)}</button>`}</li>`).join('')}</ol>
     ${S.length>6?`<button type="button" class="link" data-thread="${x.k}">All ${S.length} stories ›</button>`:''}</div>`}
 const thrAct=S=>S.reduce((m,s)=>{const d=String(s.updated||s.date||'');return d>m?d:m},'');
 function renderStorylines(){const el=$('nStory');if(!el)return;
-  const L=Object.entries(THREADS).map(([k,t])=>({k,t,S:thrStories(k)})).filter(x=>x.S.length>=2).sort((a,b)=>thrAct(b.S).localeCompare(thrAct(a.S)));
+  const L=Object.entries(THREADS).map(([k,t])=>({k,t,S:thrStories(k)})).filter(x=>x.S.length>=THR_MIN).sort((a,b)=>thrAct(b.S).localeCompare(thrAct(a.S)));
   const card=({k,t,S})=>{const last=S.at(-1),cars=[...new Set(S.flatMap(s=>s.c||[]))].filter(c=>c!=='Industry');
     return `<article class="stl"><header><div class="lbl">Storyline · ${S.length} stories · since ${fmtD(S[0].date,{month:'short',year:'numeric'})} · updated ${fmtD(thrAct(S))}</div>
       <h3>${esc(t.n||k)}</h3>${cars.length?`<span class="lgset">${cars.map(c=>who(c,'lgx')).join('')}</span>`:''}</header>
@@ -7336,7 +7349,7 @@ function peakScene(S,src){
   return {k:'peak',i:-1,a:'surf',S,src:src(S.at(-1)),
     say:"Peak season has a shape, and the shape barely changes year to year. Big and heavy boxes pay first, in late September. Every package pays from late October. Top rates switch on the Sunday before Thanksgiving. Then it all winds down by mid-January — right about when you stop checking invoices. That timing is not an accident.",
     read:"The expensive weeks are Nov 22 to Dec 28. Move what you can before Nov 22 or after Dec 28 and you skip the top rates. OnTrac is the odd one out: one flat fee all season, no peak-week step-up."}}
-function thxScenes(k){const t=THREADS[k]||{},S=thrStories(k);if(S.length<2)return [];const cx=t.cx||{},B=cx.beats||{};
+function thxScenes(k){const t=THREADS[k]||{},S=thrStories(k);if(S.length<THR_MIN)return [];const cx=t.cx||{},B=cx.beats||{};
   let pick=S;if(S.length>6){const ix=[...new Set([0,...[1,2,3,4].map(i=>Math.round(i*(S.length-1)/5)),S.length-1])];pick=ix.map(i=>S[i])}
   const fut=(typeof DATES!=='undefined'?DATES:[]).filter(d=>(d.news||[]).some(id=>S.some(s=>s.id===id))&&daysTo(d.d)>0).sort((a,b)=>a.d.localeCompare(b.d))[0]||null;
   const src=s=>(s.srcs||[]).slice(0,2).map(x=>[x.src||'Source',x.url]);
@@ -7424,7 +7437,38 @@ function thxRender(first){const el=THX.el;if(!el||!el.isConnected)return;const {
     const on=el.querySelector('.tln.on i,.tln.fut i');on&&gsap.fromTo(on,{scale:.2},{scale:1,duration:.5,delay:.6,ease:'back.out(2.5)'});
     const pf=el.querySelectorAll('.pkfill');pf.length&&gsap.fromTo(pf,{scaleX:0,transformOrigin:'left center'},{scaleX:1,duration:.8,ease:'power2.out',stagger:.1,delay:.15});
     const pm=el.querySelectorAll('.pkm');pm.length&&gsap.fromTo(pm,{opacity:0},{opacity:1,duration:.4,delay:.75,stagger:.04})}
+  thxRoute(el,first);
   THX.p=parseFloat((f&&f.style.width)||0)}
+/* ===== Route motion: the storyline is drawn as a delivery route. A parcel travels the road from the last stop to this
+   one, each stop lights up as it is reached, the story card prints out like a shipping label and gets stamped with its
+   update number, and figures count up. Everything is skipped for people who ask for reduced motion. ===== */
+const THX_R={p:0};
+function thxRoute(el,first){const rail=el.querySelector('.tlrail');if(!rail)return;rail.classList.add('route');
+  const W=rail.clientWidth||600,H=58,yAt=x=>H/2+Math.sin(x/W*Math.PI*2.2+.4)*14;
+  let d=`M0 ${yAt(0).toFixed(1)}`;for(let x=8;x<=W;x+=8)d+=` L${x} ${yAt(x).toFixed(1)}`;
+  rail.querySelectorAll('.tlsvg,.tlpkg').forEach(n=>n.remove());
+  const fill=rail.querySelector('.tlfill'),to=parseFloat((fill&&fill.style.width)||0);
+  rail.insertAdjacentHTML('afterbegin',`<svg class="tlsvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path class="rd-base" d="${d}"/><path class="rd-dash" d="${d}"/><path class="rd-done" d="${d}"/></svg>`);
+  rail.insertAdjacentHTML('beforeend',`<span class="tlpkg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9M7.5 5.2l9 4.5"/></svg></span>`);
+  rail.querySelectorAll('.tln').forEach(n=>{const x=parseFloat(n.style.left)/100*W;n.style.top=(yAt(x)-6).toFixed(1)+'px'});
+  const done=rail.querySelector('.rd-done'),pkg=rail.querySelector('.tlpkg'),L=done.getTotalLength();
+  const put=pc=>{const x=pc/100*W;pkg.style.left=x+'px';pkg.style.top=yAt(x)+'px';
+    const a=Math.atan(Math.cos(x/W*Math.PI*2.2+.4)*14*Math.PI*2.2/W)*57.3;pkg.style.transform=`translate(-50%,-110%) rotate(${a.toFixed(1)}deg)`;
+    done.style.strokeDasharray=L;done.style.strokeDashoffset=L*(1-pc/100)};
+  const card=el.querySelector('.tlcard'),stp=card&&card.querySelector('.lbl');
+  if(!window.gsap||reduceMotion()){put(to);THX_R.p=to;return}
+  const o={p:first?0:THX_R.p};put(o.p);
+  gsap.to(o,{p:to,duration:Math.min(1.6,.5+Math.abs(to-o.p)/60),ease:'power2.inOut',onUpdate:()=>put(o.p),
+    onComplete:()=>{gsap.fromTo(pkg,{y:0},{y:-5,duration:.18,yoyo:true,repeat:1,ease:'power1.out'});
+      const on=rail.querySelector('.tln.on i,.tln.fut i');on&&gsap.fromTo(on,{boxShadow:'0 0 0 0 rgba(46,196,182,.7)'},{boxShadow:'0 0 0 12px rgba(46,196,182,0)',duration:.8})}});
+  if(card){gsap.fromTo(card,{clipPath:'inset(0 0 100% 0)',y:-8},{clipPath:'inset(0 0 0% 0)',y:0,duration:.75,ease:'power3.out',delay:.35});
+    const m=stp&&stp.textContent.match(/Update (\d+)|First report|Today|Storyline/);
+    if(m){card.querySelectorAll('.tlstamp').forEach(x=>x.remove());card.insertAdjacentHTML('afterbegin',`<span class="tlstamp" aria-hidden="true">${m[1]?'#'+m[1]:m[0]==='First report'?'NEW':m[0]==='Today'?'NOW':'ROUTE'}</span>`);
+      gsap.fromTo(card.querySelector('.tlstamp'),{scale:2.6,rotate:-28,opacity:0},{scale:1,rotate:-12,opacity:.9,duration:.4,ease:'back.out(3)',delay:1})}
+    card.querySelectorAll('b,.tlfig').forEach(b=>{b.childNodes.forEach(t=>{if(t.nodeType!==3)return;const mm=t.textContent.match(/(\$?)(\d{1,3}(?:\.\d+)?)(%| billion| million)/);if(!mm)return;
+      const v=parseFloat(mm[2]),dec=(mm[2].split('.')[1]||'').length,pre=t.textContent.slice(0,mm.index),post=t.textContent.slice(mm.index+mm[0].length),c={v:0};
+      gsap.to(c,{v,duration:1.1,delay:.6,ease:'power2.out',onUpdate:()=>{t.textContent=pre+mm[1]+c.v.toFixed(dec)+mm[3]+post}})})})}
+  THX_R.p=to}
 function thxClose(){if(!THX.el)return;clearTimeout(THX.timer);THX.typer&&THX.typer.stop&&THX.typer.stop();THX.el.hidden=true;THX.el.innerHTML='';const b=THX.el.previousElementSibling;if(b)b.hidden=false;THX.el=null}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-thx]');
   if(b){e.preventDefault();e.stopPropagation();thxClose();const st=b.nextElementSibling;if(!st)return;const cb=document.querySelector('#coop .cbub');if(cb)cb.hidden=true;
