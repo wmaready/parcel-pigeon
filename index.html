@@ -1706,7 +1706,7 @@ details.dr.i-down .rtile i{background:#1E4A38;color:#D3F5E6}
 .pact:hover{border-color:var(--accent)}
 .pact b{display:block;font-size:var(--fs-sm);font-weight:600}.pact small{display:block;font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
 .pact .xstamp{width:34px;height:34px}
-.pact.plain{padding:12px 14px}.pgo{margin-left:auto;color:var(--ink-2);font-size:20px}
+.pact.plain{padding:12px 14px}.why-line{margin:8px 0 12px;padding:10px 12px;border-left:3px solid var(--accent,#e8772e);background:var(--card-2,rgba(0,0,0,.03));border-radius:6px;font-size:14px;line-height:1.45}.why-line b{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;margin-bottom:2px}.pgo{margin-left:auto;color:var(--ink-2);font-size:20px}
 /* map: ownership lines */
 .we.own{stroke:#DCE3EA;opacity:.85}
 .wend{fill:#DCE3EA}
@@ -7683,6 +7683,7 @@ function card(n,full){
       <h3>${esc(n.title)}</h3>
       <p class="sum">${decode(n.sum)}</p>
       ${storyNew(n)}
+      ${n.why?`<p class="why-line"><b>Why it matters</b> ${esc(n.why)}</p>`:''}
       <section class="dsec imp-${n.imp}"><div class="dsh">${tag}${eff?`<span class="lited">${esc(eff)}</span>`:''}</div><p>${decode(n.plain)}</p></section>
       ${keyLinks(n)}
       ${chgTable(n)}
@@ -9146,7 +9147,7 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   if(Array.isArray(news)&&news.length){const seen=new Set(NEWS.map(n=>n.url));
     const words=s=>new Set(String(s).toLowerCase().match(/[a-z0-9.$%]+/g)||[]);
     const sim=(a,b)=>{const A=words(a),B=words(b);let k=0;A.forEach(w=>{if(B.has(w))k++});return k/Math.max(1,Math.min(A.size,B.size))};
-    news.forEach(n=>{if(!n||!n.url||seen.has(n.url))return;n.c=n.c||[];n.kind=n.kind||'News';if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];
+    news.forEach(n=>{if(n&&n.url&&seen.has(n.url)){const o=NEWS.find(x=>x.url===n.url);if(o){if(n.why)o.why=n.why;if(n.score)o.score=n.score}return}if(!n||!n.url)return;n.c=n.c||[];n.kind=n.kind||'News';if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];
       n.srcs.forEach(s=>seen.add(s.url));NEWS.push(n);ch=true;cleanStory(n);
       const own=ownSet(n),idsOf=c=>String(c||'').split(/\s*·\s*/).map(x=>logoId(x)).filter(Boolean);
       (n.dates||[]).forEach((d,i)=>{if(!d||!d.d||!clockWorthy(n,d))return;
