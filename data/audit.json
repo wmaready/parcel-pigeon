@@ -1,34 +1,8 @@
 {
- "run": "2026-10-17T04:50Z",
+ "run": "2026-10-17T05:30Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 40,
- "doc_cursor": 30,
- "checked_pairs": [
-  "70042e1b5ea7",
-  "62cb3ae5df27",
-  "dbb89994655f",
-  "0cae9f6a1079",
-  "dd1c7372cb2a",
-  "94d1ac334f4e",
-  "457e37db5347",
-  "4e8faef9252d",
-  "de313bc51fd7",
-  "4d5dedc8cd29",
-  "d46a0aebc57e",
-  "6bef0a5868e5",
-  "454e4f8f6a6b",
-  "5effb73bc21d",
-  "0b8aff140a01",
-  "f3a106e02077",
-  "7e4a0a07ad2f",
-  "5f83fff4b0b8",
-  "14a3d7429698",
-  "1bc66c00eda3",
-  "9047a4b56aa7",
-  "b54077ea2f7b"
- ],
  "issues": [
   {
    "sev": "high",
@@ -161,37 +135,6 @@
     "a9b8fc0d53f23",
     "abf7a28de14a5"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories say nothing about Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, 39,400 ZIP codes, or 99.9% of demand by 2029. None of the stories supports these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the $10.70 or $20 per-package prices, or recipient PIN and QR-code requirements. The UPS Secure Commerce story covers a different product with no pricing.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash courier returns, the $7.99 price, Macy's, Anthropologie or VF joining, or DoorDash's own drones. The Happy Returns/TikTok Shop story involves a different return provider and no DoorDash service.",
-   "ids": [],
    "fixed": false
   }
  ],
@@ -327,37 +270,6 @@
     "a9b8fc0d53f23",
     "abf7a28de14a5"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories say nothing about Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, 39,400 ZIP codes, or 99.9% of demand by 2029. None of the stories supports these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the $10.70 or $20 per-package prices, or recipient PIN and QR-code requirements. The UPS Secure Commerce story covers a different product with no pricing.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash courier returns, the $7.99 price, Macy's, Anthropologie or VF joining, or DoorDash's own drones. The Happy Returns/TikTok Shop story involves a different return provider and no DoorDash service.",
-   "ids": [],
    "fixed": false
   }
  ]
