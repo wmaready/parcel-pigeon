@@ -22,7 +22,8 @@
   "abf7a28de14a5",
   "af85980b179b5",
   "a666569771590",
-  "a33c3c3ba8e14"
+  "a33c3c3ba8e14",
+  "a0f38605e4132"
  ],
  "clock": [
   "e06:7"
@@ -121,20 +122,21 @@
   "bronx amazon dsp operators oppose nyc delivery protection ac",
   "ups launches secure commerce suite for shipping fraud and lo",
   "oregon lawmakers press usps on mail delivery problems on sta",
-  "kirkwood council kills walmart wing drone delivery proposal"
+  "kirkwood council kills walmart wing drone delivery proposal",
+  "shipt adds more than 500 sprouts locations to its marketplac"
  ],
  "harvested": [
-  "a773d361dac4e",
-  "a6c2418bed0a7",
-  "aee6669d325da",
+  "a2b81ad721cb8",
   "wacb825361479",
-  "a6cc2420ad66e",
+  "a6c2418bed0a7",
   "a2def09bc43bb",
   "a89d7e4beebd9",
-  "a2b81ad721cb8",
-  "a5d45f26f2219",
+  "a773d361dac4e",
   "w150132868eae",
-  "af8ee5ed067c6"
+  "a5d45f26f2219",
+  "a6cc2420ad66e",
+  "af8ee5ed067c6",
+  "aee6669d325da"
  ],
  "backfilled": true,
  "recent": [
@@ -496,6 +498,21 @@
      "url": "https://www.stltoday.com/news/local/government-politics/article_46703613-b7e8-48c3-b09b-264ed468d0ae.html"
     }
    ]
+  },
+  {
+   "id": "a0f38605e4132",
+   "title": "Shipt adds more than 500 Sprouts locations to its marketplace",
+   "date": "2026-10-17",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t",
+   "srcs": [
+    {
+     "src": "Simply Wall Street",
+     "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t"
+    }
+   ]
   }
  ],
  "copy": {
@@ -530,6 +547,10 @@
   "a33c3c3ba8e14": {
    "t": "Kirkwood council rejects Walmart-Wing drones",
    "m": "The proposed drone launchpad at the Kirkwood Walmart cannot be built under this proposal; shipping rates and…"
+  },
+  "a0f38605e4132": {
+   "t": "Shipt adds 500+ Sprouts stores",
+   "m": "Shoppers can now order from more than 500 added Sprouts locations on Shipt's same-day delivery marketplace;…"
   }
  },
  "queue": [
@@ -554,6 +575,20 @@
    "topic": "rates",
    "mask": 27,
    "url": "https://wmaready.github.io/parcel-pigeon/#clock"
+  },
+  {
+   "kind": "story",
+   "key": "story:shipt adds more than 500 sprouts locations to its marketplace",
+   "id": "a0f38605e4132",
+   "t": "Shipt adds 500+ Sprouts stores",
+   "m": "Shoppers can now order from more than 500 added Sprouts locations on Shipt's same-day delivery marketplace;…",
+   "big": false,
+   "at": "2026-10-17T00:47:17.568493-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": false,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a0f38605e4132"
   }
  ],
  "fuelq": {},
