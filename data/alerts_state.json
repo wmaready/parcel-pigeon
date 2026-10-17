@@ -98,7 +98,12 @@
   "story:kirkwood council kills walmart wing drone delivery proposal",
   "player:honeywellintel",
   "player:dematic",
-  "player:tgwlogisticsgr"
+  "player:tgwlogisticsgr",
+  "more:clock:e06:7,player:vanderlandeind,story:amazon warns it may close 15 new york city warehouses over delivery bill,story:shipt adds more than 500 sprouts locations to its marketplace",
+  "clock:e06:7",
+  "story:amazon warns it may close 15 new york city warehouses over delivery bill",
+  "story:shipt adds more than 500 sprouts locations to its marketplace",
+  "player:vanderlandeind"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -128,17 +133,17 @@
   "amazon warns it may close 15 new york city warehouses over d"
  ],
  "harvested": [
-  "a5d45f26f2219",
-  "a6c2418bed0a7",
-  "aee6669d325da",
-  "a2def09bc43bb",
+  "a2b81ad721cb8",
   "w150132868eae",
-  "a773d361dac4e",
   "a6cc2420ad66e",
+  "a5d45f26f2219",
   "af8ee5ed067c6",
   "a89d7e4beebd9",
-  "wacb825361479",
-  "a2b81ad721cb8"
+  "a2def09bc43bb",
+  "a773d361dac4e",
+  "aee6669d325da",
+  "a6c2418bed0a7",
+  "wacb825361479"
  ],
  "backfilled": true,
  "recent": [
@@ -574,62 +579,11 @@
    "m": "No vote date set; if closed, some same-day orders could shift to next-day delivery."
   }
  },
- "queue": [
-  {
-   "kind": "player",
-   "key": "player:vanderlandeind",
-   "at": "2026-10-16T19:29:36.953916-04:00",
-   "t": "New on the map: Vanderlande Industries",
-   "m": "Vanderlande designs, builds and services automated parcel and postal sorting systems, along with airport baggage handling and warehouse automation, for parcel carriers, postal operators and e-commerce companies.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
-  },
-  {
-   "kind": "clock",
-   "key": "clock:e06:7",
-   "at": "2026-10-17T00:31:28.333449-04:00",
-   "t": "OnTrac · UPS · Amazon…: starts in 7 days",
-   "m": "Peak fee of $0.50 to $1.00 added to each home-delivery package",
-   "lvl": 2,
-   "topic": "rates",
-   "mask": 27,
-   "url": "https://wmaready.github.io/parcel-pigeon/#clock"
-  },
-  {
-   "kind": "story",
-   "key": "story:shipt adds more than 500 sprouts locations to its marketplace",
-   "id": "a0f38605e4132",
-   "t": "Shipt adds 500+ Sprouts stores",
-   "m": "Shoppers can now order from more than 500 added Sprouts locations on Shipt's same-day delivery marketplace;…",
-   "big": false,
-   "at": "2026-10-17T00:47:17.568493-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a0f38605e4132"
-  },
-  {
-   "kind": "story",
-   "key": "story:amazon warns it may close 15 new york city warehouses over delivery bill",
-   "id": "a168f88090691",
-   "t": "Amazon may close 15 NYC warehouses",
-   "m": "No vote date set; if closed, some same-day orders could shift to next-day delivery.",
-   "big": false,
-   "at": "2026-10-17T06:47:39.216764-04:00",
-   "lvl": 1,
-   "topic": "news",
-   "notable": false,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a168f88090691"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-10-16",
-  "n": 5
+  "d": "2026-10-17",
+  "n": 1
  },
- "last_push": "2026-10-16T20:41:48.861494-04:00"
+ "last_push": "2026-10-17T07:28:47.981526-04:00"
 }
