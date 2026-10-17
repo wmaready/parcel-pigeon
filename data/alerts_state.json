@@ -24,7 +24,9 @@
   "a666569771590",
   "a33c3c3ba8e14"
  ],
- "clock": [],
+ "clock": [
+  "e06:7"
+ ],
  "fuel": {
   "OnTrac": "2026-10-19"
  },
@@ -122,17 +124,17 @@
   "kirkwood council kills walmart wing drone delivery proposal"
  ],
  "harvested": [
-  "a6cc2420ad66e",
-  "af8ee5ed067c6",
-  "a5d45f26f2219",
   "a773d361dac4e",
-  "a2def09bc43bb",
-  "a89d7e4beebd9",
-  "wacb825361479",
-  "w150132868eae",
   "a6c2418bed0a7",
   "aee6669d325da",
-  "a2b81ad721cb8"
+  "wacb825361479",
+  "a6cc2420ad66e",
+  "a2def09bc43bb",
+  "a89d7e4beebd9",
+  "a2b81ad721cb8",
+  "a5d45f26f2219",
+  "w150132868eae",
+  "af8ee5ed067c6"
  ],
  "backfilled": true,
  "recent": [
@@ -541,6 +543,17 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  },
+  {
+   "kind": "clock",
+   "key": "clock:e06:7",
+   "at": "2026-10-17T00:31:28.333449-04:00",
+   "t": "OnTrac · UPS · Amazon…: starts in 7 days",
+   "m": "Peak fee of $0.50 to $1.00 added to each home-delivery package",
+   "lvl": 2,
+   "topic": "rates",
+   "mask": 27,
+   "url": "https://wmaready.github.io/parcel-pigeon/#clock"
   }
  ],
  "fuelq": {},
