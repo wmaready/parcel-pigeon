@@ -416,13 +416,14 @@
  },
  "drone-delivery": {
   "n": "Drone delivery expansion and FAA Part 108",
-  "s": "Amazon's drone expansion faces its first local pushback in Portland while the FAA's Part 108 rule remains unpublished.",
+  "s": "Drone operators are expanding US networks while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
-   "af529411b3b18"
+   "af529411b3b18",
+   "a453e283127db"
   ],
   "first": "2025-03-31",
   "last": "2026-10-15",
@@ -432,12 +433,13 @@
    "Regional"
   ],
   "cx": {
-   "sig": "314167040eb9",
+   "sig": "6f8c217c1f66",
    "v": 2,
    "beats": {},
-   "now": "Part 108 had not been published as of Oct. 9, and the FCC plans an Oct. 29 vote on 800 MHz drone use. Amazon has also sought a Portland permit."
+   "intro": "Drone networks keep growing across the US while the FAA rule that would make routine flights easier is still pending.",
+   "now": "Part 108 was still unpublished as of Oct. 9, and the FCC votes Oct. 29 on 800 MHz drone use. Amazon has also sought a Portland Prime Air permit."
   },
-  "rv": "7342104a4926"
+  "rv": "777fe2c5f26b"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
