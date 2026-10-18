@@ -1371,6 +1371,59 @@
     "https://www.wsgr.com/en/insights/wilson-sonsini-advises-manna-air-delivery-on-dollar50-million-series-b.html"
    ],
    "enriched": "2026-10-18"
+  },
+  {
+   "id": "dashwavedelive",
+   "n": "DashWave Delivery LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": "2023",
+   "s": "DashWave Delivery is a New Jersey-based last-mile delivery company and Amazon Delivery Service Partner. It delivers packages in the tri-state area, including on-foot 'Walker' routes in Manhattan, and also serves Connecticut and Pennsylvania.",
+   "al": [
+    "DASHWAVE DELIVERY",
+    "DashWave Delivery",
+    "Dashwave Delivery LLC"
+   ],
+   "src": "https://dashwavedelivery.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-18",
+   "story": "ad0f07f43ec5e",
+   "site": "dashwavedelivery.com",
+   "srcs": [
+    "https://dashwavedelivery.com/",
+    "https://www.amny.com/news/father-son-delivery-business-impact-amazons-local-partners/",
+    "https://businessdailynetwork.com/stories/676579529-dashwave-delivery-founder-opposes-nyc-delivery-protection-act-our-livelihood-is-at-stake"
+   ],
+   "enriched": "2026-10-18"
+  },
+  {
+   "id": "wgatransit",
+   "n": "WGA Transit LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "WGA Transit is an Amazon Delivery Service Partner that runs contracted last-mile package deliveries in parts of Manhattan, dispatching from Staten Island.",
+   "al": [
+    "WGA Transit"
+   ],
+   "src": "https://www.aboutamazon.com/news/transportation/amazon-dsp-program-investment-2026",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-18",
+   "story": "ad0f07f43ec5e",
+   "srcs": [
+    "https://www.aboutamazon.com/news/transportation/amazon-dsp-program-investment-2026",
+    "https://www.linkedin.com/in/joseph-artus-71942547/",
+    "https://www.snagajob.com/jobs/1170530803"
+   ],
+   "enriched": "2026-10-18"
   }
  ],
  "edges": [
@@ -2336,6 +2389,33 @@
    "t": "Delivery platform integration",
    "url": "https://dronelife.com/2026/04/01/manna-raises-50m-to-expand-drone-delivery-network-in-the-u-s/",
    "story": "a453e283127db"
+  },
+  {
+   "a": "amazon",
+   "b": "dashwavedelive",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon uses DashWave Delivery as a delivery service partner in Manhattan",
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
+   "story": "ad0f07f43ec5e"
+  },
+  {
+   "a": "amazon",
+   "b": "wgatransit",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon uses WGA Transit as a delivery service partner in Harlem",
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
+   "story": "ad0f07f43ec5e"
+  },
+  {
+   "a": "dashwavedelive",
+   "b": "amzlogistics",
+   "k": "partner",
+   "y": "2023",
+   "t": "Amazon Delivery Service Partner (Manhattan walker routes)",
+   "url": "https://www.amny.com/news/father-son-delivery-business-impact-amazons-local-partners/",
+   "story": "ad0f07f43ec5e"
   }
  ],
  "moves": [
@@ -2454,6 +2534,8 @@
   "walmart": "2026-10-17",
   "walmartmarketp": "2026-10-17",
   "mannaairdelive": "2026-10-18",
-  "schoonercapita": "2026-10-18"
+  "schoonercapita": "2026-10-18",
+  "dashwavedelive": "2026-10-18",
+  "wgatransit": "2026-10-18"
  }
 }

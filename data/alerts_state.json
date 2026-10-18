@@ -25,7 +25,8 @@
   "a33c3c3ba8e14",
   "a0f38605e4132",
   "a168f88090691",
-  "aac92cdbd2591"
+  "aac92cdbd2591",
+  "ad0f07f43ec5e"
  ],
  "clock": [
   "e06:7"
@@ -82,7 +83,9 @@
   "tgwlogisticsgr",
   "walmartmarketp",
   "mannaairdelive",
-  "schoonercapita"
+  "schoonercapita",
+  "dashwavedelive",
+  "wgatransit"
  ],
  "sent": [
   "player:pirateship",
@@ -111,7 +114,11 @@
   "story:amazon passes 1 million robots in its facilities futurism reports",
   "player:walmartmarketp",
   "player:mannaairdelive",
-  "player:schoonercapita"
+  "player:schoonercapita",
+  "more:player:dashwavedelive,player:wgatransit,story:amazon warns it could pull nyc delivery jobs over delivery protection act",
+  "story:amazon warns it could pull nyc delivery jobs over delivery protection act",
+  "player:wgatransit",
+  "player:dashwavedelive"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -139,20 +146,21 @@
   "kirkwood council kills walmart wing drone delivery proposal",
   "shipt adds more than 500 sprouts locations to its marketplac",
   "amazon warns it may close 15 new york city warehouses over d",
-  "amazon passes 1 million robots in its facilities futurism re"
+  "amazon passes 1 million robots in its facilities futurism re",
+  "amazon warns it could pull nyc delivery jobs over delivery p"
  ],
  "harvested": [
+  "a89d7e4beebd9",
+  "a6cc2420ad66e",
+  "w150132868eae",
   "a5d45f26f2219",
   "a6c2418bed0a7",
-  "af8ee5ed067c6",
-  "w150132868eae",
-  "wacb825361479",
-  "a89d7e4beebd9",
-  "a2b81ad721cb8",
-  "a773d361dac4e",
   "aee6669d325da",
-  "a6cc2420ad66e",
-  "a2def09bc43bb"
+  "af8ee5ed067c6",
+  "wacb825361479",
+  "a773d361dac4e",
+  "a2def09bc43bb",
+  "a2b81ad721cb8"
  ],
  "backfilled": true,
  "recent": [
@@ -559,6 +567,21 @@
      "url": "https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety"
     }
    ]
+  },
+  {
+   "id": "ad0f07f43ec5e",
+   "title": "Amazon warns it could pull NYC delivery jobs over Delivery Protection Act",
+   "date": "2026-10-18",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
+   "srcs": [
+    {
+     "src": "The Times of India",
+     "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms"
+    }
+   ]
   }
  ],
  "copy": {
@@ -605,13 +628,17 @@
   "aac92cdbd2591": {
    "t": "Amazon hits 1 million warehouse robots",
    "m": "No change to shipping rates or service; the milestone reflects Amazon's internal warehouse automation."
+  },
+  "ad0f07f43ec5e": {
+   "t": "Amazon warns of NYC delivery job cuts",
+   "m": "No service or rate changes yet; the cuts would only follow if the Delivery Protection Act passes and Amazon…"
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-18",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-10-18T10:29:14.055360-04:00"
+ "last_push": "2026-10-18T12:49:47.539146-04:00"
 }
