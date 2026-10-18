@@ -416,14 +416,14 @@
  },
  "drone-delivery": {
   "n": "Drone delivery expansion and FAA Part 108",
-  "s": "Drone operators are expanding US networks while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
+  "s": "The FAA's Part 108 BVLOS rule was still unpublished as of Oct. 9, so routine drone delivery relies on waivers or Part 135 certificates, which DoorDash now holds.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a453e283127db"
+   "a86fd472c4cfb"
   ],
   "first": "2025-03-31",
   "last": "2026-10-15",
@@ -433,13 +433,15 @@
    "Regional"
   ],
   "cx": {
-   "sig": "6f8c217c1f66",
+   "sig": "2c9f9ae85f13",
    "v": 2,
-   "beats": {},
-   "intro": "Drone networks keep growing across the US while the FAA rule that would make routine flights easier is still pending.",
-   "now": "Part 108 was still unpublished as of Oct. 9, and the FCC votes Oct. 29 on 800 MHz drone use. Amazon has also sought a Portland Prime Air permit."
+   "beats": {
+    "a60770e8e9c32": "Wing and Walmart are targeting Denver and Seattle in 2027, which would take them to nearly 20 metros and more than 270 Walmart stores."
+   },
+   "intro": "Drone delivery is scaling up while the FAA rule meant to make it routine is still unpublished. Shippers should watch both.",
+   "now": "As of Oct. 9, Part 108 was still unpublished, so BVLOS delivery runs on waivers or Part 135 certificates. The FCC votes on 800 MHz drone use Oct. 29."
   },
-  "rv": "777fe2c5f26b"
+  "rv": "8c5c1cf4aba8"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
