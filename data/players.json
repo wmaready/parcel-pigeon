@@ -1346,18 +1346,31 @@
    "id": "schoonercapita",
    "n": "Schooner Capital",
    "realm": "capital",
-   "own": null,
+   "own": "private",
    "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Investor in Manna Air Delivery",
-   "al": [],
-   "src": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+   "parent": "mercari",
+   "hq": "Boston, MA, USA",
+   "yr": "1971",
+   "s": "Boston-based private investment firm (family office) that invests in venture and growth companies, and took part in drone-delivery company Manna Air Delivery's $50M Series B in 2026.",
+   "al": [
+    "Schooner Capital LLC"
+   ],
+   "src": "https://www.linkedin.com/company/schooner-capital",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-14",
-   "story": "a453e283127db"
+   "story": "a453e283127db",
+   "site": "schoonercapital.com",
+   "geo": [
+    -71.059,
+    42.36
+   ],
+   "srcs": [
+    "https://www.linkedin.com/company/schooner-capital",
+    "https://dronelife.com/2026/04/01/manna-raises-50m-to-expand-drone-delivery-network-in-the-u-s/",
+    "https://www.wsgr.com/en/insights/wilson-sonsini-advises-manna-air-delivery-on-dollar50-million-series-b.html"
+   ],
+   "enriched": "2026-10-18"
   }
  ],
  "edges": [
@@ -2440,6 +2453,7 @@
   "tgwlogisticsgr": "2026-10-16",
   "walmart": "2026-10-17",
   "walmartmarketp": "2026-10-17",
-  "mannaairdelive": "2026-10-18"
+  "mannaairdelive": "2026-10-18",
+  "schoonercapita": "2026-10-18"
  }
 }
