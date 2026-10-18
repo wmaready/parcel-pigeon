@@ -874,6 +874,11 @@ nav.tabs .tabnb{position:absolute;top:4px;right:6px;margin:0;min-width:18px;heig
 .cm-r b{display:block;font-weight:600;font-size:var(--fs-sm);line-height:1.3}
 .cm-r small{display:block;color:var(--ink-2);font-size:var(--fs-xs);margin-top:1px}
 .cm-l{padding:var(--sp-3) var(--sp-3) var(--sp-1)}
+.tsearch{display:flex;align-items:center;gap:10px;width:100%;margin:0 0 var(--sp-4);padding:12px 14px;border:1px solid var(--line,rgba(127,127,127,.3));border-radius:12px;background:var(--card,transparent);color:var(--ink-2);font:inherit;font-size:var(--fs-sm);text-align:left;cursor:pointer;min-height:44px}
+.tsearch:hover{color:var(--ink)}
+.reqco{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;text-align:left;padding:10px 12px;border:1px dashed rgba(91,141,239,.55);border-radius:10px;background:transparent;color:var(--ink);font:inherit;cursor:pointer;margin:6px 0 0}
+.reqco small{color:var(--ink-2)}
+.reqco[disabled]{cursor:default;opacity:.8}
 .cm-none{padding:var(--sp-2) var(--sp-3);margin:0;font-size:var(--fs-sm);color:var(--ink-2)}
 @media (max-width:959px){.mside.open~*{}}
 @media (prefers-reduced-motion:reduce){.cnav.land .coop,.cbub,.cmenu{animation:none}}
@@ -2462,6 +2467,11 @@ body.akopen{overflow:hidden}@media (max-width:620px){.akwrap.answered .akchips{d
 .plnew{border:1px solid rgba(46,196,182,.35);border-radius:10px;padding:8px;background:rgba(46,196,182,.05)}
 .plnew .nfdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#2EC4B6;margin-right:6px}
 .plnew .pls{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-2)}
+.player-search{display:flex;align-items:center;gap:10px;margin:12px 0 16px;border-bottom:1px solid var(--grid-strong);padding:8px 0}
+.player-search input{width:100%;min-width:0;background:var(--panel);color:var(--ink);border:1px solid var(--grid-strong);border-radius:var(--r-sm);padding:12px;font:inherit}
+.player-search .btn{flex-shrink:0}
+.plmatch{display:block;color:var(--ink-2);font-size:12px;font-weight:400;white-space:normal;overflow-wrap:anywhere;margin-top:5px}
+.plresults .plr{width:100%}
 .cal .c.has{box-shadow:inset 0 2px 0 rgba(91,141,239,.55)}
 .cal .c.has .clg{display:flex;flex-wrap:wrap;gap:2px;margin-top:auto}
 
@@ -2710,6 +2720,7 @@ body.bio-open{overflow:hidden}
 <!-- ================= TODAY ================= -->
 <section id="s-today" data-section>
   <div class="shead"><div class="todayhd"><div class="tdate"><h1>Today</h1><div class="tday"><span id="tdayDate"></span><span class="tnow" id="tdayTime"></span></div></div></div><div class="views" id="vs-today" role="group" aria-label="Today view"></div></div>
+  <button type="button" class="tsearch" data-tsearch><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Search stories, companies, documents</span></button>
   <div class="hero hero-wide" id="todayHero"><div class="herobody" id="heroBody"></div></div>
   <div class="view" data-view="brief">
     <div class="stack two">
@@ -2772,7 +2783,7 @@ body.bio-open{overflow:hidden}
     </div>
     <div class="mkey lbl"><span><i class="k-own"></i>Owns</span><span><i class="k-deal"></i>Bought, merged, sold or spun off</span><span><i class="k-inv"></i>Invested</span><span><i class="k-part"></i>Partners</span></div>
   </div>
-  <div class="view" data-view="players"><div class="panel"><div class="ph"><h2>Every player we track</h2><span class="lbl" id="plCount"></span></div><div id="plList"></div></div></div>
+  <div class="view" data-view="players"><div class="panel"><div class="ph"><h2>Every player we track</h2><span class="lbl" id="plCount" role="status" aria-live="polite"></span></div><div class="player-search"><input id="playerQ" type="search" placeholder="Company, old name, ticker, place or sector" aria-label="Search Players" autocomplete="off"><button type="button" class="btn" data-player-clear aria-label="Clear Players search" title="Clear search">×</button></div><div id="plList"></div></div></div>
 </section>
 
 <!-- ================= RATE CLOCK ================= -->
@@ -8620,6 +8631,7 @@ function watchReading(){
 }
 
 function mFilter(){const q=($('mq').value||'').trim().toLowerCase();if(!q)return null;
+  if(window.ppCompanySearch)return new Set(window.ppCompanySearch(q,PLAYERS,PEDGES,RL).map(x=>x.p.id));
   return new Set(PLAYERS.filter(p=>[p.n,...(p.al||[]),RL[p.realm],p.s,p.hq||'',ownPlain(p)].join(' ').toLowerCase().includes(q)).map(p=>p.id))}
 const PCAR={ups:'c-ups',fedex:'c-fdx',usps:'c-usps',amazon:'c-amz',amzship:'c-amz',primeair:'c-amz',ontrac:'c-ontrac',dhlexpress:'c-dhl',dhlecom:'c-dhl',dhl:'c-dhl'};
 function chipCls(p){const k=PCAR[p.id];return k?' '+k:''}
@@ -8745,6 +8757,14 @@ function pDocs(p){const names=[p.n,...(p.al||[])].filter(n=>n&&n.length>2),re=ne
 function pEarn(p){return p.id==='ups'||p.id==='fedex'}
 let playerBrowse='all';
 function renderPlayers(){
+  renderQon();
+  const searchInput=$('playerQ'),query=($('mq').value||'').trim();if(searchInput&&searchInput.value!==query)searchInput.value=query;
+  if(query&&window.ppCompanySearch){
+    const hits=window.ppCompanySearch(query,PLAYERS,PEDGES,RL);
+    $('plCount').textContent=`${hits.length} match${hits.length===1?'':'es'} · ${PLAYERS.length} tracked`;
+    $('plList').innerHTML=hits.length?`<div class="plg plresults">${hits.map(({p,reason})=>`<button type="button" class="plr" data-pl="${esc(p.id)}" data-goto-map><span class="pln">${logoOrMono(p,'lgs')}<span>${esc(p.n)}<small class="plmatch">${esc(reason)}</small></span></span><span class="plo">${esc(RL[p.realm]||'')}${p.hq?' · '+esc(p.hq):''}</span></button>`).join('')}</div>`:`<div class="empty">No tracked company matches “${esc(query)}”.</div>${window.ppReqBtn?window.ppReqBtn(query):''}`;
+    return;
+  }
   const q=mFilter(),L=PLAYERS.filter(p=>!q||q.has(p.id));
   $('plCount').textContent=`${L.length} of ${PLAYERS.length}`;
   // "New players found" sits on top until you open each one; then it lives in its group like any other
@@ -8975,6 +8995,8 @@ document.addEventListener('click',e=>{
   const mm=e.target.closest('#mMode [data-m]');if(mm){MS.mode=mm.dataset.m;store.set('pw-mmode',MS.mode);renderMap()}
 },true);
 let mqT;$('mq').addEventListener('input',()=>{clearTimeout(mqT);mqT=setTimeout(renderMna,120)});
+$('playerQ').addEventListener('input',e=>{$('mq').value=e.target.value;clearTimeout(mqT);mqT=setTimeout(renderPlayers,120)});
+$('playerQ').addEventListener('keydown',e=>{if(e.key==='Escape'){$('mq').value='';renderPlayers()}if(e.key==='Enter'){const first=$('plList').querySelector('[data-pl]');if(first)first.click()}});
 addEventListener('resize',()=>{clearTimeout(mqT);mqT=setTimeout(drawLines,100)});
 indexPlayers();
 
@@ -9533,7 +9555,7 @@ renderClocks();setInterval(renderClocks,10000);
     const unread=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert').sort((x,y)=>y.date.localeCompare(x.date)).slice(0,2);
     menu.innerHTML=`<div class="cm-hd"><span class="xname">Coop</span><span>Where to?</span><button class="cm-x" data-cclose aria-label="Close">×</button></div>
       <label class="sr" for="cAsk">${sq?esc(sq.ph):'Search everything'}</label><input id="cAsk" class="cm-ask" type="search" placeholder="${sq?esc(sq.ph):'Search stories, companies, documents'}" value="${sq?esc($(sq.f).value):''}" autocomplete="off">
-      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop a parcel question</b><small>Surcharges, DIM weight, zones, fuel, contract terms</small></span></button>`:''}
+      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop: companies, documents &amp; news</b><small>Saved profiles, guide excerpts, deals and tracked fees</small></span></button>`:''}
       <div class="cm-res" id="cRes"><div class="cm-q">${QUICK().map(([g,t,s])=>`<button class="cm-r" data-cgo="${g}"><b>${esc(t)}</b><small>${esc(s)}</small></button>`).join('')}</div>
       ${unread.length?`<div class="lbl cm-l">You haven’t read</div>${unread.map(n=>row({o:n.id,t:n.title,s:fmtD(n.date)})).join('')}`:''}</div>
       <div class="cm-foot"><button class="cm-fact" data-cfact>Tell me a fun fact</button><button class="cm-fact" data-tour>Take the tour</button><label class="cm-mute" data-cquiet><span>Coop’s notes</span><input type="checkbox" role="switch" ${quiet()?'':'checked'} aria-label="Coop’s pop-up notes"><i aria-hidden="true"></i><b>${quiet()?'Muted':'On'}</b></label></div>`;
@@ -9543,8 +9565,8 @@ renderClocks();setInterval(renderClocks,10000);
       const n=sq.f==='q'?filtered().length:sq.f==='dq'?DOCS.filter(d=>[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(q.toLowerCase())).length:null;
       return `<button class="cm-r cm-here" data-cclose><b>Show ${n==null?'matches':n+' match'+(n===1?'':'es')} in ${esc(sq.w)}</b></button>`};
     ask.addEventListener('input',()=>{const q=ask.value.trim();const top=here(q.length>=2?q:'');if(q.length<2){res.innerHTML=home;return}const h=hits(q);
-      const askIt=window.PP_ASK&&(q.length>12||/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q))?`<button class="cm-r cm-askit" data-askopen="${esc(q)}" data-cclose><b>Ask Coop: “${esc(q.length>60?q.slice(0,58)+'…':q)}”</b><small>An answer from the carriers' guides</small></button>`:'';
-      res.innerHTML=askIt+top+(h.length?(top||askIt?'<div class="lbl cm-l">Everywhere</div>':'')+h.map(row).join(''):top||askIt?'':`<p class="cm-none">Nothing for “${esc(q)}”. Even I can’t deliver that. Try a carrier, a fee or a company.</p>`);el.classList.add('talking');clearTimeout(ask._t);ask._t=setTimeout(()=>el.classList.remove('talking'),600)});
+      const askIt=window.PP_ASK&&(q.length>12||/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q))?`<button class="cm-r cm-askit" data-askopen="${esc(q)}" data-cclose><b>Ask Coop: “${esc(q.length>60?q.slice(0,58)+'…':q)}”</b><small>Find matching saved profiles, excerpts and stories</small></button>`:'';
+      res.innerHTML=askIt+top+(h.length?(top||askIt?'<div class="lbl cm-l">Everywhere</div>':'')+h.map(row).join(''):top||askIt?'':`<p class="cm-none">Nothing for “${esc(q)}”. Even I can’t deliver that. Try a carrier, a fee or a company.</p>`)+(!h.some(x=>x.pl)&&q.length>=3&&!/\?$|^(how|what|why|when|does|do|can|is|are|which|who|should)\b/i.test(q)&&window.ppReqBtn?'<div class="cm-l">'+window.ppReqBtn(q)+'</div>':'');el.classList.add('talking');clearTimeout(ask._t);ask._t=setTimeout(()=>el.classList.remove('talking'),600)});
     if(ask.value.trim().length>=2)ask.dispatchEvent(new Event('input'));
     if(innerWidth>=700||sq)setTimeout(()=>ask.focus({preventScroll:true}),40);
   }
@@ -9715,6 +9737,7 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
    addEventListener('keydown',e=>{if(e.key==='Escape'&&!bd.hidden)closeBio()});}}
 </script>
 <link rel="stylesheet" href="mx.css">
+<script src="company-search.js"></script>
 <script src="mx.js"></script>
 <script src="ask.js"></script>
 </body>

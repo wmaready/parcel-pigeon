@@ -192,13 +192,14 @@ side.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){se
 /* ---- search ---- */
 const q=$('mxQ'),sugg=$('mxSugg');
 function matches(t){t=t.trim().toLowerCase();if(!t)return [];
+  if(window.ppCompanySearch){const seen=new Set();return window.ppCompanySearch(t,N.map(n=>n.p),PEDGES,RL).map(x=>byId[x.p.id]).filter(n=>n&&!seen.has(n.id)&&seen.add(n.id))}
   return N.map(n=>{const names=[n.p.n,...(n.p.al||[])].map(x=>String(x).toLowerCase());
     const s=names.some(x=>x.startsWith(t))?0:names.some(x=>x.includes(t))?1:(n.p.hq||'').toLowerCase().includes(t)?2:9;
     return {n,s}}).filter(x=>x.s<9).sort((a,b)=>a.s-b.s||b.n.deg-a.n.deg).map(x=>x.n);}
 q.addEventListener('input',()=>{const L=matches(q.value);
   G.classList.toggle('search',!!q.value.trim()&&!sel);const hit=new Set(L.map(n=>n.id));
   $('mxN').querySelectorAll('.mx-n').forEach(g=>g.classList.toggle('hit',hit.has(g.dataset.id)));
-  if(!L.length){sugg.hidden=!q.value.trim();sugg.innerHTML=q.value.trim()?'<button disabled>No match</button>':'';return}
+  if(!L.length){sugg.hidden=!q.value.trim();sugg.innerHTML=q.value.trim()?(window.ppReqBtn?window.ppReqBtn(q.value.trim()):'<button disabled>No match</button>'):'';return}
   sugg.hidden=false;sugg.innerHTML=L.slice(0,7).map(n=>{const t=q.value.trim().toLowerCase(),al=(n.p.al||[]).find(a=>a.toLowerCase().includes(t)&&!n.p.n.toLowerCase().includes(t));
     return `<button data-go="${esc(n.id)}"><span>${esc(n.p.n)}${al?` <small style="margin:0">(was ${esc(al)})</small>`:''}</span><small>${esc(RL[n.p.realm]||'')}</small></button>`}).join('');
   if(wrap.classList.contains('list'))list();});
