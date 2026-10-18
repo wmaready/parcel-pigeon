@@ -1,8 +1,34 @@
 {
- "run": "2026-10-18T04:31Z",
+ "run": "2026-10-18T04:49Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
+ "link_cursor": 40,
+ "doc_cursor": 30,
+ "checked_pairs": [
+  "f3a106e02077",
+  "1bc66c00eda3",
+  "b54077ea2f7b",
+  "14a3d7429698",
+  "de313bc51fd7",
+  "7e4a0a07ad2f",
+  "6bef0a5868e5",
+  "4e8faef9252d",
+  "4d5dedc8cd29",
+  "5effb73bc21d",
+  "70042e1b5ea7",
+  "457e37db5347",
+  "d46a0aebc57e",
+  "9047a4b56aa7",
+  "0cae9f6a1079",
+  "dbb89994655f",
+  "0b8aff140a01",
+  "454e4f8f6a6b",
+  "62cb3ae5df27",
+  "dd1c7372cb2a",
+  "94d1ac334f4e",
+  "5f83fff4b0b8"
+ ],
  "issues": [
   {
    "sev": "high",
@@ -137,13 +163,34 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"NYC advocates rally for three last-mile delivery facility bills\" may be out of date: newer story \"Amazon warns it may close 15 New York City warehouses over delivery bill\"",
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
    "ids": [
-    "a9b8fc0d53f23",
-    "a168f88090691"
+    "h426",
+    "h427"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian,' or its 39,400 ZIP code and 99.9% demand targets for 2029. The only Amazon delivery stories concern New York warehouses, drone hubs, robots and Amazon Shipping rate cards.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, recipient PIN or QR code requirements, or the $10.70 and $20 prices. The only UPS story is the Secure Commerce suite, which gives no pricing, and the only FedEx story is a pension case.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash courier returns, the $7.99 fee, Macy's, Anthropologie or VF brands joining, or DoorDash-designed drones. The Zipline story concerns a different company's drone delivery for Teriyaki Madness.",
+   "ids": [],
    "fixed": false
   }
  ],
@@ -281,13 +328,34 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"NYC advocates rally for three last-mile delivery facility bills\" may be out of date: newer story \"Amazon warns it may close 15 New York City warehouses over delivery bill\"",
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
    "ids": [
-    "a9b8fc0d53f23",
-    "a168f88090691"
+    "h426",
+    "h427"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian,' or its 39,400 ZIP code and 99.9% demand targets for 2029. The only Amazon delivery stories concern New York warehouses, drone hubs, robots and Amazon Shipping rate cards.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, recipient PIN or QR code requirements, or the $10.70 and $20 prices. The only UPS story is the Secure Commerce suite, which gives no pricing, and the only FedEx story is a pension case.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash courier returns, the $7.99 fee, Macy's, Anthropologie or VF brands joining, or DoorDash-designed drones. The Zipline story concerns a different company's drone delivery for Teriyaki Madness.",
+   "ids": [],
    "fixed": false
   }
  ]
