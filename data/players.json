@@ -1313,52 +1313,34 @@
    "id": "mannaairdelive",
    "n": "Manna Air Delivery",
    "realm": "auto",
-   "own": null,
+   "own": "private",
    "tk": null,
-   "parent": null,
-   "hq": null,
+   "parent": "mercari",
+   "hq": "Dublin, Ireland",
    "yr": null,
-   "s": "Aviation technology company that operates drone delivery of food, groceries, pharmacy products and other essentials",
-   "al": [],
+   "s": "Manna operates autonomous tether-lowering drones for suburban last-mile delivery of food, groceries and other goods, through its own app and partner delivery platforms, and has opened bases in Tulsa, Oklahoma.",
+   "al": [
+    "Manna",
+    "Manna Aero",
+    "Manna Drone Delivery",
+    "Manna Drones Limited"
+   ],
    "src": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-14",
-   "story": "a453e283127db"
-  },
-  {
-   "id": "arkinvest",
-   "n": "ARK Invest",
-   "realm": "capital",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Investor in Manna Air Delivery",
-   "al": [],
-   "src": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-14",
-   "story": "a453e283127db"
-  },
-  {
-   "id": "irelandsstrate",
-   "n": "Ireland's Strategic Investment Fund",
-   "realm": "capital",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Investor in Manna Air Delivery",
-   "al": [],
-   "src": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-14",
-   "story": "a453e283127db"
+   "story": "a453e283127db",
+   "site": "manna.aero",
+   "geo": [
+    -6.26,
+    53.35
+   ],
+   "srcs": [
+    "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+    "https://www.unmannedairspace.info/uncategorized/manna-expands-us-drone-delivery-operations-with-three-new-tulsa-bases/",
+    "https://techcrunch.com/2026/07/08/autonomous-drone-delivery-startup-manna-plots-major-u-s-expansion/"
+   ],
+   "enriched": "2026-10-18"
   },
   {
    "id": "schoonercapita",
@@ -2298,30 +2280,48 @@
    "story": "ac0d92b34ccce"
   },
   {
-   "a": "arkinvest",
-   "b": "mannaairdelive",
-   "k": "invested",
-   "y": "2026",
-   "t": "ARK Invest is an investor in Manna Air Delivery",
-   "url": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
-   "story": "a453e283127db"
-  },
-  {
-   "a": "irelandsstrate",
-   "b": "mannaairdelive",
-   "k": "invested",
-   "y": "2026",
-   "t": "Ireland's Strategic Investment Fund is an investor in Manna Air Delivery",
-   "url": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
-   "story": "a453e283127db"
-  },
-  {
    "a": "schoonercapita",
    "b": "mannaairdelive",
    "k": "invested",
    "y": "2026",
    "t": "Schooner Capital is an investor in Manna Air Delivery",
    "url": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Delivery platform partnership",
+   "url": "https://www.siliconrepublic.com/start-ups/irish-drone-start-up-manna-partners-uber-air-delivery-europe-us",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "deliveroo",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration",
+   "url": "https://www.businesswire.com/news/home/20260310714366/en/Manna-Air-Delivery-Raises-$50Million-Series-B-as-It-Announces-Plans-to-Expand-in-the-United-States",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "jet",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration (sources name it Just Eat)",
+   "url": "https://www.businesswire.com/news/home/20260310714366/en/Manna-Air-Delivery-Raises-$50Million-Series-B-as-It-Announces-Plans-to-Expand-in-the-United-States",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "doordash",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration",
+   "url": "https://dronelife.com/2026/04/01/manna-raises-50m-to-expand-drone-delivery-network-in-the-u-s/",
    "story": "a453e283127db"
   }
  ],
@@ -2439,6 +2439,7 @@
   "vanderlandeind": "2026-10-16",
   "tgwlogisticsgr": "2026-10-16",
   "walmart": "2026-10-17",
-  "walmartmarketp": "2026-10-17"
+  "walmartmarketp": "2026-10-17",
+  "mannaairdelive": "2026-10-18"
  }
 }
