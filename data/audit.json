@@ -1,5 +1,5 @@
 {
- "run": "2026-10-17T23:24Z",
+ "run": "2026-10-18T00:40Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -124,6 +124,15 @@
    "ids": [
     "a54805bbe5d65",
     "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 15 days old; check whether it has been announced",
+   "ids": [
+    "07"
    ],
    "fixed": false
   },
@@ -259,6 +268,15 @@
    "ids": [
     "a54805bbe5d65",
     "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 15 days old; check whether it has been announced",
+   "ids": [
+    "07"
    ],
    "fixed": false
   },
