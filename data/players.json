@@ -1454,6 +1454,38 @@
     "https://www.linkedin.com/company/shipstore-software"
    ],
    "enriched": "2026-10-19"
+  },
+  {
+   "id": "anthropologie",
+   "n": "Anthropologie",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": "urbanoutfitters",
+   "hq": "Philadelphia, PA, USA",
+   "yr": "1992",
+   "s": "Apparel, home and gifting retailer and URBN banner that ships online orders and, since late 2026, offers one-hour local delivery from more than 220 U.S. stores through DoorDash.",
+   "al": [
+    "Anthro",
+    "Anthropologie Group",
+    "Anthropologie Weddings"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-19",
+   "story": "a52f201b6dc3d",
+   "site": "anthropologie.com",
+   "geo": [
+    -75.165,
+    39.953
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+    "https://chainstoreage.com/doordash-delivers-macys-anthropologie-north-face-vans-timberland",
+    "https://about.doordash.com/en-us/news/doordash-just-made-the-mall-in-your-pocket-bigger"
+   ],
+   "enriched": "2026-10-19"
   }
  ],
  "edges": [
@@ -2464,6 +2496,33 @@
    "t": "Maersk and Shipstore integrate North American e-commerce delivery",
    "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/",
    "story": "a511c2951ce03"
+  },
+  {
+   "a": "anthropologie",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Anthropologie launches national DoorDash delivery partnership",
+   "url": "https://www.glossy.co/fashion/anthropologie-holiday-campaign-2026-doordash/",
+   "story": "a52f201b6dc3d"
+  },
+  {
+   "a": "urbanoutfitters",
+   "b": "anthropologie",
+   "k": "owns",
+   "y": "1992",
+   "t": "URBN banner; parent opened first Anthropologie store in 1992",
+   "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+   "story": "a52f201b6dc3d"
+  },
+  {
+   "a": "doordash",
+   "b": "anthropologie",
+   "k": "partner",
+   "y": "2026",
+   "t": "DoorDash on-demand delivery and returns from 220+ stores",
+   "url": "https://about.doordash.com/en-us/news/doordash-just-made-the-mall-in-your-pocket-bigger",
+   "story": "a52f201b6dc3d"
   }
  ],
  "moves": [
@@ -2585,6 +2644,7 @@
   "schoonercapita": "2026-10-18",
   "dashwavedelive": "2026-10-18",
   "wgatransit": "2026-10-18",
-  "shipstore": "2026-10-19"
+  "shipstore": "2026-10-19",
+  "anthropologie": "2026-10-19"
  }
 }
