@@ -27,7 +27,8 @@
   "a168f88090691",
   "aac92cdbd2591",
   "ad0f07f43ec5e",
-  "a418fdd3e6f05"
+  "a418fdd3e6f05",
+  "a511c2951ce03"
  ],
  "clock": [
   "e06:7"
@@ -86,7 +87,8 @@
   "mannaairdelive",
   "schoonercapita",
   "dashwavedelive",
-  "wgatransit"
+  "wgatransit",
+  "shipstore"
  ],
  "sent": [
   "player:pirateship",
@@ -149,20 +151,21 @@
   "amazon warns it may close 15 new york city warehouses over d",
   "amazon passes 1 million robots in its facilities futurism re",
   "amazon warns it could pull nyc delivery jobs over delivery p",
-  "amazon close to launching shipping with amazon wsj report sa"
+  "amazon close to launching shipping with amazon wsj report sa",
+  "maersk adds north american delivery services to shipstore pl"
  ],
  "harvested": [
-  "a89d7e4beebd9",
-  "a2def09bc43bb",
-  "a773d361dac4e",
-  "a6cc2420ad66e",
-  "aee6669d325da",
-  "wacb825361479",
   "a6c2418bed0a7",
+  "a89d7e4beebd9",
+  "w150132868eae",
+  "a2def09bc43bb",
   "a2b81ad721cb8",
-  "a5d45f26f2219",
   "af8ee5ed067c6",
-  "w150132868eae"
+  "a5d45f26f2219",
+  "wacb825361479",
+  "a773d361dac4e",
+  "aee6669d325da",
+  "a6cc2420ad66e"
  ],
  "backfilled": true,
  "recent": [
@@ -602,6 +605,21 @@
      "url": "https://mashable.com/article/amazon-may-soon-launch-delivery-service"
     }
    ]
+  },
+  {
+   "id": "a511c2951ce03",
+   "title": "Maersk adds North American delivery services to Shipstore platform",
+   "date": "2026-10-19",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/",
+   "srcs": [
+    {
+     "src": "LM - Logistics Manager",
+     "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -656,6 +674,10 @@
   "a418fdd3e6f05": {
    "t": "Amazon nears Shipping With Amazon launch",
    "m": "WSJ reports the service is close to launch, with Los Angeles first if it goes live; no rate or service…"
+  },
+  "a511c2951ce03": {
+   "t": "Maersk delivery added to Shipstore",
+   "m": "Shippers can manage Maersk delivery alongside other carriers in Shipstore. No rate or fee changes were…"
   }
  },
  "queue": [
@@ -672,6 +694,31 @@
    "notable": true,
    "mask": 15,
    "url": "https://wmaready.github.io/parcel-pigeon/#story=a418fdd3e6f05"
+  },
+  {
+   "kind": "story",
+   "key": "story:maersk adds north american delivery services to shipstore platform",
+   "id": "a511c2951ce03",
+   "t": "Maersk delivery added to Shipstore",
+   "m": "Shippers can manage Maersk delivery alongside other carriers in Shipstore. No rate or fee changes were…",
+   "big": false,
+   "at": "2026-10-19T06:53:33.842743-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": false,
+   "mask": 16,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a511c2951ce03"
+  },
+  {
+   "kind": "player",
+   "key": "player:shipstore",
+   "at": "2026-10-19T06:53:33.843576-04:00",
+   "t": "New on the map: Shipstore",
+   "m": "Shipstore provides multi-carrier shipping automation software for high-volume parcel (and LTL) shippers, handling rate selection, labels, documentation and tracking, and Maersk's North American e-commerce delivery services are now available in the platform.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
   }
  ],
  "fuelq": {},

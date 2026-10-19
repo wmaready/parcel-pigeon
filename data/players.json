@@ -1424,6 +1424,36 @@
     "https://www.snagajob.com/jobs/1170530803"
    ],
    "enriched": "2026-10-18"
+  },
+  {
+   "id": "shipstore",
+   "n": "Shipstore",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Liberty, MO, USA",
+   "yr": null,
+   "s": "Shipstore provides multi-carrier shipping automation software for high-volume parcel (and LTL) shippers, handling rate selection, labels, documentation and tracking, and Maersk's North American e-commerce delivery services are now available in the platform.",
+   "al": [
+    "Shipstore Software"
+   ],
+   "src": "https://www.maersk.com/news/articles/2026/09/16/maersk-expands-e-commerce-delivery-access-in-north-america-through-shipstore-partnership",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-19",
+   "story": "a511c2951ce03",
+   "site": "shipstore.com",
+   "geo": [
+    -94.419,
+    39.246
+   ],
+   "srcs": [
+    "https://www.maersk.com/news/articles/2026/09/16/maersk-expands-e-commerce-delivery-access-in-north-america-through-shipstore-partnership",
+    "https://shipstore.com/maersk-partnership-north-america/",
+    "https://www.linkedin.com/company/shipstore-software"
+   ],
+   "enriched": "2026-10-19"
   }
  ],
  "edges": [
@@ -2425,6 +2455,15 @@
    "t": "DoorDash keeps drone delivery partnership with Flytrex",
    "url": "https://startupfortune.com/doordash-just-became-an-faa-licensed-air-carrier-for-drone-delivery/",
    "story": "a86fd472c4cfb"
+  },
+  {
+   "a": "maersk",
+   "b": "shipstore",
+   "k": "partner",
+   "y": "2026",
+   "t": "Maersk and Shipstore integrate North American e-commerce delivery",
+   "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/",
+   "story": "a511c2951ce03"
   }
  ],
  "moves": [
@@ -2545,6 +2584,7 @@
   "mannaairdelive": "2026-10-18",
   "schoonercapita": "2026-10-18",
   "dashwavedelive": "2026-10-18",
-  "wgatransit": "2026-10-18"
+  "wgatransit": "2026-10-18",
+  "shipstore": "2026-10-19"
  }
 }
