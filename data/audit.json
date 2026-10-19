@@ -1,5 +1,5 @@
 {
- "run": "2026-10-19T02:34Z",
+ "run": "2026-10-19T03:34Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -113,7 +113,7 @@
   {
    "sev": "med",
    "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (502 Server Error: Bad Gateway for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -247,7 +247,7 @@
   {
    "sev": "med",
    "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (502 Server Error: Bad Gateway for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
