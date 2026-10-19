@@ -28,7 +28,9 @@
   "aac92cdbd2591",
   "ad0f07f43ec5e",
   "a418fdd3e6f05",
-  "a511c2951ce03"
+  "a511c2951ce03",
+  "a26ef27406d47",
+  "a5efac902522f"
  ],
  "clock": [
   "e06:7"
@@ -129,7 +131,9 @@
   "story:maersk adds north american delivery services to shipstore platform",
   "player:shipstore",
   "player:anthropologie",
-  "player:exelot"
+  "player:exelot",
+  "story:ups opens 80m clark hub in the philippines 15 times its predecessor s size",
+  "story:doordash adds macy s to retail marketplace plans november returns rollout"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -160,20 +164,22 @@
   "amazon passes 1 million robots in its facilities futurism re",
   "amazon warns it could pull nyc delivery jobs over delivery p",
   "amazon close to launching shipping with amazon wsj report sa",
-  "maersk adds north american delivery services to shipstore pl"
+  "maersk adds north american delivery services to shipstore pl",
+  "doordash adds macy s to retail marketplace plans november re",
+  "ups opens 80m clark hub in the philippines 15 times its pred"
  ],
  "harvested": [
-  "a89d7e4beebd9",
-  "af8ee5ed067c6",
-  "a773d361dac4e",
-  "a6c2418bed0a7",
   "a5d45f26f2219",
+  "a773d361dac4e",
   "a2b81ad721cb8",
-  "aee6669d325da",
-  "a6cc2420ad66e",
-  "a2def09bc43bb",
   "w150132868eae",
-  "wacb825361479"
+  "aee6669d325da",
+  "wacb825361479",
+  "a89d7e4beebd9",
+  "a6cc2420ad66e",
+  "a6c2418bed0a7",
+  "a2def09bc43bb",
+  "af8ee5ed067c6"
  ],
  "backfilled": true,
  "recent": [
@@ -628,6 +634,36 @@
      "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/"
     }
    ]
+  },
+  {
+   "id": "a26ef27406d47",
+   "title": "DoorDash adds Macy's to retail marketplace, plans November returns rollout",
+   "date": "2026-10-19",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.tikr.com/blog/doordash-adds-macys-and-a-new-india-hub-heres-why-the-stock-still-trades-30-below-its-high",
+   "srcs": [
+    {
+     "src": "TIKR.com",
+     "url": "https://www.tikr.com/blog/doordash-adds-macys-and-a-new-india-hub-heres-why-the-stock-still-trades-30-below-its-high"
+    }
+   ]
+  },
+  {
+   "id": "a5efac902522f",
+   "title": "UPS opens $80m+ Clark hub in the Philippines, 15 times its predecessor's size",
+   "date": "2026-10-19",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://supplychaindigital.com/news/ups-expands-capabilities-across-asia-pacific-logistics",
+   "srcs": [
+    {
+     "src": "Supply Chain Digital Magazine",
+     "url": "https://supplychaindigital.com/news/ups-expands-capabilities-across-asia-pacific-logistics"
+    }
+   ]
   }
  ],
  "copy": {
@@ -686,13 +722,21 @@
   "a511c2951ce03": {
    "t": "Maersk delivery added to Shipstore",
    "m": "Shippers can manage Maersk delivery alongside other carriers in Shipstore. No rate or fee changes were…"
+  },
+  "a26ef27406d47": {
+   "t": "DoorDash plans November returns rollout",
+   "m": "Nationwide pickup and returns roll out in November at a flat $7.99 fee; no carrier rate changes."
+  },
+  "a5efac902522f": {
+   "t": "UPS opens Clark hub in Philippines",
+   "m": "Up to two days faster to eastern China and other Asia Pacific markets; no rate or fee changes."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-19",
-  "n": 3
+  "n": 5
  },
- "last_push": "2026-10-19T10:58:56.391847-04:00"
+ "last_push": "2026-10-19T13:52:44.660073-04:00"
 }
