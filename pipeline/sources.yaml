@@ -135,6 +135,8 @@ watch:
   - {carrier: UPS,    kind: page, name: Rate updates and notices,  url: "https://ups.com/rateupdates"}
   - {carrier: UPS,    kind: page, name: Fuel surcharges,           url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"}
   - {carrier: UPS,    kind: page, name: Service alerts,            url: "https://www.ups.com/us/en/service-alerts"}
+  - {carrier: UPS,    kind: page, name: Daily Rate and Service Guide page, url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates.page"}
+  - {carrier: UPS,    kind: pdf,  name: Daily Rate and Service Guide, url: "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf"}
   - {carrier: UPS,    kind: pdf,  name: Small Business Rates guide, url: "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf"}
   - {carrier: UPS,    kind: page, name: Developer portal,          url: "https://developer.ups.com/"}
   # FedEx
@@ -153,7 +155,6 @@ watch:
   # USPS
   - {carrier: USPS,   kind: page, name: Price change center,       url: "https://pe.usps.com/PriceChange/Index"}
   - {carrier: USPS,   kind: page, name: Newsroom releases,         url: "https://about.usps.com/newsroom/national-releases/"}
-  - {carrier: USPS,   kind: page, name: PRC daily filings,         url: "https://www.prc.gov/dockets/daily"}
   # OnTrac
   - {carrier: OnTrac, kind: page, name: Surcharges and rates,      url: "https://www.ontrac.com/surchargesandrates/"}
   - {carrier: OnTrac, kind: page, name: Service alerts,            url: "https://www.ontrac.com/service-alerts/"}

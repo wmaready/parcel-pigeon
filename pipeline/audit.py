@@ -142,7 +142,21 @@ def main():
         if hh.get("fails", 0) >= 6 or (last and days(last, ISO) > 1) or (not last and hh.get("last_try") and hh.get("fails", 0) >= 2):
             issue("med", "watch-stale", f"Carrier page not read in over a day: {hh.get('carrier')} {hh.get('name')} ({hh.get('err') or 'no readable text'}) {u}", [])
         elif hh.get("thin", 0) >= 3:
-            issue("med", "watch-thin", f"Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): {hh.get('carrier')} {hh.get('name')} {u}", [])
+            issue("med", "watch-thin", f"Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): {hh.get('carrier')} {hh.get('name')} {u}. Server said: {hh.get('probe') or 'not probed yet'}", [])
+
+    # 4d. older break: a recent story that is really a later report of something we already had weeks, months or years ago
+    _stop = set("with from that this will their they have been after about into over more than says plans adds amid new its are for and the".split())
+    tk = lambda t: {w.strip(".") for w in re.findall(r"[a-z0-9$%.]+", (t or "").lower()) if (len(w) >= 4 or any(c.isdigit() for c in w)) and w not in _stop}
+    recent = [x for x in stories.values() if days(x["date"], ISO) <= 30 and x.get("kind") != "Alert"]
+    older = [x for x in stories.values() if days(x["date"], ISO) > 30]
+    for x in recent:
+        A = tk(x.get("title"))
+        for o in older:
+            B = tk(o.get("title"))
+            n = len(A & B)
+            if n >= 4 and n / max(1, min(len(A), len(B))) >= 0.6 and set(x.get("c") or []) & set(o.get("c") or []) and not x.get("thread") == o.get("thread"):
+                issue("med", "older-break", f"\"{x['title']}\" ({x['date']}) looks like a later report of \"{o['title']}\" ({o['date']}). Check whether it is new.", [x["id"], o["id"]])
+                break
 
     # 5. duplicates
     lst = sorted(stories.values(), key=lambda s: s["date"])
