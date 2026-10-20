@@ -1,5 +1,5 @@
 {
- "run": "2026-10-20T10:33Z",
+ "run": "2026-10-20T10:53Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -135,6 +135,16 @@
     "07"
    ],
    "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "ids": [
+    "a709757714d80",
+    "aeb385569416d"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -267,6 +277,16 @@
    "msg": "\"UPS has not yet announced 2027 rates\" is 17 days old; check whether it has been announced",
    "ids": [
     "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "ids": [
+    "a709757714d80",
+    "aeb385569416d"
    ],
    "fixed": false
   }

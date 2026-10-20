@@ -31,7 +31,8 @@
   "a511c2951ce03",
   "a26ef27406d47",
   "a5efac902522f",
-  "a987f817b1285"
+  "a987f817b1285",
+  "aeb385569416d"
  ],
  "clock": [
   "e06:7"
@@ -168,20 +169,21 @@
   "maersk adds north american delivery services to shipstore pl",
   "doordash adds macy s to retail marketplace plans november re",
   "ups opens 80m clark hub in the philippines 15 times its pred",
-  "narvar names founder amit sharma ceo again"
+  "narvar names founder amit sharma ceo again",
+  "police 963 000 in trading cards stolen from fedex truck in s"
  ],
  "harvested": [
-  "w150132868eae",
   "aee6669d325da",
-  "a6cc2420ad66e",
-  "a89d7e4beebd9",
-  "a2b81ad721cb8",
-  "a5d45f26f2219",
-  "wacb825361479",
   "a2def09bc43bb",
-  "a6c2418bed0a7",
+  "a5d45f26f2219",
+  "af8ee5ed067c6",
+  "a2b81ad721cb8",
+  "a89d7e4beebd9",
+  "w150132868eae",
   "a773d361dac4e",
-  "af8ee5ed067c6"
+  "a6cc2420ad66e",
+  "a6c2418bed0a7",
+  "wacb825361479"
  ],
  "backfilled": true,
  "recent": [
@@ -681,6 +683,24 @@
      "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo"
     }
    ]
+  },
+  {
+   "id": "aeb385569416d",
+   "title": "Police: $963,000 in trading cards stolen from FedEx truck in Southern California",
+   "date": "2026-10-19",
+   "c": [
+    "FedEx",
+    "UPS",
+    "DHL",
+    "Industry"
+   ],
+   "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/",
+   "srcs": [
+    {
+     "src": "finchannel",
+     "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -767,6 +787,20 @@
    "notable": false,
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#story=a987f817b1285"
+  },
+  {
+   "kind": "story",
+   "key": "story:police 963 000 in trading cards stolen from fedex truck in southern california",
+   "id": "aeb385569416d",
+   "t": "Police: $963,000 in trading cards stolen from…",
+   "m": "No change to rates or service.",
+   "big": false,
+   "at": "2026-10-20T06:53:15.887588-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": true,
+   "mask": 19,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=aeb385569416d"
   }
  ],
  "fuelq": {},
