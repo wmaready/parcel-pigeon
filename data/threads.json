@@ -237,7 +237,20 @@
    "UPS",
    "USPS"
   ],
-  "rv": "51da35db195e"
+  "rv": "51da35db195e",
+  "cx": {
+   "sig": "51da35db195e",
+   "v": 2,
+   "beats": {
+    "h418": "FedEx followed in August with similar tiers, including new $0.30–$0.55 residential fees on Ground and Home Delivery.",
+    "h419": "USPS joined in September 2024 with a temporary increase. Commercial Ground Advantage rose $0.35 to $5.50 in Zones 5–9, depending on weight.",
+    "h523": "FedEx went first again in 2025, in July. Its residential demand fee rose to $0.40–$0.65, and the enterprise tier to $1.55–$8.75.",
+    "h525": "USPS filed its 2025 holiday increases in August, pending PRC review. They ran Oct. 5 to Jan. 18, 2026 and added Parcel Select to the list.",
+    "h527": "UPS announced in September 2025, matching FedEx's $8.75 top enterprise fee. Its demand surcharges started Oct. 26."
+   },
+   "intro": "Carriers have added peak surcharges every holiday season since 2024, and the fees keep climbing. Here's how that played out.",
+   "now": "Home-delivery peak fees start Oct 24–26, rise to $0.75–$0.80 from Nov 22, and all peak surcharges end Jan 15, 2027."
+  }
  },
  "import-export-fees": {
   "n": "Per-pound import and export fees",
@@ -552,12 +565,16 @@
   ],
   "rv": "392cb881c00d",
   "cx": {
-   "sig": "887e2a10f808",
+   "sig": "87b35cd14a59",
    "v": 2,
    "beats": {
-    "a17304bde0800": "Organizers are pressing for a vote: 33 of 51 Councilmembers cosponsor the bill, yet nothing has moved since an April committee hearing."
+    "a17304bde0800": "Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3, saying the bill has had no action since an April hearing.",
+    "abf7a28de14a5": "Bronx DSP operators pushed back, and the Bronx Times said over 40 DSPs employing over 5,000 workers operate in the city.",
+    "ad0f07f43ec5e": "Amazon warned it could move roughly 5,000 delivery jobs out of the city; analysts say all 15 last-mile stations could close.",
+    "a54c3fc6ab060": "Business groups wrote to Speaker Menin opposing the bill, which sets a $500,000 penalty per non-employee worker; co-sponsors are now 35."
    },
-   "now": "The bill has not been called for a vote. Organizers have a canvass set for Oct. 17 and a City Hall rally set for Oct. 22."
+   "intro": "A New York City bill would force Amazon to employ its delivery drivers directly; shippers are watching for local delivery changes.",
+   "now": "The bill sits laid over in committee with 35 co-sponsors and no vote scheduled; organizers had a City Hall rally set for Oct. 22."
   }
  },
  "uniuni-delivery-complaints": {
