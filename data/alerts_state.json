@@ -30,7 +30,8 @@
   "a418fdd3e6f05",
   "a511c2951ce03",
   "a26ef27406d47",
-  "a5efac902522f"
+  "a5efac902522f",
+  "a987f817b1285"
  ],
  "clock": [
   "e06:7"
@@ -166,20 +167,21 @@
   "amazon close to launching shipping with amazon wsj report sa",
   "maersk adds north american delivery services to shipstore pl",
   "doordash adds macy s to retail marketplace plans november re",
-  "ups opens 80m clark hub in the philippines 15 times its pred"
+  "ups opens 80m clark hub in the philippines 15 times its pred",
+  "narvar names founder amit sharma ceo again"
  ],
  "harvested": [
-  "a773d361dac4e",
+  "w150132868eae",
   "a6cc2420ad66e",
   "a2def09bc43bb",
-  "a89d7e4beebd9",
-  "wacb825361479",
-  "a2b81ad721cb8",
-  "aee6669d325da",
+  "a773d361dac4e",
   "af8ee5ed067c6",
-  "w150132868eae",
+  "a89d7e4beebd9",
+  "aee6669d325da",
   "a5d45f26f2219",
-  "a6c2418bed0a7"
+  "a6c2418bed0a7",
+  "wacb825361479",
+  "a2b81ad721cb8"
  ],
  "backfilled": true,
  "recent": [
@@ -664,6 +666,21 @@
      "url": "https://supplychaindigital.com/news/ups-expands-capabilities-across-asia-pacific-logistics"
     }
    ]
+  },
+  {
+   "id": "a987f817b1285",
+   "title": "Narvar names founder Amit Sharma CEO again",
+   "date": "2026-10-20",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo",
+   "srcs": [
+    {
+     "src": "Retail Technology Innovation Hub",
+     "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo"
+    }
+   ]
   }
  ],
  "copy": {
@@ -730,9 +747,28 @@
   "a5efac902522f": {
    "t": "UPS opens Clark hub in Philippines",
    "m": "Up to two days faster to eastern China and other Asia Pacific markets; no rate or fee changes."
+  },
+  "a987f817b1285": {
+   "t": "Narvar names Amit Sharma CEO again",
+   "m": "Founder Amit Sharma returns as CEO of the post-purchase software provider; rates and service are unchanged."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:narvar names founder amit sharma ceo again",
+   "id": "a987f817b1285",
+   "t": "Narvar names Amit Sharma CEO again",
+   "m": "Founder Amit Sharma returns as CEO of the post-purchase software provider; rates and service are unchanged.",
+   "big": false,
+   "at": "2026-10-20T01:28:52.376822-04:00",
+   "lvl": 1,
+   "topic": "news",
+   "notable": false,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a987f817b1285"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-19",
