@@ -1,15 +1,15 @@
 {
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
-  "pend": "1eba934c9392"
+  "pend": "e54ca8b44bcf"
  },
  "https://ups.com/rateupdates": {
-  "pend": "5c40b995c47e"
+  "pend": "4f1a616c4f6e"
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
-  "pend": "fd91444ae4bb"
+  "pend": "f1cea6b69402"
  },
  "https://www.ups.com/us/en/service-alerts": {
-  "pend": "bb620e73364d"
+  "pend": "9c296fe14169"
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
   "checked": "2026-10-20",
@@ -18,22 +18,22 @@
   "told": []
  },
  "https://www.fedex.com/en-us/service-guide.html": {
-  "pend": "f7accfc2d894"
+  "pend": "3350317883c9"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
-  "pend": "f4c25e4114b6"
+  "pend": "8850840fcf13"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "pend": "6bbb1cfe0ea6"
+  "pend": "d22c2a9e992e"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
-  "pend": "0b8aecee7b27"
+  "pend": "196bf611b319"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
-  "pend": "5cbfdaf36c8f"
+  "pend": "521ceb751d32"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
-  "pend": "87d9a5e79212"
+  "pend": "7c70770ffba1"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-10-20",
@@ -134,6 +134,23 @@
    "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf"
   ],
   "lines": 27,
+  "told": []
+ },
+ "https://www.prc.gov/dockets/daily": {
+  "checked": "2026-10-20",
+  "pdfs": [
+   "https://prc.gov/sites/default/files/DocketsPac/Autoclosure_September%202026.pdf",
+   "https://prc.gov/sites/default/files/ExPartePolicy/OGC-16-1_Ex%20Parte%20Communications.pdf",
+   "https://prc.gov/sites/default/files/rateauthority/Available%20Rate%20Authority%2010-14-2026.pdf",
+   "https://www.prc.gov/sites/default/files/PRC%20eFiling%20User%20Guide_06092023.pdf",
+   "https://www.prc.gov/sites/default/files/PRCeFilingUserGuideG3032025.pdf",
+   "https://www.prc.gov/sites/default/files/Postal%20Regulatory%20Commission%202023-2028%20Strategic%20Plan%20-%20Revised%202.14.2025.pdf",
+   "https://www.prc.gov/sites/default/files/Title39/Introductory%20Statement.pdf",
+   "https://www.prc.gov/sites/default/files/rateauthority/ScheduleForRateAdjustments-2026-01-05.pdf",
+   "https://www.prc.gov/sites/default/files/references/Public%20Law%20117%E2%80%93108_PSRA%20of%202022.pdf",
+   "https://www.prc.gov/sites/default/files/references/pl109-435paea.pdf"
+  ],
+  "lines": 23,
   "told": []
  }
 }

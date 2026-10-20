@@ -1,5 +1,5 @@
 {
- "run": "2026-10-20T10:53Z",
+ "run": "2026-10-20T11:34Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -107,13 +107,6 @@
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -251,13 +244,6 @@
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
