@@ -1,5 +1,95 @@
 [
  {
+  "title": "MAK Acquisition terminates UniUni deal",
+  "buyer": "MAK Acquisition Corp.",
+  "target": "UniUni (Uni Express Inc.)",
+  "value": "Undisclosed",
+  "status": "Announced",
+  "ann": "2026-05-15",
+  "closed": null,
+  "sum": "MAK Acquisition Corp. terminated its May 15, 2026 purchase agreement with Uni Express Inc. (UniUni) and Jun Wei (Peter) Lu. MAK said UniUni breached an interim covenant that set a maximum cumulative pre-tax loss.",
+  "who": [
+   [
+    "Buyer",
+    "MAK Acquisition Corp.",
+    "A Cayman Islands special purpose acquisition corporation listed on the Toronto Stock Exchange that completed its IPO in October 2025."
+   ],
+   [
+    "Target",
+    "Uni Express Inc. (UniUni)",
+    "The company that was to be taken public through a reverse take-over with MAK."
+   ]
+  ],
+  "why": "MAK said it sent a notice of breach on September 24, 2026 and that the 15-business-day cure period expired on October 19, 2026 without the breach being cured. MAK said it reserves all of its rights and will keep searching for a qualifying acquisition. MAK also said it is withdrawing its preliminary long form non-offering prospectus and will not file a final prospectus.",
+  "parties": [
+   {
+    "name": "MAK Acquisition Corp.",
+    "role": "Buyer",
+    "realm": "SPAC / public markets",
+    "hq": "Toronto, Canada",
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Completed its initial public offering in October 2025 and listed on the Toronto Stock Exchange."
+     }
+    ]
+   },
+   {
+    "name": "UniUni (Uni Express Inc.)",
+    "role": "Target",
+    "realm": "Regional / last-mile carrier",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2026",
+      "t": "Signed a purchase agreement with MAK on May 15, 2026; MAK terminated it on October 20, 2026."
+     }
+    ]
+   }
+  ],
+  "tree": {
+   "n": "MAK Acquisition Corp.",
+   "c": []
+  },
+  "note": "Terminated; will not proceed.",
+  "d": "2026-10-20",
+  "story": "afb6fa67940a7",
+  "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
+  "srcs": [
+   {
+    "src": "The Manila Times",
+    "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
+   }
+  ],
+  "checked": "2026-10-20",
+  "ties": [
+   {
+    "d": "2026-10-10",
+    "t": "UniUni responds to Tacoma complaints of packages left at wrong addresses",
+    "story": "accf814d7d663"
+   },
+   {
+    "d": "2026-09-25",
+    "t": "DHL Express sets 5.9% average increase for U.S. accounts on Jan 1, 2027",
+    "story": "02"
+   },
+   {
+    "d": "2026-08-18",
+    "t": "Home Depot rolls out nationwide Express Delivery from 2,000+ stores",
+    "story": "g06"
+   },
+   {
+    "d": "2026-05-15",
+    "t": "UniUni to go public through MAK Acquisition at about $1 billion",
+    "story": "60"
+   }
+  ]
+ },
+ {
   "title": "WWEX Group and Auctane merge as ShipStation Global",
   "buyer": "WWEX Group",
   "target": "Auctane",

@@ -32,7 +32,10 @@
   "a26ef27406d47",
   "a5efac902522f",
   "a987f817b1285",
-  "aeb385569416d"
+  "aeb385569416d",
+  "ada5797f56ab5",
+  "afb6fa67940a7",
+  "a7708e6818313"
  ],
  "clock": [
   "e06:7"
@@ -94,7 +97,8 @@
   "wgatransit",
   "shipstore",
   "anthropologie",
-  "exelot"
+  "exelot",
+  "uniuniuniexpre"
  ],
  "sent": [
   "player:pirateship",
@@ -137,7 +141,12 @@
   "story:ups opens 80m clark hub in the philippines 15 times its predecessor s size",
   "story:doordash adds macy s to retail marketplace plans november returns rollout",
   "story:police 963 000 in trading cards stolen from fedex truck in southern california",
-  "story:narvar names founder amit sharma ceo again"
+  "story:narvar names founder amit sharma ceo again",
+  "more:player:uniuniuniexpre,story:mak acquisition terminates uniuni purchase agreement,story:shipstation global details 250 ai agents running across its platform,story:westborough mass voters ban commercial drone pads in 510 13 vote",
+  "story:westborough mass voters ban commercial drone pads in 510 13 vote",
+  "story:mak acquisition terminates uniuni purchase agreement",
+  "story:shipstation global details 250 ai agents running across its platform",
+  "player:uniuniuniexpre"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -172,20 +181,23 @@
   "doordash adds macy s to retail marketplace plans november re",
   "ups opens 80m clark hub in the philippines 15 times its pred",
   "narvar names founder amit sharma ceo again",
-  "police 963 000 in trading cards stolen from fedex truck in s"
+  "police 963 000 in trading cards stolen from fedex truck in s",
+  "shipstation global details 250 ai agents running across its ",
+  "mak acquisition terminates uniuni purchase agreement",
+  "westborough mass voters ban commercial drone pads in 510 13 "
  ],
  "harvested": [
-  "aee6669d325da",
-  "a773d361dac4e",
-  "a2b81ad721cb8",
-  "af8ee5ed067c6",
-  "a6c2418bed0a7",
   "wacb825361479",
-  "w150132868eae",
-  "a2def09bc43bb",
-  "a5d45f26f2219",
   "a6cc2420ad66e",
-  "a89d7e4beebd9"
+  "w150132868eae",
+  "aee6669d325da",
+  "af8ee5ed067c6",
+  "a2b81ad721cb8",
+  "a89d7e4beebd9",
+  "a5d45f26f2219",
+  "a2def09bc43bb",
+  "a773d361dac4e",
+  "a6c2418bed0a7"
  ],
  "backfilled": true,
  "recent": [
@@ -703,6 +715,51 @@
      "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/"
     }
    ]
+  },
+  {
+   "id": "ada5797f56ab5",
+   "title": "ShipStation Global details 250+ AI agents running across its platform",
+   "date": "2026-10-20",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://massmarketretailers.com/shipstation-global-puts-ai-to-work-across-its-platform-to-power-shipping-and-logistics-for-growing-businesses/",
+   "srcs": [
+    {
+     "src": "Mass Market Retailers",
+     "url": "https://massmarketretailers.com/shipstation-global-puts-ai-to-work-across-its-platform-to-power-shipping-and-logistics-for-growing-businesses/"
+    }
+   ]
+  },
+  {
+   "id": "afb6fa67940a7",
+   "title": "MAK Acquisition terminates UniUni purchase agreement",
+   "date": "2026-10-20",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
+   "srcs": [
+    {
+     "src": "The Manila Times",
+     "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
+    }
+   ]
+  },
+  {
+   "id": "a7708e6818313",
+   "title": "Westborough, Mass., voters ban commercial drone pads in 510-13 vote",
+   "date": "2026-10-19",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -773,13 +830,25 @@
   "a987f817b1285": {
    "t": "Narvar names Amit Sharma CEO again",
    "m": "Founder Amit Sharma returns as CEO of the post-purchase software provider; rates and service are unchanged."
+  },
+  "ada5797f56ab5": {
+   "t": "ShipStation details 250+ AI agents",
+   "m": "No change to rates or service; AI features cover label pre-filling, support and freight quoting."
+  },
+  "afb6fa67940a7": {
+   "t": "MAK ends UniUni purchase deal",
+   "m": "The proposed MAK-UniUni transaction will not proceed, per MAK; rates and service are unchanged."
+  },
+  "a7708e6818313": {
+   "t": "Westborough bans commercial drone pads",
+   "m": "Passed 510-13; effective after attorney general approval or 90 days without action."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-20",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-10-20T08:29:43.232876-04:00"
+ "last_push": "2026-10-20T10:56:47.269584-04:00"
 }

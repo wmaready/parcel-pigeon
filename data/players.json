@@ -1517,6 +1517,39 @@
     "https://il.linkedin.com/company/exelot"
    ],
    "enriched": "2026-10-19"
+  },
+  {
+   "id": "uniuniuniexpre",
+   "n": "UniUni (Uni Express Inc.)",
+   "realm": "gig",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Richmond, BC, Canada",
+   "yr": "2019",
+   "s": "UniUni is a last-mile e-commerce parcel delivery company. It uses a network of independent gig drivers and its own sorting centers to deliver parcels in Canada and the U.S. for marketplaces such as Shein and Temu.",
+   "al": [
+    "Uni Express",
+    "Uni Express Inc.",
+    "UniUni",
+    "UniUni Logistics Inc."
+   ],
+   "src": "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
+   "auto": true,
+   "added": "2026-10-20",
+   "story": "afb6fa67940a7",
+   "site": "uniuni.com",
+   "geo": [
+    -123.134,
+    49.167
+   ],
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
+    "https://www.uniuni.com/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition/",
+    "https://www.bctechnology.com/news/2026/5/21/eCommerce-Delivery-Platform-UniUni-to-Go-Public-in-Reverse-Takeover-at-1.4-Billion-Valuation.cfm"
+   ],
+   "enriched": "2026-10-20",
+   "pending": false
   }
  ],
  "edges": [
@@ -2680,6 +2713,69 @@
    "t": "JustEatTakeaway.com buys Grubhub for $7.3 billion",
    "url": "https://www.restaurantbusinessonline.com/technology/grubhub-founder-matt-maloney-bets-new-delivery-business",
    "story": "a05d915a7b81f"
+  },
+  {
+   "a": "mak",
+   "b": "uniuniuniexpre",
+   "k": "acquired",
+   "y": "2026",
+   "t": "MAK Acquisition terminates UniUni deal",
+   "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "bessemer",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Led US$30M Series C2",
+   "url": "https://www.celtic.vc/latest-news/uniuni-closes-us30m-series-c2-round-led-by-bessemer-venture-partners-1",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "lfx",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Participated in Series C2",
+   "url": "https://www.bctechnology.com/news/2024/11/15/UniUni-Closes-41.6-Million-Series-C2-Financing-Round-Led-by-Bessemer-Venture-Partners.cfm",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "dcm",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Led US$50M Series C (announced as DCM)",
+   "url": "https://www.uniuni.com/uniuni-closes-oversubscribed-us50-million-series-c-round-led-by-dcm/",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "shein",
+   "k": "partner",
+   "y": null,
+   "t": "Last-mile delivery partner (Canada anchor client)",
+   "url": "https://www.nsnews.com/economy-law-politics/richmond-delivery-company-grows-50-fold-in-four-years-7120078",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "temu",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery contract with Temu",
+   "url": "https://www.nsnews.com/economy-law-politics/richmond-delivery-company-grows-50-fold-in-four-years-7120078",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "tiktokshop",
+   "k": "partner",
+   "y": null,
+   "t": "Delivers for TikTok Shop",
+   "url": "https://www.theinformation.com/articles/sleeping-warehouses-hidden-costs-shein-temu-deliveries",
+   "story": "afb6fa67940a7"
   }
  ],
  "moves": [
@@ -2803,6 +2899,7 @@
   "wgatransit": "2026-10-18",
   "shipstore": "2026-10-19",
   "anthropologie": "2026-10-19",
-  "exelot": "2026-10-19"
+  "exelot": "2026-10-19",
+  "uniuniuniexpre": "2026-10-20"
  }
 }
