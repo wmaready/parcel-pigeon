@@ -3,19 +3,19 @@
   "carrier": "UPS",
   "name": "Rate and Service Guides",
   "fails": 0,
-  "thin": 92,
+  "thin": 93,
   "err": null,
-  "last_try": "2026-10-19",
-  "chars": 151,
+  "last_try": "2026-10-20",
+  "chars": 150,
   "last_ok": null
  },
  "https://ups.com/rateupdates": {
   "carrier": "UPS",
   "name": "Rate updates and notices",
   "fails": 0,
-  "thin": 92,
+  "thin": 93,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 110,
   "last_ok": null
  },
@@ -23,9 +23,9 @@
   "carrier": "UPS",
   "name": "Fuel surcharges",
   "fails": 0,
-  "thin": 92,
+  "thin": 93,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 166,
   "last_ok": null
  },
@@ -33,9 +33,9 @@
   "carrier": "UPS",
   "name": "Service alerts",
   "fails": 0,
-  "thin": 92,
+  "thin": 93,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 119,
   "last_ok": null
  },
@@ -45,17 +45,17 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 172944,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
@@ -63,9 +63,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
@@ -73,9 +73,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
@@ -83,9 +83,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
-  "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_try": "2026-10-20",
+  "chars": 314,
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
@@ -93,9 +93,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
@@ -103,9 +103,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
@@ -113,49 +113,49 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 315,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Surcharge and fee changes",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Standard List Rates",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Delivery Area Surcharge ZIPs",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
   "carrier": "FedEx",
   "name": "2027 Pickup Area Surcharge ZIPs",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
   "carrier": "FedEx",
   "name": "2026 Standard List Rates",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "Stream has ended unexpectedly",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://developer.fedex.com/": {
   "carrier": "FedEx",
@@ -163,9 +163,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 1269,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://pe.usps.com/PriceChange/Index": {
   "carrier": "USPS",
@@ -173,9 +173,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 600,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://about.usps.com/newsroom/national-releases/": {
   "carrier": "USPS",
@@ -183,17 +183,17 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 647,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.prc.gov/dockets/daily": {
   "carrier": "USPS",
   "name": "PRC daily filings",
-  "fails": 92,
+  "fails": 93,
   "thin": 0,
   "err": "404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily",
-  "last_try": "2026-10-19"
+  "last_try": "2026-10-20"
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "carrier": "OnTrac",
@@ -201,9 +201,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 12999,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.ontrac.com/service-alerts/": {
   "carrier": "OnTrac",
@@ -211,9 +211,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 1307,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf": {
   "carrier": "OnTrac",
@@ -221,9 +221,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 11607,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf": {
   "carrier": "OnTrac",
@@ -231,9 +231,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 167708,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://speedeedelivery.com/service-updates/": {
   "carrier": "Spee-Dee",
@@ -241,9 +241,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 1681,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://www.uniuni.com/news/": {
   "carrier": "UniUni",
@@ -251,9 +251,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 1510,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "carrier": "Amazon",
@@ -261,8 +261,8 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-19",
+  "last_try": "2026-10-20",
   "chars": 2364,
-  "last_ok": "2026-10-19"
+  "last_ok": "2026-10-20"
  }
 }
