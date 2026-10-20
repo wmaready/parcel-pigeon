@@ -35,7 +35,8 @@
   "aeb385569416d",
   "ada5797f56ab5",
   "afb6fa67940a7",
-  "a7708e6818313"
+  "a7708e6818313",
+  "a54c3fc6ab060"
  ],
  "clock": [
   "e06:7"
@@ -146,7 +147,8 @@
   "story:westborough mass voters ban commercial drone pads in 510 13 vote",
   "story:mak acquisition terminates uniuni purchase agreement",
   "story:shipstation global details 250 ai agents running across its platform",
-  "player:uniuniuniexpre"
+  "player:uniuniuniexpre",
+  "story:business groups urge nyc council to block delivery protection act"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -184,20 +186,21 @@
   "police 963 000 in trading cards stolen from fedex truck in s",
   "shipstation global details 250 ai agents running across its ",
   "mak acquisition terminates uniuni purchase agreement",
-  "westborough mass voters ban commercial drone pads in 510 13 "
+  "westborough mass voters ban commercial drone pads in 510 13 ",
+  "business groups urge nyc council to block delivery protectio"
  ],
  "harvested": [
-  "a6c2418bed0a7",
-  "a2def09bc43bb",
-  "a773d361dac4e",
   "a2b81ad721cb8",
-  "wacb825361479",
   "a89d7e4beebd9",
-  "af8ee5ed067c6",
-  "w150132868eae",
-  "aee6669d325da",
+  "a5d45f26f2219",
+  "wacb825361479",
   "a6cc2420ad66e",
-  "a5d45f26f2219"
+  "aee6669d325da",
+  "a2def09bc43bb",
+  "af8ee5ed067c6",
+  "a6c2418bed0a7",
+  "w150132868eae",
+  "a773d361dac4e"
  ],
  "backfilled": true,
  "recent": [
@@ -760,6 +763,22 @@
      "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/"
     }
    ]
+  },
+  {
+   "id": "a54c3fc6ab060",
+   "title": "Business groups urge NYC Council to block Delivery Protection Act",
+   "date": "2026-10-20",
+   "c": [
+    "Amazon",
+    "UPS"
+   ],
+   "url": "https://nypost.com/2026/10/20/us-news/lefty-nyc-labor-bill-would-kill-amazon-ups-jobs-warns-dire-letter/",
+   "srcs": [
+    {
+     "src": "New York Post",
+     "url": "https://nypost.com/2026/10/20/us-news/lefty-nyc-labor-bill-would-kill-amazon-ups-jobs-warns-dire-letter/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -842,13 +861,17 @@
   "a7708e6818313": {
    "t": "Westborough bans commercial drone pads",
    "m": "Passed 510-13; effective after attorney general approval or 90 days without action."
+  },
+  "a54c3fc6ab060": {
+   "t": "NYC business groups oppose Delivery Protection Act",
+   "m": "The bill remains in committee with no vote scheduled, and rates and service are unchanged for now."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-20",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-10-20T10:56:47.269584-04:00"
+ "last_push": "2026-10-20T12:54:07.358055-04:00"
 }
