@@ -1266,17 +1266,29 @@ Plain, neutral, a little conversational; no hype, no advice, no predictions of y
 Hard rules: use ONLY facts in the MILESTONES and CONTEXT below. Every number, date and name you write must appear there. Never
 claim a cause or link that isn't stated or plainly implied; "meanwhile" is fine, "because" needs support. Don't restate the
 headline. Never name a parcel consultancy or audit firm (say "an industry analysis").
+Dates: each milestone's first date is when it was REPORTED. "announced" is the date the company announced the change and
+"takes effect" is when it starts; they are different events. Never call a takes-effect date an announcement date or the
+reverse, and never fill in a missing one from the other or from the reported date. The same holds for CONTEXT: RATE CLOCK
+and PRICING HISTORY dates are takes-effect dates unless labelled "announced". OFF-CYCLE marks a price change outside the
+carrier's usual annual increase and peak season; you may say so.
+A milestone marked UNCONFIRMED rests on one smaller outlet so far: say "reportedly" (or "unconfirmed") in its line and never
+state it as settled fact.
 Reply with JSON only:
 {"intro": "one line, under 120 characters: what this storyline is about and why shippers care",
  "beats": {"<milestone id>": "one line, under 130 characters, for that step", ...},
  "now": "one line, under 140 characters: where it stands and what's next, only if the milestones or the rate clock say so"}"""
-BEATS_V = 2
+BEATS_V = 3   # 3: milestones carry announced / takes-effect dates, off-cycle and unconfirmed flags
 
 
 def thread_context(S, seed, live):
     """Facts from the rest of the app that can give a storyline context: the companies' profiles and owners, deals they're
     in, dated cost changes ahead on the rate clock, and other recent headlines about them."""
-    players = seed.get("players", []) + load("players.json", {}).get("players", [])
+    pj = load("players.json", {})
+    players = seed.get("players", []) + pj.get("players", [])
+    # facts double-checked against two independent sources (players.json "facts", from sweep.py) win, as in the app
+    vf = pj.get("facts") or {}
+    players = [{**p, **{k: vf[p["id"]][k] for k in ("hq", "yr", "own", "tk") if (vf.get(p["id"]) or {}).get(k)}}
+               for p in players if p.get("id")]
     byname = {}
     for p in players:
         for nm in [p.get("n")] + (p.get("al") or []):
@@ -1288,12 +1300,13 @@ def thread_context(S, seed, live):
         for o in st.get("orgs") or []:
             if isinstance(o, dict) and o.get("name"):
                 names.add(o["name"])
-    out, seen = [], set()
+    out, seen, cos = [], set(), set()
     for nm in sorted(names)[:8]:
         p = byname.get(nm.lower())
         if not p or p["id"] in seen:
             continue
         seen.add(p["id"])
+        cos.update(x.lower() for x in [p["n"]] + (p.get("al") or []) if x)
         par = byid.get(p.get("parent") or "")
         out.append(f"COMPANY {p['n']}: {(p.get('role') or p.get('s') or '')[:160]}" + (f" Part of {par['n']}." if par else "") +
                    (f" HQ {p['hq']}." if p.get("hq") else "") + (f" Founded {p['yr']}." if p.get("yr") else ""))
@@ -1301,17 +1314,43 @@ def thread_context(S, seed, live):
     hit = lambda txt: any(re.search(r"\b" + re.escape(w) + r"\b", (txt or "").lower()) for w in words)
     for d in (seed.get("deals", []) + load("deals.json", []))[:200]:
         if hit(f"{d.get('buyer')} {d.get('target')}"):
-            out.append(f"DEAL {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
+            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
     today = dt.date.today().isoformat()
     for c in seed.get("clock", []):
         if (c.get("d") or "") >= today and hit(f"{c.get('c')} {c.get('w')}"):
-            out.append(f"RATE CLOCK {c['d']}: {c.get('w')} ({c.get('c')})")
+            out.append(f"RATE CLOCK takes effect {c['d']}: {c.get('w')} ({c.get('c')})")
+    # the pricing history (data/almanac.json) for these carriers around the storyline's dates, with both dates labelled
+    lo = (dt.date.fromisoformat(min((st.get("date") or today)[:10] for st in S)) - dt.timedelta(days=60)).isoformat()
+    hi = (dt.date.today() + dt.timedelta(days=150)).isoformat()
+    alm = [e for e in load("almanac.json", []) if isinstance(e, dict) and str(e.get("carrier") or "").lower() in cos
+           and lo <= (e.get("effective") or "") <= hi]
+    for e in sorted(alm, key=lambda e: e.get("effective") or "", reverse=True)[:3]:
+        out.append(f"PRICING HISTORY {e['carrier']}: {e.get('headline')}; " + milestone_dates(e.get("announced"), e.get("effective")) +
+                   (" OFF-CYCLE." if cycle_of(e["carrier"], e.get("kind"), e.get("effective"), e.get("announced")) == "off" else ""))
     ids = {st["id"] for st in S}
     recent = (dt.date.today() - dt.timedelta(days=60)).isoformat()
     others = [n for n in live + seed.get("news", []) if n.get("id") not in ids and (n.get("date") or "") >= recent and hit(n.get("title"))]
     for n in sorted(others, key=lambda n: n.get("date") or "", reverse=True)[:5]:
         out.append(f"ALSO IN THE NEWS {n.get('date')}: {n.get('title')}")
     return "\n".join(out[:24])
+
+
+def milestone_dates(ann, act):
+    """The two dates, each labelled; one we don't have says so instead of borrowing the other."""
+    return f"announced {ann or 'date not stated'}; takes effect {act or 'date not stated'}."
+
+
+def milestone_line(s):
+    """One storyline step as Coop sees it: the reported date, then the announced and takes-effect dates the story states,
+    then its flags."""
+    flags = ([milestone_dates(s.get("ann"), s.get("act"))] if s.get("ann") or s.get("act") else []) + \
+        (["OFF-CYCLE"] if s.get("offc") else []) + (["UNCONFIRMED (one smaller outlet so far)"] if s.get("unconf") else [])
+    return f"id={s['id']} | reported {s.get('date')} | " + (" | ".join(flags) + " | " if flags else "") + \
+        f"{s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]} {(s.get('tie') or '')[:200]}"
+
+
+# words that mark a line as a report rather than settled fact
+HEDGE = re.compile(r"\b(reported(ly)?|unconfirmed|not (yet )?confirmed|according to|reports?|said to|claims?)\b", re.I)
 
 
 def write_beats(limit=6):
@@ -1337,8 +1376,7 @@ def write_beats(limit=6):
             ix = sorted({0, *[round(i * (len(S) - 1) / 7) for i in range(1, 7)], len(S) - 1})
             S = [S[i] for i in ix]
         ctx = thread_context(S, seed, live)
-        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\nMILESTONES:\n" + "\n".join(
-            f"id={s['id']} | {s.get('date')} | {s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]} {(s.get('tie') or '')[:200]}" for s in S) + \
+        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\nMILESTONES:\n" + "\n".join(milestone_line(s) for s in S) + \
             f"\n\nCONTEXT (from the rest of the app):\n{ctx or '(none)'}"
         done += 1
         try:
@@ -1346,7 +1384,10 @@ def write_beats(limit=6):
         except Exception as e:
             print(f"  storyline narration failed for {k}: {e}", file=sys.stderr); continue
         ok = lambda line, n: isinstance(line, str) and 0 < len(line) <= n and not numbers_supported(line, text)
-        beats = {i: v.strip() for i, v in (got.get("beats") or {}).items() if i in ids and ok(v, 140)}
+        unconf = {s["id"] for s in S if s.get("unconf")}
+        # an unconfirmed step must read as unconfirmed; a line that states it as fact is dropped (plain date cue instead)
+        beats = {i: v.strip() for i, v in (got.get("beats") or {}).items()
+                 if i in ids and ok(v, 140) and (i not in unconf or HEDGE.search(v))}
         cx = {"sig": sig, "v": BEATS_V, "beats": beats}
         if ok(got.get("intro"), 130):
             cx["intro"] = got["intro"].strip()
