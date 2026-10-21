@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
-from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
+from common import dedupe_live, record_deal, deal_tokens, deals_merged, DEAL_ENDED, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
@@ -148,9 +148,16 @@ Return JSON only, with exactly these keys:
 "rels": every business relationship between named companies that the sources state, for ANY story (not just M&A):
   [{{"a":"Company A","b":"Company B","k":"partner|acquired|merged|sold|spun|invested|owns","t":"short plain label, e.g. 'DoorDash and Kroger expand delivery partnership'"}}];
   a = buyer/owner/investor/seller; b = target/unit. Only real, announced relationships; [] if none;
-"deal": for M&A only, else null. {{"title":"Buyer buys Target, under 10 words","buyer":"...","target":"...","value":"... or Undisclosed",
-  "status":"Announced|Pending|Closed","ann":"YYYY-MM-DD announced or null","closed":"YYYY-MM-DD closed or null",
-  "sum":"1-2 sentences: who bought what, from whom, for how much",
+"deal": for M&A only, else null. One deal is one transaction, followed from announcement to its end: a story about a later
+  step (approval, closing, a breach notice, a termination) describes the SAME deal, named as when it was announced.
+  {{"title":"Buyer buys Target, under 10 words (the transaction, not this story's event)","buyer":"...","target":"...","value":"... or Undisclosed",
+  "status":"Announced|Pending|Closed|Terminated|Blocked|Withdrawn" (as of this story: Terminated when a party ended the agreement,
+  Blocked when a regulator or court stopped it, Withdrawn when the offer or filing was pulled; never Announced or Pending for a
+  deal this story says has ended),
+  "ann":"YYYY-MM-DD the deal was ORIGINALLY announced, or null (never this story's date when the story is a later step)",
+  "closed":"YYYY-MM-DD closed or null","ended":"YYYY-MM-DD terminated, blocked or withdrawn, or null (kept separate from ann)",
+  "latest":"one line under 20 words: where the deal stands now, with the date",
+  "sum":"1-2 sentences: who bought what, from whom, for how much; for a deal that ended, how and when it ended",
   "who":[["Buyer|Seller|Target|Merged with|Acquirer","Name","one sentence: what the company is and does"], ...],
   "why":"2-4 neutral sentences on significance: scale, what changes in the parcel market, and any earlier deals or news the sources connect it to. No advice.",
   "parties":[{{"name":"...","role":"Buyer|Seller|Target|Merged with|Acquirer|Parent|Backer","realm":"Ocean shipping & logistics|Contract logistics / 3PL|National parcel carrier|Postal operator|Gig / on-demand delivery|Retailer / marketplace|Cold chain / healthcare logistics|Drones, robots & autonomous delivery|Regional / last-mile carrier|Courier / same-day|Freight brokerage & parcel reselling|Shipping software|Supply chain software|Returns & reverse logistics|Private equity / investor|SPAC / public markets|Cross-border parcel platform","hq":"city, country or null","founded":"year or null","size":"one number fact or null","history":[{{"y":"YYYY","t":"prior owners, mergers, renames, funding, only as stated in the sources"}}]}}],
@@ -725,10 +732,20 @@ def update_market_map(deal, story):
     known = seed.get("players", []) + mp["players"]
 
     def find(name):
-        n = (name or "").lower().strip()
-        for p in known:
-            if n and (n == p["n"].lower() or n in [a.lower() for a in p.get("al", [])]):
-                return p["id"]
+        # exact name or alias first; then the name without its parenthetical, then what's in the parentheses
+        # ("UniUni (Uni Express Inc.)" is UniUni, not a new company)
+        raw = (name or "").strip()
+        tries = [raw, re.sub(r"\s*\([^)]*\)", "", raw).strip()] + re.findall(r"\(([^)]*)\)", raw)
+        for t in tries:
+            n = t.lower().strip()
+            for p in known:
+                if n and (n == p["n"].lower() or n in [a.lower() for a in p.get("al", [])]):
+                    return p["id"]
+        for t in tries:
+            tk = deal_tokens(t)
+            for p in known:
+                if tk and any(tk == deal_tokens(x) for x in [p["n"]] + list(p.get("al", []))):
+                    return p["id"]
         return None
 
     def slug(name):
@@ -756,6 +773,13 @@ def update_market_map(deal, story):
     buyers = ids.get("Buyer") or ids.get("Acquirer") or [x for x in [find(deal.get("buyer"))] if x]
     targets = ids.get("Target") or ids.get("Merged with") or [x for x in [find(deal.get("target"))] if x]
     k = "merged" if ids.get("Merged with") and not ids.get("Target") else "acquired"
+    if str(deal.get("status") or "") in DEAL_ENDED:
+        # a deal that was terminated, blocked or withdrawn never made the buyer an owner: drop its pending links, add none
+        pair = {(a, b) for a in buyers for b in targets} | {(b, a) for a in buyers for b in targets}
+        mp["edges"] = [e for e in mp["edges"] if not ((e["a"], e["b"]) in pair and e.get("k") in ("acquired", "merged", "owns"))]
+        mp["moves"] = [m for m in mp.get("moves", []) if not (m.get("id") in targets and (m.get("pend") in buyers or m.get("parent") in buyers))]
+        save("players.json", mp)
+        return
     for a in buyers:
         for b in targets:
             if a == b:
@@ -870,20 +894,15 @@ def publish_extras(story, s, live=()):
     except Exception as e:
         print(f"  relations: {e}", file=sys.stderr)
     if s.get("deal") and story["cat"] == "M&A":
-        dl = load("deals.json", [])
-        d = dict(s["deal"]); d.update({"d": d.get("closed") or story["date"], "story": story["id"], "url": story["url"],
-                                       "srcs": story.get("srcs") or [{"src": story["src"], "url": story["url"]}],
-                                       "checked": story["date"]})
-        # tie in earlier coverage of the same companies
+        d = dict(s["deal"])
+        # tie in earlier coverage of the same companies (kept only when this is a new transaction)
         names = [w for w in re.findall(r"[A-Z][A-Za-z0-9&]+", f'{d.get("buyer","")} {d.get("target","")}') if len(w) > 3 and w not in ("Corp", "Group", "Acquisition", "Capital", "Management")]
         d["ties"] = [{"d": n["date"], "t": n["title"], "story": n["id"]} for n in list(live) + load("seed.json", {}).get("news", [])
                      if n["id"] != story["id"] and any(w in n["title"] for w in names)][:4]
-        same = next((x for x in dl if x.get("buyer") == d.get("buyer") and x.get("target") == d.get("target")), None)
-        if same: same.update({k: v for k, v in d.items() if v})   # status changes, e.g. Pending -> Closed
-        else: dl.insert(0, d)
-        save("deals.json", dl)
+        # one card per transaction: a later step (closing, breach notice, termination) updates the deal already tracked
+        cur = record_deal(d, story)
         try:
-            update_market_map(d, story)
+            update_market_map({**d, **{k: cur.get(k) for k in ("status", "closed", "ended", "ann", "title")}}, story)
         except Exception as e:
             print(f"  market map: {e}", file=sys.stderr)
 
@@ -1317,9 +1336,11 @@ def thread_context(S, seed, live):
                    (f" HQ {p['hq']}." if p.get("hq") else "") + (f" Founded {p['yr']}." if p.get("yr") else ""))
     words = {w.lower() for nm in names for w in re.findall(r"[A-Za-z][A-Za-z&]{2,}", nm)}
     hit = lambda txt: any(re.search(r"\b" + re.escape(w) + r"\b", (txt or "").lower()) for w in words)
-    for d in (seed.get("deals", []) + load("deals.json", []))[:200]:
+    for d in deals_merged(seed.get("deals", []), load("deals.json", []))[:200]:
         if hit(f"{d.get('buyer')} {d.get('target')}"):
-            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
+            end = f", {d['status'].lower()} {d['ended']}" if d.get("ended") else f", closed {d['closed']}" if d.get("closed") else ""
+            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}{end}, {d.get('value') or 'value undisclosed'}). "
+                       f"{(d.get('latest') or d.get('sum') or '')[:200]}")
     today = dt.date.today().isoformat()
     for c in seed.get("clock", []):
         if (c.get("d") or "") >= today and hit(f"{c.get('c')} {c.get('w')}"):

@@ -14,6 +14,9 @@ Checks
   duplicate          two stories that look like the same event
   superseded         a "has not announced / pending" story when a newer story on the same carrier and topic exists
   deal-stale         M&A deal still Announced or Pending past its expected close or 90 days
+  deal-duplicate     two deal cards for one transaction (same buyer and target, loosely matched)
+  deal-storyline     a storyline's newest story is about a deal, but the deal card tells a different story (the storyline
+                     says it was terminated, the card still says Pending), or the card has no line on where it stands
   doc-pending        document marked "Not yet published" while a newer story says it has been published
   fuel-stale         fuel data more than 8 days old
   brief-stale        60-second brief mentions something no current story supports (Claude check)
@@ -26,7 +29,7 @@ Checks
 Run: python pipeline/audit.py [--offline]   (--offline skips link checks and Claude checks)
 """
 import datetime as dt, difflib, hashlib, json, os, re, sys
-from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary, primary_first, clock_worthy
+from common import deals_merged, deal_same, deal_status, DEAL_ENDED, load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, get, is_primary, primary_first, clock_worthy
 from scoop import notify
 
 TODAY = dt.date.today()
@@ -53,13 +56,39 @@ def overlap(a, b):
     return len(A & B) / max(1, min(len(A), len(B)))
 
 
+def deal_storyline_issues(deals, threads, stories):
+    """Storylines and deal cards must tell the same story. For each storyline whose newest story is about a deal (the deal's
+    own story or a later one in its timeline, or an M&A story in a storyline that holds the deal's first story), the deal
+    card's status must agree with what the storyline says happened, and an ended deal needs its "latest" line.
+    Returns [(ids, message)]."""
+    out = []
+    for k, t in (threads or {}).items():
+        S = sorted((stories[i] for i in (t.get("ids") or []) if i in stories), key=lambda s: s.get("date") or "")
+        if not S:
+            continue
+        top, ids = S[-1], set(t.get("ids") or [])
+        for d in deals:
+            own = {d.get("story")} | {u.get("story") for u in d.get("updates") or []}
+            own.discard(None)
+            if not (top["id"] in own or (top.get("cat") == "M&A" and own & ids)):
+                continue
+            said = deal_status({"status": "Pending"}, t.get("s"), top.get("title"), top.get("sum"))
+            name = d.get("title") or f"{d.get('buyer')} / {d.get('target')}"
+            if said in DEAL_ENDED and d.get("status") != said:
+                out.append(([k, top["id"]], f"Storyline \"{t.get('n') or k}\" says the deal was {said.lower()} (\"{top.get('title')}\"), "
+                                            f"but the deal card \"{name}\" says {d.get('status')}"))
+            elif d.get("status") in DEAL_ENDED and not d.get("latest"):
+                out.append(([k, top["id"]], f"Deal card \"{name}\" is {d.get('status')} but has no line on where it stands"))
+    return out
+
+
 def main():
     seed = load("seed.json", {})
     stories = {s["id"]: s for s in seed.get("news", [])}
     for s in load("news.json", []):
         stories.setdefault(s["id"], s)
     clock = list(seed.get("clock", []))
-    deals = seed.get("deals", []) + load("deals.json", [])
+    deals = deals_merged(seed.get("deals", []), load("deals.json", []))     # what readers see: one card per transaction
     docs = list(seed.get("docs", []))
     for d in load("docs.json", []):
         if not any((d.get("u") and x.get("u") == d.get("u")) or (x.get("c") == d.get("c") and x.get("n") == d.get("n")) for x in docs):
@@ -194,6 +223,12 @@ def main():
     for d in deals:
         if d.get("status") in ("Announced", "Pending") and days(d["d"], ISO) > 90 and not (d.get("checked") and days(d["checked"], ISO) <= 30):
             issue("med", "deal-stale", f"Deal {d['buyer']} / {d['target']} still marked {d['status']} after {days(d['d'], ISO)} days; confirm whether it closed", [])
+    for i, d in enumerate(deals):
+        for e in deals[i + 1:]:
+            if deal_same(d, e):
+                issue("high", "deal-duplicate", f"Two deal cards for one transaction: \"{d.get('title')}\" and \"{e.get('title')}\"", [x for x in (d.get("story"), e.get("story")) if x])
+    for k, why in deal_storyline_issues(deals, load("threads.json", {}), stories):
+        issue("high", "deal-storyline", why, k)
 
     # 8. docs
     for doc in docs:

@@ -1,169 +1,101 @@
 [
  {
-  "title": "MAK Acquisition terminates UniUni deal",
-  "buyer": "MAK Acquisition Corp.",
-  "target": "UniUni (Uni Express Inc.)",
-  "value": "Undisclosed",
-  "status": "Announced",
+  "buyer": "MAK Acquisition Corp. (SPAC)",
+  "target": "UniUni",
+  "title": "UniUni to go public through MAK Acquisition",
   "ann": "2026-05-15",
-  "closed": null,
-  "sum": "MAK Acquisition Corp. terminated its May 15, 2026 purchase agreement with Uni Express Inc. (UniUni) and Jun Wei (Peter) Lu. MAK said UniUni breached an interim covenant that set a maximum cumulative pre-tax loss.",
-  "who": [
-   [
-    "Buyer",
-    "MAK Acquisition Corp.",
-    "A Cayman Islands special purpose acquisition corporation listed on the Toronto Stock Exchange that completed its IPO in October 2025."
-   ],
-   [
-    "Target",
-    "Uni Express Inc. (UniUni)",
-    "The company that was to be taken public through a reverse take-over with MAK."
-   ]
-  ],
-  "why": "MAK said it sent a notice of breach on September 24, 2026 and that the 15-business-day cure period expired on October 19, 2026 without the breach being cured. MAK said it reserves all of its rights and will keep searching for a qualifying acquisition. MAK also said it is withdrawing its preliminary long form non-offering prospectus and will not file a final prospectus.",
-  "parties": [
+  "story": "60",
+  "status": "Terminated",
+  "updates": [
    {
-    "name": "MAK Acquisition Corp.",
-    "role": "Buyer",
-    "realm": "SPAC / public markets",
-    "hq": "Toronto, Canada",
-    "founded": null,
-    "size": null,
-    "history": [
-     {
-      "y": "2025",
-      "t": "Completed its initial public offering in October 2025 and listed on the Toronto Stock Exchange."
-     }
-    ]
+    "d": "2026-05-15",
+    "t": "UniUni agrees to go public through MAK Acquisition at about $1 billion",
+    "story": "60"
    },
    {
-    "name": "UniUni (Uni Express Inc.)",
-    "role": "Target",
-    "realm": "Regional / last-mile carrier",
-    "hq": null,
-    "founded": null,
-    "size": null,
-    "history": [
-     {
-      "y": "2026",
-      "t": "Signed a purchase agreement with MAK on May 15, 2026; MAK terminated it on October 20, 2026."
-     }
-    ]
+    "d": "2026-09-24",
+    "t": "MAK sends UniUni a notice of material breach, starting a 15-business-day cure period",
+    "story": "nr4f8ee6"
+   },
+   {
+    "d": "2026-10-20",
+    "t": "MAK terminates the purchase agreement; the go-public deal will not proceed",
+    "story": "afb6fa67940a7"
    }
   ],
-  "tree": {
-   "n": "MAK Acquisition Corp.",
-   "c": []
-  },
-  "note": "Terminated; will not proceed.",
-  "d": "2026-10-20",
-  "story": "afb6fa67940a7",
-  "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
   "srcs": [
    {
-    "src": "The Manila Times",
+    "src": "UniUni (GlobeNewswire)",
+    "url": "https://www.globenewswire.com/news-release/2026/05/15/3296186/0/en/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition.html"
+   },
+   {
+    "src": "Fasken",
+    "url": "https://www.fasken.com/en/experience/2026/05/uniuni-enters-into-definitive-purchase-agreement-with-mak"
+   },
+   {
+    "src": "Business in Vancouver",
+    "url": "https://www.biv.com/news/transportation/bc-delivery-platform-uniuni-to-go-public-in-us1b-deal-12302578"
+   },
+   {
+    "src": "Taiwan News (MAK breach notice)",
+    "url": "https://www.taiwannews.com.tw/en/news/6446375"
+   },
+   {
+    "src": "MAK Acquisition (GlobeNewswire, via The Manila Times)",
     "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
+   },
+   {
+    "src": "BetaKit (breach notice)",
+    "url": "https://betakit.com/?p=410314"
    }
   ],
   "checked": "2026-10-20",
-  "ties": [
-   {
-    "d": "2026-10-10",
-    "t": "UniUni responds to Tacoma complaints of packages left at wrong addresses",
-    "story": "accf814d7d663"
-   },
-   {
-    "d": "2026-09-25",
-    "t": "DHL Express sets 5.9% average increase for U.S. accounts on Jan 1, 2027",
-    "story": "02"
-   },
-   {
-    "d": "2026-08-18",
-    "t": "Home Depot rolls out nationwide Express Delivery from 2,000+ stores",
-    "story": "g06"
-   },
-   {
-    "d": "2026-05-15",
-    "t": "UniUni to go public through MAK Acquisition at about $1 billion",
-    "story": "60"
-   }
-  ]
+  "d": "2026-10-20",
+  "ended": "2026-10-20",
+  "sum": "UniUni agreed on May 15, 2026 to go public through a reverse takeover by MAK Acquisition Corp. at about US$1.0 billion. MAK sent a notice of material breach on Sept. 24, 2026 and terminated the purchase agreement on Oct. 20, 2026, so the deal will not proceed.",
+  "latest": "MAK terminated the purchase agreement on Oct. 20, 2026; the go-public deal will not proceed.",
+  "note": "MAK said UniUni breached an interim covenant capping its cumulative pre-tax loss and did not cure it before the cure period expired Oct. 19. MAK is withdrawing its preliminary prospectus and will keep looking for a qualifying acquisition."
  },
  {
-  "title": "WWEX Group and Auctane merge as ShipStation Global",
-  "buyer": "WWEX Group",
-  "target": "Auctane",
-  "value": "Undisclosed",
+  "buyer": "Thoma Bravo",
+  "target": "WWEX Group (combined with Auctane)",
+  "title": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
+  "ann": "2026-03-03",
+  "story": "64",
   "status": "Closed",
-  "ann": null,
-  "closed": null,
-  "sum": "WWEX Group and Auctane completed a merger to create ShipStation Global, combining a freight brokerage and carrier network with parcel software. Terms were not disclosed.",
-  "who": [
-   [
-    "Merged with",
-    "WWEX Group",
-    "Freight brokerage and carrier network."
-   ],
-   [
-    "Merged with",
-    "Auctane",
-    "Parcel software company behind the ShipStation brand."
-   ]
-  ],
-  "why": "The deal joins a freight brokerage with parcel software under the ShipStation brand. Dealroom said the combined company describes itself as the first multi-modal shipping platform for small and mid-size shippers and scaling enterprises. The network moves more than 3 billion shipments a year, according to Dealroom. In October 2026 ShipStation Global was named to FreightWaves' 2027 FreightTech 100 list.",
-  "parties": [
+  "updates": [
    {
-    "name": "WWEX Group",
-    "role": "Merged with",
-    "realm": "Freight brokerage & parcel reselling",
-    "hq": null,
-    "founded": null,
-    "size": null,
-    "history": []
+    "d": "2026-03-03",
+    "t": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
+    "story": "64"
    },
    {
-    "name": "Auctane",
-    "role": "Merged with",
-    "realm": "Shipping software",
-    "hq": null,
-    "founded": null,
-    "size": null,
-    "history": []
+    "d": "2026-10-14",
+    "t": "WWEX Group and Auctane merge to form ShipStation Global",
+    "story": "a386e5fed7984"
    }
   ],
-  "tree": {
-   "n": "ShipStation Global",
-   "c": [
-    {
-     "n": "WWEX Group",
-     "nw": 1,
-     "c": []
-    },
-    {
-     "n": "Auctane",
-     "nw": 1,
-     "c": []
-    }
-   ]
-  },
-  "note": "Merger completion date and terms not stated in the source.",
-  "d": "2026-10-14",
-  "story": "a386e5fed7984",
-  "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
   "srcs": [
+   {
+    "src": "Thoma Bravo",
+    "url": "https://www.thomabravo.com/press-releases/wwex-group-and-auctane-complete-merger-creating-leading-logistics-provider-shipstation-global"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/thoma-bravo-to-acquire-wwex-group-combine-with-auctane"
+   },
+   {
+    "src": "Transport Topics",
+    "url": "https://www.ttnews.com/articles/wwex-auctane-shipstation"
+   },
    {
     "src": "Dealroom",
     "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform"
    }
   ],
   "checked": "2026-10-14",
-  "ties": [
-   {
-    "d": "2026-03-03",
-    "t": "Thoma Bravo combines WWEX Group with Auctane",
-    "story": "64"
-   }
-  ]
+  "d": "2026-10-14",
+  "closed": "2026-06-01"
  },
  {
   "title": "DHL eCommerce buys Venipak Baltic companies",
@@ -383,154 +315,57 @@
   "ties": []
  },
  {
-  "title": "Evri Group acquires Cross Border Connect",
-  "buyer": "Evri Group",
+  "buyer": "Evri",
   "target": "Cross Border Connect",
-  "value": "Undisclosed",
+  "title": "Evri buys Cross Border Connect to enter the U.S.",
+  "ann": "2026-10-05",
+  "story": "aec10b9813ef5",
   "status": "Announced",
-  "ann": "2026-10-06",
-  "closed": null,
-  "sum": "Evri Group has agreed to acquire Cross Border Connect, a US-based logistics enablement provider specializing in delivery and returns. Financial terms were not disclosed.",
-  "who": [
-   [
-    "Buyer",
-    "Evri Group",
-    "Parcel delivery group that said it serves customers moving parcels between the UK, Europe and the US."
-   ],
-   [
-    "Target",
-    "Cross Border Connect",
-    "Boca Raton, Florida-based platform for international merchants entering the US market, with six US ports of entry and end-to-end customs clearance."
-   ]
-  ],
-  "why": "Evri said the acquisition supports its ability to serve customers on the UK-US trade lane and expands solutions for retailers, marketplaces and logistics partners trading across borders. It follows Evri's 2025 acquisition of Coll-8. Evri said Coll-8's customs clearance expertise and CBC's US logistics and technology capabilities create a more comprehensive cross-border offering.",
-  "parties": [
+  "updates": [
    {
-    "name": "Evri Group",
-    "role": "Buyer",
-    "realm": "Regional / last-mile carrier",
-    "hq": null,
-    "founded": null,
-    "size": null,
-    "history": [
-     {
-      "y": "2025",
-      "t": "Acquired Coll-8"
-     }
-    ]
-   },
-   {
-    "name": "Cross Border Connect",
-    "role": "Target",
-    "realm": "Cross-border parcel platform",
-    "hq": "Boca Raton, Florida, US",
-    "founded": null,
-    "size": "Six US ports of entry",
-    "history": []
+    "d": "2026-10-05",
+    "t": "Evri buys Cross Border Connect to enter the U.S.",
+    "story": "aec10b9813ef5"
    }
   ],
-  "tree": {
-   "n": "Evri Group",
-   "c": [
-    {
-     "n": "Coll-8",
-     "nw": 0,
-     "c": []
-    },
-    {
-     "n": "Cross Border Connect",
-     "nw": 1,
-     "c": []
-    }
-   ]
-  },
-  "note": "Chris Lentjes, CBC co-founder and CEO, will continue to lead the business.",
-  "d": "2026-10-06",
-  "story": "aec10b9813ef5",
-  "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html",
   "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/?p=582393"
+   },
    {
     "src": "Parcel and Postal Technology International",
     "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html"
    }
   ],
-  "checked": "2026-10-06",
-  "ties": [
-   {
-    "d": "2026-10-08",
-    "t": "Connecticut man gets 2 years for $3.5M Amazon Relay fraud scheme",
-    "story": "a504bfb1748d7"
-   },
-   {
-    "d": "2025-05-14",
-    "t": "DHL eCommerce UK to merge with Evri",
-    "story": "h518"
-   }
-  ]
+  "checked": "2026-10-10",
+  "d": "2026-10-06"
  },
  {
-  "title": "C.H. Robinson buys RXO for $5.8B",
-  "buyer": "C.H. Robinson Worldwide",
+  "buyer": "C.H. Robinson",
   "target": "RXO",
-  "value": "$5.8 billion",
-  "status": "Announced",
+  "title": "C.H. Robinson agrees to buy RXO",
   "ann": "2026-10-05",
-  "closed": null,
-  "sum": "C.H. Robinson Worldwide plans to acquire RXO in a stock-and-cash transaction valued at $5.8 billion. The companies announced the deal in a news release on Monday.",
-  "who": [
-   [
-    "Buyer",
-    "C.H. Robinson Worldwide",
-    "Third-party logistics company offering global, multimodal services; Dave Bozeman is president and CEO."
-   ],
-   [
-    "Target",
-    "RXO",
-    "Provider of brokerage and transportation services, including expedited and last-mile services in North America; Drew Wilkerson is chairman and CEO."
-   ]
-  ],
-  "why": "According to the companies, the combination would create a third-party logistics company with over $25 billion in size, serving approximately 93,000 shippers and 600,000 carriers. C.H. Robinson said it would deploy its \"Lean AI\" operating model across RXO's workflows, targeting $300 million of net run-rate savings within two years of closing. According to an investor presentation, RXO has limited shipper overlap with C.H. Robinson. C.H. Robinson CFO Damon Lee said Navisphere would become the core system of record for RXO's overlapping truckload and less-than-truckload services.",
-  "parties": [
+  "story": "a3341a802bc1a",
+  "status": "Pending",
+  "updates": [
    {
-    "name": "C.H. Robinson Worldwide",
-    "role": "Buyer",
-    "realm": "Contract logistics / 3PL",
-    "hq": null,
-    "founded": null,
-    "size": "2026 estimated gross revenue of $18.4 billion",
-    "history": []
-   },
-   {
-    "name": "RXO",
-    "role": "Target",
-    "realm": "Freight brokerage & parcel reselling",
-    "hq": null,
-    "founded": null,
-    "size": "2026 estimated gross revenue of $6.8 billion",
-    "history": []
+    "d": "2026-10-05",
+    "t": "C.H. Robinson agrees to buy RXO",
+    "story": "a3341a802bc1a"
    }
   ],
-  "tree": {
-   "n": "C.H. Robinson Worldwide",
-   "c": [
-    {
-     "n": "RXO",
-     "nw": 1,
-     "c": []
-    }
-   ]
-  },
-  "note": "Expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
-  "d": "2026-10-05",
-  "story": "a3341a802bc1a",
-  "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/",
   "srcs": [
+   {
+    "src": "RXO and C.H. Robinson (company release)",
+    "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/"
+   },
    {
     "src": "Trucking Dive",
     "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/"
    }
   ],
-  "checked": "2026-10-05",
-  "ties": []
+  "checked": "2026-10-10",
+  "d": "2026-10-05"
  }
 ]
