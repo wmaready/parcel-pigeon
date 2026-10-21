@@ -58,7 +58,8 @@
       "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
       "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}",
       "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}",
-      "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}"
+      "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}",
+      "SEC_CONTACT": "${{ secrets.SEC_CONTACT }}"
      },
      "working-directory": "pipeline",
      "run": "python publish.py || echo \"::warning::publish.py failed\"\npython watch.py || echo \"::warning::watch.py failed\"\npython docwatch.py --batch 15 || true\n# company and regulator sources (SEC filings, Federal Register, press wires, newsrooms) every hour, to be first\npython news.py --primary || echo \"::warning::primary news sweep failed\"\nnode export_seed.js ../index.html ../data/seed.json || true\npython alerts.py || echo \"::warning::alerts.py failed\"\npython audit.py --offline || true\n"

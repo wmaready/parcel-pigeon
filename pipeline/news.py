@@ -3,7 +3,7 @@
 Run: python pipeline/news.py
 Writes data/news.json (live stories) and data/review.json (things a person should check).
 """
-import datetime as dt, difflib, json, re, sys, urllib.parse
+import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
 from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source
 from scoop import is_covered, notify, PRESS, ask, big, keywords
@@ -310,6 +310,42 @@ def edgar_doc(index_url):
     return trafilatura.extract(requests.get(u, headers=SEC_UA, timeout=25).text, include_tables=True) or None, u
 
 
+CLAUDE_READS = int(os.environ.get("PP_CLAUDE_READS") or 6)     # pages per run read through Claude's web fetch tool
+READS = {"n": 0}
+
+
+def claude_read(url):
+    """Read a page through Claude's web fetch tool, which fetches from Anthropic's servers: it gets past many of the bot
+    walls that turn away GitHub's runners (not paywalls). The page text comes straight from the tool result, never from
+    the model's own words, so nothing in it can be paraphrased or invented."""
+    from common import API_KEY, track
+    if not API_KEY or READS["n"] >= CLAUDE_READS:
+        return None
+    READS["n"] += 1
+    body = {"model": MODEL_WRITE, "max_tokens": 300,
+            "tools": [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 1, "max_content_tokens": 20000}],
+            "messages": [{"role": "user", "content": f"Fetch this page with web_fetch, then reply OK.\n{url}"}]}
+    try:
+        r = requests.post("https://api.anthropic.com/v1/messages", json=body, timeout=180,
+                          headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        r.raise_for_status()
+        j = r.json(); track(j)
+    except Exception as e:
+        print(f"  web fetch failed for {url}: {e}", file=sys.stderr)
+        return None
+    for b in j.get("content", []):
+        res = b.get("content") if b.get("type") == "web_fetch_tool_result" else None
+        doc = (res or {}).get("content") if (res or {}).get("type") == "web_fetch_result" else None
+        src = (doc or {}).get("source") or {}
+        if src.get("type") == "text" and src.get("data"):
+            text = src["data"]
+            if "<" in text[:2000] and "</" in text:
+                text = trafilatura.extract(text, include_comments=False) or text
+            from fetch import is_blocked
+            return None if is_blocked(text) else text
+    return None
+
+
 def article_text(url):
     try:
         if "sec.gov/Archives/edgar" in (url or "") and url.rstrip("/").endswith(("-index.htm", "-index.html")):
@@ -319,13 +355,16 @@ def article_text(url):
             if not real:
                 return None, url
             url = real
-        import requests
         r = requests.get(url, headers=BROWSER, timeout=25, allow_redirects=True)
-        if "news.google.com" in r.url or r.status_code >= 400:
+        if "news.google.com" in r.url:
             return None, r.url
-        return trafilatura.extract(r.text, include_comments=False) or None, r.url
+        text = trafilatura.extract(r.text, include_comments=False) if r.status_code < 400 else None
+        from fetch import is_blocked
+        if not text or len(text) < 400 or is_blocked(text):
+            text = claude_read(r.url) or text     # turned away or empty: try once more from Anthropic's servers
+        return (text or None), r.url
     except Exception:
-        return None, url
+        return (claude_read(url) if url and "news.google.com" not in url else None), url
 
 
 def lead_image(url):

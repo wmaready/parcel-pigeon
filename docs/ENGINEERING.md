@@ -20,7 +20,7 @@ pricing history since 2018. It has no server and no database:
 | Workflow | When | What runs |
 |---|---|---|
 | `update.yml` "Update Parcel Pigeon" | every 2 h 10:17-22:17 UTC, plus 04:17 UTC, and on push to main | `fuel.py`, `markets.py`, `news.py`, `themes.py`, `brief.py` (12 UTC), `publish.py`, `export_seed.js`, `players.py` (04 UTC), `alerts.py`, audit |
-| `watch.yml` "Watch carrier pages" | hourly at :05 | `publish.py`, `watch.py`, `docwatch.py --batch 15`, `alerts.py`, `audit.py --offline` |
+| `watch.yml` "Watch carrier pages" | hourly at :05 | `publish.py`, `watch.py`, `docwatch.py --batch 15`, `news.py --primary` (SEC filings, Federal Register, press wires, newsrooms), `alerts.py`, `audit.py --offline` |
 | `sweep.yml` "Sweep" | 03:41, 09:41, 15:41, 21:41 UTC | `sweep.py` (market map: status, facts, vetting, discovery), capped by `PW_SWEEP_CALLS` per UTC day |
 | `alerts.yml` | every 15 min and on issue comments | approves and sends major phone alerts |
 | `checks.yml` | every pull request | the test suite (below); uses no secrets |
@@ -33,7 +33,7 @@ Most workflow files are written as JSON (valid YAML); keep that style or convert
 
 | Script | Job |
 |---|---|
-| `news.py` | Collects feeds and Google News searches (`sources.yaml`), screens them (fast model), groups coverage of one event, writes stories (writing model), checks every number against the source text, files documents, deals, companies and storylines |
+| `news.py` | Collects feeds and Google News searches (`sources.yaml`), screens them (fast model), groups coverage of one event, writes stories (writing model), checks every number against the source text, files documents, deals, companies and storylines. `--primary` reads only the company and regulator sources (`primary:`) and runs hourly. Pages the reader can't open are read once more through Claude's web fetch tool (`claude_read`, at most `PP_CLAUDE_READS` a run, default 6) |
 | `scoop.py` | "First to report": checks whether the trade and business press has an event yet |
 | `watch.py` | Hourly read of carrier rate, surcharge, fuel, alert and developer pages; diffs against the last copy and spots new PDFs |
 | `docwatch.py` | Reads the rate guides, service guides and terms in the Docs library and reports material wording or figure changes |
@@ -84,7 +84,12 @@ These are the guardrails that make the content trustworthy. Each has a test in `
    PitchBook) never count alone (`sweep.fact_ok`). Ownership changes need two sources on different websites and a date.
 6. **Only market movers join the map** (`players.MOVERS`, `news.NOT_MOVER`): no accounting, law, consulting or
    staffing firms, no passive investors.
-7. **Competitors never become stories.** Other parcel consultancies (`news.COMPETITOR_DOMAINS`) only back up a story.
+7. **Some sites are never sources** (`common.NOT_SOURCES`): press-release spam, automated finance write-ups, AI market reports.
+8. **Single weak sources are marked.** A price, deal, earnings, legal or rules story resting on one source that is not the
+   company, a regulator, the major press or the trade press shows "Unconfirmed" (`news.unconfirmed`). Each run tries to
+   confirm up to five with a search for better coverage; the mark clears as soon as a better or second source is listed.
+9. **Text read through Claude's web fetch is the tool's copy of the page,** never the model's reply.
+10. **Competitors never become stories.** Other parcel consultancies (`news.COMPETITOR_DOMAINS`) only back up a story.
 
 ## Claude usage and cost
 
@@ -96,7 +101,8 @@ Expect roughly $15-35 a month in a normal news week; the hard stop is the monthl
 ## Secrets (repository settings)
 
 `ANTHROPIC_API_KEY` (required). Optional: `EIA_API_KEY`, `OILPRICE_API_KEY`, `NTFY_TOPIC`, `ONESIGNAL_APP_ID`,
-`ONESIGNAL_API_KEY`, `PP_ADMIN_IDS`, `SITE_URL`, `PP_FETCH_PROXY` (an unblocking proxy URL with `{url}` in it).
+`ONESIGNAL_API_KEY`, `PP_ADMIN_IDS`, `SITE_URL`, `PP_FETCH_PROXY` (an unblocking proxy URL with `{url}` in it),
+`SEC_CONTACT` (an email address the SEC asks automated readers to identify themselves with).
 
 ## Tests
 
