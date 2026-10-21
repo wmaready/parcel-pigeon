@@ -10,6 +10,7 @@ from scoop import is_covered, notify, PRESS, ask, big, keywords
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
 MAX_AGE_DAYS = 7
+OLD_NEWS_DAYS = 45      # a minor story whose event is older than this isn't published as new
 MAX_SCREEN = 160              # headlines screened per run (fast model, 20 per call), best outlets first; the rest wait
 PER_FEED = 100                # entries read from each feed or search (Google News returns up to 100)
 KEEP_LIVE = 250
@@ -1116,6 +1117,10 @@ def main():
             ev = str(s.get("event_date") or "")
             # a late report keeps the date the event happened, so it files in its place instead of topping the feed
             sdate = ev if re.match(r"^\d{4}-\d{2}-\d{2}$", ev) and ev < pub else pub
+            if sdate < (dt.date.today() - dt.timedelta(days=OLD_NEWS_DAYS)).isoformat() and int(s.get("lvl", 1)) < 2:
+                # a minor item about something months old that a feed only now surfaced (a local July audit showing
+                # up in October): not news any more, so it stays off the feed
+                print(f"  skipped (old news from {sdate}): {s['title'][:80]}"); continue
             story = {"id": "a" + h(lead_url), "date": sdate, "c": s.get("carriers") or v.get("carriers") or ["Industry"],
                      "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
                      "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "why": (str(s.get("why") or "")[:200] or None), "score": int(max((v2.get("score") or 5) for _, v2 in members)), "tie": s.get("tie"),
