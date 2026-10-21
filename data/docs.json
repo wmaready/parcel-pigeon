@@ -685,7 +685,12 @@
   "d": "Counter rates",
   "cur": true,
   "upd": "2026-09-11",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2026-fedex-retail-rates-pdf-3baad6.pdf",
+  "fh": "f02c6bfffdd9c0aca5f044f508f54930aebf5f79",
+  "fat": "2026-10-21",
+  "fsz": 697605
  },
  {
   "c": "FedEx",
@@ -696,7 +701,12 @@
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx",
   "d": "Spreadsheet version",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2026-fedex-retail-rates-excel-901c6f.xlsx",
+  "fh": "7985a9b55eabae06b4b3205b17366a8c1e2f3dde",
+  "fat": "2026-10-21",
+  "fsz": 3833456
  },
  {
   "c": "FedEx",
@@ -718,7 +728,12 @@
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2026-fedex-one-rate-pricing-7c7e7f.pdf",
+  "fh": "c8dea51bee2c35270b9006d857c3a76291c29fa9",
+  "fat": "2026-10-21",
+  "fsz": 66681
  },
  {
   "c": "FedEx",
@@ -2328,5 +2343,38 @@
    "title": "PRC notices three new USPS standardized competitive contracts",
    "when": "2026-10-15"
   }
+ },
+ {
+  "c": "FedEx",
+  "t": "Terms",
+  "n": "FedEx IPIXF TermsCond",
+  "y": null,
+  "eff": null,
+  "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
+  "d": "Posted on FedEx's Fuel surcharge page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee 2025 EXPANSION LETTER",
+  "y": 2025,
+  "eff": null,
+  "u": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee 2025 EXPANSION LETTER UPDATE",
+  "y": 2025,
+  "eff": null,
+  "u": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
  }
 ]

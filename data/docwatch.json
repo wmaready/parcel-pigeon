@@ -219,14 +219,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 2,
+   "fails": 3,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 2,
+   "fails": 3,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -299,7 +299,7 @@
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
-   "fails": 2,
+   "fails": 3,
    "err": "404 Client Error: Not Found for url: https://www.shipveho.com/service-guide/last-mile-delivery",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -374,6 +374,24 @@
    "first": "2026-10-21",
    "n": "LTL_Rates_2024_Version_28.pdf",
    "hash": "21393bae0044",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf": {
+   "first": "2026-10-21",
+   "n": "IPIXF_TermsCond.pdf",
+   "hash": "9520c595235a",
+   "checked": "2026-10-21"
+  },
+  "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf": {
+   "first": "2026-10-21",
+   "n": "2025_EXPANSION_LETTER.pdf",
+   "hash": "a8a4ed1b6ec1",
+   "checked": "2026-10-21"
+  },
+  "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf": {
+   "first": "2026-10-21",
+   "n": "2025_EXPANSION_LETTER_UPDATE.pdf",
+   "hash": "3c67224255af",
    "checked": "2026-10-21"
   }
  }
