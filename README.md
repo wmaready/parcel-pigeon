@@ -20,6 +20,15 @@ from the carrier's own page and opens a **GitHub issue** with the draft. You get
 - **Discard:** close the issue.
 The first run only saves a baseline copy of each page; alerts start with the second run.
 
+### When a carrier's site turns the reader away
+UPS and FedEx use bot protection that often answers a script with an "Access Denied" page. `pipeline/fetch.py` recognizes
+those pages and never saves one as a rate guide. It tries a browser-like request, a Chrome-like connection, a real headless
+Chrome, an optional unblocking proxy and finally the Internet Archive's latest copy (marked with its capture date). If all of
+them are refused, the page counts as a failed read and the audit opens a **watch-blocked** item. For dependable UPS and FedEx
+coverage, add an unblocking proxy (ScraperAPI, ZenRows, Bright Data and similar, about $30-50 a month) as the secret
+`PP_FETCH_PROXY`, written as the provider's request address with `{url}` where the page address goes, e.g.
+`https://api.scraperapi.com/?api_key=YOUR_KEY&url={url}`.
+
 ### First to report
 When a story comes only from a primary source (a carrier or company newsroom, a press release wire, a filing, or a
 carrier page the watcher read), the pipeline searches Google News for the same event across the trade and business press.

@@ -2,42 +2,46 @@
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
   "carrier": "UPS",
   "name": "Rate and Service Guides",
-  "fails": 0,
+  "fails": 1,
   "thin": 20,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 151,
-  "last_ok": null
+  "last_ok": null,
+  "blocked": true
  },
  "https://ups.com/rateupdates": {
   "carrier": "UPS",
   "name": "Rate updates and notices",
-  "fails": 0,
+  "fails": 1,
   "thin": 20,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 111,
-  "last_ok": null
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
   "carrier": "UPS",
   "name": "Fuel surcharges",
-  "fails": 0,
+  "fails": 1,
   "thin": 20,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 167,
-  "last_ok": null
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.ups.com/us/en/service-alerts": {
   "carrier": "UPS",
   "name": "Service alerts",
-  "fails": 0,
+  "fails": 1,
   "thin": 20,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 120,
-  "last_ok": null
+  "last_ok": null,
+  "blocked": true
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
   "carrier": "UPS",
@@ -60,62 +64,68 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 315,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 314,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 314,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 315,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 315,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (saved copy was a block page)",
   "last_try": "2026-10-15",
   "chars": 315,
-  "last_ok": "2026-10-15"
+  "last_ok": null,
+  "blocked": true
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
   "carrier": "FedEx",

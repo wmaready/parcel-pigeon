@@ -49,7 +49,8 @@ def squash(t):
 
 def file_text(url):
     """Plain text of a PDF or web page (None for spreadsheets)."""
-    r = get(url, timeout=60)
+    from fetch import fetch
+    r = fetch(url, timeout=60)
     ctype = r.headers.get("content-type", "").lower()
     path = url.lower().split("?")[0]
     if path.endswith(".pdf") or "pdf" in ctype:

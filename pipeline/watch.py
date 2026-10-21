@@ -11,6 +11,7 @@ from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_s
 from scoop import is_covered, notify, ask, big
 from common import dedupe_live, same_event
 from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
+from fetch import fetch, render, is_blocked, is_pdf, Blocked
 
 SNAP = DATA / "snapshots"
 MAX_DIFF_CHARS = 12000
@@ -34,47 +35,31 @@ facts in the added/removed lines; every number must appear there; title under 90
 story may be null."""
 
 
-def page_text(url):
-    """Return (text, pdf_links). Falls back to a headless browser for pages built with JavaScript."""
-    r = get(url, timeout=40)
-    if "pdf" in r.headers.get("content-type", "") or url.lower().endswith(".pdf"):
-        return pdf_text(r.content), []
-    html = r.text
+def page_text(url, full=False):
+    """Return (text, pdf_links, page). full=True keeps the whole page's text (news-release lists, where the
+    article extractor would pick one promo block instead of the list). Falls back to a headless browser for pages built with JavaScript.
+    Raises fetch.Blocked when the carrier's site only ever returns its bot wall."""
+    pg = fetch(url, timeout=40)
+    if is_pdf(url, pg):
+        return pdf_text(pg.content), [], pg
+    html = pg.text
     text = trafilatura.extract(html, include_tables=True, include_comments=False) or ""
     hidden = 'aria-expanded="false"' in html or "<details" in html
-    if len(text) < 500 or hidden:
+    if (len(text) < 500 or hidden) and pg.via != "browser":
         html = render(url) or html
         text = trafilatura.extract(html, include_tables=True) or re.sub(r"<[^>]+>", " ", html)
+    if full:
+        text = "\n".join(l.strip() for l in re.sub(r"<[^>]+>", "\n", re.sub(r"(?is)<(script|style|noscript|svg)[^>]*>.*?</\1>", " ", html)).splitlines() if l.strip())
+    if is_blocked(text):
+        raise Blocked("blocked by the carrier's site (block page after rendering)")
     links = sorted({canon(urllib.parse.urljoin(url, m)) for m in re.findall(r'href="([^"]+\.pdf[^"]*)"', html, re.I)})
-    return text, links
+    return text, links, pg
 
 
 
 def pdf_text(data):
     reader = PdfReader(io.BytesIO(data))
     return "\n".join(f"[page {i+1}]\n" + (p.extract_text() or "") for i, p in enumerate(reader.pages))
-
-
-def render(url):
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        return None
-    try:
-        with sync_playwright() as p:
-            b = p.chromium.launch()
-            pg = b.new_page()
-            pg.goto(url, wait_until="networkidle", timeout=45000)
-            # carriers (FedEx especially) tuck notices under drop-downs; open every one so the text is in the page we read
-            pg.evaluate("""() => { document.querySelectorAll('details').forEach(d => d.open = true);
-                [...document.querySelectorAll('[aria-expanded="false"]')].slice(0, 80).forEach(b => { try { b.click(); } catch (e) {} }); }""")
-            pg.wait_for_timeout(1500)
-            html = pg.content()
-            b.close()
-            return html
-    except Exception as e:
-        print(f"  render failed {url}: {e}", file=sys.stderr)
-        return None
 
 
 def norm(text):
@@ -167,13 +152,16 @@ def main():
         key = h(item["url"])
         hh = health.setdefault(item["url"], {"carrier": item["carrier"], "name": item["name"], "fails": 0, "thin": 0})
         try:
-            text, pdfs = page_text(item["url"])
+            text, pdfs, pg = page_text(item["url"], full=item.get("mode") == "full")
         except Exception as e:
-            hh["fails"] = hh.get("fails", 0) + 1; hh["err"] = str(e)[:120]; hh["last_try"] = today
+            # a bot wall is a failed read, never a reading: nothing is saved or compared, and the audit flags it
+            hh["fails"] = hh.get("fails", 0) + 1; hh["err"] = str(e)[:160]; hh["last_try"] = today
+            hh["blocked"] = isinstance(e, Blocked)
             print(f"skip {item['name']}: {e}", file=sys.stderr); continue
         new = norm(text)
         # coverage record: the audit flags any source we haven't read successfully in the last day or so, or that reads back nearly empty
-        hh.update({"fails": 0, "err": None, "last_try": today, "chars": len(text or ""), "last_ok": today if len(text or "") >= 300 else hh.get("last_ok")})
+        hh.update({"fails": 0, "err": None, "blocked": False, "last_try": today, "chars": len(text or ""),
+                   "via": pg.via, "copy_of": pg.when, "last_ok": today if len(text or "") >= 300 else hh.get("last_ok")})
         hh["thin"] = hh.get("thin", 0) + 1 if len(text or "") < 300 else 0
         snap = SNAP / f"{key}.txt"
         prev = state.get(item["url"], {})

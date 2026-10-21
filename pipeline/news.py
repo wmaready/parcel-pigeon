@@ -5,11 +5,13 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, re, sys, urllib.parse
 import feedparser, trafilatura, yaml
-from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy
-from scoop import is_covered, notify, PRESS, ask, big
+from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words
+from scoop import is_covered, notify, PRESS, ask, big, keywords
 
-MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each)
+MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
 MAX_AGE_DAYS = 7
+MAX_SCREEN = 160              # headlines screened per run (fast model, 20 per call), best outlets first; the rest wait
+PER_FEED = 100                # entries read from each feed or search (Google News returns up to 100)
 KEEP_LIVE = 250
 
 CATEGORIES = ["Peak season", "Pricing & GRI", "Fees & rules", "Fuel", "Technology & tools", "Carrier strategy", "Postal",
@@ -60,6 +62,11 @@ that the major parcel and freight outlets already covered (check RECENT STORIES 
 (a site adding its own guides or directories, listicles, SEO explainers, product promotions). A "not yet announced" item IS a
 story when the wait itself matters to shippers (e.g. UPS announcing its general rate increase later than FedEx, leaving
 shippers less time to prepare).
+Outlets: each item shows its outlet tier: T0 the company or regulator itself, T1 major business or wire press (Reuters, WSJ,
+Bloomberg, CNBC, AP and similar), T2 parcel and logistics trade press, T3 everything else (local papers, aggregators,
+press-release reposts, blogs). Keep EVERY T0, T1 and T2 item that is about small parcel. Be stricter with T3: keep it when
+it adds a fact, a development or a local first-of-its-kind the others don't have; drop T3 rewrites of news the bigger
+outlets carried. Each item also shows its publish date; compare it with the event's own date in the summary.
 Discussion pieces: KEEP well-made commentary, columns, interviews and explainers from the parcel and freight trade press
 (PARCEL magazine / parcelindustry.com, FreightWaves, Supply Chain Dive, DC Velocity, Logistics Management, SupplyChainBrain,
 Post & Parcel) when they are about small parcel; mark kind "Opinion" (a view or argument) or "Analysis" (informational).
@@ -194,20 +201,32 @@ def collect(cfg):
     items, cutoff = [], dt.datetime.utcnow() - dt.timedelta(days=MAX_AGE_DAYS)
     feeds = [(f["name"], f["url"], True, f.get("house", False)) for f in cfg.get("direct", [])] + \
             [(q, gnews(q), False, False) for q in cfg.get("discovery", [])]
+    health, today = load("feed_health.json", {}), dt.date.today().isoformat()
     for name, url, direct, house in feeds:
+        fh = health.setdefault(name, {"direct": direct})
         try:
             parsed = feedparser.parse(get(url).content)
         except Exception as e:
+            fh.update({"err": str(e)[:120], "fails": fh.get("fails", 0) + 1, "last_try": today})
             print(f"  feed failed: {name}: {e}", file=sys.stderr)
             continue
-        for e in parsed.entries[:40]:
+        fh.update({"err": None, "fails": 0, "last_try": today, "entries": len(parsed.entries)})
+        if parsed.entries:
+            fh["last_ok"] = today
+        for e in parsed.entries[:PER_FEED]:
             ts = e.get("published_parsed") or e.get("updated_parsed")
             when = dt.datetime(*ts[:6]) if ts else dt.datetime.utcnow()
             if when < cutoff:
                 continue
             src = (e.get("source") or {}).get("title") if not direct else name
-            items.append({"title": e.get("title", "").strip(), "url": e.get("link", ""), "summary": re.sub("<[^>]+>", " ", e.get("summary", ""))[:600],
-                          "date": when.strftime("%Y-%m-%d"), "src": src or name, "direct": direct, "house": house})
+            dom = (e.get("source") or {}).get("href") if not direct else url
+            title = e.get("title", "").strip()
+            if not direct and src and title.endswith(" - " + src):
+                title = title[: -len(" - " + src)]          # Google News appends the outlet to every headline
+            items.append({"title": title, "url": e.get("link", ""), "summary": re.sub("<[^>]+>", " ", e.get("summary", ""))[:600],
+                          "date": when.strftime("%Y-%m-%d"), "src": src or name, "direct": direct, "house": house,
+                          "tier": 2 if direct and not house else tier(src, None, dom)})
+    save("feed_health.json", health)
     return items
 
 
@@ -307,6 +326,46 @@ def find_primary(query, carriers):
         if final and is_primary(final) and text:
             return {"src": (e.get("source") or {}).get("title") or "Company announcement", "url": final}
     return None
+
+
+def overlap(a, b):
+    """Share of the shorter headline's key words found in the other (0..1)."""
+    A, B = _words(a), _words(b)
+    return len(A & B) / max(1, min(len(A), len(B))) if len(A & B) >= 3 else 0.0
+
+
+def find_coverage(title, days=14):
+    """Who else reported this event: the major and trade outlets' versions of a headline we only have from a small
+    site, or from a paywalled one we can't read. Returns items in the same shape collect() makes, best outlets first."""
+    url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(" ".join(keywords(title, 7)) + f" when:{days}d") + "&hl=en-US&gl=US&ceid=US:en"
+    try:
+        entries = feedparser.parse(get(url).content).entries[:30]
+    except Exception:
+        return []
+    out = []
+    for e in entries:
+        src = (e.get("source") or {}).get("title") or ""
+        t = (e.get("title") or "").strip()
+        if src and t.endswith(" - " + src):
+            t = t[: -len(" - " + src)]
+        if overlap(t, title) < 0.4:
+            continue
+        ts = e.get("published_parsed") or e.get("updated_parsed")
+        out.append({"title": t, "url": e.get("link", ""), "summary": "", "date": dt.datetime(*ts[:6]).strftime("%Y-%m-%d") if ts else None,
+                    "src": src or "News", "direct": False, "house": False, "tier": tier(src, None, (e.get("source") or {}).get("href"))})
+    out = [x for x in out if x["date"] and x["tier"] <= 2][:12]
+    if not out:
+        return []
+    # similar words are not the same event ("FedEx closes Memphis hub" vs "FedEx closes Calverton hub"): the fast model decides
+    try:
+        keep = parse_json(claude(MODEL_FAST, "You match news headlines. Reply with a JSON list of the numbers of the CANDIDATES that report the "
+                                 "very same event as the HEADLINE (same company, same action, same place or figures). Different events "
+                                 "that merely sound alike do not match. [] if none.",
+                                 f"HEADLINE: {title}\n\nCANDIDATES:\n" + "\n".join(f"{i}. [{x['src']}] {x['title']}" for i, x in enumerate(out)), max_tokens=100))
+        out = [out[i] for i in keep if isinstance(i, int) and 0 <= i < len(out)]
+    except Exception:
+        return []
+    return sorted(out, key=lambda x: (x["tier"], x["date"]))
 
 
 def find_effective_date(story):
@@ -608,14 +667,17 @@ def main():
     for i in raw:
         # TransImpact posts go through the sweep like any outlet (as a story or a source); competitors only back up a story
         i["support_only"] = is_competitor(i["url"])
-    # exact-headline repeats (the same wire story on several sites) collapse here; the rest go to triage
+    # best outlets first, newest first within a tier: when a busy news day has more headlines than one run screens,
+    # the carrier's own posts, the major press and the trade press go first and the rest wait for the next run
+    raw.sort(key=lambda i: (i.get("tier", 3), -int((i.get("date") or "0000-00-00").replace("-", ""))))
+    # exact-headline repeats (the same wire story on several sites) collapse here, keeping the best outlet's copy; the rest go to triage
     batch = []
     for it in raw:
         if any(similar(it["title"], b["title"]) for b in batch):
             continue
         batch.append(it)
-    print(f"{len(raw)} new candidates, {len(batch)} distinct headlines")
-    batch = batch[:90]
+    print(f"{len(raw)} new candidates, {len(batch)} distinct headlines" + (f"; screening the best {MAX_SCREEN}, the rest wait" if len(batch) > MAX_SCREEN else ""))
+    batch = batch[:MAX_SCREEN]
     if not batch:
         save("seen.json", list(seen)[-6000:]); return
 
@@ -625,17 +687,26 @@ def main():
     head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent) + \
            "\n\nACTIVE STORYLINES:\n" + ("\n".join(f"{k}: {t.get('n')} (last {t.get('last')})" for k, t in active) or "(none yet)")
     # screen in chunks of 20 so a long first run can't overflow one reply; item numbers stay global
-    verdicts = []
+    verdicts, screened = [], set()
     for c0 in range(0, len(batch), 20):
-        listing = head + "\n\nNEW ITEMS:\n" + "\n".join(
-            f"{i}. [{b['src']}]{' (SUPPORTING SOURCE ONLY)' if b.get('support_only') else ''} {b['title']} :: {b['summary'][:250]}"
+        # events named in earlier batches of this run, so the same event screened in two batches gets one key
+        so_far = {}
+        for v in verdicts:
+            if v.get("keep") and v.get("event") and 0 <= v.get("i", -1) < len(batch):
+                so_far.setdefault(v["event"], batch[v["i"]]["title"])
+        listing = head + ("\n\nEVENTS ALREADY FOUND THIS RUN (reuse the key when an item reports the same event):\n" +
+                          "\n".join(f"{k}: {t}" for k, t in list(so_far.items())[-80:]) if so_far else "") + "\n\nNEW ITEMS:\n" + "\n".join(
+            f"{i}. [{b['src']} T{b.get('tier', 3)}, {b.get('date')}]{' (SUPPORTING SOURCE ONLY)' if b.get('support_only') else ''} {b['title']} :: {b['summary'][:250]}"
             for i, b in enumerate(batch) if c0 <= i < c0 + 20)
         try:
-            verdicts += parse_json(claude(MODEL_FAST, TRIAGE_SYSTEM, listing, max_tokens=4000))
+            got = parse_json(claude(MODEL_FAST, TRIAGE_SYSTEM, listing, max_tokens=4000))
+            verdicts += got
+            screened.update(range(c0, min(c0 + 20, len(batch))))
         except Exception as e:
-            print(f"triage chunk {c0}-{c0 + 19} skipped: {e}")
-    for b in batch:
-        seen.add(h(b["url"]))
+            # not marked seen: these headlines are screened again next run instead of being lost
+            print(f"triage chunk {c0}-{c0 + 19} skipped, will retry next run: {e}")
+    for i in screened:
+        seen.add(h(batch[i]["url"]))
     by_id = {s["id"]: s for s in live}
     archive = {**{x["id"]: x for x in load("seed.json", {}).get("news", []) if x.get("id")}, **by_id}   # storyline history
     groups, merged = {}, 0
@@ -650,15 +721,37 @@ def main():
         if item.get("support_only"):
             continue  # house and competitor posts only ever back up an existing story
         groups.setdefault(v.get("event") or f"e{v['i']}", []).append((item, v))
+    for members in groups.values():
+        members.sort(key=lambda m: (m[0].get("tier", 3), m[0].get("date") or ""))
+    # most important first: plainly-parcel items before loosely related ones, best outlet, most outlets covering it
+    order = sorted(groups.items(), key=lambda kv: (0 if any(v.get("fit") != "edge" for _, v in kv[1]) else 1,
+                                                    min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
     print(f"triage: {len(groups)} new events, {merged} sources added to existing stories")
 
     written = 0
-    for key, members in groups.items():
+    for n_ev, (key, members) in enumerate(order):
         if written >= MAX_NEW_PER_RUN:
+            # over this run's writing budget: these events are written next run, not dropped
+            later = [m[0] for _, ms in order[n_ev:] for m in ms]
+            for it in later:
+                seen.discard(h(it["url"]))
+            print(f"{len(order) - n_ev} events wait for the next run (writing budget {MAX_NEW_PER_RUN} reached)")
             break
         try:
+            # a story we only have from a small or late outlet, or from a paywalled one we can't read: find the
+            # major and trade outlets' versions, so the story leads with them and carries the date the news broke
+            if min(m[0].get("tier", 3) for m in members) >= 2 or members[0][0].get("tier") == 1:
+                have = {m[0]["url"] for m in members} | {m[0]["title"] for m in members}
+                lead_d = dt.date.fromisoformat(members[0][0]["date"])
+                extra = [x for x in find_coverage(members[0][0]["title"]) if x["tier"] <= 2 and x["url"] not in have and x["title"] not in have
+                         and abs((dt.date.fromisoformat(x["date"]) - lead_d).days) <= 10][:3]
+                for x in extra:
+                    seen.add(h(x["url"]))
+                members = sorted(members + [(x, members[0][1]) for x in extra], key=lambda m: (m[0].get("tier", 3), m[0].get("date") or ""))
+                if extra:
+                    print(f"  found {len(extra)} better source(s) for: {members[0][0]['title'][:70]}")
             texts, srcs = [], []
-            for item, v in members[:3]:
+            for item, v in members[:4]:
                 text, final_url = article_text(item["url"])
                 if text and len(text) >= 400:
                     texts.append((item, final_url, text))
@@ -709,7 +802,8 @@ def main():
                     ptext, _ = article_text(prim["url"])
                     if ptext:
                         texts.insert(0, ({"src": prim["src"], "title": lead_item["title"], "date": lead_item["date"]}, prim["url"], ptext))
-            pub = min(it["date"] for it, _, _ in texts)
+            # the date the news broke: the earliest report of it, read or not (a paywalled scoop still dates the story)
+            pub = min([it["date"] for it, _, _ in texts] + [m[0]["date"] for m in members if m[0].get("date")])
             ev = str(s.get("event_date") or "")
             # a late report keeps the date the event happened, so it files in its place instead of topping the feed
             sdate = ev if re.match(r"^\d{4}-\d{2}-\d{2}$", ev) and ev < pub else pub

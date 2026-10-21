@@ -139,10 +139,23 @@ def main():
     # 4c. carrier-page coverage: every watched page should have been read successfully within the last day
     for u, hh in load("watch_health.json", {}).items():
         last = hh.get("last_ok")
-        if hh.get("fails", 0) >= 6 or (last and days(last, ISO) > 1) or (not last and hh.get("last_try") and hh.get("fails", 0) >= 2):
+        if hh.get("blocked") and hh.get("fails", 0) >= 3:
+            issue("high", "watch-blocked", f"Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: {hh.get('carrier')} {hh.get('name')} {u}. "
+                  "Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).", [])
+        elif hh.get("fails", 0) >= 6 or (last and days(last, ISO) > 1) or (not last and hh.get("last_try") and hh.get("fails", 0) >= 2):
             issue("med", "watch-stale", f"Carrier page not read in over a day: {hh.get('carrier')} {hh.get('name')} ({hh.get('err') or 'no readable text'}) {u}", [])
         elif hh.get("thin", 0) >= 3:
             issue("med", "watch-thin", f"Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): {hh.get('carrier')} {hh.get('name')} {u}", [])
+
+    # 4c2. news feeds that keep failing or come back empty (a moved RSS address, a search that matches nothing)
+    dead = [n for n, f in load("feed_health.json", {}).items() if f.get("fails", 0) >= 6 or (f.get("direct") and f.get("entries") == 0)]
+    if dead:
+        issue("med", "feed-dead", f"{len(dead)} news feeds failing or empty: " + "; ".join(dead[:10]), [])
+
+    # 4d. watched documents the carrier's site keeps turning away
+    blocked_docs = [v.get("n") for v in load("docwatch.json", {}).get("docs", {}).values() if v.get("blocked") and v.get("fails", 0) >= 3]
+    if blocked_docs:
+        issue("high", "docs-blocked", f"{len(blocked_docs)} watched carrier documents can't be read (bot protection): " + "; ".join(blocked_docs[:8]), [])
 
     # 5. duplicates
     lst = sorted(stories.values(), key=lambda s: s["date"])

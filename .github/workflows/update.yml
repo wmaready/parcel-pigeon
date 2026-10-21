@@ -48,7 +48,8 @@
       "GITHUB_TOKEN": "${{ github.token }}",
       "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
       "ONESIGNAL_API_KEY": "${{ secrets.ONESIGNAL_API_KEY }}",
-      "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}"
+      "PP_ADMIN_IDS": "${{ secrets.PP_ADMIN_IDS }}",
+      "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}"
      },
      "working-directory": "pipeline",
      "run": "python fuel.py || true\npython markets.py || true\npython news.py || echo \"::warning::news.py failed; saving the other updates anyway\"\n# the 60-second brief is written once a day, on the 8 a.m. Eastern run (or when run by hand)\nif [ \"$(date -u +%H)\" = \"12\" ] || [ \"${{ github.event_name }}\" = \"workflow_dispatch\" ]; then python brief.py || true; fi\npython publish.py || true\nnode export_seed.js ../index.html ../data/seed.json || true\n# phone alerts: regular ones go out now, major ones wait for your OK\npython alerts.py || echo \"::warning::alerts.py failed\"\n# full audit (link checks and Claude fact checks) once a day on the overnight run; quick offline checks otherwise\nif [ \"$(date -u +%H)\" = \"04\" ]; then python audit.py || true; else python audit.py --offline || true; fi\n"

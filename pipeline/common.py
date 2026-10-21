@@ -142,9 +142,46 @@ def is_primary(url):
     return any(host == d or host.endswith("." + d) for d in PRIMARY_DOMAINS)
 
 
+# Outlet tiers, so a story leads with the carrier's own page, then the major business press, then the parcel and
+# logistics trade press, and a local paper or aggregator that picked the story up days later only backs it up.
+# Matched against the outlet's web address and its name (Google News gives both).
+TIER1 = {"reuters.com": "reuters", "wsj.com": "wall street journal", "bloomberg.com": "bloomberg", "cnbc.com": "cnbc",
+         "apnews.com": "associated press", "ft.com": "financial times", "nytimes.com": "new york times",
+         "washingtonpost.com": "washington post", "businessinsider.com": "business insider", "axios.com": "axios",
+         "forbes.com": "forbes", "fortune.com": "fortune", "barrons.com": "barron's", "marketwatch.com": "marketwatch",
+         "theinformation.com": "the information", "techcrunch.com": "techcrunch", "npr.org": "npr", "cnn.com": "cnn"}
+TIER2 = {"freightwaves.com": "freightwaves", "supplychaindive.com": "supply chain dive", "parcelindustry.com": "parcel industry",
+         "logisticsmgmt.com": "logistics management", "dcvelocity.com": "dc velocity", "supplychainbrain.com": "supplychainbrain",
+         "ttnews.com": "transport topics", "joc.com": "journal of commerce", "modernretail.co": "modern retail",
+         "retaildive.com": "retail dive", "truckingdive.com": "trucking dive", "postandparcel.info": "post & parcel",
+         "theloadstar.com": "the loadstar", "digitalcommerce360.com": "digital commerce 360", "aircargonews.net": "air cargo news",
+         "ccjdigital.com": "commercial carrier journal", "supplychain247.com": "supplychain247", "inboundlogistics.com": "inbound logistics",
+         "parcelandpostaltechnologyinternational.com": "parcel and postal technology", "retailtouchpoints.com": "retail touchpoints",
+         "retailbrew.com": "retail brew", "pymnts.com": "pymnts", "dronexl.co": "dronexl", "therobotreport.com": "the robot report",
+         "cepresearch.com": "cep research", "globaltrademag.com": "global trade", "ajot.com": "american journal of transportation",
+         "stattimes.com": "stat times", "aircargoweek.com": "air cargo week", "chainstoreage.com": "chain store age",
+         "transimpact.com": "transimpact"}
+
+
+def _host(url):
+    return re.sub(r"^https?://", "", url or "").split("/")[0].lower().removeprefix("www.")
+
+
+def tier(src=None, url=None, domain=None):
+    """0 = the company or regulator itself, 1 = major business or wire press, 2 = parcel and logistics trade press, 3 = everything else."""
+    if url and is_primary(url) or domain and is_primary("https://" + domain):
+        return 0
+    hosts = [x for x in (_host(url), _host(domain)) if x]
+    name = (src or "").lower()
+    for n, table in ((1, TIER1), (2, TIER2)):
+        if any(hh == d or hh.endswith("." + d) for hh in hosts for d in table) or any(v in name for v in table.values()):
+            return n
+    return 3
+
+
 def primary_first(srcs):
-    """Carrier or company sources first (stable order otherwise)."""
-    return sorted(srcs, key=lambda s: 0 if is_primary(s.get("url")) else 1)
+    """Carrier or company sources first, then major press, then trade press, then the rest (stable within a tier)."""
+    return sorted(srcs, key=lambda s: tier(s.get("src"), s.get("url")))
 
 
 # ---------------------------------------------------------------- what earns a spot on the rate clock

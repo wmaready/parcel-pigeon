@@ -11,7 +11,8 @@ data/news.json (category "Guide changes"). If no outlet has reported it yet, it 
 Usage: python docwatch.py [--batch 15]
 """
 import datetime as dt, difflib, gzip, io, json, os, re, sys
-from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE, clock_worthy
+from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE, clock_worthy, canon
+from fetch import fetch, is_blocked, is_pdf, Blocked
 from scoop import is_covered, notify, ask, big
 from changeaudit import audit, story_fields
 
@@ -32,16 +33,20 @@ old vs new wording or numbers, effective date if stated", "effect": "1 sentence 
 
 
 def text_of(url):
-    r = get(url, timeout=60)
-    ctype = r.headers.get("content-type", "").lower()
-    if url.lower().split("?")[0].endswith(".pdf") or "pdf" in ctype:
+    """Plain text of a carrier file or page. Raises fetch.Blocked for a bot wall, so it is never saved as the document."""
+    pg = fetch(url, timeout=60)
+    ctype = pg.headers.get("content-type", "").lower()
+    if is_pdf(url, pg):
         from pypdf import PdfReader
-        reader = PdfReader(io.BytesIO(r.content))
+        reader = PdfReader(io.BytesIO(pg.content))
         return "\n".join((p.extract_text() or "") for p in reader.pages)
     if "spreadsheet" in ctype or url.lower().split("?")[0].endswith((".xlsx", ".xls")):
         return None  # spreadsheets are ZIP lists and rate tables; the PDF twin is watched instead
     import trafilatura
-    return trafilatura.extract(r.text, include_comments=False, include_tables=True) or ""
+    text = trafilatura.extract(pg.text, include_comments=False, include_tables=True) or ""
+    if is_blocked(text):
+        raise Blocked("block page")
+    return text
 
 
 def norm(t):
@@ -60,7 +65,8 @@ def main():
         batch = int(sys.argv[sys.argv.index("--batch") + 1])
     SNAP.mkdir(parents=True, exist_ok=True)
     seed = load("seed.json", {})
-    docs = {d["u"]: d for d in seed.get("docs", []) + load("docs.json", []) if (d.get("u") or "").startswith("http")}
+    # one entry per file: the same file under a new cache stamp (?v=...) is not a new document
+    docs = {canon(d["u"]): {**d, "u": canon(d["u"])} for d in seed.get("docs", []) + load("docs.json", []) if (d.get("u") or "").startswith("http")}
     docs = [d for d in docs.values() if d.get("t") not in SKIP_TYPES and d.get("cur", True) is not False]
     docs.sort(key=lambda d: (PRIORITY.get(d.get("t"), 5), d.get("c", ""), d.get("n", "")))
     idx = load("docwatch.json", {"cursor": 0, "docs": {}})
@@ -77,12 +83,17 @@ def main():
         try:
             new = text_of(u)
         except Exception as e:
+            # a bot wall or dead link is a failed read: recorded so the audit can flag it, never saved as the document
+            r0 = idx["docs"].setdefault(u, {"n": d["n"]})
+            r0.update({"fails": r0.get("fails", 0) + 1, "err": str(e)[:160], "blocked": isinstance(e, Blocked), "last_try": today})
             print(f"  skip {d['n']}: {e}", file=sys.stderr)
             continue
         if new is None:
             continue
         new = norm(new)
         rec = idx["docs"].get(u, {})
+        for k in ("fails", "err", "blocked"):
+            rec.pop(k, None)
         newhash = h(new)
         p = snap_path(u)
         if not rec or not p.exists():
