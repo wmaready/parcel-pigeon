@@ -115,7 +115,10 @@ extracts; `PW_MODEL_WRITE` (default `claude-sonnet-5-5`) writes and researches.
   month spent before the ledger existed. The ledgers are kept off the public site.
 - `PP_MONTHLY_BUDGET` (repository variable, default 75) should match the Console's monthly spend limit. Each UTC day may
   spend what's left of it divided by the days left in the month.
-- Extras (Claude web fetch reads, re-confirming stories, company research, the sweep) stop at half the day's allowance.
+- Extras (company research and the sweep) stop at half the day's allowance. Accuracy work inside the news run (web
+  fetch reads, re-confirming stories, number checks) is never cut on its own.
+- Quality before cost: calls run at each model's default effort with `THINK_ROOM` headroom for thinking. `PP_EFFORT`
+  overrides effort for every call; leave it unset.
 - Once the allowance is used, Claude calls pause until midnight UTC; a run that started under it finishes. Unscreened
   headlines wait and nothing is lost. The run log shows a "Claude calls paused" notice.
 - Measured in October 2026: the scheduled pipeline costs about $1.35 a day (news.py writing is about 80% of it), about

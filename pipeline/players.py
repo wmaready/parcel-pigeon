@@ -59,14 +59,14 @@ def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searc
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
     if paused(extra=True):           # research and the sweep are extras: the news gets the day's budget first
         raise RuntimeError("Claude calls paused: " + paused(extra=True))
-    from common import EFFORT, THINK_ROOM
-    body = {"model": MODEL_WRITE, "max_tokens": max_tokens + THINK_ROOM, "output_config": {"effort": EFFORT},
-            "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
+    from common import with_effort, THINK_ROOM
+    body = with_effort({"model": MODEL_WRITE, "max_tokens": max_tokens + THINK_ROOM,
+                        "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]})
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": searches}]
     ask.searches = 0
     for attempt in range(3):
-        r = requests.post("https://api.anthropic.com/v1/messages", timeout=240, json=body,
+        r = requests.post("https://api.anthropic.com/v1/messages", timeout=420, json=body,
                           headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
         if r.status_code in (429, 500, 502, 503, 529) and attempt < 2:
             time.sleep(8 * (attempt + 1)); continue

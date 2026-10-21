@@ -55,8 +55,9 @@ SEARCH_USD = 0.01
 # The Anthropic Console's monthly spend limit. Each day may spend what's left of it divided by the days left in the month,
 # so a busy week can't use up the month and leave the app silent at the end of it. A run that starts under the day's
 # allowance finishes; once the day's allowance is used, Claude calls pause until midnight UTC and headlines wait unscreened
-# (nothing is lost). Extras (reading blocked pages through Claude, re-confirming stories, company research, the sweep)
-# stop at half the day's allowance, so the news itself is the last thing to pause.
+# (nothing is lost). Accuracy work is part of the news and is never cut on its own (reading blocked pages, re-confirming
+# single-source stories, number checks). Only company research and the sweep are extras: they stop at half the day's
+# allowance, so the news is the last thing to pause.
 MONTHLY = float(os.environ.get("PP_MONTHLY_BUDGET") or 75)
 LEDGERS = ("usage.json", "usage_sweep.json")              # the sweep runs alongside the news, so it keeps its own ledger
 LEDGER = os.environ.get("PP_LEDGER") or LEDGERS[0]
@@ -172,11 +173,20 @@ def api_check(r):
     raise RuntimeError(f"Claude API {r.status_code} {kind}: {msg}")
 
 
-# Sonnet 5.5 and Haiku 5.5 think before answering unless told otherwise, and the thinking counts against max_tokens: a
-# 900-token brief came back empty because thinking used all 900. Low effort keeps thinking short (none on most of these
-# tasks), and THINK_ROOM is headroom for what thinking there is, so the max_tokens a caller asks for is all reply.
-EFFORT = os.environ.get("PP_EFFORT") or "low"
-THINK_ROOM = 2000
+# Sonnet 5.5 and Haiku 5.5 think before answering, and the thinking counts against max_tokens: a 900-token brief once
+# came back empty because thinking used all 900. Calls run at each model's own default effort (thinking is where the
+# care goes: quality and accuracy come first), and THINK_ROOM is headroom on top of what the caller asks for, so the
+# reply always gets its full max_tokens. Headroom costs nothing unless it is used. PP_EFFORT ("low", "medium", "high")
+# overrides the effort for every call; leave it unset.
+EFFORT = os.environ.get("PP_EFFORT") or None
+THINK_ROOM = 16000
+
+
+def with_effort(body, effort=None):
+    effort = effort or EFFORT
+    if effort:
+        body["output_config"] = {"effort": effort}
+    return body
 
 
 def claude(model, system, user, max_tokens=1500):
@@ -191,9 +201,9 @@ def claude(model, system, user, max_tokens=1500):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": model, "max_tokens": max_tokens + THINK_ROOM, "system": cached_system(system),
-                  "output_config": {"effort": EFFORT}, "messages": [{"role": "user", "content": user}]},
-            timeout=120,
+            json=with_effort({"model": model, "max_tokens": max_tokens + THINK_ROOM, "system": cached_system(system),
+                              "messages": [{"role": "user", "content": user}]}),
+            timeout=360,
         )
         if r.status_code in (429, 500, 502, 503, 529):
             time.sleep(5 * (attempt + 1))
