@@ -1,5 +1,71 @@
 [
  {
+  "id": "a40674eddf824",
+  "date": "2026-10-21",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Pakistan arrests man over $126M counterfeit USPS label scheme",
+  "sum": "Pakistan's cybercrime agency arrested Faheem Akram, 33, of Khanewal, accused of running LabelsBank.com, which allegedly sold counterfeit USPS shipping labels to US customers since 2023. US authorities said a Florida federal grand jury indicted him last month and that the scheme caused about $126 million in losses to USPS.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The case concerns counterfeit postage sold to US customers, and the website has been shut down.",
+  "why": "The case involves more than five million counterfeit labels and about $126 million in reported USPS losses, with over 5,200 buyers identified.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T10:55:12Z",
+  "src": "SSBCrack",
+  "url": "https://news.ssbcrack.com/pakistan-man-arrested-for-126-million-counterfeit-stamp-operation-targeting-us-postal-service/",
+  "srcs": [
+   {
+    "src": "SSBCrack",
+    "url": "https://news.ssbcrack.com/pakistan-man-arrested-for-126-million-counterfeit-stamp-operation-targeting-us-postal-service/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-10-21",
+  "unconf": true
+ },
+ {
+  "id": "a42293aae6d92",
+  "date": "2026-10-21",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Mass. lawmakers seek drone delivery moratorium over Amazon plan",
+  "sum": "Sixteen Massachusetts legislators sent a letter to Gov. Maura Healey, Lt. Gov. Kim Driscoll and Attorney General Andrea Joy Campbell asking for a task force on commercial delivery drone rules. They also asked for a moratorium on processing commercial drone delivery operator certificates until a review is done. The letter responds to Amazon Prime Air's proposed expansion centered on Westborough, according to the Franklin Observer.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. Amazon's proposed drone delivery from Westborough still faces local zoning review, and the lawmakers' requests are not binding on the state.",
+  "why": "The request targets state oversight of drone takeoff and landing sites, which could affect Amazon's planned first New England drone hub in Westborough.",
+  "score": 4,
+  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns by the end of 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T10:55:26Z",
+  "src": "Franklin Observer",
+  "url": "https://franklinobserver.town.news/g/franklin-town-ma/n/393899/westborough-amazon-drone-buzz-reaches-governors-ear",
+  "srcs": [
+   {
+    "src": "Franklin Observer",
+    "url": "https://franklinobserver.town.news/g/franklin-town-ma/n/393899/westborough-amazon-drone-buzz-reaches-governors-ear"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 7,
+  "new": "State legislators in Massachusetts asked the governor for a task force and a moratorium on drone operator certificates, and Amazon's Westborough site awaits a Zoning Board of Appeals review, so a planned New England launch may be delayed.",
+  "exclusive": true
+ },
+ {
   "id": "ab73d424a5c41",
   "date": "2026-10-21",
   "c": [
@@ -144,8 +210,6 @@
    }
   ],
   "auto": true,
-  "thread": "usps-service-network",
-  "upd": 5,
   "new": "New detail is the operational cause: Ground Advantage parcels under one pound now move primarily by surface, with USPS citing hazardous materials risk on passenger aircraft, plus Priority Mail windows of 2 to 6 business days and a Dec. 16 holiday deadline that USPS kept in place, according to The Conveyor.",
   "exclusive": true,
   "tried": "2026-10-21",
@@ -216,6 +280,39 @@
   ],
   "auto": true,
   "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "abaae70647f04",
+  "date": "2026-10-20",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "UPS, Teamsters agree nationwide Driver Choice buyout, capped at 7,500",
+  "sum": "UPS said it reached an agreement with the Teamsters to offer its voluntary Driver Choice Program nationwide, including the Central Region. The Teamsters said eligible drivers who accept get $150,000 payments for early retirement, with total severance payments capped at 7,500 drivers.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service was announced. UPS said applications will be approved based on seniority and business needs.",
+  "why": "UPS is reconfiguring its network, and the Teamsters said up to 7,500 drivers across national job classifications could take buyouts under the agreement.",
+  "score": 8,
+  "tie": "UPS withdrew the program in the Teamsters' Central Region in March 2026 after local unions filed grievances, and an earlier April 2026 report described a settlement capping it at 7,500 drivers.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T10:54:57Z",
+  "src": "Supply Chain 24/7",
+  "url": "https://www.supplychain247.com/article/ups_teamsters_reach_nationwide_agreement_on_driver_choice_program_following_disputes/purdue_university",
+  "srcs": [
+   {
+    "src": "Supply Chain 24/7",
+    "url": "https://www.supplychain247.com/article/ups_teamsters_reach_nationwide_agreement_on_driver_choice_program_following_disputes/purdue_university"
+   }
+  ],
+  "auto": true,
+  "thread": "ups-driver-choice-lawsuit",
+  "upd": 2,
+  "new": "UPS and the Teamsters detailed the terms: $150,000 early-retirement payments, offers by seniority to long-haul feeder and Regular Package Drivers, and the Central Region included; the sources report no change to shipper rates or service.",
   "exclusive": true
  },
  {
@@ -1612,6 +1709,36 @@
   "ann": "2026-10-15",
   "thread": "royal-mail-cwu-dispute",
   "edge": true
+ },
+ {
+  "id": "acc94511885db",
+  "date": "2026-10-15",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx doubles Taoyuan airport hub in Taiwan to 19,000 square meters",
+  "sum": "FedEx has expanded its cargo hub at Taoyuan International Airport, doubling it to 19,000 square meters, Radio Taiwan International reported. Vice President Hsiao Bi-khim attended the opening ceremony on a Wednesday. The automated sorting system handles 9,000 packages per hour.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or fees was announced. The report says the new automated system raises import efficiency 2.5 times and export efficiency 1.2 times at the Taoyuan hub.",
+  "why": "The expansion adds automated import and export capacity at FedEx's Taiwan hub, which handles 9,000 packages per hour, according to Radio Taiwan International.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T10:56:16Z",
+  "src": "Rti 中央廣播電臺",
+  "url": "https://www.rti.org.tw/en/news?uid=3&pid=196771",
+  "srcs": [
+   {
+    "src": "Rti 中央廣播電臺",
+    "url": "https://www.rti.org.tw/en/news?uid=3&pid=196771"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
  },
  {
   "id": "ae5f2c699239a",
@@ -4405,6 +4532,38 @@
   "thread": "drone-delivery",
   "upd": 7,
   "new": "DoorDash, which announced its Part 135 certification on July 29, is reported as the eighth certified operator and says commercial flights are expected in fall 2026, but no markets or customer fees have been announced, so nothing changes for shippers yet.",
+  "exclusive": true
+ },
+ {
+  "id": "aae823fc44a69",
+  "date": "2026-07-14",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "USPS audit finds false delivery scans, delayed mail at three Middle Tennessee post offices",
+  "sum": "A federal audit conducted the week of July 14 at post offices in Nashville, Lebanon and Hendersonville, Tenn., found delayed mail and improper package scans, WKRN reported. At the Nashville location, nearly 73% of packages sampled in July were scanned as delivered while still at the facility. Managers submitted action plans, and the watchdog found them sufficient in September.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to USPS rates or service rules. The audit found delayed mail and inaccurate delivery scans at three Middle Tennessee post offices, and the watchdog said the action plans were sufficient.",
+  "why": "False delivery scans and delayed mail at three Tennessee facilities affect how reliably tracking data reflects actual package location for shippers using USPS.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T10:55:55Z",
+  "src": "WKRN News 2",
+  "url": "https://www.wkrn.com/news/local-news/mail-delays-discovered-in-usps-audit-of-middle-tn-post-offices/amp/",
+  "srcs": [
+   {
+    "src": "WKRN News 2",
+    "url": "https://www.wkrn.com/news/local-news/mail-delays-discovered-in-usps-audit-of-middle-tn-post-offices/amp/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-07-14",
+  "new": "A federal audit of three Middle Tennessee post offices found delayed mail and improper scans, including nearly 73% of sampled Nashville packages scanned as delivered while still at the facility, which bears on how far tracking data can be relied on for shippers.",
   "exclusive": true
  },
  {

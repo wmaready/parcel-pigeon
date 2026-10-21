@@ -336,12 +336,11 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
-  "s": "Longer Ground Advantage and adjusted Priority Mail delivery windows to noncontiguous destinations have been in effect since Oct. 1, with prices unchanged, according to USPS.",
+  "s": "USPS service standards have changed in phases since 2025, while local audits and reports continue to document delivery problems and scan accuracy issues.",
   "ids": [
    "h410",
    "h505",
-   "a4af485c67766",
-   "a4a3cb4eb56f7"
+   "a4af485c67766"
   ],
   "first": "2024-05-14",
   "last": "2026-10-20",
@@ -349,23 +348,19 @@
    "USPS"
   ],
   "cx": {
-   "sig": "adde3c823ac8",
+   "sig": "1eced18a2ca4",
    "v": 3,
-   "beats": {
-    "h410": "DeJoy's May 9 letter paused consolidation until at least Jan. 1, 2025; senators cited Palmetto, Ga., at 36% on time.",
-    "h505": "Two phases, April 1 and July 1; some mail may take an extra day, and USPS projects at least $36 billion in savings over 10 years.",
-    "a4af485c67766": "Reportedly, since Oct. 1 some non-mainland shipments are expected to take 10 days or more; USPS says prices didn't change.",
-    "a4a3cb4eb56f7": "Reportedly, Ground Advantage parcels under one pound now go mostly by surface, with USPS citing hazmat risk on passenger aircraft."
-   },
-   "intro": "USPS keeps resetting delivery standards, and the latest changes affect shippers sending to Hawaii, Alaska and Puerto Rico.",
-   "now": "Longer windows have run since Oct. 1 at unchanged prices; USPS's peak surcharge and temporary 8% are set to expire Jan. 17, 2027."
+   "beats": {},
+   "intro": "USPS has reshaped delivery timelines in phases since 2025, and slower estimates affect how shippers promise delivery dates.",
+   "now": "The reportedly longer offshore estimates took effect Oct. 1, 2026, and USPS holiday prices are set to end Jan. 17, 2027."
   },
-  "rv": "adde3c823ac8",
+  "rv": "1eced18a2ca4",
   "apart": [
    "usps-big-shipper-deals",
    "usps-finances",
    "usps-leadership"
-  ]
+  ],
+  "co": "USPS"
  },
  "usps-finances": {
   "n": "USPS losses and package volume",
@@ -494,14 +489,15 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon, Wing and DoorDash are expanding drone delivery while the FAA's Part 108 beyond-visual-line-of-sight rule remained unpublished as of Oct. 9.",
+  "s": "Amazon is expanding Prime Air drone delivery while the FAA's Part 108 rule remains unpublished and local pushback grows in Massachusetts.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb"
+   "a86fd472c4cfb",
+   "a42293aae6d92"
   ],
   "first": "2025-03-31",
   "last": "2026-10-21",
@@ -511,18 +507,27 @@
    "Regional"
   ],
   "cx": {
-   "sig": "2c9f9ae85f13",
+   "sig": "9f652840f54a",
    "v": 3,
    "beats": {
-    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth operator cleared. It expects commercial flights in fall 2026.",
-    "g27": "Amazon aims to reach almost 500 towns and 30 million people by end of 2026, up from 11 locations. Prime members pay $2.99.",
-    "a60770e8e9c32": "Wing and Walmart will add Denver and Seattle in 2027, reaching nearly 20 metros and more than 270 Walmart stores.",
-    "g26": "The FAA's Part 108 rule went to White House review July 10 after a missed Feb. 1 deadline. Still unpublished Oct. 9."
+    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth BVLOS operator; flights are expected in fall 2026 pending more approvals.",
+    "g27": "Amazon plans Prime Air sites near Chicago, Atlanta, Cleveland and Syracuse, reaching almost 500 towns, up from 11 locations.",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, nearing 20 metros; over three million customers have access so far.",
+    "g26": "Part 108 went to White House review July 10 after a missed Feb. 1 deadline; routine BVLOS still needs waivers or Part 135.",
+    "a42293aae6d92": "Sixteen Mass. lawmakers seek a task force and a certificate moratorium; Amazon's Westborough site awaits a zoning review."
    },
-   "intro": "Drone delivery is scaling fast, but the FAA rule for routine long-range flights is still unpublished.",
-   "now": "Part 108 was still unpublished as of Oct. 9; the FCC's planned Oct. 29 vote on 800 MHz drone use is next on the calendar."
+   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule stalls, so shippers are watching how fast it grows.",
+   "now": "Part 108 was still unpublished as of Oct. 9, and the FCC plans an Oct. 29 vote on 800 MHz drone use."
   },
-  "rv": "8c5c1cf4aba8"
+  "rv": "43fcc5e5df6d",
+  "co": "Amazon",
+  "apart": [
+   "amazon-labor",
+   "amazon-network-buildout",
+   "parcel-volume-amazon",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
@@ -608,15 +613,27 @@
  "ups-driver-choice-lawsuit": {
   "n": "UPS Driver Choice buyout dispute",
   "ids": [
-   "a13f12c1da7be"
+   "a13f12c1da7be",
+   "abaae70647f04"
   ],
   "first": "2026-04-05",
-  "s": "UPS and the Teamsters settled on April 5, 2026, and LawFold.com found no newer ruling or settlement development as of October 14, 2026.",
-  "last": "2026-04-05",
+  "s": "UPS and the Teamsters have agreed to offer the Driver Choice Program nationwide, with a 7,500-driver cap and no other severance programs through July 31, 2028.",
+  "last": "2026-10-20",
   "c": [
    "UPS"
   ],
-  "rv": "08125fc79c2c"
+  "rv": "64660a1a0f7c",
+  "co": "UPS",
+  "cx": {
+   "sig": "64660a1a0f7c",
+   "v": 3,
+   "beats": {
+    "a13f12c1da7be": "After a February lawsuit and March pullback in 13 central states: a 7,500-driver cap and no other severance program until 2028.",
+    "abaae70647f04": "Now nationwide, Central Region included: $150,000 to retire early, offered by seniority to feeder and package drivers."
+   },
+   "intro": "UPS's driver buyout fight, from lawsuit to a nationwide deal, plays out under a Teamsters contract that runs to July 2028.",
+   "now": "Nationwide offer is capped at 7,500 drivers, with no other severance programs through July 31, 2028, when the contract expires."
+  }
  },
  "royal-mail-cwu-dispute": {
   "n": "Royal Mail–CWU dispute over DM26",
