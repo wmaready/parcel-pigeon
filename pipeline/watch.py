@@ -7,7 +7,7 @@ Needs: ANTHROPIC_API_KEY. For issues: GITHUB_TOKEN and GITHUB_REPOSITORY (set au
 import datetime as dt, difflib, io, json, os, re, sys, urllib.parse
 import requests, trafilatura, yaml
 from pypdf import PdfReader
-from common import ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls
+from common import pdf_to_text, ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls
 from scoop import is_covered, notify, ask, big
 from common import dedupe_live, same_event
 from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
@@ -58,8 +58,7 @@ def page_text(url, full=False):
 
 
 def pdf_text(data):
-    reader = PdfReader(io.BytesIO(data))
-    return "\n".join(f"[page {i+1}]\n" + (p.extract_text() or "") for i, p in enumerate(reader.pages))
+    return pdf_to_text(data)
 
 
 def norm(text):
@@ -103,7 +102,7 @@ Close the issue to discard it.
     return notify(f"[Draft] {story['title']}", body, labels=("draft", item["carrier"]), link=item["url"]) if (token and repo) else None
 
 
-def file_into_library(lib, item, fu, res):
+def file_into_library(lib, item, fu, res, baseline=False):
     """Every file a carrier posts goes into the Docs library (and is watched from then on)."""
     if canon(fu) in known_doc_urls(lib):
         return
@@ -116,6 +115,12 @@ def file_into_library(lib, item, fu, res):
     yr = re.search(r"(20\d\d)", name)
     year = int(yr.group(1)) if yr else None
     pretty = re.sub(r"[-_]+", " ", re.sub(r"\.(pdf|xlsx?)$", "", name, flags=re.I)).strip()
+    if baseline:
+        # a file that was already on the carrier's page when we first saw it: filed and watched, but not "new"
+        lib.append({"c": item["carrier"], "t": kind, "n": f"{item['carrier']} {pretty}" if item["carrier"].lower() not in pretty.lower() else pretty,
+                    "y": year, "eff": None, "u": fu, "d": f"Posted on {item['carrier']}'s {item['name']} page",
+                    "cur": not (year and year < dt.date.today().year), "seen": dt.date.today().isoformat()})
+        return
     lib.append({"c": item["carrier"], "t": kind, "n": f"{item['carrier']} {pretty}" if item["carrier"].lower() not in pretty.lower() else pretty,
                 "y": year, "eff": None, "u": fu, "d": f"Posted on {item['carrier']}'s {item['name']} page" +
                 (f" ({res.get('verdict')})" if res and res.get("verdict") else ""),
@@ -123,6 +128,30 @@ def file_into_library(lib, item, fu, res):
                 "why": {"how": "relisted" if res and res.get("verdict") == "relisting" else "replaced" if res and res.get("pred") else "new-file",
                         "when": dt.date.today().isoformat(), "where": f"{item['carrier']}'s {item['name']} page",
                         "prev": (res.get("pred") or "").split("?")[0].split("/")[-1] if res else None}})
+
+
+def catalog(item, pdfs, skip=(), cap=10):
+    """Files already on a carrier page: read once, keep the text as the 'before' copy, file in the Docs library as existing
+    (no "new" tag, no story, no alert). From then on a change to any of them is news; their being there is not."""
+    todo = [u for u in pdfs if u not in skip and not u.lower().split("?")[0].endswith((".xlsx", ".xls")) and snapshot(u) is None][:cap]
+    if not todo:
+        return 0
+    lib, n = load("docs.json", []), 0
+    for fu in todo:
+        try:
+            txt = file_text(fu, max_pages=None)
+        except Exception as e:
+            print(f"  catalog: couldn't read {fu}: {e}", file=sys.stderr); continue
+        if not txt:
+            continue
+        remember(fu, txt, fu.split("?")[0].split("/")[-1])
+        if canon(fu) not in known_doc_urls(lib):
+            file_into_library(lib, item, fu, None, baseline=True)
+        n += 1
+    if n:
+        save("docs.json", lib)
+        print(f"  catalogued {n} existing file(s) from {item['carrier']} {item['name']} (no news)")
+    return n
 
 
 # Stories pulled after a re-check (id: reason). Removed from the live news on the next run.
@@ -163,9 +192,21 @@ def main():
         hh.update({"fails": 0, "err": None, "blocked": False, "last_try": today, "chars": len(text or ""),
                    "via": pg.via, "copy_of": pg.when, "last_ok": today if len(text or "") >= 300 else hh.get("last_ok")})
         hh["thin"] = hh.get("thin", 0) + 1 if len(text or "") < 300 else 0
+        if len(text or "") < 300 and not hh.get("probe_day") == today:
+            # a page that reads back empty: record exactly what the carrier's server sent, so the audit says why
+            try:
+                pr = requests.get(item["url"], headers=get.__globals__["UA"], timeout=25, allow_redirects=True)
+                hh["probe"] = f"HTTP {pr.status_code}, {pr.headers.get('content-type','?')[:40]}, {len(pr.content)} bytes, starts: {pr.text[:140]!r}"
+            except Exception as e:
+                hh["probe"] = f"probe failed: {str(e)[:100]}"
+            hh["probe_day"] = today
+        elif len(text or "") >= 300:
+            hh.pop("probe", None)
         snap = SNAP / f"{key}.txt"
         prev = state.get(item["url"], {})
         first = not snap.exists()
+        _new_links = sorted(set(pdfs) - {canon(x) for x in prev.get("pdfs", [])}) if prev else []
+        catalog(item, pdfs, skip=set(_new_links))
         old = snap.read_text().splitlines() if not first else []
         prev_pdfs = {canon(x) for x in prev.get("pdfs", [])}
         new_pdfs = sorted(set(pdfs) - prev_pdfs) if prev else []
@@ -262,9 +303,10 @@ def main():
         if unsupported:
             reasons.append("These numbers aren't in the old or new text: " + ", ".join(unsupported))
         if not is_covered(story["title"]):
+            # found on the carrier's own page before anyone reported it: the carrier is the source of truth, so no second
+            # source is needed. It publishes as first-to-report. (Only numbers that don't match the documents are held.)
             story["exclusive"] = True
-            if big(story):
-                reasons.append("It's big and nobody else has reported it yet.")
+            story["primary"] = True
         if reasons:
             lines = "\n".join(f"- **{c.get('what','')}**: {c.get('before') or '(new)'} → {c.get('after')}" for c in changes)
             try:

@@ -127,8 +127,8 @@
   }
  },
  "tariff-refunds": {
-  "n": "IEEPA tariff refunds",
-  "s": "Refunds are reaching importers, and some, such as Levi's, are now disclosing how they will spend the money.",
+  "n": "IEEPA tariff refunds and carriers",
+  "s": "Refunds are flowing to importers, with the U.S. Treasury having paid out about $22 billion in May and $49.2 billion in June, and Amazon is now facing consolidated consumer lawsuits over how it handles its share.",
   "ids": [
    "g31",
    "a771628a2eca4"
@@ -136,6 +136,7 @@
   "first": "2026-08-13",
   "last": "2026-10-08",
   "c": [
+   "Amazon",
    "DHL",
    "FedEx",
    "Industry",
@@ -215,7 +216,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "USPS holiday prices are in effect on four package products through Jan. 17, 2027, per this report; per earlier coverage, per-package fees at other carriers begin Oct. 24 to 26.",
+  "s": "Peak surcharges are billing at the major carriers, and an industry analysis now projects record-high parcel rates for Q4 2026.",
   "ids": [
    "h416",
    "h418",
@@ -236,7 +237,20 @@
    "UPS",
    "USPS"
   ],
-  "rv": "51da35db195e"
+  "rv": "51da35db195e",
+  "cx": {
+   "sig": "51da35db195e",
+   "v": 2,
+   "beats": {
+    "h418": "FedEx followed in August with similar tiers, including new $0.30–$0.55 residential fees on Ground and Home Delivery.",
+    "h419": "USPS joined in September 2024 with a temporary increase. Commercial Ground Advantage rose $0.35 to $5.50 in Zones 5–9, depending on weight.",
+    "h523": "FedEx went first again in 2025, in July. Its residential demand fee rose to $0.40–$0.65, and the enterprise tier to $1.55–$8.75.",
+    "h525": "USPS filed its 2025 holiday increases in August, pending PRC review. They ran Oct. 5 to Jan. 18, 2026 and added Parcel Select to the list.",
+    "h527": "UPS announced in September 2025, matching FedEx's $8.75 top enterprise fee. Its demand surcharges started Oct. 26."
+   },
+   "intro": "Carriers have added peak surcharges every holiday season since 2024, and the fees keep climbing. Here's how that played out.",
+   "now": "Home-delivery peak fees start Oct 24–26, rise to $0.75–$0.80 from Nov 22, and all peak surcharges end Jan 15, 2027."
+  }
  },
  "import-export-fees": {
   "n": "Per-pound import and export fees",
@@ -286,11 +300,11 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
-  "s": "USPS continues to adjust service standards and operations, with Hawaii delivery expectations lengthened and a local post office closure now in effect.",
+  "s": "USPS has lengthened delivery estimates for Priority Mail and Ground Advantage to and from Alaska, Hawaii, U.S. territories and several Pacific nations, effective Oct. 1, 2026.",
   "ids": [
    "h410",
    "h505",
-   "ab665e6db5daf"
+   "a4af485c67766"
   ],
   "first": "2024-05-14",
   "last": "2026-10-12",
@@ -298,14 +312,12 @@
    "USPS"
   ],
   "cx": {
-   "sig": "4dc7f5395e75",
+   "sig": "1eced18a2ca4",
    "v": 2,
-   "beats": {
-    "h410": "DeJoy paused consolidation after senators cited Atlanta's Palmetto center, where only 36% of inbound mail was on time in February."
-   },
-   "now": "Hawaii's longer standards are the latest change. Next on the rate clock: the Amazon same-day pilot reaches Columbia, S.C. on Oct. 20."
+   "beats": {},
+   "now": "The longer estimates took effect Oct. 1. Separately, USPS has set a Dec. 17 Ground Advantage deadline for Christmas delivery."
   },
-  "rv": "4dc7f5395e75"
+  "rv": "1eced18a2ca4"
  },
  "usps-finances": {
   "n": "USPS losses and package volume",
@@ -388,16 +400,17 @@
   "rv": "e3902d701814"
  },
  "amazon-network-buildout": {
-  "n": "Amazon's logistics network expansion",
-  "s": "Amazon is extending its own delivery and logistics network, and local reports now describe new delivery stations in western North Dakota.",
+  "n": "Amazon's push to deliver for everyone",
+  "s": "Amazon has widened its logistics offer to outside businesses, and a report now says a national delivery service is close to launching.",
   "ids": [
    "h512",
    "17",
    "34",
-   "05"
+   "05",
+   "a418fdd3e6f05"
   ],
   "first": "2025-04-30",
-  "last": "2026-10-08",
+  "last": "2026-10-18",
   "c": [
    "Amazon",
    "FedEx",
@@ -405,44 +418,43 @@
    "USPS"
   ],
   "cx": {
-   "sig": "ce498ee4d3ad",
+   "sig": "c1e29f365ab2",
    "v": 2,
    "beats": {
-    "h512": "Amazon committed $4 billion through 2026 to push into rural areas, aiming for more than 200 rural delivery stations and 100,000+ jobs.",
-    "34": "Sellers can buy LTL labels at Amazon-negotiated rates starting in October, with regional pricing for heavy, bulky items due in early 2027."
+    "h512": "Amazon started by building out its own reach: $4 billion by the end of 2026 to take its rural footprint to more than 200 delivery stations."
    },
-   "now": "Amazon's FBA peak fees start Oct. 15, and UPS and FedEx report earnings Oct. 27 and 28, their first since the market reaction."
+   "now": "A launch is reported as close but not dated. UPS and FedEx report earnings Oct. 27 and 28, and FedEx's 5.9% rate increase starts Jan. 4."
   },
-  "rv": "ce498ee4d3ad"
+  "rv": "c1e29f365ab2"
  },
  "drone-delivery": {
-  "n": "Drone delivery growth and FAA Part 108 rule",
-  "s": "Walmart and Wing plan to reach nearly 20 U.S. markets with Seattle and Denver in 2027, while Amazon builds its own drone network and the FAA's Part 108 rule remained unpublished as of Oct. 9.",
+  "n": "Drone delivery scale-up and FAA Part 108",
+  "s": "Amazon's Westborough drone hub is listed as in review and faces a new town bylaw, a zoning appeal and a planning hearing, while the FAA's Part 108 rule was unpublished as of early October.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
-   "af529411b3b18"
+   "af529411b3b18",
+   "a86fd472c4cfb"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-14",
+  "last": "2026-10-19",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "314167040eb9",
+   "sig": "2c9f9ae85f13",
    "v": 2,
    "beats": {
-    "g27": "Amazon's Prime Air plan jumps from 11 U.S. locations to almost 500 towns, with a $2.99 fee for Prime members, waived on $50+ orders.",
-    "a60770e8e9c32": "Wing and Walmart already give over three million customers drone access; Denver and Seattle would take them to 270+ stores."
+    "a60770e8e9c32": "Wing and Walmart are targeting Denver and Seattle in 2027, which would take them to nearly 20 metros and more than 270 Walmart stores."
    },
-   "intro": "Drone delivery is spreading across U.S. metros while the FAA rule that would standardize it is still unpublished.",
-   "now": "Part 108 was still unpublished as of Oct. 9. Meanwhile, the FCC plans an Oct. 29 vote on 800 MHz drone use."
+   "intro": "Drone delivery is scaling up while the FAA rule meant to make it routine is still unpublished. Shippers should watch both.",
+   "now": "As of Oct. 9, Part 108 was still unpublished, so BVLOS delivery runs on waivers or Part 135 certificates. The FCC votes on 800 MHz drone use Oct. 29."
   },
-  "rv": "7342104a4926"
+  "rv": "8c5c1cf4aba8"
  },
  "amazon-labor": {
   "n": "Amazon driver labor and NLRB disputes",
@@ -511,9 +523,11 @@
    "a66617050d4e9"
   ],
   "first": "2026-10-14",
-  "s": "Analysts and consultants disagree over UPS's parcel direction while UPS officials say small package remains, with Teamsters talks set for 2028.",
+  "s": "Analysts and consultants remain split on whether UPS's logistics focus signals a retreat from B2C parcels, with UPS officials saying small package is not going away.",
   "last": "2026-10-14",
   "c": [
+   "Amazon",
+   "FedEx",
    "UPS"
   ],
   "rv": "32a902935643"
@@ -530,5 +544,89 @@
    "Industry"
   ],
   "rv": "dcf71660fcf1"
+ },
+ "last-mile-facility-legislation": {
+  "n": "NYC Delivery Protection Act fight",
+  "ids": [
+   "a9b8fc0d53f23",
+   "abf7a28de14a5",
+   "a17304bde0800",
+   "ad0f07f43ec5e",
+   "a54c3fc6ab060"
+  ],
+  "first": "2026-10-13",
+  "s": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled, according to the council's website.",
+  "last": "2026-10-20",
+  "c": [
+   "Amazon",
+   "FedEx",
+   "Regional",
+   "UPS"
+  ],
+  "rv": "392cb881c00d",
+  "cx": {
+   "sig": "87b35cd14a59",
+   "v": 2,
+   "beats": {
+    "a17304bde0800": "Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3, saying the bill has had no action since an April hearing.",
+    "abf7a28de14a5": "Bronx DSP operators pushed back, and the Bronx Times said over 40 DSPs employing over 5,000 workers operate in the city.",
+    "ad0f07f43ec5e": "Amazon warned it could move roughly 5,000 delivery jobs out of the city; analysts say all 15 last-mile stations could close.",
+    "a54c3fc6ab060": "Business groups wrote to Speaker Menin opposing the bill, which sets a $500,000 penalty per non-employee worker; co-sponsors are now 35."
+   },
+   "intro": "A New York City bill would force Amazon to employ its delivery drivers directly; shippers are watching for local delivery changes.",
+   "now": "The bill sits laid over in committee with 35 co-sponsors and no vote scheduled; organizers had a City Hall rally set for Oct. 22."
+  }
+ },
+ "uniuni-delivery-complaints": {
+  "n": "UniUni delivery complaints",
+  "ids": [
+   "accf814d7d663"
+  ],
+  "first": "2026-10-10",
+  "s": "UniUni said it is working with local Tacoma delivery service providers after residents' complaints, which a group of neighbors has also sent to the Washington Attorney General's office.",
+  "last": "2026-10-10",
+  "c": [
+   "Regional"
+  ],
+  "rv": "91ef4948cff0"
+ },
+ "robot-biometric-suits": {
+  "n": "Chicago robot biometric lawsuits",
+  "ids": [
+   "a709757714d80"
+  ],
+  "first": "2026-10-16",
+  "s": "Two Cook County lawsuits filed against Coco Robotics and Serve Robotics over alleged biometric scanning; both companies dispute the claims.",
+  "last": "2026-10-16",
+  "c": [
+   "Industry"
+  ],
+  "rv": "e0904019c7b2"
+ },
+ "ups-driver-choice-lawsuit": {
+  "n": "UPS Driver Choice buyout dispute",
+  "ids": [
+   "a13f12c1da7be"
+  ],
+  "first": "2026-04-05",
+  "s": "UPS and the Teamsters settled on April 5, 2026, and LawFold.com found no newer ruling or settlement development as of October 14, 2026.",
+  "last": "2026-04-05",
+  "c": [
+   "UPS"
+  ],
+  "rv": "08125fc79c2c"
+ },
+ "uniuni-mak-acquisition": {
+  "n": "UniUni–MAK Acquisition deal",
+  "ids": [
+   "afb6fa67940a7"
+  ],
+  "first": "2026-10-20",
+  "s": "MAK terminated the UniUni purchase agreement on Oct. 20, 2026 and is withdrawing its preliminary prospectus, saying it reserves all rights.",
+  "last": "2026-10-20",
+  "c": [
+   "Regional"
+  ],
+  "rv": "1ab99b5e22ca"
  }
 }

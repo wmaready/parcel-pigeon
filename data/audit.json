@@ -1,5 +1,5 @@
 {
- "run": "2026-10-15T14:37Z",
+ "run": "2026-10-21T00:37Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -43,28 +43,28 @@
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
@@ -112,9 +112,31 @@
   },
   {
    "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
-   "ids": [],
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
+   "ids": [
+    "a54805bbe5d65",
+    "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "ids": [
+    "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "ids": [
+    "a709757714d80",
+    "aeb385569416d"
+   ],
    "fixed": false
   }
  ],
@@ -158,28 +180,28 @@
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts. Server said: not probed yet",
    "ids": [],
    "fixed": false
   },
@@ -227,9 +249,31 @@
   },
   {
    "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
-   "ids": [],
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
+   "ids": [
+    "a54805bbe5d65",
+    "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "ids": [
+    "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "ids": [
+    "a709757714d80",
+    "aeb385569416d"
+   ],
    "fixed": false
   }
  ]

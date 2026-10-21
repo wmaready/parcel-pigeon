@@ -768,6 +768,788 @@
     "https://www.fundinguniverse.com/company-histories/target-corporation-history/"
    ],
    "enriched": "2026-10-14"
+  },
+  {
+   "id": "cyanrobotics",
+   "n": "Coco Robotics",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "Coco Robotics (corporate name Cyan Robotics Inc.) operates remotely supervised sidewalk delivery robots that carry restaurant and local orders in U.S. cities such as Los Angeles, Chicago and Miami, and in Helsinki, including through Uber Eats and DoorDash.",
+   "al": [
+    "Coco",
+    "Coco Delivery",
+    "Cyan Robotics",
+    "Cyan Robotics Inc."
+   ],
+   "src": "https://www.investing.com/news/company-news/altmanbacked-robot-delivery-startup-coco-raises-80-million--bloomberg-93CH-4091186",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-15",
+   "story": "a66cca6df5c3c",
+   "srcs": [
+    "https://www.investing.com/news/company-news/altmanbacked-robot-delivery-startup-coco-raises-80-million--bloomberg-93CH-4091186",
+    "https://www.restaurantdive.com/news/doordash-coco-delivery-robot-deal-chicago-los-angeles/744986/",
+    "https://www.therobotreport.com/uber-eats-rolls-out-coco-sidewalk-delivery-robots-in-la/"
+   ],
+   "enriched": "2026-10-15"
+  },
+  {
+   "id": "zipline",
+   "n": "Zipline",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "South San Francisco, CA, USA",
+   "yr": "2014",
+   "s": "Zipline designs, manufactures and operates autonomous delivery drones and the distribution hubs behind them, carrying medical supplies, retail goods and restaurant orders to customers in the U.S. and several other countries.",
+   "al": [
+    "Romotive",
+    "Zipline International Inc."
+   ],
+   "src": "https://en.wikipedia.org/wiki/Zipline_(drone_delivery_company)",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-09",
+   "story": "ac306d0262dca",
+   "site": "zipline.com",
+   "geo": [
+    -122.408,
+    37.655
+   ],
+   "srcs": [
+    "https://en.wikipedia.org/wiki/Zipline_(drone_delivery_company)",
+    "https://www.cbinsights.com/company/romotive",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "walmart",
+   "n": "Walmart Inc.",
+   "realm": "retail",
+   "own": "public",
+   "tk": "WMT",
+   "parent": "mercari",
+   "hq": "Bentonville, AR, USA",
+   "yr": "1962",
+   "s": "Retailer that runs its own delivery network, including the Spark Driver gig platform, drone delivery with partners such as Wing, and the GoLocal white-label last-mile service for other merchants.",
+   "al": [
+    "Wal-Mart",
+    "Wal-Mart Discount City",
+    "Wal-Mart Stores, Inc.",
+    "Wal-Mart, Inc.",
+    "Walmart"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-09",
+   "story": "ac306d0262dca",
+   "site": "walmart.com",
+   "geo": [
+    -94.209,
+    36.373
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+    "https://www.britannica.com/money/Walmart",
+    "https://www.grocerydive.com/news/walmart-wing-drone-expansion-denver-seattle/832290/"
+   ],
+   "enriched": "2026-10-17"
+  },
+  {
+   "id": "usps",
+   "n": "United States Postal Service",
+   "realm": "national",
+   "own": "public",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Washington, DC, USA",
+   "yr": null,
+   "s": "The USPS is the independent federal postal operator of the United States, and it delivers mail and packages to more than 170 million addresses and runs retail post office services.",
+   "al": [
+    "Post Office",
+    "Postal Service",
+    "U.S. Mail",
+    "U.S. Postal Service",
+    "USPS",
+    "United States Post Office Department"
+   ],
+   "src": "https://about.usps.com/newsroom/national-releases/2026/0727-board-of-governors-to-meet-aug-7.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "a1785bbd2ecbb",
+   "site": "usps.com",
+   "geo": [
+    -77.037,
+    38.907
+   ],
+   "srcs": [
+    "https://about.usps.com/newsroom/national-releases/2026/0727-board-of-governors-to-meet-aug-7.htm",
+    "https://www.britannica.com/topic/United-States-Postal-Service",
+    "https://federalnewsnetwork.com/agency-oversight/2026/03/usps-cutting-delivery-days-on-the-table-as-agency-runs-out-of-cash-postmaster-general-tells-lawmakers/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "expeditorsinternationalo",
+   "n": "Expeditors International of Washington, Inc.",
+   "s": "Expeditors is a non-asset-based global logistics company that provides air and ocean freight forwarding, customs brokerage and related warehousing and distribution services.",
+   "al": [
+    "EXPD",
+    "Expeditors",
+    "Expeditors International"
+   ],
+   "src": "https://www.expeditors.com/about-us/company",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking",
+   "own": "public",
+   "tk": "EXPD",
+   "hq": "Bellevue, WA, USA",
+   "yr": "1979",
+   "site": "expeditors.com",
+   "realm": "global",
+   "geo": [
+    -122.201,
+    47.61
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.expeditors.com/about-us/company",
+    "https://www.sec.gov/Archives/edgar/data/746515/000119312526071569/expd-20251231.htm",
+    "https://finance.yahoo.com/quote/EXPD/profile/"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
+  },
+  {
+   "id": "nfi",
+   "n": "NFI",
+   "s": "NFI is a family-owned North American 3PL that runs warehousing and distribution, eCommerce fulfillment with parcel shipping, dedicated trucking, port drayage, intermodal and freight brokerage.",
+   "al": [
+    "NFI Industries",
+    "NFI Industries, Inc.",
+    "NFI eCom"
+   ],
+   "src": "https://www.nfiindustries.com/about-nfi/news/nfi-expands-capabilities-with-new-west-coast-fulfillment-node/",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking",
+   "own": "private",
+   "hq": "Camden, NJ, USA",
+   "yr": "1932",
+   "site": "nfiindustries.com",
+   "realm": "3pl",
+   "geo": [
+    -75.12,
+    39.926
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.nfiindustries.com/about-nfi/news/nfi-expands-capabilities-with-new-west-coast-fulfillment-node/",
+    "https://www.forbes.com/companies/nfi-industries/",
+    "https://www.ttnews.com/logistics/companies/nfi/2026"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
+  },
+  {
+   "id": "geodisnorthamerica",
+   "n": "GEODIS (North America)",
+   "s": "GEODIS's North American arm, run from Brentwood, Tennessee, provides freight forwarding, contract logistics and warehousing and distribution services for shippers in the U.S. and across North America.",
+   "al": [
+    "GEODIS America, Inc.",
+    "GEODIS Americas",
+    "GEODIS Logistics LLC",
+    "GEODIS USA, Inc.",
+    "OHL",
+    "Ozburn-Hessey Logistics"
+   ],
+   "src": "https://www.williamsonscene.com/business/geodis-unveils-expansion-project-at-brentwood-headquarters/article_e1fa71d6-061c-11ee-af4f-8f748b5d3bc7.html",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking",
+   "own": "sub",
+   "hq": "Brentwood, TN, USA",
+   "site": "geodis.com",
+   "realm": "3pl",
+   "geo": [
+    -86.783,
+    36.033
+   ],
+   "srcs": [
+    "https://www.williamsonscene.com/business/geodis-unveils-expansion-project-at-brentwood-headquarters/article_e1fa71d6-061c-11ee-af4f-8f748b5d3bc7.html",
+    "https://geodis.com/us-en/history",
+    "https://nashvillechamber.com/investors/geodis-logistics-llc/"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
+  },
+  {
+   "id": "forwardairomnilogistics",
+   "n": "Forward Air Corporation",
+   "s": "Forward Air is an asset-light freight company that runs expedited LTL and airport-to-airport ground services, intermodal drayage, and, through its Omni Logistics segment, air and ocean forwarding, customs brokerage and contract logistics for U.S. shippers.",
+   "al": [
+    "Forward",
+    "Forward Air",
+    "Forward Air/Omni Logistics",
+    "Omni Logistics",
+    "Omni Newco, LLC"
+   ],
+   "src": "https://www.forwardair.com/about",
+   "auto": true,
+   "added": "2026-10-16",
+   "from": "ranking",
+   "own": "public",
+   "tk": "FWRD",
+   "hq": "Dallas, TX, USA",
+   "site": "forwardair.com",
+   "realm": "national",
+   "geo": [
+    -96.797,
+    32.777
+   ],
+   "parent": "mercari",
+   "srcs": [
+    "https://www.forwardair.com/about",
+    "https://www.sec.gov/Archives/edgar/data/0000912728/000110465926051599/tm2613007d1_ars.pdf",
+    "https://ir.forwardaircorp.com/news-events/press-releases/detail/367/forward-air-announces-closing-of-omni-logistics-transaction"
+   ],
+   "enriched": "2026-10-16",
+   "pending": false
+  },
+  {
+   "id": "pirateship",
+   "n": "Pirate Ship",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Jackson, WY, USA",
+   "yr": "2014",
+   "s": "Pirate Ship is a free web-based shipping software platform that lets small businesses and e-commerce sellers buy and print discounted USPS and UPS labels, with no monthly fee or markup.",
+   "al": [
+    "Pirate Ship LLC",
+    "PirateShip",
+    "pirateship.com"
+   ],
+   "src": "https://www.pirateship.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-04",
+   "story": "a408078d40f01",
+   "site": "pirateship.com",
+   "geo": [
+    -110.762,
+    43.48
+   ],
+   "srcs": [
+    "https://www.pirateship.com/",
+    "https://www.pirateship.com/ups/ground",
+    "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/358/pitney-bowes-and-pirate-ship-team-to-offer-free-usps-shipping-software"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "stripe",
+   "n": "Stripe",
+   "realm": "capital",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "South San Francisco, CA, USA",
+   "yr": null,
+   "s": "Stripe is a payments and financial-infrastructure company. Its Stripe Capital lending product will use FedEx Dataworks shipment signals to finance small businesses that ship with FedEx, and Stripe also offers shipping-rate lookups through EasyPost and Shippo.",
+   "al": [
+    "Stripe, Inc.",
+    "Stripe, LLC"
+   ],
+   "src": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-12",
+   "story": "a3b2062870616",
+   "site": "stripe.com",
+   "geo": [
+    -122.408,
+    37.655
+   ],
+   "srcs": [
+    "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+    "https://thepaypers.com/payments/news/fedex-dataworks-and-stripe-partner-on-smb-financing-and-payments",
+    "https://stripe.com/blog/native-support-for-taxes-and-shipping"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "northstarlogis",
+   "n": "NorthStar Logistics NYC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "South Bronx-based Amazon Delivery Service Partner that runs last-mile package delivery for Amazon's DYN9 delivery station in Hunts Point, using Amazon-branded cargo vans.",
+   "al": [
+    "NorthStar Logistics",
+    "Northstar Logistics LLC",
+    "Northstar Logistics LLC DBA Northstar Logistics NYC"
+   ],
+   "src": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "abf7a28de14a5",
+   "site": "northstarlogisticsnyc.com",
+   "srcs": [
+    "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+    "https://thegrio.com/2026/09/30/nyc-delivery-worker-bill-could-put-thousands-of-jobs-at-risk-analysis-finds/",
+    "https://www.northstarlogisticsnyc.com/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "cazarlogistics",
+   "n": "Cazar Logistics LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Bronx, NY, USA",
+   "yr": "2019",
+   "s": "Veteran-owned Amazon Delivery Service Provider that delivers Amazon packages in the Bronx and Queens, NY, from Amazon's DYY5 delivery station in Morris Park.",
+   "al": [
+    "Cazar",
+    "Cazar Logistics",
+    "Cazar NYC"
+   ],
+   "src": "https://cazarnyc.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "abf7a28de14a5",
+   "site": "cazarnyc.com",
+   "geo": [
+    -73.865,
+    40.845
+   ],
+   "srcs": [
+    "https://cazarnyc.com/",
+    "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+    "https://vetbiznyc.cityofnewyork.us/profiles/2236/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "dematic",
+   "n": "Dematic",
+   "realm": "auto",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Atlanta, GA, USA",
+   "yr": "1819",
+   "s": "Dematic is a KION Group brand that designs, installs and supports warehouse and distribution-center automation (conveyors, sortation, AS/RS, robotics and software), and it lists parcel as one of the industries it serves.",
+   "al": [
+    "Dematic Corp.",
+    "Dematic GmbH & Co. KG",
+    "Mannesmann Demag Fördertechnik",
+    "Mannesmann Demag Fördertechnik AG",
+    "Mannesmann Dematic AG",
+    "Mechanische Werkstätten Harkort & Co.",
+    "Siemens Dematic AG"
+   ],
+   "src": "https://www.dematic.com/en-us/about/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "dematic.com",
+   "geo": [
+    -84.388,
+    33.749
+   ],
+   "srcs": [
+    "https://www.dematic.com/en-us/about/",
+    "https://www.kiongroup.com/en/About-us/KION-at-a-glance/",
+    "https://pitchbook.com/profiles/company/54598-69"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "honeywellintel",
+   "n": "Intelligrated",
+   "realm": "auto",
+   "own": "pe",
+   "tk": null,
+   "parent": null,
+   "hq": "Mason, OH, USA",
+   "yr": "2001",
+   "s": "Intelligrated designs, builds and services warehouse automation (conveyor, sortation, robotics, AS/RS, palletizing and software) for retail, e-commerce, distribution and parcel operations.",
+   "al": [
+    "Honeywell Intelligrated",
+    "Honeywell Warehouse and Workflow Solutions",
+    "Intelligrated, Inc.",
+    "WWS"
+   ],
+   "src": "https://www.honeywell.com/us/en/news/press-releases/2026/07/honeywell-technologies-completes-sale-of-warehouse-and-workflow-solutions-business-to-american-industrial-partners",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "intelligrated.com",
+   "geo": [
+    -84.31,
+    39.36
+   ],
+   "srcs": [
+    "https://www.honeywell.com/us/en/news/press-releases/2026/07/honeywell-technologies-completes-sale-of-warehouse-and-workflow-solutions-business-to-american-industrial-partners",
+    "https://www.morningstar.com/news/pr-newswire/20260727cl12582/intelligrated-trew-and-transnorm-unite-to-create-leading-warehouse-automation-provider",
+    "https://www.dcvelocity.com/supply-chain/other-services/systems-integration-services/warehouse-automation-trio-merger-fills-out-its-starting-lineup"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "vanderlandeind",
+   "n": "Vanderlande Industries",
+   "realm": "auto",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Veghel, Netherlands",
+   "yr": "1949",
+   "s": "Vanderlande designs, builds and services automated parcel and postal sorting systems, along with airport baggage handling and warehouse automation, for parcel carriers, postal operators and e-commerce companies.",
+   "al": [
+    "Machinefabriek Van der Lande N.V.",
+    "Rapistan Van der Lande N.V.",
+    "Vanderlande",
+    "Vanderlande Industries B.V.",
+    "Vanderlande Industries Holding B.V."
+   ],
+   "src": "https://www.toyota-industries.com/news/2017/03/23/004984/index.html",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "vanderlande.com",
+   "geo": [
+    5.547,
+    51.617
+   ],
+   "srcs": [
+    "https://www.toyota-industries.com/news/2017/03/23/004984/index.html",
+    "https://www.toyota-industries.com/news/2025/11/11/008891/index.html",
+    "https://www.vanderlande.com/about-vanderlande/toyota-automated-logistics-group/"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "tgwlogisticsgr",
+   "n": "TGW Logistics Group",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Marchtrenk, Austria",
+   "yr": "1969",
+   "s": "Foundation-owned Austrian systems integrator that designs, builds and maintains automated warehouse and fulfillment systems, including parcel and carton sortation (SmartPocket, Natrix sorters), for e-commerce and omnichannel retailers in Europe, Asia and North America.",
+   "al": [
+    "TGW",
+    "TGW Logistics",
+    "TGW Logistics Group GmbH",
+    "TGW Systems, Inc.",
+    "Transportgeräte Wels"
+   ],
+   "src": "https://www.tgw-group.com/us/our-portfolio/products/sorting-systems/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-16",
+   "story": "a177dec15405b",
+   "site": "tgw-group.com",
+   "geo": [
+    14.11,
+    48.19
+   ],
+   "srcs": [
+    "https://www.tgw-group.com/us/our-portfolio/products/sorting-systems/",
+    "https://en.wikipedia.org/wiki/TGW_Logistics_Group",
+    "https://www.mhi.org/members/16465"
+   ],
+   "enriched": "2026-10-16"
+  },
+  {
+   "id": "walmartmarketp",
+   "n": "Walmart Marketplace",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": "walmart",
+   "hq": null,
+   "yr": "2009",
+   "s": "Walmart's third-party seller platform on Walmart.com, which offers sellers Walmart Fulfillment Services and, through partners such as ShipStation, Walmart-negotiated shipping rates (Ship with Walmart) for U.S. domestic parcels.",
+   "al": [],
+   "src": "https://www.shipstation.com/press/ship-with-walmart/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-11",
+   "story": "ac0d92b34ccce",
+   "site": "marketplace.walmart.com",
+   "srcs": [
+    "https://www.shipstation.com/press/ship-with-walmart/",
+    "https://www.pymnts.com/shipping/2026/shipstation-delivers-walmart-shipping-discounts-to-marketplace-sellers/",
+    "https://talkbusiness.net/2025/04/the-supply-side-walmarts-e-commerce-profitability-achievement-took-decades/"
+   ],
+   "enriched": "2026-10-17"
+  },
+  {
+   "id": "mannaairdelive",
+   "n": "Manna Air Delivery",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Dublin, Ireland",
+   "yr": null,
+   "s": "Manna operates autonomous tether-lowering drones for suburban last-mile delivery of food, groceries and other goods, through its own app and partner delivery platforms, and has opened bases in Tulsa, Oklahoma.",
+   "al": [
+    "Manna",
+    "Manna Aero",
+    "Manna Drone Delivery",
+    "Manna Drones Limited"
+   ],
+   "src": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-14",
+   "story": "a453e283127db",
+   "site": "manna.aero",
+   "geo": [
+    -6.26,
+    53.35
+   ],
+   "srcs": [
+    "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+    "https://www.unmannedairspace.info/uncategorized/manna-expands-us-drone-delivery-operations-with-three-new-tulsa-bases/",
+    "https://techcrunch.com/2026/07/08/autonomous-drone-delivery-startup-manna-plots-major-u-s-expansion/"
+   ],
+   "enriched": "2026-10-18"
+  },
+  {
+   "id": "schoonercapita",
+   "n": "Schooner Capital",
+   "realm": "capital",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Boston, MA, USA",
+   "yr": "1971",
+   "s": "Boston-based private investment firm (family office) that invests in venture and growth companies, and took part in drone-delivery company Manna Air Delivery's $50M Series B in 2026.",
+   "al": [
+    "Schooner Capital LLC"
+   ],
+   "src": "https://www.linkedin.com/company/schooner-capital",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-14",
+   "story": "a453e283127db",
+   "site": "schoonercapital.com",
+   "geo": [
+    -71.059,
+    42.36
+   ],
+   "srcs": [
+    "https://www.linkedin.com/company/schooner-capital",
+    "https://dronelife.com/2026/04/01/manna-raises-50m-to-expand-drone-delivery-network-in-the-u-s/",
+    "https://www.wsgr.com/en/insights/wilson-sonsini-advises-manna-air-delivery-on-dollar50-million-series-b.html"
+   ],
+   "enriched": "2026-10-18"
+  },
+  {
+   "id": "dashwavedelive",
+   "n": "DashWave Delivery LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": "2023",
+   "s": "DashWave Delivery is a New Jersey-based last-mile delivery company and Amazon Delivery Service Partner. It delivers packages in the tri-state area, including on-foot 'Walker' routes in Manhattan, and also serves Connecticut and Pennsylvania.",
+   "al": [
+    "DASHWAVE DELIVERY",
+    "DashWave Delivery",
+    "Dashwave Delivery LLC"
+   ],
+   "src": "https://dashwavedelivery.com/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-18",
+   "story": "ad0f07f43ec5e",
+   "site": "dashwavedelivery.com",
+   "srcs": [
+    "https://dashwavedelivery.com/",
+    "https://www.amny.com/news/father-son-delivery-business-impact-amazons-local-partners/",
+    "https://businessdailynetwork.com/stories/676579529-dashwave-delivery-founder-opposes-nyc-delivery-protection-act-our-livelihood-is-at-stake"
+   ],
+   "enriched": "2026-10-18"
+  },
+  {
+   "id": "wgatransit",
+   "n": "WGA Transit LLC",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": null,
+   "yr": null,
+   "s": "WGA Transit is an Amazon Delivery Service Partner that runs contracted last-mile package deliveries in parts of Manhattan, dispatching from Staten Island.",
+   "al": [
+    "WGA Transit"
+   ],
+   "src": "https://www.aboutamazon.com/news/transportation/amazon-dsp-program-investment-2026",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-18",
+   "story": "ad0f07f43ec5e",
+   "srcs": [
+    "https://www.aboutamazon.com/news/transportation/amazon-dsp-program-investment-2026",
+    "https://www.linkedin.com/in/joseph-artus-71942547/",
+    "https://www.snagajob.com/jobs/1170530803"
+   ],
+   "enriched": "2026-10-18"
+  },
+  {
+   "id": "shipstore",
+   "n": "Shipstore",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Liberty, MO, USA",
+   "yr": null,
+   "s": "Shipstore provides multi-carrier shipping automation software for high-volume parcel (and LTL) shippers, handling rate selection, labels, documentation and tracking, and Maersk's North American e-commerce delivery services are now available in the platform.",
+   "al": [
+    "Shipstore Software"
+   ],
+   "src": "https://www.maersk.com/news/articles/2026/09/16/maersk-expands-e-commerce-delivery-access-in-north-america-through-shipstore-partnership",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-19",
+   "story": "a511c2951ce03",
+   "site": "shipstore.com",
+   "geo": [
+    -94.419,
+    39.246
+   ],
+   "srcs": [
+    "https://www.maersk.com/news/articles/2026/09/16/maersk-expands-e-commerce-delivery-access-in-north-america-through-shipstore-partnership",
+    "https://shipstore.com/maersk-partnership-north-america/",
+    "https://www.linkedin.com/company/shipstore-software"
+   ],
+   "enriched": "2026-10-19"
+  },
+  {
+   "id": "anthropologie",
+   "n": "Anthropologie",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": "urbanoutfitters",
+   "hq": "Philadelphia, PA, USA",
+   "yr": "1992",
+   "s": "Apparel, home and gifting retailer and URBN banner that ships online orders and, since late 2026, offers one-hour local delivery from more than 220 U.S. stores through DoorDash.",
+   "al": [
+    "Anthro",
+    "Anthropologie Group",
+    "Anthropologie Weddings"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-19",
+   "story": "a52f201b6dc3d",
+   "site": "anthropologie.com",
+   "geo": [
+    -75.165,
+    39.953
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+    "https://chainstoreage.com/doordash-delivers-macys-anthropologie-north-face-vans-timberland",
+    "https://about.doordash.com/en-us/news/doordash-just-made-the-mall-in-your-pocket-bigger"
+   ],
+   "enriched": "2026-10-19"
+  },
+  {
+   "id": "exelot",
+   "n": "Exelot",
+   "realm": "global",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Lod, Israel",
+   "yr": "2016",
+   "s": "Exelot is an Israel-based cross-border e-commerce logistics company that uses a technology platform to route international parcels through a network of carriers, airlines and last-mile partners, and Walmart Marketplace added it to its approved carrier list for seller-fulfilled orders in October 2026.",
+   "al": [
+    "Cross-border Shipping Solutions",
+    "Exelot Inc."
+   ],
+   "src": "https://www.exelot.com/about",
+   "auto": true,
+   "pending": false,
+   "added": "2026-10-13",
+   "story": "abb1592acae84",
+   "site": "exelot.com",
+   "geo": [
+    34.89,
+    31.947
+   ],
+   "srcs": [
+    "https://www.exelot.com/about",
+    "https://pitchbook.com/profiles/company/439901-11",
+    "https://il.linkedin.com/company/exelot"
+   ],
+   "enriched": "2026-10-19"
+  },
+  {
+   "id": "uniuniuniexpre",
+   "n": "UniUni (Uni Express Inc.)",
+   "realm": "gig",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Richmond, BC, Canada",
+   "yr": "2019",
+   "s": "UniUni is a last-mile e-commerce parcel delivery company. It uses a network of independent gig drivers and its own sorting centers to deliver parcels in Canada and the U.S. for marketplaces such as Shein and Temu.",
+   "al": [
+    "Uni Express",
+    "Uni Express Inc.",
+    "UniUni",
+    "UniUni Logistics Inc."
+   ],
+   "src": "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
+   "auto": true,
+   "added": "2026-10-20",
+   "story": "afb6fa67940a7",
+   "site": "uniuni.com",
+   "geo": [
+    -123.134,
+    49.167
+   ],
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
+    "https://www.uniuni.com/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition/",
+    "https://www.bctechnology.com/news/2026/5/21/eCommerce-Delivery-Platform-UniUni-to-Go-Public-in-Reverse-Takeover-at-1.4-Billion-Valuation.cfm"
+   ],
+   "enriched": "2026-10-20",
+   "pending": false
   }
  ],
  "edges": [
@@ -1355,6 +2137,645 @@
    "t": "Acquired Shipt for $550M cash; now a wholly owned subsidiary",
    "url": "https://corporate.target.com/press/release/2017/12/target-to-acquire-same-day-delivery-platform-shipt,-inc-to-bolster-fulfillment-capabilities",
    "story": "af43fd5ad3188"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Cyan Robotics operates delivery robots for Uber Eats in Chicago",
+   "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Cyan Robotics operates delivery robots for DoorDash in Chicago",
+   "url": "https://news.bloomberglaw.com/us-law-week/delivery-robot-makers-hit-with-biometric-suits-over-face-scans",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2024",
+   "t": "Coco robots deliver on Uber Eats (LA, later Miami and Chicago)",
+   "url": "https://www.therobotreport.com/uber-eats-rolls-out-coco-sidewalk-delivery-robots-in-la/",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "cyanrobotics",
+   "b": "wolt",
+   "k": "partner",
+   "y": null,
+   "t": "Helsinki robot delivery partnership via DoorDash's Wolt",
+   "url": "https://www.restaurantdive.com/news/doordash-coco-delivery-robot-deal-chicago-los-angeles/744986/",
+   "story": "a66cca6df5c3c"
+  },
+  {
+   "a": "zipline",
+   "b": "walmart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Zipline serves U.S. communities through partnerships including Walmart",
+   "url": "https://www.restaurantnews.com/teriyaki-madness-partners-with-zipline-for-drone-delivery-dallas-fort-worth-101526/",
+   "story": "a5eceb35769a4"
+  },
+  {
+   "a": "uber",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2026",
+   "t": "Strategic investment (undisclosed) tied to Uber Eats drone partnership",
+   "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Zipline-Partner-to-Bring-Drone-Delivery-to-Millions-of-Americans/default.aspx",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "zipline",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2026",
+   "t": "Drone delivery on Uber Eats, target 1M deliveries a day by end of 2029",
+   "url": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "a16z",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2016",
+   "t": "Series B participant",
+   "url": "https://venturebeat.com/business/drone-delivery-startup-zipline-raises-25-million-from-sequoia-andreessen-horowitz/",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "usps",
+   "b": "universalposta",
+   "k": "partner",
+   "y": null,
+   "t": "USPS is a UPU member",
+   "url": "https://facts.usps.com/universal-postal-union-upu/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "ups",
+   "k": "partner",
+   "y": "2024",
+   "t": "UPS became USPS's primary air cargo provider, replacing FedEx",
+   "url": "https://parcelpath.com/fedex-and-usps-partnership/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx Ground Economy uses USPS final-mile delivery. The FedEx–USPS air cargo contract ended in Sept 2024.",
+   "url": "https://parcelpath.com/fedex-and-usps-partnership/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "usps",
+   "b": "shipbob",
+   "k": "partner",
+   "y": null,
+   "t": "ShipBob offers USPS Ground Advantage through its USPS partnership",
+   "url": "https://www.shipbob.com/blog/usps-ground-advantage/",
+   "story": "a1785bbd2ecbb"
+  },
+  {
+   "a": "ups",
+   "b": "theupsstores",
+   "k": "owns",
+   "y": "2026",
+   "t": "The UPS Stores sits under UPS's U.S. domestic unit",
+   "url": "https://www.freightwaves.com/news/is-ups-parcel-pivot-a-strategic-winner-or-a-trojan-horse",
+   "story": "a66617050d4e9"
+  },
+  {
+   "a": "forwardairomnilogistics",
+   "b": "omni",
+   "k": "acquired",
+   "y": "2024",
+   "t": "Forward Air completed its acquisition of Omni Logistics, closing Jan 25, 2024",
+   "url": "https://ir.forwardaircorp.com/news-events/press-releases/detail/367/forward-air-announces-closing-of-omni-logistics-transaction",
+   "story": null
+  },
+  {
+   "a": "pirateship",
+   "b": "pitneybowes",
+   "k": "partner",
+   "y": "2019",
+   "t": "Integrated Pitney Bowes Pure Post for USPS shipping services",
+   "url": "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/358/pitney-bowes-and-pirate-ship-team-to-offer-free-usps-shipping-software",
+   "story": "a408078d40f01"
+  },
+  {
+   "a": "pirateship",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Licensed USPS Connect eCommerce Platform",
+   "url": "https://www.pirateship.com/",
+   "story": "a408078d40f01"
+  },
+  {
+   "a": "pirateship",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "UPS-certified software selling discounted UPS labels",
+   "url": "https://www.pirateship.com/ups/ground",
+   "story": "a408078d40f01"
+  },
+  {
+   "a": "cmacgm",
+   "b": "ceva",
+   "k": "owns",
+   "y": "2026",
+   "t": "CMA CGM is the parent of CEVA Logistics",
+   "url": "https://www.pymnts.com/news/artificial-intelligence/2026/ai-robots-are-ready-for-whatever-shoppers-send-back/",
+   "story": "a3da056a73eb1"
+  },
+  {
+   "a": "fdxdataworks",
+   "b": "stripe",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx Dataworks and Stripe partner on SMB financing and payments",
+   "url": "https://thepaypers.com/payments/news/fedex-dataworks-and-stripe-partner-on-smb-financing-and-payments",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "fdxdataworks",
+   "k": "partner",
+   "y": "2026",
+   "t": "Long-term collaboration on SMB financing via Stripe Capital",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2026",
+   "t": "Stripe becomes a FedEx payment processing option",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-dataworks-and-stripe-to-join-forces-to-reduce-friction-in-global-commerce-for-smbs",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "easypost",
+   "k": "partner",
+   "y": null,
+   "t": "Shipping cost lookup integration",
+   "url": "https://stripe.com/blog/native-support-for-taxes-and-shipping",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "stripe",
+   "b": "shippo",
+   "k": "partner",
+   "y": null,
+   "t": "Shipping cost lookup integration",
+   "url": "https://stripe.com/blog/native-support-for-taxes-and-shipping",
+   "story": "a3b2062870616"
+  },
+  {
+   "a": "amazon",
+   "b": "northstarlogis",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon contracts NorthStar Logistics as a delivery service provider",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "amazon",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon contracts Cazar Logistics as a delivery service provider",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "fedex",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx contracts Cazar Logistics at a Nassau County location",
+   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "northstarlogis",
+   "b": "amzlogistics",
+   "k": "partner",
+   "y": null,
+   "t": "Amazon Delivery Service Partner (Bronx, DYN9)",
+   "url": "https://www.northstarlogisticsnyc.com/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "amzlogistics",
+   "b": "cazarlogistics",
+   "k": "partner",
+   "y": null,
+   "t": "Amazon Delivery Service Partner (contract last-mile delivery for Amazon)",
+   "url": "https://cazarnyc.com/",
+   "story": "abf7a28de14a5"
+  },
+  {
+   "a": "dematic",
+   "b": "americold",
+   "k": "partner",
+   "y": "2020",
+   "t": "Automation project for two Americold temperature-controlled warehouses",
+   "url": "https://www.kiongroup.com/en/News-Stories/Press-Releases/Press-Releases-Detail.html?id=31424",
+   "story": "a177dec15405b"
+  },
+  {
+   "a": "tgwlogisticsgr",
+   "b": "urbanoutfitters",
+   "k": "partner",
+   "y": "2021",
+   "t": "Automation supplier for Kansas City fulfillment center (FlashPick)",
+   "url": "https://www.supplychain247.com/company/tgw_systems",
+   "story": "a177dec15405b"
+  },
+  {
+   "a": "tgwlogisticsgr",
+   "b": "gap",
+   "k": "partner",
+   "y": null,
+   "t": "Warehouse automation supplier (North America)",
+   "url": "https://www.mhi.org/members/16465",
+   "story": "a177dec15405b"
+  },
+  {
+   "a": "walmart",
+   "b": "flipkart",
+   "k": "invested",
+   "y": "2018",
+   "t": "Walmart's 2018 investment in Flipkart",
+   "url": "https://corpdigest.com/company/walmart/company-history",
+   "story": "ac306d0262dca"
+  },
+  {
+   "a": "auctane",
+   "b": "walmartmarketp",
+   "k": "partner",
+   "y": "2026",
+   "t": "ShipStation launches Ship with Walmart for Walmart Marketplace sellers",
+   "url": "https://www.marketscale.com/industries/retail/shipstation-now-offers-walmart-shipping-rates-with-up-to-100-lost-package-protection",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmart",
+   "b": "walmartmarketp",
+   "k": "owns",
+   "y": null,
+   "t": "Walmart owns and operates Walmart Marketplace",
+   "url": "https://www.sellerapp.com/blog/walmart-marketplace/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "shipstationg",
+   "k": "partner",
+   "y": "2026",
+   "t": "Ship with Walmart rates and seller protection launched inside ShipStation",
+   "url": "https://www.shipstation.com/press/ship-with-walmart/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "usps",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart-negotiated USPS rates in Ship with Walmart",
+   "url": "https://www.shipstation.com/partners/walmart/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "walmartmarketp",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart-negotiated FedEx rates in Ship with Walmart",
+   "url": "https://www.shipstation.com/partners/walmart/",
+   "story": "ac0d92b34ccce"
+  },
+  {
+   "a": "schoonercapita",
+   "b": "mannaairdelive",
+   "k": "invested",
+   "y": "2026",
+   "t": "Schooner Capital is an investor in Manna Air Delivery",
+   "url": "https://finance.yahoo.com/technology/articles/manna-air-delivery-accelerates-us-101700451.html",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Delivery platform partnership",
+   "url": "https://www.siliconrepublic.com/start-ups/irish-drone-start-up-manna-partners-uber-air-delivery-europe-us",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "deliveroo",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration",
+   "url": "https://www.businesswire.com/news/home/20260310714366/en/Manna-Air-Delivery-Raises-$50Million-Series-B-as-It-Announces-Plans-to-Expand-in-the-United-States",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "jet",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration (sources name it Just Eat)",
+   "url": "https://www.businesswire.com/news/home/20260310714366/en/Manna-Air-Delivery-Raises-$50Million-Series-B-as-It-Announces-Plans-to-Expand-in-the-United-States",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "mannaairdelive",
+   "b": "doordash",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery platform integration",
+   "url": "https://dronelife.com/2026/04/01/manna-raises-50m-to-expand-drone-delivery-network-in-the-u-s/",
+   "story": "a453e283127db"
+  },
+  {
+   "a": "amazon",
+   "b": "dashwavedelive",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon uses DashWave Delivery as a delivery service partner in Manhattan",
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
+   "story": "ad0f07f43ec5e"
+  },
+  {
+   "a": "amazon",
+   "b": "wgatransit",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon uses WGA Transit as a delivery service partner in Harlem",
+   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
+   "story": "ad0f07f43ec5e"
+  },
+  {
+   "a": "dashwavedelive",
+   "b": "amzlogistics",
+   "k": "partner",
+   "y": "2023",
+   "t": "Amazon Delivery Service Partner (Manhattan walker routes)",
+   "url": "https://www.amny.com/news/father-son-delivery-business-impact-amazons-local-partners/",
+   "story": "ad0f07f43ec5e"
+  },
+  {
+   "a": "doordash",
+   "b": "flytrex",
+   "k": "partner",
+   "y": "2026",
+   "t": "DoorDash keeps drone delivery partnership with Flytrex",
+   "url": "https://startupfortune.com/doordash-just-became-an-faa-licensed-air-carrier-for-drone-delivery/",
+   "story": "a86fd472c4cfb"
+  },
+  {
+   "a": "maersk",
+   "b": "shipstore",
+   "k": "partner",
+   "y": "2026",
+   "t": "Maersk and Shipstore integrate North American e-commerce delivery",
+   "url": "https://logistics-manager.com/maersk-expands-north-american-e-commerce-delivery-access-through-shipstore-partnership/",
+   "story": "a511c2951ce03"
+  },
+  {
+   "a": "anthropologie",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Anthropologie launches national DoorDash delivery partnership",
+   "url": "https://www.glossy.co/fashion/anthropologie-holiday-campaign-2026-doordash/",
+   "story": "a52f201b6dc3d"
+  },
+  {
+   "a": "urbanoutfitters",
+   "b": "anthropologie",
+   "k": "owns",
+   "y": "1992",
+   "t": "URBN banner; parent opened first Anthropologie store in 1992",
+   "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526137916/urbn-20260131.htm",
+   "story": "a52f201b6dc3d"
+  },
+  {
+   "a": "doordash",
+   "b": "anthropologie",
+   "k": "partner",
+   "y": "2026",
+   "t": "DoorDash on-demand delivery and returns from 220+ stores",
+   "url": "https://about.doordash.com/en-us/news/doordash-just-made-the-mall-in-your-pocket-bigger",
+   "story": "a52f201b6dc3d"
+  },
+  {
+   "a": "walmart",
+   "b": "uniuni",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves UniUni for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "walmart",
+   "b": "speedx",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves SpeedX for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "walmart",
+   "b": "exelot",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves Exelot for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "walmart",
+   "b": "swiftx",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves SwiftX for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "walmart",
+   "b": "gofo",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves Gofo for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "walmart",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Walmart Marketplace approves DoorDash for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "exelot",
+   "b": "walmartmarketp",
+   "k": "partner",
+   "y": "2026",
+   "t": "Approved carrier for seller-fulfilled orders",
+   "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
+   "story": "abb1592acae84"
+  },
+  {
+   "a": "ceva",
+   "b": "paack",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Ceva Logistics acquires Paack to expand European last-mile delivery",
+   "url": "https://www.freightwaves.com/news/ceva-logistics-puts-paack-in-charge-of-last-mile-parcel-delivery",
+   "story": "a2cb283a8b077"
+  },
+  {
+   "a": "ceva",
+   "b": "colisprive",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Ceva Logistics acquired Colis Privé in 2022",
+   "url": "https://www.freightwaves.com/news/ceva-logistics-puts-paack-in-charge-of-last-mile-parcel-delivery",
+   "story": "a2cb283a8b077"
+  },
+  {
+   "a": "colisprive",
+   "b": "paack",
+   "k": "merged",
+   "y": "2026",
+   "t": "Ceva merges Colis Privé into Paack under one brand",
+   "url": "https://www.freightwaves.com/news/ceva-logistics-puts-paack-in-charge-of-last-mile-parcel-delivery",
+   "story": "a2cb283a8b077"
+  },
+  {
+   "a": "doordash",
+   "b": "deliveroo",
+   "k": "owns",
+   "y": "2026",
+   "t": "DoorDash owns Deliveroo following its acquisition",
+   "url": "https://www.tikr.com/blog/doordash-adds-macys-and-a-new-india-hub-heres-why-the-stock-still-trades-30-below-its-high",
+   "story": "a26ef27406d47"
+  },
+  {
+   "a": "deliveroo",
+   "b": "coco",
+   "k": "partner",
+   "y": "2026",
+   "t": "Deliveroo signs exclusive UK robot delivery deal with Coco Robotics",
+   "url": "https://www.tikr.com/blog/doordash-adds-macys-and-a-new-india-hub-heres-why-the-stock-still-trades-30-below-its-high",
+   "story": "a26ef27406d47"
+  },
+  {
+   "a": "uber",
+   "b": "zipline",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber and Zipline bring drone delivery to Uber Eats",
+   "url": "https://mashable.com/tech/amazon-prime-air-drone-delivery-500-cities",
+   "story": "a926db30d0707"
+  },
+  {
+   "a": "jet",
+   "b": "grubhub",
+   "k": "acquired",
+   "y": "2026",
+   "t": "JustEatTakeaway.com buys Grubhub for $7.3 billion",
+   "url": "https://www.restaurantbusinessonline.com/technology/grubhub-founder-matt-maloney-bets-new-delivery-business",
+   "story": "a05d915a7b81f"
+  },
+  {
+   "a": "mak",
+   "b": "uniuniuniexpre",
+   "k": "acquired",
+   "y": "2026",
+   "t": "MAK Acquisition terminates UniUni deal",
+   "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "bessemer",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Led US$30M Series C2",
+   "url": "https://www.celtic.vc/latest-news/uniuni-closes-us30m-series-c2-round-led-by-bessemer-venture-partners-1",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "lfx",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Participated in Series C2",
+   "url": "https://www.bctechnology.com/news/2024/11/15/UniUni-Closes-41.6-Million-Series-C2-Financing-Round-Led-by-Bessemer-Venture-Partners.cfm",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "dcm",
+   "b": "uniuniuniexpre",
+   "k": "invested",
+   "y": "2024",
+   "t": "Led US$50M Series C (announced as DCM)",
+   "url": "https://www.uniuni.com/uniuni-closes-oversubscribed-us50-million-series-c-round-led-by-dcm/",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "shein",
+   "k": "partner",
+   "y": null,
+   "t": "Last-mile delivery partner (Canada anchor client)",
+   "url": "https://www.nsnews.com/economy-law-politics/richmond-delivery-company-grows-50-fold-in-four-years-7120078",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "temu",
+   "k": "partner",
+   "y": null,
+   "t": "Delivery contract with Temu",
+   "url": "https://www.nsnews.com/economy-law-politics/richmond-delivery-company-grows-50-fold-in-four-years-7120078",
+   "story": "afb6fa67940a7"
+  },
+  {
+   "a": "uniuniuniexpre",
+   "b": "tiktokshop",
+   "k": "partner",
+   "y": null,
+   "t": "Delivers for TikTok Shop",
+   "url": "https://www.theinformation.com/articles/sleeping-warehouses-hidden-costs-shein-temu-deliveries",
+   "story": "afb6fa67940a7"
   }
  ],
  "moves": [
@@ -1419,12 +2840,22 @@
    "url2": "https://www.ajbell.co.uk/news/articles/brief-gls-sells-us-freight-operations-ahead-ids-takeover",
    "t": "GLS Group announced the sale of its US freight divisions, GLS US Freight Inc. and GLS US Business Solutions Inc., to DC Logistics LLC, with closing expected on ",
    "role": null
+  },
+  {
+   "id": "auctane",
+   "k": "bought",
+   "parent": "wwex",
+   "from": "shipstationg",
+   "d": "2026-10-14",
+   "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
+   "t": "WWEX Group and Auctane merge as ShipStation Global",
+   "story": "a386e5fed7984"
   }
  ],
  "checks": {
   "ups": "2026-10-13",
   "fedex": "2026-10-13",
-  "usps": "2026-10-13",
+  "usps": "2026-10-16",
   "amzship": "2026-10-13",
   "dhlexpress": "2026-10-13",
   "dhlecom": "2026-10-13",
@@ -1445,6 +2876,30 @@
   "theupsstores": "2026-10-14",
   "crimsonlogic": "2026-10-14",
   "alphabet": "2026-10-14",
-  "targetcorp": "2026-10-14"
+  "targetcorp": "2026-10-14",
+  "cyanrobotics": "2026-10-15",
+  "zipline": "2026-10-16",
+  "expeditorsinternationalo": "2026-10-16",
+  "nfi": "2026-10-16",
+  "geodisnorthamerica": "2026-10-16",
+  "forwardairomnilogistics": "2026-10-16",
+  "pirateship": "2026-10-16",
+  "stripe": "2026-10-16",
+  "northstarlogis": "2026-10-16",
+  "cazarlogistics": "2026-10-16",
+  "dematic": "2026-10-16",
+  "honeywellintel": "2026-10-16",
+  "vanderlandeind": "2026-10-16",
+  "tgwlogisticsgr": "2026-10-16",
+  "walmart": "2026-10-17",
+  "walmartmarketp": "2026-10-17",
+  "mannaairdelive": "2026-10-18",
+  "schoonercapita": "2026-10-18",
+  "dashwavedelive": "2026-10-18",
+  "wgatransit": "2026-10-18",
+  "shipstore": "2026-10-19",
+  "anthropologie": "2026-10-19",
+  "exelot": "2026-10-19",
+  "uniuniuniexpre": "2026-10-20"
  }
 }

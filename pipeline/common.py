@@ -26,6 +26,15 @@ def save(name, obj):
     (DATA / name).write_text(json.dumps(obj, indent=1, ensure_ascii=False))
 
 
+def pdf_to_text(data, max_pages=None):
+    """Text of a PDF, page by page ("[page N]" markers keep diffs and quotes pointing at the right page)."""
+    import io
+    from pypdf import PdfReader
+    reader = PdfReader(io.BytesIO(data))
+    pages = reader.pages if max_pages is None else reader.pages[:max_pages]
+    return "\n".join(f"[page {i+1}]\n" + (p.extract_text() or "") for i, p in enumerate(pages))
+
+
 def h(s):
     return hashlib.sha1(s.encode("utf-8", "ignore")).hexdigest()[:12]
 

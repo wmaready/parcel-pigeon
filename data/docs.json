@@ -508,7 +508,7 @@
   "d": "Residential $6.95 to $7.35, plus oversize, additional handling and dangerous goods increases",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -520,7 +520,7 @@
   "d": "Takes effect Jan 4, 2027",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -532,7 +532,7 @@
   "d": "Spreadsheet version",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -805,7 +805,7 @@
   "d": "Contiguous, extended, remote, Alaska and Hawaii",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -817,7 +817,7 @@
   "d": "",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -829,7 +829,7 @@
   "d": "",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-15"
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -1883,6 +1883,23 @@
    "story": "aee6669d325da",
    "title": "GOFO adds 4% emergency fuel surcharge from Oct. 26",
    "when": "2026-10-13"
+  }
+ },
+ {
+  "c": "Amazon",
+  "t": "Terms",
+  "n": "Conditions of Use",
+  "y": null,
+  "eff": null,
+  "u": "https://ship.amazon.com/site-terms",
+  "d": "Found with: Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
+  "cur": true,
+  "added": "2026-10-15",
+  "why": {
+   "how": "story",
+   "story": "wacb825361479",
+   "title": "Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
+   "when": "2026-10-15"
   }
  }
 ]

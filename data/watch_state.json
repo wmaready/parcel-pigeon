@@ -1,18 +1,48 @@
 {
+ "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
+  "pend": "1c790d9b3378"
+ },
+ "https://ups.com/rateupdates": {
+  "pend": "f12e75a994a6"
+ },
+ "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
+  "pend": "28033ca206e5"
+ },
+ "https://www.ups.com/us/en/service-alerts": {
+  "pend": "ee030ec5cc6b"
+ },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [],
   "lines": 2680,
   "told": []
  },
+ "https://www.fedex.com/en-us/service-guide.html": {
+  "pend": "af968caaa29d"
+ },
+ "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
+  "pend": "4d341f89308d"
+ },
+ "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
+  "pend": "dee19fb4fc81"
+ },
+ "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
+  "pend": "dfb2ceaf3f1d"
+ },
+ "https://www.fedex.com/en-us/service-alerts.html": {
+  "pend": "f024557fad26"
+ },
+ "https://www.fedex.com/en-us/shipping/rate-changes.html": {
+  "pend": "6dffc9f7fb44"
+ },
  "https://developer.fedex.com/": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [],
   "lines": 56,
   "told": []
  },
  "https://pe.usps.com/PriceChange/Index": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [
    "https://about.usps.com/handbooks/dm204.pdf",
    "https://about.usps.com/publications/pub25.pdf",
@@ -24,8 +54,14 @@
   "lines": 13,
   "told": []
  },
+ "https://about.usps.com/newsroom/national-releases/": {
+  "checked": "2026-10-20",
+  "pdfs": [],
+  "lines": 8,
+  "told": []
+ },
  "https://www.ontrac.com/surchargesandrates/": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [
    "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
    "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf",
@@ -37,7 +73,7 @@
   "told": []
  },
  "https://www.ontrac.com/service-alerts/": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [
    "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf"
   ],
@@ -45,19 +81,19 @@
   "told": []
  },
  "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [],
   "lines": 1245,
   "told": []
  },
  "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [],
   "lines": 3527,
   "told": []
  },
  "https://speedeedelivery.com/service-updates/": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [
    "http://www.speedeedelivery.com/files/2024/2024_ON-CALL_RATES_MULTI.pdf",
    "http://www.speedeedelivery.com/files/2024/2024_RATES_LETTER.pdf",
@@ -87,17 +123,34 @@
   "told": []
  },
  "https://www.uniuni.com/news/": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [],
   "lines": 1,
   "told": []
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
-  "checked": "2026-10-15",
+  "checked": "2026-10-20",
   "pdfs": [
    "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf"
   ],
   "lines": 27,
+  "told": []
+ },
+ "https://www.prc.gov/dockets/daily": {
+  "checked": "2026-10-20",
+  "pdfs": [
+   "https://prc.gov/sites/default/files/DocketsPac/Autoclosure_September%202026.pdf",
+   "https://prc.gov/sites/default/files/ExPartePolicy/OGC-16-1_Ex%20Parte%20Communications.pdf",
+   "https://prc.gov/sites/default/files/rateauthority/Available%20Rate%20Authority%2010-14-2026.pdf",
+   "https://www.prc.gov/sites/default/files/PRC%20eFiling%20User%20Guide_06092023.pdf",
+   "https://www.prc.gov/sites/default/files/PRCeFilingUserGuideG3032025.pdf",
+   "https://www.prc.gov/sites/default/files/Postal%20Regulatory%20Commission%202023-2028%20Strategic%20Plan%20-%20Revised%202.14.2025.pdf",
+   "https://www.prc.gov/sites/default/files/Title39/Introductory%20Statement.pdf",
+   "https://www.prc.gov/sites/default/files/rateauthority/ScheduleForRateAdjustments-2026-01-05.pdf",
+   "https://www.prc.gov/sites/default/files/references/Public%20Law%20117%E2%80%93108_PSRA%20of%202022.pdf",
+   "https://www.prc.gov/sites/default/files/references/pl109-435paea.pdf"
+  ],
+  "lines": 23,
   "told": []
  }
 }

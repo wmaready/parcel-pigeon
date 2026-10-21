@@ -32,21 +32,65 @@ old vs new wording or numbers, effective date if stated", "effect": "1 sentence 
 "imp": "up"|"down"|"watch"|"info", "lvl": 1|2|3, "changes": ["short bullet of each change, quoting the new wording"]}"""
 
 
-def text_of(url):
+PDF_LINK = re.compile(r"""(?:href|value|data-href|data-url|data-src)\s*=\s*["']([^"']+?\.pdf(?:\?[^"']*)?)["']""", re.I)
+BLOCKED = ("access denied", "request blocked", "are you a robot", "enable javascript", "page not found", "404 error",
+           "temporarily unavailable", "captcha")
+
+
+def pdf_links(html, base):
+    """Every PDF the page offers, including ones hidden in drop-down menus (<option value=...pdf>) and buttons."""
+    from urllib.parse import urljoin
+    out = []
+    for m in PDF_LINK.findall(html or ""):
+        u = urljoin(base, m.replace("&amp;", "&"))
+        if u not in out:
+            out.append(u)
+    return out
+
+
+def best_pdf(links, name):
+    """Pick the PDF that best matches the document's name (e.g. 'Service Guide', 'Rate Guide', the current year)."""
+    words = {w for w in re.findall(r"[a-z0-9]+", (name or "").lower()) if len(w) > 2}
+    year = str(dt.date.today().year)
+    def score(u):
+        s = u.lower()
+        return sum(w in s for w in words) * 2 + (year in s or str(int(year) + 1) in s) + ("en" in s.split("/"))
+    return max(links, key=score) if links else None
+
+
+def read_pdf(content):
+    from pypdf import PdfReader
+    reader = PdfReader(io.BytesIO(content))
+    return "\n".join((p.extract_text() or "") for p in reader.pages)
+
+
+def text_of(url, name=""):
     """Plain text of a carrier file or page. Raises fetch.Blocked for a bot wall, so it is never saved as the document."""
-    pg = fetch(url, timeout=60)
-    ctype = pg.headers.get("content-type", "").lower()
-    if is_pdf(url, pg):
-        from pypdf import PdfReader
-        reader = PdfReader(io.BytesIO(pg.content))
-        return "\n".join((p.extract_text() or "") for p in reader.pages)
+    r = fetch(url, timeout=60)
+    ctype = r.headers.get("content-type", "").lower()
+    if is_pdf(url, r):
+        return read_pdf(r.content)
     if "spreadsheet" in ctype or url.lower().split("?")[0].endswith((".xlsx", ".xls")):
         return None  # spreadsheets are ZIP lists and rate tables; the PDF twin is watched instead
+    # HTML page: prefer the real PDF behind the page (carrier sites hide them behind drop-downs)
+    pdf = best_pdf(pdf_links(r.text, r.url), name)
+    if pdf:
+        try:
+            t = read_pdf(fetch(pdf, timeout=60).content)
+            if len(t.strip()) > 500:
+                print(f"  {name}: using PDF {pdf}")
+                return t
+        except Exception as e:
+            print(f"  {name}: PDF {pdf} failed ({e}), using page text", file=sys.stderr)
     import trafilatura
-    text = trafilatura.extract(pg.text, include_comments=False, include_tables=True) or ""
-    if is_blocked(text):
+    t = trafilatura.extract(r.text, include_comments=False, include_tables=True) or ""
+    low = t.lower()[:3000]
+    if is_blocked(t):
         raise Blocked("block page")
-    return text
+    if len(t.strip()) < 300 or any(b in low for b in BLOCKED):
+        # blank, blocked or error page: never save it as the document, or a later real page looks like a huge "change"
+        raise RuntimeError("page is blank or blocked; snapshot kept as-is")
+    return t
 
 
 def norm(t):
@@ -81,7 +125,7 @@ def main():
     for d in picks:
         u = d["u"]
         try:
-            new = text_of(u)
+            new = text_of(u, d.get("n", ""))
         except Exception as e:
             # a bot wall or dead link is a failed read: recorded so the audit can flag it, never saved as the document
             r0 = idx["docs"].setdefault(u, {"n": d["n"]})

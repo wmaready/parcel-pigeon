@@ -1,14 +1,62 @@
 [
  {
-  "d": "2026-10-14",
+  "d": "2026-10-18",
   "kind": "new player",
-  "n": "Sauce",
-  "why": "check failed: Profile is mostly right, but: (1) former_names is empty although Sauce was formerly Say2eat; (2) yr is null, and sources conflict (2015 per PitchBook and Dealro",
+  "n": "ARK Invest",
+  "why": "check failed: Identity and fields check out: the firm is active, privately held, based in St. Petersburg, FL and founded in 2014, with no ticker or parent. Its largest owner ",
   "urls": [
-   "https://foodondemand.com/10142026/grubhub-leans-into-first-party-ordering-with-sauce-partnership/",
-   "https://www.restaurantnews.com/sauce-and-grubhub-launch-direct-ordering-solution-101426/",
-   "https://pitchbook.com/profiles/company/149016-61",
-   "https://www.getsauce.com/post/uber-eats-vs-grubhub-for-restaurants"
+   "https://www.prnewswire.com/news-releases/ark-investment-management-llc-announces-relocation-of-its-corporate-headquarters-and-groundbreaking-for-the-ark-innovation-center-301394331.html",
+   "https://www.ark-invest.com/our-team",
+   "https://www.sec.gov/Archives/edgar/data/1905088/000094040025014993/AIA0010ARK103125.htm",
+   "https://www.sec.gov/Archives/edgar/data/1905088/000121390025097285/ea0254858-01_ncsr.htm"
+  ]
+ },
+ {
+  "d": "2026-10-18",
+  "kind": "new player",
+  "n": "Ireland's Strategic Investment Fund",
+  "why": "status active / serves_us False",
+  "urls": [
+   "https://www.isif.ie/about",
+   "https://www.ntma.ie/annualreport2024/documents/Ireland-Strategic-Investment-Fund.pdf",
+   "https://www.ucd.ie/innovation/news-and-events/2026/manna-series-b-new-jobs/",
+   "https://dronedj.com/2026/04/07/manna-drone-delivery-us-funding/"
+  ]
+ },
+ {
+  "d": "2026-10-19",
+  "kind": "new player",
+  "n": "Wakefern Food Corp.",
+  "why": "check failed: Core facts check out, but Wakefern is a grocery retailer co-op doing grocery delivery, not parcel shipping, so it may not belong on a parcel market map. Link 3'",
+  "urls": [
+   "https://www.supermarketnews.com/grocery-operations/shipt-adds-eight-northeast-grocery-banners-to-same-day-delivery",
+   "https://newsroom.wakefern.com/2023/09/wakefern-launches-live-tracking-for-home-delivery-of-online-orders/",
+   "https://www.sec.gov/Archives/edgar/data/103595/000010359521000014/vlgea-20210731.htm",
+   "https://chainstoreage.com/northeast-grocery-co-op-wakefern-expands-delivery-uber-eats"
+  ]
+ },
+ {
+  "d": "2026-10-19",
+  "kind": "new player",
+  "n": "Bites",
+  "why": "check failed: Bites is real, active and based in San Francisco, but it is a restaurant food-ordering and delivery marketplace, not parcel shipping, so it is probably out of s",
+  "urls": [
+   "https://www.restaurantbusinessonline.com/technology/grubhub-founder-matt-maloney-bets-new-delivery-business",
+   "https://foodondemand.com/04222026/bites-ceo-calls-3pd-broken-says-ai-will-fix-it/",
+   "https://www.prnewswire.com/news-releases/bites-launches-on-chatgpt-unlocking-ai-powered-direct-ordering-for-restaurants-and-pos-platforms-302742535.html",
+   "https://withbites.com/newsroom"
+  ]
+ },
+ {
+  "d": "2026-10-20",
+  "kind": "new player",
+  "n": "Olo",
+  "why": "check failed: Company facts check out. Thoma Bravo closed the ~$2B take-private on 2025-09-12, NYSE:OLO was delisted, and Olo keeps its name. The main doubt is scope: Olo is ",
+  "urls": [
+   "https://www.thomabravo.com/press-releases/thoma-bravo-completes-acquisition-of-olo",
+   "https://www.thomabravo.com/portfolio/olo",
+   "https://www.restaurantbusinessonline.com/technology/olo-readies-its-answer-third-party-delivery-apps",
+   "https://www.qsrmagazine.com/news/olo-integrates-uber-direct-technology-fulfillment-solution/"
   ]
  }
 ]

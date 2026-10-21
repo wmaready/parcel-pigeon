@@ -9007,7 +9007,42 @@
     "UPS Ground",
     "UPS Healthcare"
    ],
-   "src": "https://en.wikipedia.org/wiki/United_Parcel_Service"
+   "src": "https://en.wikipedia.org/wiki/United_Parcel_Service",
+   "hist": [
+    {
+     "y": "1907",
+     "t": "Starts as American Messenger Company in Seattle"
+    },
+    {
+     "y": "1988",
+     "t": "Launches UPS Airlines"
+    },
+    {
+     "y": "1999",
+     "t": "Goes public"
+    },
+    {
+     "y": "2015",
+     "t": "Buys Coyote Logistics"
+    },
+    {
+     "y": "2021",
+     "t": "Sells UPS Freight to TFI, which renames it TForce Freight"
+    },
+    {
+     "y": "2023",
+     "t": "Signs a five-year Teamsters contract running to July 31, 2028"
+    },
+    {
+     "y": "2024",
+     "t": "Sells Coyote to RXO"
+    },
+    {
+     "y": "2025",
+     "t": "Says it will cut its Amazon volume by more than half by mid-2026"
+    }
+   ],
+   "vet": "Its 2013 bid for TNT Express was blocked by the European Commission. Europe's General Court overturned that block in 2017, but by then FedEx had already bought TNT."
   },
   {
    "id": "fedex",
@@ -9025,7 +9060,38 @@
     "FedEx Ground",
     "Federal Express"
    ],
-   "src": "https://en.wikipedia.org/wiki/FedEx"
+   "src": "https://en.wikipedia.org/wiki/FedEx",
+   "hist": [
+    {
+     "y": "1971",
+     "t": "Federal Express founded; flights start from Memphis in 1973"
+    },
+    {
+     "y": "1998",
+     "t": "Buys Caliber System, whose RPS becomes FedEx Ground"
+    },
+    {
+     "y": "2004",
+     "t": "Buys Kinko's"
+    },
+    {
+     "y": "2016",
+     "t": "Buys TNT Express"
+    },
+    {
+     "y": "2019",
+     "t": "Ends its Amazon contracts"
+    },
+    {
+     "y": "2024",
+     "t": "Merges FedEx Express and Ground into one company, Federal Express"
+    },
+    {
+     "y": "2026",
+     "t": "Spins off FedEx Freight as a separately listed company"
+    }
+   ],
+   "vet": "TNT was hit by the NotPetya cyberattack in 2017, the year after FedEx bought it. The integration ran years late and cost far more than planned. That is why the TNT deal is usually called painful, even though it worked."
   },
   {
    "id": "usps",
@@ -9043,7 +9109,25 @@
     "Postal Service",
     "Ground Advantage"
    ],
-   "src": "https://en.wikipedia.org/wiki/United_States_Postal_Service"
+   "src": "https://en.wikipedia.org/wiki/United_States_Postal_Service",
+   "hist": [
+    {
+     "y": "1971",
+     "t": "The Postal Reorganization Act turns the Post Office Department into the U.S. Postal Service"
+    },
+    {
+     "y": "2021",
+     "t": "Launches the 10-year Delivering for America plan"
+    },
+    {
+     "y": "2022",
+     "t": "The Postal Service Reform Act ends the prepaid retiree health mandate"
+    },
+    {
+     "y": "2024",
+     "t": "UPS replaces FedEx as its main air cargo carrier"
+    }
+   ]
   },
   {
    "id": "amzship",
@@ -9491,7 +9575,6 @@
    "s": "E-commerce giant and largest U.S. parcel deliverer by volume through its own logistics network.",
    "al": [
     "Amazon.com",
-    "Amazon Logistics",
     "Amazon Flex",
     "Amazon DSP"
    ],
@@ -9733,6 +9816,33 @@
     "CEVA"
    ],
    "src": "https://en.wikipedia.org/wiki/CEVA_Logistics",
+   "hist": [
+    {
+     "y": "2007",
+     "t": "Formed from TNT Logistics and EGL"
+    },
+    {
+     "y": "2018",
+     "t": "CMA CGM buys a minority stake"
+    },
+    {
+     "y": "2019",
+     "t": "CMA CGM takes control through a tender offer"
+    },
+    {
+     "y": "2022",
+     "t": "Buys GEFCO and Ingram Micro CLS"
+    },
+    {
+     "y": "2024",
+     "t": "Absorbs Bolloré Logistics after CMA CGM's €4.85 billion purchase"
+    },
+    {
+     "y": "2026",
+     "t": "Buys FedEx Supply Chain"
+    }
+   ],
+   "vet": "CMA CGM did not buy CEVA in one step. In 2018 it took a minority stake, said it would only stay a minority holder, and then launched a takeover a few months later. It took full control in 2019. CEVA has since become a roll-up of other companies' logistics arms: GEFCO, Bolloré and now FedEx Supply Chain.",
    "role": "Contract logistics, forwarding and ground freight"
   },
   {
@@ -9749,6 +9859,16 @@
     "GXO Logistics"
    ],
    "src": "https://en.wikipedia.org/wiki/GXO_Logistics",
+   "hist": [
+    {
+     "y": "2021",
+     "t": "Spun off from XPO"
+    },
+    {
+     "y": "2024",
+     "t": "Buys Wincanton"
+    }
+   ],
    "role": "Contract logistics and warehousing",
    "was": "xpo",
    "wasY": "2021"
@@ -9780,7 +9900,29 @@
    "al": [
     "XPO Logistics"
    ],
-   "src": "https://en.wikipedia.org/wiki/XPO,_Inc."
+   "src": "https://en.wikipedia.org/wiki/XPO,_Inc.",
+   "hist": [
+    {
+     "y": "2011",
+     "t": "Brad Jacobs takes over Express-1"
+    },
+    {
+     "y": "2015",
+     "t": "Buys Con-way and Norbert Dentressangle"
+    },
+    {
+     "y": "2021",
+     "t": "Spins off GXO"
+    },
+    {
+     "y": "2022",
+     "t": "Spins off RXO"
+    },
+    {
+     "y": "2023",
+     "t": "Buys 28 former Yellow terminals"
+    }
+   ]
   },
   {
    "id": "rxo",
@@ -9794,6 +9936,20 @@
    "s": "Truckload freight brokerage and last-mile provider spun off from XPO; bought Coyote Logistics from UPS.",
    "al": [],
    "src": "https://rxo.com/news/rxo-completes-acquisition-of-coyote-logistics/",
+   "hist": [
+    {
+     "y": "2022",
+     "t": "Spun off from XPO"
+    },
+    {
+     "y": "2024",
+     "t": "Buys Coyote from UPS"
+    },
+    {
+     "y": "2026",
+     "t": "Agrees to be bought by C.H. Robinson"
+    }
+   ],
    "role": "Truck brokerage, managed transport and last mile",
    "was": "xpo",
    "wasY": "2022"
@@ -9812,6 +9968,21 @@
     "Coyote"
    ],
    "src": "https://rxo.com/news/rxo-completes-acquisition-of-coyote-logistics/",
+   "hist": [
+    {
+     "y": "2006",
+     "t": "Founded in Chicago"
+    },
+    {
+     "y": "2015",
+     "t": "UPS buys it for about $1.8 billion"
+    },
+    {
+     "y": "2024",
+     "t": "RXO buys it for about $1.025 billion, closing in September"
+    }
+   ],
+   "vet": "The 2024 sale was often reported as UPS \"selling a brokerage\". UPS actually sold it for roughly $775 million less than it paid. That is UPS admitting the freight-brokerage bet did not work. RXO is now in turn being bought by C.H. Robinson.",
    "role": "Truckload brokerage",
    "was": "ups",
    "wasY": "2024"
@@ -9905,7 +10076,26 @@
     "Deutsche Post",
     "DPDHL"
    ],
-   "src": "https://en.wikipedia.org/wiki/DHL_Group"
+   "src": "https://en.wikipedia.org/wiki/DHL_Group",
+   "hist": [
+    {
+     "y": "2002",
+     "t": "Deutsche Post takes full control of DHL"
+    },
+    {
+     "y": "2003",
+     "t": "Buys Airborne Express"
+    },
+    {
+     "y": "2008",
+     "t": "Leaves U.S. domestic parcel delivery"
+    },
+    {
+     "y": "2023",
+     "t": "Renames itself DHL Group"
+    }
+   ],
+   "vet": "The Airborne purchase and the U.S. domestic exit in 2008 are commonly put at around $10 billion in losses. That is why DHL Express in the U.S. today is international-only, and why DHL eCommerce relies on USPS for the final mile."
   },
   {
    "id": "cmacgm",
@@ -9935,7 +10125,25 @@
    "al": [
     "DSV A/S"
    ],
-   "src": "https://en.wikipedia.org/wiki/DSV_(company)"
+   "src": "https://en.wikipedia.org/wiki/DSV_(company)",
+   "hist": [
+    {
+     "y": "2016",
+     "t": "Buys UTi Worldwide"
+    },
+    {
+     "y": "2019",
+     "t": "Buys Panalpina"
+    },
+    {
+     "y": "2021",
+     "t": "Buys Agility GIL"
+    },
+    {
+     "y": "2025",
+     "t": "Completes its €14.3 billion purchase of DB Schenker"
+    }
+   ]
   },
   {
    "id": "schenker",
@@ -10244,7 +10452,8 @@
    "al": [
     "PB"
    ],
-   "src": "https://en.wikipedia.org/wiki/Pitney_Bowes"
+   "src": "https://en.wikipedia.org/wiki/Pitney_Bowes",
+   "vet": "Pitney Bowes did not sell its Global Ecommerce parcel business. It put it into Chapter 11 in 2024 and wound it down, which pushed its volume onto other carriers almost overnight."
   },
   {
    "id": "shopify",
@@ -10560,6 +10769,12 @@
     "UPS Freight"
    ],
    "src": "https://www.ttnews.com/articles/tfi-international-completes-ups-freight-acquisition",
+   "hist": [
+    {
+     "y": "2021",
+     "t": "TFI buys UPS Freight for $800 million and renames it TForce Freight"
+    }
+   ],
    "role": "LTL carrier",
    "was": "ups",
    "wasY": "2021"
@@ -10823,9 +11038,7 @@
    "hq": null,
    "yr": null,
    "s": "U.S. e-commerce and retail fulfillment provider bought by DHL Supply Chain in 2025.",
-   "al": [
-    "IDS"
-   ],
+   "al": [],
    "src": "https://www.dhl.com/us-en/home/press/press-archive/2025/dhl-supply-chain-strengthens-its-offering-to-small-and-midsize-companies.html",
    "role": "E-commerce fulfillment for brands"
   },
@@ -10889,7 +11102,8 @@
    "yr": null,
    "s": "European auto and industrial logistics group bought by CMA CGM and merged into CEVA.",
    "al": [],
-   "src": "https://www.cevalogistics.com/en/news-and-media/Newsroom/Breaking-news/cma-cgm-group-finalizes-acquisition-of-gefco"
+   "src": "https://www.cevalogistics.com/en/news-and-media/Newsroom/Breaking-news/cma-cgm-group-finalizes-acquisition-of-gefco",
+   "vet": "GEFCO was 75% owned by Russian Railways. The 2022 sale to CMA CGM came right after sanctions over the invasion of Ukraine. It was effectively a forced sale, not a normal auction."
   },
   {
    "id": "ingramcls",
@@ -11236,10 +11450,7 @@
    "hq": null,
    "yr": null,
    "s": "SoftBank's growth fund; co-led Veho's $170M Series B in 2022.",
-   "al": [
-    "SoftBank Vision Fund",
-    "SoftBank"
-   ],
+   "al": [],
    "src": "https://www.freightwaves.com/news/veho-raises-another-170m-six-weeks-after-reaching-unicorn-status"
   },
   {
@@ -12284,9 +12495,7 @@
    "hq": "Sydney, Australia",
    "yr": "2014",
    "s": "Small-business parcel shipping service; merged into FAST Group in 2025 and shut down in January 2026.",
-   "al": [
-    "FAST Group"
-   ],
+   "al": [],
    "src": "https://www.smartcompany.com.au/transport-logistics/sendle-is-back-under-new-ownership/"
   },
   {
@@ -12299,9 +12508,7 @@
    "hq": "Salt Lake City, USA",
    "yr": null,
    "s": "U.S. e-commerce parcel shipper/consolidator; merged into FAST Group with Sendle and ACI Logistix in 2025.",
-   "al": [
-    "FAST Group"
-   ],
+   "al": [],
    "src": "https://www.freightwaves.com/news/last-mile-provider-fast-groups-post-merger-meltdown-pe-backer-freezes-fund-amid-financial-red-flags"
   },
   {
@@ -12315,8 +12522,7 @@
    "yr": null,
    "s": "U.S. parcel logistics and consolidation firm; merged into FAST Group in 2025.",
    "al": [
-    "ACI",
-    "FAST Group"
+    "ACI"
    ],
    "src": "https://www.freightwaves.com/news/last-mile-provider-fast-groups-post-merger-meltdown-pe-backer-freezes-fund-amid-financial-red-flags"
   },
@@ -13120,6 +13326,950 @@
    "wasY": "2026"
   },
   {
+   "parent": null,
+   "id": "jbhunt",
+   "n": "J.B. Hunt",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "JBHT",
+   "hq": "Lowell, AR, USA",
+   "yr": "1961",
+   "geo": [
+    -94.13,
+    36.19
+   ],
+   "al": [
+    "J.B. Hunt Transport Services",
+    "JB Hunt",
+    "J.B. Hunt Final Mile"
+   ],
+   "s": "Largest U.S. intermodal operator, with dedicated trucking, brokerage and big-and-bulky final-mile delivery.",
+   "src": "https://en.wikipedia.org/wiki/J.B._Hunt",
+   "hist": [
+    {
+     "y": "1961",
+     "t": "Johnnie Bryan Hunt starts out selling rice hulls in Arkansas"
+    },
+    {
+     "y": "1969",
+     "t": "Starts trucking with five trucks"
+    },
+    {
+     "y": "1989",
+     "t": "Pairs with the Santa Fe railway (now BNSF) and builds intermodal into its core business"
+    },
+    {
+     "y": "2020",
+     "t": "Buys Special Logistics Dedicated to grow final-mile"
+    }
+   ],
+   "mover": true,
+   "role": "Intermodal, dedicated, brokerage and final mile"
+  },
+  {
+   "parent": null,
+   "id": "odfl",
+   "n": "Old Dominion Freight Line",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "ODFL",
+   "hq": "Thomasville, NC, USA",
+   "yr": "1934",
+   "geo": [
+    -80.08,
+    35.88
+   ],
+   "al": [
+    "Old Dominion",
+    "ODFL",
+    "OD"
+   ],
+   "s": "Less-than-truckload carrier known as the U.S. benchmark for on-time service and pricing discipline.",
+   "src": "https://en.wikipedia.org/wiki/Old_Dominion_Freight_Line",
+   "hist": [
+    {
+     "y": "1934",
+     "t": "Founded with one truck in Richmond, VA"
+    },
+    {
+     "y": "1991",
+     "t": "Goes public"
+    },
+    {
+     "y": "2023",
+     "t": "Picks up freight after Yellow shuts down; does not end up buying Yellow terminals"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "saia",
+   "n": "Saia",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "SAIA",
+   "hq": "Johns Creek, GA, USA",
+   "yr": "1924",
+   "geo": [
+    -84.2,
+    34.03
+   ],
+   "al": [
+    "Saia LTL Freight",
+    "Saia Inc."
+   ],
+   "s": "Fast-growing less-than-truckload carrier that used the Yellow shutdown to push into new regions.",
+   "src": "https://en.wikipedia.org/wiki/Saia",
+   "hist": [
+    {
+     "y": "1924",
+     "t": "Founded in Houma, Louisiana"
+    },
+    {
+     "y": "2023",
+     "t": "Wins 28 former Yellow terminals in the bankruptcy auction"
+    },
+    {
+     "y": "2024",
+     "t": "Opens dozens of terminals, many of them ex-Yellow sites"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "yellow",
+   "n": "Yellow Corporation",
+   "realm": "3pl",
+   "own": "public",
+   "tk": null,
+   "hq": "Nashville, TN, USA",
+   "yr": "1924",
+   "gone": "2023",
+   "geo": [
+    -86.78,
+    36.16
+   ],
+   "al": [
+    "YRC Worldwide",
+    "Yellow Freight",
+    "YRC Freight",
+    "Roadway",
+    "Holland",
+    "New Penn",
+    "Reddaway"
+   ],
+   "s": "Once the third-largest U.S. less-than-truckload carrier. It shut down in July 2023 and its terminals were sold off.",
+   "src": "https://en.wikipedia.org/wiki/Yellow_Corporation",
+   "hist": [
+    {
+     "y": "1924",
+     "t": "Founded in Oklahoma City"
+    },
+    {
+     "y": "2003",
+     "t": "Buys Roadway"
+    },
+    {
+     "y": "2005",
+     "t": "Buys USF and becomes YRC Worldwide"
+    },
+    {
+     "y": "2020",
+     "t": "Takes a $700 million federal pandemic loan"
+    },
+    {
+     "y": "2021",
+     "t": "Renames itself Yellow"
+    },
+    {
+     "y": "2023",
+     "t": "Shuts down July 30 and files for bankruptcy Aug. 6"
+    }
+   ],
+   "vet": "Yellow was not \"bought\". It closed, and its terminals were auctioned off one by one. XPO, Saia, Estes and others each bought sites. Its customers went to Old Dominion, Saia, XPO and the rest of the LTL industry. That is why LTL prices went up in late 2023.",
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "estes",
+   "n": "Estes Express Lines",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "hq": "Richmond, VA, USA",
+   "yr": "1931",
+   "geo": [
+    -77.44,
+    37.54
+   ],
+   "al": [
+    "Estes",
+    "Estes Forwarding Worldwide"
+   ],
+   "s": "Largest privately held U.S. less-than-truckload carrier, family-owned since 1931.",
+   "src": "https://en.wikipedia.org/wiki/Estes_Express_Lines",
+   "hist": [
+    {
+     "y": "1931",
+     "t": "W.W. Estes starts hauling farm goods in Virginia"
+    },
+    {
+     "y": "2023",
+     "t": "Buys former Yellow terminals in the bankruptcy auction"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "landstar",
+   "n": "Landstar System",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "LSTR",
+   "hq": "Jacksonville, FL, USA",
+   "yr": "1988",
+   "geo": [
+    -81.66,
+    30.33
+   ],
+   "al": [
+    "Landstar"
+   ],
+   "s": "Asset-light truckload network run through independent agents and owner-operators instead of company trucks.",
+   "src": "https://en.wikipedia.org/wiki/Landstar_System",
+   "hist": [
+    {
+     "y": "1988",
+     "t": "Formed from a management buyout of Allegheny International's trucking group"
+    },
+    {
+     "y": "1993",
+     "t": "Goes public"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "expeditors",
+   "n": "Expeditors International",
+   "realm": "global",
+   "own": "public",
+   "tk": "EXPD",
+   "hq": "Seattle, WA, USA",
+   "yr": "1979",
+   "geo": [
+    -122.33,
+    47.61
+   ],
+   "al": [
+    "Expeditors"
+   ],
+   "s": "Global freight forwarder and customs broker that has grown almost entirely on its own rather than through acquisitions.",
+   "src": "https://en.wikipedia.org/wiki/Expeditors_International",
+   "hist": [
+    {
+     "y": "1979",
+     "t": "Founded in Seattle"
+    },
+    {
+     "y": "2022",
+     "t": "Hit by a cyberattack that shut down its systems for weeks"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "hubgroup",
+   "n": "Hub Group",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "HUBG",
+   "hq": "Oak Brook, IL, USA",
+   "yr": "1971",
+   "geo": [
+    -87.93,
+    41.84
+   ],
+   "al": [
+    "Hub Group Final Mile"
+   ],
+   "s": "Intermodal, dedicated trucking, brokerage and final-mile provider.",
+   "src": "https://en.wikipedia.org/wiki/Hub_Group",
+   "hist": [
+    {
+     "y": "1971",
+     "t": "Founded in Chicago"
+    },
+    {
+     "y": "2023",
+     "t": "Buys Forward Air's final-mile business (about $262 million)"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "knightswift",
+   "n": "Knight-Swift",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "KNX",
+   "hq": "Phoenix, AZ, USA",
+   "yr": "2017",
+   "geo": [
+    -112.07,
+    33.45
+   ],
+   "al": [
+    "Knight-Swift Transportation",
+    "Swift Transportation",
+    "Knight Transportation"
+   ],
+   "s": "Largest U.S. truckload carrier, now also building a national less-than-truckload network.",
+   "src": "https://en.wikipedia.org/wiki/Knight-Swift",
+   "hist": [
+    {
+     "y": "2017",
+     "t": "Knight and Swift merge"
+    },
+    {
+     "y": "2021",
+     "t": "Buys AAA Cooper, its first big LTL carrier"
+    },
+    {
+     "y": "2023",
+     "t": "Buys U.S. Xpress"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "arcbest",
+   "n": "ArcBest",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "ARCB",
+   "hq": "Fort Smith, AR, USA",
+   "yr": "1923",
+   "geo": [
+    -94.4,
+    35.39
+   ],
+   "al": [
+    "Arkansas Best"
+   ],
+   "s": "Owner of ABF Freight, a union LTL carrier, plus a truckload brokerage arm.",
+   "src": "https://en.wikipedia.org/wiki/ArcBest",
+   "hist": [
+    {
+     "y": "1923",
+     "t": "Begins as a small Arkansas trucking firm"
+    },
+    {
+     "y": "2014",
+     "t": "Arkansas Best renames itself ArcBest"
+    },
+    {
+     "y": "2021",
+     "t": "Buys Chicago broker MoLo Solutions"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "forwardair",
+   "n": "Forward Air",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "FWRD",
+   "hq": "Greeneville, TN, USA",
+   "yr": "1990",
+   "geo": [
+    -82.83,
+    36.16
+   ],
+   "al": [
+    "Forward Air Corporation"
+   ],
+   "s": "Expedited airport-to-airport freight network that bought forwarder Omni Logistics in 2024.",
+   "src": "https://en.wikipedia.org/wiki/Forward_Air",
+   "hist": [
+    {
+     "y": "1990",
+     "t": "Founded as a ground network linking airports"
+    },
+    {
+     "y": "2023",
+     "t": "Sells its final-mile unit to Hub Group"
+    },
+    {
+     "y": "2024",
+     "t": "Closes its Omni Logistics purchase in January"
+    }
+   ],
+   "vet": "Many headlines treated Omni as a simple purchase. In fact, shareholders sued, the deal was restructured, and it took on heavy debt. Forward Air later put itself up for review. Watch it as a turnaround story, not a growth story.",
+   "mover": true,
+   "role": "Expedited LTL and freight forwarding"
+  },
+  {
+   "parent": null,
+   "id": "tql",
+   "n": "Total Quality Logistics",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "hq": "Cincinnati, OH, USA",
+   "yr": "1997",
+   "geo": [
+    -84.51,
+    39.1
+   ],
+   "al": [
+    "TQL"
+   ],
+   "s": "Second-largest U.S. freight broker by revenue, privately owned by its founder.",
+   "src": "https://en.wikipedia.org/wiki/Total_Quality_Logistics",
+   "hist": [
+    {
+     "y": "1997",
+     "t": "Founded by Ken Oaks"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "echo",
+   "n": "Echo Global Logistics",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "hq": "Chicago, IL, USA",
+   "yr": "2005",
+   "geo": [
+    -87.63,
+    41.88
+   ],
+   "al": [
+    "Echo"
+   ],
+   "s": "Large technology-led freight broker and managed-transportation provider.",
+   "src": "https://en.wikipedia.org/wiki/Echo_Global_Logistics",
+   "hist": [
+    {
+     "y": "2005",
+     "t": "Founded in Chicago"
+    },
+    {
+     "y": "2009",
+     "t": "Goes public"
+    },
+    {
+     "y": "2021",
+     "t": "Taken private by The Jordan Company"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "arrive",
+   "n": "Arrive Logistics",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "hq": "Austin, TX, USA",
+   "yr": "2014",
+   "geo": [
+    -97.74,
+    30.27
+   ],
+   "al": [
+    "Arrive"
+   ],
+   "s": "Fast-growing freight brokerage, now one of the largest in the U.S.",
+   "src": "https://en.wikipedia.org/wiki/Arrive_Logistics",
+   "hist": [
+    {
+     "y": "2014",
+     "t": "Founded in Austin"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "penske",
+   "n": "Penske Logistics",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "hq": "Reading, PA, USA",
+   "yr": "1969",
+   "geo": [
+    -75.93,
+    40.34
+   ],
+   "al": [
+    "Penske Truck Leasing"
+   ],
+   "s": "Contract logistics and dedicated fleet arm of Penske Truck Leasing.",
+   "src": "https://en.wikipedia.org/wiki/Penske_Truck_Leasing",
+   "hist": [
+    {
+     "y": "1969",
+     "t": "Penske Truck Leasing founded"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "nipponexpress",
+   "n": "NX Group (Nippon Express)",
+   "realm": "global",
+   "own": "public",
+   "tk": "9147 (TSE)",
+   "hq": "Tokyo, Japan",
+   "yr": "1937",
+   "geo": [
+    139.77,
+    35.68
+   ],
+   "al": [
+    "Nippon Express",
+    "NIPPON EXPRESS HOLDINGS",
+    "NX"
+   ],
+   "s": "Japan's largest logistics group and a top global forwarder.",
+   "src": "https://en.wikipedia.org/wiki/Nippon_Express",
+   "hist": [
+    {
+     "y": "1937",
+     "t": "Founded"
+    },
+    {
+     "y": "2022",
+     "t": "Becomes a holding company, NIPPON EXPRESS HOLDINGS"
+    },
+    {
+     "y": "2024",
+     "t": "Buys German forwarder cargo-partner"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "yamato",
+   "n": "Yamato Holdings",
+   "realm": "global",
+   "own": "public",
+   "tk": "9064 (TSE)",
+   "hq": "Tokyo, Japan",
+   "yr": "1919",
+   "geo": [
+    139.74,
+    35.66
+   ],
+   "al": [
+    "Yamato Transport",
+    "Ta-Q-Bin",
+    "Kuroneko Yamato"
+   ],
+   "s": "Japan's biggest parcel carrier and inventor of TA-Q-BIN home delivery.",
+   "src": "https://en.wikipedia.org/wiki/Yamato_Transport",
+   "hist": [
+    {
+     "y": "1919",
+     "t": "Founded in Tokyo"
+    },
+    {
+     "y": "1976",
+     "t": "Launches TA-Q-BIN, Japan's first door-to-door parcel service"
+    },
+    {
+     "y": "2017",
+     "t": "Raises rates and limits volume as driver shortages and Amazon growth strain its network"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "sfexpress",
+   "n": "SF Express",
+   "realm": "global",
+   "own": "public",
+   "tk": "002352 (SZSE)",
+   "hq": "Shenzhen, China",
+   "yr": "1993",
+   "geo": [
+    114.06,
+    22.54
+   ],
+   "al": [
+    "SF Holding",
+    "S.F. Express"
+   ],
+   "s": "China's premium express carrier, with its own cargo airline. It controls Kerry Logistics.",
+   "src": "https://en.wikipedia.org/wiki/S.F._Express",
+   "hist": [
+    {
+     "y": "1993",
+     "t": "Founded by Wang Wei"
+    },
+    {
+     "y": "2017",
+     "t": "Lists on the Shenzhen exchange"
+    },
+    {
+     "y": "2021",
+     "t": "Takes control of Kerry Logistics Network"
+    },
+    {
+     "y": "2024",
+     "t": "Adds a Hong Kong listing"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "zto",
+   "n": "ZTO Express",
+   "realm": "global",
+   "own": "public",
+   "tk": "ZTO",
+   "hq": "Shanghai, China",
+   "yr": "2002",
+   "geo": [
+    121.47,
+    31.23
+   ],
+   "al": [
+    "ZTO"
+   ],
+   "s": "China's largest express carrier by parcel volume, built on a network partner model.",
+   "src": "https://en.wikipedia.org/wiki/ZTO_Express",
+   "hist": [
+    {
+     "y": "2002",
+     "t": "Founded"
+    },
+    {
+     "y": "2016",
+     "t": "Lists in New York, the largest U.S. IPO that year"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "jdl",
+   "n": "JD Logistics",
+   "realm": "global",
+   "own": "sub",
+   "tk": "2618 (HKEX)",
+   "hq": "Beijing, China",
+   "yr": "2007",
+   "geo": [
+    116.4,
+    39.9
+   ],
+   "al": [
+    "JD.com Logistics",
+    "JINGDONG Logistics"
+   ],
+   "s": "JD.com's in-house logistics network, now selling warehousing and delivery to outside shippers.",
+   "src": "https://en.wikipedia.org/wiki/JD_Logistics",
+   "hist": [
+    {
+     "y": "2007",
+     "t": "JD.com starts building its own network"
+    },
+    {
+     "y": "2021",
+     "t": "Lists in Hong Kong"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "postnl",
+   "n": "PostNL",
+   "realm": "global",
+   "own": "public",
+   "tk": "PNL (Euronext)",
+   "hq": "The Hague, Netherlands",
+   "yr": "1799",
+   "geo": [
+    4.3,
+    52.08
+   ],
+   "al": [
+    "TNT Post"
+   ],
+   "s": "Dutch postal and parcel carrier, split from TNT Express in 2011.",
+   "src": "https://en.wikipedia.org/wiki/PostNL",
+   "hist": [
+    {
+     "y": "2011",
+     "t": "Splits from TNT Express and takes the PostNL name"
+    },
+    {
+     "y": "2016",
+     "t": "FedEx buys the TNT Express side"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "laposte",
+   "n": "La Poste Groupe",
+   "realm": "global",
+   "own": "gov",
+   "tk": null,
+   "hq": "Paris, France",
+   "yr": "1991",
+   "geo": [
+    2.32,
+    48.84
+   ],
+   "al": [
+    "La Poste",
+    "Groupe La Poste"
+   ],
+   "s": "French state postal group and owner of Geopost (DPD), Europe's biggest parcel network.",
+   "src": "https://en.wikipedia.org/wiki/La_Poste_(France)",
+   "hist": [
+    {
+     "y": "1991",
+     "t": "Becomes an independent public operator"
+    },
+    {
+     "y": "2010",
+     "t": "Becomes a state-owned company"
+    }
+   ],
+   "mover": true,
+   "role": "French state-owned postal group"
+  },
+  {
+   "parent": "ids",
+   "id": "royalmail",
+   "n": "Royal Mail",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "hq": "London, UK",
+   "yr": "1516",
+   "geo": [
+    -0.12,
+    51.52
+   ],
+   "al": [
+    "Royal Mail Group"
+   ],
+   "s": "The U.K.'s national postal service, part of International Distribution Services along with GLS.",
+   "src": "https://en.wikipedia.org/wiki/Royal_Mail",
+   "hist": [
+    {
+     "y": "2013",
+     "t": "Privatized and listed in London"
+    },
+    {
+     "y": "2022",
+     "t": "Parent renames itself International Distribution Services"
+    },
+    {
+     "y": "2025",
+     "t": "Daniel Křetínský's EP Group completes its takeover of IDS"
+    }
+   ],
+   "mover": true,
+   "role": "UK postal and parcel operator"
+  },
+  {
+   "parent": null,
+   "id": "lineage",
+   "n": "Lineage",
+   "realm": "cold",
+   "own": "public",
+   "tk": "LINE",
+   "hq": "Novi, MI, USA",
+   "yr": "2008",
+   "geo": [
+    -83.48,
+    42.48
+   ],
+   "al": [
+    "Lineage Logistics"
+   ],
+   "s": "World's largest temperature-controlled warehouse company.",
+   "src": "https://en.wikipedia.org/wiki/Lineage_Logistics",
+   "hist": [
+    {
+     "y": "2008",
+     "t": "Formed by Bay Grove"
+    },
+    {
+     "y": "2024",
+     "t": "Lists on Nasdaq in the year's biggest IPO"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": null,
+   "id": "americold",
+   "n": "Americold",
+   "realm": "cold",
+   "own": "public",
+   "tk": "COLD",
+   "hq": "Atlanta, GA, USA",
+   "yr": "1903",
+   "geo": [
+    -84.39,
+    33.75
+   ],
+   "al": [
+    "Americold Realty Trust"
+   ],
+   "s": "Second-largest cold-storage warehouse operator.",
+   "src": "https://en.wikipedia.org/wiki/Americold",
+   "hist": [
+    {
+     "y": "2018",
+     "t": "Lists on the NYSE"
+    },
+    {
+     "y": "2020",
+     "t": "Buys Agro Merchants"
+    }
+   ],
+   "mover": true
+  },
+  {
+   "parent": "knightswift",
+   "id": "aaacooper",
+   "n": "AAA Cooper Transportation",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "hq": "Dothan, AL, USA",
+   "yr": "1955",
+   "s": "Southeastern less-than-truckload carrier.",
+   "al": [],
+   "src": "https://en.wikipedia.org/wiki/AAA_Cooper_Transportation",
+   "joined": "2021",
+   "mover": true
+  },
+  {
+   "parent": "knightswift",
+   "id": "usxpress",
+   "n": "U.S. Xpress",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "hq": "Chattanooga, TN, USA",
+   "yr": "1985",
+   "s": "Truckload carrier.",
+   "al": [],
+   "src": "https://en.wikipedia.org/wiki/U.S._Xpress",
+   "joined": "2023",
+   "mover": true
+  },
+  {
+   "parent": "arcbest",
+   "id": "abf",
+   "n": "ABF Freight",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "hq": "Fort Smith, AR, USA",
+   "yr": "1923",
+   "s": "Union less-than-truckload carrier.",
+   "al": [],
+   "src": "https://en.wikipedia.org/wiki/ABF_Freight_System",
+   "joined": null,
+   "mover": true
+  },
+  {
+   "parent": "arcbest",
+   "id": "molo",
+   "n": "MoLo Solutions",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "hq": "Chicago, IL, USA",
+   "yr": "2016",
+   "s": "Truckload freight brokerage.",
+   "al": [],
+   "src": "https://en.wikipedia.org/wiki/ArcBest",
+   "joined": "2021",
+   "mover": true
+  },
+  {
+   "parent": "forwardair",
+   "id": "omni",
+   "n": "Omni Logistics",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "hq": "Dallas, TX, USA",
+   "yr": "2000",
+   "s": "Freight forwarder and logistics provider.",
+   "al": [],
+   "src": "https://en.wikipedia.org/wiki/Forward_Air",
+   "joined": "2024",
+   "mover": true,
+   "role": "Freight forwarding and contract logistics"
+  },
+  {
+   "parent": "sfexpress",
+   "id": "kerry",
+   "n": "Kerry Logistics Network",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "hq": "Hong Kong",
+   "yr": "1981",
+   "s": "Asian logistics and freight forwarding group.",
+   "al": [
+    "Kerry Logistics"
+   ],
+   "src": "https://en.wikipedia.org/wiki/Kerry_Logistics",
+   "joined": "2021",
+   "mover": true
+  },
+  {
+   "parent": "royalmail",
+   "id": "parcelforce",
+   "n": "Parcelforce Worldwide",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "hq": "Milton Keynes, UK",
+   "yr": "1990",
+   "s": "Royal Mail's express parcel arm.",
+   "al": [
+    "Parcelforce"
+   ],
+   "src": "https://en.wikipedia.org/wiki/Parcelforce",
+   "joined": null,
+   "mover": true
+  },
+  {
    "id": "upsairlines",
    "n": "UPS Airlines",
    "realm": "global",
@@ -13617,20 +14767,6 @@
    "toName": "Metro Supply Chain"
   },
   {
-   "id": "royalmail",
-   "n": "Royal Mail",
-   "realm": "national",
-   "own": "sub",
-   "tk": null,
-   "parent": "ids",
-   "hq": "London, UK",
-   "yr": null,
-   "s": "UK postal and parcel operator",
-   "al": [],
-   "src": "https://www.ipc.be/news-portal/general-news/2025/09/08/13/50/international-distribution-services-plc-2024-25-results",
-   "role": "UK postal and parcel operator"
-  },
-  {
    "id": "glsgroup",
    "n": "GLS",
    "realm": "global",
@@ -13646,22 +14782,6 @@
    ],
    "src": "https://www.ipc.be/news-portal/general-news/2025/09/08/13/50/international-distribution-services-plc-2024-25-results",
    "role": "European parcel network"
-  },
-  {
-   "id": "laposte",
-   "n": "La Poste",
-   "realm": "national",
-   "own": "sub",
-   "tk": null,
-   "parent": null,
-   "hq": "Paris, France",
-   "yr": null,
-   "s": "French state-owned postal group",
-   "al": [
-    "Groupe La Poste"
-   ],
-   "src": "https://en.wikipedia.org/wiki/Geopost",
-   "role": "French state-owned postal group"
   },
   {
    "id": "dpd",
@@ -13907,22 +15027,6 @@
    "role": "Maintenance and repair products distribution"
   },
   {
-   "id": "jbhunt",
-   "n": "J.B. Hunt",
-   "realm": "3pl",
-   "own": "sub",
-   "tk": null,
-   "parent": null,
-   "hq": "Lowell, AR, USA",
-   "yr": null,
-   "s": "Intermodal, dedicated, brokerage and final mile",
-   "al": [
-    "J.B. Hunt Transport Services"
-   ],
-   "src": "https://www.jbhunt.com/content/dam/jbhunt/jbh/investor-relations/documents/earnings-releases/Q2_2026_Earnings_Release.pdf",
-   "role": "Intermodal, dedicated, brokerage and final mile"
-  },
-  {
    "id": "jbhuntfms",
    "n": "J.B. Hunt Final Mile Services",
    "realm": "3pl",
@@ -13939,40 +15043,12 @@
    "role": "Big-and-bulky final-mile delivery"
   },
   {
-   "id": "forwardair",
-   "n": "Forward Air",
-   "realm": "3pl",
-   "own": "sub",
-   "tk": null,
-   "parent": null,
-   "hq": "Greeneville, TN, USA",
-   "yr": null,
-   "s": "Expedited LTL and freight forwarding",
-   "al": [],
-   "src": "https://www.sec.gov/Archives/edgar/data/0000912728/000162828026053329/fwrd-20260630.htm",
-   "role": "Expedited LTL and freight forwarding"
-  },
-  {
-   "id": "omni",
-   "n": "Omni Logistics",
-   "realm": "global",
-   "own": "sub",
-   "tk": null,
-   "parent": "forwardair",
-   "hq": null,
-   "yr": "2024",
-   "s": "Freight forwarding and contract logistics",
-   "al": [],
-   "src": "https://www.ttnews.com/articles/forward-air-acquires-omni",
-   "role": "Freight forwarding and contract logistics"
-  },
-  {
    "id": "fwdfinalmile",
    "n": "Forward Air Final Mile",
    "realm": "3pl",
    "own": "sub",
    "tk": null,
-   "parent": null,
+   "parent": "hubgroup",
    "hq": null,
    "yr": null,
    "s": "Big-and-bulky final-mile delivery",
@@ -13980,8 +15056,7 @@
    "src": "https://www.hubgroup.com/about-us/news/hub-group-expands-its-final-mile-service-offering-through-the-acquisition-of-forward-air-final-mile/",
    "role": "Big-and-bulky final-mile delivery",
    "was": "forwardair",
-   "wasY": "2023",
-   "toName": "Hub Group"
+   "wasY": "2023"
   }
  ],
  "edges": [
@@ -17346,6 +18421,123 @@
    "url": "https://ir.workhorse.com/news-events/press-releases/detail/322/workhorse-group-and-motiv-electric-trucks-complete-merger"
   },
   {
+   "a": "laposte",
+   "b": "geopost",
+   "k": "owns",
+   "y": null,
+   "t": "La Poste Groupe owns Geopost (DPD)",
+   "url": "https://en.wikipedia.org/wiki/Geopost",
+   "story": null
+  },
+  {
+   "a": "ids",
+   "b": "royalmail",
+   "k": "owns",
+   "y": null,
+   "t": "International Distribution Services owns Royal Mail",
+   "url": "https://en.wikipedia.org/wiki/International_Distribution_Services",
+   "story": null
+  },
+  {
+   "a": "knightswift",
+   "b": "aaacooper",
+   "k": "owns",
+   "y": "2021",
+   "t": "Knight-Swift owns AAA Cooper Transportation",
+   "url": "https://en.wikipedia.org/wiki/AAA_Cooper_Transportation",
+   "story": null
+  },
+  {
+   "a": "knightswift",
+   "b": "usxpress",
+   "k": "owns",
+   "y": "2023",
+   "t": "Knight-Swift owns U.S. Xpress",
+   "url": "https://en.wikipedia.org/wiki/U.S._Xpress",
+   "story": null
+  },
+  {
+   "a": "arcbest",
+   "b": "abf",
+   "k": "owns",
+   "y": null,
+   "t": "ArcBest owns ABF Freight",
+   "url": "https://en.wikipedia.org/wiki/ABF_Freight_System",
+   "story": null
+  },
+  {
+   "a": "arcbest",
+   "b": "molo",
+   "k": "owns",
+   "y": "2021",
+   "t": "ArcBest owns MoLo Solutions",
+   "url": "https://en.wikipedia.org/wiki/ArcBest",
+   "story": null
+  },
+  {
+   "a": "forwardair",
+   "b": "omni",
+   "k": "owns",
+   "y": "2024",
+   "t": "Forward Air owns Omni Logistics",
+   "url": "https://en.wikipedia.org/wiki/Forward_Air",
+   "story": null
+  },
+  {
+   "a": "sfexpress",
+   "b": "kerry",
+   "k": "owns",
+   "y": "2021",
+   "t": "SF Express owns Kerry Logistics Network",
+   "url": "https://en.wikipedia.org/wiki/Kerry_Logistics",
+   "story": null
+  },
+  {
+   "a": "royalmail",
+   "b": "parcelforce",
+   "k": "owns",
+   "y": null,
+   "t": "Royal Mail owns Parcelforce Worldwide",
+   "url": "https://en.wikipedia.org/wiki/Parcelforce",
+   "story": null
+  },
+  {
+   "a": "xpo",
+   "b": "yellow",
+   "k": "acquired",
+   "y": "2023",
+   "t": "XPO bought 28 Yellow terminals in the bankruptcy auction",
+   "url": "https://en.wikipedia.org/wiki/Yellow_Corporation",
+   "story": null
+  },
+  {
+   "a": "saia",
+   "b": "yellow",
+   "k": "acquired",
+   "y": "2023",
+   "t": "Saia bought 28 Yellow terminals in the bankruptcy auction",
+   "url": "https://en.wikipedia.org/wiki/Yellow_Corporation",
+   "story": null
+  },
+  {
+   "a": "estes",
+   "b": "yellow",
+   "k": "acquired",
+   "y": "2023",
+   "t": "Estes bought Yellow terminals in the bankruptcy auction",
+   "url": "https://en.wikipedia.org/wiki/Yellow_Corporation",
+   "story": null
+  },
+  {
+   "a": "hubgroup",
+   "b": "forwardair",
+   "k": "acquired",
+   "y": "2023",
+   "t": "Hub Group bought Forward Air's final-mile business",
+   "url": "https://en.wikipedia.org/wiki/Hub_Group",
+   "story": null
+  },
+  {
    "a": "ups",
    "b": "upsairlines",
    "k": "owns",
@@ -17743,15 +18935,6 @@
   },
   {
    "a": "ids",
-   "b": "royalmail",
-   "k": "owns",
-   "y": null,
-   "t": "International Distribution Services owns Royal Mail",
-   "url": "https://www.ipc.be/news-portal/general-news/2025/09/08/13/50/international-distribution-services-plc-2024-25-results",
-   "story": null
-  },
-  {
-   "a": "ids",
    "b": "glsgroup",
    "k": "owns",
    "y": null,
@@ -17766,15 +18949,6 @@
    "y": null,
    "t": "GLS owns GLS US",
    "url": "https://www.truckingdive.com/news/gls-group-selling-us-freight-operations-dc-logistics/723960/",
-   "story": null
-  },
-  {
-   "a": "laposte",
-   "b": "geopost",
-   "k": "owns",
-   "y": null,
-   "t": "La Poste owns Geopost",
-   "url": "https://en.wikipedia.org/wiki/Geopost",
    "story": null
   },
   {
@@ -17818,7 +18992,7 @@
    "b": "asendia",
    "k": "owns",
    "y": "2012",
-   "t": "La Poste owns Asendia",
+   "t": "La Poste Groupe owns Asendia",
    "url": "https://asendiausa.com/en-us/about-asendia",
    "story": null
   },
@@ -17950,19 +19124,19 @@
   },
   {
    "a": "forwardair",
-   "b": "omni",
-   "k": "owns",
-   "y": "2024",
-   "t": "Forward Air owns Omni Logistics",
-   "url": "https://www.ttnews.com/articles/forward-air-acquires-omni",
-   "story": null
-  },
-  {
-   "a": "forwardair",
    "b": "fwdfinalmile",
    "k": "sold",
    "y": "2023",
    "t": "Forward Air sold its final-mile business to Hub Group.",
+   "url": "https://www.hubgroup.com/about-us/news/hub-group-expands-its-final-mile-service-offering-through-the-acquisition-of-forward-air-final-mile/",
+   "story": null
+  },
+  {
+   "a": "hubgroup",
+   "b": "fwdfinalmile",
+   "k": "acquired",
+   "y": "2023",
+   "t": "Hub Group bought Forward Air Final Mile from Forward Air",
    "url": "https://www.hubgroup.com/about-us/news/hub-group-expands-its-final-mile-service-offering-through-the-acquisition-of-forward-air-final-mile/",
    "story": null
   }

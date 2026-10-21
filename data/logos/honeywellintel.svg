@@ -1,0 +1,4318 @@
+<svg class="home-icon" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        
+                        
+                            <path d="M14.25 14.7499H3.75C3.55109 14.7499 3.36032 14.6709 3.21967 14.5303C3.07902 14.3896 3 14.1989 3 13.9999V7.24994H0.75L8.49525 0.20894C8.63333 0.0832983 8.81331 0.0136719 9 0.0136719C9.18669 0.0136719 9.36667 0.0832983 9.50475 0.20894L17.25 7.24994H15V13.9999C15 14.1989 14.921 14.3896 14.7803 14.5303C14.6397 14.6709 14.4489 14.7499 14.25 14.7499ZM4.5 13.2499H13.5V5.86769L9 1.77719L4.5 5.86769V13.2499ZM6 10.2499H12V11.7499H6V10.2499Z" fill="#303030"/>
+                        
+                    </svg>
+                </u>
+            
+            
+        </a>
+    </li>
+
+        <li class="breadcrumb__list-item ">
+            
+            
+                <a  target="_self" class="breadcrumb__list-item-link" aria-label="breadcrumb items">
+            
+            
+            
+                <u class="breadcrumb__uline"> Products</u>
+            
+        </a>
+    </li>
+
+        <li class="breadcrumb__list-item  breadcrumb__list-item--active">
+            
+            
+                
+            
+            
+            
+                <u class="breadcrumb__uline"> Warehouse Automation</u>
+            
+        </a>
+    </li>
+</ul>
+
+    
+
+</div>
+<div class="page-load-analytics-data aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+   
+	
+	<div class="page_global_info d-none" data--l4-category="N/A" data--l3-category="N/A" data--l2-category="Warehouse Automation" data--l1-category="Products" data-datalayer-sbgName="IA" data-enable-global-datalayer-analytics="true" data-enable-web-sdk-analytics="true" data-enable-server-side-analytics="true" data-tenant-path="/content/sps" data-analytics-api-path="https://automation.honeywell.com/content/experience-fragments/sps/us/en/site/header/master/jcr:content/root/responsivegrid/page_load_analytics__5970327.pageanalytics" data-page-name="Warehouse Automation" data-page="/content/sps/us/en/products/warehouse-automation" data-language="en">
+	</div>
+	<div class="user_global_info d-none" data-lob="N/A" data-usertype="jsFetch" data-accountname="N/A" data-accountid="N/A" data-emailid="N/A" data-jobTitle="N/A" data-function="N/A" data-department="N/A" data-postalCode="N/A" data-city="jsFetch" data-name="N/A" data-custGroup="N/A" data-custType="N/A" data-marketo-i-d="jsFetch" data-visitor-access-level="jsFetch" data-loginState="Logged In" data-anonymousState="Anonymous" data-visitor-region="jsFetch" data-authenticationStatus="jsFetch" data-user-i-d="jsFetch" data-visitorState="jsFetch">
+	</div>
+	<div class="page_load_event_info d-none" data-eventName="Page Load">
+	</div>
+</div>
+<div class="globalnotification globalnotification--informative aem-GridColumn aem-GridColumn--default--12">
+
+
+
+    
+</div>
+<div class="localized-experiencefragment experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div class="cmp-experiencefragment cmp-experiencefragment--">
+<div class="xf-content-height">
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="htmlcontent parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+    <style>
+    /* Makes a scrolling enhancement to the pages in the SPS website making it a smooth scrolling */
+    html {
+        scroll-behavior: smooth !important;
+    }
+
+    /* Changes the border-radius of carousel elements, zoom icon and centers and rounds the corners of the Save as PDF CTA in the PDP page | It also centers the Save as PDF CTA beneath the carousel */
+    #productDetailPageAlt.mvp2 .tab-pane .product-slide-wrapper .item {
+        border-radius: 5px;
+    }
+    #productDetailPage .pdp-print-button {
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+
+    .tab-pane .left .img-wrapper #showLarger {
+        border-radius: 5px;
+    }
+
+    /* changes to the position of the floating CTAs across the entire website to the far right */
+    .floating-cta__buttons-container { justify-content: right!important; }
+
+
+    /* removes the margin placed on CTA in Superhero component, so that the CTA is aligned with the text above it */
+    .super-hero-slide .hero-slide-wrapper .mvp2 a:hover,
+    .super-hero-slide .herocontent .mvp2 a:hover {
+        color: #ffffff !important;
+    }
+    .cta a,
+    .cta span,
+    .cta button {
+        margin-left: 0px !important;
+    }
+
+    /* changes the Search icon color to red in the website menu and increases its size to 35px */
+    .global-header .icon-search:before {
+        font-size: 26px !important;
+        color: #ee3124 !important;
+    }
+    .search-bar-takeover__container--without .search-bar-takeover__search-button {
+        font-size: 35px !important;
+    }
+
+    /* lowers the padding between navigation levels in the main menu to keep it in one single viewpoint */
+    #navigationV2Container .cmp-navigation-v2 .standard-flyout .tertiary-navigation-v2 .cmp-navigation-v2__nav-level-3 .cmp-navigation-v2__item,
+    #navigationV2Container .cmp-navigation-v2 .standard-flyout .sub-navigation-v2 .cmp-navigation-v2__nav-level-3 .cmp-navigation-v2__item {
+        margin-bottom: -15px !important;
+    }
+
+    /* displays the subtitle of the Superhero component on mobile displays */
+    @media (max-width: 767px) {
+        .superhero-heading p {
+            display: block !important ;
+        }
+        p.hero-body.mt-3.d-none.d-md-block {
+            display: block !important;
+        }
+        header-container .logo-container {
+            margin-right: 2em !important;
+            margin-left: 4em !important;
+        }
+    }
+
+    /* improvements made on mobile and tablet view for the main navigation menu */
+    @media (max-width: 1024px) {
+        .global-header.navigationV2
+            .global-header-container
+            .search-bar-takeover
+            .search-bar-takeover__container.search-without-takeover.search-bar-takeover__container--without
+            .search-bar-takeover__search-bar
+            .search-bar-takeover__close-button {
+            right: 0;
+            top: 0;
+            display: none;
+        }
+        .global-header.navigationV2
+            .global-header-container
+            .search-bar-takeover
+            .search-bar-takeover__container.search-without-takeover.search-bar-takeover__container--without
+            .search-bar-takeover__search-bar
+            .search-bar-takeover__input-text {
+            padding-top: 10px !important;
+        }
+    }
+</style>
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</div></div>
+
+    
+</div>
+<div class="globalnotification globalnotification--critical globalnotification--banner aem-GridColumn aem-GridColumn--default--12">
+
+
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</div></div>
+
+    
+</div>
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-light-gray pb-0 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="localized-experiencefragment experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div class="cmp-experiencefragment cmp-experiencefragment--floating-cta-automation">
+<div class="xf-content-height">
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="floating-cta aem-GridColumn aem-GridColumn--default--12">
+	
+		<div class="floating-cta__wrapper full-width ">
+			<div class="floating-cta__container aem-Grid aem-Grid--default--12 aem-Grid--phone--12">
+				<div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--hide">
+					
+					
+					
+						<h2 class="floating-cta__title ">Warehouse Automation</h2>
+					
+				</div>
+				<div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--default--0 aem-GridColumn--default--none aem-GridColumn--phone--12">
+					<div class="floating-cta__buttons-container">
+						
+							<div class="button button--primary">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Support
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+							<div class="button button--primary">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Buy Spare Parts
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+							<div class="button button--primary">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Contact Us
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+						
+						
+
+					</div>
+				</div>
+			</div>
+			
+    
+
+		</div>
+	
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</div></div>
+
+    
+</div>
+<div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="full-width-image-carousel default-carousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+<div class="default-carousel--container ">
+
+    <div class="carousel__container" data-nb-slides="3" data-slide-timer="7000">
+        <div class="super-hero-slide superhero-v2 header1-xlarge super-hero-width-text-60">
+
+
+
+
+
+
+
+<div class="hero-slide-wrapper">
+
+    
+    
+    
+        <style>
+            .mvp-hero-slide-image.seed-92-55 {
+                background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-intelligrated-trew-and-transnorm-hero-image-version-desktop-screen:4-5-mobile-hero");
+            }
+            @media (min-width: 768px) {
+                .mvp-hero-slide-image.seed-92-55 {
+                    background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-intelligrated-trew-and-transnorm-hero-image-version-desktop-screen:5-2-hero");
+                }
+            }
+        </style>
+    
+    
+
+        
+
+        
+        
+            
+            <div class="img-overlay-dark">
+                <div class="mvp-hero-slide-image seed-92-55 mvp2 clearfix" data-bg-mobile="//honeywell.scene7.com/is/image/honeywell/igs-intelligrated-trew-transnorm-image-mobile:4-5-mobile-hero">
+                    <div class="container-fluid h-100">
+                        
+<div class="d-flex justify-content-start">
+    <div class="text-left col-lg-10 offset-lg-1 superhero-heading">
+        
+        
+        
+        
+
+        
+        
+        
+
+
+        <h1 class="header1">
+            <span class="text-white">Intelligrated</span>
+            <span class="text-white">Trew</span>
+            <span class="text-white">Transnorm</span>
+            
+            
+            
+        </h1>
+
+        <p class="text-white subheadline d-none d-md-block">Three trusted brands unite to create a leading warehouse automation provider.</p>
+
+        
+        
+            
+            
+
+
+
+
+    
+
+
+<div class="cta cta--primary ">
+    <div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+        
+            
+            <a target="_blank" >
+                <div class="anchor-text"> Learn more about what’s ahead</div>
+            </a>
+        
+
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        
+		
+
+
+
+</div>
+
+</div>
+
+    
+        <div class="super-hero-slide superhero-v2 header1-xlarge super-hero-width-text-60">
+
+
+
+
+
+
+
+<div class="hero-slide-wrapper">
+
+    
+    
+    
+        <style>
+            .mvp-hero-slide-image.seed-97-56 {
+                background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-smarter-warehouses-start-here-hero-image-version-desktop-screen:4-5-mobile-hero");
+            }
+            @media (min-width: 768px) {
+                .mvp-hero-slide-image.seed-97-56 {
+                    background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-smarter-warehouses-start-here-hero-image-version-desktop-screen:5-2-hero");
+                }
+            }
+        </style>
+    
+    
+
+        
+
+        
+        
+            
+            <div class="img-overlay-dark">
+                <div class="mvp-hero-slide-image seed-97-56 mvp2 clearfix" data-bg-mobile="//honeywell.scene7.com/is/image/honeywell/igs-smarter-warehouses-hero-image-mobile:4-5-mobile-hero">
+                    <div class="container-fluid h-100">
+                        
+<div class="d-flex justify-content-start">
+    <div class="text-left col-lg-10 offset-lg-1 superhero-heading">
+        
+        
+        
+        
+
+        
+        
+        
+
+
+        <h1 class="header1">
+            <span class="text-white">Smarter Warehouses</span>
+            <span class="text-white">Start Here</span>
+            
+            
+            
+            
+        </h1>
+
+        <p class="text-white subheadline d-none d-md-block">Unlock end-to-end automation that drives uptime, agility, and performance - powered by Intelligrated.</p>
+
+        
+        
+            
+            
+
+
+
+
+    
+
+
+<div class="cta cta--primary ">
+    <div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+        
+
+        
+        
+        
+            
+            <a href="#contact-us">
+                <div class="anchor-text"> Contact us</div>
+            </a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        
+		
+
+
+
+</div>
+
+</div>
+
+    
+        <div class="super-hero-slide superhero-v2 header1-xlarge super-hero-width-text-60">
+
+
+
+
+
+
+
+<div class="hero-slide-wrapper">
+
+    
+    
+    
+        <style>
+            .mvp-hero-slide-image.seed-102-98 {
+                background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-get-support-and-spare-parts-hero-image-version-desktop-screen:4-5-mobile-hero");
+            }
+            @media (min-width: 768px) {
+                .mvp-hero-slide-image.seed-102-98 {
+                    background-image: url("//honeywell.scene7.com/is/image/honeywell/igs-get-support-and-spare-parts-hero-image-version-desktop-screen:5-2-hero");
+                }
+            }
+        </style>
+    
+    
+
+        
+
+        
+        
+            
+            <div class="img-overlay-dark">
+                <div class="mvp-hero-slide-image seed-102-98 mvp2 clearfix" data-bg-mobile="//honeywell.scene7.com/is/image/honeywell/igs-support-spare-parts-hero-image-mobile-version:4-5-mobile-hero">
+                    <div class="container-fluid h-100">
+                        
+<div class="d-flex justify-content-start">
+    <div class="text-left col-lg-10 offset-lg-1 superhero-heading">
+        
+        
+        
+        
+
+        
+        
+        
+
+
+        <h1 class="header1">
+            <span class="text-white">Get what you need</span>
+            <span class="text-white">for your operations</span>
+            
+            
+            
+            
+        </h1>
+
+        <p class="text-white subheadline d-none d-md-block"></p>
+
+        
+        
+            
+            
+
+
+
+
+    
+
+
+<div class="cta cta--primary ">
+    <div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+        
+            
+            <a target="_blank" >
+                <div class="anchor-text"> Get support and spare parts</div>
+            </a>
+        
+
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        
+		
+
+
+
+</div>
+
+</div>
+
+    </div>
+    <div class="proxy-slick-buttons d-none">
+        <button class="slick-prev prev-proxy slick-arrow" aria-label="Previous" type="button" style="" tabindex="0">Previous</button>
+        <button class="slick-next next-proxy slick-arrow" aria-label="Next" type="button" style="" tabindex="0">Next</button>
+    </div>
+    <div class="slide-progress js-carousel-control">
+        <span class="js-play-pause timer-icon icon-pause"></span>
+    </div>
+</div>
+
+
+
+<div class="vidyard-video-holder">
+    
+        
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+        
+    
+        
+    
+        
+    
+</div>
+</div>
+<div class="responsivegrid bg-dark-gray pt-20 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-transparent aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--6 aem-Grid--tablet--6 aem-Grid--default--6 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image pt-15 pb-15 pl-15 pr-15 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn--tablet--3 aem-GridColumn aem-GridColumn--tablet--newline aem-GridColumn--default--newline aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        
+            <div class="cq-dd-image ">
+                <div id="image-5348" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/igs-automation-company-image" data-asset-name="igs-automation-company-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Bringing trusted expertise, complementary technologies and customer-first cultures to deliver greater value for customers." data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        
+            <div class="cq-dd-image ">
+                <div id="image-9516" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/igs-automation-company-image" data-asset-name="igs-automation-company-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Bringing trusted expertise, complementary technologies and customer-first cultures to deliver greater value for customers." data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+<div class="responsivegrid bg-dark-gray aem-GridColumn--default--none aem-GridColumn aem-GridColumn--phone--3 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--3 aem-Grid--default--3 aem-Grid--phone--3 ">
+    
+    <div class="text pt-15 pb-0 pl-0 pr-30 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn--tablet--4 aem-GridColumn aem-GridColumn--tablet--newline aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0"><div class="cmp-text">
+    <p><b><span class="text-header5">A stronger, more focused automation company</span></b></p>
+<p>Bringing trusted expertise, complementary technologies and customer-first cultures to deliver greater value for customers.</p>
+
+</div>
+
+    
+</div>
+<div class="button button--link button--tertiary aem-GridColumn aem-GridColumn--default--3">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Learn more
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-transparent aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--6 aem-Grid--tablet--6 aem-Grid--default--6 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image pt-15 pb-15 pl-15 pr-15 aem-GridColumn--offset--tablet--0 aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn--tablet--3 aem-GridColumn aem-GridColumn--tablet--newline aem-GridColumn--default--newline aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--2">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        
+            <div class="cq-dd-image ">
+                <div id="image-2250" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/igs-social-media-image" data-asset-name="igs-social-media-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Bringing trusted expertise, complementary technologies and customer-first cultures to deliver greater value for customers." data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        
+            <div class="cq-dd-image ">
+                <div id="image-1272" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/igs-social-media-image" data-asset-name="igs-social-media-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Bringing trusted expertise, complementary technologies and customer-first cultures to deliver greater value for customers." data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+<div class="responsivegrid bg-dark-gray aem-GridColumn--default--none aem-GridColumn aem-GridColumn--phone--3 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--3 aem-Grid--default--3 aem-Grid--phone--3 ">
+    
+    <div class="text pt-15 pb-0 pl-0 pr-30 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--6 aem-GridColumn--tablet--4 aem-GridColumn aem-GridColumn--tablet--newline aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0"><div class="cmp-text">
+    <p><b><span class="text-header5">Let's connect!</span></b></p>
+<p>Discover our new vision and follow our journey on social media. Get the latest news and updates wherever you are!</p>
+
+</div>
+
+    
+</div>
+<div class="button button--link aem-GridColumn aem-GridColumn--default--3">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Follow us on LinkedIn
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+<div class="button button--link aem-GridColumn aem-GridColumn--default--3">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Subscribe to our YouTube channel
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+<div class="button button--link aem-GridColumn aem-GridColumn--default--3">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Like us on Facebook
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray pt-50 pl-30 pr-30 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="sectiontitle section-title--h-medium text-center pt-15 aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--offset--default--1">
+
+
+    
+
+
+
+
+
+
+<h2 class="section-title">Meet the Demands of Modern Fulfillment</h2>
+
+
+
+
+
+<h5 class="section-subtitle">Labor shortages, rising costs, and growing customer expectations are pushing logistics operations to their limits. Today’s warehouses need more than equipment - they need intelligent, integrated solutions.</h5>
+
+
+
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray pt-30 pl-20 pr-20 pb-0 aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-light-gray pt-10 pb-0 aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-light-gray p-15 pt-0 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-demanding-throughput.png" alt="Demanding Throughput" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <h5 style="text-align: center;">Demanding Throughput</h5>
+<p style="text-align: center;">Today's market pressures reduce the time for maintenance and modifications</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray p-15 pt-0 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-segmented-architecture-risks.png" alt="Segmented Architecture Risks" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <h5 style="text-align: center;">Segmented Architecture Risks</h5>
+<p style="text-align: center;">Age-diverse systems pose downtime and efficiency risks<br>
+<br>
+</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray p-15 pt-0 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-evolving-material-handling.png" alt="Evolving Material Handling" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+
+
+<div class="aem-Grid aem-Grid--4 aem-Grid--tablet--12 aem-Grid--default--4 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--4"><div class="cmp-text">
+    <h5 style="text-align: center;">Evolving Material Handling</h5>
+<p style="text-align: center;">Integration cannot rely solely on mechanical capabilities; sustainable value requires innovation</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray pt-30 pl-30 pr-30 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text pt-10 aem-GridColumn aem-GridColumn--default--12"><div class="cmp-text">
+    <p style="text-align: center;"><span class="text-header5"><b>WHO WE ARE</b></span></p>
+
+</div>
+
+    
+</div>
+<div class="sectiontitle text-center pb-10 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+<h3 class="section-title">A Global Leader in Warehouse Automation.</h3>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="text Body-XL-Regular aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--offset--default--1"><div class="cmp-text">
+    <p style="text-align: center;">We design, build, integrate, and support intelligent systems that boost efficiency and productivity across distribution centers. Our software-first approach combines modular architecture, cloud migration, and pre-built value to deliver seamless, future-ready operations.</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray pt-20 pl-30 pr-30 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn aem-GridColumn--default--12"><div class="cmp-text">
+    <p style="text-align: center;"><span class="text-header5"><b>WHAT WE DO</b></span></p>
+
+</div>
+
+    
+</div>
+<div class="sectiontitle text-center pb-10 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+<h3 class="section-title">End-to-End Automation, Delivered.</h3>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="text Body-XL-Regular aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--10 aem-GridColumn--offset--default--1"><div class="cmp-text">
+    <p style="text-align: center;">Intelligrated delivers end-to-end design, installation, integration, and lifecycle support for warehouse automation systems. Our solutions integrate cloud-native and hybrid WES software, robotics, simulation tools, and more, providing optimized performance without disrupting your workflows.</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid pt-20 pl-70 pr-70 pb-10 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="sectiontitle section-title--h-medium text-center pt-10 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+<h2 class="section-title">Explore Intelligrated</h2>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="leftrailwithcontent pb-medium left-rail-v2-styles aem-GridColumn aem-GridColumn--default--12">
+
+
+
+	<div class="cmp-leftrail-enhanced">
+		<div class="left-rail-container-v2">
+			<div class="container mvp2 left-rail-w-content">
+				
+				<div class="left-rail-container-desktop">
+					<div class="row">
+						<div class="col-lg-3 pr-lg-0 left-rail-c72">
+							<ul class="nav-tabs nav left-rail-tabs" data-target="left-rail-tabs-content-v2" role="tablist" aria-busy="true">
+								
+									<li role="list" aria-busy="true">
+										<a data-toggle="tab" href="#systems" class="label1" data-leftrail-item="Systems">Systems</a>
+									</li>
+								
+									<li role="list" aria-busy="true">
+										<a data-toggle="tab" href="#software" class="label1" data-leftrail-item="Software">Software</a>
+									</li>
+								
+									<li role="list" aria-busy="true">
+										<a data-toggle="tab" href="#services" class="label1" data-leftrail-item="Services">Services</a>
+									</li>
+								
+									<li role="list" aria-busy="true">
+										<a data-toggle="tab" href="#systems-design" class="label1" data-leftrail-item="Systems Design">Systems Design</a>
+									</li>
+								
+							</ul>
+						</div>
+						<div class="col-lg-9 tab-content" id="left-rail-tabs-content-v2">
+							
+								<div class="tab-pane fade" id="systems" role="tabpanel">
+									<div class="body1" data-analytics-v2="cta-v2-analytics">
+										
+										
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-5575" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-the-honeywell-smart-flexible-depalletizer" data-asset-name="hon-ia-igs-the-honeywell-smart-flexible-depalletizer.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligrated Smart Flexible Depalletizer" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-136" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-the-honeywell-smart-flexible-depalletizer" data-asset-name="hon-ia-igs-the-honeywell-smart-flexible-depalletizer.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligrated Smart Flexible Depalletizer" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Warehouse Automation Systems &amp; Technologies</h4>
+<p>Explore the core systems driving modern warehouse automation.&nbsp;From conveyors to ASRS, advanced robotics, or hybrid strategies, learn how Intelligrated's integrated solutions can solve your labor, throughput, and efficiency challenges.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-systems">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+									</div>
+								</div>
+							
+								<div class="tab-pane fade" id="software" role="tabpanel">
+									<div class="body1" data-analytics-v2="cta-v2-analytics">
+										
+										
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-3775" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-software-section-image" data-asset-name="hon-ia-igs-products-software-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligence Engine for Your Automated Warehouse" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-1494" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-software-section-image" data-asset-name="hon-ia-igs-products-software-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligence Engine for Your Automated Warehouse" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>The Intelligence Engine for Your Automated Warehouse</h4>
+<p>Momentum Core is Intelligrated's modular software platform for warehouse operations. It brings together warehouse execution (WES), warehouse control (WCS), machine control, and SCADA into a cohesive architecture, controlled through a standardized interface powered by Ignition Perspective from Inductive Automation.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-momentum-wes">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+									</div>
+								</div>
+							
+								<div class="tab-pane fade" id="services" role="tabpanel">
+									<div class="body1" data-analytics-v2="cta-v2-analytics">
+										
+										
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-2087" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-warehouse-automation-services-image" data-asset-name="hon-ia-igs-warehouse-automation-services-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Maximize Your Automation ROI with Full Lifecycle Support" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-2697" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-warehouse-automation-services-image" data-asset-name="hon-ia-igs-warehouse-automation-services-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Maximize Your Automation ROI with Full Lifecycle Support" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Maximize Your Automation ROI with Full Lifecycle Support</h4>
+<p>Protect your investment and maintain peak performance. Intelligrated's tailored, comprehensive lifecycle services, from data-driven preventative maintenance to to 24/7 technical support, spare parts or training, can help reduce TCO and maximize uptime for your automated systems.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-lss">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+									</div>
+								</div>
+							
+								<div class="tab-pane fade" id="systems-design" role="tabpanel">
+									<div class="body1" data-analytics-v2="cta-v2-analytics">
+										
+										
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-5210" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-solutions-consulting-section-image" data-asset-name="hon-ia-igs-products-solutions-consulting-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Systems Design" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-1118" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-solutions-consulting-section-image" data-asset-name="hon-ia-igs-products-solutions-consulting-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Systems Design" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Systems Design</h4>
+<p>Unlock hidden efficiencies in your warehouse. Our consulting team uses data-driven analysis to help you identify bottlenecks and boost productivity, and to help you select, design, and justify the ideal mix of technologies to meet your specific operational goals.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-systems-integrations">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="left-rail-accordion" id="left-rail-accordion-mobile" style="display:none">
+				
+					<div class="left-rail-accordion__container">
+						<div class="left-rail-accordion__title-container">
+							<div class="left-rail-accordion__title">Systems</div>
+							<span class="left-rail-accordion__icon" tabindex="0"></span>
+						</div>
+						<div class="left-rail-accordion__content">
+							
+							
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-2633" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-the-honeywell-smart-flexible-depalletizer" data-asset-name="hon-ia-igs-the-honeywell-smart-flexible-depalletizer.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligrated Smart Flexible Depalletizer" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-1349" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-the-honeywell-smart-flexible-depalletizer" data-asset-name="hon-ia-igs-the-honeywell-smart-flexible-depalletizer.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligrated Smart Flexible Depalletizer" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Warehouse Automation Systems &amp; Technologies</h4>
+<p>Explore the core systems driving modern warehouse automation.&nbsp;From conveyors to ASRS, advanced robotics, or hybrid strategies, learn how Intelligrated's integrated solutions can solve your labor, throughput, and efficiency challenges.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-systems">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+						</div>
+					</div>
+				
+					<div class="left-rail-accordion__container">
+						<div class="left-rail-accordion__title-container">
+							<div class="left-rail-accordion__title">Software</div>
+							<span class="left-rail-accordion__icon" tabindex="0"></span>
+						</div>
+						<div class="left-rail-accordion__content">
+							
+							
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-1881" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-software-section-image" data-asset-name="hon-ia-igs-products-software-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligence Engine for Your Automated Warehouse" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-6777" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-software-section-image" data-asset-name="hon-ia-igs-products-software-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="The Intelligence Engine for Your Automated Warehouse" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>The Intelligence Engine for Your Automated Warehouse</h4>
+<p>Momentum Core is Intelligrated's modular software platform for warehouse operations. It brings together warehouse execution (WES), warehouse control (WCS), machine control, and SCADA into a cohesive architecture, controlled through a standardized interface powered by Ignition Perspective from Inductive Automation.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-momentum-wes">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+						</div>
+					</div>
+				
+					<div class="left-rail-accordion__container">
+						<div class="left-rail-accordion__title-container">
+							<div class="left-rail-accordion__title">Services</div>
+							<span class="left-rail-accordion__icon" tabindex="0"></span>
+						</div>
+						<div class="left-rail-accordion__content">
+							
+							
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-4064" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-warehouse-automation-services-image" data-asset-name="hon-ia-igs-warehouse-automation-services-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Maximize Your Automation ROI with Full Lifecycle Support" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  target="_blank" data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-7640" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-warehouse-automation-services-image" data-asset-name="hon-ia-igs-warehouse-automation-services-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Maximize Your Automation ROI with Full Lifecycle Support" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Maximize Your Automation ROI with Full Lifecycle Support</h4>
+<p>Protect your investment and maintain peak performance. Intelligrated's tailored, comprehensive lifecycle services, from data-driven preventative maintenance to to 24/7 technical support, spare parts or training, can help reduce TCO and maximize uptime for your automated systems.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-lss">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+						</div>
+					</div>
+				
+					<div class="left-rail-accordion__container">
+						<div class="left-rail-accordion__title-container">
+							<div class="left-rail-accordion__title">Systems Design</div>
+							<span class="left-rail-accordion__icon" tabindex="0"></span>
+						</div>
+						<div class="left-rail-accordion__content">
+							
+							
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--5 aem-Grid--default--5 aem-Grid--phone--12 ">
+    
+    <div class="cmp cmp-image aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--5">
+      <div style="text-align:center">
+ 
+ 
+ 
+
+
+<div class="image_desktop image-overlap-false-small">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-1652" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-solutions-consulting-section-image" data-asset-name="hon-ia-igs-products-solutions-consulting-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Systems Design" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+<div class="image_mobile">
+    
+    
+    
+    
+    
+        
+        
+        <a class="cmp-image__link skeleton"  data-cmp-hook-image="link">
+            <div class="cq-dd-image ">
+                <div id="image-6410" data-current-page="/content/sps/us/en/products/warehouse-automation" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-products-solutions-consulting-section-image" data-asset-name="hon-ia-igs-products-solutions-consulting-section-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="image" data-alt="Systems Design" data-isTransparentPng="false" class="s7dm-dynamic-media">
+                </div>
+            </div>
+            <div class="dot-flashing"></div>
+        </a>
+        
+    
+
+    
+    
+
+    
+
+</div>
+
+    
+
+
+    
+
+
+    </div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white p-15 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--7 aem-Grid--default--7 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7"><div class="cmp-text">
+    <h4>Systems Design</h4>
+<p>Unlock hidden efficiencies in your warehouse. Our consulting team uses data-driven analysis to help you identify bottlenecks and boost productivity, and to help you select, design, and justify the ideal mix of technologies to meet your specific operational goals.</p>
+
+</div>
+
+    
+</div>
+<div class="cta cta--tertiary aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--7">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="learn-more-systems-integrations">
+            <div class="anchor-text"> Learn More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray pt-30 pl-30 pr-30 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn aem-GridColumn--default--12"><div class="cmp-text">
+    <p style="text-align: center;"><span class="text-header5"><b>WHY CHOOSE INTELLIGRATED</b></span></p>
+
+</div>
+
+    
+</div>
+<div class="sectiontitle text-center pb-10 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+<h3 class="section-title">Trusted by 4,000+ Sites Worldwide</h3>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="responsivegrid pt-10 pl-20 pr-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-light-gray p-15 pt-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-field-engineers-icon.png" alt="Field Engineers" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <h5 style="text-align: center;">750+<br>
+Field Engineers</h5>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray p-15 pt-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-technical-support-icon.png" alt="24/7 Technical Support" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <h5 style="text-align: center;">24/7<br>
+Technical Support</h5>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray p-15 pt-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-predictive-diagnostics-icon.png" alt="Predictive Diagnostics" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <h5 style="text-align: center;">Predictive<br>
+Diagnostics</h5>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-light-gray p-15 pt-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <p style="text-align: center;"><img src="/content/dam/honeywell-edam/sps/igs/en-us/products/hon-ia-igs-assurance-360-service-model-icon.png" alt="Assurance 360 Service Model" width="90" height="90"></p>
+
+</div>
+
+    
+</div>
+<div class="responsivegrid bg-light-gray p-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text Body-XL-Regular aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--3"><div class="cmp-text">
+    <h5 style="text-align: center;">Assurance 360<br>
+Service Model</h5>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="text pl-0 aem-GridColumn aem-GridColumn--default--12"><div class="cmp-text">
+    <p style="text-align: center;">We help businesses reduce downtime, extend equipment life, and improve supply chain performance, backed by deep domain expertise and a global footprint.</p>
+
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+<div class="cta cta--primary justify-content-center aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+
+    
+    
+    
+		
+		<a href="#request-consultation">
+            <div class="anchor-text"> Request a consultation</div>
+        </a>
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="static-content-carousel default-carousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+<div class="default-carousel--container ">
+
+    <div class="carousel__container" data-nb-slides="1" data-slide-timer="0">
+        <div class="slide pt-30 pb-50 pl-70 pr-70">
+    
+    <div class="slide__container aem-Grid aem-Grid--default--12 aem-Grid--phone--12">
+        
+        
+            <div class="slide__image-container image-clickable aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                
+                
+                    <div class="image_desktop">
+                        
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="slide-591" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="4-3-carousel-desktop" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-playbook-solving-top-4-critical-warehouse-challenges-1" data-asset-name="hon-ia-igs-playbook-solving-top-4-critical-warehouse-challenges.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="A playbook for solving the top 4 critical warehouse challenges: throughput, efficiency, labor and space constraints" data-isTransparentPng="true" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                    </div>
+                    <div class="image_mobile">
+                        
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="slide-6472" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="16-9-carousel-mobile" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-playbook-solving-top-4-critical-warehouse-challenges-1" data-asset-name="hon-ia-igs-playbook-solving-top-4-critical-warehouse-challenges.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="A playbook for solving the top 4 critical warehouse challenges: throughput, efficiency, labor and space constraints" data-isTransparentPng="true" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                    </div>
+                
+            </div>
+        
+        
+        
+        <div class="slide__content-wrapper aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+            <h2 class="slide__title">A playbook for solving the top 4 critical warehouse challenges</h2>
+            <h2 class="slide__subtitle" title="Throughput, efficiency, labor and space constraints">Throughput, efficiency, labor and space constraints</h2>
+            <div class="slide__text"><p>Read this playbook about the four most persistent challenges warehouse leaders face today: throughput, efficiency, labor, and space. You will gain insights, data and practical guidance, focusing not only on what technology to adopt but also on how to approach the warehouse as a unified, evolving system.</p>
+</div>
+            
+                
+                
+                    <div class="cta cta--tertiary">
+
+
+
+
+<div class="cmp-call-to-action" data-analytics-v2="cta-v2-analytics">
+
+    
+	
+		<a target="_blank"  id="read-more-ebook">
+            <div class="anchor-text"> Read More</div>
+        </a>
+    
+
+    
+    
+    
+    
+    
+
+
+</div>
+
+
+
+</div>
+
+                    
+                
+            
+            
+        </div>
+    </div>
+    
+    
+
+</div>
+
+    </div>
+    <div class="proxy-slick-buttons d-none">
+        <button class="slick-prev prev-proxy slick-arrow" aria-label="Previous" type="button" style="" tabindex="0">Previous</button>
+        <button class="slick-next next-proxy slick-arrow" aria-label="Next" type="button" style="" tabindex="0">Next</button>
+    </div>
+    <div class="slide-progress js-carousel-control">
+        <span class="js-play-pause timer-icon icon-pause"></span>
+    </div>
+</div>
+
+
+
+<div class="vidyard-video-holder">
+    
+        
+            
+                
+            
+        
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white pt-0 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--12 aem-GridColumn--phone--newline aem-GridColumn aem-GridColumn--tablet--newline aem-GridColumn--default--12 aem-GridColumn--offset--phone--0 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-white pt-30 pl-50 pr-50 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="sectiontitle section-title--h-medium text-center pt-10 pb-20 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+<h2 class="section-title">More material handling resources</h2>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="tile-grid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="cmp-tile-grid">
+    <div class="cmp-tile-grid_layout ">
+        
+            
+    
+    <div role="list" class="row">
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+
+        
+        
+        
+        
+        
+            
+                
+                    <div class="col-lg-4 d-flex ">
+                        <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                            
+                            <a role="link" rel="_" aria-label="Click on tile Mastering Warehouse Complexity: Your Roadmap to a More Efficient, Resilient Warehouse"  target="_blank" class="internal_type">
+                            
+                            
+                            
+                           <div class="tile-grid-image">
+                                
+                                    
+                                    
+                                        
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy_754150048-62" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-mastering-warehouse-complexity-ebook-cover-image" data-asset-name="hon-ia-igs-mastering-warehouse-complexity-ebook-cover-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Mastering Warehouse Complexity: Your Roadmap to a More Efficient, Resilient Warehouse" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                    
+                                
+                            </div>
+                            </a>
+                            
+    <div class="tile-grid-streach-image-none">
+        <div class="tile-grid-tag">Ebook</div>
+        
+        
+            <div class="tile-grid-title">Mastering Warehouse Complexity: Your Roadmap to a More Efficient, Resilient Warehouse</div>
+        
+        
+        
+        <a role="link" rel="_" aria-label="Click on tile Mastering Warehouse Complexity: Your Roadmap to a More Efficient, Resilient Warehouse"  target="_blank" class="internal_type">
+        
+        
+        
+        <div role="link" aria-label=" about Mastering Warehouse Complexity: Your Roadmap to a More Efficient, Resilient Warehouse" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                <span>
+                    <div class="anchor-text">Learn More</div>
+                </span>
+        </div>
+        </a>
+    </div>
+
+                        </div>
+                    </div>
+                
+            
+                
+            
+                
+            
+
+            <div class="col-lg-8 d-flex">
+                <div class="row">
+                    
+                        
+                    
+                        
+                            <div class="col-lg-12 tile-grid__stacked d-flex">
+                                <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile Top 4 Challenges in Manufacturing - and How to Solve Them with Smarter Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            
+                                                
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy_754150048-9756" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-top-4-challenges-manufacturing-small-image" data-asset-name="hon-ia-igs-top-4-challenges-manufacturing-small-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Top 4 Challenges in Manufacturing - and How to Solve Them with Smarter Warehouse Automation" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                            
+                                            </a>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <div class="tile-grid-tag">Brochure</div>
+                                            
+                                            
+                                                <div class="tile-grid-title">Top 4 Challenges in Manufacturing - and How to Solve Them with Smarter Warehouse Automation</div>
+                                            
+
+                                            
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile Top 4 Challenges in Manufacturing - and How to Solve Them with Smarter Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            <div role="link" aria-label=" about Top 4 Challenges in Manufacturing - and How to Solve Them with Smarter Warehouse Automation" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                                                <span>Learn More</span>
+                                            </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-lg-12 tile-grid__stacked d-flex">
+                                <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile Procurement Strategies: Why Fragmentation Is Costing Distribution Centers More Than They Realize"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            
+                                                
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy_754150048-243" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-procurement-strategies-small-image" data-asset-name="hon-ia-igs-procurement-strategies-small-image.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="Procurement Strategies: Why Fragmentation Is Costing Distribution Centers More Than They Realize" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                            
+                                            </a>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <div class="tile-grid-tag">Whitepaper</div>
+                                            
+                                            
+                                                <div class="tile-grid-title">Procurement Strategies: Why Fragmentation Is Costing Distribution Centers More Than They Realize</div>
+                                            
+
+                                            
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile Procurement Strategies: Why Fragmentation Is Costing Distribution Centers More Than They Realize"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            <div role="link" aria-label=" about Procurement Strategies: Why Fragmentation Is Costing Distribution Centers More Than They Realize" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                                                <span>Learn More</span>
+                                            </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        
+
+        
+        
+
+        
+        
+    </div>
+
+        
+        
+    </div>
+</div>
+
+
+    
+
+</div>
+<div class="tile-grid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="cmp-tile-grid">
+    <div class="cmp-tile-grid_layout ">
+        
+            
+    
+    <div role="list" class="row">
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        
+
+        
+        
+        
+        
+        
+            
+                
+                    <div class="col-lg-4 d-flex ">
+                        <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                            <a role="link" rel="noreferrer" aria-label="Click on tile The Benefits of Preventive Maintenance in 2025 and Beyond"  target="_blank" class="external_type">
+                            
+                            
+                            
+                            
+                           <div class="tile-grid-image">
+                                
+                                    
+                                    
+                                        
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy-6967" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-benefits-preventive-maintenance" data-asset-name="hon-ia-igs-benefits-preventive-maintenance.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="The Benefits of Preventive Maintenance in 2025 and Beyond" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                    
+                                
+                            </div>
+                            </a>
+                            
+    <div class="tile-grid-streach-image-none">
+        <div class="tile-grid-tag">Featured Story</div>
+        
+        
+            <div class="tile-grid-title">The Benefits of Preventive Maintenance in 2025 and Beyond</div>
+        
+        
+        <a role="link" rel="noreferrer" aria-label="Click on tile The Benefits of Preventive Maintenance in 2025 and Beyond"  target="_blank" class="external_type">
+        
+        
+        
+        
+        <div role="link" aria-label=" about The Benefits of Preventive Maintenance in 2025 and Beyond" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                <span>
+                    <div class="anchor-text">Learn More</div>
+                </span>
+        </div>
+        </a>
+    </div>
+
+                        </div>
+                    </div>
+                
+            
+                
+            
+                
+            
+
+            <div class="col-lg-8 d-flex">
+                <div class="row">
+                    
+                        
+                    
+                        
+                            <div class="col-lg-12 tile-grid__stacked d-flex">
+                                <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile 10 Key Trends Reshaping Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            
+                                                
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy-5134" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-10-key-trends-reshaping-warehouse-automation-infographic" data-asset-name="hon-ia-igs-10-key-trends-reshaping-warehouse-automation-infographic.png" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="10 Key Trends Reshaping Warehouse Automation" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                            
+                                            </a>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <div class="tile-grid-tag">Infographic</div>
+                                            
+                                            
+                                                <div class="tile-grid-title">10 Key Trends Reshaping Warehouse Automation</div>
+                                            
+
+                                            
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile 10 Key Trends Reshaping Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            <div role="link" aria-label=" about 10 Key Trends Reshaping Warehouse Automation" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                                                <span>Learn More</span>
+                                            </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                    
+                        
+                            <div class="col-lg-12 tile-grid__stacked d-flex">
+                                <div class="tile-grid__common tile-grid__gridLayout33-67-stacked bg-color-white-white drop-shadow-none rounded-corner-false-large" data-analytics-v2="cta-v2-analytics">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile A Software-First Approach to Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            
+                                                
+    
+    
+        
+        
+        
+        <div class="cq-dd-image ">
+            <div id="tile_grid_copy-2385" data-current-page="/content/sps/us/en/products/warehouse-automation" data-image-style="3-2-list" data-page-locale="en" data-asset-path="honeywell/hon-ia-igs-digital-services-small-image" data-asset-name="hon-ia-igs-digital-services-small-image.jpg" data-asset-type="image" data-viewer-path="https://honeywell.scene7.com/s7viewers/" data-imageserver="https://honeywell.scene7.com/is/image/" data-videoserver="https://honeywell.scene7.com/is/content/" data-contenturl="//honeywell.scene7.com/is/content/" data-wcmdisabled data-dms7 data-mode="smartcrop" data-alt="A Software-First Approach to Warehouse Automation" data-isTransparentPng="false" class="lazy-load s7dm-dynamic-media">
+            </div>
+        </div>
+        
+       
+        
+    
+
+                                            
+                                            </a>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <div class="tile-grid-tag">Brochure</div>
+                                            
+                                            
+                                                <div class="tile-grid-title">A Software-First Approach to Warehouse Automation</div>
+                                            
+
+                                            
+                                            
+                                            <a role="link" rel="_" aria-label="Click on tile A Software-First Approach to Warehouse Automation"  target="_blank" class="internal_type">
+                                            
+                                            
+                                            
+                                            <div role="link" aria-label=" about A Software-First Approach to Warehouse Automation" class="cta cta--tertiary aem-GridColumn aem-GridColumn--default--12">
+                                                <span>Learn More</span>
+                                            </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        
+
+        
+        
+
+        
+        
+    </div>
+
+        
+        
+    </div>
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid pt-50 pl-50 pr-30 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="sectiontitle text-center pt-10 pl-30 pr-30 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+<a id="contact-us"></a>
+
+
+<h3 class="section-title">Ready to Automate Smarter?</h3>
+
+
+
+
+
+<h4 class="section-subtitle">Let’s build your future-ready warehouse.</h4>
+
+
+
+</div>
+<div class="marketo-form cmp-marketoform-v2 aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+<input type="hidden" id="enable-one-link"/>
+<div class="marketo-form" id="mktoFrm" data-analytics-marketo-form="marketo-form-analytics" data-ineditor="false" data-contentpath="/content/sps/us/en/products/warehouse-automation/jcr:content/root/responsivegrid/responsivegrid_copy_/responsivegrid/marketo_form_copy">
+	<div class="text-center">
+		<p class="marketo-form__name"> </p>
+		<div class="marketo-form__instruction"></div>
+	</div>
+	<div class="text-center">
+		
+			
+<form id="mktoForm_7434"></form>
+
+		
+		
+		
+	</div>
+	<div class="marketo-form__disclaimer text-center mt-4">
+		
+	</div>
+</div></div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-white aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+<div class="localized-experiencefragment experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div class="cmp-experiencefragment cmp-experiencefragment--footer">
+<div class="xf-content-height">
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="htmlcontent parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+</div>
+<div class="marketo-form aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+<input type="hidden" id="enable-one-link"/>
+<div class="marketo-form" id="mktoFrm" data-analytics-marketo-form="marketo-form-analytics" data-ineditor="false" data-contentpath="/content/experience-fragments/sps/us/en/site/footer/master/jcr:content/root/responsivegrid/marketo_form_copy">
+	<div class="text-center">
+		<p class="marketo-form__name"> </p>
+		<div class="marketo-form__instruction"></div>
+	</div>
+	<div class="text-center">
+		
+			<style>
+.footer-content {
+    color: #fff;
+    background-color: #404040;
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+}
+@media (max-width: 767px) {
+.footer-content {
+    color: #fff;
+    background-color: #404040;
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+}
+}
+@media (min-width: 1025px) {
+.footer-content__container {
+    padding-left: 60px!important;
+    padding-right: 60px!important;
+}
+}
+</style>
+		
+		
+		
+	</div>
+	<div class="marketo-form__disclaimer text-center mt-4">
+		
+	</div>
+</div></div>
+<div class="flexible-footer responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+<div class="footer-content offset-lg-0 col-lg-12 col-12 mt-5 ">
+    
+
+    <div class="row footer-content__container">
+        
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid bg-transparent aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
+    
+    <div class="responsivegrid bg-transparent aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="text pb-15 aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0"><div class="cmp-text">
+    <p><span class="text-header4" style="color: #fff !important; font-size: 40px!important;">Let's Connect!</span></p>
+<p style="font-size: 18.0px;">Sign up to receive exclusive communications from Honeywell including product updates, technical information, new offerings, events and news, surveys, special offers, and related topics via telephone, email, and other forms of electronic communication.</p>
+
+</div>
+
+    
+</div>
+<div class="button button--tertiary aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_blank"  data-paramcheck="false" data-localurl="false">
+		Subscribe
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-transparent aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Products</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Detection, Measurement and Control</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Personal Protective Equipment</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Process Automation</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Productivity Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Sensing Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Smart Energy</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Thermal Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Warehouse Automation</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">More Products</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Software</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Detection, Measurement and Control</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Personal Protective Equipment</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Productivity Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Smart Energy</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Warehouse Automation</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Services</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Detection, Measurement and Control</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Process Automation</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Personal Protective Equipment</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Productivity Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Warehouse Automation</a></li>
+</ul></div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-transparent aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Industries</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Aerospace</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Commercial Buildings</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Energy</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Government and Public Sector</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Healthcare</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Life Sciences</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Manufacturing</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Logistics and Warehouses</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Retail</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Utilities</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Where to Buy</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Gas and Flame Detection</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Personal Protective Equipment</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Process Automation</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Productivity Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Sensing Solutions</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Warehouse Automation</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">myAutomation Support</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">How-to videos</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Need help?</a></li>
+</ul></div>
+
+    
+</div>
+</div>
+<div class="responsivegrid bg-transparent aem-GridColumn--tablet--12 aem-GridColumn--offset--tablet--0 aem-GridColumn--default--none aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn--tablet--none aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3 aem-GridColumn--offset--default--0">
+
+
+<div class="aem-Grid aem-Grid--3 aem-Grid--tablet--12 aem-Grid--default--3 aem-Grid--phone--12 ">
+    
+    <div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Company</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_blank">About Honeywell</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">About IA</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">News</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Press Releases</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Investors</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Events</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Careers</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_blank">Careers</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Job Search</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-links aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__title d-flex justify-content-between d-md-block">Contact</div>
+<a class="js-collapse-link d-md-none m-0" href="#?">
+    <span class="icon icon-carat_down"></span>
+    <span class="sr-only">toggle view</span>
+</a>
+<ul class="footer--links__list d-md-flex flex-column justify-content-center align-items-start pl-0 hidden">
+    <li><a class="footer--links__list-item"  target="_self">Contact Us</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Support</a></li>
+
+    <li><a class="footer--links__list-item"  target="_blank">Unsubscribe</a></li>
+
+    <li><a class="footer--links__list-item"  target="_self">Notifications</a></li>
+</ul></div>
+<div class="text pt-15 aem-GridColumn--tablet--12 aem-GridColumn--phone--hide aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+</div>
+<div class="footer-socials aem-GridColumn--tablet--12 aem-GridColumn--phone--none aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--offset--phone--0 aem-GridColumn--default--3">
+
+    
+
+
+<div class="footer--links__content d-flex d-md-block flex-nowrap flex-column flex-md-row">
+    
+        <div class="footer--links__title  footer--links__title-social d-flex justify-content-between text-center text-md-left d-md-block">
+            Follow Us</div>
+    
+    <ul class="footer--links__socials d-flex flex-wrap pl-0">
+        <li>
+            <a  target="_blank" rel="noopener noreferrer">
+                <svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve" aria-labelledby="linkedin-svg">
+	 <title class="linkedin-svg">LinkedIn</title>
+<g>
+	<path fill="#E0E0E0" d="M12,35H6V17h6V35z M9.6,13.9c-2,0-3.6-1.6-3.6-3.6c0-2,1.6-3.7,3.6-3.7c2,0,3.6,1.6,3.6,3.7
+		C13.2,12.3,11.6,13.9,9.6,13.9L9.6,13.9z M35,35h-6V24.9c0-1.6-1.9-3-3.5-3c-1.6,0-3.5,1.4-3.5,3V35h-6V17h6v2.8
+		c1-1.6,3.7-2.8,5.5-2.8c3.8,0,7.5,3.2,7.5,7.1V35z M34.8,35.6"/>
+</g>
+</svg>
+
+            </a>
+        </li>
+    
+        <li>
+            <a  target="_blank" rel="noopener noreferrer">
+                <svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve" aria-labelledby="facebook-svg">
+    <title class="facebook-svg">Facebook</title>
+<path fill="#E0E0E0" d="M17,37V23h-4v-6h4v-5.3C17,8.1,20.1,5,23.7,5H29v5h-3.9C24,10,24,11.4,24,12.5V17h4.6l-0.8,6H24v14H17z"/>
+</svg>
+
+            </a>
+        </li>
+    
+        <li>
+            <a  target="_blank" rel="noopener noreferrer">
+                <svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve" aria-labelledby="youtube-svg">
+	 <title class="youtube-svg">YouTube</title>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#E0E0E0" d="M36,14.5c0-2.5-2-4.5-4.4-4.5H10.4C8,10,6,12,6,14.5v12.1
+		C6,29,8,31,10.4,31h21.1c2.5,0,4.4-2,4.4-4.5V14.5z M18,26.1V14.9l8.5,5.6L18,26.1z M17.3,25.1"/>
+</g>
+</svg>
+
+            </a>
+        </li>
+    </ul>
+</div></div>
+
+    
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+    </div>
+
+    <div class="footer-content__bottom d-flex flex-wrap justify-content-between flex-column flex-md-row footer-content__container row">
+        <div class="col-xl-6">
+            <p class="footer-content__copyright m-0">Copyright © 2026 Honeywell International Inc</p>
+        </div>
+        <div class="col-xl-6">
+            <div class="footer-content__bottom-display">
+                
+                    <div class="footer-content__bottom-link">
+                        <a class="footer--links__list-item"  target="_blank">Terms &amp; Conditions</a>
+                        <span class="footer-content__bottom-link-border"></span>
+                    </div>
+                
+                    <div class="footer-content__bottom-link">
+                        <a class="footer--links__list-item"  target="_blank">Privacy Statement</a>
+                        <span class="footer-content__bottom-link-border"></span>
+                    </div>
+                
+                    <div class="footer-content__bottom-link">
+                        <a class="footer--links__list-item"  target="_blank"><span>Your Privacy Choices</span><img src="/content/dam/images/ccpa-privacyoptions.svg" class="footer-icon" alt="icon"/></a>
+                        <span class="footer-content__bottom-link-border"></span>
+                    </div>
+                
+                    <div class="footer-content__bottom-link">
+                        <a class="footer--links__list-item"  target="_blank">Cookie Notice</a>
+                        <span class="footer-content__bottom-link-border"></span>
+                    </div>
+                
+                    <div class="footer-content__bottom-link">
+                        <a class="footer--links__list-item"  target="_blank">Global Unsubscribe</a>
+                        <span class="footer-content__bottom-link-border"></span>
+                    </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div></div>
+<div class="marketo-form aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+<input type="hidden" id="enable-one-link"/>
+<div class="marketo-form" id="mktoFrm" data-analytics-marketo-form="marketo-form-analytics" data-ineditor="false" data-contentpath="/content/experience-fragments/sps/us/en/site/footer/master/jcr:content/root/responsivegrid/marketo_form">
+	<div class="text-center">
+		<p class="marketo-form__name"> </p>
+		<div class="marketo-form__instruction"></div>
+	</div>
+	<div class="text-center">
+		
+			<style>
+.footer-content__bottom {min-height: 48px!important; }
+.footer-content {
+    color: #fff;
+    background-color: #404040;
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+}
+@media (max-width: 767px) {
+	.footer-content {
+	    color: #fff;
+	    background-color: #404040;
+	    padding-left: 40px!important;
+	    padding-right: 40px!important;
+	}
+}
+</style>
+
+		
+		
+		
+	</div>
+	<div class="marketo-form__disclaimer text-center mt-4">
+		
+	</div>
+</div></div>
+<div class="modalcomponent abstract aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+	<div>
+
+
+
+
+
+ 
+
+<div class="base-modal-component">
+ 
+    
+    <div class="base-modal modal fade" id="global_api_error_modal" tabindex="-1" role="dialog" aria-labelledby="global_api_error_modal" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-custom modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Error</div>
+                    <h5 class="modal-title-maxsize" style="display:none">Maximum File Size</h5>
+                    <h5 class="modal-title-maxfile" style="display:none">Maximum Files Exceeded</h5>
+                    <h5 class="online-ordering d-none"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="mvp-icon-close" aria-hidden="true"></span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        
+                            <div class="col-md-9">
+                                
+                            </div>
+                            <div class="col-md-3">
+                                <div class="alert-icon text-center">
+                                    <img src="/content/dam/aero/en-us/icons/modal-icons/exclamation.png" alt="warning image" class="iconpath fluidimage lazy"/>
+                                </div>
+                            </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <div class="button-wrapper mvp2 cta-component d-flex">
+                        
+                        
+
+
+
+
+
+	
+	<div class="button button--primary justify-content-start close_modal_btn">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_self" data-paramcheck="false" data-localurl="false">
+		OK
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+        
+	</div>
+
+
+</div>
+<div class="modalcomponent abstract aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+	<div>
+
+
+
+
+
+ 
+
+<div class="base-modal-component">
+ 
+    
+    <div class="base-modal modal fade" id="session_expiring" tabindex="-1" role="dialog" aria-labelledby="session_expiring" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-custom modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Your Session Is Expiring.</div>
+                    <h5 class="modal-title-maxsize" style="display:none">Maximum File Size</h5>
+                    <h5 class="modal-title-maxfile" style="display:none">Maximum Files Exceeded</h5>
+                    <h5 class="online-ordering d-none"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="mvp-icon-close" aria-hidden="true"></span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        
+                        
+                            <div class="col-md-12">
+                                
+                                    <p>Due to inactivity you will be logged out in <span id="session_seconds_left">000</span> seconds.</p>
+
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <div class="button-wrapper mvp2 cta-component d-flex">
+                        
+                        
+
+
+
+
+
+	
+	<div class="button button--primary session_keep_btn">
+
+
+
+    
+
+
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+	<a class="functionality_modal" data-toggle="modal" data-target="#Keep-me-signed-in" data-back="false" data-analytics-v1="cta-v1-analytics" target="modal">
+		Keep Me Signed In
+	</a>
+
+</div>
+
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+        
+	</div>
+
+
+</div>
+<div class="modalcomponent abstract aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+	<div>
+
+
+
+
+
+ 
+
+<div class="base-modal-component">
+ 
+    
+    <div class="base-modal modal fade" id="pdpNoAcessShowPopup" tabindex="-1" role="dialog" aria-labelledby="pdpNoAcessShowPopup" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-custom modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Access Restricted</div>
+                    <h5 class="modal-title-maxsize" style="display:none">Maximum File Size</h5>
+                    <h5 class="modal-title-maxfile" style="display:none">Maximum Files Exceeded</h5>
+                    <h5 class="online-ordering d-none"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="mvp-icon-close" aria-hidden="true"></span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        
+                        
+                        
+                            <div class="col-md-12">
+                                
+                                    <p>You cannot access this page as this product is not available in your country. </p>
+
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <div class="button-wrapper mvp2 cta-component d-flex">
+                        
+                        
+
+
+
+
+
+	
+	<div class="button button--primary justify-content-start">
+
+
+
+    
+
+
+
+	<a data-back="false" data-analytics-v1="cta-v1-analytics" target="_self"  data-paramcheck="false" data-localurl="false">
+		Back to Home Page
+	</a>
+
+
+
+<span id="training-description" style="display:none;"></span>
+
+
+</div>
+
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+        
+	</div>
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</div></div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+    
+</main>
+            
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<aside class="modals">
+
+</aside>
+
+<input type="hidden" class="form-control " name="inheritedSearchPage" value="/content/sps/us/en/search-results"/>
+<input type="hidden" class="form-control " name="inheritedHomePage" value="/content/sps/us/en/home"/>
+<input type="hidden" class="form-control " name="inheritedPostLoginPage"/>
+<input type="hidden" class="form-control " name="annual_revalidation_endpoint" value="/pif/api/account/v1/common/user/revalidate"/>
+<input type="hidden" class="form-control " name="enable-order-reports-log"/>
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+    
+    
+    
+
+            
+
+        
+    </body>
+</html>

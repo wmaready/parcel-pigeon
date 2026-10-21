@@ -86,6 +86,7 @@ closed, took effect, or a confirmed wait for one), not a pile of related article
 Reply with JSON only: a list of objects
 {{"i": index, "keep": true|false, "carriers": [subset of {CARRIERS}, or ["Industry"] if no specific carrier],
 "category": one of {CATEGORIES}, "kind": "News"|"Opinion"|"Analysis", "event": short key, "same_as": id or null,
+"score": 1-10 for how much the item matters to U.S. parcel shippers (10 = a dated price change from UPS, FedEx or USPS affecting most shippers; 7-9 = a big carrier network, labor, regulation or deal move; 4-6 = a regional carrier, platform or report worth knowing; 1-3 = minor or local),
 "fit": "core" if it is plainly small parcel news, "edge" if you are keeping it but it is only loosely tied to small parcel
 (general freight, trucking or ocean, broad retail or economy, tech not specific to shipping, a local story),
 "thread": the key of the ACTIVE STORYLINE it belongs to, or a new short lowercase key (e.g. "ups-teamsters-contract",
@@ -112,6 +113,7 @@ Return JSON only, with exactly these keys:
   surcharge or fuel tables, notices, tariffs, filings), each {{"c":"carrier","t":"Rate guide|Service guide|GRI notice|Surcharges & fees|Peak|Fuel|Zones & DAS|Special program|Terms|Regulatory filing",
   "n":"the document's own title with year","y":year it applies to or null,"eff":"YYYY-MM-DD or null","u":"exact URL from the sources"}}; [] if none;
 "tie": one sentence linking this to earlier related news ABOUT THE SAME COMPANY that the sources themselves mention (with month/year), or null. Never tie a story to another carrier's news;
+"why": one sentence under 160 characters on why this matters to parcel shippers or the parcel market, from the sources only (who is affected and how big); never generic;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
 "event_date": "YYYY-MM-DD" the day the event itself happened or was announced, if the sources say and it is earlier than the article, else null;
@@ -727,6 +729,10 @@ def main():
     order = sorted(groups.items(), key=lambda kv: (0 if any(v.get("fit") != "edge" for _, v in kv[1]) else 1,
                                                     min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
     print(f"triage: {len(groups)} new events, {merged} sources added to existing stories")
+    # strongest stories first, so the per-run cap never spends itself on minor items; minor loose-fit items are skipped
+    sc = lambda m: max(int(v.get("score") or 5) for _, v in m)
+    groups = {k: m for k, m in sorted(groups.items(), key=lambda kv: -sc(kv[1]))
+              if not (sc(m) <= 3 and all(v.get("fit") == "edge" for _, v in m))}
 
     written = 0
     for n_ev, (key, members) in enumerate(order):
@@ -809,7 +815,7 @@ def main():
             sdate = ev if re.match(r"^\d{4}-\d{2}-\d{2}$", ev) and ev < pub else pub
             story = {"id": "a" + h(lead_url), "date": sdate, "c": s.get("carriers") or v.get("carriers") or ["Industry"],
                      "cat": s.get("category") or v.get("category") or "Network & operations", "kind": s.get("kind") or v.get("kind") or "News",
-                     "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "tie": s.get("tie"),
+                     "title": s["title"], "sum": s["sum"], "imp": s.get("imp", "info"), "lvl": int(s.get("lvl", 1)), "plain": s["plain"], "why": (str(s.get("why") or "")[:200] or None), "score": int(max((v2.get("score") or 5) for _, v2 in members)), "tie": s.get("tie"),
                      "act": s.get("act"), "dates": s.get("dates") or [],
                      "added": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
