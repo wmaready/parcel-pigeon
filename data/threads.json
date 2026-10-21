@@ -17,14 +17,16 @@
    "UPS"
   ],
   "cx": {
-   "sig": null,
-   "v": 2,
+   "sig": "8754e0e28dbf",
+   "v": 3,
    "beats": {
-    "h403": "UPS opened 2024 with 12,000 job cuts aimed at about $1 billion in savings, after fourth-quarter revenue fell 7.8%.",
-    "h503": "Then came the big one: UPS would cut Amazon volume by more than half. Amazon was its largest customer, at nearly 12% of revenue.",
-    "h511": "In April, UPS put numbers on the Amazon pullback: about 20,000 jobs and 73 buildings, aiming for another $1 billion in savings."
+    "h406": "Investor day: about 200 U.S. facilities to close or consolidate, 400 automated buildings by 2028, $3 billion in savings targeted.",
+    "h503": "Amazon, nearly 12% of revenue and UPS's largest customer, will be cut by more than half by the second half of 2026.",
+    "h511": "Specifics follow: about 20,000 jobs in 2025 and 73 buildings by end of June, targeting about $1 billion in savings.",
+    "18": "UPS closed 23 buildings in early 2026 and planned about 30,000 job cuts for the year, after 48,000 in 2025, with Amazon cut by over half."
    },
-   "intro": "UPS is shrinking its Amazon business and its own network at once. Shippers should know what that means for capacity and costs."
+   "intro": "UPS is shrinking Amazon volume and remaking its network, which reshapes one of the biggest U.S. parcel carriers.",
+   "now": "Analysts are split on whether UPS is retreating from B2C parcels; UPS says small package isn't going away. Earnings are Oct 27."
   },
   "was": [
    "ups-parcel-pivot"
@@ -74,9 +76,14 @@
   ],
   "cx": {
    "sig": "51288bc858e6",
-   "v": 2,
-   "beats": {},
-   "intro": "FedEx is folding Ground and Express into one network, and shippers feel it in service, pickup routes and pricing."
+   "v": 3,
+   "beats": {
+    "h411": "On June 1, 2024, FedEx Express, Ground and Services became one company, Federal Express Corp., with FedEx Freight kept separate.",
+    "h413": "FedEx said DRIVE cut $1.8 billion in costs, and Network 2.0 launched in Canada, its largest market yet. A Freight review also began.",
+    "43": "FedEx is now merging Ground and Express pickup and delivery, and expects the U.S. rollout to be complete by the end of 2027."
+   },
+   "intro": "FedEx is folding its Ground and Express operations into one network, a shift that shapes how packages get picked up and delivered.",
+   "now": "FedEx expects the U.S. rollout to finish by the end of 2027. Its next rate step is a 5.9% average general rate increase on Jan. 4, 2027."
   },
   "rv": "51288bc858e6"
  },
@@ -123,13 +130,14 @@
    "USPS"
   ],
   "cx": {
-   "sig": null,
-   "v": 2,
+   "sig": "131b7af39fc6",
+   "v": 3,
    "beats": {
-    "h420": "The idea started with volume: the White House said de minimis shipments grew from about 140 million to over 1 billion a year.",
-    "h504": "USPS stopped taking China and Hong Kong parcels, then reversed a day later and said it would work with CBP on collecting the new duties."
+    "h513": "De minimis ended for China and Hong Kong on May 2. Postal shipments faced 120% duties or $100 per item, rising to $200 on June 1.",
+    "h526": "The exemption ended for every country on Aug. 29. The UPU said at least 25 countries halted postal shipments to the U.S.",
+    "a55e20dc9f8f3": "CBP proposed that type 11 entries be filed on or before arrival instead of within 15 days, and that postal type 13 entries carry more data."
    },
-   "intro": "The $800 duty-free exemption for small imports is gone, so low-value parcels now face duties and new paperwork."
+   "now": "CBP's proposal is open for comment through Dec. 7, and no effective date has been stated."
   },
   "was": [
    "cbp-low-value-import-filing"
@@ -154,10 +162,11 @@
   ],
   "cx": {
    "sig": "dbe4c7321e1f",
-   "v": 2,
-   "beats": {},
-   "intro": "After the Supreme Court struck down IEEPA tariffs, refunds are starting to flow, and shippers want to know who gets paid and when.",
-   "now": "CBP's current capability covers roughly $11.4 billion, or 6.9%, of IEEPA tariffs; UPS reports earnings Oct. 27 and FedEx Oct. 28."
+   "v": 3,
+   "beats": {
+    "a771628a2eca4": "CBP began processing some finally liquidated entries, accepting 477 CAPE declarations; the phase slipped from a late-July target to October."
+   },
+   "now": "Refunds are flowing: Treasury paid about $22 billion in May and $49.2 billion in June. UPS and FedEx report earnings Oct. 27 and 28."
   },
   "rv": "dbe4c7321e1f"
  },
@@ -222,7 +231,13 @@
     "h516": "In May 2025, governors approved July 13 hikes: Ground Advantage 7.1%, Priority Mail 6.3%, Parcel Select 7.6%. Express held flat."
    },
    "intro": "USPS has raised package prices in steps since 2024, and holiday pricing is the latest layer shippers have to budget for."
-  }
+  },
+  "apart": [
+   "usps-big-shipper-deals",
+   "usps-finances",
+   "usps-leadership",
+   "usps-service-network"
+  ]
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
@@ -250,16 +265,18 @@
   "rv": "51da35db195e",
   "cx": {
    "sig": "51da35db195e",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h418": "FedEx followed in August with similar tiers, including new $0.30–$0.55 residential fees on Ground and Home Delivery.",
-    "h419": "USPS joined in September 2024 with a temporary increase. Commercial Ground Advantage rose $0.35 to $5.50 in Zones 5–9, depending on weight.",
-    "h523": "FedEx went first again in 2025, in July. Its residential demand fee rose to $0.40–$0.65, and the enterprise tier to $1.55–$8.75.",
-    "h525": "USPS filed its 2025 holiday increases in August, pending PRC review. They ran Oct. 5 to Jan. 18, 2026 and added Parcel Select to the list.",
-    "h527": "UPS announced in September 2025, matching FedEx's $8.75 top enterprise fee. Its demand surcharges started Oct. 26."
+    "h416": "UPS posted 2024 peak tables in July, adding a second fee for shippers above 20,000 weekly packages; fees start Sept. 29.",
+    "h418": "FedEx announced a similar two-tier setup in August, including new $0.30–$0.55 Ground residential fees from Sept. 30.",
+    "h419": "USPS proposed its own temporary increase for Oct. 6 to Jan. 19; commercial Ground Advantage rises $0.35 to $5.50 in Zones 5–9.",
+    "h523": "FedEx's 2025 fees start Sept. 29, with residential demand at $0.40–$0.65 a package, up from $0.30–$0.55 in 2024.",
+    "h525": "USPS filed 2025 holiday increases for Oct. 5 to Jan. 18, now including Parcel Select, pending PRC review.",
+    "h527": "UPS announced its 2025 fees in September: oversize fees from Sept. 28, demand surcharges of $0.40–$2.05 from Oct. 26.",
+    "01": "Oversize peak fees already bill at OnTrac, UPS and FedEx; per-package home-delivery fees start Oct 24–26, then rise in late November."
    },
-   "intro": "Carriers have added peak surcharges every holiday season since 2024, and the fees keep climbing. Here's how that played out.",
-   "now": "Home-delivery peak fees start Oct 24–26, rise to $0.75–$0.80 from Nov 22, and all peak surcharges end Jan 15, 2027."
+   "intro": "How holiday peak surcharges at UPS, FedEx and USPS have evolved since 2024, and what's billing now.",
+   "now": "Home-delivery peak fees start Oct 24; UPS and FedEx report earnings Oct 27 and 28, and fees step up from Nov 22."
   }
  },
  "import-export-fees": {
@@ -363,7 +380,10 @@
    "v": 2,
    "beats": {},
    "intro": "USPS lost billions while its package business shifted; shippers watch it because USPS also does last-mile for other carriers."
-  }
+  },
+  "apart": [
+   "usps-big-shipper-deals"
+  ]
  },
  "parcel-volume-amazon": {
   "n": "Amazon's rise to top U.S. parcel carrier",
@@ -395,7 +415,12 @@
    },
    "intro": "How Amazon climbed to No. 1 in U.S. parcel volume, while UPS and FedEx still lead on revenue.",
    "now": "Amazon leads on volume, UPS and FedEx on revenue. Peak fees start Oct. 24, and UPS and FedEx report earnings Oct. 27 and 28."
-  }
+  },
+  "apart": [
+   "amazon-labor",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
@@ -414,14 +439,12 @@
   ],
   "cx": {
    "sig": "e3902d701814",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "21": "Reports said Amazon would cut its USPS volume by two-thirds; the new agreement trims it by about 20% instead.",
-    "g09": "DHL eCommerce's 19 automated hubs feed USPS's 170 million-plus delivery points, and Amazon's roughly 80% stays in that network.",
-    "09": "Amazon drops a second batch at select post offices between noon and 1 p.m. for delivery by 8 p.m., capped at 200 packages a day per site."
+    "21": "Reports said Amazon would cut its USPS volume by two-thirds. The new agreement trims it by about 20% instead."
    },
-   "intro": "USPS is reshaping its two big parcel relationships, with Amazon and DHL eCommerce, and shippers rely on its network.",
-   "now": "The same-day pilot adds Columbia, S.C. on Oct 20 with a 500-package cap; USPS holiday prices end Jan 15."
+   "intro": "USPS has locked in Amazon and DHL eCommerce as big customers, and shippers watch for what that means for its network.",
+   "now": "The 2026 USPS peak surcharge, stacked on the temporary 8% increase, runs to Jan 17, 2027; no 2027 shipping filing yet."
   },
   "rv": "e3902d701814"
  },
@@ -514,7 +537,11 @@
    "v": 2,
    "beats": {},
    "intro": "Fights over who employs Amazon's delivery drivers could shape labor costs and risk across the delivery network shippers rely on."
-  }
+  },
+  "apart": [
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "delivery-robot-rules": {
   "n": "San Jose delivery robot rules",
