@@ -1739,6 +1739,8 @@ a.pdoc:hover{background:color-mix(in srgb,var(--accent) 8%,var(--panel-2))}
 @media (max-width:420px){.logo .lstack{gap:10px}.logo .ltag{font-size:9px;letter-spacing:0}.top .wrap{min-height:64px}}
 @media (max-width:520px){.logo .ltag{white-space:normal;max-width:220px;line-height:1.3;font-size:9.5px}.logo .lstack{gap:8px}}
 @media (max-width:520px){.logo .ltag{max-width:258px;font-size:9.2px}}
+/* small phones: the title scales with the screen so the header never pushes the page sideways, even before the brand font loads */
+@media (max-width:420px){.top .wrap>.logo{min-width:0;flex:0 1 auto}.logo .lword{font-size:min(1em,7.2vw)}}
 
 /* ===== Get the app / share ===== */
 .top .hshare{margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid var(--grid-strong);border-radius:999px;background:rgba(255,255,255,.03);color:var(--ink);font:600 12px/1 inherit;font-family:inherit;cursor:pointer;flex:none}

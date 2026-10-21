@@ -25,6 +25,18 @@ def site():
     srv.shutdown()
 
 
+# elements that stick out past the right edge of the screen (the innermost ones, so the report names the real culprit)
+OVERFLOW = """() => { const W = document.documentElement.clientWidth; if (document.documentElement.scrollWidth <= W) return null;
+  const out = []; for (const el of document.querySelectorAll('body *')) { const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
+    let clipped = false;      // inside a box that hides its overflow (a ticker, a scrolling table): it can't widen the page
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) { const ox = getComputedStyle(a).overflowX;
+      if (ox !== 'visible' && a.getBoundingClientRect().right <= W + 1) { clipped = true; break } }
+    if (!clipped && r.width > 0 && r.right > W + 1 && cs.position !== 'fixed' && cs.visibility !== 'hidden'
+        && ![...el.children].some(c => c.getBoundingClientRect().right > W + 1))
+      out.push(el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\\s+/).join('.') : '') + ' right=' + Math.round(r.right) + ' "' + (el.textContent || '').trim().slice(0, 40) + '"'); }
+  return [document.documentElement.scrollWidth, W, out.slice(0, 6)] }"""
+
+
 @pytest.mark.parametrize("width", [390, 1280])
 def test_app_loads_every_tab(site, width):
     pw = pytest.importorskip("playwright.sync_api")
@@ -37,12 +49,17 @@ def test_app_loads_every_tab(site, width):
         pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())     # the test never leaves this machine
         pg.goto(site, wait_until="load", timeout=60000)
         pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100", timeout=60000)
-        for tab in ("today", "news", "mna", "clock", "fuel", "docs"):
-            pg.click(f'nav.tabs [data-tab="{tab}"]')
-            pg.wait_for_timeout(400)
-        pg.evaluate("() => setView.clock && setView.clock('years')")
-        pg.wait_for_function("() => document.querySelector('#clockYears .ayt')", timeout=20000)
-        wide = pg.evaluate("() => document.documentElement.scrollWidth > document.documentElement.clientWidth")
+        wide = {}
+        for tab in ("today", "news", "mna", "clock", "fuel", "docs", "years"):
+            if tab == "years":
+                pg.evaluate("() => setView.clock && setView.clock('years')")
+                pg.wait_for_function("() => document.querySelector('#clockYears .ayt')", timeout=20000)
+            else:
+                pg.click(f'nav.tabs [data-tab="{tab}"]')
+                pg.wait_for_timeout(400)
+            over = pg.evaluate(OVERFLOW)
+            if over:
+                wide[tab] = over
         b.close()
     assert not errors, errors[:5]
-    assert not wide, "the page scrolls sideways"
+    assert not wide, f"the page scrolls sideways (tab: elements past the right edge): {wide}"
