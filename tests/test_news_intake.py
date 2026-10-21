@@ -60,3 +60,22 @@ def test_best_outlet_leads_and_dates_story(news):
     s0 = next(s for s in common.load("news.json", []) if "alpha" in s["title"])
     assert s0["srcs"][0]["src"] == "The Wall Street Journal"
     assert s0["date"] == "2026-10-14"        # the WSJ report, earlier than the local site's
+
+
+def test_small_outlet_only_is_unconfirmed(news):
+    live = common.load("news.json", [])
+    assert all(not s.get("unconf") for s in live), "stories led by the WSJ or FreightWaves are confirmed"
+    import news as N
+    story = {"id": "x", "srcs": [{"src": "RiverheadLOCAL", "url": "https://riverheadlocal.com/a"}], "unconf": True}
+    N.add_source(story, {"src": "Supply Chain Dive", "date": "2026-10-20"}, "https://www.supplychaindive.com/news/a")
+    assert "unconf" not in story and story["srcs"][0]["src"] == "Supply Chain Dive"
+
+
+def test_unconfirmed_rule():
+    import news as N
+    one_small = {"cat": "M&A", "srcs": [{"src": "Vietnam.vn", "url": "https://vietnam.vn/a"}]}
+    assert N.unconfirmed(one_small)
+    assert not N.unconfirmed({**one_small, "cat": "Drones & robots", "lvl": 1})                # low stakes: no mark
+    assert not N.unconfirmed({**one_small, "srcs": one_small["srcs"] + [{"src": "City Limits", "url": "https://citylimits.org/b"}]})
+    assert not N.unconfirmed({**one_small, "srcs": [{"src": "Reuters", "url": "https://www.reuters.com/a"}]})
+    assert not N.unconfirmed({**one_small, "srcs": [{"src": "Sen. Merkley", "url": "https://www.merkley.senate.gov/a"}]})

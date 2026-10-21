@@ -169,7 +169,25 @@ TIER2 = {"freightwaves.com": "freightwaves", "supplychaindive.com": "supply chai
          "retailbrew.com": "retail brew", "pymnts.com": "pymnts", "dronexl.co": "dronexl", "therobotreport.com": "the robot report",
          "cepresearch.com": "cep research", "globaltrademag.com": "global trade", "ajot.com": "american journal of transportation",
          "stattimes.com": "stat times", "aircargoweek.com": "air cargo week", "chainstoreage.com": "chain store age",
-         "transimpact.com": "transimpact"}
+         "transimpact.com": "transimpact", "paymentsdive.com": "payments dive", "truckinginfo.com": "heavy duty trucking",
+         "mlex.com": "mlex", "qz.com": "quartz", "seekingalpha.com": "seeking alpha", "mediapost.com": "mediapost",
+         "logisticsmanager.com": "logistics manager", "supplychaindigital.com": "supply chain digital", "logisticsviewpoints.com": "logistics viewpoints",
+         "freightcaviar.com": "freightcaviar", "joc.com": "joc", "theverge.com": "the verge", "geekwire.com": "geekwire"}
+
+
+# Never a source: press-release spam sites, automated finance write-ups and AI-written market reports. Items from these
+# are dropped at intake and never listed under a story.
+NOT_SOURCES = ["einnews.com", "einpresswire.com", "openpr.com", "newsbreak.com", "gurufocus.com", "simplywall.st", "marketbeat.com",
+               "tickerreport.com", "biggo.com", "trendhunter.com", "indexbox.io", "giiresearch.com", "marketresearchfuture.com",
+               "openpr.de", "issuewire.com", "newswire.com", "prlog.org", "whatech.com"]
+NOT_SOURCE_NAMES = ["ein news", "ein presswire", "openpr", "gurufocus", "simply wall st", "marketbeat", "indexbox", "trend hunter",
+                    "newsbreak", "prlog", "issuewire"]
+
+
+def not_a_source(src=None, url=None, domain=None):
+    hosts = [x for x in (_host(url), _host(domain)) if x]
+    name = (src or "").lower()
+    return any(hh == d or hh.endswith("." + d) for hh in hosts for d in NOT_SOURCES) or any(n in name for n in NOT_SOURCE_NAMES)
 
 
 def _host(url):
@@ -180,6 +198,8 @@ def tier(src=None, url=None, domain=None):
     """0 = the company or regulator itself, 1 = major business or wire press, 2 = parcel and logistics trade press, 3 = everything else."""
     if url and is_primary(url) or domain and is_primary("https://" + domain):
         return 0
+    if any(h.endswith(".gov") for h in (_host(url), _host(domain)) if h):
+        return 0          # government bodies and officials speak for themselves
     hosts = [x for x in (_host(url), _host(domain)) if x]
     name = (src or "").lower()
     for n, table in ((1, TIER1), (2, TIER2)):

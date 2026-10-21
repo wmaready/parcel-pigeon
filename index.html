@@ -359,7 +359,7 @@ dl.gl dd{margin:var(--sp-1) 0 0;color:var(--ink);font-size:var(--fs-sm)}
 .cards .cardft{display:flex;flex-wrap:wrap;gap:var(--sp-2);justify-content:space-between;align-items:center;padding:var(--sp-3) var(--sp-4);border-top:var(--line) solid var(--grid)}
 .cards .cardft a{color:var(--ink-2)}
 .clk{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
-.tag{color:var(--ink-2)}
+.tag{color:var(--ink-2)}.tag-unconf{color:var(--warn)}
 .tag.tag-op{color:var(--accent);border-style:dashed;font-style:italic}
 @media (max-width:560px){.cardbody{padding:var(--sp-3)}.cardbody h3{font-size:var(--fs-lg)}.cardhd,.cards .cardft{padding-left:var(--sp-3);padding-right:var(--sp-3)}}
 /* ===== Fuel, simplified ===== */
@@ -6624,7 +6624,9 @@ const carCls=n=>{const m=CAR_CLS.find(([r])=>r.test(String(n).trim()));return m?
 const carSpan=n=>{const k=carCls(n),lg=typeof logoImg==='function'?logoImg(n,'lgm'):'';return lg?`<span class="car lonly">${lg}</span>`:k?`<span class="car ${k}">${esc(n)}</span>`:esc(n)};
 const carList=(s,sep)=>{const L=[...new Set(String(s).split(/\s*(?:·|,)\s*/).filter(Boolean))];return `<span class="lgset">${L.map(c=>{const lg=typeof logoImg==='function'&&logoImg(c,'lgm');return lg?`<span class="car lonly">${lg}</span>`:`<span class="car nlogo ${carCls(c)}">${esc(c)}</span>`}).join('')}</span>`};
 const carChip=c=>{const lg=typeof logoImg==='function'?logoImg(c,'lgx'):'';if(lg)return lg;const k=carCls(c);return k?`<i class="sq ${k}" aria-hidden="true"></i>`:''};
-const kindTag=n=>n.kind&&n.kind!=='News'?`<span class="tag${/^(Opinion|Analysis)$/.test(n.kind)?' tag-op':''}" title="${/^(Opinion|Analysis)$/.test(n.kind)?'A viewpoint or interpretation, not a confirmed announcement':''}">${/^(Opinion|Analysis)$/.test(n.kind)?'◆ '+esc(n.kind)+' · not news':esc(n.kind)}</span>`:'';
+const kindTag0=n=>n.kind&&n.kind!=='News'?`<span class="tag${/^(Opinion|Analysis)$/.test(n.kind)?' tag-op':''}" title="${/^(Opinion|Analysis)$/.test(n.kind)?'A viewpoint or interpretation, not a confirmed announcement':''}">${/^(Opinion|Analysis)$/.test(n.kind)?'◆ '+esc(n.kind)+' · not news':esc(n.kind)}</span>`:'';
+// a story resting on one smaller outlet so far: marked until the company, the major press or the trade press confirms it
+const kindTag=n=>kindTag0(n)+(n.unconf?'<span class="tag tag-unconf" title="Reported by one smaller outlet so far; not yet confirmed by the company or the major or trade press">Unconfirmed</span>':'');
 const PRIMARY=['ups.com','fedex.com','usps.com','prc.gov','dhl.com','ontrac.com','amazon.com','aboutamazon.com','uniuni.com','gofo.com','speedeedelivery.com','gls-us.com','lso.com','shipveho.com','bettertrucks.com','jitsu.com','cdldelivery.com','sec.gov','federalregister.gov','congress.gov','uspsoig.gov','businesswire.com','prnewswire.com','globenewswire.com','wwex.com','uber.com','doordash.com','homedepot.com','instacart.com','descartes.com','zipline.com','serverobotics.com','starship.xyz','ship.com','shipbob.com','teamster.org','roadie.com','walmart.com','corporate.walmart.com','target.com','kroger.com','shipmatrix.com','pitneybowes.com','adobe.com','deloitte.com','salesforce.com','narvar.com','alixpartners.com','the-lmi.com','shipstation.com','nrf.com','oversight.gov','uspsoig.gov','census.gov'];
 const isPrimary=u=>{const h=String(u||'').replace(/^https?:\/\//,'').split('/')[0].toLowerCase();return PRIMARY.some(d=>h===d||h.endsWith('.'+d))};
 const srcA=s=>`<a href="${escU(s.url)}" target="_blank" rel="noopener"${s.house?' class="house"':''}>${esc(s.src)}${s.house&&!/analysis$/i.test(s.src)?' analysis':''}</a>`;

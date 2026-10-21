@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
-from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words
+from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
@@ -242,6 +242,8 @@ def collect(cfg, primary_only=False):
             title = e.get("title", "").strip()
             if not direct and src and title.endswith(" - " + src):
                 title = title[: -len(" - " + src)]          # Google News appends the outlet to every headline
+            if not direct and not_a_source(src, None, dom):
+                continue          # press-release spam and automated write-ups never become sources
             summary = re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", e.get("summary", ""))).strip()
             if kind == "edgar":
                 # "8-K - Current report" says nothing; the company and the items filed (e.g. 2.02 results, 8.01 other events) do
@@ -443,12 +445,29 @@ def is_competitor(url):
     return any(host == d or host.endswith("." + d) for d in COMPETITOR_DOMAINS)
 
 
+HIGH_STAKES = {"Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "M&A", "Earnings & markets", "Legal", "Guide changes",
+               "Deals & partnerships", "Regulation & trade"}
+
+
+def unconfirmed(story):
+    """Marked "Unconfirmed" in the app: a price, deal, earnings, legal or rules story that rests on a single source, and that
+    source is neither the company, a regulator, the major press nor the trade press. Cleared as soon as a better source
+    is listed. Everything else shows no mark, so the page stays clean."""
+    srcs = [x for x in story.get("srcs") or [] if x.get("url")]
+    if len({x.get("src") for x in srcs}) != 1 or story.get("kind") == "Alert":
+        return False
+    high = story.get("cat") in HIGH_STAKES or int(story.get("lvl") or 1) >= 2
+    return high and tier(srcs[0].get("src"), srcs[0].get("url")) >= 3
+
+
 def add_source(story, item, url):
     srcs = story.setdefault("srcs", [{"src": story.get("src"), "url": story.get("url")}])
     if not any(x["url"] == url for x in srcs):
         srcs.append({"src": item["src"], "url": url, **({"house": True} if item.get("house") else {})})
         story["srcs"] = primary_first(srcs)
         story["src"], story["url"] = story["srcs"][0]["src"], story["srcs"][0]["url"]
+        if story.get("unconf") and not unconfirmed(story):
+            story.pop("unconf")      # a second outlet, or the company, the major press or the trade press
         story["updated"] = item["date"]
         return True
     return False
@@ -954,6 +973,20 @@ def main():
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
     live = dedupe_live(live)
+    if not primary_only:
+        # try to confirm a few single-source stories each run: a better outlet's report of the same event is attached
+        recent = (dt.date.today() - dt.timedelta(days=10)).isoformat()
+        for st in [x for x in live if unconfirmed(x) and x.get("date", "") >= recent and x.get("tried") != dt.date.today().isoformat()][:5]:
+            st["tried"] = dt.date.today().isoformat()
+            for x in find_coverage(st["title"], days=21)[:2]:
+                real = gnews_decode(x["url"]) or x["url"]
+                if add_source(st, x, real):
+                    print(f"  confirmed by {x['src']}: {st['title'][:70]}")
+    for st in live:
+        if unconfirmed(st):
+            st["unconf"] = True
+        else:
+            st.pop("unconf", None)
     save("news.json", live[:KEEP_LIVE]); save("review.json", review[:200]); save("seen.json", list(seen)[-6000:])
     print(f"wrote {written} stories; {len(live)} live; {len(review)} in review")
 

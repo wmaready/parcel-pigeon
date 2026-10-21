@@ -29,3 +29,11 @@ def test_sources_yaml():
     for w in cfg["watch"]:
         assert {"carrier", "kind", "name", "url"} <= set(w), w
         assert w["kind"] in ("page", "pdf"), w
+
+
+def test_spam_sites_are_never_sources():
+    from common import not_a_source
+    assert not_a_source("EIN Presswire", "https://www.einpresswire.com/article/1")
+    assert not_a_source("GuruFocus", None, "https://www.gurufocus.com")
+    assert not not_a_source("FreightWaves", "https://www.freightwaves.com/news/x")
+    assert not not_a_source("UPS", "https://about.ups.com/x")
