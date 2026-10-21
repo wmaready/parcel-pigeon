@@ -1,5 +1,5 @@
 {
- "run": "2026-10-21T02:43Z",
+ "run": "2026-10-21T02:51Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -50,10 +50,30 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS files to add international service contract 128 to competitive list\" and \"USPS files notice to add shipping services contract to NSA list\"",
+   "ids": [
+    "a2e0cb230779a",
+    "a89329fa0cdbb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
    "ids": [
     "a54805bbe5d65",
     "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air to start Tallahassee drone deliveries in mid-November\"",
+   "ids": [
+    "aa4c45051038a",
+    "ab73d424a5c41"
    ],
    "fixed": false
   },
@@ -73,6 +93,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"USPS issues interim rule on customs charges for international mailers\"",
+   "ids": [
+    "a2e0cb230779a",
+    "a15404304f17b"
    ],
    "fixed": false
   }
@@ -124,10 +154,30 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS files to add international service contract 128 to competitive list\" and \"USPS files notice to add shipping services contract to NSA list\"",
+   "ids": [
+    "a2e0cb230779a",
+    "a89329fa0cdbb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
    "ids": [
     "a54805bbe5d65",
     "ab3283b22bb4f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air to start Tallahassee drone deliveries in mid-November\"",
+   "ids": [
+    "aa4c45051038a",
+    "ab73d424a5c41"
    ],
    "fixed": false
   },
@@ -147,6 +197,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"USPS issues interim rule on customs charges for international mailers\"",
+   "ids": [
+    "a2e0cb230779a",
+    "a15404304f17b"
    ],
    "fixed": false
   }

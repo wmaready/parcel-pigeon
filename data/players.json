@@ -1554,6 +1554,23 @@
     "https://wwd.com/sourcing-journal/logistics/fedex-dexterity-robotics-autonomous-trailer-loading-physical-ai-pilot-1239091771/"
    ],
    "enriched": "2026-10-21"
+  },
+  {
+   "id": "broadcom",
+   "n": "Broadcom",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Designs, develops and supplies semiconductors and infrastructure software",
+   "al": [],
+   "src": "https://markets.businessinsider.com/news/stocks/broadcom-announces-continued-infrastructure-agreement-with-fedex-to-support-global-operations-1036643604",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-20",
+   "story": "a1c7da706f81d"
   }
  ],
  "edges": [
@@ -2824,6 +2841,15 @@
    "t": "Robotics work with UPS cited in trade press",
    "url": "https://www.automatedwarehouseonline.com/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse/",
    "story": "a68878cb71618"
+  },
+  {
+   "a": "broadcom",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2026",
+   "t": "Broadcom and FedEx continue VMware infrastructure agreement",
+   "url": "https://markets.businessinsider.com/news/stocks/broadcom-announces-continued-infrastructure-agreement-with-fedex-to-support-global-operations-1036643604",
+   "story": "a1c7da706f81d"
   }
  ],
  "moves": [
