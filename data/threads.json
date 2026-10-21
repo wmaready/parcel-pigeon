@@ -52,13 +52,13 @@
   "rv": "27596ef51563",
   "cx": {
    "sig": "27596ef51563",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h433": "Freight is the largest U.S. LTL carrier, with $9.4B in fiscal 2024 revenue. FedEx had been reviewing its fit since June 2024.",
-    "h519": "John A. Smith is future CEO and R. Brad Martin chairman; a confidential Form 10 went in Aug. 2025, with FDXF as the ticker."
+    "h433": "Freight, the largest U.S. LTL carrier with $9.4 billion in fiscal 2024 revenue, is set to split off tax-free within 18 months.",
+    "h519": "John A. Smith will be CEO and R. Brad Martin chairman at separation; a confidential Form 10 followed in August 2025, ticker FDXF."
    },
    "intro": "FedEx is spinning off FedEx Freight, the largest U.S. LTL carrier, into its own public company.",
-   "now": "Leaders are named and the separation is still expected by June 2026, with FDXF as the planned ticker."
+   "now": "The target was June 2026, and nothing here confirms completion. Meanwhile, FedEx sold its supply chain unit to CMA CGM for $1.4B."
   }
  },
  "fedex-network-2": {
@@ -104,10 +104,13 @@
   "rv": "bbbb22f9753d",
   "cx": {
    "sig": "bbbb22f9753d",
-   "v": 2,
-   "beats": {},
-   "intro": "USPS moved its domestic air cargo from FedEx to UPS, a shift that hit FedEx's profit outlook and reshuffled who flies the mail.",
-   "now": "The handover is done. Next on the clock: UPS reports earnings Oct. 27 and FedEx Oct. 28."
+   "v": 3,
+   "beats": {
+    "h407": "UPS said April 1, 2024 it would be USPS's main air carrier for at least five and a half years; FedEx said extension talks failed.",
+    "h425": "FedEx's deal ended Sept. 29, 2024 and UPS's began the next day; FedEx had flagged a $500 million fiscal 2025 profit headwind."
+   },
+   "intro": "UPS replaced FedEx as the Postal Service's main air cargo carrier, a big contract swing for both companies.",
+   "now": "The handover is done: UPS is USPS's primary air cargo carrier, and FedEx planned to cut related air network costs."
   }
  },
  "de-minimis": {
@@ -224,14 +227,13 @@
   "rv": "e040dd275a8f",
   "cx": {
    "sig": "e040dd275a8f",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h402": "The year opened with a Jan. 21 increase: Ground Advantage rose 5.4%, Priority Mail 5.7% and Express 5.9%. None of them changed in July.",
-    "h409": "In May, USPS proposed a 25% average Parcel Select jump for July 14, while Ground Advantage, Priority Mail and Express stayed flat.",
-    "h430": "By November, USPS proposed another round for Jan. 19, 2025: Ground Advantage 3.9%, and Parcel Select 9.2% on top of July's 25%.",
-    "h516": "In May 2025, governors approved July 13 hikes: Ground Advantage 7.1%, Priority Mail 6.3%, Parcel Select 7.6%. Express held flat."
+    "h402": "Jan. 21, 2024: Ground Advantage rose 5.4%, Priority Mail 5.7% and Express 5.9%, and none of the three changed in July 2024.",
+    "h409": "USPS proposed a 25% average Parcel Select increase for July 14, 2024, and no increases for Ground Advantage, Priority Mail or Express.",
+    "h430": "The Nov. 2024 proposal for Jan. 19, 2025 had Ground Advantage up about 3.9%. Parcel Select, up about 25% in July, was set for another 9.2%."
    },
-   "intro": "USPS has raised package prices in steps since 2024, and holiday pricing is the latest layer shippers have to budget for."
+   "now": "The 2026 peak surcharge runs Oct. 4, 2026 to Jan. 17, 2027, on top of a temporary 8% increase. Both expire Jan. 17, with no 2027 filing yet."
   },
   "apart": [
    "usps-big-shipper-deals",

@@ -46,7 +46,16 @@
   "told": []
  },
  "https://www.fedex.com/en-us/service-guide.html": {
-  "pend": "af968caaa29d"
+  "checked": "2026-10-21",
+  "pdfs": [
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf"
+  ],
+  "lines": 23,
+  "told": []
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "pend": "4d341f89308d"
