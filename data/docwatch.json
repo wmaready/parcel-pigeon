@@ -219,14 +219,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 6,
+   "fails": 7,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 6,
+   "fails": 7,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -299,7 +299,7 @@
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
-   "fails": 6,
+   "fails": 7,
    "err": "404 Client Error: Not Found for url: https://www.shipveho.com/service-guide/last-mile-delivery",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -392,6 +392,48 @@
    "first": "2026-10-21",
    "n": "2025_EXPANSION_LETTER_UPDATE.pdf",
    "hash": "3c67224255af",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf": {
+   "first": "2026-10-21",
+   "n": "DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
+   "hash": "228d4702cf23",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
+   "first": "2026-10-21",
+   "n": "DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
+   "hash": "91e60ae28a01",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf": {
+   "first": "2026-10-21",
+   "n": "FedEx_Standard_List_Rates_2027.pdf",
+   "hash": "a5b9ee808286",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf": {
+   "first": "2026-10-21",
+   "n": "OneRate-Pricing_2026.pdf",
+   "hash": "15395631186d",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf": {
+   "first": "2026-10-21",
+   "n": "PAS_Contiguous_Extended_Remote_2026.pdf",
+   "hash": "ffa00e94210b",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
+   "first": "2026-10-21",
+   "n": "PAS_Contiguous_Extended_Remote_2027.pdf",
+   "hash": "3a94d89a86d8",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
+   "first": "2026-10-21",
+   "n": "surcharge_and_fee_changes_2027.pdf",
+   "hash": "212d6fd9551c",
    "checked": "2026-10-21"
   }
  }

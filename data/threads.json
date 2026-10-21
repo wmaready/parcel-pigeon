@@ -7,8 +7,7 @@
    "h406",
    "h503",
    "h511",
-   "18",
-   "a66617050d4e9"
+   "18"
   ],
   "first": "2024-01-30",
   "last": "2026-10-14",
@@ -30,7 +29,11 @@
   "was": [
    "ups-parcel-pivot"
   ],
-  "co": "UPS"
+  "co": "UPS",
+  "apart": [
+   "ups-driver-choice-lawsuit"
+  ],
+  "rv": "8754e0e28dbf"
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
@@ -101,7 +104,7 @@
   }
  },
  "de-minimis": {
-  "n": "End of de minimis and low-value import rules",
+  "n": "End of de minimis and low-value imports",
   "s": "CBP's proposal, published Oct. 8, is open for public comment through Dec. 7, with no effective date stated.",
   "ids": [
    "h420",
@@ -130,7 +133,8 @@
   },
   "was": [
    "cbp-low-value-import-filing"
-  ]
+  ],
+  "rv": "131b7af39fc6"
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds and carriers",
@@ -302,7 +306,11 @@
    },
    "now": "Steiner is still Postmaster General and spoke to postal customer councils by video in early October 2026. The Amazon same-day pilot expands Oct. 20."
   },
-  "rv": "7d2b47d4740d"
+  "rv": "7d2b47d4740d",
+  "apart": [
+   "usps-big-shipper-deals",
+   "usps-finances"
+  ]
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
@@ -320,17 +328,22 @@
   ],
   "cx": {
    "sig": "adde3c823ac8",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h410": "Senators flagged Palmetto, Ga. (36% of inbound mail on time in February); DeJoy paused consolidation until at least Jan. 1, 2025.",
-    "h505": "Two phases, April 1 and July 1: some mail may take an extra day, with USPS projecting at least $36 billion saved over 10 years.",
-    "a4af485c67766": "Since Oct. 1, some Priority Mail and Ground Advantage shipments to and from non-mainland places can take 10 days or more; prices unchanged.",
-    "a4a3cb4eb56f7": "The why: Ground Advantage parcels under a pound now go mainly by surface, and USPS cites hazmat risk on passenger aircraft."
+    "h410": "DeJoy's May 9 letter paused consolidation until at least Jan. 1, 2025; senators cited Palmetto, Ga., at 36% on time.",
+    "h505": "Two phases, April 1 and July 1; some mail may take an extra day, and USPS projects at least $36 billion in savings over 10 years.",
+    "a4af485c67766": "Reportedly, since Oct. 1 some non-mainland shipments are expected to take 10 days or more; USPS says prices didn't change.",
+    "a4a3cb4eb56f7": "Reportedly, Ground Advantage parcels under one pound now go mostly by surface, with USPS citing hazmat risk on passenger aircraft."
    },
-   "intro": "USPS has kept reshaping its delivery standards, and shippers to Hawaii, Alaska and territories now face longer windows.",
-   "now": "The longer windows are in effect with prices unchanged; on the rate clock, USPS holiday prices end Jan. 15, 2027."
+   "intro": "USPS keeps resetting delivery standards, and the latest changes affect shippers sending to Hawaii, Alaska and Puerto Rico.",
+   "now": "Longer windows have run since Oct. 1 at unchanged prices; USPS's peak surcharge and temporary 8% are set to expire Jan. 17, 2027."
   },
-  "rv": "adde3c823ac8"
+  "rv": "adde3c823ac8",
+  "apart": [
+   "usps-big-shipper-deals",
+   "usps-finances",
+   "usps-leadership"
+  ]
  },
  "usps-finances": {
   "n": "USPS losses and package volume",
@@ -432,13 +445,23 @@
   ],
   "cx": {
    "sig": "c1e29f365ab2",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h512": "Amazon started by building out its own reach: $4 billion by the end of 2026 to take its rural footprint to more than 200 delivery stations."
+    "h512": "Amazon said it would put $4 billion into rural delivery by the end of 2026, passing 200 delivery stations and creating 100,000+ jobs.",
+    "17": "Amazon Supply Chain Services bundles freight, warehousing and parcels for outsiders; UPS and FedEx shares each fell about 9 to 10% that day.",
+    "34": "Sellers can buy LTL labels through Buy Shipping from October, and regional pricing for heavy, bulky items is due in early 2027.",
+    "05": "Business Insider reported a backup plan, drawn up in case the USPS deal failed, to reach about 95% of U.S. ZIP codes by 2029.",
+    "a418fdd3e6f05": "The WSJ reportedly says Shipping With Amazon is close to launching in Los Angeles, with prices set below rivals'. Sources are anonymous."
    },
-   "now": "A launch is reported as close but not dated. UPS and FedEx report earnings Oct. 27 and 28, and FedEx's 5.9% rate increase starts Jan. 4."
+   "now": "Still reported, not confirmed. Peak fees start Oct. 24, and UPS and FedEx report earnings Oct. 27 and 28."
   },
-  "rv": "c1e29f365ab2"
+  "rv": "c1e29f365ab2",
+  "apart": [
+   "amazon-labor",
+   "parcel-volume-amazon",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
@@ -460,12 +483,15 @@
   ],
   "cx": {
    "sig": "2c9f9ae85f13",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "a60770e8e9c32": "Wing and Walmart are targeting Denver and Seattle in 2027, which would take them to nearly 20 metros and more than 270 Walmart stores."
+    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth operator cleared. It expects commercial flights in fall 2026.",
+    "g27": "Amazon aims to reach almost 500 towns and 30 million people by end of 2026, up from 11 locations. Prime members pay $2.99.",
+    "a60770e8e9c32": "Wing and Walmart will add Denver and Seattle in 2027, reaching nearly 20 metros and more than 270 Walmart stores.",
+    "g26": "The FAA's Part 108 rule went to White House review July 10 after a missed Feb. 1 deadline. Still unpublished Oct. 9."
    },
-   "intro": "Drone delivery is scaling up while the FAA rule meant to make it routine is still unpublished. Shippers should watch both.",
-   "now": "As of Oct. 9, Part 108 was still unpublished, so BVLOS delivery runs on waivers or Part 135 certificates. The FCC votes on 800 MHz drone use Oct. 29."
+   "intro": "Drone delivery is scaling fast, but the FAA rule for routine long-range flights is still unpublished.",
+   "now": "Part 108 was still unpublished as of Oct. 9; the FCC's planned Oct. 29 vote on 800 MHz drone use is next on the calendar."
   },
   "rv": "8c5c1cf4aba8"
  },
@@ -524,15 +550,13 @@
   "rv": "392cb881c00d",
   "cx": {
    "sig": "87b35cd14a59",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "a17304bde0800": "Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3, saying the bill has had no action since an April hearing.",
-    "abf7a28de14a5": "Bronx DSP operators pushed back, and the Bronx Times said over 40 DSPs employing over 5,000 workers operate in the city.",
-    "ad0f07f43ec5e": "Amazon warned it could move roughly 5,000 delivery jobs out of the city; analysts say all 15 last-mile stations could close.",
-    "a54c3fc6ab060": "Business groups wrote to Speaker Menin opposing the bill, which sets a $500,000 penalty per non-employee worker; co-sponsors are now 35."
+    "a17304bde0800": "Reportedly, Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3. The bill had 33 of 51 cosponsors but no action since April.",
+    "abf7a28de14a5": "Reportedly, Bronx delivery contractors are pushing back too. Amazon said it would consider moving warehouses outside the city."
    },
-   "intro": "A New York City bill would force Amazon to employ its delivery drivers directly; shippers are watching for local delivery changes.",
-   "now": "The bill sits laid over in committee with 35 co-sponsors and no vote scheduled; organizers had a City Hall rally set for Oct. 22."
+   "intro": "A NYC bill would force Amazon to hire its delivery drivers directly, and Amazon is threatening to pull jobs.",
+   "now": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled."
   }
  },
  "robot-biometric-suits": {
@@ -562,7 +586,7 @@
   "rv": "08125fc79c2c"
  },
  "royal-mail-cwu-dispute": {
-  "n": "Royal Mail–CWU dispute",
+  "n": "Royal Mail–CWU dispute over DM26",
   "ids": [
    "a2f399daa6200",
    "acc7a2dcc3b9d",
@@ -576,20 +600,19 @@
    "Regional"
   ],
   "cx": {
-   "sig": null,
-   "v": 2,
-   "beats": {
-    "acc7a2dcc3b9d": "General Secretary Dave Ward cited recruitment and retention problems, and the call followed BBC reporting of a \"nightmare Christmas\"."
-   },
-   "now": "The CWU's call for an emergency summit is on the table; the milestones don't say whether the government or employers have responded."
+   "sig": "fa03ac90c18b",
+   "v": 3,
+   "beats": {},
+   "now": "The CWU's call for an emergency summit of government, employers and union representatives is where things stand; no response to it is reported yet."
   },
   "was": [
    "royal-mail-dm26"
   ],
-  "co": "Royal Mail"
+  "co": "Royal Mail",
+  "rv": "fa03ac90c18b"
  },
  "uniuni": {
-  "n": "UniUni: funding, SPAC deal and complaints",
+  "n": "UniUni: funding, SPAC deal and collapse",
   "ids": [
    "h521",
    "61",
@@ -609,10 +632,17 @@
    "uniuni-mak-acquisition"
   ],
   "cx": {
-   "sig": null,
-   "v": 2,
-   "beats": {}
+   "sig": "045c9e317693",
+   "v": 3,
+   "beats": {
+    "h521": "A $70 million all-equity Series D, co-led by Bessemer and Sinovation, was meant to keep extending its North American network.",
+    "61": "Next came $30 million in equity led by Rockets Capital and a $55 million RBC credit facility, bringing total funding to $285 million.",
+    "60": "UniUni agreed to a reverse takeover by MAK at about US$1.0 billion, targeting a TSX listing; it reports over 1 million parcels a day."
+   },
+   "intro": "UniUni raised money, then lined up a $1 billion listing that now looks to have fallen apart. Shippers using it may want to know.",
+   "now": "The go-public deal reportedly won't proceed, though that rests on one smaller outlet so far. Tacoma complaints have also reached the Washington AG."
   },
-  "co": "UniUni"
+  "co": "UniUni",
+  "rv": "045c9e317693"
  }
 }
