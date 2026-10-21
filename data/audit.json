@@ -1,5 +1,5 @@
 {
- "run": "2026-10-21T04:49Z",
+ "run": "2026-10-21T05:38Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -158,16 +158,6 @@
     "a15404304f17b"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
   }
  ],
  "open": [
@@ -298,16 +288,6 @@
    "ids": [
     "a2e0cb230779a",
     "a15404304f17b"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
    ],
    "fixed": false
   }
