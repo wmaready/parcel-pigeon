@@ -242,7 +242,7 @@ def main():
         lib_urls = [d["u"] for d in lib if d.get("c") == item["carrier"] and d.get("u")]
         for fu in new_pdfs[:6]:
             try:
-                ftxt = file_text(fu)
+                ftxt = file_text(fu, max_pages=None)     # whole file, as docwatch reads it, or pages past 60 look "added" later
             except Exception as e:
                 print(f"  couldn't open {fu}: {e}", file=sys.stderr); continue
             if not ftxt:
@@ -253,7 +253,7 @@ def main():
                 otxt = snapshot(pred)
                 if otxt is None:
                     try:
-                        otxt = file_text(pred)
+                        otxt = file_text(pred, max_pages=None)
                     except Exception:
                         otxt = None
             res = audit(item["carrier"], fu.split("/")[-1], fu, otxt, ftxt,
@@ -340,4 +340,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        from scoop import crash_alert
+        crash_alert("watch.py")
+        raise

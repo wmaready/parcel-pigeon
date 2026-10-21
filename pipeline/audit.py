@@ -277,6 +277,9 @@ def main():
 
     if relinked:
         save("news.json", live)
+    for k in ("link_cursor", "doc_cursor", "checked_pairs"):   # the hourly offline run must not reset the daily run's progress
+        if k not in fix and k in prev:
+            fix[k] = prev[k]
     out = {"run": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), **fix,
            "issues": issues, "open": [i for i in issues if not i["fixed"]]}
     save("audit.json", out)

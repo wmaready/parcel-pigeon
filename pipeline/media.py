@@ -211,9 +211,10 @@ def story_photo(url, sid):
     """Download a company's own announcement image and save the wide and square versions. Returns (wide, square) or None."""
     from PIL import Image, ImageOps
     try:
-        im = _img(url, min_side=360)
+        got = _img(url, min_side=360)          # ("img", picture) or ("svg", text) or None
     except Exception:
         return None
+    im = got[1] if got and got[0] == "img" else None
     if im is None or im.width < 600:
         return None
     im = im.convert("RGB")

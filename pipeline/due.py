@@ -1,22 +1,35 @@
-"""Once-a-day jobs: exit 0 (run it) on the first run at or after the given UTC hour each day, and 1 otherwise.
+"""Once-a-day jobs: run on the first run at or after a given hour each day, and again on later runs until one succeeds.
 
 Runs can wait a long time in GitHub's queue behind the hourly watch, so "only on the 04 UTC run" missed whole days: the
-04:17 run started at 05:27 and the company research and full audit were skipped. This remembers the day each job last ran.
-Usage: python due.py NAME HOUR      (e.g. `if python due.py brief 12; then python brief.py; fi`)
+04:17 run started at 05:27 and the company research and full audit were skipped. This remembers the day each job last
+finished. Hours are UTC, or U.S. Eastern with --et (so the morning brief stays at 8 a.m. through daylight saving changes).
+Usage:  if python due.py brief 8 --et; then python brief.py && python due.py --done brief --et; fi
 """
 import datetime as dt, sys
+from zoneinfo import ZoneInfo
 from common import load, save
 
 
-def due(name, hour, now=None):
-    now = now or dt.datetime.now(dt.timezone.utc)
+def now(et=False):
+    return dt.datetime.now(ZoneInfo("America/New_York") if et else dt.timezone.utc)
+
+
+def due(name, hour, t=None):
+    """True if the job hasn't finished today and it's at or past the hour."""
+    t = t or now()
+    return t.hour >= hour and load("due.json", {}).get(name) != t.date().isoformat()
+
+
+def done(name, t=None):
+    t = t or now()
     st = load("due.json", {})
-    if now.hour < hour or st.get(name) == now.date().isoformat():
-        return False
-    st[name] = now.date().isoformat()
+    st[name] = t.date().isoformat()
     save("due.json", st)
-    return True
 
 
 if __name__ == "__main__":
-    sys.exit(0 if due(sys.argv[1], int(sys.argv[2])) else 1)
+    et = "--et" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--et"]
+    if args[0] == "--done":
+        done(args[1], now(et)); sys.exit(0)
+    sys.exit(0 if due(args[0], int(args[1]), now(et)) else 1)

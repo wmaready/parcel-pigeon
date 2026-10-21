@@ -88,6 +88,18 @@ CORP = {"inc", "llc", "ltd", "limited", "corp", "corporation", "co", "company", 
 BLOCK = re.compile(r"transimpact|parcel spend intelligence", re.I)      # never part of the public map
 
 
+class Names(dict):
+    """Company name -> id. A name with no Latin letters or digits (メルカリ株式会社, Белпочта) normalizes to "", and an
+    empty key would match every missing parent: 25 companies once got Mercari as their parent that way. Empty keys are
+    never stored or found."""
+    def __setitem__(self, k, v):
+        if k:
+            super().__setitem__(k, v)
+
+    def get(self, k, default=None):
+        return super().get(k, default) if k else default
+
+
 def norm(name):
     w = [x for x in re.sub(r"[^a-z0-9& ]+", " ", str(name or "").lower().replace("&", " and ")).split() if x not in CORP]
     return "".join(w)
@@ -223,7 +235,7 @@ def main():
     seed, mp = load("seed.json", {}), load("players.json", {"players": [], "edges": []})
     news = {s["id"]: s for s in load("news.json", [])}
     known = [p for p in seed.get("players", []) + mp["players"] if not p.get("pending")]
-    byname = {}
+    byname = Names()
     for p in known:
         for nm in [p["n"]] + (p.get("al") or []):
             byname[nm.lower()] = p["id"]; byname[norm(nm)] = p["id"]
@@ -254,7 +266,10 @@ def main():
             mp["players"] = [x for x in mp["players"] if x["id"] != p["id"]]
             mp["edges"] = [e for e in mp["edges"] if p["id"] not in (e["a"], e["b"])]
             print(f"  dropped (not a parcel player): {p['n']}"); continue
-        ok, res, why = verify_profile(res, known_list)
+        try:
+            ok, res, why = verify_profile(res, known_list)
+        except Exception as e:                      # the check couldn't run (API error, paused): try again next run
+            print(f"  check failed for {p['n']}, will retry: {e}", file=sys.stderr); continue
         if not ok:                                  # not proven: it stays off the map and waits in the review list
             mp["players"] = [x for x in mp["players"] if x["id"] != p["id"]]
             mp["edges"] = [e for e in mp["edges"] if p["id"] not in (e["a"], e["b"])]
@@ -296,7 +311,7 @@ def family_check(limit=1):
     for m in sorted(mp.get("moves") or [], key=lambda m: m.get("d") or ""):   # earlier changes already applied in the app
         if m["id"] in byid and m["k"] != "pending":
             byid[m["id"]]["parent"] = m.get("parent")
-    byname = {}
+    byname = Names()
     for p in known:
         for nm in [p["n"]] + (p.get("al") or []):
             byname[str(nm).lower()] = p["id"]

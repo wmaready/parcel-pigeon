@@ -7357,7 +7357,7 @@ function closeStory(silent,nav){const sh=$('storySheet');if(!sh||STORY_OPEN==nul
   if(typeof newsEnsure==='function')newsEnsure(was);const c=$('n-'+was);if(c&&!silent&&!nav){const r=c.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)c.scrollIntoView({block:'center'})}}
 addEventListener('popstate',()=>{if(STORY_OPEN!=null){const keep=STORY_OPEN;STORY_OPEN=null;const sh=$('storySheet');if(sh){sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220)}}});
 document.addEventListener('click',e=>{if(e.target.closest('[data-ssclose]')){e.preventDefault();closeStory()}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&STORY_OPEN!=null)closeStory()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&STORY_OPEN!=null){closeStory();e.stopImmediatePropagation()}});   // one Escape closes only the story, not the company page under it
 // shared links: …/#s=<story id> opens that story
 setTimeout(()=>{const m=/^#s=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!NEWS.some(n=>n.id===m[1])&&k++<20)return setTimeout(go,250);openStory(m[1])};go()}},500);
 
@@ -7374,7 +7374,7 @@ function coEvents(p,alm){const ev=[],names=coNames(p),seen=new Set(),add=x=>{con
   PEDGES.forEach(e=>{if((e.a===p.id||e.b===p.id)&&e.y&&e.k!=='partner'&&e.t)add({d:String(e.y),kind:e.k,t:e.t,other:e.a===p.id?e.b:e.a,url:e.url})});
   alm.forEach(e=>{if(names.has(String(e.carrier||'').toLowerCase()))add({d:e.effective||e.date||e.announced||String(e.year),kind:e.kind,t:e.headline,sub:YKIND[e.kind]||e.kind,url:(e.sources||[])[0],pct:e.pct,ann:e.announced,eff:e.effective,offc:cycleOf(e.carrier,e.kind,e.effective,e.announced)==='off'})});
   return ev.sort((a,b)=>String(b.d).localeCompare(String(a.d)))}
-function coUpcoming(p){const names=coNames(p);return DATES.filter(x=>names.has(String(x.c||'').toLowerCase())&&daysTo(x.d)>=0).sort((a,b)=>a.d.localeCompare(b.d)).slice(0,6)}
+function coUpcoming(p){const names=coNames(p);return DATES.filter(x=>String(x.c||'').split(/\s*(?:·|,|\/)\s*/).some(c=>names.has(c.toLowerCase()))&&daysTo(x.d)>=0).sort((a,b)=>a.d.localeCompare(b.d)).slice(0,6)}
 function coThreads(p){const ids=new Set(pStories(p.id).map(n=>n.id));return Object.entries(THREADS||{}).filter(([k,t])=>(t.ids||[]).some(i=>ids.has(i))).map(([k,t])=>({k,t,n:(t.ids||[]).filter(i=>ids.has(i)).length})).sort((a,b)=>b.n-a.n).slice(0,8)}
 function coDay(d){d=String(d);return d.length>=10?fmtD(d.slice(0,10),{month:'short',day:'numeric'}):d.length===7?fmtD(d+'-01',{month:'short'}):''}
 async function openCompany(id,replace){const p=PL[id];if(!p)return;
@@ -7399,12 +7399,12 @@ function closeCompany(silent){const sh=$('coSheet');if(!sh||CO_OPEN==null)return
 // Back closes the page, unless Back only closed a story opened on top of it
 addEventListener('popstate',()=>{if(CO_OPEN!=null&&!(history.state&&history.state.company))closeCompany(true)});
 document.addEventListener('click',e=>{
-  const cp=e.target.closest('[data-cpage]');if(cp){e.preventDefault();e.stopPropagation();openCompany(cp.dataset.cpage);return}
+  const cp=e.target.closest('[data-cpage]');if(cp){e.preventDefault();e.stopImmediatePropagation();openCompany(cp.dataset.cpage);return}
   if(CO_OPEN==null)return;
   if(e.target.closest('[data-coclose]')){e.preventDefault();closeCompany();return}
   const inside=e.target.closest('#coSheet');if(!inside)return;
   // another company on the page opens that company's page
-  const pl=e.target.closest('[data-pl]');if(pl&&!e.target.closest('a')){e.preventDefault();e.stopPropagation();openCompany(pl.dataset.pl,true);return}
+  const pl=e.target.closest('[data-pl]');if(pl&&!e.target.closest('a')){e.preventDefault();e.stopImmediatePropagation();openCompany(pl.dataset.pl,true);return}   // stopImmediate: the map's own [data-pl] handler must not also switch tabs
   const mp=e.target.closest('[data-comap]');if(mp){e.preventDefault();e.stopPropagation();const id=mp.dataset.comap;closeCompany();setTimeout(()=>{if(curView.mna!=='map'||$('s-mna').hidden)goTo('mna','map');selectPlayer(id)},260);return}
   // going somewhere else in the app closes the page first; a story opens on top of it
   if(e.target.closest('[data-clock],[data-gdoc],[data-goto],[data-thread],[data-newsq],[data-cdocs],[data-deal],[data-coopgo]'))closeCompany(false)},true);

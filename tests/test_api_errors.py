@@ -46,3 +46,16 @@ def test_calls_leave_room_for_thinking(monkeypatch):
     assert common.claude("claude-haiku-5-5", "sys", "hi", max_tokens=200) == "ok"
     assert sent["max_tokens"] == 200 + common.THINK_ROOM
     assert "output_config" not in sent              # each model's own default effort: quality before cost
+
+
+def test_a_crash_opens_one_issue_a_day(data_dir, monkeypatch):
+    """A crashed news.py used to show only as a warning in a green run. Now it opens an issue, once a day per script."""
+    import scoop
+    sent = []
+    monkeypatch.setattr(scoop, "notify", lambda title, body, **k: sent.append((title, body)))
+    for _ in range(2):
+        try:
+            raise TypeError("cycle_of() takes 2 positional arguments but 4 were given")
+        except TypeError:
+            scoop.crash_alert("news.py")
+    assert len(sent) == 1 and "news.py crashed" in sent[0][0] and "TypeError" in sent[0][1]
