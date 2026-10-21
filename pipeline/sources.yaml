@@ -52,9 +52,6 @@ discovery:
   - "site:logisticsmgmt.com parcel"
   - "site:modernretail.co shipping OR delivery"
   # Carriers and regulators
-  - "site:about.ups.com"
-  - "site:newsroom.fedex.com"
-  - "site:about.usps.com"
   - "site:prc.gov"
   - "OnTrac"
   - "\"Amazon Shipping\""
@@ -148,6 +145,25 @@ discovery:
   - "site:theloadstar.com parcel OR express"
   - "site:supplychainbrain.com parcel OR last mile"
   - "site:retailtouchpoints.com shipping OR delivery OR returns"
+
+# Company and regulator sources, read every hour so a filing or release is screened before the press writes it up.
+# kind: edgar = an SEC company filing feed (8-K current reports); fedreg = a Federal Register feed; gnews = a Google News
+# search of a press-release wire or newsroom. Items from these are tier 0 (the company's own word).
+primary:
+  - {name: "SEC: UPS 8-K",           kind: edgar, company: UPS,           url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001090727&type=8-K&dateb=&owner=include&count=20&output=atom"}
+  - {name: "SEC: FedEx 8-K",         kind: edgar, company: FedEx,         url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001048911&type=8-K&dateb=&owner=include&count=20&output=atom"}
+  - {name: "SEC: Amazon 8-K",        kind: edgar, company: Amazon,        url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=8-K&dateb=&owner=include&count=20&output=atom"}
+  - {name: "SEC: Pitney Bowes 8-K",  kind: edgar, company: Pitney Bowes,  url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078814&type=8-K&dateb=&owner=include&count=20&output=atom"}
+  - {name: "Federal Register: USPS", kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=postal-service&order=newest"}
+  - {name: "Federal Register: PRC",  kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=postal-regulatory-commission&order=newest"}
+  - {name: "Federal Register: de minimis and postal imports", kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bterm%5D=%22de+minimis%22+OR+%22postal+shipments%22&order=newest"}
+  - {name: "Wire: PR Newswire",      kind: gnews, q: "site:prnewswire.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"last mile\" OR \"Amazon Shipping\" OR OnTrac OR courier"}
+  - {name: "Wire: Business Wire",    kind: gnews, q: "site:businesswire.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"last mile\" OR \"Amazon Shipping\" OR OnTrac OR courier"}
+  - {name: "Wire: GlobeNewswire",    kind: gnews, q: "site:globenewswire.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"last mile\" OR \"Amazon Shipping\" OR OnTrac OR courier"}
+  - {name: "Newsroom: UPS",          kind: gnews, q: "site:about.ups.com"}
+  - {name: "Newsroom: FedEx",        kind: gnews, q: "site:newsroom.fedex.com"}
+  - {name: "Newsroom: USPS",         kind: gnews, q: "site:about.usps.com"}
+  - {name: "Newsroom: Amazon",       kind: gnews, q: "site:aboutamazon.com delivery OR shipping OR logistics"}
 
 # Carrier pages and files watched every hour. Any change is compared word-for-word with the last copy;
 # if it matters to shippers, an agent drafts a Parcel Pigeon story and opens a GitHub issue for you to approve.

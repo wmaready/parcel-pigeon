@@ -30,7 +30,7 @@ def news(data_dir, monkeypatch):
         return json.dumps({"title": hl, "sum": "FedEx closes a hub.", "plain": "No change to rates or service.", "imp": "info", "lvl": 1,
                            "carriers": ["FedEx"], "category": "Network & operations", "kind": "News"})
 
-    monkeypatch.setattr(N, "collect", lambda cfg: list(items))
+    monkeypatch.setattr(N, "collect", lambda cfg, primary_only=False: list(items))
     monkeypatch.setattr(N, "similar", lambda a, b: False)
     monkeypatch.setattr(N, "claude", fake_claude)
     monkeypatch.setattr(N, "article_text", lambda u: ("FedEx closes hub text " * 50, u))

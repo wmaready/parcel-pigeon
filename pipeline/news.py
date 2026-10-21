@@ -4,7 +4,7 @@ Run: python pipeline/news.py
 Writes data/news.json (live stories) and data/review.json (things a person should check).
 """
 import datetime as dt, difflib, json, re, sys, urllib.parse
-import feedparser, trafilatura, yaml
+import feedparser, requests, trafilatura, yaml
 from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
@@ -199,15 +199,32 @@ def gnews(q):
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-US&gl=US&ceid=US:en"
 
 
-def collect(cfg):
+# SEC asks automated readers to name themselves with a contact address
+SEC_UA = {"User-Agent": "ParcelPigeon parcel-news reader " + (__import__("os").environ.get("SEC_CONTACT") or "bot@users.noreply.github.com")}
+
+
+def primary_feeds(cfg):
+    """The company and regulator sources read before anyone writes about them: SEC filings, the Federal Register,
+    press-release wires and carrier newsrooms (sources.yaml "primary:"). Items from these count as tier 0."""
+    out = []
+    for f in cfg.get("primary", []):
+        kind = f.get("kind", "rss")
+        url = gnews(f["q"]) if kind == "gnews" else f["url"]
+        out.append((f["name"], url, kind != "gnews", False, kind, f.get("company")))
+    return out
+
+
+def collect(cfg, primary_only=False):
     items, cutoff = [], dt.datetime.utcnow() - dt.timedelta(days=MAX_AGE_DAYS)
-    feeds = [(f["name"], f["url"], True, f.get("house", False)) for f in cfg.get("direct", [])] + \
-            [(q, gnews(q), False, False) for q in cfg.get("discovery", [])]
+    feeds = primary_feeds(cfg)
+    if not primary_only:
+        feeds += [(f["name"], f["url"], True, f.get("house", False), "rss", None) for f in cfg.get("direct", [])] + \
+                 [(q, gnews(q), False, False, "gnews", None) for q in cfg.get("discovery", [])]
     health, today = load("feed_health.json", {}), dt.date.today().isoformat()
-    for name, url, direct, house in feeds:
+    for name, url, direct, house, kind, company in feeds:
         fh = health.setdefault(name, {"direct": direct})
         try:
-            parsed = feedparser.parse(get(url).content)
+            parsed = feedparser.parse(requests.get(url, headers=SEC_UA, timeout=20).content if kind == "edgar" else get(url).content)
         except Exception as e:
             fh.update({"err": str(e)[:120], "fails": fh.get("fails", 0) + 1, "last_try": today})
             print(f"  feed failed: {name}: {e}", file=sys.stderr)
@@ -225,9 +242,13 @@ def collect(cfg):
             title = e.get("title", "").strip()
             if not direct and src and title.endswith(" - " + src):
                 title = title[: -len(" - " + src)]          # Google News appends the outlet to every headline
-            items.append({"title": title, "url": e.get("link", ""), "summary": re.sub("<[^>]+>", " ", e.get("summary", ""))[:600],
+            summary = re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", e.get("summary", ""))).strip()
+            if kind == "edgar":
+                # "8-K - Current report" says nothing; the company and the items filed (e.g. 2.02 results, 8.01 other events) do
+                title, src = f"{company} files SEC Form {title.split(' - ')[0]}: {summary[:160]}", f"{company} SEC filing"
+            items.append({"title": title, "url": e.get("link", ""), "summary": summary[:600],
                           "date": when.strftime("%Y-%m-%d"), "src": src or name, "direct": direct, "house": house,
-                          "tier": 2 if direct and not house else tier(src, None, dom)})
+                          "tier": 0 if kind in ("edgar", "fedreg") else 2 if direct and not house else tier(src, None, dom)})
     save("feed_health.json", health)
     return items
 
@@ -275,8 +296,22 @@ def gnews_decode(url):
     return real
 
 
+def edgar_doc(index_url):
+    """An SEC filing's index page lists its documents; the press release is exhibit 99 (else the main form)."""
+    import requests
+    page = requests.get(index_url, headers=SEC_UA, timeout=25).text
+    docs = re.findall(r'href="(/Archives/edgar/data/[^"]+\.htm)"', page, re.I)
+    pick = next((d for d in docs if re.search(r"ex-?99", d, re.I)), docs[0] if docs else None)
+    if not pick:
+        return None, index_url
+    u = "https://www.sec.gov" + pick
+    return trafilatura.extract(requests.get(u, headers=SEC_UA, timeout=25).text, include_tables=True) or None, u
+
+
 def article_text(url):
     try:
+        if "sec.gov/Archives/edgar" in (url or "") and url.rstrip("/").endswith(("-index.htm", "-index.html")):
+            return edgar_doc(url)
         if "news.google.com" in (url or ""):
             real = gnews_decode(url)
             if not real:
@@ -665,9 +700,11 @@ def main():
     threads = load("threads.json", {})
     if not threads:
         threads = backfill_threads(live)
-    allitems = collect(cfg)
+    primary_only = "--primary" in sys.argv        # the hourly run: company and regulator sources only
+    allitems = collect(cfg, primary_only)
     week = (dt.date.today() - dt.timedelta(days=7)).isoformat()
-    retry = [x for x in review if x.get("type") == "headline-only" and (x.get("date") or "") >= week and not x.get("retried")]
+    retry = [] if primary_only else \
+        [x for x in review if x.get("type") == "headline-only" and (x.get("date") or "") >= week and not x.get("retried")]
     if retry:
         review = [x for x in review if x not in retry]
         allitems += [{"title": x["title"], "url": x["url"], "summary": "", "date": x["date"], "src": x.get("src") or "News",
