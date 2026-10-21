@@ -129,3 +129,64 @@ def test_story_ties_and_storylines(site):
         assert any("UniUni" in t for t in main), main
         b.close()
     assert not errors, errors[:5]
+
+
+# records every time Coop's own pop-up note appears, with its first words (and skips the first-visit tour offer)
+COOP_SAID = """window.__said = []; new MutationObserver(ms => { for (const m of ms) { const t = m.target;
+  if (t.classList && t.classList.contains('cbub') && t.closest('#coop') && !t.hidden) window.__said.push(t.textContent.slice(0, 50)) } })
+  .observe(document, {subtree: true, attributes: true, attributeFilter: ['hidden']});
+  try { localStorage.setItem('pw-tour', 'done') } catch (e) {}"""
+
+
+@pytest.mark.parametrize("case", ["normal", "muted", "story_open"])
+def test_coop_speaks_up_at_most_once(site, case):
+    """Coop's unprompted notes: none in the first minute, at most one a visit, none while muted or while a story is open.
+    Tapping him still gets an answer."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.add_init_script(COOP_SAID + ("; try { localStorage.setItem('pw-coop-quiet', '1') } catch (e) {}" if case == "muted" else ""))
+        pg.clock.install()
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.clock.run_for(3000)
+        pg.wait_for_function("() => document.querySelector('#coop .cbird')", timeout=60000)
+
+        def wait(ms):                                             # jump ahead in 30-second steps (timers fire, frames don't)
+            for _ in range(ms // 30000):
+                pg.clock.fast_forward(30000)
+                pg.clock.run_for(1600)
+
+        def visit(*tabs):
+            for t in tabs:
+                pg.evaluate(f"() => showTab('{t}')")
+                pg.mouse.move(200, 300)
+                pg.clock.run_for(4000)
+
+        visit("news", "clock", "fuel", "docs", "today")           # the first minute: nothing
+        assert pg.evaluate("() => __said") == [], "Coop spoke up within the first minute"
+        wait(60000)
+        if case == "story_open":
+            pg.evaluate("() => openStory(NEWS[0].id)")
+            wait(390000)
+            assert pg.evaluate("() => __said") == [], "Coop spoke up over an open story"
+            pg.evaluate("() => history.back()")
+            pg.clock.run_for(2000)
+        visit("news", "mna", "clock", "fuel", "docs", "today")
+        wait(390000)                                              # several fun-fact chances too
+        said = pg.evaluate("() => __said")
+        if case == "muted":
+            assert said == [], said
+        else:
+            assert len(said) == 1, said
+        # asking him for something always works
+        pg.evaluate("() => document.querySelector('#coop .cbird').click()")
+        pg.clock.run_for(300)
+        pg.evaluate("() => document.querySelector('#coop [data-cfact]').click()")
+        pg.clock.run_for(300)
+        assert len(pg.evaluate("() => __said")) == len(said) + 1
+        b.close()
+    assert not errors, errors[:5]

@@ -7191,7 +7191,7 @@ function coopMail(fresh){
   const land=row=>{const b=row.sm.querySelector('.nb');row.el.classList.remove('dropin');void row.el.offsetWidth;row.el.classList.add('dropin');
     if(b&&!b.hidden){b.classList.remove('nbpop');void b.offsetWidth;b.classList.add('nbpop')}setTimeout(()=>row.el.classList.remove('dropin'),2600)};
   if(!rows.length)return;
-  if(reduceMotion()||!window.COOP_FLY){rows.forEach(land);return}
+  if(reduceMotion()||!window.COOP_FLY||store.get('pw-coop-quiet','')){rows.forEach(land);return}
   const T=[],E=[],at=(fn,ms)=>T.push(setTimeout(fn,ms));let done=false;
   const sk=document.createElement('button');sk.className='coopskip';sk.type='button';sk.textContent='Skip ›';document.body.appendChild(sk);E.push(sk);
   const finish=()=>{if(done)return;done=true;T.forEach(clearTimeout);E.forEach(e=>e.remove());document.querySelectorAll('.coopfly,.cooplt').forEach(e=>e.remove());rows.forEach(land)};
@@ -7419,7 +7419,7 @@ document.addEventListener('click',e=>{
   if(e.target.closest('[data-clock],[data-gdoc],[data-goto],[data-thread],[data-newsq],[data-cdocs],[data-deal],[data-coopgo]'))closeCompany(false)},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&CO_OPEN!=null&&STORY_OPEN==null)closeCompany()});
 // shared links: …/#c=<company id> opens that company's page
-setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!(typeof PL!=='undefined'&&PL[m[1]])&&k++<20)return setTimeout(go,250);openCompany(m[1])};go()}},600);
+setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!(typeof PL!=='undefined'&&PL[m[1]])&&k++<20)return setTimeout(go,250);if(PL[m[1]])openCompany(m[1]);else goTo('mna','players')};go()}},600);
 
 // anything that takes you elsewhere (rate clock, Docs, a storyline, another section) closes the story page first
 document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');if(t)closeStory(false,true)},true);
@@ -9618,6 +9618,16 @@ renderClocks();setInterval(renderClocks,10000);
   /* ===== Coop's voice: dry, a little edgy, built from the live numbers on the page ===== */
   const pick=a=>a[Math.floor(Math.random()*a.length)];
   const quiet=()=>!!store.get('pw-coop-quiet','');
+  /* How often Coop speaks up on his own: at most ONE note per visit, never in the first minute after the app opens (or
+     comes back on screen), never over an open story or company page, never while muted. Anything you tap him for is
+     always answered. A visit is this tab's session, so reopening the app starts a new one. */
+  const NUDGE_WAIT=60000;let openedAt=Date.now(),nudgedMem=false;
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)openedAt=Date.now()});
+  const nudged=()=>{if(nudgedMem)return true;try{return !!sessionStorage.getItem('pw-coop-nudged')}catch(e){return false}};
+  const markNudged=()=>{nudgedMem=true;try{sessionStorage.setItem('pw-coop-nudged','1')}catch(e){}};
+  const mayNudge=()=>!quiet()&&!nudged()&&Date.now()-openedAt>=NUDGE_WAIT&&!document.hidden&&menu.hidden&&bub.hidden&&!placing
+    &&Date.now()-(window.PP_LANDING||0)>=20000&&!busy();
+  function nudge(t,ms){if(!mayNudge())return false;markNudged();say(t,ms);return true}
   function greet(){const L=[];
     const nx=typeof nextChange==='function'&&nextChange();if(nx){const n=daysTo(nx.d);L.push(`Next dated cost change, ${n===0?'today':n===1?'tomorrow':'in '+n+' days'}: ${esc(nx.w.replace(/\.$/,''))}.`)}
     try{const u=fuelNow(1),d=gDelta('UPS'),dd=DIESEL.at(-1)[1]-DIESEL.at(-2)[1];if(u&&d!=null)L.push(`UPS Ground fuel is ${pct(u[1])} this week (${d>0?'+':''}${d.toFixed(2)} pts). Diesel ${dd>=0?'rose':'fell'} ${Math.abs(dd*100).toFixed(0)}¢ last week, and ground fuel follows diesel by about two weeks. ${dd<0?'Enjoy it while it lasts.':'You’ll feel that one shortly.'}`)}catch(e){}
@@ -9625,6 +9635,7 @@ renderClocks();setInterval(renderClocks,10000);
     const un=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert'&&daysTo(n.date)>=-7).length;if(un>1)L.push(`${un} stories from this week you haven’t opened. They’re not getting cheaper either.`);
     return L.length?pick(L):'Quiet week so far.'}
   const SEC_LINES={
+    today:()=>greet(),
     news:()=>'Service guide and surcharge-page revisions often land before anyone writes about them. The Docs tab tracks those. '+pick(['Press releases are written for investors, not shippers.','The press release is the trailer. The service guide is the movie.']),
     mna:()=>'Follow who ends up owning the final mile and the injection points. That’s where pricing leverage moves. '+pick(['Nobody buys a last-mile network for the scenery.','“Synergies” usually shows up on someone’s invoice.']),
     clock:()=>{const k=DATES.filter(x=>daysTo(x.d)>=0&&x.imp==='up').length;return `${k} dated increases ahead. The GRI headline is an average; accessorials and light-weight ground usually move more. `+pick(['None of them are optional.','The clock only runs one direction.'])},
@@ -9661,11 +9672,11 @@ renderClocks();setInterval(renderClocks,10000);
   const FSRC=['https://about.ups.com/us/en/our-company/our-history.html','https://www.cbs58.com/news/why-ups-trucks-almost-never-turn-left','https://www.fedex.com/en-us/about/history.html','https://en.wikipedia.org/wiki/Frederick_W._Smith','https://edition.cnn.com/style/article/hidden-designs-famous-logos','https://www.newsnationnow.com/nmw/ups-color-brown','https://group.dhl.com/en/about-us/the-group/history/1969.html','https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/','https://www.si.edu/stories/mules-still-deliver-mail-grand-canyon','https://postalmuseum.si.edu/50-zippy-years','https://www.sec.gov/Archives/edgar/data/1018724/000119312505017451/dex991.htm','https://www.supplychain247.com/article/ups_rolls_out_dimensional_pricing_changes_effective_december_2014/endicia','https://www.asme.org/wwwasmeorg/media/ResourceFiles/AboutASME/Who%20We%20Are/Engineering%20History/Landmarks/114-Pitney-Bowes-Model-M-Postage-Meter.pdf','https://en.wikipedia.org/wiki/UPS_Airlines','https://www.capgemini.com/insights/research-library/the-last-mile-delivery-challenge/','https://www.freightwaves.com/news/ontrac-lasership-rebrand-into-ontrac-name','https://en.wikipedia.org/wiki/UPS_Airlines','https://www.fedex.com/en-us/about/history.html','https://about.usps.com/news/state-releases/fl/2009/fl_2009_1028a.htm','https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/','https://about.ups.com/us/en/our-company/our-history.html'];
   const factHTML=f=>{const u=FSRC[FACTS.indexOf(f)];return `<span class="cfact">Fun fact</span>${f}${u?` <a class="cfsrc" href="${u}" target="_blank" rel="noopener">Source</a>`:''}`};
   function funFact(){const pool=[...FACTS,...factLive()].filter(f=>!factsSeen.has(f));if(!pool.length)return null;const f=pick(pool);factsSeen.add(f);return f}
-  setInterval(()=>{if(quiet()||factN>=3||!menu.hidden||!bub.hidden||placing||document.hidden)return;if(Date.now()-lastAct>90000)return;
-    if(Math.random()<.5)return;const f=funFact();if(!f)return;factN++;say(factHTML(f),8000)},150000);
+  setInterval(()=>{if(!mayNudge())return;if(Date.now()-lastAct>90000)return;
+    if(Math.random()<.5)return;const f=funFact();if(!f)return;factN++;nudge(factHTML(f),8000)},150000);
   /* Pointers: when a story you're reading has its source document, a dated change I can animate, or a deal walkthrough,
      I offer to take you straight there. Once per story, a few per visit, never while muted. */
-  const offered=new Set();let offN=0,offAt=0;
+  const offered=new Set();
   function offerFor(n){
     const ck=(typeof clockFor==='function'?clockFor(n.id):[]).find(x=>daysTo(x.d)>=0&&typeof rcxOf==='function'&&rcxOf(x));
     const dl=DEALS.find(x=>x.story===n.id),D=relDocs(n)[0];
@@ -9678,22 +9689,23 @@ renderClocks();setInterval(renderClocks,10000);
   if(typeof IntersectionObserver!=='undefined'){
     const io=new IntersectionObserver(es=>es.forEach(en=>{const c=en.target,id=c.id.slice(2);clearTimeout(c._ot);
       if(!en.isIntersecting||en.intersectionRatio<.55)return;
-      let tries=0;const tryIt=()=>{if(quiet()||offered.has(id)||offN>=4)return;
-        if(Date.now()-offAt<45000||!menu.hidden||!bub.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000){if(tries++<4)c._ot=setTimeout(tryIt,4000);return}
-        const n=NEWS.find(x=>x.id===id);if(!n)return;const t=offerFor(n);if(!t)return;offered.add(id);offN++;offAt=Date.now();say(t,11000)};
+      let tries=0;const tryIt=()=>{if(quiet()||nudged()||offered.has(id))return;
+        if(!mayNudge()){if(tries++<4)c._ot=setTimeout(tryIt,4000);return}
+        const r=c.getBoundingClientRect();if(!c.isConnected||!c.offsetParent||r.bottom<60||r.top>innerHeight-60)return;   // only about a story still on screen
+        const n=NEWS.find(x=>x.id===id);if(!n)return;const t=offerFor(n);if(!t)return;offered.add(id);nudge(t,11000)};
       c._ot=setTimeout(tryIt,2600)}),{threshold:[0,.55]});
     const watch=()=>document.querySelectorAll('#nList .card:not([data-cw])').forEach(c=>{c.dataset.cw='1';io.observe(c)});
     if($('nList'))new MutationObserver(watch).observe($('nList'),{childList:true});watch()}
   const seen=new Set();let lastSec=null,lastAct=Date.now(),idled=false,pokes=[];
   function secNow(){const s=document.querySelector('[data-section]:not([hidden])');return s&&s.id.slice(2)}
-  setInterval(()=>{const s=secNow();if(!s||s===lastSec)return;lastSec=s;
-    if(quiet()||seen.has(s)||!SEC_LINES[s]||!menu.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000||document.querySelector('.xstage:not([hidden]) .xscene')||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null))return;seen.add(s);
-    setTimeout(()=>{if(secNow()===s&&menu.hidden&&bub.hidden)say(SEC_LINES[s](),7000)},1400)},900);
+  setInterval(()=>{const s=secNow();if(!s||s===lastSec)return;if(lastSec){bub.hidden=true;el.classList.remove('talking')}lastSec=s;   // a note belongs to the page it was about
+    if(seen.has(s)||!SEC_LINES[s]||!mayNudge())return;seen.add(s);
+    setTimeout(()=>{if(secNow()===s)nudge(SEC_LINES[s](),7000)},1400)},900);
   ['pointerdown','keydown','scroll'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
   let bubT;
   // one Coop voice at a time: no pop-up notes while one of his explainers is on screen or a story page is open
   const busy=()=>{const x=[...document.querySelectorAll('.xstage:not([hidden]) .xscene, .xstage .xscene')].some(e=>{const r=e.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.width>0});
-    return x||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)||!!document.querySelector('.cdlv,.coopdrop,.ptour,.ptoffer')};
+    return x||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)||(typeof CO_OPEN!=='undefined'&&CO_OPEN!=null)||!!document.querySelector('.cdlv,.coopdrop,.ptour,.ptoffer')};
   function wake(ms){el.classList.add('awake');clearTimeout(wake.t);wake.t=setTimeout(()=>el.classList.remove('awake'),ms||9000)}
   function say(t,ms,force){if(!force&&busy())return;wake((ms||7000)+2000);bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span><button type="button" class="cmute" data-cmute aria-label="${quiet()?'Unmute':'Mute'} Coop’s notes">${quiet()?'Unmute':'Mute Coop'}</button>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
     bubT=setTimeout(()=>{el.classList.remove('talking')},Math.min(2400,t.length*40));setTimeout(()=>{if(bub.innerHTML.includes(t))bub.hidden=true},ms||7000)}
@@ -9722,9 +9734,8 @@ renderClocks();setInterval(renderClocks,10000);
     const r1=bird.getBoundingClientRect();
     el.classList.add('away');placing=true;
     flight(r0,r1,()=>{el.classList.remove('away');el.classList.add('land');wake(6000);if(el._openAfter){el._openAfter=false;setTimeout(openMenu,60)}setTimeout(()=>el.classList.remove('land'),700);placing=false;setTimeout(()=>{if(menu.hidden)place(false)},120);
-      if(first&&!store.get('pw-coop-met','')){store.set('pw-coop-met','1');setTimeout(()=>say('Coop. Tap me to search stories, companies and documents.',4000),250)}
-      else if(first&&!quiet()&&!sessionStorage.getItem('pw-coop-hi')){try{sessionStorage.setItem('pw-coop-hi','1')}catch(e){}setTimeout(()=>say(greet(),7000),400)}
-      else if(w&&!store.get('pw-coop-perch','')){store.set('pw-coop-perch','1');setTimeout(()=>say('I’ll sit here while you search...',3500),200)}});
+      // no hello on arrival (the first-visit tour introduces him); the perch line is this visit's one note, if any
+      if(!first&&w&&!store.get('pw-coop-perch','')&&mayNudge()){store.set('pw-coop-perch','1');setTimeout(()=>nudge('I’ll sit here while you search...',3500),200)}});
   }
   function hits(q){q=q.toLowerCase();const R=[],re=new RegExp('(^|[^a-z0-9])'+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),has=s=>re.test(s);
     Object.entries(typeof THREADS!=='undefined'?THREADS:{}).forEach(([k,t])=>{if(has(t.n||'')||has(t.s||''))R.push({th:k,t:t.n,s:`Storyline · ${(t.ids||[]).length} stories`})});
