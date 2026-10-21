@@ -1690,7 +1690,6 @@ details.dr.i-down .rtile i{background:#1E4A38;color:#D3F5E6}
 .prl{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--rc)}
 .prl i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rc);margin-right:6px;vertical-align:middle}
 .pfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:14px 0 4px;border-radius:12px;overflow:hidden;background:var(--grid);border:var(--line) solid var(--grid)}
-.pverified{margin:8px 0 2px;font-size:12px;color:var(--ink-2)}.pverified a{color:inherit}
 .pvet{margin:12px 0 4px;padding:10px 12px;border-left:3px solid #F2A65A;background:color-mix(in srgb,#F2A65A 9%,var(--panel-2));border-radius:8px;font-size:13px;line-height:1.45}
 .pvet b{display:block;font:600 10px/1 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:#F2A65A;margin-bottom:5px}.pvet p{margin:0}
 .phist ol{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}.phist li{display:grid;grid-template-columns:44px 1fr;gap:8px;font-size:13px;line-height:1.4}.phist li span{color:var(--ink-2)}
@@ -6623,8 +6622,10 @@ const kindTag=n=>n.kind&&n.kind!=='News'?`<span class="tag${/^(Opinion|Analysis)
 const PRIMARY=['ups.com','fedex.com','usps.com','prc.gov','dhl.com','ontrac.com','amazon.com','aboutamazon.com','uniuni.com','gofo.com','speedeedelivery.com','gls-us.com','lso.com','shipveho.com','bettertrucks.com','jitsu.com','cdldelivery.com','sec.gov','federalregister.gov','congress.gov','uspsoig.gov','businesswire.com','prnewswire.com','globenewswire.com','wwex.com','uber.com','doordash.com','homedepot.com','instacart.com','descartes.com','zipline.com','serverobotics.com','starship.xyz','ship.com','shipbob.com','teamster.org','roadie.com','walmart.com','corporate.walmart.com','target.com','kroger.com','shipmatrix.com','pitneybowes.com','adobe.com','deloitte.com','salesforce.com','narvar.com','alixpartners.com','the-lmi.com','shipstation.com','nrf.com','oversight.gov','uspsoig.gov','census.gov'];
 const isPrimary=u=>{const h=String(u||'').replace(/^https?:\/\//,'').split('/')[0].toLowerCase();return PRIMARY.some(d=>h===d||h.endsWith('.'+d))};
 const srcA=s=>`<a href="${escU(s.url)}" target="_blank" rel="noopener"${s.house?' class="house"':''}>${esc(s.src)}${s.house&&!/analysis$/i.test(s.src)?' analysis':''}</a>`;
-const srcLinks=n=>{const p=n.srcs.filter(s=>isPrimary(s.url)),o=n.srcs.filter(s=>!isPrimary(s.url));
-  return (p.length?`From the source: ${p.map(srcA).join(' · ')}`:'')+(p.length&&o.length?'<br>':'')+(o.length?`${p.length?'Also reported by':'Reported by'}: ${o.map(srcA).join(' · ')}`:'')};
+// one link per outlet, and at most three press outlets listed (the pipeline already puts the best ones first)
+const srcLinks=n=>{const one=a=>a.filter((s,i)=>a.findIndex(t=>t.src===s.src)===i);const p=one(n.srcs.filter(s=>isPrimary(s.url))),o=one(n.srcs.filter(s=>!isPrimary(s.url)));
+  const ol=o.slice(0,3).map(srcA).join(' · ')+(o.length>3?` and ${o.length-3} more`:'');
+  return (p.length?`From the source: ${p.slice(0,2).map(srcA).join(' · ')}`:'')+(p.length&&o.length?'<br>':'')+(o.length?`${p.length?'Also reported by':'Reported by'}: ${ol}`:'')};
 const srcDrop=(n,bg)=>{const L=n.srcs||(n.url?[{src:'Source',url:n.url}]:[]);if(!L.length&&!bg)return '<span></span>';
   const p=L.filter(s=>isPrimary(s.url)),o=L.filter(s=>!isPrimary(s.url));
   const cnt={};L.forEach(s=>{cnt[s.src]=(cnt[s.src]||0)+1});
@@ -8741,7 +8742,6 @@ function renderSide(){
   el.innerHTML=`<button class="mclose" data-mclose aria-label="Close">×</button>
     <header class="phd"><span class="prl r-${p.realm}"><i></i>${esc(RL[p.realm])}</span><div class="phtl">${logoImg(p,'lgl')}<h3>${esc(p.n)}</h3></div><p>${esc(p.s)}</p>${PSITE[p.id]?`<a class="psite" href="https://${PSITE[p.id]}" target="_blank" rel="noopener">${esc(PSITE[p.id].split('/')[0].replace(/^www\./,''))} ↗</a>`:''}</header>
     <div class="pfacts">${fact('Ownership',ownLine(p))}${fact('Headquarters',p.hq?esc(p.hq.replace(/, USA$/,'')):'')}${fact('Founded',p.yr?esc(p.yr):'')}${fact('Ticker',p.tk?esc(p.tk):'')}${fact('Status',p.gone?esc('Closed'+(p.gone.length===4?' '+p.gone:'')+(p.into&&PL[p.into]?', folded into '+PL[p.into].n:'')):'')}</div>
-    ${p.vf?`<div class="pverified">Facts checked ${esc(new Date(p.vf+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}))}${(p.vsrc||[]).slice(0,3).map(u=>` · <a href="${esc(u)}" target="_blank" rel="noopener">${esc(String(u).replace(/^https?:\/\/(www\.)?/,'').split('/')[0])}</a>`).join('')}</div>`:''}
     ${p.vet?`<div class="pvet"><b>Record check</b><p>${esc(p.vet)}</p></div>`:''}
     ${p.hist&&p.hist.length?`<details class="psec pfold phist"><summary><h4>History<small>${p.hist.length}</small></h4></summary><ol>${p.hist.map(h=>`<li><span class="mono">${esc(h.y)}</span>${esc(h.t)}</li>`).join('')}</ol></details>`:''}
     ${famTree(p)||(chain.length||kids.length||formerHtml?sec('Ownership family',null,`${chain.length?`<div class="pchain"><span class="lbl">Part of</span>${chain.map(chip).join('<span class="parr">›</span>')}<span class="parr">›</span><span class="pme">${esc(p.n)}</span></div>`:''}${kids.length?`<div class="lbl pkl">Owns ${kids.length}</div><div class="rps">${kids.map(chip).join('')}</div>`:''}${formerHtml}`):'')}

@@ -2776,6 +2776,14 @@
    "t": "Delivers for TikTok Shop",
    "url": "https://www.theinformation.com/articles/sleeping-warehouses-hidden-costs-shein-temu-deliveries",
    "story": "afb6fa67940a7"
+  },
+  {
+   "a": "fedex",
+   "b": "inpost",
+   "k": "invested",
+   "y": "2026",
+   "t": "FedEx joins the Advent-led consortium that bought InPost",
+   "url": "https://pulse2.com/inpost-fedex-and-advent-led-consortium-completes-e7-8-billion-buyout-after-securing-89-8-of-shares/"
   }
  ],
  "moves": [
@@ -2940,6 +2948,71 @@
    "url": "https://www.xerfi.com/etudes-par-entreprise/geopost_340012392",
    "url2": "https://lei.bloomberg.com/leis/view/969500BRDRBPU2R89V61",
    "t": "Geopost (formerly DPDgroup) is La Poste Groupe's parcel and express arm.",
+   "role": null
+  },
+  {
+   "id": "inpost",
+   "k": "bought",
+   "parent": "advent",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-09-30",
+   "url": "https://www.adventinternational.com/ideas/polands-delivery-champion-rafal-brzoska-ceo-of-inpost/",
+   "url2": "https://inpost.eu/sites/default/files/2026-05/InPost%20Press%20release%20launch%20offer%2022.05.2026_0.pdf",
+   "t": "A consortium led by Advent International with FedEx, A&R and PPF completed its buyout of InPost.",
+   "role": null
+  },
+  {
+   "id": "firstmile",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-01-10",
+   "url": "https://www.businesswire.com/news/home/20250807254032/en/Better-together-FirstMile-ACI-Logistix-and-Sendle-merge-to-deliver-more-for-shippers-of-all-sizes",
+   "url2": "https://www.supplychaindive.com/news/sendle-aci-logistix-firstmile-fast-group-shut-down/809356/",
+   "t": "FAST Group, formed by FirstMile, ACI Logistix and Sendle, voted to wind down in January 2026.",
+   "role": null
+  },
+  {
+   "id": "acilogistix",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-01-10",
+   "url": "https://www.businesswire.com/news/home/20250807254032/en/Better-together-FirstMile-ACI-Logistix-and-Sendle-merge-to-deliver-more-for-shippers-of-all-sizes",
+   "url2": "https://www.supplychaindive.com/news/sendle-aci-logistix-firstmile-fast-group-shut-down/809356/",
+   "t": "FAST Group, formed by FirstMile, ACI Logistix and Sendle, voted to wind down in January 2026.",
+   "role": null
+  },
+  {
+   "id": "yodel",
+   "k": "closed",
+   "parent": null,
+   "from": "inpost",
+   "pend": null,
+   "into": "inpost",
+   "d": "2026-07-17",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/05200072",
+   "url2": "https://www.ordertracker.com/carriers/yodel",
+   "t": "InPost retired the Yodel brand; the UK network now runs as InPost.",
+   "role": null
+  },
+  {
+   "id": "bollorelog",
+   "k": "closed",
+   "parent": null,
+   "from": "cmacgm",
+   "pend": null,
+   "into": "ceva",
+   "d": "2024-12-31",
+   "url": "https://container-news.com/ceva-logistics-accelerates-growth-with-integration-of-bollore-logistics",
+   "url2": "https://tanknewsinternational.com/ceva-logistics-welcomes-bollore-logistics-and-unites-under-one-brand/",
+   "t": "CMA CGM folded Bolloré Logistics into CEVA Logistics after buying it in February 2024.",
    "role": null
   }
  ],
@@ -3467,7 +3540,8 @@
     "https://trans.info/en/inpost-takeover-moves-closer-as-consortium-secures-majority-of-shares-504288",
     "https://en.wikipedia.org/wiki/InPost"
    ],
-   "hq": "Kraków, Poland"
+   "hq": "Kraków, Poland",
+   "own": "pe"
   },
   "paack": {
    "vf": "2026-10-21",
