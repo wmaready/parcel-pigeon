@@ -302,7 +302,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf",
   "d": "Label requirements tied to the non-compliant label fee",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-ups-ground-saver-labeling-supplement-v1-8-c6c550.pdf",
+  "fh": "3491aa25a2b605991a76e0432ea3b7b1634774bd",
+  "fat": "2026-10-21",
+  "fsz": 956513
  },
  {
   "c": "UPS",
@@ -359,7 +364,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf",
   "d": "Ground and domestic air index tables",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-ups-domestic-fuel-surcharge-tables-418d77.pdf",
+  "fh": "81ed0a3e63cbb3c3736e2ff729b382c8ac127d21",
+  "fat": "2026-10-21",
+  "fsz": 148373
  },
  {
   "c": "UPS",
@@ -371,7 +381,12 @@
   "d": "Updated Aug 26, 2026. Large package and additional handling from Sep 27; air, residential and Ground Saver from Oct 25; through Jan 16, 2027",
   "cur": true,
   "upd": "2026-08-26",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-ups-demand-surcharges-2026-27-season-b716b8.pdf",
+  "fh": "0c3894cf55ced7c0f6d0d6ee22509cc770191632",
+  "fat": "2026-10-21",
+  "fsz": 113643
  },
  {
   "c": "UPS",
@@ -395,7 +410,12 @@
   "d": "International surge fees by lane (Mar 22, May 3, Sep 27 and Oct 25, 2026 phases)",
   "cur": true,
   "upd": "2026-09-18",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-ups-surge-emergency-fee-update-da32d2.pdf",
+  "fh": "afc5a0f447b9bfa0dd72c30e541ba5dd3674acb2",
+  "fat": "2026-10-21",
+  "fsz": 146213
  },
  {
   "c": "UPS",
@@ -2159,5 +2179,121 @@
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
   "seen": "2026-10-21"
+ },
+ {
+  "c": "UPS",
+  "t": "Rate guide",
+  "n": "UPS daily rates us en",
+  "y": null,
+  "eff": null,
+  "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
+  "d": "Posted on UPS's Rate and Service Guides page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "UPS",
+  "t": "Rate guide",
+  "n": "UPS retail rates us en",
+  "y": null,
+  "eff": null,
+  "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
+  "d": "Posted on UPS's Rate and Service Guides page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee LTL Rates 2025 version 29",
+  "y": 2025,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2024/11/LTL-Rates-2025-version-29-.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee Spee Dee Deliver HOT SOLUTIONS COMPANIES",
+  "y": null,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee Spee Dee Delivery PRESS RELEASE shipit",
+  "y": null,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2026 RATES LETTER",
+  "y": 2026,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee LTL Rates 2026 version 30",
+  "y": 2026,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee 2024 KC LETTER",
+  "y": 2024,
+  "eff": null,
+  "u": "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee LTL Rates 2024 Version 28",
+  "y": 2024,
+  "eff": null,
+  "u": "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Regulatory filing",
+  "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
+  "y": 2026,
+  "eff": "2026-10-19",
+  "u": "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals",
+  "d": "Found with: USPS finalizes live animal mailing rules in Publication 52",
+  "cur": true,
+  "added": "2026-10-19",
+  "why": {
+   "how": "story",
+   "story": "a58373f1b7bc3",
+   "title": "USPS finalizes live animal mailing rules in Publication 52",
+   "when": "2026-10-19"
+  }
  }
 ]

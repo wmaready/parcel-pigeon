@@ -219,14 +219,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 1,
+   "fails": 2,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 1,
+   "fails": 2,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -299,10 +299,82 @@
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
-   "fails": 1,
+   "fails": 2,
    "err": "404 Client Error: Not Found for url: https://www.shipveho.com/service-guide/last-mile-delivery",
    "blocked": false,
    "last_try": "2026-10-21"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf": {
+   "first": "2026-10-21",
+   "n": "surge-fee-us-en.pdf",
+   "hash": "edf2fa3b4179",
+   "checked": "2026-10-21"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf": {
+   "first": "2026-10-21",
+   "n": "demand-surcharges-us-en.pdf",
+   "hash": "10e2e45bcf78",
+   "checked": "2026-10-21"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
+   "first": "2026-10-21",
+   "n": "daily-rates-us-en.pdf",
+   "hash": "0898c2640b82",
+   "checked": "2026-10-21"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf": {
+   "first": "2026-10-21",
+   "n": "retail-rates-us-en.pdf",
+   "hash": "e3db3b1e80c3",
+   "checked": "2026-10-21"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf": {
+   "first": "2026-10-21",
+   "n": "fsc-applicable-charges-us-en.pdf",
+   "hash": "7ddd1ae59c63",
+   "checked": "2026-10-21"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2024/11/LTL-Rates-2025-version-29-.pdf": {
+   "first": "2026-10-21",
+   "n": "LTL-Rates-2025-version-29-.pdf",
+   "hash": "aec5fbad2136",
+   "checked": "2026-10-21"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf": {
+   "first": "2026-10-21",
+   "n": "Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
+   "hash": "bffd7b9dbf5b",
+   "checked": "2026-10-21"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf": {
+   "first": "2026-10-21",
+   "n": "Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
+   "hash": "23ab895007fa",
+   "checked": "2026-10-21"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf": {
+   "first": "2026-10-21",
+   "n": "2026-RATES-LETTER.pdf",
+   "hash": "323ff4aa69ce",
+   "checked": "2026-10-21"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf": {
+   "first": "2026-10-21",
+   "n": "LTL-Rates-2026-version-30.pdf",
+   "hash": "ca82afb7dd28",
+   "checked": "2026-10-21"
+  },
+  "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf": {
+   "first": "2026-10-21",
+   "n": "2024_KC_LETTER.pdf",
+   "hash": "78dfac57526d",
+   "checked": "2026-10-21"
+  },
+  "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf": {
+   "first": "2026-10-21",
+   "n": "LTL_Rates_2024_Version_28.pdf",
+   "hash": "21393bae0044",
+   "checked": "2026-10-21"
   }
  }
 }

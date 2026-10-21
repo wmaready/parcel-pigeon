@@ -55,20 +55,27 @@
   "pend": "dee19fb4fc81"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
-  "pend": "dfb2ceaf3f1d"
+  "checked": "2026-10-21",
+  "pdfs": [
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf"
+  ],
+  "lines": 67,
+  "told": []
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
-  "pend": "f024557fad26"
+  "checked": "2026-10-21",
+  "pdfs": [],
+  "lines": 69,
+  "told": []
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "pend": "6dffc9f7fb44"
  },
  "https://developer.fedex.com/": {
-  "checked": "2026-10-20",
+  "checked": "2026-10-21",
   "pdfs": [],
-  "lines": 56,
-  "told": [],
-  "pend": "4301f20ec4c8"
+  "lines": 17,
+  "told": []
  },
  "https://pe.usps.com/PriceChange/Index": {
   "checked": "2026-10-21",
@@ -90,7 +97,7 @@
   "told": []
  },
  "https://www.ontrac.com/surchargesandrates/": {
-  "checked": "2026-10-20",
+  "checked": "2026-10-21",
   "pdfs": [
    "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
    "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf",
@@ -99,8 +106,7 @@
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf"
   ],
   "lines": 109,
-  "told": [],
-  "pend": "69421c23a8ea"
+  "told": []
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-10-21",
@@ -153,11 +159,10 @@
   "told": []
  },
  "https://www.uniuni.com/news/": {
-  "checked": "2026-10-20",
+  "checked": "2026-10-21",
   "pdfs": [],
-  "lines": 1,
-  "told": [],
-  "pend": "29571d068da2"
+  "lines": 176,
+  "told": []
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-10-21",
