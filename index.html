@@ -8596,6 +8596,7 @@ const ownLine=p=>{const par=p.parent&&PL[p.parent];
   if(!p.own)return 'Ownership not checked yet';
   if(p.own==='public')return `Public${p.tk?` · ${esc(p.tk)}`:''}`;
   if(p.own==='gov')return 'Government';
+  if(p.own==='coop')return 'Member-owned cooperative';
   if(p.own==='pending')return 'Go-public deal pending';
   if(p.own==='pe')return par?`PE-owned · <button class="link" data-pl="${par.id}">${esc(par.n)}</button>`:'PE-owned';
   if(p.own==='sub')return par?`Owned by <button class="link" data-pl="${par.id}">${esc(par.n)}</button>`:'Subsidiary';
@@ -9262,7 +9263,7 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   if(pls&&Array.isArray(pls.players)){pls.players.forEach(p=>{if(p&&p.id&&!p.pending&&!PL[p.id]&&REALMS.some(r=>r[0]===p.realm)){const nm=[p.n,...(p.al||[])].map(x=>String(x).toLowerCase());const dup=PLAYERS.find(q=>[q.n,...(q.al||[])].some(x=>nm.includes(String(x).toLowerCase())));if(dup){PL[p.id]=dup;return}PLAYERS.push(p);PL[p.id]=p;if(p.site&&typeof PSITE!=='undefined'&&!PSITE[p.id])PSITE[p.id]=p.site}});
     (pls.edges||[]).forEach(e=>{if(e&&PL[e.a]&&PL[e.b]){e={...e,a:PL[e.a].id,b:PL[e.b].id}}if(e&&e.a!==e.b&&PL[e.a]&&PL[e.b]&&!PEDGES.some(x=>x.a===e.a&&x.b===e.b&&x.k===e.k))PEDGES.push(e)});famMoves(pls.moves);if(pls.checks)PLAYERS.forEach(p=>{if(pls.checks[p.id])p.chk=pls.checks[p.id]});
     // facts re-checked against two independent sources (data/players.json "facts", kept current by sweep.py) win over the built-in list
-    if(pls.facts)Object.entries(pls.facts).forEach(([id,f])=>{const p=PL[id];if(!p||!f)return;['hq','yr','tk','own'].forEach(k=>{if(f[k]!=null&&f[k]!=='')p[k]=f[k]});if(f.own&&f.own!=='public')p.tk=f.tk||null;if(Array.isArray(f.geo)&&f.geo.length===2){p.geo=f.geo;if(HQGEO_ID[id])HQGEO_ID[id]=f.geo}p.vf=f.vf;p.vsrc=f.src||[]});
+    if(pls.facts)Object.entries(pls.facts).forEach(([id,f])=>{const p=PL[id];if(!p||!f)return;['hq','yr','tk','own'].forEach(k=>{if(f[k]!=null&&f[k]!=='')p[k]=f[k]});if(f.own&&f.own!=='public')p.tk=f.tk||null;if(Array.isArray(f.geo)&&f.geo.length===2){p.geo=f.geo;HQGEO_ID[id]=f.geo}p.vf=f.vf;p.vsrc=f.src||[]});
     indexPlayers();ch=true}
   if(ch){renderAll();stampLabels();window.coopBrief&&coopBrief()}
 })();
