@@ -52,15 +52,27 @@ USAGE = {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0, "usd": 0.0}
 # Haiku 5.5 costs more on prompts over 100K tokens. Web search is $10 per 1,000 searches.
 PRICES = {"haiku": (0.10, 0.50), "sonnet": (2.00, 10.00), "opus": (4.00, 20.00)}
 SEARCH_USD = 0.01
-# The Anthropic Console's monthly spend limit. Each day may spend what's left of it divided by the days left in the month,
-# so a busy week can't use up the month and leave the app silent at the end of it. A run that starts under the day's
-# allowance finishes; once the day's allowance is used, Claude calls pause until midnight UTC and headlines wait unscreened
-# (nothing is lost). Accuracy work is part of the news and is never cut on its own (reading blocked pages, re-confirming
+# The Anthropic Console's monthly spend limit. Each day (U.S. Eastern, the readers' day) may spend what's left of it divided
+# by the days left in the month, so a busy week can't use up the month and leave the app silent at the end of it. The
+# day's allowance builds up through the day (a quarter of it is there at midnight, all of it by 6 p.m.), so one late-night
+# run can't use the whole day and leave the morning with no news. A run that starts under what's built up finishes; past
+# it, Claude calls wait for the next run and headlines wait unscreened (nothing is lost). Accuracy work is part of the news and is never cut on its own (reading blocked pages, re-confirming
 # single-source stories, number checks). Only company research and the sweep are extras: they stop at half the day's
 # allowance, so the news is the last thing to pause.
 MONTHLY = float(os.environ.get("PP_MONTHLY_BUDGET") or 75)
 LEDGERS = ("usage.json", "usage_sweep.json")              # the sweep runs alongside the news, so it keeps its own ledger
 LEDGER = os.environ.get("PP_LEDGER") or LEDGERS[0]
+
+
+ET = __import__("zoneinfo").ZoneInfo("America/New_York")
+NOW = lambda: dt.datetime.now(ET)
+
+
+def built_up(a, t=None):
+    """How much of the day's allowance a run may have spent by now: a quarter at midnight Eastern, rising evenly to all
+    of it by 6 p.m."""
+    t = t or NOW()
+    return a * min(1.0, 0.25 + 0.75 * (t.hour + t.minute / 60) / 18)
 
 
 def cost(model, u):
@@ -75,7 +87,7 @@ def cost(model, u):
 def spent(day=None):
     """(today, this month, this month before today) in dollars, from the ledgers plus this process's calls so far.
     A ledger's "carry" holds what the month had already spent before the ledger existed (from the Console)."""
-    day = day or dt.date.today().isoformat()
+    day = day or NOW().date().isoformat()
     today = before = 0.0
     for name in LEDGERS:
         led = load(name, {})
@@ -94,7 +106,7 @@ def spent(day=None):
 
 def allowance(day=None):
     """What today may spend: the rest of the monthly limit spread over the days left in the month, today included."""
-    d = dt.date.fromisoformat(day) if day else dt.date.today()
+    d = dt.date.fromisoformat(day) if day else NOW().date()
     nxt = (d.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
     return max(0.0, MONTHLY - spent(d.isoformat())[2]) / (nxt - d).days
 
@@ -112,10 +124,11 @@ def paused(extra=False):
     if "why" not in PACE:
         today, month, _ = spent()
         a = allowance()
-        PACE["why"] = (f"today's ${a:.2f} allowance is used (${today:.2f} spent, ${month:.2f} of ${MONTHLY:.0f} this month)"
-                       if today >= a else None)
+        b = built_up(a)
+        PACE["why"] = (f"${today:.2f} spent today of the ${b:.2f} built up so far (day's allowance ${a:.2f}; "
+                       f"${month:.2f} of ${MONTHLY:.0f} this month)" if today >= b else None)
         if PACE["why"]:
-            print(f"::notice title=Claude calls paused until midnight UTC::{PACE['why']}. Headlines wait and are screened tomorrow.")
+            print(f"::notice title=Claude calls wait for a later run::{PACE['why']}. Headlines wait and are screened then.")
     return PACE["why"]
 
 
@@ -132,7 +145,7 @@ def _usage_report():
         led = load(LEDGER, {})
         led = led if isinstance(led, dict) else {}
         days = led.setdefault("days", {})
-        d = dt.date.today().isoformat()
+        d = NOW().date().isoformat()
         days[d] = round(days.get(d, 0) + USAGE["usd"], 4)
         led["days"] = dict(sorted(days.items())[-120:])
         save(LEDGER, led)

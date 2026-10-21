@@ -1,9 +1,9 @@
 {
- "note": "Claude API spend by day (UTC), in dollars at list prices, counted by the pipeline itself. carry holds what a month had already spent before this ledger started (from the Anthropic Console).",
+ "note": "Claude API spend by day (U.S. Eastern), in dollars at list prices, counted by the pipeline itself. carry holds what a month had already spent before this ledger started (from the Anthropic Console).",
  "carry": {
   "2026-10": 60
  },
  "days": {
-  "2026-10-21": 1.4121
+  "2026-10-20": 1.4121
  }
 }

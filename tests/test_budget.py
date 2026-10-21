@@ -28,9 +28,10 @@ def test_ledger_and_pacing(data_dir, monkeypatch):
 
 
 def test_pause_and_extras(data_dir, monkeypatch):
+    monkeypatch.setattr(common, "NOW", lambda: dt.datetime(2026, 10, 21, 19, 0, tzinfo=common.ET))   # evening: all built up
     monkeypatch.setattr(common, "MONTHLY", 75.0)
     monkeypatch.setattr(common, "API_KEY", "test-key")
-    d = dt.date.today()
+    d = common.NOW().date()
     save("usage.json", {"carry": {d.isoformat()[:7]: 0}, "days": {}})
     a = allowance()
     assert paused() is None and extras_ok()
@@ -39,7 +40,7 @@ def test_pause_and_extras(data_dir, monkeypatch):
     assert paused() is None                     # the news keeps going
     common.PACE.clear()
     track({"model": "claude-sonnet-5-5", "usage": {"input_tokens": 0, "output_tokens": int(a * 0.5 / 10 * 1e6)}})
-    assert paused() and "allowance" in paused()
+    assert paused() and "built up" in paused()
     try:
         common.claude("claude-haiku-5-5", "s", "u")
     except RuntimeError as e:
@@ -52,11 +53,21 @@ def test_report_writes_todays_spend(data_dir):
     save("usage.json", {"carry": {}, "days": {}})
     track({"model": "claude-haiku-5-5", "usage": {"input_tokens": 1000, "output_tokens": 1000}})
     common._usage_report()
-    assert load("usage.json", {})["days"][dt.date.today().isoformat()] == round(0.0006, 4)
+    assert load("usage.json", {})["days"][common.NOW().date().isoformat()] == round(0.0006, 4)
+
+
+def test_allowance_builds_up_through_the_eastern_day():
+    """Last night one 10 p.m. run used the whole day's allowance and the next morning had no news. Days are Eastern now,
+    and a quarter of the day's allowance is there at midnight, all of it by 6 p.m."""
+    at = lambda h: dt.datetime(2026, 10, 21, h, 0, tzinfo=common.ET)
+    assert common.built_up(1.0, at(0)) == 0.25
+    assert round(common.built_up(1.0, at(8)), 3) == round(0.25 + 0.75 * 8 / 18, 3)
+    assert common.built_up(1.0, at(18)) == common.built_up(1.0, at(23)) == 1.0
 
 
 def test_due_once_a_day_from_the_hour(data_dir):
     from due import due, done
+    save("due.json", {})
     t = lambda h, day=21: dt.datetime(2026, 10, day, h, 17, tzinfo=dt.timezone.utc)
     assert not due("players", 4, t(3))
     assert due("players", 4, t(5))              # a late start still runs

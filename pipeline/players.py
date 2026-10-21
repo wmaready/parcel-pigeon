@@ -231,6 +231,9 @@ def apply_profile(p, res, byname, edges, mp, today):
 def main():
     if not API_KEY:
         print("players: no API key"); return
+    from common import paused
+    if paused(extra=True):          # exit non-zero so the day's research isn't marked done and runs on a later run
+        print(f"players: waiting, {paused(extra=True)}"); sys.exit(1)
     limit = int(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 6
     seed, mp = load("seed.json", {}), load("players.json", {"players": [], "edges": []})
     news = {s["id"]: s for s in load("news.json", [])}
