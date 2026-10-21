@@ -219,14 +219,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 15,
+   "fails": 16,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 15,
+   "fails": 16,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -299,7 +299,7 @@
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
-   "fails": 15,
+   "fails": 16,
    "err": "404 Client Error: Not Found for url: https://www.shipveho.com/service-guide/last-mile-delivery",
    "blocked": false,
    "last_try": "2026-10-21"
@@ -452,6 +452,18 @@
    "first": "2026-10-21",
    "n": "9-21-26_US-Import-Demand-Surcharges.pdf",
    "hash": "9f9b1f0b82a6",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf": {
+   "first": "2026-10-21",
+   "n": "FICE_TermsCond.pdf",
+   "hash": "30cb066f3355",
+   "checked": "2026-10-21"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf": {
+   "first": "2026-10-21",
+   "n": "IDP_TermsCond.pdf",
+   "hash": "787d356e545f",
    "checked": "2026-10-21"
   }
  }
