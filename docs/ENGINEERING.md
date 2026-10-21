@@ -93,7 +93,15 @@ These are the guardrails that make the content trustworthy. Each has a test in `
    company, a regulator, the major press or the trade press shows "Unconfirmed" (`news.unconfirmed`). Each run tries to
    confirm up to five with a search for better coverage; the mark clears as soon as a better or second source is listed.
 9. **Text read through Claude's web fetch is the tool's copy of the page,** never the model's reply.
-10. **Competitors never become stories.** Other parcel consultancies (`news.COMPETITOR_DOMAINS`) only back up a story.
+10. **Announced and effective dates are never mixed.** Stories keep `date` (published), `ann` (the announcement date, only
+    when a source states it) and `act` (takes effect). The rate clock says "announced" only for a stated announcement,
+    otherwise "first reported" (our earliest story), and only when that came before the change took effect; notice days
+    are shown for price changes only.
+11. **Off-cycle price changes are marked** (`common.cycle_of` / `cycleOf` in `index.html`, kept identical by
+    `tests/test_cycle.py`): judged by the effective date, on-cycle is the annual increase window (Dec 15 - Jan 20; USPS
+    January) and peak surcharges Sept-Jan; a change announced with the annual increase (mid-Aug to mid-Dec) and in
+    effect by the end of February stays on-cycle.
+12. **Competitors never become stories.** Other parcel consultancies (`news.COMPETITOR_DOMAINS`) only back up a story.
 
 ## Claude usage and cost
 

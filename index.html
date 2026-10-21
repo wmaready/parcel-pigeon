@@ -359,7 +359,7 @@ dl.gl dd{margin:var(--sp-1) 0 0;color:var(--ink);font-size:var(--fs-sm)}
 .cards .cardft{display:flex;flex-wrap:wrap;gap:var(--sp-2);justify-content:space-between;align-items:center;padding:var(--sp-3) var(--sp-4);border-top:var(--line) solid var(--grid)}
 .cards .cardft a{color:var(--ink-2)}
 .clk{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
-.tag{color:var(--ink-2)}.tag-unconf{color:var(--warn)}
+.tag{color:var(--ink-2)}.tag-unconf{color:var(--warn)}.tag-offc{color:var(--accent)}
 .tag.tag-op{color:var(--accent);border-style:dashed;font-style:italic}
 @media (max-width:560px){.cardbody{padding:var(--sp-3)}.cardbody h3{font-size:var(--fs-lg)}.cardhd,.cards .cardft{padding-left:var(--sp-3);padding-right:var(--sp-3)}}
 /* ===== Fuel, simplified ===== */
@@ -1692,6 +1692,7 @@ details.dr.i-down .rtile i{background:#1E4A38;color:#D3F5E6}
 .pfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:14px 0 4px;border-radius:12px;overflow:hidden;background:var(--grid);border:var(--line) solid var(--grid)}
 .ystack{display:grid;gap:var(--sp-3)}.yempty{padding:var(--sp-3);color:var(--ink-2)}
 .ayw{overflow-x:auto}.ayt{border-collapse:collapse;width:100%;font-size:var(--fs-sm)}.ayt th,.ayt td{padding:var(--sp-2);border-bottom:var(--line) solid var(--grid);text-align:right;white-space:nowrap;vertical-align:top}.ayt th:first-child{text-align:left}.ayt small{display:block;color:var(--ink-2);font-size:var(--fs-xs)}.ayt .ynil{color:var(--ink-2)}
+.ywhen{display:block;margin-top:2px;color:var(--ink-2);font-size:var(--fs-xs)}.ynote{margin:0;padding:var(--sp-2) var(--sp-3) var(--sp-3);color:var(--ink-2);font-size:var(--fs-xs);line-height:1.45}.rann{color:var(--ink-2)}
 .ypats{display:grid;gap:var(--sp-3);padding:var(--sp-3)}.ypat p{margin:var(--sp-1) 0 0;line-height:1.45}
 .yyr>summary{display:flex;gap:var(--sp-2);align-items:baseline;cursor:pointer;padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}.yyr ul{list-style:none;margin:0;padding:0 var(--sp-3) var(--sp-2)}
 .yyr li{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:baseline;padding:var(--sp-2) 0;border-top:var(--line) solid var(--grid);font-size:var(--fs-sm)}.yyr .ydt{min-width:52px;color:var(--ink-2)}.yyr .yhl{flex:1 1 220px}.yyr .yhl a{color:var(--ink-2);text-decoration:none}
@@ -6633,8 +6634,21 @@ const carSpan=n=>{const k=carCls(n),lg=typeof logoImg==='function'?logoImg(n,'lg
 const carList=(s,sep)=>{const L=[...new Set(String(s).split(/\s*(?:·|,)\s*/).filter(Boolean))];return `<span class="lgset">${L.map(c=>{const lg=typeof logoImg==='function'&&logoImg(c,'lgm');return lg?`<span class="car lonly">${lg}</span>`:`<span class="car nlogo ${carCls(c)}">${esc(c)}</span>`}).join('')}</span>`};
 const carChip=c=>{const lg=typeof logoImg==='function'?logoImg(c,'lgx'):'';if(lg)return lg;const k=carCls(c);return k?`<i class="sq ${k}" aria-hidden="true"></i>`:''};
 const kindTag0=n=>n.kind&&n.kind!=='News'?`<span class="tag${/^(Opinion|Analysis)$/.test(n.kind)?' tag-op':''}" title="${/^(Opinion|Analysis)$/.test(n.kind)?'A viewpoint or interpretation, not a confirmed announcement':''}">${/^(Opinion|Analysis)$/.test(n.kind)?'◆ '+esc(n.kind)+' · not news':esc(n.kind)}</span>`:'';
+/* On-cycle vs off-cycle, by the date a change TAKES EFFECT (same rule as cycle_of() in pipeline/common.py; tests keep them in step).
+   On-cycle: the annual increase window (Dec 15 - Jan 20; for USPS its January change) and peak surcharges Sept-Jan. Anything else is off-cycle. */
+const COST_KINDS=new Set(['gri','price_change','peak','surcharge','fee','fuel_table','dim','das']);
+function cycleOf(c,kind,eff,ann){if(!COST_KINDS.has(kind)||!eff)return null;const m=+String(eff).slice(5,7),d=+String(eff).slice(8,10);if(!m)return null;
+  if(kind==='peak')return m>=9||m===1?'on':'off';
+  // announced with the annual increase (mid-Aug to mid-Dec) and in effect by the end of February: part of that cycle, even if staggered
+  if(ann){const am=+String(ann).slice(5,7),ad=+String(ann).slice(8,10),md=am*100+ad;if(md>=815&&md<=1215&&(m<=2||(m===12&&d>=15))&&(Date.parse(eff)-Date.parse(ann))/864e5<200)return 'on'}if(c==='USPS')return m===1?'on':'off';return (m===12&&d>=15)||(m===1&&d<=20)?'on':'off'}
+function kindOf(text,cat){const t=String(text||'').toLowerCase();
+  if(/peak|demand surcharge|holiday (price|surcharge|rate)/.test(t))return 'peak';if(t.includes('fuel'))return 'fuel_table';
+  if(/general rate|\bgri\b|rate increase|average (net )?increase|price (change|increase)|prices? (rise|increase)|raises? (\w+ ){0,2}(rates|prices)|list rates/.test(t))return 'gri';
+  if(/surcharge|\bfees?\b|zone|dimensional|\bdim\b|delivery area|divisor/.test(t))return 'surcharge';return cat==='Pricing & GRI'?'gri':null}
+const OFFC_TAG='<span class="tag tag-offc" title="Takes effect outside the carrier\u2019s usual annual increase and peak season">Off-cycle</span>';
+const noticeDays=(ann,eff)=>ann&&eff&&ann<eff?Math.round((Date.parse(eff)-Date.parse(ann))/864e5):null;
 // a story resting on one smaller outlet so far: marked until the company, the major press or the trade press confirms it
-const kindTag=n=>kindTag0(n)+(n.unconf?'<span class="tag tag-unconf" title="Reported by one smaller outlet so far; not yet confirmed by the company or the major or trade press">Unconfirmed</span>':'');
+const kindTag=n=>kindTag0(n)+(n.offc?OFFC_TAG:'')+(n.unconf?'<span class="tag tag-unconf" title="Reported by one smaller outlet so far; not yet confirmed by the company or the major or trade press">Unconfirmed</span>':'');
 const PRIMARY=['ups.com','fedex.com','usps.com','prc.gov','dhl.com','ontrac.com','amazon.com','aboutamazon.com','uniuni.com','gofo.com','speedeedelivery.com','gls-us.com','lso.com','shipveho.com','bettertrucks.com','jitsu.com','cdldelivery.com','sec.gov','federalregister.gov','congress.gov','uspsoig.gov','businesswire.com','prnewswire.com','globenewswire.com','wwex.com','uber.com','doordash.com','homedepot.com','instacart.com','descartes.com','zipline.com','serverobotics.com','starship.xyz','ship.com','shipbob.com','teamster.org','roadie.com','walmart.com','corporate.walmart.com','target.com','kroger.com','shipmatrix.com','pitneybowes.com','adobe.com','deloitte.com','salesforce.com','narvar.com','alixpartners.com','the-lmi.com','shipstation.com','nrf.com','oversight.gov','uspsoig.gov','census.gov'];
 const isPrimary=u=>{const h=String(u||'').replace(/^https?:\/\//,'').split('/')[0].toLowerCase();return PRIMARY.some(d=>h===d||h.endsWith('.'+d))};
 const srcA=s=>`<a href="${escU(s.url)}" target="_blank" rel="noopener"${s.house?' class="house"':''}>${esc(s.src)}${s.house&&!/analysis$/i.test(s.src)?' analysis':''}</a>`;
@@ -7358,7 +7372,7 @@ function coEvents(p,alm){const ev=[],names=coNames(p),seen=new Set(),add=x=>{con
   pStories(p.id).forEach(n=>add({d:n.date,kind:'story',t:n.title,sub:n.cat,open:n.id,imp:n.imp}));
   DEALS.forEach((x,i)=>{if(dealPlayers(x).includes(p.id))add({d:x.closed||x.ann||x.d,kind:'deal',t:x.title||(x.buyer&&x.target?`${x.buyer} buys ${x.target}`:x.target),sub:x.status,deal:i})});
   PEDGES.forEach(e=>{if((e.a===p.id||e.b===p.id)&&e.y&&e.k!=='partner'&&e.t)add({d:String(e.y),kind:e.k,t:e.t,other:e.a===p.id?e.b:e.a,url:e.url})});
-  alm.forEach(e=>{if(names.has(String(e.carrier||'').toLowerCase()))add({d:e.effective||e.date||e.announced||String(e.year),kind:e.kind,t:e.headline,sub:YKIND[e.kind]||e.kind,url:(e.sources||[])[0],pct:e.pct})});
+  alm.forEach(e=>{if(names.has(String(e.carrier||'').toLowerCase()))add({d:e.effective||e.date||e.announced||String(e.year),kind:e.kind,t:e.headline,sub:YKIND[e.kind]||e.kind,url:(e.sources||[])[0],pct:e.pct,ann:e.announced,eff:e.effective,offc:cycleOf(e.carrier,e.kind,e.effective,e.announced)==='off'})});
   return ev.sort((a,b)=>String(b.d).localeCompare(String(a.d)))}
 function coUpcoming(p){const names=coNames(p);return DATES.filter(x=>names.has(String(x.c||'').toLowerCase())&&daysTo(x.d)>=0).sort((a,b)=>a.d.localeCompare(b.d)).slice(0,6)}
 function coThreads(p){const ids=new Set(pStories(p.id).map(n=>n.id));return Object.entries(THREADS||{}).filter(([k,t])=>(t.ids||[]).some(i=>ids.has(i))).map(([k,t])=>({k,t,n:(t.ids||[]).filter(i=>ids.has(i)).length})).sort((a,b)=>b.n-a.n).slice(0,8)}
@@ -7367,7 +7381,7 @@ async function openCompany(id,replace){const p=PL[id];if(!p)return;
   let sh=$('coSheet');if(!sh){sh=document.createElement('div');sh.id='coSheet';sh.className='ssheet cosheet';sh.setAttribute('role','dialog');sh.setAttribute('aria-modal','true');document.body.appendChild(sh)}
   const alm=await coAlmanac(),ev=coEvents(p,alm),up=coUpcoming(p),th=coThreads(p);
   const by={};ev.forEach(x=>{const y=String(x.d).slice(0,4);(by[y]=by[y]||[]).push(x)});
-  const row=x=>`<li${x.open?` data-open="${x.open}" tabindex="0"`:''}><span class="mono cod">${esc(coDay(x.d))}</span><span class="tag">${esc(x.sub&&x.kind==='story'?x.sub:CO_KIND[x.kind]||x.sub||x.kind)}</span><span class="cot">${x.deal!=null?`<button class="link" data-deal="${x.deal}">${esc(x.t)}</button>`:x.other&&PL[x.other]?`${esc(x.t)} <button class="link" data-pl="${x.other}">${esc(PL[x.other].n)}</button>`:esc(x.t)}${!x.open&&x.url?` <a href="${escU(x.url)}" target="_blank" rel="noopener" aria-label="Source">↗</a>`:''}</span></li>`;
+  const row=x=>`<li${x.open?` data-open="${x.open}" tabindex="0"`:''}><span class="mono cod">${esc(coDay(x.d))}</span><span class="tag">${esc(x.sub&&x.kind==='story'?x.sub:CO_KIND[x.kind]||x.sub||x.kind)}</span>${x.offc?OFFC_TAG:''}<span class="cot">${x.deal!=null?`<button class="link" data-deal="${x.deal}">${esc(x.t)}</button>`:x.other&&PL[x.other]?`${esc(x.t)} <button class="link" data-pl="${x.other}">${esc(PL[x.other].n)}</button>`:esc(x.t)}${!x.open&&x.url?` <a href="${escU(x.url)}" target="_blank" rel="noopener" aria-label="Source">↗</a>`:''}${x.ann&&x.eff?`<small class="ywhen">Takes effect ${esc(fmtD(x.eff,{month:'short',day:'numeric'}))} · announced ${esc(fmtD(x.ann,{month:'short',day:'numeric',year:'numeric'}))}</small>`:''}</span></li>`;
   const years=Object.keys(by).sort((a,b)=>b.localeCompare(a));
   const tl=years.length?`<section class="psec cotl"><h4>What's happened<small>${ev.length}</small></h4>${years.map((y,i)=>`<details class="coyr"${i<2?' open':''}><summary><b class="mono">${esc(y)}</b><span class="lbl">${by[y].length}</span></summary><ul>${by[y].map(row).join('')}</ul></details>`).join('')}</section>`:'';
   const upc=up.length?`<section class="psec"><h4>Coming up<small>${up.length}</small></h4><ul class="coup">${up.map(x=>`<li data-clock="${esc(x.id)}" tabindex="0"><span class="mono cod">${esc(fmtD(x.d,{month:'short',day:'numeric'}))}</span><span>${esc(x.w)}</span></li>`).join('')}</ul></section>`:'';
@@ -7796,7 +7810,7 @@ const none='<div class="empty">No stories match these filters. <button class="li
    story page: what's new, what it means, what changed, documents, earlier coverage, sources and comments. */
 function card(n,full){
   const links=clockFor(n.id).filter(x=>daysTo(x.d)>=0).slice(0,4);
-  const eff=n.act?(()=>{const d=daysTo(n.act);return n.inferred?`First seen on the carrier’s site ${fmtD(n.act)}`:d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`})():'';
+  const eff=n.act?(()=>{const d=daysTo(n.act);return n.inferred?`First seen on the carrier’s site ${fmtD(n.act)}`:(d>0?`Effective ${fmtD(n.act)}, in ${d} days`:d===0?'Effective today':`Effective since ${fmtD(n.act)}`)+((k=>k?` · announced ${fmtD(n.ann)}, ${k} days' notice`:'')(n.ann?noticeDays(n.ann,n.act):null))})():'';
   const cars=storyCars(n);
   const hd=`<header class="cardhd"><span>${n.dl||fmtD(n.date,{month:'short',day:'numeric',year:'numeric'})}</span><span>${cars.length?carList(cars.join(', '),', '):'Industry'}</span>${kindTag(n)}${FRESHSET.has(n.id)&&!MS.read.has(n.id)?'<span class="newtag">New</span>':''}${statusTag0(n)}${rxPill(n)}</header>`;
   const tag=`<span class="eff2k"><i></i>${IMPACT[n.imp].w}${n.lvl>1?` · ${['','Low','Medium','High'][n.lvl]}`:''}</span>`;
@@ -8060,13 +8074,19 @@ function renderClockList(){
     if(!todayDone&&n>=0){todayDone=true;h+=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`}
     if(m!==month){h+=`<div class="month">${m}</div>`;month=m}
     const st=(x.news||[]).map(id=>NEWS.find(s=>s.id===id)).filter(Boolean),fx=rcxOf(x);
+    // "announced" only when a source states it (the entry's own ann, or a story's ann); otherwise the earliest story about it
+    // is shown as "first reported". Either one only when it came before the change took effect.
+    const sAnn=x.ann||st.map(s=>s.ann).filter(Boolean).sort()[0]||null,sRep=st.map(s=>s.date).filter(Boolean).sort()[0]||null;
+    const cost=x.imp==='up'||x.imp==='down';      // notice and cycle are about price changes, not deadlines, earnings or contracts
+    const ann=cost&&sAnn&&sAnn<x.d?sAnn:null,rep1=cost&&!ann&&sRep&&sRep<x.d?sRep:null,nd=noticeDays(ann||rep1,x.d);
+    const offc=cost&&cycleOf(String(x.c).split(/\s*(?:·|,)\s*/)[0],fx&&{gri:'gri',peak:'peak',usps:'peak',perlb:'surcharge',fuel:'fuel_table',fee:'surcharge',das:'das',zone:'surcharge'}[fx.t]||kindOf(x.w),x.d,ann||rep1)==='off';
     const eff=x.imp==='info'?(n<0?'Happened':'Happens'):(n<0?'In effect since':'Takes effect');
     const cd=n>1?`<b>${n}</b> days`:n===1?'<b>Tomorrow</b>':n===0?'<b>Today</b>':x.imp==='info'?'Passed':'In effect';
     h+=`<details class="dr i-${impCls(x.imp)} ${n<0?'past':n<=21?'soon':''}" id="${x.id}"><summary>
       <span class="rtile" aria-hidden="true"><i>${MON(x.d)}</i><b>${+x.d.slice(8)}</b><small>${fmtD(x.d,{weekday:'short'})}</small></span>
       <span class="rmain"><span class="w"><span class="${impCls(x.imp)}">${IMPACT[x.imp].s}</span> ${esc(x.w)}</span>
-        <span class="reff">${eff} <b>${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}</b>${x.end?` <span class="rrng">· ${span(x)}</span>`:''}</span>
-        <span class="rtags">${String(x.c).split(/\s*(?:·|,)\s*/).filter(Boolean).map(c=>logoImg(c,'lgm')||`<span class="rchip ${carCls(c)}">${esc(c)}</span>`).join('')}${fx?`<span class="rtype">${RCX_T[fx.t]}</span>`:''}${x.fees?`<span class="rmeta">${x.fees.length} fees</span>`:''}${st.length?`<span class="rmeta">${st.length} ${st.length>1?'stories':'story'}</span>`:''}</span></span>
+        <span class="reff">${eff} <b>${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}</b>${x.end?` <span class="rrng">· ${span(x)}</span>`:''}${ann||rep1?` <span class="rann">· ${ann?'announced':'first reported'} ${fmtD(ann||rep1,{month:'short',day:'numeric'})}${nd!=null?`, ${nd} days' notice`:''}</span>`:''}</span>
+        <span class="rtags">${String(x.c).split(/\s*(?:·|,)\s*/).filter(Boolean).map(c=>logoImg(c,'lgm')||`<span class="rchip ${carCls(c)}">${esc(c)}</span>`).join('')}${fx?`<span class="rtype">${RCX_T[fx.t]}</span>`:''}${offc?OFFC_TAG:''}${x.fees?`<span class="rmeta">${x.fees.length} fees</span>`:''}${st.length?`<span class="rmeta">${st.length} ${st.length>1?'stories':'story'}</span>`:''}</span></span>
       <span class="cdn">${cd}</span></summary>
       <div class="drbody">${fx?`<button class="rshow" data-rx="${x.id}"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>Show me what this does</b><small>${RCX_T[fx.t]} · Coop walks you through it</small></span></button><div class="xstage rcx" id="rcx-${x.id}" hidden></div>`:''}
       ${x.note?`<p class="note">${esc(x.note)}</p>`:''}${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}
@@ -8202,9 +8222,15 @@ function renderYears(){const el=$('clockYears');if(!el)return;
   const pats=P.length?`<section class="panel"><div class="ph"><h2>This year against earlier years</h2>${PAT.updated?`<span class="lbl">Updated ${esc(fmtD(PAT.updated,{month:'short',day:'numeric'}))}</span>`:''}</div><div class="ypats">${P.map(p=>`<div class="ypat"><b>${esc(p.t)}</b><p>${esc(p.body)}</p></div>`).join('')}</div></section>`:'';
   const by={};A.forEach(e=>{(by[e.year]=by[e.year]||[]).push(e)});
   const when=e=>e.effective||e.date||e.announced||'';
-  const row=e=>`<li><span class="mono ydt">${esc(when(e)?md(when(e).length===7?when(e)+'-01':when(e)):'')}</span>${carSpan(e.carrier)}<span class="tag">${esc(YKIND[e.kind]||e.kind)}</span><span class="yhl">${esc(e.headline||'')}${e.sources&&e.sources[0]?` <a href="${escU(e.sources[0])}" target="_blank" rel="noopener" aria-label="Source">↗</a>`:''}</span></li>`;
+  const timing=e=>{const nd=noticeDays(e.announced,e.effective);return e.effective&&e.announced?`<small class="ywhen">Takes effect ${esc(fmtD(e.effective,{month:'short',day:'numeric',year:'numeric'}))} · announced ${esc(fmtD(e.announced,{month:'short',day:'numeric',year:'numeric'}))}${nd!=null?`, ${nd} days' notice`:''}</small>`:''};
+  const row=e=>`<li><span class="mono ydt">${esc(when(e)?md(when(e).length===7?when(e)+'-01':when(e)):'')}</span>${carSpan(e.carrier)}<span class="tag">${esc(YKIND[e.kind]||e.kind)}</span>${cycleOf(e.carrier,e.kind,e.effective,e.announced)==='off'?OFFC_TAG:''}<span class="yhl">${esc(e.headline||'')}${e.sources&&e.sources[0]?` <a href="${escU(e.sources[0])}" target="_blank" rel="noopener" aria-label="Source">↗</a>`:''}${timing(e)}</span></li>`;
   const years=Object.keys(by).map(Number).sort((a,b)=>b-a).map((y,i)=>`<details class="yyr"${i===0?' open':''}><summary><b class="mono">${y}</b><span class="lbl">${by[y].length} event${by[y].length===1?'':'s'}</span></summary><ul>${by[y].sort((a,b)=>String(when(a)).localeCompare(String(when(b)))).map(row).join('')}</ul></details>`).join('');
-  el.innerHTML=pats+table+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
+  // off-cycle price changes per carrier per year: the trend leadership asks about
+  const oy=[...new Set(A.map(e=>+e.year))].filter(y=>y>=2018).sort((a,b)=>a-b).slice(-10),offN=(c,y)=>A.filter(e=>e.carrier===c&&+e.year===y&&cycleOf(e.carrier,e.kind,e.effective,e.announced)==='off').length;
+  const offt=`<section class="panel"><div class="ph"><h2>Off-cycle price changes</h2><span class="lbl">By year</span></div><div class="ayw"><table class="ayt"><thead><tr><th></th>${oy.map(y=>`<th class="mono">${y}</th>`).join('')}</tr></thead>
+    <tbody>${['UPS','FedEx','USPS'].map(c=>`<tr><th>${carSpan(c)}</th>${oy.map(y=>{const n=offN(c,y);return `<td class="mono${n?'':' ynil'}">${n||'—'}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>
+    <p class="ynote">Price changes that take effect outside the carrier's annual increase and the holiday peak season: mid-year increases, new surcharges and fees, fuel-table changes. Counted by effective date. Recent years were researched in more depth, so earlier years may be undercounted.</p></section>`;
+  el.innerHTML=pats+table+offt+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
 function renderClock(){renderCalendar();renderClockList();renderYears()}
 
 /* ================= FUEL ================= */
