@@ -1691,7 +1691,7 @@ details.dr.i-down .rtile i{background:#1E4A38;color:#D3F5E6}
 .prl i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rc);margin-right:6px;vertical-align:middle}
 .pfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:14px 0 4px;border-radius:12px;overflow:hidden;background:var(--grid);border:var(--line) solid var(--grid)}
 .ystack{display:grid;gap:var(--sp-3)}.yempty{padding:var(--sp-3);color:var(--ink-2)}
-.yoyw{overflow-x:auto}.yoy{border-collapse:collapse;width:100%;font-size:var(--fs-sm)}.yoy th,.yoy td{padding:var(--sp-2);border-bottom:var(--line) solid var(--grid);text-align:right;white-space:nowrap;vertical-align:top}.yoy th:first-child{text-align:left}.yoy small{display:block;color:var(--ink-2);font-size:var(--fs-xs)}.yoy .ynil{color:var(--ink-2)}
+.ayw{overflow-x:auto}.ayt{border-collapse:collapse;width:100%;font-size:var(--fs-sm)}.ayt th,.ayt td{padding:var(--sp-2);border-bottom:var(--line) solid var(--grid);text-align:right;white-space:nowrap;vertical-align:top}.ayt th:first-child{text-align:left}.ayt small{display:block;color:var(--ink-2);font-size:var(--fs-xs)}.ayt .ynil{color:var(--ink-2)}
 .ypats{display:grid;gap:var(--sp-3);padding:var(--sp-3)}.ypat p{margin:var(--sp-1) 0 0;line-height:1.45}
 .yyr>summary{display:flex;gap:var(--sp-2);align-items:baseline;cursor:pointer;padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}.yyr ul{list-style:none;margin:0;padding:0 var(--sp-3) var(--sp-2)}
 .yyr li{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:baseline;padding:var(--sp-2) 0;border-top:var(--line) solid var(--grid);font-size:var(--fs-sm)}.yyr .ydt{min-width:52px;color:var(--ink-2)}.yyr .yhl{flex:1 1 220px}.yyr .yhl a{color:var(--ink-2);text-decoration:none}
@@ -8130,13 +8130,13 @@ function renderYears(){const el=$('clockYears');if(!el)return;
   if(ALMST<2){if(!ALMST)loadYears();el.innerHTML='<div class="panel"><p class="yempty">Loading the year-over-year history…</p></div>';return}
   const A=Array.isArray(ALM)?ALM:[];if(!A.length){el.innerHTML='<div class="panel"><p class="yempty">The year-over-year history is being built.</p></div>';return}
   const md=d=>d?fmtD(d,{month:'short',day:'numeric'}):'';
-  const isInc=e=>e.kind==='gri'||e.kind==='price_change';
+  const isInc=e=>e.kind==='gri';   // USPS raises each product by a different amount, so it stays in the year-by-year list
   const yrs=[...new Set(A.filter(isInc).map(e=>+e.year))].sort((a,b)=>a-b).slice(-10);
   const cell=(c,y)=>{const L=A.filter(e=>e.carrier===c&&+e.year===y&&isInc(e)&&e.pct!=null);if(!L.length)return '<td class="mono ynil">—</td>';
-    const ann=c!=='USPS'&&L[0].announced?`<small>ann. ${esc(md(L[0].announced))}</small>`:'';
+    const ann=L[0].announced?`<small>ann. ${esc(md(L[0].announced))}</small>`:'';
     return `<td class="mono" title="${esc(L.map(e=>e.headline).join(' · '))}">${L.map(e=>esc(String(e.pct))+'%').join(' / ')}${ann}</td>`};
-  const table=`<section class="panel"><div class="ph"><h2>Average rate increases</h2><span class="lbl">By rate year</span></div><div class="yoyw"><table class="yoy"><thead><tr><th></th>${yrs.map(y=>`<th class="mono">${y}</th>`).join('')}</tr></thead>
-    <tbody>${['UPS','FedEx','USPS'].map(c=>`<tr><th>${carSpan(c)}</th>${yrs.map(y=>cell(c,y)).join('')}</tr>`).join('')}</tbody></table></div></section>`;
+  const table=`<section class="panel"><div class="ph"><h2>UPS and FedEx general rate increases</h2><span class="lbl">Average, by rate year</span></div><div class="ayw"><table class="ayt"><thead><tr><th></th>${yrs.map(y=>`<th class="mono">${y}</th>`).join('')}</tr></thead>
+    <tbody>${['UPS','FedEx'].map(c=>`<tr><th>${carSpan(c)}</th>${yrs.map(y=>cell(c,y)).join('')}</tr>`).join('')}</tbody></table></div></section>`;
   const P=(PAT&&Array.isArray(PAT.items))?PAT.items:[];
   const pats=P.length?`<section class="panel"><div class="ph"><h2>This year against earlier years</h2>${PAT.updated?`<span class="lbl">Updated ${esc(fmtD(PAT.updated,{month:'short',day:'numeric'}))}</span>`:''}</div><div class="ypats">${P.map(p=>`<div class="ypat"><b>${esc(p.t)}</b><p>${esc(p.body)}</p></div>`).join('')}</div></section>`:'';
   const by={};A.forEach(e=>{(by[e.year]=by[e.year]||[]).push(e)});
