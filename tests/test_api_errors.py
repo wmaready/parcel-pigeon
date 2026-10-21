@@ -32,7 +32,7 @@ def test_ordinary_bad_request_names_the_reason_but_keeps_going(monkeypatch):
 
 def test_calls_leave_room_for_thinking(monkeypatch):
     """Sonnet 5.5 and Haiku 5.5 think by default and thinking counts against max_tokens; a short max_tokens once came
-    back as an empty reply. Every call asks for low effort and adds headroom on top of the reply's own limit."""
+    back as an empty reply. Every call adds headroom on top of the reply's own limit."""
     import requests, common
     sent = {}
 
@@ -44,4 +44,5 @@ def test_calls_leave_room_for_thinking(monkeypatch):
     monkeypatch.setattr(common, "API_KEY", "test-key")
     monkeypatch.setattr(requests, "post", lambda url, **k: sent.update(k["json"]) or R())
     assert common.claude("claude-haiku-5-5", "sys", "hi", max_tokens=200) == "ok"
-    assert sent["max_tokens"] == 200 + common.THINK_ROOM and sent["output_config"] == {"effort": "low"}
+    assert sent["max_tokens"] == 200 + common.THINK_ROOM
+    assert "output_config" not in sent              # each model's own default effort: quality before cost
