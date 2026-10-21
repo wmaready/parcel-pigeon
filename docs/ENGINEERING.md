@@ -63,6 +63,10 @@ Most workflow files are written as JSON (valid YAML); keep that style or convert
 | `seen.json`, `*_state.json` | pipeline memory (headlines already screened, cursors, budgets) | several |
 | `snapshots/`, `docwatch/` | raw page and document copies for diffing; removed before the site is published | `watch.py`, `docwatch.py` |
 
+Each company has a full page (`openCompany` in `index.html`, shareable as `#c=<company id>`): the same profile as the
+market map panel (`profileHTML`), plus every dated item about the company in one timeline (stories, deals, ownership
+changes, almanac pricing events) and its upcoming rate clock dates and storylines.
+
 The app also carries large built-in lists inside `index.html` (`PLAYERS`, the family registry `D`, `HQGEO` city
 coordinates, `RCX_MAP`). `data/players.json` is applied on top of them at load: new players, edges, `moves` (in date
 order) and `facts` (checked values win over built-in ones).
