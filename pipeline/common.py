@@ -205,13 +205,14 @@ def with_effort(body, effort=None):
     return body
 
 
-def claude(model, system, user, max_tokens=1500):
-    """Call the Claude Messages API and return the text reply."""
+def claude(model, system, user, max_tokens=1500, paced=True):
+    """Call the Claude Messages API and return the text reply. paced=False skips the day's pacing (for the once-a-day
+    brief, about 3 cents: readers expect it in the morning, not whenever the allowance has built up again)."""
     if not API_KEY:
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
-    if paused():
+    if paced and paused():
         raise RuntimeError("Claude calls paused: " + paused())
     for attempt in range(3):
         r = requests.post(
