@@ -52,6 +52,7 @@ the map and matter to U.S. parcel shippers or carriers. Rules:
 - Skip anything already on the map (under any name, including former names), tiny local businesses, companies with no U.S.
   operations or U.S. customers, shut-down companies, and parcel-spend consultancies and invoice-audit firms.
 - Prefer companies with real scale, funding, a national footprint, or a role in recent deals; at most 10, best first.
+- Only market movers. """ + P.MOVERS + """
 Reply JSON only: {"candidates": [{"n": "official name", "what": "one neutral sentence on what it does in parcel", "url": "page about it", "us": true|false}]}"""
 
 STATUS_Q = """You keep Parcel Pigeon's market map of the parcel industry current. For EACH company listed (id | name | what we have on file), use

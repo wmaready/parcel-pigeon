@@ -495,6 +495,10 @@ def update_market_map(deal, story):
     save("players.json", mp)
 
 
+NOT_MOVER = re.compile(r"\b(cpas?|llp|accounting|accountants|law (firm|group)|attorneys|legal|consult(ing|ants?)|advisors?|advisory|"
+                       r"staffing|recruit\w*|insurance agency|tax)\b", re.I)
+
+
 def add_candidates(orgs, story):
     """Companies a story is about that aren't on the market map yet. They wait as candidates until players.py
     researches them, confirms they're parcel players and links them to the map."""
@@ -504,11 +508,15 @@ def add_candidates(orgs, story):
     names = {n.lower() for p in known for n in [p["n"]] + (p.get("al") or [])}
     ids = {p["id"] for p in known}
     changed = False
+    if story.get("edge"):
+        return          # loosely related stories don't add companies to a parcel market map
     for o in orgs[:4]:
         name = (o.get("name") or "").strip()
         realm = REALM_OF.get(o.get("realm"))
-        if not name or not realm or name.lower() in names:
+        if not name or not realm or name.lower() in names or NOT_MOVER.search(name):
             continue
+        if realm == "capital" and story.get("cat") != "M&A":
+            continue    # investors join the map through deals they lead, not every story that names them
         base = re.sub(r"[^a-z0-9]+", "", name.lower())[:14] or "co"
         pid, k = base, 2
         while pid in ids:
