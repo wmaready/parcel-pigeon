@@ -349,11 +349,11 @@ def claude_read(url):
     """Read a page through Claude's web fetch tool, which fetches from Anthropic's servers: it gets past many of the bot
     walls that turn away GitHub's runners (not paywalls). The page text comes straight from the tool result, never from
     the model's own words, so nothing in it can be paraphrased or invented."""
-    from common import API_KEY, API_DOWN, track, api_check, extras_ok
+    from common import API_KEY, API_DOWN, track, api_check, extras_ok, EFFORT, THINK_ROOM
     if not API_KEY or API_DOWN or READS["n"] >= CLAUDE_READS or not extras_ok():
         return None
     READS["n"] += 1
-    body = {"model": MODEL_WRITE, "max_tokens": 300,
+    body = {"model": MODEL_WRITE, "max_tokens": 300 + THINK_ROOM, "output_config": {"effort": EFFORT},
             "tools": [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 1, "max_content_tokens": 20000}],
             "messages": [{"role": "user", "content": f"Fetch this page with web_fetch, then reply OK.\n{url}"}]}
     try:
@@ -734,8 +734,8 @@ ANNUAL = [(re.compile(r"peak|holiday surcharge|demand surcharge", re.I), "peak")
           (re.compile(r"usps.*(price|pricing)", re.I), "usps")]
 
 
-def cycle_of(kind, d):
-    """Same calendar as the app (stories.js thrCycle): peak runs into January; next year's rates start late summer."""
+def season_of(kind, d):
+    """The rate year or peak season a storyline date belongs to. Same calendar as the app (stories.js thrCycle): peak runs into January; next year's rates start late summer."""
     try:
         y, m = int(str(d)[:4]), int(str(d)[5:7])
     except ValueError:
@@ -751,8 +751,8 @@ def cycle_count(t, key, story, live):
     if not kind:
         return len(ids)
     dates = {s["id"]: s.get("date") for s in load("seed.json", {}).get("news", []) + list(live)}
-    cur = cycle_of(kind, story.get("date"))
-    return sum(1 for i in ids if cycle_of(kind, dates.get(i)) == cur)
+    cur = season_of(kind, story.get("date"))
+    return sum(1 for i in ids if season_of(kind, dates.get(i)) == cur)
 
 def backfill_threads(live):
     """One time: group what's already published (and the app's built-in stories) into storylines."""

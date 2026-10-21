@@ -28,3 +28,20 @@ def test_ordinary_bad_request_names_the_reason_but_keeps_going(monkeypatch):
     with pytest.raises(RuntimeError, match="max_tokens"):
         common.api_check(R(400, {"error": {"type": "invalid_request_error", "message": "max_tokens: too large"}}))
     assert not common.API_DOWN
+
+
+def test_calls_leave_room_for_thinking(monkeypatch):
+    """Sonnet 5.5 and Haiku 5.5 think by default and thinking counts against max_tokens; a short max_tokens once came
+    back as an empty reply. Every call asks for low effort and adds headroom on top of the reply's own limit."""
+    import requests, common
+    sent = {}
+
+    class R:
+        status_code = 200
+        def json(self):
+            return {"model": "claude-haiku-5-5", "content": [{"type": "thinking", "thinking": ""}, {"type": "text", "text": "ok"}],
+                    "usage": {"input_tokens": 10, "output_tokens": 5}}
+    monkeypatch.setattr(common, "API_KEY", "test-key")
+    monkeypatch.setattr(requests, "post", lambda url, **k: sent.update(k["json"]) or R())
+    assert common.claude("claude-haiku-5-5", "sys", "hi", max_tokens=200) == "ok"
+    assert sent["max_tokens"] == 200 + common.THINK_ROOM and sent["output_config"] == {"effort": "low"}
