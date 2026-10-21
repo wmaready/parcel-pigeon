@@ -50,3 +50,12 @@ def test_all_routes_blocked_raises(monkeypatch):
 def test_pdf_wanted_html_returned(monkeypatch):
     monkeypatch.setattr(F, "ROUTES", [page(b"<html>Access Denied</html>"), page(b"%PDF-1.4 real", "proxy", ctype="application/pdf")])
     assert F.fetch("https://www.fedex.com/a/FedEx_Standard_List_Rates_2027.pdf").via == "proxy"
+
+
+def test_late_routes_after_a_rendered_block(monkeypatch):
+    real = F.Page(b"<html><body>" + b"FedEx surcharge table line " * 300 + b"</body></html>", {"content-type": "text/html"}, "u", "archive", "2026-10-18")
+    monkeypatch.setattr(F, "_proxy", lambda u, t: None)
+    monkeypatch.setattr(F, "_archive", lambda u, t: real)
+    assert F.fetch_late("https://www.fedex.com/en-us/shipping/fuel-surcharge.html").via == "archive"
+    monkeypatch.setattr(F, "_archive", lambda u, t: F.Page(FEDEX_BLOCK.encode(), {}, u, "archive"))
+    assert F.fetch_late("https://www.fedex.com/x") is None

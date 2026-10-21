@@ -11,7 +11,7 @@ from common import pdf_to_text, ROOT, DATA, load, save, h, get, claude, parse_js
 from scoop import is_covered, notify, ask, big
 from common import dedupe_live, same_event
 from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
-from fetch import fetch, render, is_blocked, is_pdf, Blocked
+from fetch import fetch, fetch_late, render, is_blocked, is_pdf, Blocked
 
 SNAP = DATA / "snapshots"
 MAX_DIFF_CHARS = 12000
@@ -51,7 +51,15 @@ def page_text(url, full=False):
     if full:
         text = "\n".join(l.strip() for l in re.sub(r"<[^>]+>", "\n", re.sub(r"(?is)<(script|style|noscript|svg)[^>]*>.*?</\1>", " ", html)).splitlines() if l.strip())
     if is_blocked(text):
-        raise Blocked("blocked by the carrier's site (block page after rendering)")
+        late = fetch_late(url)
+        if late is None:
+            raise Blocked("blocked by the carrier's site (block page after rendering; no proxy or archive copy)")
+        pg, html = late, late.text
+        text = trafilatura.extract(html, include_tables=True, include_comments=False) or ""
+        if full:
+            text = "\n".join(l.strip() for l in re.sub(r"<[^>]+>", "\n", re.sub(r"(?is)<(script|style|noscript|svg)[^>]*>.*?</\1>", " ", html)).splitlines() if l.strip())
+        if is_blocked(text):
+            raise Blocked("blocked by the carrier's site (the archive copy is a block page too)")
     links = sorted({canon(urllib.parse.urljoin(url, m)) for m in re.findall(r'href="([^"]+\.pdf[^"]*)"', html, re.I)})
     return text, links, pg
 

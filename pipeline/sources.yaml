@@ -147,13 +147,13 @@ discovery:
   - "site:retailtouchpoints.com shipping OR delivery OR returns"
 
 # Company and regulator sources, read every hour so a filing or release is screened before the press writes it up.
-# kind: edgar = an SEC company filing feed (8-K current reports); fedreg = a Federal Register feed; gnews = a Google News
+# kind: edgar = a company's SEC filings (data.sec.gov submissions data; 8-K current reports only); fedreg = a Federal Register feed; gnews = a Google News
 # search of a press-release wire or newsroom. Items from these are tier 0 (the company's own word).
 primary:
-  - {name: "SEC: UPS 8-K",           kind: edgar, company: UPS,           url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001090727&type=8-K&dateb=&owner=include&count=20&output=atom"}
-  - {name: "SEC: FedEx 8-K",         kind: edgar, company: FedEx,         url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001048911&type=8-K&dateb=&owner=include&count=20&output=atom"}
-  - {name: "SEC: Amazon 8-K",        kind: edgar, company: Amazon,        url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=8-K&dateb=&owner=include&count=20&output=atom"}
-  - {name: "SEC: Pitney Bowes 8-K",  kind: edgar, company: Pitney Bowes,  url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078814&type=8-K&dateb=&owner=include&count=20&output=atom"}
+  - {name: "SEC: UPS 8-K",           kind: edgar, company: UPS,           url: "https://data.sec.gov/submissions/CIK0001090727.json"}
+  - {name: "SEC: FedEx 8-K",         kind: edgar, company: FedEx,         url: "https://data.sec.gov/submissions/CIK0001048911.json"}
+  - {name: "SEC: Amazon 8-K",        kind: edgar, company: Amazon,        url: "https://data.sec.gov/submissions/CIK0001018724.json"}
+  - {name: "SEC: Pitney Bowes 8-K",  kind: edgar, company: Pitney Bowes,  url: "https://data.sec.gov/submissions/CIK0000078814.json"}
   - {name: "Federal Register: USPS", kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=postal-service&order=newest"}
   - {name: "Federal Register: PRC",  kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=postal-regulatory-commission&order=newest"}
   - {name: "Federal Register: de minimis and postal imports", kind: fedreg, url: "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bterm%5D=%22de+minimis%22+OR+%22postal+shipments%22&order=newest"}
