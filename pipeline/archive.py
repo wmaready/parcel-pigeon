@@ -8,7 +8,8 @@ A changed file replaces the old copy (git history keeps earlier versions). Set P
 Usage: python archive.py [--max 6]      (alerts.py runs it every run)
 """
 import datetime as dt, hashlib, os, re, sys
-from common import ROOT, load, save, get
+from common import ROOT, load, save
+from fetch import fetch
 
 FILES = ROOT / "data" / "files"
 MAX_MB = float(os.environ.get("PP_ARCHIVE_MAX_MB") or 8)
@@ -56,7 +57,7 @@ def main(limit=6):
         e = ext_of(d["u"])
         d["fchk"] = TODAY.isoformat()
         try:
-            r = get(d["u"], timeout=40)
+            r = fetch(d["u"], timeout=40)
             body = r.content
         except Exception as ex:
             print(f"  archive: couldn't fetch {d['n'][:60]}: {ex}", file=sys.stderr); continue

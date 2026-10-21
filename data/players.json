@@ -2776,6 +2776,14 @@
    "t": "Delivers for TikTok Shop",
    "url": "https://www.theinformation.com/articles/sleeping-warehouses-hidden-costs-shein-temu-deliveries",
    "story": "afb6fa67940a7"
+  },
+  {
+   "a": "fedex",
+   "b": "inpost",
+   "k": "invested",
+   "y": "2026",
+   "t": "FedEx joins the Advent-led consortium that bought InPost",
+   "url": "https://pulse2.com/inpost-fedex-and-advent-led-consortium-completes-e7-8-billion-buyout-after-securing-89-8-of-shares/"
   }
  ],
  "moves": [
@@ -2850,6 +2858,162 @@
    "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform",
    "t": "WWEX Group and Auctane merge as ShipStation Global",
    "story": "a386e5fed7984"
+  },
+  {
+   "id": "pandion",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2025-01-01",
+   "url": "https://www.geekwire.com/2025/heavily-funded-pandion-delivery-startup-closes-abruptly-in-latest-logistics-industry-fallout/",
+   "url2": "https://www.supplychaindive.com/news/pandion-parcel-delivery-shuts-down/737142/",
+   "t": "Pandion shut down in January 2025 after sale talks failed.",
+   "role": null
+  },
+  {
+   "id": "drizly",
+   "k": "closed",
+   "parent": null,
+   "from": "uber",
+   "pend": null,
+   "into": null,
+   "d": "2024-03-31",
+   "url": "https://abc7news.com/post/uber-drizley-alcohol-delivery-app-shutting-down/14331526/",
+   "url2": "https://www.convenience.org/Media/Daily/2024/Jan/17/3-Uber-Shuts-Down-$1-Billion-Alcohol-Delivery_Ops",
+   "t": "Uber shut Drizly down at the end of March 2024 and folded alcohol delivery into Uber Eats.",
+   "role": null
+  },
+  {
+   "id": "sendle",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-02-25",
+   "url": "https://ia.acs.org.au/article/2026/sendle-shuts-down-after-12-years---100m-in-funding.html",
+   "url2": "https://www.easyship.com/blog/sendle-shutdown",
+   "t": "Sendle stopped taking bookings on Jan. 11, 2026 and entered liquidation on Feb. 25, 2026.",
+   "role": null
+  },
+  {
+   "id": "pbgec",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2024-08-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/78814/000007881424000067/pbi-20240930.htm",
+   "url2": "https://www.supplychaindive.com/news/pitney-bowes-global-ecommerce-bankruptcy-chapter-11/724545/",
+   "t": "Pitney Bowes' Global Ecommerce unit was placed in Chapter 11 in August 2024 to wind down.",
+   "role": null
+  },
+  {
+   "id": "grubhub",
+   "k": "bought",
+   "parent": "wonder",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2025-01-07",
+   "url": "https://nrn.com/mergers-acquisitions/wonder-finalizes-acquisition-of-grubhub-for-650-million",
+   "url2": "https://news.wttw.com/2024/11/13/just-eat-takeaway-sells-chicago-based-grubhub-650-million-just-3-years-after-buying-app",
+   "t": "Wonder completed its $650 million purchase of Grubhub from Just Eat Takeaway in January 2025.",
+   "role": null
+  },
+  {
+   "id": "paack",
+   "k": "bought",
+   "parent": "colisprive",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-08-03",
+   "url": "https://www.cevalogistics.com/news-and-media/newsroom/press-release/colis-prive-completes-purchase-paack-iberia-france",
+   "url2": "https://cross-border-magazine.com/ceva-completes-paack-acquisition",
+   "t": "Colis Privé (CEVA Logistics, CMA CGM) completed its purchase of Paack Iberia and Paack France.",
+   "role": null
+  },
+  {
+   "id": "geopost",
+   "k": "bought",
+   "parent": "laposte",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": null,
+   "url": "https://www.xerfi.com/etudes-par-entreprise/geopost_340012392",
+   "url2": "https://lei.bloomberg.com/leis/view/969500BRDRBPU2R89V61",
+   "t": "Geopost (formerly DPDgroup) is La Poste Groupe's parcel and express arm.",
+   "role": null
+  },
+  {
+   "id": "inpost",
+   "k": "bought",
+   "parent": "advent",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-09-30",
+   "url": "https://www.adventinternational.com/ideas/polands-delivery-champion-rafal-brzoska-ceo-of-inpost/",
+   "url2": "https://inpost.eu/sites/default/files/2026-05/InPost%20Press%20release%20launch%20offer%2022.05.2026_0.pdf",
+   "t": "A consortium led by Advent International with FedEx, A&R and PPF completed its buyout of InPost.",
+   "role": null
+  },
+  {
+   "id": "firstmile",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-01-10",
+   "url": "https://www.businesswire.com/news/home/20250807254032/en/Better-together-FirstMile-ACI-Logistix-and-Sendle-merge-to-deliver-more-for-shippers-of-all-sizes",
+   "url2": "https://www.supplychaindive.com/news/sendle-aci-logistix-firstmile-fast-group-shut-down/809356/",
+   "t": "FAST Group, formed by FirstMile, ACI Logistix and Sendle, voted to wind down in January 2026.",
+   "role": null
+  },
+  {
+   "id": "acilogistix",
+   "k": "closed",
+   "parent": null,
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-01-10",
+   "url": "https://www.businesswire.com/news/home/20250807254032/en/Better-together-FirstMile-ACI-Logistix-and-Sendle-merge-to-deliver-more-for-shippers-of-all-sizes",
+   "url2": "https://www.supplychaindive.com/news/sendle-aci-logistix-firstmile-fast-group-shut-down/809356/",
+   "t": "FAST Group, formed by FirstMile, ACI Logistix and Sendle, voted to wind down in January 2026.",
+   "role": null
+  },
+  {
+   "id": "yodel",
+   "k": "closed",
+   "parent": null,
+   "from": "inpost",
+   "pend": null,
+   "into": "inpost",
+   "d": "2026-07-17",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/05200072",
+   "url2": "https://www.ordertracker.com/carriers/yodel",
+   "t": "InPost retired the Yodel brand; the UK network now runs as InPost.",
+   "role": null
+  },
+  {
+   "id": "bollorelog",
+   "k": "closed",
+   "parent": null,
+   "from": "cmacgm",
+   "pend": null,
+   "into": "ceva",
+   "d": "2024-12-31",
+   "url": "https://container-news.com/ceva-logistics-accelerates-growth-with-integration-of-bollore-logistics",
+   "url2": "https://tanknewsinternational.com/ceva-logistics-welcomes-bollore-logistics-and-unites-under-one-brand/",
+   "t": "CMA CGM folded Bolloré Logistics into CEVA Logistics after buying it in February 2024.",
+   "role": null
   }
  ],
  "checks": {
@@ -2901,5 +3065,956 @@
   "anthropologie": "2026-10-19",
   "exelot": "2026-10-19",
   "uniuniuniexpre": "2026-10-20"
+ },
+ "facts": {
+  "ups": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.boardroomalpha.com/sec/ups-10-q-2025-08-06-0001090727-25-000064",
+    "https://www.boardroomalpha.com/sec/ups-10-q-2025-11-05-0001628280-25-049661",
+    "https://www.historylink.org/file/1679",
+    "https://www.britannica.com/print/article/683594"
+   ],
+   "hq": "Atlanta, GA, USA",
+   "yr": "1907"
+  },
+  "dhlexpress": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://group.dhl.com/en/about-us/the-group/history/1969.html",
+    "https://en.wikipedia.org/wiki/DHL",
+    "https://www.ordertracker.com/carriers/dhl-express"
+   ],
+   "hq": "Bonn, Germany",
+   "yr": "1969"
+  },
+  "ontrac": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.freightwaves.com/news/ontrac-ceo-duffy-leaves-for-uk-pest-control-company",
+    "https://www.ontrac.com/?p=100947",
+    "https://www.sortlist.co.uk/agency/ontrac-3",
+    "https://runalphaloops.com/carrier/va/550978/ontrac-logistics-inc",
+    "https://en.wikipedia.org/wiki/OnTrac",
+    "https://www.ziprecruiter.com/co/OnTrac"
+   ],
+   "hq": "Chantilly, VA, USA",
+   "geo": [
+    -77.43,
+    38.89
+   ]
+  },
+  "cdl": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://cdldelivers.com/about-us",
+    "https://www.zoominfo.com/c/cdl-last-mile-solutions/351504939",
+    "https://www.17track.net/en/carriers/cdl-last-mile"
+   ],
+   "hq": "New York, NY, USA",
+   "yr": "1955"
+  },
+  "gofo": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.ecomcrew.com/a-new-chinese-backed-carrier-just-launched-last-mile-delivery-across-canada/",
+    "https://www.datanyze.com/companies/gofo/5000068765",
+    "https://smbceo.com/2026/05/21/gofo-express-advancing-logistics-through-expansion-and-infrastructure-upgrades/",
+    "https://www.fulfill.com/partners/gofo",
+    "https://racklify.com/news/gofo-completes-acquisition-cirro-e/",
+    "https://finance.yahoo.com/news/startup-courier-gofo-acquires-cirro-141919720.html"
+   ],
+   "yr": "2023"
+  },
+  "diamond": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://pitchbook.com/profiles/company/366457-51",
+    "https://pulse2.com/priority-courier-experts-acquires-priority-dispatch-and-diamond-expedited-adding-500-drivers-and-250000-annual-orders/",
+    "https://www.ajot.com/news/priority-courier-experts-acquires-priority-dispatch-inc-and-diamond-expedited-deepening-midwest-presence",
+    "https://www.freightwaves.com/news/private-equity-group-rolls-up-3-small-firms-for-courier-network"
+   ],
+   "hq": "Des Plaines, IL, USA",
+   "geo": [
+    -87.88,
+    42.03
+   ],
+   "yr": "1995"
+  },
+  "uber": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+    "https://hk.finance.yahoo.com/quote/UBER/profile"
+   ],
+   "hq": "San Francisco, CA, USA",
+   "yr": "2009"
+  },
+  "deliveroo": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1792789/000114036125037039/ef20056500_ex99-1.htm",
+    "https://www.barchart.com/story/news/35211733/doordash-finalizes-3-7-billion-deliveroo-acquisition",
+    "https://builtinlondon.uk/company/deliveroo",
+    "https://magazine.wharton.upenn.edu/the-innovator-william-shu-wg12/"
+   ],
+   "hq": "London, UK",
+   "yr": "2013"
+  },
+  "walmart": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://corporate.walmart.com/news/2025/11/20/walmart-to-transfer-stock-exchange-listing-to-nasdaq",
+    "https://www.sec.gov/Archives/edgar/data/104169/000010416925000177/pressrelease-transfertonas.htm",
+    "https://tech.walmart.com/content/usone/en_us/company/winning-workplace/northwest-arkansas.html",
+    "https://americancompanies.com/news/is-walmart-an-american-company-inside-the-bentonville-retail-giant/"
+   ],
+   "hq": "Bentonville, AR, USA",
+   "yr": "1962"
+  },
+  "costco": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/cost-20240901.htm"
+   ],
+   "hq": "Issaquah, WA, USA",
+   "yr": "1983"
+  },
+  "tiktokshop": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://techcrunch.com/2023/09/12/tiktok-shop-officially-launches-in-the-u-s",
+    "https://gulfnews.com/technology/companies/tiktok-shop-launches-in-the-us-as-the-company-bets-big-on-e-commerce-1.1694532087948",
+    "https://retail-news.de/tiktok-strukturumbau-usa-shop-advertising-bytedance/",
+    "https://www.affiversemedia.com/?p=103966"
+   ],
+   "yr": "2023"
+  },
+  "dhl": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://group.dhl.com/content/dam/deutschepostdhl/de/about-us/about-us-assets/factsheet-neustrukturierung-01-09-2026.pdf",
+    "https://www.tradingview.com/symbols/XETR-DHL/",
+    "https://lightyear.com/en/stock/DHL:XETRA"
+   ],
+   "hq": "Bonn, Germany"
+  },
+  "kn": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.tradingview.com/symbols/SIX-KNIN/",
+    "https://pitchbook.com/profiles/company/59583-25"
+   ],
+   "hq": "Schindellegi, Switzerland",
+   "yr": "1890"
+  },
+  "estafeta": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.estafeta.com/acerca-de-estafeta",
+    "https://mergr.com/company/estafeta",
+    "https://mexicobusiness.news/logistics/news/ups-cancels-acquisition-estafeta",
+    "https://www.supplychain247.com/article/ups_says_its_deal_to_acquire_estafeta_is_now_off/fleet_management"
+   ],
+   "hq": "Mexico City, Mexico",
+   "yr": "1979"
+  },
+  "hillebrand": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://hillebrand.com/media/publication/hillebrand-joins-forces-with-deutsche-post-dhl",
+    "https://www.logisticsmgmt.com/article/deutsche_post_dhl_groups_acquisition_of_j.f._hillebrand_group_is_a_done_dea",
+    "https://glossary.wein.plus/hillebrand",
+    "https://nombase.com/companies/hillebranddhl"
+   ],
+   "hq": "Mainz, Germany",
+   "geo": [
+    8.27,
+    50.0
+   ],
+   "yr": "1844"
+  },
+  "zongteng": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.bnnbloomberg.ca/glp-backed-china-logistics-firm-zongteng-group-weighing-ipo-1.1666077",
+    "https://app.dealroom.co/companies/zongteng_network/team",
+    "https://www.yunexpress.com/about-us"
+   ],
+   "hq": "Shenzhen, China",
+   "geo": [
+    114.06,
+    22.54
+   ]
+  },
+  "speedx": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cbinsights.com/investor/speedx",
+    "https://www.ordertracker.com/carriers/speedx",
+    "https://craft.co/speed-xpress",
+    "https://www.ajot.com/news/speedx-founder-acquires-ags-and-aims-to-build-a-1-billion-end-to-end-supply-chain-enterprise",
+    "https://airfreight.news/articles/full/speedx-and-proship-partner-to-give-enterprise-shippers-fast-last-mile-deliveries-to-over-80-of-the-u.s-population-via-a-single-platform"
+   ],
+   "yr": "2022"
+  },
+  "wolt": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://explore.wolt.com/el/cyp/about",
+    "https://seedtable.com/exits/wolt"
+   ],
+   "hq": "Helsinki, Finland",
+   "yr": "2014"
+  },
+  "jet": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.retaildetail.eu/news/food/acquisition-of-just-eat-takeaway-completed-the-hard-work-is-just-beginning/",
+    "https://www.businessday.co.za/bd/companies/telecoms-and-technology/2025-10-17-prosus-now-owns-98-of-just-eat-takeawaycom/",
+    "https://www.ajbell.co.uk/news/articles/prosus-start-squeezing-out-minority-just-eat-takeaway-shareholders"
+   ],
+   "hq": "Amsterdam, Netherlands"
+  },
+  "atlasair": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.apollo.com/insights-news/pressreleases/2023/03/investor-group-led-by-apollo-together-with-j-f-lehman-company-and-hill-city-capital-completes-acquisition-of-atlas-air-worldwide-200115897",
+    "https://www.atlasairworldwide.com/about-us/interactive-timeline/",
+    "https://flightglobal.com/crop-duster-to-cargo-giant/35602.article"
+   ],
+   "hq": "Purchase, NY, USA",
+   "yr": "1992"
+  },
+  "venipak": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://venipak.com/lt/en/?p=16232",
+    "https://www.ipc.be/news-portal/e-commerce/2026/07/29/13/25/dhl-ecommerce-to-acquire-venipak",
+    "https://www.cobalt.legal/news-cases/agreement-signed-for-the-acquisition-of-venipak-group/",
+    "https://nshift.com/carriers/venipak",
+    "https://www.cvbankas.lt/head-of-marketing-for-baltics-vilniuje/1-14125962"
+   ],
+   "hq": "Vilnius, Lithuania",
+   "geo": [
+    25.28,
+    54.69
+   ],
+   "yr": "2004",
+   "own": "private"
+  },
+  "gap": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.boardroomalpha.com/sec/gap-10-k-2026-03-17-0001628280-26-018573",
+    "https://apparelnews.net/news/2024/aug/15/gap-to-celebrate-55th-anniversary-with-new-nyse-ticker-symbol",
+    "https://sgbonline.com/athleta-parent-company-gap-inc-changing-ticker-symbol-to-gap/"
+   ],
+   "hq": "San Francisco, CA, USA",
+   "yr": "1969"
+  },
+  "dicks": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1089063/000114036125023387/ny20050218x1_s4.htm",
+    "https://www.streetinsider.com/PRNewswire/DICKS+Sporting+Goods+Completes+Acquisition+of+Foot+Locker/25306095.html",
+    "https://storebrands.com/dicks-sporting-goods-completes-foot-locker-acquisition"
+   ],
+   "hq": "Coraopolis, PA, USA",
+   "geo": [
+    -80.17,
+    40.52
+   ],
+   "yr": "1948"
+  },
+  "fedex": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/FedEx-Q4-FY26-Stat-Book.pdf",
+    "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+    "https://www.nasdaq.com/press-release/fedex-completes-spin-fedex-freight-2026-06-01"
+   ],
+   "hq": "Memphis, TN, USA"
+  },
+  "dhlecom": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.dhl.com/us-en/home/press/press-archive/2025/dhl-ecommerce-announces-new-ceo-for-the-americas.html",
+    "https://www.dhl.com/us-en/home/our-divisions/ecommerce/customer-service/contact-ecommerce-business-contact-us.html"
+   ],
+   "hq": "Weston, FL, USA",
+   "geo": [
+    -80.4,
+    26.1
+   ]
+  },
+  "gls": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://newsroom.de.gls-group.com/news/gso-completes-name-change-to-general-logistics-systems-us--inc./s/02fe3d39-d29e-4699-a30f-44d3e89ab8d2",
+    "https://www.cbinsights.com/company/gls-3/",
+    "https://www.highperformr.ai/company/general-logistics-systems-us",
+    "https://gls-group.com/US/en/about-gls/",
+    "https://www.logisticsmanager.com/royal-mail-buys-us-parcel-carrier",
+    "https://www.logisticsmanager.com/gls-group-announces-sale-of-us-freight-divisions-to-dc-logistics"
+   ],
+   "hq": "San Ramon, CA, USA",
+   "geo": [
+    -121.98,
+    37.78
+   ],
+   "yr": "1995"
+  },
+  "bettertrucks": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://equityzen.com/company/bettertrucks/",
+    "https://www.employbl.com/companies/Better-Trucks",
+    "https://www.roserocket.com/trucking-company/better-trucks-inc-usdot-3246657",
+    "https://www.builtinchicago.org/company/better-trucks",
+    "https://www.cbinsights.com/company/better-trucks",
+    "https://multichannelmerchant.com/operations/better-trucks-gls-link-up-expand-parcel-delivery-footprint"
+   ],
+   "yr": "2019"
+  },
+  "uniuni": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://betakit.com/uniuni-secures-additional-42-2-million-cad-to-strengthen-us-expansion/",
+    "https://thelogic.co/briefing/b-c-last-mile-delivery-company-uniuni-to-go-public-via-spac/",
+    "https://betakit.com/uniuni-seeks-new-round-of-private-funding-as-spac-deal-falters/",
+    "https://www.fasken.com/en/experience/2026/05/uniuni-enters-into-definitive-purchase-agreement-with-mak"
+   ],
+   "hq": "Richmond, BC, Canada",
+   "geo": [
+    -123.14,
+    49.17
+   ],
+   "yr": "2019"
+  },
+  "inpax": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.ccjdigital.com/business/article/15833561/priority-courier-experts-acquires-inpax-shipping-solutions",
+    "https://www.ajot.com/news/priority-courier-experts-acquires-inpax-expanding-into-the-southeast",
+    "https://aircargoweek.com/?p=112069",
+    "https://pitchbook.com/profiles/company/388390-69"
+   ],
+   "hq": "Atlanta, GA, USA"
+  },
+  "instacart": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm"
+   ],
+   "hq": "San Francisco, CA, USA"
+  },
+  "gopuff": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cbinsights.com/company/gopuff/customers",
+    "https://www.thedp.com/article/2018/11/gopuff-philadelphia-drexel-delivery-headquarters",
+    "https://www.inquirer.com/topic/gopuff"
+   ],
+   "hq": "Philadelphia, PA, USA",
+   "yr": "2013"
+  },
+  "target": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/27419/000002741923000015/tgt-20230128.htm",
+    "https://www.britannica.com/print/article/1235321"
+   ],
+   "hq": "Minneapolis, MN, USA",
+   "yr": "1902"
+  },
+  "kroger": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/0000056873/000110465926111205/tm2625941-1_424b5.htm",
+    "https://pitchbook.com/profiles/company/12853-18"
+   ],
+   "hq": "Cincinnati, OH, USA",
+   "yr": "1883"
+  },
+  "temu": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1737806/000110465923049927/pdd-20221231x20f.htm",
+    "https://www.temu.com/terms-of-use.html",
+    "https://fortune.com/2024/04/26/temu-shopping-app-china-us-headquarters",
+    "https://fashionunited.uk/news/business/chinese-fashion-giant-temu-moves-headquarters-to-dublin/2023050869421",
+    "https://techcrunch.com/?p=2537697"
+   ],
+   "yr": "2022"
+  },
+  "cmacgm": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://maritime-executive.com/article/cma-cgm-celebrates-forty-years",
+    "https://www.freshplaza.com/north-america/article/2201397/cma-cgm-celebrates-40-years/",
+    "https://cross-border-magazine.com/ceva-completes-paack-acquisition"
+   ],
+   "hq": "Marseille, France",
+   "yr": "1978"
+  },
+  "flexport": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://sacra.com/c/flexport/",
+    "https://obj.ca/shopify-invests-in-san-francisco-based-logistics-giant-flexport/",
+    "https://thelogic.co/briefing/shopify-invests-us260m-in-flexport/"
+   ],
+   "hq": "San Francisco, CA, USA"
+  },
+  "atsg": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://stonepeak.com/news/stonepeak-completes-acquisition-of-atsg",
+    "https://www.businesswire.com/news/home/20250411108782/en",
+    "https://www.stattimes.com/air-cargo/stonepeak-completes-31-billion-acquisition-of-atsg-in-all-cash-deal-1354981",
+    "https://www.sec.gov/Archives/edgar/data/0000894081/000119312509061133/d10k.htm"
+   ],
+   "hq": "Wilmington, OH, USA",
+   "geo": [
+    -83.83,
+    39.44
+   ],
+   "yr": "2007"
+  },
+  "apex": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://paulhastings.com/news/apex-internationals-acquisition-by-kuehne-nagel",
+    "https://www.freightwaves.com/news/breaking-news-kuehne-nagel-buys-hong-kong-forwarder-apex",
+    "https://www.dealstreetasia.com/stories/partners-group-apex-logistics-460817",
+    "https://www.mainsights.io/ma-news/switzerland-based-partners-group-sells-249-stake-in-singapore-based-logistics-firm-apex-logistics-to-kuehnenagel-for-over-usd-4000m",
+    "https://www.ttnews.com/articles/kuehnenagel-apex-logistics"
+   ],
+   "yr": "2001"
+  },
+  "alibaba": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/0001577552/000119312526231755/baba-20260331.htm",
+    "https://es.finance.yahoo.com/quote/BABA/profile"
+   ],
+   "hq": "Hangzhou, China",
+   "yr": "1999"
+  },
+  "dropoff": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cbinsights.com/investor/dropoff",
+    "https://techcrunch.com/2015/06/22/dropoff-raises-7-million-to-scale-its-same-day-b2b-delivery-service",
+    "https://www.dropoff.com/blog/dropoff-acquires-rightaway-delivery-after-years-of-success/",
+    "https://bizneworleans.com/qcs-logistics-announces-sale-to-dropoff-inc/",
+    "https://www.preqin.com/data/profile/asset/dropoff--inc-/155380"
+   ],
+   "hq": "Austin, TX, USA"
+  },
+  "ulta": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1403568/000155837024003941/ulta-20240203x10k.htm",
+    "https://www.ulta.com/investor/news-events/press-releases/detail/236"
+   ],
+   "hq": "Bolingbrook, IL, USA",
+   "yr": "1990"
+  },
+  "wonder": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.restaurantbusinessonline.com/technology/wonder-completes-acquisition-grubhub-650m",
+    "https://www.nrn.com/mergers-acquisitions/wonder-finalizes-acquisition-grubhub-650-million",
+    "https://www.fortune.com/2026/07/16/exclusive-marc-lore-says-wonder-is-gearing-up-for-an-ipo-650-million-9-billion-valuation-cathie-wood-grubhub-food-delivery/"
+   ],
+   "yr": "2018"
+  },
+  "inpost": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.adventinternational.com/ideas/polands-delivery-champion-rafal-brzoska-ceo-of-inpost/",
+    "https://inpost.eu/sites/default/files/2026-05/InPost%20Press%20release%20launch%20offer%2022.05.2026_0.pdf",
+    "https://pulse2.com/inpost-fedex-and-advent-led-consortium-completes-e7-8-billion-buyout-after-securing-89-8-of-shares/",
+    "https://trans.info/en/inpost-takeover-moves-closer-as-consortium-secures-majority-of-shares-504288",
+    "https://en.wikipedia.org/wiki/InPost"
+   ],
+   "hq": "Kraków, Poland",
+   "own": "pe"
+  },
+  "paack": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cevalogistics.com/news-and-media/newsroom/press-release/colis-prive-completes-purchase-paack-iberia-france",
+    "https://cross-border-magazine.com/ceva-completes-paack-acquisition",
+    "https://startups.one.gob.es/news/feed/cma-cgm-s-colis-prive-buys-spanish-delivery-startup-paack-to-expand-last-mile-network"
+   ],
+   "hq": "Barcelona, Spain",
+   "yr": "2015",
+   "own": "sub"
+  },
+  "kohls": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://s204.q4cdn.com/271435555/files/doc_financials/2025/q4/5ecff7ad-4587-499d-a710-6d874b6bfe13.pdf",
+    "https://www.sec.gov/Archives/edgar/data/885639/000156459021014145/kss-10k_20210130.htm",
+    "https://secure.businesswire.com/news/home/20260818064212/en/DoorDash-Makes-Back-to-School-Shopping-Easier-with-Barnes-Noble-Carters-and-Kohls"
+   ],
+   "hq": "Menomonee Falls, WI, USA",
+   "geo": [
+    -88.12,
+    43.18
+   ]
+  },
+  "footlocker": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1089063/000114036125034244/ef20055283_ex99-1.htm",
+    "https://www.retaildive.com/news/foot-locker-backs-out-headquarters-relocation-florida-dicks-sporting-goods-acquisition/805793/",
+    "https://www.businessobserverfl.com/news/2025/sep/09/foot-lockers-sale-dicks-closes-hq-st-pete",
+    "https://www.sgieurope.com/people-and-hr/dicks-begins-foot-locker-restructuring/120323.article",
+    "https://www.fundinguniverse.com/company-histories/foot-locker-inc-history",
+    "https://www.encyclopedia.com/books/politics-and-business-magazines/foot-locker-inc"
+   ],
+   "hq": "New York, NY, USA"
+  },
+  "usps": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.govinfo.gov/content/pkg/GOVMAN-2009-09-15/html/GOVMAN-2009-09-15-Pg534.htm",
+    "https://en.wikipedia.org/wiki/United_States_Postal_Service",
+    "https://ebsco.com/research-starters/history/independent-agency-takes-over-us-postal-service"
+   ],
+   "hq": "Washington, DC, USA",
+   "yr": "1971"
+  },
+  "lso": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/LSO_(company)",
+    "https://www.ordertracker.com/couriers/lone-star-overnight",
+    "https://www.datanyze.com/people/M-Cs/11559264674"
+   ],
+   "hq": "Austin, TX, USA"
+  },
+  "pce": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.businesswire.com/news/home/20230822261047/en/Trident-Makes-Strategic-Investment-in-Priority-Courier-Experts",
+    "https://www.cbinsights.com/company/priority-courier-experts",
+    "https://www.ajot.com/news/priority-courier-experts-acquires-priority-dispatch-inc-and-diamond-expedited-deepening-midwest-presence",
+    "https://www.dcvelocity.com/articles/58336-priority-courier-experts-gains-private-equity-backing"
+   ],
+   "hq": "Minneapolis-St. Paul, MN, USA"
+  },
+  "roadie": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cbinsights.com/company/roadie",
+    "https://www.ziprecruiter.com/co/Roadie",
+    "https://en.wikipedia.org/wiki/Roadie_(app)"
+   ],
+   "hq": "Atlanta, GA, USA",
+   "yr": "2014"
+  },
+  "shipt": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://linkedin.com/company/shipt",
+    "https://www.retaildive.com/news/shipts-cmo-on-life-with-target-and-the-delivery-services-future/532871",
+    "https://subger.com/en/service/shipt"
+   ],
+   "hq": "Birmingham, AL, USA",
+   "yr": "2014"
+  },
+  "grubhub": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://nrn.com/mergers-acquisitions/wonder-finalizes-acquisition-of-grubhub-for-650-million",
+    "https://news.wttw.com/2024/11/13/just-eat-takeaway-sells-chicago-based-grubhub-650-million-just-3-years-after-buying-app",
+    "https://chicago.suntimes.com/money/2025/02/28/chicago-grubhub-cuts-500-jobs-wonder-ownership"
+   ],
+   "hq": "Chicago, IL, USA",
+   "yr": "2004"
+  },
+  "homedepot": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Home_Depot",
+    "https://www.britannica.com/money/Home-Depot"
+   ],
+   "hq": "Atlanta, GA, USA",
+   "yr": "1978"
+  },
+  "dollargeneral": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://wikipedia.com/wiki/Ntense",
+    "https://komo.ai/directory/dollar-general-offices"
+   ],
+   "hq": "Goodlettsville, TN, USA",
+   "yr": "1939"
+  },
+  "shein": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://ir.sheingroup.com/system/files-encrypted/nasdaq_kms/news/2026/09/01/23-10-56/%E3%80%90Press%20release%E3%80%91%20Shein%20Global%20Holdings%20Limited.pdf",
+    "https://www.deloitte.com/cn/en/about/press-room/deloitte-china-assists-listing-of-shein-on-sehk.html",
+    "https://www.euronews.com/2026/09/01/shein-shares-fall-on-hong-kong-debut-as-parcel-duties-and-iran-costs-bite",
+    "https://www.irishexaminer.com/business/companies/arid-41902537.html",
+    "https://daoinsights.com/news/fast-fashion-retailer-shein-shifts-major-assets-to-singapore/"
+   ],
+   "hq": "Singapore",
+   "yr": "2008",
+   "own": "public",
+   "tk": "0625.HK"
+  },
+  "dsv": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://mfn.se/one/a/dsv/dsv-1154-dsv-completes-the-acqusition-of-schenker-020a40cc",
+    "https://www.itln.in/business-of-cargo/how-dsv-grew-from-a-fleet-of-nine-trucks-into-the-worlds-largest-freight-forwarding-company-in-50-years-1359890",
+    "https://en.wikipedia.org/wiki/DSV_(company)"
+   ],
+   "hq": "Hedehusene, Denmark",
+   "yr": "1976"
+  },
+  "evri": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://find-and-update.company-information.service.gov.uk/company/03900782",
+    "https://en.wikipedia.org/wiki/Evri",
+    "https://www.fleetnews.co.uk/news/evri-merger-with-dhl-s-delivery-business-given-the-green-light",
+    "https://transportnews.co.uk/2025/05/15/evri-and-dhl-merger-will-create-uk-delivery-powerhouse"
+   ],
+   "hq": "Leeds, UK"
+  },
+  "gefco": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.cevalogistics.com/news-and-media/Newsroom/ceva-creates-global-finished-vehicles-organization-from-former-gefco-operation",
+    "https://www.ajot.com/news/gefco-becomes-ceva-ceva-logistics-creates-global-finished-vehicle-organization-from-former-gefco-operation",
+    "https://cargonewswire.com/gefco-becomes-ceva/"
+   ],
+   "yr": "1949"
+  },
+  "maersk": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Maersk",
+    "https://simplywall.st/stocks/gb/transportation/bats-chixe-maerac/ap-mller-maersk-shares/information",
+    "https://borsdata.se/en/ap-moller-maersk/ratios"
+   ],
+   "hq": "Copenhagen, Denmark",
+   "yr": "1904"
+  },
+  "cainiao": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1577552/000110465924038666/tm249803d1_ex99-1.htm",
+    "https://en.wikipedia.org/wiki/Cainiao",
+    "https://www.cbinsights.com/company/cainiao"
+   ],
+   "hq": "Hangzhou, China",
+   "yr": "2013"
+  },
+  "jtexpress": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://uk.finance.yahoo.com/quote/1519.HK/profile",
+    "https://simplywall.st/stock/SEHK/1519",
+    "https://siliconvalleyinvestclub.com/companies/jtexpress-com/"
+   ],
+   "hq": "Shanghai, China",
+   "geo": [
+    121.47,
+    31.23
+   ],
+   "yr": "2015"
+  },
+  "rightaway": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://dropoff.com/blog/dropoff-acquires-rightaway-delivery-after-years-of-success",
+    "https://www.cbinsights.com/company/rightaway-delivery"
+   ],
+   "yr": "1999"
+  },
+  "bestbuy": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Best_Buy",
+    "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=BBY",
+    "https://company-histories.com/Best-Buy-Co-Inc-Company-History.html"
+   ],
+   "hq": "Richfield, MN, USA",
+   "yr": "1966"
+  },
+  "flipkart": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.retail-insight-network.com/newsletters/flipkart-completes-re-domiciliation",
+    "https://www.outlookbusiness.com/corporate/flipkart-gets-nclt-nod-to-re-domicile-from-singapore-to-india-ahead-of-ipo",
+    "https://www.medianama.com/2026/03/223-flipkart-shifts-holding-company-india-planned-ipo/"
+   ],
+   "hq": "Bengaluru, India",
+   "yr": "2007"
+  },
+  "yodel": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://find-and-update.company-information.service.gov.uk/company/05200072",
+    "https://www.ordertracker.com/carriers/yodel",
+    "https://www.yodel.co.uk/news/2025/april-2025/inpost-leaps-ahead-in-the-uk-with-strategic-takeover-of-yodel",
+    "https://inpost.co.uk/blog/move-switch-get-on-the-way",
+    "https://www.parcel2go.com/content-hub/yodel-is-now-inpost",
+    "https://channelx.world/2026/07/yodel-by-inpost-website-app-no-longer-available/"
+   ],
+   "hq": "Liverpool, UK",
+   "geo": [
+    -2.98,
+    53.41
+   ],
+   "yr": "2004"
+  },
+  "stasher": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://tech.eu/2026/09/23/london-traveltech-stasher-secures-ps3m-for-global-expansion",
+    "https://coverager.com/company/stasher/",
+    "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-partners-with-stasher-to-offer-convenient-luggage-storage-and-shipping-solutions-for-travelers.html"
+   ],
+   "hq": "London, UK",
+   "yr": "2015"
+  },
+  "urbanoutfitters": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.inquirer.com/business/a/urban-outfitters-headquarters-navy-yard-expansion-20260628.html",
+    "https://en.wikipedia.org/wiki/Urban_Outfitters",
+    "https://www.nbcphiladelphia.com/news/local/gov-shapiro-announces-urban-outfitters-inc-expansion-in-philly-bucks-county/4413812/?amp=1"
+   ],
+   "hq": "Philadelphia, PA, USA",
+   "yr": "1970"
+  },
+  "acehardware": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Ace_Hardware",
+    "https://www.builtinchicago.org/company/ace-hardware-corporation",
+    "https://www.costar.com/article/1544920667/ace-hardware-moving-hq-to-former-mcdonalds-campus-in-largest-suburban-chicago-lease-in-decade",
+    "https://www.hbsdealer.com/inside-ace-hardwares-new-hq"
+   ],
+   "hq": "Oak Brook, IL, USA",
+   "geo": [
+    -87.95,
+    41.83
+   ],
+   "yr": "1924",
+   "own": "coop"
+  },
+  "purolator": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.purolator.com/en/node/501",
+    "https://www.canadapost-postescanada.ca/cpc/doc/en/news-and-media/2026_Q2_report_en.pdf",
+    "https://www.purolator.com/en/node/1351",
+    "https://en.wikipedia.org/wiki/Purolator_Inc."
+   ],
+   "hq": "Mississauga, Canada",
+   "yr": "1960"
+  },
+  "speedee": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.glassdoor.com/Overview/Working-at-EI_IE1411233.htm",
+    "https://www.ordertracker.com/carriers/spee-dee-delivery",
+    "https://speedeedelivery.com/affordable-overnight-delivery-services-in-st-cloud-mn/"
+   ],
+   "hq": "St. Cloud, MN, USA",
+   "yr": "1978"
+  },
+  "veho": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://builtin.com/articles/veho-raises-170m-series-b-1b-valuation-logistics-tech-unicorn",
+    "https://techcrunch.com/?p=2249998",
+    "https://clay.com/dossier/veho-ceo",
+    "https://www.shipveho.com/blog/the-path-to-becoming-a-national-primary-shipping-partner-in-2026"
+   ],
+   "hq": "New York, NY, USA",
+   "yr": "2016"
+  },
+  "pridispatch": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://pitchbook.com/profiles/company/247777-84",
+    "https://www.uchealth.com/wp-content/uploads/supplychain/Business%20Summary.pdf",
+    "https://www.freightwaves.com/news/private-equity-group-rolls-up-3-small-firms-for-courier-network",
+    "https://pulse2.com/priority-courier-experts-acquires-priority-dispatch-and-diamond-expedited-adding-500-drivers-and-250000-annual-orders/"
+   ],
+   "hq": "Cincinnati, OH, USA",
+   "yr": "1973"
+  },
+  "doordash": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://secure.businesswire.com/news/home/20251002060133/en/DoorDash-Completes-Acquisition-of-Deliveroo",
+    "https://uk.finance.yahoo.com/quote/DASH/profile?p=DASH"
+   ],
+   "hq": "San Francisco, CA, USA",
+   "yr": "2013"
+  },
+  "postmates": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.freightwaves.com/news/uber-buys-food-delivery-startup-postmates-for-2-65-billion",
+    "https://pulse2.com/uber-technologies-to-buy-postmates-for-2-65-billion/",
+    "https://therideshareguy.com/uber-dismantles-postmates-fleet-app-what-should-drivers-do/"
+   ],
+   "yr": "2011"
+  },
+  "amazon": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.sec.gov/Archives/edgar/data/1018724/000101872421000004/amzn-20201231.htm",
+    "https://www.nexscope.ai/blog/where-is-amazon-headquarters"
+   ],
+   "hq": "Seattle, WA, USA",
+   "yr": "1994"
+  },
+  "lowes": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://northcarolinahistory.org/encyclopedia/lowes-companies/",
+    "https://www.ourstate.com/the-little-hardware-store-that-could",
+    "https://en.wikipedia.org/wiki/Lowe%27s"
+   ],
+   "hq": "Mooresville, NC, USA",
+   "yr": "1921"
+  },
+  "macys": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.macys.com/s/brand-heritage/history/",
+    "https://www.Britannica.Com/money/Macys",
+    "https://en.wikipedia.org/wiki/Macy%27s,_Inc."
+   ],
+   "hq": "New York, NY, USA",
+   "yr": "1929"
+  },
+  "omahasteaks": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.omahasteaks.com/llms.txt",
+    "https://www.fundinguniverse.com/company-histories/omaha-steaks-international-inc-history/",
+    "https://www.businesswire.com/news/home/20260610322824/en/"
+   ],
+   "hq": "Omaha, NE, USA",
+   "yr": "1917"
+  },
+  "schenker": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.dsv.com/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker",
+    "https://www.nasdaq.com/press-release/dsv-1154-dsv-completes-acqusition-schenker-2025-04-30",
+    "https://www.ajot.com/news/dsv-signs-agreement-to-acquire-schenker"
+   ],
+   "hq": "Essen, Germany",
+   "geo": [
+    7.01,
+    51.46
+   ]
+  },
+  "ids": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.expressandstar.com/uk-news/czech-billionaire-kretinsky-named-chairman-of-royal-mail-after-takeover-5688123",
+    "https://www.malaymail.com/news/money/2025/06/27/czech-billionaire-daniel-kretinsky-takes-charge-of-royal-mail-after-36b-takeover/181947",
+    "https://www.cbinsights.com/company/international-distribution-services"
+   ],
+   "hq": "London, UK",
+   "own": "sub"
+  },
+  "cbc": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.freightwaves.com/?p=582393",
+    "https://www.sdcexec.com/transportation/trucking/news/22975849/cross-border-connect-cbc-evri-acquires-cross-border-connect"
+   ],
+   "hq": "Boca Raton, FL, USA",
+   "own": "private"
+  },
+  "clearjet": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.01net.it/clearjet-secures-25m-growth-investment-led-by-edison-partners-to-scale-its-supercarrier-network-for-package-deliveries/",
+    "https://raising.fi/news/clearjet-growth-august-2026",
+    "https://www.ontrac.com/ontrac-announces-express-service-with-clearjet-as-exclusive-launch-partner-ahead-of-early-2026-rollout/"
+   ],
+   "hq": "Austin, TX, USA"
+  },
+  "nowcourier": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.businesswire.com/news/home/20241210588603/en/Priority-Courier-Experts-Acquires-Now-Courier-to-Expand-Footprint-in-Indiana-Region",
+    "https://www.insideindianabusiness.com/articles/indianapolis-courier-company-acquired-by-minnesota-firm",
+    "https://www.ibj.com/articles/indianapolis-courier-company-acquired-by-minnesota-logistics-firm"
+   ],
+   "hq": "Indianapolis, IN, USA",
+   "yr": "1986"
+  },
+  "bpost": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Bpost",
+    "https://www.tradingview.com/symbols/EURONEXT-BPOST/",
+    "https://www.ordertracker.com/carriers/bpost"
+   ],
+   "hq": "Brussels, Belgium"
+  },
+  "geopost": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://www.xerfi.com/etudes-par-entreprise/geopost_340012392",
+    "https://lei.bloomberg.com/leis/view/969500BRDRBPU2R89V61",
+    "https://pitchbook.com/profiles/company/59237-11",
+    "https://www.biocair.com/en/about-us",
+    "https://dpd.com/ee/en/?p=28505"
+   ],
+   "hq": "Issy-les-Moulineaux, France",
+   "geo": [
+    2.27,
+    48.82
+   ]
+  },
+  "advanceauto": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://theroanoker.com/advance-auto-parts/",
+    "https://csimarket.com/stocks/AAP/profile/",
+    "https://en.wikipedia.org/wiki/Advance_Auto_Parts"
+   ],
+   "hq": "Raleigh, NC, USA",
+   "geo": [
+    -78.64,
+    35.78
+   ],
+   "yr": "1932"
+  },
+  "stevemadden": {
+   "vf": "2026-10-21",
+   "src": [
+    "https://en.wikipedia.org/wiki/Steve_Madden,_Ltd.",
+    "https://salestools.io/en/report/steve-madden-headquarters"
+   ],
+   "hq": "Long Island City, NY, USA",
+   "geo": [
+    -73.95,
+    40.75
+   ],
+   "yr": "1990"
+  }
  }
 }

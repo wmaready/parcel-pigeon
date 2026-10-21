@@ -47,15 +47,16 @@ def squash(t):
     return re.sub(r"\s+", " ", (t or "").lower()).replace(" ,", ",").strip()
 
 
-def file_text(url):
-    """Plain text of a PDF or web page (None for spreadsheets)."""
-    r = get(url, timeout=60)
+def file_text(url, max_pages=60):
+    """Plain text of a PDF or web page (None for spreadsheets). max_pages=None reads the whole file."""
+    from fetch import fetch
+    r = fetch(url, timeout=60)
     ctype = r.headers.get("content-type", "").lower()
     path = url.lower().split("?")[0]
     if path.endswith(".pdf") or "pdf" in ctype:
         from pypdf import PdfReader
         reader = PdfReader(io.BytesIO(r.content))
-        return "\n".join((p.extract_text() or "") for p in reader.pages[:60])
+        return "\n".join((p.extract_text() or "") for p in (reader.pages if max_pages is None else reader.pages[:max_pages]))
     if path.endswith((".xlsx", ".xls")) or "spreadsheet" in ctype:
         return None
     import trafilatura

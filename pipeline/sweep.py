@@ -52,6 +52,7 @@ the map and matter to U.S. parcel shippers or carriers. Rules:
 - Skip anything already on the map (under any name, including former names), tiny local businesses, companies with no U.S.
   operations or U.S. customers, shut-down companies, and parcel-spend consultancies and invoice-audit firms.
 - Prefer companies with real scale, funding, a national footprint, or a role in recent deals; at most 10, best first.
+- Only market movers. """ + P.MOVERS + """
 Reply JSON only: {"candidates": [{"n": "official name", "what": "one neutral sentence on what it does in parcel", "url": "page about it", "us": true|false}]}"""
 
 STATUS_Q = """You keep Parcel Pigeon's market map of the parcel industry current. For EACH company listed (id | name | what we have on file), use
@@ -299,6 +300,84 @@ def status(st, mp, seed, batches):
     return applied
 
 
+# ---------------------------------------------------------------- facts: headquarters, founding year, ownership, ticker
+FACTS_DAYS = 90            # every company's basic facts are re-checked about once a quarter
+FACTS_BATCH = 5            # companies per call
+FACTS_FIRST = ["national", "regional", "gig", "retail", "global"]   # what people click first gets checked first
+FACTS_Q = """You check basic facts about companies on Parcel Pigeon's market map of the small parcel industry. The map is shown to
+industry executives, so a wrong fact is worse than a missing one. For each company, search the web and find, AS OF TODAY:
+hq: the CURRENT corporate headquarters city ("City, ST, USA" in the U.S., "City, Country" elsewhere). Headquarters move after
+    mergers and acquisitions; a company's historical home town is not its headquarters if it has moved.
+yr: the year THIS company was founded (say in note if the map's company continues an older one).
+own: public | private | pe (owned by a private-equity firm) | sub (a subsidiary of another company) | gov | coop.
+tk: stock ticker if publicly traded, else null.
+For EACH field give the sources you used. A field counts only with the company's own website, an SEC filing or an official
+press release, OR two independent sources on different websites. Wikipedia, LinkedIn and data aggregators (Crunchbase,
+PitchBook, ZoomInfo, Tracxn) may support but never count alone. If sources conflict, give your best value and set
+"disputed": true for that field. Never guess: if you can't confirm a field, set it to null.
+Reply JSON only:
+{"results": [{"id": "the id given", "answered": true|false,
+  "hq": {"v": "...", "src": ["url", ...], "primary": true|false, "disputed": false, "lat": number, "lon": number},   // lat/lon of the hq city
+  "yr": {"v": "YYYY", "src": [...], "primary": true|false, "disputed": false},
+  "own": {"v": "...", "src": [...], "primary": true|false, "disputed": false},
+  "tk": {"v": "... or null", "src": [...], "primary": true|false, "disputed": false},
+  "note": "one line: anything that changed or is doubtful"}]}"""
+WEAK = ("wikipedia.org", "linkedin.com", "crunchbase.com", "pitchbook.com", "zoominfo.com", "tracxn.com", "cbinsights.com", "dnb.com")
+
+
+def fact_ok(f):
+    """A fact the map can show: a primary source, or two independent websites that aren't just directories."""
+    if not isinstance(f, dict) or f.get("disputed") or f.get("v") in (None, ""):
+        return False
+    urls = [u for u in (f.get("src") or []) if str(u).startswith("http")]
+    strong = {P.domain(u) for u in urls if not any(w in u for w in WEAK)}
+    return bool(urls) and (bool(f.get("primary")) and len(strong) >= 1 or len({P.domain(u) for u in urls}) >= 2 and len(strong) >= 1)
+
+
+def facts(st, mp, seed, batches):
+    known, byid, _ = names(mp, seed)
+    fx = mp.setdefault("facts", {})
+    cutoff = (today() - dt.timedelta(days=FACTS_DAYS)).isoformat()
+    rank = lambda p: (FACTS_FIRST.index(p.get("realm")) if p.get("realm") in FACTS_FIRST else 9, (fx.get(p["id"]) or {}).get("vf") or "")
+    due = sorted([p for p in known if ((fx.get(p["id"]) or {}).get("vf") or "") < cutoff], key=rank)
+    changed = checked = 0
+    for b in range(min(batches, budget(st, batches))):
+        grp = due[b * FACTS_BATCH:(b + 1) * FACTS_BATCH]
+        if not grp:
+            break
+        lines = "\n".join(f"{p['id']} | {p['n']}{' (also ' + ', '.join(p['al'][:3]) + ')' if p.get('al') else ''} | map says: hq {p.get('hq')}, "
+                          f"founded {p.get('yr')}, {p.get('own')}, ticker {p.get('tk')}"
+                          f"{', part of ' + byid[p['parent']]['n'] if byid.get(p.get('parent')) else ''} | {str(p.get('s') or '')[:120]}" for p in grp)
+        try:
+            res = parse_json(P.ask(f"Today is {today().isoformat()}. Companies:\n{lines}", system=FACTS_Q, max_tokens=3000, strict=True, searches=8)) or {}
+        except Exception as e:
+            print(f"  facts check failed: {e}", file=sys.stderr); spend(st); continue
+        spend(st)
+        if P.ask.searches < 1:
+            continue
+        for r in res.get("results") or []:
+            p = byid.get(r.get("id")) if isinstance(r, dict) else None
+            if not p or r.get("answered") is False:
+                continue
+            checked += 1
+            rec = {"vf": today().isoformat(), "src": []}
+            for k in ("hq", "yr", "own", "tk"):
+                f = r.get(k)
+                if fact_ok(f):
+                    rec[k] = str(f["v"]).strip()
+                    rec["src"] += [u for u in f.get("src") or [] if u not in rec["src"]]
+                    if k == "hq" and all(isinstance(f.get(c), (int, float)) for c in ("lat", "lon")) and -90 <= f["lat"] <= 90 and -180 <= f["lon"] <= 180:
+                        rec["geo"] = [round(f["lon"], 3), round(f["lat"], 3)]     # so a company in a new city stays on the map
+                    if str(p.get(k) or "").lower() != rec[k].lower():
+                        changed += 1; print(f"  fact: {p['n']} {k}: {p.get(k)} -> {rec[k]}")
+                elif isinstance(f, dict) and f.get("disputed"):
+                    P.review_add("fact disputed", p["n"], f"{k}: map says {p.get(k)!r}, sources disagree ({f.get('v')!r}). {r.get('note') or ''}"[:300], f.get("src"))
+            rec["src"] = rec["src"][:6]
+            fx[p["id"]] = rec
+    print(f"  facts: {checked} companies checked, {changed} field{'s' if changed != 1 else ''} corrected")
+    return changed
+
+
 def main():
     if not API_KEY:
         print("sweep: no API key"); return
@@ -315,6 +394,10 @@ def main():
         status(st, mp, seed, arg("--status", 1))       # existing companies first: they're what the map already claims
     except Exception as e:
         print("status check failed:", e, file=sys.stderr)
+    try:
+        facts(st, mp, seed, arg("--facts", 2))         # headquarters, founding year, ownership, ticker: two sources or none
+    except Exception as e:
+        print("facts check failed:", e, file=sys.stderr)
     try:
         vet(st, mp, seed, arg("--vet", 4))
     except Exception as e:

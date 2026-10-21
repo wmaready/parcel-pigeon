@@ -26,6 +26,15 @@ def save(name, obj):
     (DATA / name).write_text(json.dumps(obj, indent=1, ensure_ascii=False))
 
 
+def pdf_to_text(data, max_pages=None):
+    """Text of a PDF, page by page ("[page N]" markers keep diffs and quotes pointing at the right page)."""
+    import io
+    from pypdf import PdfReader
+    reader = PdfReader(io.BytesIO(data))
+    pages = reader.pages if max_pages is None else reader.pages[:max_pages]
+    return "\n".join(f"[page {i+1}]\n" + (p.extract_text() or "") for i, p in enumerate(pages))
+
+
 def h(s):
     return hashlib.sha1(s.encode("utf-8", "ignore")).hexdigest()[:12]
 
@@ -142,9 +151,66 @@ def is_primary(url):
     return any(host == d or host.endswith("." + d) for d in PRIMARY_DOMAINS)
 
 
+# Outlet tiers, so a story leads with the carrier's own page, then the major business press, then the parcel and
+# logistics trade press, and a local paper or aggregator that picked the story up days later only backs it up.
+# Matched against the outlet's web address and its name (Google News gives both).
+TIER1 = {"reuters.com": "reuters", "wsj.com": "wall street journal", "bloomberg.com": "bloomberg", "cnbc.com": "cnbc",
+         "apnews.com": "associated press", "ft.com": "financial times", "nytimes.com": "new york times",
+         "washingtonpost.com": "washington post", "businessinsider.com": "business insider", "axios.com": "axios",
+         "forbes.com": "forbes", "fortune.com": "fortune", "barrons.com": "barron's", "marketwatch.com": "marketwatch",
+         "theinformation.com": "the information", "techcrunch.com": "techcrunch", "npr.org": "npr", "cnn.com": "cnn"}
+TIER2 = {"freightwaves.com": "freightwaves", "supplychaindive.com": "supply chain dive", "parcelindustry.com": "parcel industry",
+         "logisticsmgmt.com": "logistics management", "dcvelocity.com": "dc velocity", "supplychainbrain.com": "supplychainbrain",
+         "ttnews.com": "transport topics", "joc.com": "journal of commerce", "modernretail.co": "modern retail",
+         "retaildive.com": "retail dive", "truckingdive.com": "trucking dive", "postandparcel.info": "post & parcel",
+         "theloadstar.com": "the loadstar", "digitalcommerce360.com": "digital commerce 360", "aircargonews.net": "air cargo news",
+         "ccjdigital.com": "commercial carrier journal", "supplychain247.com": "supplychain247", "inboundlogistics.com": "inbound logistics",
+         "parcelandpostaltechnologyinternational.com": "parcel and postal technology", "retailtouchpoints.com": "retail touchpoints",
+         "retailbrew.com": "retail brew", "pymnts.com": "pymnts", "dronexl.co": "dronexl", "therobotreport.com": "the robot report",
+         "cepresearch.com": "cep research", "globaltrademag.com": "global trade", "ajot.com": "american journal of transportation",
+         "stattimes.com": "stat times", "aircargoweek.com": "air cargo week", "chainstoreage.com": "chain store age",
+         "transimpact.com": "transimpact", "paymentsdive.com": "payments dive", "truckinginfo.com": "heavy duty trucking",
+         "mlex.com": "mlex", "qz.com": "quartz", "seekingalpha.com": "seeking alpha", "mediapost.com": "mediapost",
+         "logisticsmanager.com": "logistics manager", "supplychaindigital.com": "supply chain digital", "logisticsviewpoints.com": "logistics viewpoints",
+         "freightcaviar.com": "freightcaviar", "joc.com": "joc", "theverge.com": "the verge", "geekwire.com": "geekwire"}
+
+
+# Never a source: press-release spam sites, automated finance write-ups and AI-written market reports. Items from these
+# are dropped at intake and never listed under a story.
+NOT_SOURCES = ["einnews.com", "einpresswire.com", "openpr.com", "newsbreak.com", "gurufocus.com", "simplywall.st", "marketbeat.com",
+               "tickerreport.com", "biggo.com", "trendhunter.com", "indexbox.io", "giiresearch.com", "marketresearchfuture.com",
+               "openpr.de", "issuewire.com", "newswire.com", "prlog.org", "whatech.com"]
+NOT_SOURCE_NAMES = ["ein news", "ein presswire", "openpr", "gurufocus", "simply wall st", "marketbeat", "indexbox", "trend hunter",
+                    "newsbreak", "prlog", "issuewire"]
+
+
+def not_a_source(src=None, url=None, domain=None):
+    hosts = [x for x in (_host(url), _host(domain)) if x]
+    name = (src or "").lower()
+    return any(hh == d or hh.endswith("." + d) for hh in hosts for d in NOT_SOURCES) or any(n in name for n in NOT_SOURCE_NAMES)
+
+
+def _host(url):
+    return re.sub(r"^https?://", "", url or "").split("/")[0].lower().removeprefix("www.")
+
+
+def tier(src=None, url=None, domain=None):
+    """0 = the company or regulator itself, 1 = major business or wire press, 2 = parcel and logistics trade press, 3 = everything else."""
+    if url and is_primary(url) or domain and is_primary("https://" + domain):
+        return 0
+    if any(h.endswith(".gov") for h in (_host(url), _host(domain)) if h):
+        return 0          # government bodies and officials speak for themselves
+    hosts = [x for x in (_host(url), _host(domain)) if x]
+    name = (src or "").lower()
+    for n, table in ((1, TIER1), (2, TIER2)):
+        if any(hh == d or hh.endswith("." + d) for hh in hosts for d in table) or any(v in name for v in table.values()):
+            return n
+    return 3
+
+
 def primary_first(srcs):
-    """Carrier or company sources first (stable order otherwise)."""
-    return sorted(srcs, key=lambda s: 0 if is_primary(s.get("url")) else 1)
+    """Carrier or company sources first, then major press, then trade press, then the rest (stable within a tier)."""
+    return sorted(srcs, key=lambda s: tier(s.get("src"), s.get("url")))
 
 
 # ---------------------------------------------------------------- what earns a spot on the rate clock
