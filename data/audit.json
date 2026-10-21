@@ -1,5 +1,5 @@
 {
- "run": "2026-10-21T08:44Z",
+ "run": "2026-10-21T09:41Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -89,20 +89,6 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
@@ -121,6 +107,16 @@
    "ids": [
     "a2e0cb230779a",
     "a89329fa0cdbb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
+   "ids": [
+    "a7d88cb8247eb",
+    "ae5f2c699239a"
    ],
    "fixed": false
   },
@@ -235,20 +231,6 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
@@ -267,6 +249,16 @@
    "ids": [
     "a2e0cb230779a",
     "a89329fa0cdbb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
+   "ids": [
+    "a7d88cb8247eb",
+    "ae5f2c699239a"
    ],
    "fixed": false
   },

@@ -193,17 +193,18 @@
   "rv": "4418fe805c66",
   "cx": {
    "sig": "4418fe805c66",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h401": "FedEx's 2024 increase averaged 5.9%, matching UPS, which started Dec. 26, 2023. Both were down from 6.9% the year before.",
-    "h424": "DHL Express matched the 5.9% for U.S. accounts, effective Jan. 1, 2025, with some service and surcharge changes too.",
-    "h426": "UPS matched FedEx at 5.9% but started two weeks earlier than the year before, on Dec. 23, 2024.",
-    "h529": "FedEx stayed at 5.9% for 2026. Surcharges rose too: residential delivery went to $6.95 from $6.55.",
-    "02": "DHL Express matches the 5.9% again, effective Jan 1, 2027. It will change a limited number of services and surcharges but did not list them.",
-    "07": "UPS hasn't announced yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline."
+    "h401": "FedEx's 5.9% took effect Jan. 1, 2024, after UPS's matching 5.9% began Dec. 26. Both were down from 6.9% a year earlier.",
+    "h421": "FedEx set 5.9% again for Jan. 6, 2025, with two-day air and long-distance ground rising by more than the average.",
+    "h424": "DHL Express followed with a 5.9% average for U.S. accounts from Jan. 1, 2025, matching FedEx and UPS.",
+    "h426": "UPS also landed on 5.9% for 2025, starting Dec. 23, 2024, a few days ahead of the prior year's Dec. 26 start.",
+    "h529": "FedEx's Jan. 5, 2026 increase stayed at 5.9%, and residential delivery went to $6.95 from $6.55.",
+    "02": "DHL Express also set 5.9% for U.S. accounts on Jan. 1, 2027. Some services and surcharges change too, but DHL didn't list them.",
+    "07": "UPS hasn't announced its 2027 increase yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline."
    },
-   "intro": "Carriers raise list rates every January, and 5.9% has been the average headline figure for years. Shippers care what's beneath it.",
-   "now": "DHL starts Jan. 1 and FedEx Jan. 4; UPS has yet to announce. UPS reports earnings Oct. 27 and FedEx Oct. 28."
+   "intro": "Carriers keep announcing 5.9% average rate hikes each year, and shippers are waiting on UPS's number for 2027.",
+   "now": "UPS hasn't announced 2027 rates yet. DHL's 5.9% starts Jan. 1 and FedEx's starts Jan. 4, with FedEx zone changes on Feb. 1."
   }
  },
  "usps-pricing": {
@@ -294,10 +295,12 @@
   ],
   "cx": {
    "sig": "c246f9c59438",
-   "v": 2,
-   "beats": {},
-   "intro": "UPS and FedEx are now both adding per-pound fees on international express, which raises the cost of heavier imports and exports.",
-   "now": "FedEx's fees run until further notice. UPS reports earnings Oct. 27 and FedEx Oct. 28, and peak surcharges at major carriers end Jan. 15, 2027."
+   "v": 3,
+   "beats": {
+    "h530": "UPS went first: $0.23/lb on Europe-to-U.S. express and $0.47/lb from India from Sept. 28, through Jan. 17, 2026. China was excluded.",
+    "31": "FedEx's fees run until further notice: imports $0.12 to $0.25/lb by region, and its export fee rose from $0.20 to $0.30."
+   },
+   "intro": "UPS and FedEx now add per-pound fees on international parcels, which raises the cost of imports and exports."
   },
   "rv": "c246f9c59438"
  },
@@ -316,12 +319,12 @@
   ],
   "cx": {
    "sig": "7d2b47d4740d",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h506": "DeJoy announced his exit, and Deputy Postmaster General Doug Tulino stepped in as acting chief while the Board of Governors searched.",
-    "h515": "The Board picked former Waste Management CEO David Steiner, a FedEx board member who said he'd leave that board before joining USPS."
+    "h515": "In May 2025 the Board picked David Steiner, a former Waste Management CEO, who said he'd leave the FedEx board before joining USPS.",
+    "36": "Reuters reported that Steiner has told associates he wants to resign. USPS said the report has 'absolutely zero validity.'"
    },
-   "now": "Steiner is still Postmaster General and spoke to postal customer councils by video in early October 2026. The Amazon same-day pilot expands Oct. 20."
+   "now": "Steiner is still Postmaster General and spoke to postal customer councils in an official USPS video in early October 2026."
   },
   "rv": "7d2b47d4740d",
   "apart": [
@@ -377,9 +380,10 @@
   "rv": "3ceee99aa69e",
   "cx": {
    "sig": "3ceee99aa69e",
-   "v": 2,
+   "v": 3,
    "beats": {},
-   "intro": "USPS lost billions while its package business shifted; shippers watch it because USPS also does last-mile for other carriers."
+   "intro": "USPS lost money two years running while its package business shifted from growth to shrinking volume, which matters for shippers.",
+   "now": "The 8% temporary increase and 2026 peak rates are both set to expire Jan. 17, 2027, and no 2027 shipping filing has been made yet."
   },
   "apart": [
    "usps-big-shipper-deals"
@@ -407,14 +411,14 @@
   "rv": "7045e15542ff",
   "cx": {
    "sig": "7045e15542ff",
-   "v": 2,
+   "v": 3,
    "beats": {
-    "h408": "Amazon Logistics grew 15.7% to 5.9 billion parcels in 2023, passing UPS at 4.6 billion. USPS still led at 6.6 billion.",
-    "h522": "In 2024, USPS held 31% of volume and Amazon 28%. Pitney Bowes projected Amazon would pass USPS by 2028.",
-    "r03": "Pitney Bowes also has Amazon first, at 6.9 billion parcels to USPS's 6.2 billion. By revenue, UPS (31.6%) and FedEx (30.8%) lead."
+    "h408": "In 2023, Amazon Logistics grew 15.7% to 5.9 billion parcels and passed UPS at 4.6 billion. USPS still led at 6.6 billion.",
+    "h522": "For 2024, USPS held 31% of volume and Amazon 28%. The index projected Amazon would pass USPS by 2028.",
+    "r03": "Pitney Bowes also has Amazon first in 2025 at 6.9 billion, but by revenue UPS leads at 31.6% and Amazon holds 15.5%."
    },
-   "intro": "How Amazon climbed to No. 1 in U.S. parcel volume, while UPS and FedEx still lead on revenue.",
-   "now": "Amazon leads on volume, UPS and FedEx on revenue. Peak fees start Oct. 24, and UPS and FedEx report earnings Oct. 27 and 28."
+   "intro": "Amazon went from challenger to the biggest U.S. parcel carrier by volume. Shippers care because the market's balance is shifting.",
+   "now": "Amazon leads on volume in both 2025 tallies, though the totals differ: 23.9 billion (ShipMatrix) and 23.1 billion (Pitney Bowes)."
   },
   "apart": [
    "amazon-labor",
@@ -534,9 +538,9 @@
   "rv": "04a401fa9e96",
   "cx": {
    "sig": "04a401fa9e96",
-   "v": 2,
+   "v": 3,
    "beats": {},
-   "intro": "Fights over who employs Amazon's delivery drivers could shape labor costs and risk across the delivery network shippers rely on."
+   "now": "The Teamsters have sought an appeal of the settlement, and the former drivers' suit seeks class status; no dates are set in the milestones."
   },
   "apart": [
    "ups-amazon-glide-down",
