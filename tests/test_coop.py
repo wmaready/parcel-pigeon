@@ -131,7 +131,9 @@ def test_ask_coop_answers_from_history_facts_and_stories(site):  # noqa: F811
         moved = next((e for e in alm if e["carrier"] == "USPS" and re.search(r"from 166 to 139", e["headline"]) and e["effective"] <= today), None)
         if dimnote and moved:
             a = pg.evaluate(ASK, "USPS dim divisor")
-            assert "Changed since this note" in a["h"] and "139" in a["h"]
+            assert "139" in a["h"]
+            # an up-to-date note (it names the new figure) carries no warning; an old one does
+            assert ("Changed since this note" in a["h"]) == ("139" not in dimnote["t"])
         b.close()
     assert not errors, errors[:5]
 
