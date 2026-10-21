@@ -1,5 +1,35 @@
 [
  {
+  "id": "a312b45efa358",
+  "date": "2026-10-21",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "Deposco: Q3 carrier rates fall 3.3% per package, operator costs fall 0.6%",
+  "sum": "Deposco published its Q3 2026 Commerce Signal report on Oct. 21, saying carrier rates fell 3.3% per package from Q2 while what operators paid declined 0.6%. The company said heavier packages, faster services and more residential deliveries absorbed most of the rate relief.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Deposco says shippers' actual per-package spend fell far less than carrier rates in Q3 because of package mix. The report says peak surcharges begin Oct. 25 and expects per-package costs to rise in peak season.",
+  "why": "Deposco's data suggests lower carrier rates did not carry through to what operators paid, and the report expects peak per-package costs to exceed Q3.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T13:09:00Z",
+  "src": "GlobeNewswire",
+  "url": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
+  "srcs": [
+   {
+    "src": "GlobeNewswire",
+    "url": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html"
+   }
+  ],
+  "auto": true,
+  "exclusive": true
+ },
+ {
   "id": "a40674eddf824",
   "date": "2026-10-21",
   "c": [
@@ -60,8 +90,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 7,
   "new": "State legislators in Massachusetts asked the governor for a task force and a moratorium on drone operator certificates, and Amazon's Westborough site awaits a Zoning Board of Appeals review, so a planned New England launch may be delayed.",
   "exclusive": true
  },
@@ -252,6 +280,64 @@
   "tried": "2026-10-21"
  },
  {
+  "id": "a6e82ba740e99",
+  "date": "2026-10-20",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "EU to apply €2 per-line handling fee on non-EU shipments from 1 Nov",
+  "sum": "The EU's €2 handling fee applies per line to distance-sales shipments arriving from outside the Union from 1 November, Air Cargo Week reported on 20 October. Product Identifier (PID) data is requested on all shipments from 26 October. The fee follows the €3 charge on low-value goods that began on 1 July.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "From 1 November, distance-sales shipments entering the EU from outside the Union face a €2 handling fee for each line, not just each parcel. PID data is requested on all shipments from 26 October.",
+  "why": "The fee covers all distance sales into the EU and is charged per line, after small-parcel imports fell 30 to 40 percent in the two months following the July change, per the French Ministry of Economy.",
+  "score": 5,
+  "tie": null,
+  "act": "2026-11-01",
+  "dates": [
+   {
+    "d": "2026-10-26",
+    "w": "EU requests Product Identifier (PID) data on all shipments",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-11-01",
+    "w": "EU €2 per-line handling fee applies to non-EU distance sales",
+    "imp": "up",
+    "fx": {
+     "t": "fee",
+     "car": "EU",
+     "items": [
+      [
+       "handling fee per line on distance sales into the EU",
+       "€2.00",
+       2
+      ]
+     ]
+    }
+   }
+  ],
+  "added": "2026-10-21T13:10:00Z",
+  "src": "DHL",
+  "url": "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026",
+  "srcs": [
+   {
+    "src": "DHL",
+    "url": "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026"
+   },
+   {
+    "src": "Air Cargo Week",
+    "url": "https://aircargoweek.com/countdown-to-eu-e2-handling-fee-applied-from-1st-november/"
+   }
+  ],
+  "auto": true,
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a987f817b1285",
   "date": "2026-10-20",
   "c": [
@@ -280,6 +366,41 @@
   ],
   "auto": true,
   "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "aba40a11b6946",
+  "date": "2026-10-20",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "News",
+  "title": "Amazon's Larsen says logistics network opened after seller demand",
+  "sum": "Amazon Vice President Peter Larsen told Supply Chain 24/7 at the Gartner Supply Chain Symposium/Xpo in Orlando that Amazon opened its supply chain and logistics network to all businesses, including those that do not sell on Amazon. He said sellers had asked to use it for off-Amazon volume, and that Amazon had to detach services from its seller ID requirement.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Businesses that do not sell on Amazon can now use its supply chain and logistics network, according to Amazon. The interview gives no prices, rates or effective dates.",
+  "why": "Amazon's network, previously tied to its own sellers, is now open to any business, widening the carrier options available to shippers outside Amazon.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T13:08:44Z",
+  "src": "About Amazon",
+  "url": "https://www.aboutamazon.com/company-news/amazon-germany-investment",
+  "srcs": [
+   {
+    "src": "About Amazon",
+    "url": "https://www.aboutamazon.com/company-news/amazon-germany-investment"
+   },
+   {
+    "src": "Supply Chain 24/7",
+    "url": "https://www.supplychain247.com/article/looking_at_amazons_push_to_open_its_logistics_network_to_all/Data_Warehouse"
+   }
+  ],
+  "auto": true,
+  "new": "Amazon's Peter Larsen explained in an interview that seller requests for off-Amazon volume and the removal of seller ID dependencies led to opening the network, and said bulk distribution capability was only added this year.",
   "exclusive": true
  },
  {
@@ -2871,6 +2992,41 @@
   ],
   "auto": true,
   "exclusive": true
+ },
+ {
+  "id": "a752722310083",
+  "date": "2026-10-12",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Northglenn, Colorado weighs special-use permit rules for drone delivery hubs",
+  "sum": "Northglenn, Colorado, held a first reading on October 12 of an ordinance that would require a one-year special-use permit for drone delivery hubs, with a second reading set for October 26, Dronelife reported. Salem, Oregon's City Council also voted on October 12 to study what regulations it could impose.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service today. If Northglenn's council approves the ordinance, operators wanting a drone hub there would need a one-year special-use permit meeting the stated limits.",
+  "why": "Local zoning rules could shape where drone delivery hubs are sited as Wing and Walmart plan Denver-area service next year, while the FAA keeps control of the airspace.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T13:10:34Z",
+  "src": "Dronelife",
+  "url": "https://dronelife.com/2026/10/21/drone-delivery-zoning-rules-local-restrictions/",
+  "srcs": [
+   {
+    "src": "Dronelife",
+    "url": "https://dronelife.com/2026/10/21/drone-delivery-zoning-rules-local-restrictions/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-12",
+  "new": "Northglenn, Colorado, has a drone hub ordinance in readings (second reading October 26) and Salem, Oregon, voted to study options; this adds local ground-level rules alongside federal airspace oversight, with no change yet to shipper rates or service.",
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-10-21",
+  "unconf": true
  },
  {
   "id": "a83608ad7515e",

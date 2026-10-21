@@ -450,8 +450,8 @@
   "rv": "e3902d701814"
  },
  "amazon-network-buildout": {
-  "n": "Amazon's push to deliver for everyone",
-  "s": "Amazon has widened its logistics offer to outside businesses, and a report now says a national delivery service is close to launching.",
+  "n": "Amazon opens its delivery network to all",
+  "s": "Amazon has opened its logistics network to all businesses, and reports say it is close to launching a national delivery service.",
   "ids": [
    "h512",
    "17",
@@ -460,7 +460,7 @@
    "a418fdd3e6f05"
   ],
   "first": "2025-04-30",
-  "last": "2026-10-18",
+  "last": "2026-10-20",
   "c": [
    "Amazon",
    "FedEx",
@@ -485,19 +485,19 @@
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
-  ]
+  ],
+  "co": "Amazon"
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is expanding Prime Air drone delivery while the FAA's Part 108 rule remains unpublished and local pushback grows in Massachusetts.",
+  "s": "Local governments in Colorado and Oregon are drafting or studying drone hub zoning rules as drone delivery expands, while the FAA retains authority over airspace.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb",
-   "a42293aae6d92"
+   "a86fd472c4cfb"
   ],
   "first": "2025-03-31",
   "last": "2026-10-21",
@@ -507,19 +507,18 @@
    "Regional"
   ],
   "cx": {
-   "sig": "9f652840f54a",
+   "sig": "2c9f9ae85f13",
    "v": 3,
    "beats": {
-    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth BVLOS operator; flights are expected in fall 2026 pending more approvals.",
-    "g27": "Amazon plans Prime Air sites near Chicago, Atlanta, Cleveland and Syracuse, reaching almost 500 towns, up from 11 locations.",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, nearing 20 metros; over three million customers have access so far.",
-    "g26": "Part 108 went to White House review July 10 after a missed Feb. 1 deadline; routine BVLOS still needs waivers or Part 135.",
-    "a42293aae6d92": "Sixteen Mass. lawmakers seek a task force and a certificate moratorium; Amazon's Westborough site awaits a zoning review."
+    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth cleared operator; flights are expected in fall 2026, markets TBD.",
+    "g27": "Amazon plans to grow Prime Air from 11 U.S. locations to nearly 500 towns, reaching 30 million people, by end of 2026.",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, taking their network to nearly 20 metros and over 270 Walmart stores.",
+    "g26": "Part 108 went to White House review July 10 after a missed Feb. 1 deadline; Zipline says the wait is holding back investment."
    },
-   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule stalls, so shippers are watching how fast it grows.",
-   "now": "Part 108 was still unpublished as of Oct. 9, and the FCC plans an Oct. 29 vote on 800 MHz drone use."
+   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule is stuck, which affects where and how fast parcels can fly.",
+   "now": "Part 108 was still unpublished Oct. 9, while Colorado and Oregon localities weigh hub zoning and the FAA keeps the airspace."
   },
-  "rv": "43fcc5e5df6d",
+  "rv": "8c5c1cf4aba8",
   "co": "Amazon",
   "apart": [
    "amazon-labor",
