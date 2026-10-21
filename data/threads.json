@@ -300,7 +300,7 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
-  "s": "USPS's longer delivery expectations for noncontiguous destinations have been in effect since Oct. 1, with prices unchanged and a Dec. 16 holiday deadline still published.",
+  "s": "Longer Ground Advantage and adjusted Priority Mail delivery windows to noncontiguous destinations have been in effect since Oct. 1, with prices unchanged, according to USPS.",
   "ids": [
    "h410",
    "h505",
@@ -313,12 +313,18 @@
    "USPS"
   ],
   "cx": {
-   "sig": "1eced18a2ca4",
+   "sig": "adde3c823ac8",
    "v": 2,
-   "beats": {},
-   "now": "The longer estimates took effect Oct. 1. Separately, USPS has set a Dec. 17 Ground Advantage deadline for Christmas delivery."
+   "beats": {
+    "h410": "Senators flagged Palmetto, Ga. (36% of inbound mail on time in February); DeJoy paused consolidation until at least Jan. 1, 2025.",
+    "h505": "Two phases, April 1 and July 1: some mail may take an extra day, with USPS projecting at least $36 billion saved over 10 years.",
+    "a4af485c67766": "Since Oct. 1, some Priority Mail and Ground Advantage shipments to and from non-mainland places can take 10 days or more; prices unchanged.",
+    "a4a3cb4eb56f7": "The why: Ground Advantage parcels under a pound now go mainly by surface, and USPS cites hazmat risk on passenger aircraft."
+   },
+   "intro": "USPS has kept reshaping its delivery standards, and shippers to Hawaii, Alaska and territories now face longer windows.",
+   "now": "The longer windows are in effect with prices unchanged; on the rate clock, USPS holiday prices end Jan. 15, 2027."
   },
-  "rv": "1eced18a2ca4"
+  "rv": "adde3c823ac8"
  },
  "usps-finances": {
   "n": "USPS losses and package volume",
@@ -374,13 +380,11 @@
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
-  "s": "USPS has agreements with Amazon and DHL eCommerce and filed another negotiated international contract with the PRC in October 2026.",
+  "s": "USPS has the Amazon and DHL eCommerce agreements in place and a same-day pilot for Amazon, and has now filed notice of another negotiated shipping contract.",
   "ids": [
    "21",
    "g09",
-   "09",
-   "a89329fa0cdbb",
-   "a2e0cb230779a"
+   "09"
   ],
   "first": "2026-04-01",
   "last": "2026-10-15",
@@ -432,15 +436,14 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon, Wing, Walmart and DoorDash are expanding drone delivery, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9.",
+  "s": "Amazon, Wing and DoorDash are expanding drone delivery while the FAA's Part 108 beyond-visual-line-of-sight rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb",
-   "ab73d424a5c41"
+   "a86fd472c4cfb"
   ],
   "first": "2025-03-31",
   "last": "2026-10-21",
@@ -536,21 +539,6 @@
   ],
   "rv": "32a902935643"
  },
- "de-minimis-end": {
-  "n": "De minimis suspension",
-  "ids": [
-   "aeb508490eee1",
-   "a15404304f17b"
-  ],
-  "first": "2026-10-14",
-  "s": "USPS has issued an interim final rule on customs duty responsibility and payment for international mailers, effective October 19, 2026, with comments open until November 18, 2026.",
-  "last": "2026-10-19",
-  "c": [
-   "Industry",
-   "USPS"
-  ],
-  "rv": "dcf71660fcf1"
- },
  "last-mile-facility-legislation": {
   "n": "NYC Delivery Protection Act fight",
   "ids": [
@@ -638,13 +626,24 @@
  "royal-mail-cwu-dispute": {
   "n": "Royal Mail–CWU dispute",
   "ids": [
-   "abc0a8a7d3e45"
+   "abc0a8a7d3e45",
+   "acc7a2dcc3b9d"
   ],
   "first": "2026-10-20",
-  "s": "Royal Mail publicly rebutted CWU leadership statements on 2026-10-20, citing improved on-time rates and Christmas hiring, and said it will keep working with the union at operational levels.",
+  "s": "The CWU has called for an emergency summit of the government, employers and union representatives over Royal Mail's staffing crisis.",
   "last": "2026-10-20",
   "c": [
-   "Industry"
-  ]
+   "Industry",
+   "Regional"
+  ],
+  "rv": "9d2c0a517f70",
+  "cx": {
+   "sig": "9d2c0a517f70",
+   "v": 2,
+   "beats": {
+    "acc7a2dcc3b9d": "General Secretary Dave Ward cited recruitment and retention problems, and the call followed BBC reporting of a \"nightmare Christmas\"."
+   },
+   "now": "The CWU's call for an emergency summit is on the table; the milestones don't say whether the government or employers have responded."
+  }
  }
 }

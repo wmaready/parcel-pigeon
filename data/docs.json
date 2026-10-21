@@ -471,7 +471,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:c6bf8a2f-018f-4aa0-838b-ffc1a75eb1d9/original/as/terms-carriage-us-en.pdf",
   "d": "Current US tariff, effective Apr 17, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-tariff-terms-and-conditions-of-service-f88fcb.pdf",
+  "fh": "41fa5fa8d54ea0f21243316c2cddf8113e446dcd",
+  "fat": "2026-10-21",
+  "fsz": 572038
  },
  {
   "c": "UPS",
@@ -527,7 +532,8 @@
   "d": "Current U.S. Service Guide",
   "cur": true,
   "upd": "2026-09-11",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21"
  },
  {
   "c": "FedEx",
@@ -623,7 +629,12 @@
   "d": "Current list rates",
   "cur": true,
   "upd": "2026-06-01",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2026-fedex-standard-list-rates-pdf-ae150d.pdf",
+  "fh": "d661912910c6f8246f2a6b65aff70df71964d22e",
+  "fat": "2026-10-21",
+  "fsz": 960793
  },
  {
   "c": "FedEx",
@@ -634,7 +645,12 @@
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.xlsx",
   "d": "Spreadsheet version",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2026-fedex-standard-list-rates-excel-2de617.xlsx",
+  "fh": "3a26f2601057187692858c0b4dc8f958b5f51d60",
+  "fat": "2026-10-21",
+  "fsz": 301491
  },
  {
   "c": "FedEx",
@@ -2294,6 +2310,23 @@
    "story": "a58373f1b7bc3",
    "title": "USPS finalizes live animal mailing rules in Publication 52",
    "when": "2026-10-19"
+  }
+ },
+ {
+  "c": "USPS",
+  "t": "Regulatory filing",
+  "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
+  "y": 2026,
+  "eff": null,
+  "u": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products",
+  "d": "Found with: PRC notices three new USPS standardized competitive contracts",
+  "cur": true,
+  "added": "2026-10-15",
+  "why": {
+   "how": "story",
+   "story": "ae5f2c699239a",
+   "title": "PRC notices three new USPS standardized competitive contracts",
+   "when": "2026-10-15"
   }
  }
 ]
