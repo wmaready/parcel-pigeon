@@ -32,7 +32,7 @@ def main():
     text = "ALREADY BRIEFED:\n" + "\n".join(f"- {h}" for h in history) + "\n\nSTORIES:\n" + "\n".join(
         f"- id={s['id']} date={s['date']} [{s['cat']}] {'FIRST TO REPORT ' if s.get('exclusive') else ''}{'(routine follow-up) ' if s.get('routine') else ''}"
         f"{s['title']}: {s.get('sum','')} Effect: {s.get('plain','')}" for s in recent)
-    reply = claude(MODEL_WRITE, SYSTEM, text, max_tokens=900)
+    reply = claude(MODEL_WRITE, SYSTEM, text, max_tokens=900, paced=False)    # once a day, ~3 cents: never waits on pacing
     try:
         items = parse_json(reply)[:3]
     except Exception as e:

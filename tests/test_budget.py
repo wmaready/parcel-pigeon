@@ -76,3 +76,23 @@ def test_due_once_a_day_from_the_hour(data_dir):
     assert not due("players", 4, t(9))          # once a day
     assert due("players", 4, t(4, 22))
     assert due("brief", 12, t(13))              # each job keeps its own day
+
+
+def test_the_brief_never_waits_on_pacing(data_dir, monkeypatch):
+    """The morning brief (one call a day) goes out even when the news has used what has built up so far."""
+    import requests
+    monkeypatch.setattr(common, "API_KEY", "test-key")
+    monkeypatch.setattr(common, "PACE", {"why": "built-up allowance used"})
+
+    class R:
+        status_code = 200
+        def json(self):
+            return {"model": "claude-sonnet-5-5", "content": [{"type": "text", "text": "ok"}], "usage": {"input_tokens": 1, "output_tokens": 1}}
+    monkeypatch.setattr(requests, "post", lambda url, **k: R())
+    assert common.claude("claude-sonnet-5-5", "s", "u", paced=False) == "ok"
+    try:
+        common.claude("claude-sonnet-5-5", "s", "u")
+    except RuntimeError as e:
+        assert "paused" in str(e)
+    else:
+        raise AssertionError("a paced call should wait")
