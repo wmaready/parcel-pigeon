@@ -99,7 +99,8 @@
   "shipstore",
   "anthropologie",
   "exelot",
-  "uniuniuniexpre"
+  "uniuniuniexpre",
+  "dexterity"
  ],
  "sent": [
   "player:pirateship",
@@ -191,17 +192,17 @@
   "business groups urge nyc council to block delivery protectio"
  ],
  "harvested": [
-  "a2def09bc43bb",
-  "aee6669d325da",
-  "w150132868eae",
-  "a5d45f26f2219",
-  "a89d7e4beebd9",
   "af8ee5ed067c6",
+  "a2def09bc43bb",
+  "w150132868eae",
   "a6c2418bed0a7",
   "a6cc2420ad66e",
+  "a89d7e4beebd9",
   "wacb825361479",
+  "a773d361dac4e",
   "a2b81ad721cb8",
-  "a773d361dac4e"
+  "a5d45f26f2219",
+  "aee6669d325da"
  ],
  "backfilled": true,
  "recent": [
@@ -868,7 +869,19 @@
    "m": "The bill remains in committee with no vote scheduled, and rates and service are unchanged for now."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "player",
+   "key": "player:dexterity",
+   "at": "2026-10-20T22:30:17.691339-04:00",
+   "t": "New on the map: Dexterity",
+   "m": "Dexterity builds physical-AI robots, including the two-armed Mech powered by its Foresight world model, that load trailers and handle parcels in carrier hubs such as FedEx's Hagerstown, Maryland hub.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#mna"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-20",

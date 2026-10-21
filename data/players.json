@@ -1550,6 +1550,38 @@
    ],
    "enriched": "2026-10-20",
    "pending": false
+  },
+  {
+   "id": "dexterity",
+   "n": "Dexterity",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": "mercari",
+   "hq": "Redwood City, CA, USA",
+   "yr": "2017",
+   "s": "Dexterity builds physical-AI robots, including the two-armed Mech powered by its Foresight world model, that load trailers and handle parcels in carrier hubs such as FedEx's Hagerstown, Maryland hub.",
+   "al": [
+    "Dexterity AI",
+    "Dexterity Inc.",
+    "Dexterity, Inc."
+   ],
+   "src": "https://newsroom.fedex.com/newsroom/global-english/fedex-and-dexterity-expand-physical-ai-deployment-for-autonomous-trailer-loading-at-hagerstown-hub",
+   "auto": true,
+   "pending": false,
+   "added": "2026-08-03",
+   "story": "a68878cb71618",
+   "site": "dexterity.ai",
+   "geo": [
+    -122.236,
+    37.485
+   ],
+   "srcs": [
+    "https://newsroom.fedex.com/newsroom/global-english/fedex-and-dexterity-expand-physical-ai-deployment-for-autonomous-trailer-loading-at-hagerstown-hub",
+    "https://www.therobotreport.com/dexterity-picks-up-95m-funding-container-unloading-robots/",
+    "https://wwd.com/sourcing-journal/logistics/fedex-dexterity-robotics-autonomous-trailer-loading-physical-ai-pilot-1239091771/"
+   ],
+   "enriched": "2026-10-21"
   }
  ],
  "edges": [
@@ -2784,6 +2816,42 @@
    "y": "2026",
    "t": "FedEx joins the Advent-led consortium that bought InPost",
    "url": "https://pulse2.com/inpost-fedex-and-advent-led-consortium-completes-e7-8-billion-buyout-after-securing-89-8-of-shares/"
+  },
+  {
+   "a": "ups",
+   "b": "upscapital",
+   "k": "owns",
+   "y": "2026",
+   "t": "UPS Capital is the financial services arm of UPS",
+   "url": "https://www.pymnts.com/news/delivery/2026/ups-capital-uses-ai-to-stop-holiday-delivery-disasters/",
+   "story": "ad3bb2b386f62"
+  },
+  {
+   "a": "fedex",
+   "b": "dexterity",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx and Dexterity expand autonomous trailer loading at Hagerstown",
+   "url": "https://www.supplychain247.com/article/fedex_dexterity_are_expanding_autonomous_trailer_loading_at_maryland_hub/dmlogic",
+   "story": "a68878cb71618"
+  },
+  {
+   "a": "dexterity",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2023",
+   "t": "Mech/DexR trailer-loading robots; expanded at Hagerstown hub in 2026",
+   "url": "https://wwd.com/sourcing-journal/logistics/fedex-dexterity-robotics-autonomous-trailer-loading-physical-ai-pilot-1239091771/",
+   "story": "a68878cb71618"
+  },
+  {
+   "a": "dexterity",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "Robotics work with UPS cited in trade press",
+   "url": "https://www.automatedwarehouseonline.com/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse/",
+   "story": "a68878cb71618"
   }
  ],
  "moves": [
@@ -3064,7 +3132,8 @@
   "shipstore": "2026-10-19",
   "anthropologie": "2026-10-19",
   "exelot": "2026-10-19",
-  "uniuniuniexpre": "2026-10-20"
+  "uniuniuniexpre": "2026-10-20",
+  "dexterity": "2026-10-21"
  },
  "facts": {
   "ups": {

@@ -300,14 +300,15 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
-  "s": "USPS has lengthened delivery estimates for Priority Mail and Ground Advantage to and from Alaska, Hawaii, U.S. territories and several Pacific nations, effective Oct. 1, 2026.",
+  "s": "USPS's longer delivery expectations for noncontiguous destinations have been in effect since Oct. 1, with prices unchanged and a Dec. 16 holiday deadline still published.",
   "ids": [
    "h410",
    "h505",
-   "a4af485c67766"
+   "a4af485c67766",
+   "a4a3cb4eb56f7"
   ],
   "first": "2024-05-14",
-  "last": "2026-10-12",
+  "last": "2026-10-20",
   "c": [
    "USPS"
   ],
@@ -373,14 +374,15 @@
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
-  "s": "USPS signed an exclusive last-mile deal with DHL eCommerce and is piloting same-day delivery for Amazon.",
+  "s": "USPS has signed agreements with Amazon and DHL eCommerce in 2026 and is piloting same-day delivery for Amazon, and it has now filed another unnamed domestic shipping contract with the PRC.",
   "ids": [
    "21",
    "g09",
-   "09"
+   "09",
+   "a89329fa0cdbb"
   ],
   "first": "2026-04-01",
-  "last": "2026-09-30",
+  "last": "2026-10-15",
   "c": [
    "Amazon",
    "DHL",
@@ -429,17 +431,18 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's Westborough drone hub is listed as in review and faces a new town bylaw, a zoning appeal and a planning hearing, while the FAA's Part 108 rule was unpublished as of early October.",
+  "s": "Amazon, Wing, Walmart and DoorDash are expanding drone delivery, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb"
+   "a86fd472c4cfb",
+   "ab73d424a5c41"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-19",
+  "last": "2026-10-21",
   "c": [
    "Amazon",
    "Industry",
@@ -535,13 +538,15 @@
  "de-minimis-end": {
   "n": "De minimis suspension",
   "ids": [
-   "aeb508490eee1"
+   "aeb508490eee1",
+   "a15404304f17b"
   ],
   "first": "2026-10-14",
-  "s": "De minimis is suspended for all countries since August 2025, and the commercial shipment exemption is set to be repealed from July 1, 2027, according to the article.",
-  "last": "2026-10-14",
+  "s": "USPS has adopted an interim rule on customs responsibilities and payments for international mail, with comments open until Nov. 18, 2026.",
+  "last": "2026-10-19",
   "c": [
-   "Industry"
+   "Industry",
+   "USPS"
   ],
   "rv": "dcf71660fcf1"
  },
@@ -628,5 +633,17 @@
    "Regional"
   ],
   "rv": "1ab99b5e22ca"
+ },
+ "royal-mail-cwu-dispute": {
+  "n": "Royal Mail–CWU dispute",
+  "ids": [
+   "abc0a8a7d3e45"
+  ],
+  "first": "2026-10-20",
+  "s": "Royal Mail publicly rebutted CWU leadership statements on 2026-10-20, citing improved on-time rates and Christmas hiring, and said it will keep working with the union at operational levels.",
+  "last": "2026-10-20",
+  "c": [
+   "Industry"
+  ]
  }
 }
