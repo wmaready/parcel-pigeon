@@ -51,3 +51,11 @@ def test_almanac_dates_are_in_order():
     for e in json.loads((ROOT / "data" / "almanac.json").read_text()):
         if e.get("announced") and e.get("effective"):
             assert e["announced"] <= e["effective"], f"{e['id']}: announced after it took effect"
+
+
+def test_news_uses_the_shared_rule():
+    """news.py once defined its own two-argument cycle_of (storyline seasons), which hid this one and crashed every run
+    at the off-cycle step. The names must stay distinct."""
+    import common, news
+    assert news.cycle_of is common.cycle_of
+    assert news.season_of("peak", "2026-01-10") == 2025

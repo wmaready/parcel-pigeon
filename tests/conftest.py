@@ -29,8 +29,11 @@ def no_network(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
-def fresh_meter(monkeypatch):
-    """Each test counts its own Claude spend, so nothing a test 'spends' reaches the real ledger when pytest exits."""
+def fresh_meter(monkeypatch, request):
+    """Each test counts its own Claude spend, so nothing a test 'spends' reaches the real ledger when pytest exits, and
+    the real ledger's spend never pauses a test. Tests with their own data/ copy keep the ledgers in it."""
     import common
+    if "data_dir" not in request.fixturenames:
+        monkeypatch.setattr(common, "LEDGERS", ())
     monkeypatch.setattr(common, "USAGE", {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0, "usd": 0.0})
     monkeypatch.setattr(common, "PACE", {})

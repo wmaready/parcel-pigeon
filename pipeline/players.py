@@ -59,7 +59,9 @@ def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searc
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
     if paused(extra=True):           # research and the sweep are extras: the news gets the day's budget first
         raise RuntimeError("Claude calls paused: " + paused(extra=True))
-    body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
+    from common import EFFORT, THINK_ROOM
+    body = {"model": MODEL_WRITE, "max_tokens": max_tokens + THINK_ROOM, "output_config": {"effort": EFFORT},
+            "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": searches}]
     ask.searches = 0

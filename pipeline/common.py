@@ -172,6 +172,13 @@ def api_check(r):
     raise RuntimeError(f"Claude API {r.status_code} {kind}: {msg}")
 
 
+# Sonnet 5.5 and Haiku 5.5 think before answering unless told otherwise, and the thinking counts against max_tokens: a
+# 900-token brief came back empty because thinking used all 900. Low effort keeps thinking short (none on most of these
+# tasks), and THINK_ROOM is headroom for what thinking there is, so the max_tokens a caller asks for is all reply.
+EFFORT = os.environ.get("PP_EFFORT") or "low"
+THINK_ROOM = 2000
+
+
 def claude(model, system, user, max_tokens=1500):
     """Call the Claude Messages API and return the text reply."""
     if not API_KEY:
@@ -184,8 +191,8 @@ def claude(model, system, user, max_tokens=1500):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": model, "max_tokens": max_tokens, "system": cached_system(system),
-                  "messages": [{"role": "user", "content": user}]},
+            json={"model": model, "max_tokens": max_tokens + THINK_ROOM, "system": cached_system(system),
+                  "output_config": {"effort": EFFORT}, "messages": [{"role": "user", "content": user}]},
             timeout=120,
         )
         if r.status_code in (429, 500, 502, 503, 529):
