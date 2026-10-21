@@ -2437,6 +2437,11 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .ak-box{margin:10px 0;padding:10px 12px;border-left:3px solid #2EC4B6;background:var(--panel-2,#121A23);border-radius:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
 .ak-box .link{text-align:left}.ak-guide{border-left-color:#E8772E}.ak-guide p{font-size:13.5px;color:var(--ink-2)}
 .ak-src{font-size:12.5px;color:var(--ink-2)}.ak-src .lbl{margin-right:6px}.ak-ai{margin-top:10px;padding:10px 12px;border:1px dashed var(--grid-strong);border-radius:6px}
+.ak-warn{border-left-color:var(--warn)}.ak-alm{border-left-color:var(--accent)}
+.ak-ev,.ak-st{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:6px 0;border-top:1px solid var(--grid-strong);width:100%}.ak-ev:first-of-type,.ak-st:first-of-type{border-top:0}
+.ak-ev b{flex:1 1 100%;font-weight:600}.ak-ev small,.ak-st small,.ak-box>small{flex:1 1 100%;color:var(--ink-2);font-size:12.5px}.ak-st .link{flex:1 1 auto;min-width:0}
+.ak-note{font-style:italic}.ak-facts{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px}.ak-facts i{font-style:normal;color:var(--ink-2);margin-right:4px}
+.akout a.link{overflow-wrap:anywhere;text-align:left}
 body.akopen{overflow:hidden}@media (max-width:620px){.akwrap.answered .akchips{display:none}}
 .tlcard{background:var(--panel-2,#121A23);border:1px solid var(--grid-strong,#2A3644);border-left:3px solid #2EC4B6;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tlcard b{font-size:var(--fs-md,15px);line-height:1.35;color:var(--ink)}
@@ -9437,7 +9442,9 @@ renderClocks();setInterval(renderClocks,10000);
   const st={i:0,open:false,timer:null,paused:false,anim:null,done:false,hide:null};
   const plain=h=>{const d=document.createElement('div');d.innerHTML=h;return d.textContent};
   const headline=h=>{const m=/<b>(.*?)<\/b>/.exec(h);return m?plain(m[1]):plain(h).split(/(?<=\.)\s/)[0]};
-  const item=i=>{const sid=STOPS[i]&&STOPS[i].story,s=sid&&NEWS.find(n=>n.id===sid);return {html:s?`<b>${esc(s.title)}</b>`:'',id:s&&s.id}};
+  // a story resting on one smaller outlet keeps its Unconfirmed label in the brief too
+  const UNC='<span class="tag tag-unconf">Unconfirmed</span>';
+  const item=i=>{const sid=STOPS[i]&&STOPS[i].story,s=sid&&NEWS.find(n=>n.id===sid);return {html:s?`<b>${esc(s.title)}</b>`:'',id:s&&s.id,unc:!!(s&&s.unconf)}};
   const stops=()=>STOPS.slice(0,Math.max(1,LV.length));
   const pct=([x,y])=>[x/W*100,y/H*100];
   function shell(){
@@ -9473,14 +9480,14 @@ renderClocks();setInterval(renderClocks,10000);
     $('cfly').addEventListener('click',e=>{const b=e.target.closest('[data-cb]');if(!b)return;e.stopPropagation();const k=b.dataset.cb;
       if(k==='all'){st.open=!st.open;b.setAttribute('aria-expanded',st.open);b.textContent=st.open?'Just this one':'All three';$('cfly').classList.toggle('showall',st.open);return}
       go(st.i+(k==='next'?1:-1))});
-    $('cblist').innerHTML=stops().map((_,k)=>{const x=item(k),s=stops()[k],h=x.html;return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}</span></span></li>`}).join('');
+    $('cblist').innerHTML=stops().map((_,k)=>{const x=item(k),s=stops()[k],h=x.html;return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}${x.unc?' '+UNC:''}</span></span></li>`}).join('');
   }
   function place(k){const [l,t]=pct(stops()[k].p),b=$('cbird');b.style.left=l+'%';b.style.top=t+'%'}
   function letter(k){
     const it=item(k),S=stops(),[l,t]=pct(S[k].p),L=$('clet');
     L.className='clet';void L.offsetWidth;
     const cw=$('cmap').clientWidth||300,lw=Math.min(cw*(innerWidth<=620?.86:.78),innerWidth<=620?260:300),half=lw/2/cw*100+1;L.style.setProperty('--lx',Math.min(Math.max(l,half),100-half)+'%');L.style.setProperty('--ly',t+'%');L.dataset.side=t>50?'up':'down';
-    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${stops().length}</span><span>${logoImg(S[k].c,'lgx')}${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
+    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${stops().length}</span><span>${logoImg(S[k].c,'lgx')}${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.unc?UNC:''}${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
     requestAnimationFrame(()=>L.classList.add('open'));
     document.querySelectorAll('#cmap .cstop').forEach((g,n)=>g.classList.toggle('on',n===k));
     document.querySelectorAll('#cmap .cslab').forEach((g,n)=>g.classList.toggle('on',n===k));
@@ -9680,7 +9687,7 @@ renderClocks();setInterval(renderClocks,10000);
     const unread=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert').sort((x,y)=>y.date.localeCompare(x.date)).slice(0,2);
     menu.innerHTML=`<div class="cm-hd"><span class="xname">Coop</span><span>Where to?</span><button class="cm-x" data-cclose aria-label="Close">×</button></div>
       <label class="sr" for="cAsk">${sq?esc(sq.ph):'Search everything'}</label><input id="cAsk" class="cm-ask" type="search" placeholder="${sq?esc(sq.ph):'Search stories, companies, documents'}" value="${sq?esc($(sq.f).value):''}" autocomplete="off">
-      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop: companies, documents &amp; news</b><small>Saved profiles, guide excerpts, deals and tracked fees</small></span></button>`:''}
+      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop: companies, documents &amp; news</b><small>Company facts, guide excerpts, pricing history since 2018, deals and tracked fees</small></span></button>`:''}
       <div class="cm-res" id="cRes"><div class="cm-q">${QUICK().map(([g,t,s])=>`<button class="cm-r" data-cgo="${g}"><b>${esc(t)}</b><small>${esc(s)}</small></button>`).join('')}</div>
       ${unread.length?`<div class="lbl cm-l">You haven’t read</div>${unread.map(n=>row({o:n.id,t:n.title,s:fmtD(n.date)})).join('')}`:''}</div>
       <div class="cm-foot"><button class="cm-fact" data-cfact>Tell me a fun fact</button><button class="cm-fact" data-tour>Take the tour</button><label class="cm-mute" data-cquiet><span>Coop’s notes</span><input type="checkbox" role="switch" ${quiet()?'':'checked'} aria-label="Coop’s pop-up notes"><i aria-hidden="true"></i><b>${quiet()?'Muted':'On'}</b></label></div>`;
