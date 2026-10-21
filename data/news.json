@@ -94,36 +94,36 @@
   "exclusive": true
  },
  {
-  "id": "ab73d424a5c41",
+  "id": "a6efb99bbcab2",
   "date": "2026-10-21",
   "c": [
-   "Amazon"
+   "USPS"
   ],
-  "cat": "Drones & robots",
+  "cat": "Legal",
   "kind": "News",
-  "title": "Amazon Prime Air to start Tallahassee drone deliveries in mid-November",
-  "sum": "Amazon's Prime Air drone delivery service will begin in Tallahassee, Florida, in mid-November, WTXL reported. Drones will fly from the company's fulfillment center on Mahan Drive and deliver up to 7.5 miles away.",
-  "imp": "info",
+  "title": "Pakistan court remands suspect in alleged $126 million USPS label fraud",
+  "sum": "A judicial magistrate in Lahore on Wednesday granted the National Cyber Crime Investigation Agency five-day physical remand of a 33-year-old suspect, Dawn reported. A Florida jury charged him with defrauding the US Postal Service of $126 million through the online sale of counterfeit postage labels, the US Attorney's Office of the Southern District of Florida said on Sept 28.",
+  "imp": "watch",
   "lvl": 1,
-  "plain": "Customers within 7.5 miles of Amazon's Mahan Drive fulfillment center in Tallahassee are set to get drone delivery from mid-November. No change to rates or service for other shippers.",
-  "why": "The launch adds another U.S. location to Amazon's drone program, which Amazon has said will reach almost 500 cities and towns.",
+  "plain": "No change to USPS rates or service. The case concerns counterfeit postage labels sold through a website that was not authorised to sell USPS products; a US court order authorised its seizure and shutdown.",
+  "why": "US prosecutors say counterfeit labels sold at about $2 each caused USPS losses above $126 million.",
   "score": 4,
-  "tie": "Amazon said in August 2026 that Prime Air would start deliveries by the end of 2026 from additional sites, with fees of $2.99 per delivery for Prime members and $4.99 for others.",
+  "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-10-21T02:48:29Z",
-  "src": "WTXL ABC 27",
-  "url": "https://www.wtxl.com/northeast-tallahassee/amazon-prime-air-drone-deliveries-coming-to-tallahassee",
+  "added": "2026-10-21T19:05:44Z",
+  "src": "Dawn",
+  "url": "https://www.dawn.com/news/2038787",
   "srcs": [
    {
-    "src": "WTXL ABC 27",
-    "url": "https://www.wtxl.com/northeast-tallahassee/amazon-prime-air-drone-deliveries-coming-to-tallahassee"
+    "src": "Dawn",
+    "url": "https://www.dawn.com/news/2038787"
    }
   ],
   "auto": true,
-  "ann": "2026-10-21",
-  "new": "Amazon's Prime Air launch in Tallahassee has a mid-November start, with drones flying up to 7.5 miles from the Mahan Drive fulfillment center, and the city said Florida law limits local control over drone operations.",
-  "exclusive": true
+  "exclusive": true,
+  "tried": "2026-10-21",
+  "unconf": true
  },
  {
   "id": "a3697365517fa",
@@ -278,6 +278,42 @@
   "exclusive": true,
   "unconf": true,
   "tried": "2026-10-21"
+ },
+ {
+  "id": "a614194f46e5f",
+  "date": "2026-10-20",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air to start Tallahassee drone delivery by mid-November",
+  "sum": "Amazon's Prime Air showed its 70-pound MK 30 drone at a Tallahassee community event on Oct. 20, 2026. Josh Brundage, a Prime Air senior manager, said the service is slated to launch by mid-November at $4.99 per delivery. It will cover a 7.5-mile radius around Amazon's Mahan Drive fulfillment center.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Customers within 7.5 miles of Amazon's Tallahassee fulfillment center are due to get optional drone delivery at $4.99 from mid-November. Items must fit in a shoebox-sized package and be stocked at that facility.",
+  "why": "Amazon has drones in 15 markets and hopes to reach 40 to 50 by year-end; Tallahassee would be the second Florida city with the service.",
+  "score": 5,
+  "tie": "In August 2026, Amazon said Prime Air would reach almost 500 cities and towns by the end of 2026, up from 11 U.S. locations.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T19:05:29Z",
+  "src": "Miramar News",
+  "url": "https://www.miramarflnews.com/news/article317707493.html",
+  "srcs": [
+   {
+    "src": "Miramar News",
+    "url": "https://www.miramarflnews.com/news/article317707493.html"
+   },
+   {
+    "src": "WTXL ABC 27",
+    "url": "https://www.wtxl.com/northeast-tallahassee/amazon-prime-air-drone-deliveries-coming-to-tallahassee"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-20",
+  "new": "Amazon gave Tallahassee specifics: a mid-November launch, a $4.99 optional fee, a 7.5-mile radius, shoebox-sized items and a fleet of up to 21 drones, with 15 markets already live and a goal of 40 to 50 by year-end.",
+  "exclusive": true
  },
  {
   "id": "a6e82ba740e99",
@@ -2264,6 +2300,38 @@
   "exclusive": true,
   "unconf": true,
   "tried": "2026-10-21"
+ },
+ {
+  "id": "adb9900b3abe7",
+  "date": "2026-10-14",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Massachusetts Democrats ask FAA to review Amazon drone hub near Boston",
+  "sum": "Four Massachusetts Democratic lawmakers wrote to FAA Administrator Bryan Bedford on Oct. 14 asking for a new environmental review before an Amazon Prime Air hub is allowed in Westborough, about 30 miles west of Boston. They cited community concerns including noise, health and safety, and privacy. The FAA said it would respond directly, and Amazon did not immediately comment, according to Reuters.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. The lawmakers' request concerns whether the FAA should review the planned Westborough hub before it is allowed.",
+  "why": "Local objections to a drone hub come as the FAA's July review lets qualifying operators launch fleets without a site-specific environmental analysis.",
+  "score": 6,
+  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns by the end of 2026, up from 11 U.S. locations.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-21T19:04:47Z",
+  "src": "WTAQ",
+  "url": "https://wtaq.com/2026/10/14/us-lawmakers-ask-faa-to-conduct-review-before-allowing-amazon-drone-hub-near-boston/",
+  "srcs": [
+   {
+    "src": "WTAQ",
+    "url": "https://wtaq.com/2026/10/14/us-lawmakers-ask-faa-to-conduct-review-before-allowing-amazon-drone-hub-near-boston/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-14",
+  "new": "Four Massachusetts lawmakers asked the FAA on Oct. 14 for a new review of Amazon's planned Westborough hub, adding local pushback to the Sept. 28 suit by 15 states and Harris County, Texas; no change to shipper rates or service has been announced.",
+  "exclusive": true
  },
  {
   "id": "aeb508490eee1",
@@ -4539,30 +4607,39 @@
   "exclusive": true
  },
  {
-  "id": "ad91e3b17e5ab",
+  "id": "acb44dbafb712",
   "date": "2026-10-05",
   "c": [
    "UPS"
   ],
   "cat": "Legal",
   "kind": "News",
-  "title": "NLRB judge rules UPS safety vest policy barring union insignia broke labor law",
-  "sum": "An NLRB administrative law judge, Kimberly Sorg-Graves, ruled in a Monday decision that United Parcel Service broke federal labor law by enforcing a work rule that kept employees from wearing union insignia on safety vests, according to Bloomberg Law. The judge found UPS did not show a legitimate business justification and rejected the company's safety argument.",
+  "title": "NLRB judge rules UPS unlawfully restricted union insignia on safety vests",
+  "sum": "An NLRB administrative law judge ruled on October 5 that UPS unlawfully maintained and enforced overly broad rules limiting union insignia on safety vests, according to reports cited by Hoodline. UPS said it plans to appeal. The decision is a recommended order, not a final board order.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service. The ruling concerns UPS's workplace dress rule on union logos and buttons on safety vests.",
+  "plain": "No change to rates or service. The recommended order would require UPS to rescind the policies and post a notice at its Atlanta facility, and UPS plans to appeal.",
+  "why": "The recommended order targets a UPS dress-code policy at its Atlanta facility and remains subject to appeal, so no final board order exists yet.",
+  "score": 5,
   "tie": null,
   "act": null,
   "dates": [],
-  "src": "Bloomberg Law News",
-  "url": "https://news.bloomberglaw.com/daily-labor-report/ups-safety-vest-dress-policy-violates-labor-law-nlrb-judge-says",
+  "added": "2026-10-21T19:05:12Z",
+  "src": "Hoodline",
+  "url": "https://hoodline.com/2026/10/atlanta-ups-vest-policy-ruled-unlawful-company-vows-appeal/",
   "srcs": [
+   {
+    "src": "Hoodline",
+    "url": "https://hoodline.com/2026/10/atlanta-ups-vest-policy-ruled-unlawful-company-vows-appeal/"
+   },
    {
     "src": "Bloomberg Law News",
     "url": "https://news.bloomberglaw.com/daily-labor-report/ups-safety-vest-dress-policy-violates-labor-law-nlrb-judge-says"
    }
   ],
-  "auto": true
+  "auto": true,
+  "ann": "2026-10-05",
+  "exclusive": true
  },
  {
   "id": "a4af485c67766",
