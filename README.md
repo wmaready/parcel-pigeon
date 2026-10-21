@@ -199,10 +199,16 @@ editor. The app shows that line, plus any audited change to the document.
 Built in the app; they switch on when `config.json` (`{"api": "..."}`) points at the Cloudflare worker in `cloudflare/`
 (see `cloudflare/SETUP.md`). Reactions are Coop faces (Like, Love, Dislike, Shocked). Comments use a display name and an
 automatic screen (spam, abuse, personal info, accusations, confidential contract rates), no approval queue.
-Ask Coop: `guides.py` (run from alerts.py) publishes the text of the library's guides as `data/guides/<carrier>.json`;
-the app picks the best passages plus matching stories, rate clock, fuel and company data and sends only those; the worker
-answers from them with sources, drops any source it wasn't given, caches repeats for 24 hours, and enforces per-reader,
-daily and monthly caps.
+Ask Coop: `guides.py` (run from alerts.py) publishes the text of the library's guides as `data/guides/<carrier>.json`.
+`ask.js` answers in the browser, with no AI call and no cost per question, from Coop's notes (`data/coop.json`), those
+guide passages, the pricing history (`data/almanac.json`) and its year-over-year notes (`data/patterns.json`), this
+week's fuel, the rate clock, company profiles with their double-checked facts (HQ, founded, owner) and stories. It keeps
+the announced date and the takes-effect date as two labelled fields ("date not on file" when one is missing), flags
+off-cycle changes, marks single-source stories Unconfirmed, links stories (`#s=`) and company pages (`#c=`), and warns
+when the pricing history shows a figure in Coop's notes has since changed. A fuller written answer ("Coop's take") is
+off: it only runs if `config.json` has an `"ask"` address. Then the app sends just those matched snippets to that
+worker, which answers from them with sources, drops any source it wasn't given, caches repeats for 24 hours, and
+enforces per-reader, daily and monthly caps.
 
 ## Logos and photos
 

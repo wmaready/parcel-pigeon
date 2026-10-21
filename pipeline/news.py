@@ -56,7 +56,8 @@ one city's delivery tweak) and small foreign carriers' routine news. When unsure
 Local items: DROP routine hyper-local U.S. items: one post office's hours or temporary closure, one facility's hours, local
 holiday-deadline reminders, a petty local crime. KEEP local items that are news for the industry: a new service reaching a
 town (drone or robot delivery starting somewhere), a federal raid or fraud or theft ring, a facility closure under a named
-national program, a first-of-its-kind service. Those are fine as stories; they just don't join storylines.
+national program, a first-of-its-kind service. Those are fine as stories; they just don't start storylines (they may join
+a company's ACTIVE storyline when they are the next chapter of that company's saga).
 Late reports: DROP an item from a smaller or local outlet that reports, as if new, an event that happened weeks earlier and
 that the major parcel and freight outlets already covered (check RECENT STORIES and the dates in the summary). DROP non-stories
 (a site adding its own guides or directories, listicles, SEO explainers, product promotions). A "not yet announced" item IS a
@@ -75,7 +76,12 @@ You also get RECENT STORIES already published (id: title) and ACTIVE STORYLINES 
 same event as a recent story and adds NO new development, set "same_as" to that id. A new development in an ongoing story
 (a new offer in labor talks, a ruling, a deal closing, a rate taking effect, a follow-up with new facts) is NOT same_as: keep
 it as its own item and put it in that storyline. Storylines are how a news desk follows a subject over weeks or months. Be strict: an item joins a storyline only when it is directly about that
-same subject (same company or program AND the same issue), not merely the same company or a loosely related theme. Only
+same subject (same company or program AND the same issue), not merely the same company or a loosely related theme.
+One exception: a smaller or regional company's ongoing saga is ONE storyline. When a regional or alternative carrier, courier
+or startup goes through a connected chain of events (funding, a go-public or sale deal and its fallout, the service trouble or
+lawsuits that come with fast growth), use that company's ACTIVE storyline (the [company] shown with each one), whichever outlet
+reports it, instead of opening a second storyline for the same company. Check the ACTIVE STORYLINES for the item's main company
+before you make a new key. Only
 small-parcel subjects get storylines (carrier pricing and surcharges, carrier networks and service, carrier labor, postal
 policy and finances, parcel regulation and trade rules, deals that reshape who delivers parcels, delivery tech rolling out at
 scale). No storylines for general finance (a private-equity firm selling a tech unit, stock moves), local events,
@@ -84,7 +90,9 @@ closed, took effect, or a confirmed wait for one), not a pile of related article
 (e.g. "ups-2027-gri"); every other kept item gets its own unique key.
 
 Reply with JSON only: a list of objects
-{{"i": index, "keep": true|false, "carriers": [subset of {CARRIERS}, or ["Industry"] if no specific carrier],
+{{"i": index, "keep": true|false, "carriers": [subset of {CARRIERS} that the item is ABOUT (the subject or the acting party),
+never a carrier only mentioned, compared or quoted in passing; ["Industry"] if no specific carrier],
+"company": the one company the item is mainly about, by its common name (e.g. "UniUni", "UPS", "Royal Mail"), or null,
 "category": one of {CATEGORIES}, "kind": "News"|"Opinion"|"Analysis", "event": short key, "same_as": id or null,
 "score": 1-10 for how much the item matters to U.S. parcel shippers (10 = a dated price change from UPS, FedEx or USPS affecting most shippers; 7-9 = a big carrier network, labor, regulation or deal move; 4-6 = a regional carrier, platform or report worth knowing; 1-3 = minor or local),
 "fit": "core" if it is plainly small parcel news, "edge" if you are keeping it but it is only loosely tied to small parcel
@@ -131,7 +139,8 @@ Return JSON only, with exactly these keys:
          {{"t":"zone","car":"FedEx"}} for a zone chart change;
 "category": one of {CATEGORIES} (use "M&A" for mergers, acquisitions, sales, spin-offs, SPACs, IPOs and funding rounds);
 "kind": "News", "Opinion" or "Analysis";
-"carriers": subset of {CARRIERS}, or ["Industry"];
+"carriers": subset of {CARRIERS} that the story is ABOUT (the subject or the acting party), never a carrier only mentioned,
+  compared or quoted in passing (a story about Amazon's delivery plans is ["Amazon"], not also USPS, UPS and FedEx), or ["Industry"];
 "orgs": companies in the parcel world that the story is about (carriers, couriers, gig and last-mile networks, 3PLs, shipping
   or returns software, drone/robot delivery firms, retailers' delivery arms, investors in these): [{{"name":"...","what":"one line on
   what it does, from the sources","realm":"same realm names as deal parties"}}]; skip law firms, agencies, people and generic shippers; [] if none;
@@ -195,6 +204,161 @@ def own_only(story):
     story["dates"] = keep
     if story.get("tie") and foreign(story["tie"]):
         story["tie"] = None
+
+
+# The big carriers the writer tends to tag on any story that merely mentions them ("Amazon's plan to replace USPS" tagged
+# USPS, UPS and FedEx too). index.html applies the same rule (storyCos) so older stories follow it as well.
+BIG_TAGS = ("UPS", "FedEx", "USPS", "Amazon", "OnTrac", "DHL")
+
+
+def subject_tags(story):
+    """A story's carrier tags, limited to the companies it is about. When the headline names a company, a big-carrier tag
+    stays only if that carrier (or its parent or one of its arms) is in the headline; a carrier the story only mentions
+    goes. Stories whose headline names no company keep their tags (an industry report, "Postmaster General resigns")."""
+    tags = list(story.get("c") or [])
+    head = _cos(story.get("title", ""))
+    if not head:
+        return tags
+    fam = {i: par for i, par, _ in _names()}
+    roots = head | {fam[i] for i in head if fam.get(i)}          # the headline companies and their parents...
+    own = roots | {i for i, par in fam.items() if par in roots}  # ...and their arms (Blue Dart -> DHL Group -> DHL Express)
+    keep = [c for c in tags if c not in BIG_TAGS or (_cos(c) & own)]
+    return keep or ["Industry"]
+
+
+# ---------------------------------------------------------------- storylines: one subject, one storyline
+def _co(x):
+    return re.sub(r"[^a-z0-9]+", "", str(x or "").lower())
+
+
+def resolve_thread(threads, key):
+    """A storyline key the model reuses after that storyline was merged into another one points to the merged storyline."""
+    if not key or key in threads:
+        return key
+    return next((k for k, t in threads.items() if key in (t.get("was") or [])), key)
+
+
+def thread_company(t, key=""):
+    """The main company a storyline follows: its "co" field, else the one company named in its name (as written there)."""
+    if t.get("co"):
+        return t["co"]
+    found = {m.group(0) for _, _, rx in _names() for m in [rx.search(t.get("n") or "")] if m}
+    # "UniUni" can match two map entries for the same company; one company means one distinct name in the text
+    found = {x for x in found if not any(x != y and x in y for y in found)}
+    return found.pop() if len(found) == 1 else None
+
+
+def saga_candidates(threads, company, skip=(), days=365):
+    """Existing storylines about the same main company that are still recent enough to continue, newest first."""
+    co = _co(company)
+    if len(co) < 2:
+        return []
+    since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+    word = re.compile(r"(?<![a-z0-9])" + re.escape(str(company).lower()) + r"(?![a-z0-9])")
+    out = [k for k, t in threads.items() if k not in skip and (t.get("last") or "") >= since and
+           (_co(thread_company(t, k)) == co or word.search((t.get("n") or "").lower() + " " + k.replace("-", " ")))]
+    return sorted(out, key=lambda k: threads[k].get("last") or "", reverse=True)[:6]
+
+
+SAGA = """You keep a parcel news app's storylines tidy. A storyline follows one subject over weeks or months. You get a NEW
+item (or a storyline) and EXISTING storylines about the same company, with their latest headlines. Say whether the new one
+is the same ongoing saga as one of them. For a smaller or regional company (a regional carrier, a courier, a startup), its
+funding, its go-public or sale deal and that deal's fallout, and the service trouble or lawsuits that come with its growth
+are ONE saga. For a big carrier (UPS, FedEx, USPS, Amazon, DHL), the same saga means the same program or issue (one labor
+contract, one network overhaul, one deal), not just the same company.
+Reply with JSON only: {"same": "<existing key>" or null}"""
+
+
+def same_saga(threads, candidates, title, summary, archive):
+    """Ask the fast model whether a new item (or storyline) continues one of the candidate storylines. Returns its key or None."""
+    if not candidates:
+        return None
+    text = f"NEW: {title}\n{(summary or '')[:300]}\n\nEXISTING STORYLINES:\n" + "\n".join(
+        f"{k}: {threads[k].get('n')}\n" + "\n".join(f"  - {archive[i].get('date')}: {archive[i].get('title')}"
+                                                    for i in threads[k].get("ids", [])[-4:] if i in archive) for k in candidates)
+    try:
+        got = parse_json(claude(MODEL_FAST, SAGA, text, max_tokens=200)) or {}
+    except Exception as e:
+        print(f"  storyline check failed: {e}", file=sys.stderr)
+        return None
+    k = got.get("same") if isinstance(got, dict) else None
+    return k if k in candidates else None
+
+
+def merge_threads(threads, src, dst, dates, live=(), name=None, status=None, co=None, add=()):
+    """Fold storyline src into dst (dst is created when it doesn't exist yet). Story ids are combined in date order; Coop's
+    step lines for every story stay; the intro and "where it stands" come from whichever side has the newest story; the
+    narration and the editor review run again because the story set changed. Old keys are remembered in "was", so the
+    pipeline files later items sent to an old key into the merged storyline."""
+    a = threads.pop(src, None) if src != dst else None
+    b = threads.setdefault(dst, {"n": (a or {}).get("n") or dst, "ids": []})
+    if a is None and not add and not (name or status or co):
+        return b
+    a = a or {}
+    ids = sorted({*b.get("ids", []), *a.get("ids", []), *add}, key=lambda i: (dates.get(i) or "", i))
+    newer = a if (a.get("last") or "") > (b.get("last") or "") else b
+    known = [dates[i] for i in ids if dates.get(i)]
+    beats = {**((a.get("cx") or {}).get("beats") or {}), **((b.get("cx") or {}).get("beats") or {})}
+    cx = {"sig": None, "v": BEATS_V, "beats": {i: v for i, v in beats.items() if i in ids}}
+    for k in ("intro", "now"):
+        # "now" describes the newest story, so it only comes from the side that has it; the intro can come from either
+        v = (newer.get("cx") or {}).get(k) or (k == "intro" and ((b.get("cx") or {}).get(k) or (a.get("cx") or {}).get(k)))
+        if v:
+            cx[k] = v
+    b.update({"ids": ids, "first": min(known) if known else b.get("first") or a.get("first"),
+              "last": max(known) if known else max(b.get("last") or "", a.get("last") or ""),
+              "c": sorted(set(b.get("c") or []) | set(a.get("c") or [])), "cx": cx})
+    if newer.get("s"):
+        b["s"] = newer["s"]
+    if name:
+        b["n"] = name[:60]
+    if status:
+        b["s"] = status
+    if co or a.get("co"):
+        b["co"] = co or b.get("co") or a.get("co")
+    was = set(b.get("was") or []) | set(a.get("was") or []) | ({src} if src != dst else set())
+    if was:
+        b["was"] = sorted(was)
+    b.pop("rv", None)
+    for x in live:
+        if x.get("thread") == src:
+            x["thread"] = dst
+    return b
+
+
+def merge_sagas(limit=4):
+    """Editor pass: storylines that follow the same company are checked in pairs; when the model says they are one saga,
+    they become one storyline. Pairs found to be different are remembered ("apart"), so each pair is asked about once."""
+    threads = load("threads.json", {})
+    if len(threads) < 2:
+        return
+    seed, live = load("seed.json", {}), load("news.json", [])
+    archive = {s["id"]: s for s in seed.get("news", []) + live if s.get("id")}
+    dates = {i: s.get("date") for i, s in archive.items()}
+    asked, changed = 0, False
+    for k in sorted(threads, key=lambda k: threads[k].get("last") or "", reverse=True):
+        if asked >= limit or k not in threads:
+            continue
+        t = threads[k]
+        co = thread_company(t, k)
+        cands = [c for c in saga_candidates(threads, co, skip={k}) if c not in (t.get("apart") or [])
+                 and k not in (threads[c].get("apart") or [])] if co else []
+        if not cands:
+            continue
+        last = archive.get((t.get("ids") or [""])[-1]) or {}
+        asked += 1
+        hit = same_saga(threads, cands, f"{t.get('n')} (latest: {last.get('title') or ''})", t.get("s") or "", archive)
+        if hit:
+            # the storyline with more stories keeps its key; the newer one's "where it stands" wins
+            src, dst = (k, hit) if len(threads[hit].get("ids", [])) >= len(t.get("ids", [])) else (hit, k)
+            merge_threads(threads, src, dst, dates, live, co=co)
+            print(f"  storylines merged (same {co} saga): {src} -> {dst}")
+        else:
+            t["apart"] = sorted(set(t.get("apart") or []) | set(cands))
+        changed = True
+    if changed:
+        save("threads.json", threads)
+        save("news.json", live)
 
 def gnews(q):
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-US&gl=US&ceid=US:en"
@@ -822,7 +986,8 @@ def main():
     active = sorted(((k, t) for k, t in threads.items() if (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
                     key=lambda kt: kt[1].get("last") or "", reverse=True)[:60]
     head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent) + \
-           "\n\nACTIVE STORYLINES:\n" + ("\n".join(f"{k}: {t.get('n')} (last {t.get('last')})" for k, t in active) or "(none yet)")
+           "\n\nACTIVE STORYLINES:\n" + ("\n".join(f"{k}: {t.get('n')}" + (f" [{thread_company(t, k)}]" if thread_company(t, k) else "") + f" (last {t.get('last')})"
+                      for k, t in active) or "(none yet)")
     # screen in chunks of 20 so a long first run can't overflow one reply; item numbers stay global
     verdicts, screened = [], set()
     for c0 in range(0, len(batch), 20):
@@ -908,6 +1073,10 @@ def main():
             tkey = (v.get("thread") or "").strip().lower()[:60] or None
             if tkey and not re.match(r"^[a-z0-9][a-z0-9-]{2,59}$", tkey):
                 tkey = None
+            tkey = resolve_thread(threads, tkey)
+            if tkey and tkey not in threads and v.get("company"):
+                # a "new" storyline for a company that already has one: ask whether it is the same saga before opening a second
+                tkey = same_saga(threads, saga_candidates(threads, v["company"]), lead_item["title"], lead_item.get("summary"), archive) or tkey
             prior = [archive[i] for i in (threads.get(tkey) or {}).get("ids", []) if i in archive][-4:] if tkey else []
             if tkey:
                 prompt += ("\n\nSTORYLINE: " + ((threads.get(tkey) or {}).get("n") or tkey) + "\n" +
@@ -974,6 +1143,8 @@ def main():
                     if got:
                         story["img"], story["thumb"], story["imgc"] = got[0], got[1], f"Image: {sx['src']}"
                         break
+            # tagged only with the companies it is about, not every carrier it mentions
+            story["c"] = subject_tags(story)
             # only the story's own company's dates and context: other carriers' events mentioned in passing are dropped
             own_only(story)
             # only cost changes and big events go on the rate clock
@@ -1037,6 +1208,8 @@ def main():
             publish_extras(story, s, live)
             if tkey:
                 t = threads.setdefault(tkey, {"n": s.get("thread_name") or tkey.replace("-", " ").title(), "ids": [], "first": story["date"]})
+                if v.get("company") and not t.get("co"):
+                    t["co"] = str(v["company"])[:40]
                 if s.get("thread_name") and not prior:
                     t["n"] = s["thread_name"][:60]
                 if s.get("status"):
@@ -1093,17 +1266,29 @@ Plain, neutral, a little conversational; no hype, no advice, no predictions of y
 Hard rules: use ONLY facts in the MILESTONES and CONTEXT below. Every number, date and name you write must appear there. Never
 claim a cause or link that isn't stated or plainly implied; "meanwhile" is fine, "because" needs support. Don't restate the
 headline. Never name a parcel consultancy or audit firm (say "an industry analysis").
+Dates: each milestone's first date is when it was REPORTED. "announced" is the date the company announced the change and
+"takes effect" is when it starts; they are different events. Never call a takes-effect date an announcement date or the
+reverse, and never fill in a missing one from the other or from the reported date. The same holds for CONTEXT: RATE CLOCK
+and PRICING HISTORY dates are takes-effect dates unless labelled "announced". OFF-CYCLE marks a price change outside the
+carrier's usual annual increase and peak season; you may say so.
+A milestone marked UNCONFIRMED rests on one smaller outlet so far: say "reportedly" (or "unconfirmed") in its line and never
+state it as settled fact.
 Reply with JSON only:
 {"intro": "one line, under 120 characters: what this storyline is about and why shippers care",
  "beats": {"<milestone id>": "one line, under 130 characters, for that step", ...},
  "now": "one line, under 140 characters: where it stands and what's next, only if the milestones or the rate clock say so"}"""
-BEATS_V = 2
+BEATS_V = 3   # 3: milestones carry announced / takes-effect dates, off-cycle and unconfirmed flags
 
 
 def thread_context(S, seed, live):
     """Facts from the rest of the app that can give a storyline context: the companies' profiles and owners, deals they're
     in, dated cost changes ahead on the rate clock, and other recent headlines about them."""
-    players = seed.get("players", []) + load("players.json", {}).get("players", [])
+    pj = load("players.json", {})
+    players = seed.get("players", []) + pj.get("players", [])
+    # facts double-checked against two independent sources (players.json "facts", from sweep.py) win, as in the app
+    vf = pj.get("facts") or {}
+    players = [{**p, **{k: vf[p["id"]][k] for k in ("hq", "yr", "own", "tk") if (vf.get(p["id"]) or {}).get(k)}}
+               for p in players if p.get("id")]
     byname = {}
     for p in players:
         for nm in [p.get("n")] + (p.get("al") or []):
@@ -1115,12 +1300,13 @@ def thread_context(S, seed, live):
         for o in st.get("orgs") or []:
             if isinstance(o, dict) and o.get("name"):
                 names.add(o["name"])
-    out, seen = [], set()
+    out, seen, cos = [], set(), set()
     for nm in sorted(names)[:8]:
         p = byname.get(nm.lower())
         if not p or p["id"] in seen:
             continue
         seen.add(p["id"])
+        cos.update(x.lower() for x in [p["n"]] + (p.get("al") or []) if x)
         par = byid.get(p.get("parent") or "")
         out.append(f"COMPANY {p['n']}: {(p.get('role') or p.get('s') or '')[:160]}" + (f" Part of {par['n']}." if par else "") +
                    (f" HQ {p['hq']}." if p.get("hq") else "") + (f" Founded {p['yr']}." if p.get("yr") else ""))
@@ -1128,17 +1314,43 @@ def thread_context(S, seed, live):
     hit = lambda txt: any(re.search(r"\b" + re.escape(w) + r"\b", (txt or "").lower()) for w in words)
     for d in (seed.get("deals", []) + load("deals.json", []))[:200]:
         if hit(f"{d.get('buyer')} {d.get('target')}"):
-            out.append(f"DEAL {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
+            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
     today = dt.date.today().isoformat()
     for c in seed.get("clock", []):
         if (c.get("d") or "") >= today and hit(f"{c.get('c')} {c.get('w')}"):
-            out.append(f"RATE CLOCK {c['d']}: {c.get('w')} ({c.get('c')})")
+            out.append(f"RATE CLOCK takes effect {c['d']}: {c.get('w')} ({c.get('c')})")
+    # the pricing history (data/almanac.json) for these carriers around the storyline's dates, with both dates labelled
+    lo = (dt.date.fromisoformat(min((st.get("date") or today)[:10] for st in S)) - dt.timedelta(days=60)).isoformat()
+    hi = (dt.date.today() + dt.timedelta(days=150)).isoformat()
+    alm = [e for e in load("almanac.json", []) if isinstance(e, dict) and str(e.get("carrier") or "").lower() in cos
+           and lo <= (e.get("effective") or "") <= hi]
+    for e in sorted(alm, key=lambda e: e.get("effective") or "", reverse=True)[:3]:
+        out.append(f"PRICING HISTORY {e['carrier']}: {e.get('headline')}; " + milestone_dates(e.get("announced"), e.get("effective")) +
+                   (" OFF-CYCLE." if cycle_of(e["carrier"], e.get("kind"), e.get("effective"), e.get("announced")) == "off" else ""))
     ids = {st["id"] for st in S}
     recent = (dt.date.today() - dt.timedelta(days=60)).isoformat()
     others = [n for n in live + seed.get("news", []) if n.get("id") not in ids and (n.get("date") or "") >= recent and hit(n.get("title"))]
     for n in sorted(others, key=lambda n: n.get("date") or "", reverse=True)[:5]:
         out.append(f"ALSO IN THE NEWS {n.get('date')}: {n.get('title')}")
     return "\n".join(out[:24])
+
+
+def milestone_dates(ann, act):
+    """The two dates, each labelled; one we don't have says so instead of borrowing the other."""
+    return f"announced {ann or 'date not stated'}; takes effect {act or 'date not stated'}."
+
+
+def milestone_line(s):
+    """One storyline step as Coop sees it: the reported date, then the announced and takes-effect dates the story states,
+    then its flags."""
+    flags = ([milestone_dates(s.get("ann"), s.get("act"))] if s.get("ann") or s.get("act") else []) + \
+        (["OFF-CYCLE"] if s.get("offc") else []) + (["UNCONFIRMED (one smaller outlet so far)"] if s.get("unconf") else [])
+    return f"id={s['id']} | reported {s.get('date')} | " + (" | ".join(flags) + " | " if flags else "") + \
+        f"{s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]} {(s.get('tie') or '')[:200]}"
+
+
+# words that mark a line as a report rather than settled fact
+HEDGE = re.compile(r"\b(reported(ly)?|unconfirmed|not (yet )?confirmed|according to|reports?|said to|claims?)\b", re.I)
 
 
 def write_beats(limit=6):
@@ -1164,8 +1376,7 @@ def write_beats(limit=6):
             ix = sorted({0, *[round(i * (len(S) - 1) / 7) for i in range(1, 7)], len(S) - 1})
             S = [S[i] for i in ix]
         ctx = thread_context(S, seed, live)
-        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\nMILESTONES:\n" + "\n".join(
-            f"id={s['id']} | {s.get('date')} | {s.get('title')} :: {(s.get('sum') or '')[:420]} {(s.get('new') or '')[:200]} {(s.get('tie') or '')[:200]}" for s in S) + \
+        text = f"STORYLINE: {t.get('n') or k}\nWHERE IT STANDS: {t.get('s') or ''}\n\nMILESTONES:\n" + "\n".join(milestone_line(s) for s in S) + \
             f"\n\nCONTEXT (from the rest of the app):\n{ctx or '(none)'}"
         done += 1
         try:
@@ -1173,7 +1384,10 @@ def write_beats(limit=6):
         except Exception as e:
             print(f"  storyline narration failed for {k}: {e}", file=sys.stderr); continue
         ok = lambda line, n: isinstance(line, str) and 0 < len(line) <= n and not numbers_supported(line, text)
-        beats = {i: v.strip() for i, v in (got.get("beats") or {}).items() if i in ids and ok(v, 140)}
+        unconf = {s["id"] for s in S if s.get("unconf")}
+        # an unconfirmed step must read as unconfirmed; a line that states it as fact is dropped (plain date cue instead)
+        beats = {i: v.strip() for i, v in (got.get("beats") or {}).items()
+                 if i in ids and ok(v, 140) and (i not in unconf or HEDGE.search(v))}
         cx = {"sig": sig, "v": BEATS_V, "beats": beats}
         if ok(got.get("intro"), 130):
             cx["intro"] = got["intro"].strip()
@@ -1200,7 +1414,9 @@ REVIEW = """You review one STORYLINE in a small-parcel news app: a subject follo
 - "parcel": true if the subject is squarely small parcel (carrier pricing and surcharges, carrier networks and service,
   carrier labor, postal policy and finances, parcel regulation and trade rules, deals that reshape who delivers parcels,
   delivery tech rolling out at scale); false for general finance (a fund selling a tech unit), local events, or loose themes.
-- "drop": ids of stories that don't belong in a tight arc: a different subject, a loose tie (same company, different issue),
+- "drop": ids of stories that don't belong in a tight arc: a different subject, a loose tie (same company, different issue;
+  but for a storyline that follows one smaller or regional company's saga, its funding, deals, fallout and service trouble
+  are all one arc, so keep those),
   a local item (it stays on the site, just not in the storyline), an opinion piece, a repeat that adds nothing new, or a
   side note. Keep each step a real development: announced, changed, ruled, closed, took effect, or a confirmed wait for one
   (e.g. one carrier still hasn't announced its increase). The result should read as one clear story in order.
@@ -1290,7 +1506,7 @@ if __name__ == "__main__":
         from scoop import crash_alert
         crash_alert("news.py --primary" if "--primary" in sys.argv else "news.py")
         raise
-    for step in (curate, review_threads):     # editor passes first, so Coop narrates the cleaned-up storylines
+    for step in (curate, merge_sagas, review_threads):     # editor passes first, so Coop narrates the cleaned-up storylines
         try:
             step()
         except Exception as e:

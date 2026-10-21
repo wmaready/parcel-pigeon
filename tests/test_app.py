@@ -90,3 +90,103 @@ def test_company_page(site):
         b.close()
     assert not errors, errors[:5]
     assert not wide, wide
+
+
+def test_story_ties_and_storylines(site):
+    """A story sits on the profiles of the companies it is about, not every company it mentions; its map pin goes to the
+    place it names; and UniUni's saga is one storyline on the main list."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100 && NEWS.some(n => n.id === 'afb6fa67940a7')"
+                             " && THREADS.uniuni && typeof window.storyHome === 'function'", timeout=60000)
+        ids = lambda co: set(pg.evaluate(f"() => pStories('{co}').map(n => n.id)"))
+        amazon, usps = ids("amazon"), ids("usps")
+        assert "g09" not in amazon             # DHL eCommerce and USPS deal: a USPS story, Amazon only mentioned
+        assert "a418fdd3e6f05" not in usps     # Amazon's own delivery service: USPS only named as a rival
+        assert "05" not in usps                # Amazon's backup plan, tagged USPS in the built-in data
+        assert "h512" not in usps              # Amazon's rural network, which names USPS in passing
+        assert {"a418fdd3e6f05", "05"} <= amazon and "g09" in usps
+        # a big-carrier tag stays when the headline names that carrier's family (Blue Dart is DHL's)
+        assert pg.evaluate("() => storyCos(NEWS.find(n => n.id === 'a5e5d0db945cf'), true).includes('dhlexpress')")
+        # pins: the place a story names first, then the company it is about; never a company it only mentions
+        home = lambda sid: pg.evaluate(f"() => {{const h = storyHome(NEWS.find(n => n.id === '{sid}')); return h && [h.id, h.city]}}")
+        assert home("accf814d7d663") == ["uniuni", "Tacoma, WA"]
+        assert home("ab73d424a5c41")[1] == "Tallahassee, FL"
+        assert home("a418fdd3e6f05")[0] in ("amazon", "amzship")
+        # one UniUni storyline, on the main list, and on UniUni's company page
+        assert pg.evaluate("() => Object.keys(THREADS).filter(k => /uniuni/i.test(k + ' ' + THREADS[k].n))") == ["uniuni"]
+        assert pg.evaluate("() => thrStories('uniuni').length") >= 4
+        assert pg.evaluate("() => coThreads(PL.uniuni).map(x => x.k)") == ["uniuni"]
+        pg.click('nav.tabs [data-tab="news"]')
+        pg.evaluate("() => renderStorylines()")
+        main = pg.evaluate("() => [...document.querySelectorAll('#nStory > .stl h3')].map(h => h.textContent)")
+        assert any("UniUni" in t for t in main), main
+        b.close()
+    assert not errors, errors[:5]
+
+
+# records every time Coop's own pop-up note appears, with its first words (and skips the first-visit tour offer)
+COOP_SAID = """window.__said = []; new MutationObserver(ms => { for (const m of ms) { const t = m.target;
+  if (t.classList && t.classList.contains('cbub') && t.closest('#coop') && !t.hidden) window.__said.push(t.textContent.slice(0, 50)) } })
+  .observe(document, {subtree: true, attributes: true, attributeFilter: ['hidden']});
+  try { localStorage.setItem('pw-tour', 'done') } catch (e) {}"""
+
+
+@pytest.mark.parametrize("case", ["normal", "muted", "story_open"])
+def test_coop_speaks_up_at_most_once(site, case):
+    """Coop's unprompted notes: none in the first minute, at most one a visit, none while muted or while a story is open.
+    Tapping him still gets an answer."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.add_init_script(COOP_SAID + ("; try { localStorage.setItem('pw-coop-quiet', '1') } catch (e) {}" if case == "muted" else ""))
+        pg.clock.install()
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.clock.run_for(3000)
+        pg.wait_for_function("() => document.querySelector('#coop .cbird')", timeout=60000)
+
+        def wait(ms):                                             # jump ahead in 30-second steps (timers fire, frames don't)
+            for _ in range(ms // 30000):
+                pg.clock.fast_forward(30000)
+                pg.clock.run_for(1600)
+
+        def visit(*tabs):
+            for t in tabs:
+                pg.evaluate(f"() => showTab('{t}')")
+                pg.mouse.move(200, 300)
+                pg.clock.run_for(4000)
+
+        visit("news", "clock", "fuel", "docs", "today")           # the first minute: nothing
+        assert pg.evaluate("() => __said") == [], "Coop spoke up within the first minute"
+        wait(60000)
+        if case == "story_open":
+            pg.evaluate("() => openStory(NEWS[0].id)")
+            wait(390000)
+            assert pg.evaluate("() => __said") == [], "Coop spoke up over an open story"
+            pg.evaluate("() => history.back()")
+            pg.clock.run_for(2000)
+        visit("news", "mna", "clock", "fuel", "docs", "today")
+        wait(390000)                                              # several fun-fact chances too
+        said = pg.evaluate("() => __said")
+        if case == "muted":
+            assert said == [], said
+        else:
+            assert len(said) == 1, said
+        # asking him for something always works
+        pg.evaluate("() => document.querySelector('#coop .cbird').click()")
+        pg.clock.run_for(300)
+        pg.evaluate("() => document.querySelector('#coop [data-cfact]').click()")
+        pg.clock.run_for(300)
+        assert len(pg.evaluate("() => __said")) == len(said) + 1
+        b.close()
+    assert not errors, errors[:5]

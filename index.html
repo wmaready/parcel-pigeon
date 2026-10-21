@@ -184,6 +184,7 @@ th button:focus-visible{outline:2px solid var(--accent)}
 .search::placeholder{color:var(--ink-2)}
 .filters{display:grid;gap:var(--sp-2);margin:var(--sp-3) 0}
 .active-filters{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;margin-bottom:var(--sp-3)}
+.active-filters .chip{max-width:100%;overflow:hidden;text-overflow:ellipsis}   /* a long storyline name never widens the page */
 .card{border-top:var(--line) solid var(--grid)}
 .card:first-child{border-top:0}
 .card .hd{padding:var(--sp-3)}
@@ -2437,6 +2438,11 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .ak-box{margin:10px 0;padding:10px 12px;border-left:3px solid #2EC4B6;background:var(--panel-2,#121A23);border-radius:6px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
 .ak-box .link{text-align:left}.ak-guide{border-left-color:#E8772E}.ak-guide p{font-size:13.5px;color:var(--ink-2)}
 .ak-src{font-size:12.5px;color:var(--ink-2)}.ak-src .lbl{margin-right:6px}.ak-ai{margin-top:10px;padding:10px 12px;border:1px dashed var(--grid-strong);border-radius:6px}
+.ak-warn{border-left-color:var(--warn)}.ak-alm{border-left-color:var(--accent)}
+.ak-ev,.ak-st{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:6px 0;border-top:1px solid var(--grid-strong);width:100%}.ak-ev:first-of-type,.ak-st:first-of-type{border-top:0}
+.ak-ev b{flex:1 1 100%;font-weight:600}.ak-ev small,.ak-st small,.ak-box>small{flex:1 1 100%;color:var(--ink-2);font-size:12.5px}.ak-st .link{flex:1 1 auto;min-width:0}
+.ak-note{font-style:italic}.ak-facts{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px}.ak-facts i{font-style:normal;color:var(--ink-2);margin-right:4px}
+.akout a.link{overflow-wrap:anywhere;text-align:left}
 body.akopen{overflow:hidden}@media (max-width:620px){.akwrap.answered .akchips{display:none}}
 .tlcard{background:var(--panel-2,#121A23);border:1px solid var(--grid-strong,#2A3644);border-left:3px solid #2EC4B6;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .tlcard b{font-size:var(--fs-md,15px);line-height:1.35;color:var(--ink)}
@@ -7185,7 +7191,7 @@ function coopMail(fresh){
   const land=row=>{const b=row.sm.querySelector('.nb');row.el.classList.remove('dropin');void row.el.offsetWidth;row.el.classList.add('dropin');
     if(b&&!b.hidden){b.classList.remove('nbpop');void b.offsetWidth;b.classList.add('nbpop')}setTimeout(()=>row.el.classList.remove('dropin'),2600)};
   if(!rows.length)return;
-  if(reduceMotion()||!window.COOP_FLY){rows.forEach(land);return}
+  if(reduceMotion()||!window.COOP_FLY||store.get('pw-coop-quiet','')){rows.forEach(land);return}
   const T=[],E=[],at=(fn,ms)=>T.push(setTimeout(fn,ms));let done=false;
   const sk=document.createElement('button');sk.className='coopskip';sk.type='button';sk.textContent='Skip ›';document.body.appendChild(sk);E.push(sk);
   const finish=()=>{if(done)return;done=true;T.forEach(clearTimeout);E.forEach(e=>e.remove());document.querySelectorAll('.coopfly,.cooplt').forEach(e=>e.remove());rows.forEach(land)};
@@ -7288,11 +7294,14 @@ function thrTidy(T){const last=t=>String(t.last||'');
   const into=(src,dst)=>{const a=T[src],b=T[dst];if(!a||!b||src===dst)return;b.ids=[...new Set([...(b.ids||[]),...(a.ids||[])])];
     if(last(a)>last(b)){if(a.s)b.s=a.s;b.last=a.last}delete T[src]};
   Object.entries(THR_ALIAS).forEach(([a,b])=>into(a,b));
+  // keys a storyline absorbed earlier (its "was" list, written by the pipeline's merge) fold into it if they come back
+  Object.entries(T).forEach(([k,t])=>(t&&t.was||[]).forEach(w=>{if(T[w]&&w!==k)into(w,k)}));
   Object.keys(T).forEach(k=>{const t=T[k];if(!t||(t.ids||[]).length>1||t.cyc)return;const W=thrWords(t);if(!W.size)return;
     const hit=Object.keys(T).find(j=>j!==k&&!/@/.test(j)&&(T[j].ids||[]).length>1&&[...thrWords(T[j])].filter(w=>W.has(w)).length>=2);if(hit)into(k,hit)});
   return T}
-/* a storyline whose newest story is this old has gone quiet: it moves to "Earlier storylines" */
-const THR_QUIET_DAYS=240;
+/* a storyline whose newest story is this old has gone quiet: it moves off the main list to the collapsed "Earlier storylines"
+   (still one tap away, and still linked from its stories). Together with THR_MIN, the main list holds only live subjects. */
+const THR_QUIET_DAYS=60;
 /* Coop's ledger: subjects that come around every year. He has tracked these for years, so a new announcement is read
    against the record, not as a surprise. Figures are UPS/FedEx average list increases (both matched each year). */
 const CYC={'carrier-gri':{lbl:'Average GRI, UPS & FedEx',every:'Announced every fall (FedEx usually mid-to-late Sept, UPS about two to three weeks later), effective late Dec / early Jan.',
@@ -7410,7 +7419,7 @@ document.addEventListener('click',e=>{
   if(e.target.closest('[data-clock],[data-gdoc],[data-goto],[data-thread],[data-newsq],[data-cdocs],[data-deal],[data-coopgo]'))closeCompany(false)},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&CO_OPEN!=null&&STORY_OPEN==null)closeCompany()});
 // shared links: …/#c=<company id> opens that company's page
-setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!(typeof PL!=='undefined'&&PL[m[1]])&&k++<20)return setTimeout(go,250);openCompany(m[1])};go()}},600);
+setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!(typeof PL!=='undefined'&&PL[m[1]])&&k++<20)return setTimeout(go,250);if(PL[m[1]])openCompany(m[1]);else goTo('mna','players')};go()}},600);
 
 // anything that takes you elsewhere (rate clock, Docs, a storyline, another section) closes the story page first
 document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');if(t)closeStory(false,true)},true);
@@ -8687,11 +8696,17 @@ function indexPlayers(){
 }
 const storyText=n=>[n.title,n.sum,n.plain||'',n.tie||''].join(' ');
 /* The companies a story is about, most relevant first: its tagged carriers, then companies named in the headline (in headline
-   order), then companies named in the body (in order of first mention). titleOnly keeps just the tagged and headline ones. */
+   order), then companies named in the body (in order of first mention). titleOnly keeps just the tagged and headline ones.
+   A big-carrier tag counts only when the headline names that carrier or its family, if the headline names any company:
+   older stories were tagged with every carrier they mention, so "Amazon close to launching Shipping With Amazon" was also
+   tagged UPS, FedEx and USPS. pipeline/news.py subject_tags() applies the same rule to new stories. */
+const BIG_TAGS=new Set(['UPS','FedEx','USPS','Amazon','OnTrac','DHL']);
+function famOf(ids){const roots=new Set(ids);ids.forEach(id=>{const p=PL[id];if(p&&p.parent)roots.add(p.parent)});
+  const out=new Set(roots);PLAYERS.forEach(q=>{if(q.parent&&roots.has(q.parent))out.add(q.id)});return out}
 function storyCos(n,titleOnly){if(!n)return [];const k=titleOnly?'_cosT':'_cos';if(n[k]&&n[k+'P']===PRE)return n[k];
   const at=(id,t)=>{const e=PRE.find(x=>x[0]===id);if(!e)return -1;const m=e[1].exec(t);return m?m.index+m[1].length:-1};
-  const tag=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional').map(c=>logoId(c)).filter(Boolean);
-  const T=String(n.title||''),hd=mentions(T).map(id=>[id,at(id,T)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  const T=String(n.title||''),hd=mentions(T).map(id=>[id,at(id,T)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]),fam=hd.length?famOf(hd):null;
+  const tag=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional').map(c=>[c,logoId(c)]).filter(([c,id])=>id&&(!fam||!BIG_TAGS.has(c)||fam.has(id))).map(x=>x[1]);
   let L=[...tag,...hd];
   if(!titleOnly){const B=storyText(n);L=L.concat(mentions(B).map(id=>[id,at(id,B)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]))}
   L=[...new Set(L)].filter(id=>typeof PL==='undefined'||PL[id]||tag.includes(id));n[k]=L;n[k+'P']=PRE;return L}
@@ -8705,9 +8720,13 @@ function storyCars(n){const base=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Region
 // which companies a text mentions: hundreds of name patterns per text, so each text is matched once and remembered
 const MENT={pre:null,m:new Map()};
 const mentions=t=>{if(MENT.pre!==PRE){MENT.pre=PRE;MENT.m.clear()}let r=MENT.m.get(t);if(!r){r=PRE.filter(([,re])=>re.test(t)).map(([id])=>id);if(MENT.m.size>4000)MENT.m.clear();MENT.m.set(t,r)}return r};
+/* the stories on a company's profile: the ones it is the subject or acting party of (its tag, or its name in the headline),
+   not every story that merely mentions it, so a USPS story never lands on Amazon's page. A company's page also lists the
+   stories about its own arms (UPS shows Roadie's), except an investor's. */
 const PST={k:null,m:new Map()};
 const pStories=id=>{const k=PRE.length+'|'+NEWS.length+'|'+(NEWS[0]&&NEWS[0].id);if(PST.k!==k||PST.pre!==PRE){PST.k=k;PST.pre=PRE;PST.m.clear()}
-  let r=PST.m.get(id);if(!r){const re=(PRE.find(x=>x[0]===id)||[])[1];r=re?NEWS.filter(n=>re.test(storyText(n))).sort((a,b)=>b.date.localeCompare(a.date)):[];PST.m.set(id,r)}return r.slice()};
+  let r=PST.m.get(id);if(!r){const p=PL[id],own=new Set([id,...(p&&p.realm!=='capital'?PLAYERS.filter(q=>q.parent===id).map(q=>q.id):[])]);
+    r=p?NEWS.filter(n=>storyCos(n,true).some(x=>own.has(x))).sort((a,b)=>b.date.localeCompare(a.date)):[];PST.m.set(id,r)}return r.slice()};
 const dealPlayers=x=>mentions([x.buyer,x.target,...(x.who||[]).map(w=>w[1]),...(x.parties||[]).map(p=>p.name)].join(' | '));
 const ownLine=p=>{const par=p.parent&&PL[p.parent];
   if(!p.own)return 'Ownership not checked yet';
@@ -9419,15 +9438,58 @@ renderClocks();setInterval(renderClocks,10000);
     for(const days of [4,10,30]){const L=NEWS.filter(n=>n.kind!=='Alert'&&n.title&&daysTo(n.date)>=-days).sort((a,b)=>(+b.lvl||1)-(+a.lvl||1)||String(b.date).localeCompare(a.date));
       if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,3)}
     return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,3)}
-  // the stop for a story: its carrier's headquarters, else the headquarters of a company the story names
-  const homeOf=n=>{const ids=typeof storyCos==='function'?storyCos(n):[];
-    for(const id of ids){const p=PL[id];if(!p||!/USA$/.test(p.hq||''))continue;if(GEO[cityOf(p.hq)])return stop(p);
-      const g=typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const s=stop(p);s.p=px(g.g);return s}}return null};
+  /* the stop for a story. 1) A U.S. place the story itself names (a town getting drone delivery, a facility, a city's
+     complaints): the pin goes there, labeled with the story's own company. 2) Else the headquarters of the company the story
+     is about (its tag or headline company, never one it only mentions). 3) Else, for a company based abroad, its own city,
+     pulled to the map's edge. 4) Else a plain pin with no company name, rather than another company's. */
+  // [lon, lat, state, name shown]
+  const PLACES=Object.assign({},GEO,{'Tacoma':[-122.44,47.25,'WA'],'Tallahassee':[-84.28,30.44,'FL'],'Westborough':[-71.62,42.27,'MA'],'San Jose':[-121.89,37.34,'CA'],
+    'Santa Ana':[-117.87,33.75,'CA'],'Bronx':[-73.87,40.84,'NY'],'Brooklyn':[-73.95,40.65,'NY'],'Queens':[-73.79,40.73,'NY'],'Manhattan':[-73.97,40.78,'NY'],'New York City':[-74.01,40.71,'NY'],'NYC':[-74.01,40.71,'NY','New York City'],
+    'Louisville':[-85.76,38.25,'KY'],'Houston':[-95.37,29.76,'TX'],'Phoenix':[-112.07,33.45,'AZ'],'Denver':[-104.99,39.74,'CO'],'San Diego':[-117.16,32.72,'CA'],'San Antonio':[-98.49,29.42,'TX'],
+    'Orlando':[-81.38,28.54,'FL'],'Jacksonville':[-81.66,30.33,'FL'],'Sacramento':[-121.49,38.58,'CA'],'Kansas City':[-94.58,39.1,'MO'],'St. Louis':[-90.2,38.63,'MO'],'Pittsburgh':[-79.99,40.44,'PA'],
+    'Cleveland':[-81.69,41.5,'OH'],'Milwaukee':[-87.91,43.04,'WI'],'Oklahoma City':[-97.52,35.47,'OK'],'Raleigh':[-78.64,35.78,'NC'],'Newark':[-74.17,40.74,'NJ'],'Fort Worth':[-97.33,32.76,'TX'],
+    'El Paso':[-106.49,31.76,'TX'],'Tucson':[-110.97,32.22,'AZ'],'Fresno':[-119.79,36.74,'CA'],'Spokane':[-117.43,47.66,'WA'],'Boise':[-116.2,43.62,'ID'],'Reno':[-119.81,39.53,'NV'],
+    'Albuquerque':[-106.65,35.08,'NM'],'Tulsa':[-95.99,36.15,'OK'],'Round Rock':[-97.68,30.51,'TX'],'Stockton':[-121.29,37.96,'CA'],
+    'Gastonia':[-81.19,35.26,'NC'],'Kirkwood':[-90.41,38.58,'MO'],'Calverton':[-72.79,40.92,'NY'],'Hebron, Ky':[-84.7,39.07,'KY','Hebron'],'Ontario, Calif':[-117.65,34.06,'CA','Ontario'],'Portland, Ore':[-122.68,45.52,'OR','Portland'],
+    'North Portland':[-122.7,45.58,'OR','Portland'],'Richmond, Va':[-77.44,37.54,'VA','Richmond'],'Columbus, Ohio':[-83.0,39.96,'OH','Columbus'],
+    'Washington, D.C.':[-77.04,38.91,'','Washington, DC'],'Washington, DC':[-77.04,38.91,'','Washington, DC']});
+  // names that are also people, companies, other states' cities or plain words: matched only in the longer forms above
+  ['Washington','Jamaica','Purchase','Rye','Tucker','Irving','Austin','Chandler','McKinney','Charlotte','Concord','Columbus','Burlington','Birmingham',
+   'Omaha','Brentwood','Richfield','Conshohocken','Sandy Springs (Atlanta)','Minneapolis-St. Paul'].forEach(c=>delete PLACES[c]);
+  // a place, not a newspaper ("New York Post") or a company's home base ("Chicago-based", "headquartered in Atlanta")
+  const PLACE_RE=new RegExp('(?<![A-Za-z])(?<!(?:based|headquartered|headquarters|HQ) in )('+Object.keys(PLACES).sort((a,b)=>b.length-a.length).map(c=>c.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+
+    ')(?![A-Za-z])(?!-based| based| Post| Times| Globe| Tribune| Herald| Journal| Morning| Business| Daily| Magazine| Sun\\b| Chronicle| Inquirer| Star\\b| Observer| Fed\\b)'+
+    // nor part of a longer name ("Boston Card Hunter"); "NYC Council" and "Portland City Council" are still places
+    '(?! (?!Council|City Council|Mayor|County|Police)[A-Z][a-z])');
+  // the headline, then the opening of the summary, where a story says where it happens
+  const placeOf=n=>{for(const t of [n.title,String(n.sum||'').slice(0,220)]){const m=PLACE_RE.exec(String(t||''));if(m)return m[1]}return null};
+  const clampUS=([lo,la])=>[Math.min(-67,Math.max(-124,lo)),Math.min(48.8,Math.max(25,la))];
+  // the company that names the pin: the first one in the headline (the most specific when two start together, "Amazon
+  // Prime Air" over "Amazon"), else its first tag
+  const leadOf=(n,ids)=>{const T=String(n.title||''),hit=id=>{const e=PRE.find(x=>x[0]===id),m=e&&e[1].exec(T);return m?[m.index+m[1].length,-m[2].length]:null};
+    const hd=ids.map(id=>[id,hit(id)]).filter(x=>x[1]).sort((a,b)=>a[1][0]-b[1][0]||a[1][1]-b[1][1]);if(hd.length)return PL[hd[0][0]]||null;
+    // a plain "Amazon" tag is Amazon itself, not the Amazon Shipping arm it maps to for logos
+    const t0=(n.c||[]).find(c=>c!=='Industry'&&c!=='Regional'),exact=t0&&PLAYERS.find(p=>p.n===t0);return exact&&ids.includes(logoId(t0))?exact:PL[ids[0]]||null};
+  // a city that is only some other named company's home ("Evri buys Boca Raton's Cross Border Connect") is not where it happens
+  const homeOfOther=(n,pl,lead)=>mentions(storyText(n)).some(id=>id!==(lead&&lead.id)&&PL[id]&&cityOf(PL[id].hq)===pl&&!(lead&&cityOf(lead.hq)===pl));
+  const homeOf=n=>{const ids=typeof storyCos==='function'?storyCos(n,true):[],lead=ids.length?leadOf(n,ids):null;
+    const pl=placeOf(n);if(pl&&!homeOfOther(n,pl,lead)){const g=PLACES[pl],st=g[2]!=null?g[2]:ST[pl]||'',nm=g[3]||pl;
+      return {id:lead?lead.id:null,c:lead?lead.n:(n.cat||'Parcel news'),city:nm+(st?', '+st:''),realm:lead?lead.realm:'none',p:px(clampUS(g)),place:true}}
+    const order=[...new Set([lead&&lead.id,...ids].filter(Boolean))];
+    for(const id of order){const p=PL[id];if(!p||!/USA$/.test(p.hq||''))continue;if(GEO[cityOf(p.hq)])return stop(p);
+      const g=typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const s=stop(p);s.p=px(g.g);return s}}
+    for(const id of order){const p=PL[id],g=p&&typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const hq=String((g.via||p).hq||'');
+      return {id:p.id,c:p.n,city:/USA$/.test(hq)?stop(g.via||p).city:hq.split(',').slice(0,2).join(',').trim(),realm:p.realm,p:px(clampUS(g.g))}}}
+    return null};
+  window.storyHome=homeOf;   // for the tests
   function drawStops(){LV=liveStories();const n=Math.max(1,LV.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     const out=[],realms=new Set(),far=s=>out.every(o=>!o||Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
     // each story at its carrier's headquarters when there's room; otherwise a nearby-looking market-map stop
-    LV.forEach((st0,k)=>{const h=homeOf(st0);out[k]=h&&far(h)?Object.assign(h,{story:st0.id}):null});
-    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>!out.includes(s)&&far(s));out[k]=Object.assign({},s||pool[k],{story:LV[k]&&LV[k].id})}
+    // two stories at the same place sit side by side instead of one moving to a stranger's pin
+    LV.forEach((st0,k)=>{const h=homeOf(st0);if(!h)return;if(!far(h))h.p=[h.p[0]+(k%2?14:-14),h.p[1]+(k%2?-8:8)];out[k]=Object.assign(h,{story:st0.id})});
+    // a story with no place and no company of its own gets a plain pin named by its topic, never another company's name
+    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>far(s))||pool[k]||{p:[W/2,H/2]};
+      out[k]={id:null,c:(LV[k]&&LV[k].cat)||'Parcel news',city:'',realm:'none',p:s.p,story:LV[k]&&LV[k].id}}
     STOPS=out.slice(0,n).map(s=>Object.assign({},s)).sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign(s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}));return;
     // prefer different realms, then fill; keep stops far enough apart for their labels
     for(const s of pool){if(out.length>=n)break;if(!realms.has(s.realm)&&far(s)){out.push(s);realms.add(s.realm)}}
@@ -9437,7 +9499,9 @@ renderClocks();setInterval(renderClocks,10000);
   const st={i:0,open:false,timer:null,paused:false,anim:null,done:false,hide:null};
   const plain=h=>{const d=document.createElement('div');d.innerHTML=h;return d.textContent};
   const headline=h=>{const m=/<b>(.*?)<\/b>/.exec(h);return m?plain(m[1]):plain(h).split(/(?<=\.)\s/)[0]};
-  const item=i=>{const sid=STOPS[i]&&STOPS[i].story,s=sid&&NEWS.find(n=>n.id===sid);return {html:s?`<b>${esc(s.title)}</b>`:'',id:s&&s.id}};
+  // a story resting on one smaller outlet keeps its Unconfirmed label in the brief too
+  const UNC='<span class="tag tag-unconf">Unconfirmed</span>';
+  const item=i=>{const sid=STOPS[i]&&STOPS[i].story,s=sid&&NEWS.find(n=>n.id===sid);return {html:s?`<b>${esc(s.title)}</b>`:'',id:s&&s.id,unc:!!(s&&s.unconf)}};
   const stops=()=>STOPS.slice(0,Math.max(1,LV.length));
   const pct=([x,y])=>[x/W*100,y/H*100];
   function shell(){
@@ -9473,14 +9537,14 @@ renderClocks();setInterval(renderClocks,10000);
     $('cfly').addEventListener('click',e=>{const b=e.target.closest('[data-cb]');if(!b)return;e.stopPropagation();const k=b.dataset.cb;
       if(k==='all'){st.open=!st.open;b.setAttribute('aria-expanded',st.open);b.textContent=st.open?'Just this one':'All three';$('cfly').classList.toggle('showall',st.open);return}
       go(st.i+(k==='next'?1:-1))});
-    $('cblist').innerHTML=stops().map((_,k)=>{const x=item(k),s=stops()[k],h=x.html;return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}</span></span></li>`}).join('');
+    $('cblist').innerHTML=stops().map((_,k)=>{const x=item(k),s=stops()[k],h=x.html;return `<li${x.id?` data-open="${x.id}" role="button" tabindex="0"`:''}><span class="cbn">${k+1}</span><span class="cbt"><span class="cbs">${s?esc(s.c)+' · '+esc(s.city):''}</span><span class="cbh">${h}${x.unc?' '+UNC:''}</span></span></li>`}).join('');
   }
   function place(k){const [l,t]=pct(stops()[k].p),b=$('cbird');b.style.left=l+'%';b.style.top=t+'%'}
   function letter(k){
     const it=item(k),S=stops(),[l,t]=pct(S[k].p),L=$('clet');
     L.className='clet';void L.offsetWidth;
     const cw=$('cmap').clientWidth||300,lw=Math.min(cw*(innerWidth<=620?.86:.78),innerWidth<=620?260:300),half=lw/2/cw*100+1;L.style.setProperty('--lx',Math.min(Math.max(l,half),100-half)+'%');L.style.setProperty('--ly',t+'%');L.dataset.side=t>50?'up':'down';
-    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${stops().length}</span><span>${logoImg(S[k].c,'lgx')}${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
+    L.innerHTML=`<button class="cenv" ${it.id?`data-open="${it.id}"`:'disabled'}><span class="cflap" aria-hidden="true"></span><span class="cpaper"><span class="cmeta"><span class="cbn">${k+1}/${stops().length}</span><span>${logoImg(S[k].c,'lgx')}${esc(S[k].city.replace('Washington, ',''))}</span></span><b>${esc(headline(it.html))}</b>${it.unc?UNC:''}${it.id?'<em>Read the story ›</em>':''}</span><span class="cstamp" aria-hidden="true">AIR</span><span class="cpost" aria-hidden="true">${fmtD(TODAY).toUpperCase()}</span></button>`;
     requestAnimationFrame(()=>L.classList.add('open'));
     document.querySelectorAll('#cmap .cstop').forEach((g,n)=>g.classList.toggle('on',n===k));
     document.querySelectorAll('#cmap .cslab').forEach((g,n)=>g.classList.toggle('on',n===k));
@@ -9554,6 +9618,16 @@ renderClocks();setInterval(renderClocks,10000);
   /* ===== Coop's voice: dry, a little edgy, built from the live numbers on the page ===== */
   const pick=a=>a[Math.floor(Math.random()*a.length)];
   const quiet=()=>!!store.get('pw-coop-quiet','');
+  /* How often Coop speaks up on his own: at most ONE note per visit, never in the first minute after the app opens (or
+     comes back on screen), never over an open story or company page, never while muted. Anything you tap him for is
+     always answered. A visit is this tab's session, so reopening the app starts a new one. */
+  const NUDGE_WAIT=60000;let openedAt=Date.now(),nudgedMem=false;
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)openedAt=Date.now()});
+  const nudged=()=>{if(nudgedMem)return true;try{return !!sessionStorage.getItem('pw-coop-nudged')}catch(e){return false}};
+  const markNudged=()=>{nudgedMem=true;try{sessionStorage.setItem('pw-coop-nudged','1')}catch(e){}};
+  const mayNudge=()=>!quiet()&&!nudged()&&Date.now()-openedAt>=NUDGE_WAIT&&!document.hidden&&menu.hidden&&bub.hidden&&!placing
+    &&Date.now()-(window.PP_LANDING||0)>=20000&&!busy();
+  function nudge(t,ms){if(!mayNudge())return false;markNudged();say(t,ms);return true}
   function greet(){const L=[];
     const nx=typeof nextChange==='function'&&nextChange();if(nx){const n=daysTo(nx.d);L.push(`Next dated cost change, ${n===0?'today':n===1?'tomorrow':'in '+n+' days'}: ${esc(nx.w.replace(/\.$/,''))}.`)}
     try{const u=fuelNow(1),d=gDelta('UPS'),dd=DIESEL.at(-1)[1]-DIESEL.at(-2)[1];if(u&&d!=null)L.push(`UPS Ground fuel is ${pct(u[1])} this week (${d>0?'+':''}${d.toFixed(2)} pts). Diesel ${dd>=0?'rose':'fell'} ${Math.abs(dd*100).toFixed(0)}¢ last week, and ground fuel follows diesel by about two weeks. ${dd<0?'Enjoy it while it lasts.':'You’ll feel that one shortly.'}`)}catch(e){}
@@ -9561,6 +9635,7 @@ renderClocks();setInterval(renderClocks,10000);
     const un=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert'&&daysTo(n.date)>=-7).length;if(un>1)L.push(`${un} stories from this week you haven’t opened. They’re not getting cheaper either.`);
     return L.length?pick(L):'Quiet week so far.'}
   const SEC_LINES={
+    today:()=>greet(),
     news:()=>'Service guide and surcharge-page revisions often land before anyone writes about them. The Docs tab tracks those. '+pick(['Press releases are written for investors, not shippers.','The press release is the trailer. The service guide is the movie.']),
     mna:()=>'Follow who ends up owning the final mile and the injection points. That’s where pricing leverage moves. '+pick(['Nobody buys a last-mile network for the scenery.','“Synergies” usually shows up on someone’s invoice.']),
     clock:()=>{const k=DATES.filter(x=>daysTo(x.d)>=0&&x.imp==='up').length;return `${k} dated increases ahead. The GRI headline is an average; accessorials and light-weight ground usually move more. `+pick(['None of them are optional.','The clock only runs one direction.'])},
@@ -9597,11 +9672,11 @@ renderClocks();setInterval(renderClocks,10000);
   const FSRC=['https://about.ups.com/us/en/our-company/our-history.html','https://www.cbs58.com/news/why-ups-trucks-almost-never-turn-left','https://www.fedex.com/en-us/about/history.html','https://en.wikipedia.org/wiki/Frederick_W._Smith','https://edition.cnn.com/style/article/hidden-designs-famous-logos','https://www.newsnationnow.com/nmw/ups-color-brown','https://group.dhl.com/en/about-us/the-group/history/1969.html','https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/','https://www.si.edu/stories/mules-still-deliver-mail-grand-canyon','https://postalmuseum.si.edu/50-zippy-years','https://www.sec.gov/Archives/edgar/data/1018724/000119312505017451/dex991.htm','https://www.supplychain247.com/article/ups_rolls_out_dimensional_pricing_changes_effective_december_2014/endicia','https://www.asme.org/wwwasmeorg/media/ResourceFiles/AboutASME/Who%20We%20Are/Engineering%20History/Landmarks/114-Pitney-Bowes-Model-M-Postage-Meter.pdf','https://en.wikipedia.org/wiki/UPS_Airlines','https://www.capgemini.com/insights/research-library/the-last-mile-delivery-challenge/','https://www.freightwaves.com/news/ontrac-lasership-rebrand-into-ontrac-name','https://en.wikipedia.org/wiki/UPS_Airlines','https://www.fedex.com/en-us/about/history.html','https://about.usps.com/news/state-releases/fl/2009/fl_2009_1028a.htm','https://www.smithsonianmag.com/smart-news/brief-history-children-sent-through-mail-180959372/','https://about.ups.com/us/en/our-company/our-history.html'];
   const factHTML=f=>{const u=FSRC[FACTS.indexOf(f)];return `<span class="cfact">Fun fact</span>${f}${u?` <a class="cfsrc" href="${u}" target="_blank" rel="noopener">Source</a>`:''}`};
   function funFact(){const pool=[...FACTS,...factLive()].filter(f=>!factsSeen.has(f));if(!pool.length)return null;const f=pick(pool);factsSeen.add(f);return f}
-  setInterval(()=>{if(quiet()||factN>=3||!menu.hidden||!bub.hidden||placing||document.hidden)return;if(Date.now()-lastAct>90000)return;
-    if(Math.random()<.5)return;const f=funFact();if(!f)return;factN++;say(factHTML(f),8000)},150000);
+  setInterval(()=>{if(!mayNudge())return;if(Date.now()-lastAct>90000)return;
+    if(Math.random()<.5)return;const f=funFact();if(!f)return;factN++;nudge(factHTML(f),8000)},150000);
   /* Pointers: when a story you're reading has its source document, a dated change I can animate, or a deal walkthrough,
      I offer to take you straight there. Once per story, a few per visit, never while muted. */
-  const offered=new Set();let offN=0,offAt=0;
+  const offered=new Set();
   function offerFor(n){
     const ck=(typeof clockFor==='function'?clockFor(n.id):[]).find(x=>daysTo(x.d)>=0&&typeof rcxOf==='function'&&rcxOf(x));
     const dl=DEALS.find(x=>x.story===n.id),D=relDocs(n)[0];
@@ -9614,22 +9689,23 @@ renderClocks();setInterval(renderClocks,10000);
   if(typeof IntersectionObserver!=='undefined'){
     const io=new IntersectionObserver(es=>es.forEach(en=>{const c=en.target,id=c.id.slice(2);clearTimeout(c._ot);
       if(!en.isIntersecting||en.intersectionRatio<.55)return;
-      let tries=0;const tryIt=()=>{if(quiet()||offered.has(id)||offN>=4)return;
-        if(Date.now()-offAt<45000||!menu.hidden||!bub.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000){if(tries++<4)c._ot=setTimeout(tryIt,4000);return}
-        const n=NEWS.find(x=>x.id===id);if(!n)return;const t=offerFor(n);if(!t)return;offered.add(id);offN++;offAt=Date.now();say(t,11000)};
+      let tries=0;const tryIt=()=>{if(quiet()||nudged()||offered.has(id))return;
+        if(!mayNudge()){if(tries++<4)c._ot=setTimeout(tryIt,4000);return}
+        const r=c.getBoundingClientRect();if(!c.isConnected||!c.offsetParent||r.bottom<60||r.top>innerHeight-60)return;   // only about a story still on screen
+        const n=NEWS.find(x=>x.id===id);if(!n)return;const t=offerFor(n);if(!t)return;offered.add(id);nudge(t,11000)};
       c._ot=setTimeout(tryIt,2600)}),{threshold:[0,.55]});
     const watch=()=>document.querySelectorAll('#nList .card:not([data-cw])').forEach(c=>{c.dataset.cw='1';io.observe(c)});
     if($('nList'))new MutationObserver(watch).observe($('nList'),{childList:true});watch()}
   const seen=new Set();let lastSec=null,lastAct=Date.now(),idled=false,pokes=[];
   function secNow(){const s=document.querySelector('[data-section]:not([hidden])');return s&&s.id.slice(2)}
-  setInterval(()=>{const s=secNow();if(!s||s===lastSec)return;lastSec=s;
-    if(quiet()||seen.has(s)||!SEC_LINES[s]||!menu.hidden||placing||Date.now()-(window.PP_LANDING||0)<20000||document.querySelector('.xstage:not([hidden]) .xscene')||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null))return;seen.add(s);
-    setTimeout(()=>{if(secNow()===s&&menu.hidden&&bub.hidden)say(SEC_LINES[s](),7000)},1400)},900);
+  setInterval(()=>{const s=secNow();if(!s||s===lastSec)return;if(lastSec){bub.hidden=true;el.classList.remove('talking')}lastSec=s;   // a note belongs to the page it was about
+    if(seen.has(s)||!SEC_LINES[s]||!mayNudge())return;seen.add(s);
+    setTimeout(()=>{if(secNow()===s)nudge(SEC_LINES[s](),7000)},1400)},900);
   ['pointerdown','keydown','scroll'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
   let bubT;
   // one Coop voice at a time: no pop-up notes while one of his explainers is on screen or a story page is open
   const busy=()=>{const x=[...document.querySelectorAll('.xstage:not([hidden]) .xscene, .xstage .xscene')].some(e=>{const r=e.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.width>0});
-    return x||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)||!!document.querySelector('.cdlv,.coopdrop,.ptour,.ptoffer')};
+    return x||(typeof STORY_OPEN!=='undefined'&&STORY_OPEN!=null)||(typeof CO_OPEN!=='undefined'&&CO_OPEN!=null)||!!document.querySelector('.cdlv,.coopdrop,.ptour,.ptoffer')};
   function wake(ms){el.classList.add('awake');clearTimeout(wake.t);wake.t=setTimeout(()=>el.classList.remove('awake'),ms||9000)}
   function say(t,ms,force){if(!force&&busy())return;wake((ms||7000)+2000);bub.innerHTML=`<i class="cair" aria-hidden="true">AIR</i>${t}<span class="csig">— Coop</span><button type="button" class="cmute" data-cmute aria-label="${quiet()?'Unmute':'Mute'} Coop’s notes">${quiet()?'Unmute':'Mute Coop'}</button>`;bub.hidden=false;el.classList.add('talking');clearTimeout(bubT);
     bubT=setTimeout(()=>{el.classList.remove('talking')},Math.min(2400,t.length*40));setTimeout(()=>{if(bub.innerHTML.includes(t))bub.hidden=true},ms||7000)}
@@ -9658,9 +9734,8 @@ renderClocks();setInterval(renderClocks,10000);
     const r1=bird.getBoundingClientRect();
     el.classList.add('away');placing=true;
     flight(r0,r1,()=>{el.classList.remove('away');el.classList.add('land');wake(6000);if(el._openAfter){el._openAfter=false;setTimeout(openMenu,60)}setTimeout(()=>el.classList.remove('land'),700);placing=false;setTimeout(()=>{if(menu.hidden)place(false)},120);
-      if(first&&!store.get('pw-coop-met','')){store.set('pw-coop-met','1');setTimeout(()=>say('Coop. Tap me to search stories, companies and documents.',4000),250)}
-      else if(first&&!quiet()&&!sessionStorage.getItem('pw-coop-hi')){try{sessionStorage.setItem('pw-coop-hi','1')}catch(e){}setTimeout(()=>say(greet(),7000),400)}
-      else if(w&&!store.get('pw-coop-perch','')){store.set('pw-coop-perch','1');setTimeout(()=>say('I’ll sit here while you search...',3500),200)}});
+      // no hello on arrival (the first-visit tour introduces him); the perch line is this visit's one note, if any
+      if(!first&&w&&!store.get('pw-coop-perch','')&&mayNudge()){store.set('pw-coop-perch','1');setTimeout(()=>nudge('I’ll sit here while you search...',3500),200)}});
   }
   function hits(q){q=q.toLowerCase();const R=[],re=new RegExp('(^|[^a-z0-9])'+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),has=s=>re.test(s);
     Object.entries(typeof THREADS!=='undefined'?THREADS:{}).forEach(([k,t])=>{if(has(t.n||'')||has(t.s||''))R.push({th:k,t:t.n,s:`Storyline · ${(t.ids||[]).length} stories`})});
@@ -9680,7 +9755,7 @@ renderClocks();setInterval(renderClocks,10000);
     const unread=NEWS.filter(n=>!(typeof MS!=='undefined'&&MS.read.has(n.id))&&n.kind!=='Alert').sort((x,y)=>y.date.localeCompare(x.date)).slice(0,2);
     menu.innerHTML=`<div class="cm-hd"><span class="xname">Coop</span><span>Where to?</span><button class="cm-x" data-cclose aria-label="Close">×</button></div>
       <label class="sr" for="cAsk">${sq?esc(sq.ph):'Search everything'}</label><input id="cAsk" class="cm-ask" type="search" placeholder="${sq?esc(sq.ph):'Search stories, companies, documents'}" value="${sq?esc($(sq.f).value):''}" autocomplete="off">
-      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop: companies, documents &amp; news</b><small>Saved profiles, guide excerpts, deals and tracked fees</small></span></button>`:''}
+      ${window.PP_ASK?`<button class="cm-askbtn" data-askopen="" data-cclose>${rxFace('like','cm-askf')}<span><b>Ask Coop: companies, documents &amp; news</b><small>Company facts, guide excerpts, pricing history since 2018, deals and tracked fees</small></span></button>`:''}
       <div class="cm-res" id="cRes"><div class="cm-q">${QUICK().map(([g,t,s])=>`<button class="cm-r" data-cgo="${g}"><b>${esc(t)}</b><small>${esc(s)}</small></button>`).join('')}</div>
       ${unread.length?`<div class="lbl cm-l">You haven’t read</div>${unread.map(n=>row({o:n.id,t:n.title,s:fmtD(n.date)})).join('')}`:''}</div>
       <div class="cm-foot"><button class="cm-fact" data-cfact>Tell me a fun fact</button><button class="cm-fact" data-tour>Take the tour</button><label class="cm-mute" data-cquiet><span>Coop’s notes</span><input type="checkbox" role="switch" ${quiet()?'':'checked'} aria-label="Coop’s pop-up notes"><i aria-hidden="true"></i><b>${quiet()?'Muted':'On'}</b></label></div>`;

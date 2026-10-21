@@ -126,9 +126,25 @@ def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 
 
-def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=None, lines=False):
+TITLE_MAX = 50                           # iOS shows about one line of bold title; Android cuts a little later
+BODY_MAX = 120                           # about three lines under the title on an iPhone lock screen
+LIST_LINES, LIST_MAX = 4, 200            # a roll-up: at most four lines (iOS shows about four before "more")
+
+
+def fit_lines(body, n=LIST_LINES, limit=LIST_MAX):
+    """A list body cut at whole lines (never mid-word): at most n lines and `limit` characters."""
+    out = []
+    for line in (body or "").split("\n"):
+        if len(out) >= n or len("\n".join(out + [line])) > limit:
+            break
+        out.append(line)
+    return "\n".join(out) or short(body, limit)
+
+
+def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=None, lines=False, topic=None):
     """One notification. `key` makes it send-once: OneSignal drops any repeat with the same idempotency key
-    (30 days), and the ledger in alerts_state.json skips it before that, so overlapping runs can't double-send."""
+    (30 days), and the ledger in alerts_state.json skips it before that, so overlapping runs can't double-send.
+    `topic` (web_push_topic) lets a newer push replace an older one with the same topic on the phone."""
     if key and SENT is not None and key in SENT:
         print(f"  (already sent) {heading}")
         return {"id": "dup"}
@@ -136,9 +152,11 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=
         print(f"  (push skipped, OneSignal keys not set) {heading}: {body}")
         return None
     # iOS shows the app name on top, then this title in bold, then the message
-    text = body[:240] if lines else short(body, 120)       # a list keeps its line breaks: one story per line
-    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, 60)}, "contents": {"en": text},
+    text = fit_lines(body) if lines else short(body, BODY_MAX)       # a list keeps its line breaks: one story per line
+    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, TITLE_MAX)}, "contents": {"en": text},
            "url": url, "chrome_web_icon": ICON, "firefox_icon": ICON, "ttl": ttl}
+    if topic:
+        msg["web_push_topic"] = re.sub(r"[^A-Za-z0-9_-]", "-", topic)[:32]
     if key:
         msg["idempotency_key"] = str(uuid.uuid5(NS, key))
     if after:
@@ -182,15 +200,36 @@ def story_link(s, big=False):
     return f"{SITE}#{'alert' if big else 'story'}={s['id']}"
 
 
+def company_link(pid):
+    """Opening a push about a company opens its company page (the same #c= link the app's Share button makes)."""
+    return f"{SITE}#c={pid}"
+
+
+def nice_date(iso):
+    """2027-01-04 -> "Jan 4, 2027" (None if it isn't a date)."""
+    try:
+        return dt.date.fromisoformat(str(iso)[:10]).strftime("%b %-d, %Y")
+    except Exception:
+        return None
+
+
+def flags(s):
+    """What the app marks on the story itself, said first in the push so a lock screen never oversells it."""
+    return [w for w, on in (("Unconfirmed", s.get("unconf")), ("Off-cycle", s.get("offc"))) if on]
+
+
 COPY_PROMPT = """Write phone notification text for each parcel-shipping news story. For each: "t" a short headline,
 at most 45 characters, plain and specific (carrier + what changed, e.g. "UPS adds $1.25 peak fee"); "m" one short sentence,
-at most 100 characters, saying what it means for shippers or when it starts. No emoji, no hype, no exclamation marks, no
-facts that aren't in the story. Reply with JSON only: {"<id>": {"t": "...", "m": "..."}}"""
+at most 100 characters, saying what it means for shippers or when it starts. When "takes_effect" is given, a start date
+must be that date, worded like "takes effect Jan 4"; "announced" is only when it was announced, never when it starts.
+Don't call anything confirmed, official, off-cycle or unconfirmed (the app adds those labels). No emoji, no hype, no
+exclamation marks, no facts that aren't in the story. Reply with JSON only: {"<id>": {"t": "...", "m": "..."}}"""
 
 
 def numbers_ok(text, s):
     """Every figure in the alert text must appear in the story itself (title, summary or plain line)."""
-    src = " ".join(str(s.get(k) or "") for k in ("title", "sum", "plain")).replace(",", "")
+    src = " ".join([str(s.get(k) or "") for k in ("title", "sum", "plain")]
+                   + [nice_date(s.get(k)) or "" for k in ("act", "ann")]).replace(",", "")
     for n in re.findall(r"\d[\d,]*(?:\.\d+)?", text or ""):
         n = n.replace(",", "").rstrip(".")
         if n and not re.search(r"(?<![\d.])" + re.escape(n) + r"(?![\d])", src):
@@ -205,7 +244,9 @@ def push_copy(stories, state):
     if need:
         try:
             got = parse_json(claude(MODEL_FAST, COPY_PROMPT, json.dumps(
-                [{"id": s["id"], "title": s["title"], "summary": short(s.get("plain") or s.get("sum") or "", 400)} for s in need]), 1200)) or {}
+                [{"id": s["id"], "title": s["title"], "summary": short(s.get("plain") or s.get("sum") or "", 400),
+                  **({"takes_effect": nice_date(s["act"])} if nice_date(s.get("act")) and not s.get("inferred") else {}),
+                  **({"announced": nice_date(s["ann"])} if nice_date(s.get("ann")) else {})} for s in need]), 1200)) or {}
             for s in need:
                 g = got.get(s["id"]) or {}
                 if g.get("t") and g.get("m") and numbers_ok(g["t"] + " " + g["m"], s):
@@ -229,15 +270,23 @@ def push_copy(stories, state):
 
 # ---------------------------------------------------------------- what counts as major
 def is_major(s):
-    cs = set(s.get("c") or [])
-    lvl = int(s.get("lvl") or 1)
-    if lvl >= 3:
-        return True
-    return False                         # only the biggest (lvl 3) wait for your OK; everything else alerts live
+    """Only the biggest (lvl 3) wait for your OK and go out as big news. A story the app marks Unconfirmed (one smaller
+    outlet so far) never does: it waits in the regular queue, labelled, and never gets its own big-news alert."""
+    if s.get("unconf"):
+        return False
+    return int(s.get("lvl") or 1) >= 3
+
+
+def push_level(s):
+    """The level a story is ranked at for pushes: an unconfirmed story counts as level 1 however big it sounds."""
+    return 1 if s.get("unconf") else int(s.get("lvl") or 1)
 
 
 def notable(s):
-    """Worth a buzz for most readers: real news (level 2+), or a level-1 story in the livelier beats about a big carrier."""
+    """Worth a buzz for most readers: real news (level 2+), or a level-1 story in the livelier beats about a big carrier.
+    Unconfirmed stories go only to readers who chose "Every new story" (and to the rates, docs and deals topics, labelled)."""
+    if s.get("unconf"):
+        return False
     lvl = int(s.get("lvl") or 1)
     return lvl >= 2 or (s.get("cat") in COOL_CATS and bool(set(s.get("c") or []) & (BIG4 | {"DHL", "OnTrac", "Walmart"})))
 
@@ -283,7 +332,7 @@ def open_review(s, test=False, copy=None):
     if quiet(auto) and not test:
         auto = next_morning(auto)
     c = copy or {"t": short(s["title"], 50), "m": short(s.get("plain") or s.get("sum") or "", 110)}
-    title, msg, url = c["t"], c["m"], story_link(s, big=True)
+    title, msg, url = c["t"], (" · ".join(flags(s)) + ": " if flags(s) else "") + c["m"], story_link(s, big=True)
     body = ((f"@{OWNER} **TEST ALERT.** This is a practice run of the approval flow. Replying `send` pushes it to "
              f"**your phone only**, never to readers.\n\n") if test else "") + (f"@{OWNER} a major alert is ready. **Nothing has gone to readers yet.**\n\n"
             f"### Title\n{title}\n\n### Message\n{msg}\n\n### Link\n{url}\n\n---\n"
@@ -625,6 +674,16 @@ def collect(state, today):
     return stories, rem, moves
 
 
+def clock_item(key, e, left):
+    """A rate clock reminder, 7 days and 1 day before. It names the date (not "tomorrow"), so it's still right if it
+    waits through the night; it's dropped once that date has passed, and the 1-day reminder replaces the 7-day one."""
+    d = dt.date.fromisoformat(e["d"])
+    return {"kind": "clock", "key": "clock:" + key, "at": now_et().isoformat(), "until": e["d"],
+            "t": f"{short(e.get('c') or 'Carrier', 22)}: takes effect {d.strftime('%a %b %-d')}", "m": e.get("w", ""),
+            "lvl": 2, "topic": "rates", "mask": mask_of(carriers_in(e.get("c"))), "url": SITE + "#clock",
+            "topic_id": "pp-clock-" + str(e.get("id") or e["d"])}
+
+
 def count_today(state, n=1):
     d = now_et().date().isoformat()
     day = state.setdefault("day", {})
@@ -632,6 +691,13 @@ def count_today(state, n=1):
         day.clear(); day.update({"d": d, "n": 0})
     day["n"] += n
     return day["n"]
+
+
+def rollup_body(items):
+    """The roll-up's lines: up to four stories, or three plus "+N more in the app". Unconfirmed ones say so."""
+    shown = items if len(items) <= LIST_LINES else items[:LIST_LINES - 1]
+    line = lambda q: "• " + ("Unconfirmed: " + short(q["t"], 33) if q.get("unconf") else short(q["t"], 46))
+    return "\n".join(line(q) for q in shown) + (f"\n+{len(items) - len(shown)} more in the app" if len(items) > len(shown) else "")
 
 
 def union_mask(items):
@@ -660,13 +726,15 @@ def send_queued(state):
         push("Ground fuel this week", ", ".join(parts), SITE + "#fuel",
              audience([{"field": "tag", "key": "ft", "relation": ">", "value": "0"},
                        {"field": "tag", "key": "ft", "relation": "<", "value": str(mv + 0.001)}], bits or None),
-             key="fuel:" + ",".join(f"{c}:{v[0]}" for c, v in sorted(fq.items())))
+             key="fuel:" + ",".join(f"{c}:{v[0]}" for c, v in sorted(fq.items())), topic="pp-fuel")
         state["fuelq"] = {}
         sent += 1
     sent_times = []
     cutoff = now_et() - dt.timedelta(hours=QUEUE_HOURS)
+    today = now_et().date().isoformat()
     queue = [q for q in state.get("queue") or [] if q["key"] not in SENT
-             and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff]
+             and dt.datetime.fromisoformat(q.get("at") or now_et().isoformat()) >= cutoff
+             and (q.get("until") or today) >= today]           # a rate-clock reminder never arrives after its date
     # newest first inside each importance tier: a fresh story never waits behind a queued older one
     queue.sort(key=lambda q: q.get("at") or "", reverse=True)
     queue.sort(key=lambda q: (not q.get("big"), -int(q.get("lvl") or 0), not q.get("notable", True), q["kind"] != "story"))
@@ -686,23 +754,24 @@ def send_queued(state):
             if after and quiet(after):
                 break                                # don't schedule into the night; it goes in the morning
             extra = topic_filter(q)
-            r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after)
+            r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after,
+                     topic=q.get("topic_id"))
             if r is not None:
                 count_today(state); sent += 1; sent_times.append(after or now_et())
     else:
         # a busy run: the biggest story gets its own alert (if it's real news), everything else is one roll-up
-        lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 3) else None   # only big news stands alone
+        lead = queue[0] if (queue[0].get("big") or int(queue[0].get("lvl") or 0) >= 3) and not queue[0].get("unconf") else None   # only big news stands alone
         rest = queue[1:] if lead else queue
         if lead:
             extra = topic_filter(lead)
-            r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"])
+            r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"],
+                     topic=lead.get("topic_id"))
             if r is not None:
                 count_today(state); sent += 1; sent_times.append(now_et())
         if rest and count_today(state, 0) < MAX_PER_DAY and (not lead or room > 1):
             words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
-            # one bullet per story, biggest first, so a glance at the lock screen reads like a short list
-            shown = rest[:4]
-            body = "\n".join("• " + short(q["t"], 46) for q in shown) + (f"\n+{len(rest) - len(shown)} more in the app" if len(rest) > len(shown) else "")
+            # one bullet per story, biggest first, so a glance at the lock screen reads like a short list (four lines at most)
+            body = rollup_body(rest)
             r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", body,
                      SITE + "#news", audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
@@ -776,8 +845,12 @@ def run():
         c = copy.get(s["id"]) or push_copy([s], state)[s["id"]]
         th = (load("threads.json", {}).get(s.get("thread") or "") or {}) if s.get("upd") else {}
         m = f"Update {s['upd']} · {th['n']}: {c['m']}" if th.get("n") else c["m"]
+        if flags(s):
+            m = " · ".join(flags(s)) + ": " + m
+        big = big and not s.get("unconf")
         return {"kind": "story", "key": "story:" + norm(s["title"]), "id": s["id"], "t": c["t"], "m": m, "big": big, "at": now_et().isoformat(),
-                "lvl": int(s.get("lvl") or 1), "topic": topic_of(s), "notable": big or notable(s), "mask": mask_of(s.get("c")), "url": story_link(s, big)}
+                "lvl": push_level(s), "unconf": bool(s.get("unconf")), "topic": topic_of(s), "notable": big or notable(s),
+                "mask": mask_of(s.get("c")), "url": story_link(s, big)}
     def seen(s):
         state["stories"].append(s["id"]); state["titles"].append(norm(s.get("title"))[:60])
     for s in majors:
@@ -800,9 +873,7 @@ def run():
             enqueue(story_item(s)); seen(s)
     # rate clock reminders: 7 days and 1 day before a dated increase
     for key, e, left in rem:
-        when = "tomorrow" if left == 1 else "in 7 days"
-        enqueue({"kind": "clock", "key": "clock:" + key, "at": now_et().isoformat(), "t": f"{short(e.get('c') or 'Carrier', 24)}: starts {when}", "m": e.get("w", ""),
-                 "lvl": 2, "topic": "rates", "mask": mask_of(carriers_in(e.get("c"))), "url": SITE + "#clock"})
+        enqueue(clock_item(key, e, left))
         state["clock"].append(key)
     # fuel: keep the latest weekly move per carrier until it goes out (it waits through quiet hours)
     fq = state.setdefault("fuelq", {})
@@ -815,7 +886,7 @@ def run():
             and p["id"] not in state["players"]]
     for p in [x for x in newp if not x.get("seeded")]:      # companies added by the sweep fill in the map quietly: no alert, no badge
         enqueue({"kind": "player", "key": "player:" + p["id"], "at": now_et().isoformat(), "t": f"New on the map: {p['n']}", "m": p.get("s") or "",
-                 "lvl": 0, "topic": "deals", "mask": None, "url": SITE + "#mna"})
+                 "lvl": 0, "topic": "deals", "mask": None, "url": company_link(p["id"])})
     state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
     sends = send_queued(state)
     try:
