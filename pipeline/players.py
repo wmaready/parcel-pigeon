@@ -54,9 +54,11 @@ Also return "mover": true|false and "mover_why": "one line". """ + MOVERS
 def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searches=5):
     """One Claude call, with web search. strict=True means the answer is only worth anything if it was really searched:
     a failed search raises instead of falling back to the model's memory, and ask.searches says how many searches ran."""
-    from common import API_DOWN
+    from common import API_DOWN, paused
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
+    if paused(extra=True):           # research and the sweep are extras: the news gets the day's budget first
+        raise RuntimeError("Claude calls paused: " + paused(extra=True))
     body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": searches}]

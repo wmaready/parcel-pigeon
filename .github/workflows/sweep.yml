@@ -61,8 +61,10 @@
      "working-directory": "pipeline",
      "env": {
       "ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}",
+      "PP_MONTHLY_BUDGET": "${{ vars.PP_MONTHLY_BUDGET || '75' }}",
       "PW_SWEEP_CALLS": "${{ inputs.calls || vars.SWEEP_CALLS || '40' }}",
-      "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}"
+      "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}",
+      "PP_LEDGER": "usage_sweep.json"
      },
      "run": "python sweep.py --status ${{ inputs.status || 1 }} --vet ${{ inputs.vet || 4 }} --discover ${{ inputs.discover || 1 }}"
     },

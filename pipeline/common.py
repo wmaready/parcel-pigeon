@@ -1,5 +1,5 @@
 """Shared helpers for the Parcel Pigeon pipeline."""
-import hashlib, json, os, re, time
+import datetime as dt, hashlib, json, os, re, time
 from pathlib import Path
 import requests
 
@@ -45,13 +45,93 @@ def get(url, timeout=20):
     return r
 
 
-USAGE = {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0}
+USAGE = {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0, "usd": 0.0}
+
+# ---------------------------------------------------------------- spend: what each call costs, paced across the month
+# List prices in dollars per million tokens (input, output). Cache reads cost a tenth of the input price, cache writes 1.25x.
+# Haiku 5.5 costs more on prompts over 100K tokens. Web search is $10 per 1,000 searches.
+PRICES = {"haiku": (0.10, 0.50), "sonnet": (2.00, 10.00), "opus": (4.00, 20.00)}
+SEARCH_USD = 0.01
+# The Anthropic Console's monthly spend limit. Each day may spend what's left of it divided by the days left in the month,
+# so a busy week can't use up the month and leave the app silent at the end of it. A run that starts under the day's
+# allowance finishes; once the day's allowance is used, Claude calls pause until midnight UTC and headlines wait unscreened
+# (nothing is lost). Extras (reading blocked pages through Claude, re-confirming stories, company research, the sweep)
+# stop at half the day's allowance, so the news itself is the last thing to pause.
+MONTHLY = float(os.environ.get("PP_MONTHLY_BUDGET") or 75)
+LEDGERS = ("usage.json", "usage_sweep.json")              # the sweep runs alongside the news, so it keeps its own ledger
+LEDGER = os.environ.get("PP_LEDGER") or LEDGERS[0]
+
+
+def cost(model, u):
+    i, o = next((p for k, p in PRICES.items() if k in (model or "")), PRICES["sonnet"])
+    cache_r, cache_w = u.get("cache_read_input_tokens") or 0, u.get("cache_creation_input_tokens") or 0
+    if "haiku" in (model or "") and (u.get("input_tokens", 0) + cache_r + cache_w) > 100_000:
+        i, o = 0.50, 2.50
+    usd = (u.get("input_tokens", 0) * i + cache_w * i * 1.25 + cache_r * i * 0.1 + u.get("output_tokens", 0) * o) / 1e6
+    return usd + SEARCH_USD * ((u.get("server_tool_use") or {}).get("web_search_requests") or 0)
+
+
+def spent(day=None):
+    """(today, this month, this month before today) in dollars, from the ledgers plus this process's calls so far.
+    A ledger's "carry" holds what the month had already spent before the ledger existed (from the Console)."""
+    day = day or dt.date.today().isoformat()
+    today = before = 0.0
+    for name in LEDGERS:
+        led = load(name, {})
+        before += float((led.get("carry") or {}).get(day[:7]) or 0)
+        for d, usd in (led.get("days") or {}).items():
+            if d[:7] == day[:7]:
+                if d < day:
+                    before += usd
+                elif d == day:
+                    today += usd
+    today += USAGE["usd"]
+    return today, before + today, before
+
+
+def allowance(day=None):
+    """What today may spend: the rest of the monthly limit spread over the days left in the month, today included."""
+    d = dt.date.fromisoformat(day) if day else dt.date.today()
+    nxt = (d.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
+    return max(0.0, MONTHLY - spent(d.isoformat())[2]) / (nxt - d).days
+
+
+PACE = {}
+
+
+def paused(extra=False):
+    """Why Claude calls should wait, or None. Decided once per run for the news itself (a run that starts finishes);
+    extras are checked each time."""
+    if extra:
+        today, _, _ = spent()
+        a = allowance()
+        return f"extras pause at half of today's ${a:.2f} allowance (${today:.2f} spent)" if today >= a / 2 else None
+    if "why" not in PACE:
+        today, month, _ = spent()
+        a = allowance()
+        PACE["why"] = (f"today's ${a:.2f} allowance is used (${today:.2f} spent, ${month:.2f} of ${MONTHLY:.0f} this month)"
+                       if today >= a else None)
+        if PACE["why"]:
+            print(f"::notice title=Claude calls paused until midnight UTC::{PACE['why']}. Headlines wait and are screened tomorrow.")
+    return PACE["why"]
+
+
+def extras_ok():
+    return not API_DOWN and not paused(extra=True)
 
 
 def _usage_report():
     if USAGE["calls"]:
+        today, month, _ = spent()
         print(f"claude usage this step: {USAGE['calls']} calls, {USAGE['in'] + USAGE['cached'] + USAGE['written']} input tokens "
-              f"({USAGE['cached']} read from cache), {USAGE['out']} output tokens")
+              f"({USAGE['cached']} read from cache), {USAGE['out']} output tokens, ${USAGE['usd']:.3f} "
+              f"(today ${today:.2f} of ${allowance():.2f}; month ${month:.2f} of ${MONTHLY:.0f})")
+        led = load(LEDGER, {})
+        days = led.setdefault("days", {})
+        d = dt.date.today().isoformat()
+        days[d] = round(days.get(d, 0) + USAGE["usd"], 4)
+        led["days"] = dict(sorted(days.items())[-120:])
+        save(LEDGER, led)
 
 
 import atexit
@@ -67,7 +147,7 @@ def cached_system(system):
 
 def track(j):
     u = (j or {}).get("usage") or {}
-    USAGE["calls"] += 1
+    USAGE["calls"] += 1; USAGE["usd"] += cost((j or {}).get("model"), u)
     USAGE["in"] += u.get("input_tokens", 0); USAGE["out"] += u.get("output_tokens", 0)
     USAGE["cached"] += u.get("cache_read_input_tokens", 0) or 0; USAGE["written"] += u.get("cache_creation_input_tokens", 0) or 0
 
@@ -98,6 +178,8 @@ def claude(model, system, user, max_tokens=1500):
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
+    if paused():
+        raise RuntimeError("Claude calls paused: " + paused())
     for attempt in range(3):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
