@@ -1,0 +1,32 @@
+name: Checks
+
+# Runs the test suite on every pull request (and on demand), so a change that breaks the pipeline or the app
+# is caught before it reaches main. Uses no secrets and calls no outside service.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install
+        run: |
+          pip install -r requirements.txt pytest playwright
+          python -m playwright install --with-deps chromium
+      - name: Every pipeline script compiles
+        run: python -m py_compile pipeline/*.py
+      - name: Tests
+        run: python -m pytest tests -q
