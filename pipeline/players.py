@@ -11,7 +11,7 @@ Also keeps family trees current (family_check, one company per run, about weekly
 """
 import datetime as dt, json, os, re, sys, time
 import requests
-from common import load, save, parse_json, API_KEY, MODEL_WRITE, cached_system, track
+from common import load, save, parse_json, API_KEY, MODEL_WRITE, cached_system, track, api_check
 
 REALMS = ["national", "regional", "gig", "retail", "3pl", "global", "software", "cold", "auto", "capital"]
 KINDS = {"owns", "acquired", "invested", "partner", "merged", "sold", "spun"}
@@ -54,6 +54,9 @@ Also return "mover": true|false and "mover_why": "one line". """ + MOVERS
 def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searches=5):
     """One Claude call, with web search. strict=True means the answer is only worth anything if it was really searched:
     a failed search raises instead of falling back to the model's memory, and ask.searches says how many searches ran."""
+    from common import API_DOWN
+    if API_DOWN:
+        raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
     body = {"model": MODEL_WRITE, "max_tokens": max_tokens, "system": cached_system(system or RESEARCH), "messages": [{"role": "user", "content": user}]}
     if use_search:
         body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": searches}]
@@ -67,7 +70,7 @@ def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searc
     if r.status_code >= 400 and use_search and not strict:
         print(f"  web search unavailable ({r.status_code}); researching from the story only", file=sys.stderr)
         return ask(user, use_search=False, system=system, max_tokens=max_tokens)
-    r.raise_for_status()
+    api_check(r)
     j = r.json(); track(j)
     ask.searches = sum(1 for b in j.get("content", []) if b.get("type") == "server_tool_use")
     return "".join(b.get("text", "") for b in j.get("content", []) if b.get("type") == "text")

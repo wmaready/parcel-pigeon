@@ -33,7 +33,12 @@
   "d": "US48, Alaska and Hawaii. Reissued Sep 7, 2026; 2026 GRI took effect Dec 22, 2025. UPS overwrites this file on each update",
   "cur": true,
   "upd": "2026-09-07",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-daily-rate-and-service-guide-pdf-bf42ed.pdf",
+  "fh": "a536d000248732f895c89aace13e16c5b700a068",
+  "fat": "2026-10-21",
+  "fsz": 6950046
  },
  {
   "c": "UPS",
@@ -44,7 +49,8 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ffbe526-135e-47d8-8f50-6dbfc7d52e56/original/as/daily-rates-us-en.xlsx",
   "d": "Spreadsheet version of the daily rate guide",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21"
  },
  {
   "c": "UPS",
@@ -66,7 +72,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
   "d": "Counter rates; updated guide effective Sep 7, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-retail-rate-and-service-guide-b51c20.pdf",
+  "fh": "e0ade3b9c1447f5f855557ffba0b0b038d77e43d",
+  "fat": "2026-10-21",
+  "fsz": 6150686
  },
  {
   "c": "UPS",
@@ -77,7 +88,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn%3Aaaid%3Aaem%3A2f5d50bd-53e4-4ad1-882b-f06e9f3ad9f3/original/as/ak-hi-retail-rates-us-en.pdf",
   "d": "Original 2026 retail guide; superseded by the Sep 7, 2026 update",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-retail-rate-and-service-guide-dec-22-2025-edition-ac6976.pdf",
+  "fh": "a04dbb5b63fd3b1ad09b4290b4f3707c1f8be2af",
+  "fat": "2026-10-21",
+  "fsz": 6017357
  },
  {
   "c": "UPS",
@@ -88,7 +104,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:c7a3d067-725a-4b33-887a-586753b3e615/original/as/preview-ak-hi-rates-us-en.pdf",
   "d": "Published ahead of the 2026 GRI",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-alaska-and-hawaii-rates-preview-206a82.pdf",
+  "fh": "b526083c359a386fdc773b23b3c78cdc951b2a2f",
+  "fat": "2026-10-21",
+  "fsz": 451661
  },
  {
   "c": "UPS",
@@ -155,7 +176,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf",
   "d": "Last updated Jan 26, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-21",
+  "f": "data/files/ups-2026-ups-small-business-rate-guide-d37433.pdf",
+  "fh": "58cc8519ad4b572ebd7adc5cd63082fece0fc22a",
+  "fat": "2026-10-21",
+  "fsz": 1403267
  },
  {
   "c": "UPS",
@@ -508,7 +534,11 @@
   "d": "Residential $6.95 to $7.35, plus oversize, additional handling and dangerous goods increases",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-surcharge-and-fee-changes-f5a8ce.pdf",
+  "fh": "f2101219ae2946b8c437a7543eb21535b36d6f08",
+  "fat": "2026-10-21",
+  "fsz": 416593
  },
  {
   "c": "FedEx",
@@ -520,7 +550,11 @@
   "d": "Takes effect Jan 4, 2027",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-standard-list-rates-pdf-875121.pdf",
+  "fh": "8ca2626015d07fa2332302fd488941c5135c9250",
+  "fat": "2026-10-21",
+  "fsz": 956571
  },
  {
   "c": "FedEx",
@@ -532,7 +566,11 @@
   "d": "Spreadsheet version",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-standard-list-rates-excel-25c8a6.xlsx",
+  "fh": "253c127ea1372792c1e1934e399dc6c43d298b92",
+  "fat": "2026-10-21",
+  "fsz": 304748
  },
  {
   "c": "FedEx",
@@ -805,7 +843,11 @@
   "d": "Contiguous, extended, remote, Alaska and Hawaii",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-delivery-area-zip-list-pdf-ea9c65.pdf",
+  "fh": "5b8103fcc7330466a2c0fda03bbe0012d0f8e18e",
+  "fat": "2026-10-21",
+  "fsz": 279870
  },
  {
   "c": "FedEx",
@@ -817,7 +859,11 @@
   "d": "",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-delivery-area-zip-list-excel-dab896.xlsx",
+  "fh": "eb327c8d3b18be235f5a429a9c839d31375d133a",
+  "fat": "2026-10-21",
+  "fsz": 289988
  },
  {
   "c": "FedEx",
@@ -829,7 +875,11 @@
   "d": "",
   "cur": false,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-21",
+  "f": "data/files/fedex-2027-fedex-pickup-area-zip-list-0a90ef.pdf",
+  "fh": "4dede9f5ce29414cc73992b6e12e86c3f17a27d4",
+  "fat": "2026-10-21",
+  "fsz": 282545
  },
  {
   "c": "FedEx",
@@ -1901,5 +1951,192 @@
    "title": "Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
    "when": "2026-10-15"
   }
+ },
+ {
+  "c": "UPS",
+  "t": "Special program",
+  "n": "UPS Ship API EU PID Requirements v1.2",
+  "y": null,
+  "eff": null,
+  "u": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
+  "d": "Posted on UPS's Developer portal page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Special program",
+  "n": "USPS dm204",
+  "y": null,
+  "eff": null,
+  "u": "https://about.usps.com/handbooks/dm204.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Special program",
+  "n": "USPS pub25",
+  "y": null,
+  "eff": null,
+  "u": "https://about.usps.com/publications/pub25.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Special program",
+  "n": "USPS SKU User Guide",
+  "y": null,
+  "eff": null,
+  "u": "https://pe.usps.com/resources/Misc/USPS SKU User Guide.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Rate guide",
+  "n": "USPS July 2026 Price Change   Notice123 PDF   7.10.26",
+  "y": 2026,
+  "eff": null,
+  "u": "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Rate guide",
+  "n": "USPS Time Limited OCT 2026 Price Change   Notice123 PDF   Final",
+  "y": 2026,
+  "eff": null,
+  "u": "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Special program",
+  "n": "USPS SKU User Guide July2026",
+  "y": 2026,
+  "eff": null,
+  "u": "https://pe.usps.com/resources/PriceChange/USPS SKU User Guide_July2026.pdf",
+  "d": "Posted on USPS's Price change center page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "OnTrac",
+  "t": "Surcharges & fees",
+  "n": "2026 OnTrac AHS%2BLPSRates",
+  "y": 2026,
+  "eff": null,
+  "u": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
+  "d": "Posted on OnTrac's Surcharges and rates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "OnTrac",
+  "t": "Zones & DAS",
+  "n": "OnTrac ImpactedZIPS 08242026",
+  "y": 2026,
+  "eff": null,
+  "u": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
+  "d": "Posted on OnTrac's Service alerts page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2024 ON CALL RATES MULTI",
+  "y": 2024,
+  "eff": null,
+  "u": "http://www.speedeedelivery.com/files/2024/2024_ON-CALL_RATES_MULTI.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2024 Rate Chart",
+  "y": 2024,
+  "eff": null,
+  "u": "http://www.speedeedelivery.com/files/2024/2024_Rate_Chart.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2024 WALK IN COUNTER RATES MULTI",
+  "y": 2024,
+  "eff": null,
+  "u": "http://www.speedeedelivery.com/files/2024/2024_WALK-IN_COUNTER_RATES_MULTI.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Fuel",
+  "n": "Spee-Dee Effective November 14 Fuel Increase Explaination",
+  "y": null,
+  "eff": null,
+  "u": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Special program",
+  "n": "Spee-Dee LETTER%20 %20UNBOXED%20AND%20ANIMAL%20SHIPPING",
+  "y": null,
+  "eff": null,
+  "u": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": true,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2025 RATES LETTER",
+  "y": 2025,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025-RATES-LETTER.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2025 STANDARD RATE CHART",
+  "y": 2025,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025-STANDARD-RATE-CHART.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
+ },
+ {
+  "c": "Spee-Dee",
+  "t": "Rate guide",
+  "n": "Spee-Dee 2025 WALK IN COUNTER RATES CHART",
+  "y": 2025,
+  "eff": null,
+  "u": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025_WALK-IN_COUNTER_RATES_CHART.pdf",
+  "d": "Posted on Spee-Dee's Service updates page",
+  "cur": false,
+  "seen": "2026-10-21"
  }
 ]

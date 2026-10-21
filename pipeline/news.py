@@ -204,6 +204,29 @@ def gnews(q):
 SEC_UA = {"User-Agent": "ParcelPigeon parcel-news reader " + (__import__("os").environ.get("SEC_CONTACT") or "bot@users.noreply.github.com")}
 
 
+# what an 8-K's item numbers mean, so a filing's headline says what it is about
+SEC_ITEMS = {"1.01": "a material agreement", "1.02": "an ended agreement", "2.01": "an acquisition or sale", "2.02": "results of operations",
+             "2.03": "new debt", "2.05": "restructuring costs", "2.06": "an impairment", "3.01": "a listing change", "5.01": "a change in control",
+             "5.02": "executive or board changes", "5.07": "shareholder vote results", "7.01": "a disclosure to investors", "8.01": "other events"}
+
+
+def edgar_items(url, company, cutoff):
+    """An SEC company's recent 8-K filings from data.sec.gov (the SEC's structured filings data), as intake items."""
+    j = requests.get(url, headers=SEC_UA, timeout=25)
+    j.raise_for_status()
+    rec = (j.json().get("filings") or {}).get("recent") or {}
+    cik = str(int(re.search(r"CIK(\d+)", url).group(1)))
+    out = []
+    for form, day, acc, items in zip(rec.get("form", []), rec.get("filingDate", []), rec.get("accessionNumber", []), rec.get("items", [])):
+        if form not in ("8-K", "8-K/A") or dt.datetime.fromisoformat(day) < cutoff:
+            continue
+        what = [SEC_ITEMS[i] for i in (items or "").split(",") if i in SEC_ITEMS] or ["a current report"]
+        out.append({"title": f"{company} files SEC Form {form}: {'; '.join(what)}", "date": day, "summary": f"Items {items}" if items else "",
+                    "url": f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc.replace('-', '')}/{acc}-index.htm",
+                    "src": f"{company} SEC filing", "direct": True, "house": False, "tier": 0})
+    return out
+
+
 def primary_feeds(cfg):
     """The company and regulator sources read before anyone writes about them: SEC filings, the Federal Register,
     press-release wires and carrier newsrooms (sources.yaml "primary:"). Items from these count as tier 0."""
@@ -224,8 +247,18 @@ def collect(cfg, primary_only=False):
     health, today = load("feed_health.json", {}), dt.date.today().isoformat()
     for name, url, direct, house, kind, company in feeds:
         fh = health.setdefault(name, {"direct": direct})
+        if kind == "edgar":
+            try:
+                got = edgar_items(url, company, cutoff)
+            except Exception as e:
+                fh.update({"err": str(e)[:120], "fails": fh.get("fails", 0) + 1, "last_try": today})
+                print(f"  feed failed: {name}: {e}", file=sys.stderr)
+                continue
+            fh.update({"err": None, "fails": 0, "last_try": today, "entries": len(got), "last_ok": today})
+            items += got
+            continue
         try:
-            parsed = feedparser.parse(requests.get(url, headers=SEC_UA, timeout=20).content if kind == "edgar" else get(url).content)
+            parsed = feedparser.parse(get(url).content)
         except Exception as e:
             fh.update({"err": str(e)[:120], "fails": fh.get("fails", 0) + 1, "last_try": today})
             print(f"  feed failed: {name}: {e}", file=sys.stderr)
@@ -246,12 +279,9 @@ def collect(cfg, primary_only=False):
             if not direct and not_a_source(src, None, dom):
                 continue          # press-release spam and automated write-ups never become sources
             summary = re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", e.get("summary", ""))).strip()
-            if kind == "edgar":
-                # "8-K - Current report" says nothing; the company and the items filed (e.g. 2.02 results, 8.01 other events) do
-                title, src = f"{company} files SEC Form {title.split(' - ')[0]}: {summary[:160]}", f"{company} SEC filing"
             items.append({"title": title, "url": e.get("link", ""), "summary": summary[:600],
                           "date": when.strftime("%Y-%m-%d"), "src": src or name, "direct": direct, "house": house,
-                          "tier": 0 if kind in ("edgar", "fedreg") else 2 if direct and not house else tier(src, None, dom)})
+                          "tier": 0 if kind == "fedreg" else 2 if direct and not house else tier(src, None, dom)})
     save("feed_health.json", health)
     return items
 
@@ -319,8 +349,8 @@ def claude_read(url):
     """Read a page through Claude's web fetch tool, which fetches from Anthropic's servers: it gets past many of the bot
     walls that turn away GitHub's runners (not paywalls). The page text comes straight from the tool result, never from
     the model's own words, so nothing in it can be paraphrased or invented."""
-    from common import API_KEY, track
-    if not API_KEY or READS["n"] >= CLAUDE_READS:
+    from common import API_KEY, API_DOWN, track, api_check
+    if not API_KEY or API_DOWN or READS["n"] >= CLAUDE_READS:
         return None
     READS["n"] += 1
     body = {"model": MODEL_WRITE, "max_tokens": 300,
@@ -329,7 +359,7 @@ def claude_read(url):
     try:
         r = requests.post("https://api.anthropic.com/v1/messages", json=body, timeout=180,
                           headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-        r.raise_for_status()
+        api_check(r)
         j = r.json(); track(j)
     except Exception as e:
         print(f"  web fetch failed for {url}: {e}", file=sys.stderr)
@@ -1041,6 +1071,16 @@ def main():
         else:
             st.pop("offc", None)
     save("news.json", live[:KEEP_LIVE]); save("review.json", review[:200]); save("seen.json", list(seen)[-6000:])
+    from common import API_DOWN
+    if API_DOWN:
+        # the account itself is refusing calls (credit, spend limit, key): tell a person once a day, not just the log
+        st = load("api_alert.json", {})
+        if st.get("day") != dt.date.today().isoformat():
+            notify("Parcel Pigeon: Claude API is refusing calls", "No stories can be screened or written until this is fixed. "
+                   "Headlines are kept and will be processed once calls work again.\n\nThe API said: " + API_DOWN["why"] +
+                   "\n\nCheck the Anthropic Console: credit balance, monthly spend limit, and that the ANTHROPIC_API_KEY secret is current.",
+                   labels=("audit",))
+            save("api_alert.json", {"day": dt.date.today().isoformat(), "why": API_DOWN["why"]})
     print(f"wrote {written} stories; {len(live)} live; {len(review)} in review")
 
 

@@ -1,5 +1,5 @@
 {
- "run": "2026-10-21T01:36Z",
+ "run": "2026-10-21T01:54Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -42,71 +42,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)) https://developer.ups.com/",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Surcharge and fee changes (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Delivery Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Pickup Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+   "type": "feed-dead",
+   "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },
@@ -179,71 +116,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate and Service Guides https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Rate updates and notices https://ups.com/rateupdates. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Fuel surcharges https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Service alerts https://www.ups.com/us/en/service-alerts. Server said: not probed yet",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=40)) https://developer.ups.com/",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Surcharge and fee changes (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Delivery Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2027 Pickup Area Surcharge ZIPs (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: FedEx 2026 Standard List Rates (Stream has ended unexpectedly) https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+   "type": "feed-dead",
+   "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },

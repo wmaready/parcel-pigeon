@@ -149,6 +149,19 @@ def _archive(url, timeout):
 ROUTES = [_plain, _impersonate, _browser, _proxy, _archive]
 
 
+def fetch_late(url, timeout=40):
+    """The routes after the browser (an unblocking proxy, then the Internet Archive), for pages that only reveal their bot
+    wall once a browser runs them: the plain read looks fine, the rendered page is blocked. None if neither works."""
+    for route in (_proxy, _archive):
+        try:
+            page = route(url, timeout)
+        except Exception:
+            continue
+        if page is not None and _ok(page, url):
+            return page
+    return None
+
+
 def fetch(url, timeout=40, archive=True):
     """First route that returns the real page or file. Raises Blocked when every route hits a bot wall,
     and the underlying error when the address itself is broken (404 and the like)."""
