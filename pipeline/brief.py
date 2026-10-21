@@ -41,8 +41,11 @@ def main():
     if len(items) < 3:
         return
     leads = [i["text"].split("</b>")[0].replace("<b>", "") for i in items]
+    # each item opens its story, and the app pins it on the map at that story's company or place: an id the model made up
+    # or took from outside the stories it was shown would tie the item to the wrong story, so it gets no link instead
+    shown = {s["id"] for s in recent}
     save("brief.json", {"week": today.isoformat(), "newest": newest, "items": [i["text"] for i in items],
-                        "ids": [i.get("id") for i in items], "history": (history + leads)[-30:]})
+                        "ids": [i.get("id") if i.get("id") in shown else None for i in items], "history": (history + leads)[-30:]})
 
 
 if __name__ == "__main__":

@@ -184,6 +184,7 @@ th button:focus-visible{outline:2px solid var(--accent)}
 .search::placeholder{color:var(--ink-2)}
 .filters{display:grid;gap:var(--sp-2);margin:var(--sp-3) 0}
 .active-filters{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;margin-bottom:var(--sp-3)}
+.active-filters .chip{max-width:100%;overflow:hidden;text-overflow:ellipsis}   /* a long storyline name never widens the page */
 .card{border-top:var(--line) solid var(--grid)}
 .card:first-child{border-top:0}
 .card .hd{padding:var(--sp-3)}
@@ -7288,11 +7289,14 @@ function thrTidy(T){const last=t=>String(t.last||'');
   const into=(src,dst)=>{const a=T[src],b=T[dst];if(!a||!b||src===dst)return;b.ids=[...new Set([...(b.ids||[]),...(a.ids||[])])];
     if(last(a)>last(b)){if(a.s)b.s=a.s;b.last=a.last}delete T[src]};
   Object.entries(THR_ALIAS).forEach(([a,b])=>into(a,b));
+  // keys a storyline absorbed earlier (its "was" list, written by the pipeline's merge) fold into it if they come back
+  Object.entries(T).forEach(([k,t])=>(t&&t.was||[]).forEach(w=>{if(T[w]&&w!==k)into(w,k)}));
   Object.keys(T).forEach(k=>{const t=T[k];if(!t||(t.ids||[]).length>1||t.cyc)return;const W=thrWords(t);if(!W.size)return;
     const hit=Object.keys(T).find(j=>j!==k&&!/@/.test(j)&&(T[j].ids||[]).length>1&&[...thrWords(T[j])].filter(w=>W.has(w)).length>=2);if(hit)into(k,hit)});
   return T}
-/* a storyline whose newest story is this old has gone quiet: it moves to "Earlier storylines" */
-const THR_QUIET_DAYS=240;
+/* a storyline whose newest story is this old has gone quiet: it moves off the main list to the collapsed "Earlier storylines"
+   (still one tap away, and still linked from its stories). Together with THR_MIN, the main list holds only live subjects. */
+const THR_QUIET_DAYS=60;
 /* Coop's ledger: subjects that come around every year. He has tracked these for years, so a new announcement is read
    against the record, not as a surprise. Figures are UPS/FedEx average list increases (both matched each year). */
 const CYC={'carrier-gri':{lbl:'Average GRI, UPS & FedEx',every:'Announced every fall (FedEx usually mid-to-late Sept, UPS about two to three weeks later), effective late Dec / early Jan.',
@@ -8687,11 +8691,17 @@ function indexPlayers(){
 }
 const storyText=n=>[n.title,n.sum,n.plain||'',n.tie||''].join(' ');
 /* The companies a story is about, most relevant first: its tagged carriers, then companies named in the headline (in headline
-   order), then companies named in the body (in order of first mention). titleOnly keeps just the tagged and headline ones. */
+   order), then companies named in the body (in order of first mention). titleOnly keeps just the tagged and headline ones.
+   A big-carrier tag counts only when the headline names that carrier or its family, if the headline names any company:
+   older stories were tagged with every carrier they mention, so "Amazon close to launching Shipping With Amazon" was also
+   tagged UPS, FedEx and USPS. pipeline/news.py subject_tags() applies the same rule to new stories. */
+const BIG_TAGS=new Set(['UPS','FedEx','USPS','Amazon','OnTrac','DHL']);
+function famOf(ids){const roots=new Set(ids);ids.forEach(id=>{const p=PL[id];if(p&&p.parent)roots.add(p.parent)});
+  const out=new Set(roots);PLAYERS.forEach(q=>{if(q.parent&&roots.has(q.parent))out.add(q.id)});return out}
 function storyCos(n,titleOnly){if(!n)return [];const k=titleOnly?'_cosT':'_cos';if(n[k]&&n[k+'P']===PRE)return n[k];
   const at=(id,t)=>{const e=PRE.find(x=>x[0]===id);if(!e)return -1;const m=e[1].exec(t);return m?m.index+m[1].length:-1};
-  const tag=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional').map(c=>logoId(c)).filter(Boolean);
-  const T=String(n.title||''),hd=mentions(T).map(id=>[id,at(id,T)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+  const T=String(n.title||''),hd=mentions(T).map(id=>[id,at(id,T)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]),fam=hd.length?famOf(hd):null;
+  const tag=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Regional').map(c=>[c,logoId(c)]).filter(([c,id])=>id&&(!fam||!BIG_TAGS.has(c)||fam.has(id))).map(x=>x[1]);
   let L=[...tag,...hd];
   if(!titleOnly){const B=storyText(n);L=L.concat(mentions(B).map(id=>[id,at(id,B)]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]))}
   L=[...new Set(L)].filter(id=>typeof PL==='undefined'||PL[id]||tag.includes(id));n[k]=L;n[k+'P']=PRE;return L}
@@ -8705,9 +8715,13 @@ function storyCars(n){const base=(n.c||[]).filter(c=>c!=='Industry'&&c!=='Region
 // which companies a text mentions: hundreds of name patterns per text, so each text is matched once and remembered
 const MENT={pre:null,m:new Map()};
 const mentions=t=>{if(MENT.pre!==PRE){MENT.pre=PRE;MENT.m.clear()}let r=MENT.m.get(t);if(!r){r=PRE.filter(([,re])=>re.test(t)).map(([id])=>id);if(MENT.m.size>4000)MENT.m.clear();MENT.m.set(t,r)}return r};
+/* the stories on a company's profile: the ones it is the subject or acting party of (its tag, or its name in the headline),
+   not every story that merely mentions it, so a USPS story never lands on Amazon's page. A company's page also lists the
+   stories about its own arms (UPS shows Roadie's), except an investor's. */
 const PST={k:null,m:new Map()};
 const pStories=id=>{const k=PRE.length+'|'+NEWS.length+'|'+(NEWS[0]&&NEWS[0].id);if(PST.k!==k||PST.pre!==PRE){PST.k=k;PST.pre=PRE;PST.m.clear()}
-  let r=PST.m.get(id);if(!r){const re=(PRE.find(x=>x[0]===id)||[])[1];r=re?NEWS.filter(n=>re.test(storyText(n))).sort((a,b)=>b.date.localeCompare(a.date)):[];PST.m.set(id,r)}return r.slice()};
+  let r=PST.m.get(id);if(!r){const p=PL[id],own=new Set([id,...(p&&p.realm!=='capital'?PLAYERS.filter(q=>q.parent===id).map(q=>q.id):[])]);
+    r=p?NEWS.filter(n=>storyCos(n,true).some(x=>own.has(x))).sort((a,b)=>b.date.localeCompare(a.date)):[];PST.m.set(id,r)}return r.slice()};
 const dealPlayers=x=>mentions([x.buyer,x.target,...(x.who||[]).map(w=>w[1]),...(x.parties||[]).map(p=>p.name)].join(' | '));
 const ownLine=p=>{const par=p.parent&&PL[p.parent];
   if(!p.own)return 'Ownership not checked yet';
@@ -9419,15 +9433,58 @@ renderClocks();setInterval(renderClocks,10000);
     for(const days of [4,10,30]){const L=NEWS.filter(n=>n.kind!=='Alert'&&n.title&&daysTo(n.date)>=-days).sort((a,b)=>(+b.lvl||1)-(+a.lvl||1)||String(b.date).localeCompare(a.date));
       if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,3)}
     return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,3)}
-  // the stop for a story: its carrier's headquarters, else the headquarters of a company the story names
-  const homeOf=n=>{const ids=typeof storyCos==='function'?storyCos(n):[];
-    for(const id of ids){const p=PL[id];if(!p||!/USA$/.test(p.hq||''))continue;if(GEO[cityOf(p.hq)])return stop(p);
-      const g=typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const s=stop(p);s.p=px(g.g);return s}}return null};
+  /* the stop for a story. 1) A U.S. place the story itself names (a town getting drone delivery, a facility, a city's
+     complaints): the pin goes there, labeled with the story's own company. 2) Else the headquarters of the company the story
+     is about (its tag or headline company, never one it only mentions). 3) Else, for a company based abroad, its own city,
+     pulled to the map's edge. 4) Else a plain pin with no company name, rather than another company's. */
+  // [lon, lat, state, name shown]
+  const PLACES=Object.assign({},GEO,{'Tacoma':[-122.44,47.25,'WA'],'Tallahassee':[-84.28,30.44,'FL'],'Westborough':[-71.62,42.27,'MA'],'San Jose':[-121.89,37.34,'CA'],
+    'Santa Ana':[-117.87,33.75,'CA'],'Bronx':[-73.87,40.84,'NY'],'Brooklyn':[-73.95,40.65,'NY'],'Queens':[-73.79,40.73,'NY'],'Manhattan':[-73.97,40.78,'NY'],'New York City':[-74.01,40.71,'NY'],'NYC':[-74.01,40.71,'NY','New York City'],
+    'Louisville':[-85.76,38.25,'KY'],'Houston':[-95.37,29.76,'TX'],'Phoenix':[-112.07,33.45,'AZ'],'Denver':[-104.99,39.74,'CO'],'San Diego':[-117.16,32.72,'CA'],'San Antonio':[-98.49,29.42,'TX'],
+    'Orlando':[-81.38,28.54,'FL'],'Jacksonville':[-81.66,30.33,'FL'],'Sacramento':[-121.49,38.58,'CA'],'Kansas City':[-94.58,39.1,'MO'],'St. Louis':[-90.2,38.63,'MO'],'Pittsburgh':[-79.99,40.44,'PA'],
+    'Cleveland':[-81.69,41.5,'OH'],'Milwaukee':[-87.91,43.04,'WI'],'Oklahoma City':[-97.52,35.47,'OK'],'Raleigh':[-78.64,35.78,'NC'],'Newark':[-74.17,40.74,'NJ'],'Fort Worth':[-97.33,32.76,'TX'],
+    'El Paso':[-106.49,31.76,'TX'],'Tucson':[-110.97,32.22,'AZ'],'Fresno':[-119.79,36.74,'CA'],'Spokane':[-117.43,47.66,'WA'],'Boise':[-116.2,43.62,'ID'],'Reno':[-119.81,39.53,'NV'],
+    'Albuquerque':[-106.65,35.08,'NM'],'Tulsa':[-95.99,36.15,'OK'],'Round Rock':[-97.68,30.51,'TX'],'Stockton':[-121.29,37.96,'CA'],
+    'Gastonia':[-81.19,35.26,'NC'],'Kirkwood':[-90.41,38.58,'MO'],'Calverton':[-72.79,40.92,'NY'],'Hebron, Ky':[-84.7,39.07,'KY','Hebron'],'Ontario, Calif':[-117.65,34.06,'CA','Ontario'],'Portland, Ore':[-122.68,45.52,'OR','Portland'],
+    'North Portland':[-122.7,45.58,'OR','Portland'],'Richmond, Va':[-77.44,37.54,'VA','Richmond'],'Columbus, Ohio':[-83.0,39.96,'OH','Columbus'],
+    'Washington, D.C.':[-77.04,38.91,'','Washington, DC'],'Washington, DC':[-77.04,38.91,'','Washington, DC']});
+  // names that are also people, companies, other states' cities or plain words: matched only in the longer forms above
+  ['Washington','Jamaica','Purchase','Rye','Tucker','Irving','Austin','Chandler','McKinney','Charlotte','Concord','Columbus','Burlington','Birmingham',
+   'Omaha','Brentwood','Richfield','Conshohocken','Sandy Springs (Atlanta)','Minneapolis-St. Paul'].forEach(c=>delete PLACES[c]);
+  // a place, not a newspaper ("New York Post") or a company's home base ("Chicago-based", "headquartered in Atlanta")
+  const PLACE_RE=new RegExp('(?<![A-Za-z])(?<!(?:based|headquartered|headquarters|HQ) in )('+Object.keys(PLACES).sort((a,b)=>b.length-a.length).map(c=>c.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+
+    ')(?![A-Za-z])(?!-based| based| Post| Times| Globe| Tribune| Herald| Journal| Morning| Business| Daily| Magazine| Sun\\b| Chronicle| Inquirer| Star\\b| Observer| Fed\\b)'+
+    // nor part of a longer name ("Boston Card Hunter"); "NYC Council" and "Portland City Council" are still places
+    '(?! (?!Council|City Council|Mayor|County|Police)[A-Z][a-z])');
+  // the headline, then the opening of the summary, where a story says where it happens
+  const placeOf=n=>{for(const t of [n.title,String(n.sum||'').slice(0,220)]){const m=PLACE_RE.exec(String(t||''));if(m)return m[1]}return null};
+  const clampUS=([lo,la])=>[Math.min(-67,Math.max(-124,lo)),Math.min(48.8,Math.max(25,la))];
+  // the company that names the pin: the first one in the headline (the most specific when two start together, "Amazon
+  // Prime Air" over "Amazon"), else its first tag
+  const leadOf=(n,ids)=>{const T=String(n.title||''),hit=id=>{const e=PRE.find(x=>x[0]===id),m=e&&e[1].exec(T);return m?[m.index+m[1].length,-m[2].length]:null};
+    const hd=ids.map(id=>[id,hit(id)]).filter(x=>x[1]).sort((a,b)=>a[1][0]-b[1][0]||a[1][1]-b[1][1]);if(hd.length)return PL[hd[0][0]]||null;
+    // a plain "Amazon" tag is Amazon itself, not the Amazon Shipping arm it maps to for logos
+    const t0=(n.c||[]).find(c=>c!=='Industry'&&c!=='Regional'),exact=t0&&PLAYERS.find(p=>p.n===t0);return exact&&ids.includes(logoId(t0))?exact:PL[ids[0]]||null};
+  // a city that is only some other named company's home ("Evri buys Boca Raton's Cross Border Connect") is not where it happens
+  const homeOfOther=(n,pl,lead)=>mentions(storyText(n)).some(id=>id!==(lead&&lead.id)&&PL[id]&&cityOf(PL[id].hq)===pl&&!(lead&&cityOf(lead.hq)===pl));
+  const homeOf=n=>{const ids=typeof storyCos==='function'?storyCos(n,true):[],lead=ids.length?leadOf(n,ids):null;
+    const pl=placeOf(n);if(pl&&!homeOfOther(n,pl,lead)){const g=PLACES[pl],st=g[2]!=null?g[2]:ST[pl]||'',nm=g[3]||pl;
+      return {id:lead?lead.id:null,c:lead?lead.n:(n.cat||'Parcel news'),city:nm+(st?', '+st:''),realm:lead?lead.realm:'none',p:px(clampUS(g)),place:true}}
+    const order=[...new Set([lead&&lead.id,...ids].filter(Boolean))];
+    for(const id of order){const p=PL[id];if(!p||!/USA$/.test(p.hq||''))continue;if(GEO[cityOf(p.hq)])return stop(p);
+      const g=typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const s=stop(p);s.p=px(g.g);return s}}
+    for(const id of order){const p=PL[id],g=p&&typeof wmLoc==='function'&&wmLoc(p);if(g&&g.g&&!g.approx){const hq=String((g.via||p).hq||'');
+      return {id:p.id,c:p.n,city:/USA$/.test(hq)?stop(g.via||p).city:hq.split(',').slice(0,2).join(',').trim(),realm:p.realm,p:px(clampUS(g.g))}}}
+    return null};
+  window.storyHome=homeOf;   // for the tests
   function drawStops(){LV=liveStories();const n=Math.max(1,LV.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     const out=[],realms=new Set(),far=s=>out.every(o=>!o||Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
     // each story at its carrier's headquarters when there's room; otherwise a nearby-looking market-map stop
-    LV.forEach((st0,k)=>{const h=homeOf(st0);out[k]=h&&far(h)?Object.assign(h,{story:st0.id}):null});
-    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>!out.includes(s)&&far(s));out[k]=Object.assign({},s||pool[k],{story:LV[k]&&LV[k].id})}
+    // two stories at the same place sit side by side instead of one moving to a stranger's pin
+    LV.forEach((st0,k)=>{const h=homeOf(st0);if(!h)return;if(!far(h))h.p=[h.p[0]+(k%2?14:-14),h.p[1]+(k%2?-8:8)];out[k]=Object.assign(h,{story:st0.id})});
+    // a story with no place and no company of its own gets a plain pin named by its topic, never another company's name
+    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>far(s))||pool[k]||{p:[W/2,H/2]};
+      out[k]={id:null,c:(LV[k]&&LV[k].cat)||'Parcel news',city:'',realm:'none',p:s.p,story:LV[k]&&LV[k].id}}
     STOPS=out.slice(0,n).map(s=>Object.assign({},s)).sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign(s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}));return;
     // prefer different realms, then fill; keep stops far enough apart for their labels
     for(const s of pool){if(out.length>=n)break;if(!realms.has(s.realm)&&far(s)){out.push(s);realms.add(s.realm)}}

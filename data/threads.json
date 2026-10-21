@@ -1,32 +1,36 @@
 {
  "ups-amazon-glide-down": {
   "n": "UPS Amazon cutback and network overhaul",
-  "s": "UPS has finished cutting Amazon volume and reconfiguring its network after announcing job cuts and building closures.",
+  "s": "Analysts and consultants remain split on whether UPS's logistics focus signals a retreat from B2C parcels, with UPS officials saying small package is not going away.",
   "ids": [
    "h403",
    "h406",
    "h503",
    "h511",
-   "18"
+   "18",
+   "a66617050d4e9"
   ],
   "first": "2024-01-30",
-  "last": "2026-04-28",
+  "last": "2026-10-14",
   "c": [
    "Amazon",
+   "FedEx",
    "UPS"
   ],
-  "rv": "8754e0e28dbf",
   "cx": {
-   "sig": "8754e0e28dbf",
+   "sig": null,
    "v": 2,
    "beats": {
     "h403": "UPS opened 2024 with 12,000 job cuts aimed at about $1 billion in savings, after fourth-quarter revenue fell 7.8%.",
     "h503": "Then came the big one: UPS would cut Amazon volume by more than half. Amazon was its largest customer, at nearly 12% of revenue.",
     "h511": "In April, UPS put numbers on the Amazon pullback: about 20,000 jobs and 73 buildings, aiming for another $1 billion in savings."
    },
-   "intro": "UPS is shrinking its Amazon business and its own network at once. Shippers should know what that means for capacity and costs.",
-   "now": "The cutback is complete. UPS reports quarterly earnings Oct. 27, and its Teamsters contract runs until July 31, 2028."
-  }
+   "intro": "UPS is shrinking its Amazon business and its own network at once. Shippers should know what that means for capacity and costs."
+  },
+  "was": [
+   "ups-parcel-pivot"
+  ],
+  "co": "UPS"
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
@@ -97,34 +101,36 @@
   }
  },
  "de-minimis": {
-  "n": "End of the de minimis exemption",
-  "s": "De minimis has ended for all countries, and carriers report a trade hit while postal services suspended U.S. shipments.",
+  "n": "End of de minimis and low-value import rules",
+  "s": "CBP's proposal, published Oct. 8, is open for public comment through Dec. 7, with no effective date stated.",
   "ids": [
    "h420",
    "h504",
    "h513",
    "h526",
-   "h532"
+   "h532",
+   "a55e20dc9f8f3"
   ],
   "first": "2024-09-13",
-  "last": "2025-09-18",
+  "last": "2026-10-08",
   "c": [
    "FedEx",
    "Industry",
    "UPS",
    "USPS"
   ],
-  "rv": "f405d49cdc56",
   "cx": {
-   "sig": "f405d49cdc56",
+   "sig": null,
    "v": 2,
    "beats": {
     "h420": "The idea started with volume: the White House said de minimis shipments grew from about 140 million to over 1 billion a year.",
     "h504": "USPS stopped taking China and Hong Kong parcels, then reversed a day later and said it would work with CBP on collecting the new duties."
    },
-   "intro": "The $800 duty-free exemption for small imports is gone, so low-value parcels now face duties and new paperwork.",
-   "now": "De minimis is closed to every country. FedEx reports quarterly earnings on Oct. 28 and UPS on Oct. 27, so there may be more to learn about the impact."
-  }
+   "intro": "The $800 duty-free exemption for small imports is gone, so low-value parcels now face duties and new paperwork."
+  },
+  "was": [
+   "cbp-low-value-import-filing"
+  ]
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds and carriers",
@@ -497,48 +503,6 @@
   ],
   "rv": "e00613a8e8ec"
  },
- "royal-mail-dm26": {
-  "n": "Royal Mail DM26 rollout",
-  "ids": [
-   "a2f399daa6200"
-  ],
-  "first": "2026-10-10",
-  "s": "The CWU has paused further rollout of DM26 and is calling for an agreed plan to fix delivery offices where it is not working as intended.",
-  "last": "2026-10-10",
-  "c": [
-   "Regional"
-  ],
-  "rv": "0b1698560687"
- },
- "cbp-low-value-import-filing": {
-  "n": "CBP low-value import filing rules",
-  "ids": [
-   "a55e20dc9f8f3"
-  ],
-  "first": "2026-10-08",
-  "s": "CBP's proposal, published Oct. 8, is open for public comment through Dec. 7, with no effective date stated.",
-  "last": "2026-10-08",
-  "c": [
-   "Industry",
-   "USPS"
-  ],
-  "rv": "073ada236f49"
- },
- "ups-parcel-pivot": {
-  "n": "UPS parcel strategy pivot",
-  "ids": [
-   "a66617050d4e9"
-  ],
-  "first": "2026-10-14",
-  "s": "Analysts and consultants remain split on whether UPS's logistics focus signals a retreat from B2C parcels, with UPS officials saying small package is not going away.",
-  "last": "2026-10-14",
-  "c": [
-   "Amazon",
-   "FedEx",
-   "UPS"
-  ],
-  "rv": "32a902935643"
- },
  "last-mile-facility-legislation": {
   "n": "NYC Delivery Protection Act fight",
   "ids": [
@@ -571,19 +535,6 @@
    "now": "The bill sits laid over in committee with 35 co-sponsors and no vote scheduled; organizers had a City Hall rally set for Oct. 22."
   }
  },
- "uniuni-delivery-complaints": {
-  "n": "UniUni delivery complaints",
-  "ids": [
-   "accf814d7d663"
-  ],
-  "first": "2026-10-10",
-  "s": "UniUni said it is working with local Tacoma delivery service providers after residents' complaints, which a group of neighbors has also sent to the Washington Attorney General's office.",
-  "last": "2026-10-10",
-  "c": [
-   "Regional"
-  ],
-  "rv": "91ef4948cff0"
- },
  "robot-biometric-suits": {
   "n": "Chicago robot biometric lawsuits",
   "ids": [
@@ -610,40 +561,58 @@
   ],
   "rv": "08125fc79c2c"
  },
- "uniuni-mak-acquisition": {
-  "n": "UniUni–MAK Acquisition deal",
-  "ids": [
-   "afb6fa67940a7"
-  ],
-  "first": "2026-10-20",
-  "s": "MAK terminated the UniUni purchase agreement on Oct. 20, 2026 and is withdrawing its preliminary prospectus, saying it reserves all rights.",
-  "last": "2026-10-20",
-  "c": [
-   "Regional"
-  ],
-  "rv": "1ab99b5e22ca"
- },
  "royal-mail-cwu-dispute": {
   "n": "Royal Mail–CWU dispute",
   "ids": [
-   "abc0a8a7d3e45",
-   "acc7a2dcc3b9d"
+   "a2f399daa6200",
+   "acc7a2dcc3b9d",
+   "abc0a8a7d3e45"
   ],
-  "first": "2026-10-20",
+  "first": "2026-10-10",
   "s": "The CWU has called for an emergency summit of the government, employers and union representatives over Royal Mail's staffing crisis.",
   "last": "2026-10-20",
   "c": [
    "Industry",
    "Regional"
   ],
-  "rv": "9d2c0a517f70",
   "cx": {
-   "sig": "9d2c0a517f70",
+   "sig": null,
    "v": 2,
    "beats": {
     "acc7a2dcc3b9d": "General Secretary Dave Ward cited recruitment and retention problems, and the call followed BBC reporting of a \"nightmare Christmas\"."
    },
    "now": "The CWU's call for an emergency summit is on the table; the milestones don't say whether the government or employers have responded."
-  }
+  },
+  "was": [
+   "royal-mail-dm26"
+  ],
+  "co": "Royal Mail"
+ },
+ "uniuni": {
+  "n": "UniUni: funding, SPAC deal and complaints",
+  "ids": [
+   "h521",
+   "61",
+   "60",
+   "nr4f8ee6",
+   "accf814d7d663",
+   "afb6fa67940a7"
+  ],
+  "first": "2025-06-26",
+  "s": "MAK terminated the UniUni purchase agreement on Oct. 20, 2026, so the planned go-public deal will not proceed; Tacoma residents' delivery complaints have also gone to the Washington Attorney General's office.",
+  "last": "2026-10-20",
+  "c": [
+   "Regional"
+  ],
+  "was": [
+   "uniuni-delivery-complaints",
+   "uniuni-mak-acquisition"
+  ],
+  "cx": {
+   "sig": null,
+   "v": 2,
+   "beats": {}
+  },
+  "co": "UniUni"
  }
 }

@@ -90,3 +90,42 @@ def test_company_page(site):
         b.close()
     assert not errors, errors[:5]
     assert not wide, wide
+
+
+def test_story_ties_and_storylines(site):
+    """A story sits on the profiles of the companies it is about, not every company it mentions; its map pin goes to the
+    place it names; and UniUni's saga is one storyline on the main list."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100 && NEWS.some(n => n.id === 'afb6fa67940a7')"
+                             " && THREADS.uniuni && typeof window.storyHome === 'function'", timeout=60000)
+        ids = lambda co: set(pg.evaluate(f"() => pStories('{co}').map(n => n.id)"))
+        amazon, usps = ids("amazon"), ids("usps")
+        assert "g09" not in amazon             # DHL eCommerce and USPS deal: a USPS story, Amazon only mentioned
+        assert "a418fdd3e6f05" not in usps     # Amazon's own delivery service: USPS only named as a rival
+        assert "05" not in usps                # Amazon's backup plan, tagged USPS in the built-in data
+        assert "h512" not in usps              # Amazon's rural network, which names USPS in passing
+        assert {"a418fdd3e6f05", "05"} <= amazon and "g09" in usps
+        # a big-carrier tag stays when the headline names that carrier's family (Blue Dart is DHL's)
+        assert pg.evaluate("() => storyCos(NEWS.find(n => n.id === 'a5e5d0db945cf'), true).includes('dhlexpress')")
+        # pins: the place a story names first, then the company it is about; never a company it only mentions
+        home = lambda sid: pg.evaluate(f"() => {{const h = storyHome(NEWS.find(n => n.id === '{sid}')); return h && [h.id, h.city]}}")
+        assert home("accf814d7d663") == ["uniuni", "Tacoma, WA"]
+        assert home("ab73d424a5c41")[1] == "Tallahassee, FL"
+        assert home("a418fdd3e6f05")[0] in ("amazon", "amzship")
+        # one UniUni storyline, on the main list, and on UniUni's company page
+        assert pg.evaluate("() => Object.keys(THREADS).filter(k => /uniuni/i.test(k + ' ' + THREADS[k].n))") == ["uniuni"]
+        assert pg.evaluate("() => thrStories('uniuni').length") >= 4
+        assert pg.evaluate("() => coThreads(PL.uniuni).map(x => x.k)") == ["uniuni"]
+        pg.click('nav.tabs [data-tab="news"]')
+        pg.evaluate("() => renderStorylines()")
+        main = pg.evaluate("() => [...document.querySelectorAll('#nStory > .stl h3')].map(h => h.textContent)")
+        assert any("UniUni" in t for t in main), main
+        b.close()
+    assert not errors, errors[:5]
