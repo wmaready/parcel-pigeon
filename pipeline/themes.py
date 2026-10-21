@@ -12,7 +12,7 @@ the almanac gains an event, and only state facts and figures found in the almana
 Usage: python themes.py [--force]
 """
 import datetime as dt, json, re, sys
-from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, numbers_supported
+from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, numbers_supported, cycle_of
 
 BIG = ("UPS", "FedEx", "USPS")
 PRICE_CATS = ("Pricing & GRI", "Peak season", "Fees & rules", "Guide changes", "Fuel", "Postal")
@@ -33,7 +33,9 @@ PATTERNS = """You are the year-over-year desk of Parcel Pigeon, a U.S. small-par
 executives. You get the ALMANAC (carrier pricing events and industry milestones since 2018, each with an id) and this year's
 STORYLINES and RECENT PRICE STORIES. Write 3 to 6 short notes on how this year compares with earlier years: timing (when
 increases were announced and took effect), size (average increases year by year), structure (surcharges and fees that keep
-growing, new kinds of charges), and what is genuinely new this year. Rules: use ONLY facts and figures in the inputs; every
+growing, new kinds of charges), off-cycle changes (marked OFF-CYCLE: price changes taking effect outside the annual increase
+window and the peak season, which have become more frequent), and what is genuinely new this year. Keep the date a change was
+announced and the date it takes effect apart, and say which one you mean. Rules: use ONLY facts and figures in the inputs; every
 number must appear in them; name the years you compare; neutral wire style; no advice, no predictions, no adjectives that
 judge. Reply JSON only: {"items": [{"t": "headline under 70 characters", "body": "2-3 sentences", "carriers": ["UPS"|"FedEx"|
 "USPS"|"Industry"], "refs": ["almanac ids or story ids you used"]}]}"""
@@ -83,6 +85,8 @@ def compact(alm):
     for e in sorted(alm, key=lambda e: (e.get("year") or 0, e.get("carrier") or "", e.get("effective") or e.get("date") or "")):
         when = e.get("effective") or e.get("date") or ""
         ann = f" (announced {e['announced']})" if e.get("announced") else ""
+        if cycle_of(e.get("carrier"), e.get("kind"), e.get("effective"), e.get("announced")) == "off":
+            ann += " OFF-CYCLE"
         pct = f" avg {e['pct']}%" if e.get("pct") is not None else ""
         det = "; ".join(str(x) for x in (e.get("details") or [])[:3])
         lines.append(f"{e.get('id')} | {e.get('year')} {e.get('carrier')} {e.get('kind')} {when}{ann}{pct}: {e.get('headline')}. {det}")

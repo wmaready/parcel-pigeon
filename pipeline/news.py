@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
-from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source
+from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
@@ -116,8 +116,9 @@ Return JSON only, with exactly these keys:
 "why": one sentence under 160 characters on why this matters to parcel shippers or the parcel market, from the sources only (who is affected and how big); never generic;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
-"event_date": "YYYY-MM-DD" the day the event itself happened or was announced, if the sources say and it is earlier than the article, else null;
-"act": "YYYY-MM-DD" effective date if one is stated, else null;
+"event_date": "YYYY-MM-DD" the day the company ANNOUNCED it (or the event happened), if the sources say and it is earlier than the article, else null;
+"act": "YYYY-MM-DD" the day it TAKES EFFECT, if one is stated, else null. The announcement date and the effective date are
+  different things: never put one in the other's place, and never infer an effective date from when it was announced;
 "dates": list of {{"d":"YYYY-MM-DD","w":"what changes that day, under 70 characters","imp":"up|down|info","fx":null}} for future dates in the source
          about THIS story's own company only (never other carriers' events the article mentions in passing; one event per entry)
          ONLY when shippers' prices, surcharges, fees, service levels or rules change that day, or for a big industry event that
@@ -952,6 +953,8 @@ def main():
                      "act": s.get("act"), "dates": s.get("dates") or [],
                      "added": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
                      "src": ordered[0]["src"], "url": ordered[0]["url"], "srcs": ordered, "auto": True}
+            if re.match(r"^\d{4}-\d{2}-\d{2}$", ev):
+                story["ann"] = ev          # the announcement date the sources state; never guessed from when we covered it
             if tkey:
                 story["thread"] = tkey
                 done_before = cycle_count(threads.get(tkey) or {}, tkey, story, live) if prior else 0
@@ -990,6 +993,11 @@ def main():
                         missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
                 except Exception as e:
                     print(f"  rewrite failed: {e}", file=sys.stderr)
+            # on-cycle or off-cycle, judged by the date the change takes effect (never the date it was announced)
+            if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and story.get("act") and story["imp"] in ("up", "down"):
+                cyc = cycle_of((story["c"] or [""])[0], kind_of(story["title"], story["cat"]), story["act"], story.get("ann") or story["date"])
+                if cyc == "off":
+                    story["offc"] = True
             # Price changes belong on the rate clock; a story without a date can't get there.
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules") and story["imp"] == "up" and not story["act"] and not story["dates"]:
                 found = find_effective_date(story)
@@ -1056,6 +1064,12 @@ def main():
             st["unconf"] = True
         else:
             st.pop("unconf", None)
+        offc = st.get("cat") in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and st.get("imp") in ("up", "down") \
+            and cycle_of((st.get("c") or [""])[0], kind_of(st.get("title"), st.get("cat")), st.get("act"), st.get("ann") or st.get("date")) == "off"
+        if offc:
+            st["offc"] = True
+        else:
+            st.pop("offc", None)
     save("news.json", live[:KEEP_LIVE]); save("review.json", review[:200]); save("seen.json", list(seen)[-6000:])
     from common import API_DOWN
     if API_DOWN:

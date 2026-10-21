@@ -235,6 +235,55 @@ def primary_first(srcs):
     return sorted(srcs, key=lambda s: tier(s.get("src"), s.get("url")))
 
 
+# ---------------------------------------------------------------- on-cycle vs off-cycle rate changes
+# Carriers used to change prices once a year (the general rate increase, with its surcharge and fee changes) plus the
+# holiday peak. Changes outside those windows are "off-cycle", and they have become far more common. The app's
+# cycleOf() in index.html applies the same rule; tests/test_cycle.py keeps the two in step.
+COST_KINDS = {"gri", "price_change", "peak", "surcharge", "fee", "fuel_table", "dim", "das"}
+
+
+def cycle_of(carrier, kind, effective, announced=None):
+    """'on' or 'off' for a carrier price change by the date it TAKES EFFECT; None for anything that isn't one.
+    On-cycle: the annual increase window (Dec 15 - Jan 20; for USPS its January price change) and peak surcharges in
+    the September-January season. Everything else (a mid-year increase, a new surcharge in May, a temporary USPS
+    increase, a summer fuel-table change) is off-cycle. A change announced with the annual increase (mid-August to
+    mid-December) that takes effect by the end of February is part of that cycle, even when staggered (e.g. a zone change
+    on Feb. 1)."""
+    import datetime as _dt
+    if kind not in COST_KINDS or not effective:
+        return None
+    try:
+        d = _dt.date.fromisoformat(str(effective)[:10])
+    except ValueError:
+        return None
+    if kind == "peak":
+        return "on" if d.month >= 9 or d.month == 1 else "off"
+    try:
+        a = _dt.date.fromisoformat(str(announced)[:10]) if announced else None
+    except ValueError:
+        a = None
+    if a and ((a.month, a.day) >= (8, 15) and (a.month, a.day) <= (12, 15)) and (d.month in (1, 2) or (d.month == 12 and d.day >= 15)) \
+            and (d - a).days < 200:
+        return "on"
+    if carrier == "USPS":
+        return "on" if d.month == 1 else "off"
+    return "on" if (d.month == 12 and d.day >= 15) or (d.month == 1 and d.day <= 20) else "off"
+
+
+def kind_of(text, cat=None):
+    """Which kind of price change a story or rate clock line describes (for cycle_of), from its wording."""
+    t = (text or "").lower()
+    if re.search(r"peak|demand surcharge|holiday (price|surcharge|rate)", t):
+        return "peak"
+    if "fuel" in t:
+        return "fuel_table"
+    if re.search(r"general rate|\bgri\b|rate increase|average (net )?increase|price (change|increase)|prices? (rise|increase)|raises? (\w+ ){0,2}(rates|prices)|list rates", t):
+        return "gri"
+    if re.search(r"surcharge|\bfees?\b|zone|dimensional|\bdim\b|delivery area|divisor", t):
+        return "surcharge"
+    return "gri" if cat == "Pricing & GRI" else None
+
+
 # ---------------------------------------------------------------- what earns a spot on the rate clock
 # The rate clock is for cost changes and big events, not every date a story mentions.
 CLOCK_CATS = {"Pricing & GRI", "Fees & rules", "Peak season", "Fuel", "Guide changes", "Postal", "Regulation & trade",

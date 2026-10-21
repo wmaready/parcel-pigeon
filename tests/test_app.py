@@ -63,3 +63,30 @@ def test_app_loads_every_tab(site, width):
         b.close()
     assert not errors, errors[:5]
     assert not wide, f"the page scrolls sideways (tab: elements past the right edge): {wide}"
+
+
+def test_company_page(site):
+    """A shared company link opens the full page with its timeline; a story opens on top and Back returns to the company."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.goto(site + "#c=ups", wait_until="load", timeout=60000)
+        pg.wait_for_function("() => document.querySelector('#coSheet.open .cpage .coyr li')", timeout=60000)
+        assert pg.evaluate("() => CO_OPEN") == "ups"
+        pg.evaluate("() => document.querySelector('#coSheet .coyr li[data-open]').click()")
+        pg.wait_for_timeout(400)
+        assert pg.evaluate("() => STORY_OPEN != null && CO_OPEN === 'ups'")
+        pg.go_back()
+        pg.wait_for_timeout(400)
+        assert pg.evaluate("() => STORY_OPEN == null && CO_OPEN === 'ups' && !$('coSheet').hidden")
+        pg.evaluate("() => [...document.querySelectorAll('#coSheet [data-pl]')].find(x => x.dataset.pl !== 'ups').click()")
+        pg.wait_for_timeout(400)
+        assert pg.evaluate("() => CO_OPEN") not in (None, "ups")
+        wide = pg.evaluate(OVERFLOW)
+        b.close()
+    assert not errors, errors[:5]
+    assert not wide, wide
