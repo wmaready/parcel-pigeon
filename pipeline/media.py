@@ -34,6 +34,32 @@ def _img(url, min_side=48):
     return ("img", im)
 
 
+LOGO_WORDS = {"logo", "logos", "header", "footer", "nav", "brand", "white", "black", "dark", "light", "color", "colour",
+              "main", "site", "primary", "full", "horizontal", "vertical", "mark", "wordmark", "default", "new", "small",
+              "large", "retina", "img", "image", "final", "rgb", "cmyk", "rev", "web", "mobile", "desktop", "lazy", "corp",
+              "blue", "red", "green", "orange", "cream", "original", "transparent", "official", "line", "group", "with",
+              "tagline", "single", "outline", "logomark", "updated", "english", "the", "and", "inc", "llc", "company",
+              "cropped", "scaled", "layout", "set", "blk", "png", "svg", "jpg", "webp", "rendition", "renditions", "banner",
+              "home", "divider", "center", "fill", "match", "csm", "file", "filters", "format", "quality", "portal",
+              "template", "mbl", "fullcolor", "deepindigo", "box", "year", "years", "website", "tps"}
+
+
+def foreign_logo(src, host, pid=""):
+    """True if an <img> logo's file name names some other brand: 'sally-logo.svg' on deliverysolutions.co is a
+    customer's logo from a logo wall, not the company's own. Site icons (favicon, apple-touch-icon), generic names
+    (logo.svg, header-logo-white.svg) and names containing part of the company's id or domain pass."""
+    path = urllib.parse.unquote(urllib.parse.urlsplit(src).path).lower()
+    if re.search(r"favicon|apple-touch|apple-icon|android-chrome|icon|s2/favicons|/ip3/", path):
+        return False
+    stem = path.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+    words = [re.sub(r"logo|header", "", w) for w in re.split(r"[^a-z0-9]+", stem)]
+    words = [w for w in words if len(w) >= 3 and w not in LOGO_WORDS and not re.search(r"\d", w)]
+    if not words:
+        return False
+    own = [re.sub(r"[^a-z0-9]", "", host.lower().removeprefix("www.").rsplit(".", 1)[0]), re.sub(r"[^a-z0-9]", "", pid.lower())]
+    return not any(w in o or o[:4] in w for w in words for o in own if len(o) >= 3)
+
+
 def logo_candidates(domain):
     """Best first: the logo the site itself declares (JSON-LD), the header logo image (often a crisp SVG wordmark),
     then the app icons. Wordmarks read far better than tiny round app icons. A unit with its own page on a parent's
@@ -54,6 +80,8 @@ def logo_candidates(domain):
             src = (re.search(r'(?:data-src|src)=["\']([^"\']+)', tag, re.I) or [None, ""])[1]
             if not src or src.startswith("data:") and "svg" not in src[:30]:
                 continue
+            if not src.startswith("data:") and foreign_logo(src, host, domain.split(".")[0]):
+                continue                                  # a customer's or partner's logo from a logo wall
             score = 800 + (60 if src.lower().split("?")[0].endswith(".svg") else 0) + (30 if re.search(r"header|nav|brand", attrs) else 0)
             out.append((score, urllib.parse.urljoin(base, src)))
         for tag in re.findall(r"<link[^>]+>", html, re.I):
@@ -167,6 +195,15 @@ def logos(limit=25):
             if isinstance(rec, dict) and not rec.get("f"):
                 rec["checked"] = "2000-01-01"
         idx["_v4"] = True
+    if not idx.get("_v5"):
+        # one-time: logos taken from a page's customer logo wall (Delivery Solutions showed Sally Beauty's) are dropped
+        # and looked up again
+        for pid, rec in idx.items():
+            if isinstance(rec, dict) and rec.get("f") and rec.get("src") and rec.get("host") and foreign_logo(rec["src"], rec["host"], pid):
+                for k in ("f", "ar", "src"):
+                    rec.pop(k, None)
+                rec["checked"] = "2000-01-01"
+        idx["_v5"] = True
     due = [pid for pid in sites if pid not in idx or
            (dt.date.fromisoformat(idx[pid].get("checked", "2000-01-01")) < TODAY - dt.timedelta(days=30))]
     done = 0

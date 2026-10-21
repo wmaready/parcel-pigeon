@@ -57,3 +57,15 @@ def test_no_company_gets_a_parent_from_an_empty_name():
     from pathlib import Path
     pl = json.loads((Path(__file__).resolve().parent.parent / "data" / "players.json").read_text())
     assert not [p["id"] for p in pl["players"] if p.get("parent") in ("mercari", "belposhta")]
+
+
+def test_logo_from_a_customer_logo_wall_is_rejected():
+    """Delivery Solutions showed Sally Beauty's logo and Pitney Bowes units showed the Mastercard and WWE logos: the
+    finder took a customer's logo from the company's own page."""
+    from media import foreign_logo
+    assert foreign_logo("https://deliverysolutions.co/hubfs/sally-logo.svg", "deliverysolutions.co", "deliverysolutions")
+    assert foreign_logo("https://pitneybowes.com/content/dam/pitneybowes/us/en/shipping-and-mailing/client-logo/mastercard-logo.png/_jcr_content/renditions/mastercard-logo.400.webp", "pitneybowes.com", "pbecomfulfill")
+    assert not foreign_logo("https://www.ups.com/assets/ups-logo-white.svg", "ups.com", "ups")
+    assert not foreign_logo("https://www.ontrac.com/wp-content/uploads/2023/03/cropped-wordmark_black-red.png", "ontrac.com", "ontrac")
+    assert not foreign_logo("https://dhl.com/apple-touch-icon.png", "dhl.com", "dhlexpress")
+    assert not foreign_logo("https://www.odfl.com/x/fullcolorlogo-100x100.png", "odfl.com", "odfl")

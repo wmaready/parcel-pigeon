@@ -57,6 +57,7 @@ def test_report_writes_todays_spend(data_dir):
 
 def test_due_once_a_day_from_the_hour(data_dir):
     from due import due, done
+    save("due.json", {})
     t = lambda h, day=21: dt.datetime(2026, 10, day, h, 17, tzinfo=dt.timezone.utc)
     assert not due("players", 4, t(3))
     assert due("players", 4, t(5))              # a late start still runs
