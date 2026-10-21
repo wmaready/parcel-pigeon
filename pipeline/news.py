@@ -349,8 +349,8 @@ def claude_read(url):
     """Read a page through Claude's web fetch tool, which fetches from Anthropic's servers: it gets past many of the bot
     walls that turn away GitHub's runners (not paywalls). The page text comes straight from the tool result, never from
     the model's own words, so nothing in it can be paraphrased or invented."""
-    from common import API_KEY, API_DOWN, track, api_check
-    if not API_KEY or API_DOWN or READS["n"] >= CLAUDE_READS:
+    from common import API_KEY, API_DOWN, track, api_check, extras_ok
+    if not API_KEY or API_DOWN or READS["n"] >= CLAUDE_READS or not extras_ok():
         return None
     READS["n"] += 1
     body = {"model": MODEL_WRITE, "max_tokens": 300,
@@ -1050,7 +1050,8 @@ def main():
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
     live = dedupe_live(live)
-    if not primary_only:
+    from common import extras_ok
+    if not primary_only and extras_ok():
         # try to confirm a few single-source stories each run: a better outlet's report of the same event is attached
         recent = (dt.date.today() - dt.timedelta(days=10)).isoformat()
         for st in [x for x in live if unconfirmed(x) and x.get("date", "") >= recent and x.get("tried") != dt.date.today().isoformat()][:5]:

@@ -46,7 +46,7 @@ Most workflow files are written as JSON (valid YAML); keep that style or convert
 | `audit.py` | Consistency checks across all data; safe fixes go to `audit.json`, the rest to one GitHub issue |
 | `fuel.py`, `markets.py`, `brief.py`, `guides.py`, `media.py`, `archive.py`, `publish.py`, `mergejson.py` | Fuel and diesel, share prices, the daily brief, guide text, logos and photos, saved document copies, publishing approved drafts, merging data files after a push race |
 | `export_seed.js` | Copies the app's built-in lists (players, docs, deals) into `data/seed.json` so Python can read them |
-| `common.py` | Shared helpers: `load`/`save`, the Claude call, number checking, source tiers, URL canonicalizing |
+| `common.py` | Shared helpers: `load`/`save`, the Claude call, the spend meter and pacing, number checking, source tiers, URL canonicalizing |
 
 ## Data files (`data/`)
 
@@ -107,8 +107,22 @@ These are the guardrails that make the content trustworthy. Each has a test in `
 
 All calls go through `common.claude` (plain HTTPS to the Messages API, with retries and prompt caching) or
 `players.ask` (adds the web search server tool). Models: `PW_MODEL_FAST` (default `claude-haiku-5-5`) screens and
-extracts; `PW_MODEL_WRITE` (default `claude-sonnet-5-5`) writes and researches. Each script prints its token usage.
-Expect roughly $15-35 a month in a normal news week; the hard stop is the monthly limit set in the Claude Console.
+extracts; `PW_MODEL_WRITE` (default `claude-sonnet-5-5`) writes and researches.
+
+**Spend meter and pacing** (`common.cost`, `spent`, `allowance`, `paused`):
+- Every call is priced at list prices (`common.PRICES`, web search at $0.01 each) and each script adds its spend to the
+  day's total in `data/usage.json` (`data/usage_sweep.json` for the sweep, which runs in parallel). `carry` holds what a
+  month spent before the ledger existed. The ledgers are kept off the public site.
+- `PP_MONTHLY_BUDGET` (repository variable, default 75) should match the Console's monthly spend limit. Each UTC day may
+  spend what's left of it divided by the days left in the month.
+- Extras (Claude web fetch reads, re-confirming stories, company research, the sweep) stop at half the day's allowance.
+- Once the allowance is used, Claude calls pause until midnight UTC; a run that started under it finishes. Unscreened
+  headlines wait and nothing is lost. The run log shows a "Claude calls paused" notice.
+- Measured in October 2026: the scheduled pipeline costs about $1.35 a day (news.py writing is about 80% of it), about
+  $40 a month, before the hourly primary-source screening and web fetch reads were added.
+
+Once-a-day jobs (the brief, company research, the full audit) use `due.py NAME HOUR`: the first run at or after that UTC
+hour each day, since runs can wait an hour or more in GitHub's queue.
 
 ## Secrets (repository settings)
 

@@ -26,3 +26,11 @@ def no_network(monkeypatch):
         raise RuntimeError("tests must not use the network")
     monkeypatch.setattr(requests, "get", blocked)
     monkeypatch.setattr(requests, "post", blocked)
+
+
+@pytest.fixture(autouse=True)
+def fresh_meter(monkeypatch):
+    """Each test counts its own Claude spend, so nothing a test 'spends' reaches the real ledger when pytest exits."""
+    import common
+    monkeypatch.setattr(common, "USAGE", {"calls": 0, "in": 0, "cached": 0, "written": 0, "out": 0, "usd": 0.0})
+    monkeypatch.setattr(common, "PACE", {})
