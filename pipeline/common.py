@@ -72,10 +72,32 @@ def track(j):
     USAGE["cached"] += u.get("cache_read_input_tokens", 0) or 0; USAGE["written"] += u.get("cache_creation_input_tokens", 0) or 0
 
 
+API_DOWN = {}      # set once the API refuses for a reason that won't change this run (credit, key, permission)
+
+
+def api_check(r):
+    """Raise with the API's own explanation instead of a bare "400 Bad Request". When the account itself is the problem
+    (no credit, spend limit reached, bad key), say so loudly in the run summary and stop further calls this run."""
+    if r.status_code < 400:
+        return
+    try:
+        err = (r.json() or {}).get("error") or {}
+    except Exception:
+        err = {}
+    kind, msg = err.get("type") or "", (err.get("message") or r.text[:200]).strip()
+    fatal = r.status_code in (401, 403) or re.search(r"credit balance|billing|spend limit|usage limit|purchase credits", msg, re.I)
+    if fatal and not API_DOWN:
+        API_DOWN["why"] = f"{r.status_code} {kind}: {msg}"
+        print(f"::error title=Claude API refused every call::{API_DOWN['why']} (check the Anthropic Console: credit balance, spend limit, API key)")
+    raise RuntimeError(f"Claude API {r.status_code} {kind}: {msg}")
+
+
 def claude(model, system, user, max_tokens=1500):
     """Call the Claude Messages API and return the text reply."""
     if not API_KEY:
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
+    if API_DOWN:
+        raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
     for attempt in range(3):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
@@ -87,7 +109,7 @@ def claude(model, system, user, max_tokens=1500):
         if r.status_code in (429, 500, 502, 503, 529):
             time.sleep(5 * (attempt + 1))
             continue
-        r.raise_for_status()
+        api_check(r)
         j = r.json(); track(j)
         return "".join(b.get("text", "") for b in j.get("content", []))
     raise RuntimeError("Claude API unavailable after retries")
