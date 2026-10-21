@@ -122,7 +122,7 @@ section#s-mna .view[data-view="map"] > #mNewP{display:none!important}
 .mx{scroll-margin-top:120px}
 
 .mx[data-m="geo"] .mx-geo{display:block}.mx-geo{display:none}
-.mx-gmap{height:min(70vh,640px);border:1px solid var(--grid);border-radius:16px;overflow:hidden;background:var(--bg)}
+.mx-gmap{height:min(70vh,640px);border:1px solid var(--grid);border-radius:16px;overflow:hidden;background:var(--bg);isolation:isolate}  /* keeps Leaflet's map layers (z-index 400-700) under sheets opened on top */
 .mx-gnote{font-size:13px;color:var(--ink-2);margin-top:8px}.mx-gnote b{color:var(--ink)}
 .mx-gmap .leaflet-tooltip.mx-tip{background:var(--panel-2);color:var(--ink);border:1px solid var(--grid-strong);border-radius:8px;font-family:var(--font-ui);font-size:12px;padding:3px 8px;box-shadow:none}
 .mx-gmap .leaflet-tooltip.mx-tip::before{display:none}

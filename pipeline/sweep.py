@@ -97,7 +97,7 @@ def names(mp, seed):
             p["n"] = m["new"]
         elif m["k"] != "pending":
             p["parent"] = m.get("parent")
-    byname = {}
+    byname = P.Names()
     for p in known:
         for nm in [p["n"]] + (p.get("al") or []):
             byname[str(nm).lower()] = p["id"]; byname[P.norm(nm)] = p["id"]

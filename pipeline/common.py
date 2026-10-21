@@ -79,8 +79,10 @@ def spent(day=None):
     today = before = 0.0
     for name in LEDGERS:
         led = load(name, {})
+        led = led if isinstance(led, dict) else {}
         before += float((led.get("carry") or {}).get(day[:7]) or 0)
         for d, usd in (led.get("days") or {}).items():
+            usd = usd if isinstance(usd, (int, float)) else 0     # a damaged entry must never stop every Claude call
             if d[:7] == day[:7]:
                 if d < day:
                     before += usd
@@ -128,6 +130,7 @@ def _usage_report():
               f"({USAGE['cached']} read from cache), {USAGE['out']} output tokens, ${USAGE['usd']:.3f} "
               f"(today ${today:.2f} of ${allowance():.2f}; month ${month:.2f} of ${MONTHLY:.0f})")
         led = load(LEDGER, {})
+        led = led if isinstance(led, dict) else {}
         days = led.setdefault("days", {})
         d = dt.date.today().isoformat()
         days[d] = round(days.get(d, 0) + USAGE["usd"], 4)

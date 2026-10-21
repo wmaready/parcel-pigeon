@@ -56,10 +56,12 @@ def test_report_writes_todays_spend(data_dir):
 
 
 def test_due_once_a_day_from_the_hour(data_dir):
-    from due import due
+    from due import due, done
     t = lambda h, day=21: dt.datetime(2026, 10, day, h, 17, tzinfo=dt.timezone.utc)
     assert not due("players", 4, t(3))
     assert due("players", 4, t(5))              # a late start still runs
-    assert not due("players", 4, t(6))          # once a day
+    assert due("players", 4, t(7))              # and keeps trying until a run finishes it
+    done("players", t(7))
+    assert not due("players", 4, t(9))          # once a day
     assert due("players", 4, t(4, 22))
     assert due("brief", 12, t(13))              # each job keeps its own day

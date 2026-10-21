@@ -4,7 +4,7 @@ is_covered(): searches Google News for the event over the last few days and retu
 that already ran it. If none have, the story is a potential first-to-report ("scoop").
 notify(): opens a GitHub issue (GitHub mobile push) and, if NTFY_TOPIC is set, sends a free phone push via ntfy.sh.
 """
-import json, os, re, urllib.parse
+import json, os, re, sys, urllib.parse
 import feedparser, requests
 from common import get
 
@@ -37,6 +37,23 @@ def is_covered(title, days=4):
         if any(p in src for p in PRESS):
             hits.append((e.get("source") or {}).get("title"))
     return sorted(set(hits))
+
+
+def crash_alert(script):
+    """A script crashed: open one issue a day per script, with the traceback, so a broken run is seen by a person
+    instead of hiding behind a green run with a warning in the log. Call from an except block, then re-raise."""
+    import datetime as dt, traceback
+    from common import load, save
+    st, day = load("crash_alert.json", {}), dt.date.today().isoformat()
+    if st.get(script) == day:
+        return
+    try:
+        notify(f"Parcel Pigeon: {script} crashed", f"The run kept going without it, so the rest of the app still updated.\n\n"
+               f"```\n{traceback.format_exc()[-3000:]}\n```", labels=("audit",))
+    except Exception as e:
+        print(f"crash alert failed: {e}", file=sys.stderr)
+    st[script] = day
+    save("crash_alert.json", st)
 
 
 def notify(title, body, labels=("draft", "first-to-report"), link=None):

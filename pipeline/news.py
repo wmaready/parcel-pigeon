@@ -860,14 +860,13 @@ def main():
         groups.setdefault(v.get("event") or f"e{v['i']}", []).append((item, v))
     for members in groups.values():
         members.sort(key=lambda m: (m[0].get("tier", 3), m[0].get("date") or ""))
-    # most important first: plainly-parcel items before loosely related ones, best outlet, most outlets covering it
-    order = sorted(groups.items(), key=lambda kv: (0 if any(v.get("fit") != "edge" for _, v in kv[1]) else 1,
-                                                    min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
     print(f"triage: {len(groups)} new events, {merged} sources added to existing stories")
-    # strongest stories first, so the per-run cap never spends itself on minor items; minor loose-fit items are skipped
+    # strongest stories first, so the per-run cap never spends itself on minor items; minor loose-fit items are skipped.
+    # Ties: plainly-parcel items before loosely related ones, then best outlet, then most outlets covering it.
     sc = lambda m: max(int(v.get("score") or 5) for _, v in m)
-    groups = {k: m for k, m in sorted(groups.items(), key=lambda kv: -sc(kv[1]))
-              if not (sc(m) <= 3 and all(v.get("fit") == "edge" for _, v in m))}
+    order = sorted(((k, m) for k, m in groups.items() if not (sc(m) <= 3 and all(v.get("fit") == "edge" for _, v in m))),
+                   key=lambda kv: (-sc(kv[1]), 0 if any(v.get("fit") != "edge" for _, v in kv[1]) else 1,
+                                   min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
 
     written = 0
     for n_ev, (key, members) in enumerate(order):
@@ -1285,7 +1284,12 @@ def review_threads(limit=8):
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        from scoop import crash_alert
+        crash_alert("news.py --primary" if "--primary" in sys.argv else "news.py")
+        raise
     for step in (curate, review_threads):     # editor passes first, so Coop narrates the cleaned-up storylines
         try:
             step()

@@ -1,9 +1,12 @@
 name: Checks
 
-# Runs the test suite on every pull request (and on demand), so a change that breaks the pipeline or the app
+# Runs the test suite on every pull request, on every change pushed straight to main (data updates excepted), and on demand, so a change that breaks the pipeline or the app
 # is caught before it reaches main. Uses no secrets and calls no outside service.
 on:
   pull_request:
+  push:
+    branches: [main]
+    paths-ignore: ["data/**"]
   workflow_dispatch:
 
 permissions:
