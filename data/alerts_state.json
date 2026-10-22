@@ -47,7 +47,8 @@
   "a312b45efa358",
   "a40674eddf824",
   "a42293aae6d92",
-  "a6efb99bbcab2"
+  "a6efb99bbcab2",
+  "a2f683da86bf8"
  ],
  "clock": [
   "e06:7"
@@ -212,26 +213,28 @@
   "deposco q3 carrier rates fall 3 3 per package operator costs",
   "pakistan arrests man over 126m counterfeit usps label scheme",
   "mass lawmakers seek drone delivery moratorium over amazon pl",
-  "pakistan court remands suspect in alleged 126 million usps l"
+  "pakistan court remands suspect in alleged 126 million usps l",
+  "cbp extends postal formal entry compliance date to jan 20 20"
  ],
  "harvested": [
-  "a773d361dac4e",
-  "af8ee5ed067c6",
-  "a15404304f17b",
   "a89d7e4beebd9",
-  "a6cc2420ad66e",
+  "a2f683da86bf8",
+  "a773d361dac4e",
+  "a6c2418bed0a7",
   "a3a45d7f6db20",
   "a6e82ba740e99",
-  "w150132868eae",
+  "a5d45f26f2219",
+  "a6cc2420ad66e",
+  "aee6669d325da",
   "a58373f1b7bc3",
   "wacb825361479",
+  "af8ee5ed067c6",
   "a2b81ad721cb8",
-  "a312b45efa358",
   "aba40a11b6946",
-  "aee6669d325da",
-  "a2def09bc43bb",
-  "a6c2418bed0a7",
-  "a5d45f26f2219"
+  "a312b45efa358",
+  "a15404304f17b",
+  "w150132868eae",
+  "a2def09bc43bb"
  ],
  "backfilled": true,
  "recent": [
@@ -991,6 +994,21 @@
      "url": "https://www.dawn.com/news/2038787"
     }
    ]
+  },
+  {
+   "id": "a2f683da86bf8",
+   "title": "CBP extends postal formal-entry compliance date to Jan. 20, 2027",
+   "date": "2026-10-22",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry",
+   "srcs": [
+    {
+     "src": "Federal Register: de minimis and postal imports",
+     "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1259,6 +1277,21 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#c=deposco"
+  },
+  {
+   "kind": "story",
+   "key": "story:cbp extends postal formal entry compliance date to jan 20 2027",
+   "id": "a2f683da86bf8",
+   "t": "CBP extends postal formal-entry compliance date…",
+   "m": "Update 7 · End of de minimis and low-value imports: The formal-entry requirement for these categories of postal goods now applies from Jan.",
+   "big": false,
+   "at": "2026-10-22T01:41:29.722702-04:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a2f683da86bf8"
   }
  ],
  "fuelq": {},

@@ -1,5 +1,5 @@
 {
- "run": "2026-10-22T04:50Z",
+ "run": "2026-10-22T05:42Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -162,20 +162,6 @@
     "a15404304f17b"
    ],
    "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=20)): UPS Ship API EU PID Requirements v1.2 https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (404 Client Error: The specified blob does not exist. for url: https://cdn.gls-us.com/media/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -310,20 +296,6 @@
     "a2e0cb230779a",
     "a15404304f17b"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=20)): UPS Ship API EU PID Requirements v1.2 https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (404 Client Error: The specified blob does not exist. for url: https://cdn.gls-us.com/media/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
-   "ids": [],
    "fixed": false
   }
  ]

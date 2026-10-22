@@ -1,5 +1,45 @@
 [
  {
+  "id": "a2f683da86bf8",
+  "date": "2026-10-22",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "CBP extends postal formal-entry compliance date to Jan. 20, 2027",
+  "sum": "U.S. Customs and Border Protection extended the compliance date for formal entry of certain international postal shipments from Oct. 22, 2026 to Jan. 20, 2027, according to a final rule published in the Federal Register (91 FR 66638). It covers mail subject to partner government agency requirements, mail subject to duties under HTSUS Chapter 98 or 99, and mail claiming duty-free treatment under Chapter 98 or a free trade agreement. CBP said importers, brokers and logistics providers need more time to update systems and procedures.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "The formal-entry requirement for these categories of postal goods now applies from Jan. 20, 2027 instead of Oct. 22, 2026. CBP said the process for informal mail entries under the June 24, 2026 interim final rule does not change during the delay.",
+  "why": "The delay gives importers, brokers and logistics providers in the international postal network until Jan. 20, 2027 to comply with the formal-entry requirement for these goods.",
+  "score": 8,
+  "tie": "CBP on Oct. 8, 2026 proposed earlier filing deadlines for low-value imports and more data for postal entries.",
+  "act": "2027-01-20",
+  "dates": [
+   {
+    "d": "2027-01-20",
+    "w": "Postal formal-entry compliance date for PGA, Ch. 98/99, FTA goods",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "added": "2026-10-22T05:40:51Z",
+  "src": "Federal Register: de minimis and postal imports",
+  "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry",
+  "srcs": [
+   {
+    "src": "Federal Register: de minimis and postal imports",
+    "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
+   }
+  ],
+  "auto": true,
+  "thread": "de-minimis",
+  "upd": 7,
+  "new": "CBP pushed the compliance date for formal entry of PGA-regulated, Chapter 98/99 and duty-free-claim postal goods from Oct. 22, 2026 to Jan. 20, 2027, so those shipments have about three more months before the requirement applies.",
+  "exclusive": true
+ },
+ {
   "id": "a312b45efa358",
   "date": "2026-10-21",
   "c": [
@@ -750,6 +790,38 @@
   ],
   "auto": true,
   "new": "Westborough voters approved a bylaw on October 19 banning commercial drone pads and drop zones, adding a local hurdle to one Amazon site; the attorney general's review is pending, so nothing changes yet for shippers.",
+  "exclusive": true
+ },
+ {
+  "id": "ad66ad94a48fa",
+  "date": "2026-10-19",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS files two new competitive shipping contracts with PRC",
+  "sum": "The Postal Regulatory Commission noticed two USPS filings on negotiated service agreements, both accepted October 19, 2026. One adds Priority Mail Express, Priority Mail & USPS Ground Advantage Contract 1514 to the Competitive product list, with comments due October 27, 2026. The other adds a fulfillment product, PM-GA Contract 1114, under summary review.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "The notice does not change published rates or service for shippers. It covers two negotiated contracts, with the pricing and customer details filed under seal.",
+  "why": "The filings show USPS adding negotiated competitive contracts for Priority Mail, Ground Advantage and fulfillment, though the notice withholds the customers and the terms.",
+  "score": 4,
+  "tie": "Earlier coverage reported a new USPS agreement with Amazon in April 2026 and an exclusive DHL eCommerce last-mile deal in May 2026, but this notice does not name the counterparties to either contract.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T05:41:05Z",
+  "src": "Federal Register: PRC",
+  "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21620/new-postal-products",
+  "srcs": [
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21620/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-19",
+  "new": "The PRC notice shows USPS filing Contract 1514 (Priority Mail Express, Priority Mail & USPS Ground Advantage) and fulfillment product PM-GA Contract 1114, with no named customers, so nothing here changes rates or service for shippers.",
   "exclusive": true
  },
  {
