@@ -68,7 +68,7 @@
   "carrier": "UPS",
   "name": "Developer portal",
   "fails": 0,
-  "thin": 29,
+  "thin": 30,
   "err": null,
   "last_try": "2026-10-22",
   "blocked": false,
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 29,
+  "fails": 30,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-22",
@@ -106,7 +106,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 1,
+  "fails": 2,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-22",
@@ -132,28 +132,28 @@
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 1,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-10-22",
   "chars": 7463,
   "last_ok": "2026-10-22",
-  "blocked": true,
+  "blocked": false,
   "via": "archive",
   "copy_of": "2026-10-14"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 2,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-10-22",
   "chars": 5705,
   "last_ok": "2026-10-22",
-  "blocked": true,
+  "blocked": false,
   "via": "archive",
-  "copy_of": "2026-10-11"
+  "copy_of": "2026-10-22"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
   "carrier": "FedEx",
