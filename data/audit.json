@@ -1,5 +1,5 @@
 {
- "run": "2026-10-22T21:37Z",
+ "run": "2026-10-22T22:36Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -86,6 +86,13 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -271,6 +278,13 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
