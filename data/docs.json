@@ -50,7 +50,7 @@
   "d": "Spreadsheet version of the daily rate guide",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "UPS",
@@ -248,7 +248,7 @@
   "d": "Spreadsheet version",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "UPS",
@@ -533,7 +533,7 @@
   "cur": true,
   "upd": "2026-09-11",
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "FedEx",
@@ -1610,7 +1610,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf",
   "d": "DHL overwrites this file each year",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-2026-dhl-express-service-and-rate-guide-u-s-b533b4.pdf",
+  "fh": "044f292c650fc4d72b93fa97f44055a4e569e477",
+  "fat": "2026-10-22",
+  "fsz": 3418778
  },
  {
   "c": "DHL",
@@ -1621,7 +1626,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-2026-dhl-express-u-s-domestic-retail-rate-and-service-guide-4680b2.pdf",
+  "fh": "f6ada3a592d74d3f2f189a499bbb4db67ad2445a",
+  "fat": "2026-10-22",
+  "fsz": 1044911
  },
  {
   "c": "DHL",
@@ -1691,7 +1701,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-domestic-fuel-table-effective-may-30-2026-bee054.pdf",
+  "fh": "d7a8fc1f133eb219724654191eb167698999ce32",
+  "fat": "2026-10-22",
+  "fsz": 87761
  },
  {
   "c": "DHL",

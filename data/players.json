@@ -1559,18 +1559,33 @@
    "id": "deposco",
    "n": "Deposco",
    "realm": "software",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
+   "hq": "Alpharetta, GA, USA",
    "yr": null,
-   "s": "Provider of AI-based supply chain software solutions",
-   "al": [],
+   "s": "Deposco sells cloud-based warehouse management, order management and shipping software (Bright Suite) that brands, retailers and 3PLs use to fulfill and ship parcel orders. It also publishes a quarterly Commerce Signal report on parcel rates using its platform data.",
+   "al": [
+    "Deposco Bright Suite",
+    "Deposco, Inc.",
+    "Xtrascope, Inc."
+   ],
    "src": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-21",
-   "story": "a312b45efa358"
+   "story": "a312b45efa358",
+   "site": "deposco.com",
+   "geo": [
+    -84.294,
+    34.075
+   ],
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
+    "https://www.cbinsights.com/company/deposco",
+    "https://pitchbook.com/profiles/company/13325-50"
+   ],
+   "enriched": "2026-10-22"
   }
  ],
  "edges": [
@@ -2841,6 +2856,24 @@
    "t": "Robotics work with UPS cited in trade press",
    "url": "https://www.automatedwarehouseonline.com/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse/",
    "story": "a68878cb71618"
+  },
+  {
+   "a": "ups",
+   "b": "deposco",
+   "k": "invested",
+   "y": "2008",
+   "t": "UPS Strategic Enterprise Fund investment in Deposco",
+   "url": "https://www.sdcexec.com/software-technology/software-solutions/article/10352955/deposco-inc-deposco-secures-investment-from-ups-strategic-enterprise-fund",
+   "story": "a312b45efa358"
+  },
+  {
+   "a": "deposco",
+   "b": "easypost",
+   "k": "partner",
+   "y": null,
+   "t": "Deposco listed as an EasyPost ecommerce tools partner",
+   "url": "https://www.easypost.com/partners/deposco/",
+   "story": "a312b45efa358"
   }
  ],
  "moves": [
@@ -3122,7 +3155,8 @@
   "anthropologie": "2026-10-19",
   "exelot": "2026-10-19",
   "uniuniuniexpre": "2026-10-20",
-  "dexterity": "2026-10-21"
+  "dexterity": "2026-10-21",
+  "deposco": "2026-10-22"
  },
  "facts": {
   "ups": {
