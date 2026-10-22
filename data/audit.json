@@ -1,5 +1,5 @@
 {
- "run": "2026-10-21T23:34Z",
+ "run": "2026-10-22T00:47Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -94,9 +94,9 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -150,7 +150,7 @@
   {
    "sev": "low",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
    "ids": [
     "07"
    ],
@@ -243,9 +243,9 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -299,7 +299,7 @@
   {
    "sev": "low",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
    "ids": [
     "07"
    ],
