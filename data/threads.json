@@ -488,6 +488,7 @@
   "rv": "c1e29f365ab2",
   "apart": [
    "amazon-labor",
+   "last-mile-facility-legislation",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
@@ -496,7 +497,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is preparing a mid-November Tallahassee launch, while the FAA's Part 108 beyond-visual-line-of-sight rule had not been published as of Oct. 9, per earlier coverage.",
+  "s": "Wing and Walmart are expanding store by store, while the FAA's Part 108 rule had not been published as of Oct. 9, according to earlier coverage.",
   "ids": [
    "g27",
    "g26",
@@ -529,6 +530,7 @@
   "apart": [
    "amazon-labor",
    "amazon-network-buildout",
+   "last-mile-facility-legislation",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
@@ -577,12 +579,12 @@
   "ids": [
    "a9b8fc0d53f23",
    "abf7a28de14a5",
-   "a17304bde0800",
    "ad0f07f43ec5e",
-   "a54c3fc6ab060"
+   "a54c3fc6ab060",
+   "a45eccf8e24d3"
   ],
   "first": "2026-10-13",
-  "s": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled, according to the council's website.",
+  "s": "The bill is in a multimillion-dollar lobbying fight, and Mayor Mamdani is preparing to join national labor leaders in pushing for its passage.",
   "last": "2026-10-20",
   "c": [
    "Amazon",
@@ -590,17 +592,26 @@
    "Regional",
    "UPS"
   ],
-  "rv": "392cb881c00d",
+  "rv": "98a5dcda15a1",
   "cx": {
-   "sig": "87b35cd14a59",
+   "sig": "24d6ffb82c84",
    "v": 3,
    "beats": {
-    "a17304bde0800": "Reportedly, Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3. The bill had 33 of 51 cosponsors but no action since April.",
-    "abf7a28de14a5": "Reportedly, Bronx delivery contractors are pushing back too. Amazon said it would consider moving warehouses outside the city."
+    "abf7a28de14a5": "Bronx DSP operators are reportedly pushing back; the bill has supermajority council support but reportedly hasn't had a vote.",
+    "ad0f07f43ec5e": "Amazon warns it could move roughly 5,000 delivery jobs out of NYC; analysts say all 15 city last-mile stations could close.",
+    "a54c3fc6ab060": "Reportedly, a business coalition wrote Speaker Julie Menin; the bill sets a $500,000 penalty per non-employee worker.",
+    "a45eccf8e24d3": "Mamdani reportedly says Amazon and other opponents are spending heavily to scare New Yorkers, and he plans to join labor leaders."
    },
-   "intro": "A NYC bill would force Amazon to hire its delivery drivers directly, and Amazon is threatening to pull jobs.",
-   "now": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled."
-  }
+   "intro": "A NYC bill would make Amazon directly employ its delivery drivers, and shippers are watching for local delivery changes.",
+   "now": "Reportedly still no vote; Mamdani is preparing to join national labor leaders in pushing the bill as the lobbying fight continues."
+  },
+  "co": "Amazon",
+  "apart": [
+   "amazon-labor",
+   "parcel-volume-amazon",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "robot-biometric-suits": {
   "n": "Chicago robot biometric lawsuits",

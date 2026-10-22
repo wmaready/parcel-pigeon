@@ -1,5 +1,122 @@
 [
  {
+  "title": "Stord acquires AMS Fulfillment",
+  "buyer": "Stord",
+  "target": "AMS Fulfillment",
+  "value": "Undisclosed",
+  "status": "Closed",
+  "ann": null,
+  "closed": null,
+  "sum": "Stord has acquired AMS Fulfillment, a third-party logistics provider, in its largest acquisition to date. The sources do not state a price.",
+  "who": [
+   [
+    "Buyer",
+    "Stord",
+    "Fulfillment network and commerce technology provider founded in 2015 that serves independent commerce brands."
+   ],
+   [
+    "Target",
+    "AMS Fulfillment",
+    "Third-party logistics provider for premium beauty, wellness and high-velocity direct-to-consumer brands, with more than 20 years of experience."
+   ]
+  ],
+  "why": "The deal adds more than 10 million annual orders and facilities in the Los Angeles, Salt Lake City and Philadelphia areas, and takes Stord's network to more than 100 locations. It is Stord's twelfth acquisition, following Shipwire from CMA CGM, Ware2Go from UPS and Pitney Bowes' e-commerce fulfillment business. Stord said some AMS facilities already use automated put walls and sortation systems.",
+  "parties": [
+   {
+    "name": "Stord",
+    "role": "Buyer",
+    "realm": "Contract logistics / 3PL",
+    "hq": null,
+    "founded": "2015",
+    "size": "More than 100 network locations; more than 1,000 brands",
+    "history": [
+     {
+      "y": "2026",
+      "t": "Raised $250 million Series F in May at a $3 billion valuation and launched Stord Labs"
+     },
+     {
+      "y": "2026",
+      "t": "Secured a $400 million credit facility led by Citi in October"
+     },
+     {
+      "y": "2026",
+      "t": "Acquired AMS Fulfillment, its twelfth acquisition"
+     }
+    ]
+   },
+   {
+    "name": "AMS Fulfillment",
+    "role": "Target",
+    "realm": "Contract logistics / 3PL",
+    "hq": null,
+    "founded": null,
+    "size": "More than 10 million annual orders",
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "Stord",
+   "c": [
+    {
+     "n": "AMS Fulfillment",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Shipwire",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Ware2Go",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Pitney Bowes e-commerce fulfillment business",
+     "nw": 0,
+     "c": []
+    }
+   ]
+  },
+  "note": "Price and closing date not stated in the sources.",
+  "d": "2026-10-22",
+  "story": "a351cab9045c7",
+  "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+  "srcs": [
+   {
+    "src": "PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html"
+   },
+   {
+    "src": "Supply Chain Digital",
+    "url": "https://supplychaindigital.com/news/stord-expands-fulfilment-capability-with-ams-acquisition"
+   },
+   {
+    "src": "Pulse 2.0",
+    "url": "https://pulse2.com/stord-acquires-ams-fulfillment-to-expand-logistics-network-and-ai-powered-fulfillment-platform/"
+   }
+  ],
+  "checked": "2026-10-22",
+  "ties": [
+   {
+    "d": "2026-10-09",
+    "t": "Stord closes $400M Citi-led credit facility, names CFO and CRO",
+    "story": "a8f1e464edd85"
+   },
+   {
+    "d": "2026-05-26",
+    "t": "Stord raises $250 million at a $3 billion valuation",
+    "story": "g18"
+   },
+   {
+    "d": "2024-09-18",
+    "t": "Amazon speeds up Multi-Channel Fulfillment and expands Buy with Prime",
+    "story": "h422"
+   }
+  ]
+ },
+ {
   "title": "MAK Acquisition terminates UniUni deal",
   "buyer": "MAK Acquisition Corp.",
   "target": "UniUni (Uni Express Inc.)",

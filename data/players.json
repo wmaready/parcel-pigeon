@@ -1586,6 +1586,22 @@
     "https://pitchbook.com/profiles/company/13325-50"
    ],
    "enriched": "2026-10-22"
+  },
+  {
+   "id": "amsfulfillment",
+   "n": "AMS Fulfillment",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Third-party logistics provider for premium beauty, wellness and high-velocity direct-to-consumer brands, with more than 20 years of experience.",
+   "al": [],
+   "src": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "auto": true,
+   "added": "2026-10-22",
+   "story": "a351cab9045c7"
   }
  ],
  "edges": [
@@ -2874,6 +2890,33 @@
    "t": "Deposco listed as an EasyPost ecommerce tools partner",
    "url": "https://www.easypost.com/partners/deposco/",
    "story": "a312b45efa358"
+  },
+  {
+   "a": "stord",
+   "b": "amsfulfillment",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Stord acquires AMS Fulfillment",
+   "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "story": "a351cab9045c7"
+  },
+  {
+   "a": "kohls",
+   "b": "instacart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Kohl's offers same-day delivery through Instacart",
+   "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+   "story": "a4d34002e71df"
+  },
+  {
+   "a": "kohls",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Kohl's to launch same-day delivery with Uber Eats",
+   "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+   "story": "a4d34002e71df"
   }
  ],
  "moves": [
@@ -3104,6 +3147,16 @@
    "url2": "https://tanknewsinternational.com/ceva-logistics-welcomes-bollore-logistics-and-unites-under-one-brand/",
    "t": "CMA CGM folded Bolloré Logistics into CEVA Logistics after buying it in February 2024.",
    "role": null
+  },
+  {
+   "id": "amsfulfillment",
+   "k": "bought",
+   "parent": "stord",
+   "from": null,
+   "d": "2026-10-22",
+   "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "t": "Stord acquires AMS Fulfillment",
+   "story": "a351cab9045c7"
   }
  ],
  "checks": {
