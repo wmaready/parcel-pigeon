@@ -1,5 +1,5 @@
 {
- "run": "2026-10-22T12:49Z",
+ "run": "2026-10-22T13:09Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -65,6 +65,15 @@
     "a2b81ad721cb8"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source PR Newswire moved ahead of press coverage on \"GOFO wins 2026 CSCMP Supply Chain Innovation Award for ATLAS platform\"",
+   "ids": [
+    "a2f580fcbb2de"
+   ],
+   "fixed": true
   },
   {
    "sev": "med",
@@ -155,6 +164,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
+   "ids": [
+    "aa4c45051038a",
+    "a5876cb3ae6f1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
    "ids": [
     "ab3283b22bb4f",
@@ -168,6 +187,16 @@
    "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
    "ids": [
     "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Mass. lawmakers seek drone delivery moratorium over Amazon plan\"",
+   "ids": [
+    "a5876cb3ae6f1",
+    "a42293aae6d92"
    ],
    "fixed": false
   },
@@ -318,6 +347,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
+   "ids": [
+    "aa4c45051038a",
+    "a5876cb3ae6f1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
    "ids": [
     "ab3283b22bb4f",
@@ -331,6 +370,16 @@
    "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
    "ids": [
     "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Mass. lawmakers seek drone delivery moratorium over Amazon plan\"",
+   "ids": [
+    "a5876cb3ae6f1",
+    "a42293aae6d92"
    ],
    "fixed": false
   },
