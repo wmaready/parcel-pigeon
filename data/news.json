@@ -239,6 +239,109 @@
   "exclusive": true
  },
  {
+  "id": "wdf959a97bcb6",
+  "date": "2026-10-22",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts Aug 26, 2026 Demand Surcharge schedule for peak season 2026-27",
+  "sum": "The NEW text is a UPS Demand Surcharge notice dated August 26, 2026. The OLD text is the Rate & Service Guide hub with no demand surcharge schedule, so every term below is new. Surcharges run in three periods between 9/27/26 and 1/16/27, with the highest rates from 11/22/26 through 12/26/26.",
+  "plain": "Domestic shippers with Additional Handling, Large Package or Over Maximum packages pay per-package surcharges from 9/27/26. Ground Saver, Ground Residential and Air shippers pay them from 10/25/26. Shippers over 20,000 packages in a week face a volume-based scale reaching $8.00 (Ground) or $9.35 (Air Residential) per package.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Guide changes",
+  "act": "2026-09-27",
+  "inferred": null,
+  "detected": "2026-10-22",
+  "changes": [
+   {
+    "what": "Additional Handling Demand Surcharge (all U.S. domestic shipments)",
+    "before": null,
+    "after": "$8.75 per package 9/27/26-11/21/26; $11.90 per package 11/22/26-12/26/26; $8.75 per package 12/27/26-1/16/27",
+    "effective": "2026-09-27",
+    "who": "U.S. domestic packages requiring Additional Handling",
+    "impact": "Peak-period rate is $3.15 per package higher than the shoulder periods ($8.75 -> $11.90)"
+   },
+   {
+    "what": "Large Package Demand Surcharge (all U.S. domestic shipments)",
+    "before": null,
+    "after": "$96.25 per package 9/27/26-11/21/26; $117.50 per package 11/22/26-12/26/26; $96.25 per package 12/27/26-1/16/27",
+    "effective": "2026-09-27",
+    "who": "U.S. domestic Large Packages",
+    "impact": "Peak-period rate is $21.25 per package higher than the shoulder periods ($96.25 -> $117.50)"
+   },
+   {
+    "what": "Over Maximum Limits Demand Surcharge (all U.S. domestic shipments)",
+    "before": null,
+    "after": "$530 per package 9/27/26-11/21/26; $590 per package 11/22/26-12/26/26; $530 per package 12/27/26-1/16/27",
+    "effective": "2026-09-27",
+    "who": "U.S. domestic packages over maximum limits",
+    "impact": "Peak-period rate is $60 per package higher than the shoulder periods ($530 -> $590)"
+   },
+   {
+    "what": "Tier applies to all packages in the week at the highest applicable amount",
+    "before": null,
+    "after": "The highest applicable surcharge applies to every package in that service level that week; e.g. 175% of Baseline means $2.65 on each Ground Residential package",
+    "effective": "2026-10-25",
+    "who": "Higher Volume Shippers",
+    "impact": "$2.65 per package on all Ground Residential packages in the example, not only the volume above 150%"
+   },
+   {
+    "what": "Baseline volume definition for the tiers",
+    "before": null,
+    "after": "Baseline is the customer's average weekly volume for the service level in June 2026 (May 31-June 27, 2026), with a lower-volume fallback to Aug 30-Sept 26, 2026",
+    "effective": null,
+    "who": "Higher Volume Shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "The NEW text is truncated; the higher-volume tables for 11/22-12/26/26 and 12/27/26-1/16/27 are cut off or not shown.",
+   "Section A periods begin 9/27/26 and Section B periods begin 10/25/26; the text does not explain the difference.",
+   "The December 27 period heading in Section B has no year stated; the 1/16/27 end date implies 2026.",
+   "The OLD text is the Rate & Service Guide hub, so it is unclear whether this notice was previously posted elsewhere; no earlier surcharge amounts were provided."
+  ],
+  "dates": [
+   {
+    "d": "2026-09-27",
+    "w": "UPS: Additional Handling Demand Surcharge (all U.S. domestic shipments",
+    "imp": "up"
+   },
+   {
+    "d": "2026-09-27",
+    "w": "UPS: Large Package Demand Surcharge (all U.S. domestic shipments)",
+    "imp": "up"
+   },
+   {
+    "d": "2026-09-27",
+    "w": "UPS: Over Maximum Limits Demand Surcharge (all U.S. domestic shipments",
+    "imp": "up"
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "UPS",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS: UPS Shipping Zones and Rates hub",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 3,
+   "compared": [
+    {
+     "new": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "a312b45efa358",
   "date": "2026-10-21",
   "c": [
