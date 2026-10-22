@@ -1,5 +1,5 @@
 {
- "run": "2026-10-22T16:52Z",
+ "run": "2026-10-22T16:57Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -182,6 +182,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "abf7a28de14a5",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "low",
    "type": "superseded",
    "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
@@ -193,10 +203,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Mass. lawmakers seek drone delivery moratorium over Amazon plan\"",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "a45eccf8e24d3",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a42293aae6d92"
+    "ac198fadf6127"
    ],
    "fixed": false
   },
@@ -207,6 +227,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Google, UPS face California privacy class action over package tracking box\" may be out of date: newer story \"Class action accuses Google, UPS of sharing tracking data\"",
+   "ids": [
+    "af3f3854829a2",
+    "a392500587e33"
    ],
    "fixed": false
   },
@@ -365,6 +395,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "abf7a28de14a5",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "low",
    "type": "superseded",
    "msg": "\"UPS has not yet announced 2027 rates\" is 19 days old; check whether it has been announced",
@@ -376,10 +416,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Mass. lawmakers seek drone delivery moratorium over Amazon plan\"",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "a45eccf8e24d3",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a42293aae6d92"
+    "ac198fadf6127"
    ],
    "fixed": false
   },
@@ -390,6 +440,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Google, UPS face California privacy class action over package tracking box\" may be out of date: newer story \"Class action accuses Google, UPS of sharing tracking data\"",
+   "ids": [
+    "af3f3854829a2",
+    "a392500587e33"
    ],
    "fixed": false
   },

@@ -109,6 +109,71 @@
   "edge": true
  },
  {
+  "id": "a49dce99d3aaa",
+  "date": "2026-10-22",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "UPS completes automation of 4 more sortation facilities before peak",
+  "sum": "UPS said it has converted four conventional package sortation centers into automated facilities, in Denver, St. Paul, Syracuse and Portland, ahead of the holiday peak. The company also said it is hiring 100,000 seasonal employees nationwide. FreightWaves reported the details from a UPS news release.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates, fees or service terms was announced. UPS temporarily closed its Portland facility on Swan Island during construction and shifted operations to other locations.",
+  "why": "UPS says automated sites cost about 28% less per piece, and 68.5% of its U.S. volume now moves through automated facilities, so network changes shape its cost base.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T16:55:33Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season"
+   }
+  ],
+  "auto": true
+ },
+ {
+  "id": "a4a63ed69f438",
+  "date": "2026-10-22",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518",
+  "sum": "The Queens Chronicle reported that supporters and opponents of the City Council's Delivery Protection Act (Intro. 518) have hardened positions. The bill, submitted by Councilmember Tiffany Cabán in February, would require a city permit for some last-mile delivery facilities and set safety, training and employment requirements. A Council Speaker spokesman said it is moving through the legislative process.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet; the bill has not passed. If enacted as written, it would require permits for some NYC last-mile facilities and make the facility operator responsible for employing delivery workers.",
+  "why": "The bill would make facility operators such as Amazon responsible for employing delivery workers, and Amazon says it affects more than 40 DSPs and 5,000 employees in the city.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T16:57:16Z",
+  "src": "Queens Chronicle",
+  "url": "https://www.qchron.com/editions/queenswide/little-middle-ground-on-delivery-legislation/article_36dc8efa-da94-56d6-a8e0-c551359ee8e5.html",
+  "srcs": [
+   {
+    "src": "Queens Chronicle",
+    "url": "https://www.qchron.com/editions/queenswide/little-middle-ground-on-delivery-legislation/article_36dc8efa-da94-56d6-a8e0-c551359ee8e5.html"
+   }
+  ],
+  "auto": true,
+  "thread": "last-mile-facility-legislation",
+  "upd": 6,
+  "new": "The Chronicle reports both sides digging in, with Amazon citing more than 40 DSPs and 5,000 employees at risk and a source saying Amazon rejected rewritten versions; no change for shippers yet since the bill has not advanced to a vote.",
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-10-22",
+  "unconf": true
+ },
+ {
   "id": "a72efb5e01b99",
   "date": "2026-10-22",
   "c": [
@@ -137,6 +202,40 @@
   ],
   "auto": true,
   "ann": "2026-10-22",
+  "exclusive": true
+ },
+ {
+  "id": "ac198fadf6127",
+  "date": "2026-10-22",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "MassDOT tells Amazon to get review before Westborough drone ops",
+  "sum": "The Massachusetts Department of Transportation sent Amazon a letter on Thursday saying its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough, according to The Boston Globe. Amazon had originally planned to start in October from a parking lot at its Westborough Fulfillment Center, with deliveries of packages under 5 pounds within a 7.5-mile radius.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for current shippers. Amazon's planned Westborough drone launch cannot begin until the state completes its review, and the company had originally targeted October.",
+  "why": "The state review could delay one Amazon Prime Air launch site, where drones would serve a 7.5-mile radius for packages under 5 pounds.",
+  "score": 5,
+  "tie": "Amazon said in August 2026 that Prime Air would start drone deliveries by the end of 2026 from sites near Chicago, Atlanta, Cleveland and Syracuse, N.Y.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T16:56:28Z",
+  "src": "The Boston Globe",
+  "url": "https://www.bostonglobe.com/2026/10/22/business/massdot-demands-public-safety-review-before-amazon-drone-delivery-takes-off-westborough/",
+  "srcs": [
+   {
+    "src": "The Boston Globe",
+    "url": "https://www.bostonglobe.com/2026/10/22/business/massdot-demands-public-safety-review-before-amazon-drone-delivery-takes-off-westborough/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-22",
+  "thread": "drone-delivery",
+  "upd": 8,
+  "new": "MassDOT told Amazon it must complete an Aeronautics Division suitability review before operating in Westborough, which was originally planned to start in October, adding a state-level approval step for that site only.",
   "exclusive": true
  },
  {
@@ -572,8 +671,6 @@
    }
   ],
   "auto": true,
-  "thread": "last-mile-facility-legislation",
-  "upd": 5,
   "new": "Business groups sent a letter opposing the bill, and the co-sponsor count is now 35 versus 33 in earlier coverage; shippers see no direct change while the bill awaits a committee vote.",
   "exclusive": true,
   "unconf": true,
@@ -962,6 +1059,40 @@
   ],
   "auto": true,
   "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a56e459aac1af",
+  "date": "2026-10-19",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Massachusetts lawmakers ask Healey to freeze drone delivery permits",
+  "sum": "Sixteen Massachusetts legislators asked Gov. Maura Healey, Lt. Gov. Kim Driscoll and Attorney General Andrea Joy Campbell in an Oct. 19 letter to create a drone delivery task force. They also asked that state agencies stop accepting or processing certificate applications from drone delivery operators until its review is done. Healey's office said it is \"evaluating our options,\" according to a State House News Service report the Boston Globe ran on Oct. 21. The letter responds to Amazon's plan to fly Prime Air drones from its Westborough warehouse.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. Amazon's Westborough drone deliveries have not started, and the request, if adopted, could affect when and where drone hubs get state approval.",
+  "why": "The request targets state approval of drone landing sites; Amazon's Westborough hub could reach 15 cities and towns named in the letter.",
+  "score": 5,
+  "tie": "The letter follows Amazon's August 2026 announcement that Prime Air would expand drone deliveries to almost 500 cities and towns by the end of 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T16:55:59Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/10/22/massachusetts-lawmakers-healey-drone-delivery-task-force-moratorium-amazon/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/10/22/massachusetts-lawmakers-healey-drone-delivery-task-force-moratorium-amazon/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-19",
+  "thread": "drone-delivery",
+  "upd": 7,
+  "new": "Sixteen Massachusetts legislators now ask for a state freeze on drone delivery certificate applications and a task force; no fees or service terms change, but the timing of Amazon's Westborough launch remains uncertain.",
   "exclusive": true
  },
  {
@@ -4045,6 +4176,41 @@
   ],
   "auto": true,
   "new": "Lowe's has started a drone delivery pilot in Matthews, North Carolina with Wing and DoorDash, adding a home improvement retailer to the drone delivery sites reported earlier; shippers see no change in rates, and the service covers small items of about 2.5 pounds.",
+  "exclusive": true
+ },
+ {
+  "id": "af3f3854829a2",
+  "date": "2026-10-09",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Google, UPS face California privacy class action over package tracking box",
+  "sum": "Two California residents, Lennie Woodley and Joseph Schrant, filed a class-action privacy complaint against Google and UPS in the Northern District of California, according to MediaPost. They allege a package-tracking box on a Google search page sends user data to outside companies beyond the tracking number. Google and UPS had not responded to MediaPost's request for comment.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. The complaint is a pending lawsuit and none of its allegations have been decided.",
+  "why": "The suit targets a Google tracking feature tied to UPS, which could affect how consumers' tracking lookups handle data.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-22T16:56:18Z",
+  "src": "MediaPost",
+  "url": "https://www.mediapost.com/publications/article/418698/google-ups-hit-with-privacy-suit-over-package-tra.html",
+  "srcs": [
+   {
+    "src": "MediaPost",
+    "url": "https://www.mediapost.com/publications/article/418698/google-ups-hit-with-privacy-suit-over-package-tra.html"
+   },
+   {
+    "src": "Top Class Actions",
+    "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/google-ups-class-action-alleges-package-tracking-system-shares-users-private-data/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-09",
   "exclusive": true
  },
  {
