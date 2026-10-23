@@ -1,0 +1,29 @@
+{
+ "note": "World events behind the biggest moves in the fuel chart. Each one sits on a real move in the weekly EIA diesel (or monthly jet fuel) data the chart draws, and each has a source. Checked Oct 23, 2026. Left out because the chart shows no big move at the time: Hurricane Ida (Aug 2021), the OPEC+ cut of Apr 2023 and the Red Sea shipping attacks (late 2023, when diesel was falling).",
+ "events": [
+  {"d": "2020-03-11", "title": "COVID-19 declared a pandemic", "dir": "down",
+   "why": "Lockdowns cut fuel demand to the lowest in decades; jet fuel fell by about two-thirds from January to April and diesel slid for months.",
+   "src": "EIA", "url": "https://www.eia.gov/todayinenergy/detail.php?id=46141"},
+  {"d": "2022-02-24", "title": "Russia invades Ukraine", "dir": "up",
+   "why": "Diesel rose 29% in three weeks, from $4.06 to $5.25 a gallon, the fastest three-week rise in percentage terms in EIA's data.",
+   "src": "EIA", "url": "https://www.eia.gov/todayinenergy/detail.php?id=51758"},
+  {"d": "2022-06-20", "title": "Diesel record at the time: $5.81", "dir": "up",
+   "why": "The weekly U.S. average hit $5.81 a gallon, a record that stood until September 2026.",
+   "src": "FleetOwner", "url": "https://fleetowner.com/news/article/21244225/diesel-prices-slow-their-ascent-but-still-reach-record"},
+  {"d": "2022-10-05", "title": "OPEC+ cuts output targets by 2 million barrels a day", "dir": "up",
+   "why": "OPEC and its allies lowered production targets from November 2022; diesel rose about 39 cents the following week.",
+   "src": "OPEC", "url": "https://www.opec.org/pr-detail/73-05-oct-2022.html"},
+  {"d": "2026-02-28", "title": "U.S. and Israel strike Iran; Strait of Hormuz shipping halts", "dir": "up",
+   "why": "Diesel jumped 96 cents in one week to $4.86 a gallon, the largest weekly rise in the EIA series.",
+   "src": "FreightWaves", "url": "https://www.freightwaves.com/news/strait-of-hormuz-concerns-diesel-benchmark-sets-a-record-gain"},
+  {"d": "2026-06-22", "title": "Strait of Hormuz gradually reopens", "dir": "down",
+   "why": "Diesel fell below $5 a gallon for the first time since March, after seven straight weekly declines.",
+   "src": "FreightWaves", "url": "https://www.freightwaves.com/news/benchmark-diesel-price-falls-below-5-per-gallon"},
+  {"d": "2026-07-13", "title": "Conflict over the Strait of Hormuz resumes", "dir": "up",
+   "why": "Diesel rose 22 cents in a week to $4.80, then another 34 cents the week after.",
+   "src": "FleetOwner", "url": "https://www.fleetowner.com/emissions-efficiency/news/55390729/us-regional-diesel-prices-back-on-the-rise-amid-more-oil-volatility"},
+  {"d": "2026-09-21", "title": "Diesel all-time high: $6.53", "dir": "up",
+   "why": "The highest in EIA's 32 years of weekly data, 89% above January's low, with the Strait of Hormuz still disrupted.",
+   "src": "USAFacts", "url": "https://usafacts.org/articles/diesel-prices-rose-89-from-january-low-to-september-record-high"}
+ ]
+}
