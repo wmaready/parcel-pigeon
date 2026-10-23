@@ -117,7 +117,9 @@ def test_story_ties_and_storylines(site):
         # pins: the place a story names first, then the company it is about; never a company it only mentions
         home = lambda sid: pg.evaluate(f"() => {{const h = storyHome(NEWS.find(n => n.id === '{sid}')); return h && [h.id, h.city]}}")
         assert home("accf814d7d663") == ["uniuni", "Tacoma, WA"]
-        assert home("ab73d424a5c41")[1] == "Tallahassee, FL"
+        # the Tallahassee drone story (its id changes when a newer report of it replaces the older one)
+        talla = pg.evaluate("() => (NEWS.find(n => /Tallahassee/.test(n.title) && /drone/i.test(n.title)) || {}).id")
+        assert talla and home(talla)[1] == "Tallahassee, FL"
         assert home("a418fdd3e6f05")[0] in ("amazon", "amzship")
         # one UniUni storyline, on the main list, and on UniUni's company page
         assert pg.evaluate("() => Object.keys(THREADS).filter(k => /uniuni/i.test(k + ' ' + THREADS[k].n))") == ["uniuni"]
