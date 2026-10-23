@@ -34,7 +34,7 @@ from zoneinfo import ZoneInfo
 import requests
 from urllib.parse import urljoin
 
-from common import same_event, load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls
+from common import same_event, load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls, doc_key, doc_year
 
 ET = ZoneInfo("America/New_York")
 AUTO_SEND_HOURS = float(os.environ.get("PP_AUTO_SEND_HOURS") or 2)
@@ -534,17 +534,17 @@ def harvest(story, lib, carrier=None, editor=False):
     added = []
     for p in find_docs(story, carrier or fallback or "the carrier named in each link"):
         p["u"] = canon(p["u"])
-        if p["u"] in have:
+        if p["u"] in have or doc_key(p["u"]) in have:     # also the same file at another address
             continue
         c = carrier or carrier_of_url(p["u"]) or fallback
         if not c:
             continue
         d = {"c": c, "t": p.get("t") if p.get("t") in DOC_TYPES else "Special program", "n": short(p.get("n") or story["title"], 120),
-             "y": p.get("y"), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
+             "y": doc_year({"c": c, "n": p.get("n"), "u": p["u"], "y": p.get("y")}), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
              "cur": True, "added": now_et().date().isoformat(),
              "why": {"how": "editor" if editor else "story", "story": story.get("id"), "title": story.get("title"),
                      "when": now_et().date().isoformat()}}
-        lib.append(d); have.add(p["u"]); added.append(d)
+        lib.append(d); have |= {p["u"], doc_key(p["u"])}; added.append(d)
     return added
 
 

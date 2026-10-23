@@ -2124,6 +2124,9 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .dyr:first-of-type{border-top:0}
 .dyr>summary{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;list-style:none;font-size:14.5px;background:var(--panel-2)}
 .dyr>summary::-webkit-details-marker{display:none}
+.dyear>summary b{font-size:17px}
+.dyear .dyrb{padding-bottom:6px}
+.dtyp{padding:12px 16px 2px;color:var(--ink-2)}
 .dyr>summary b{font-family:var(--font-mono);font-weight:600;letter-spacing:.02em}
 .dyr>summary b::before{content:"›";display:inline-block;width:16px;color:var(--ink-2);transition:transform .2s}
 .dyr[open]>summary b::before{transform:rotate(90deg)}
@@ -8558,6 +8561,21 @@ const reportCat=d=>(REPORT_CATS.find(([,re])=>re.test(d.n||''))||['Other reports
 const DOC_LABEL=c=>c==='Reports'?'Market reports':c==='Regional'?'Other regionals':c;
 const docGroup=d=>d.c==='Reports'?reportCat(d):(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
 const DF=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});
+/* The year a document is filed under. A year the document states for itself wins over a stored one: "2026 UPS Rate Guide"
+   files under 2026 even if it was stored as 2025. A year inside a full date ("signed before Aug 1, 2018", "Dec 22, 2025
+   edition") is a date, not the document's year. Then the file name, then the year the file was uploaded (/uploads/2025/08/),
+   then the stored year, then its effective or update date. Market reports keep their publication year (a 2026 report on
+   2025 volume is a 2026 report). Same rule as doc_year() in pipeline/common.py. */
+const DOC_MON='(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\\.?';
+const DOC_DATEY=new RegExp(DOC_MON+'\\s+\\d{1,2},?\\s+(20[1-3]\\d)','gi');
+function statedYears(t){const s=String(t||'').replace(DOC_DATEY,' ');return [...new Set((s.match(/(?<![\d.])20[1-3]\d(?![\d.]?\d)/g)||[]).map(Number))]}
+function docYear(d){if(d.c!=='Reports'){const t=statedYears(d.n);if(t.length===1)return t[0];
+    if(!t.length&&d.u){let path='';try{path=decodeURIComponent(new URL(d.u).pathname)}catch(e){path=String(d.u)}const f=statedYears(path.split('/').pop());if(f.length===1)return f[0];
+      if(!d.y){const up=/\/uploads\/(20[1-3]\d)\/\d{2}\//.exec(path);if(up)return +up[1]}}}
+  return d.y||+(d.eff||d.upd||d.added||'').slice(0,4)||null}
+/* the same document reached by two addresses (UPS serves one rate guide from two hosts): one entry */
+const docKey=u=>{u=String(u||'');const a=/urn(?::|%3A)aaid(?::|%3A)aem(?::|%3A)([0-9a-f-]{36})/i.exec(u);if(a)return 'aem:'+a[1].toLowerCase()+':'+u.split('?')[0].split('/').pop().toLowerCase();
+  return u.replace(/^https?:\/\/(www\.)?/i,'').split('#')[0].split('?')[0].replace(/\/$/,'').toLowerCase()};
 let DOC_CHANGES=null;   // url -> newest guide-change story about that document
 function docWhy(d){
   if(!DOC_CHANGES){DOC_CHANGES={};NEWS.filter(n=>n.cat==='Guide changes'||n.audit).forEach(n=>(n.srcs||[]).forEach(s=>{const u=(s.url||'').split('?')[0];if(u&&(!DOC_CHANGES[u]||DOC_CHANGES[u].date<n.date))DOC_CHANGES[u]=n}))}
@@ -8572,10 +8590,11 @@ function docWhy(d){
   else t='';
   if(ch)t+=` <button class="link" data-open="${ch.id}">Changed ${fmtD(ch.date)}: ${esc(ch.title)}</button>`;
   return t}
-const docDomId=d=>{let h=0;for(const ch of (d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
+// keyed by the document's own address (_u0 keeps it when fixLink points a dead link at a replacement page)
+const docDomId=d=>{let h=0;for(const ch of (d._u0||d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
 function docRow(d){
   const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=(w=>w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d)))(d.added||(d.why&&d.why.when));
-  const meta=[d.y?String(d.y):'',d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
+  const meta=[d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
   const note=d.d&&!/^(Found with:|Added from alert:|Posted on )/.test(d.d)?`<span class="dd">${esc(d.d)}</span>`:'';
   return `<div class="drow2${d.u?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${d.u?`href="${escU(d.u)}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
     <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docActs(d)}</div>`}
@@ -8587,7 +8606,7 @@ document.addEventListener('toggle',e=>{const el=e.target;if(!el.open||!el.closes
   const rows=[...el.querySelectorAll(':scope>.drows>.drow2,:scope>.dtb>.drows>.drow2,:scope>.dyrb>.drows>.drow2')];if(!rows.length)return;
   setTimeout(()=>{if(!el.open)return;rows.forEach(r=>{if(r.id)DOC_SEEN.add(r.id)});store.set('pw-docs-seen',JSON.stringify([...DOC_SEEN].slice(-2000)));docBadges();docsTabBadge()},900)},true);
 const LINKFIX={'https://www.ontrac.com/supplemental-surcharges':'https://www.ontrac.com/surcharges','https://www.shipveho.com/service-guide/last-mile-delivery':'https://www.shipveho.com/service-guide'};
-function fixLink(d){if(!d||!d.u)return;if(LINKFIX[d.u])d.u=LINKFIX[d.u];else if(/gls-us\.com\/getmedia\//.test(d.u)&&!d._ok)d.u='https://www.gls-us.com/shipping-resources/fuel-surcharge'}
+function fixLink(d){if(!d||!d.u)return;const u0=d.u;if(LINKFIX[d.u])d.u=LINKFIX[d.u];else if(/gls-us\.com\/getmedia\//.test(d.u)&&!d._ok)d.u='https://www.gls-us.com/shipping-resources/fuel-surcharge';if(d.u!==u0&&!d._u0)d._u0=u0}
 function docsTabBadge(){const b=document.querySelector('nav.tabs [data-tab="docs"]');if(!b)return;let n=b.querySelector('.nb');if(!n){n=document.createElement('span');n.className='nb tabnb';b.appendChild(n)}
   const c=DOCS.filter(d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))}).length;n.textContent=c;n.hidden=!c;n.title=c+' new document'+(c>1?'s':'')}
 function renderDocs(){
@@ -8595,7 +8614,9 @@ function renderDocs(){
   DOC_CHANGES=null;
   $('docCar').innerHTML=['All',...DOC_CARS].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===docCar}">${carChip(c)}${DOC_LABEL(c)}</button>`).join('');
   const dq=($('dq')&&$('dq').value||'').trim().toLowerCase();
-  const ds=DOCS.filter(d=>docCar==='All'||(docCar==='Regional'?REG_DOC(d):d.c===docCar)).filter(d=>!dq||[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(dq));
+  const seenK=new Set();
+  const ds=DOCS.filter(d=>{if(!d.u)return true;const k=docKey(d._u0||d.u);if(seenK.has(k))return false;seenK.add(k);return true})
+    .filter(d=>docCar==='All'||(docCar==='Regional'?REG_DOC(d):d.c===docCar)).filter(d=>!dq||[d.n,d.t,d.c,docYear(d),d.d||'',d.eff||''].join(' ').toLowerCase().includes(dq));
   const order=c=>{const i=['UPS','FedEx','USPS','OnTrac','Amazon','DHL'].indexOf(c);return c==='Reports'?10:i<0?9:i};
   const sorter=(x,y)=>(y.y||0)-(x.y||0)||(y.eff||'').localeCompare(x.eff||'')||x.n.localeCompare(y.n);
   const ER=c=>EARN.filter(e=>e.company===c||(c==='FedEx'&&e.company==='FedEx Freight'));
@@ -8608,7 +8629,9 @@ function renderDocs(){
     const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
     return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
       ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue $${last.rev.toFixed(1)}B · Adj. EPS $${last.eps.toFixed(2)}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
-  const yearOf=d=>String(d.y||(d.eff||d.upd||d.added||'').slice(0,4)||'Undated');
+  const yearOf=d=>String(docYear(d)||'Undated');
+  // current: not replaced, or still to take effect, or announced but not yet posted (a placeholder for a coming year)
+  const docCur=d=>d.cur!==false||(d.eff&&d.eff>TODAY)||(!d.u&&+yearOf(d)>=+TODAY.slice(0,4));
   const ysort=(x,y)=>x==='Undated'?1:y==='Undated'?-1:y.localeCompare(x);
   // "new" = added in the last 30 days and not yet seen on this device; the count shows on every folder on the way to it
   const isNew=d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))};
@@ -8628,8 +8651,18 @@ function renderDocs(){
       :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
     const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
     return `<details class="dgrp"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
-  const typesOf=(L,c)=>(c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents']).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
-      .map(([g,G])=>fold('dgrp',g,G,typeBody(G))).join('')+earnFolder(c);
+  // carrier › year (newest first, the newest one open) › kind of document; replaced versions fold away at the end of each year
+  const KINDS=c=>c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents'];
+  const yearBody=(L,c)=>{const kinds=KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length);
+    // a year with no current documents (an earlier year) simply lists them; "replaced versions" only folds away beside current ones
+    const any=L.some(docCur),cur=d=>!any||docCur(d),old=L.filter(d=>!cur(d)).sort(sorter);
+    return `<div class="dyrb">${kinds.map(([g,G])=>{const C=G.filter(cur).sort(sorter);return C.length?`<div class="dtyp lbl">${esc(g)}</div><div class="drows">${C.map(docRow).join('')}</div>`:''}).join('')}
+      ${old.length?`<details class="dold" data-dids="${ids(old)}"${dq?' open':''}><summary>Replaced versions (${old.length})${badge(old)}</summary><div class="drows">${old.map(docRow).join('')}</div></details>`:''}</div>`};
+  const typesOf=(L,c)=>{const ys=[...new Set(L.map(yearOf))].sort(ysort);
+    // the newest year with a published, current document opens; the others are one tap away
+    const first=ys.find(y=>L.some(d=>yearOf(d)===y&&d.u&&docCur(d)))||ys[0];
+    return ys.map(y=>{const Y=L.filter(d=>yearOf(d)===y);
+      return `<details class="dyr dyear" data-dids="${ids(Y)}"${dq||y===first?' open':''}><summary><b>${y==='Undated'?'Ongoing / undated':esc(y)}</b>${badge(Y)}<span class="lbl">${Y.length} document${Y.length>1?'s':''}</span></summary>${yearBody(Y,c)}</details>`}).join('')+earnFolder(c)};
   const cars=[...new Set(ds.map(d=>d.c))].sort((a,b)=>order(a)-order(b)||a.localeCompare(b));
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:

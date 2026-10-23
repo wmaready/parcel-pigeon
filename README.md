@@ -195,8 +195,12 @@ on the Market map and a Deals alert.
 
 ## Docs library
 
-Carrier first, then kind of document (rate guides, GRI announcements, peak, special pricing programs, surcharges, fuel,
-zones, service guides and terms, filings, other). Every document added by the pipeline records why (`why` field):
+Carrier first, then year (newest first, under a year header), then kind of document (rate guides, GRI announcements, peak,
+special pricing programs, surcharges, fuel, zones, service guides and terms, filings, other). A document files under the
+year it states for itself (its title, then its file name, then its upload folder), so "2026 UPS Rate Guide" is a 2026
+document whatever year was stored; a year inside a full date ("signed before Aug 1, 2018") doesn't count, and market
+reports keep their publication year (`doc_year` in common.py, `docYear` in the app). The same file reached at two
+addresses is one document (`doc_key`), so it is never filed twice. Every document added by the pipeline records why (`why` field):
 a new file on a carrier page, a file that replaced an older one, a re-linked old file, linked in a story, or added by the
 editor. The app shows that line, plus any audited change to the document.
 
