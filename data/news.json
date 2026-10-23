@@ -1,5 +1,129 @@
 [
  {
+  "id": "w599d9089a65d",
+  "date": "2026-10-23",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026",
+  "sum": "UPS posted a PDF with new fuel surcharge tables for U.S. Ground Domestic, UPS Ground Saver and Domestic Air, effective November 2, 2026. The Ground table runs from 28.50% ($5.53–$5.80 diesel) to 31.50% ($6.79–$6.88), and the Air table runs from 31.50% ($4.06–$4.11 jet fuel) to 34.50% ($4.66–$4.71). The out-of-range anchor prices rose from $4.99 to $5.80 for Ground and from $3.01 to $3.56 for Air, which shows the table was reset. Also: UPS announces U.S. Ground, Ground Saver and Domestic Air fuel surcharge changes Nov 2, 2026.",
+  "plain": "Shippers using UPS Ground, Ground Saver or the Domestic Air services get a different surcharge percentage for any given fuel price from Nov 2, 2026. The size of the change per shipment can't be calculated because the old percentage rows are not in the supplied text.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Fuel",
+  "act": "2026-11-02",
+  "inferred": null,
+  "detected": "2026-10-23",
+  "changes": [
+   {
+    "what": "U.S. Ground Domestic and Ground Saver fuel surcharge table",
+    "before": null,
+    "after": "New table effective Nov 2, 2026: 28.50% at $5.53–$5.80 diesel, rising 0.25% per step to 31.50% at $6.79–$6.88",
+    "effective": "2026-11-02",
+    "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
+    "impact": "Old percentages are not in the supplied text, so the size of the move is not confirmed"
+   },
+   {
+    "what": "Domestic Air fuel surcharge table",
+    "before": null,
+    "after": "New table effective Nov 2, 2026: 31.50% at $4.06–$4.11 jet fuel, rising 0.25% per step to 34.50% at $4.66–$4.71",
+    "effective": "2026-11-02",
+    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
+    "impact": "Old percentages are not in the supplied text, so the size of the move is not confirmed"
+   },
+   {
+    "what": "Ground diesel price above which the table range extends in $0.09 steps",
+    "before": "above $4.99",
+    "after": "above $5.80",
+    "effective": "2026-11-02",
+    "who": "U.S. Ground Domestic and Ground Saver shipments",
+    "impact": "Anchor price +$0.81 per gallon; the $0.09 and $0.27 increments and the 0.25% steps are unchanged"
+   },
+   {
+    "what": "Jet fuel price above which the Domestic Air table range extends in $0.05 steps",
+    "before": "above $3.01",
+    "after": "above $3.56",
+    "effective": "2026-11-02",
+    "who": "Domestic Air shipments",
+    "impact": "Anchor price +$0.55 per gallon; the $0.05 and $0.21 increments and the 0.25% steps are unchanged"
+   },
+   {
+    "what": "Announced change to U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air fuel surcharges",
+    "before": null,
+    "after": "Effective November 2, 2026, the U.S. Ground Domestic and the UPS Ground Saver Fuel Surcharge and the U.S. Domestic Air Fuel Surcharge will change.",
+    "effective": "2026-11-02",
+    "who": "Shippers using U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air services",
+    "impact": "Not quantified on the page; details are in a linked document"
+   },
+   {
+    "what": "Date the changed surcharges will appear on the Fuel Surcharge website",
+    "before": null,
+    "after": "Changes will be reflected on the Fuel Surcharge website beginning October 29, 2026.",
+    "effective": "2026-10-29",
+    "who": "All shippers checking weekly fuel surcharge rates",
+    "impact": null
+   },
+   {
+    "what": "Index basis and weekly adjustment stated to continue",
+    "before": null,
+    "after": "Ground and Ground Saver continue to be based on the National U.S. Average On-Highway Diesel Fuel Price; Domestic Air on the National Average U.S. Gulf Coast Jet Fuel Price; both adjusted weekly.",
+    "effective": null,
+    "who": "Ground, Ground Saver and Domestic Air shippers",
+    "impact": "No change in index or weekly cadence"
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "The old Ground and Air table percentages were not in the supplied text, so the change in surcharge at any given fuel price can't be calculated.",
+   "Whether the surcharge goes up or down for a given fuel price is not confirmed; the shifted anchor prices only show the table was reset.",
+   "The new PDF covers only Ground, Ground Saver and Domestic Air; the international surcharge tables are not shown, so any change to them can't be confirmed.",
+   "The new text says the Ground fuel surcharge does not apply to UPS Ground packages originating in the 48 contiguous states under Retail rates; the old text doesn't show whether that is new."
+  ],
+  "dates": [
+   {
+    "d": "2026-11-02",
+    "w": "UPS: U.S. Ground Domestic and Ground Saver fuel surcharge table",
+    "imp": "info"
+   },
+   {
+    "d": "2026-11-02",
+    "w": "UPS: Domestic Air fuel surcharge table",
+    "imp": "info"
+   },
+   {
+    "d": "2026-11-02",
+    "w": "UPS: Ground diesel price above which the table range extends in $0.09 ",
+    "imp": "info"
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS Fuel surcharges",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+   },
+   {
+    "src": "UPS: fuelsurcharge-us-en.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "relisting (fsc-applicable-charges-us-en.pdf), price change (fuelsurcharge-us-en.pdf), price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "a2cde9f1bc84b",
   "date": "2026-10-22",
   "c": [
@@ -205,6 +329,52 @@
   "exclusive": true
  },
  {
+  "id": "a831c709e5809",
+  "date": "2026-10-22",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Teamsters rally at City Hall for NYC Delivery Protection Act vote",
+  "sum": "The Teamsters, Mayor Zohran Mamdani and other elected officials rallied at New York City Hall on Oct. 22, 2026, urging Council Speaker Julie Menin to schedule a vote on the Delivery Protection Act. The bill, authored by Councilmember Tiffany Cabán, would require delivery companies such as Amazon to register facilities with the city and ban subcontracting for last-mile drivers in the five boroughs. The Teamsters said Amazon has spent over $8 million against the bill.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet; the bill has not been scheduled for a vote. If passed, it would require facility registration and ban subcontracting for last-mile drivers in the five boroughs.",
+  "why": "The bill would ban subcontracted last-mile drivers in the five boroughs, which would affect how delivery companies like Amazon staff New York City routes.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-23T04:40:27Z",
+  "src": "PR Newswire",
+  "url": "https://www.prnewswire.com/news-releases/teamsters-rally-for-delivery-protection-act-at-new-york-city-hall-302917339.html",
+  "srcs": [
+   {
+    "src": "PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/teamsters-rally-for-delivery-protection-act-at-new-york-city-hall-302917339.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-22",
+  "thread": "last-mile-facility-legislation",
+  "upd": 6,
+  "new": "The Teamsters held a City Hall rally on Oct. 22 with Mayor Mamdani and said Amazon has spent over $8 million against the bill; the vote has still not been scheduled, so nothing changes for shippers yet.",
+  "syn": "Teamsters General President Sean M. O'Brien joined hundreds of Amazon Teamsters and city officials, including Mayor Zohran Mamdani, at a City Hall rally on Oct. 22, 2026. They urged Council Speaker Julie Menin to schedule a vote on the Delivery Protection Act. The bill, authored by Councilmember Tiffany Cabán, would require delivery companies like Amazon to register facilities with the city and ban subcontracting for last-mile drivers in the five boroughs. The Teamsters said a majority of the Council and the mayor support it and that Amazon has spent over $8 million against it.",
+  "aff": [
+   {
+    "who": "Amazon last-mile delivery in NYC",
+    "what": "Bill would require facility registration and ban subcontracting for last-mile drivers in the five boroughs; no vote scheduled."
+   },
+   {
+    "who": "Delivery drivers",
+    "what": "Drivers working for third-party Delivery Service Partners would be affected by the proposed subcontracting ban."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "ac198fadf6127",
   "date": "2026-10-22",
   "c": [
@@ -237,109 +407,6 @@
   "upd": 8,
   "new": "MassDOT told Amazon it must complete an Aeronautics Division suitability review before operating in Westborough, which was originally planned to start in October, adding a state-level approval step for that site only.",
   "exclusive": true
- },
- {
-  "id": "wdf959a97bcb6",
-  "date": "2026-10-22",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS posts Aug 26, 2026 Demand Surcharge schedule for peak season 2026-27",
-  "sum": "The NEW text is a UPS Demand Surcharge notice dated August 26, 2026. The OLD text is the Rate & Service Guide hub with no demand surcharge schedule, so every term below is new. Surcharges run in three periods between 9/27/26 and 1/16/27, with the highest rates from 11/22/26 through 12/26/26.",
-  "plain": "Domestic shippers with Additional Handling, Large Package or Over Maximum packages pay per-package surcharges from 9/27/26. Ground Saver, Ground Residential and Air shippers pay them from 10/25/26. Shippers over 20,000 packages in a week face a volume-based scale reaching $8.00 (Ground) or $9.35 (Air Residential) per package.",
-  "imp": "up",
-  "lvl": 3,
-  "cat": "Guide changes",
-  "act": "2026-09-27",
-  "inferred": null,
-  "detected": "2026-10-22",
-  "changes": [
-   {
-    "what": "Additional Handling Demand Surcharge (all U.S. domestic shipments)",
-    "before": null,
-    "after": "$8.75 per package 9/27/26-11/21/26; $11.90 per package 11/22/26-12/26/26; $8.75 per package 12/27/26-1/16/27",
-    "effective": "2026-09-27",
-    "who": "U.S. domestic packages requiring Additional Handling",
-    "impact": "Peak-period rate is $3.15 per package higher than the shoulder periods ($8.75 -> $11.90)"
-   },
-   {
-    "what": "Large Package Demand Surcharge (all U.S. domestic shipments)",
-    "before": null,
-    "after": "$96.25 per package 9/27/26-11/21/26; $117.50 per package 11/22/26-12/26/26; $96.25 per package 12/27/26-1/16/27",
-    "effective": "2026-09-27",
-    "who": "U.S. domestic Large Packages",
-    "impact": "Peak-period rate is $21.25 per package higher than the shoulder periods ($96.25 -> $117.50)"
-   },
-   {
-    "what": "Over Maximum Limits Demand Surcharge (all U.S. domestic shipments)",
-    "before": null,
-    "after": "$530 per package 9/27/26-11/21/26; $590 per package 11/22/26-12/26/26; $530 per package 12/27/26-1/16/27",
-    "effective": "2026-09-27",
-    "who": "U.S. domestic packages over maximum limits",
-    "impact": "Peak-period rate is $60 per package higher than the shoulder periods ($530 -> $590)"
-   },
-   {
-    "what": "Tier applies to all packages in the week at the highest applicable amount",
-    "before": null,
-    "after": "The highest applicable surcharge applies to every package in that service level that week; e.g. 175% of Baseline means $2.65 on each Ground Residential package",
-    "effective": "2026-10-25",
-    "who": "Higher Volume Shippers",
-    "impact": "$2.65 per package on all Ground Residential packages in the example, not only the volume above 150%"
-   },
-   {
-    "what": "Baseline volume definition for the tiers",
-    "before": null,
-    "after": "Baseline is the customer's average weekly volume for the service level in June 2026 (May 31-June 27, 2026), with a lower-volume fallback to Aug 30-Sept 26, 2026",
-    "effective": null,
-    "who": "Higher Volume Shippers",
-    "impact": null
-   }
-  ],
-  "verdict": "new document",
-  "unknowns": [
-   "The NEW text is truncated; the higher-volume tables for 11/22-12/26/26 and 12/27/26-1/16/27 are cut off or not shown.",
-   "Section A periods begin 9/27/26 and Section B periods begin 10/25/26; the text does not explain the difference.",
-   "The December 27 period heading in Section B has no year stated; the 1/16/27 end date implies 2026.",
-   "The OLD text is the Rate & Service Guide hub, so it is unclear whether this notice was previously posted elsewhere; no earlier surcharge amounts were provided."
-  ],
-  "dates": [
-   {
-    "d": "2026-09-27",
-    "w": "UPS: Additional Handling Demand Surcharge (all U.S. domestic shipments",
-    "imp": "up"
-   },
-   {
-    "d": "2026-09-27",
-    "w": "UPS: Large Package Demand Surcharge (all U.S. domestic shipments)",
-    "imp": "up"
-   },
-   {
-    "d": "2026-09-27",
-    "w": "UPS: Over Maximum Limits Demand Surcharge (all U.S. domestic shipments",
-    "imp": "up"
-   }
-  ],
-  "kind": "Alert",
-  "exclusive": true,
-  "src": "UPS",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-  "srcs": [
-   {
-    "src": "UPS: UPS Shipping Zones and Rates hub",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "new document",
-   "dropped": 3,
-   "compared": [
-    {
-     "new": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates (previous version)"
-    }
-   ]
-  }
  },
  {
   "id": "a312b45efa358",

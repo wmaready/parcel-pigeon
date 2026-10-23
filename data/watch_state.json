@@ -1,40 +1,69 @@
 {
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
-  "checked": "2026-10-22",
+  "checked": "2026-10-23",
   "pdfs": [
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
   ],
-  "lines": 27,
-  "told": [],
-  "pend": "914683e84741"
+  "lines": 30,
+  "told": [
+   "11aeeaaf04a5",
+   "d3237e6aca1d",
+   "e5f494871462",
+   "0cb700d246ac",
+   "0e39e9c533c0",
+   "bde9d415f3be",
+   "31a4e40b61a2",
+   "7010ecc99f98",
+   "6f4ce29e40b5",
+   "4fdbce8afb2a",
+   "3488b7c5c9b0",
+   "127d5bb5d7fa",
+   "50597b804888"
+  ]
  },
  "https://ups.com/rateupdates": {
-  "checked": "2026-10-22",
+  "checked": "2026-10-23",
   "pdfs": [
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
   ],
-  "lines": 27,
-  "told": [],
-  "pend": "914683e84741"
+  "lines": 30,
+  "told": [
+   "832329a1749e",
+   "b09cde8bb2ba",
+   "d7df5c54e825",
+   "970041a34cce",
+   "a5245d911495",
+   "b538b5672af8",
+   "0de8a99fede5",
+   "3e7af5dfb182",
+   "1df0a93b9c4e",
+   "9b476fb38494"
+  ]
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
-  "checked": "2026-10-22",
+  "checked": "2026-10-23",
   "pdfs": [
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf"
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
   ],
-  "lines": 84,
-  "told": [],
-  "pend": "382631377b5e"
+  "lines": 91,
+  "told": [
+   "7de5e9806b89",
+   "47b4b45ddf55",
+   "90af64de2bd7",
+   "865ca7d3b896",
+   "4d003cb70c5f",
+   "48916d261db4",
+   "52be1c4a9704"
+  ]
  },
  "https://www.ups.com/us/en/service-alerts": {
   "checked": "2026-10-23",

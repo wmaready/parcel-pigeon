@@ -219,14 +219,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 51,
+   "fails": 52,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-23"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 51,
+   "fails": 52,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-23"
@@ -300,7 +300,7 @@
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
-   "fails": 51,
+   "fails": 52,
    "err": "404 Client Error: Not Found for url: https://www.shipveho.com/service-guide/last-mile-delivery",
    "blocked": false,
    "last_try": "2026-10-23"
@@ -466,6 +466,18 @@
    "n": "IDP_TermsCond.pdf",
    "hash": "787d356e545f",
    "checked": "2026-10-21"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf": {
+   "first": "2026-10-23",
+   "n": "fuelsurcharge-us-en.pdf",
+   "hash": "b3b5181ba673",
+   "checked": "2026-10-23"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf": {
+   "first": "2026-10-23",
+   "n": "fsc-applicable-charges-us-en.pdf",
+   "hash": "7ddd1ae59c63",
+   "checked": "2026-10-23"
   }
  }
 }

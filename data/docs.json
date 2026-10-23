@@ -887,7 +887,12 @@
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2025.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-23",
+  "f": "data/files/fedex-2025-fedex-ground-economy-rates-by-ounce-2b158d.pdf",
+  "fh": "d2ce5b81d7fac0b68f540e9a9f5f579b149621c0",
+  "fat": "2026-10-23",
+  "fsz": 84865
  },
  {
   "c": "FedEx",
@@ -898,7 +903,12 @@
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_Returns_2025.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-23",
+  "f": "data/files/fedex-2025-fedex-ground-economy-returns-rates-67b774.pdf",
+  "fh": "ad49de02ccc898dfe9bc2bd0cbd4f04c88cd0935",
+  "fat": "2026-10-23",
+  "fsz": 98669
  },
  {
   "c": "FedEx",
@@ -1107,7 +1117,12 @@
   "d": "ZIPs added and removed",
   "cur": false,
   "upd": "2025-06-02",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-23",
+  "f": "data/files/fedex-2025-fedex-delivery-area-zip-changes-a402fa.pdf",
+  "fh": "f80ece3584eb5708477ac00b79d06ef19112dd17",
+  "fat": "2026-10-23",
+  "fsz": 71524
  },
  {
   "c": "FedEx",
@@ -2664,5 +2679,22 @@
   "fh": "a082041ca4ec2958f4dee2d0c3f9ad88da65fcb9",
   "fat": "2026-10-23",
   "fsz": 182730
+ },
+ {
+  "c": "UPS",
+  "t": "Surcharges & fees",
+  "n": "UPS fuelsurcharge us en",
+  "y": null,
+  "eff": null,
+  "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "d": "Posted on UPS's Rate and Service Guides page (price change)",
+  "cur": true,
+  "added": "2026-10-23",
+  "why": {
+   "how": "replaced",
+   "when": "2026-10-23",
+   "where": "UPS's Rate and Service Guides page",
+   "prev": "fuel-surcharges"
+  }
  }
 ]
