@@ -180,6 +180,12 @@ Stories show a **What changed** before/after table. New files always join the Do
 Only cost changes and big events get dates (`clock_worthy` in common.py, mirrored in the app): never court dates,
 sentencing, hearings, conferences or earnings calls.
 
+**Calendar feed.** `ratecal.py` (run by both workflows) writes `data/rates.ics`: every price change on the rate clock that
+is in effect now or still to come, as all-day events on the date it takes effect, plus an "Announced" event on the date
+a source says it was announced. Each links back to its story. The rate clock's "Add to calendar" button subscribes to it
+(`webcal://wmaready.github.io/parcel-pigeon/data/rates.ics`) or copies the https link for Outlook, Teams or Google
+Calendar, which then refresh it on their own.
+
 ## New players
 
 Stories nominate companies they're about (`orgs`); deals add their parties. `players.py` (run from alerts.py, 3 per run)
