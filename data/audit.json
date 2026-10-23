@@ -1,5 +1,5 @@
 {
- "run": "2026-10-23T07:58Z",
+ "run": "2026-10-23T08:50Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -82,6 +82,13 @@
    "sev": "med",
    "type": "watch-thin",
    "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -292,6 +299,13 @@
    "sev": "med",
    "type": "watch-thin",
    "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
