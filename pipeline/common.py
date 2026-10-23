@@ -136,6 +136,31 @@ def extras_ok():
     return not API_DOWN and not paused(extra=True)
 
 
+# Two small lanes skip the day's pacing, each with its own hard cap, so the pacing can never hold back what matters most:
+# the breaking-news lane (news.py: at most BREAKING_PER_DAY big stories a day while the news is paused) and the nightly
+# company-research slot (players.py --slot: a few candidates before the news on the 04 UTC run). What they spend still
+# goes in the ledger, so the next days' allowances shrink to match and the month stays inside the limit. They stop too
+# once the month is within MONTH_RESERVE of the limit, so the Console's hard limit is never the thing that stops the app.
+MONTH_RESERVE = 1.50
+UNPACED = {"on": False}
+
+
+def month_full():
+    """Why even the unpaced lanes must stop (the month is nearly at its limit), or None."""
+    _, month, _ = spent()
+    return f"${month:.2f} of ${MONTHLY:.0f} spent this month" if month >= MONTHLY - MONTH_RESERVE else None
+
+
+class unpaced:
+    """with unpaced(): Claude calls inside skip the day's pacing (never the month's limit)."""
+    def __enter__(self):
+        self.was = UNPACED["on"]; UNPACED["on"] = True
+        return self
+
+    def __exit__(self, *a):
+        UNPACED["on"] = self.was
+
+
 def _usage_report():
     if USAGE["calls"]:
         today, month, _ = spent()
@@ -212,8 +237,10 @@ def claude(model, system, user, max_tokens=1500, paced=True):
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
-    if paced and paused():
+    if paced and not UNPACED["on"] and paused():
         raise RuntimeError("Claude calls paused: " + paused())
+    if UNPACED["on"] and month_full():
+        raise RuntimeError("Claude calls paused: " + month_full())
     for attempt in range(3):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",

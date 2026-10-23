@@ -820,6 +820,9 @@ def add_candidates(orgs, story):
     mp = load("players.json", {"players": [], "edges": []})
     known = seed.get("players", []) + mp["players"]
     names = {n.lower() for p in known for n in [p["n"]] + (p.get("al") or [])}
+    # companies research already turned down (not a mover, not parcel, not verified) don't go back in the queue: Olo was
+    # researched and held back on Oct 20, then queued again from the next story that named it
+    names |= {str(x.get("n") or "").lower() for x in load("sweep_review.json", []) if isinstance(x, dict)}
     ids = {p["id"] for p in known}
     changed = False
     if story.get("edge"):
@@ -968,6 +971,60 @@ def backfill_threads(live):
     return threads
 
 
+# ---------------------------------------------------------------- breaking lane: big news never waits for the pacing
+# When the day's allowance has run out, ordinary headlines wait for the next day. Big news can't: on Oct 22 UPS's peak
+# surcharge news came in at 5 p.m. Eastern, after the pacing had paused the news at 3 p.m., and every run until midnight
+# skipped it. So while the news is paused, headlines from the big carriers and from primary sources and the major press
+# still get the fast screen (one call, about a fifth of a cent), and the ones that are big news are written up at once.
+# "Big" means a screen score of 8 or more, or a price, surcharge or peak change from UPS, FedEx, USPS or Amazon.
+# At most BREAKING_PER_DAY a day (Eastern), so the lane can't run away with the budget; everything else waits as before.
+BREAKING_PER_DAY = 3
+BREAKING_SCREEN = 20                  # headlines the lane screens per run: one fast-model call
+MAJOR = {"UPS", "FedEx", "USPS", "Amazon"}
+MAJOR_RX = re.compile(r"\b(UPS|FedEx|USPS|U\.S\. Postal Service|Postal Service|Amazon)\b", re.I)
+PRICE_RX = re.compile(r"surcharge|\bGRI\b|general rate increase|\b(rate|price|pricing|postage) (increase|hike|change|adjustment)s?\b|"
+                      r"\b(raise|raises|raising|hike|hikes|increase|increases|new) (its |their )?(rates|prices|fees|postage)\b|"
+                      r"\bpeak[- ](season )?(surcharge|fee|fees|rate|rates|pricing)\b", re.I)
+PRICE_CATS = {"Pricing & GRI", "Peak season", "Fees & rules"}
+
+
+def breaking_state():
+    """data/breaking.json: how many breaking stories today (Eastern) and which headlines the lane already screened."""
+    from common import NOW
+    st = load("breaking.json", {})
+    st = st if isinstance(st, dict) else {}
+    today = NOW().date().isoformat()
+    if st.get("day") != today:
+        st["day"], st["n"] = today, 0
+    week = (NOW().date() - dt.timedelta(days=MAX_AGE_DAYS + 1)).isoformat()
+    st["screened"] = {k: d for k, d in (st.get("screened") or {}).items() if d >= week}
+    return st
+
+
+def breaking_pick(batch, st):
+    """The headlines worth a breaking screen: the carrier or regulator itself (T0), the major press (T1), and trade-press
+    items about UPS, FedEx, USPS or Amazon. Price and surcharge headlines first. Each is screened by the lane once."""
+    pick = [b for b in batch if not b.get("support_only") and h(b["url"]) not in st["screened"]
+            and (b.get("tier", 3) <= 1 or (b.get("tier", 3) <= 2 and MAJOR_RX.search(b["title"])))]
+    pick.sort(key=lambda b: (0 if PRICE_RX.search(b["title"] + " " + b.get("summary", "")[:200]) else 1, b.get("tier", 3),
+                             -int((b.get("date") or "0000-00-00").replace("-", ""))))
+    return pick[:BREAKING_SCREEN]
+
+
+def breaking_worthy(v, item):
+    """Big enough to write while the news is paused: score 8+, or a major carrier's price, surcharge or peak change."""
+    if not v.get("keep") or v.get("fit") == "edge" or item.get("support_only"):
+        return False
+    try:
+        score = int(v.get("score") or 0)
+    except (TypeError, ValueError):
+        score = 0
+    if score >= 8:
+        return True
+    major = bool(set(v.get("carriers") or []) & MAJOR) or bool(MAJOR_RX.search(item["title"]))
+    return major and (v.get("category") in PRICE_CATS or bool(PRICE_RX.search(item["title"])))
+
+
 def main():
     cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
     live, review, seen = load("news.json", []), load("review.json", []), set(load("seen.json", []))
@@ -1002,6 +1059,31 @@ def main():
     if not batch:
         save("seen.json", list(seen)[-6000:]); return
 
+    import common
+    lane = None
+    if not common.API_DOWN and common.paused():
+        # the news is paused for today: only the breaking lane runs (see BREAKING_PER_DAY); the rest wait, unscreened
+        lane = breaking_state()
+        full = common.month_full()
+        pick = [] if full or lane["n"] >= BREAKING_PER_DAY else breaking_pick([b for b in batch if not b.get("retry")], lane)
+        review += retry           # pages we couldn't read before wait in the review list for the full run, as they were
+        print(f"breaking lane: {len(pick)} headline(s) from major carriers, primary sources and the major press screened for "
+              f"big news ({lane['n']} of {BREAKING_PER_DAY} breaking stories written today" + (f"; {full}" if full else "") + ")")
+        for b in pick:
+            print(f"  lane: [{b['src']} T{b.get('tier', 3)}] {b['title'][:100]}")
+        batch = pick
+        if not batch:
+            save("breaking.json", lane); save("seen.json", list(seen)[-6000:]); return
+        common.UNPACED["on"] = True
+    try:
+        _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lane)
+    finally:
+        common.UNPACED["on"] = False
+        if lane is not None:
+            save("breaking.json", lane)
+
+
+def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lane):
     recent = [s for s in live if s["date"] >= (dt.date.today() - dt.timedelta(days=14)).isoformat()][:60]
     active = sorted(((k, t) for k, t in threads.items() if (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
                     key=lambda kt: kt[1].get("last") or "", reverse=True)[:60]
@@ -1028,7 +1110,11 @@ def main():
             # not marked seen: these headlines are screened again next run instead of being lost
             print(f"triage chunk {c0}-{c0 + 19} skipped, will retry next run: {e}")
     for i in screened:
-        seen.add(h(batch[i]["url"]))
+        if lane is None:
+            seen.add(h(batch[i]["url"]))
+        else:
+            # screened by the lane only: not marked seen, so the full screen still takes it when the news resumes
+            lane["screened"][h(batch[i]["url"])] = lane["day"]
     by_id = {s["id"]: s for s in live}
     archive = {**{x["id"]: x for x in load("seed.json", {}).get("news", []) if x.get("id")}, **by_id}   # storyline history
     groups, merged = {}, 0
@@ -1036,6 +1122,8 @@ def main():
         if not v.get("keep") or not (0 <= v.get("i", -1) < len(batch)):
             continue
         item = batch[v["i"]]
+        if lane is not None and not breaking_worthy(v, item):
+            continue  # not big news: it waits for the full screen when the news resumes
         if v.get("same_as") in by_id:
             if add_source(by_id[v["same_as"]], item, item["url"]):
                 merged += 1
@@ -1054,14 +1142,22 @@ def main():
                                    min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
 
     written = 0
+    cap = MAX_NEW_PER_RUN if lane is None else max(0, BREAKING_PER_DAY - lane["n"])
     for n_ev, (key, members) in enumerate(order):
-        if written >= MAX_NEW_PER_RUN:
+        if written >= cap:
             # over this run's writing budget: these events are written next run, not dropped
             later = [m[0] for _, ms in order[n_ev:] for m in ms]
             for it in later:
                 seen.discard(h(it["url"]))
-            print(f"{len(order) - n_ev} events wait for the next run (writing budget {MAX_NEW_PER_RUN} reached)")
+            print(f"{len(order) - n_ev} events wait for the next run (writing budget {cap} reached)")
             break
+        if lane is not None:
+            # counted when started, so a failed write can't loop past the day's cap; its headlines are taken now
+            lane["n"] += 1
+            for m in members:
+                seen.add(h(m[0]["url"]))
+            print(f"::notice title=Breaking story written while the news is paused::{members[0][0]['title'][:150]} "
+                  f"({lane['n']} of {BREAKING_PER_DAY} today)")
         try:
             # a story we only have from a small or late outlet, or from a paywalled one we can't read: find the
             # major and trade outlets' versions, so the story leads with them and carries the date the news broke
@@ -1246,8 +1342,10 @@ def main():
         except Exception as e:
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
+    import common
+    common.UNPACED["on"] = False          # the lane covers screening and writing only; the upkeep below stays paced
     live = dedupe_live(live)
-    if not primary_only:
+    if not primary_only and lane is None:
         # try to confirm a few single-source stories each run: a better outlet's report of the same event is attached
         recent = (dt.date.today() - dt.timedelta(days=10)).isoformat()
         for st in [x for x in live if unconfirmed(x) and x.get("date", "") >= recent and x.get("tried") != dt.date.today().isoformat()][:5]:

@@ -70,6 +70,7 @@ def test_new_storyline_for_same_company_joins_its_saga(data_dir, monkeypatch):
             "date": "2026-10-20", "src": "FreightWaves", "direct": False, "house": False, "tier": 2}
     monkeypatch.setattr(N, "collect", lambda cfg, primary_only=False: [dict(item)])
     monkeypatch.setattr(N, "claude", fake_claude)
+    monkeypatch.setattr(common, "paused", lambda extra=False: None)   # the news is running (the paused case: test_lanes.py)
     monkeypatch.setattr(N, "article_text", lambda u: ("Acme parcel delivery complaints text " * 40, u))
     for name, fn in (("find_coverage", lambda t, days=14: []), ("find_primary", lambda q, c: None), ("lead_image", lambda u: None),
                      ("is_covered", lambda t, days=4: ["FreightWaves"]), ("publish_extras", lambda *a, **k: None)):
