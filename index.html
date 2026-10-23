@@ -8306,7 +8306,8 @@ function renderYears(){const el=$('clockYears');if(!el)return;
   const offt=`<section class="panel"><div class="ph"><h2>Off-cycle price changes</h2><span class="lbl">By year</span></div><div class="ayw"><table class="ayt"><thead><tr><th></th>${oy.map(y=>`<th class="mono">${y}</th>`).join('')}</tr></thead>
     <tbody>${['UPS','FedEx','USPS'].map(c=>`<tr><th>${carSpan(c)}</th>${oy.map(y=>{const n=offN(c,y);return `<td class="mono${n?'':' ynil'}">${n||'—'}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>
     <p class="ynote">Price changes that take effect outside the carrier's annual increase and the holiday peak season: mid-year increases, new surcharges and fees, fuel-table changes. Counted by effective date. Recent years were researched in more depth, so earlier years may be undercounted.</p></section>`;
-  el.innerHTML=pats+table+offt+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
+  // the numbers first (the increase and off-cycle tables), then the written notes on this year, then the full year-by-year list
+  el.innerHTML=table+offt+pats+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
 function renderClock(){renderCalendar();renderClockList();renderYears()}
 
 /* ================= FUEL ================= */
