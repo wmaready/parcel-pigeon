@@ -115,17 +115,17 @@
  },
  "de-minimis": {
   "n": "End of de minimis and low-value imports",
-  "s": "CBP's proposal, published Oct. 8, is open for public comment through Dec. 7, with no effective date stated.",
+  "s": "CBP has suspended de minimis for postal shipments indefinitely and set a $2,500 informal entry process, while formal-entry compliance for certain postal goods is now due Jan. 20, 2027.",
   "ids": [
    "h420",
    "h504",
    "h513",
    "h526",
-   "h532",
-   "a55e20dc9f8f3"
+   "a55e20dc9f8f3",
+   "a2f683da86bf8"
   ],
   "first": "2024-09-13",
-  "last": "2026-10-08",
+  "last": "2026-10-22",
   "c": [
    "FedEx",
    "Industry",
@@ -133,19 +133,24 @@
    "USPS"
   ],
   "cx": {
-   "sig": "131b7af39fc6",
+   "sig": "8228a3beb91d",
    "v": 3,
    "beats": {
-    "h513": "De minimis ended for China and Hong Kong on May 2. Postal shipments faced 120% duties or $100 per item, rising to $200 on June 1.",
-    "h526": "The exemption ended for every country on Aug. 29. The UPU said at least 25 countries halted postal shipments to the U.S.",
-    "a55e20dc9f8f3": "CBP proposed that type 11 entries be filed on or before arrival instead of within 15 days, and that postal type 13 entries carry more data."
+    "h420": "Proposal to curb de minimis on tariffed goods; White House said shipments grew from about 140 million to over 1 billion a year.",
+    "h504": "USPS said Feb. 4 it would stop taking China and Hong Kong parcels, then reversed a day later to work with CBP on duties.",
+    "h513": "De minimis ended May 2 for China and Hong Kong; postal shipments faced 120% duty or $100 per item, rising to $200 on June 1.",
+    "h526": "Aug. 29: de minimis ended for all countries, and the UPU said at least 25 countries halted postal shipments to the U.S.",
+    "a55e20dc9f8f3": "Oct. 8: CBP proposed entry type 11 imports be filed on or before arrival, not within 15 days; comments are due Dec. 7.",
+    "a2f683da86bf8": "CBP pushed formal-entry compliance for certain postal goods from Oct. 22, 2026 to Jan. 20, 2027, giving shippers more time."
    },
-   "now": "CBP's proposal is open for comment through Dec. 7, and no effective date has been stated."
+   "intro": "De minimis duty-free entry for $800-or-less parcels is gone, and CBP keeps tightening low-value import rules.",
+   "now": "Postal formal-entry compliance is now due Jan. 20, 2027, and comments on CBP's earlier-filing proposal are due Dec. 7."
   },
   "was": [
    "cbp-low-value-import-filing"
   ],
-  "rv": "131b7af39fc6"
+  "rv": "8228a3beb91d",
+  "co": "CBP"
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds and carriers",
@@ -425,14 +430,14 @@
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
-  "s": "USPS has the Amazon and DHL eCommerce agreements in place and a same-day pilot for Amazon, and has now filed notice of another negotiated shipping contract.",
+  "s": "USPS has two new competitive contract filings before the PRC, and the notice does not say whether either involves Amazon or DHL eCommerce.",
   "ids": [
    "21",
    "g09",
    "09"
   ],
   "first": "2026-04-01",
-  "last": "2026-10-15",
+  "last": "2026-10-19",
   "c": [
    "Amazon",
    "DHL",
@@ -447,7 +452,8 @@
    "intro": "USPS has locked in Amazon and DHL eCommerce as big customers, and shippers watch for what that means for its network.",
    "now": "The 2026 USPS peak surcharge, stacked on the temporary 8% increase, runs to Jan 17, 2027; no 2027 shipping filing yet."
   },
-  "rv": "e3902d701814"
+  "rv": "e3902d701814",
+  "co": "USPS"
  },
  "amazon-network-buildout": {
   "n": "Amazon opens its delivery network to all",
@@ -482,6 +488,7 @@
   "rv": "c1e29f365ab2",
   "apart": [
    "amazon-labor",
+   "last-mile-facility-legislation",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
@@ -490,39 +497,44 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Local governments in Colorado and Oregon are drafting or studying drone hub zoning rules as drone delivery expands, while the FAA retains authority over airspace.",
+  "s": "Amazon's Westborough, Mass. drone site awaits a MassDOT safety review and public hearing, while the FAA's Part 108 rule remained unpublished as of earlier coverage.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb"
+   "a86fd472c4cfb",
+   "a56e459aac1af",
+   "ac198fadf6127"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-21",
+  "last": "2026-10-22",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "2c9f9ae85f13",
+   "sig": "cf4b47d581f7",
    "v": 3,
    "beats": {
-    "a86fd472c4cfb": "DoorDash got Part 135 certification, reportedly the eighth cleared operator; flights are expected in fall 2026, markets TBD.",
-    "g27": "Amazon plans to grow Prime Air from 11 U.S. locations to nearly 500 towns, reaching 30 million people, by end of 2026.",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, taking their network to nearly 20 metros and over 270 Walmart stores.",
-    "g26": "Part 108 went to White House review July 10 after a missed Feb. 1 deadline; Zipline says the wait is holding back investment."
+    "a86fd472c4cfb": "DoorDash gets FAA Part 135 certification, reportedly the eighth operator cleared; flights expected fall 2026, markets TBD.",
+    "g27": "Amazon says Prime Air will reach almost 500 towns by end of 2026, up from 11 U.S. locations, at $2.99 a delivery for Prime members.",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, for nearly 20 metros; over three million customers have access so far.",
+    "g26": "Meanwhile, Part 108 went to White House review July 10 and was unpublished Oct. 9; until then, waivers or Part 135 are needed.",
+    "a56e459aac1af": "Sixteen Mass. legislators ask for a drone task force and a pause on applications; Healey's office is \"evaluating our options.\"",
+    "ac198fadf6127": "MassDOT tells Amazon its Westborough launch, first planned for October, needs a state suitability review first."
    },
-   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule is stuck, which affects where and how fast parcels can fly.",
-   "now": "Part 108 was still unpublished Oct. 9, while Colorado and Oregon localities weigh hub zoning and the FAA keeps the airspace."
+   "intro": "Drone delivery is scaling up while the FAA rule and state pushback stay unsettled, which shapes where parcels can fly.",
+   "now": "Amazon's Westborough site awaits a MassDOT safety review and public hearing; Part 108 was still unpublished as of Oct. 9."
   },
-  "rv": "8c5c1cf4aba8",
+  "rv": "fdf5cbfc70f3",
   "co": "Amazon",
   "apart": [
    "amazon-labor",
    "amazon-network-buildout",
+   "last-mile-facility-legislation",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
@@ -571,30 +583,35 @@
   "ids": [
    "a9b8fc0d53f23",
    "abf7a28de14a5",
-   "a17304bde0800",
    "ad0f07f43ec5e",
-   "a54c3fc6ab060"
+   "a45eccf8e24d3",
+   "a4a63ed69f438"
   ],
   "first": "2026-10-13",
-  "s": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled, according to the council's website.",
-  "last": "2026-10-20",
+  "s": "Intro. 518 remains in the Council's legislative process, with 33 members backing it according to the Queens Chronicle and no vote reported.",
+  "last": "2026-10-22",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "392cb881c00d",
+  "rv": "74aaddea38ba",
   "cx": {
-   "sig": "87b35cd14a59",
+   "sig": "68ad2e04d856",
    "v": 3,
    "beats": {
-    "a17304bde0800": "Reportedly, Teamsters and NYC-DSA canvassed Speaker Menin's district on Oct. 3. The bill had 33 of 51 cosponsors but no action since April.",
-    "abf7a28de14a5": "Reportedly, Bronx delivery contractors are pushing back too. Amazon said it would consider moving warehouses outside the city."
+    "abf7a28de14a5": "Reportedly, Bronx Amazon contractor operators are pushing back. The bill has supermajority support but hasn't been called for a vote."
    },
-   "intro": "A NYC bill would force Amazon to hire its delivery drivers directly, and Amazon is threatening to pull jobs.",
-   "now": "The bill is laid over in committee with 35 co-sponsors, and no committee vote has been scheduled."
-  }
+   "now": "Intro. 518 is still in the legislative process; 33 members back it, per the Queens Chronicle, and no vote has been reported."
+  },
+  "co": "Amazon",
+  "apart": [
+   "amazon-labor",
+   "parcel-volume-amazon",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  },
  "robot-biometric-suits": {
   "n": "Chicago robot biometric lawsuits",

@@ -1,32 +1,33 @@
 {
- "run": "2026-10-21T17:38Z",
+ "run": "2026-10-23T00:49Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 40,
- "doc_cursor": 30,
+ "link_cursor": 80,
+ "doc_cursor": 60,
  "checked_pairs": [
-  "4e8faef9252d",
-  "94d1ac334f4e",
-  "1bc66c00eda3",
+  "73dcfc31b988",
   "5f83fff4b0b8",
-  "70042e1b5ea7",
-  "bd74f39e4a2a",
+  "de313bc51fd7",
+  "d46a0aebc57e",
+  "b54077ea2f7b",
   "0b8aff140a01",
-  "457e37db5347",
-  "7e4a0a07ad2f",
+  "1bc66c00eda3",
+  "62cb3ae5df27",
   "6bef0a5868e5",
+  "70042e1b5ea7",
+  "0cae9f6a1079",
+  "4e8faef9252d",
   "f3a106e02077",
   "4d5dedc8cd29",
-  "b54077ea2f7b",
-  "dbb89994655f",
-  "62cb3ae5df27",
+  "94d1ac334f4e",
   "14a3d7429698",
-  "0cae9f6a1079",
-  "d46a0aebc57e",
+  "457e37db5347",
   "454e4f8f6a6b",
-  "de313bc51fd7",
-  "5effb73bc21d"
+  "bd74f39e4a2a",
+  "5effb73bc21d",
+  "dbb89994655f",
+  "7e4a0a07ad2f"
  ],
  "issues": [
   {
@@ -66,9 +67,25 @@
    "fixed": false
   },
   {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source PR Newswire moved ahead of press coverage on \"GOFO wins 2026 CSCMP Supply Chain Innovation Award for ATLAS platform\"",
+   "ids": [
+    "a2f580fcbb2de"
+   ],
+   "fixed": true
+  },
+  {
    "sev": "med",
    "type": "watch-thin",
    "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -80,23 +97,9 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -140,19 +143,59 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air to start Tallahassee drone deliveries in mid-November\"",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
    "ids": [
     "aa4c45051038a",
-    "ab73d424a5c41"
+    "a5876cb3ae6f1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
+   "ids": [
+    "ab3283b22bb4f",
+    "adb9900b3abe7"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "abf7a28de14a5",
+    "a4a63ed69f438"
    ],
    "fixed": false
   },
   {
    "sev": "low",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 20 days old; check whether it has been announced",
    "ids": [
     "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "a45eccf8e24d3",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a5876cb3ae6f1",
+    "ac198fadf6127"
    ],
    "fixed": false
   },
@@ -163,6 +206,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Google, UPS face California privacy class action over package tracking box\" may be out of date: newer story \"Class action accuses Google, UPS of sharing tracking data\"",
+   "ids": [
+    "af3f3854829a2",
+    "a392500587e33"
    ],
    "fixed": false
   },
@@ -224,28 +277,21 @@
   {
    "sev": "high",
    "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
    "ids": [],
    "fixed": false
   },
@@ -289,19 +335,59 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air to start Tallahassee drone deliveries in mid-November\"",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
    "ids": [
     "aa4c45051038a",
-    "ab73d424a5c41"
+    "a5876cb3ae6f1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
+   "ids": [
+    "ab3283b22bb4f",
+    "adb9900b3abe7"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "abf7a28de14a5",
+    "a4a63ed69f438"
    ],
    "fixed": false
   },
   {
    "sev": "low",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 18 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" is 20 days old; check whether it has been announced",
    "ids": [
     "07"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
+   "ids": [
+    "a45eccf8e24d3",
+    "a4a63ed69f438"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a5876cb3ae6f1",
+    "ac198fadf6127"
    ],
    "fixed": false
   },
@@ -312,6 +398,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Google, UPS face California privacy class action over package tracking box\" may be out of date: newer story \"Class action accuses Google, UPS of sharing tracking data\"",
+   "ids": [
+    "af3f3854829a2",
+    "a392500587e33"
    ],
    "fixed": false
   },

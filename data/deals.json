@@ -1,101 +1,120 @@
 [
  {
-  "buyer": "MAK Acquisition Corp. (SPAC)",
-  "target": "UniUni",
-  "title": "UniUni to go public through MAK Acquisition",
-  "ann": "2026-05-15",
-  "story": "60",
-  "status": "Terminated",
-  "updates": [
-   {
-    "d": "2026-05-15",
-    "t": "UniUni agrees to go public through MAK Acquisition at about $1 billion",
-    "story": "60"
-   },
-   {
-    "d": "2026-09-24",
-    "t": "MAK sends UniUni a notice of material breach, starting a 15-business-day cure period",
-    "story": "nr4f8ee6"
-   },
-   {
-    "d": "2026-10-20",
-    "t": "MAK terminates the purchase agreement; the go-public deal will not proceed",
-    "story": "afb6fa67940a7"
-   }
-  ],
-  "srcs": [
-   {
-    "src": "UniUni (GlobeNewswire)",
-    "url": "https://www.globenewswire.com/news-release/2026/05/15/3296186/0/en/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition.html"
-   },
-   {
-    "src": "Fasken",
-    "url": "https://www.fasken.com/en/experience/2026/05/uniuni-enters-into-definitive-purchase-agreement-with-mak"
-   },
-   {
-    "src": "Business in Vancouver",
-    "url": "https://www.biv.com/news/transportation/bc-delivery-platform-uniuni-to-go-public-in-us1b-deal-12302578"
-   },
-   {
-    "src": "Taiwan News (MAK breach notice)",
-    "url": "https://www.taiwannews.com.tw/en/news/6446375"
-   },
-   {
-    "src": "MAK Acquisition (GlobeNewswire, via The Manila Times)",
-    "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
-   },
-   {
-    "src": "BetaKit (breach notice)",
-    "url": "https://betakit.com/?p=410314"
-   }
-  ],
-  "checked": "2026-10-20",
-  "d": "2026-10-20",
-  "ended": "2026-10-20",
-  "sum": "UniUni agreed on May 15, 2026 to go public through a reverse takeover by MAK Acquisition Corp. at about US$1.0 billion. MAK sent a notice of material breach on Sept. 24, 2026 and terminated the purchase agreement on Oct. 20, 2026, so the deal will not proceed.",
-  "latest": "MAK terminated the purchase agreement on Oct. 20, 2026; the go-public deal will not proceed.",
-  "note": "MAK said UniUni breached an interim covenant capping its cumulative pre-tax loss and did not cure it before the cure period expired Oct. 19. MAK is withdrawing its preliminary prospectus and will keep looking for a qualifying acquisition."
- },
- {
-  "buyer": "Thoma Bravo",
-  "target": "WWEX Group (combined with Auctane)",
-  "title": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
-  "ann": "2026-03-03",
-  "story": "64",
+  "title": "Stord acquires AMS Fulfillment",
+  "buyer": "Stord",
+  "target": "AMS Fulfillment",
+  "value": "Undisclosed",
   "status": "Closed",
-  "updates": [
+  "ann": null,
+  "closed": null,
+  "sum": "Stord has acquired AMS Fulfillment, a third-party logistics provider, in its largest acquisition to date. The sources do not state a price.",
+  "who": [
+   [
+    "Buyer",
+    "Stord",
+    "Fulfillment network and commerce technology provider founded in 2015 that serves independent commerce brands."
+   ],
+   [
+    "Target",
+    "AMS Fulfillment",
+    "Third-party logistics provider for premium beauty, wellness and high-velocity direct-to-consumer brands, with more than 20 years of experience."
+   ]
+  ],
+  "why": "The deal adds more than 10 million annual orders and facilities in the Los Angeles, Salt Lake City and Philadelphia areas, and takes Stord's network to more than 100 locations. It is Stord's twelfth acquisition, following Shipwire from CMA CGM, Ware2Go from UPS and Pitney Bowes' e-commerce fulfillment business. Stord said some AMS facilities already use automated put walls and sortation systems.",
+  "parties": [
    {
-    "d": "2026-03-03",
-    "t": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
-    "story": "64"
+    "name": "Stord",
+    "role": "Buyer",
+    "realm": "Contract logistics / 3PL",
+    "hq": null,
+    "founded": "2015",
+    "size": "More than 100 network locations; more than 1,000 brands",
+    "history": [
+     {
+      "y": "2026",
+      "t": "Raised $250 million Series F in May at a $3 billion valuation and launched Stord Labs"
+     },
+     {
+      "y": "2026",
+      "t": "Secured a $400 million credit facility led by Citi in October"
+     },
+     {
+      "y": "2026",
+      "t": "Acquired AMS Fulfillment, its twelfth acquisition"
+     }
+    ]
    },
    {
-    "d": "2026-10-14",
-    "t": "WWEX Group and Auctane merge to form ShipStation Global",
-    "story": "a386e5fed7984"
+    "name": "AMS Fulfillment",
+    "role": "Target",
+    "realm": "Contract logistics / 3PL",
+    "hq": null,
+    "founded": null,
+    "size": "More than 10 million annual orders",
+    "history": []
    }
   ],
+  "tree": {
+   "n": "Stord",
+   "c": [
+    {
+     "n": "AMS Fulfillment",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Shipwire",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Ware2Go",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Pitney Bowes e-commerce fulfillment business",
+     "nw": 0,
+     "c": []
+    }
+   ]
+  },
+  "note": "Price and closing date not stated in the sources.",
+  "d": "2026-10-22",
+  "story": "a351cab9045c7",
+  "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
   "srcs": [
    {
-    "src": "Thoma Bravo",
-    "url": "https://www.thomabravo.com/press-releases/wwex-group-and-auctane-complete-merger-creating-leading-logistics-provider-shipstation-global"
+    "src": "PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html"
    },
    {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/thoma-bravo-to-acquire-wwex-group-combine-with-auctane"
+    "src": "Supply Chain Digital",
+    "url": "https://supplychaindigital.com/news/stord-expands-fulfilment-capability-with-ams-acquisition"
    },
    {
-    "src": "Transport Topics",
-    "url": "https://www.ttnews.com/articles/wwex-auctane-shipstation"
-   },
-   {
-    "src": "Dealroom",
-    "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform"
+    "src": "Pulse 2.0",
+    "url": "https://pulse2.com/stord-acquires-ams-fulfillment-to-expand-logistics-network-and-ai-powered-fulfillment-platform/"
    }
   ],
-  "checked": "2026-10-14",
-  "d": "2026-10-14",
-  "closed": "2026-06-01"
+  "checked": "2026-10-22",
+  "ties": [
+   {
+    "d": "2026-10-09",
+    "t": "Stord closes $400M Citi-led credit facility, names CFO and CRO",
+    "story": "a8f1e464edd85"
+   },
+   {
+    "d": "2026-05-26",
+    "t": "Stord raises $250 million at a $3 billion valuation",
+    "story": "g18"
+   },
+   {
+    "d": "2024-09-18",
+    "t": "Amazon speeds up Multi-Channel Fulfillment and expands Buy with Prime",
+    "story": "h422"
+   }
+  ]
  },
  {
   "title": "DHL eCommerce buys Venipak Baltic companies",
@@ -313,6 +332,104 @@
   ],
   "checked": "2026-10-09",
   "ties": []
+ },
+ {
+  "buyer": "MAK Acquisition Corp. (SPAC)",
+  "target": "UniUni",
+  "title": "UniUni to go public through MAK Acquisition",
+  "ann": "2026-05-15",
+  "story": "60",
+  "status": "Terminated",
+  "updates": [
+   {
+    "d": "2026-05-15",
+    "t": "UniUni agrees to go public through MAK Acquisition at about $1 billion",
+    "story": "60"
+   },
+   {
+    "d": "2026-09-24",
+    "t": "MAK sends UniUni a notice of material breach, starting a 15-business-day cure period",
+    "story": "nr4f8ee6"
+   },
+   {
+    "d": "2026-10-20",
+    "t": "MAK terminates the purchase agreement; the go-public deal will not proceed",
+    "story": "afb6fa67940a7"
+   }
+  ],
+  "srcs": [
+   {
+    "src": "UniUni (GlobeNewswire)",
+    "url": "https://www.globenewswire.com/news-release/2026/05/15/3296186/0/en/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition.html"
+   },
+   {
+    "src": "Fasken",
+    "url": "https://www.fasken.com/en/experience/2026/05/uniuni-enters-into-definitive-purchase-agreement-with-mak"
+   },
+   {
+    "src": "Business in Vancouver",
+    "url": "https://www.biv.com/news/transportation/bc-delivery-platform-uniuni-to-go-public-in-us1b-deal-12302578"
+   },
+   {
+    "src": "Taiwan News (MAK breach notice)",
+    "url": "https://www.taiwannews.com.tw/en/news/6446375"
+   },
+   {
+    "src": "MAK Acquisition (GlobeNewswire, via The Manila Times)",
+    "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
+   },
+   {
+    "src": "BetaKit (breach notice)",
+    "url": "https://betakit.com/?p=410314"
+   }
+  ],
+  "checked": "2026-10-20",
+  "d": "2026-10-20",
+  "ended": "2026-10-20",
+  "latest": "MAK terminated the purchase agreement on Oct. 20, 2026; the go-public deal will not proceed.",
+  "sum": "UniUni agreed on May 15, 2026 to go public through a reverse takeover by MAK Acquisition Corp. at about US$1.0 billion. MAK sent a notice of material breach on Sept. 24, 2026 and terminated the purchase agreement on Oct. 20, 2026, so the deal will not proceed.",
+  "note": "MAK said UniUni breached an interim covenant capping its cumulative pre-tax loss and did not cure it before the cure period expired Oct. 19. MAK is withdrawing its preliminary prospectus and will keep looking for a qualifying acquisition."
+ },
+ {
+  "buyer": "Thoma Bravo",
+  "target": "WWEX Group (combined with Auctane)",
+  "title": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
+  "ann": "2026-03-03",
+  "story": "64",
+  "status": "Closed",
+  "updates": [
+   {
+    "d": "2026-03-03",
+    "t": "Thoma Bravo combines WWEX Group with Auctane as ShipStation Global",
+    "story": "64"
+   },
+   {
+    "d": "2026-10-14",
+    "t": "WWEX Group and Auctane merge to form ShipStation Global",
+    "story": "a386e5fed7984"
+   }
+  ],
+  "srcs": [
+   {
+    "src": "Thoma Bravo",
+    "url": "https://www.thomabravo.com/press-releases/wwex-group-and-auctane-complete-merger-creating-leading-logistics-provider-shipstation-global"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/thoma-bravo-to-acquire-wwex-group-combine-with-auctane"
+   },
+   {
+    "src": "Transport Topics",
+    "url": "https://www.ttnews.com/articles/wwex-auctane-shipstation"
+   },
+   {
+    "src": "Dealroom",
+    "url": "https://app.dealroom.co/news/note/wwex-group-and-auctane-merge-to-form-shipstation-global-a-multi-modal-shipping-platform"
+   }
+  ],
+  "checked": "2026-10-14",
+  "d": "2026-10-14",
+  "closed": "2026-06-01"
  },
  {
   "buyer": "Evri",

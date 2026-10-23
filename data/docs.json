@@ -50,7 +50,7 @@
   "d": "Spreadsheet version of the daily rate guide",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "UPS",
@@ -120,7 +120,12 @@
   "u": "https://filexfer.ups.com/assets/resources/webcontent/en_US/Daily_US48_Preview.pdf",
   "d": "Legacy UPS address still serving the 2025 preview",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/ups-2025-ups-daily-rates-preview-us48-70e61f.pdf",
+  "fh": "b4a7159c5652837f5d9f8af08ac2ebee568cb8b7",
+  "fat": "2026-10-22",
+  "fsz": 4846507
  },
  {
   "c": "UPS",
@@ -142,7 +147,12 @@
   "u": "https://filexfer.ups.com/assets/resources/webcontent/en_US/CWT%20_Preview.pdf",
   "d": "Legacy hundredweight preview; year not stated",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/ups-2025-ups-hundredweight-rates-preview-3d76d2.pdf",
+  "fh": "3fbfb9441a6804d0ba31faed6150c4c733556f53",
+  "fat": "2026-10-22",
+  "fsz": 1637854
  },
  {
   "c": "UPS",
@@ -153,7 +163,12 @@
   "u": "https://www.ups.com/assets/resources/webcontent/en_US/rate-service-guide-pr.pdf",
   "d": "Latest Puerto Rico guide UPS still hosts",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/ups-2025-ups-rate-and-service-guide-puerto-rico-e4b25c.pdf",
+  "fh": "b68ee9869d3efd921adc4796d61c332b357eec1a",
+  "fat": "2026-10-22",
+  "fsz": 1388016
  },
  {
   "c": "UPS",
@@ -248,7 +263,7 @@
   "d": "Spreadsheet version",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "UPS",
@@ -291,7 +306,12 @@
   "u": "https://www.ups.com/assets/resources/media/en_US/SurePost_Terms.pdf",
   "d": "Prior terms at the legacy SurePost address",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/ups-ups-ground-saver-terms-effective-mar-31-2025-1f45f3.pdf",
+  "fh": "14c8d25411e9ceef879efcf30752450c37b83867",
+  "fat": "2026-10-22",
+  "fsz": 169806
  },
  {
   "c": "UPS",
@@ -533,7 +553,7 @@
   "cur": true,
   "upd": "2026-09-11",
   "checked": "2026-10-09",
-  "fchk": "2026-10-21"
+  "fchk": "2026-10-22"
  },
  {
   "c": "FedEx",
@@ -1610,7 +1630,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf",
   "d": "DHL overwrites this file each year",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-2026-dhl-express-service-and-rate-guide-u-s-b533b4.pdf",
+  "fh": "044f292c650fc4d72b93fa97f44055a4e569e477",
+  "fat": "2026-10-22",
+  "fsz": 3418778
  },
  {
   "c": "DHL",
@@ -1621,7 +1646,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-2026-dhl-express-u-s-domestic-retail-rate-and-service-guide-4680b2.pdf",
+  "fh": "f6ada3a592d74d3f2f189a499bbb4db67ad2445a",
+  "fat": "2026-10-22",
+  "fsz": 1044911
  },
  {
   "c": "DHL",
@@ -1691,7 +1721,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-domestic-fuel-table-effective-may-30-2026-bee054.pdf",
+  "fh": "d7a8fc1f133eb219724654191eb167698999ce32",
+  "fat": "2026-10-22",
+  "fsz": 87761
  },
  {
   "c": "DHL",
@@ -1702,7 +1737,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-020126-052926.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-domestic-fuel-table-feb-1-to-may-29-2026-02935d.pdf",
+  "fh": "01790487027bd5f6b9e8a3cb0f623637dd69b36d",
+  "fat": "2026-10-22",
+  "fsz": 86384
  },
  {
   "c": "DHL",
@@ -1713,7 +1753,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-jet-fuel-surcharge-effective-from-020126.pdf",
   "d": "International products",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-jet-fuel-surcharge-effective-feb-1-2026-6b04d9.pdf",
+  "fh": "891ace333b81e3d28d031b286440a983e4197cec",
+  "fat": "2026-10-22",
+  "fsz": 103539
  },
  {
   "c": "DHL",
@@ -1735,7 +1780,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-delivery-area-zip-list-effective-jan-18-2026-7f9b10.xlsx",
+  "fh": "7177fa1303fb80440b18abcc497232e931caa219",
+  "fat": "2026-10-22",
+  "fsz": 258724
  },
  {
   "c": "DHL",
@@ -1758,7 +1808,12 @@
   "d": "Oct 25, 2026 to Jan 16, 2027",
   "cur": true,
   "upd": "2026-09-22",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-peak-surcharge-2026-27-c37905.pdf",
+  "fh": "37a92cf2f852af610a7667237f4bf130bdf7d0fd",
+  "fat": "2026-10-22",
+  "fsz": 107069
  },
  {
   "c": "DHL",
@@ -1780,7 +1835,12 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf",
   "d": "Matches the terms effective Jan 25, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/dhl-dhl-ecommerce-terms-of-carriage-jan-2026-version-90fc0c.pdf",
+  "fh": "2f9c3caa0ae403c26e7c8b1820eb23a9967bc0d1",
+  "fat": "2026-10-22",
+  "fsz": 116674
  },
  {
   "c": "DHL",
@@ -1859,7 +1919,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-2026-spee-dee-standard-rate-chart-410a16.pdf",
+  "fh": "792733266730858556bcbf4b7ad146f9afef7ada",
+  "fat": "2026-10-22",
+  "fsz": 421297
  },
  {
   "c": "Spee-Dee",
@@ -1870,7 +1935,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART-MULTIPLE.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-2026-spee-dee-standard-rate-chart-multiple-packages-ebde4f.pdf",
+  "fh": "e4b6f4f2d57b68899926ee531ca99a652e07565e",
+  "fat": "2026-10-22",
+  "fsz": 421765
  },
  {
   "c": "Spee-Dee",
@@ -1881,7 +1951,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2026/01/2026-OnCall-Chart.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-2026-spee-dee-on-call-pickup-chart-55b76d.pdf",
+  "fh": "1ae9ad33d9c1f1500e30190d32d3b69123304ce2",
+  "fat": "2026-10-22",
+  "fsz": 676512
  },
  {
   "c": "Spee-Dee",
@@ -1892,7 +1967,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-Walkin-Counter-Chart.pdf",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-2026-spee-dee-rate-chart-walk-in-counter-file-9e263d.pdf",
+  "fh": "5d6fa2181b6d9fd9084e8afe6b2afea58fbd05f0",
+  "fat": "2026-10-22",
+  "fsz": 462514
  },
  {
   "c": "Spee-Dee",
@@ -1991,7 +2071,12 @@
   "u": "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf",
   "d": "PADD 5 diesel index, 19.75% to 32.00%",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-22",
+  "f": "data/files/gls-us-gls-us-fuel-surcharge-matrix-d902c1.pdf",
+  "fh": "8b65be389d3be01c7c541995e33639ee2d23d2fc",
+  "fat": "2026-10-22",
+  "fsz": 78638
  },
  {
   "c": "GLS US",
@@ -2197,7 +2282,12 @@
   "u": "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
   "d": "Posted on USPS's Price change center page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/usps-usps-july-2026-price-change-notice123-pdf-7-10-26-ccd755.pdf",
+  "fh": "2797be235a8a8f2d65cb293ff4053d1de25ed9bb",
+  "fat": "2026-10-22",
+  "fsz": 1337931
  },
  {
   "c": "USPS",
@@ -2208,7 +2298,12 @@
   "u": "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
   "d": "Posted on USPS's Price change center page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/usps-usps-time-limited-oct-2026-price-change-notice123-pdf-final-215da4.pdf",
+  "fh": "c406ff05584a894d83448efcdddf4d4cb9ccad34",
+  "fat": "2026-10-22",
+  "fsz": 1338915
  },
  {
   "c": "USPS",
@@ -2219,7 +2314,12 @@
   "u": "https://pe.usps.com/resources/PriceChange/USPS SKU User Guide_July2026.pdf",
   "d": "Posted on USPS's Price change center page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/usps-usps-sku-user-guide-july2026-507998.pdf",
+  "fh": "2742939aabc86ac3e72237defca2de46d3d77100",
+  "fat": "2026-10-22",
+  "fsz": 1767060
  },
  {
   "c": "OnTrac",
@@ -2230,7 +2330,12 @@
   "u": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
   "d": "Posted on OnTrac's Surcharges and rates page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/ontrac-2026-ontrac-ahs-2blpsrates-5ddd1e.pdf",
+  "fh": "f440dca25f76a6b828a8c3a92c425f7217829b1d",
+  "fat": "2026-10-22",
+  "fsz": 41030
  },
  {
   "c": "OnTrac",
@@ -2241,7 +2346,12 @@
   "u": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
   "d": "Posted on OnTrac's Service alerts page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/ontrac-ontrac-impactedzips-08242026-ed3aa5.pdf",
+  "fh": "9836f8782ebaa84bd623b713f5d635ce2b4ce0df",
+  "fat": "2026-10-22",
+  "fsz": 49111
  },
  {
   "c": "Spee-Dee",
@@ -2395,7 +2505,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-spee-dee-2026-rates-letter-c6c9b7.pdf",
+  "fh": "832b4dc98dcad7b04f40d3ce2fed7643c20f172d",
+  "fat": "2026-10-22",
+  "fsz": 219808
  },
  {
   "c": "Spee-Dee",
@@ -2406,7 +2521,12 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "fchk": "2026-10-22",
+  "f": "data/files/spee-dee-spee-dee-ltl-rates-2026-version-30-c7b926.pdf",
+  "fh": "bc915774bcecbd79460142c66b5f312c78f5a7a8",
+  "fat": "2026-10-22",
+  "fsz": 947022
  },
  {
   "c": "Spee-Dee",

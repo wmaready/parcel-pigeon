@@ -1533,12 +1533,77 @@
    "hq": null,
    "yr": null,
    "s": "Provider of AI-based supply chain software solutions",
-   "al": [],
+   "al": [
+    "Deposco Bright Suite",
+    "Deposco, Inc.",
+    "Xtrascope, Inc."
+   ],
    "src": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
    "auto": true,
    "pending": true,
    "added": "2026-10-21",
-   "story": "a312b45efa358"
+   "story": "a312b45efa358",
+   "site": "deposco.com",
+   "geo": [
+    -84.294,
+    34.075
+   ],
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
+    "https://www.cbinsights.com/company/deposco",
+    "https://pitchbook.com/profiles/company/13325-50"
+   ],
+   "enriched": "2026-10-22"
+  },
+  {
+   "id": "amsfulfillment",
+   "n": "AMS Fulfillment",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Third-party logistics provider for premium beauty, wellness and high-velocity direct-to-consumer brands, with more than 20 years of experience.",
+   "al": [],
+   "src": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "auto": true,
+   "added": "2026-10-22",
+   "story": "a351cab9045c7"
+  },
+  {
+   "id": "google",
+   "n": "Google",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Operates a search page with a feature for tracking package deliveries",
+   "al": [],
+   "src": "https://www.mediapost.com/publications/article/418698/google-ups-hit-with-privacy-suit-over-package-tra.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-09",
+   "story": "af3f3854829a2"
+  },
+  {
+   "id": "olo",
+   "n": "Olo",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Restaurant technology company that launched a consumer food-ordering app on October 20",
+   "al": [],
+   "src": "https://finance.yahoo.com/small-business/articles/doordash-uber-eats-rival-offering-030700969.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-20",
+   "story": "a4c5c81eec8df"
   }
  ],
  "edges": [
@@ -2774,6 +2839,51 @@
    "t": "Robotics work with UPS cited in trade press",
    "url": "https://www.automatedwarehouseonline.com/ai-ascendant-dexterity-redefines-robotics-in-the-modern-warehouse/",
    "story": "a68878cb71618"
+  },
+  {
+   "a": "ups",
+   "b": "deposco",
+   "k": "invested",
+   "y": "2008",
+   "t": "UPS Strategic Enterprise Fund investment in Deposco",
+   "url": "https://www.sdcexec.com/software-technology/software-solutions/article/10352955/deposco-inc-deposco-secures-investment-from-ups-strategic-enterprise-fund",
+   "story": "a312b45efa358"
+  },
+  {
+   "a": "deposco",
+   "b": "easypost",
+   "k": "partner",
+   "y": null,
+   "t": "Deposco listed as an EasyPost ecommerce tools partner",
+   "url": "https://www.easypost.com/partners/deposco/",
+   "story": "a312b45efa358"
+  },
+  {
+   "a": "stord",
+   "b": "amsfulfillment",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Stord acquires AMS Fulfillment",
+   "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "story": "a351cab9045c7"
+  },
+  {
+   "a": "kohls",
+   "b": "instacart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Kohl's offers same-day delivery through Instacart",
+   "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+   "story": "a4d34002e71df"
+  },
+  {
+   "a": "kohls",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Kohl's to launch same-day delivery with Uber Eats",
+   "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+   "story": "a4d34002e71df"
   }
  ],
  "moves": [
@@ -3004,6 +3114,16 @@
    "url2": "https://tanknewsinternational.com/ceva-logistics-welcomes-bollore-logistics-and-unites-under-one-brand/",
    "t": "CMA CGM folded Bolloré Logistics into CEVA Logistics after buying it in February 2024.",
    "role": null
+  },
+  {
+   "id": "amsfulfillment",
+   "k": "bought",
+   "parent": "stord",
+   "from": null,
+   "d": "2026-10-22",
+   "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
+   "t": "Stord acquires AMS Fulfillment",
+   "story": "a351cab9045c7"
   }
  ],
  "checks": {
@@ -3055,6 +3175,7 @@
   "anthropologie": "2026-10-19",
   "exelot": "2026-10-19",
   "dexterity": "2026-10-21",
+  "deposco": "2026-10-22",
   "uniuni": "2026-10-20"
  },
  "facts": {
