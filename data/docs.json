@@ -50,7 +50,7 @@
   "d": "Spreadsheet version of the daily rate guide",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-22"
+  "fchk": "2026-10-23"
  },
  {
   "c": "UPS",
@@ -263,7 +263,7 @@
   "d": "Spreadsheet version",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-22"
+  "fchk": "2026-10-23"
  },
  {
   "c": "UPS",
@@ -373,7 +373,12 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
   "d": "Which accessorials the fuel surcharge applies to; latest version UPS posts",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-23",
+  "f": "data/files/ups-ups-charges-subject-to-fuel-surcharge-ecb6d6.pdf",
+  "fh": "4da7d493d13265896aa109f9dd9f2e121c1a51a3",
+  "fat": "2026-10-23",
+  "fsz": 101316
  },
  {
   "c": "UPS",
@@ -507,7 +512,12 @@
   "u": "https://filexfer.ups.com/assets/resources/webcontent/en_US/terms_service_us.pdf",
   "d": "Prior tariff",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "fchk": "2026-10-23",
+  "f": "data/files/ups-2025-ups-tariff-terms-and-conditions-of-service-2db146.pdf",
+  "fh": "b61a2f7a4c12955b5d5c7fd9813c4949d441436f",
+  "fat": "2026-10-23",
+  "fsz": 554310
  },
  {
   "c": "UPS",
@@ -553,7 +563,7 @@
   "cur": true,
   "upd": "2026-09-11",
   "checked": "2026-10-09",
-  "fchk": "2026-10-22"
+  "fchk": "2026-10-23"
  },
  {
   "c": "FedEx",
@@ -2617,5 +2627,27 @@
   "d": "Posted on FedEx's Service Guide page",
   "cur": true,
   "seen": "2026-10-21"
+ },
+ {
+  "c": "USPS",
+  "t": "Special program",
+  "n": "Printable version",
+  "y": 2026,
+  "eff": null,
+  "u": "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf",
+  "d": "Found with: USPS says it is set for 2026 holiday peak after 2.5-day 2025 average",
+  "cur": true,
+  "added": "2026-10-22",
+  "why": {
+   "how": "story",
+   "story": "a72efb5e01b99",
+   "title": "USPS says it is set for 2026 holiday peak after 2.5-day 2025 average",
+   "when": "2026-10-22"
+  },
+  "fchk": "2026-10-23",
+  "f": "data/files/usps-printable-version-0ed3f0.pdf",
+  "fh": "a082041ca4ec2958f4dee2d0c3f9ad88da65fcb9",
+  "fat": "2026-10-23",
+  "fsz": 182730
  }
 ]
