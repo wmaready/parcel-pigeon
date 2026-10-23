@@ -104,6 +104,29 @@ subject likely to keep developing (labor talks, lawsuits and rulings, regulation
 cycle, a carrier's ongoing strategy), or null for a one-off item. Yearly events (holiday peak surcharges, the annual
 rate increase, USPS price changes) use the ACTIVE storyline for that subject; the app splits it by year on its own}}."""
 
+def page_parts(s):
+    """The story page's synopsis ("syn") and "what it affects" list ("aff") from Claude's reply, cleaned. Either may be
+    missing: the app then builds the page from the older fields (sum, why, plain), which every story keeps."""
+    out = {}
+    if not isinstance(s, dict):
+        return out
+    syn = re.sub(r"\s+", " ", str(s.get("syn") or "")).strip()
+    if syn:
+        out["syn"] = syn[:900]
+    aff = []
+    for a in s.get("aff") if isinstance(s.get("aff"), list) else []:
+        if isinstance(a, dict) and str(a.get("what") or "").strip():
+            aff.append({"who": str(a.get("who") or "Shippers").strip()[:60], "what": re.sub(r"\s+", " ", str(a["what"])).strip()[:200]})
+    if aff:
+        out["aff"] = aff[:4]
+    return out
+
+
+def page_text(story):
+    """Every word the story page adds beyond the summary: checked against the sources like the rest."""
+    return " ".join([story.get("syn") or ""] + [f"{a.get('who', '')} {a.get('what', '')}" for a in story.get("aff") or []])
+
+
 WRITE_SYSTEM = f"""You write for Parcel Pigeon, a small parcel trade news service in the style of Supply Chain Dive and
 FreightWaves: neutral, factual, attributed. Use ONLY facts in the articles provided. Never invent numbers, dates or names;
 every number must appear in the source text. Do not quote more than a few words. No advice, no recommendations, no
@@ -125,6 +148,12 @@ Return JSON only, with exactly these keys:
 "why": one sentence under 160 characters on why this matters to parcel shippers or the parcel market, from the sources only (who is affected and how big); never generic;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
+"syn": the story page's synopsis: 2-4 sentences that tell the whole story once: what happened, who, when, the key figures
+       and why it matters to parcel shippers. Say each fact once. Leave the list of who is affected to "aff";
+"aff": what it affects, as a list of 1-4 objects {{"who":"the group or thing affected, e.g. 'UPS Ground shippers',
+       'Poshmark sellers', 'Residential deliveries', 'Delivery times'","what":"one short factual line under 140 characters
+       on what changes for them, with the figure and the date if the sources give them"}}. Only effects the sources state.
+       If nothing changes for shippers, one entry {{"who":"Shippers","what":"No change to rates or service."}};
 "event_date": "YYYY-MM-DD" the day the company ANNOUNCED it (or the event happened), if the sources say and it is earlier than the article, else null;
 "act": "YYYY-MM-DD" the day it TAKES EFFECT, if one is stated, else null. The announcement date and the effective date are
   different things: never put one in the other's place, and never infer an effective date from when it was announced;
@@ -1272,6 +1301,7 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
             if story.get("act") and not clock_worthy(story, {"w": story["title"], "imp": story.get("imp")}):
                 story["act"] = None
             alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
+            story.update(page_parts(s))
             missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
             if missing:
                 # one rewrite that drops the figures the articles don't contain, instead of asking the editor
@@ -1281,9 +1311,14 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
                                            "leave a figure out rather than estimate or convert it.", max_tokens=2500))
                     if isinstance(s2, dict) and s2.get("title") and s2.get("sum") and s2.get("plain"):
                         story.update({"title": s2["title"], "sum": s2["sum"], "plain": s2["plain"]})
+                        story.pop("syn", None); story.pop("aff", None); story.update(page_parts(s2))
                         missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
                 except Exception as e:
                     print(f"  rewrite failed: {e}", file=sys.stderr)
+            # the synopsis and the "affects" list pass the same numbers check; if they fail it, the story page falls back
+            # to the summary and plain-English effect (which passed) instead of holding the story back
+            if numbers_supported(page_text(story), alltext):
+                story.pop("syn", None); story.pop("aff", None)
             # on-cycle or off-cycle, judged by the date the change takes effect (never the date it was announced)
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and story.get("act") and story["imp"] in ("up", "down"):
                 cyc = cycle_of((story["c"] or [""])[0], kind_of(story["title"], story["cat"]), story["act"], story.get("ann") or story["date"])

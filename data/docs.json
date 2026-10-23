@@ -2291,22 +2291,6 @@
  },
  {
   "c": "USPS",
-  "t": "Rate guide",
-  "n": "USPS Time Limited OCT 2026 Price Change   Notice123 PDF   Final",
-  "y": 2026,
-  "eff": null,
-  "u": "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
-  "d": "Posted on USPS's Price change center page",
-  "cur": true,
-  "seen": "2026-10-21",
-  "fchk": "2026-10-22",
-  "f": "data/files/usps-usps-time-limited-oct-2026-price-change-notice123-pdf-final-215da4.pdf",
-  "fh": "c406ff05584a894d83448efcdddf4d4cb9ccad34",
-  "fat": "2026-10-22",
-  "fsz": 1338915
- },
- {
-  "c": "USPS",
   "t": "Special program",
   "n": "USPS SKU User Guide July2026",
   "y": 2026,
@@ -2400,7 +2384,7 @@
  {
   "c": "Spee-Dee",
   "t": "Special program",
-  "n": "Spee-Dee LETTER%20 %20UNBOXED%20AND%20ANIMAL%20SHIPPING",
+  "n": "Spee-Dee LETTER UNBOXED AND ANIMAL SHIPPING",
   "y": null,
   "eff": null,
   "u": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
@@ -2442,28 +2426,6 @@
   "seen": "2026-10-21"
  },
  {
-  "c": "UPS",
-  "t": "Rate guide",
-  "n": "UPS daily rates us en",
-  "y": null,
-  "eff": null,
-  "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-  "d": "Posted on UPS's Rate and Service Guides page",
-  "cur": true,
-  "seen": "2026-10-21"
- },
- {
-  "c": "UPS",
-  "t": "Rate guide",
-  "n": "UPS retail rates us en",
-  "y": null,
-  "eff": null,
-  "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
-  "d": "Posted on UPS's Rate and Service Guides page",
-  "cur": true,
-  "seen": "2026-10-21"
- },
- {
   "c": "Spee-Dee",
   "t": "Rate guide",
   "n": "Spee-Dee LTL Rates 2025 version 29",
@@ -2478,7 +2440,7 @@
   "c": "Spee-Dee",
   "t": "Special program",
   "n": "Spee-Dee Spee Dee Deliver HOT SOLUTIONS COMPANIES",
-  "y": null,
+  "y": 2025,
   "eff": null,
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
@@ -2489,7 +2451,7 @@
   "c": "Spee-Dee",
   "t": "Special program",
   "n": "Spee-Dee Spee Dee Delivery PRESS RELEASE shipit",
-  "y": null,
+  "y": 2025,
   "eff": null,
   "u": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
   "d": "Posted on Spee-Dee's Service updates page",

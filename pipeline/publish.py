@@ -62,6 +62,9 @@ def main():
         for label, key in FIELDS.items():
             f = re.search(rf"^{label}:\s*(.+)$", body, re.M)
             if f and f.group(1).strip():
+                if story.get(key) != f.group(1).strip():
+                    # your edit wins on the story page too: the written synopsis / "affects" list it replaces is dropped
+                    story.pop({"sum": "syn", "plain": "aff"}.get(key, ""), None)
                 story[key] = f.group(1).strip()
         story.pop("unsupported_numbers", None)
         extras = story.pop("_extras", None) or {}

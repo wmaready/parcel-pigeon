@@ -462,11 +462,50 @@ def canon(u):
     return urllib.parse.urlunsplit((p.scheme, p.netloc, p.path, urllib.parse.urlencode(q), ""))
 
 
+def doc_key(u):
+    """One key per document, whatever address it was reached by: no scheme, www, cache stamp or trailing slash, and an
+    Adobe asset (UPS serves the same rate guide from assets.ups.com and from its adobeaemcloud.com host) keyed by its id."""
+    u = urllib.parse.unquote(str(u or ""))
+    a = re.search(r"urn:aaid:aem:([0-9a-f-]{36})", u, re.I)
+    if a:
+        return "aem:" + a.group(1).lower() + ":" + u.split("?")[0].rstrip("/").split("/")[-1].lower()
+    return re.sub(r"^https?://(www\.)?", "", canon(u), flags=re.I).rstrip("/").lower()
+
+
 def known_doc_urls(lib=None):
-    """Every document already on file (the app's built-in list plus data/docs.json), with cache stamps removed."""
+    """Every document already on file (the app's built-in list plus data/docs.json): their addresses with cache stamps
+    removed, plus each one's doc_key, so `doc_key(u) in known_doc_urls()` also catches the same file at another address."""
     seed = load("seed.json", {})
     docs = (seed.get("docs") or []) + (lib if lib is not None else load("docs.json", []))
-    return {canon(d.get("u") or "") for d in docs if d.get("u")}
+    return {canon(d.get("u") or "") for d in docs if d.get("u")} | {doc_key(d["u"]) for d in docs if d.get("u")}
+
+
+# The year a document is filed under (the app's docYear() in index.html follows the same rule). A year the document
+# states for itself wins: "2026 UPS Rate Guide" is a 2026 document even if it was stored as 2025. A year inside a full
+# date ("signed before Aug 1, 2018", "Dec 22, 2025 edition") is a date, not the document's year. Then the file name, then
+# the upload folder (/uploads/2025/08/) for a document with no year, then the year stored. Market reports keep their
+# publication year: a 2026 report on 2025 volume is a 2026 report.
+_DATE_YEAR = re.compile(r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+(20[1-3]\d)", re.I)
+
+
+def stated_years(text):
+    return sorted({int(y) for y in re.findall(r"(?<![\d.])(20[1-3]\d)(?![\d.]?\d)", _DATE_YEAR.sub(" ", str(text or "")))})
+
+
+def doc_year(d):
+    if d.get("c") != "Reports":
+        t = stated_years(d.get("n"))
+        if len(t) == 1:
+            return t[0]
+        if not t and d.get("u"):
+            path = urllib.parse.unquote(urllib.parse.urlsplit(d["u"]).path)
+            f = stated_years(path.rstrip("/").split("/")[-1])
+            if len(f) == 1:
+                return f[0]
+            up = re.search(r"/uploads/(20[1-3]\d)/\d{2}/", path)
+            if up and not d.get("y"):
+                return int(up.group(1))
+    return d.get("y")
 
 
 # ---------------------------------------------------------------- one story per event

@@ -1,0 +1,169 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Parcel Pigeon//Rate clock//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Parcel Pigeon rate clock
+X-WR-CALDESC:Parcel price changes in effect now and coming up\, from the Pa
+ rcel Pigeon rate clock.
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VEVENT
+UID:e06@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261027
+SUMMARY:▲ Peak fee of $0.50 to $1.00 added to each home-delivery package
+DESCRIPTION:OnTrac Oct 24\, UPS and Amazon Oct 25\, FedEx Oct 26. Amazon ch
+ arges per package\, with no separate residential surcharge. UPS and FedEx 
+ shippers above 20\,000 residential packages a week pay higher tiered charg
+ es.\nCarriers: OnTrac · UPS · Amazon · FedEx\nTakes effect between Oct 
+ 24\, 2026 and Oct 26\, 2026\, depending on the carrier.\nOnTrac: Residenti
+ al\, flat all season $1.00\nUPS: Ground residential and Ground Saver $0.50
+ \nAmazon: Every package $0.50\nFedEx: Ground residential and Home Delivery
+  $0.50\nUPS: Next Day Air and other Air $1.35\nFedEx: Express Overnight $1
+ .30\nFedEx: Express 2Day and Saver $1.20\nFedEx: Ground Economy $2.55\nAma
+ zon: Additional handling $8.75\nStory: Peak surcharges hit oversize packag
+ es now and home deliveries from Oct 24 to 26\nOn Parcel Pigeon: https://wm
+ aready.github.io/parcel-pigeon/#s=01
+URL:https://wmaready.github.io/parcel-pigeon/#s=01
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xaee6669d325da0@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:▲ GOFO 4% emergency fuel surcharge takes effect
+DESCRIPTION:Carriers: Regional\nTakes effect Oct 26\, 2026.\nStory: GOFO ad
+ ds 4% emergency fuel surcharge from Oct. 26\nOn Parcel Pigeon: https://wma
+ ready.github.io/parcel-pigeon/#s=aee6669d325da
+URL:https://wmaready.github.io/parcel-pigeon/#s=aee6669d325da
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa6e82ba740e991@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:▲ EU €2 per-line handling fee applies to non-EU distance sales
+DESCRIPTION:Carriers: Industry\nTakes effect Nov 1\, 2026.\nStory: EU to ap
+ ply €2 per-line handling fee on non-EU shipments from 1 Nov\nOn Parcel P
+ igeon: https://wmaready.github.io/parcel-pigeon/#s=a6e82ba740e99
+URL:https://wmaready.github.io/parcel-pigeon/#s=a6e82ba740e99
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e08@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261124
+SUMMARY:▲ Peak-week fees rise: home deliveries go to $0.75–$0.80 a pack
+ age\; big-box fees go up too
+DESCRIPTION:UPS and Amazon Nov 22\, FedEx Nov 23\, through Dec 26 to 27.\nC
+ arriers: UPS · Amazon · FedEx\nTakes effect between Nov 22\, 2026 and No
+ v 23\, 2026\, depending on the carrier.\nUPS: Ground residential $0.75\nFe
+ dEx: Ground residential $0.80\nAmazon: Every package $0.75\nUPS: Air $2.50
+ \nFedEx: Express Overnight $2.55\nFedEx: Ground Economy $4.05\nUPS: Additi
+ onal handling $11.90\nFedEx: Additional handling $11.85\nUPS: Large packag
+ e $117.50\nFedEx: Oversize $117.25\nStory: Peak surcharges hit oversize pa
+ ckages now and home deliveries from Oct 24 to 26\nOn Parcel Pigeon: https:
+ //wmaready.github.io/parcel-pigeon/#s=01
+URL:https://wmaready.github.io/parcel-pigeon/#s=01
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e09@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261229
+SUMMARY:▼ Peak-week fees end: home-delivery peak fee drops back to $0.50 
+ a package
+DESCRIPTION:UPS and Amazon Dec 27\, FedEx Dec 28. Per-package fees return t
+ o $0.50.\nCarriers: UPS · Amazon · FedEx\nTakes effect between Dec 27\, 
+ 2026 and Dec 28\, 2026\, depending on the carrier.\nStory: Peak surcharges
+  hit oversize packages now and home deliveries from Oct 24 to 26\nOn Parce
+ l Pigeon: https://wmaready.github.io/parcel-pigeon/#s=01
+URL:https://wmaready.github.io/parcel-pigeon/#s=01
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e15@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:▲ DHL Express 2027 rate increase for U.S. accounts: 5.9% average
+DESCRIPTION:U.S. account holders. Some services and surcharges also change\
+ ; DHL has not listed them.\nCarriers: DHL\nTakes effect Jan 1\, 2027.\nSto
+ ry: DHL Express sets 5.9% average increase for U.S. accounts on Jan 1\, 20
+ 27\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=02
+URL:https://wmaready.github.io/parcel-pigeon/#s=02
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e10@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:▲ FedEx 2027 general rate increase: 5.9% average
+DESCRIPTION:Carriers: FedEx\nTakes effect Jan 4\, 2027.\nStory: FedEx sets 
+ 5.9% average increase for Jan 4\, 2027\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=12
+URL:https://wmaready.github.io/parcel-pigeon/#s=12
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e11@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270118
+SUMMARY:▼ Peak surcharges end at every major carrier\; USPS holiday price
+ s end
+DESCRIPTION:Last day: OnTrac Jan 15\, UPS\, Amazon and USPS holiday prices 
+ Jan 16\, FedEx Jan 17.\nCarriers: OnTrac · UPS · Amazon · FedEx · USPS
+ \nTakes effect between Jan 15\, 2027 and Jan 17\, 2027\, depending on the 
+ carrier.\nStory: Peak surcharges hit oversize packages now and home delive
+ ries from Oct 24 to 26\nOn Parcel Pigeon: https://wmaready.github.io/parce
+ l-pigeon/#s=01
+URL:https://wmaready.github.io/parcel-pigeon/#s=01
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e12@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:▲ FedEx paper document fees start
+DESCRIPTION:$25 Paper Document Fee when international trade documents aren'
+ t sent electronically\; $5 Paper Air Waybill Fee on U.S. and export shipme
+ nts started on a paper airbill.\nCarriers: FedEx\nTakes effect Jan 18\, 20
+ 27.\nStory: FedEx sets 5.9% average increase for Jan 4\, 2027\nOn Parcel P
+ igeon: https://wmaready.github.io/parcel-pigeon/#s=12
+URL:https://wmaready.github.io/parcel-pigeon/#s=12
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:e13@parcel-pigeon
+DTSTAMP:20261023T015158Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:▲ FedEx zone changes for select U.S. ZIP code pairs
+DESCRIPTION:FedEx reclassifies zones for select U.S. domestic origin-destin
+ ation ZIP code pairs.\nCarriers: FedEx\nTakes effect Feb 1\, 2027.\nStory:
+  FedEx sets 5.9% average increase for Jan 4\, 2027\nOn Parcel Pigeon: http
+ s://wmaready.github.io/parcel-pigeon/#s=12
+URL:https://wmaready.github.io/parcel-pigeon/#s=12
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+END:VCALENDAR

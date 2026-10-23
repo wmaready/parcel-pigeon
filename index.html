@@ -81,6 +81,15 @@ nav.tabs button[aria-current="page"]{background:var(--accent);color:var(--accent
 main{padding-block:var(--sp-4) var(--sp-5)}
 .shead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);margin-bottom:var(--sp-4)}
 .shead h1{font-size:var(--fs-xxl);line-height:1}
+.calsub{margin:0 0 var(--sp-4);border:1px solid var(--grid-strong);border-radius:12px;background:var(--panel)}
+.calsub>summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;min-height:var(--tap);padding:8px 12px;font-weight:600;color:var(--accent)}
+.calsub>summary::-webkit-details-marker{display:none}
+.calsub>summary small{font-weight:400;color:var(--ink-2);font-size:12.5px}
+.calsubb{padding:0 12px 12px}
+.calsubr{display:flex;flex-wrap:wrap;gap:8px}
+.calsubr .btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border-radius:10px;border:1px solid var(--grid-strong);background:var(--panel-2);color:var(--ink);font:600 14px/1 var(--font-ui);text-decoration:none;cursor:pointer}
+.calsubr .btn.pri{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.calhow,.calnote{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--ink)}.calnote{color:var(--ink-2);margin-top:4px}
 .shead .lbl{margin-top:var(--sp-1)}
 .views{display:flex;max-width:100%;overflow-x:auto;scrollbar-width:none;border:var(--line) solid var(--grid-strong);background:var(--panel)}
 .views::-webkit-scrollbar{display:none}
@@ -380,6 +389,16 @@ dl.gl dd{margin:var(--sp-1) 0 0;color:var(--ink);font-size:var(--fs-sm)}
 .fcwrap{position:relative;touch-action:pan-y}
 .fread{min-height:1.6em;font-size:var(--fs-sm);color:var(--ink);display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-4);padding-top:var(--sp-2)}
 .fread b{font-weight:600}
+.fev{cursor:pointer;outline:none}.fevh{fill:transparent}
+.fevl{stroke:var(--ink-2);stroke-width:1;stroke-dasharray:2 3;opacity:.55}
+.fevd{fill:var(--panel);stroke:var(--up);stroke-width:1.5}.fev.down .fevd{stroke:var(--down)}
+.fevt{font:700 9.5px var(--font-mono);fill:var(--ink);pointer-events:none}
+.fev.on .fevd,.fev:hover .fevd,.fev:focus-visible .fevd{fill:var(--up)}.fev.down.on .fevd,.fev.down:hover .fevd,.fev.down:focus-visible .fevd{fill:var(--down)}
+.fev.on .fevt,.fev:hover .fevt,.fev:focus-visible .fevt{fill:var(--bg)}.fev.on .fevl{opacity:1;stroke-dasharray:none}
+.fcev{min-height:1.6em;padding-top:var(--sp-2);font-size:var(--fs-sm);line-height:1.45}
+.fcev b{display:inline-flex;align-items:center;gap:6px;font-weight:600;margin-right:8px}.fcev .mono{color:var(--ink-2);font-size:12px}
+.fcev p{margin:4px 0 0;color:var(--ink)}.fcev a{white-space:nowrap}
+.fevn{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;font:700 10px var(--font-mono);color:var(--bg);background:var(--up)}.fevn.down{background:var(--down)}
 .fread span{color:var(--ink-2)}
 .ftab{table-layout:auto}
 .ftab thead th{white-space:normal;line-height:1.25;vertical-align:bottom}
@@ -2117,6 +2136,9 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .dyr:first-of-type{border-top:0}
 .dyr>summary{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;list-style:none;font-size:14.5px;background:var(--panel-2)}
 .dyr>summary::-webkit-details-marker{display:none}
+.dyear>summary b{font-size:17px}
+.dyear .dyrb{padding-bottom:6px}
+.dtyp{padding:12px 16px 2px;color:var(--ink-2)}
 .dyr>summary b{font-family:var(--font-mono);font-weight:600;letter-spacing:.02em}
 .dyr>summary b::before{content:"›";display:inline-block;width:16px;color:var(--ink-2);transition:transform .2s}
 .dyr[open]>summary b::before{transform:rotate(90deg)}
@@ -2358,6 +2380,26 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .kla{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .kdoc{cursor:default}
 .dsrc{margin-top:14px}
+/* story page: one synopsis, then one plain block of what it affects */
+.syn{margin-top:8px}
+.syn p{margin:0 0 10px;font-size:var(--fs-md);line-height:1.55;color:var(--ink)}
+.syn .synbg{font-size:14px;color:var(--ink-2)}
+.syn .synup{padding-left:10px;border-left:2px solid var(--accent)}
+.syn .synup b,.aff>.lbl,.sco .lbl{display:block;font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:2px}
+.aff{margin-top:12px;padding:12px;border:1px solid var(--grid-strong);border-radius:12px}
+.aff dl{margin:6px 0 0;display:grid;gap:0}
+.afr{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 12px;padding:8px 0;border-top:1px solid var(--grid)}
+.afr:first-child{border-top:0;padding-top:2px}
+.afr dt{font-size:12.5px;color:var(--ink-2);padding-top:2px}
+.afr dd{margin:0;font-size:14.5px;line-height:1.45;min-width:0;overflow-wrap:anywhere}
+.afr dd .lgset{vertical-align:middle}
+.afs{color:var(--ink-2);font-size:12.5px}
+.afflag dd{display:grid;gap:6px}.aff1{line-height:1.5}
+.ssrc{margin:14px 0 0;font-size:12.5px;line-height:1.6;color:var(--ink-2)}
+.ssrc a{color:var(--ink)}
+.sco{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sco .lbl{flex-basis:100%;margin:0}
+@media (max-width:560px){.afr{grid-template-columns:1fr;gap:2px}}
 .card.full .srcd>summary{pointer-events:none}
 .card.full .cardft{border-top:0}
 @media (max-width:560px){.kl{grid-template-columns:40px 1fr}.kla,.klgo{grid-column:2;justify-content:flex-start}.klgo{display:none}}
@@ -2821,6 +2863,12 @@ body.bio-open{overflow:hidden}
 <!-- ================= RATE CLOCK ================= -->
 <section id="s-clock" data-section hidden>
   <div class="shead"><div><h1>Rate clock</h1></div><div class="views" id="vs-clock" role="group" aria-label="Rate clock view"></div></div>
+  <details class="calsub" id="calSub"><summary><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>Add to calendar<small>Price changes in your Outlook, Teams or Google calendar</small></summary>
+    <div class="calsubb">
+      <div class="calsubr"><a class="btn pri" id="calWebcal" href="webcal://wmaready.github.io/parcel-pigeon/data/rates.ics">Subscribe</a><button type="button" class="btn" id="calCopy" data-cal="https://wmaready.github.io/parcel-pigeon/data/rates.ics">Copy link</button></div>
+      <p class="calhow"><b>Outlook or Teams:</b> Add calendar › Subscribe from web, paste the link. <b>Google:</b> Other calendars + › From URL, paste the link.</p>
+      <p class="calnote">Every price change in effect now or coming up, with its announcement date when known. Updates on its own; calendars refresh every few hours.</p>
+    </div></details>
   <div class="view" data-view="calendar">
     <div class="panel cal"><div class="nav"><button id="calPrev" aria-label="Previous month">&lt;</button><h2 id="calTitle"></h2><button id="calNext" aria-label="Next month">&gt;</button></div>
       <div class="grid7" id="calGrid"></div><div class="detail" id="calDetail" aria-live="polite">Tap a day to see what changes.</div></div>
@@ -2843,7 +2891,7 @@ body.bio-open{overflow:hidden}
         <div class="seg" id="fcRange" role="group" aria-label="Time range"><button data-r="w12">12 wks</button><button data-r="ytd">This year</button><button data-r="y1">1 year</button><button data-r="all">Since 2017</button></div>
         <div class="chips wrap" id="fcSeries" role="group" aria-label="Lines to show"></div>
       </div>
-      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
+      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
   </div>
 </section>
 
@@ -7438,6 +7486,8 @@ setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history
 
 // anything that takes you elsewhere (rate clock, Docs, a storyline, another section) closes the story page first
 document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');if(t)closeStory(false,true)},true);
+// a company link on the story page: the story closes, then the company page opens
+document.addEventListener('click',e=>{const b=e.target.closest('#storySheet [data-sco]');if(!b)return;e.preventDefault();e.stopPropagation();const id=b.dataset.sco;closeStory(false,true);setTimeout(()=>openCompany(id),260)},true);
 // swipe right (or down from the top bar) to close on phones
 {let x0=null,y0=null;document.addEventListener('touchstart',e=>{if(STORY_OPEN==null||!e.target.closest('.sspanel'))return;const t=e.touches[0];x0=t.clientX;y0=t.clientY},{passive:true});
  document.addEventListener('touchend',e=>{if(x0==null)return;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
@@ -7859,22 +7909,67 @@ function card(n,full){
     </div>
     <footer class="cardft"><button type="button" class="more" data-open="${n.id}">Read more${extra.length?`<small> · ${extra.join(' · ')}</small>`:''} ›</button>${cmtBar(n)}${links.length?`<span class="clk"><button class="datechip" data-clock="${links[0].id}" title="${esc(links[0].w)}">Rate clock ${fmtD(links[0].d)}</button></span>`:''}</footer>
   </article>`}
-  return `<article class="card full" id="d-${n.id}">${hd}
+  // story page: headline, one synopsis, one "What it affects" block, key dates, sources, storyline and companies
+  const S=storyParts(n),hdF=hd.replace(kindTag(n),kindTag0(n));   // Off-cycle / Unconfirmed move into "What it affects"
+  return `<article class="card full" id="d-${n.id}">${hdF}
     <div class="cardbody">
       ${media(n,'wide')}
       ${storyChip(n)}
       <h3>${esc(n.title)}</h3>
-      <p class="sum">${decode(n.sum)}</p>
-      ${storyNew(n)}
-      ${n.why?`<p class="why-line"><b>Why it matters</b> ${esc(n.why)}</p>`:''}
-      <section class="dsec imp-${n.imp}"><div class="dsh">${tag}${eff?`<span class="lited">${esc(eff)}</span>`:''}</div><p>${decode(n.plain)}</p></section>
+      <div class="syn"><p>${decode(S.syn.join(' '))}</p>${S.bg.length?`<p class="synbg">${decode(S.bg.join(' '))}</p>`:''}${S.upd.length?`<p class="synup"><b>New in this update</b> ${esc(S.upd.join(' '))}</p>`:''}</div>
+      ${storyAffects(n,S)}
       ${keyLinks(n)}
       ${chgTable(n)}
+      <p class="ssrc">${srcLinks(n)}</p>
       ${storySoFar(n)}
-      <div class="dsrc">${srcDrop(n,n.tie).replace('<details class="srcd">','<details class="srcd" open>')}</div>
+      ${storyCoLinks(n)}
     </div>
     <footer class="cardft">${cmtBar(n)}</footer>
   </article>`}
+/* The pipeline's older fields overlap: the summary, "why it matters", the plain-English effect, "what's new" and the
+   background line often say the same thing twice. Each sentence is kept once, in the first place it belongs, and only
+   when it adds something: a word or a figure the reader hasn't already seen. New stories carry a written synopsis (syn)
+   and an "affects" list (aff); older ones are assembled from the fields they have. No fact is dropped: a sentence only
+   leaves when every figure in it, and nearly all its words, are already on the page. */
+const SYN_STOP=new Set('about after also and any are been but for from has have into its more not now one other over said says than that the their them then there these they this those under were what when which while will with would'.split(' '));
+// sentences, without breaking after "Oct.", "U.S.", "N.C." or "Inc."
+const SYN_ABBR=/(?:\b(?:Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Inc|Corp|Co|Ltd|No|St|Mr|Mrs|Ms|Dr|Jr|Sr|vs|etc|approx|est)|\b[A-Z](?:\.[A-Z])*)\.$/;
+const synSplit=t=>String(t||'').replace(/\s+/g,' ').trim().split(/(?<=[.!?])\s+(?=["“A-Z0-9$])/).reduce((a,s)=>{if(a.length&&SYN_ABBR.test(a[a.length-1]))a[a.length-1]+=' '+s;else a.push(s);return a},[]).map(s=>s.trim()).filter(Boolean);
+const synWords=t=>(String(t).toLowerCase().match(/[a-z][a-z'-]{2,}/g)||[]).filter(w=>!SYN_STOP.has(w)).map(w=>w.replace(/'s$/,'').replace(/(?<=..)s$/,''));
+const synNums=t=>String(t).replace(/(\d),(\d)/g,'$1$2').match(/\d+(?:\.\d+)?/g)||[];
+function synNovel(s,seen){const nums=new Set(synNums(seen));if(synNums(s).some(x=>!nums.has(x)))return true;
+  const W=synWords(s);if(!W.length)return false;const SW=new Set(synWords(seen));return W.filter(w=>SW.has(w)).length/W.length<.6}
+function storyParts(n){let seen='';const take=(t,cap)=>{const out=[];synSplit(t).forEach(s=>{if(cap&&out.length>=cap)return;if(synNovel(s,seen)){out.push(s);seen+=' '+s}});return out};
+  const aff=Array.isArray(n.aff)?n.aff.filter(a=>a&&(a.what||a.w)).map(a=>({who:String(a.who||'').trim(),what:String(a.what||a.w).trim()})):[];
+  // the effect on shippers is the point of "What it affects", so it is read first: the written list (aff) on new stories,
+  // the plain-English effect on older ones. The synopsis then skips "why it matters" lines that only restate it.
+  aff.forEach(a=>{seen+=' '+a.who+' '+a.what});
+  const eff=aff.length?take(n.plain):synSplit(n.plain);seen+=' '+eff.join(' ');
+  const syn=[...synSplit(n.syn||n.sum)];seen+=' '+syn.join(' ');
+  if(n.syn)syn.push(...take(n.sum));syn.push(...take(n.why));
+  const upd=n.new?take(n.new):[];
+  const bg=take(n.tie);                             // background: earlier news the sources connect it to
+  return {syn:syn.length?syn:[n.sum||''],bg,aff,eff,upd}}
+function storyAffects(n,S){S=S||storyParts(n);
+  const row=(k,v,cls)=>v?`<div class="afr${cls?' '+cls:''}"><dt>${k}</dt><dd>${v}</dd></div>`:'';
+  const cars=storyCars(n),d=n.act?daysTo(n.act):null,nd=n.ann&&n.act?noticeDays(n.ann,n.act):null;
+  const when=n.act?(n.inferred?`First seen on the carrier’s site ${fmtD(n.act,{month:'short',day:'numeric',year:'numeric'})}`:`<b>${fmtD(n.act,{month:'short',day:'numeric',year:'numeric'})}</b> <span class="afs">${d>0?`in ${d} day${d===1?'':'s'}`:d===0?'today':'in effect'}</span>`):'';
+  const ann=n.ann?`<b>${fmtD(n.ann,{month:'short',day:'numeric',year:'numeric'})}</b>${nd!=null?` <span class="afs">${nd} days' notice</span>`:''}`:'';
+  const flags=[n.offc?`<span class="aff1">${OFFC_TAG} <span class="afs">Takes effect outside the carrier’s usual annual increase and peak season.</span></span>`:'',
+    n.unconf?`<span class="aff1"><span class="tag tag-unconf">Unconfirmed</span> <span class="afs">One smaller outlet so far; not yet confirmed by the company or the major or trade press.</span></span>`:''].filter(Boolean);
+  const PRICES={up:'Going up',down:'Going down',watch:'Developing',info:'No price change reported'};
+  const lv=['','Low','Medium','High'][+n.lvl||1];
+  return `<section class="aff imp-${n.imp}"><div class="lbl">What it affects</div><dl>
+    ${S.aff.map(a=>row(esc(a.who||'Shippers'),decode(a.what))).join('')}
+    ${S.eff.length?row('For shippers',decode(S.eff.join(' '))):''}
+    ${row('Carriers',cars.length?carList(cars.join(', '),', '):'Industry-wide')}
+    ${row('Prices',`<span class="eff2k"><i></i>${PRICES[n.imp]||IMPACT[n.imp].w}</span>${+n.lvl>1?` <span class="afs">${lv} impact</span>`:''}`)}
+    ${row(n.inferred?'Spotted':'Takes effect',when)}
+    ${row('Announced',ann)}
+    ${flags.length?row('Status',flags.join(''),'afflag'):''}</dl></section>`}
+/* the companies a story is about, each one tap from its company page */
+function storyCoLinks(n){const L=(typeof storyCos==='function'?storyCos(n,true):[]).filter(id=>PL[id]).slice(0,6);if(!L.length)return '';
+  return `<p class="sco"><span class="lbl">Company pages</span>${L.map(id=>`<button type="button" class="pchip" data-sco="${esc(id)}">${esc(PL[id].n)}</button>`).join('')}</p>`}
 /* Story page: the rate clock dates and the carrier documents behind a story, side by side, each one tap away */
 function keyLinks(n){const D=clockFor(n.id).slice().sort((a,b)=>a.d.localeCompare(b.d)),R=relDocs(n);if(!D.length&&!R.length)return '';
   const dRow=x=>{const k=daysTo(x.d);return `<button type="button" class="kl" data-clock="${x.id}"><span class="kli kcal" aria-hidden="true"><i>${fmtD(x.d,{month:'short'}).toUpperCase()}</i><b>${+x.d.slice(8)}</b></span><span class="klt"><b>${esc(x.w)}</b><small>${k>0?`In ${k} day${k===1?'':'s'}`:k===0?'Today':'In effect'} · open on the rate clock</small></span><span class="klgo" aria-hidden="true">›</span></button>`};
@@ -8131,6 +8226,11 @@ const COOP_SKEP={
 /* Coop's stamp, for buttons that open one of his walkthroughs (shares the masthead's gradient ids) */
 const COOP_STAMP="<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"lgB\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#A7B0BC\"/><stop offset=\".6\" stop-color=\"#8A94A2\"/><stop offset=\"1\" stop-color=\"#6E7886\"/></linearGradient>\n<linearGradient id=\"lgW\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#99A3B0\"/><stop offset=\"1\" stop-color=\"#7E8896\"/></linearGradient>\n<linearGradient id=\"lgN\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#3E9C82\"/><stop offset=\".5\" stop-color=\"#4E78A8\"/><stop offset=\"1\" stop-color=\"#7E5AA6\"/></linearGradient>\n<radialGradient id=\"lgH\" cx=\".4\" cy=\".35\" r=\".7\"><stop offset=\"0\" stop-color=\"#B3BCC7\"/><stop offset=\"1\" stop-color=\"#8A94A2\"/></radialGradient>\n<radialGradient id=\"lgI\" cx=\".4\" cy=\".4\" r=\".6\"><stop offset=\"0\" stop-color=\"#FFC233\"/><stop offset=\"1\" stop-color=\"#C2410C\"/></radialGradient>\n<mask id=\"lgm\"><rect width=\"100\" height=\"100\" fill=\"#fff\"/><circle cx=\"6.0\" cy=\"6\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6.0\" cy=\"94\" r=\"4.2\" fill=\"#000\"/><circle cx=\"28.0\" cy=\"6\" r=\"4.2\" fill=\"#000\"/><circle cx=\"28.0\" cy=\"94\" r=\"4.2\" fill=\"#000\"/><circle cx=\"50.0\" cy=\"6\" r=\"4.2\" fill=\"#000\"/><circle cx=\"50.0\" cy=\"94\" r=\"4.2\" fill=\"#000\"/><circle cx=\"72.0\" cy=\"6\" r=\"4.2\" fill=\"#000\"/><circle cx=\"72.0\" cy=\"94\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94.0\" cy=\"6\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94.0\" cy=\"94\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6\" cy=\"6.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94\" cy=\"6.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6\" cy=\"28.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94\" cy=\"28.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6\" cy=\"50.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94\" cy=\"50.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6\" cy=\"72.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94\" cy=\"72.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"6\" cy=\"94.0\" r=\"4.2\" fill=\"#000\"/><circle cx=\"94\" cy=\"94.0\" r=\"4.2\" fill=\"#000\"/></mask></defs>\n<rect x=\"6\" y=\"6\" width=\"88\" height=\"88\" fill=\"#F3ECDD\" mask=\"url(#lgm)\"/>\n<rect x=\"15\" y=\"15\" width=\"70\" height=\"70\" fill=\"#E3EAF0\"/>\n<svg x=\"15\" y=\"15\" width=\"70\" height=\"70\" viewBox=\"72 40 120 120\" preserveAspectRatio=\"xMidYMid slice\"><path d=\"M58 132 C58 104 90 94 120 102 C152 110 160 142 152 166 C144 192 110 200 84 194 C60 188 48 170 50 152 C51 144 54 138 58 132 Z\" fill=\"url(#lgB)\" stroke=\"#5A6472\" stroke-width=\"1.2\"/>\n<path d=\"M108 120 C134 122 150 140 146 164 C142 184 120 194 100 190 C114 176 118 150 108 120 Z\" fill=\"#C3CBD4\" opacity=\".55\"/>\n<path d=\"M64 128 C84 114 124 116 140 140 C136 166 106 180 78 172 C64 164 58 146 64 128 Z\" fill=\"url(#lgW)\" stroke=\"#B3BCC7\" stroke-width=\"1.2\"/>\n<path d=\"M80 140 C96 134 116 136 128 146\" fill=\"none\" stroke=\"#2A2F37\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n<path d=\"M78 154 C94 148 112 150 124 160\" fill=\"none\" stroke=\"#2A2F37\" stroke-width=\"5\" stroke-linecap=\"round\"/>\n<path d=\"M106 110 C106 92 116 82 130 80 L154 84 C160 98 158 112 152 120 C138 126 118 124 106 110 Z\" fill=\"url(#lgN)\"/>\n<path d=\"M110 108 C116 98 128 94 140 96\" fill=\"none\" stroke=\"#A8EFD8\" stroke-width=\"2\" opacity=\".5\" stroke-linecap=\"round\"/>\n<circle cx=\"140\" cy=\"74\" r=\"27\" fill=\"url(#lgH)\" stroke=\"#6E7886\" stroke-width=\"1.2\"/>\n<ellipse cx=\"132\" cy=\"88\" rx=\"7\" ry=\"4\" fill=\"#8A94A2\" opacity=\".3\"/>\n<path d=\"M163 70 C170 70 178 74 182 78 L163 80 Z\" fill=\"#3A3F48\"/><path d=\"M163 80 L180 80 C176 85 170 87 163 86 Z\" fill=\"#2B2F36\"/>\n<ellipse cx=\"164\" cy=\"70\" rx=\"5\" ry=\"3.4\" fill=\"#E6E9EE\"/>\n<circle cx=\"148\" cy=\"76\" r=\"8.5\" fill=\"#3A3F48\"/><circle cx=\"148\" cy=\"76\" r=\"7\" fill=\"url(#lgI)\"/><circle cx=\"149\" cy=\"76\" r=\"3.2\" fill=\"#120C08\"/><circle cx=\"151\" cy=\"73.6\" r=\"1.1\" fill=\"#FFF4D6\"/>\n<path d=\"M139 66 Q148 62.5 157 66.5\" fill=\"none\" stroke=\"#6E7886\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>\n<rect x=\"15\" y=\"15\" width=\"70\" height=\"70\" fill=\"none\" stroke=\"#B23A2E\" stroke-width=\"1.6\"/></svg>";
 /* ================= RATE CLOCK ================= */
+/* "Add to calendar": Subscribe opens the device's calendar app (webcal://); Copy link is for Outlook on the web, Teams and
+   Google Calendar, which subscribe from a pasted https link. The feed (data/rates.ics) is written by pipeline/ratecal.py. */
+$('calCopy')&&$('calCopy').addEventListener('click',async e=>{const b=e.currentTarget,u=b.dataset.cal,done=t=>{b.textContent=t;setTimeout(()=>{b.textContent='Copy link'},1800)};
+  try{await navigator.clipboard.writeText(u);done('Link copied')}catch(err){const a=document.createElement('textarea');a.value=u;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+    try{document.execCommand('copy');done('Link copied')}catch(_){done('Press and hold to copy')}a.remove()}});
 const cdTxt=(d,imp)=>{const n=daysTo(d);return n>1?`in ${n} days`:n===1?'tomorrow':n===0?'today':imp==='info'?'passed':'in effect'};
 const impVar=i=>i==='up'?'--up':i==='down'?'--down':'--neutral';
 
@@ -8312,7 +8412,8 @@ function renderYears(){const el=$('clockYears');if(!el)return;
   const offt=`<section class="panel"><div class="ph"><h2>Off-cycle price changes</h2><span class="lbl">By year</span></div><div class="ayw"><table class="ayt"><thead><tr><th></th>${oy.map(y=>`<th class="mono">${y}</th>`).join('')}</tr></thead>
     <tbody>${['UPS','FedEx','USPS'].map(c=>`<tr><th>${carSpan(c)}</th>${oy.map(y=>{const n=offN(c,y);return `<td class="mono${n?'':' ynil'}">${n||'—'}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>
     <p class="ynote">Price changes that take effect outside the carrier's annual increase and the holiday peak season: mid-year increases, new surcharges and fees, fuel-table changes. Counted by effective date. Recent years were researched in more depth, so earlier years may be undercounted.</p></section>`;
-  el.innerHTML=pats+table+offt+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
+  // the numbers first (the increase and off-cycle tables), then the written notes on this year, then the full year-by-year list
+  el.innerHTML=table+offt+pats+`<section class="panel"><div class="ph"><h2>Year by year</h2><span class="lbl">Rate changes, surcharges and milestones</span></div>${years}</section>`}
 function renderClock(){renderCalendar();renderClockList();renderYears()}
 
 /* ================= FUEL ================= */
@@ -8335,6 +8436,15 @@ try{const s=JSON.parse(store.get('pw-fuelchart2','null'));if(s&&s.range)fc=Objec
 const fcSave=()=>store.set('pw-fuelchart2',JSON.stringify(fc));
 const T0=d=>Date.parse(d+'T00:00:00Z'),isoD=t=>new Date(t).toISOString().slice(0,10);
 const pts1=v=>(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(2);
+/* World events behind the big moves (data/fuel_events.json): a numbered dot on the chart, the reason and its source on
+   tap or hover. Each one is checked against the diesel and jet fuel data the chart draws. */
+let FUEL_EV=[],fevOn=null;
+fetch('data/fuel_events.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.events)){FUEL_EV=j.events.filter(e=>e&&/^\d{4}-\d{2}-\d{2}$/.test(e.d)&&e.title&&e.url).sort((a,b)=>a.d.localeCompare(b.d));if(fc._geo)renderFuelChart()}}).catch(()=>{});
+function fevShow(i){fevOn=i;const el=$('fcEv');if(!el)return;const G=fc._geo,L=(G&&G.ev)||[];
+  document.querySelectorAll('#fcSvg .fev').forEach(g=>g.classList.toggle('on',+g.dataset.fev===i));
+  const k=L.indexOf(FUEL_EV[i]);const e=FUEL_EV[i];
+  if(i==null||k<0||!e){el.innerHTML=L.length?`<span class="lbl">${L.length} world event${L.length>1?'s':''} marked · tap a numbered dot for what happened</span>`:'';return}
+  el.innerHTML=`<b><span class="fevn ${e.dir==='down'?'down':'up'}">${k+1}</span>${esc(e.title)}</b><span class="mono">${fmtD(e.d,{month:'short',day:'numeric',year:'numeric'})}</span><p>${esc(e.why)} <a href="${escU(e.url)}" target="_blank" rel="noopener">${esc(e.src||'Source')} ↗</a></p>`}
 const fuelAt=(i,d,tol=4)=>{const t=T0(d);const r=FUELDB.find(x=>x[i]!=null&&Math.abs(T0(x[0])-t)<=tol*864e5);return r?r[i]:null};
 const fuelNow=i=>FUELDB.filter(r=>r[0]<=FUEL.eff&&r[i]!=null).at(-1);
 const swatch=s=>`<svg width="24" height="8" aria-hidden="true" style="vertical-align:middle;margin-right:6px"><line x1="0" x2="24" y1="4" y2="4" stroke="${s.c}" stroke-width="${s.w||2.5}" stroke-dasharray="${s.d}"/></svg>`;
@@ -8398,6 +8508,9 @@ function renderFuelChart(){
   if(!lines.length&&!(dsl&&dsl.p.length)){$('fc').innerHTML='<div class="empty">Pick at least one line above.</div>';$('fcRead').innerHTML='';$('fcNote').textContent='';fc._geo=null;return}
   const narrow=window.innerWidth<620,W=narrow?360:680,H=narrow?250:300,P={l:narrow?42:48,r:dsl?(narrow?44:50):12,t:12,b:28};
   const t0=T0(s0),t1=T0(FUEL.eff),x=d=>P.l+(T0(d)-t0)/(t1-t0)*(W-P.l-P.r);
+  // event dots sit in a band above the lines, staggered into rows so close events never overlap or cover the data
+  const EV=FUEL_EV.filter(e=>e.d>=s0&&e.d<=FUEL.eff),rowX=[],evRow=EV.map(e=>{const xx=x(e.d);let r=0;while(rowX[r]!=null&&xx-rowX[r]<17)r++;rowX[r]=xx;return r});
+  const evTop=P.t;if(EV.length)P.t+=rowX.length*17+4;
   // left axis: surcharge %
   const vs=lines.flatMap(s=>s.p.map(p=>p[1]));let mn,mx,st;
   if(vs.length){mn=Math.min(...vs);mx=Math.max(...vs);if(mx-mn<1){mx+=.5;mn-=.5}st=niceStep(mx-mn);mn=Math.floor(mn/st)*st;mx=Math.ceil(mx/st)*st}
@@ -8418,10 +8531,13 @@ function renderFuelChart(){
   grid+=ticks.map(([d,l])=>`<line x1="${x(d)}" x2="${x(d)}" y1="${P.t}" y2="${H-P.b}" stroke="var(--grid)" stroke-dasharray="2 4"/><text x="${x(d)}" y="${H-9}" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--ink-2)">${l}</text>`).join('');
   const path=(s,yf)=>`<polyline fill="none" stroke="${s.c}" stroke-width="${s.w||2}" stroke-dasharray="${s.d}" stroke-linejoin="round" points="${s.p.map(p=>x(p[0]).toFixed(1)+','+yf(p[1]).toFixed(1)).join(' ')}"/>`;
   const all=[...pxs,...lines];
-  $('fc').innerHTML=`<svg class="chart" id="fcSvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${$('fcTitle').textContent}">${grid}${pxs.map(s=>path(s,yd)).join('')}${lines.map(s=>path(s,y)).join('')}<line id="fcCur" x1="0" x2="0" y1="${P.t}" y2="${H-P.b}" stroke="var(--ink-2)" visibility="hidden"/><g id="fcDots"></g></svg>
+  const evs=EV.map((e,k)=>{const xx=x(e.d),cy=evTop+8+evRow[k]*17,i=FUEL_EV.indexOf(e);
+    return `<g class="fev ${e.dir==='down'?'down':'up'}" data-fev="${i}" tabindex="0" role="button" aria-label="${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}: ${esc(e.title)}"><title>${esc(e.title)}: ${esc(e.why)}</title>
+      <line x1="${xx.toFixed(1)}" x2="${xx.toFixed(1)}" y1="${cy+7}" y2="${H-P.b}" class="fevl"/><circle cx="${xx.toFixed(1)}" cy="${cy}" r="13" class="fevh"/><circle cx="${xx.toFixed(1)}" cy="${cy}" r="7.5" class="fevd"/><text x="${xx.toFixed(1)}" y="${cy+3.5}" text-anchor="middle" class="fevt">${k+1}</text></g>`}).join('');
+  $('fc').innerHTML=`<svg class="chart" id="fcSvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${$('fcTitle').textContent}">${grid}${pxs.map(s=>path(s,yd)).join('')}${lines.map(s=>path(s,y)).join('')}${evs}<line id="fcCur" x1="0" x2="0" y1="${P.t}" y2="${H-P.b}" stroke="var(--ink-2)" visibility="hidden"/><g id="fcDots"></g></svg>
     <div class="lbl fcax"><span>${lines.length?'Left: fuel surcharge %':''}</span><span>${pxs.length?'Right: '+pxs.map(s=>s.k==='dsl'?'diesel':'jet fuel').join(' and ')+' $/gal':''}</span></div>`;
-  fc._geo={W,P,t0,t1,x,y,yd,lines:all};
-  fcReadout(null);
+  fc._geo={W,P,t0,t1,x,y,yd,lines:all,ev:EV};
+  fcReadout(null);fevShow(fevOn!=null&&EV.includes(FUEL_EV[fevOn])?fevOn:null);
   const first=s=>s.p[0],last=s=>s.p.at(-1);
   $('fcNote').textContent=[...lines.map(s=>`${s.l}: ${pct(first(s)[1])} → ${pct(last(s)[1])}`),...pxs.map(s=>`${s.k==='dsl'?'Diesel':'Jet fuel'}: $${first(s)[1].toFixed(2)} → $${last(s)[1].toFixed(2)}`)].join(' · ')+
     '. Weekly carrier-published rates the U.S. average on-highway diesel price and U.S. Gulf Coast jet fuel (EIA; jet fuel is monthly before July 2026). Ground fuel is set from diesel about two weeks earlier; air and international follow jet fuel.';
@@ -8443,6 +8559,9 @@ function fcPointer(e){const G=fc._geo,svg=$('fcSvg');if(!G||!svg)return;const r=
   const d=ds.reduce((a,b)=>Math.abs(T0(b)-t)<Math.abs(T0(a)-t)?b:a);fcReadout(d)}
 $('fc').addEventListener('pointermove',fcPointer);$('fc').addEventListener('pointerdown',fcPointer);
 $('fc').addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')fcReadout(null)});
+$('fc').addEventListener('click',e=>{const g=e.target.closest('[data-fev]');if(g)fevShow(+g.dataset.fev)});
+$('fc').addEventListener('mouseover',e=>{const g=e.target.closest('[data-fev]');if(g)fevShow(+g.dataset.fev)});
+$('fc').addEventListener('keydown',e=>{const g=e.target.closest('[data-fev]');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();fevShow(+g.dataset.fev)}});
 $('fcRange').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(!b)return;fc.range=b.dataset.r;fcSave();renderFuelChart()});
 $('fcSeries').addEventListener('click',e=>{const b=e.target.closest('[data-s]');if(!b)return;const k=b.dataset.s;
   if(k==='dsl')fc.dsl=!fc.dsl;else if(k==='jet')fc.jet=!fc.jet;else fc.on=fc.on.includes(k)?fc.on.filter(x=>x!==k):[...fc.on,k];
@@ -8515,6 +8634,21 @@ const reportCat=d=>(REPORT_CATS.find(([,re])=>re.test(d.n||''))||['Other reports
 const DOC_LABEL=c=>c==='Reports'?'Market reports':c==='Regional'?'Other regionals':c;
 const docGroup=d=>d.c==='Reports'?reportCat(d):(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
 const DF=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});
+/* The year a document is filed under. A year the document states for itself wins over a stored one: "2026 UPS Rate Guide"
+   files under 2026 even if it was stored as 2025. A year inside a full date ("signed before Aug 1, 2018", "Dec 22, 2025
+   edition") is a date, not the document's year. Then the file name, then the year the file was uploaded (/uploads/2025/08/),
+   then the stored year, then its effective or update date. Market reports keep their publication year (a 2026 report on
+   2025 volume is a 2026 report). Same rule as doc_year() in pipeline/common.py. */
+const DOC_MON='(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\\.?';
+const DOC_DATEY=new RegExp(DOC_MON+'\\s+\\d{1,2},?\\s+(20[1-3]\\d)','gi');
+function statedYears(t){const s=String(t||'').replace(DOC_DATEY,' ');return [...new Set((s.match(/(?<![\d.])20[1-3]\d(?![\d.]?\d)/g)||[]).map(Number))]}
+function docYear(d){if(d.c!=='Reports'){const t=statedYears(d.n);if(t.length===1)return t[0];
+    if(!t.length&&d.u){let path='';try{path=decodeURIComponent(new URL(d.u).pathname)}catch(e){path=String(d.u)}const f=statedYears(path.split('/').pop());if(f.length===1)return f[0];
+      if(!d.y){const up=/\/uploads\/(20[1-3]\d)\/\d{2}\//.exec(path);if(up)return +up[1]}}}
+  return d.y||+(d.eff||d.upd||d.added||'').slice(0,4)||null}
+/* the same document reached by two addresses (UPS serves one rate guide from two hosts): one entry */
+const docKey=u=>{u=String(u||'');const a=/urn(?::|%3A)aaid(?::|%3A)aem(?::|%3A)([0-9a-f-]{36})/i.exec(u);if(a)return 'aem:'+a[1].toLowerCase()+':'+u.split('?')[0].split('/').pop().toLowerCase();
+  return u.replace(/^https?:\/\/(www\.)?/i,'').split('#')[0].split('?')[0].replace(/\/$/,'').toLowerCase()};
 let DOC_CHANGES=null;   // url -> newest guide-change story about that document
 function docWhy(d){
   if(!DOC_CHANGES){DOC_CHANGES={};NEWS.filter(n=>n.cat==='Guide changes'||n.audit).forEach(n=>(n.srcs||[]).forEach(s=>{const u=(s.url||'').split('?')[0];if(u&&(!DOC_CHANGES[u]||DOC_CHANGES[u].date<n.date))DOC_CHANGES[u]=n}))}
@@ -8529,10 +8663,11 @@ function docWhy(d){
   else t='';
   if(ch)t+=` <button class="link" data-open="${ch.id}">Changed ${fmtD(ch.date)}: ${esc(ch.title)}</button>`;
   return t}
-const docDomId=d=>{let h=0;for(const ch of (d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
+// keyed by the document's own address (_u0 keeps it when fixLink points a dead link at a replacement page)
+const docDomId=d=>{let h=0;for(const ch of (d._u0||d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
 function docRow(d){
   const st=!d.u?'Not public':d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=(w=>w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d)))(d.added||(d.why&&d.why.when));
-  const meta=[d.y?String(d.y):'',d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
+  const meta=[d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
   const note=d.d&&!/^(Found with:|Added from alert:|Posted on )/.test(d.d)?`<span class="dd">${esc(d.d)}</span>`:'';
   return `<div class="drow2${d.u?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${d.u?`href="${escU(d.u)}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
     <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docActs(d)}</div>`}
@@ -8544,7 +8679,7 @@ document.addEventListener('toggle',e=>{const el=e.target;if(!el.open||!el.closes
   const rows=[...el.querySelectorAll(':scope>.drows>.drow2,:scope>.dtb>.drows>.drow2,:scope>.dyrb>.drows>.drow2')];if(!rows.length)return;
   setTimeout(()=>{if(!el.open)return;rows.forEach(r=>{if(r.id)DOC_SEEN.add(r.id)});store.set('pw-docs-seen',JSON.stringify([...DOC_SEEN].slice(-2000)));docBadges();docsTabBadge()},900)},true);
 const LINKFIX={'https://www.ontrac.com/supplemental-surcharges':'https://www.ontrac.com/surcharges','https://www.shipveho.com/service-guide/last-mile-delivery':'https://www.shipveho.com/service-guide'};
-function fixLink(d){if(!d||!d.u)return;if(LINKFIX[d.u])d.u=LINKFIX[d.u];else if(/gls-us\.com\/getmedia\//.test(d.u)&&!d._ok)d.u='https://www.gls-us.com/shipping-resources/fuel-surcharge'}
+function fixLink(d){if(!d||!d.u)return;const u0=d.u;if(LINKFIX[d.u])d.u=LINKFIX[d.u];else if(/gls-us\.com\/getmedia\//.test(d.u)&&!d._ok)d.u='https://www.gls-us.com/shipping-resources/fuel-surcharge';if(d.u!==u0&&!d._u0)d._u0=u0}
 function docsTabBadge(){const b=document.querySelector('nav.tabs [data-tab="docs"]');if(!b)return;let n=b.querySelector('.nb');if(!n){n=document.createElement('span');n.className='nb tabnb';b.appendChild(n)}
   const c=DOCS.filter(d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))}).length;n.textContent=c;n.hidden=!c;n.title=c+' new document'+(c>1?'s':'')}
 function renderDocs(){
@@ -8552,7 +8687,9 @@ function renderDocs(){
   DOC_CHANGES=null;
   $('docCar').innerHTML=['All',...DOC_CARS].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===docCar}">${carChip(c)}${DOC_LABEL(c)}</button>`).join('');
   const dq=($('dq')&&$('dq').value||'').trim().toLowerCase();
-  const ds=DOCS.filter(d=>docCar==='All'||(docCar==='Regional'?REG_DOC(d):d.c===docCar)).filter(d=>!dq||[d.n,d.t,d.c,d.y,d.d||'',d.eff||''].join(' ').toLowerCase().includes(dq));
+  const seenK=new Set();
+  const ds=DOCS.filter(d=>{if(!d.u)return true;const k=docKey(d._u0||d.u);if(seenK.has(k))return false;seenK.add(k);return true})
+    .filter(d=>docCar==='All'||(docCar==='Regional'?REG_DOC(d):d.c===docCar)).filter(d=>!dq||[d.n,d.t,d.c,docYear(d),d.d||'',d.eff||''].join(' ').toLowerCase().includes(dq));
   const order=c=>{const i=['UPS','FedEx','USPS','OnTrac','Amazon','DHL'].indexOf(c);return c==='Reports'?10:i<0?9:i};
   const sorter=(x,y)=>(y.y||0)-(x.y||0)||(y.eff||'').localeCompare(x.eff||'')||x.n.localeCompare(y.n);
   const ER=c=>EARN.filter(e=>e.company===c||(c==='FedEx'&&e.company==='FedEx Freight'));
@@ -8565,7 +8702,9 @@ function renderDocs(){
     const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
     return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
       ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue $${last.rev.toFixed(1)}B · Adj. EPS $${last.eps.toFixed(2)}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
-  const yearOf=d=>String(d.y||(d.eff||d.upd||d.added||'').slice(0,4)||'Undated');
+  const yearOf=d=>String(docYear(d)||'Undated');
+  // current: not replaced, or still to take effect, or announced but not yet posted (a placeholder for a coming year)
+  const docCur=d=>d.cur!==false||(d.eff&&d.eff>TODAY)||(!d.u&&+yearOf(d)>=+TODAY.slice(0,4));
   const ysort=(x,y)=>x==='Undated'?1:y==='Undated'?-1:y.localeCompare(x);
   // "new" = added in the last 30 days and not yet seen on this device; the count shows on every folder on the way to it
   const isNew=d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))};
@@ -8585,8 +8724,18 @@ function renderDocs(){
       :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
     const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
     return `<details class="dgrp"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
-  const typesOf=(L,c)=>(c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents']).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
-      .map(([g,G])=>fold('dgrp',g,G,typeBody(G))).join('')+earnFolder(c);
+  // carrier › year (newest first, the newest one open) › kind of document; replaced versions fold away at the end of each year
+  const KINDS=c=>c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents'];
+  const yearBody=(L,c)=>{const kinds=KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length);
+    // a year with no current documents (an earlier year) simply lists them; "replaced versions" only folds away beside current ones
+    const any=L.some(docCur),cur=d=>!any||docCur(d),old=L.filter(d=>!cur(d)).sort(sorter);
+    return `<div class="dyrb">${kinds.map(([g,G])=>{const C=G.filter(cur).sort(sorter);return C.length?`<div class="dtyp lbl">${esc(g)}</div><div class="drows">${C.map(docRow).join('')}</div>`:''}).join('')}
+      ${old.length?`<details class="dold" data-dids="${ids(old)}"${dq?' open':''}><summary>Replaced versions (${old.length})${badge(old)}</summary><div class="drows">${old.map(docRow).join('')}</div></details>`:''}</div>`};
+  const typesOf=(L,c)=>{const ys=[...new Set(L.map(yearOf))].sort(ysort);
+    // the newest year with a published, current document opens; the others are one tap away
+    const first=ys.find(y=>L.some(d=>yearOf(d)===y&&d.u&&docCur(d)))||ys[0];
+    return ys.map(y=>{const Y=L.filter(d=>yearOf(d)===y);
+      return `<details class="dyr dyear" data-dids="${ids(Y)}"${dq||y===first?' open':''}><summary><b>${y==='Undated'?'Ongoing / undated':esc(y)}</b>${badge(Y)}<span class="lbl">${Y.length} document${Y.length>1?'s':''}</span></summary>${yearBody(Y,c)}</details>`}).join('')+earnFolder(c)};
   const cars=[...new Set(ds.map(d=>d.c))].sort((a,b)=>order(a)-order(b)||a.localeCompare(b));
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
