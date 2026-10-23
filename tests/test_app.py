@@ -190,3 +190,38 @@ def test_coop_speaks_up_at_most_once(site, case):
         assert len(pg.evaluate("() => __said")) == len(said) + 1
         b.close()
     assert not errors, errors[:5]
+
+
+def test_feed_files_late_finds_under_the_day_found(site):
+    """A story found a day or two after the news broke files under the day we found it while that find is recent (so it
+    isn't buried below news that broke after it), says both dates on its card, and settles back to its own date later."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": 390, "height": 860})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.wait_for_function("() => typeof feedCmp === 'function' && typeof NEWS !== 'undefined' && NEWS.length > 10", timeout=60000)
+        got = pg.evaluate("""() => {
+          const at = (d, h) => new Date(addDays(TODAY, d) + 'T' + String(h).padStart(2, '0') + ':00:00').toISOString();
+          const base = NEWS[0];
+          const mk = (id, date, added) => Object.assign({}, base, {id, date: addDays(TODAY, date), added, dl: null});
+          const S = [
+            mk('zz-today-am', 0, at(0, 9)),        // broke this morning, found this morning
+            mk('zz-late', -1, at(0, 15)),          // broke yesterday, found this afternoon: a late find
+            mk('zz-yday', -1, at(-1, 10)),         // broke and found yesterday
+            mk('zz-old-late', -6, at(-4, 10)),     // found 4 days ago, 2 days late: settled back to its own date
+            mk('zz-very-late', -12, at(0, 8)),     // a report of an event 12 days old: files under the event's date
+          ];
+          const order = S.slice().sort(feedCmp).map(s => s.id);
+          return {order, label: reportedFound(S[1]), none: reportedFound(S[0]), veryLate: reportedFound(S[4]),
+                  card: card(S[1], false).includes('Reported ' + fmtD(S[1].date) + ' · found ' + fmtD(TODAY))};
+        }""")
+        b.close()
+    assert not errors, errors[:5]
+    assert got["order"] == ["zz-late", "zz-today-am", "zz-yday", "zz-old-late", "zz-very-late"], got
+    assert got["label"].startswith("Reported ") and " · found " in got["label"]
+    assert got["none"] == "" and got["veryLate"] == ""
+    assert got["card"], "the card shows both dates"

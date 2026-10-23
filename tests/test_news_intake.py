@@ -39,6 +39,7 @@ def news(data_dir, monkeypatch):
     monkeypatch.setattr(N, "lead_image", lambda u: None)
     monkeypatch.setattr(N, "is_covered", lambda t, days=4: ["FreightWaves"])
     monkeypatch.setattr(N, "publish_extras", lambda *a, **k: None)
+    monkeypatch.setattr(common, "paused", lambda extra=False: None)   # the news is running (the paused case: test_lanes.py)
     monkeypatch.setattr(N, "MAX_NEW_PER_RUN", 3)
     monkeypatch.setattr(N, "MAX_SCREEN", 20)
     for f, v in (("news.json", []), ("seen.json", []), ("review.json", []), ("threads.json", {"x": {"n": "x", "ids": [], "last": "2000-01-01"}})):

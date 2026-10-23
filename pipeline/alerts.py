@@ -792,7 +792,7 @@ def run():
         import players                      # research new companies before alerting on them (3 per run keeps cost low)
         sys.argv = [sys.argv[0], "--max", "3"]
         players.main()
-    except Exception as e:
+    except (Exception, SystemExit) as e:     # players.main used to sys.exit(1) when paused, which stopped every alert
         print("player research failed:", e, file=sys.stderr)
     try:
         import players as _pl
