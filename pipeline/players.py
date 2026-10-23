@@ -54,10 +54,13 @@ Also return "mover": true|false and "mover_why": "one line". """ + MOVERS
 def ask(user, use_search=True, system=None, max_tokens=2500, strict=False, searches=5):
     """One Claude call, with web search. strict=True means the answer is only worth anything if it was really searched:
     a failed search raises instead of falling back to the model's memory, and ask.searches says how many searches ran."""
-    from common import API_DOWN, paused
+    from common import API_DOWN, paused, UNPACED, month_full
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
-    if paused(extra=True):           # research and the sweep are extras: the news gets the day's budget first
+    if UNPACED["on"]:                # the nightly research slot: its own cap, only the month's limit applies
+        if month_full():
+            raise RuntimeError("Claude calls paused: " + month_full())
+    elif paused(extra=True):         # research and the sweep are extras: the news gets the day's budget first
         raise RuntimeError("Claude calls paused: " + paused(extra=True))
     from common import with_effort, THINK_ROOM
     body = with_effort({"model": MODEL_WRITE, "max_tokens": max_tokens + THINK_ROOM,
@@ -136,7 +139,7 @@ Mark a field "confirmed" only if you found it in a reliable source yourself; "di
  "links": [{"i": 0, "ok": true|false}], "evidence": ["urls you used"], "notes": "one line: anything wrong or doubtful"}"""
 
 
-def verify_profile(res, known_list=""):
+def verify_profile(res, known_list="", searches=6):
     """Second, adversarial look at a researched profile. Returns (ok, cleaned_profile, reason). A profile goes live only if
     (1) the research cited pages on at least two different websites, (2) a separate search-backed check agrees the company
     exists under that name, is active, is parcel-relevant and U.S.-relevant, and (3) only the fields and links that check
@@ -149,7 +152,7 @@ def verify_profile(res, known_list=""):
     brief = {k: res.get(k) for k in ("n", "al", "former_names", "status", "realm", "own", "tk", "parent", "hq", "yr", "site", "s")}
     brief["links"] = [{"i": i, "other": l.get("other"), "k": l.get("k"), "dir": l.get("dir"), "y": l.get("y"), "url": l.get("url")}
                       for i, l in enumerate(res.get("links") or [])]
-    v = parse_json(ask("Profile to check:\n" + json.dumps(brief, ensure_ascii=False), system=VERIFY, max_tokens=1500, strict=True, searches=6)) or {}
+    v = parse_json(ask("Profile to check:\n" + json.dumps(brief, ensure_ascii=False), system=VERIFY, max_tokens=1500, strict=True, searches=searches)) or {}
     if not isinstance(v, dict) or ask.searches < 1:
         return False, res, "the check did not search"
     if not (v.get("exists") and v.get("name_ok") and v.get("parcel_relevant") and v.get("us_relevant")):
@@ -228,13 +231,77 @@ def apply_profile(p, res, byname, edges, mp, today):
     return added
 
 
-def main():
+def queued(mp):
+    return [p for p in mp["players"] if p.get("auto") and not p.get("enriched")]
+
+
+def top_up(want):
+    """The nightly slot's supply: when fewer than `want` candidates are waiting, one market segment is searched for
+    market movers missing from the map (the sweep's discovery step, one search-backed call) and up to `want` of the
+    names it finds join the queue as candidates. The sweep itself is switched off, and the news alone has brought only
+    one or two candidates a day, so without this the slot would mostly find nothing to research."""
+    import sweep
+    mp, seed = load("players.json", {"players": [], "edges": []}), load("seed.json", {})
+    need = want - len(queued(mp))
+    if need <= 0:
+        return 0
+    st = load("sweep_state.json", {})
+    if len(st.get("queue") or []) < need:
+        sweep.discover(st, mp, seed, 1)
+    today, added = dt.date.today().isoformat(), 0
+    taken = {norm(p["n"]) for p in mp["players"]} | {norm(p["n"]) for p in seed.get("players", [])}
+    for c in list(st.get("queue") or []):
+        if added >= need:
+            break
+        st["queue"].remove(c)
+        if norm(c["n"]) in taken:
+            continue
+        pid = re.sub(r"[^a-z0-9]+", "", c["n"].lower())[:14] or "co"
+        while pid in {p["id"] for p in mp["players"] + seed.get("players", [])}:
+            pid += "x"
+        mp["players"].append({"id": pid, "n": c["n"], "realm": c.get("realm"), "own": None, "tk": None, "parent": None, "hq": None,
+                              "yr": None, "s": c.get("what") or "", "al": [], "src": c.get("url"), "auto": True, "added": today,
+                              "from": "discover"})
+        taken.add(norm(c["n"])); added += 1
+        print(f"  candidate from discovery: {c['n']}")
+    save("sweep_state.json", st)
+    save("players.json", mp)
+    return added
+
+
+SLOT_MAX = 3              # candidates the nightly slot researches
+SLOT_USD = 0.50           # and the most it may spend (research plus check is about $0.10-0.20 a company)
+SLOT_SEARCHES = 4         # web searches per research or check call in the slot
+
+
+def main(slot=False):
+    """Research waiting candidates. Returns False when the research had to wait (paused), True otherwise.
+    slot=True is the nightly slot: up to SLOT_MAX candidates and SLOT_USD, outside the day's pacing (never past the month's
+    limit), topped up from discovery when the queue is short. It runs before the news on the 04 UTC run, so the day's news
+    can never starve it the way it did when research only ran as an extra after the news."""
     if not API_KEY:
-        print("players: no API key"); return
-    from common import paused
-    if paused(extra=True):          # exit non-zero so the day's research isn't marked done and runs on a later run
-        print(f"players: waiting, {paused(extra=True)}"); sys.exit(1)
+        print("players: no API key"); return True
+    from common import paused, unpaced, USAGE, month_full
+    if slot:
+        if month_full():
+            print(f"players: waiting, {month_full()}"); return False
+        with unpaced():
+            start = USAGE["usd"]
+            try:
+                top_up(SLOT_MAX)
+            except Exception as e:
+                print(f"  discovery failed: {e}", file=sys.stderr)
+            _research(SLOT_MAX, searches=SLOT_SEARCHES, stop=lambda: USAGE["usd"] - start >= SLOT_USD)
+            print(f"players: nightly slot spent ${USAGE['usd'] - start:.2f}")
+        return True
+    if paused(extra=True):          # the day's research isn't marked done and runs on a later run
+        print(f"players: waiting, {paused(extra=True)}"); return False
     limit = int(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 6
+    _research(limit)
+    return True
+
+
+def _research(limit, searches=6, stop=lambda: False):
     seed, mp = load("seed.json", {}), load("players.json", {"players": [], "edges": []})
     news = {s["id"]: s for s in load("news.json", [])}
     known = [p for p in seed.get("players", []) + mp["players"] if not p.get("pending")]
@@ -242,18 +309,29 @@ def main():
     for p in known:
         for nm in [p["n"]] + (p.get("al") or []):
             byname[nm.lower()] = p["id"]; byname[norm(nm)] = p["id"]
-    todo = [p for p in mp["players"] if p.get("auto") and not p.get("enriched")][:limit]
+    turned_down = {norm(x.get("n")) for x in load("sweep_review.json", []) if isinstance(x, dict)}
+    turned_down.discard("")
+    again = [p for p in queued(mp) if norm(p["n"]) in turned_down]
+    if again:                 # already researched and turned down: not paid for twice (a person can add it from the review list)
+        gone = {p["id"] for p in again}
+        mp["players"] = [p for p in mp["players"] if p["id"] not in gone]
+        mp["edges"] = [e for e in mp["edges"] if e["a"] not in gone and e["b"] not in gone]
+        print(f"players: {len(again)} candidate(s) already turned down, removed from the queue: {', '.join(p['n'] for p in again)}")
+        save("players.json", mp)
+    todo = queued(mp)[:limit]
     if not todo:
         print("players: nothing new to research"); return
     known_list = "; ".join(sorted({p["n"] for p in known}))
     today = dt.date.today().isoformat()
     edges = seed.get("edges", []) + mp["edges"]
     for p in todo:
+        if stop():
+            print("  research budget for this run reached; the rest wait"); break
         st = news.get(p.get("story")) or {}
         user = (f"Company: {p['n']}\nSeen in: {st.get('title') or p.get('s') or ''}\n{st.get('sum') or ''}\nSource: {p.get('src') or st.get('url') or ''}\n\n"
                 f"REALMS: {', '.join(REALMS)}\n\nKNOWN (companies already on the map): {known_list}")
         try:
-            res = parse_json(ask(user, strict=True, searches=6))
+            res = parse_json(ask(user, strict=True, searches=searches))
         except Exception as e:
             print(f"  research failed for {p['n']}: {e}", file=sys.stderr); continue
         if not isinstance(res, dict):
@@ -268,9 +346,11 @@ def main():
         if not res.get("is_player"):
             mp["players"] = [x for x in mp["players"] if x["id"] != p["id"]]
             mp["edges"] = [e for e in mp["edges"] if p["id"] not in (e["a"], e["b"])]
+            # on record, so the next story naming it doesn't queue it (and pay to research it) all over again
+            review_add("not a parcel player", p["n"], "research found it is not part of parcel shipping or delivery", [p.get("src")])
             print(f"  dropped (not a parcel player): {p['n']}"); continue
         try:
-            ok, res, why = verify_profile(res, known_list)
+            ok, res, why = verify_profile(res, known_list, searches=searches)
         except Exception as e:                      # the check couldn't run (API error, paused): try again next run
             print(f"  check failed for {p['n']}, will retry: {e}", file=sys.stderr); continue
         if not ok:                                  # not proven: it stays off the map and waits in the review list
@@ -428,5 +508,8 @@ def rankings_pull():
 
 
 if __name__ == "__main__":
+    if "--slot" in sys.argv:    # the nightly slot (update.yml, 04 UTC run, before the news)
+        sys.exit(0 if main(slot=True) else 1)
     rankings_pull()             # monthly: new market movers from ranking lists become candidates
-    main()                      # research candidates (from news and from rankings)
+    # exit non-zero when paused, so the day's research isn't marked done and runs on a later run
+    sys.exit(0 if main() else 1)

@@ -58,7 +58,7 @@ Releases of parcel and e-commerce shipping reports and indexes (Pitney Bowes, Sh
 ### M&A and the market map
 The M&A tab has three views. **Deals** shows every deal with Coop's explainer. **Market map** sorts about 100 companies into ten realms: carriers, regional and last-mile, gig, retail, 3PL, global, software and returns, cold chain, drones and EVs, and investors. Lines show who owns, bought, invested in or partners with whom, and every company and connection links to its source. **Players** is the same list A to Z.
 In "My map", companies stay faded until you read a story or deal that mentions them. A story counts as read once it has been on screen for a few seconds, or when you open it or play its explainer. The tab shows a "+N" badge for new companies. Your reading history is saved in your browser only.
-Each deal's walkthrough stays current on its own: any later story that names the deal's companies shows up on the card as "Latest" and as an update step in Coop's walkthrough, and a follow-up M&A story that changes the status (for example Pending to Closed) updates the deal itself. When news.py writes a new deal, it adds any companies that aren't on the map yet, plus the deal itself, to `data/players.json`. New companies are marked `"auto": true`. Check their one-line description, and add the owner if it's missing.
+Each deal's walkthrough stays current on its own: any later story that names the deal's companies shows up on the card as "Latest" and as an update step in Coop's walkthrough, and a follow-up M&A story updates the same deal, matched loosely by buyer and target, never as a second card: its status moves forward (Announced, Pending, then Closed, Terminated, Blocked or Withdrawn), the closing or end date and a one-line "where it stands" are recorded, and the story joins the deal's timeline. A deal card links to the storyline that follows it, the storyline shows the deal's status, and a terminated, blocked or withdrawn deal draws no ownership line on the market map. When news.py writes a new deal, it adds any companies that aren't on the map yet, plus the deal itself, to `data/players.json`. New companies are marked `"auto": true`. Check their one-line description, and add the owner if it's missing.
 
 ### Coop, the guide
 Coop flies in when the app opens and perches in the bottom corner. He is also the search: on News, M&A and the Docs library, typing in his box filters that page (press / on a keyboard). Tap him to jump to the brief, the next rate change, fuel, the market map, documents or earnings, or type a few letters to find any story, company or document.
@@ -180,6 +180,12 @@ Stories show a **What changed** before/after table. New files always join the Do
 Only cost changes and big events get dates (`clock_worthy` in common.py, mirrored in the app): never court dates,
 sentencing, hearings, conferences or earnings calls.
 
+**Calendar feed.** `ratecal.py` (run by both workflows) writes `data/rates.ics`: every price change on the rate clock that
+is in effect now or still to come, as all-day events on the date it takes effect, plus an "Announced" event on the date
+a source says it was announced. Each links back to its story. The rate clock's "Add to calendar" button subscribes to it
+(`webcal://wmaready.github.io/parcel-pigeon/data/rates.ics`) or copies the https link for Outlook, Teams or Google
+Calendar, which then refresh it on their own.
+
 ## New players
 
 Stories nominate companies they're about (`orgs`); deals add their parties. `players.py` (run from alerts.py, 3 per run)
@@ -189,8 +195,12 @@ on the Market map and a Deals alert.
 
 ## Docs library
 
-Carrier first, then kind of document (rate guides, GRI announcements, peak, special pricing programs, surcharges, fuel,
-zones, service guides and terms, filings, other). Every document added by the pipeline records why (`why` field):
+Carrier first, then year (newest first, under a year header), then kind of document (rate guides, GRI announcements, peak,
+special pricing programs, surcharges, fuel, zones, service guides and terms, filings, other). A document files under the
+year it states for itself (its title, then its file name, then its upload folder), so "2026 UPS Rate Guide" is a 2026
+document whatever year was stored; a year inside a full date ("signed before Aug 1, 2018") doesn't count, and market
+reports keep their publication year (`doc_year` in common.py, `docYear` in the app). The same file reached at two
+addresses is one document (`doc_key`), so it is never filed twice. Every document added by the pipeline records why (`why` field):
 a new file on a carrier page, a file that replaced an older one, a re-linked old file, linked in a story, or added by the
 editor. The app shows that line, plus any audited change to the document.
 

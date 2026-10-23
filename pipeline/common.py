@@ -136,6 +136,31 @@ def extras_ok():
     return not API_DOWN and not paused(extra=True)
 
 
+# Two small lanes skip the day's pacing, each with its own hard cap, so the pacing can never hold back what matters most:
+# the breaking-news lane (news.py: at most BREAKING_PER_DAY big stories a day while the news is paused) and the nightly
+# company-research slot (players.py --slot: a few candidates before the news on the 04 UTC run). What they spend still
+# goes in the ledger, so the next days' allowances shrink to match and the month stays inside the limit. They stop too
+# once the month is within MONTH_RESERVE of the limit, so the Console's hard limit is never the thing that stops the app.
+MONTH_RESERVE = 1.50
+UNPACED = {"on": False}
+
+
+def month_full():
+    """Why even the unpaced lanes must stop (the month is nearly at its limit), or None."""
+    _, month, _ = spent()
+    return f"${month:.2f} of ${MONTHLY:.0f} spent this month" if month >= MONTHLY - MONTH_RESERVE else None
+
+
+class unpaced:
+    """with unpaced(): Claude calls inside skip the day's pacing (never the month's limit)."""
+    def __enter__(self):
+        self.was = UNPACED["on"]; UNPACED["on"] = True
+        return self
+
+    def __exit__(self, *a):
+        UNPACED["on"] = self.was
+
+
 def _usage_report():
     if USAGE["calls"]:
         today, month, _ = spent()
@@ -212,8 +237,10 @@ def claude(model, system, user, max_tokens=1500, paced=True):
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
     if API_DOWN:
         raise RuntimeError("Claude API unavailable this run: " + API_DOWN["why"])
-    if paced and paused():
+    if paced and not UNPACED["on"] and paused():
         raise RuntimeError("Claude calls paused: " + paused())
+    if UNPACED["on"] and month_full():
+        raise RuntimeError("Claude calls paused: " + month_full())
     for attempt in range(3):
         r = requests.post(
             "https://api.anthropic.com/v1/messages",
@@ -435,11 +462,50 @@ def canon(u):
     return urllib.parse.urlunsplit((p.scheme, p.netloc, p.path, urllib.parse.urlencode(q), ""))
 
 
+def doc_key(u):
+    """One key per document, whatever address it was reached by: no scheme, www, cache stamp or trailing slash, and an
+    Adobe asset (UPS serves the same rate guide from assets.ups.com and from its adobeaemcloud.com host) keyed by its id."""
+    u = urllib.parse.unquote(str(u or ""))
+    a = re.search(r"urn:aaid:aem:([0-9a-f-]{36})", u, re.I)
+    if a:
+        return "aem:" + a.group(1).lower() + ":" + u.split("?")[0].rstrip("/").split("/")[-1].lower()
+    return re.sub(r"^https?://(www\.)?", "", canon(u), flags=re.I).rstrip("/").lower()
+
+
 def known_doc_urls(lib=None):
-    """Every document already on file (the app's built-in list plus data/docs.json), with cache stamps removed."""
+    """Every document already on file (the app's built-in list plus data/docs.json): their addresses with cache stamps
+    removed, plus each one's doc_key, so `doc_key(u) in known_doc_urls()` also catches the same file at another address."""
     seed = load("seed.json", {})
     docs = (seed.get("docs") or []) + (lib if lib is not None else load("docs.json", []))
-    return {canon(d.get("u") or "") for d in docs if d.get("u")}
+    return {canon(d.get("u") or "") for d in docs if d.get("u")} | {doc_key(d["u"]) for d in docs if d.get("u")}
+
+
+# The year a document is filed under (the app's docYear() in index.html follows the same rule). A year the document
+# states for itself wins: "2026 UPS Rate Guide" is a 2026 document even if it was stored as 2025. A year inside a full
+# date ("signed before Aug 1, 2018", "Dec 22, 2025 edition") is a date, not the document's year. Then the file name, then
+# the upload folder (/uploads/2025/08/) for a document with no year, then the year stored. Market reports keep their
+# publication year: a 2026 report on 2025 volume is a 2026 report.
+_DATE_YEAR = re.compile(r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+(20[1-3]\d)", re.I)
+
+
+def stated_years(text):
+    return sorted({int(y) for y in re.findall(r"(?<![\d.])(20[1-3]\d)(?![\d.]?\d)", _DATE_YEAR.sub(" ", str(text or "")))})
+
+
+def doc_year(d):
+    if d.get("c") != "Reports":
+        t = stated_years(d.get("n"))
+        if len(t) == 1:
+            return t[0]
+        if not t and d.get("u"):
+            path = urllib.parse.unquote(urllib.parse.urlsplit(d["u"]).path)
+            f = stated_years(path.rstrip("/").split("/")[-1])
+            if len(f) == 1:
+                return f[0]
+            up = re.search(r"/uploads/(20[1-3]\d)/\d{2}/", path)
+            if up and not d.get("y"):
+                return int(up.group(1))
+    return d.get("y")
 
 
 # ---------------------------------------------------------------- one story per event
@@ -490,3 +556,186 @@ def dedupe_live(live):
         print(f"dedupe: removed or merged {len(gone)} stories (repeats of one event, or taken off by the editor)")
     out.sort(key=lambda x: x.get("date") or "", reverse=True)
     return out
+
+
+# ---------------------------------------------------------------- deals: one card per transaction
+# A deal is followed from announcement to its end. Later stories about it (a closing, a breach notice, a termination) update
+# the same card instead of opening a second one. The app (index.html, dealSame) mirrors this matching exactly.
+DEAL_STATUSES = ("Announced", "Pending", "Closed", "Terminated", "Blocked", "Withdrawn")
+DEAL_ENDED = {"Terminated", "Blocked", "Withdrawn"}          # the deal will not happen
+DEAL_DONE = DEAL_ENDED | {"Closed"}                           # nothing more to wait for
+_DEAL_STOP = set("corp corporation inc incorporated llc lp llp ltd limited plc co company group holdings holding "
+                 "acquisition acquisitions the sa se ag nv bv gmbh spa srl pte pty spac".split())
+# fields an update never changes: the card keeps the transaction's name, first story and announcement date
+DEAL_FIXED = ("buyer", "target", "title", "ann", "story", "who", "why", "ties", "parties", "tree")
+
+
+def deal_tokens(name):
+    """A company name reduced to the words that identify it: lowercase, no parenthetical, no legal suffixes or
+    words like Corp, Inc, Acquisition, Holdings. "MAK Acquisition Corp. (SPAC)" -> ["mak"]."""
+    s = re.sub(r"\([^)]*\)", " ", str(name or "").lower())
+    s = re.sub(r"[.'’&]", "", s)
+    return [w for w in re.split(r"[^a-z0-9]+", s) if w and w not in _DEAL_STOP]
+
+
+def deal_names_match(a, b):
+    """Same company: the same identifying words, or one name's words all inside the other's ("Evri" / "Evri Group")."""
+    A, B = set(deal_tokens(a)), set(deal_tokens(b))
+    return bool(A and B) and (A <= B or B <= A)
+
+
+def deal_same(x, y):
+    """Two deal records describe the same transaction: targets match and buyers match (a merger may be written either way round)."""
+    if not x or not y:
+        return False
+    m = deal_names_match
+    return (m(x.get("target"), y.get("target")) and m(x.get("buyer"), y.get("buyer"))) or \
+           (m(x.get("target"), y.get("buyer")) and m(x.get("buyer"), y.get("target")))
+
+
+def deal_status(deal, *texts):
+    """The deal's status, from the allowed list. A story that plainly reports the end of a deal ("MAK terminates UniUni deal")
+    is not left as Announced or Pending even if the writer said so."""
+    raw = str((deal or {}).get("status") or "").strip().lower()
+    st = next((s for s in DEAL_STATUSES if s.lower() == raw), "Announced")
+    if st in ("Announced", "Pending"):
+        t = " ".join(str(x or "") for x in texts)
+        if re.search(r"\b(terminat\w*|called off|calls off|scrap(s|ped)?|abandon(s|ed)?)\b", t, re.I):
+            st = "Terminated"
+        elif re.search(r"\bblocked\b|\bblocks\b", t, re.I):
+            st = "Blocked"
+        elif re.search(r"\bwithdr[ae]w\w*\b|\bwithdrawn\b", t, re.I):
+            st = "Withdrawn"
+    return st
+
+
+def _union_srcs(a, b):
+    out, seen = [], set()
+    for x in list(a or []) + list(b or []):
+        u = (x or {}).get("url")
+        if u and u not in seen:
+            seen.add(u); out.append(x)
+    return out
+
+
+def _union_updates(a, b):
+    out, seen = [], set()
+    for x in list(a or []) + list(b or []):
+        k = (x or {}).get("story") or ((x or {}).get("d"), (x or {}).get("t"))
+        if x and x.get("d") and k not in seen:
+            seen.add(k); out.append(x)
+    return sorted(out, key=lambda u: u.get("d") or "")
+
+
+def deal_overlay(base, ov):
+    """The deal as readers see it: the built-in record with a newer pipeline update laid over it (same rules as the app)."""
+    out = dict(base)
+    if not ov or (ov.get("checked") or ov.get("d") or "") < (base.get("checked") or ""):
+        return out
+    for k, v in ov.items():
+        if k == "srcs":
+            out[k] = _union_srcs(base.get(k), v)
+        elif k == "updates":
+            out[k] = _union_updates(base.get(k), v)
+        elif k in DEAL_FIXED and base.get(k) not in (None, "", []):
+            continue
+        elif k == "status":
+            out[k] = deal_forward(base.get(k), v)
+        elif v not in (None, "", []):
+            out[k] = v
+    return out
+
+
+def deal_forward(prev, new):
+    """Status only moves forward: a finished deal (closed or ended) isn't reopened, and Pending doesn't fall back to Announced."""
+    if prev in DEAL_DONE and new not in DEAL_DONE:
+        return prev
+    if prev == "Pending" and new == "Announced":
+        return prev
+    return new or prev
+
+
+def deals_merged(seed_deals, live_deals):
+    """Every deal once: built-in deals with their updates from data/deals.json laid over them, then pipeline-only deals."""
+    out = [dict(x) for x in seed_deals or []]
+    for x in live_deals or []:
+        if not x or not x.get("target"):
+            continue
+        i = next((i for i, y in enumerate(out) if deal_same(x, y)), None)
+        if i is None:
+            out.append(dict(x))
+        else:
+            out[i] = deal_overlay(out[i], x)
+    return out
+
+
+def deal_advance(cur, new, story):
+    """What changes on an existing deal when a new story reports on it. Returns the fields to write (an overlay):
+    status moves forward only (Announced -> Pending -> Closed, or to Terminated/Blocked/Withdrawn), the announcement date
+    and title stay, the end or closing date is recorded, and the story joins the deal's timeline."""
+    prev = deal_status(cur)
+    st = deal_forward(prev, deal_status(new, new.get("title"), story.get("title")))
+    day = (story.get("date") or "")[:10]
+    when = ((new.get("ended") if st in DEAL_ENDED else new.get("closed") if st == "Closed" else None) or day)[:10]
+    first = cur.get("ann") or cur.get("d")
+    ups = cur.get("updates") or ([{"d": first[:10], "t": cur.get("title") or "Deal announced", "story": cur.get("story")}] if first else [])
+    try:
+        echo = st == prev and abs((dt.date.fromisoformat(when) - dt.date.fromisoformat(first[:10])).days) <= 3
+    except (TypeError, ValueError):
+        echo = False
+    if echo:                                                     # more coverage of the announcement itself isn't a new step
+        if ups and not ups[0].get("story") and story.get("id"):
+            ups = [dict(ups[0], story=story["id"])] + ups[1:]
+    else:
+        ups = _union_updates(ups, [{"d": when, "t": story.get("title") or new.get("title") or "", "story": story.get("id")}])
+    ov = {"buyer": cur.get("buyer"), "target": cur.get("target"), "title": cur.get("title"), "ann": cur.get("ann"),
+          "story": cur.get("story") or story.get("id"), "status": st, "updates": ups,
+          "srcs": _union_srcs(cur.get("srcs"), story.get("srcs") or [{"src": story.get("src"), "url": story.get("url")}]),
+          "checked": max(str(cur.get("checked") or ""), day), "d": max(str(cur.get("d") or ""), when)}
+    if st in DEAL_ENDED:
+        ov["ended"] = cur.get("ended") if prev == st and cur.get("ended") else when
+    if st == "Closed":
+        ov["closed"] = cur.get("closed") if prev == "Closed" and cur.get("closed") else when
+    if st != prev:
+        ov["sum"] = new.get("sum") or cur.get("sum")
+        ov["latest"] = new.get("latest") or f"{st} {when}: {story.get('title') or ''}".strip()
+        if new.get("note"):
+            ov["note"] = new["note"]
+    else:
+        ov["latest"] = new.get("latest") or cur.get("latest") or ""
+    return {k: v for k, v in ov.items() if v not in (None, "")}
+
+
+def record_deal(deal, story):
+    """Write a story's deal to data/deals.json. A deal already tracked (built in, or added earlier) is updated, keyed by
+    its existing buyer and target so the app lays the update over the same card; only a new transaction adds a card.
+    Returns the deal as readers now see it."""
+    seed = load("seed.json", {}).get("deals", [])
+    dl = load("deals.json", [])
+    base = next((x for x in seed if deal_same(x, deal)), None)
+    own = next((x for x in dl if deal_same(x, deal) or (base and deal_same(x, base))), None)
+    if base or own:
+        cur = deal_overlay(base, own) if base and own else (base or own)
+        ov = deal_advance(cur, deal, story)
+        if own:
+            for k in ("buyer", "target", "title", "ann", "story"):
+                if own.get(k) not in (None, ""):
+                    ov.pop(k, None)                              # the record keeps its key, name and first story
+            own.update(ov)
+        else:
+            dl.insert(0, ov)
+        save("deals.json", dl)
+        return deal_overlay(base, own or ov) if base else own
+    d = dict(deal)
+    st = deal_status(d, d.get("title"), story.get("title"))
+    day = (story.get("date") or "")[:10]
+    d.update({"status": st, "d": d.get("closed") or d.get("ended") or day, "story": story["id"], "url": story.get("url"),
+              "srcs": story.get("srcs") or [{"src": story.get("src"), "url": story.get("url")}], "checked": day,
+              "updates": [{"d": (d.get("ann") or day)[:10], "t": story.get("title") or d.get("title") or "", "story": story["id"]}]})
+    if st in DEAL_ENDED:
+        d["ended"] = d.get("ended") or day
+    if not d.get("latest"):
+        d["latest"] = f"{st} {(d.get('ended') or d.get('closed') or d.get('ann') or day)[:10]}"
+    dl.insert(0, d)
+    save("deals.json", dl)
+    return d

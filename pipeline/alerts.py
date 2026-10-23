@@ -34,7 +34,7 @@ from zoneinfo import ZoneInfo
 import requests
 from urllib.parse import urljoin
 
-from common import same_event, load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls
+from common import same_event, load, save, get, claude, parse_json, is_primary, MODEL_FAST, canon, known_doc_urls, doc_key, doc_year
 
 ET = ZoneInfo("America/New_York")
 AUTO_SEND_HOURS = float(os.environ.get("PP_AUTO_SEND_HOURS") or 2)
@@ -47,6 +47,7 @@ MIN_GAP_MIN = 50                         # minutes between regular pushes across
 QUEUE_HOURS = 30                         # a story that hasn't gone out by then is old news; it stays in the app only
 MAX_MAJOR_PER_RUN = 3
 FRESH_DAYS = 1                           # only alert on stories from the last day
+STALL_HOURS = 24                         # alerts waiting this long with nothing sent: open an issue (one a day)
 
 APP_ID = os.environ.get("ONESIGNAL_APP_ID", "").strip()
 API_KEY = os.environ.get("ONESIGNAL_API_KEY", "").strip()
@@ -165,16 +166,33 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=
         msg["include_subscription_ids"] = ids
     else:
         msg["filters"] = filters or [{"field": "tag", "key": "cm", "relation": "exists"}]
-    r = requests.post("https://api.onesignal.com/notifications?c=push", json=msg, timeout=30,
-                      headers={"Authorization": f"Key {API_KEY}", "Content-Type": "application/json"})
+    try:
+        r = requests.post("https://api.onesignal.com/notifications?c=push", json=msg, timeout=30,
+                          headers={"Authorization": f"Key {API_KEY}", "Content-Type": "application/json"})
+    except Exception as e:
+        print(f"  push failed {heading}: {e}", file=sys.stderr)
+        PUSH_ERRORS.append({"status": None, "heading": heading, "reply": str(e)[:300]})
+        return {"errors": [str(e)[:300]]}
     try:
         j = r.json()
     except Exception:
         j = {"text": r.text[:300]}
+    if not isinstance(j, dict):
+        j = {"errors": j}
     print(f"  push [{r.status_code}] {heading} -> {j}")
-    if key and SENT is not None and (j.get("id") or "not subscribed" in json.dumps(j.get("errors") or "")):
+    if not (200 <= r.status_code < 300) or not delivered(j):
+        PUSH_ERRORS.append({"status": r.status_code, "heading": heading, "reply": json.dumps(j)[:300]})
+    if key and SENT is not None and delivered(j):
         SENT.append(key)
     return j
+
+
+PUSH_ERRORS = []                         # this run's pushes OneSignal didn't take (status, heading, reply)
+
+
+def delivered(r):
+    """True if OneSignal took the push (an id), or there was simply nobody subscribed to that audience."""
+    return bool(r) and (bool(r.get("id")) or "not subscribed" in json.dumps(r.get("errors") or ""))
 
 
 def ntfy(title, body, url):
@@ -237,16 +255,20 @@ def numbers_ok(text, s):
     return True
 
 
+COPY_DOWN = {}                           # set when this run's copy call failed: the rest use the headline, no retries
+
+
 def push_copy(stories, state):
-    """Short title + message per story, written once (fast model, a fraction of a cent) and kept in state."""
+    """Short title + message per story, written once (fast model, about a tenth of a cent) and kept in state.
+    Never paced: an alert must not wait on the day's Claude allowance. If the call fails anyway, the headline is used."""
     cache = state.setdefault("copy", {})
     need = [s for s in stories if s["id"] not in cache]
-    if need:
+    if need and not COPY_DOWN:
         try:
             got = parse_json(claude(MODEL_FAST, COPY_PROMPT, json.dumps(
                 [{"id": s["id"], "title": s["title"], "summary": short(s.get("plain") or s.get("sum") or "", 400),
                   **({"takes_effect": nice_date(s["act"])} if nice_date(s.get("act")) and not s.get("inferred") else {}),
-                  **({"announced": nice_date(s["ann"])} if nice_date(s.get("ann")) else {})} for s in need]), 1200)) or {}
+                  **({"announced": nice_date(s["ann"])} if nice_date(s.get("ann")) else {})} for s in need]), 1200, paced=False)) or {}
             for s in need:
                 g = got.get(s["id"]) or {}
                 if g.get("t") and g.get("m") and numbers_ok(g["t"] + " " + g["m"], s):
@@ -254,6 +276,7 @@ def push_copy(stories, state):
                 elif g.get("t"):
                     print(f"  push copy for {s['id']} had a figure that isn't in the story; using the headline instead")
         except Exception as e:
+            COPY_DOWN["why"] = str(e)
             print("  short copy failed, using the headline:", e, file=sys.stderr)
     out = {}
     for s in stories:
@@ -377,6 +400,7 @@ def review():
         cur = load("alerts_state.json", None) or {}
         cur["sent"] = list(dict.fromkeys(cur.get("sent", []) + st["sent"]))[-4000:]
         save("alerts_state.json", cur)
+        check_health(cur)                    # every 15 minutes, even when the regular run keeps failing
 
 
 def _review():
@@ -534,17 +558,17 @@ def harvest(story, lib, carrier=None, editor=False):
     added = []
     for p in find_docs(story, carrier or fallback or "the carrier named in each link"):
         p["u"] = canon(p["u"])
-        if p["u"] in have:
+        if p["u"] in have or doc_key(p["u"]) in have:     # also the same file at another address
             continue
         c = carrier or carrier_of_url(p["u"]) or fallback
         if not c:
             continue
         d = {"c": c, "t": p.get("t") if p.get("t") in DOC_TYPES else "Special program", "n": short(p.get("n") or story["title"], 120),
-             "y": p.get("y"), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
+             "y": doc_year({"c": c, "n": p.get("n"), "u": p["u"], "y": p.get("y")}), "eff": p.get("eff"), "u": p["u"], "d": f"Found with: {story['title']}",
              "cur": True, "added": now_et().date().isoformat(),
              "why": {"how": "editor" if editor else "story", "story": story.get("id"), "title": story.get("title"),
                      "when": now_et().date().isoformat()}}
-        lib.append(d); have.add(p["u"]); added.append(d)
+        lib.append(d); have |= {p["u"], doc_key(p["u"])}; added.append(d)
     return added
 
 
@@ -756,7 +780,7 @@ def send_queued(state):
             extra = topic_filter(q)
             r = push(q["t"], q["m"], q["url"], audience(extra, q.get("mask")), ttl=2 * 86400 if q.get("big") else 86400, key=q["key"], after=after,
                      topic=q.get("topic_id"))
-            if r is not None:
+            if delivered(r):
                 count_today(state); sent += 1; sent_times.append(after or now_et())
     else:
         # a busy run: the biggest story gets its own alert (if it's real news), everything else is one roll-up
@@ -766,7 +790,7 @@ def send_queued(state):
             extra = topic_filter(lead)
             r = push(lead["t"], lead["m"], lead["url"], audience(extra, lead.get("mask")), ttl=2 * 86400 if lead.get("big") else 86400, key=lead["key"],
                      topic=lead.get("topic_id"))
-            if r is not None:
+            if delivered(r):
                 count_today(state); sent += 1; sent_times.append(now_et())
         if rest and count_today(state, 0) < MAX_PER_DAY and (not lead or room > 1):
             words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
@@ -775,7 +799,7 @@ def send_queued(state):
             r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", body,
                      SITE + "#news", audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
-            if r is not None:
+            if delivered(r):
                 SENT.extend(q["key"] for q in rest); count_today(state); sent += 1
                 sent_times.append(now_et() + dt.timedelta(minutes=SPACING_MIN) if lead else now_et())
     state["queue"] = [q for q in queue if q["key"] not in SENT]
@@ -786,27 +810,32 @@ def send_queued(state):
     return sent
 
 
+def side_job(name, fn, *args):
+    """Extras that run alongside the alerts (company research, logos, documents). Nothing they do, not even a
+    sys.exit() when the day's Claude allowance is used up, may stop the alerts from going out."""
+    try:
+        return fn(*args)
+    except (Exception, SystemExit) as e:
+        print(f"{name} failed:", repr(e), file=sys.stderr)
+
+
+def research_players():
+    import players                          # research new companies before alerting on them (3 per run keeps cost low)
+    argv = sys.argv
+    sys.argv = [argv[0], "--max", "3"]
+    try:
+        players.main()
+    finally:
+        sys.argv = argv
+
+
 def run():
     global SENT
-    try:
-        import players                      # research new companies before alerting on them (3 per run keeps cost low)
-        sys.argv = [sys.argv[0], "--max", "3"]
-        players.main()
-    except Exception as e:
-        print("player research failed:", e, file=sys.stderr)
-    try:
-        import players as _pl
-        _pl.backfill_sites(8)                # websites for companies already on the map, so their logos can be found
-    except Exception as e:
-        print("site lookup failed:", e, file=sys.stderr)
-    try:
-        _pl.family_check(1)                  # one company's family tree re-checked for sales, buys and spin-offs
-    except Exception as e:
-        print("family check failed:", e, file=sys.stderr)
-    try:
-        process_doc_requests()
-    except Exception as e:
-        print("doc requests failed:", e, file=sys.stderr)
+    import importlib
+    side_job("player research", research_players)
+    side_job("site lookup", lambda: importlib.import_module("players").backfill_sites(8))   # websites, so logos can be found
+    side_job("family check", lambda: importlib.import_module("players").family_check(1))   # one family tree re-checked
+    side_job("doc requests", process_doc_requests)
     state = load("alerts_state.json", None)
     today = now_et().date()
     if APP_ID:
@@ -889,28 +918,85 @@ def run():
                  "lvl": 0, "topic": "deals", "mask": None, "url": company_link(p["id"])})
     state["players"] = (state["players"] + [p["id"] for p in newp])[-3000:]
     sends = send_queued(state)
-    try:
+    check_health(state)
+
+    def media_job():
         import media                        # company logos (monthly) and company photos for recent stories
         media.logos(40)
         media.photos(6)
-    except Exception as e:
-        print("media failed:", e, file=sys.stderr)
-    try:
-        import archive                      # saved copies of carrier PDFs and spreadsheets for one-tap download
-        archive.main(6)
-    except Exception as e:
-        print("archive failed:", e, file=sys.stderr)
-    try:
-        import guides                       # refresh Coop's reference shelf (local, no API cost)
-        guides.main()
-    except Exception as e:
-        print("guides failed:", e, file=sys.stderr)
+    side_job("media", media_job)
+    side_job("archive", lambda: importlib.import_module("archive").main(6))   # saved copies of carrier PDFs for download
+    side_job("guides", lambda: importlib.import_module("guides").main())      # Coop's reference shelf (local, no API cost)
     state["stories"] = state["stories"][-3000:]
     state["titles"] = state["titles"][-3000:]
     state["sent"] = SENT[-4000:]
     state["clock"] = state["clock"][-500:]
     save("alerts_state.json", state)
     print(f"alerts: {len(majors)} for review, {len(state.get('queue') or [])} waiting for the next run, {sends} pushes sent")
+
+
+# ---------------------------------------------------------------- loud failure: a person hears when alerts stop
+def opened_today(title):
+    """True if an issue with this title was already opened today. The 15-minute review run doesn't save data/, so
+    GitHub itself is the record that keeps it to one issue a day."""
+    if not GH:
+        return False
+    try:
+        since = now_et().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(dt.timezone.utc)
+        for it in gh("GET", "/issues", params={"state": "all", "labels": "audit", "per_page": 50,
+                                               "since": since.strftime("%Y-%m-%dT%H:%M:%SZ")}):
+            if it.get("title") == title and dt.datetime.fromisoformat(it["created_at"].replace("Z", "+00:00")) >= since:
+                return True
+    except Exception as e:
+        print("  couldn't check earlier alarm issues:", e, file=sys.stderr)
+    return False
+
+
+def alarm(kind, title, body):
+    """Open one GitHub issue a day per kind of alert failure (and ping ntfy, if set). Returns True if it opened one."""
+    day = now_et().date().isoformat()
+    seen = load("alerts_alarm.json", {})
+    if seen.get(kind) == day or opened_today(title):
+        return False
+    print(f"::error title={title}::{body.splitlines()[0]}")
+    try:
+        from scoop import notify
+        notify(title, body, labels=("audit",))
+    except Exception as e:
+        print("alarm failed:", e, file=sys.stderr)
+    seen[kind] = day
+    save("alerts_alarm.json", seen)
+    return True
+
+
+def stalled(state, now=None):
+    """Hours alerts have been waiting with nothing sent, if that's over STALL_HOURS (else None). The clock starts at
+    the later of the last push and the oldest waiting item, so a quiet news week never looks like a broken pipe."""
+    times = [dt.datetime.fromisoformat(q["at"]) for q in state.get("queue") or [] if q.get("at")]
+    if not times:
+        return None
+    since = min(times)
+    if state.get("last_push"):
+        since = max(since, dt.datetime.fromisoformat(state["last_push"]))
+    hours = ((now or now_et()) - since).total_seconds() / 3600
+    return hours if hours > STALL_HOURS else None
+
+
+def check_health(state):
+    """Loud failure: OneSignal refusing pushes, or alerts waiting a day with nothing sent, opens an issue (once a day)."""
+    if PUSH_ERRORS:
+        e = PUSH_ERRORS[0]
+        alarm("push-error", "Parcel Pigeon: OneSignal rejected a phone alert",
+              f"OneSignal didn't take {len(PUSH_ERRORS)} push(es) this run, so readers didn't get them.\n\n"
+              f"First one: **{e['heading']}**, HTTP {e['status']}\n\n```\n{e['reply']}\n```\n\n"
+              "Check the ONESIGNAL_APP_ID and ONESIGNAL_API_KEY secrets (OneSignal > Settings > Keys & IDs) and the "
+              "alerts output of the latest Update or Watch run.")
+    h = stalled(state)
+    if h:
+        alarm("push-stalled", "Parcel Pigeon: phone alerts have stopped",
+              f"{len(state.get('queue') or [])} alert(s) have waited {h:.0f} hours and nothing has been pushed since "
+              f"{state.get('last_push') or 'never'}.\n\nLook at the `python alerts.py` output of the latest Update or "
+              "Watch run (a `::warning::alerts.py failed` line means it crashed).")
 
 
 def test_alert():
@@ -926,4 +1012,9 @@ if __name__ == "__main__":
     elif "--review" in sys.argv:
         review()
     else:
-        run()
+        try:
+            run()
+        except BaseException:
+            from scoop import crash_alert
+            crash_alert("alerts.py")
+            raise

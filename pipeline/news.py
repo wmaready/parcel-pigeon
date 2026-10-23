@@ -5,7 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
-from common import dedupe_live, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
+from common import dedupe_live, record_deal, deal_tokens, deals_merged, DEAL_ENDED, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
 MAX_NEW_PER_RUN = 18          # cost guard: stories written per run (about 2-4 cents each); the rest wait for the next run
@@ -104,6 +104,29 @@ subject likely to keep developing (labor talks, lawsuits and rulings, regulation
 cycle, a carrier's ongoing strategy), or null for a one-off item. Yearly events (holiday peak surcharges, the annual
 rate increase, USPS price changes) use the ACTIVE storyline for that subject; the app splits it by year on its own}}."""
 
+def page_parts(s):
+    """The story page's synopsis ("syn") and "what it affects" list ("aff") from Claude's reply, cleaned. Either may be
+    missing: the app then builds the page from the older fields (sum, why, plain), which every story keeps."""
+    out = {}
+    if not isinstance(s, dict):
+        return out
+    syn = re.sub(r"\s+", " ", str(s.get("syn") or "")).strip()
+    if syn:
+        out["syn"] = syn[:900]
+    aff = []
+    for a in s.get("aff") if isinstance(s.get("aff"), list) else []:
+        if isinstance(a, dict) and str(a.get("what") or "").strip():
+            aff.append({"who": str(a.get("who") or "Shippers").strip()[:60], "what": re.sub(r"\s+", " ", str(a["what"])).strip()[:200]})
+    if aff:
+        out["aff"] = aff[:4]
+    return out
+
+
+def page_text(story):
+    """Every word the story page adds beyond the summary: checked against the sources like the rest."""
+    return " ".join([story.get("syn") or ""] + [f"{a.get('who', '')} {a.get('what', '')}" for a in story.get("aff") or []])
+
+
 WRITE_SYSTEM = f"""You write for Parcel Pigeon, a small parcel trade news service in the style of Supply Chain Dive and
 FreightWaves: neutral, factual, attributed. Use ONLY facts in the articles provided. Never invent numbers, dates or names;
 every number must appear in the source text. Do not quote more than a few words. No advice, no recommendations, no
@@ -125,6 +148,12 @@ Return JSON only, with exactly these keys:
 "why": one sentence under 160 characters on why this matters to parcel shippers or the parcel market, from the sources only (who is affected and how big); never generic;
 "plain": 1-2 sentences of the direct, factual effect on shippers (what changes, for whom, from when). If nothing changes
          for shippers, say so plainly (e.g. "No change to rates or service.");
+"syn": the story page's synopsis: 2-4 sentences that tell the whole story once: what happened, who, when, the key figures
+       and why it matters to parcel shippers. Say each fact once. Leave the list of who is affected to "aff";
+"aff": what it affects, as a list of 1-4 objects {{"who":"the group or thing affected, e.g. 'UPS Ground shippers',
+       'Poshmark sellers', 'Residential deliveries', 'Delivery times'","what":"one short factual line under 140 characters
+       on what changes for them, with the figure and the date if the sources give them"}}. Only effects the sources state.
+       If nothing changes for shippers, one entry {{"who":"Shippers","what":"No change to rates or service."}};
 "event_date": "YYYY-MM-DD" the day the company ANNOUNCED it (or the event happened), if the sources say and it is earlier than the article, else null;
 "act": "YYYY-MM-DD" the day it TAKES EFFECT, if one is stated, else null. The announcement date and the effective date are
   different things: never put one in the other's place, and never infer an effective date from when it was announced;
@@ -148,9 +177,16 @@ Return JSON only, with exactly these keys:
 "rels": every business relationship between named companies that the sources state, for ANY story (not just M&A):
   [{{"a":"Company A","b":"Company B","k":"partner|acquired|merged|sold|spun|invested|owns","t":"short plain label, e.g. 'DoorDash and Kroger expand delivery partnership'"}}];
   a = buyer/owner/investor/seller; b = target/unit. Only real, announced relationships; [] if none;
-"deal": for M&A only, else null. {{"title":"Buyer buys Target, under 10 words","buyer":"...","target":"...","value":"... or Undisclosed",
-  "status":"Announced|Pending|Closed","ann":"YYYY-MM-DD announced or null","closed":"YYYY-MM-DD closed or null",
-  "sum":"1-2 sentences: who bought what, from whom, for how much",
+"deal": for M&A only, else null. One deal is one transaction, followed from announcement to its end: a story about a later
+  step (approval, closing, a breach notice, a termination) describes the SAME deal, named as when it was announced.
+  {{"title":"Buyer buys Target, under 10 words (the transaction, not this story's event)","buyer":"...","target":"...","value":"... or Undisclosed",
+  "status":"Announced|Pending|Closed|Terminated|Blocked|Withdrawn" (as of this story: Terminated when a party ended the agreement,
+  Blocked when a regulator or court stopped it, Withdrawn when the offer or filing was pulled; never Announced or Pending for a
+  deal this story says has ended),
+  "ann":"YYYY-MM-DD the deal was ORIGINALLY announced, or null (never this story's date when the story is a later step)",
+  "closed":"YYYY-MM-DD closed or null","ended":"YYYY-MM-DD terminated, blocked or withdrawn, or null (kept separate from ann)",
+  "latest":"one line under 20 words: where the deal stands now, with the date",
+  "sum":"1-2 sentences: who bought what, from whom, for how much; for a deal that ended, how and when it ended",
   "who":[["Buyer|Seller|Target|Merged with|Acquirer","Name","one sentence: what the company is and does"], ...],
   "why":"2-4 neutral sentences on significance: scale, what changes in the parcel market, and any earlier deals or news the sources connect it to. No advice.",
   "parties":[{{"name":"...","role":"Buyer|Seller|Target|Merged with|Acquirer|Parent|Backer","realm":"Ocean shipping & logistics|Contract logistics / 3PL|National parcel carrier|Postal operator|Gig / on-demand delivery|Retailer / marketplace|Cold chain / healthcare logistics|Drones, robots & autonomous delivery|Regional / last-mile carrier|Courier / same-day|Freight brokerage & parcel reselling|Shipping software|Supply chain software|Returns & reverse logistics|Private equity / investor|SPAC / public markets|Cross-border parcel platform","hq":"city, country or null","founded":"year or null","size":"one number fact or null","history":[{{"y":"YYYY","t":"prior owners, mergers, renames, funding, only as stated in the sources"}}]}}],
@@ -725,10 +761,20 @@ def update_market_map(deal, story):
     known = seed.get("players", []) + mp["players"]
 
     def find(name):
-        n = (name or "").lower().strip()
-        for p in known:
-            if n and (n == p["n"].lower() or n in [a.lower() for a in p.get("al", [])]):
-                return p["id"]
+        # exact name or alias first; then the name without its parenthetical, then what's in the parentheses
+        # ("UniUni (Uni Express Inc.)" is UniUni, not a new company)
+        raw = (name or "").strip()
+        tries = [raw, re.sub(r"\s*\([^)]*\)", "", raw).strip()] + re.findall(r"\(([^)]*)\)", raw)
+        for t in tries:
+            n = t.lower().strip()
+            for p in known:
+                if n and (n == p["n"].lower() or n in [a.lower() for a in p.get("al", [])]):
+                    return p["id"]
+        for t in tries:
+            tk = deal_tokens(t)
+            for p in known:
+                if tk and any(tk == deal_tokens(x) for x in [p["n"]] + list(p.get("al", []))):
+                    return p["id"]
         return None
 
     def slug(name):
@@ -756,6 +802,13 @@ def update_market_map(deal, story):
     buyers = ids.get("Buyer") or ids.get("Acquirer") or [x for x in [find(deal.get("buyer"))] if x]
     targets = ids.get("Target") or ids.get("Merged with") or [x for x in [find(deal.get("target"))] if x]
     k = "merged" if ids.get("Merged with") and not ids.get("Target") else "acquired"
+    if str(deal.get("status") or "") in DEAL_ENDED:
+        # a deal that was terminated, blocked or withdrawn never made the buyer an owner: drop its pending links, add none
+        pair = {(a, b) for a in buyers for b in targets} | {(b, a) for a in buyers for b in targets}
+        mp["edges"] = [e for e in mp["edges"] if not ((e["a"], e["b"]) in pair and e.get("k") in ("acquired", "merged", "owns"))]
+        mp["moves"] = [m for m in mp.get("moves", []) if not (m.get("id") in targets and (m.get("pend") in buyers or m.get("parent") in buyers))]
+        save("players.json", mp)
+        return
     for a in buyers:
         for b in targets:
             if a == b:
@@ -796,6 +849,9 @@ def add_candidates(orgs, story):
     mp = load("players.json", {"players": [], "edges": []})
     known = seed.get("players", []) + mp["players"]
     names = {n.lower() for p in known for n in [p["n"]] + (p.get("al") or [])}
+    # companies research already turned down (not a mover, not parcel, not verified) don't go back in the queue: Olo was
+    # researched and held back on Oct 20, then queued again from the next story that named it
+    names |= {str(x.get("n") or "").lower() for x in load("sweep_review.json", []) if isinstance(x, dict)}
     ids = {p["id"] for p in known}
     changed = False
     if story.get("edge"):
@@ -870,20 +926,15 @@ def publish_extras(story, s, live=()):
     except Exception as e:
         print(f"  relations: {e}", file=sys.stderr)
     if s.get("deal") and story["cat"] == "M&A":
-        dl = load("deals.json", [])
-        d = dict(s["deal"]); d.update({"d": d.get("closed") or story["date"], "story": story["id"], "url": story["url"],
-                                       "srcs": story.get("srcs") or [{"src": story["src"], "url": story["url"]}],
-                                       "checked": story["date"]})
-        # tie in earlier coverage of the same companies
+        d = dict(s["deal"])
+        # tie in earlier coverage of the same companies (kept only when this is a new transaction)
         names = [w for w in re.findall(r"[A-Z][A-Za-z0-9&]+", f'{d.get("buyer","")} {d.get("target","")}') if len(w) > 3 and w not in ("Corp", "Group", "Acquisition", "Capital", "Management")]
         d["ties"] = [{"d": n["date"], "t": n["title"], "story": n["id"]} for n in list(live) + load("seed.json", {}).get("news", [])
                      if n["id"] != story["id"] and any(w in n["title"] for w in names)][:4]
-        same = next((x for x in dl if x.get("buyer") == d.get("buyer") and x.get("target") == d.get("target")), None)
-        if same: same.update({k: v for k, v in d.items() if v})   # status changes, e.g. Pending -> Closed
-        else: dl.insert(0, d)
-        save("deals.json", dl)
+        # one card per transaction: a later step (closing, breach notice, termination) updates the deal already tracked
+        cur = record_deal(d, story)
         try:
-            update_market_map(d, story)
+            update_market_map({**d, **{k: cur.get(k) for k in ("status", "closed", "ended", "ann", "title")}}, story)
         except Exception as e:
             print(f"  market map: {e}", file=sys.stderr)
 
@@ -949,6 +1000,60 @@ def backfill_threads(live):
     return threads
 
 
+# ---------------------------------------------------------------- breaking lane: big news never waits for the pacing
+# When the day's allowance has run out, ordinary headlines wait for the next day. Big news can't: on Oct 22 UPS's peak
+# surcharge news came in at 5 p.m. Eastern, after the pacing had paused the news at 3 p.m., and every run until midnight
+# skipped it. So while the news is paused, headlines from the big carriers and from primary sources and the major press
+# still get the fast screen (one call, about a fifth of a cent), and the ones that are big news are written up at once.
+# "Big" means a screen score of 8 or more, or a price, surcharge or peak change from UPS, FedEx, USPS or Amazon.
+# At most BREAKING_PER_DAY a day (Eastern), so the lane can't run away with the budget; everything else waits as before.
+BREAKING_PER_DAY = 3
+BREAKING_SCREEN = 20                  # headlines the lane screens per run: one fast-model call
+MAJOR = {"UPS", "FedEx", "USPS", "Amazon"}
+MAJOR_RX = re.compile(r"\b(UPS|FedEx|USPS|U\.S\. Postal Service|Postal Service|Amazon)\b", re.I)
+PRICE_RX = re.compile(r"surcharge|\bGRI\b|general rate increase|\b(rate|price|pricing|postage) (increase|hike|change|adjustment)s?\b|"
+                      r"\b(raise|raises|raising|hike|hikes|increase|increases|new) (its |their )?(rates|prices|fees|postage)\b|"
+                      r"\bpeak[- ](season )?(surcharge|fee|fees|rate|rates|pricing)\b", re.I)
+PRICE_CATS = {"Pricing & GRI", "Peak season", "Fees & rules"}
+
+
+def breaking_state():
+    """data/breaking.json: how many breaking stories today (Eastern) and which headlines the lane already screened."""
+    from common import NOW
+    st = load("breaking.json", {})
+    st = st if isinstance(st, dict) else {}
+    today = NOW().date().isoformat()
+    if st.get("day") != today:
+        st["day"], st["n"] = today, 0
+    week = (NOW().date() - dt.timedelta(days=MAX_AGE_DAYS + 1)).isoformat()
+    st["screened"] = {k: d for k, d in (st.get("screened") or {}).items() if d >= week}
+    return st
+
+
+def breaking_pick(batch, st):
+    """The headlines worth a breaking screen: the carrier or regulator itself (T0), the major press (T1), and trade-press
+    items about UPS, FedEx, USPS or Amazon. Price and surcharge headlines first. Each is screened by the lane once."""
+    pick = [b for b in batch if not b.get("support_only") and h(b["url"]) not in st["screened"]
+            and (b.get("tier", 3) <= 1 or (b.get("tier", 3) <= 2 and MAJOR_RX.search(b["title"])))]
+    pick.sort(key=lambda b: (0 if PRICE_RX.search(b["title"] + " " + b.get("summary", "")[:200]) else 1, b.get("tier", 3),
+                             -int((b.get("date") or "0000-00-00").replace("-", ""))))
+    return pick[:BREAKING_SCREEN]
+
+
+def breaking_worthy(v, item):
+    """Big enough to write while the news is paused: score 8+, or a major carrier's price, surcharge or peak change."""
+    if not v.get("keep") or v.get("fit") == "edge" or item.get("support_only"):
+        return False
+    try:
+        score = int(v.get("score") or 0)
+    except (TypeError, ValueError):
+        score = 0
+    if score >= 8:
+        return True
+    major = bool(set(v.get("carriers") or []) & MAJOR) or bool(MAJOR_RX.search(item["title"]))
+    return major and (v.get("category") in PRICE_CATS or bool(PRICE_RX.search(item["title"])))
+
+
 def main():
     cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
     live, review, seen = load("news.json", []), load("review.json", []), set(load("seen.json", []))
@@ -983,6 +1088,31 @@ def main():
     if not batch:
         save("seen.json", list(seen)[-6000:]); return
 
+    import common
+    lane = None
+    if not common.API_DOWN and common.paused():
+        # the news is paused for today: only the breaking lane runs (see BREAKING_PER_DAY); the rest wait, unscreened
+        lane = breaking_state()
+        full = common.month_full()
+        pick = [] if full or lane["n"] >= BREAKING_PER_DAY else breaking_pick([b for b in batch if not b.get("retry")], lane)
+        review += retry           # pages we couldn't read before wait in the review list for the full run, as they were
+        print(f"breaking lane: {len(pick)} headline(s) from major carriers, primary sources and the major press screened for "
+              f"big news ({lane['n']} of {BREAKING_PER_DAY} breaking stories written today" + (f"; {full}" if full else "") + ")")
+        for b in pick:
+            print(f"  lane: [{b['src']} T{b.get('tier', 3)}] {b['title'][:100]}")
+        batch = pick
+        if not batch:
+            save("breaking.json", lane); save("seen.json", list(seen)[-6000:]); return
+        common.UNPACED["on"] = True
+    try:
+        _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lane)
+    finally:
+        common.UNPACED["on"] = False
+        if lane is not None:
+            save("breaking.json", lane)
+
+
+def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lane):
     recent = [s for s in live if s["date"] >= (dt.date.today() - dt.timedelta(days=14)).isoformat()][:60]
     active = sorted(((k, t) for k, t in threads.items() if (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
                     key=lambda kt: kt[1].get("last") or "", reverse=True)[:60]
@@ -1009,7 +1139,11 @@ def main():
             # not marked seen: these headlines are screened again next run instead of being lost
             print(f"triage chunk {c0}-{c0 + 19} skipped, will retry next run: {e}")
     for i in screened:
-        seen.add(h(batch[i]["url"]))
+        if lane is None:
+            seen.add(h(batch[i]["url"]))
+        else:
+            # screened by the lane only: not marked seen, so the full screen still takes it when the news resumes
+            lane["screened"][h(batch[i]["url"])] = lane["day"]
     by_id = {s["id"]: s for s in live}
     archive = {**{x["id"]: x for x in load("seed.json", {}).get("news", []) if x.get("id")}, **by_id}   # storyline history
     groups, merged = {}, 0
@@ -1017,6 +1151,8 @@ def main():
         if not v.get("keep") or not (0 <= v.get("i", -1) < len(batch)):
             continue
         item = batch[v["i"]]
+        if lane is not None and not breaking_worthy(v, item):
+            continue  # not big news: it waits for the full screen when the news resumes
         if v.get("same_as") in by_id:
             if add_source(by_id[v["same_as"]], item, item["url"]):
                 merged += 1
@@ -1035,14 +1171,22 @@ def main():
                                    min(m[0].get("tier", 3) for m in kv[1]), -len(kv[1])))
 
     written = 0
+    cap = MAX_NEW_PER_RUN if lane is None else max(0, BREAKING_PER_DAY - lane["n"])
     for n_ev, (key, members) in enumerate(order):
-        if written >= MAX_NEW_PER_RUN:
+        if written >= cap:
             # over this run's writing budget: these events are written next run, not dropped
             later = [m[0] for _, ms in order[n_ev:] for m in ms]
             for it in later:
                 seen.discard(h(it["url"]))
-            print(f"{len(order) - n_ev} events wait for the next run (writing budget {MAX_NEW_PER_RUN} reached)")
+            print(f"{len(order) - n_ev} events wait for the next run (writing budget {cap} reached)")
             break
+        if lane is not None:
+            # counted when started, so a failed write can't loop past the day's cap; its headlines are taken now
+            lane["n"] += 1
+            for m in members:
+                seen.add(h(m[0]["url"]))
+            print(f"::notice title=Breaking story written while the news is paused::{members[0][0]['title'][:150]} "
+                  f"({lane['n']} of {BREAKING_PER_DAY} today)")
         try:
             # a story we only have from a small or late outlet, or from a paywalled one we can't read: find the
             # major and trade outlets' versions, so the story leads with them and carries the date the news broke
@@ -1157,6 +1301,7 @@ def main():
             if story.get("act") and not clock_worthy(story, {"w": story["title"], "imp": story.get("imp")}):
                 story["act"] = None
             alltext = " ".join(tx + " " + it["title"] for it, _, tx in texts)
+            story.update(page_parts(s))
             missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
             if missing:
                 # one rewrite that drops the figures the articles don't contain, instead of asking the editor
@@ -1166,9 +1311,14 @@ def main():
                                            "leave a figure out rather than estimate or convert it.", max_tokens=2500))
                     if isinstance(s2, dict) and s2.get("title") and s2.get("sum") and s2.get("plain"):
                         story.update({"title": s2["title"], "sum": s2["sum"], "plain": s2["plain"]})
+                        story.pop("syn", None); story.pop("aff", None); story.update(page_parts(s2))
                         missing = numbers_supported(" ".join([story["title"], story["sum"], story["plain"]]), alltext)
                 except Exception as e:
                     print(f"  rewrite failed: {e}", file=sys.stderr)
+            # the synopsis and the "affects" list pass the same numbers check; if they fail it, the story page falls back
+            # to the summary and plain-English effect (which passed) instead of holding the story back
+            if numbers_supported(page_text(story), alltext):
+                story.pop("syn", None); story.pop("aff", None)
             # on-cycle or off-cycle, judged by the date the change takes effect (never the date it was announced)
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and story.get("act") and story["imp"] in ("up", "down"):
                 cyc = cycle_of((story["c"] or [""])[0], kind_of(story["title"], story["cat"]), story["act"], story.get("ann") or story["date"])
@@ -1227,8 +1377,10 @@ def main():
         except Exception as e:
             print(f"  story skipped: {type(e).__name__}: {e}", file=sys.stderr)
 
+    import common
+    common.UNPACED["on"] = False          # the lane covers screening and writing only; the upkeep below stays paced
     live = dedupe_live(live)
-    if not primary_only:
+    if not primary_only and lane is None:
         # try to confirm a few single-source stories each run: a better outlet's report of the same event is attached
         recent = (dt.date.today() - dt.timedelta(days=10)).isoformat()
         for st in [x for x in live if unconfirmed(x) and x.get("date", "") >= recent and x.get("tried") != dt.date.today().isoformat()][:5]:
@@ -1317,9 +1469,11 @@ def thread_context(S, seed, live):
                    (f" HQ {p['hq']}." if p.get("hq") else "") + (f" Founded {p['yr']}." if p.get("yr") else ""))
     words = {w.lower() for nm in names for w in re.findall(r"[A-Za-z][A-Za-z&]{2,}", nm)}
     hit = lambda txt: any(re.search(r"\b" + re.escape(w) + r"\b", (txt or "").lower()) for w in words)
-    for d in (seed.get("deals", []) + load("deals.json", []))[:200]:
+    for d in deals_merged(seed.get("deals", []), load("deals.json", []))[:200]:
         if hit(f"{d.get('buyer')} {d.get('target')}"):
-            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}, {d.get('value') or 'value undisclosed'}). {(d.get('sum') or '')[:200]}")
+            end = f", {d['status'].lower()} {d['ended']}" if d.get("ended") else f", closed {d['closed']}" if d.get("closed") else ""
+            out.append(f"DEAL announced {d.get('ann') or d.get('d')}: {d.get('title')} ({d.get('status')}{end}, {d.get('value') or 'value undisclosed'}). "
+                       f"{(d.get('latest') or d.get('sum') or '')[:200]}")
     today = dt.date.today().isoformat()
     for c in seed.get("clock", []):
         if (c.get("d") or "") >= today and hit(f"{c.get('c')} {c.get('w')}"):

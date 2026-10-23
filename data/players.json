@@ -1493,38 +1493,6 @@
    "enriched": "2026-10-19"
   },
   {
-   "id": "uniuniuniexpre",
-   "n": "UniUni (Uni Express Inc.)",
-   "realm": "gig",
-   "own": "private",
-   "tk": null,
-   "hq": "Richmond, BC, Canada",
-   "yr": "2019",
-   "s": "UniUni is a last-mile e-commerce parcel delivery company. It uses a network of independent gig drivers and its own sorting centers to deliver parcels in Canada and the U.S. for marketplaces such as Shein and Temu.",
-   "al": [
-    "Uni Express",
-    "Uni Express Inc.",
-    "UniUni",
-    "UniUni Logistics Inc."
-   ],
-   "src": "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
-   "auto": true,
-   "added": "2026-10-20",
-   "story": "afb6fa67940a7",
-   "site": "uniuni.com",
-   "geo": [
-    -123.134,
-    49.167
-   ],
-   "srcs": [
-    "https://www.globenewswire.com/news-release/2026/10/20/3384545/0/en/mak-acquisition-terminates-purchase-agreement-with-uniuni.html",
-    "https://www.uniuni.com/uniuni-leading-north-american-ecommerce-last-mile-delivery-platform-to-go-public-via-mak-acquisition/",
-    "https://www.bctechnology.com/news/2026/5/21/eCommerce-Delivery-Platform-UniUni-to-Go-Public-in-Reverse-Takeover-at-1.4-Billion-Valuation.cfm"
-   ],
-   "enriched": "2026-10-20",
-   "pending": false
-  },
-  {
    "id": "dexterity",
    "n": "Dexterity",
    "realm": "auto",
@@ -1559,12 +1527,12 @@
    "id": "deposco",
    "n": "Deposco",
    "realm": "software",
-   "own": "private",
+   "own": null,
    "tk": null,
    "parent": null,
-   "hq": "Alpharetta, GA, USA",
+   "hq": null,
    "yr": null,
-   "s": "Deposco sells cloud-based warehouse management, order management and shipping software (Bright Suite) that brands, retailers and 3PLs use to fulfill and ship parcel orders. It also publishes a quarterly Commerce Signal report on parcel rates using its platform data.",
+   "s": "Provider of AI-based supply chain software solutions",
    "al": [
     "Deposco Bright Suite",
     "Deposco, Inc.",
@@ -1572,7 +1540,7 @@
    ],
    "src": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
    "auto": true,
-   "pending": false,
+   "pending": true,
    "added": "2026-10-21",
    "story": "a312b45efa358",
    "site": "deposco.com",
@@ -2801,26 +2769,8 @@
    "story": "a05d915a7b81f"
   },
   {
-   "a": "mak",
-   "b": "uniuniuniexpre",
-   "k": "acquired",
-   "y": "2026",
-   "t": "MAK Acquisition terminates UniUni deal",
-   "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
-   "story": "afb6fa67940a7"
-  },
-  {
-   "a": "bessemer",
-   "b": "uniuniuniexpre",
-   "k": "invested",
-   "y": "2024",
-   "t": "Led US$30M Series C2",
-   "url": "https://www.celtic.vc/latest-news/uniuni-closes-us30m-series-c2-round-led-by-bessemer-venture-partners-1",
-   "story": "afb6fa67940a7"
-  },
-  {
    "a": "lfx",
-   "b": "uniuniuniexpre",
+   "b": "uniuni",
    "k": "invested",
    "y": "2024",
    "t": "Participated in Series C2",
@@ -2828,16 +2778,7 @@
    "story": "afb6fa67940a7"
   },
   {
-   "a": "dcm",
-   "b": "uniuniuniexpre",
-   "k": "invested",
-   "y": "2024",
-   "t": "Led US$50M Series C (announced as DCM)",
-   "url": "https://www.uniuni.com/uniuni-closes-oversubscribed-us50-million-series-c-round-led-by-dcm/",
-   "story": "afb6fa67940a7"
-  },
-  {
-   "a": "uniuniuniexpre",
+   "a": "uniuni",
    "b": "shein",
    "k": "partner",
    "y": null,
@@ -2846,7 +2787,7 @@
    "story": "afb6fa67940a7"
   },
   {
-   "a": "uniuniuniexpre",
+   "a": "uniuni",
    "b": "temu",
    "k": "partner",
    "y": null,
@@ -2855,21 +2796,13 @@
    "story": "afb6fa67940a7"
   },
   {
-   "a": "uniuniuniexpre",
+   "a": "uniuni",
    "b": "tiktokshop",
    "k": "partner",
    "y": null,
    "t": "Delivers for TikTok Shop",
    "url": "https://www.theinformation.com/articles/sleeping-warehouses-hidden-costs-shein-temu-deliveries",
    "story": "afb6fa67940a7"
-  },
-  {
-   "a": "fedex",
-   "b": "inpost",
-   "k": "invested",
-   "y": "2026",
-   "t": "FedEx joins the Advent-led consortium that bought InPost",
-   "url": "https://pulse2.com/inpost-fedex-and-advent-led-consortium-completes-e7-8-billion-buyout-after-securing-89-8-of-shares/"
   },
   {
    "a": "ups",
@@ -3241,9 +3174,9 @@
   "shipstore": "2026-10-19",
   "anthropologie": "2026-10-19",
   "exelot": "2026-10-19",
-  "uniuniuniexpre": "2026-10-20",
   "dexterity": "2026-10-21",
-  "deposco": "2026-10-22"
+  "deposco": "2026-10-22",
+  "uniuni": "2026-10-20"
  },
  "facts": {
   "ups": {
