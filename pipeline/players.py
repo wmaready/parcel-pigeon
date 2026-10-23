@@ -229,11 +229,13 @@ def apply_profile(p, res, byname, edges, mp, today):
 
 
 def main():
+    """Research new candidates. Returns 1 when the day's extras are paused (the command line turns that into a non-zero
+    exit so the day's research isn't marked done); never exits itself, because alerts.py calls it in-process."""
     if not API_KEY:
         print("players: no API key"); return
     from common import paused
-    if paused(extra=True):          # exit non-zero so the day's research isn't marked done and runs on a later run
-        print(f"players: waiting, {paused(extra=True)}"); sys.exit(1)
+    if paused(extra=True):
+        print(f"players: waiting, {paused(extra=True)}"); return 1
     limit = int(sys.argv[sys.argv.index("--max") + 1]) if "--max" in sys.argv else 6
     seed, mp = load("seed.json", {}), load("players.json", {"players": [], "edges": []})
     news = {s["id"]: s for s in load("news.json", [])}
@@ -429,4 +431,4 @@ def rankings_pull():
 
 if __name__ == "__main__":
     rankings_pull()             # monthly: new market movers from ranking lists become candidates
-    main()                      # research candidates (from news and from rankings)
+    sys.exit(main() or 0)       # research candidates (from news and from rankings); 1 = paused, try a later run
