@@ -2346,6 +2346,26 @@ button.kl:hover{background:rgba(76,201,240,.06)}
 .kla{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
 .kdoc{cursor:default}
 .dsrc{margin-top:14px}
+/* story page: one synopsis, then one plain block of what it affects */
+.syn{margin-top:8px}
+.syn p{margin:0 0 10px;font-size:var(--fs-md);line-height:1.55;color:var(--ink)}
+.syn .synbg{font-size:14px;color:var(--ink-2)}
+.syn .synup{padding-left:10px;border-left:2px solid var(--accent)}
+.syn .synup b,.aff>.lbl,.sco .lbl{display:block;font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:2px}
+.aff{margin-top:12px;padding:12px;border:1px solid var(--grid-strong);border-radius:12px}
+.aff dl{margin:6px 0 0;display:grid;gap:0}
+.afr{display:grid;grid-template-columns:120px minmax(0,1fr);gap:4px 12px;padding:8px 0;border-top:1px solid var(--grid)}
+.afr:first-child{border-top:0;padding-top:2px}
+.afr dt{font-size:12.5px;color:var(--ink-2);padding-top:2px}
+.afr dd{margin:0;font-size:14.5px;line-height:1.45;min-width:0;overflow-wrap:anywhere}
+.afr dd .lgset{vertical-align:middle}
+.afs{color:var(--ink-2);font-size:12.5px}
+.afflag dd{display:grid;gap:6px}.aff1{line-height:1.5}
+.ssrc{margin:14px 0 0;font-size:12.5px;line-height:1.6;color:var(--ink-2)}
+.ssrc a{color:var(--ink)}
+.sco{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.sco .lbl{flex-basis:100%;margin:0}
+@media (max-width:560px){.afr{grid-template-columns:1fr;gap:2px}}
 .card.full .srcd>summary{pointer-events:none}
 .card.full .cardft{border-top:0}
 @media (max-width:560px){.kl{grid-template-columns:40px 1fr}.kla,.klgo{grid-column:2;justify-content:flex-start}.klgo{display:none}}
@@ -7423,6 +7443,8 @@ setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history
 
 // anything that takes you elsewhere (rate clock, Docs, a storyline, another section) closes the story page first
 document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');if(t)closeStory(false,true)},true);
+// a company link on the story page: the story closes, then the company page opens
+document.addEventListener('click',e=>{const b=e.target.closest('#storySheet [data-sco]');if(!b)return;e.preventDefault();e.stopPropagation();const id=b.dataset.sco;closeStory(false,true);setTimeout(()=>openCompany(id),260)},true);
 // swipe right (or down from the top bar) to close on phones
 {let x0=null,y0=null;document.addEventListener('touchstart',e=>{if(STORY_OPEN==null||!e.target.closest('.sspanel'))return;const t=e.touches[0];x0=t.clientX;y0=t.clientY},{passive:true});
  document.addEventListener('touchend',e=>{if(x0==null)return;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
@@ -7835,22 +7857,67 @@ function card(n,full){
     </div>
     <footer class="cardft"><button type="button" class="more" data-open="${n.id}">Read more${extra.length?`<small> · ${extra.join(' · ')}</small>`:''} ›</button>${cmtBar(n)}${links.length?`<span class="clk"><button class="datechip" data-clock="${links[0].id}" title="${esc(links[0].w)}">Rate clock ${fmtD(links[0].d)}</button></span>`:''}</footer>
   </article>`}
-  return `<article class="card full" id="d-${n.id}">${hd}
+  // story page: headline, one synopsis, one "What it affects" block, key dates, sources, storyline and companies
+  const S=storyParts(n),hdF=hd.replace(kindTag(n),kindTag0(n));   // Off-cycle / Unconfirmed move into "What it affects"
+  return `<article class="card full" id="d-${n.id}">${hdF}
     <div class="cardbody">
       ${media(n,'wide')}
       ${storyChip(n)}
       <h3>${esc(n.title)}</h3>
-      <p class="sum">${decode(n.sum)}</p>
-      ${storyNew(n)}
-      ${n.why?`<p class="why-line"><b>Why it matters</b> ${esc(n.why)}</p>`:''}
-      <section class="dsec imp-${n.imp}"><div class="dsh">${tag}${eff?`<span class="lited">${esc(eff)}</span>`:''}</div><p>${decode(n.plain)}</p></section>
+      <div class="syn"><p>${decode(S.syn.join(' '))}</p>${S.bg.length?`<p class="synbg">${decode(S.bg.join(' '))}</p>`:''}${S.upd.length?`<p class="synup"><b>New in this update</b> ${esc(S.upd.join(' '))}</p>`:''}</div>
+      ${storyAffects(n,S)}
       ${keyLinks(n)}
       ${chgTable(n)}
+      <p class="ssrc">${srcLinks(n)}</p>
       ${storySoFar(n)}
-      <div class="dsrc">${srcDrop(n,n.tie).replace('<details class="srcd">','<details class="srcd" open>')}</div>
+      ${storyCoLinks(n)}
     </div>
     <footer class="cardft">${cmtBar(n)}</footer>
   </article>`}
+/* The pipeline's older fields overlap: the summary, "why it matters", the plain-English effect, "what's new" and the
+   background line often say the same thing twice. Each sentence is kept once, in the first place it belongs, and only
+   when it adds something: a word or a figure the reader hasn't already seen. New stories carry a written synopsis (syn)
+   and an "affects" list (aff); older ones are assembled from the fields they have. No fact is dropped: a sentence only
+   leaves when every figure in it, and nearly all its words, are already on the page. */
+const SYN_STOP=new Set('about after also and any are been but for from has have into its more not now one other over said says than that the their them then there these they this those under were what when which while will with would'.split(' '));
+// sentences, without breaking after "Oct.", "U.S.", "N.C." or "Inc."
+const SYN_ABBR=/(?:\b(?:Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Inc|Corp|Co|Ltd|No|St|Mr|Mrs|Ms|Dr|Jr|Sr|vs|etc|approx|est)|\b[A-Z](?:\.[A-Z])*)\.$/;
+const synSplit=t=>String(t||'').replace(/\s+/g,' ').trim().split(/(?<=[.!?])\s+(?=["“A-Z0-9$])/).reduce((a,s)=>{if(a.length&&SYN_ABBR.test(a[a.length-1]))a[a.length-1]+=' '+s;else a.push(s);return a},[]).map(s=>s.trim()).filter(Boolean);
+const synWords=t=>(String(t).toLowerCase().match(/[a-z][a-z'-]{2,}/g)||[]).filter(w=>!SYN_STOP.has(w)).map(w=>w.replace(/'s$/,'').replace(/(?<=..)s$/,''));
+const synNums=t=>String(t).replace(/(\d),(\d)/g,'$1$2').match(/\d+(?:\.\d+)?/g)||[];
+function synNovel(s,seen){const nums=new Set(synNums(seen));if(synNums(s).some(x=>!nums.has(x)))return true;
+  const W=synWords(s);if(!W.length)return false;const SW=new Set(synWords(seen));return W.filter(w=>SW.has(w)).length/W.length<.6}
+function storyParts(n){let seen='';const take=(t,cap)=>{const out=[];synSplit(t).forEach(s=>{if(cap&&out.length>=cap)return;if(synNovel(s,seen)){out.push(s);seen+=' '+s}});return out};
+  const aff=Array.isArray(n.aff)?n.aff.filter(a=>a&&(a.what||a.w)).map(a=>({who:String(a.who||'').trim(),what:String(a.what||a.w).trim()})):[];
+  // the effect on shippers is the point of "What it affects", so it is read first: the written list (aff) on new stories,
+  // the plain-English effect on older ones. The synopsis then skips "why it matters" lines that only restate it.
+  aff.forEach(a=>{seen+=' '+a.who+' '+a.what});
+  const eff=aff.length?take(n.plain):synSplit(n.plain);seen+=' '+eff.join(' ');
+  const syn=[...synSplit(n.syn||n.sum)];seen+=' '+syn.join(' ');
+  if(n.syn)syn.push(...take(n.sum));syn.push(...take(n.why));
+  const upd=n.new?take(n.new):[];
+  const bg=take(n.tie);                             // background: earlier news the sources connect it to
+  return {syn:syn.length?syn:[n.sum||''],bg,aff,eff,upd}}
+function storyAffects(n,S){S=S||storyParts(n);
+  const row=(k,v,cls)=>v?`<div class="afr${cls?' '+cls:''}"><dt>${k}</dt><dd>${v}</dd></div>`:'';
+  const cars=storyCars(n),d=n.act?daysTo(n.act):null,nd=n.ann&&n.act?noticeDays(n.ann,n.act):null;
+  const when=n.act?(n.inferred?`First seen on the carrier’s site ${fmtD(n.act,{month:'short',day:'numeric',year:'numeric'})}`:`<b>${fmtD(n.act,{month:'short',day:'numeric',year:'numeric'})}</b> <span class="afs">${d>0?`in ${d} day${d===1?'':'s'}`:d===0?'today':'in effect'}</span>`):'';
+  const ann=n.ann?`<b>${fmtD(n.ann,{month:'short',day:'numeric',year:'numeric'})}</b>${nd!=null?` <span class="afs">${nd} days' notice</span>`:''}`:'';
+  const flags=[n.offc?`<span class="aff1">${OFFC_TAG} <span class="afs">Takes effect outside the carrier’s usual annual increase and peak season.</span></span>`:'',
+    n.unconf?`<span class="aff1"><span class="tag tag-unconf">Unconfirmed</span> <span class="afs">One smaller outlet so far; not yet confirmed by the company or the major or trade press.</span></span>`:''].filter(Boolean);
+  const PRICES={up:'Going up',down:'Going down',watch:'Developing',info:'No price change reported'};
+  const lv=['','Low','Medium','High'][+n.lvl||1];
+  return `<section class="aff imp-${n.imp}"><div class="lbl">What it affects</div><dl>
+    ${S.aff.map(a=>row(esc(a.who||'Shippers'),decode(a.what))).join('')}
+    ${S.eff.length?row('For shippers',decode(S.eff.join(' '))):''}
+    ${row('Carriers',cars.length?carList(cars.join(', '),', '):'Industry-wide')}
+    ${row('Prices',`<span class="eff2k"><i></i>${PRICES[n.imp]||IMPACT[n.imp].w}</span>${+n.lvl>1?` <span class="afs">${lv} impact</span>`:''}`)}
+    ${row(n.inferred?'Spotted':'Takes effect',when)}
+    ${row('Announced',ann)}
+    ${flags.length?row('Status',flags.join(''),'afflag'):''}</dl></section>`}
+/* the companies a story is about, each one tap from its company page */
+function storyCoLinks(n){const L=(typeof storyCos==='function'?storyCos(n,true):[]).filter(id=>PL[id]).slice(0,6);if(!L.length)return '';
+  return `<p class="sco"><span class="lbl">Company pages</span>${L.map(id=>`<button type="button" class="pchip" data-sco="${esc(id)}">${esc(PL[id].n)}</button>`).join('')}</p>`}
 /* Story page: the rate clock dates and the carrier documents behind a story, side by side, each one tap away */
 function keyLinks(n){const D=clockFor(n.id).slice().sort((a,b)=>a.d.localeCompare(b.d)),R=relDocs(n);if(!D.length&&!R.length)return '';
   const dRow=x=>{const k=daysTo(x.d);return `<button type="button" class="kl" data-clock="${x.id}"><span class="kli kcal" aria-hidden="true"><i>${fmtD(x.d,{month:'short'}).toUpperCase()}</i><b>${+x.d.slice(8)}</b></span><span class="klt"><b>${esc(x.w)}</b><small>${k>0?`In ${k} day${k===1?'':'s'}`:k===0?'Today':'In effect'} · open on the rate clock</small></span><span class="klgo" aria-hidden="true">›</span></button>`};
