@@ -118,7 +118,7 @@ def test_paused_extras_no_longer_kill_the_alerts_run(data_dir, monkeypatch):
     monkeypatch.setattr(players, "API_KEY", "test-key")
     monkeypatch.setattr(common, "paused", lambda extra=False: "Claude calls paused: $1.20 spent today")
     monkeypatch.setattr(A, "now_et", lambda: dt.datetime(2026, 10, 22, 10, 0, tzinfo=A.ET))
-    assert players.main() == 1                       # paused research reports it; it no longer exits the process
+    assert players.main() is False                   # paused research reports it; it no longer exits the process
     A.run()                                          # before the fix: SystemExit(1) here
     st = load("alerts_state.json", {})
     assert calls, "nothing was pushed"
