@@ -88,7 +88,7 @@ def written(data_dir, monkeypatch):
     items = [{"title": f"FedEx story {w}", "url": f"https://www.freightwaves.com/{w}", "summary": "FedEx parcel", "date": "2026-10-18",
               "src": "FreightWaves", "direct": False, "house": False, "tier": 2} for w in ("good", "bad")]
 
-    def fake_claude(model, system, user, max_tokens=0):
+    def fake_claude(model, system, user, max_tokens=0, **kw):
         if system == N.TRIAGE_SYSTEM:
             lines = [l for l in user.split("NEW ITEMS:\n")[1].splitlines() if l[:1].isdigit()]
             return json.dumps([{"i": int(l.split(".")[0]), "keep": True, "carriers": ["FedEx"], "category": "Network & operations",
@@ -100,6 +100,7 @@ def written(data_dir, monkeypatch):
                            "syn": f"FedEx adds a {fee} fee on hub parcels.", "aff": [{"who": "Hub shippers", "what": f"Pay {fee} more."}],
                            "carriers": ["FedEx"], "category": "Network & operations", "kind": "News"})
 
+    monkeypatch.setattr(common, "paused", lambda extra=False: None)   # the news is running (paused: test_lanes.py)
     monkeypatch.setattr(N, "collect", lambda cfg, primary_only=False: list(items))
     monkeypatch.setattr(N, "similar", lambda a, b: False)
     monkeypatch.setattr(N, "claude", fake_claude)
