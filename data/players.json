@@ -1586,6 +1586,72 @@
    ],
    "enriched": "2026-10-23",
    "pending": false
+  },
+  {
+   "id": "dispatch",
+   "n": "Dispatch",
+   "realm": "gig",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Bloomington, MN, USA",
+   "yr": "2016",
+   "s": "Dispatch runs a B2B last-mile delivery marketplace that connects businesses with a network of independent-contractor drivers across the U.S., and it also sells delivery scheduling and routing software (Dispatch Connect, DispatchOne).",
+   "al": [
+    "Dispatch Connect",
+    "Dispatch Marketplace",
+    "DispatchIt, Inc.",
+    "DispatchOne"
+   ],
+   "src": "https://www.dispatchit.com/press-release/dispatch-accelerates-growth-with-50-million-series-c",
+   "auto": true,
+   "added": "2026-10-23",
+   "from": "discover",
+   "site": "dispatchit.com",
+   "geo": [
+    -93.298,
+    44.841
+   ],
+   "srcs": [
+    "https://www.dispatchit.com/press-release/dispatch-accelerates-growth-with-50-million-series-c",
+    "https://www.freightwaves.com/news/peakspan-capital-delivers-dispatch-50m",
+    "https://www.peakspancapital.com/partnership/dispatch"
+   ],
+   "enriched": "2026-10-23",
+   "pending": false
+  },
+  {
+   "id": "uniteddelivery",
+   "n": "United Delivery Service, Ltd. (UDS)",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": "Oakbrook Terrace, IL, USA",
+   "yr": "1972",
+   "s": "UDS is a Midwest regional parcel carrier that provides same-day and next-day last-mile delivery in Illinois, Indiana and Wisconsin for e-commerce, healthcare and other business shippers.",
+   "al": [
+    "UDS",
+    "United Delivery Service",
+    "United Delivery Service, Ltd.",
+    "United Delivery Services Inc"
+   ],
+   "src": "https://parcelindustry.com/article-6629-United-Delivery-Service-Unveils-'3POD'-The-Future-of-AI-Assisted-Multi-Image-Proof-of-Delivery.html",
+   "auto": true,
+   "added": "2026-10-23",
+   "from": "discover",
+   "site": "uniteddeliveryservice.com",
+   "geo": [
+    -87.965,
+    41.85
+   ],
+   "srcs": [
+    "https://parcelindustry.com/article-6629-United-Delivery-Service-Unveils-'3POD'-The-Future-of-AI-Assisted-Multi-Image-Proof-of-Delivery.html",
+    "https://proshipinc.com/blog/new-carrier-announcement-proship-adds-united-delivery-service/",
+    "https://docs.easypost.com/carriers/uds-guide"
+   ],
+   "enriched": "2026-10-23",
+   "pending": false
   }
  ],
  "edges": [
@@ -2866,6 +2932,33 @@
    "t": "Kohl's to launch same-day delivery with Uber Eats",
    "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
    "story": "a4d34002e71df"
+  },
+  {
+   "a": "proship",
+   "b": "uniteddelivery",
+   "k": "partner",
+   "y": null,
+   "t": "ProShip added UDS as a carrier in its multi-carrier shipping software",
+   "url": "https://proshipinc.com/blog/new-carrier-announcement-proship-adds-united-delivery-service/",
+   "story": null
+  },
+  {
+   "a": "easypost",
+   "b": "uniteddelivery",
+   "k": "partner",
+   "y": null,
+   "t": "UDS carrier integration in the EasyPost API",
+   "url": "https://docs.easypost.com/carriers/uds-guide",
+   "story": null
+  },
+  {
+   "a": "shipwise",
+   "b": "uniteddelivery",
+   "k": "partner",
+   "y": null,
+   "t": "UDS shipping integration in ShipWise",
+   "url": "https://www.shipwise.com/integrations/uds",
+   "story": null
   }
  ],
  "moves": [
@@ -3159,7 +3252,9 @@
   "dexterity": "2026-10-21",
   "deposco": "2026-10-22",
   "uniuni": "2026-10-20",
-  "amsfulfillment": "2026-10-23"
+  "amsfulfillment": "2026-10-23",
+  "dispatch": "2026-10-23",
+  "uniteddelivery": "2026-10-23"
  },
  "facts": {
   "ups": {

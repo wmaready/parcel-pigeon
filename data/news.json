@@ -1,5 +1,169 @@
 [
  {
+  "id": "w84705482dd2f",
+  "date": "2026-10-23",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes",
+  "sum": "UPS's Important Updates now say that, effective December 21, 2026, Daily Rates for Ground, Air and International services rise an average net 5.9%. The Additional Handling minimum billable weight goes from 40 to 50 lbs., and the Area Surcharge and zone ZIP lists change. Also new: an origin-ZIP surcharge on Ground and Ground Saver for Qualified customers (December 21, 2026 or later) and a fuel surcharge change effective November 2, 2026. Also: UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026.",
+  "plain": "Shippers using UPS Ground, Air or International face an average net 5.9% rate increase. Actual cost depends on each shipper's agreement and profile. Shippers in affected ZIPs may see different Area Surcharges or zones, and Ground/Ground Saver shippers sending from certain origin ZIPs may pay an extra per-package surcharge.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-23",
+  "changes": [
+   {
+    "what": "Average Daily Rate increase for UPS Ground, UPS Air and International services",
+    "before": null,
+    "after": "Average net increase of 5.9%; detailed rate previews to follow at a later date",
+    "effective": "2026-12-21",
+    "who": "Shippers using UPS Ground, UPS Air and International services",
+    "impact": "+5.9% average net; individual impact varies by shipping profile and UPS agreement"
+   },
+   {
+    "what": "Additional Handling minimum billable weight",
+    "before": null,
+    "after": "Increases from 40 lbs. to 50 lbs. (the 40 lb. figure comes from the NEW text; the OLD excerpt did not contain this item)",
+    "effective": "2026-12-21",
+    "who": "Packages subject to Additional Handling",
+    "impact": "Minimum billable weight +10 lbs. (40 -> 50 lbs.)"
+   },
+   {
+    "what": "Area Surcharge ZIP code list",
+    "before": null,
+    "after": "The list of ZIP codes to which Area Surcharges apply will change",
+    "effective": "2026-12-21",
+    "who": "Shipments to ZIP codes added to or removed from the Area Surcharge list",
+    "impact": null
+   },
+   {
+    "what": "ZIP codes aligned to certain zones",
+    "before": null,
+    "after": "The list of ZIP codes aligned to certain Zones will change",
+    "effective": "2026-12-21",
+    "who": "Shipments to or from ZIPs that move zones",
+    "impact": null
+   },
+   {
+    "what": "New per-package surcharge on domestic Ground and Ground Saver shipments from certain origin ZIP codes",
+    "before": null,
+    "after": "Additional surcharge per package for Qualified customers; details and origin ZIPs due in early November",
+    "effective": "2026-12-21",
+    "who": "Qualified customers shipping Ground and Ground Saver from certain ZIP codes",
+    "impact": "Amount not stated"
+   },
+   {
+    "what": "Fuel surcharge change for U.S. Ground Domestic, Ground Saver and U.S. Domestic Air",
+    "before": null,
+    "after": "Fuel surcharges will change; details are at a linked page",
+    "effective": "2026-11-02",
+    "who": "Domestic Ground, Ground Saver and Air shippers",
+    "impact": "Size not stated in the text"
+   },
+   {
+    "what": "Ground Domestic / Ground Saver fuel surcharge table replaced; new table starts at $5.53 diesel at 28.50%",
+    "before": null,
+    "after": "New table from $5.53 (28.50%) up to $6.79–$6.88 (31.50%), in 0.25% steps per band, effective Nov 2, 2026",
+    "effective": "2026-11-02",
+    "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
+    "impact": "Percentages in the old table are not in the text provided, so the size of the move is unknown"
+   },
+   {
+    "what": "Ground Domestic / Ground Saver table top band published",
+    "before": null,
+    "after": "$6.79–$6.88 diesel band carries a 31.50% surcharge",
+    "effective": "2026-11-02",
+    "who": "Ground and Ground Saver shippers when diesel is in the high range",
+    "impact": null
+   },
+   {
+    "what": "Diesel range-extension anchor price moved up",
+    "before": "Above/below $4.99, extension in $0.09 (above) and $0.27 (below) increments, 0.25% steps",
+    "after": "Above/below $5.80, with the same $0.09 (above) and $0.27 (below) increments and 0.25% steps",
+    "effective": "2026-11-02",
+    "who": "Ground and Ground Saver shipments if diesel falls outside the published range",
+    "impact": "Anchor +$0.81 per gallon ($4.99 -> $5.80); increments unchanged"
+   },
+   {
+    "what": "Domestic Air fuel surcharge table replaced; new table starts at $4.06 jet fuel at 31.50%",
+    "before": null,
+    "after": "New table from $4.06 (31.50%) up to $4.66–$4.71 (34.50%), in 0.25% steps per band, effective Nov 2, 2026",
+    "effective": "2026-11-02",
+    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
+    "impact": "Percentages in the old table are not in the text provided, so the size of the move is unknown"
+   },
+   {
+    "what": "Domestic Air table top band published",
+    "before": null,
+    "after": "$4.66–$4.71 jet fuel band carries a 34.50% surcharge",
+    "effective": "2026-11-02",
+    "who": "Domestic Air shippers when jet fuel is in the high range",
+    "impact": null
+   },
+   {
+    "what": "Jet fuel range-extension anchor price moved up",
+    "before": "Above/below $3.01, extension in $0.05 (above) and $0.21 (below) increments, 0.25% steps",
+    "after": "Above/below $3.56, with the same $0.05 (above) and $0.21 (below) increments and 0.25% steps",
+    "effective": "2026-11-02",
+    "who": "Domestic Air shipments if jet fuel falls outside the published range",
+    "impact": "Anchor +$0.55 per gallon ($3.01 -> $3.56); increments unchanged"
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Whether the fuel surcharge change affects the fuel table itself, and its size; details are on a linked page not shown.",
+   "The amount of the origin-ZIP surcharge and which origin ZIPs and customers qualify; due in early November.",
+   "Whether the 5.9% increase applies uniformly to all services or what the per-service and per-zone rates will be; rate previews come later.",
+   "The OLD text's notices about the Surge Emergency Fees (Oct 15, 2026), the September 7, 2026 Rate and Service Guide update, the Disbursement Fee (2.5%, $17.50 minimum) and the Entry-Line Charge ($3.50 after first five lines) no longer appear in the excerpt of NEW text. It cannot be confirmed whether they were reversed or only removed from the page."
+  ],
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS: Average Daily Rate increase for UPS Ground, UPS Air and Internati",
+    "imp": "up"
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS: Additional Handling minimum billable weight",
+    "imp": "up"
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS: Area Surcharge ZIP code list",
+    "imp": "up"
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: fuelsurcharge-us-en.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "w599d9089a65d",
   "date": "2026-10-23",
   "c": [

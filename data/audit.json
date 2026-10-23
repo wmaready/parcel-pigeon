@@ -1,33 +1,36 @@
 {
- "run": "2026-10-23T04:41Z",
+ "run": "2026-10-23T04:49Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 80,
- "doc_cursor": 60,
+ "link_cursor": 120,
+ "doc_cursor": 90,
  "checked_pairs": [
-  "73dcfc31b988",
-  "5f83fff4b0b8",
-  "de313bc51fd7",
-  "d46a0aebc57e",
-  "b54077ea2f7b",
-  "0b8aff140a01",
-  "1bc66c00eda3",
-  "62cb3ae5df27",
-  "6bef0a5868e5",
-  "70042e1b5ea7",
-  "0cae9f6a1079",
-  "4e8faef9252d",
-  "f3a106e02077",
-  "4d5dedc8cd29",
   "94d1ac334f4e",
+  "0b8aff140a01",
+  "60030262fcea",
+  "bd74f39e4a2a",
+  "4d5dedc8cd29",
+  "c74456d2bddc",
   "14a3d7429698",
   "457e37db5347",
-  "454e4f8f6a6b",
-  "bd74f39e4a2a",
+  "0cae9f6a1079",
+  "70042e1b5ea7",
+  "f3a106e02077",
+  "de313bc51fd7",
+  "4621e9e86574",
+  "b54077ea2f7b",
+  "1bc66c00eda3",
+  "7e4a0a07ad2f",
   "5effb73bc21d",
+  "d46a0aebc57e",
   "dbb89994655f",
-  "7e4a0a07ad2f"
+  "5f83fff4b0b8",
+  "62cb3ae5df27",
+  "454e4f8f6a6b",
+  "4e8faef9252d",
+  "73dcfc31b988",
+  "6bef0a5868e5"
  ],
  "issues": [
   {
@@ -188,11 +191,12 @@
    "fixed": false
   },
   {
-   "sev": "low",
+   "sev": "high",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 20 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
    "ids": [
-    "07"
+    "07",
+    "w84705482dd2f"
    ],
    "fixed": false
   },
@@ -397,11 +401,12 @@
    "fixed": false
   },
   {
-   "sev": "low",
+   "sev": "high",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" is 20 days old; check whether it has been announced",
+   "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
    "ids": [
-    "07"
+    "07",
+    "w84705482dd2f"
    ],
    "fixed": false
   },

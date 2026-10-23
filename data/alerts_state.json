@@ -60,7 +60,8 @@
   "ae3846ec1ac41",
   "af710cc767bac",
   "w599d9089a65d",
-  "a831c709e5809"
+  "a831c709e5809",
+  "w84705482dd2f"
  ],
  "clock": [
   "e06:7",
@@ -127,7 +128,9 @@
   "uniuniuniexpre",
   "dexterity",
   "deposco",
-  "amsfulfillment"
+  "amsfulfillment",
+  "dispatch",
+  "uniteddelivery"
  ],
  "sent": [
   "player:pirateship",
@@ -240,32 +243,34 @@
   "jefferies amazon automation parcel network could lift margin",
   "wing and walmart launch drone delivery from 7 charlotte area",
   "ups posts new ground and domestic air fuel surcharge tables ",
-  "teamsters rally at city hall for nyc delivery protection act"
+  "teamsters rally at city hall for nyc delivery protection act",
+  "ups announces dec 21 2026 rate increase 50 lb additional han"
  ],
  "harvested": [
-  "wdf959a97bcb6",
-  "a312b45efa358",
+  "aee6669d325da",
+  "w84705482dd2f",
+  "a6c2418bed0a7",
   "a6cc2420ad66e",
-  "a2b81ad721cb8",
+  "w599d9089a65d",
+  "wacb825361479",
+  "a2f683da86bf8",
+  "wdf959a97bcb6",
   "a2def09bc43bb",
   "a3a45d7f6db20",
-  "a773d361dac4e",
-  "w150132868eae",
-  "a6e82ba740e99",
-  "a72efb5e01b99",
-  "af8ee5ed067c6",
-  "a6c2418bed0a7",
   "a15404304f17b",
-  "a89d7e4beebd9",
   "a351cab9045c7",
-  "a58373f1b7bc3",
-  "a831c709e5809",
-  "aee6669d325da",
+  "a72efb5e01b99",
   "a5d45f26f2219",
-  "a2f683da86bf8",
   "aba40a11b6946",
-  "w599d9089a65d",
-  "wacb825361479"
+  "a2b81ad721cb8",
+  "w150132868eae",
+  "a89d7e4beebd9",
+  "a831c709e5809",
+  "af8ee5ed067c6",
+  "a312b45efa358",
+  "a6e82ba740e99",
+  "a773d361dac4e",
+  "a58373f1b7bc3"
  ],
  "backfilled": true,
  "recent": [
@@ -1232,6 +1237,25 @@
      "url": "https://www.prnewswire.com/news-releases/teamsters-rally-for-delivery-protection-act-at-new-york-city-hall-302917339.html"
     }
    ]
+  },
+  {
+   "id": "w84705482dd2f",
+   "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes",
+   "date": "2026-10-23",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: fuelsurcharge-us-en.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1366,6 +1390,10 @@
   "a831c709e5809": {
    "t": "Teamsters rally for NYC delivery bill",
    "m": "Not yet scheduled for a vote; would require facility registration and ban subcontracting."
+  },
+  "w84705482dd2f": {
+   "t": "UPS announces 5.9% avg net rate increase",
+   "m": "Takes effect Dec 21, 2026. Avg net increase 5.9%; actual cost depends on your agreement and ZIP."
   }
  },
  "queue": [
@@ -1752,6 +1780,43 @@
    "topic": "deals",
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#c=amsfulfillment"
+  },
+  {
+   "kind": "story",
+   "key": "story:ups announces dec 21 2026 rate increase 50 lb additional handling threshold zip changes",
+   "id": "w84705482dd2f",
+   "t": "UPS announces 5.9% avg net rate increase",
+   "m": "Takes effect Dec 21, 2026. Avg net increase 5.9%; actual cost depends on your agreement and ZIP.",
+   "big": true,
+   "at": "2026-10-23T00:48:20.483961-04:00",
+   "lvl": 3,
+   "unconf": false,
+   "topic": "rates",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#alert=w84705482dd2f"
+  },
+  {
+   "kind": "player",
+   "key": "player:dispatch",
+   "at": "2026-10-23T00:48:20.484911-04:00",
+   "t": "New on the map: Dispatch",
+   "m": "Dispatch runs a B2B last-mile delivery marketplace that connects businesses with a network of independent-contractor drivers across the U.S., and it also sells delivery scheduling and routing software (Dispatch Connect, DispatchOne).",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#c=dispatch"
+  },
+  {
+   "kind": "player",
+   "key": "player:uniteddelivery",
+   "at": "2026-10-23T00:48:20.484918-04:00",
+   "t": "New on the map: United Delivery Service, Ltd. (UDS)",
+   "m": "UDS is a Midwest regional parcel carrier that provides same-day and next-day last-mile delivery in Illinois, Indiana and Wisconsin for e-commerce, healthcare and other business shippers.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#c=uniteddelivery"
   }
  ],
  "fuelq": {},
