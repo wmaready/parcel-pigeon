@@ -8619,10 +8619,13 @@ const REG_DOC=d=>!['UPS','FedEx','USPS','OnTrac','Amazon','DHL','Reports'].inclu
 let docCar=store.get('pw-doccar','All');if(!['All',...DOC_CARS].includes(docCar))docCar='All';
 const fmtOf=u=>!u?'':/\.xlsx(\?|$)/i.test(u)?'Excel':/\.pdf(\?|$)/i.test(u)||/\/Mail-Innovations-Surcharges$/.test(u)?'PDF':/\.txt$/i.test(u)?'Text':'Web page';
 /* Docs: carrier first, then the kind of document, newest first; every row says why it's in the library */
-const DOC_GROUPS=[['Rate guides',['Rate guide']],['GRI announcements',['GRI notice']],['Peak announcements',['Peak']],
-  ['Special pricing programs',['Special program']],['Surcharges & fees',['Surcharges & fees']],['Fuel',['Fuel']],
-  ['Zones & delivery areas',['Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Filings',['Regulatory filing']],
+const DOC_GROUPS=[['Rate guides',['Rate guide']],['GRI & peak season',['GRI notice','Peak']],
+  ['Off-cycle announcements',[]],['Surcharges, fees & programs',['Surcharges & fees','Special program']],
+  ['Fuel, zones & ZIP lists',['Fuel','Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Filings',['Regulatory filing']],
   ['Market reports',['Market report']]];
+// a price notice taking effect outside the annual increase window and peak season (same rule as the rate clock's Off-cycle tag)
+const DOC_KIND={'GRI notice':'gri','Peak':'peak','Surcharges & fees':'surcharge','Special program':'program'};
+const docOffCycle=d=>!!(DOC_KIND[d.t]&&d.eff&&typeof cycleOf==='function'&&cycleOf(d.c,DOC_KIND[d.t],d.eff)==='off');
 /* Market reports (industry studies from many publishers) are grouped by what they measure, not by document type */
 const REPORT_CATS=[['Parcel volume & service',/parcel volume|parcels in|package volume|on time|on-time|shipping index|carrier performance|shipmatrix/i],
   ['Government & regulators',/inspector general|regulatory commission|\bgao\b|census|congress|federal/i],
@@ -8632,7 +8635,7 @@ const REPORT_CATS=[['Parcel volume & service',/parcel volume|parcels in|package 
   ['Shipper & merchant surveys',/merchant|brands|retailers|sellers|survey|small business/i]];
 const reportCat=d=>(REPORT_CATS.find(([,re])=>re.test(d.n||''))||['Other reports'])[0];
 const DOC_LABEL=c=>c==='Reports'?'Market reports':c==='Regional'?'Other regionals':c;
-const docGroup=d=>d.c==='Reports'?reportCat(d):(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
+const docGroup=d=>d.c==='Reports'?reportCat(d):docOffCycle(d)?'Off-cycle announcements':(DOC_GROUPS.find(g=>g[1].includes(d.t))||['Other documents'])[0];
 const DF=x=>fmtD(x,{month:'short',day:'numeric',year:'numeric'});
 /* The year a document is filed under. A year the document states for itself wins over a stored one: "2026 UPS Rate Guide"
    files under 2026 even if it was stored as 2025. A year inside a full date ("signed before Aug 1, 2018", "Dec 22, 2025
@@ -8724,18 +8727,10 @@ function renderDocs(){
       :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
     const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
     return `<details class="dgrp"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
-  // carrier › year (newest first, the newest one open) › kind of document; replaced versions fold away at the end of each year
   const KINDS=c=>c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents'];
-  const yearBody=(L,c)=>{const kinds=KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length);
-    // a year with no current documents (an earlier year) simply lists them; "replaced versions" only folds away beside current ones
-    const any=L.some(docCur),cur=d=>!any||docCur(d),old=L.filter(d=>!cur(d)).sort(sorter);
-    return `<div class="dyrb">${kinds.map(([g,G])=>{const C=G.filter(cur).sort(sorter);return C.length?`<div class="dtyp lbl">${esc(g)}</div><div class="drows">${C.map(docRow).join('')}</div>`:''}).join('')}
-      ${old.length?`<details class="dold" data-dids="${ids(old)}"${dq?' open':''}><summary>Replaced versions (${old.length})${badge(old)}</summary><div class="drows">${old.map(docRow).join('')}</div></details>`:''}</div>`};
-  const typesOf=(L,c)=>{const ys=[...new Set(L.map(yearOf))].sort(ysort);
-    // the newest year with a published, current document opens; the others are one tap away
-    const first=ys.find(y=>L.some(d=>yearOf(d)===y&&d.u&&docCur(d)))||ys[0];
-    return ys.map(y=>{const Y=L.filter(d=>yearOf(d)===y);
-      return `<details class="dyr dyear" data-dids="${ids(Y)}"${dq||y===first?' open':''}><summary><b>${y==='Undated'?'Ongoing / undated':esc(y)}</b>${badge(Y)}<span class="lbl">${Y.length} document${Y.length>1?'s':''}</span></summary>${yearBody(Y,c)}</details>`}).join('')+earnFolder(c)};
+  // carrier › kind of document › year (a kind splits into years once it holds more than 3 documents over several years)
+  const typesOf=(L,c)=>KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
+      .map(([g,G])=>fold('dgrp',g,G,typeBody(G))).join('')+earnFolder(c);
   const cars=[...new Set(ds.map(d=>d.c))].sort((a,b)=>order(a)-order(b)||a.localeCompare(b));
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
