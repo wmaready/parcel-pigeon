@@ -1,5 +1,5 @@
 {
- "run": "2026-10-24T04:47Z",
+ "run": "2026-10-24T05:35Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -107,13 +107,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -254,24 +247,6 @@
    "ids": [
     "a2e0cb230779a",
     "a15404304f17b"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))): https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable",
-   "ids": [
-    "a03895dd99d3d"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
-   "ids": [
-    "41"
    ],
    "fixed": false
   }
@@ -342,13 +317,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -489,24 +457,6 @@
    "ids": [
     "a2e0cb230779a",
     "a15404304f17b"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))): https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable",
-   "ids": [
-    "a03895dd99d3d"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
-   "ids": [
-    "41"
    ],
    "fixed": false
   }
