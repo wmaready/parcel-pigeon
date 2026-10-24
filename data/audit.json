@@ -1,10 +1,10 @@
 {
- "run": "2026-10-24T04:36Z",
+ "run": "2026-10-24T04:47Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 120,
- "doc_cursor": 90,
+ "link_cursor": 160,
+ "doc_cursor": 120,
  "checked_pairs": [
   "94d1ac334f4e",
   "0b8aff140a01",
@@ -256,6 +256,24 @@
     "a15404304f17b"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))): https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable",
+   "ids": [
+    "a03895dd99d3d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
+   "ids": [
+    "41"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -471,6 +489,24 @@
    "ids": [
     "a2e0cb230779a",
     "a15404304f17b"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))): https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable",
+   "ids": [
+    "a03895dd99d3d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
+   "ids": [
+    "41"
    ],
    "fixed": false
   }

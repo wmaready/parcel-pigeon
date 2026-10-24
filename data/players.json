@@ -1652,6 +1652,79 @@
    ],
    "enriched": "2026-10-23",
    "pending": false
+  },
+  {
+   "id": "bringg",
+   "n": "Bringg",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": "2013",
+   "s": "Bringg is a B2B SaaS delivery orchestration platform that lets retailers, grocers, restaurants and logistics firms manage dispatch, routing, and delivery through their own drivers or external providers (3PLs, parcel carriers, crowdsourced fleets).",
+   "al": [
+    "Bringg Delivery Technologies Ltd."
+   ],
+   "src": "https://www.crunchbase.com/organization/bringg",
+   "auto": true,
+   "added": "2026-10-24",
+   "from": "discover",
+   "site": "bringg.com",
+   "srcs": [
+    "https://www.crunchbase.com/organization/bringg",
+    "https://www.prnewswire.com/il/news-releases/bringg-acquires-parcel-delivery-solution-zenkraft-to-meet-growing-customer-demands-for-diverse-choice-of-delivery-offerings-301478662.html",
+    "https://www.freightwaves.com/news/bringg-acquires-parcel-delivery-service-zenkraft"
+   ],
+   "enriched": "2026-10-24",
+   "pending": false
+  },
+  {
+   "id": "onfleet",
+   "n": "Onfleet",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "San Francisco, CA, USA",
+   "yr": "2012",
+   "s": "Onfleet is a San Francisco-based SaaS company. Its last-mile delivery management platform covers route optimization, dispatch, driver apps, customer notifications and delivery tracking.",
+   "al": [
+    "OnFleet",
+    "Onfleet, Inc."
+   ],
+   "src": "https://onfleet.com/press",
+   "auto": true,
+   "added": "2026-10-24",
+   "from": "discover",
+   "site": "onfleet.com",
+   "geo": [
+    -122.419,
+    37.775
+   ],
+   "srcs": [
+    "https://onfleet.com/press",
+    "https://www.crunchbase.com/organization/onfleet",
+    "https://en.wikipedia.org/wiki/Onfleet"
+   ],
+   "enriched": "2026-10-24",
+   "pending": false
+  },
+  {
+   "id": "curri",
+   "n": "Curri",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "On-demand same-day courier and virtual-fleet delivery network with local drivers across the U.S., serving suppliers, distributors and retailers.",
+   "al": [],
+   "src": "https://www.curri.com/deliveries/virtual-fleet-services",
+   "auto": true,
+   "added": "2026-10-24",
+   "from": "discover"
   }
  ],
  "edges": [
@@ -2959,6 +3032,24 @@
    "t": "UDS shipping integration in ShipWise",
    "url": "https://www.shipwise.com/integrations/uds",
    "story": null
+  },
+  {
+   "a": "bringg",
+   "b": "blueyonder",
+   "k": "partner",
+   "y": "2021",
+   "t": "Partnership to give retailers order-to-delivery coverage across the supply chain (Business Wire, Dec 14, 2021). I only s",
+   "url": "https://finder.startupnationcentral.org/company_page/bringg",
+   "story": null
+  },
+  {
+   "a": "onfleet",
+   "b": "shopify",
+   "k": "partner",
+   "y": null,
+   "t": "Shopify-to-Onfleet integration that creates delivery tasks automatically",
+   "url": "https://prod1.onfleet.com/grocery",
+   "story": null
   }
  ],
  "moves": [
@@ -3254,7 +3345,9 @@
   "uniuni": "2026-10-20",
   "amsfulfillment": "2026-10-23",
   "dispatch": "2026-10-23",
-  "uniteddelivery": "2026-10-23"
+  "uniteddelivery": "2026-10-23",
+  "bringg": "2026-10-24",
+  "onfleet": "2026-10-24"
  },
  "facts": {
   "ups": {
