@@ -62,7 +62,12 @@
   "w599d9089a65d",
   "a831c709e5809",
   "w84705482dd2f",
-  "a57a06c26359c"
+  "a57a06c26359c",
+  "a2f41e69648f3",
+  "a63ee5425135a",
+  "a6f025bac3520",
+  "ac78f72e7f458",
+  "afb439a13ef25"
  ],
  "clock": [
   "e06:7",
@@ -204,7 +209,13 @@
   "more:player:bringg,player:onfleet,story:amazon tom team drivers at indiana facility join teamsters local 142",
   "story:amazon tom team drivers at indiana facility join teamsters local 142",
   "player:onfleet",
-  "player:bringg"
+  "player:bringg",
+  "more:story:fareye survey 70 of last mile operators rank fuel a top cost,story:fedex to report first post spinoff results oct 28,story:industry analysis projects record parcel and ltl costs in q4 2026,story:ups profit per u s package rises to about 1 16 after amazon cutback analysis says,story:usps holiday rates on some package products run through mid january",
+  "story:ups profit per u s package rises to about 1 16 after amazon cutback analysis says",
+  "story:fareye survey 70 of last mile operators rank fuel a top cost",
+  "story:usps holiday rates on some package products run through mid january",
+  "story:industry analysis projects record parcel and ltl costs in q4 2026",
+  "story:fedex to report first post spinoff results oct 28"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -269,34 +280,40 @@
   "ups posts new ground and domestic air fuel surcharge tables ",
   "teamsters rally at city hall for nyc delivery protection act",
   "ups announces dec 21 2026 rate increase 50 lb additional han",
-  "amazon tom team drivers at indiana facility join teamsters l"
+  "amazon tom team drivers at indiana facility join teamsters l",
+  "fedex to report first post spinoff results oct 28",
+  "ups profit per u s package rises to about 1 16 after amazon ",
+  "industry analysis projects record parcel and ltl costs in q4",
+  "usps holiday rates on some package products run through mid ",
+  "fareye survey 70 of last mile operators rank fuel a top cost"
  ],
  "harvested": [
-  "a6cc2420ad66e",
-  "wdf959a97bcb6",
+  "aee6669d325da",
+  "ac78f72e7f458",
+  "a2b81ad721cb8",
+  "a6c2418bed0a7",
+  "a57a06c26359c",
+  "a5d45f26f2219",
+  "aba40a11b6946",
+  "w150132868eae",
+  "a58373f1b7bc3",
   "w599d9089a65d",
-  "a312b45efa358",
+  "a6e82ba740e99",
+  "w84705482dd2f",
+  "a831c709e5809",
+  "a3a45d7f6db20",
   "wacb825361479",
   "a89d7e4beebd9",
-  "a72efb5e01b99",
-  "w150132868eae",
-  "a2def09bc43bb",
-  "a831c709e5809",
-  "a773d361dac4e",
-  "aba40a11b6946",
   "a2f683da86bf8",
-  "a5d45f26f2219",
-  "a15404304f17b",
-  "a6e82ba740e99",
-  "a6c2418bed0a7",
-  "a3a45d7f6db20",
-  "a2b81ad721cb8",
   "af8ee5ed067c6",
-  "a58373f1b7bc3",
-  "a57a06c26359c",
-  "aee6669d325da",
+  "a312b45efa358",
+  "a6cc2420ad66e",
+  "a773d361dac4e",
+  "a15404304f17b",
   "a351cab9045c7",
-  "w84705482dd2f"
+  "a2def09bc43bb",
+  "a72efb5e01b99",
+  "wdf959a97bcb6"
  ],
  "backfilled": true,
  "recent": [
@@ -1297,6 +1314,81 @@
      "url": "https://www.prnewswire.com/news-releases/amazon-tom-team-drivers-at-oil9-facility-join-teamsters-302918209.html"
     }
    ]
+  },
+  {
+   "id": "a2f41e69648f3",
+   "title": "FedEx to report first post-spinoff results Oct. 28",
+   "date": "2026-10-24",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://247wallst.com/investing/2026/10/24/leaner-machine-heavier-costs-can-fedex-deliver-margin-growth-on-oct-28-after-freight-spinoff/",
+   "srcs": [
+    {
+     "src": "24/7 Wall St.",
+     "url": "https://247wallst.com/investing/2026/10/24/leaner-machine-heavier-costs-can-fedex-deliver-margin-growth-on-oct-28-after-freight-spinoff/"
+    }
+   ]
+  },
+  {
+   "id": "a63ee5425135a",
+   "title": "UPS profit per U.S. package rises to about $1.16 after Amazon cutback, analysis says",
+   "date": "2026-10-24",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://businessmodelanalyst.com/ups-amazon-glide-down-casey-delivery-department/",
+   "srcs": [
+    {
+     "src": "Business Model Analyst",
+     "url": "https://businessmodelanalyst.com/ups-amazon-glide-down-casey-delivery-department/"
+    }
+   ]
+  },
+  {
+   "id": "a6f025bac3520",
+   "title": "Industry analysis projects record parcel and LTL costs in Q4 2026",
+   "date": "2026-10-23",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.supplychain247.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures",
+   "srcs": [
+    {
+     "src": "Supply Chain 24/7",
+     "url": "https://www.supplychain247.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures"
+    }
+   ]
+  },
+  {
+   "id": "ac78f72e7f458",
+   "title": "USPS holiday rates on some package products run through mid-January",
+   "date": "2026-10-23",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.ktre.com/2026/10/23/usps-raises-some-shipping-rates-ahead-holiday-season/",
+   "srcs": [
+    {
+     "src": "KTRE",
+     "url": "https://www.ktre.com/2026/10/23/usps-raises-some-shipping-rates-ahead-holiday-season/"
+    }
+   ]
+  },
+  {
+   "id": "afb439a13ef25",
+   "title": "FarEye survey: 70% of last-mile operators rank fuel a top cost",
+   "date": "2026-10-23",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.dcvelocity.com/transportation/ready-for-peak",
+   "srcs": [
+    {
+     "src": "DC Velocity",
+     "url": "https://www.dcvelocity.com/transportation/ready-for-peak"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1439,13 +1531,33 @@
   "a57a06c26359c": {
    "t": "Amazon Indiana drivers join Teamsters union",
    "m": "No change to rates or service; union seeks Amazon recognition and a contract for OIL9 drivers."
+  },
+  "a2f41e69648f3": {
+   "t": "FedEx first post-spinoff earnings Oct. 28",
+   "m": "No change to rates or service; the report previews results after the Freight spinoff."
+  },
+  "a63ee5425135a": {
+   "t": "UPS profit per U.S. package rises to $1.16",
+   "m": "Analysis only, not a rate change; UPS is shifting toward small and mid-sized business volume."
+  },
+  "a6f025bac3520": {
+   "t": "Record Q4 2026 parcel and LTL costs forecast",
+   "m": "No rate change on a set date; more surcharge increases are expected into 2027."
+  },
+  "ac78f72e7f458": {
+   "t": "USPS holiday rates on some packages",
+   "m": "Takes effect Oct 4; costs rise on some USPS Priority and Ground Advantage parcels until mid-January."
+  },
+  "afb439a13ef25": {
+   "t": "70% of last-mile firms rank fuel a top cost",
+   "m": "Survey only, with no rate or service change; it also covers growing use of AI tools."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-24",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-10-24T07:33:31.477999-04:00"
+ "last_push": "2026-10-24T15:00:44.013258-04:00"
 }

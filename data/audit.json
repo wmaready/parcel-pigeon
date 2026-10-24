@@ -1,5 +1,5 @@
 {
- "run": "2026-10-24T18:35Z",
+ "run": "2026-10-24T19:00Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -48,6 +48,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS holiday rates on some package products run through mid-January\"",
+   "ids": [
+    "ac78f72e7f458"
    ],
    "fixed": false
   },
@@ -205,6 +214,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a80e5b8dd1671",
+    "ac198fadf6127"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
@@ -227,10 +246,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT says Amazon has not applied for Westborough drone pad certificate\"",
    "ids": [
     "a5876cb3ae6f1",
-    "ac198fadf6127"
+    "a80e5b8dd1671"
    ],
    "fixed": false
   },
@@ -241,6 +260,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon and Teamsters file Fifth Circuit briefs over NLRB bargaining order\" may be out of date: newer story \"Amazon TOM Team drivers at Indiana facility join Teamsters Local 142\"",
+   "ids": [
+    "aa0e6e5c54025",
+    "a57a06c26359c"
    ],
    "fixed": false
   },
@@ -281,6 +310,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS holiday rates on some package products run through mid-January\"",
+   "ids": [
+    "ac78f72e7f458"
    ],
    "fixed": false
   },
@@ -429,6 +467,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a80e5b8dd1671",
+    "ac198fadf6127"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
@@ -451,10 +499,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT says Amazon has not applied for Westborough drone pad certificate\"",
    "ids": [
     "a5876cb3ae6f1",
-    "ac198fadf6127"
+    "a80e5b8dd1671"
    ],
    "fixed": false
   },
@@ -465,6 +513,16 @@
    "ids": [
     "a709757714d80",
     "aeb385569416d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"Amazon and Teamsters file Fifth Circuit briefs over NLRB bargaining order\" may be out of date: newer story \"Amazon TOM Team drivers at Indiana facility join Teamsters Local 142\"",
+   "ids": [
+    "aa0e6e5c54025",
+    "a57a06c26359c"
    ],
    "fixed": false
   },

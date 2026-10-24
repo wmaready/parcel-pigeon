@@ -1,7 +1,7 @@
 {
  "ups-amazon-glide-down": {
   "n": "UPS Amazon cutback and network overhaul",
-  "s": "Analysts and consultants remain split on whether UPS's logistics focus signals a retreat from B2C parcels, with UPS officials saying small package is not going away.",
+  "s": "UPS says the Amazon volume reduction finished in Q2 2026, and an analysis now points to higher profit per package and Amazon's entry into B2B logistics.",
   "ids": [
    "h403",
    "h406",
@@ -10,7 +10,7 @@
    "18"
   ],
   "first": "2024-01-30",
-  "last": "2026-10-14",
+  "last": "2026-10-24",
   "c": [
    "Amazon",
    "FedEx",
@@ -241,6 +241,7 @@
    "now": "The 2026 peak surcharge runs Oct. 4, 2026 to Jan. 17, 2027, on top of a temporary 8% increase. Both expire Jan. 17, with no 2027 filing yet."
   },
   "apart": [
+   "peak-surcharges",
    "usps-big-shipper-deals",
    "usps-finances",
    "usps-leadership",
@@ -249,7 +250,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Peak surcharges are billing at the major carriers, and an industry analysis now projects record-high parcel rates for Q4 2026.",
+  "s": "USPS temporary holiday prices have applied since Oct. 4 and run through mid-January, as carrier per-package peak fees phase in.",
   "ids": [
    "h416",
    "h418",
@@ -261,7 +262,7 @@
    "01"
   ],
   "first": "2024-07-26",
-  "last": "2026-10-13",
+  "last": "2026-10-23",
   "c": [
    "Amazon",
    "FedEx",
@@ -285,7 +286,14 @@
    },
    "intro": "How holiday peak surcharges at UPS, FedEx and USPS have evolved since 2024, and what's billing now.",
    "now": "Home-delivery peak fees start Oct 24; UPS and FedEx report earnings Oct 27 and 28, and fees step up from Nov 22."
-  }
+  },
+  "co": "USPS",
+  "apart": [
+   "usps-big-shipper-deals",
+   "usps-finances",
+   "usps-leadership",
+   "usps-service-network"
+  ]
  },
  "import-export-fees": {
   "n": "Per-pound import and export fees",
@@ -497,7 +505,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's Westborough, Mass. drone site awaits a MassDOT safety review and public hearing, while the FAA's Part 108 rule remained unpublished as of earlier coverage.",
+  "s": "MassDOT says Amazon has not applied for the state certificate it needs, and a local appeal and site-plan hearing are scheduled for Nov. 2 and Nov. 10.",
   "ids": [
    "g27",
    "g26",

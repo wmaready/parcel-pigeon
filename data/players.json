@@ -1725,6 +1725,54 @@
    "auto": true,
    "added": "2026-10-24",
    "from": "discover"
+  },
+  {
+   "id": "melaracquisiti",
+   "n": "Melar Acquisition Corp. I",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": "New York, United States",
+   "yr": null,
+   "s": "A Cayman Islands special purpose acquisition company listed on Nasdaq, sponsored by Melar Acquisition Sponsor I LLC.",
+   "al": [],
+   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "auto": true,
+   "added": "2026-10-22",
+   "story": "a86749c3f1d9f"
+  },
+  {
+   "id": "everliglobalin",
+   "n": "Everli Global Inc.",
+   "realm": "gig",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": "Italy",
+   "yr": null,
+   "s": "A Nevada corporation that runs an e-grocery technology and fulfillment platform in Italy.",
+   "al": [],
+   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "auto": true,
+   "added": "2026-10-22",
+   "story": "a86749c3f1d9f"
+  },
+  {
+   "id": "melaracquisiti2",
+   "n": "Melar Acquisition Sponsor I LLC",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "SPAC / public markets named in Melar shareholders approve SPAC merger with Everli Global.",
+   "al": [],
+   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "auto": true,
+   "added": "2026-10-22",
+   "story": "a86749c3f1d9f"
   }
  ],
  "edges": [
@@ -3050,6 +3098,51 @@
    "t": "Shopify-to-Onfleet integration that creates delivery tasks automatically",
    "url": "https://prod1.onfleet.com/grocery",
    "story": null
+  },
+  {
+   "a": "uber",
+   "b": "instacart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber and Instacart partnered in 2024 to add Uber Eats restaurant delivery to Instacart's app",
+   "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
+   "story": "a3bcc80e64163"
+  },
+  {
+   "a": "uber",
+   "b": "instacart",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Uber or DoorDash may buy Instacart",
+   "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
+   "story": "a3bcc80e64163"
+  },
+  {
+   "a": "doordash",
+   "b": "instacart",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Uber or DoorDash may buy Instacart",
+   "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
+   "story": "a3bcc80e64163"
+  },
+  {
+   "a": "melaracquisiti",
+   "b": "everliglobalin",
+   "k": "acquired",
+   "y": "2025",
+   "t": "Melar SPAC merges with Everli Global",
+   "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "story": "a86749c3f1d9f"
+  },
+  {
+   "a": "melaracquisiti2",
+   "b": "melaracquisiti",
+   "k": "invested",
+   "y": null,
+   "t": "Backs Melar Acquisition Corp. I",
+   "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "story": "a86749c3f1d9f"
   }
  ],
  "moves": [

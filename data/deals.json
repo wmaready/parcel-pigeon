@@ -1,5 +1,253 @@
 [
  {
+  "title": "Melar SPAC merges with Everli Global",
+  "buyer": "Melar Acquisition Corp. I",
+  "target": "Everli Global Inc.",
+  "value": "Undisclosed",
+  "status": "Pending",
+  "ann": "2025-07-30",
+  "closed": null,
+  "ended": null,
+  "latest": "Melar shareholders approved the business combination on Oct. 22, 2026; closing awaits remaining conditions.",
+  "sum": "Melar Acquisition Corp. I, a SPAC, is combining with Everli Global Inc., an Italian e-grocery platform. The merger agreement is dated July 30, 2025 and was amended on Oct. 2, 2025 and Dec. 8, 2025.",
+  "who": [
+   [
+    "Acquirer",
+    "Melar Acquisition Corp. I",
+    "A Cayman Islands special purpose acquisition company listed on Nasdaq, sponsored by Melar Acquisition Sponsor I LLC."
+   ],
+   [
+    "Target",
+    "Everli Global Inc.",
+    "A Nevada corporation that runs an e-grocery technology and fulfillment platform in Italy."
+   ]
+  ],
+  "why": "The combined company would be named Everli Global Holdings Inc. and is expected to list on Nasdaq under \"EVRL\". Everli manages the logistics chain from online ordering to last-mile delivery for grocery retailers in Italy. The shareholder vote is one of the conditions for completing the deal.",
+  "parties": [
+   {
+    "name": "Melar Acquisition Corp. I",
+    "role": "Acquirer",
+    "realm": "SPAC / public markets",
+    "hq": "New York, United States",
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2025",
+      "t": "Merger agreement with Everli signed July 30, 2025; amended Oct. 2, 2025 and Dec. 8, 2025"
+     }
+    ]
+   },
+   {
+    "name": "Everli Global Inc.",
+    "role": "Target",
+    "realm": "Gig / on-demand delivery",
+    "hq": "Italy",
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Melar Acquisition Sponsor I LLC",
+    "role": "Backer",
+    "realm": "SPAC / public markets",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "Everli Global Holdings Inc.",
+   "c": [
+    {
+     "n": "Everli Global Inc.",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Melar Acquisition Corp. I",
+     "nw": 0,
+     "c": []
+    }
+   ]
+  },
+  "note": "Closing is subject to satisfaction or waiver of remaining conditions.",
+  "ties": [
+   {
+    "d": "2026-10-20",
+    "t": "ShipStation Global details 250+ AI agents running across its platform",
+    "story": "ada5797f56ab5"
+   },
+   {
+    "d": "2026-10-14",
+    "t": "WWEX Group and Auctane merge to form ShipStation Global",
+    "story": "a386e5fed7984"
+   },
+   {
+    "d": "2024-08-08",
+    "t": "Pitney Bowes exits Global Ecommerce as unit files for Chapter 11",
+    "story": "h417"
+   },
+   {
+    "d": "2026-09-09",
+    "t": "FedEx launches Global Trade Navigator tools for international shipping",
+    "story": "nr67a5e2"
+   }
+  ],
+  "d": "2026-10-22",
+  "story": "a86749c3f1d9f",
+  "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+  "srcs": [
+   {
+    "src": "Financial Times",
+    "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1"
+   }
+  ],
+  "checked": "2026-10-22",
+  "updates": [
+   {
+    "d": "2025-07-30",
+    "t": "Melar shareholders approve SPAC merger with Everli Global",
+    "story": "a86749c3f1d9f"
+   }
+  ]
+ },
+ {
+  "title": "Uber or DoorDash may buy Instacart",
+  "buyer": "Undisclosed (Uber and DoorDash held early talks)",
+  "target": "Instacart",
+  "value": "Undisclosed",
+  "status": "Announced",
+  "ann": null,
+  "closed": null,
+  "ended": null,
+  "latest": "Instacart explores a sale after preliminary talks with Uber and DoorDash, per a report on Oct. 23, 2026.",
+  "sum": "Instacart is exploring a sale and has held early talks with Uber and DoorDash, according to The Information. No price or agreement has been announced.",
+  "who": [
+   [
+    "Target",
+    "Instacart",
+    "Grocery delivery platform that went public in September 2023 and supplies technology to grocery chains."
+   ],
+   [
+    "Buyer",
+    "Uber",
+    "Ride and delivery platform that partnered with Instacart in 2024; held preliminary talks, per the report."
+   ],
+   [
+    "Buyer",
+    "DoorDash",
+    "Delivery platform that discussed buying Instacart in 2021; held preliminary talks, per the report."
+   ]
+  ],
+  "why": "Instacart's market value of roughly $12 billion is less than a third of the $40 billion to $50 billion DoorDash discussed in 2021, per Startup Fortune. That outlet's analysis says a deal would likely draw significant antitrust scrutiny. Orders rose 15% and gross transaction value rose 11% in 2025.",
+  "parties": [
+   {
+    "name": "Instacart",
+    "role": "Target",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": null,
+    "size": "Market value of roughly $12 billion",
+    "history": [
+     {
+      "y": "2021",
+      "t": "Privately valued at $39 billion; DoorDash discussed buying it at $40 billion to $50 billion."
+     },
+     {
+      "y": "2023",
+      "t": "Went public in September at a valuation below its 2021 peak."
+     }
+    ]
+   },
+   {
+    "name": "Uber",
+    "role": "Buyer",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2024",
+      "t": "Partnered with Instacart to add Uber Eats restaurant delivery to Instacart's app."
+     }
+    ]
+   },
+   {
+    "name": "DoorDash",
+    "role": "Buyer",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": [
+     {
+      "y": "2021",
+      "t": "Held talks to buy Instacart; they ended partly over antitrust concerns."
+     }
+    ]
+   }
+  ],
+  "tree": {
+   "n": "Instacart",
+   "c": []
+  },
+  "note": "Talks are preliminary; no buyer, price or agreement has been announced.",
+  "ties": [
+   {
+    "d": "2026-10-22",
+    "t": "Lowe's starts drone delivery pilot near Charlotte with DoorDash and Wing",
+    "story": "a2cde9f1bc84b"
+   },
+   {
+    "d": "2026-10-21",
+    "t": "Kohl's adds Uber Eats, DoorDash and Instacart same-day delivery for holidays",
+    "story": "a4d34002e71df"
+   },
+   {
+    "d": "2026-10-19",
+    "t": "DoorDash adds Macy's to retail marketplace, plans November returns rollout",
+    "story": "a26ef27406d47"
+   },
+   {
+    "d": "2026-10-09",
+    "t": "Dollar General expands Instacart same-day delivery at in-store prices",
+    "story": "a57e28d9138b3"
+   }
+  ],
+  "d": "2026-10-23",
+  "story": "a3bcc80e64163",
+  "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
+  "srcs": [
+   {
+    "src": "The Information",
+    "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks"
+   },
+   {
+    "src": "Startup Fortune",
+    "url": "https://startupfortune.com/instacart-explores-a-sale-to-uber-or-doordash-at-a-fraction-of-its-old-price/"
+   },
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-10-23/instacart-rallies-on-report-of-sale-talks-with-uber-doordash"
+   }
+  ],
+  "checked": "2026-10-23",
+  "updates": [
+   {
+    "d": "2026-10-23",
+    "t": "Instacart explores sale after early talks with Uber, DoorDash",
+    "story": "a3bcc80e64163"
+   }
+  ]
+ },
+ {
   "title": "Stord acquires AMS Fulfillment",
   "buyer": "Stord",
   "target": "AMS Fulfillment",
