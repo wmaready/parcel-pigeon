@@ -200,7 +200,11 @@
   "story:lowe s starts drone delivery pilot near charlotte with doordash and wing",
   "player:uniteddelivery",
   "player:dispatch",
-  "player:amsfulfillment"
+  "player:amsfulfillment",
+  "more:player:bringg,player:onfleet,story:amazon tom team drivers at indiana facility join teamsters local 142",
+  "story:amazon tom team drivers at indiana facility join teamsters local 142",
+  "player:onfleet",
+  "player:bringg"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -268,31 +272,31 @@
   "amazon tom team drivers at indiana facility join teamsters l"
  ],
  "harvested": [
-  "a351cab9045c7",
-  "a6c2418bed0a7",
+  "a5d45f26f2219",
   "a2f683da86bf8",
   "wacb825361479",
-  "a72efb5e01b99",
-  "w84705482dd2f",
-  "a831c709e5809",
-  "a58373f1b7bc3",
-  "a312b45efa358",
-  "a3a45d7f6db20",
-  "a2def09bc43bb",
-  "w150132868eae",
-  "a6e82ba740e99",
-  "a57a06c26359c",
   "a6cc2420ad66e",
-  "w599d9089a65d",
-  "af8ee5ed067c6",
   "a15404304f17b",
+  "a831c709e5809",
+  "a6e82ba740e99",
+  "a2def09bc43bb",
+  "a312b45efa358",
   "a89d7e4beebd9",
-  "a5d45f26f2219",
-  "wdf959a97bcb6",
-  "a773d361dac4e",
-  "aba40a11b6946",
+  "w84705482dd2f",
+  "w599d9089a65d",
   "a2b81ad721cb8",
-  "aee6669d325da"
+  "a6c2418bed0a7",
+  "a351cab9045c7",
+  "af8ee5ed067c6",
+  "w150132868eae",
+  "a773d361dac4e",
+  "a72efb5e01b99",
+  "aba40a11b6946",
+  "a3a45d7f6db20",
+  "a57a06c26359c",
+  "aee6669d325da",
+  "a58373f1b7bc3",
+  "wdf959a97bcb6"
  ],
  "backfilled": true,
  "recent": [
@@ -1437,49 +1441,11 @@
    "m": "No change to rates or service; union seeks Amazon recognition and a contract for OIL9 drivers."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:amazon tom team drivers at indiana facility join teamsters local 142",
-   "id": "a57a06c26359c",
-   "t": "Amazon Indiana drivers join Teamsters union",
-   "m": "No change to rates or service; union seeks Amazon recognition and a contract for OIL9 drivers.",
-   "big": false,
-   "at": "2026-10-24T00:36:17.545666-04:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a57a06c26359c"
-  },
-  {
-   "kind": "player",
-   "key": "player:bringg",
-   "at": "2026-10-24T00:46:43.509510-04:00",
-   "t": "New on the map: Bringg",
-   "m": "Bringg is a B2B SaaS delivery orchestration platform that lets retailers, grocers, restaurants and logistics firms manage dispatch, routing, and delivery through their own drivers or external providers (3PLs, parcel carriers, crowdsourced fleets).",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=bringg"
-  },
-  {
-   "kind": "player",
-   "key": "player:onfleet",
-   "at": "2026-10-24T00:46:43.509536-04:00",
-   "t": "New on the map: Onfleet",
-   "m": "Onfleet is a San Francisco-based SaaS company. Its last-mile delivery management platform covers route optimization, dispatch, driver apps, customer notifications and delivery tracking.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=onfleet"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-10-23",
-  "n": 2
+  "d": "2026-10-24",
+  "n": 1
  },
- "last_push": "2026-10-23T08:43:43.380387-04:00"
+ "last_push": "2026-10-24T07:33:31.477999-04:00"
 }
