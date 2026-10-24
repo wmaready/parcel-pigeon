@@ -2,28 +2,28 @@
  "SEC: UPS 8-K": {
   "direct": true,
   "err": "403 Client Error: Forbidden for url: https://data.sec.gov/submissions/CIK0001090727.json",
-  "fails": 108,
+  "fails": 109,
   "last_try": "2026-10-24",
   "entries": 0
  },
  "SEC: FedEx 8-K": {
   "direct": true,
   "err": "403 Client Error: Forbidden for url: https://data.sec.gov/submissions/CIK0001048911.json",
-  "fails": 108,
+  "fails": 109,
   "last_try": "2026-10-24",
   "entries": 0
  },
  "SEC: Amazon 8-K": {
   "direct": true,
   "err": "403 Client Error: Forbidden for url: https://data.sec.gov/submissions/CIK0001018724.json",
-  "fails": 108,
+  "fails": 109,
   "last_try": "2026-10-24",
   "entries": 0
  },
  "SEC: Pitney Bowes 8-K": {
   "direct": true,
   "err": "403 Client Error: Forbidden for url: https://data.sec.gov/submissions/CIK0000078814.json",
-  "fails": 108,
+  "fails": 109,
   "last_try": "2026-10-24",
   "entries": 0
  },
@@ -64,7 +64,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-24",
-  "entries": 56,
+  "entries": 54,
   "last_ok": "2026-10-24"
  },
  "Wire: GlobeNewswire": {
@@ -80,7 +80,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-24",
-  "entries": 13,
+  "entries": 14,
   "last_ok": "2026-10-24"
  },
  "Newsroom: FedEx": {

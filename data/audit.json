@@ -1,5 +1,5 @@
 {
- "run": "2026-10-24T09:36Z",
+ "run": "2026-10-24T10:33Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -88,21 +88,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -305,21 +291,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
