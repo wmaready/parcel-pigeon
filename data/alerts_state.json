@@ -61,7 +61,8 @@
   "af710cc767bac",
   "w599d9089a65d",
   "a831c709e5809",
-  "w84705482dd2f"
+  "w84705482dd2f",
+  "a57a06c26359c"
  ],
  "clock": [
   "e06:7",
@@ -261,33 +262,35 @@
   "wing and walmart launch drone delivery from 7 charlotte area",
   "ups posts new ground and domestic air fuel surcharge tables ",
   "teamsters rally at city hall for nyc delivery protection act",
-  "ups announces dec 21 2026 rate increase 50 lb additional han"
+  "ups announces dec 21 2026 rate increase 50 lb additional han",
+  "amazon tom team drivers at indiana facility join teamsters l"
  ],
  "harvested": [
-  "a6c2418bed0a7",
-  "a831c709e5809",
-  "aee6669d325da",
-  "a5d45f26f2219",
-  "a6e82ba740e99",
-  "a6cc2420ad66e",
-  "a312b45efa358",
-  "a3a45d7f6db20",
-  "wdf959a97bcb6",
-  "a15404304f17b",
-  "a773d361dac4e",
-  "a89d7e4beebd9",
-  "a351cab9045c7",
-  "a72efb5e01b99",
-  "w150132868eae",
   "a58373f1b7bc3",
-  "wacb825361479",
+  "a6e82ba740e99",
+  "a15404304f17b",
+  "a6c2418bed0a7",
+  "a5d45f26f2219",
+  "a6cc2420ad66e",
+  "w150132868eae",
   "af8ee5ed067c6",
-  "w599d9089a65d",
   "a2def09bc43bb",
-  "a2b81ad721cb8",
-  "aba40a11b6946",
+  "a773d361dac4e",
   "a2f683da86bf8",
-  "w84705482dd2f"
+  "a89d7e4beebd9",
+  "w599d9089a65d",
+  "a312b45efa358",
+  "aba40a11b6946",
+  "a57a06c26359c",
+  "wacb825361479",
+  "aee6669d325da",
+  "a72efb5e01b99",
+  "w84705482dd2f",
+  "a351cab9045c7",
+  "a3a45d7f6db20",
+  "a831c709e5809",
+  "a2b81ad721cb8",
+  "wdf959a97bcb6"
  ],
  "backfilled": true,
  "recent": [
@@ -1273,6 +1276,21 @@
      "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
     }
    ]
+  },
+  {
+   "id": "a57a06c26359c",
+   "title": "Amazon TOM Team drivers at Indiana facility join Teamsters Local 142",
+   "date": "2026-10-23",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/amazon-tom-team-drivers-at-oil9-facility-join-teamsters-302918209.html",
+   "srcs": [
+    {
+     "src": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/amazon-tom-team-drivers-at-oil9-facility-join-teamsters-302918209.html"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1411,9 +1429,29 @@
   "w84705482dd2f": {
    "t": "UPS announces 5.9% avg net rate increase",
    "m": "Takes effect Dec 21, 2026. Avg net increase 5.9%; actual cost depends on your agreement and ZIP."
+  },
+  "a57a06c26359c": {
+   "t": "Amazon Indiana drivers join Teamsters union",
+   "m": "No change to rates or service; union seeks Amazon recognition and a contract for OIL9 drivers."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:amazon tom team drivers at indiana facility join teamsters local 142",
+   "id": "a57a06c26359c",
+   "t": "Amazon Indiana drivers join Teamsters union",
+   "m": "No change to rates or service; union seeks Amazon recognition and a contract for OIL9 drivers.",
+   "big": false,
+   "at": "2026-10-24T00:36:17.545666-04:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a57a06c26359c"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-23",
