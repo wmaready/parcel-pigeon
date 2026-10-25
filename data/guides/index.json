@@ -6,13 +6,13 @@
  },
  "DHL": {
   "file": "data/guides/dhl.json",
-  "docs": 5,
-  "passages": 51
+  "docs": 6,
+  "passages": 53
  },
  "FedEx": {
   "file": "data/guides/fedex.json",
-  "docs": 19,
-  "passages": 814
+  "docs": 21,
+  "passages": 977
  },
  "GLS US": {
   "file": "data/guides/gls-us.json",
@@ -31,12 +31,17 @@
  },
  "UPS": {
   "file": "data/guides/ups.json",
-  "docs": 15,
-  "passages": 848
+  "docs": 19,
+  "passages": 1321
  },
  "USPS": {
   "file": "data/guides/usps.json",
-  "docs": 10,
-  "passages": 798
+  "docs": 13,
+  "passages": 968
+ },
+ "Veho": {
+  "file": "data/guides/veho.json",
+  "docs": 1,
+  "passages": 88
  }
 }

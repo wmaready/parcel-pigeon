@@ -1,5 +1,5 @@
 {
- "cursor": 15,
+ "cursor": 30,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -27,25 +27,45 @@
    "hash": "62aa9b6eeaf0",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 Spee-Dee on-call pickup chart"
+   "n": "2026 Spee-Dee on-call pickup chart",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2026/01/2026-OnCall-Chart.pdf",
+    "txt": "data/snapshots/55b76da2af02/2026-10-25.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-Walkin-Counter-Chart.pdf": {
    "hash": "166d3014ae97",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 Spee-Dee rate chart (walk-in counter file)"
+   "n": "2026 Spee-Dee rate chart (walk-in counter file)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-Walkin-Counter-Chart.pdf",
+    "txt": "data/snapshots/9e263d16a11e/2026-10-25.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART.pdf": {
    "hash": "c65a731c3900",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 Spee-Dee standard rate chart"
+   "n": "2026 Spee-Dee standard rate chart",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART.pdf",
+    "txt": "data/snapshots/410a160f681e/2026-10-25.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART-MULTIPLE.pdf": {
    "hash": "291ebcf5a19d",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 Spee-Dee standard rate chart, multiple packages"
+   "n": "2026 Spee-Dee standard rate chart, multiple packages",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART-MULTIPLE.pdf",
+    "txt": "data/snapshots/ebde4fd84cd3/2026-10-25.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
    "hash": "0898c2640b82",
@@ -147,7 +167,12 @@
    "first": "2026-10-21",
    "n": "2026-OnTrac-Rates.pdf",
    "hash": "2bafd025bd0b",
-   "checked": "2026-10-25"
+   "checked": "2026-10-25",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf",
+    "txt": "data/snapshots/db0056cbeb9c/2026-10-25.txt"
+   }
   },
   "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf": {
    "first": "2026-10-21",
@@ -159,7 +184,12 @@
    "first": "2026-10-21",
    "n": "ontrac-2024-rates.pdf",
    "hash": "b1c6b16e2ddb",
-   "checked": "2026-10-25"
+   "checked": "2026-10-25",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
+    "txt": "data/snapshots/a9b2a53c0fd7/2026-10-25.txt"
+   }
   },
   "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf": {
    "first": "2026-10-21",
@@ -229,14 +259,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 117,
+   "fails": 118,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 117,
+   "fails": 118,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
@@ -311,13 +341,23 @@
    "hash": "816453d43d8f",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Standard List Rates (PDF)"
+   "n": "2026 FedEx Standard List Rates (PDF)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
+    "txt": "data/snapshots/ae150d6897dc/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/en-us/service-guide.html": {
    "hash": "8afec96399b3",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "FedEx Service Guide page"
+   "n": "FedEx Service Guide page",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf",
+    "txt": "data/snapshots/1e0affe2a9b1/2026-10-25.txt"
+   }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates": {
    "hash": "0898c2640b82",
@@ -659,6 +699,96 @@
    "first": "2026-10-25",
    "checked": "2026-10-25",
    "n": "OnTrac terms and conditions"
+  },
+  "https://www.ontrac.com/supplemental-surcharges": {
+   "n": "Supplemental Surcharges",
+   "fails": 1,
+   "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
+   "blocked": false,
+   "last_try": "2026-10-25"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:c6bf8a2f-018f-4aa0-838b-ffc1a75eb1d9/original/as/terms-carriage-us-en.pdf": {
+   "hash": "2272bb1c9949",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "2026 UPS Tariff / Terms and Conditions of Service"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges": {
+   "n": "UPS Mail Innovations domestic surcharges",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-10-25"
+  },
+  "https://www.ups.com/us/en/support/shipping-support/legal-terms-conditions": {
+   "hash": "0cf8a2c84b64",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "UPS legal terms and conditions page"
+  },
+  "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx": {
+   "n": "2026 holiday prices, Notice 123 (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf": {
+   "hash": "c48e3cbb51f4",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "2026 holiday prices, Notice 123 (PDF)"
+  },
+  "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
+   "n": "2026 holiday prices, SKU price files (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://about.usps.com/who/legal/terms-of-use.htm": {
+   "hash": "7b29a8b90772",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Terms of use"
+  },
+  "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf": {
+   "hash": "0bf70104e05e",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "USPS transportation-related temporary price change"
+  },
+  "https://shipveho.com/client/terms": {
+   "hash": "016c9d745ba3",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Veho client terms and conditions"
+  },
+  "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html": {
+   "hash": "b1ab54f802c4",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL Express 2027 U.S. price adjustment"
+  },
+  "https://www.fedex.com/en-us/shipping/fedex-smartpost/rates-zones/chart.html": {
+   "hash": "21c5891a193b",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx Ground Economy rates and zones page"
+  },
+  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
+   "hash": "816453d43d8f",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx rate changes page"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
+   "hash": "a5290fff91cb",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "2026 UPS Small Business Rate Guide"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:0b31f1b2-8a05-4897-8cc0-6c19db7c7d91/original/as/sbr-cwt-final-us-en.pdf": {
+   "hash": "836ed90f110d",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "2026 UPS Small Business hundredweight rates"
   }
  }
 }
