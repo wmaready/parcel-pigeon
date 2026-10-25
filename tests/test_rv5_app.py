@@ -207,3 +207,26 @@ def test_map_assets_live_in_their_folder(site):
     got = {u.rsplit("/", 2)[-2] + "/" + u.rsplit("/", 1)[-1]: s for u, s in seen if any(u.endswith("/" + f) for f in MAP_ASSETS)}
     assert all(got.get(f"map-assets/{f}") == 200 for f in MAP_ASSETS), got
     assert all(s == 200 for s in got.values()), got
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_seed_ownership_and_history_corrections(site, width):
+    """B23: InPost-Yodel dated Apr 17, 2025 (95.5% of Judge Logistics, PayPoint 4.5%, InPost's release); Canada Post's
+    history line; FedEx's 19.9% of FedEx Freight as a dated connection at separation, June 1, 2026."""
+    with app(site, width) as pg:
+        E = pg.evaluate("() => PEDGES.filter(e => e.a === 'fedex' && e.b === 'fdxfreight')")
+        # the built-in InPost-Yodel lines (live data later folds Yodel into InPost, which retires them at run time)
+        src = (ROOT / "index.html").read_text(encoding="utf-8")
+        y = json.loads(re.search(r"^const PEDGES=(\[.*\]);$", src, re.M).group(1))
+        y = [e for e in y if e["a"] == "inpost" and e["b"] == "yodel"]
+        assert len(y) == 2 and all(e["d"] == "2025-04-17" and "95.5% of Judge Logistics" in e["t"] and "PayPoint" in e["t"]
+                         and "Strategic%20Takeover%20of%20Yodel.pdf" in e["url"] for e in y), y
+        f = [e for e in E if e["b"] == "fdxfreight" and e["k"] == "invested"]
+        assert len(f) == 1 and f[0]["d"] == "2026-06-01" and "19.9%" in f[0]["t"] and "at separation, June 1, 2026" in f[0]["t"]
+        assert pg.evaluate("() => PL.canadapost.yr") == "1851 (postal service); federal department 1867; Crown corporation 1981"
+        ev = pg.evaluate("() => coEvents(PL.fdxfreight, []).filter(x => /19.9%/.test(x.t)).map(x => x.d)")
+        assert ev == ["2026-06-01"]
+        pg.evaluate("() => openCompany('canadapost')")
+        pg.wait_for_timeout(400)
+        assert "Crown corporation 1981" in pg.inner_text("body")
+        assert pg.evaluate(OVERFLOW) is None
