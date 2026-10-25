@@ -380,7 +380,7 @@ def test_service_worker_saved_copies(site):
     """B26: an error answer is a failure (the saved copy is used); when saved copies are used the page says "Offline -
     saved <time>"; data/snapshots/ is never cached; the cache version is bumped."""
     sw = (ROOT / "sw.js").read_text()
-    assert "const C='pp-v35'" in sw and "data\\/snapshots" in sw
+    assert "const C='pp-v36'" in sw and "data\\/snapshots" in sw
     pw = pytest.importorskip("playwright.sync_api")
     with pw.sync_playwright() as p:
         b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
@@ -399,7 +399,7 @@ def test_service_worker_saved_copies(site):
         # a picture under data/snapshots/ is fetched from the network only, never saved
         pg.evaluate("() => fetch('data/snapshots/none/2026-10-24.jpg').catch(() => null)")
         pg.wait_for_timeout(300)
-        keys = pg.evaluate("() => caches.open('pp-v35').then(c => c.keys()).then(K => K.map(r => r.url))")
+        keys = pg.evaluate("() => caches.open('pp-v36').then(c => c.keys()).then(K => K.map(r => r.url))")
         assert any(k.endswith("/data/news.json") for k in keys) and not any("/data/snapshots/" in k for k in keys)
         # a 500 for data the page already saved: the saved copy answers, and the page says so
         bad = re.compile(r".*/data/fuel\.json(\?.*)?$")

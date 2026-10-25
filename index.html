@@ -325,15 +325,6 @@ details.dr.past>summary{opacity:.6}
 .doc .go{margin-top:auto;font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;color:var(--accent)}
 .doc.pending .go{color:var(--ink-2)}
 .badge{align-self:flex-start;font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;padding:0 var(--sp-1);border:var(--line) solid var(--tc,var(--ink-2));color:var(--tc,var(--ink-2))}
-.mk-tiles{display:grid;grid-template-columns:1fr;gap:var(--line);background:var(--grid);border:var(--line) solid var(--grid)}
-@media (min-width:700px){.mk-tiles{grid-template-columns:1fr 1fr}}
-.mk{background:var(--panel);padding:var(--sp-3);display:grid;grid-template-columns:1fr auto;gap:var(--sp-1) var(--sp-3)}
-.mk .sym{font-family:var(--font-mono);font-weight:600;font-size:var(--fs-xl)}
-.mk .px{font-family:var(--font-mono);font-weight:600;font-size:var(--fs-xl);text-align:right}
-.mk .ch{text-align:right;font-family:var(--font-mono);font-size:var(--fs-xs)}
-.mk svg{grid-column:1/-1;width:100%;height:40px}
-.mk .row{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2);border-top:var(--line) solid var(--grid);padding-top:var(--sp-2);font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--ink-2);text-transform:uppercase}
-.mk .row b{display:block;color:var(--ink);font-size:var(--fs-sm)}
 dl.gl{margin:0}
 dl.gl div{padding:var(--sp-3);border-top:var(--line) solid var(--grid)}
 dl.gl div:first-child{border-top:0}
@@ -456,13 +447,6 @@ a.drow .dn{text-decoration:underline;text-decoration-color:var(--grid-strong);te
 .earn .el a{min-height:32px;display:inline-flex;align-items:center}
 .earn .el .off{color:var(--ink-2);min-height:32px;display:inline-flex;align-items:center}
 /* ===== Today: stock ===== */
-.mkt{padding:var(--sp-3);border-top:var(--line) solid var(--grid)}
-.mkt:first-child{border-top:0}
-.mkt .mh{display:flex;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap;align-items:baseline}
-.mkt .mh b{font-family:var(--font-mono)}
-.mkt .rng{position:relative;height:6px;background:var(--panel-2);border:var(--line) solid var(--grid-strong);margin:var(--sp-3) 0 var(--sp-1)}
-.mkt .rng i{position:absolute;top:-5px;width:3px;height:14px;background:var(--ink);transform:translateX(-1px)}
-.mkt .mr{display:flex;justify-content:space-between}
 /* ===== Carrier colors: one per carrier, same everywhere ===== */
 .car{font-weight:600}
 .c-ups{color:var(--ups)}.c-fdx{color:var(--fdx)}.c-usps{color:var(--usps)}.c-amz{color:var(--amz)}.c-ontrac{color:var(--ontrac)}.c-dhl{color:var(--dhl)}.c-reg{color:var(--reg)}
@@ -911,51 +895,16 @@ nav.tabs .tabnb{position:absolute;top:4px;right:6px;margin:0;min-width:18px;heig
 .fchg{min-width:52px}
 .fcards{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))}
 
-/* Today: one clock, stock strip up top */
+/* Today: one clock */
 .tday{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--sp-1) var(--sp-3)}
 .tnow{font-family:var(--font-mono);color:var(--ink-2);letter-spacing:.02em}
 .tnow b{font-size:1.25rem;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
 .tnow small{font-size:var(--fs-xs);color:var(--ink-2)}
 .tnow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);margin-right:8px;vertical-align:2px;animation:tPulse 2s ease-in-out infinite}
 @keyframes tPulse{50%{opacity:.35}}
-.mkstrip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3);margin-bottom:var(--sp-4)}
-.mkc{display:block;text-decoration:none;color:var(--ink);background:var(--panel);border:var(--line) solid var(--grid-strong);border-top:3px solid currentColor;border-radius:var(--r-lg);padding:var(--sp-3) var(--sp-4);min-width:0;transition:background .2s var(--ease),transform .2s var(--ease)}
-.mkc:hover{background:var(--panel-2);transform:translateY(-1px)}
-.mkc.c-ups{border-top-color:var(--ups)}.mkc.c-fdx{border-top-color:var(--fdx)}
-.mkh{display:flex;align-items:baseline;gap:var(--sp-2);min-width:0}
-.mkh b{font-size:var(--fs-lg)}
-.mkc.c-ups .mkh b{color:var(--ups)}.mkc.c-fdx .mkh b{color:var(--fdx)}
-.mkn{color:var(--ink-2);font-size:var(--fs-sm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mkp{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--sp-1) var(--sp-3);margin-top:var(--sp-1)}
-.mkpx{font-size:1.6rem;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
-.mkp .gain,.mkp .loss,.mkp .flat{font-size:var(--fs-sm)}
-.mkc .rng{position:relative;height:4px;border-radius:2px;background:var(--grid-strong);margin:var(--sp-3) 0 var(--sp-1)}
-.mkc .rng i{position:absolute;top:-4px;width:3px;height:12px;border-radius:2px;background:currentColor;transform:translateX(-1px)}
-.mkc .mr{display:flex;justify-content:space-between;gap:var(--sp-2)}
-.mke{color:var(--ink)}
-.mknote{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2)}
-.mknote .link{min-height:0}
-@media (max-width:520px){.mkc{padding:var(--sp-3)}.mkpx{font-size:1.3rem}.mkn{display:none}.mke{display:none}}
-@media (max-width:520px){.mknote{font-size:.62rem;gap:4px 6px}.mknote .link{font-size:.62rem}}
 
-/* Stock watch at the bottom of Today */
-.mkwatch{margin-top:var(--sp-4)}
-.mkbig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3);padding:var(--sp-3)}
-.mkbig .mkc{border-radius:var(--r-md)}
-.mksm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--line);background:var(--grid);border-top:var(--line) solid var(--grid)}
-@media (max-width:760px){.mksm{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.mks{display:block;background:var(--panel);padding:var(--sp-3);text-decoration:none;color:var(--ink);min-width:0;transition:background .2s var(--ease)}
-.mks:hover{background:var(--panel-2)}
-.mks .mkh b{font-size:var(--fs-md);color:var(--ink)}
-.mks .mkn{display:inline}
-.mksp{font-size:var(--fs-lg);font-weight:600}
-.mks .mkp{gap:2px var(--sp-2)}
-.mks .mkp .gain,.mks .mkp .loss,.mks .mkp .flat{font-size:var(--fs-xs)}
 .rng.sm{position:relative;height:3px;border-radius:2px;background:var(--grid-strong);margin:var(--sp-2) 0}
 .rng.sm i{position:absolute;top:-3px;width:2px;height:9px;background:var(--ink-2)}
-.mkw{font-size:var(--fs-xs);color:var(--ink-2);line-height:1.35}
-.mkwatch .mknote{padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}
-@media (max-width:520px){.mks .mkn{display:block;font-size:var(--fs-xs)}.mks .mkh{display:block}.mkw{display:none}}
 
 /* less text: notes live in "about" details; Coop is the search */
 details.about{margin-top:var(--sp-3);font-size:var(--fs-sm);color:var(--ink-2)}
@@ -1050,32 +999,28 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 @media (prefers-reduced-motion:reduce){.crt,.cstop.on .csr{animation:none}.cenv,.cflap{transition:none}}
 
 /* stock watch: rotate, pick two, or all */
-.mkpick{display:flex;gap:6px;padding:var(--sp-3) var(--sp-3) 0;overflow-x:auto;scrollbar-width:none}
-.mkpick::-webkit-scrollbar{display:none}
-.mkpick .chip{flex:0 0 auto;min-height:32px;border-radius:999px}
-.mkpick .chip.c-ups[aria-pressed="true"]{border-color:var(--ups);color:var(--ups)}.mkpick .chip.c-fdx[aria-pressed="true"]{border-color:var(--fdx);color:var(--fdx)}
-.mkbig.mkall{grid-template-columns:repeat(4,minmax(0,1fr))}
-@media (max-width:960px){.mkbig.mkall{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.mkroll .mkc{animation:mkin .5s var(--ease) both}.mkroll .mkc:nth-child(2){animation-delay:.08s}
-@keyframes mkin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.mkc .mkw2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;color:var(--ink-2)}
-.mkdots{display:flex;justify-content:center;gap:6px;padding-bottom:var(--sp-2)}
-.mkdots i{width:6px;height:6px;border-radius:50%;background:var(--grid-strong)}.mkdots i.on{background:var(--accent)}
-.mkc{color:var(--ink)}
-.mkc:not(.c-ups):not(.c-fdx){border-top-color:var(--grid-strong)}
-@media (max-width:520px){.mkc .mkw2{display:none}}
-/* Stock watch: the card is a plain box with its own quote link; the last-earnings line is a separate button under it */
-.mkroll .mkcw:nth-child(2) .mkc{animation-delay:.08s}
-.mkcw{display:flex;flex-direction:column;gap:6px;min-width:0}
-.mkcw .mkc{flex:1 1 auto}
-.mkc:hover{transform:none}
-.mkp .mkvs{text-transform:none;letter-spacing:0;color:var(--ink-2)}
-.mkc .mkas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px var(--sp-2);margin-top:4px;color:var(--ink-2)}
-.mkc .mkq{display:inline-flex;align-items:center;min-height:44px;margin-top:2px}
-.mkearn{display:block;width:100%;text-align:left;min-height:44px;padding:8px 10px;border:1px solid var(--grid-strong);border-radius:var(--r-md);background:var(--panel);color:var(--ink);font:inherit;font-size:var(--fs-sm);line-height:1.35;white-space:normal;overflow-wrap:normal;word-break:normal;hyphens:none;cursor:pointer}
-.mkearn:hover{background:var(--panel-2)}
-.mkearn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+/* Today, at the bottom: the latest earnings for UPS and FedEx */
+.etoday{margin-top:var(--sp-4)}
+.etgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-3);padding:var(--sp-3)}
+.etc{display:flex;flex-direction:column;gap:6px;min-width:0;text-align:left;font:inherit;color:var(--ink);background:var(--panel);border:var(--line) solid var(--grid-strong);border-top:3px solid var(--grid-strong);border-radius:var(--r-md);padding:var(--sp-3);cursor:pointer}
+.etc.c-ups{border-top-color:var(--ups)}.etc.c-fdx{border-top-color:var(--fdx)}
+.etc:hover{background:var(--panel-2)}.etc:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eth{display:flex;align-items:center;gap:var(--sp-2);min-width:0;margin-bottom:2px}
+.etq{display:flex;flex-direction:column;min-width:0}.etq small{color:var(--ink-2);font-size:var(--fs-xs)}
+.etst{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:baseline;gap:var(--sp-2);border-top:var(--line) solid var(--grid);padding-top:6px}
+.etst .lbl{min-width:0}
+.etv{font-size:1.15rem;font-weight:600;color:var(--ink)}
+.etyy{font-size:var(--fs-sm);min-width:4.5em;text-align:right}
+.etyy.flat{color:var(--ink-2);font-size:var(--fs-xs);font-family:inherit}
+.etn{display:flex;justify-content:space-between;gap:var(--sp-2);margin-top:auto;padding-top:4px}
+.etgo{color:var(--accent);margin-left:auto}
+.etnote{margin:0;padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}
+@media (max-width:600px){.etgrid{grid-template-columns:minmax(0,1fr)}}
+/* Docs: the share price beside the carrier's logo */
+.dstk{display:inline-flex;align-items:baseline;gap:4px;font-size:12px;font-weight:500;color:var(--ink-2);white-space:nowrap;margin-left:4px}
+.dstk>span{color:var(--ink-2)}.dstk b{font-weight:600}
+@media (max-width:420px){.dstk>span{display:none}}
 .hero,.herobody,.plbl,.pnet{min-width:0;max-width:100%}
 .todayhd>.tdate{min-width:0}
 @media (max-width:620px){.todayhd{flex-direction:column;align-items:stretch}.ppaper .r0 span{font-size:.6rem}}
@@ -2149,15 +2094,6 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .fsrcs a{color:var(--ink-2);text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
 .fsrcs a:hover{color:var(--accent)}
 .fch .car:has(.lgo)::before{display:none}
-.mkdots button{width:22px;height:22px;padding:8px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
-.mkdots button::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--grid-strong)}.mkdots button.on::before{background:var(--accent)}
-.mkh .lgo{align-self:center}
-.mktv{display:flex;flex-direction:column;cursor:default}.mktv:hover{transform:none;background:var(--panel)}
-.mktv .mkh .mke{margin-left:auto;white-space:nowrap}
-.mktv .tvw{height:168px;margin:var(--sp-2) calc(-1 * var(--sp-2)) 0}
-.mktv .tvfb{display:none}.mktv.tvfail .tvw{display:none}.mktv.tvfail .tvfb{display:block}
-.mktv .tvfb .mkc{border:0;padding:0;background:none}.mktv .tvfb .mkh{display:none}
-.mknote a{color:inherit}
 /* docs: years inside each carrier */
 .dyr{border-top:1px solid var(--grid)}
 .dyr:first-of-type{border-top:0}
@@ -2174,7 +2110,6 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .dcarp>summary h2 .car{display:inline-flex;align-items:center}
 @media (max-width:560px){.dyrb{margin-left:10px;padding-left:4px}}
 .fsrcs{padding:var(--sp-3) var(--sp-4) 0}
-.mktv .tvfb .mke{display:none}
 /* landing from a notification */
 .landed{position:relative;animation:landp 1.4s ease-out 3;box-shadow:0 0 0 2px var(--accent),0 0 0 6px rgba(76,201,240,.18)!important;border-radius:var(--r-lg,12px)}
 .landed::after{content:attr(data-landlbl);position:absolute;top:-11px;left:16px;z-index:2;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
@@ -2231,9 +2166,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 @media (max-width:560px){.egrow{grid-template-columns:1fr;gap:0}}
 .egdet .erow2{padding-left:0;padding-right:0}
 .egsrc{margin:0}
-.egstock{margin:4px 0 0;font-size:12px;color:var(--ink-2)}.egstock small{display:block;font-size:11px;margin-top:2px}
-.egrx summary,.egtbl summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-size:12.5px}
-.egrxs{width:100%;max-width:420px;height:auto;display:block}
+.egtbl summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-size:12.5px}
 .egz{stroke:var(--grid-strong);stroke-width:1;stroke-dasharray:3 3}
 .egst{fill:none;stroke:var(--egc);stroke-width:2;vector-effect:non-scaling-stroke}.egsp{fill:none;stroke:var(--ink-2);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .egtw{overflow-x:auto;max-width:100%}
@@ -2903,7 +2836,7 @@ body.bio-open{overflow:hidden}
         <div class="panel mini next o4"><div class="ph"><h2>Coming up</h2><button class="link" data-goto="clock:list">Rate clock</button></div><div id="next"></div><div id="upcoming"></div></div>
       </aside>
     </div>
-    <div class="panel mkwatch" id="mkToday" aria-label="Stock watch"></div>
+    <div class="panel etoday" id="earnToday" aria-label="Latest earnings"></div>
   </div>
   <div class="view" data-view="compact">
     <div class="panel oneline"><div class="ph"><h2>Headlines</h2><span class="lbl" id="ccount"></span></div><ul id="compact"></ul></div>
@@ -7936,7 +7869,7 @@ function fitTop(){const ul=$('top');if(!ul)return;const items=[...ul.children];i
 }
 addEventListener('resize',()=>{clearTimeout(window._ft);window._ft=setTimeout(fitTop,150)});
 function renderToday(){
-  renderMarkets();
+  renderEarnToday();
   $('brief').innerHTML=BRIEF.map((t,i)=>{const s=BRIEF_IDS[i]&&NEWS.find(n=>n.id===BRIEF_IDS[i]);return `<li${s?` class="bl" data-open="${s.id}" role="button" tabindex="0"`:''}><span class="n">${i+1}</span>${s?media(s,'bthumb'):''}<span class="t">${t}</span></li>`}).join('');
   // Top stories rotate: importance fades with age (about a level every three days), stories you've read sink,
   // routine follow-ups rank lower, and every story from the last two days gets a look-in before older ones
@@ -8911,26 +8844,11 @@ function earnDetail(e){if(!e)return '';const co=e.company,v=e.vol,cmp=e.comparab
     else L.push(`<div class="egrow"><span class="lbl">Packages</span><span>— <small>(not yet entered from the ${esc(co)} filing)</small></span></div>`);
     L.push(`<div class="egrow"><span class="lbl">Revenue per package</span><span>${v&&v.rpp!=null?`$${(+v.rpp).toFixed(2)} · ${sgn1(earnRppYoY(v))}`:'—'}</span></div>`)}
   let src='';if(v&&v.src)src=`<p class="lbl egsrc">Package figures: <a class="link" href="${escU(v.src)}" target="_blank" rel="noopener">${v.src===e.filing?'10-Q / 10-K':'source'}</a>${v.checked?`, checked ${esc(DF(v.checked))}`:''}</p>`;
-  return `<div class="eghq"><b>${esc(earnLabel(e))}</b>${e.note?`<small>${esc(e.note)}</small>`:''}</div>${L.join('')}${earnRow(e)}${src}${earnStock(e)}`}
-function earnStock(e){const r=e.rx;if(!r||!r.d1)return '';
-  const w=(k,l)=>r[k]&&r[k].pct!=null?`${l} ${sgn1(r[k].pct)} (S&amp;P 500 ${sgn1(r[k].spx)})`:'';
-  const parts=[w('d1','Stock, first trading day after the report:'),w('d5','5 days'),w('d21','about a month')].filter(Boolean);
-  // one month = 21 trading sessions; until then, roughly when (weekdays, holidays not counted)
-  let wait='';if(!r.d21&&r.base&&r.base.d){let d=r.base.d,k=0;while(k<21){d=addDays(d,1);const wd=new Date(d+'T12:00:00').getDay();if(wd&&wd<6)k++}wait=` · One-month figure available about ${esc(DF(d))}.`}
-  const sr=Array.isArray(r.series)&&r.series.length>2?r.series:null;
-  return `<p class="egstock">${parts.join(' · ')}${wait}<small>Daily closes (${esc(r.src||'')}${r.checked?`, checked ${esc(DF(r.checked))}`:''}) · Not investment advice</small></p>
-    ${sr?`<details class="egrx"><summary>Show stock chart</summary>${earnRxSvg(sr,e)}</details>`:''}`}
-function earnRxSvg(sr,e){const W=300,H=120,P=6,vals=sr.flatMap(x=>[+x[1],+x[2]]).filter(x=>!isNaN(x)),mn=Math.min(0,...vals),mx=Math.max(0,...vals),r=mx-mn||1;
-  const X=i=>P+i/(sr.length-1)*(W-2*P),Y=v=>P+(mx-v)/r*(H-2*P),pl=k=>sr.map((x,i)=>x[k]==null?null:`${X(i).toFixed(1)},${Y(+x[k]).toFixed(1)}`).filter(Boolean).join(' ');
-  const b=sr.findIndex(x=>x[0]===(e.rx.base||{}).d);
-  return `<svg class="egrxs" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(e.company)} share price and the S&amp;P 500, percent from the close before the report, ${esc(sr[0][0])} to ${esc(sr.at(-1)[0])}">
-    <line x1="${P}" x2="${W-P}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" class="egz"/>${b>=0?`<line x1="${X(b).toFixed(1)}" x2="${X(b).toFixed(1)}" y1="${P}" y2="${H-P}" class="egz"/>`:''}
-    <polyline points="${pl(2)}" class="egsp"/><polyline points="${pl(1)}" class="egst"/></svg>
-    <p class="lbl eglg"><span><i class="egk1"></i>${esc(e.company)}</span><span><i class="egk4"></i>S&amp;P 500</span> · % from the close before the report</p>`}
+  return `<div class="eghq"><b>${esc(earnLabel(e))}</b>${e.note?`<small>${esc(e.note)}</small>`:''}</div>${L.join('')}${earnRow(e)}${src}`}
 function earnTable(co){const S=earnSeries(co).slice().reverse(),pk=earnPkg(co);
   const td=x=>`<td class="mono">${x}</td>`;
-  return `<div class="egtw"><table class="egt"><thead><tr><th>Quarter</th><th>Reported</th><th>Revenue</th><th>vs a year earlier</th>${pk?'<th>Packages a day</th><th>U.S. domestic a day</th><th>Revenue per package</th>':''}<th>Stock, first day</th></tr></thead><tbody>${S.map(e=>{const v=e.vol||{},y=earnYoY(e);
-    return `<tr><th scope="row">${esc(earnLabel(e))}</th>${td(esc(DF(e.d)))}${td(earnRevS(e))}${td(e.comparable===false?'— (not comparable)':sgn1(y))}${pk?td(v.adv_k!=null?(v.adv_k/1000).toFixed(1)+' million ('+sgn1(earnAdvYoY(v))+')':'—')+td(v.us_adv_k!=null?(v.us_adv_k/1000).toFixed(1)+' million':'—')+td(v.rpp!=null?'$'+(+v.rpp).toFixed(2):'—'):''}${td(e.rx&&e.rx.d1?sgn1(e.rx.d1.pct)+' (S&amp;P 500 '+sgn1(e.rx.d1.spx)+')':'—')}</tr>`}).join('')}</tbody></table></div>`}
+  return `<div class="egtw"><table class="egt"><thead><tr><th>Quarter</th><th>Reported</th><th>Revenue</th><th>vs a year earlier</th>${pk?'<th>Packages a day</th><th>U.S. domestic a day</th><th>Revenue per package</th>':''}</tr></thead><tbody>${S.map(e=>{const v=e.vol||{},y=earnYoY(e);
+    return `<tr><th scope="row">${esc(earnLabel(e))}</th>${td(esc(DF(e.d)))}${td(earnRevS(e))}${td(e.comparable===false?'— (not comparable)':sgn1(y))}${pk?td(v.adv_k!=null?(v.adv_k/1000).toFixed(1)+' million ('+sgn1(earnAdvYoY(v))+')':'—')+td(v.us_adv_k!=null?(v.us_adv_k/1000).toFixed(1)+' million':'—')+td(v.rpp!=null?'$'+(+v.rpp).toFixed(2):'—'):''}</tr>`}).join('')}</tbody></table></div>`}
 function earnMarket(co){const m=EARN_MKT;if(!m||!m.cos||m.cos[co]==null)return '';
   return `<p class="lbl egmkt">U.S. parcel market ${esc(m.year)}: about ${esc(m.total_b)} billion parcels; ${esc(co)} about ${esc(m.cos[co])} billion. Source: ${m.url?`<a class="link" href="${escU(m.url)}" target="_blank" rel="noopener">${esc(m.src)}</a>`:esc(m.src)} (${esc(m.note||'estimate')}).</p>`}
 function earnGlance(co){const S=earnSeries(co);if(!S.length)return '';const pk=earnPkg(co);
@@ -9005,81 +8923,39 @@ function renderDocs(){
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
     cars.map(c=>{const L=ds.filter(d=>d.c===c);
-      return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(DOC_LABEL(c))}</span>`}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
+      return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(DOC_LABEL(c))}</span>`}${docStock(c)}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
   docBadges();renderGuideChanges();if(typeof renderQon==='function')renderQon();
 }
 
 {let dqT;$('dq').addEventListener('input',()=>{clearTimeout(dqT);dqT=setTimeout(renderDocs,120)})}
 $('docCar').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;docCar=b.dataset.c;store.set('pw-doccar',docCar);renderDocs()});
-/* Stock watch: two cards side by side that roll through every company; pick any two, or show all */
+/* stock symbols lead with their logo on the ticker */
 const MK_LOGO={UPS:'ups',FDX:'fedex',AMZN:'amazon',DHL:'dhl',FDXF:'FedEx Freight'};
-/* On the live site, quotes and charts come from TradingView's free widgets (official exchange data, delayed);
-   the preview and any blocked network fall back to our own cards from the pipeline's closes. */
-const TV_SYM={UPS:'NYSE:UPS',FDX:'NYSE:FDX',AMZN:'NASDAQ:AMZN',DHL:'XETR:DHL',FDXF:'NYSE:FDXF',DASH:'NASDAQ:DASH',UBER:'NYSE:UBER',PBI:'NYSE:PBI'};
-const TV_ON=false;   // TradingView's mini charts were hard to read on phones; our own cards are clearer
-function tvMount(el,sym){if(!el||el.dataset.tv===sym)return;el.dataset.tv=sym;el.innerHTML='<div class="tradingview-widget-container__widget"></div>';
-  const sc=document.createElement('script');sc.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';sc.async=true;
-  sc.textContent=JSON.stringify({symbol:sym,width:'100%',height:'100%',locale:'en',dateRange:'12M',colorTheme:'dark',isTransparent:true,autosize:true,largeChartUrl:'',
-    trendLineColor:'rgba(76,201,240,1)',underLineColor:'rgba(76,201,240,.18)',underLineBottomColor:'rgba(76,201,240,0)'});
-  sc.onerror=()=>{el.closest('.mktv')&&el.closest('.mktv').classList.add('tvfail')};el.appendChild(sc)}
-const MKS={mode:store.get('pw-mk-mode','auto'),pick:JSON.parse(store.get('pw-mk-pick','["UPS","FDX"]')),i:0,timer:null,hold:0};
-/* the line under the UPS and FedEx cards: the last report's revenue and packages a day, straight to that quarter in Docs */
-const MK_EARN={UPS:'UPS',FDX:'FedEx'};
-function mkEarnLine(t){const co=MK_EARN[t.s];if(!co)return '';const e=earnSeries(co).filter(x=>x.d<=TODAY).at(-1);if(!e||earnRev(e)==null)return '';
-  const y=earnYoY(e),v=e.vol,ay=earnAdvYoY(v);
-  const txt=`Last earnings ${fmtD(e.d,{month:'short',day:'numeric'})} · revenue $${earnRev(e).toFixed(1)}B${y!=null?` (${sgn1(y)})`:''}${v&&v.adv_k!=null?` · ${(v.adv_k/1000).toFixed(1)}M packages a day${ay!=null?` (${sgn1(ay)})`:''}`:''} ›`;
-  return `<button type="button" class="mkearn" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}">${esc(txt)}</button>`}
-function renderMarkets(){
-  const nx={UPS:EARN_NEXT.find(x=>x.c==='UPS'),FDX:EARN_NEXT.find(x=>x.c==='FedEx')};
-  const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{if(t.ch==null||t.chp==null)return `<span class="mono flat" title="Change since the previous close not available">—</span>`;
-    const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>${t.prevD?`<span class="lbl mkvs">vs ${fmtD(t.prevD,{month:'short',day:'numeric'})} close</span>`:''}`};
-  const pos=t=>Math.max(0,Math.min(100,(t.px-t.lo)/(t.hi-t.lo)*100)).toFixed(1);
-  const ccy=t=>t.ccy||(t.cur==='€'?'EUR':'USD'),rngL=t=>t.closeRng?'52-week closing range':'52-week range';
-  // a plain card with its own "Live quote" link: nothing tappable sits inside another link
-  const card=t=>{const n=nx[t.s];return `<div class="mkc ${carCls(t.s)}">
-      <div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${esc(t.s)}</b><span class="mkn">${esc(t.n)}</span></div>
-      <div class="mkp"><span class="mono mkpx">${money(t,t.px)}</span>${chg(t)}</div>
-      <div class="rng" role="img" aria-label="${rngL(t)} ${money(t,t.lo)} to ${money(t,t.hi)}, now ${money(t,t.px)}"><i style="left:${pos(t)}%"></i></div>
-      <div class="lbl mr"><span>${money(t,t.lo).replace(/\.\d+$/,'')}</span>${n?`<span class="mke">Earnings ${fmtD(n.d)}</span>`:t.w?`<span class="mke mkw2">${esc(t.w)}</span>`:''}<span>${money(t,t.hi).replace(/\.\d+$/,'')}</span></div>
-      <div class="lbl mkas"><span>${rngL(t).replace('52-week','52-wk')} · ${esc(ccy(t))}</span><span>${esc(t.asof||'')}</span></div>
-      <a class="link mkq" href="${escU(t.src)}" target="_blank" rel="noopener" aria-label="Live quote for ${esc(t.n)}, opens in a new tab">Live quote ↗</a></div>`};
-  const cell=t=>`<div class="mkcw">${card(t)}${mkEarnLine(t)}</div>`;
-  const tvCard=t=>{const n=nx[t.s];return `<div class="mkc mktv ${carCls(t.s)}"><div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span>${n?`<span class="mke lbl">Earnings ${fmtD(n.d)}</span>`:''}</div>
-      <div class="tvw tradingview-widget-container" data-sym="${TV_SYM[t.s]}"></div><div class="tvfb">${card(t)}</div></div>`};
-  const pairs=[];for(let i=0;i<TICKERS.length;i+=2)pairs.push(TICKERS.slice(i,i+2));
-  let shown;
-  if(MKS.mode==='all')shown=TICKERS;
-  else if(MKS.mode==='pick')shown=MKS.pick.map(s=>TICKERS.find(t=>t.s===s)).filter(Boolean);
-  else shown=pairs[MKS.i%pairs.length];
-  const on=s=>MKS.mode==='pick'&&MKS.pick.includes(s);
-  const asofs=[...new Set(TICKERS.map(t=>t.asof))];
-  // the header's Earnings button opens the company of the first card on screen (UPS when no card on screen has earnings)
-  const eco=shown.map(t=>({UPS:'UPS',FDX:'FedEx',FDXF:'FedEx Freight'})[t.s]).find(Boolean)||'UPS';
-  $('mkToday').innerHTML=`<div class="ph"><h2>Stock watch</h2><button class="link" data-goto="docs:earnings:${esc(eco)}">Earnings</button></div>
-    <div class="mkpick" role="group" aria-label="Choose stocks">
-      <button class="chip" data-mk="auto" aria-pressed="${MKS.mode==='auto'}">Rotate</button>
-      ${TICKERS.map(t=>`<button class="chip ${carCls(t.s)}" data-mk="${t.s}" aria-pressed="${on(t.s)}">${t.s}</button>`).join('')}
-      <button class="chip" data-mk="all" aria-pressed="${MKS.mode==='all'}">All</button></div>
-    <div class="mkbig${MKS.mode==='all'?' mkall':''}${MKS.mode==='auto'&&!TV_ON?' mkroll':''}" aria-live="polite">${shown.map(TV_ON?tvCard:cell).join('')}</div>
-    ${MKS.mode==='auto'?`<div class="mkdots">${pairs.map((p,i)=>`<button type="button" data-mki="${i}" class="${i===MKS.i%pairs.length?'on':''}" aria-label="Show ${p.map(t=>t.s).join(' and ')}"></button>`).join('')}</div>`:''}
-    <p class="lbl mknote">${TV_ON?'Charts and quotes by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>, delayed':asofs.length===1?'As of '+esc(asofs[0]):'Latest closes'} · Not investment advice</p>`;
-  if(TV_ON)$('mkToday').querySelectorAll('.tvw').forEach(el=>tvMount(el,el.dataset.sym));
-  // while rotating, the cards keep the height of the tallest pair seen (UPS and FedEx carry a last-earnings line), so the
-  // page below doesn't jump each time the cards change
-  const big=$('mkToday').querySelector('.mkbig');
-  if(big&&MKS.mode==='auto'){if(MKS.w!==innerWidth){MKS.w=innerWidth;MKS.h=0}MKS.h=Math.max(MKS.h||0,big.offsetHeight);big.style.minHeight=MKS.h+'px'}
-  mkTick();
-}
-/* rotation: phones have no hover, so a touch or focus anywhere in Stock watch holds the cards still for 30 seconds (a tap
-   never lands on a card that just rolled away), as does keyboard focus on it; picking a stock stops the rotation */
-function mkTick(){clearTimeout(MKS.timer);if(MKS.mode!=='auto'||TV_ON||reduceMotion())return;
-  MKS.timer=setTimeout(()=>{const el=$('mkToday');if(document.hidden||el.matches(':hover')||Date.now()<MKS.hold||el.querySelector(':focus-visible')){mkTick();return}
-    MKS.i=(MKS.i+1)%Math.ceil(TICKERS.length/2);renderMarkets()},6000)}
-['pointerdown','focusin'].forEach(k=>$('mkToday').addEventListener(k,()=>{MKS.hold=Date.now()+30000}));
-$('mkToday').addEventListener('click',e=>{const d=e.target.closest('[data-mki]');if(d){MKS.i=+d.dataset.mki;renderMarkets();return}const b=e.target.closest('[data-mk]');if(!b)return;const k=b.dataset.mk;
-  if(k==='auto'||k==='all')MKS.mode=k;
-  else{if(MKS.mode!=='pick'){MKS.mode='pick';MKS.pick=[k]}else if(MKS.pick.includes(k)){MKS.pick=MKS.pick.filter(s=>s!==k);if(!MKS.pick.length)MKS.mode='auto'}else MKS.pick=[...MKS.pick,k].slice(-2)}
-  store.set('pw-mk-mode',MKS.mode);store.set('pw-mk-pick',JSON.stringify(MKS.pick));renderMarkets()});
+/* Docs: the carrier's share price beside its logo (the latest close the pipeline saved, with the day's change) */
+const DOC_STOCK={UPS:'UPS',FedEx:'FDX',Amazon:'AMZN',DHL:'DHL'};
+function docStock(c){const t=TICKERS.find(x=>x.s===DOC_STOCK[c]);if(!t||t.px==null)return '';
+  const px=(t.cur||'$')+t.px.toFixed(2),dir=t.chp==null?'flat':t.chp>0?'gain':t.chp<0?'loss':'flat';
+  const ch=t.chp==null?'':`<b class="${dir}">${t.chp>0?'▲':t.chp<0?'▼':''}${Math.abs(t.chp).toFixed(2)}%</b>`;
+  const said=`${t.n} stock ${px}${t.chp==null?'':`, ${t.chp>0?'up':t.chp<0?'down':'unchanged'} ${Math.abs(t.chp).toFixed(2)}% on the day`}${t.asof?`, ${t.asof}`:''}`;
+  return `<span class="dstk mono" title="${esc(said)} · Not investment advice" aria-label="${esc(said)}"><span>${esc(t.s)}</span> ${esc(px)}${ch}</span>`}
+/* Today, at the bottom: UPS and FedEx's latest reported quarter (revenue, packages a day, revenue per package), each
+   opening that quarter in Docs. A fixed pair: nothing rotates, so the page below never moves. */
+const TODAY_EARN=['UPS','FedEx'];
+function renderEarnToday(){const el=$('earnToday');if(!el)return;
+  const stat=(l,v,y,miss)=>`<div class="etst"><span class="lbl">${l}</span><span class="mono etv">${v!=null?v:'—'}</span><span class="mono etyy ${y==null?'flat':y>0?'gain':y<0?'loss':'flat'}">${v!=null&&y!=null?sgn1(y):v==null?esc(miss):''}</span></div>`;
+  const card=co=>{const e=earnSeries(co).filter(x=>x.d<=TODAY).at(-1);if(!e)return '';
+    const v=e.vol||{},r=earnRev(e),cmp=e.comparable!==false,nx=EARN_NEXT.filter(x=>x.c===co&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
+    const said=`${co} ${earnLabel(e)}, reported ${DF(e.d)}. Open in Docs`;
+    return `<button type="button" class="etc ${carCls(co)}" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}" aria-label="${esc(said)}">
+      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(e.q)}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span></span>
+      ${stat('Revenue',r!=null?'$'+r.toFixed(1)+'B':null,cmp?earnYoY(e):null,'')}
+      ${stat('Packages a day',v.adv_k!=null?(v.adv_k/1000).toFixed(1)+'M':null,cmp?earnAdvYoY(v):null,'Not yet entered')}
+      ${stat('Revenue per package',v.rpp!=null?'$'+(+v.rpp).toFixed(2):null,cmp?earnRppYoY(v):null,'Not yet entered')}
+      <span class="lbl etn">${nx?`Next report ${esc(fmtD(nx.d,{month:'short',day:'numeric'}))}`:''}<span class="etgo">Earnings ›</span></span></button>`};
+  const cards=TODAY_EARN.map(card).filter(Boolean);
+  el.hidden=!cards.length;
+  el.innerHTML=`<div class="ph"><h2>Latest earnings</h2><button class="link" data-goto="docs:earnings:UPS">All earnings</button></div>
+    <div class="etgrid">${cards.join('')}</div><p class="lbl etnote">Change vs the same quarter a year earlier · From each carrier's release and filings, never estimated</p>`}
 /* ===== Phone alerts (web push through OneSignal). Settings live on this device and in the reader's alert profile (6 tags). ===== */
 const PUSH={app:null,os:null,ready:null,cfg:null,busy:false,msg:''};
 const PKEY='pp-push-prefs',PDEF={cm:31,t_rates:1,t_docs:1,t_deals:1,t_news:1,ft:'0.5'};   // t_news: 0 off, 1 notable stories, 2 every story

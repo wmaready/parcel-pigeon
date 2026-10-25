@@ -7,7 +7,7 @@
 // come from the saved copies first, so an old page never mixes with newer data (or the reverse) on a flaky connection.
 // Doc watch's dated page pictures (data/snapshots/) are large proof files: network only, never cached.
 // Scripts the page loads (company-foundation.js, company-search.js, mx.js, ask.js, map-assets/*) are cached on first use.
-const C='pp-v35';
+const C='pp-v36';
 const OFFLINE=new Set();          // clients whose page came from the saved copy
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

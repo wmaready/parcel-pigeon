@@ -39,7 +39,7 @@ link. The "check by hand" column lists what a person should open before the demo
 | B27 Consultancy companies | done | 1aafad2, 33f3302 | `company-foundation.js` is unchanged (hash-checked). "Shipware" no longer matches Costco. No map positions are inferred. |
 | B28 Earnings data fields | partly done | 3c4d598 | Only the brief's checked figures are filled in (UPS Q2 2026; FedEx FY26 Q4 reaction and 12.6%). Everything else is null; see the list below. |
 | B29 Earnings chart | done | 62ab42c | Look at all three views on a real phone. Eight bars fit with a sliver of scroll. |
-| B30 Stock watch earnings line | done | d7c8c0e | Check that rotation pauses on a phone tap. |
+| B30 Stock watch earnings line | replaced (owner's call, Oct 25) | d7c8c0e | Stock watch is gone from Today. Stock prices stay on the ticker and sit beside each carrier's logo in Docs; Today ends with a fixed "Latest earnings" panel (UPS and FedEx revenue, packages a day, revenue per package). The earnings page no longer shows stock reactions or a stock chart. |
 | B31 Earnings opens the right company | done | 62ab42c | FedEx Freight's company page gets an Earnings button too. |
 | B32 New quarters added automatically | partly done | 3c4d598 | The release is read twice and the quarter added as `checked:false`. Package figures from the 10-Q are requested in review.json, not read automatically. **After Oct 27, enter UPS Q3 2026 package figures from the 10-Q.** FedEx Freight has no automatic lookup. Confirm the FedEx transition period length from the release. |
 | B33 Back and exit | done | 6339eeb | Try every Back sequence on a real phone, including the installed app. |

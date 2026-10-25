@@ -218,9 +218,10 @@ def test_page_shows_the_figures_as_printed(page_at):
     pg.wait_for_timeout(500)
     det = pg.inner_text('.eglance[data-eco="UPS"] .egdet')
     for want in ("$22.83B · +7.6% vs a year earlier", "19.0 million a day", "−3.7%", "U.S. domestic 16.0 million",
-                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%",
-                 "Stock, first trading day after the report: −6.6% (S&P 500 +0.2%)", "about a month −6.9% (S&P 500 +3.6%)", "Not investment advice"):
+                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%"):
         assert want in det, (want, det)
+    # the earnings page carries no stock lines or stock chart
+    assert "Stock" not in det and not pg.query_selector('.eglance .egrx, .eglance .egstock')
     got = pg.evaluate("""() => {
       // a FedEx quarter with packages a day but no stated day count, a FedEx Freight quarter, a transition period and a bare row
       EARN.push({company:'FedEx', q:'T1', d:'2026-10-28', rev:21.5, period:{start:'2026-06-01', end:'2026-09-30', months:4}, comparable:false, revYoY:4.0,
