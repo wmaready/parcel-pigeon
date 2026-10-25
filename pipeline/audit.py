@@ -82,6 +82,67 @@ def deal_storyline_issues(deals, threads, stories):
     return out
 
 
+WRONG_TITLE = re.compile(r"access denied|request access|page not found|404|error|sign in|log in", re.I)
+
+
+def _depth(path):
+    return len([p for p in (path or "").split("/") if p])
+
+
+def classify_link(url, name, status, final_url, ctype="", title="", blocked=False):
+    """B21: what a document link check means. Returns {state, content_verified, why}:
+    blocked    the site turned the checker away (401/403/429/503 or a bot wall): not known, never shown as broken
+    broken     404/410 or another error: content_verified False
+    wrong-page a redirect to a home or section page, an error.page, or an "Access denied"/"Request Access" title:
+               content_verified False (the reader would not get the document)
+    opens      the right address answers. content_verified is True only when the page title names the document;
+               a 200 alone (a PDF, or a title we can't match) stays None, never "confirmed"."""
+    from urllib.parse import urlsplit
+    if blocked or status in (401, 403, 429, 503) or status is None:
+        return {"state": "blocked", "content_verified": None, "why": f"blocked ({status or 'no answer'})"}
+    if status >= 400:
+        return {"state": "broken", "content_verified": False, "why": f"HTTP {status}"}
+    a, b = urlsplit(url), urlsplit(final_url or url)
+    if re.search(r"error\.page|/error(/|$|\.)", b.path, re.I):
+        return {"state": "wrong-page", "content_verified": False, "why": "redirected to an error page"}
+    if title and WRONG_TITLE.search(title) and "pdf" not in (ctype or ""):
+        return {"state": "wrong-page", "content_verified": False, "why": f'page title "{title[:60]}"'}
+    moved = (b.netloc.lower().removeprefix("www."), b.path.rstrip("/").lower()) != (a.netloc.lower().removeprefix("www."), a.path.rstrip("/").lower())
+    home = re.fullmatch(r"/?([a-z]{2}([-_/][a-z]{2})?/)?(home|index|default)?(\.html?|\.page|\.aspx)?/?", b.path or "/", re.I)
+    if moved and (home or _depth(b.path) < _depth(a.path)) and "pdf" not in (ctype or ""):
+        return {"state": "wrong-page", "content_verified": False, "why": "redirected to a home or section page"}
+    words = {w for w in re.findall(r"[a-z0-9]{3,}", (name or "").lower()) if w not in ("the", "and", "pdf", "page", "for", "with")}
+    tw = set(re.findall(r"[a-z0-9]{3,}", (title or "").lower()))
+    ok = True if words and title and len(words & tw) * 2 >= len(words) else None
+    return {"state": "opens", "content_verified": ok, "why": "title names the document" if ok else "opens; content not confirmed"}
+
+
+def check_doc_link(url, name, timeout=20):
+    """One document link check, recorded with http_status, final_url, content_verified and checked_at."""
+    import requests
+    from fetch import is_blocked, BROWSER
+    status, final, ctype, title, blocked = None, url, "", "", False
+    try:
+        r = requests.get(url, headers=BROWSER, timeout=timeout, allow_redirects=True, stream=True)
+        status, final, ctype = r.status_code, r.url, (r.headers.get("content-type") or "").lower()
+        if "pdf" not in ctype and status < 400:
+            head = b""
+            for chunk in r.iter_content(65536):
+                head += chunk
+                if len(head) > 200000:
+                    break
+            text = head.decode("utf-8", "replace")
+            m = re.search(r"<title[^>]*>(.*?)</title>", text, re.I | re.S)
+            title = re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
+            blocked = is_blocked(text)
+        r.close()
+    except Exception as e:
+        print(f"  doc link check failed for {url}: {type(e).__name__}", file=sys.stderr)
+    rec = classify_link(url, name, status, final, ctype, title, blocked)
+    return {"http_status": status, "final_url": final, "content_verified": rec["content_verified"], "state": rec["state"],
+            "why": rec["why"], "checked_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")}
+
+
 def main():
     seed = load("seed.json", {})
     stories = {s["id"]: s for s in seed.get("news", [])}
@@ -263,18 +324,28 @@ def main():
 
         # 10b. document library links (a rotating slice each run). The library is the source of truth for agents,
         # so a dead carrier document is flagged medium.
+        # B21: each check is recorded (data/doc_links.json, and on the docs.json entry): http_status, final_url,
+        # content_verified, checked_at. A blocked check is never "broken"; a 200 is never "confirmed" by itself.
         durls = sorted({d["u"] for d in docs if (d.get("u") or "").startswith("http")})
         dstart = prev.get("doc_cursor", 0) % max(1, len(durls))
+        links = load("doc_links.json", {})
         for u in (durls[dstart:] + durls[:dstart])[:30]:
-            try:
-                r = get(u, timeout=20)
-                if r.status_code >= 400:
-                    raise Exception(r.status_code)
-            except Exception as e:
-                if "403" in str(e) or "429" in str(e):
-                    continue
-                name = next((d["n"] for d in docs if d.get("u") == u), u)
-                issue("med", "doc-link-broken", f"Library document no longer opens ({e}): {name} {u}", [])
+            name = next((d["n"] for d in docs if d.get("u") == u), u)
+            rec = check_doc_link(u, name)
+            links[u] = rec
+            if rec["state"] == "broken":
+                issue("med", "doc-link-broken", f"Library document no longer opens ({rec['why']}): {name} {u}", [])
+            elif rec["state"] == "wrong-page":
+                issue("med", "doc-link-wrong-page", f"Library link lands on the wrong page ({rec['why']}): {name} {u} -> {rec['final_url']}", [])
+        save("doc_links.json", links)
+        lib = load("docs.json", [])
+        touched = False
+        for d in lib:
+            rec = links.get(d.get("u") or "")
+            if rec and d.get("checked_at") != rec["checked_at"]:
+                d.update({k: rec[k] for k in ("http_status", "final_url", "content_verified", "checked_at")}); touched = True
+        if touched:
+            save("docs.json", lib)
         fix["doc_cursor"] = dstart + 30
 
         # 11. numbers: story vs its clock entry (only pairs that changed since last run)
