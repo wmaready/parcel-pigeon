@@ -40,3 +40,39 @@ def test_built_in_rate_clock_wording(site, width):
         assert "has not listed" not in D["e15"]["note"] and "Elevated Risk" in D["e15"]["note"]
         assert "USPS holiday prices Jan 16" in D["e11"]["note"]   # PRC Order 9703: prices roll back on Jan 17, 2027
         assert pg.evaluate(OVERFLOW) is None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_fuel_weeks_per_carrier_and_one_current_value(site, width):
+    """B8: each carrier shows its own effective week ("last confirmed week of ..." in amber when over 8 days old); the
+    ticker and the Fuel tab read the same current value; the next posted week is shown apart; the UPS Nov 2 table change
+    is a dated notice, not an increase."""
+    with app(site, width) as pg:
+        pg.click('nav.tabs [data-tab="fuel"]')
+        pg.wait_for_timeout(400)
+        r = pg.evaluate("""() => {
+          const cards = {UPS: document.querySelector('#fuelNow .fcard.c-ups'), FedEx: document.querySelector('#fuelNow .fcard.c-fdx'), OnTrac: document.querySelector('#fuelNow .fcard.c-ontrac')};
+          const out = {};
+          [['UPS', 1], ['FedEx', 2], ['OnTrac', 3]].forEach(([c, i]) => {
+            const cur = FUELDB.filter(r => r[0] <= TODAY && r[i] != null).at(-1), nx = FUELDB.find(r => r[0] > TODAY && r[i] != null);
+            const card = cards[c], wk = card.querySelector('.fwk');
+            out[c] = {d: cur[0], v: cur[i], old: (Date.parse(TODAY) - Date.parse(cur[0])) / 864e5 > 8, wk: wk.textContent,
+                      amber: wk.classList.contains('fstale'), shown: card.querySelector('.frow:not(.fhd) .fval').textContent,
+                      cur: FUEL.current[c].ground, exp: card.querySelector('.fexp').textContent, next: nx ? [nx[0], nx[i]] : null};
+          });
+          out.ticker = document.getElementById('ticker').textContent;
+          out.sum = document.getElementById('fuelSum').textContent;
+          out.head = document.getElementById('fuelNowH').textContent;
+          out.notice = document.getElementById('fuelNotice').textContent;
+          return out }""")
+        for c in ("UPS", "FedEx", "OnTrac"):
+            x = r[c]
+            assert x["cur"] == x["v"] and x["shown"] == f"{x['v']:g}%", (c, x)
+            assert x["wk"].startswith("Last confirmed week of" if x["old"] else "Week of") and x["amber"] == x["old"], (c, x)
+            if x["next"]:
+                assert f"{x['next'][1]:g}% posted" in x["exp"], (c, x)
+        assert f"{r['OnTrac']['v']:g}%" in r["ticker"]
+        if r["UPS"]["old"]:
+            assert "this week" not in r["sum"] and r["head"] == "Latest posted rates"
+        assert "Nov 2, 2026" in r["notice"] and "not labeled an increase" in r["notice"]
+        assert pg.evaluate(OVERFLOW) is None
