@@ -8767,7 +8767,7 @@ function tvMount(el,sym){if(!el||el.dataset.tv===sym)return;el.dataset.tv=sym;el
 const MKS={mode:store.get('pw-mk-mode','auto'),pick:JSON.parse(store.get('pw-mk-pick','["UPS","FDX"]')),i:0,timer:null};
 function renderMarkets(){
   const nx={UPS:EARN_NEXT.find(x=>x.c==='UPS'),FDX:EARN_NEXT.find(x=>x.c==='FedEx')};
-  const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>`};
+  const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{if(t.ch==null||t.chp==null)return `<span class="mono flat">—</span>`;const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>`};
   const pos=t=>Math.max(0,Math.min(100,(t.px-t.lo)/(t.hi-t.lo)*100)).toFixed(1);
   const card=t=>{const n=nx[t.s];return `<a class="mkc ${carCls(t.s)}" href="${t.src}" target="_blank" rel="noopener" title="Live quote for ${esc(t.n)}">
       <div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span></div>
@@ -9604,7 +9604,9 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
     [['UPS',1],['FedEx',2],['OnTrac',3]].forEach(([c,i])=>Object.entries(fuel.hist[c]||{}).forEach(([d,v])=>{if(v==null)return;let r=FUELDB.find(x=>x[0]===d);if(!r){r=[d,...Array(14).fill(null)];FUELDB.push(r)}if(r[i]==null)r[i]=v}));
     FUELDB.sort((a,b)=>a[0].localeCompare(b[0]));
     recalcWeeks();ch=true}
-  if(mk){TICKERS.forEach(t=>{const q=mk[t.s];if(q&&q.px){Object.assign(t,{px:q.px,ch:q.ch??t.ch,chp:q.chp??t.chp,lo:q.lo??t.lo,hi:q.hi??t.hi,asof:q.asof||t.asof});ch=true}})}
+  // the day's change counts only when the file says which close it is measured from (prev_date); an older file's change
+  // was a one-year move, so it shows as "—" rather than as today's change
+  if(mk){TICKERS.forEach(t=>{const q=mk[t.s];if(q&&q.px){const day=!!q.prev_date;Object.assign(t,{px:q.px,ch:day?q.ch??null:null,chp:day?q.chp??null:null,prevD:day?q.prev_date:null,lo:q.lo??t.lo,hi:q.hi??t.hi,asof:q.asof||t.asof,ccy:q.cur||t.ccy,closeRng:true});ch=true}})}
   if(Array.isArray(docs)&&docs.length){docs.forEach(d=>{if(!d||!d.n)return;const k=DOCS.find(x=>(d.u&&x.u===d.u)||(x.c===d.c&&x.n===d.n));if(k)Object.assign(k,d);else DOCS.push(d)});ch=true}
   if(Array.isArray(earn)&&earn.length){earn.forEach(e=>{if(!e||!e.q)return;const k=EARN.find(x=>x.company===e.company&&x.q===e.q);if(k)Object.assign(k,e);else EARN.push(e)});ch=true}
   if(brief&&Array.isArray(brief.items)&&brief.items.length===3&&(!brief.week||brief.week>='2026-10-09')){BRIEF.length=0;brief.items.forEach(b=>BRIEF.push(b));BRIEF_IDS.length=0;(brief.ids||[]).forEach(i=>BRIEF_IDS.push(i));ch=true}
