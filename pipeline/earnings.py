@@ -277,7 +277,8 @@ def main():
     except Exception as e:
         added, fails = [], [f"new quarters: {e}"]
     fill_yoy(rows)
-    fails += update_reactions(rows, today)
+    for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
+        print(f"::warning title=earnings prices::{f}")
     bad = fedex_fy_check(rows, review)
     for x in vol_problems(rows):
         fails.append(f"{x}: package figures without a source or check date")

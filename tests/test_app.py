@@ -316,9 +316,15 @@ def test_earnings_navigation_and_back(site, width):
         # Today → Stock watch earnings line → the phone's back button returns to Today, where it was
         pg.click('nav.tabs [data-tab="today"]')
         pg.evaluate("() => document.getElementById('mkToday').scrollIntoView({block: 'center', behavior: 'instant'})")
-        pg.wait_for_timeout(200)
+        # the phone header collapses once the page scrolls, and scroll anchoring then moves the page: wait until it settles
+        pg.wait_for_function("""() => new Promise(r => { const a = scrollY; setTimeout(() => r(scrollY === a), 250) })""", timeout=5000)
+        # Playwright scrolls a button into its own view before clicking; do that first, so the position read here is the
+        # one the reader tapped from
+        pg.locator('#mkToday .mkearn[data-goto="docs:earnings:UPS:Q2 2026"]').scroll_into_view_if_needed()
+        pg.wait_for_function("""() => new Promise(r => { const a = scrollY; setTimeout(() => r(scrollY === a), 250) })""", timeout=5000)
         y0 = pg.evaluate("() => scrollY")
         pg.click('#mkToday .mkearn[data-goto="docs:earnings:UPS:Q2 2026"]')
+        assert pg.evaluate("() => NAVBACK.length && NAVBACK[NAVBACK.length - 1].y") == y0
         pg.wait_for_function("() => curTab() === 'docs' && document.activeElement && document.activeElement.matches('.dcarp[data-car=\"UPS\"] details.dearn > summary')", timeout=15000)
         assert pg.evaluate("""() => curTab() === 'docs' && document.querySelector('.dcarp[data-car="UPS"] details.dearn').open
           && document.querySelector('.eglance[data-eco="UPS"] .egbar[aria-pressed="true"]').dataset.ebar === 'Q2 2026'""")

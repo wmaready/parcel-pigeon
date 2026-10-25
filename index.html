@@ -9064,6 +9064,10 @@ function renderMarkets(){
     ${MKS.mode==='auto'?`<div class="mkdots">${pairs.map((p,i)=>`<button type="button" data-mki="${i}" class="${i===MKS.i%pairs.length?'on':''}" aria-label="Show ${p.map(t=>t.s).join(' and ')}"></button>`).join('')}</div>`:''}
     <p class="lbl mknote">${TV_ON?'Charts and quotes by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>, delayed':asofs.length===1?'As of '+esc(asofs[0]):'Latest closes'} · Not investment advice</p>`;
   if(TV_ON)$('mkToday').querySelectorAll('.tvw').forEach(el=>tvMount(el,el.dataset.sym));
+  // while rotating, the cards keep the height of the tallest pair seen (UPS and FedEx carry a last-earnings line), so the
+  // page below doesn't jump each time the cards change
+  const big=$('mkToday').querySelector('.mkbig');
+  if(big&&MKS.mode==='auto'){if(MKS.w!==innerWidth){MKS.w=innerWidth;MKS.h=0}MKS.h=Math.max(MKS.h||0,big.offsetHeight);big.style.minHeight=MKS.h+'px'}
   mkTick();
 }
 /* rotation: phones have no hover, so a touch or focus anywhere in Stock watch holds the cards still for 30 seconds (a tap
@@ -9673,13 +9677,16 @@ function renderBack(){let b=$('navBack');if(!b){b=document.createElement('button
   const where=p.title?`“${p.title.length>38?p.title.slice(0,36)+'…':p.title}”`:TABN[p.t]||'where you were';
   b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Back to <b>${esc(where)}</b></span>`;
   b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
+// scroll back to y; the phone header collapses once the page scrolls (.hcol), and the browser's scroll anchoring then
+// shifts the position by the header's height change, so set it again once the layout has settled
+function restoreY(y){document.body.classList.toggle('hcol',y>24);scrollTo({top:y,behavior:'instant'});const again=()=>{if(Math.abs(scrollY-y)>2)scrollTo({top:y,behavior:'instant'})};requestAnimationFrame(()=>requestAnimationFrame(again))}
 function goBack(){const p=NAVBACK.pop();if(!p)return;navRestoring=true;showTab(p.t);if(p.v&&setView[p.t])setView[p.t](p.v);navRestoring=false;renderBack();
   // the company or story page the jump was made from opens again, over the section it was on
-  if(p.co&&PL[p.co]){setTimeout(()=>scrollTo({top:p.y,behavior:'instant'}),60);openCompany(p.co);return}
-  if(p.story&&NEWS.some(n=>n.id===p.story)){setTimeout(()=>scrollTo({top:p.y,behavior:'instant'}),60);openStory(p.story);return}
+  if(p.co&&PL[p.co]){setTimeout(()=>restoreY(p.y),60);openCompany(p.co);return}
+  if(p.story&&NEWS.some(n=>n.id===p.story)){setTimeout(()=>restoreY(p.y),60);openStory(p.story);return}
   if(p.el&&/^d-/.test(p.el)&&typeof openStory==='function'){const id=p.el.slice(2);newsEnsure(id);const c=$('n-'+id);if(c)c.scrollIntoView({block:'center'});setTimeout(()=>openStory(id),80);return}
   // the same scroll position as before the jump; if what was tapped has moved out of view since, it's brought into view
-  setTimeout(()=>{scrollTo({top:p.y,behavior:'instant'});const el=p.el&&$(p.el);if(el){const r=el.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)el.scrollIntoView({block:'center',behavior:'smooth'})}},60)}
+  setTimeout(()=>{restoreY(p.y);const el=p.el&&$(p.el);if(el){const r=el.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)el.scrollIntoView({block:'center',behavior:'smooth'})}},60)}
 document.addEventListener('keydown',e=>{if(e.key==='Backspace'&&NAVBACK.length&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();navBackGo()}});
 
 

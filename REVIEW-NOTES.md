@@ -58,3 +58,19 @@ update. Both are now guarded, and `tests/test_data.py::test_seed_export_runs_on_
 UPS SBR figures; UPS 5.9% average (Ground, Air, International); FedEx Freight completion (June 1, 2026, FDXF, 19.9%);
 USPS Sept 22 release; C.H. Robinson "$5.8 billion implied transaction value"; DHL–Venipak July 27, 2026 (this one matches
 story nr1dab23); InPost–Yodel April 17, 2025 (95.5%).
+
+## Found by the independent bug review of the merged work, and fixed
+- **Reading article pages (B16/B17).** A headline with an apostrophe ("UPS's …") was read as "UPS", and a "Subscribe…" banner could be taken as the article's first paragraph, so real stories would have been held as mismatched. When an article was recovered after a bot wall, it was still judged by the bot-wall page.
+- **"Benefit removed" rule (B3).** A plain percentage counted as "adding a charge", so a sentence like "SBR, which includes fuel at no extra cost, will rise 4.5%" was wrongly flagged as removing the fuel benefit.
+- **Robot notes (B9).** Two published UPS stories still showed robot notes ("the NEW text; the OLD excerpt…", "Also: …"). Those notes are now cleaned.
+- **Earnings stock prices (B28).** A failure to fetch stock prices no longer turns every run red. It shows a warning and keeps the last good figures.
+- **"Waiting" stories (B6).** A "still waiting" story is closed only when its headline is about that carrier, so a FedEx story that mentions UPS isn't dropped.
+- **Stock watch (B30).** Rotating stock cards changed height by about 110 px, which shifted the whole page below them. The height is now kept steady.
+- **Back button (B33).** Returning to Today now settles at the right place even while the phone header collapses. A flaky test was also measuring the wrong starting point; it now measures correctly.
+
+## Still for a person to decide or check
+- **USPS last day of the peak (B7, e11).** One source says the peak runs "through Jan 17, 2027 (midnight CT)", while PRC Order 9703 says prices "roll back Jan 17". The app uses Jan 16 as the last day on the rate clock, and the almanac and peak table show Jan 17. Settle it from USPS Notice 123.
+- **9.7% figure.** "About 9.7% combined (1.045 × 1.05)" for SBR is the brief's own calculation, labeled as calculated, before agreement terms.
+- **Larsen interview (B17).** The story was kept with its Supply Chain 24/7 link. If that page isn't the interview, remove the story (add its id to data/drop.json).
+- **Ask Coop.** "Small Business Rates fuel" opens with SBR's advertised inclusions, and the Dec 21 change appears under Related stories.
+- **Earnings robot (B32).** It picks the newest release link on the IR page. The UPS IR page may load its links with JavaScript, so if the automatic add doesn't fire after Oct 27, add the quarter by hand.

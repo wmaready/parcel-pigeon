@@ -342,8 +342,8 @@
    "UPS"
   ],
   "title": "UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026",
-  "sum": "UPS posted a PDF with new fuel surcharge tables for U.S. Ground Domestic, UPS Ground Saver and Domestic Air, effective November 2, 2026. The Ground table runs from 28.50% ($5.53–$5.80 diesel) to 31.50% ($6.79–$6.88), and the Air table runs from 31.50% ($4.06–$4.11 jet fuel) to 34.50% ($4.66–$4.71). The out-of-range anchor prices rose from $4.99 to $5.80 for Ground and from $3.01 to $3.56 for Air, which shows the table was reset. Also: UPS announces U.S. Ground, Ground Saver and Domestic Air fuel surcharge changes Nov 2, 2026.",
-  "plain": "Shippers using UPS Ground, Ground Saver or the Domestic Air services get a different surcharge percentage for any given fuel price from Nov 2, 2026. The size of the change per shipment can't be calculated because the old percentage rows are not in the supplied text.",
+  "sum": "UPS posted a PDF with new fuel surcharge tables for U.S. Ground Domestic, UPS Ground Saver and Domestic Air, effective November 2, 2026. The Ground table runs from 28.50% ($5.53–$5.80 diesel) to 31.50% ($6.79–$6.88), and the Air table runs from 31.50% ($4.06–$4.11 jet fuel) to 34.50% ($4.66–$4.71). The out-of-range anchor prices rose from $4.99 to $5.80 for Ground and from $3.01 to $3.56 for Air, which shows the table was reset. UPS announces U.S. Ground, Ground Saver and Domestic Air fuel surcharge changes Nov 2, 2026.",
+  "plain": "Shippers using UPS Ground, Ground Saver or the Domestic Air services get a different surcharge percentage for any given fuel price from Nov 2, 2026.",
   "imp": "watch",
   "lvl": 2,
   "cat": "Fuel",
@@ -357,7 +357,7 @@
     "after": "New table effective Nov 2, 2026: 28.50% at $5.53–$5.80 diesel, rising 0.25% per step to 31.50% at $6.79–$6.88",
     "effective": "2026-11-02",
     "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
-    "impact": "Old percentages are not in the supplied text, so the size of the move is not confirmed"
+    "impact": null
    },
    {
     "what": "Domestic Air fuel surcharge table",
@@ -365,7 +365,7 @@
     "after": "New table effective Nov 2, 2026: 31.50% at $4.06–$4.11 jet fuel, rising 0.25% per step to 34.50% at $4.66–$4.71",
     "effective": "2026-11-02",
     "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
-    "impact": "Old percentages are not in the supplied text, so the size of the move is not confirmed"
+    "impact": null
    },
    {
     "what": "Ground diesel price above which the table range extends in $0.09 steps",
@@ -410,10 +410,9 @@
   ],
   "verdict": "price change",
   "unknowns": [
-   "The old Ground and Air table percentages were not in the supplied text, so the change in surcharge at any given fuel price can't be calculated.",
+   "Older version not on file",
    "Whether the surcharge goes up or down for a given fuel price is not confirmed; the shifted anchor prices only show the table was reset.",
-   "The new PDF covers only Ground, Ground Saver and Domestic Air; the international surcharge tables are not shown, so any change to them can't be confirmed.",
-   "The new text says the Ground fuel surcharge does not apply to UPS Ground packages originating in the 48 contiguous states under Retail rates; the old text doesn't show whether that is new."
+   "The new PDF covers only Ground, Ground Saver and Domestic Air; the international surcharge tables are not shown, so any change to them can't be confirmed."
   ],
   "dates": [
    {
@@ -466,7 +465,7 @@
    "UPS"
   ],
   "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling minimum billable weight, ZIP changes",
-  "sum": "UPS's Important Updates now say that, effective December 21, 2026, Daily Rates for Ground, Air and International services rise an average net 5.9%. The Additional Handling minimum billable weight goes from 40 to 50 lbs., and the Area Surcharge and zone ZIP lists change. Also new: an origin-ZIP surcharge on Ground and Ground Saver for Qualified customers (December 21, 2026 or later) and a fuel surcharge change effective November 2, 2026. Also: UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026.",
+  "sum": "UPS's Important Updates now say that, effective December 21, 2026, Daily Rates for Ground, Air and International services rise an average net 5.9%. The Additional Handling minimum billable weight goes from 40 to 50 lbs., and the Area Surcharge and zone ZIP lists change. Also new: an origin-ZIP surcharge on Ground and Ground Saver for Qualified customers (December 21, 2026 or later) and a fuel surcharge change effective November 2, 2026. UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026.",
   "plain": "Shippers using UPS Ground, Air or International face an average net 5.9% rate increase. Actual cost depends on each shipper's agreement and profile. Shippers in affected ZIPs may see different Area Surcharges or zones, and Ground/Ground Saver shippers sending from certain origin ZIPs may pay an extra per-package surcharge.",
   "imp": "up",
   "lvl": 3,
@@ -486,7 +485,7 @@
    {
     "what": "Additional Handling minimum billable weight",
     "before": null,
-    "after": "Increases from 40 lbs. to 50 lbs. (the 40 lb. figure comes from the NEW text; the OLD excerpt did not contain this item)",
+    "after": "Increases from 40 lbs. to 50 lbs.",
     "effective": "2026-12-21",
     "who": "Packages subject to Additional Handling",
     "impact": "Minimum billable weight +10 lbs. (40 -> 50 lbs.)"
@@ -521,7 +520,7 @@
     "after": "Fuel surcharges will change; details are at a linked page",
     "effective": "2026-11-02",
     "who": "Domestic Ground, Ground Saver and Air shippers",
-    "impact": "Size not stated in the text"
+    "impact": null
    },
    {
     "what": "Ground Domestic / Ground Saver fuel surcharge table replaced; new table starts at $5.53 diesel at 28.50%",
@@ -529,7 +528,7 @@
     "after": "New table from $5.53 (28.50%) up to $6.79–$6.88 (31.50%), in 0.25% steps per band, effective Nov 2, 2026",
     "effective": "2026-11-02",
     "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
-    "impact": "Percentages in the old table are not in the text provided, so the size of the move is unknown"
+    "impact": null
    },
    {
     "what": "Ground Domestic / Ground Saver table top band published",
@@ -553,7 +552,7 @@
     "after": "New table from $4.06 (31.50%) up to $4.66–$4.71 (34.50%), in 0.25% steps per band, effective Nov 2, 2026",
     "effective": "2026-11-02",
     "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
-    "impact": "Percentages in the old table are not in the text provided, so the size of the move is unknown"
+    "impact": null
    },
    {
     "what": "Domestic Air table top band published",
@@ -577,7 +576,7 @@
    "Whether the fuel surcharge change affects the fuel table itself, and its size; details are on a linked page not shown.",
    "The amount of the origin-ZIP surcharge and which origin ZIPs and customers qualify; due in early November.",
    "Whether the 5.9% increase applies uniformly to all services or what the per-service and per-zone rates will be; rate previews come later.",
-   "The OLD text's notices about the Surge Emergency Fees (Oct 15, 2026), the September 7, 2026 Rate and Service Guide update, the Disbursement Fee (2.5%, $17.50 minimum) and the Entry-Line Charge ($3.50 after first five lines) no longer appear in the excerpt of NEW text. It cannot be confirmed whether they were reversed or only removed from the page."
+   "Older version not on file"
   ],
   "dates": [
    {
@@ -2909,7 +2908,7 @@
   "sum": "The Postal Service gave notice in the Federal Register on Oct. 15, 2026 that it filed a request with the Postal Regulatory Commission. The request would add a domestic shipping services contract to the Negotiated Service Agreements in the Mail Classification Schedule's Competitive Products List. The notice, filed under Priority Mail and USPS Ground Advantage categories, names no customer or rates in the text provided.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to published USPS rates or service for shippers generally. The notice concerns one negotiated contract, and its customer and terms are not stated in the text provided.",
+  "plain": "No change to published USPS rates or service for shippers generally.",
   "why": "Negotiated agreements set contract terms for individual customers outside published rates, so this filing affects the contracting customer rather than shippers generally.",
   "score": 5,
   "tie": null,

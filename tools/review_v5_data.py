@@ -470,11 +470,51 @@ def fix_state(curated, alm_state):
     return cur, dict(alm_state, read=read)
 
 
+def scrub_leaks(news, log):
+    """B9 for stories already published: robot notes ("the NEW text; the OLD excerpt", "not in the supplied text") and
+    "Also: ..." stitching are cut from what readers see; a missing older version becomes the one unknown
+    "Older version not on file". Uses the robots' own scrub rules (pipeline/changeaudit.py)."""
+    from changeaudit import _strip_robot, _is_robot, robot_leaks, OLDER_NOT_ON_FILE, NO_OLD, OLD_WORD
+    import re
+    for st in news:
+        if not robot_leaks(st):
+            continue
+        hit = False
+        for k in ("title", "sum", "plain", "why", "syn"):
+            v = st.get(k)
+            if isinstance(v, str):
+                nv = re.sub(r"(^|(?<=[.!?])\s+)Also:\s*", r"\1", v)       # stitched summaries read as plain sentences
+                nv = _strip_robot(nv) if _is_robot(nv) else nv
+                if nv != v:
+                    if (NO_OLD.search(v) or OLD_WORD.search(v)) and k != "title":
+                        hit = True
+                    st[k] = nv
+        for c in st.get("changes") or []:
+            for k in ("what", "before", "after", "who", "impact"):
+                v = c.get(k)
+                if _is_robot(v):
+                    hit = True
+                    c[k] = _strip_robot(v) or None
+        us = []
+        for u in st.get("unknowns") or []:
+            if isinstance(u, str) and _is_robot(u):
+                u = OLDER_NOT_ON_FILE if (NO_OLD.search(u) or OLD_WORD.search(u)) else _strip_robot(u)
+                hit = True
+            if u and u not in us:
+                us.append(u)
+        if hit and OLDER_NOT_ON_FILE not in us:
+            us.append(OLDER_NOT_ON_FILE)
+        if "unknowns" in st or us:
+            st["unknowns"] = us
+        log.append(f"B9: robot notes cut from {st.get('id')}")
+
+
 def main(dry=False):
     files = {k: load(k + ".json", None) for k in ("news", "threads", "almanac", "deals", "docs", "drop", "curated", "almanac_state")}
     before = {k: json.dumps(v, ensure_ascii=False) for k, v in files.items()}
     log = []
     fix_news(files["news"], log)
+    scrub_leaks(files["news"], log)
     fix_drop(files["drop"], log)
     seed = load("seed.json", {})
     pool = {s["id"]: s for s in seed.get("news", []) + files["news"] if s.get("id")}

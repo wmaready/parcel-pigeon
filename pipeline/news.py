@@ -625,6 +625,10 @@ META = {}                # final page address -> page_meta(), filled by article_
 STALE_DAYS = 30          # B16: an article published more than this long before we found it isn't news
 
 
+BOILER = re.compile(r"\b(subscribe|sign (up|in)|log ?in|newsletter|cookies?|advertis|create (a|an) (free )?account|"
+                    r"already a (subscriber|member)|enable javascript|privacy policy)\b", re.I)
+
+
 def page_meta(html):
     """The article's own publish date (article:published_time, or JSON-LD datePublished), its title and its first paragraph."""
     html = html or ""
@@ -636,19 +640,26 @@ def page_meta(html):
         re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', html)
     if m:
         pub = m.group(1)
-    t = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)', html, re.I) or \
-        re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
-    desc = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)', html, re.I)
+    # a quoted value ends at its own kind of quote: "UPS's new surcharge" keeps its apostrophe
+    val = r'content=(?:"([^"]*)"|\'([^\']*)\')'
+    t = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+' + val, html, re.I)
+    tt = (t.group(1) if t.group(1) is not None else t.group(2)) if t else None
+    if not tt:
+        t2 = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+        tt = t2.group(1) if t2 else ""
+    d = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+' + val, html, re.I)
+    dd = (d.group(1) if d.group(1) is not None else d.group(2)) if d else ""
     first = ""
     for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.I | re.S):
         p = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", p)).strip()
+        if BOILER.search(p[:120]):
+            continue                              # a subscribe, cookie or sign-in banner is not the article's opening
         if len(p) >= 60:
             first = p
             break
     import html as _h
     clean = lambda s: _h.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s or ""))).strip()
-    return {"published": pub, "title": clean(t.group(1) if t else ""), "first": clean(first),
-            "desc": clean(desc.group(1) if desc else "")}
+    return {"published": pub, "title": clean(tt), "first": clean(first), "desc": clean(dd)}
 
 
 NAME_SKIP = {"the", "a", "an", "new", "says", "said", "report", "reports", "update", "ceo", "cfo", "coo", "us", "u.s", "usa", "inc",
@@ -723,7 +734,10 @@ def article_text(url):
         text = trafilatura.extract(r.text, include_comments=False) if r.status_code < 400 else None
         from fetch import is_blocked
         if not text or len(text) < 400 or is_blocked(text):
-            text = claude_read(r.url) or text     # turned away or empty: try once more from Anthropic's servers
+            got = claude_read(r.url)              # turned away or empty: try once more from Anthropic's servers
+            if got:
+                META.pop(r.url, None)             # the meta read above was the bot wall's, not the article's
+            text = got or text
         return (text or None), r.url
     except Exception:
         return (claude_read(url) if url and "news.google.com" not in url else None), url

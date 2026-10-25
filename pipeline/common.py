@@ -814,7 +814,10 @@ def program_brief(progs):
 
 _REMOVAL = re.compile(r"\b(no longer (appl|charg|assess)|waiv|remov|eliminat|discontinu|exempt|will not apply|does not apply)", re.I)
 # the charge is being applied or added (a mere mention, e.g. "the Area Surcharge ZIP list will change", is not)
-_CHARGE = re.compile(r"\b(appl(y|ies|ied)|assessed|added|adds?|new|introduc\w*|will be charged|now charged|subject to)\b|%|\$\s?\d", re.I)
+_CHARGE = re.compile(r"\b(appl(y|ies|ied)|assessed|added|adds?|new|introduc\w*|will be charged|now charged|subject to)\b", re.I)
+# a sentence restating the promise ("which include the fuel surcharge at no extra cost") is not a change to it
+_STILL_INCLUDED = re.compile(r"\b(includ(e|es|ed|ing)|inclusive of|at no (extra|additional) (cost|charge)|free of charge)\b", re.I)
+_STRONG_CHARGE = re.compile(r"\b(appl(y|ies|ied)|assessed|added|adds?|introduc\w*|will be charged|now charged)\b", re.I)
 
 
 def benefit_removed(progs, changes=(), text=""):
@@ -828,7 +831,8 @@ def benefit_removed(progs, changes=(), text=""):
         items += [s for s in re.split(r"(?<=[.;!?])\s+", text or "") if any(_has(n, s) for n in names)]
         for promise in (p.get("includes") or []) + (p.get("no_fees") or []):
             for s in items:
-                if any(_has(t, s) for t in promise.get("match") or []) and _CHARGE.search(s) and not _REMOVAL.search(s):
+                if any(_has(t, s) for t in promise.get("match") or []) and _CHARGE.search(s) and not _REMOVAL.search(s) \
+                        and not (_STILL_INCLUDED.search(s) and not _STRONG_CHARGE.search(s)):
                     return p, promise
     return None
 
