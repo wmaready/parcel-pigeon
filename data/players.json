@@ -1713,50 +1713,32 @@
   {
    "id": "curri",
    "n": "Curri",
-   "realm": "regional",
-   "own": null,
+   "realm": "gig",
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "On-demand same-day courier and virtual-fleet delivery network with local drivers across the U.S., serving suppliers, distributors and retailers.",
-   "al": [],
-   "src": "https://www.curri.com/deliveries/virtual-fleet-services",
+   "hq": "Ventura, CA, USA",
+   "yr": "2018",
+   "s": "Curri runs an on-demand and scheduled delivery platform with a nationwide network of local drivers, an \"elastic\" virtual fleet, that moves construction and industrial supplies for suppliers and distributors.",
+   "al": [
+    "Curri, Inc."
+   ],
+   "src": "https://pulse2.com/curri-42-million-in-funding/",
    "auto": true,
    "added": "2026-10-24",
-   "from": "discover"
-  },
-  {
-   "id": "melaracquisiti",
-   "n": "Melar Acquisition Corp. I",
-   "realm": "capital",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": "New York, United States",
-   "yr": null,
-   "s": "A Cayman Islands special purpose acquisition company listed on Nasdaq, sponsored by Melar Acquisition Sponsor I LLC.",
-   "al": [],
-   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
-   "auto": true,
-   "added": "2026-10-22",
-   "story": "a86749c3f1d9f"
-  },
-  {
-   "id": "everliglobalin",
-   "n": "Everli Global Inc.",
-   "realm": "gig",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": "Italy",
-   "yr": null,
-   "s": "A Nevada corporation that runs an e-grocery technology and fulfillment platform in Italy.",
-   "al": [],
-   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
-   "auto": true,
-   "added": "2026-10-22",
-   "story": "a86749c3f1d9f"
+   "from": "discover",
+   "site": "curri.com",
+   "geo": [
+    -119.229,
+    34.275
+   ],
+   "srcs": [
+    "https://pulse2.com/curri-42-million-in-funding/",
+    "https://www.builtinla.com/articles/curri-raises-6m-series-a-construction-material-delivery-platform",
+    "https://www.linkedin.com/company/curri"
+   ],
+   "enriched": "2026-10-25",
+   "pending": false
   },
   {
    "id": "melaracquisiti2",
@@ -3127,22 +3109,13 @@
    "story": "a3bcc80e64163"
   },
   {
-   "a": "melaracquisiti",
-   "b": "everliglobalin",
-   "k": "acquired",
-   "y": "2025",
-   "t": "Melar SPAC merges with Everli Global",
-   "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
-   "story": "a86749c3f1d9f"
-  },
-  {
-   "a": "melaracquisiti2",
-   "b": "melaracquisiti",
+   "a": "bessemer",
+   "b": "curri",
    "k": "invested",
-   "y": null,
-   "t": "Backs Melar Acquisition Corp. I",
-   "url": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
-   "story": "a86749c3f1d9f"
+   "y": "2023",
+   "t": "Led $42M Series B",
+   "url": "https://pulse2.com/curri-42-million-in-funding/",
+   "story": null
   }
  ],
  "moves": [
@@ -3440,7 +3413,8 @@
   "dispatch": "2026-10-23",
   "uniteddelivery": "2026-10-23",
   "bringg": "2026-10-24",
-  "onfleet": "2026-10-24"
+  "onfleet": "2026-10-24",
+  "curri": "2026-10-25"
  },
  "facts": {
   "ups": {
