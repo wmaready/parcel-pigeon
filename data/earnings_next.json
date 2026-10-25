@@ -1,0 +1,70 @@
+{
+ "next": [
+  {
+   "c": "UPS",
+   "q": "Q3 2026",
+   "d": "2026-10-27",
+   "t": "Before market open; call 8:30 a.m. ET",
+   "s": "before market open, call 8:30 a.m. ET",
+   "u": "https://investors.ups.com/news-events/ir-calendar",
+   "session": "pre",
+   "period": {
+    "start": "2026-07-01",
+    "end": "2026-09-30",
+    "months": 3
+   },
+   "label": "Q3 2026",
+   "match": "ups-releases-3q-2026-earnings",
+   "period_src": "IR event listing (expected); confirm from the release"
+  },
+  {
+   "c": "FedEx",
+   "q": "Jun–Sep 2026 transition period",
+   "d": "2026-10-28",
+   "t": "After market close; call 4:30 p.m. CT. FedEx moved to a December fiscal year-end",
+   "s": "after market close, call 4:30 p.m. CT",
+   "u": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+   "session": "post",
+   "period": {
+    "start": "2026-06-01",
+    "end": "2026-09-30",
+    "months": 4
+   },
+   "label": "Transition period (Jun–Sep 2026)",
+   "match": "FedEx-Reports",
+   "period_src": "IR event listing (expected); confirm from the release"
+  },
+  {
+   "c": "FedEx Freight",
+   "q": "Jun–Sep 2026 transition period",
+   "d": "2026-10-29",
+   "t": "Call 4:00 p.m. CT. First report as a separate company (FDXF)",
+   "u": "https://ir.fedexfreight.com/news-events/events-presentation/20261029-fedex-freight-june-q3-ty26-earnings-call",
+   "session": null,
+   "period": {
+    "start": "2026-06-01",
+    "end": "2026-09-30",
+    "months": 4
+   },
+   "label": "Transition period (Jun–Sep 2026)",
+   "match": null,
+   "period_src": "IR event listing (expected); confirm from the release"
+  }
+ ],
+ "ir": {
+  "UPS": "https://investors.ups.com/news-events/press-releases",
+  "FedEx": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+  "FedEx Freight": "https://ir.fedexfreight.com/financial-information/quarterly-results"
+ },
+ "market": {
+  "year": 2025,
+  "total_b": 23.1,
+  "cos": {
+   "UPS": 4.3,
+   "FedEx": 3.9
+  },
+  "src": "Pitney Bowes Parcel Shipping Index, 2026 edition",
+  "url": "https://www.pitneybowes.com/us/shipping-index.html",
+  "note": "estimate, U.S. only, won't match company worldwide counts"
+ }
+}
