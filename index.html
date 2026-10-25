@@ -1019,10 +1019,8 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 .egcalc{display:block;font-size:11px;color:var(--ink-2);margin-top:2px}
 .etnote{margin:0;padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}
 @media (max-width:600px){.etgrid{grid-template-columns:minmax(0,1fr)}}
-/* Docs: the share price beside the carrier's logo */
-.dstk{display:inline-flex;align-items:baseline;gap:4px;font-size:12px;font-weight:500;color:var(--ink-2);white-space:nowrap;margin-left:4px}
-.dstk>span{color:var(--ink-2)}.dstk b{font-weight:600}
-@media (max-width:420px){.dstk>span{display:none}}
+.etstk{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;text-align:right;white-space:nowrap;font-size:12.5px;color:var(--ink)}
+.etstk i{font-style:normal;color:var(--ink-2)}.etstk b{font-weight:600;margin-left:4px}.etstk small{font-size:11px;color:var(--ink-2)}
 .hero,.herobody,.plbl,.pnet{min-width:0;max-width:100%}
 .todayhd>.tdate{min-width:0}
 @media (max-width:620px){.todayhd{flex-direction:column;align-items:stretch}.ppaper .r0 span{font-size:.6rem}}
@@ -8928,7 +8926,7 @@ function renderDocs(){
   $('lib').innerHTML=!ds.length?'<div class="empty">No documents for this carrier yet.</div>':
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
     cars.map(c=>{const L=ds.filter(d=>d.c===c);
-      return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(DOC_LABEL(c))}</span>`}${docStock(c)}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
+      return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(DOC_LABEL(c))}</span>`}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
   docBadges();renderGuideChanges();if(typeof renderQon==='function')renderQon();
 }
 
@@ -8936,26 +8934,31 @@ function renderDocs(){
 $('docCar').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;docCar=b.dataset.c;store.set('pw-doccar',docCar);renderDocs()});
 /* stock symbols lead with their logo on the ticker */
 const MK_LOGO={UPS:'ups',FDX:'fedex',AMZN:'amazon',DHL:'dhl',FDXF:'FedEx Freight'};
-/* Docs: the carrier's share price beside its logo (the latest close the pipeline saved, with the day's change) */
-const DOC_STOCK={UPS:'UPS',FedEx:'FDX',Amazon:'AMZN',DHL:'DHL'};
-function docStock(c){const t=TICKERS.find(x=>x.s===DOC_STOCK[c]);if(!t||t.px==null)return '';
+/* Today's earnings cards: the company's share price beside its logo (the latest price the update robot saved, with the
+   day's change when known, and when it was taken) */
+const CO_STOCK={UPS:'UPS',FedEx:'FDX',Amazon:'AMZN'};
+function stockWhen(a){const m=String(a||'').match(/^(\w{3} \d{1,2}), (\d{4}) (\d\d):(\d\d) UTC$/);
+  if(!m)return String(a||'').replace(/, \d{4}/,'');
+  const d=new Date(`${m[1]}, ${m[2]} ${m[3]}:${m[4]}:00 UTC`);if(isNaN(d))return a;
+  return d.toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+function coStock(c){const t=TICKERS.find(x=>x.s===CO_STOCK[c]);if(!t||t.px==null)return '';
   const px=(t.cur||'$')+t.px.toFixed(2),dir=t.chp==null?'flat':t.chp>0?'gain':t.chp<0?'loss':'flat';
-  const ch=t.chp==null?'':`<b class="${dir}">${t.chp>0?'▲':t.chp<0?'▼':''}${Math.abs(t.chp).toFixed(2)}%</b>`;
-  const said=`${t.n} stock ${px}${t.chp==null?'':`, ${t.chp>0?'up':t.chp<0?'down':'unchanged'} ${Math.abs(t.chp).toFixed(2)}% on the day`}${t.asof?`, ${t.asof}`:''}`;
-  return `<span class="dstk mono" title="${esc(said)} · Not investment advice" aria-label="${esc(said)}"><span>${esc(t.s)}</span> ${esc(px)}${ch}</span>`}
+  const ch=t.chp==null?'':`<b class="${dir}">${t.chp>0?'▲':t.chp<0?'▼':''}${Math.abs(t.chp).toFixed(2)}%</b>`,when=stockWhen(t.asof);
+  const said=`${t.n} stock ${px}${t.chp==null?'':`, ${t.chp>0?'up':t.chp<0?'down':'unchanged'} ${Math.abs(t.chp).toFixed(2)}% on the day`}${when?`, as of ${when}`:''}`;
+  return `<span class="etstk" title="${esc(said)} · Not investment advice" aria-label="${esc(said)}"><span class="mono"><i>${esc(t.s)}</i> ${esc(px)}${ch}</span>${when?`<small>${esc(when)}</small>`:''}</span>`}
 /* Today, at the bottom: UPS and FedEx's latest reported quarter (revenue, packages a day, revenue per package), each
    opening that quarter in Docs. A fixed pair: nothing rotates, so the page below never moves. */
 const TODAY_EARN=['UPS','FedEx','USPS','Amazon'];
 function renderEarnToday(){const el=$('earnToday');if(!el)return;
   const stat=(l,v,y,miss)=>`<div class="etst"><span class="lbl">${l}</span><span class="mono etv">${v!=null?v:'—'}</span><span class="mono etyy ${y==null?'flat':y>0?'gain':y<0?'loss':'flat'}">${v!=null&&y!=null?sgn1(y):v==null?esc(miss):''}</span></div>`;
   // Amazon publishes no package counts or parcel revenue: say so rather than fill the card with someone's estimate
-  const none=co=>`<div class="etc etnone ${carCls(co)}"><span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(co)}</b><small>No package figures published</small></span></span>
+  const none=co=>`<div class="etc etnone ${carCls(co)}"><span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(co)}</b><small>No package figures published</small></span>${coStock(co)}</span>
       <p class="etwhy">${esc(co)} doesn't report how many packages it delivers or what its delivery business earns, so there is nothing official to show here. Outside counts (such as the Pitney Bowes Parcel Shipping Index) are yearly estimates.</p></div>`;
   const card=co=>{if(co==='Amazon')return none(co);const e=earnSeries(co).filter(x=>x.d<=TODAY).at(-1);if(!e)return '';
     const v=e.vol||{},r=earnRev(e),cmp=e.comparable!==false,nx=EARN_NEXT.filter(x=>x.c===co&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
     const said=`${co} ${earnLabel(e)}, reported ${DF(e.d)}. Open in Docs`;
     return `<button type="button" class="etc ${carCls(co)}" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}" aria-label="${esc(said)}">
-      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(e.q)}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span></span>
+      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(e.q)}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span>${coStock(co)}</span>
       ${stat('Revenue',r!=null?'$'+r.toFixed(1)+'B':null,cmp?earnYoY(e):null,'')}
       ${stat('Packages a day',v.adv_k!=null?(v.adv_src==='calc'?'≈':'')+(v.adv_k/1000).toFixed(1)+'M':null,cmp?earnAdvYoY(v):null,'Not yet entered')}
       ${stat('Revenue per package',v.rpp!=null?'$'+(+v.rpp).toFixed(2):null,cmp?earnRppYoY(v):null,co==='USPS'?'Not reported':'Not yet entered')}
@@ -8963,7 +8966,7 @@ function renderEarnToday(){const el=$('earnToday');if(!el)return;
   const cards=TODAY_EARN.map(card).filter(Boolean);
   el.hidden=!cards.length;
   el.innerHTML=`<div class="ph"><h2>Latest earnings</h2><button class="link" data-goto="docs:earnings:UPS">All earnings</button></div>
-    <div class="etgrid">${cards.join('')}</div><p class="lbl etnote">Change vs the same quarter a year earlier · From each carrier's own reports, never estimated · ≈ calculated from those reports (USPS: quarterly pieces over calendar days)</p>`}
+    <div class="etgrid">${cards.join('')}</div><p class="lbl etnote">Change vs the same quarter a year earlier · Stock: latest saved price, not investment advice · From each carrier's own reports, never estimated · ≈ calculated from those reports (USPS: quarterly pieces over calendar days)</p>`}
 /* ===== Phone alerts (web push through OneSignal). Settings live on this device and in the reader's alert profile (6 tags). ===== */
 const PUSH={app:null,os:null,ready:null,cfg:null,busy:false,msg:''};
 const PKEY='pp-push-prefs',PDEF={cm:31,t_rates:1,t_docs:1,t_deals:1,t_news:1,ft:'0.5'};   // t_news: 0 off, 1 notable stories, 2 every story

@@ -246,7 +246,7 @@ def _open(p, site, width, hash_=""):
 def test_earnings_chart_and_stock_watch(site, width):
     """B29/B34: the earnings chart for UPS and FedEx in all three views, with keyboard-reachable bars, the FedEx spin-off
     divider and nothing wider than the screen. Today ends with the latest UPS and FedEx earnings (no stock cards), and
-    Docs shows each carrier's share price beside its logo."""
+    each card shows the company's share price beside its logo."""
     pw = pytest.importorskip("playwright.sync_api")
     with pw.sync_playwright() as p:
         b, pg, errors = _open(p, site, width)
@@ -265,13 +265,12 @@ def test_earnings_chart_and_stock_watch(site, width):
         h0 = pg.evaluate("() => document.getElementById('earnToday').offsetHeight")
         pg.wait_for_timeout(6500)
         assert pg.evaluate("() => document.getElementById('earnToday').offsetHeight") == h0
+        # the share price sits beside the logo on Today's UPS, FedEx and Amazon cards (USPS has no stock), and not in Docs
+        stk = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(c => (c.querySelector('.eth .etstk') || {}).textContent || null)""")
+        assert stk[0].startswith("UPS $") and stk[1].startswith("FDX $") and stk[2] is None and stk[3].startswith("AMZN $"), stk
         pg.evaluate("() => goTo('docs')")
         pg.wait_for_timeout(300)
-        stk = pg.evaluate("""() => Object.fromEntries([...document.querySelectorAll('#lib .dcarp')].map(p => [p.dataset.car,
-          (p.querySelector(':scope > summary .dstk') || {}).textContent || null]))""")
-        assert stk.get("UPS", "").startswith("UPS $") and stk.get("FedEx", "").startswith("FDX $"), stk
-        assert stk.get("USPS") is None, stk
-        assert pg.evaluate("() => [...document.querySelectorAll('#lib .dcarp > summary')].every(s => s.scrollWidth <= s.clientWidth + 1)")
+        assert pg.evaluate("() => !document.querySelector('#lib .dstk, #lib .etstk')")
         wide = {}
         for co in ("UPS", "FedEx"):
             pg.evaluate(f"() => goTo('docs','earnings','{co}')")
