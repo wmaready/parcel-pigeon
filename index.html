@@ -1057,6 +1057,17 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 .mkc{color:var(--ink)}
 .mkc:not(.c-ups):not(.c-fdx){border-top-color:var(--grid-strong)}
 @media (max-width:520px){.mkc .mkw2{display:none}}
+/* Stock watch: the card is a plain box with its own quote link; the last-earnings line is a separate button under it */
+.mkroll .mkcw:nth-child(2) .mkc{animation-delay:.08s}
+.mkcw{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mkcw .mkc{flex:1 1 auto}
+.mkc:hover{transform:none}
+.mkp .mkvs{text-transform:none;letter-spacing:0;color:var(--ink-2)}
+.mkc .mkas{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px var(--sp-2);margin-top:4px;color:var(--ink-2)}
+.mkc .mkq{display:inline-flex;align-items:center;min-height:44px;margin-top:2px}
+.mkearn{display:block;width:100%;text-align:left;min-height:44px;padding:8px 10px;border:1px solid var(--grid-strong);border-radius:var(--r-md);background:var(--panel);color:var(--ink);font:inherit;font-size:var(--fs-sm);line-height:1.35;white-space:normal;overflow-wrap:normal;word-break:normal;hyphens:none;cursor:pointer}
+.mkearn:hover{background:var(--panel-2)}
+.mkearn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 .hero,.herobody,.plbl,.pnet{min-width:0;max-width:100%}
 .todayhd>.tdate{min-width:0}
@@ -8923,16 +8934,28 @@ function tvMount(el,sym){if(!el||el.dataset.tv===sym)return;el.dataset.tv=sym;el
   sc.textContent=JSON.stringify({symbol:sym,width:'100%',height:'100%',locale:'en',dateRange:'12M',colorTheme:'dark',isTransparent:true,autosize:true,largeChartUrl:'',
     trendLineColor:'rgba(76,201,240,1)',underLineColor:'rgba(76,201,240,.18)',underLineBottomColor:'rgba(76,201,240,0)'});
   sc.onerror=()=>{el.closest('.mktv')&&el.closest('.mktv').classList.add('tvfail')};el.appendChild(sc)}
-const MKS={mode:store.get('pw-mk-mode','auto'),pick:JSON.parse(store.get('pw-mk-pick','["UPS","FDX"]')),i:0,timer:null};
+const MKS={mode:store.get('pw-mk-mode','auto'),pick:JSON.parse(store.get('pw-mk-pick','["UPS","FDX"]')),i:0,timer:null,hold:0};
+/* the line under the UPS and FedEx cards: the last report's revenue and packages a day, straight to that quarter in Docs */
+const MK_EARN={UPS:'UPS',FDX:'FedEx'};
+function mkEarnLine(t){const co=MK_EARN[t.s];if(!co)return '';const e=earnSeries(co).filter(x=>x.d<=TODAY).at(-1);if(!e||earnRev(e)==null)return '';
+  const y=earnYoY(e),v=e.vol,ay=earnAdvYoY(v);
+  const txt=`Last earnings ${fmtD(e.d,{month:'short',day:'numeric'})} · revenue $${earnRev(e).toFixed(1)}B${y!=null?` (${sgn1(y)})`:''}${v&&v.adv_k!=null?` · ${(v.adv_k/1000).toFixed(1)}M packages a day${ay!=null?` (${sgn1(ay)})`:''}`:''} ›`;
+  return `<button type="button" class="mkearn" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}">${esc(txt)}</button>`}
 function renderMarkets(){
   const nx={UPS:EARN_NEXT.find(x=>x.c==='UPS'),FDX:EARN_NEXT.find(x=>x.c==='FedEx')};
-  const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{if(t.ch==null||t.chp==null)return `<span class="mono flat">—</span>`;const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>`};
+  const money=(t,v)=>(t.cur||'$')+v.toFixed(2),chg=t=>{if(t.ch==null||t.chp==null)return `<span class="mono flat" title="Change since the previous close not available">—</span>`;
+    const dir=t.ch>0?'gain':t.ch<0?'loss':'flat';return `<span class="mono ${dir}">${t.ch>0?'▲':t.ch<0?'▼':''} ${t.ch>=0?'+':'−'}${Math.abs(t.ch).toFixed(2)} (${Math.abs(t.chp).toFixed(2)}%)</span>${t.prevD?`<span class="lbl mkvs">vs ${fmtD(t.prevD,{month:'short',day:'numeric'})} close</span>`:''}`};
   const pos=t=>Math.max(0,Math.min(100,(t.px-t.lo)/(t.hi-t.lo)*100)).toFixed(1);
-  const card=t=>{const n=nx[t.s];return `<a class="mkc ${carCls(t.s)}" href="${t.src}" target="_blank" rel="noopener" title="Live quote for ${esc(t.n)}">
-      <div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span></div>
+  const ccy=t=>t.ccy||(t.cur==='€'?'EUR':'USD'),rngL=t=>t.closeRng?'52-week closing range':'52-week range';
+  // a plain card with its own "Live quote" link: nothing tappable sits inside another link
+  const card=t=>{const n=nx[t.s];return `<div class="mkc ${carCls(t.s)}">
+      <div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${esc(t.s)}</b><span class="mkn">${esc(t.n)}</span></div>
       <div class="mkp"><span class="mono mkpx">${money(t,t.px)}</span>${chg(t)}</div>
-      <div class="rng" role="img" aria-label="52-week range ${money(t,t.lo)} to ${money(t,t.hi)}, now ${money(t,t.px)}"><i style="left:${pos(t)}%"></i></div>
-      <div class="lbl mr"><span>52-wk ${money(t,t.lo).replace(/\.\d+$/,'')}</span>${n?`<span class="mke">Earnings ${fmtD(n.d)}</span>`:t.w?`<span class="mke mkw2">${esc(t.w)}</span>`:''}<span>${money(t,t.hi).replace(/\.\d+$/,'')}</span></div></a>`};
+      <div class="rng" role="img" aria-label="${rngL(t)} ${money(t,t.lo)} to ${money(t,t.hi)}, now ${money(t,t.px)}"><i style="left:${pos(t)}%"></i></div>
+      <div class="lbl mr"><span>${money(t,t.lo).replace(/\.\d+$/,'')}</span>${n?`<span class="mke">Earnings ${fmtD(n.d)}</span>`:t.w?`<span class="mke mkw2">${esc(t.w)}</span>`:''}<span>${money(t,t.hi).replace(/\.\d+$/,'')}</span></div>
+      <div class="lbl mkas"><span>${rngL(t).replace('52-week','52-wk')} · ${esc(ccy(t))}</span><span>${esc(t.asof||'')}</span></div>
+      <a class="link mkq" href="${escU(t.src)}" target="_blank" rel="noopener" aria-label="Live quote for ${esc(t.n)}, opens in a new tab">Live quote ↗</a></div>`};
+  const cell=t=>`<div class="mkcw">${card(t)}${mkEarnLine(t)}</div>`;
   const tvCard=t=>{const n=nx[t.s];return `<div class="mkc mktv ${carCls(t.s)}"><div class="mkh">${logoImg(MK_LOGO[t.s]||t.n,'lgs',t.n)}<b class="mono">${t.s}</b><span class="mkn">${esc(t.n)}</span>${n?`<span class="mke lbl">Earnings ${fmtD(n.d)}</span>`:''}</div>
       <div class="tvw tradingview-widget-container" data-sym="${TV_SYM[t.s]}"></div><div class="tvfb">${card(t)}</div></div>`};
   const pairs=[];for(let i=0;i<TICKERS.length;i+=2)pairs.push(TICKERS.slice(i,i+2));
@@ -8942,18 +8965,25 @@ function renderMarkets(){
   else shown=pairs[MKS.i%pairs.length];
   const on=s=>MKS.mode==='pick'&&MKS.pick.includes(s);
   const asofs=[...new Set(TICKERS.map(t=>t.asof))];
-  $('mkToday').innerHTML=`<div class="ph"><h2>Stock watch</h2><button class="link" data-goto="docs:earnings">Earnings calls</button></div>
+  // the header's Earnings button opens the company of the first card on screen (UPS when no card on screen has earnings)
+  const eco=shown.map(t=>({UPS:'UPS',FDX:'FedEx',FDXF:'FedEx Freight'})[t.s]).find(Boolean)||'UPS';
+  $('mkToday').innerHTML=`<div class="ph"><h2>Stock watch</h2><button class="link" data-goto="docs:earnings:${esc(eco)}">Earnings</button></div>
     <div class="mkpick" role="group" aria-label="Choose stocks">
       <button class="chip" data-mk="auto" aria-pressed="${MKS.mode==='auto'}">Rotate</button>
       ${TICKERS.map(t=>`<button class="chip ${carCls(t.s)}" data-mk="${t.s}" aria-pressed="${on(t.s)}">${t.s}</button>`).join('')}
       <button class="chip" data-mk="all" aria-pressed="${MKS.mode==='all'}">All</button></div>
-    <div class="mkbig${MKS.mode==='all'?' mkall':''}${MKS.mode==='auto'&&!TV_ON?' mkroll':''}" aria-live="polite">${shown.map(TV_ON?tvCard:card).join('')}</div>
+    <div class="mkbig${MKS.mode==='all'?' mkall':''}${MKS.mode==='auto'&&!TV_ON?' mkroll':''}" aria-live="polite">${shown.map(TV_ON?tvCard:cell).join('')}</div>
     ${MKS.mode==='auto'?`<div class="mkdots">${pairs.map((p,i)=>`<button type="button" data-mki="${i}" class="${i===MKS.i%pairs.length?'on':''}" aria-label="Show ${p.map(t=>t.s).join(' and ')}"></button>`).join('')}</div>`:''}
     <p class="lbl mknote">${TV_ON?'Charts and quotes by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>, delayed':asofs.length===1?'As of '+esc(asofs[0]):'Latest closes'} · Not investment advice</p>`;
   if(TV_ON)$('mkToday').querySelectorAll('.tvw').forEach(el=>tvMount(el,el.dataset.sym));
-  clearTimeout(MKS.timer);
-  if(MKS.mode==='auto'&&!TV_ON&&!reduceMotion())MKS.timer=setTimeout(()=>{if(!document.hidden&&!$('mkToday').matches(':hover'))MKS.i=(MKS.i+1)%pairs.length;renderMarkets()},6000);
+  mkTick();
 }
+/* rotation: phones have no hover, so a touch or focus anywhere in Stock watch holds the cards still for 30 seconds (a tap
+   never lands on a card that just rolled away), as does keyboard focus on it; picking a stock stops the rotation */
+function mkTick(){clearTimeout(MKS.timer);if(MKS.mode!=='auto'||TV_ON||reduceMotion())return;
+  MKS.timer=setTimeout(()=>{const el=$('mkToday');if(document.hidden||el.matches(':hover')||Date.now()<MKS.hold||el.querySelector(':focus-visible')){mkTick();return}
+    MKS.i=(MKS.i+1)%Math.ceil(TICKERS.length/2);renderMarkets()},6000)}
+['pointerdown','focusin'].forEach(k=>$('mkToday').addEventListener(k,()=>{MKS.hold=Date.now()+30000}));
 $('mkToday').addEventListener('click',e=>{const d=e.target.closest('[data-mki]');if(d){MKS.i=+d.dataset.mki;renderMarkets();return}const b=e.target.closest('[data-mk]');if(!b)return;const k=b.dataset.mk;
   if(k==='auto'||k==='all')MKS.mode=k;
   else{if(MKS.mode!=='pick'){MKS.mode='pick';MKS.pick=[k]}else if(MKS.pick.includes(k)){MKS.pick=MKS.pick.filter(s=>s!==k);if(!MKS.pick.length)MKS.mode='auto'}else MKS.pick=[...MKS.pick,k].slice(-2)}
