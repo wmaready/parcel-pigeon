@@ -8722,15 +8722,27 @@ function docWhy(d){
   return t}
 // keyed by the document's own address (_u0 keeps it when fixLink points a dead link at a replacement page)
 const docDomId=d=>{let h=0;for(const ch of (d._u0||d.u||d.n||'').split('?')[0])h=(h*31+ch.charCodeAt(0))|0;return 'doc-'+(h>>>0).toString(36)};
-// a placeholder closed out by an announcement (d.story): it points to that story and to the carrier page the story cites
-const docAnn=d=>{const n=!d.u&&d.story&&NEWS.find(x=>x.id===d.story);if(!n)return '';const s=(n.srcs||[]).find(x=>x&&/^https?:/.test(x.url||''))||{url:n.url,src:n.src};
-  return `<span class="dwhy">${s&&s.url?`<a class="link" href="${escU(s.url)}" target="_blank" rel="noopener">${esc((d.c||'')+' announcement')} ↗</a> · `:''}<button class="link" data-open="${esc(n.id)}">${esc(n.title)}</button></span>`};
+// a placeholder closed out by an announcement: it points to the announcement (d.see, kept apart from d.u because that
+// page is often already its own Docs entry) or to the carrier page its story cites, and to the story (d.story)
+const docAnn=d=>{if(d.u)return '';const n=d.story&&NEWS.find(x=>x.id===d.story);const s=d.see?{url:d.see}:n?((n.srcs||[]).find(x=>x&&/^https?:/.test(x.url||''))||{url:n.url}):null;
+  if(!n&&!(s&&s.url))return '';
+  return `<span class="dwhy">${s&&s.url?`<a class="link" href="${escU(s.url)}" target="_blank" rel="noopener">${esc((d.c||'')+' announcement')} ↗</a>`:''}${s&&s.url&&n?' · ':''}${n?`<button class="link" data-open="${esc(n.id)}">${esc(n.title)}</button>`:''}</span>`};
+/* B35: Doc watch's dated pictures of a watched page (data/docwatch.json docs[url].snap = {d, img, prev}), shown under the
+   entry after any change text, each opening in a new tab. Nothing shows when a page has no picture. */
+let DOCSNAP={};
+fetch('data/docwatch.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{const D=j&&j.docs;if(!D||typeof D!=='object')return;const m={};
+  Object.entries(D).forEach(([u,r])=>{const x=r&&r.snap;if(x&&typeof x==='object'&&x.img&&/^\d{4}-\d{2}-\d{2}/.test(String(x.d||'')))m[docKey(u)]=x});
+  DOCSNAP=m;if(Object.keys(m).length&&typeof renderAll==='function')renderAll()}).catch(()=>{});
+const docSnap=d=>{const x=(d.u||d._u0)&&DOCSNAP[docKey(d._u0||d.u)];if(!x)return '';const nm=`${d.c||''} ${d.n||''}`.trim(),pd=(String(x.prev||'').match(/(\d{4}-\d{2}-\d{2})(?=\.\w+$)/)||[])[1];
+  const a=(u,t,l)=>`<a class="link" href="${escU(u)}" target="_blank" rel="noopener" aria-label="${esc(l)}">${esc(t)} ↗</a>`;
+  return `<span class="dwhy dsnap">${a(x.img,'Page as it read on '+DF(x.d),`Picture of ${nm} as it read on ${DF(x.d)}`)}${x.prev?' · '+a(x.prev,pd?'Before: '+DF(pd):'Before',`Picture of ${nm}${pd?' as it read on '+DF(pd):', earlier version'}`):''}</span>`};
 function docRow(d){
-  const st=!d.u?(d.story&&NEWS.some(x=>x.id===d.story)?'Announced':'Not public'):d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=(w=>w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d)))(d.added||(d.why&&d.why.when));
+  const st=!d.u?(d.see||d.story&&NEWS.some(x=>x.id===d.story)?'Announced':'Not public'):d.eff&&d.eff>TODAY?'Upcoming':'';const fresh=(w=>w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d)))(d.added||(d.why&&d.why.when));
   const meta=[d.eff?'Effective '+DF(d.eff):'',d.upd&&d.upd!==d.eff?'Updated '+DF(d.upd):'',fmtOf(d.u),!d.why&&!d.added&&d.checked?'Checked '+fmtD(d.checked):''].filter(Boolean).join(' · ');
   const note=d.d&&!/^(Found with:|Added from alert:|Posted on )/.test(d.d)?`<span class="dd">${esc(d.d)}</span>`:'';
-  return `<div class="drow2${d.u?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${d.u?`href="${escU(d.u)}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
-    <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docAnn(d)}${docActs(d)}</div>`}
+  const lk=d.u||d.see;
+  return `<div class="drow2${lk?'':' pending'}" id="${docDomId(d)}"><a class="dn" ${lk?`href="${escU(lk)}" target="_blank" rel="noopener"`:''}>${esc(d.n)}${fresh?' <span class="tag tnew">New</span>':''}${st?` <span class="tag">${st}</span>`:''}</a>
+    <span class="dm">${esc(meta)}</span>${note}${(w=>w?`<span class="dwhy">${w}</span>`:"")(docWhy(d))}${docAnn(d)}${docSnap(d)}${docActs(d)}</div>`}
 /* documents seen on this device: opening the folder that holds a new document clears it */
 const DOC_SEEN=new Set((()=>{try{return JSON.parse(store.get('pw-docs-seen','[]'))}catch(e){return []}})());
 function docBadges(){document.querySelectorAll('#lib [data-dids]').forEach(el=>{const L=(el.dataset.dids||'').split(',').filter(x=>x&&!DOC_SEEN.has(x)),b=el.querySelector(':scope>summary .nb');
@@ -9681,7 +9693,7 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   if(mk){TICKERS.forEach(t=>{const q=mk[t.s];if(q&&q.px){Object.assign(t,{px:q.px,ch:q.ch??t.ch,chp:q.chp??t.chp,lo:q.lo??t.lo,hi:q.hi??t.hi,asof:q.asof||t.asof});ch=true}})}
   if(Array.isArray(docs)&&docs.length){docs.forEach(d=>{if(!d||!d.n)return;const k=DOCS.find(x=>(d.u&&x.u===d.u)||(x.c===d.c&&x.n===d.n));
     // an unlinked placeholder ("Not yet published") never reopens an entry already closed out by an announcement (k.story)
-    if(k&&!d.u&&k.story&&!d.story)return;if(k)Object.assign(k,d);else DOCS.push(d)});ch=true}
+    if(k&&!d.u&&!d.see&&(k.story||k.see)&&!d.story)return;if(k)Object.assign(k,d);else DOCS.push(d)});ch=true}
   if(Array.isArray(earn)&&earn.length){earn.forEach(e=>{if(!e||!e.q)return;const k=EARN.find(x=>x.company===e.company&&x.q===e.q);if(k)Object.assign(k,e);else EARN.push(e)});ch=true}
   if(brief&&Array.isArray(brief.items)&&brief.items.length===3&&(!brief.week||brief.week>='2026-10-09')){BRIEF.length=0;brief.items.forEach(b=>BRIEF.push(b));BRIEF_IDS.length=0;(brief.ids||[]).forEach(i=>BRIEF_IDS.push(i));ch=true}
   if(audit){

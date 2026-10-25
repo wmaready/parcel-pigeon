@@ -292,3 +292,33 @@ def test_phone_first_screen(site, width):
         pg.click(".tdhelp [data-tour]")
         pg.wait_for_selector(".ptour", timeout=5000)
         pg.keyboard.press("Escape")
+
+
+def test_docs_snapshot_links_and_announcement_link(site):
+    """B35: a watched page's dated pictures (data/docwatch.json docs[url].snap) show under its Docs entry, after any change
+    text, opening in a new tab, escaped; nothing when absent. B6: a closed placeholder's 'see' link is its link."""
+    hub = "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    dw = json.loads((ROOT / "data/docwatch.json").read_text())
+    dw["docs"][hub] = {**dw["docs"].get(hub, {}), "snap": {"d": "2026-10-24", "img": "data/snapshots/ups-hub/2026-10-24.jpg",
+                                                           "prev": "data/snapshots/ups-hub/2026-09-30.jpg"}}
+    docs = json.loads((ROOT / "data/docs.json").read_text())
+    for d in docs:
+        if d.get("c") == "UPS" and d.get("n") == "UPS 2027 general rate increase":
+            d.update({"u": None, "see": "https://about.ups.example/2027-rates?a=1&b=2", "d": "Announced Oct 23, 2026; rate previews not yet published by UPS"})
+    with app_with(site, 390, files={"data/docwatch.json": dw, "data/docs.json": docs}) as pg:
+        pg.click('nav.tabs [data-tab="docs"]')
+        pg.wait_for_timeout(500)
+        pg.evaluate("() => { docCar = 'UPS'; renderDocs() }")
+        r = pg.evaluate("""hub => { const row = d => document.getElementById(docDomId(d));
+            const h = row(DOCS.find(d => d.u === hub)), g = row(DOCS.find(d => d.c === 'UPS' && d.n === 'UPS 2027 general rate increase'));
+            const other = row(DOCS.find(d => d.c === 'UPS' && d.u && d.u !== hub));
+            const L = [...h.querySelectorAll('.dsnap a')];
+            return {links: L.map(a => [a.textContent, a.getAttribute('href'), a.target, a.getAttribute('aria-label')]),
+                    after: h.innerHTML.indexOf('dsnap') > Math.max(h.innerHTML.indexOf('class="dd"'), h.innerHTML.indexOf('class="dm"')),
+                    other: other.querySelectorAll('.dsnap').length, see: g.querySelector('a.dn').getAttribute('href'), gtxt: g.textContent} }""", hub)
+        assert r["links"][0][:3] == ["Page as it read on Oct 24, 2026 ↗", "data/snapshots/ups-hub/2026-10-24.jpg", "_blank"]
+        assert r["links"][1][:3] == ["Before: Sep 30, 2026 ↗", "data/snapshots/ups-hub/2026-09-30.jpg", "_blank"]
+        assert "UPS" in r["links"][0][3] and "Oct 24, 2026" in r["links"][0][3]
+        assert r["after"] and r["other"] == 0
+        assert r["see"] == "https://about.ups.example/2027-rates?a=1&b=2" and "Announced" in r["gtxt"] and "Not yet published" not in r["gtxt"]
+        assert pg.evaluate(OVERFLOW) is None
