@@ -401,8 +401,42 @@ def gnews(q):
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-US&gl=US&ceid=US:en"
 
 
-# SEC asks automated readers to name themselves with a contact address
-SEC_UA = {"User-Agent": "ParcelPigeon parcel-news reader " + (__import__("os").environ.get("SEC_CONTACT") or "bot@users.noreply.github.com")}
+# SEC asks automated readers to name themselves with a real contact address. The old fallback (a GitHub no-reply
+# address) was refused: 117 failed reads in a row by Oct 24, 2026, so 8-K filings were never read.
+PLACEHOLDER_CONTACTS = ("noreply", "no-reply", "example.com", "example.org", "users.noreply.github.com")
+
+
+def sec_contact():
+    """The SEC_CONTACT secret when it holds a real e-mail address, else None."""
+    c = (os.environ.get("SEC_CONTACT") or "").strip()
+    if not re.search(r"[^@\s]+@[^@\s]+\.[a-z]{2,}", c, re.I) or any(p in c.lower() for p in PLACEHOLDER_CONTACTS):
+        return None
+    return c
+
+
+def sec_ua():
+    """Headers for SEC reads, built at call time from SEC_CONTACT. Filing feeds are skipped without a real contact (see
+    collect); a filing page linked from elsewhere is still tried with the generic name."""
+    return {"User-Agent": "ParcelPigeon parcel-news reader " + (sec_contact() or "bot@users.noreply.github.com")}
+
+
+def sec_contact_missing():
+    """No real SEC_CONTACT: a loud ::error annotation every run, and at most one GitHub issue a day. Never stops the run."""
+    print("::error title=SEC_CONTACT missing::SEC filings are not being read. Add a repository secret SEC_CONTACT holding a "
+          "real e-mail address (Settings > Secrets and variables > Actions); the SEC refuses readers without one.")
+    st, day = load("crash_alert.json", {}), dt.date.today().isoformat()
+    if st.get("SEC_CONTACT") == day:
+        return
+    try:
+        notify("Parcel Pigeon: SEC_CONTACT secret missing, SEC filings not read",
+               "The SEC asks automated readers to give a real contact e-mail in their User-Agent and refuses the rest, so "
+               "company 8-K filings (UPS, FedEx, Amazon, Pitney Bowes) are skipped.\n\nFix: in GitHub, Settings > Secrets and "
+               "variables > Actions > New repository secret, name `SEC_CONTACT`, value: a real e-mail address you read.",
+               labels=("audit",))
+    except Exception as e:
+        print(f"SEC contact alert failed: {e}", file=sys.stderr)
+    st["SEC_CONTACT"] = day
+    save("crash_alert.json", st)
 
 
 # what an 8-K's item numbers mean, so a filing's headline says what it is about
@@ -413,7 +447,7 @@ SEC_ITEMS = {"1.01": "a material agreement", "1.02": "an ended agreement", "2.01
 
 def edgar_items(url, company, cutoff):
     """An SEC company's recent 8-K filings from data.sec.gov (the SEC's structured filings data), as intake items."""
-    j = requests.get(url, headers=SEC_UA, timeout=25)
+    j = requests.get(url, headers=sec_ua(), timeout=25)
     j.raise_for_status()
     rec = (j.json().get("filings") or {}).get("recent") or {}
     cik = str(int(re.search(r"CIK(\d+)", url).group(1)))
@@ -446,9 +480,16 @@ def collect(cfg, primary_only=False):
         feeds += [(f["name"], f["url"], True, f.get("house", False), "rss", None) for f in cfg.get("direct", [])] + \
                  [(q, gnews(q), False, False, "gnews", None) for q in cfg.get("discovery", [])]
     health, today = load("feed_health.json", {}), dt.date.today().isoformat()
+    warned = False
     for name, url, direct, house, kind, company in feeds:
         fh = health.setdefault(name, {"direct": direct})
         if kind == "edgar":
+            if not sec_contact():
+                # without a real contact the SEC refuses the read: say so loudly instead of failing quietly every hour
+                if not warned:
+                    sec_contact_missing(); warned = True
+                fh.update({"err": "SEC_CONTACT secret missing; not read", "fails": fh.get("fails", 0) + 1, "last_try": today})
+                continue
             try:
                 got = edgar_items(url, company, cutoff)
             except Exception as e:
@@ -533,13 +574,13 @@ def gnews_decode(url):
 def edgar_doc(index_url):
     """An SEC filing's index page lists its documents; the press release is exhibit 99 (else the main form)."""
     import requests
-    page = requests.get(index_url, headers=SEC_UA, timeout=25).text
+    page = requests.get(index_url, headers=sec_ua(), timeout=25).text
     docs = re.findall(r'href="(/Archives/edgar/data/[^"]+\.htm)"', page, re.I)
     pick = next((d for d in docs if re.search(r"ex-?99", d, re.I)), docs[0] if docs else None)
     if not pick:
         return None, index_url
     u = "https://www.sec.gov" + pick
-    return trafilatura.extract(requests.get(u, headers=SEC_UA, timeout=25).text, include_tables=True) or None, u
+    return trafilatura.extract(requests.get(u, headers=sec_ua(), timeout=25).text, include_tables=True) or None, u
 
 
 CLAUDE_READS = int(os.environ.get("PP_CLAUDE_READS") or 6)     # pages per run read through Claude's web fetch tool
