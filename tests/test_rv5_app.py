@@ -374,3 +374,47 @@ def test_consultancies_on_the_map_and_in_search(site, width):
         co = pg.inner_text("#mxCo")
         assert "Record checked Oct 18, 2026" in co and "Source: shipware.com" in co and "Consultancies & shipping intelligence" in co
         assert pg.evaluate(OVERFLOW) is None
+
+
+def test_service_worker_saved_copies(site):
+    """B26: an error answer is a failure (the saved copy is used); when saved copies are used the page says "Offline -
+    saved <time>"; data/snapshots/ is never cached; the cache version is bumped."""
+    sw = (ROOT / "sw.js").read_text()
+    assert "const C='pp-v35'" in sw and "data\\/snapshots" in sw
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        ctx = b.new_context(viewport={"width": 390, "height": 900})
+        ctx.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg = ctx.new_page()
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.goto(site, wait_until="load")
+        pg.evaluate("() => navigator.serviceWorker.ready.then(() => true)")
+        pg.reload(wait_until="load")          # now controlled: the page and its data are saved as they load
+        pg.wait_for_function("() => typeof PL !== 'undefined' && NEWS.length > 150", timeout=60000)
+        pg.wait_for_timeout(1500)
+        assert pg.evaluate("() => !!navigator.serviceWorker.controller")
+        assert pg.is_hidden("#offlineNote")
+        # a picture under data/snapshots/ is fetched from the network only, never saved
+        pg.evaluate("() => fetch('data/snapshots/none/2026-10-24.jpg').catch(() => null)")
+        pg.wait_for_timeout(300)
+        keys = pg.evaluate("() => caches.open('pp-v35').then(c => c.keys()).then(K => K.map(r => r.url))")
+        assert any(k.endswith("/data/news.json") for k in keys) and not any("/data/snapshots/" in k for k in keys)
+        # a 500 for data the page already saved: the saved copy answers, and the page says so
+        bad = re.compile(r".*/data/fuel\.json(\?.*)?$")
+        ctx.route(bad, lambda r: r.fulfill(status=500, body="boom"))
+        st = pg.evaluate("() => fetch('data/fuel.json', {cache: 'no-store'}).then(r => [r.status, r.headers.get('x-pp-saved')])")
+        assert st[0] == 200 and st[1], st
+        pg.wait_for_function("() => !document.getElementById('offlineNote').hidden", timeout=5000)
+        assert re.match(r"^Offline — saved [A-Z][a-z]{2} \d{1,2}, \d{4}", pg.inner_text("#offlineNote"))
+        ctx.unroute(bad)
+        # fully offline: the saved app and data load, with the notice
+        ctx.set_offline(True)
+        pg.reload(wait_until="load")
+        pg.wait_for_function("() => typeof PL !== 'undefined' && NEWS.length > 150", timeout=60000)
+        pg.wait_for_function("() => !document.getElementById('offlineNote').hidden", timeout=8000)
+        assert pg.inner_text("#offlineNote").startswith("Offline — saved ")
+        assert pg.evaluate(OVERFLOW) is None
+        b.close()
+    assert not errors, errors[:3]
