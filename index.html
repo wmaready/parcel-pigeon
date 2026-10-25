@@ -9581,16 +9581,26 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   // one card per transaction: a pipeline update to a deal already on the list (a closing, a breach notice, a termination)
   // is laid over that card, matched loosely (dealSame), never added as a second card
   if(Array.isArray(deals)&&deals.length){deals.forEach(x=>{if(!x||!x.target)return;const y=DEALS.find(y=>dealSame(y,x));if(!y){DEALS.push(Object.assign({},x));return}dealOverlay(y,x)});ch=true}
-  if(Array.isArray(news)&&news.length){const seen=new Set(NEWS.map(n=>n.url));
+  if(Array.isArray(news)&&news.length){
     const words=s=>new Set(String(s).toLowerCase().match(/[a-z0-9.$%]+/g)||[]);
     const sim=(a,b)=>{const A=words(a),B=words(b);let k=0;A.forEach(w=>{if(B.has(w))k++});return k/Math.max(1,Math.min(A.size,B.size))};
-    news.forEach(n=>{if(n&&n.url&&seen.has(n.url)){const o=NEWS.find(x=>x.url===n.url);if(o){if(n.why)o.why=n.why;if(n.score)o.score=n.score}return}if(!n||!n.url)return;n.c=n.c||[];n.kind=n.kind||'News';if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];
-      n.srcs.forEach(s=>seen.add(s.url));NEWS.push(n);ch=true;cleanStory(n);
+    // two copies of one story: the same id, or a shared link AND a similar title AND dates within a week. A link alone is
+    // never a story's identity (UPS's rate hub page carried both the Sep 7 guide revision and the Dec 21, 2026 increase).
+    // Mirrors same_story() in pipeline/ratecal.py.
+    const gap=(a,b)=>{const t=x=>/^\d{4}-\d{2}-\d{2}/.test(String(x||''))?Date.parse(String(x).slice(0,10)+'T00:00:00Z'):NaN;return Math.abs(t(a)-t(b))/864e5};
+    const sameStory=(a,b)=>!!(a.id&&a.id===b.id)||([a.url,...(a.srcs||[]).map(s=>s&&s.url)].includes(b.url)&&sim(a.title,b.title)>=.5&&gap(a.date,b.date)<=7);
+    // a story date joins a clock entry only on that entry's date (or inside its stated span), with an equivalent label
+    // (mostly the same words and the same services named) and the same direction. Mirrors same_label() in ratecal.py.
+    const SVC=new Set(['ground','air','international','intl','saver','express','economy','overnight','2day','priority','freight','residential','commercial','domestic','home','surepost','sbr','simple','retail','daily']);
+    const svc=s=>[...words(s)].filter(w=>SVC.has(w)).sort().join(' ');
+    const sameLabel=(a,b)=>sim(a,b)>=.5&&svc(a)===svc(b);
+    news.forEach(n=>{if(!n||!n.url)return;const o=NEWS.find(x=>sameStory(x,n));if(o){if(n.why)o.why=n.why;if(n.score)o.score=n.score;return}n.c=n.c||[];n.kind=n.kind||'News';if(!n.srcs)n.srcs=[{src:n.src,url:n.url}];
+      NEWS.push(n);ch=true;cleanStory(n);
       const own=ownSet(n),idsOf=c=>String(c||'').split(/\s*·\s*/).map(x=>logoId(x)).filter(Boolean);
       (n.dates||[]).forEach((d,i)=>{if(!d||!d.d||!clockWorthy(n,d))return;
         // an existing clock entry only takes this story when it is about the same company (or neither names one)
         const same=x=>{const xi=new Set([...idsOf(x.c),...mentions(x.w)]);return own.size?[...xi].some(i=>own.has(i)):!xi.size};
-        const near=DATES.find(x=>Math.abs(daysTo(x.d)-daysTo(d.d))<=3&&same(x)&&sim(x.w,d.w)>=.3);
+        const near=DATES.find(x=>x.d<=d.d&&d.d<=(x.end||x.d)&&same(x)&&sameLabel(x.w,d.w)&&x.imp===(d.imp||'up'));
         if(near){near.news=near.news||[];if(!near.news.includes(n.id))near.news.push(n.id)}
         else DATES.push({id:'x'+n.id+i,d:d.d,w:d.w,c:(storyCars(n).length?storyCars(n):n.c).join(' · '),imp:d.imp||'up',news:[n.id],...(d.fx&&d.fx.t?{fx:d.fx}:{})})})});
     DATES.sort((a,b)=>a.d.localeCompare(b.d))}

@@ -103,3 +103,52 @@ def test_rate_clock_add_to_calendar(site, width):
     text, _ = ratecal.build(today=today)
     feed = [u.split("@")[0] for u in re.findall(r"^UID:(.*)$", text.replace("\r\n ", ""), re.M) if not u.endswith("-ann@parcel-pigeon")]
     assert sorted(feed) == sorted(app_ids)
+
+
+def test_story_sharing_a_built_in_link_still_reaches_the_calendar(data_dir):
+    """B4: UPS's Dec 21, 2026 increase (w84705482dd2f) shares UPS's rate hub page with the Sep 7 built-in story 15. A shared
+    link alone is not the same story; a copy with a similar title and date is."""
+    import common, ratecal
+    seed = common.load("seed.json", {})
+    hub = "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    seed["news"] = [{"id": "15", "date": "2026-09-07", "c": ["UPS"], "cat": "Documents", "title": "UPS revises its Rate and Service Guides",
+                     "url": hub, "srcs": [{"src": "UPS", "url": hub}]}]
+    seed["clock"] = []
+    common.save("seed.json", seed)
+    story = {"date": "2026-10-23", "c": ["UPS"], "cat": "Pricing & GRI", "kind": "News", "lvl": 3, "imp": "up", "sum": "x", "plain": "x",
+             "url": hub, "srcs": [{"src": "UPS", "url": hub}]}
+    common.save("news.json", [
+        {**story, "id": "zzups1", "title": "UPS announces Dec 21, 2026 rate increase",
+         "dates": [{"d": "2026-12-21", "w": "UPS 2027 rate increase takes effect", "imp": "up"}]},
+        # a second copy of the same story (same link, near-identical title, same day) is skipped, as before
+        {**story, "id": "zzups2", "title": "UPS announces Dec 21, 2026 rate increase for 2027",
+         "dates": [{"d": "2026-12-22", "w": "UPS copy date that must not appear", "imp": "up"}]},
+        # a revision of the built-in story itself (same link, same title, same week) stays the built-in story
+        {**story, "id": "zzups3", "date": "2026-09-08", "title": "UPS revises its Rate and Service Guides",
+         "dates": [{"d": "2026-12-23", "w": "UPS revision copy date that must not appear", "imp": "up"}]}])
+    text, _ = ratecal.build(today="2026-10-25", stamp="20261025T120000Z")
+    flat = text.replace("\r\n ", "")
+    assert "UID:xzzups10@parcel-pigeon" in flat and "UPS 2027 rate increase takes effect" in flat
+    assert "must not appear" not in flat
+    assert ratecal.same_story({"id": "a", "url": hub, "title": "x y z", "date": "2026-10-01"}, {"id": "a"})
+
+
+def test_clock_never_merges_different_services_dates_or_directions(data_dir):
+    """B10: a story date joins a clock entry only on its date, with an equivalent label and the same direction."""
+    import common, ratecal
+    seed = common.load("seed.json", {})
+    seed["news"] = []
+    seed["clock"] = [{"id": "zzg", "d": "2026-11-02", "w": "UPS raises Ground fuel surcharge", "c": "UPS", "imp": "up"},
+                     {"id": "zzp", "d": "2026-11-20", "end": "2026-11-22", "w": "UPS peak surcharges rise", "c": "UPS", "imp": "up"}]
+    common.save("seed.json", seed)
+    common.save("news.json", [{"id": "zzf", "date": "2026-10-20", "c": ["UPS"], "cat": "Fuel", "kind": "News", "lvl": 2, "imp": "up",
+                               "title": "UPS fuel changes", "sum": "x", "plain": "x", "url": "https://x.example/f",
+                               "dates": [{"d": "2026-11-02", "w": "UPS raises Air fuel surcharge", "imp": "up"},       # other service
+                                         {"d": "2026-11-03", "w": "UPS raises Ground fuel surcharge", "imp": "up"},    # other day
+                                         {"d": "2026-11-02", "w": "UPS lowers Ground fuel surcharge", "imp": "down"},  # other direction
+                                         {"d": "2026-11-02", "w": "UPS raises Ground fuel surcharge again", "imp": "up"},  # same change
+                                         {"d": "2026-11-21", "w": "UPS peak surcharges rise", "imp": "up"}]}])       # inside the span
+    got = {x["id"]: x for x in ratecal.entries()}
+    assert got["zzg"]["news"] == ["zzf"] and got["zzp"]["news"] == ["zzf"]
+    assert {"xzzf0", "xzzf1", "xzzf2"} <= set(got) and "xzzf3" not in got and "xzzf4" not in got
+    assert not ratecal.same_label("UPS raises Ground fuel surcharge Nov 2", "UPS raises Air fuel surcharge Nov 2")
