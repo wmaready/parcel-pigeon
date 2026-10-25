@@ -1,74 +1,114 @@
 {
  "UPS": {
   "px": 101.06,
-  "ch": 14.03,
-  "chp": 16.12,
+  "ch": -0.46,
+  "chp": -0.45,
   "lo": 87.22,
   "hi": 120.0,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "United Parcel Service"
+  "n": "United Parcel Service",
+  "prev": 101.52,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NYSE"
  },
  "FDX": {
   "px": 298.72,
-  "ch": 106.8,
-  "chp": 55.65,
+  "ch": -5.2,
+  "chp": -1.71,
   "lo": 194.32,
   "hi": 339.35,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "FedEx"
+  "n": "FedEx",
+  "prev": 303.92,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NYSE"
  },
  "AMZN": {
   "px": 248.0,
-  "ch": 26.91,
-  "chp": 12.17,
+  "ch": -2.38,
+  "chp": -0.95,
   "lo": 198.79,
   "hi": 284.02,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "Amazon"
+  "n": "Amazon",
+  "prev": 250.38,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NasdaqGS"
  },
  "DHL": {
   "px": 57.28,
-  "ch": 18.12,
-  "chp": 46.27,
+  "ch": 0.16,
+  "chp": 0.28,
   "lo": 39.11,
   "hi": 58.62,
   "asof": "Oct 23, 2026 15:35 UTC",
-  "n": "DHL Group"
+  "n": "DHL Group",
+  "prev": 57.12,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "EUR",
+  "exch": "XETRA"
  },
  "FDXF": {
   "px": 110.05,
-  "ch": -24.95,
-  "chp": -18.48,
+  "ch": -0.97,
+  "chp": -0.87,
   "lo": 107.95,
   "hi": 188.46,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "FedEx Freight"
+  "n": "FedEx Freight",
+  "prev": 111.02,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NYSE"
  },
  "DASH": {
   "px": 179.38,
-  "ch": -75.21,
-  "chp": -29.54,
+  "ch": -6.56,
+  "chp": -3.53,
   "lo": 146.6,
   "hi": 266.06,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "DoorDash"
+  "n": "DoorDash",
+  "prev": 185.94,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NasdaqGS"
  },
  "UBER": {
   "px": 66.7,
-  "ch": -27.91,
-  "chp": -29.5,
+  "ch": -2.37,
+  "chp": -3.43,
   "lo": 65.94,
   "hi": 99.72,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "Uber"
+  "n": "Uber",
+  "prev": 69.07,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NYSE"
  },
  "PBI": {
   "px": 17.35,
-  "ch": 5.69,
-  "chp": 48.8,
+  "ch": -0.19,
+  "chp": -1.08,
   "lo": 9.02,
   "hi": 18.51,
   "asof": "Oct 23, 2026 20:00 UTC",
-  "n": "Pitney Bowes"
+  "n": "Pitney Bowes",
+  "prev": 17.54,
+  "prev_date": "2026-10-22",
+  "range": "52-week closing range",
+  "cur": "USD",
+  "exch": "NYSE"
  }
 }

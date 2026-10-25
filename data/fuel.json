@@ -287,5 +287,19 @@
  "eff": {
   "OnTrac": "2026-10-19"
  },
- "updated": "2026-10-25T20:46Z"
+ "updated": "2026-10-25T22:44Z",
+ "health": {
+  "UPS": {
+   "ok": false,
+   "why": "OILPRICE_API_KEY not set",
+   "at": "2026-10-25T22:44Z",
+   "last_ok": null
+  },
+  "FedEx": {
+   "ok": false,
+   "why": "OILPRICE_API_KEY not set",
+   "at": "2026-10-25T22:44Z",
+   "last_ok": null
+  }
+ }
 }
