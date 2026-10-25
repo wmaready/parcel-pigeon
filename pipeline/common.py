@@ -525,11 +525,42 @@ def same_event(a, b):
             return False
     except Exception:
         return False
+    # B10: similar wording isn't enough. "UPS raises Ground fuel surcharge Nov 2" and "UPS raises Air fuel surcharge
+    # Nov 9" are two events: a different effective date or a different service keeps them apart.
+    ea, eb = _effective(a), _effective(b)
+    if ea and eb and ea != eb:
+        return False
+    sa, sb = _service_set(a.get("title")), _service_set(b.get("title"))
+    if sa and sb and sa != sb:
+        return False
     ua = canon(((a.get("srcs") or [{}])[0].get("url")) or a.get("url") or "")
     ub = canon(((b.get("srcs") or [{}])[0].get("url")) or b.get("url") or "")
     A, B = _words(a.get("title")), _words(b.get("title"))
     sim = len(A & B) / max(1, min(len(A), len(B)))
     return (ua and ua == ub and sim >= 0.34) or sim >= 0.7
+
+
+_SERVICE_NAMES = ["Ground Saver", "Ground Advantage", "Ground Economy", "Home Delivery", "Priority Mail Express", "Priority Mail",
+                  "SurePost", "Next Day Air", "2nd Day Air", "Ground", "Air", "Express", "Freight", "International"]
+_MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+
+def _service_set(title):
+    """Carrier services a headline names ("Ground Saver" counts once, not also as "Ground")."""
+    t, out = title or "", set()
+    for s in _SERVICE_NAMES:
+        if re.search(r"\b" + re.escape(s) + r"\b", t, re.I):
+            out.add(s.lower())
+            t = re.sub(r"\b" + re.escape(s) + r"\b", " ", t, flags=re.I)
+    return out
+
+
+def _effective(s):
+    """The date a story's change takes effect: its act date, else a month-day date its headline states (as MM-DD)."""
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", str(s.get("act") or "")):
+        return s["act"][5:]
+    m = re.search(r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})\b", s.get("title") or "", re.I)
+    return f"{_MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}" if m else None
 
 
 def dedupe_live(live):

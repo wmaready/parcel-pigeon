@@ -10,11 +10,12 @@ from pypdf import PdfReader
 from common import pdf_to_text, ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls, doc_key, doc_year
 from scoop import is_covered, notify, ask, big
 from common import dedupe_live, same_event
-from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields
+from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields, robot_leaks
 from fetch import fetch, fetch_late, render, is_blocked, is_pdf, Blocked
 
 SNAP = DATA / "snapshots"
 MAX_DIFF_CHARS = 12000
+RETRY_RUNS = 3          # runs a partly failed page check is retried before the parts that worked go ahead
 
 ANALYST = """You are the Parcel Pigeon change analyst. A carrier changed a page or document that shippers rely on
 (rate guide, surcharge page, fuel table, service alert, developer/API page, postal price filing). You get the lines
@@ -221,7 +222,9 @@ def main():
         def accept():
             # the snapshot moves forward only once this change is handled, so a failed analysis is retried next run
             snap.write_text("\n".join(new))
-            state[item["url"]] = {"checked": today, "pdfs": pdfs, "lines": len(new), "told": (state.get(item["url"]) or {}).get("told", [])}
+            was = state.get(item["url"]) or {}
+            state[item["url"]] = {"checked": today, "pdfs": pdfs, "lines": len(new), "told": was.get("told", []),
+                                  **{k: was[k] for k in ("told2", "told_until") if was.get(k)}}
         if first:
             accept(); print(f"baseline saved: {item['carrier']} {item['name']}"); continue
         removed, added = diff_lines(old, new)
@@ -269,8 +272,15 @@ def main():
                 failed = True
             else:
                 results.append(res)
-        if failed and not results:
-            print(f"  audit failed, will retry next run: {item['name']}", file=sys.stderr); continue
+        # B10: a partly failed check is retried whole next run (the snapshot doesn't move), so the change whose audit
+        # failed isn't lost behind the ones that worked. After 3 failed runs in a row the rest go ahead, logged.
+        pst = state.setdefault(item["url"], dict(prev or {}))
+        if failed:
+            pst["fail_runs"] = pst.get("fail_runs", 0) + 1
+            if pst["fail_runs"] < RETRY_RUNS or not results:
+                print(f"  audit failed ({pst['fail_runs']} run(s)), will retry next run: {item['name']}", file=sys.stderr); continue
+            print(f"  audit kept failing for part of {item['name']}; going ahead with the {len(results)} part(s) that worked", file=sys.stderr)
+        pst.pop("fail_runs", None)
         accept()
         save("docs.json", lib)
         material = [r for r in results if r.get("material") and r.get("changes")]
@@ -278,64 +288,90 @@ def main():
         if not material:
             drafts.insert(0, {"status": "not material", "date": today, "page": item["url"], "verdicts": verdicts})
             print(f"  checked, nothing material: {item['name']} [{verdicts}]"); continue
-        # drop changes this page has already been reported for (fingerprint: what + after), so a re-read never repeats a story
-        told = set(state.get(item["url"], {}).get("told", []))
-        fp = lambda c: h((c.get("what") or "").lower().strip() + "|" + re.sub(r"\s+", " ", (c.get("after") or "").lower()).strip())
+        # drop changes this page has already been reported for, so a re-read never repeats a story. B10: the fingerprint
+        # covers what, before, after, effective date and who, so the same wording for another service or date is a new
+        # change. Fingerprints saved the old way (what + after only, "told") still count for 30 days after this page's
+        # first report under the new fingerprint, so nothing already told is told twice, then they stop counting.
+        st = state.setdefault(item["url"], {})
+        told2 = set(st.get("told2", []))
+        told = set(st.get("told", [])) if today <= st.get("told_until", "9999") else set()
         for r in material:
-            r["changes"] = [c for c in r["changes"] if fp(c) not in told]
+            r["changes"] = [c for c in r["changes"] if fingerprint(c) not in told2 and old_fingerprint(c) not in told]
         material = [r for r in material if r["changes"]]
         if not material:
             drafts.insert(0, {"status": "already reported", "date": today, "page": item["url"], "verdicts": verdicts})
             print(f"  already reported, skipped: {item['name']}"); continue
-        st = state.setdefault(item["url"], {})
-        st["told"] = (st.get("told", []) + [fp(c) for r in material for c in r["changes"]])[-300:]
+        st["told2"] = (st.get("told2", []) + [fingerprint(c) for r in material for c in r["changes"]])[-300:]
+        st.setdefault("told_until", (dt.date.today() + dt.timedelta(days=30)).isoformat())
         material.sort(key=lambda r: (-int(r.get("lvl") or 1), -len(r["changes"])))
-        lead = material[0]
-        f = story_fields(lead, item["carrier"])
-        for r in material[1:]:
-            f["changes"] += [{k: c.get(k) for k in ("what", "before", "after", "effective", "who", "impact")} for c in r["changes"]]
-            f["sum"] += f" Also: {r.get('title')}."
-        f["changes"] = f["changes"][:12]
-        srcs = [{"src": f"{item['carrier']} {item['name']}", "url": item["url"]}] + \
-               [{"src": f"{item['carrier']}: {r['file'].split('/')[-1]}", "url": r["file"]} for r in material if r.get("file")]
-        story = {"id": "w" + h(item["url"] + today + f["title"]), "date": today, "c": [item["carrier"]], **f, "kind": "Alert",
-                 "src": f"{item['carrier']} {item['name']} (spotted by Parcel Pigeon)", "url": lead.get("file") or item["url"],
-                 "srcs": srcs, "auto": True,
-                 "audit": {"verdicts": verdicts, "dropped": sum(r.get("dropped", 0) for r in results),
-                           "compared": [{"new": r.get("file"), "old": r.get("pred")} for r in material if r.get("file")]}}
-        story["dates"] = [d for d in story["dates"] if clock_worthy(story, d)]
-        changes = story["changes"]
-        reasons = []
-        unsupported = sorted({x for r in material for x in r.get("unsupported") or []})
-        if unsupported:
-            reasons.append("These numbers aren't in the old or new text: " + ", ".join(unsupported))
-        if not is_covered(story["title"]):
-            # found on the carrier's own page before anyone reported it: the carrier is the source of truth, so no second
-            # source is needed. It publishes as first-to-report. (Only numbers that don't match the documents are held.)
-            story["exclusive"] = True
-            story["primary"] = True
-        if reasons:
-            lines = "\n".join(f"- **{c.get('what','')}**: {c.get('before') or '(new)'} → {c.get('after')}" for c in changes)
-            try:
-                url = ask(story, reasons, story["srcs"], extra=f"Spotted on **{item['carrier']} — {item['name']}** ({verdicts}):\n{lines}")
-            except Exception as e:
-                url = None; print(f"  issue failed: {e}", file=sys.stderr)
-            drafts.insert(0, {"status": "asked", "issue": url, "story": story})
-            continue
-        live = load("news.json", [])
-        twin = next((x for x in live if same_event(x, story)), None)
-        if twin:
-            drafts.insert(0, {"status": "same as published", "story": story, "twin": twin.get("id")})
-            print(f"  same event already published ({twin.get('id')}), skipped: {story['title']}"); continue
-        if not any(x.get("id") == story["id"] for x in live):
-            live.insert(0, story); save("news.json", live)
-        drafts.insert(0, {"status": "published", "story": story})
-        print(f"  PUBLISHED: {story['title']} [{verdicts}]")
+        # B9: one story per material audit (the page's own change, each new file), never one story with "Also: ..." stitched on
+        for r in material:
+            publish_audit(r, item, verdicts, drafts)
     save("watch_state.json", state); save("drafts.json", drafts[:200]); save("watch_health.json", health)
     live = load("news.json", [])
     clean = dedupe_live(live)
     if len(clean) != len(live):
         save("news.json", clean)
+
+
+def _fp_text(v):
+    return re.sub(r"\s+", " ", str(v or "").lower()).strip()
+
+
+def fingerprint(c):
+    """What makes a reported change the same change: what, before, after, effective date and who (B10)."""
+    return h("|".join(_fp_text(c.get(k)) for k in ("what", "before", "after", "effective", "who")))
+
+
+def old_fingerprint(c):
+    return h((c.get("what") or "").lower().strip() + "|" + re.sub(r"\s+", " ", (c.get("after") or "").lower()).strip())
+
+
+def publish_audit(r, item, verdicts, drafts):
+    """One verified audit becomes one story: published, held for a person (numbers not in the texts, or robot notes
+    left in the text), or skipped as the same event as a published story."""
+    today = dt.date.today().isoformat()
+    f = story_fields(r, item["carrier"])
+    f["changes"] = f["changes"][:12]
+    srcs = [{"src": f"{item['carrier']} {item['name']}", "url": item["url"]}] + \
+           ([{"src": f"{item['carrier']}: {r['file'].split('/')[-1]}", "url": r["file"]}] if r.get("file") else [])
+    story = {"id": "w" + h(item["url"] + today + f["title"]), "date": today, "c": [item["carrier"]], **f, "kind": "Alert",
+             "src": f"{item['carrier']} {item['name']} (spotted by Parcel Pigeon)", "url": r.get("file") or item["url"],
+             "srcs": srcs, "auto": True,
+             "audit": {"verdicts": verdicts, "dropped": r.get("dropped", 0),
+                       "compared": [{"new": r.get("file"), "old": r.get("pred")}] if r.get("file") else []}}
+    story["dates"] = [d for d in story["dates"] if clock_worthy(story, d)]
+    changes = story["changes"]
+    reasons = []
+    if r.get("unsupported"):
+        reasons.append("These numbers aren't in the old or new text: " + ", ".join(sorted(set(r["unsupported"]))))
+    leaks = robot_leaks(story)
+    if leaks:
+        # B9 final pass: anything that still reads like the robot's own notes is held for a person, never published
+        reasons.append("The text still has robot notes in it: " + " | ".join(x[:100] for x in leaks[:3]))
+    if not is_covered(story["title"]):
+        # found on the carrier's own page before anyone reported it: the carrier is the source of truth, so no second
+        # source is needed. It publishes as first-to-report. (Only numbers that don't match the documents are held.)
+        story["exclusive"] = True
+        story["primary"] = True
+    if reasons:
+        story.pop("robot_notes", None)
+        lines = "\n".join(f"- **{c.get('what','')}**: {c.get('before') or '(new)'} → {c.get('after')}" for c in changes)
+        try:
+            url = ask(story, reasons, story["srcs"], extra=f"Spotted on **{item['carrier']} — {item['name']}** ({verdicts}):\n{lines}")
+        except Exception as e:
+            url = None; print(f"  issue failed: {e}", file=sys.stderr)
+        drafts.insert(0, {"status": "asked", "issue": url, "story": story})
+        return
+    live = load("news.json", [])
+    twin = next((x for x in live if same_event(x, story)), None)
+    if twin:
+        drafts.insert(0, {"status": "same as published", "story": story, "twin": twin.get("id")})
+        print(f"  same event already published ({twin.get('id')}), skipped: {story['title']}"); return
+    if not any(x.get("id") == story["id"] for x in live):
+        live.insert(0, story); save("news.json", live)
+    drafts.insert(0, {"status": "published", "story": story})
+    print(f"  PUBLISHED: {story['title']} [{verdicts}]")
 
 
 if __name__ == "__main__":
