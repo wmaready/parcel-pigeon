@@ -230,3 +230,24 @@ def test_seed_ownership_and_history_corrections(site, width):
         pg.wait_for_timeout(400)
         assert "Crown corporation 1981" in pg.inner_text("body")
         assert pg.evaluate(OVERFLOW) is None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_map_coverage_line_follows_the_filter(site, width):
+    """B24: above the map, 'Headquarters only, not service coverage. X of Y companies have a mapped location.', both
+    numbers from the current sector filter."""
+    with app(site, width) as pg:
+        pg.click('nav.tabs [data-tab="mna"]')
+        pg.wait_for_timeout(300)
+        pg.evaluate("() => { const b = document.querySelector('[data-m=\"geo\"]'); b && b.click() }")
+        pg.wait_for_function("() => /companies have a mapped location/.test(document.getElementById('mxGcov').textContent)", timeout=20000)
+        rx = r"^Headquarters only, not service coverage\. (\d+) of (\d+) companies have a mapped location\.$"
+        m = re.match(rx, pg.inner_text("#mxGcov"))
+        total = int(re.search(r"(\d+) companies", pg.inner_text("#mxStats")).group(1))
+        assert m and int(m.group(2)) == total and 0 < int(m.group(1)) <= total
+        assert pg.evaluate("() => { const g = document.getElementById('mxGcov'), m = document.getElementById('mxGeo'); return g.compareDocumentPosition(m) & Node.DOCUMENT_POSITION_FOLLOWING }")
+        chip = pg.evaluate("() => { const b = [...document.querySelectorAll('#mxChips [data-r]')].find(b => b.dataset.r !== '*' && +b.querySelector('em').textContent > 0); b.click(); return +b.querySelector('em').textContent }")
+        pg.wait_for_timeout(300)
+        m2 = re.match(rx, pg.inner_text("#mxGcov"))
+        assert m2 and int(m2.group(2)) == chip and int(m2.group(1)) <= chip
+        assert pg.evaluate(OVERFLOW) is None

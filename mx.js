@@ -72,7 +72,7 @@ wrap.innerHTML=`<div class="mx-top">
 </div>
 <div class="mx-stats" id="mxStats"></div>
 <details class="mx-filters"><summary id="mxFilterLabel">Sectors · All</summary><div class="mx-chips" id="mxChips" role="group" aria-label="Show sectors"></div></details>
-<nav class="mx-crumb" id="mxCrumb" aria-label="Where you are"></nav><div class="mx-geo" id="mxGeoWrap"><div class="mx-gmap" id="mxGeo"></div><div class="mx-gnote" id="mxGnote"></div></div><div class="mx-home" id="mxHome"></div><div class="mx-sect" id="mxSect"></div><div class="mx-co" id="mxCo"></div>
+<nav class="mx-crumb" id="mxCrumb" aria-label="Where you are"></nav><div class="mx-geo" id="mxGeoWrap"><p class="mx-gcov" id="mxGcov"></p><div class="mx-gmap" id="mxGeo"></div><div class="mx-gnote" id="mxGnote"></div></div><div class="mx-home" id="mxHome"></div><div class="mx-sect" id="mxSect"></div><div class="mx-co" id="mxCo"></div>
 <div class="mx-body">
   <div class="mx-stage" id="mxStage">
     <svg id="mxSvg" role="img" aria-label="Network of parcel market players"><g class="mx-g z1" id="mxG"><g id="mxE"></g><g id="mxN"></g></g></svg>
@@ -248,6 +248,9 @@ $('mxGnote').addEventListener('click',e=>{if(e.target.closest('.mx-retry'))geo()
 let geoSig='';
 function drawGeo(){if(!LMAP||typeof wmLoc!=='function')return;
   const big=N.filter(n=>(n.tier<=2||n.deg>=3)&&filt.has(n.p.realm)).map(n=>({n,loc:wmLoc(n.p)})).filter(({loc})=>loc&&!loc.via&&Array.isArray(loc.g)&&loc.g.length===2&&loc.g.every(Number.isFinite));
+  // what the map shows, from the current sector filter: headquarters only, never service coverage
+  const inF=N.filter(n=>filt.has(n.p.realm)).length;
+  $('mxGcov').innerHTML=`Headquarters only, not service coverage. <b>${big.length}</b> of <b>${inF}</b> companies have a mapped location.`;
   const s=JSON.stringify(big.map(({n,loc})=>[n.id,n.p.n,n.p.realm,loc.g]));if(s===geoSig)return;geoSig=s;
   if(LLAY)LLAY.remove();
   LLAY=L.markerClusterGroup({maxClusterRadius:()=>window.innerWidth<600?64:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:true,spiderfyDistanceMultiplier:2.2,animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,
