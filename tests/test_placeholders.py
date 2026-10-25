@@ -133,3 +133,14 @@ def test_ask_coop_never_says_not_yet_announced_once_the_story_exists(files, data
     box = a["h"].split('ak-alm', 1)[-1].split("</div></div>", 1)[0] if "ak-alm" in a["h"] else ""
     assert box and "not yet announced" not in box.lower()
     assert "UPS 2027 rate increase announced" in a["h"]
+
+
+def test_a_closed_docs_entry_is_never_rewritten(files):
+    """Oct 25, 2026: the closed UPS 2027 entry still says "Rate previews not yet published", and the next run rewrote it."""
+    T.close_placeholders([dict(PLACE)], today="2026-10-25")
+    first = next(d for d in load("docs.json", []) if d["n"] == "UPS 2027 general rate increase")
+    first["d"] = "Announced Oct 23, 2026. Rate previews not yet published by UPS."
+    save("docs.json", [dict(HUB), first])
+    T.close_placeholders([dict(PLACE)], today="2026-10-26")
+    again = next(d for d in load("docs.json", []) if d["n"] == "UPS 2027 general rate increase")
+    assert again == first

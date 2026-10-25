@@ -218,9 +218,10 @@ def test_page_shows_the_figures_as_printed(page_at):
     pg.wait_for_timeout(500)
     det = pg.inner_text('.eglance[data-eco="UPS"] .egdet')
     for want in ("$22.83B · +7.6% vs a year earlier", "19.0 million a day", "−3.7%", "U.S. domestic 16.0 million",
-                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%",
-                 "Stock, first trading day after the report: −6.6% (S&P 500 +0.2%)", "about a month −6.9% (S&P 500 +3.6%)", "Not investment advice"):
+                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%"):
         assert want in det, (want, det)
+    # the earnings page carries no stock lines or stock chart
+    assert "Stock" not in det and not pg.query_selector('.eglance .egrx, .eglance .egstock')
     got = pg.evaluate("""() => {
       // a FedEx quarter with packages a day but no stated day count, a FedEx Freight quarter, a transition period and a bare row
       EARN.push({company:'FedEx', q:'T1', d:'2026-10-28', rev:21.5, period:{start:'2026-06-01', end:'2026-09-30', months:4}, comparable:false, revYoY:4.0,
@@ -248,3 +249,19 @@ def test_page_shows_the_figures_as_printed(page_at):
     assert all(same for _, _, same in got["charts"]) and len({c for c, _, _ in got["charts"]}) == len(got["charts"])
     assert got["hatched"] and got["divider"]
     assert pg.errors == []
+
+
+def test_package_backfill_from_the_carriers_own_reports():
+    """Oct 25, 2026 backfill (tools/backfill_volumes.py): figures as printed by each carrier, calculated ones marked."""
+    f = row("FedEx", "FY26 Q4")["vol"]                       # Q4 FY26 stat book, Federal Express segment
+    assert (f["adv_k"], f["adv_prior_k"], f["us_adv_k"], f["us_adv_prior_k"], f["rpp"], f["rpp_prior"]) == (17083, 16794, 14225, 13826, 17.9, 16.14)
+    assert "Stat-Book" in f["src"] and "adv_src" not in f
+    u = row("UPS", "Q1 2024")["vol"]                         # the Q1 2024 10-Q
+    assert (u["adv_k"], u["adv_prior_k"], u["days"], u["us_adv_k"], u["rpp"]) == (21199, 21989, 63, 18075, 13.73)
+    q4 = row("UPS", "Q4 2025")["vol"]                        # not printed on its own: calculated, and says so
+    assert q4["adv_src"] == "calc" and q4["adv_note"].startswith("Calculated") and q4["rpp"] is None
+    assert q4["us_adv_k"] == 19970 and q4["us_adv_prior_k"] == row("UPS", "Q4 2024")["vol"]["us_adv_k"] == 22382   # UPS's own Q4 figures
+    s = row("USPS", "FY26 Q3")                               # USPS Q3 FY26 results release
+    assert (s["rev_m"], s["rev_prior_m"], s["vol"]["pieces_m"], s["vol"]["pieces_prior_m"], s["vol"]["adv_yoy"]) == (19940, 18797, 1554, 1609, -3.4)
+    assert s["vol"]["adv_src"] == "calc" and s["vol"]["days"] == 91 and s["vol"]["rpp"] is None
+    assert all((r.get("vol") or {}).get("src") and r["vol"].get("checked") for r in ROWS if r["company"] in ("UPS", "FedEx", "USPS"))

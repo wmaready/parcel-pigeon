@@ -55,7 +55,9 @@ def test_missing_sec_contact_is_loud_but_never_stops_the_run(data_dir, monkeypat
     """Oct 2026: the SEC refused 117 reads in a row because the robot named itself with a GitHub no-reply address.
     Without a real SEC_CONTACT the filing feeds are skipped, an ::error annotation is printed every run, at most one
     GitHub issue is opened a day, and the other sources are still read."""
-    from common import load
+    from common import load, save
+    # start from no reminder sent today (the copied live data may already hold one from today's real run)
+    save("crash_alert.json", {k: v for k, v in load("crash_alert.json", {}).items() if k != "SEC_CONTACT"})
     cfg = {"primary": [{"name": "SEC: UPS 8-K", "kind": "edgar", "company": "UPS", "url": "https://data.sec.gov/submissions/CIK0001090727.json"},
                        {"name": "SEC: FedEx 8-K", "kind": "edgar", "company": "FedEx", "url": "https://data.sec.gov/submissions/CIK0001048911.json"},
                        {"name": "Federal Register: USPS", "kind": "fedreg", "url": "https://fr.example/usps"}]}

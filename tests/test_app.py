@@ -244,18 +244,33 @@ def _open(p, site, width, hash_=""):
 
 @pytest.mark.parametrize("width", [390, 1280])
 def test_earnings_chart_and_stock_watch(site, width):
-    """B29/B30/B34: the earnings chart for UPS and FedEx in all three views, with keyboard-reachable bars, the FedEx spin-off
-    divider, nothing wider than the screen, and Stock watch with no link or button inside a link."""
+    """B29/B34: the earnings chart for UPS and FedEx in all three views, with keyboard-reachable bars, the FedEx spin-off
+    divider and nothing wider than the screen. Today ends with the latest UPS and FedEx earnings (no stock cards), and
+    each card shows the company's share price beside its logo."""
     pw = pytest.importorskip("playwright.sync_api")
     with pw.sync_playwright() as p:
         b, pg, errors = _open(p, site, width)
-        assert pg.evaluate("() => document.querySelectorAll('#mkToday a a, #mkToday a button').length") == 0
-        lines = pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkearn')].map(x => [x.textContent, x.dataset.goto, x.closest('a') === null])")
-        assert lines and all(ok for _, _, ok in lines)
-        assert ["Last earnings Jul 28 · revenue $22.8B (+7.6%) · 19.0M packages a day (−3.7%) ›", "docs:earnings:UPS:Q2 2026", True] in lines
-        assert pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkc')].every(c => c.tagName === 'DIV' && c.querySelector('a.mkq').textContent.includes('Live quote'))")
-        # the earnings line wraps instead of cutting a word off
-        assert pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkearn')].every(x => x.scrollWidth <= x.clientWidth + 1)")
+        assert pg.evaluate("() => !document.querySelector('.mkc, .mkwatch')")
+        cards = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(x => [x.dataset.goto || null, x.textContent.replace(/\\s+/g, ' ')])""")
+        assert [c[0] for c in cards] == ["docs:earnings:UPS:Q2 2026", "docs:earnings:FedEx:FY26 Q4", "docs:earnings:USPS:FY26 Q3", None], cards
+        want = {0: ("Q2 2026", "Revenue", "$22.8B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "Revenue per package", "$15.96", "+11.3%"),
+                1: ("FY26 Q4", "$25.0B", "+12.6%", "17.1M", "+1.7%", "$17.90", "+10.9%"),
+                2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "Not reported"),      # USPS: pieces over calendar days, marked ≈
+                3: ("Amazon", "doesn't report how many packages")}
+        for i, ws in want.items():
+            for w in ws:
+                assert w in cards[i][1], (w, cards[i][1])
+        assert pg.evaluate("() => [...document.querySelectorAll('#earnToday .etc')].every(x => x.scrollWidth <= x.clientWidth + 1 && !x.querySelector('a, button'))")
+        # the bottom of Today doesn't move: nothing rotates
+        h0 = pg.evaluate("() => document.getElementById('earnToday').offsetHeight")
+        pg.wait_for_timeout(6500)
+        assert pg.evaluate("() => document.getElementById('earnToday').offsetHeight") == h0
+        # the share price sits beside the logo on Today's UPS, FedEx and Amazon cards (USPS has no stock), and not in Docs
+        stk = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(c => (c.querySelector('.eth .etstk') || {}).textContent || null)""")
+        assert stk[0].startswith("UPS $") and stk[1].startswith("FDX $") and stk[2] is None and stk[3].startswith("AMZN $"), stk
+        pg.evaluate("() => goTo('docs')")
+        pg.wait_for_timeout(300)
+        assert pg.evaluate("() => !document.querySelector('#lib .dstk, #lib .etstk')")
         wide = {}
         for co in ("UPS", "FedEx"):
             pg.evaluate(f"() => goTo('docs','earnings','{co}')")
@@ -289,7 +304,7 @@ def test_earnings_chart_and_stock_watch(site, width):
 @pytest.mark.parametrize("width", [390, 1280])
 def test_earnings_navigation_and_back(site, width):
     """B31/B33: from FedEx's company page, Earnings opens the FedEx panel with its Earnings folder open on screen, and
-    "Back to FedEx" returns to the company page, which Escape then closes. The Stock watch earnings line lands on its
+    "Back to FedEx" returns to the company page, which Escape then closes. Today's latest-earnings card lands on its
     quarter, and the phone's back button returns to Today where it was. Story → company → Back → Back → the feed.
     Back never leaves the site."""
     pw = pytest.importorskip("playwright.sync_api")
@@ -313,17 +328,17 @@ def test_earnings_navigation_and_back(site, width):
         assert pg.evaluate("() => CO_OPEN == null && document.getElementById('coSheet').hidden && NAVBACK.length === 0")
         assert pg.url.startswith(site)
 
-        # Today → Stock watch earnings line → the phone's back button returns to Today, where it was
+        # Today → latest-earnings card → the phone's back button returns to Today, where it was
         pg.click('nav.tabs [data-tab="today"]')
-        pg.evaluate("() => document.getElementById('mkToday').scrollIntoView({block: 'center', behavior: 'instant'})")
+        pg.evaluate("() => document.getElementById('earnToday').scrollIntoView({block: 'center', behavior: 'instant'})")
         # the phone header collapses once the page scrolls, and scroll anchoring then moves the page: wait until it settles
         pg.wait_for_function("""() => new Promise(r => { const a = scrollY; setTimeout(() => r(scrollY === a), 250) })""", timeout=5000)
         # Playwright scrolls a button into its own view before clicking; do that first, so the position read here is the
         # one the reader tapped from
-        pg.locator('#mkToday .mkearn[data-goto="docs:earnings:UPS:Q2 2026"]').scroll_into_view_if_needed()
+        pg.locator('#earnToday .etc[data-goto="docs:earnings:UPS:Q2 2026"]').scroll_into_view_if_needed()
         pg.wait_for_function("""() => new Promise(r => { const a = scrollY; setTimeout(() => r(scrollY === a), 250) })""", timeout=5000)
         y0 = pg.evaluate("() => scrollY")
-        pg.click('#mkToday .mkearn[data-goto="docs:earnings:UPS:Q2 2026"]')
+        pg.click('#earnToday .etc[data-goto="docs:earnings:UPS:Q2 2026"]')
         assert pg.evaluate("() => NAVBACK.length && NAVBACK[NAVBACK.length - 1].y") == y0
         pg.wait_for_function("() => curTab() === 'docs' && document.activeElement && document.activeElement.matches('.dcarp[data-car=\"UPS\"] details.dearn > summary')", timeout=15000)
         assert pg.evaluate("""() => curTab() === 'docs' && document.querySelector('.dcarp[data-car="UPS"] details.dearn').open

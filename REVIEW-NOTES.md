@@ -37,9 +37,9 @@ link. The "check by hand" column lists what a person should open before the demo
 | B25 Phone first screen | done | 842a9a4 | The tour sits in the page flow, and a Help row was added at the foot of Today. The header collapses on scroll, and Presentation mode was added. Try both on a real phone and a boardroom screen. |
 | B26 Offline / freshness | done | 33f3302 | Cache version pp-v35. Test offline on a phone. |
 | B27 Consultancy companies | done | 1aafad2, 33f3302 | `company-foundation.js` is unchanged (hash-checked). "Shipware" no longer matches Costco. No map positions are inferred. |
-| B28 Earnings data fields | partly done | 3c4d598 | Only the brief's checked figures are filled in (UPS Q2 2026; FedEx FY26 Q4 reaction and 12.6%). Everything else is null; see the list below. |
+| B28 Earnings data fields | done for packages (Oct 25) | 3c4d598, backfill | Packages a day and revenue per package backfilled from the carriers' own reports by `tools/backfill_volumes.py` (UPS 10-Qs and 10-Ks, FedEx Q4 FY26 stat book, USPS results releases). UPS Q4 packages a day are calculated (full year less three quarters) and marked so; UPS Q4 revenue per piece stays empty. USPS FY26 Q1–Q3 added; its packages a day is pieces over calendar days, marked calculated. Amazon publishes no package figures. Revenue in $ millions is still filled only where the brief gave it. |
 | B29 Earnings chart | done | 62ab42c | Look at all three views on a real phone. Eight bars fit with a sliver of scroll. |
-| B30 Stock watch earnings line | done | d7c8c0e | Check that rotation pauses on a phone tap. |
+| B30 Stock watch earnings line | replaced (owner's call, Oct 25) | d7c8c0e | Stock watch is gone from Today. Stock prices stay on the ticker and sit beside each carrier's logo in Docs; Today ends with a fixed "Latest earnings" panel (UPS and FedEx revenue, packages a day, revenue per package). The earnings page no longer shows stock reactions or a stock chart. |
 | B31 Earnings opens the right company | done | 62ab42c | FedEx Freight's company page gets an Earnings button too. |
 | B32 New quarters added automatically | partly done | 3c4d598 | The release is read twice and the quarter added as `checked:false`. Package figures from the 10-Q are requested in review.json, not read automatically. **After Oct 27, enter UPS Q3 2026 package figures from the 10-Q.** FedEx Freight has no automatic lookup. Confirm the FedEx transition period length from the release. |
 | B33 Back and exit | done | 6339eeb | Try every Back sequence on a real phone, including the installed app. |
@@ -50,9 +50,10 @@ Also fixed during the merge: two new lines in the app's built-in data broke `pip
 update. Both are now guarded, and `tests/test_data.py::test_seed_export_runs_on_the_app` covers it.
 
 ## Earnings figures still to copy from filings (stored as null, never estimated)
-- Packages a day, operating days, revenue per piece and U.S. domestic: every UPS quarter Q1 2024–Q1 2026, and all eight FedEx quarters FY25 Q1–FY26 Q4.
-- Revenue in $ millions (`rev_m`, `rev_prior_m`): every quarter except UPS Q2 2026.
-- `revYoY`: UPS Q3 2025 and FedEx FY25 Q3.
+- Revenue in $ millions (`rev_m`, `rev_prior_m`) for most UPS and FedEx quarters (the $ billions figure is filled).
+- UPS Q4 revenue per piece (UPS prints it only for the full year).
+- USPS FY25 Q4 and earlier quarters (their results releases weren't reachable); FY26 Q4 arrives in mid-November.
+- The text of every source used for the backfill is on branch `claude/fetch-filings` (folder `filings/`).
 
 ## Facts taken from the brief and not re-verified from here
 UPS SBR figures; UPS 5.9% average (Ground, Air, International); FedEx Freight completion (June 1, 2026, FDXF, 19.9%);
