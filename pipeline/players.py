@@ -13,7 +13,7 @@ import datetime as dt, json, os, re, sys, time
 import requests
 from common import load, save, parse_json, API_KEY, MODEL_WRITE, cached_system, track, api_check
 
-REALMS = ["national", "regional", "gig", "retail", "3pl", "global", "software", "cold", "auto", "capital"]
+REALMS = ["national", "regional", "gig", "retail", "3pl", "global", "software", "cold", "auto", "capital", "consultancy"]
 KINDS = {"owns", "acquired", "invested", "partner", "merged", "sold", "spun"}
 
 # The map is for MARKET MOVERS: companies whose moves change who delivers parcels, how, or at what price.
@@ -21,7 +21,9 @@ MOVERS = """A company is a market mover if at least one is true: a carrier, cour
 or a multi-state footprint; a retailer or marketplace whose delivery program shapes parcel volume; a 3PL, fulfillment, software,
 returns, drone/robot or cold-chain company with national reach, notable funding (roughly $20M+) or a role in a notable deal;
 an investor or private-equity firm that OWNS or controls a parcel or logistics company on the map, or led a major round
-(roughly $50M+) in one. NOT market movers: accounting, tax, law, consulting and advisory firms; small or generalist PE firms,
+(roughly $50M+) in one; a parcel consultancy or shipping-intelligence firm serving U.S. shippers (parcel spend management,
+carrier contract negotiation, parcel invoice audit and refund recovery, shipping analytics), realm "consultancy". NOT market
+movers: accounting, tax, law, and general consulting and advisory firms with no parcel-specific practice; small or generalist PE firms,
 lenders and banks that only took part in a deal; minority or passive investors; staffing agencies; single-location or
 local businesses; vendors with no parcel-specific role."""
 
@@ -46,8 +48,8 @@ Return JSON only:
 Links only to companies in the KNOWN list, only real announced relationships, each with the URL where you found it.
 Set "is_player" false for: small non-U.S. carriers and couriers with no U.S. operations or U.S. customers (keep national posts,
 global carriers and logistics groups, and any company that serves U.S. shippers); a regional office, circle, branch or
-subsidiary office of a postal operator or carrier (it belongs to its parent, not a separate player); parcel-spend consultancies
-and invoice-audit firms; anything you can't confirm exists today.
+subsidiary office of a postal operator or carrier (it belongs to its parent, not a separate player); anything you can't
+confirm exists today. Parcel consultancies, parcel-spend and invoice-audit firms ARE players: realm "consultancy".
 Also return "mover": true|false and "mover_why": "one line". """ + MOVERS
 
 

@@ -23,6 +23,46 @@ def _sim(a, b):
     return len(A & B) / max(1, min(len(A), len(B)))
 
 
+# Service names that make two otherwise similar labels different changes ("UPS Ground fuel" is not "UPS Air fuel")
+SERVICES = ("ground", "air", "international", "intl", "saver", "express", "economy", "overnight", "2day", "priority",
+            "freight", "residential", "commercial", "domestic", "home", "surepost", "sbr", "simple", "retail", "daily")
+
+
+def _svc(s):
+    return _words(s) & set(SERVICES)
+
+
+def same_label(a, b):
+    """An equivalent rate clock label: mostly the same words and the same services named. Mirrors sameLabel() in index.html."""
+    return _sim(a, b) >= .5 and _svc(a) == _svc(b)
+
+
+def same_day(x, d):
+    """A story date joins a clock entry only on the entry's own date (or inside its stated span, when carriers stagger it)."""
+    return x["d"] <= d <= (x.get("end") or x["d"])
+
+
+def _urls(s):
+    return {u for u in [s.get("url"), *[x.get("url") for x in s.get("srcs") or [] if isinstance(x, dict)]] if u}
+
+
+def _gap(a, b):
+    try:
+        return abs((dt.date.fromisoformat(str(a)[:10]) - dt.date.fromisoformat(str(b)[:10])).days)
+    except ValueError:
+        return None
+
+
+def same_story(a, b):
+    """Two copies of one story: the same id, or a shared link AND a similar title AND dates within a week. A link alone is
+    never a story's identity: carriers post different news on one hub page (UPS's rate page carried both the Sep 7 guide
+    revision and the Dec 21, 2026 increase). Mirrors sameStory() in index.html."""
+    if a.get("id") and a.get("id") == b.get("id"):
+        return True
+    g = _gap(a.get("date"), b.get("date"))
+    return bool(b.get("url") in _urls(a) and _sim(a.get("title"), b.get("title")) >= .5 and g is not None and g <= 7)
+
+
 def _cars(c):
     return {x.strip().lower() for x in re.split(r"\s*(?:·|,|/)\s*", str(c or "")) if x.strip()}
 
@@ -89,34 +129,35 @@ class Companies:
 
 
 def entries():
-    """The rate clock, assembled the way the app assembles it: built-in entries, then story dates (a story date within
-    three days of an entry about the same company, with a similar description, joins that entry instead of adding one)."""
+    """The rate clock, assembled the way the app assembles it: built-in entries, then story dates (a story date
+    on an entry's date, about the same company, with an equivalent label and the same direction, joins that entry instead of
+    adding one; anything less adds its own entry, so distinct changes are never merged away)."""
     seed = load("seed.json", {}) or {}
     clock = [dict(x) for x in seed.get("clock") or [] if isinstance(x, dict) and x.get("d")]
     stories = {s["id"]: s for s in seed.get("news") or [] if isinstance(s, dict) and s.get("id")}
     dropped = {d if isinstance(d, str) else (d or {}).get("id") for d in load("drop.json", []) or []}
     live = [s for s in load("news.json", []) or [] if isinstance(s, dict) and s.get("id") and s["id"] not in dropped]
     stories.update({s["id"]: s for s in live})
-    day = lambda d: dt.date.fromisoformat(d[:10])
     cos = Companies(seed)
-    seen = {s.get("url") for s in seed.get("news") or [] if isinstance(s, dict)}
+    kept = [s for s in seed.get("news") or [] if isinstance(s, dict)]
     for s in live:
-        if s.get("url") in seen:          # a story the app already carries built in: the app skips its live copy
+        if any(same_story(o, s) for o in kept):   # a story the app already carries: the app skips its second copy
             continue
-        seen |= {x.get("url") for x in s.get("srcs") or [{"url": s.get("url")}] if isinstance(x, dict)}
+        kept.append(s)
         for i, d in enumerate(cos.clean_dates(s)):
             if not isinstance(d, dict) or not re.match(r"^\d{4}-\d{2}-\d{2}$", str(d.get("d") or "")) or not clock_worthy(s, d):
                 continue
             cars = {c.lower() for c in s.get("c") or [] if c not in ("Industry", "Regional")}
-            near = next((x for x in clock if abs((day(x["d"]) - day(d["d"])).days) <= 3 and (not cars or cars & _cars(x.get("c")))
-                         and _sim(x.get("w"), d.get("w")) >= .3), None)
+            near = next((x for x in clock if same_day(x, d["d"]) and (not cars or cars & _cars(x.get("c")))
+                         and same_label(x.get("w"), d.get("w")) and x.get("imp") == (d.get("imp") or "up")), None)
             if near:
                 near.setdefault("news", [])
                 if s["id"] not in near["news"]:
                     near["news"].append(s["id"])
             else:
                 clock.append({"id": f"x{s['id']}{i}", "d": d["d"], "w": d.get("w") or s.get("title"), "imp": d.get("imp") or "up",
-                              "c": " · ".join(c for c in s.get("c") or [] if c != "Industry") or "Industry", "news": [s["id"]]})
+                              "c": " · ".join(c for c in s.get("c") or [] if c != "Industry") or "Industry", "news": [s["id"]],
+                              **({"fees": d["fees"]} if isinstance(d.get("fees"), list) and d["fees"] else {})})
     audit = load("audit.json", {}) or {}
     for x in audit.get("clock_add") or []:
         if isinstance(x, dict) and x.get("d") and x.get("id") and not any(y["id"] == x["id"] for y in clock):
@@ -156,6 +197,19 @@ def fold(line):
     return "\r\n ".join(out)
 
 
+def fee_line(f):
+    """A clock line's sub-item as one line of text: [who, what, amount] (built-in), a string, or a {w, v} object (as the
+    app's feeNorm reads them)."""
+    if isinstance(f, dict):
+        f = [f.get("c") or "", f.get("w") or f.get("what") or f.get("t") or f.get("label") or "",
+             f.get("v") or f.get("amount") or f.get("after") or f.get("impact") or ""]
+    elif not isinstance(f, list):
+        f = ["", str(f or ""), ""]
+    f = [str(x) for x in (list(f) + ["", "", ""])[:3]]
+    head = " · ".join(x for x in f[:2] if x)
+    return f"{head}: {f[2]}" if head and f[2] else (head or f[2])
+
+
 def nice(d):
     x = dt.date.fromisoformat(d)
     return f"{x.strftime('%b')} {x.day}, {x.year}"
@@ -175,7 +229,7 @@ def build(today=None, stamp=None):
         desc = [x.get("note") or "", f"Carriers: {who}" if who else "",
                 (f"Takes effect between {nice(x['d'])} and {nice(x['end'])}, depending on the carrier." if x.get("end") else f"Takes effect {nice(x['d'])}."),
                 f"Announced {nice(ann)}." if ann else "",
-                *[f"{f[0]}: {f[1]} {f[2]}".strip() for f in x.get("fees") or [] if isinstance(f, list) and len(f) >= 3],
+                *[fee_line(f) for f in x.get("fees") or [] if fee_line(f)],
                 f"Story: {x['_stories'][0]['title']}" if x["_stories"] else "", f"On Parcel Pigeon: {link}"]
         nxt = (dt.date.fromisoformat(end) + dt.timedelta(days=1)).isoformat()
         summary = ("▲ " if x["imp"] == "up" else "▼ ") + str(x["w"])

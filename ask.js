@@ -17,7 +17,7 @@
   const KINDW = new Set('gri general rate rates increase increases hike annual price prices peak demand holiday fuel table tables surcharge surcharges fees fee'.split(' '));
   // whole-word match from the start of a word: "ontrac" is not in "contract", "owns" is not in "towns"
   const hasW = (txt, w) => new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(txt);
-  let KB = null, GUIDES = null, GIDX = null, ASKURL = null, ALMA = null, PATS = null;
+  let KB = null, GUIDES = null, GIDX = null, ASKURL = null, ALMA = null, PATS = null, PROGS = null;
 
   const getJSON = (u, dflt) => fetch(u).then(r => r.ok ? r.json() : dflt).catch(() => dflt);
   const load = async () => {
@@ -28,6 +28,12 @@
       [ALMA, PATS] = Array.isArray(A) ? [A, P || { items: [] }] : await Promise.all([getJSON('data/almanac.json', []), getJSON('data/patterns.json', { items: [] })]);
       if (!Array.isArray(ALMA)) ALMA = [];
       if (!PATS || !Array.isArray(PATS.items)) PATS = { items: [] };
+    }
+    // what each program advertises (data/programs.json, kept by the pipeline); read defensively, it may be absent
+    if (!PROGS) {
+      const j = await getJSON('data/programs.json', null);
+      const L = Array.isArray(j) ? j : j && Array.isArray(j.programs) ? j.programs : j && typeof j === 'object' ? Object.values(j).filter(x => x && typeof x === 'object' && !Array.isArray(x)) : [];
+      PROGS = L.map(progNorm).filter(Boolean);
     }
     if (!GUIDES) {
       GUIDES = [];
@@ -40,7 +46,26 @@
   };
 
   const CARS = ['UPS', 'FedEx', 'USPS', 'Amazon', 'OnTrac', 'DHL', 'Spee-Dee'];
-  const carsIn = q => CARS.filter(c => new RegExp('\\b' + c.replace('-', '\\-') + '\\b', 'i').test(q));
+  const carsNamed = q => CARS.filter(c => new RegExp('\\b' + c.replace('-', '\\-') + '\\b', 'i').test(q));
+  // a question about a carrier's program ("Small Business Rates") is about that carrier, even when it doesn't name it
+  const carsIn = q => { const c = carsNamed(q); return c.length ? c : [...new Set(progHits(q).map(p => p.carrier).filter(x => CARS.includes(x)))]; };
+
+  /* ---- programs (data/programs.json): SBR, Ground Saver, One Rate and what each says it includes ---- */
+  const txtOf = x => typeof x === 'string' ? x : x && typeof x === 'object' ? String(x.text || x.t || x.item || x.what || x.name || x.n || '') : '';
+  const listOf = v => (Array.isArray(v) ? v : v ? [v] : []).map(x => ({ t: txtOf(x), src: x && typeof x === 'object' ? (x.src || x.url || x.source || null) : null, checked: x && typeof x === 'object' ? (x.checked || null) : null })).filter(x => x.t);
+  function progNorm(r) {
+    if (!r || typeof r !== 'object') return null;
+    const name = String(r.program || r.name || r.n || r.title || '').trim(), carrier = String(r.carrier || r.c || '').trim();
+    if (!name) return null;
+    const bare = name.replace(new RegExp('^' + carrier.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s+', 'i'), '');
+    const acr = bare.split(/\s+/).filter(w => /^[A-Z]/.test(w)).map(w => w[0]).join('');
+    const names = [...new Set([name, bare, ...(Array.isArray(r.aliases) ? r.aliases : Array.isArray(r.al) ? r.al : []), ...(acr.length >= 3 ? [acr] : [])].map(String).filter(n => n.length >= 3))];
+    return { id: r.id || name, name, carrier, names, inc: listOf(r.inclusions || r.includes || r.included || r.promises || r.advertised),
+      none: listOf(r.no_fees || r.excluded_fees || r.waived || r.not_charged), changes: listOf(r.changes),
+      src: r.src || r.url || r.source || (Array.isArray(r.sources) ? r.sources[0] : null), checked: r.checked || null };
+  }
+  const progHits = q => (PROGS || []).filter(p => p.names.some(n => new RegExp('\\b' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(q))).slice(0, 2);
+  const progText = p => `${p.carrier && !new RegExp('^' + p.carrier, 'i').test(p.name) ? p.carrier + ' ' : ''}${p.name}${p.inc.length ? `: advertised as including ${p.inc.map(x => x.t).join('; ')}` : ''}${p.none.length ? `. No ${p.none.map(x => x.t).join(', ')}` : ''}.`;
   const today = () => G('TODAY') || new Date().toISOString().slice(0, 10);
   const longD = d => { const f = G('fmtD'); const s = f ? f(String(d).slice(0, 10), { month: 'short', day: 'numeric', year: 'numeric' }) : ''; return s || String(d); };
 
@@ -95,7 +120,24 @@
       if (ys.some(y => +e.year === y)) s += 1;
       return { e, s };
     }).filter(Boolean);
-    return hits.sort((a, b) => b.s - a.s || String(b.e.effective || b.e.date || '').localeCompare(String(a.e.effective || a.e.date || ''))).slice(0, off ? 6 : since ? 2 : 4).map(x => x.e);
+    return hits.filter(x => !closedBy(x.e)).sort((a, b) => b.s - a.s || String(b.e.effective || b.e.date || '').localeCompare(String(a.e.effective || a.e.date || ''))).slice(0, off ? 6 : since ? 2 : 4).map(x => x.e);
+  }
+  /* A "not yet announced" placeholder (no announced or effective date, no figure) is closed once a Pricing & GRI story for
+     the same carrier lands with a change taking effect from November of the year before to the end of that year: the
+     answer then leads with that story, never with "not yet announced". */
+  const isPlaceholder = e => e && !e.announced && !e.effective && e.pct == null && /\bnot (yet )?(announced|published)\b/i.test(String(e.headline || '') + ' ' + String(e.note || ''));
+  function closedBy(e) {
+    if (!isPlaceholder(e) || !e.year) return null;
+    const y = +e.year, lo = `${y - 1}-11-01`, hi = `${y}-12-31`;
+    return (G('NEWS') || []).filter(n => n && n.cat === 'Pricing & GRI' && (Array.isArray(n.c) ? n.c : [n.c]).some(c => String(c).toLowerCase() === String(e.carrier).toLowerCase())
+      && [n.act, ...(n.dates || []).map(d => d && d.d)].some(d => d && d >= lo && d <= hi)).sort((a, b) => String(b.date).localeCompare(a.date))[0] || null;
+  }
+  // the stories that closed the placeholders a question would otherwise have hit
+  function closingStories(q) {
+    const cs = carsIn(q), ys = yearsIn(q);
+    if (!cs.length && !ys.length) return [];
+    return [...new Set(ALMA.filter(e => isPlaceholder(e) && (!cs.length || cs.some(c => String(e.carrier).toLowerCase() === c.toLowerCase())) && (!ys.length || ys.includes(+e.year)))
+      .map(closedBy).filter(Boolean))];
   }
   // "UPS 2026 GRI: …" already names its carrier; "DIM divisor cut …" doesn't
   const almHead = e => new RegExp('^' + String(e.carrier).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(e.headline) ? e.headline : `${e.carrier}: ${e.headline}`;
@@ -113,8 +155,10 @@
 
   /* ---- vetted facts (data/coop.json), with a warning when the pricing history shows a figure has since changed ---- */
   function factHits(q) {
-    const ql = q.toLowerCase(), qw = new Set(words(q));
-    return (KB.facts || []).map(f => {
+    const ql = q.toLowerCase(), qw = new Set(words(q)), cs = carsNamed(q);
+    // a question that names a carrier never gets a note about other carriers only
+    const other = f => { if (!cs.length) return false; const fc = carsNamed(f.t); return fc.length > 0 && !fc.some(c => cs.includes(c)); };
+    return (KB.facts || []).filter(f => !other(f)).map(f => {
       let s = 0; f.k.forEach(k => { if (ql.includes(k)) s += k.includes(' ') ? 3 : 2; else if (qw.has(k)) s += 2; });
       words(f.t).forEach(w => { if (qw.has(w)) s += .3; });
       return { f, s };
@@ -139,9 +183,25 @@
     return GUIDES.map((g, i) => {
       if (cs.length && !cs.includes(g.car)) return null;
       let s = 0, hit = 0; qw.forEach(w => { const c = GIDX[i].get(w); if (c) { s += idf[w] * (1 + Math.log(c)); hit++; } });
-      return hit >= Math.min(2, qw.length) ? { g, s: s * hit } : null;
-    }).filter(Boolean).sort((a, b) => b.s - a.s).slice(0, 2).map(x => ({ ...x.g, ex: excerpt(x.g.t, qw) }));
+      if (hit < Math.min(2, qw.length)) return null;
+      // prefer the current year's guide: last year's counts a little less, older or undated documents much less
+      const y = guideYear(g), cy = +today().slice(0, 4);
+      return { g, s: s * hit * (!y ? .45 : y >= cy ? 1 : y === cy - 1 ? .7 : .4) };
+    }).filter(Boolean).sort((a, b) => b.s - a.s).slice(0, 2).map(x => ({ ...x.g, ex: excerpt(x.g.t, qw), y: guideYear(x.g), eff: guideEff(x.g) }));
   }
+  // a guide's effective date: the app's Docs entry for the same file, else an "Effective <date>" the passage states
+  const MON = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\\.?';
+  function guideEff(g) {
+    const DOCS = G('DOCS') || [], key = G('docKey'), u = g.doc && g.doc.u;
+    const d = u && key && DOCS.find(x => x && x.u && key(x._u0 || x.u) === key(u));
+    if (d && d.eff) return d.eff;
+    const m = new RegExp('effective\\s+(' + MON + '\\s+\\d{1,2},?\\s+20[1-3]\\d)', 'i').exec(g.t);
+    if (!m) return null;
+    const t = new Date(m[1].replace(/\.(?=\s)/, '') + ' 12:00');
+    return isNaN(t) ? null : `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
+  }
+  const guideYear = g => +(g.doc && g.doc.y) || +String(guideEff(g) || '').slice(0, 4) || null;
+  const guideMeta = g => [g.y ? String(g.y) : 'Year not stated', g.eff ? `effective ${longD(g.eff)}` : 'effective date not on file'].join(' · ');
 
   function excerpt(t, qw) {
     const flat = t.replace(/\s+/g, ' '), lo = flat.toLowerCase();
@@ -155,9 +215,13 @@
     const out = [], ql = q.toLowerCase(), cs = carsIn(q);
     const FUEL = G('FUEL'), DATES = G('DATES') || [], daysTo = G('daysTo');
     if (/fuel|diesel|surcharge %|fsc/.test(ql) && !/fuel table/.test(ql) && FUEL && FUEL.current) {
-      const pick = cs.length ? cs : ['UPS', 'FedEx', 'OnTrac'];
-      const L = pick.filter(c => FUEL.current[c]).map(c => `${c} Ground ${FUEL.current[c].ground}%${FUEL.current[c].air ? `, air ${FUEL.current[c].air}%` : ''}`);
-      if (L.length) out.push({ h: 'Fuel this week', t: L.join(' · ') + ` (in effect from ${longD(FUEL.eff)}).`, go: 'fuel:chart', gol: 'Open the fuel tab ›' });
+      // each carrier's own effective week, "last confirmed week of …" when it is more than 8 days old (as the Fuel tab)
+      const pick = cs.length ? cs : ['UPS', 'FedEx', 'OnTrac'], FA = window.FUEL_API, wk = FUEL.wk || {};
+      const when = c => { const d = wk[c] && wk[c].ground; return d ? (FA ? FA.wk(d) : `week of ${longD(d)}`) : ''; };
+      const old = c => { const d = wk[c] && wk[c].ground; return !d || (FA ? FA.old(d) : true); };
+      const P = pick.filter(c => FUEL.current[c] && FUEL.current[c].ground != null);
+      const L = P.map(c => `${c} Ground ${FUEL.current[c].ground}%${FUEL.current[c].air ? `, air ${FUEL.current[c].air}%` : ''}${when(c) ? ` (${when(c)})` : ''}`);
+      if (L.length) out.push({ h: P.some(old) ? 'Fuel, latest posted weeks' : 'Fuel this week', t: L.join(' · ') + '.', go: 'fuel:chart', gol: 'Open the fuel tab ›' });
     }
     if (/when|next|date|deadline|upcoming|effective|start|peak|gri|increase|change/.test(ql) && daysTo) {
       const qw = words(q);
@@ -210,12 +274,27 @@
   const cLink = (p, inner) => `<a class="link" href="#c=${E(p.id)}" data-akc="${E(p.id)}">${inner}</a>`;
 
   function answer(q) {
-    const fx = factHits(q), al = almanacHits(q), pt = patternHits(q), live = liveBits(q), { pl, th, ns } = peopleAndNews(q), fmtD = G('fmtD') || (d => d);
+    const fx = factHits(q), al = almanacHits(q), pt = patternHits(q), live = liveBits(q), { pl, th } = peopleAndNews(q), fmtD = G('fmtD') || (d => d);
+    const pg = progHits(q), cl = closingStories(q);
+    let { ns } = peopleAndNews(q);
+    ns = [...cl, ...ns.filter(n => !cl.includes(n))].slice(0, Math.max(3, cl.length));
     const off = OFFC_Q.test(q), ys = yearsIn(q), coQ = !fx.length && pl.length && CO_Q.test(q) && coFacts(pl[0]).length;
     // a dated pricing question or a company-facts question is answered from those; rate-table excerpts would only be noise
-    const gd = (al.length && (ys.length || off)) || coQ ? [] : guideHits(q);
+    // a program question is answered from the program record; generic rate-guide passages would only blur it
+    const gd = (al.length && (ys.length || off)) || coQ || pg.length || cl.length ? [] : guideHits(q);
     const src = [];
     let h = '';
+    pg.forEach((p, i) => {
+      h += `<p${!i ? ' class="ak-lead"' : ''}>${E(progText(p))}</p>`;
+      if (p.changes.length) h += `<div class="ak-box ak-warn"><span class="lbl">Changes on file</span>${p.changes.map(c => `<p>${E(c.t)}</p>`).join('')}</div>`;
+      h += p.src || p.checked ? `<p class="ak-note"><small>${p.src ? `<a href="${E(p.src)}" target="_blank" rel="noopener">${E(p.carrier || 'Program')} program page ›</a> ` : ''}${p.checked ? `Checked ${E(longD(p.checked))}.` : ''}</small></p>` : '';
+      if (p.src) src.push([`${p.name}`, p.src]);
+    });
+    const lead = !pg.length;
+    if (!pg.length && cl.length && !al.length) {
+      const n = cl[0];
+      h += `<p class="ak-lead">${E(n.title)}. ${E(storyDates(n) || `Reported ${longD(n.date)}`)}.</p>`;
+    }
     const stale = fx.map(supersededBy);
     const facts = lead => fx.forEach((f, i) => {
       if (stale[i]) h += `<div class="ak-box ak-warn"><span class="lbl">Changed since this note</span><p>${E(almHead(stale[i]))}. ${E(dateLine(stale[i].announced, stale[i].effective))}.</p></div>`;
@@ -225,16 +304,16 @@
       h += `<p class="ak-lead">Here ${al.length + ns.length === 1 ? 'is the off-cycle change' : 'are the off-cycle changes'} on file${carsIn(q).length ? ' for ' + E(carsIn(q).join(' and ')) : ''}${ys.length ? ' in ' + ys.join(' and ') : ''}: price changes that take effect outside the carrier's usual annual increase and peak season.</p>`;
     } else if (al.length && ys.length) {
       const e = al[0];
-      h += `<p class="ak-lead">${E(almHead(e))}. ${E(dateLine(e.announced, e.effective, e.date))}.</p>`;
+      h += `<p${lead ? ' class="ak-lead"' : ''}>${E(almHead(e))}. ${E(dateLine(e.announced, e.effective, e.date))}.</p>`;
       facts(false);
     } else if (fx.length) {
-      facts(true);
+      facts(lead && !cl.length);
     } else if (coQ) {
       const p = pl[0];
       h += `<p class="ak-lead">${E(p.n)}: ${coFacts(p).map(([k, v]) => `${k.toLowerCase()} ${E(v)}`).join('; ')}.${p.vf ? '' : ' <small>(from the market map; not yet double-checked)</small>'}</p>`;
     } else if (al.length) {
       const e = al[0];
-      h += `<p class="ak-lead">${E(almHead(e))}. ${E(dateLine(e.announced, e.effective, e.date))}.</p>`;
+      h += `<p${lead ? ' class="ak-lead"' : ''}>${E(almHead(e))}. ${E(dateLine(e.announced, e.effective, e.date))}.</p>`;
     }
     if (al.length) {
       h += `<div class="ak-box ak-alm"><span class="lbl">${off ? 'Off-cycle changes in the pricing history' : 'Pricing history'}</span>${al.map(e => {
@@ -246,7 +325,9 @@
     live.forEach(b => {
       h += `<div class="ak-box"><span class="lbl">${E(b.h)}</span>${b.t ? `<p>${E(b.t)}</p>` : ''}${b.list ? b.list.map(x => `<button type="button" class="link" data-clock="${E(x.clock)}" data-akclose>${E(x.t)}</button>`).join('') : ''}${b.go ? `<button type="button" class="link" data-goto="${E(b.go)}" data-akclose>${E(b.gol)}</button>` : ''}</div>`;
     });
-    gd.forEach(g => { h += `<div class="ak-box ak-guide"><span class="lbl">From the ${E(g.car)} guide</span><p>${E(g.ex)}</p>${g.doc.u ? `<a href="${E(g.doc.u)}" target="_blank" rel="noopener">${E(g.doc.n || 'Open the guide')} ›</a>` : ''}</div>`; if (g.doc.u) src.push([g.doc.n, g.doc.u]); });
+    // each excerpt names its document, year and effective date; an older year says so
+    const cy = +today().slice(0, 4);
+    gd.forEach(g => { h += `<div class="ak-box ak-guide"><span class="lbl">From the ${E(g.car)} guide: ${E(g.doc.n || 'document')}</span><small>${E(guideMeta(g))}</small>${!g.y || g.y < cy ? `<small class="ak-note">${g.y ? `This is a ${E(g.y)} document` : 'This document states no year'}; check the carrier's current version.</small>` : ''}<p>${E(g.ex)}</p>${g.doc.u ? `<a href="${E(g.doc.u)}" target="_blank" rel="noopener">${E(g.doc.n || 'Open the guide')} ›</a>` : ''}</div>`; if (g.doc.u) src.push([g.doc.n, g.doc.u]); });
     pl.forEach(p => {
       const F = coFacts(p);
       h += `<div class="ak-box"><span class="lbl">Company</span>${cLink(p, `<b>${E(p.n)}</b>`)}${p.s ? `<p>${E(p.s)}</p>` : ''}${F.length ? `<p class="ak-facts">${F.map(([k, v]) => `<span><i>${E(k)}</i> ${E(v)}</span>`).join('')}</p>` : ''}${p.vf ? `<small>Facts double-checked ${E(longD(p.vf))}${(p.vsrc || []).length ? ` against ${(p.vsrc || []).length} sources` : ''}</small>` : ''}${cLink(p, 'Open the company page ›')}</div>`;
@@ -255,15 +336,16 @@
     const DEALS = G('DEALS') || [], dl = DEALS.map((d, i) => ({ d, i })).filter(({ d }, j, A) => A.findIndex(x => String(x.d.target).toLowerCase() === String(d.target).toLowerCase()) === j).filter(({ d }) => pl.some(p => hasW([d.buyer, d.target, d.title].join(' '), p.n))).slice(0, 2);
     if (dl.length) h += `<div class="ak-box"><span class="lbl">Deals</span>${dl.map(({ d, i }) => `<button type="button" class="link" data-akdeal="${i}" data-akclose><b>${E(d.title)}</b> <small>· ${E(d.value || '')} · ${E(d.status || '')}</small></button>`).join('')}</div>`;
     if (ns.length) h += `<div class="ak-box ak-stories"><span class="lbl">${off ? 'Off-cycle stories' : 'Related stories'}</span>${ns.map(n => `<div class="ak-st">${sLink(n, `${E(n.title)} <small>· ${E(fmtD(n.date))}</small>`)}${storyTags(n)}${storyDates(n) ? `<small>${E(storyDates(n))}</small>` : ''}</div>`).join('')}${ns.some(n => n.unconf) ? '<small class="ak-note">Unconfirmed: reported by one smaller outlet so far, not yet confirmed by the company or the major or trade press.</small>' : ''}</div>`;
-    const found = !!(fx.length || al.length || pt.length || gd.length || live.length || pl.length || th.length || ns.length);
+    const found = !!(pg.length || fx.length || al.length || pt.length || gd.length || live.length || pl.length || th.length || ns.length);
     if (!found) h = `<p class="ak-lead">I don't have that one on file yet. Try a fee name, a carrier or a company. Examples: “dim weight divisor”, “UPS additional handling”, “when do FedEx peak fees start”, “when was the 2026 UPS GRI announced”.</p>`;
     const ctx = [
+      ...pg.map(p => `[Program] ${progText(p)}${p.changes.length ? ' Changes: ' + p.changes.map(c => c.t).join('; ') : ''}`),
       ...fx.map((f, i) => f.t + (stale[i] ? ` [Changed since: ${almText(stale[i])}]` : '')),
       ...al.map(e => `[Pricing history] ${almText(e)}`),
       ...pt.map(p => `[Year over year] ${p.t}: ${p.body}`),
       ...pl.map(p => `[Company] ${coText(p)}`),
       ...live.map(b => b.t || (b.list || []).map(x => x.t).join('; ')),
-      ...gd.map(g => `[${g.car} guide: ${g.doc.n}] ${g.ex}`),
+      ...gd.map(g => `[${g.car} guide: ${g.doc.n}, ${guideMeta(g)}] ${g.ex}`),
       ...ns.map(storyCtx),
     ];
     return { h, src, found, ctx, al, pl, ns };
