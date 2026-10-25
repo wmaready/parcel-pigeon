@@ -1,0 +1,24 @@
+name: Fetch filings (one-off)
+# Runs only on the claude/fetch-filings branch: saves the carriers' quarterly reports as text for a by-hand backfill.
+on:
+  push:
+    branches: [claude/fetch-filings]
+    paths: [tools/fetch_filings.py, .github/workflows/fetch-filings.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install curl_cffi pypdf
+      - run: python tools/fetch_filings.py
+        env:
+          SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
+      - run: |
+          git config user.name "parcel-pigeon-bot"; git config user.email "bot@users.noreply.github.com"
+          git add filings && git commit -m "Fetched filings" && git push || echo "nothing new"
