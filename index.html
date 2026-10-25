@@ -157,7 +157,7 @@ th button:focus-visible{outline:2px solid var(--accent)}
 .next .body{padding:var(--sp-3)}
 .next .what{font-weight:600;margin-top:var(--sp-2)}
 .fees{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2);margin-top:var(--sp-3)}
-.fees div{border:var(--line) solid var(--grid);padding:var(--sp-2);font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;color:var(--ink-2)}
+.fees div{overflow-wrap:anywhere;border:var(--line) solid var(--grid);padding:var(--sp-2);font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;color:var(--ink-2)}
 .fees b{display:block;color:var(--ink);font-size:var(--fs-lg);font-weight:600}
 .count{display:flex;gap:var(--sp-4);margin-top:var(--sp-2)}
 .count b{display:block;font-family:var(--font-mono);font-weight:600;font-size:var(--fs-xxl);line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
@@ -6702,7 +6702,9 @@ const groupOf=cat=>(GROUPS.find(g=>g[2].includes(cat))||GROUPS[5]);
 const MAIN=['UPS','FedEx','USPS','Amazon','OnTrac','DHL'];
 const CARS=[...MAIN,'Regional','Industry'];
 const hasCar=(n,c)=>c==='Industry'?(n.c.includes('Industry')||!n.c.some(x=>MAIN.includes(x)||x==='Regional')):c==='Regional'?(n.c.includes('Regional')||n.cat==='Regional & alternative'):n.c.includes(c);
-const feeDiv=f=>`<div>${esc(f[0])} · ${esc(f[1])}<b>${esc(f[2])}</b></div>`;
+// a clock line's sub-items: [who, what, amount] (built-in), or the pipeline's strings / {w, v} objects, shown whole
+const feeNorm=f=>Array.isArray(f)?f:f&&typeof f==='object'?[f.c||'',f.w||f.what||f.t||f.label||'',f.v||f.amount||f.after||f.impact||'']:['',String(f??''),''];
+const feeDiv=f=>{f=feeNorm(f);const a=[f[0],f[1]].filter(x=>x!=null&&x!=='').map(esc).join(' · ');return `<div>${a}${f[2]!=null&&f[2]!==''?`<b>${esc(f[2])}</b>`:''}</div>`};
 const feeTxt=f=>`${esc(f[0])} ${esc(f[1])} <b>${esc(f[2])}</b>`;
 const span=x=>x.end?`${fmtD(x.d)}–${fmtD(x.end).replace(/^[A-Za-z]+ /,m=>fmtD(x.d).slice(0,3)===m.trim()?'':m)}`:fmtD(x.d);
 
@@ -7849,7 +7851,7 @@ function renderNext(){
     <div class="lbl">${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}${x.end?' to '+fmtD(x.end,{month:'short',day:'numeric'}):''}</div>
       <div class="count" role="timer" aria-label="${D} days ${H} hours ${M} minutes"><div><b>${String(D).padStart(2,'0')}</b><span class="lbl">Days</span></div><div><b>${String(H).padStart(2,'0')}</b><span class="lbl">Hrs</span></div><div><b>${String(M).padStart(2,'0')}</b><span class="lbl">Min</span></div></div>
       <div class="what">${esc(x.w)}</div>
-      ${x.fees?`<div class="fees">${x.fees.slice(0,4).map(feeDiv).join('')}</div>`:''}</button>`;
+      ${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}</button>`;
 }
 function renderCompact(){
   const list=[...NEWS].sort(feedCmp);
@@ -9638,7 +9640,7 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
         const same=x=>{const xi=new Set([...idsOf(x.c),...mentions(x.w)]);return own.size?[...xi].some(i=>own.has(i)):!xi.size};
         const near=DATES.find(x=>x.d<=d.d&&d.d<=(x.end||x.d)&&same(x)&&sameLabel(x.w,d.w)&&x.imp===(d.imp||'up'));
         if(near){near.news=near.news||[];if(!near.news.includes(n.id))near.news.push(n.id)}
-        else DATES.push({id:'x'+n.id+i,d:d.d,w:d.w,c:(storyCars(n).length?storyCars(n):n.c).join(' · '),imp:d.imp||'up',news:[n.id],...(d.fx&&d.fx.t?{fx:d.fx}:{})})})});
+        else DATES.push({id:'x'+n.id+i,d:d.d,w:d.w,c:(storyCars(n).length?storyCars(n):n.c).join(' · '),imp:d.imp||'up',news:[n.id],...(d.fx&&d.fx.t?{fx:d.fx}:{}),...(Array.isArray(d.fees)&&d.fees.length?{fees:d.fees}:{})})})});
     DATES.sort((a,b)=>a.d.localeCompare(b.d))}
   if(fuel&&fuel.hist){['UPS','FedEx'].forEach(c=>{if(fuel.hist[c])Object.assign(FUEL.hist[c],fuel.hist[c])});
     if(fuel.hist.OnTrac)Object.assign(FUEL.ontracHist,fuel.hist.OnTrac);

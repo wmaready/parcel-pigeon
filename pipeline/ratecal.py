@@ -156,7 +156,8 @@ def entries():
                     near["news"].append(s["id"])
             else:
                 clock.append({"id": f"x{s['id']}{i}", "d": d["d"], "w": d.get("w") or s.get("title"), "imp": d.get("imp") or "up",
-                              "c": " · ".join(c for c in s.get("c") or [] if c != "Industry") or "Industry", "news": [s["id"]]})
+                              "c": " · ".join(c for c in s.get("c") or [] if c != "Industry") or "Industry", "news": [s["id"]],
+                              **({"fees": d["fees"]} if isinstance(d.get("fees"), list) and d["fees"] else {})})
     audit = load("audit.json", {}) or {}
     for x in audit.get("clock_add") or []:
         if isinstance(x, dict) and x.get("d") and x.get("id") and not any(y["id"] == x["id"] for y in clock):
@@ -196,6 +197,19 @@ def fold(line):
     return "\r\n ".join(out)
 
 
+def fee_line(f):
+    """A clock line's sub-item as one line of text: [who, what, amount] (built-in), a string, or a {w, v} object (as the
+    app's feeNorm reads them)."""
+    if isinstance(f, dict):
+        f = [f.get("c") or "", f.get("w") or f.get("what") or f.get("t") or f.get("label") or "",
+             f.get("v") or f.get("amount") or f.get("after") or f.get("impact") or ""]
+    elif not isinstance(f, list):
+        f = ["", str(f or ""), ""]
+    f = [str(x) for x in (list(f) + ["", "", ""])[:3]]
+    head = " · ".join(x for x in f[:2] if x)
+    return f"{head}: {f[2]}" if head and f[2] else (head or f[2])
+
+
 def nice(d):
     x = dt.date.fromisoformat(d)
     return f"{x.strftime('%b')} {x.day}, {x.year}"
@@ -215,7 +229,7 @@ def build(today=None, stamp=None):
         desc = [x.get("note") or "", f"Carriers: {who}" if who else "",
                 (f"Takes effect between {nice(x['d'])} and {nice(x['end'])}, depending on the carrier." if x.get("end") else f"Takes effect {nice(x['d'])}."),
                 f"Announced {nice(ann)}." if ann else "",
-                *[f"{f[0]}: {f[1]} {f[2]}".strip() for f in x.get("fees") or [] if isinstance(f, list) and len(f) >= 3],
+                *[fee_line(f) for f in x.get("fees") or [] if fee_line(f)],
                 f"Story: {x['_stories'][0]['title']}" if x["_stories"] else "", f"On Parcel Pigeon: {link}"]
         nxt = (dt.date.fromisoformat(end) + dt.timedelta(days=1)).isoformat()
         summary = ("▲ " if x["imp"] == "up" else "▼ ") + str(x["w"])

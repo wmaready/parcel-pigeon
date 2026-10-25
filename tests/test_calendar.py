@@ -152,3 +152,16 @@ def test_clock_never_merges_different_services_dates_or_directions(data_dir):
     assert got["zzg"]["news"] == ["zzf"] and got["zzp"]["news"] == ["zzf"]
     assert {"xzzf0", "xzzf1", "xzzf2"} <= set(got) and "xzzf3" not in got and "xzzf4" not in got
     assert not ratecal.same_label("UPS raises Ground fuel surcharge Nov 2", "UPS raises Air fuel surcharge Nov 2")
+
+
+def test_story_date_sub_items_reach_the_calendar(data_dir):
+    """B5/B10: a collapsed clock line keeps its sub-items (fees) in the feed's description, whole."""
+    import common, ratecal
+    common.save("news.json", [{"id": "zzsub", "date": "2026-10-23", "c": ["UPS"], "cat": "Pricing & GRI", "kind": "News", "lvl": 3, "imp": "up",
+                               "title": "UPS sets a test increase", "sum": "x", "plain": "x", "url": "https://x.example/sub",
+                               "dates": [{"d": "2026-12-21", "w": "UPS test rate increase: 5.9% average", "imp": "up",
+                                          "fees": ["Additional Handling minimum billable weight 40 to 50 lb", {"w": "Area Surcharge ZIP list", "v": "changes"}]}]}])
+    text, _ = ratecal.build(today="2026-10-25", stamp="20261025T120000Z")
+    flat = text.replace("\r\n ", "").replace("\\,", ",")
+    assert "Additional Handling minimum billable weight 40 to 50 lb" in flat and "Area Surcharge ZIP list: changes" in flat
+    assert ratecal.fee_line(["UPS", "Residential", "$0.50"]) == "UPS · Residential: $0.50"

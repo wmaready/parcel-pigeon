@@ -5,6 +5,53 @@ import pytest
 from conftest import ROOT
 from test_app import site, OVERFLOW  # noqa: F401  (the local web server fixture)
 from test_polish import app
+import contextlib, os
+
+
+@contextlib.contextmanager
+def app_with(site, width=390, files=None, news_extra=None):
+    """The app with some data files replaced (files: {"data/x.json": obj, or None for a 404}) and extra live stories."""
+    pw = pytest.importorskip("playwright.sync_api")
+    files = dict(files or {})
+    if news_extra:
+        files["data/news.json"] = json.loads((ROOT / "data/news.json").read_text()) + news_extra
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_page(viewport={"width": width, "height": 900})
+        errors = []
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        def handler(obj):
+            body = None if obj is None else json.dumps(obj)
+            return lambda route: route.fulfill(status=404, body="") if body is None else route.fulfill(status=200, content_type="application/json", body=body)
+        for path, obj in files.items():
+            pg.route(re.compile(r"/" + re.escape(path) + r"(\?.*)?$"), handler(obj))
+        pg.goto(site, wait_until="load", timeout=60000)
+        pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100 && NEWS.length > 150", timeout=60000)
+        pg.wait_for_timeout(500)
+        pg.errors = errors
+        yield pg
+        b.close()
+    assert not errors, errors[:3]
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_clock_line_keeps_its_sub_items(site, width):
+    """B5/B10: a story date's sub-items (fees) reach the rate clock line and are shown whole, escaped."""
+    st = {"id": "zzsubapp", "date": "2026-10-23", "c": ["UPS"], "cat": "Pricing & GRI", "kind": "News", "lvl": 3, "imp": "up",
+          "title": "UPS sets a test increase", "sum": "x", "plain": "x", "url": "https://x.example/subapp",
+          "srcs": [{"src": "UPS", "url": "https://x.example/subapp"}],
+          "dates": [{"d": "2030-12-21", "w": "UPS test rate increase: 5.9% average (Ground, Air, International)", "imp": "up",
+                     "fees": ["Additional Handling minimum billable weight goes from 40 lb to 50 lb <b>x</b>", {"w": "Area Surcharge ZIP list", "v": "changes"}]}]}
+    with app_with(site, width, news_extra=[st]) as pg:
+        pg.click('nav.tabs [data-tab="clock"]')
+        pg.wait_for_timeout(300)
+        x = pg.evaluate("() => DATES.find(x => x.id === 'xzzsubapp0')")
+        assert x and len(x["fees"]) == 2
+        html = pg.evaluate("() => DATES.find(x => x.id === 'xzzsubapp0').fees.map(feeDiv).join('')")
+        assert "Additional Handling minimum billable weight goes from 40 lb to 50 lb &lt;b&gt;x&lt;/b&gt;" in html
+        assert "Area Surcharge ZIP list<b>changes</b>" in html
+        assert pg.evaluate(OVERFLOW) is None
 
 
 @pytest.mark.parametrize("width", [390, 1280])
