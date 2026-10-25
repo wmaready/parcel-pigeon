@@ -218,6 +218,9 @@ def close_placeholders(alm, today=None):
         eff = f"takes effect {nice(s['act'])}" if nice(s.get("act")) else "effective date not stated yet"
         # 1. Docs: the "not yet published" note for this carrier and year
         for d in docs:
+            # an entry already closed (by this step or by hand, e.g. "... Rate previews not yet published") stays as written
+            if d.get("closed_by") or d.get("story"):
+                continue
             if d.get("c") != c or d.get("u") or doc_year(d) != y or not re.search(r"not yet", str(d.get("d") or ""), re.I) or \
                     not (d.get("t") == "GRI notice" or re.search(r"rate increase|\bGRI\b", d.get("n") or "", re.I)):
                 continue
