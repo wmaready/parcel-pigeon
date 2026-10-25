@@ -8,7 +8,7 @@ proven is dropped, and if nothing survives the change isn't published as news.
 Used by watch.py (carrier pages and the files they link) and docwatch.py (documents in the library).
 """
 import difflib, gzip, io, json, re, sys
-from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE
+from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, programs_for, program_brief, apply_benefit_rule
 
 SNAP = ROOT / "data" / "docwatch"            # same text snapshots docwatch keeps, so a file's "before" is always on hand
 MAX_TEXT = 14000
@@ -40,7 +40,10 @@ Return JSON only:
  "act": "YYYY-MM-DD or null",
  "changes": [{"what": "...", "before": "... or null", "after": "...", "effective": "YYYY-MM-DD or null",
               "who": "which shipments or shippers", "impact": "size of the move, or null", "quote_old": "... or null", "quote_new": "..."}],
- "unknowns": ["anything that could not be confirmed from the texts"]}"""
+ "unknowns": ["anything that could not be confirmed from the texts"]}
+Readers see every field except the quotes. Never write about the texts themselves in them ("the NEW text", "the OLD excerpt",
+"not in the supplied text", "excerpt"): say what the carrier's document says. If the older version is missing or doesn't
+cover an item, put "Older version not on file" in "unknowns" and set "before" to null; never explain it in "after"."""
 
 
 def squash(t):
@@ -162,6 +165,10 @@ def nums(t):
 def audit(carrier, name, url, old, new, note=""):
     """Compare two versions (old may be None) and return a verified verdict dict."""
     o, n = focus(old or "", new or "")
+    # the program this document belongs to (by its name or address), with what the program says is included (B3)
+    progs = programs_for(carrier, name, urls=(url,))
+    if progs:
+        note = (note + "\n" if note else "") + program_brief(progs)
     payload = (f"Carrier: {carrier}\nDocument: {name}\nURL: {url}\n{note}\n\n"
                + (f"OLD TEXT (changed parts with context):\n{o}\n\n" if old else "OLD TEXT: none, this file has no earlier version on record.\n\n")
                + f"NEW TEXT{' (changed parts with context)' if old else ''}:\n{n}")
@@ -172,12 +179,155 @@ def audit(carrier, name, url, old, new, note=""):
         return None
     if not isinstance(res, dict):
         return None
-    return verify(res, old or "", new or "")
+    res.pop("why", None); res.pop("benefit", None)       # only the code rule below writes these
+    res = verify(res, old or "", new or "")
+    if progs and res.get("material"):
+        apply_benefit_rule(res, progs, res.get("changes") or [])     # proven changes only
+    return res
+
+
+# ---------------------------------------------------------------- B9: robot notes never reach readers
+# The auditor's working notes leaked into published stories ("the 40 lb figure comes from the NEW text; the OLD excerpt
+# did not contain this item", "not in the supplied text"). This pass removes them, moves "older version not on file" into
+# unknowns, and reports anything it can't clean so the story is held for a person instead of published.
+ROBOT = re.compile(r"supplied (text|excerpt|document)|\b(new|old) (text|excerpt)s?\b|\bexcerpts?\b|\bthe (NEW|OLD) version\b"
+                   r"|\b(NEW|OLD) TEXT\b|not (found |stated |given |shown )?in the (texts?|source text|document text)\b", re.I)
+NO_OLD = re.compile(r"\b(older|earlier|previous|prior) (version|copy)( of [^.;,]{1,40})? (is |was )?(not on file|not available|"
+                    r"unavailable|missing|not provided)|\bno (older|earlier|previous|prior) version\b|\bold (text|excerpt|version) "
+                    r"(did|does)(n'?t| not) (contain|include|cover|show)|\bnot in the old (text|excerpt|version)\b", re.I)
+OLDER_NOT_ON_FILE = "Older version not on file"
+
+
+def _strip_robot(text):
+    """Text without robot notes: parentheses and sentences that talk about the texts are removed."""
+    if not isinstance(text, str) or not text:
+        return text
+    t = re.sub(r"\s*\([^()]*\)", lambda m: "" if ROBOT.search(m.group(0)) or NO_OLD.search(m.group(0)) else m.group(0), text)
+    parts = re.split(r"(?<=[.;!?])\s+", t)
+    keep = [p for p in parts if not (ROBOT.search(p) or NO_OLD.search(p))]
+    t = " ".join(keep).strip()
+    return re.sub(r"\s{2,}", " ", t).strip(" ;")
+
+
+OLD_WORD = re.compile(r"\b(old|older|previous|earlier|prior)\b", re.I)
+
+
+def _is_robot(v):
+    return isinstance(v, str) and bool(ROBOT.search(v) or NO_OLD.search(v))
+
+
+def scrub(res):
+    """Clean a verified audit in place. Robot notes are cut from reader-facing fields; a note that the older version
+    lacked something becomes the single unknown "Older version not on file". Returns the fields that were nothing but
+    robot notes and can't be shown (the caller then holds the story for a person instead of publishing it)."""
+    unknowns = [u for u in (res.get("unknowns") or []) if isinstance(u, str)]
+    left, kept = [], []
+
+    def note_old(v):
+        if (NO_OLD.search(v) or OLD_WORD.search(v)) and OLDER_NOT_ON_FILE not in unknowns:
+            unknowns.append(OLDER_NOT_ON_FILE)
+    for c in res.get("changes") or []:
+        for k in ("what", "before", "after", "who", "impact"):
+            v = c.get(k)
+            if _is_robot(v):
+                note_old(v)
+                c[k] = _strip_robot(v) or None
+        if not c.get("after") or not c.get("what"):
+            continue            # nothing left to tell a reader: the change goes, its proof was only robot notes
+        kept.append(c)
+    res["changes"] = kept
+    for k in ("title", "summary", "effect"):
+        v = res.get(k)
+        if _is_robot(v):
+            note_old(v)
+            res[k] = _strip_robot(v)
+            if not res[k]:
+                left.append(f"{k}: {v[:120]}")
+    clean_u = []
+    for u in unknowns:
+        if _is_robot(u):
+            if NO_OLD.search(u) or OLD_WORD.search(u):
+                u = OLDER_NOT_ON_FILE
+            else:
+                u = _strip_robot(u)
+        if u and u not in clean_u:
+            clean_u.append(u)
+    if OLDER_NOT_ON_FILE in clean_u:          # keep it last, after the substantive unknowns
+        clean_u = [u for u in clean_u if u != OLDER_NOT_ON_FILE] + [OLDER_NOT_ON_FILE]
+    res["unknowns"] = clean_u
+    if not kept and res.get("material"):
+        res["material"] = False
+    return left
+
+
+def robot_leaks(story):
+    """Reader-facing story text that still reads like the robot's notes (final check before publishing)."""
+    bits = [story.get(k) for k in ("title", "sum", "plain", "why")]
+    bits += [c.get(k) for c in story.get("changes") or [] for k in ("what", "before", "after", "who", "impact")]
+    bits += [d.get("w") for d in story.get("dates") or [] if isinstance(d, dict)]
+    out =[b for b in bits if isinstance(b, str) and (ROBOT.search(b) or NO_OLD.search(b))]
+    if re.search(r"(^|\.\s+)Also:", story.get("sum") or ""):
+        out.append("stitched summary ('Also: ...')")
+    return out + list(story.get("robot_notes") or [])
+
+
+# ---------------------------------------------------------------- B5: rate clock lines
+GRI_WORDS = re.compile(r"general rate|\bGRI\b|rate increase|rates? (increase|rise)|average (net )?(rate )?increase|increase[^.;]{0,30}average", re.I)
+SERVICES = ["Ground Saver", "Ground Advantage", "Home Delivery", "Ground Economy", "Priority Mail", "Ground", "Air", "International",
+            "Express", "Freight"]
+
+
+def _services(text):
+    found, t = [], text or ""
+    for s in SERVICES:                      # longest names first, so "Ground Saver" isn't also counted as "Ground"
+        m = re.search(r"\b" + re.escape(s) + r"\b", t)
+        if m:
+            found.append((m.start(), s))
+            t = t[:m.start()] + " " * len(s) + t[m.end():]
+    return [s for _, s in sorted(found)]
+
+
+def gri_label(carrier, c, res=None):
+    """'UPS 2027 rate increase: 5.9% average (Ground, Air, International)' for a general-rate-increase change, built only from
+    the change's own proven words: the figure from "after" (or "impact"), the year only when the texts state one, the
+    services named in the change. None when the change isn't a rate increase with a stated percentage."""
+    what, after, impact = c.get("what") or "", c.get("after") or "", c.get("impact") or ""
+    if not GRI_WORDS.search(f"{what} {after}"):
+        return None
+    m = re.search(r"(\d+(?:\.\d+)?)\s?%", after) or re.search(r"(\d+(?:\.\d+)?)\s?%", impact)
+    if not m:
+        return None
+    from common import stated_years
+    years = stated_years(" ".join([what, after, (res or {}).get("title") or ""]))
+    year = f" {years[0]}" if len(years) == 1 else ""
+    avg = " average" if re.search(r"\baverage\b", f"{what} {after} {impact}", re.I) else ""
+    svc = _services(f"{what} {c.get('who') or ''}")
+    return f"{carrier}{year} rate increase: {m.group(1)}%{avg}" + (f" ({', '.join(svc)})" if svc else "")
+
+
+def clock_lines(changes, carrier, imp):
+    """One rate clock line per effective date. Same-day changes from one audit are one event: the rate increase (or the
+    first change) leads, and the rest become its sub-items (`fees`: [carrier, what, figure]). Labels are never cut short."""
+    by_day = {}
+    for c in changes:
+        if c.get("effective"):
+            by_day.setdefault(c["effective"], []).append(c)
+    out = []
+    for d, cs in sorted(by_day.items()):
+        labels = [(gri_label(carrier, c), c) for c in cs]
+        lead_label, lead = next(((l, c) for l, c in labels if l), (None, cs[0]))
+        line = {"d": d, "w": lead_label or f"{carrier}: {lead.get('what', '')}", "imp": imp if imp in ("up", "down") else "info"}
+        subs = [[carrier, c.get("what") or "", c.get("impact") or c.get("after") or ""] for c in cs if c is not lead]
+        if subs:
+            line["fees"] = subs
+        out.append(line)
+    return out[:3]
 
 
 def story_fields(res, carrier):
     """Turn a verified audit into story fields (changes become a before/after table in the app)."""
-    ch = [{k: c.get(k) for k in ("what", "before", "after", "effective", "who", "impact")} for c in res["changes"][:10]]
+    robot_only = scrub(res)
+    ch =[{k: c.get(k) for k in ("what", "before", "after", "effective", "who", "impact")} for c in res["changes"][:10]]
     # A carrier doc we just saw change, with no effective date printed in it, is almost always live already (ZIP/zone lists,
     # rate guides and fee pages are updated when they take effect). Date it from first sighting and say so plainly.
     import datetime as _dt
@@ -186,9 +336,15 @@ def story_fields(res, carrier):
     act = res.get("act") or (seen if inferred else None)
     note = (" The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on "
             + seen + ", so it is treated as in effect from then.") if inferred else ""
-    return {"title": res.get("title") or f"{carrier} change", "sum": (res.get("summary") or "") + note, "plain": res.get("effect") or "",
-            "imp": res.get("imp") if res.get("imp") in ("up", "down", "watch", "info") else "watch",
-            "lvl": int(res.get("lvl") or 2), "cat": res.get("category") or "Guide changes", "act": act, "inferred": inferred or None, "detected": seen,
-            "changes": ch, "verdict": res.get("verdict"), "unknowns": (res.get("unknowns") or [])[:4],
-            "dates": [{"d": c["effective"], "w": f"{carrier}: {c.get('what', '')}"[:70], "imp": res.get("imp") if res.get("imp") in ("up", "down") else "info"}
-                      for c in ch if c.get("effective")][:3]}
+    out = {"title": res.get("title") or f"{carrier} change", "sum": (res.get("summary") or "") + note, "plain": res.get("effect") or "",
+           "imp": res.get("imp") if res.get("imp") in ("up", "down", "watch", "info") else "watch",
+           "lvl": int(res.get("lvl") or 2), "cat": res.get("category") or "Guide changes", "act": act, "inferred": inferred or None, "detected": seen,
+           "changes": ch, "verdict": res.get("verdict"),
+           "unknowns": (lambda u: u[:4] if OLDER_NOT_ON_FILE not in u[4:] else u[:3] + [OLDER_NOT_ON_FILE])(res.get("unknowns") or []),
+           "dates": clock_lines(ch, carrier, res.get("imp"))}
+    if robot_only:
+        out["robot_notes"] = robot_only        # robot_leaks() reports these, so the story is held for a person
+    if res.get("benefit"):
+        # B3: the change takes away something the program advertises; the rule (common.apply_benefit_rule) wrote "why"
+        out.update({"why": res.get("why"), "benefit": res["benefit"]})
+    return out

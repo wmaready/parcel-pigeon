@@ -5,6 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
+from common import programs_for, program_brief, apply_benefit_rule
 from common import dedupe_live, record_deal, deal_tokens, deals_merged, DEAL_ENDED, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
@@ -1256,6 +1257,10 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
             v = members[0][1]
             prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
                                    for n, (it, _, tx) in enumerate(texts))
+            # B3: what the named programs advertise as included (data/programs.json), so a removed perk is recognized
+            progs = [p for c in (v.get("carriers") or []) for p in programs_for(c, prompt)]
+            if progs:
+                prompt += "\n\n" + program_brief(progs)
             tkey = (v.get("thread") or "").strip().lower()[:60] or None
             if tkey and not re.match(r"^[a-z0-9][a-z0-9-]{2,59}$", tkey):
                 tkey = None
@@ -1360,6 +1365,9 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
             # to the summary and plain-English effect (which passed) instead of holding the story back
             if numbers_supported(page_text(story), alltext):
                 story.pop("syn", None); story.pop("aff", None)
+            # B3 rule, in code: a change that adds a charge the program says is included is a removed benefit
+            if progs:
+                apply_benefit_rule(story, progs, text=" ".join([story["title"], story["sum"], story["plain"]]))
             # on-cycle or off-cycle, judged by the date the change takes effect (never the date it was announced)
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and story.get("act") and story["imp"] in ("up", "down"):
                 cyc = cycle_of((story["c"] or [""])[0], kind_of(story["title"], story["cat"]), story["act"], story.get("ann") or story["date"])

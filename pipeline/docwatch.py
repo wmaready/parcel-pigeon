@@ -14,7 +14,7 @@ import datetime as dt, difflib, gzip, io, json, os, re, sys
 from common import ROOT, load, save, h, get, claude, parse_json, MODEL_WRITE, clock_worthy, canon
 from fetch import fetch, is_blocked, is_pdf, Blocked
 from scoop import is_covered, notify, ask, big
-from changeaudit import audit, story_fields
+from changeaudit import audit, story_fields, robot_leaks
 
 SNAP = ROOT / "data" / "docwatch"
 PICS = ROOT / "data" / "snapshots"          # dated pictures of watched pages: <doc-id>/<YYYY-MM-DD>.jpg + .txt
@@ -321,6 +321,12 @@ def main():
         story["dates"] = [x for x in story["dates"] if clock_worthy(story, x)]
         if res.get("unsupported"):
             ask(story, ["These numbers aren't in the old or new text: " + ", ".join(res["unsupported"])], story["srcs"])
+            continue
+        leaks = robot_leaks(story)
+        if leaks:
+            # B9 final pass: text that still reads like the auditor's own notes is held for a person, never published
+            story.pop("robot_notes", None)
+            ask(story, ["The text still has robot notes in it: " + " | ".join(x[:100] for x in leaks[:3])], story["srcs"])
             continue
         # found on the carrier's own site before anyone reported it: publish as first-to-report (the audit above already proved every number)
         news.insert(0, story)          # routine guide changes publish on their own; alerts.py handles the phone push
