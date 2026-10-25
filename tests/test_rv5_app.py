@@ -175,3 +175,35 @@ def test_ask_coop_programs_fuel_weeks_and_excerpts(site):
     # data/programs.json missing: no error, generic answer
     with app_with(site, 390, files={"data/programs.json": None}) as pg:
         assert "Fuel" in pg.evaluate(ASK, "Small Business Rates fuel")
+
+
+MAP_ASSETS = ("leaflet.js", "leaflet.css", "MarkerCluster.css", "leaflet.markercluster.js")
+
+
+def test_map_assets_live_in_their_folder(site):
+    """B20: the four map files are in map-assets/ and served from there (the address mx.js asks for first), so the map
+    makes no failed requests on a first visit."""
+    import urllib.request
+    base = site.rsplit("/", 1)[0]
+    for f in MAP_ASSETS:
+        assert (ROOT / "map-assets" / f).is_file(), f
+        assert not (ROOT / f).exists(), f"{f} is still at the top level"
+        with urllib.request.urlopen(f"{base}/map-assets/{f}") as r:
+            assert r.status == 200 and len(r.read()) > 500, f
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+        pg = b.new_context(viewport={"width": 390, "height": 900}, service_workers="block").new_page()
+        seen = []
+        pg.on("response", lambda r: seen.append((r.url, r.status)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.goto(site, wait_until="load")
+        pg.wait_for_function("() => typeof PL !== 'undefined' && NEWS.length > 150", timeout=60000)
+        pg.click('nav.tabs [data-tab="mna"]')
+        pg.wait_for_timeout(300)
+        pg.evaluate("() => { const b = document.querySelector('[data-m=\"geo\"]'); b && b.click() }")
+        pg.wait_for_function("() => window.L && L.markerClusterGroup", timeout=20000)
+        b.close()
+    got = {u.rsplit("/", 2)[-2] + "/" + u.rsplit("/", 1)[-1]: s for u, s in seen if any(u.endswith("/" + f) for f in MAP_ASSETS)}
+    assert all(got.get(f"map-assets/{f}") == 200 for f in MAP_ASSETS), got
+    assert all(s == 200 for s in got.values()), got
