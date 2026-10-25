@@ -108,10 +108,11 @@ def test_story_ties_and_storylines(site):
         ids = lambda co: set(pg.evaluate(f"() => pStories('{co}').map(n => n.id)"))
         amazon, usps = ids("amazon"), ids("usps")
         assert "g09" not in amazon             # DHL eCommerce and USPS deal: a USPS story, Amazon only mentioned
-        assert "a418fdd3e6f05" not in usps     # Amazon's own delivery service: USPS only named as a rival
+        # the Feb 2018 "Shipping With Amazon" article (review v5, B16) is off the site through data/drop.json
+        assert pg.evaluate("() => !NEWS.some(n => n.id === 'a418fdd3e6f05')")
         assert "05" not in usps                # Amazon's backup plan, tagged USPS in the built-in data
         assert "h512" not in usps              # Amazon's rural network, which names USPS in passing
-        assert {"a418fdd3e6f05", "05"} <= amazon and "g09" in usps
+        assert {"17", "05"} <= amazon and "g09" in usps
         # a big-carrier tag stays when the headline names that carrier's family (Blue Dart is DHL's)
         assert pg.evaluate("() => storyCos(NEWS.find(n => n.id === 'a5e5d0db945cf'), true).includes('dhlexpress')")
         # pins: the place a story names first, then the company it is about; never a company it only mentions
@@ -120,7 +121,7 @@ def test_story_ties_and_storylines(site):
         # the Tallahassee drone story (its id changes when a newer report of it replaces the older one)
         talla = pg.evaluate("() => (NEWS.find(n => /Tallahassee/.test(n.title) && /drone/i.test(n.title)) || {}).id")
         assert talla and home(talla)[1] == "Tallahassee, FL"
-        assert home("a418fdd3e6f05")[0] in ("amazon", "amzship")
+        assert home("17")[0] in ("amazon", "amzship")
         # one UniUni storyline, on the main list, and on UniUni's company page
         assert pg.evaluate("() => Object.keys(THREADS).filter(k => /uniuni/i.test(k + ' ' + THREADS[k].n))") == ["uniuni"]
         assert pg.evaluate("() => thrStories('uniuni').length") >= 4
