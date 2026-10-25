@@ -9,7 +9,7 @@ import contextlib, os
 
 
 @contextlib.contextmanager
-def app_with(site, width=390, files=None, news_extra=None):
+def app_with(site, width=390, files=None, news_extra=None, tz=None):
     """The app with some data files replaced (files: {"data/x.json": obj, or None for a 404}) and extra live stories."""
     pw = pytest.importorskip("playwright.sync_api")
     files = dict(files or {})
@@ -18,7 +18,7 @@ def app_with(site, width=390, files=None, news_extra=None):
     with pw.sync_playwright() as p:
         b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
         # no service worker: it would fetch data files itself, past the routes below
-        pg = b.new_context(viewport={"width": width, "height": 900}, service_workers="block").new_page()
+        pg = b.new_context(viewport={"width": width, "height": 900}, service_workers="block", **({"timezone_id": tz} if tz else {})).new_page()
         errors = []
         pg.on("pageerror", lambda e: errors.append(str(e)))
         pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
@@ -251,3 +251,44 @@ def test_map_coverage_line_follows_the_filter(site, width):
         m2 = re.match(rx, pg.inner_text("#mxGcov"))
         assert m2 and int(m2.group(2)) == chip and int(m2.group(1)) <= chip
         assert pg.evaluate(OVERFLOW) is None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_phone_first_screen(site, width):
+    """B25: the tour offer sits in the page under Today's heading and closes on the first section change; Help has "Take
+    the tour"; the brief's controls are 44x44 named buttons with a visible keyboard focus; the header tagline folds after
+    the first scroll on a phone; times show in the reader's zone with UTC on tap; Presentation mode quiets the page."""
+    with app_with(site, width, tz="America/Chicago") as pg:
+        pg.wait_for_selector(".ptoffer", timeout=8000)
+        o = pg.evaluate("""() => { const o = document.querySelector('.ptoffer'); return [getComputedStyle(o).position,
+            !!(o.previousElementSibling && o.previousElementSibling.classList.contains('shead')), o.closest('#s-today') != null] }""")
+        assert o == ["static", True, True]
+        pg.click('nav.tabs [data-tab="news"]')
+        pg.wait_for_timeout(500)
+        assert pg.evaluate("() => !document.querySelector('.ptoffer')")
+        pg.click('nav.tabs [data-tab="today"]')
+        pg.wait_for_timeout(300)
+        B = pg.evaluate("() => [...document.querySelectorAll('#cfly .cbbtn, #cfly .cbdot')].map(b => { const r = b.getBoundingClientRect(); return [r.width, r.height, b.tagName, b.getAttribute('aria-label') || ''] })")
+        assert len(B) >= 4 and all(w >= 44 and h >= 44 and t == "BUTTON" and l for w, h, t, l in B), B
+        pg.focus('#cfly .cbbtn[data-cb="prev"]')
+        pg.keyboard.press("Tab")
+        f = pg.evaluate("() => { const a = document.activeElement; return [a.className, getComputedStyle(a).outlineStyle, getComputedStyle(a).outlineWidth] }")
+        assert "cbdot" in f[0] and f[1] == "solid" and f[2] != "0px", f
+        t = pg.inner_text("#tdayTime")
+        assert "CDT" in t or "CST" in t, t
+        pg.click("#tdayTime")
+        assert "UTC" in pg.inner_text("#tdayTime")
+        pg.evaluate("() => window.scrollTo(0, 400)")
+        pg.wait_for_timeout(200)
+        hidden = pg.evaluate("() => getComputedStyle(document.querySelector('.logo .ltag')).display === 'none'")
+        assert hidden == (width <= 700)
+        pg.evaluate("() => window.scrollTo(0, 0)")
+        pg.click("#presentBtn")
+        st = pg.evaluate("() => [document.body.classList.contains('present'), reduceMotion(), getComputedStyle(document.querySelector('.ticker .track')).animationName, document.getElementById('presentBtn').getAttribute('aria-pressed')]")
+        assert st == [True, True, "none", "true"], st
+        assert pg.evaluate(OVERFLOW) is None
+        pg.click("#presentBtn")
+        assert not pg.evaluate("() => document.body.classList.contains('present')")
+        pg.click(".tdhelp [data-tour]")
+        pg.wait_for_selector(".ptour", timeout=5000)
+        pg.keyboard.press("Escape")
