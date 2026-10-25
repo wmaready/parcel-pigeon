@@ -29,10 +29,12 @@ def test_primary_feeds_are_tier_0(data_dir, monkeypatch):
     cfg = {"primary": [{"name": "SEC: UPS 8-K", "kind": "edgar", "company": "UPS", "url": "https://data.sec.gov/submissions/CIK0001090727.json"},
                        {"name": "Federal Register: USPS", "kind": "fedreg", "url": "https://fr.example/usps"}],
            "direct": [{"name": "Trade", "url": "https://trade.example/feed"}], "discovery": ["parcel"]}
-    calls = []
-    monkeypatch.setattr(N.requests, "get", lambda url, **k: (calls.append(url), R(EDGAR))[1])
+    calls, heads = [], []
+    monkeypatch.setenv("SEC_CONTACT", "desk@parcelpigeon.test")
+    monkeypatch.setattr(N.requests, "get", lambda url, **k: (calls.append(url), heads.append(k.get("headers")), R(EDGAR))[2])
     monkeypatch.setattr(N, "get", lambda url, **k: (calls.append(url), R(FEDREG))[1])
     items = N.collect(cfg, primary_only=True)
+    assert heads[0]["User-Agent"].endswith("desk@parcelpigeon.test")        # the real contact, never the placeholder
     assert "https://trade.example/feed" not in calls, "the hourly run reads only company and regulator sources"
     sec = [i for i in items if "SEC" in i["src"]]
     assert len(sec) == 1, "only recent 8-Ks: not the 10-Q, not the 2020 filing"
@@ -47,3 +49,29 @@ def test_sec_filing_reads_the_press_release(monkeypatch):
     monkeypatch.setattr(N.requests, "get", lambda url, **k: R(pages["ex99" if "ex99" in url else "index"]))
     text, url = N.article_text("https://www.sec.gov/Archives/edgar/data/1090727/000109072726000045/0001090727-26-000045-index.htm")
     assert url.endswith("ex99-1.htm") and "5.9 percent" in text
+
+
+def test_missing_sec_contact_is_loud_but_never_stops_the_run(data_dir, monkeypatch, capsys):
+    """Oct 2026: the SEC refused 117 reads in a row because the robot named itself with a GitHub no-reply address.
+    Without a real SEC_CONTACT the filing feeds are skipped, an ::error annotation is printed every run, at most one
+    GitHub issue is opened a day, and the other sources are still read."""
+    from common import load
+    cfg = {"primary": [{"name": "SEC: UPS 8-K", "kind": "edgar", "company": "UPS", "url": "https://data.sec.gov/submissions/CIK0001090727.json"},
+                       {"name": "SEC: FedEx 8-K", "kind": "edgar", "company": "FedEx", "url": "https://data.sec.gov/submissions/CIK0001048911.json"},
+                       {"name": "Federal Register: USPS", "kind": "fedreg", "url": "https://fr.example/usps"}]}
+    issues, sec_calls = [], []
+    monkeypatch.setattr(N, "notify", lambda title, body, **k: issues.append(title))
+    monkeypatch.setattr(N.requests, "get", lambda url, **k: (sec_calls.append(url), R(EDGAR))[1])
+    monkeypatch.setattr(N, "get", lambda url, **k: R(FEDREG))
+    for bad in (None, "", "bot@users.noreply.github.com", "not an address"):
+        if bad is None:
+            monkeypatch.delenv("SEC_CONTACT", raising=False)
+        else:
+            monkeypatch.setenv("SEC_CONTACT", bad)
+        assert N.sec_contact() is None
+        items = N.collect(cfg, primary_only=True)
+        assert any("Mailing Standards" in i["title"] for i in items)          # the rest of the run carried on
+    assert sec_calls == [], "no SEC read is sent without a real contact"
+    assert capsys.readouterr().out.count("::error title=SEC_CONTACT missing::") == 4    # loud on every run, once per run
+    assert len(issues) == 1, "at most one GitHub issue a day"
+    assert load("feed_health.json", {})["SEC: UPS 8-K"]["err"].startswith("SEC_CONTACT secret missing")

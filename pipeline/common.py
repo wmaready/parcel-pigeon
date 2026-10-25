@@ -525,11 +525,42 @@ def same_event(a, b):
             return False
     except Exception:
         return False
+    # B10: similar wording isn't enough. "UPS raises Ground fuel surcharge Nov 2" and "UPS raises Air fuel surcharge
+    # Nov 9" are two events: a different effective date or a different service keeps them apart.
+    ea, eb = _effective(a), _effective(b)
+    if ea and eb and ea != eb:
+        return False
+    sa, sb = _service_set(a.get("title")), _service_set(b.get("title"))
+    if sa and sb and sa != sb:
+        return False
     ua = canon(((a.get("srcs") or [{}])[0].get("url")) or a.get("url") or "")
     ub = canon(((b.get("srcs") or [{}])[0].get("url")) or b.get("url") or "")
     A, B = _words(a.get("title")), _words(b.get("title"))
     sim = len(A & B) / max(1, min(len(A), len(B)))
     return (ua and ua == ub and sim >= 0.34) or sim >= 0.7
+
+
+_SERVICE_NAMES = ["Ground Saver", "Ground Advantage", "Ground Economy", "Home Delivery", "Priority Mail Express", "Priority Mail",
+                  "SurePost", "Next Day Air", "2nd Day Air", "Ground", "Air", "Express", "Freight", "International"]
+_MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+
+def _service_set(title):
+    """Carrier services a headline names ("Ground Saver" counts once, not also as "Ground")."""
+    t, out = title or "", set()
+    for s in _SERVICE_NAMES:
+        if re.search(r"\b" + re.escape(s) + r"\b", t, re.I):
+            out.add(s.lower())
+            t = re.sub(r"\b" + re.escape(s) + r"\b", " ", t, flags=re.I)
+    return out
+
+
+def _effective(s):
+    """The date a story's change takes effect: its act date, else a month-day date its headline states (as MM-DD)."""
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", str(s.get("act") or "")):
+        return s["act"][5:]
+    m = re.search(r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})\b", s.get("title") or "", re.I)
+    return f"{_MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}" if m else None
 
 
 def dedupe_live(live):
@@ -739,3 +770,85 @@ def record_deal(deal, story):
     dl.insert(0, d)
     save("deals.json", dl)
     return d
+
+
+# ---------------------------------------------------------------- program promises (data/programs.json, B3)
+# What each carrier program advertises as included (UPS Small Business Rates: "inclusive of Delivery Area Surcharge,
+# Fuel Surcharge and other value-added services"), so a change that adds one of those charges is recognized as taking
+# away a stated benefit instead of being reported as a routine fee change.
+def _has(term, text):
+    return bool(term) and re.search(r"(?<![a-z0-9])" + re.escape(term.lower()) + r"(?![a-z0-9])", (text or "").lower()) is not None
+
+
+def programs_for(carrier, *texts, urls=()):
+    """The program records for this carrier that the texts name (by name or alias) or whose own pages are in `urls`."""
+    out = []
+    for p in (load("programs.json", {}) or {}).get("programs") or []:
+        if not isinstance(p, dict) or (carrier and p.get("carrier") != carrier):
+            continue
+        names = [p.get("name"), p.get("short")] + list(p.get("aka") or [])
+        if any(canon(u) in {canon(x) for x in p.get("pages") or []} for u in urls if u) or \
+                any(_has(n, t) for n in names if n for t in texts):
+            out.append(p)
+    return out
+
+
+def program_label(p):
+    return p.get("short") or p.get("name") or "program"
+
+
+def program_brief(progs):
+    """The program records as prompt text: what each program says is included, with its source and check date, and the rule."""
+    if not progs:
+        return ""
+    lines = []
+    for p in progs:
+        inc = "; ".join(f"{i['what']} included" for i in p.get("includes") or [])
+        none = ", ".join(i["what"] for i in p.get("no_fees") or [])
+        lines.append(f"- {p.get('name')} ({program_label(p)}): the carrier states it is \"{p.get('stated')}\". {inc}."
+                     + (f" No {none} fees." if none else "") + f" Source: {(p.get('pages') or [''])[0]}, checked {p.get('checked')}.")
+    return ("PROGRAM PROMISES (what the carrier advertises for these programs; a baseline, not news):\n" + "\n".join(lines) +
+            "\nRule: if a change ADDS a charge the program says is included, or a fee it says it does not charge, it takes away a "
+            "stated benefit: imp \"up\", lvl 2 or 3, and the \"why\" starts with \"Removes a stated <program> benefit: \" naming it.")
+
+
+_REMOVAL = re.compile(r"\b(no longer (appl|charg|assess)|waiv|remov|eliminat|discontinu|exempt|will not apply|does not apply)", re.I)
+# the charge is being applied or added (a mere mention, e.g. "the Area Surcharge ZIP list will change", is not)
+_CHARGE = re.compile(r"\b(appl(y|ies|ied)|assessed|added|adds?|new|introduc\w*|will be charged|now charged|subject to)\b|%|\$\s?\d", re.I)
+
+
+def benefit_removed(progs, changes=(), text=""):
+    """(program, promise) for the first change that adds a charge a program says is included (or says it never charges).
+    `changes` are proven audit changes ({what, after}) from a document that belongs to the program; `text` is a written
+    story, where the program, the charge and the adding must all be in one sentence (an article about a general rate
+    increase that mentions SBR elsewhere is not an SBR benefit change). None when nothing matches."""
+    for p in progs:
+        names = [n for n in [p.get("name"), p.get("short")] + list(p.get("aka") or []) if n]
+        items = [f"{c.get('what') or ''} {c.get('after') or ''}" for c in changes if isinstance(c, dict)]
+        items += [s for s in re.split(r"(?<=[.;!?])\s+", text or "") if any(_has(n, s) for n in names)]
+        for promise in (p.get("includes") or []) + (p.get("no_fees") or []):
+            for s in items:
+                if any(_has(t, s) for t in promise.get("match") or []) and _CHARGE.search(s) and not _REMOVAL.search(s):
+                    return p, promise
+    return None
+
+
+def apply_benefit_rule(obj, progs, changes=(), text=""):
+    """B3 rule, enforced in code whatever the model wrote: a change that adds a charge the program says is included gets
+    imp 'up', lvl at least 2, and a "why" starting "Removes a stated <program> benefit: ". Returns True when it applied."""
+    hit = benefit_removed(progs, changes, text)
+    if not hit:
+        return False
+    p, promise = hit
+    label = program_label(p)
+    head = f"Removes a stated {label} benefit: "
+    obj["imp"] = "up"
+    obj["lvl"] = max(2, int(obj.get("lvl") or 1))
+    why = str(obj.get("why") or "")
+    if not why.startswith(head):
+        what = promise["what"]
+        said = "was advertised as included" if promise in (p.get("includes") or []) else "was advertised as never charged"
+        obj["why"] = head + f"{what} {said} in {p.get('name')}."
+    # where the promise comes from, for the story page and a person checking it
+    obj["benefit"] = {"program": p.get("id"), "what": promise["what"], "src": promise.get("src"), "checked": promise.get("checked")}
+    return True

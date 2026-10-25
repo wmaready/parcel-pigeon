@@ -188,6 +188,9 @@ def test_nightly_slot_tops_up_from_discovery_when_the_queue_is_short(research, m
     import sweep
     monkeypatch.setattr(common, "month_full", lambda: None)
     save("players.json", {"players": [cand(0, "Alpha Parcel")], "edges": []})
+    # start from an empty discovery queue: the live sweep_state.json copied from data/ holds real names waiting
+    # (e.g. Lalamove, Spoke), and the slot rightly takes those before searching again
+    save("sweep_state.json", {"queue": []})
 
     def fake_discover(st, mp, seed, segs):
         st.setdefault("queue", []).extend({"n": n, "what": "courier", "url": "https://d.example", "realm": "regional"} for n in ("Echo Freight", "Foxtrot Lockers", "Golf Returns"))

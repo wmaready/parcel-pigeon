@@ -112,9 +112,21 @@ def test_paused_extras_no_longer_kill_the_alerts_run(data_dir, monkeypatch):
     SystemExit isn't an Exception, so every daytime run died before sending or saving (log: 'players: waiting,
     extras pause at half of today's allowance' then '::warning::alerts.py failed'). Pushes stopped on Oct 20."""
     import common, players
-    from common import load
+    from common import load, save
     quiet_side_jobs(monkeypatch)
     calls = onesignal(monkeypatch)
+    # The test's own starting state, not the live one copied from data/: the live alerts_state.json carries the real
+    # last push time (e.g. Oct 25), which is after this test's clock (Oct 22), so the 50-minute spacing held every push.
+    # Everything already on file counts as seen; one story waits in the queue, so the run has exactly one thing to send.
+    fuel = load("fuel.json", {}).get("hist") or {}
+    save("alerts_state.json", {
+        "stories": [s["id"] for s in load("news.json", []) if s.get("id")],
+        "titles": [], "sent": [], "recent": [],
+        "clock": [f"{e.get('id')}:{n}" for e in load("seed.json", {}).get("clock") or [] for n in (7, 1)],
+        "fuel": {c: sorted(h)[-1] for c, h in fuel.items() if h},
+        "players": [p["id"] for p in load("players.json", {}).get("players", [])],
+        "queue": [{"kind": "story", "key": "story:test queued story", "id": "t1", "t": "Test story", "m": "m",
+                   "at": "2026-10-22T09:30:00-04:00", "lvl": 1, "topic": "news", "mask": None, "url": "u"}]})
     monkeypatch.setattr(players, "API_KEY", "test-key")
     monkeypatch.setattr(common, "paused", lambda extra=False: "Claude calls paused: $1.20 spent today")
     monkeypatch.setattr(A, "now_et", lambda: dt.datetime(2026, 10, 22, 10, 0, tzinfo=A.ET))

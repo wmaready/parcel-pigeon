@@ -178,6 +178,10 @@ watch:
   - {carrier: UPS,    kind: page, name: Daily Rate and Service Guide page, url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates.page"}
   - {carrier: UPS,    kind: pdf,  name: Daily Rate and Service Guide, url: "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf"}
   - {carrier: UPS,    kind: pdf,  name: Small Business Rates guide, url: "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf"}
+  # program pages: UPS posted the Dec 21, 2026 SBR change (4.5% plus a new 5% fuel surcharge) on the page, not the PDF
+  - {carrier: UPS,    kind: page, name: Small Business Rates page, url: "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"}
+  - {carrier: UPS,    kind: page, name: Ground Saver page, url: "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver"}
+  - {carrier: UPS,    kind: page, name: Simple Rate page, url: "https://www.ups.com/us/en/services/shipping/simple-rate"}
   - {carrier: UPS,    kind: page, name: Developer portal,          url: "https://developer.ups.com/"}
   # FedEx
   - {carrier: FedEx,  kind: page, name: Service Guide,             url: "https://www.fedex.com/en-us/service-guide.html"}

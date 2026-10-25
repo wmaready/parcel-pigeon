@@ -1,0 +1,29 @@
+{
+ "about": "What each carrier program advertises as included, so a change that adds a charge the program says is included can be recognized as removing a stated benefit. One record per program; every inclusion carries its source and the date it was checked. Add a program only with its own source.",
+ "programs": [
+  {
+   "id": "ups-sbr",
+   "carrier": "UPS",
+   "name": "UPS Small Business Rates",
+   "short": "SBR",
+   "aka": ["Small Business Rates", "Small Business Rate", "SBR"],
+   "pages": [
+    "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+    "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf"
+   ],
+   "stated": "inclusive of Delivery Area Surcharge, Fuel Surcharge and other value-added services",
+   "includes": [
+    {"what": "Delivery Area Surcharge", "match": ["delivery area surcharge", "area surcharge", "das"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"},
+    {"what": "Fuel Surcharge", "match": ["fuel surcharge"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"},
+    {"what": "other value-added services", "match": [], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"}
+   ],
+   "no_fees": [
+    {"what": "Address Correction", "match": ["address correction"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"},
+    {"what": "Shipping Charge Correction Audit", "match": ["shipping charge correction"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"},
+    {"what": "Missing PLD", "match": ["missing pld", "pld"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"}
+   ],
+   "checked": "2026-10-24",
+   "checked_by": "Parcel Pigeon outside review (brief v5, Oct 24, 2026), read from the UPS page above. Not yet re-read by the robots."
+  }
+ ]
+}
