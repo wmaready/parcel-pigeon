@@ -621,6 +621,91 @@ def claude_read(url):
     return None
 
 
+META = {}                # final page address -> page_meta(), filled by article_text for the checks below
+STALE_DAYS = 30          # B16: an article published more than this long before we found it isn't news
+
+
+def page_meta(html):
+    """The article's own publish date (article:published_time, or JSON-LD datePublished), its title and its first paragraph."""
+    html = html or ""
+    pub = None
+    m = re.search(r'<meta[^>]+(?:property|name|itemprop)=["\'](?:article:published_time|og:published_time|datePublished)["\'][^>]*'
+                  r'content=["\'](\d{4}-\d{2}-\d{2})', html, re.I) or \
+        re.search(r'<meta[^>]+content=["\'](\d{4}-\d{2}-\d{2})[^"\']*["\'][^>]+(?:property|name|itemprop)=["\']'
+                  r'(?:article:published_time|og:published_time|datePublished)["\']', html, re.I) or \
+        re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', html)
+    if m:
+        pub = m.group(1)
+    t = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)', html, re.I) or \
+        re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+    desc = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+content=["\']([^"\']+)', html, re.I)
+    first = ""
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.I | re.S):
+        p = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", p)).strip()
+        if len(p) >= 60:
+            first = p
+            break
+    import html as _h
+    clean = lambda s: _h.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s or ""))).strip()
+    return {"published": pub, "title": clean(t.group(1) if t else ""), "first": clean(first),
+            "desc": clean(desc.group(1) if desc else "")}
+
+
+NAME_SKIP = {"the", "a", "an", "new", "says", "said", "report", "reports", "update", "ceo", "cfo", "coo", "us", "u.s", "usa", "inc",
+             "corp", "co", "llc", "ltd", "wsj", "q1", "q2", "q3", "q4", "how", "why", "what", "who", "when", "after", "as", "in", "on",
+             "for", "to", "of", "and", "with", "from", "its", "it", "is", "will", "could", "may", "exclusive", "breaking", "watch"}
+
+
+def key_names(title):
+    """The names a headline is about (people, companies, places): its capitalized words, possessives trimmed."""
+    out = []
+    for w in re.findall(r"[A-Z][A-Za-z0-9&.\-]*(?:'s|’s)?", title or ""):
+        w = re.sub(r"(?:'s|’s)$", "", w).strip(".-")
+        if len(w) >= 3 and w.lower() not in NAME_SKIP and w not in out:
+            out.append(w)
+    return out
+
+
+def content_verified(meta, title):
+    """B17: the page's title, description or first paragraph names every key name in the story's headline. None when the
+    page couldn't be read as HTML (nothing to check), False when a name is missing."""
+    if not meta or not (meta.get("title") or meta.get("first")):
+        return None
+    hay = " ".join([meta.get("title") or "", meta.get("desc") or "", meta.get("first") or ""]).lower()
+    names = key_names(title)
+    if not names:
+        return None
+    hits = sum(bool(re.search(r"(?<![a-z0-9])" + re.escape(n.lower()) + r"(?![a-z0-9])", hay)) for n in names)
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z'’]+", title or "") if w.lower() not in NAME_SKIP]
+    if words and sum(w[0].isupper() for w in words) / len(words) > 0.6:
+        return hits * 2 >= len(names)       # a Title Case headline capitalizes ordinary words too: half its names will do
+    return hits == len(names)
+
+
+def vet_sources(texts, srcs, today=None):
+    """B16 and B17, before a story is written. A source page whose own publish date is more than STALE_DAYS before we found
+    it, or whose title/first paragraph doesn't name the headline's people, companies and places, is left out (its link too).
+    Returns (texts, srcs, problems) with one line per page left out."""
+    today = dt.date.fromisoformat(today) if today else dt.date.today()
+    keep, bad_urls, problems = [], set(), []
+    for it, u, tx in texts:
+        meta = META.get(u) or {}
+        pub = meta.get("published")
+        try:
+            age = (today - dt.date.fromisoformat(pub)).days if pub else None
+        except ValueError:
+            age = None
+        if age is not None and age > STALE_DAYS:
+            problems.append(f"old article: {u} was published {pub}, {age} days before it was found ({today.isoformat()})")
+            bad_urls.add(u); continue
+        if content_verified(meta, it.get("title")) is False:
+            problems.append(f"content_verified:false: {u} ('{meta.get('title', '')[:80]}') doesn't name "
+                            + ", ".join(key_names(it.get("title"))))
+            bad_urls.add(u); continue
+        keep.append((it, u, tx))
+    return keep, [s for s in srcs if s.get("url") not in bad_urls], problems
+
+
 def article_text(url):
     try:
         if "sec.gov/Archives/edgar" in (url or "") and url.rstrip("/").endswith(("-index.htm", "-index.html")):
@@ -633,6 +718,8 @@ def article_text(url):
         r = requests.get(url, headers=BROWSER, timeout=25, allow_redirects=True)
         if "news.google.com" in r.url:
             return None, r.url
+        if r.status_code < 400 and isinstance(r.text, str):
+            META[r.url] = page_meta(r.text)          # the page's own date, title and first paragraph (B16, B17)
         text = trafilatura.extract(r.text, include_comments=False) if r.status_code < 400 else None
         from fetch import is_blocked
         if not text or len(text) < 400 or is_blocked(text):
@@ -1248,6 +1335,19 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
                 if text and len(text) >= 400:
                     texts.append((item, final_url, text))
                 srcs.append({"src": item["src"], "url": final_url})
+            # B16 + B17: an old article found today, or a link to a page about something else, never makes a story
+            had = len(texts)
+            texts, srcs, problems = vet_sources(texts, srcs)
+            if had and not texts:
+                item = members[0][0]
+                kind = "old-article" if all(p.startswith("old article") for p in problems) else "content-mismatch"
+                review.insert(0, {"type": kind, "title": item["title"], "url": item["url"], "src": item["src"], "date": item["date"],
+                                  "content_verified": False if kind == "content-mismatch" else None,
+                                  "note": "Kept out of the feed: " + "; ".join(problems)[:400] +
+                                  (" Publish it by hand only as a clearly labeled Reminder or Background item." if kind == "old-article" else
+                                   " Find the page that really carries this story, or delete this entry.")})
+                print(f"  kept out ({kind}): {item['title'][:80]}")
+                continue
             if not texts:
                 item = members[0][0]
                 review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"], "retried": bool(item.get("retry")),
