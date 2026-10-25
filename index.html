@@ -1199,6 +1199,9 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 @keyframes nbpop{from{transform:translateY(12px) scale(.9);opacity:0}to{transform:none;opacity:1}}
 @media (min-width:960px){.navback{bottom:24px;left:24px}}
 .navback,.navback *{text-transform:none!important;letter-spacing:0!important;font-family:var(--font-ui)!important}
+/* while "Back to …" floats over the page, the page ends below it, so it never covers the last links or chart bars */
+body.nb-on main.wrap{padding-bottom:calc(var(--sp-5) + 72px)}
+body.nb-on{scroll-padding-bottom:72px}
 
 .xnums{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;width:100%}
 .xnum{background:var(--panel);border:var(--line) solid var(--grid-strong);border-top:2px solid var(--accent);border-radius:var(--r-md);padding:12px}
@@ -7470,6 +7473,11 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-thread]');
 
 /* ===== Story page: the deep dive, over the feed. Back (button, swipe-back or Esc) returns to the exact spot. ===== */
 let STORY_OPEN=null;
+/* one Back = one layer (story page, then company page, then the previous section), for the on-screen Back, Escape and the
+   phone's own back button. POP_LAYER: this Back closed a story or company page, so it doesn't also change section.
+   POP_SKIP: a Back the app made itself (closing a page with its × button), not the reader's. NAV_PENDING: a page was
+   just left for another section, so the jump reuses that page's history entry instead of adding one. */
+let POP_LAYER=false,POP_SKIP=false,NAV_PENDING=false;
 function openStory(id){const n=NEWS.find(x=>x.id===id);if(!n)return;
   let sh=$('storySheet');if(!sh){sh=document.createElement('div');sh.id='storySheet';sh.className='ssheet';sh.setAttribute('role','dialog');sh.setAttribute('aria-modal','true');document.body.appendChild(sh)}
   sh.innerHTML=`<div class="ssbg" data-ssclose></div><div class="sspanel"><div class="ssbar"><button type="button" class="ssback" data-ssclose aria-label="Back to the feed">‹ Back</button><span class="lbl">${esc(n.cat||'')}</span>
@@ -7478,13 +7486,13 @@ function openStory(id){const n=NEWS.find(x=>x.id===id);if(!n)return;
   setTimeout(()=>{const b=sh.querySelector('[data-cmt]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click()},60);
   sh.setAttribute('aria-label',n.title);sh.hidden=false;document.body.classList.add('ss-open');requestAnimationFrame(()=>sh.classList.add('open'));
   sh.querySelector('.ssbody').scrollTop=0;
-  if(STORY_OPEN==null){try{history.pushState({story:id},'','#s='+id)}catch(e){}}else{try{history.replaceState({story:id},'','#s='+id)}catch(e){}}
+  if(STORY_OPEN==null&&!(history.state&&history.state.story===id)){try{history.pushState({story:id},'','#s='+id)}catch(e){}}else{try{history.replaceState({story:id},'','#s='+id)}catch(e){}}
   STORY_OPEN=id;if(typeof rxLoad==='function')rxLoad([id]);setTimeout(()=>sh.querySelector('.ssback')&&sh.querySelector('.ssback').focus({preventScroll:true}),50)}
 function closeStory(silent,nav){const sh=$('storySheet');if(!sh||STORY_OPEN==null)return;const was=STORY_OPEN;STORY_OPEN=null;
   sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220);
-  if(!silent&&history.state&&history.state.story){try{history.back()}catch(e){}}
+  if(!silent&&history.state&&history.state.story){POP_SKIP=true;try{history.back()}catch(e){POP_SKIP=false}}
   if(typeof newsEnsure==='function')newsEnsure(was);const c=$('n-'+was);if(c&&!silent&&!nav){const r=c.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)c.scrollIntoView({block:'center'})}}
-addEventListener('popstate',()=>{if(STORY_OPEN!=null){const keep=STORY_OPEN;STORY_OPEN=null;const sh=$('storySheet');if(sh){sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220)}}});
+addEventListener('popstate',()=>{if(STORY_OPEN!=null){const keep=STORY_OPEN;STORY_OPEN=null;POP_LAYER=true;const sh=$('storySheet');if(sh){sh.classList.remove('open');document.body.classList.remove('ss-open');setTimeout(()=>{if(STORY_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220)}}});
 document.addEventListener('click',e=>{if(e.target.closest('[data-ssclose]')){e.preventDefault();closeStory()}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&STORY_OPEN!=null){closeStory();e.stopImmediatePropagation()}});   // one Escape closes only the story, not the company page under it
 // shared links: …/#s=<story id> opens that story
@@ -7523,13 +7531,13 @@ async function openCompany(id,replace){const p=PL[id];if(!p)return;
     <div class="ssbody cpage">${profileHTML(p,true)}${upc}${tl}${ths}<p class="lbl comap"><button class="link" data-comap="${p.id}">Show on the market map ›</button></p></div></div>`;
   sh.setAttribute('aria-label',p.n);sh.hidden=false;document.body.classList.add('co-open');requestAnimationFrame(()=>sh.classList.add('open'));
   sh.querySelector('.ssbody').scrollTop=0;
-  if(CO_OPEN==null&&!replace){try{history.pushState({company:id},'','#c='+id)}catch(e){}}else{try{history.replaceState({company:id},'','#c='+id)}catch(e){}}
+  if(CO_OPEN==null&&!replace&&!(history.state&&history.state.company===id)){try{history.pushState({company:id},'','#c='+id)}catch(e){}}else{try{history.replaceState({company:id},'','#c='+id)}catch(e){}}
   CO_OPEN=id;setTimeout(()=>sh.querySelector('.ssback')&&sh.querySelector('.ssback').focus({preventScroll:true}),50)}
 function closeCompany(silent){const sh=$('coSheet');if(!sh||CO_OPEN==null)return;CO_OPEN=null;
   sh.classList.remove('open');document.body.classList.remove('co-open');setTimeout(()=>{if(CO_OPEN==null){sh.hidden=true;sh.innerHTML=''}},220);
-  if(!silent&&history.state&&history.state.company){try{history.back()}catch(e){}}}
+  if(!silent&&history.state&&history.state.company){POP_SKIP=true;try{history.back()}catch(e){POP_SKIP=false}}}
 // Back closes the page, unless Back only closed a story opened on top of it
-addEventListener('popstate',()=>{if(CO_OPEN!=null&&!(history.state&&history.state.company))closeCompany(true)});
+addEventListener('popstate',()=>{if(CO_OPEN!=null&&!(history.state&&history.state.company)){POP_LAYER=true;closeCompany(true)}});
 document.addEventListener('click',e=>{
   const cp=e.target.closest('[data-cpage]');if(cp){e.preventDefault();e.stopImmediatePropagation();openCompany(cp.dataset.cpage);return}
   if(CO_OPEN==null)return;
@@ -7538,16 +7546,20 @@ document.addEventListener('click',e=>{
   // another company on the page opens that company's page
   const pl=e.target.closest('[data-pl]');if(pl&&!e.target.closest('a')){e.preventDefault();e.stopImmediatePropagation();openCompany(pl.dataset.pl,true);return}   // stopImmediate: the map's own [data-pl] handler must not also switch tabs
   const mp=e.target.closest('[data-comap]');if(mp){e.preventDefault();e.stopPropagation();const id=mp.dataset.comap;closeCompany();setTimeout(()=>{if(curView.mna!=='map'||$('s-mna').hidden)goTo('mna','map');selectPlayer(id)},260);return}
-  // going somewhere else in the app closes the page first; a story opens on top of it
-  if(e.target.closest('[data-clock],[data-gdoc],[data-goto],[data-thread],[data-newsq],[data-cdocs],[data-deal],[data-coopgo]'))closeCompany(false)},true);
+  // going somewhere else in the app closes the page first; a story opens on top of it. Back returns to this company page:
+  // the jump remembers it (navCtx.co), and the jump takes over the page's own history entry (layerLeave)
+  if(e.target.closest('[data-clock],[data-gdoc],[data-goto],[data-thread],[data-newsq],[data-cdocs],[data-deal],[data-coopgo]')){
+    navCtx={...(navCtx||{}),co:CO_OPEN,title:PL[CO_OPEN]&&PL[CO_OPEN].n,story:null};closeCompany(true);layerLeave()}},true);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&CO_OPEN!=null&&STORY_OPEN==null)closeCompany()});
 // shared links: …/#c=<company id> opens that company's page
 setTimeout(()=>{const m=/^#c=([\w-]+)/.exec(location.hash||'');if(m){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}let k=0;const go=()=>{if(!(typeof PL!=='undefined'&&PL[m[1]])&&k++<20)return setTimeout(go,250);if(PL[m[1]])openCompany(m[1]);else goTo('mna','players')};go()}},600);
 
 // anything that takes you elsewhere (rate clock, Docs, a storyline, another section) closes the story page first
-document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');if(t)closeStory(false,true)},true);
-// a company link on the story page: the story closes, then the company page opens
-document.addEventListener('click',e=>{const b=e.target.closest('#storySheet [data-sco]');if(!b)return;e.preventDefault();e.stopPropagation();const id=b.dataset.sco;closeStory(false,true);setTimeout(()=>openCompany(id),260)},true);
+document.addEventListener('click',e=>{if(STORY_OPEN==null)return;const t=e.target.closest('#storySheet [data-clock],#storySheet [data-gdoc],#storySheet [data-goto],#storySheet [data-thread],#storySheet [data-coopgo]');
+  if(t){navCtx={...(navCtx||{}),story:STORY_OPEN,co:null,title:(NEWS.find(n=>n.id===STORY_OPEN)||{}).title||null};closeStory(true,true);layerLeave()}},true);
+// a company link on the story page: the story closes, then the company page opens over the story's history entry,
+// so Back closes the company page and reopens the story, and the next Back returns to the feed
+document.addEventListener('click',e=>{const b=e.target.closest('#storySheet [data-sco]');if(!b)return;e.preventDefault();e.stopPropagation();const id=b.dataset.sco;closeStory(true,true);setTimeout(()=>openCompany(id),260)},true);
 // swipe right (or down from the top bar) to close on phones
 {let x0=null,y0=null;document.addEventListener('touchstart',e=>{if(STORY_OPEN==null||!e.target.closest('.sspanel'))return;const t=e.touches[0];x0=t.clientX;y0=t.clientY},{passive:true});
  document.addEventListener('touchend',e=>{if(x0==null)return;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
@@ -9555,19 +9567,40 @@ const NAVBACK=[];let navCtx=null,navRestoring=false;
 const TABN={today:'Today',news:'News',mna:'Parcel Market Map',clock:'Rate clock',fuel:'Fuel',docs:'Docs & alerts'};
 document.addEventListener('pointerdown',e=>{const c=e.target.closest('article.card[id],.panel[id],#cfly,.mside');navCtx={el:c&&c.id||null,title:c&&(c.querySelector('h3')||{}).textContent||null,y:scrollY}},true);
 function curTab(){const s=document.querySelector('[data-section]:not([hidden])');return s?s.id.slice(2):'today'}
-{const g=goTo;goTo=function(t,v){const from={t:curTab(),v:curView[curTab()],y:(navCtx&&navCtx.y)||scrollY,el:navCtx&&navCtx.el,title:navCtx&&navCtx.title};
+{const g=goTo;goTo=function(t,v){const c=navCtx||{},from={t:curTab(),v:curView[curTab()],y:c.y||scrollY,el:c.el,title:c.title,co:c.co||null,story:c.story||null};
   g.apply(this,arguments);
-  if(!navRestoring&&(from.t!==t||(v&&from.v!==v))){NAVBACK.push(from);if(NAVBACK.length>12)NAVBACK.shift();renderBack()}navCtx=null}}
+  if(!navRestoring&&(from.t!==t||(v&&from.v!==v)||from.co||from.story)){NAVBACK.push(from);if(NAVBACK.length>12)NAVBACK.shift();renderBack();navHist()}
+  navCtx=null}}
+/* every jump is also a step in the browser's history, so the phone's back button undoes it instead of leaving the site.
+   A jump made from a story or company page takes over that page's history entry (one layer, one step). */
+function navHist(){const st={nav:NAVBACK.length};
+  try{if(NAV_PENDING){NAV_PENDING=false;history.replaceState(st,'',location.pathname+location.search)}else history.pushState(st,'')}catch(e){}}
+// a page was closed for a jump; if no jump followed after all, its history entry goes too
+function layerLeave(){NAV_PENDING=true;setTimeout(()=>{if(!NAV_PENDING)return;NAV_PENDING=false;const st=history.state;
+  if(st&&(st.company||st.story)){POP_SKIP=true;try{history.back()}catch(e){POP_SKIP=false}}},0)}
+// runs after the story and company pages' own Back handlers: a Back that closed one of them does nothing more here, except
+// that a company page opened from a story returns to that story; otherwise Back undoes the last jump
+addEventListener('popstate',()=>{const st=history.state,layer=POP_LAYER;POP_LAYER=false;
+  if(POP_SKIP){POP_SKIP=false;return}
+  if(layer){if(st&&st.story&&STORY_OPEN==null&&CO_OPEN==null)openStory(st.story);return}
+  if(st&&(st.company||(st.story&&STORY_OPEN!=null)))return;
+  if(NAVBACK.length)goBack()});
+// the on-screen Back (and Backspace) take the same history step as the phone's back button
+function navBackGo(){if(history.state&&history.state.nav!=null)history.back();else goBack()}
 function renderBack(){let b=$('navBack');if(!b){b=document.createElement('button');b.id='navBack';b.className='navback';document.body.appendChild(b);
-    b.addEventListener('click',e=>{e.stopPropagation();goBack()})}
-  const p=NAVBACK.at(-1);b.hidden=!p;if(!p)return;
+    b.addEventListener('click',e=>{e.stopPropagation();navBackGo()})}
+  const p=NAVBACK.at(-1);b.hidden=!p;document.body.classList.toggle('nb-on',!!p);if(!p)return;
   const where=p.title?`“${p.title.length>38?p.title.slice(0,36)+'…':p.title}”`:TABN[p.t]||'where you were';
   b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Back to <b>${esc(where)}</b></span>`;
   b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
 function goBack(){const p=NAVBACK.pop();if(!p)return;navRestoring=true;showTab(p.t);if(p.v&&setView[p.t])setView[p.t](p.v);navRestoring=false;renderBack();
+  // the company or story page the jump was made from opens again, over the section it was on
+  if(p.co&&PL[p.co]){setTimeout(()=>scrollTo({top:p.y,behavior:'instant'}),60);openCompany(p.co);return}
+  if(p.story&&NEWS.some(n=>n.id===p.story)){setTimeout(()=>scrollTo({top:p.y,behavior:'instant'}),60);openStory(p.story);return}
   if(p.el&&/^d-/.test(p.el)&&typeof openStory==='function'){const id=p.el.slice(2);newsEnsure(id);const c=$('n-'+id);if(c)c.scrollIntoView({block:'center'});setTimeout(()=>openStory(id),80);return}
-  setTimeout(()=>{const el=p.el&&$(p.el);if(el)el.scrollIntoView({block:'center',behavior:'smooth'});else scrollTo({top:p.y,behavior:'smooth'})},60)}
-document.addEventListener('keydown',e=>{if(e.key==='Backspace'&&NAVBACK.length&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();goBack()}});
+  // the same scroll position as before the jump; if what was tapped has moved out of view since, it's brought into view
+  setTimeout(()=>{scrollTo({top:p.y,behavior:'instant'});const el=p.el&&$(p.el);if(el){const r=el.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)el.scrollIntoView({block:'center',behavior:'smooth'})}},60)}
+document.addEventListener('keydown',e=>{if(e.key==='Backspace'&&NAVBACK.length&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){e.preventDefault();navBackGo()}});
 
 
 /* ===== Coop's delivery: a guide or terms change arrives from the carrier's HQ ===== */

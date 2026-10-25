@@ -227,3 +227,123 @@ def test_feed_files_late_finds_under_the_day_found(site):
     assert got["label"].startswith("Reported ") and " · found " in got["label"]
     assert got["none"] == "" and got["veryLate"] == ""
     assert got["card"], "the card shows both dates"
+
+
+def _open(p, site, width, hash_=""):
+    b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+    pg = b.new_page(viewport={"width": width, "height": 860})
+    errors = []
+    pg.on("pageerror", lambda e: errors.append(str(e)))
+    pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())       # prices and quotes: local fixtures only
+    pg.add_init_script("try { localStorage.setItem('pw-tour', 'done'); localStorage.setItem('pw-mk-mode', 'pick') } catch (e) {}")
+    pg.goto(site + hash_, wait_until="load", timeout=60000)
+    pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100 && EARN_NEXT.length && EARN.some(e => e.vol)", timeout=60000)
+    return b, pg, errors
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_earnings_chart_and_stock_watch(site, width):
+    """B29/B30/B34: the earnings chart for UPS and FedEx in all three views, with keyboard-reachable bars, the FedEx spin-off
+    divider, nothing wider than the screen, and Stock watch with no link or button inside a link."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b, pg, errors = _open(p, site, width)
+        assert pg.evaluate("() => document.querySelectorAll('#mkToday a a, #mkToday a button').length") == 0
+        lines = pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkearn')].map(x => [x.textContent, x.dataset.goto, x.closest('a') === null])")
+        assert lines and all(ok for _, _, ok in lines)
+        assert ["Last earnings Jul 28 · revenue $22.8B (+7.6%) · 19.0M packages a day (−3.7%) ›", "docs:earnings:UPS:Q2 2026", True] in lines
+        assert pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkc')].every(c => c.tagName === 'DIV' && c.querySelector('a.mkq').textContent.includes('Live quote'))")
+        # the earnings line wraps instead of cutting a word off
+        assert pg.evaluate("() => [...document.querySelectorAll('#mkToday .mkearn')].every(x => x.scrollWidth <= x.clientWidth + 1)")
+        wide = {}
+        for co in ("UPS", "FedEx"):
+            pg.evaluate(f"() => goTo('docs','earnings','{co}')")
+            pg.wait_for_timeout(300)
+            for v in ("rev", "adv", "rpp"):
+                pg.evaluate(f"() => document.querySelector('.eglance[data-eco=\"{co}\"] [data-eview=\"{v}\"]').click()")
+                st = pg.evaluate(f"""() => {{ const g = document.querySelector('.eglance[data-eco="{co}"]');
+                  return {{bars: g.querySelectorAll('button.egbar').length, label: g.querySelector('.egbars').getAttribute('aria-label'),
+                          pressed: g.querySelector('[data-eview="{v}"]').getAttribute('aria-pressed'), div: !!g.querySelector('.egdiv'),
+                          sel: g.querySelectorAll('.egbar[aria-pressed="true"]').length}} }}""")
+                assert st["bars"] >= 8 and st["pressed"] == "true" and st["sel"] == 1 and st["label"], (co, v, st)
+                assert st["div"] == (co == "FedEx" and v == "rev"), (co, v)
+                over = pg.evaluate(OVERFLOW)
+                if over:
+                    wide[f"{co}:{v}"] = over
+        if width == 390:   # the latest quarters are on screen; older ones scroll inside the chart, not the page
+            vis = pg.evaluate("""() => { const sc = document.querySelector('.eglance[data-eco="FedEx"] .egscroll'), r = sc.getBoundingClientRect();
+              return [...sc.querySelectorAll('.egbar')].filter(x => { const q = x.getBoundingClientRect(); return q.left >= r.left - 1 && q.right <= r.right + 1 }).length }""")
+            assert vis >= 7, vis
+        # keyboard: the bars are buttons, and the arrow keys move the selection
+        pg.evaluate("() => earnView('rev')")
+        pg.focus('.eglance[data-eco="FedEx"] .egbar[aria-pressed="true"]')
+        pg.keyboard.press("ArrowLeft")
+        assert pg.evaluate("() => document.activeElement.dataset.ebar") == "FY26 Q3"
+        assert pg.evaluate("() => document.querySelector('.eglance[data-eco=\"FedEx\"] .egdet').textContent.includes('Fiscal Q3 2026 (Dec 2025–Feb 2026)')")
+        b.close()
+    assert not errors, errors[:5]
+    assert not wide, wide
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_earnings_navigation_and_back(site, width):
+    """B31/B33: from FedEx's company page, Earnings opens the FedEx panel with its Earnings folder open on screen, and
+    "Back to FedEx" returns to the company page, which Escape then closes. The Stock watch earnings line lands on its
+    quarter, and the phone's back button returns to Today where it was. Story → company → Back → Back → the feed.
+    Back never leaves the site."""
+    pw = pytest.importorskip("playwright.sync_api")
+    with pw.sync_playwright() as p:
+        b, pg, errors = _open(p, site, width, "#c=fedex")
+        pg.wait_for_function("() => CO_OPEN === 'fedex' && document.querySelector('#coSheet.open [data-goto^=\"docs:earnings\"]')", timeout=30000)
+        assert pg.get_attribute('#coSheet [data-goto^="docs:earnings"]', "data-goto") == "docs:earnings:FedEx"
+        pg.click('#coSheet [data-goto^="docs:earnings"]')
+        pg.wait_for_function("() => curTab() === 'docs' && document.activeElement && document.activeElement.matches('.dcarp[data-car=\"FedEx\"] details.dearn > summary')", timeout=15000)
+        st = pg.evaluate("""() => { const p = document.querySelector('.dcarp[data-car="FedEx"]'), f = p && p.querySelector('details.dearn'),
+            r = f && f.querySelector('summary').getBoundingClientRect();
+          return {tab: curTab(), co: CO_OPEN, panel: p && p.open, folder: f && f.open, onscreen: !!r && r.top >= 0 && r.bottom <= innerHeight,
+                  ups: document.querySelector('.dcarp[data-car="UPS"]').open, focus: document.activeElement === (f && f.querySelector('summary')),
+                  back: document.getElementById('navBack').textContent, padded: document.body.classList.contains('nb-on')} }""")
+        assert st == {"tab": "docs", "co": None, "panel": True, "folder": True, "onscreen": True, "ups": False, "focus": True,
+                      "back": "Back to “FedEx”", "padded": True}, st
+        pg.go_back()                                             # the phone's back button
+        pg.wait_for_function("() => CO_OPEN === 'fedex' && !document.getElementById('coSheet').hidden", timeout=10000)
+        pg.keyboard.press("Escape")
+        pg.wait_for_function("() => CO_OPEN == null && document.getElementById('coSheet').hidden", timeout=15000)
+        assert pg.evaluate("() => CO_OPEN == null && document.getElementById('coSheet').hidden && NAVBACK.length === 0")
+        assert pg.url.startswith(site)
+
+        # Today → Stock watch earnings line → the phone's back button returns to Today, where it was
+        pg.click('nav.tabs [data-tab="today"]')
+        pg.evaluate("() => document.getElementById('mkToday').scrollIntoView({block: 'center', behavior: 'instant'})")
+        pg.wait_for_timeout(200)
+        y0 = pg.evaluate("() => scrollY")
+        pg.click('#mkToday .mkearn[data-goto="docs:earnings:UPS:Q2 2026"]')
+        pg.wait_for_function("() => curTab() === 'docs' && document.activeElement && document.activeElement.matches('.dcarp[data-car=\"UPS\"] details.dearn > summary')", timeout=15000)
+        assert pg.evaluate("""() => curTab() === 'docs' && document.querySelector('.dcarp[data-car="UPS"] details.dearn').open
+          && document.querySelector('.eglance[data-eco="UPS"] .egbar[aria-pressed="true"]').dataset.ebar === 'Q2 2026'""")
+        pg.go_back()
+        pg.wait_for_function("() => curTab() === 'today'", timeout=15000)
+        pg.wait_for_timeout(300)
+        assert pg.evaluate("() => curTab()") == "today"
+        assert abs(pg.evaluate("() => scrollY") - y0) <= 4
+        assert pg.url.startswith(site) and pg.evaluate("() => !!document.querySelector('nav.tabs')")
+
+        # a story → its company page → Back (the story again) → Back (the feed)
+        sid = pg.evaluate("() => (NEWS.find(n => storyCoLinks(n)) || {}).id || null")
+        assert sid
+        pg.evaluate(f"() => openStory('{sid}')")
+        pg.wait_for_function("() => !!document.querySelector('#storySheet.open [data-sco]')", timeout=15000)
+        pg.click('#storySheet [data-sco]')
+        pg.wait_for_function("() => CO_OPEN != null && STORY_OPEN == null", timeout=10000)
+        pg.go_back()
+        pg.wait_for_function("() => CO_OPEN == null && STORY_OPEN != null", timeout=15000)
+        assert pg.evaluate(f"() => CO_OPEN == null && STORY_OPEN === '{sid}'")
+        pg.go_back()
+        pg.wait_for_function("() => STORY_OPEN == null", timeout=15000)
+        pg.wait_for_timeout(300)
+        assert pg.evaluate("() => CO_OPEN == null && STORY_OPEN == null && !!document.querySelector('nav.tabs')")
+        assert pg.url.startswith(site)
+        wide = pg.evaluate(OVERFLOW)
+        b.close()
+    assert not errors, errors[:5]
+    assert not wide, wide
