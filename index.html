@@ -2162,6 +2162,58 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 .elinks{display:flex;flex-wrap:wrap;gap:4px 14px}.elinks .link{min-height:28px;font-size:11px}
 .erow2 .elinks{margin-top:2px}
 @media (max-width:560px){.dcr{grid-template-columns:1fr;gap:2px}}
+/* docs: earnings at a glance (chart, selected quarter, table) */
+.eglance{padding:12px 12px 10px;border-bottom:1px solid var(--grid);min-width:0;--egc:var(--accent)}
+.eglance.eg-ups{--egc:var(--ups)}.eglance.eg-fdx{--egc:var(--fdx)}
+@media (max-width:560px){.eglance{margin:0 -4px;padding:12px 0 10px}.eglance>:not(.egch),.eglance .egch>:not(.egscroll){margin-left:8px;margin-right:8px}}
+.eghd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.egviews{display:flex;flex-wrap:wrap;gap:6px}
+.egviews .chip{min-height:44px;padding:0 12px}
+.egunit{margin:10px 0 2px;color:var(--ink-2)}
+.egscroll{overflow-x:auto;overflow-y:hidden;container-type:inline-size;scrollbar-width:thin;overscroll-behavior-x:contain}
+.egplot{--bw:44px;--eglab:30px;position:relative;display:flex;height:calc(150px + var(--eglab) + 20px);width:max(100%,calc(var(--bw) * var(--n)))}
+@supports (width:1cqw){.egplot{--bw:clamp(44px,calc(100cqw / 8),72px)}}
+.egdefs{position:absolute}
+.eghb{fill:transparent}.eghl{stroke:var(--egc);stroke-width:3;opacity:.75}
+.egyax{position:sticky;left:0;z-index:2;flex:0 0 0;width:0;height:100%;pointer-events:none}
+.egyax span{position:absolute;left:0;transform:translateY(-1px);padding:0 3px;font-family:var(--font-mono);font-size:10px;line-height:1.2;color:var(--ink-2);white-space:nowrap;background:color-mix(in srgb,var(--panel) 82%,transparent);border-radius:3px}
+.eggrid{position:absolute;inset:0;pointer-events:none}.eggrid i{position:absolute;left:0;right:0;border-top:1px dashed var(--grid)}
+.egdiv{position:absolute;top:0;bottom:var(--eglab);border-left:1.5px dashed var(--ink-2);z-index:1;pointer-events:none}
+.egdiv span{position:absolute;top:0;left:4px;font-family:var(--font-mono);font-size:10px;color:var(--ink-2);white-space:nowrap}
+.egdiv.end span{left:auto;right:4px}
+.egbars{position:relative;z-index:1;display:flex;height:100%}
+.egbar{position:relative;flex:0 0 var(--bw);width:var(--bw);height:100%;padding:0;margin:0;border:0;border-radius:6px;background:none;color:var(--ink);cursor:pointer;font:inherit}
+.egbar:hover{background:rgba(127,127,127,.08)}
+.egbar[aria-pressed="true"]{background:rgba(76,201,240,.10);box-shadow:inset 0 -2px 0 var(--egc)}
+.egbar:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.egsv{position:absolute;left:0;right:0;bottom:var(--eglab);width:100%;height:150px;overflow:visible}
+.egr{fill:var(--egc);opacity:.78}.egbar[aria-pressed="true"] .egr{opacity:1}
+.egr.eghat{opacity:1;stroke:var(--egc);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.egr2{fill:#fff;opacity:.42}
+.egval{position:absolute;left:0;right:0;text-align:center;font-size:10px;line-height:1;color:var(--ink-2)}
+.egbar[aria-pressed="true"] .egval,.egbar[aria-pressed="true"] .egq{color:var(--ink);font-weight:600}
+.egq{position:absolute;left:0;right:0;bottom:0;height:var(--eglab);display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;line-height:1.2;color:var(--ink-2)}
+.eglg{display:flex;flex-wrap:wrap;gap:4px 14px;margin:6px 0 0;color:var(--ink-2)}
+.eglg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.egk1{background:var(--egc)}.egk2{background:color-mix(in srgb,var(--egc) 58%,#fff)}.egk3{background:repeating-linear-gradient(45deg,var(--egc) 0 2px,transparent 2px 5px);outline:1px solid var(--egc)}.egk4{background:var(--ink-2)}
+.egnote{margin:6px 0 0;font-size:12px;color:var(--ink-2)}
+.egdet{margin-top:10px;border-top:1px solid var(--grid);padding-top:8px;display:grid;gap:4px}
+.eghq b{font-weight:600}.eghq small{display:block;color:var(--ink-2);font-size:12px}
+.egrow{display:grid;grid-template-columns:150px 1fr;gap:8px;font-size:var(--fs-sm);align-items:baseline}
+.egrow small{color:var(--ink-2)}
+@media (max-width:560px){.egrow{grid-template-columns:1fr;gap:0}}
+.egdet .erow2{padding-left:0;padding-right:0}
+.egsrc{margin:0}
+.egstock{margin:4px 0 0;font-size:12px;color:var(--ink-2)}.egstock small{display:block;font-size:11px;margin-top:2px}
+.egrx summary,.egtbl summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-size:12.5px}
+.egrxs{width:100%;max-width:420px;height:auto;display:block}
+.egz{stroke:var(--grid-strong);stroke-width:1;stroke-dasharray:3 3}
+.egst{fill:none;stroke:var(--egc);stroke-width:2;vector-effect:non-scaling-stroke}.egsp{fill:none;stroke:var(--ink-2);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.egtw{overflow-x:auto;max-width:100%}
+.egt{border-collapse:collapse;font-size:12px;min-width:100%}
+.egt th,.egt td{padding:6px 8px;border-top:1px solid var(--grid);text-align:left;white-space:nowrap;vertical-align:top}
+.egt thead th{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-2)}
+.egmkt{margin:6px 0 0;color:var(--ink-2);text-transform:none;letter-spacing:0;line-height:1.45}
 /* Coop: mute control and fun facts */
 .cbub .cmute{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:3px 10px;min-height:26px;border-radius:999px;border:1px solid var(--grid-strong);background:transparent;color:var(--ink-2);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
 .cbub .cmute::before{content:"";width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M11 5L6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M11 5L6 9H3v6h3l5 4zM22 9l-6 6M16 9l6 6'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -7741,8 +7793,18 @@ function showTab(t){
   const m=TABMEM[t];if(CUR_T!==t){if(m&&Date.now()-m.at<FRESH_MS)requestAnimationFrame(()=>window.scrollTo(0,m.y));else{window.scrollTo(0,0);if(m)resetTab(t)}}
   CUR_T=t;
 }
-function goTo(t,v){if(t==='docs'&&v==='earnings')return goEarnings();showTab(t);if(v&&setView[t])setView[t](v)}
-function goEarnings(c){docCar='All';showTab('docs');setView.docs('library');renderDocs();const p=document.querySelector(`.dcarp[data-car="${c||'UPS'}"]`);if(p){p.open=true;setTimeout(()=>(p.querySelector('.dcall')||p).scrollIntoView({block:'center'}),60)}}
+function goTo(t,v,a,q){if(t==='docs'&&v==='earnings')return goEarnings(a,q);showTab(t);if(v&&setView[t])setView[t](v)}
+/* Docs › a company › Earnings reports, open and on screen, with quarter q selected in its chart. FedEx Freight's rows sit
+   in the FedEx panel. The folder's heading lands just below the sticky header and takes keyboard focus. */
+// how far down the bars that stay pinned to the top reach once the page scrolls (their own top offset plus their height)
+const stickyTop=()=>[...document.querySelectorAll('.ticker,nav.tabs,header')].reduce((m,el)=>{const cs=getComputedStyle(el),t=parseFloat(cs.top),h=el.getBoundingClientRect().height;
+  return (cs.position==='sticky'||cs.position==='fixed')&&!isNaN(t)&&h>0&&h<200?Math.max(m,t+h):m},0);
+function goEarnings(c,q){const co=['UPS','FedEx','FedEx Freight'].includes(c)?c:'UPS',car=co==='FedEx Freight'?'FedEx':co;
+  docCar='All';showTab('docs');setView.docs('library');renderDocs();
+  const p=document.querySelector(`.dcarp[data-car="${car}"]`);if(!p)return;p.open=true;
+  const f=p.querySelector('details.dearn');if(f)f.open=true;if(q)earnSelect(co,q);
+  setTimeout(()=>{const el=f?f.querySelector(':scope>summary'):p;if(f)earnScroll(f);
+    el.style.scrollMarginTop=(stickyTop()+8)+'px';el.scrollIntoView({block:'start',behavior:'instant'});el.focus({preventScroll:true})},60)}
 function goStory(id){
   if(!filtered().some(n=>n.id===id)){resetFilters()}
   goTo('news','list');
@@ -8682,6 +8744,121 @@ const LINKFIX={'https://www.ontrac.com/supplemental-surcharges':'https://www.ont
 function fixLink(d){if(!d||!d.u)return;const u0=d.u;if(LINKFIX[d.u])d.u=LINKFIX[d.u];else if(/gls-us\.com\/getmedia\//.test(d.u)&&!d._ok)d.u='https://www.gls-us.com/shipping-resources/fuel-surcharge';if(d.u!==u0&&!d._u0)d._u0=u0}
 function docsTabBadge(){const b=document.querySelector('nav.tabs [data-tab="docs"]');if(!b)return;let n=b.querySelector('.nb');if(!n){n=document.createElement('span');n.className='nb tabnb';b.appendChild(n)}
   const c=DOCS.filter(d=>{const w=d.added||(d.why&&d.why.when);return w&&daysTo(w)>=-30&&!DOC_SEEN.has(docDomId(d))}).length;n.textContent=c;n.hidden=!c;n.title=c+' new document'+(c>1?'s':'')}
+/* ===== Earnings at a glance (Docs › UPS or FedEx › Earnings reports): revenue, packages a day and revenue per package,
+   from each company's own release and filing; the stock's move after the report is a footnote under the chosen quarter.
+   One chart per company, drawn here as SVG (no chart library, so it works offline). UPS and FedEx count packages a day
+   differently, so they never share a package chart; FedEx Freight is its own series with no package view.
+   Revenue per package is always the company's reported figure, never total revenue divided by packages. ===== */
+const EARN_VIEWS=[['rev','Revenue','$ billions'],['adv','Packages per day','millions of packages a day'],['rpp','Revenue per package','$ per package']];
+let EARN_VIEW='rev';const EARN_SEL={};
+const EARN_SPLIT='2026-06-01';                     // FedEx Freight separated from FedEx
+const earnPkg=co=>co!=='FedEx Freight';            // FedEx Freight moves pallets and shipments, not packages
+const sgn1=v=>v==null||isNaN(v)?'—':(v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(1)+'%';
+const earnLabel=e=>e.label||e.q;
+// the bar's own label: the quarter ("Q2 2026", "FY26 Q4"), or the months of a longer period ("Jun–Sep 2026")
+const earnShort=e=>{const q=String(e.q||''),p=e.period;if(q.length<=8||!p||!p.start||!p.end)return q.slice(0,12);const m=d=>fmtD(d,{month:'short'});return `${m(p.start)}–${m(p.end)} ${p.end.slice(0,4)}`};
+const earnRev=e=>e.rev_m!=null?e.rev_m/1000:e.rev!=null?+e.rev:null;
+const earnRevS=e=>e.rev_m!=null?'$'+(e.rev_m/1000).toFixed(2)+'B':e.rev!=null?'$'+(+e.rev).toFixed(1)+'B':'—';
+// change on a year earlier: none for a period that isn't comparable (a different length or scope)
+const earnYoY=e=>e.comparable===false?null:e.revYoY!=null?+e.revYoY:e.rev_m&&e.rev_prior_m?Math.round((e.rev_m/e.rev_prior_m-1)*1000)/10:null;
+const earnAdvYoY=v=>!v?null:v.adv_yoy!=null?+v.adv_yoy:v.adv_k&&v.adv_prior_k?Math.round((v.adv_k/v.adv_prior_k-1)*1000)/10:null;
+const earnRppYoY=v=>v&&v.rpp&&v.rpp_prior?Math.round((v.rpp/v.rpp_prior-1)*1000)/10:null;
+const earnSeries=co=>EARN.filter(e=>e&&e.company===co&&e.q&&e.d).sort((a,b)=>a.d.localeCompare(b.d));
+const earnSel=co=>{const S=earnSeries(co);return (S.find(e=>e.q===EARN_SEL[co])||S.at(-1)||{}).q};
+function earnVal(e,v){if(v==='rev')return earnRev(e);const x=e.vol;if(!x)return null;return v==='adv'?(x.adv_k!=null?x.adv_k/1000:null):(x.rpp!=null?+x.rpp:null)}
+function earnTicks(max){if(!(max>0))return [0,1];const raw=max/4,p=10**Math.floor(Math.log10(raw)),st=[1,2,2.5,5,10].find(k=>k*p>=raw)*p,T=[];
+  for(let i=0;i*st<max+st*1e-6&&i<12;i++)T.push(+(i*st).toFixed(6));if(T.at(-1)<max)T.push(+(T.length*st).toFixed(6));return T}
+/* one quarter row: the summary line and the release, call and filing links (also the selected quarter's detail) */
+function earnRow(e){const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';const y=earnYoY(e);
+  return `<div class="drow2 erow2"><span class="dn">${esc(e.company==='FedEx Freight'?'FedEx Freight ':'')}${esc(e.q)} earnings${e.checked===false?' <span class="tag">Not yet checked</span>':''}</span>
+    <span class="dm">Reported ${DF(e.d)} · Revenue ${earnRevS(e)}${y!=null?` (${sgn1(y)} YoY)`:''}${e.eps!=null?` · Adj. EPS $${(+e.eps).toFixed(2)}`:''}</span>
+    ${e.take?`<span class="dd">${esc(e.take)}</span>`:''}<span class="elinks">${lk(e.release,'Release')}${lk(e.webcast,'Call recording')}${lk(e.transcript,'Transcript')}${lk(e.filing,'10-Q / 10-K')}</span></div>`}
+function earnChart(co,view){
+  const S=earnSeries(co),v=earnPkg(co)?view:'rev',H=150;if(!S.length)return '';
+  const vals=S.map(e=>earnVal(e,v)),inner=S.map(e=>v==='adv'&&e.vol&&e.vol.us_adv_k!=null?e.vol.us_adv_k/1000:null);
+  const none=vals.every(x=>x==null),T=none?[]:earnTicks(Math.max(0,...vals.filter(x=>x!=null),...inner.filter(x=>x!=null))*1.15),top=T.at(-1)||1;
+  const fmtV=x=>v==='rpp'?'$'+x.toFixed(2):x.toFixed(1),fmtT=x=>v==='adv'?String(+x.toFixed(2)):'$'+(+x.toFixed(2));
+  const name=EARN_VIEWS.find(x=>x[0]===v),sel=earnSel(co),hid='eghatch-'+co.replace(/\W/g,'');
+  const said=(e,x)=>`${earnLabel(e)}: ${x==null?'no figure yet':v==='rev'?`revenue ${earnRevS(e).replace('B',' billion')}`:v==='adv'?`${x.toFixed(1)} million packages a day`:`$${x.toFixed(2)} per package`}${e.comparable===false?' (not comparable with a year earlier)':''}`;
+  const bar=(e,i)=>{const x=vals[i],u=inner[i],hat=e.comparable===false,h=x!=null?Math.max(1,x/top*H):0,hu=u!=null?Math.max(1,u/top*H):0;
+    return `<button type="button" class="egbar" data-ebar="${esc(e.q)}" data-eco="${esc(co)}" aria-pressed="${e.q===sel}" aria-label="${esc(said(e,x))}">
+      <span class="egval mono" style="bottom:calc(var(--eglab) + ${(h+3).toFixed(1)}px)">${x!=null?fmtV(x):'—'}</span>
+      <svg class="egsv" viewBox="0 0 44 ${H}" preserveAspectRatio="none" aria-hidden="true">${x!=null?`<rect x="8" y="${(H-h).toFixed(1)}" width="28" height="${h.toFixed(1)}" class="egr${hat?' eghat':''}"${hat?` fill="url(#${hid})"`:''}/>`:''}${hu?`<rect x="15" y="${(H-hu).toFixed(1)}" width="14" height="${hu.toFixed(1)}" class="egr2"/>`:''}</svg>
+      <span class="egq mono">${esc(earnShort(e)).replace(/ (?=\S+$)/,'<br>')}</span></button>`};
+  // FedEx: a dashed line where FedEx Freight left (June 1, 2026), on the revenue view only
+  let dv='';if(co==='FedEx'&&v==='rev'&&TODAY>=EARN_SPLIT){let i=S.findIndex(e=>((e.period&&e.period.start)||e.d)>=EARN_SPLIT);if(i<0)i=S.length;
+    if(i>0)dv=`<div class="egdiv${i===S.length?' end':''}" style="left:calc(var(--bw) * ${i})"><span>FedEx Freight separated</span></div>`}
+  const sum=`${co} ${name[1].toLowerCase()} by quarter, ${name[2]}: `+S.map((e,i)=>said(e,vals[i])).join('; ');
+  const basis=v==='rev'?'':co==='UPS'?(v==='adv'?'Average per operating day. Worldwide small package; U.S. domestic shown lighter.':'Average revenue per piece, as UPS reports it.')
+    :(v==='adv'?'Average on a 5-day-per-week basis. Federal Express segment; U.S. domestic shown lighter.':'Composite package yield, as FedEx reports it.');
+  const scope=co==='UPS'?'Worldwide small package':'Federal Express segment';
+  return `<p class="lbl egunit">${esc(name[2])}</p>
+    <div class="egscroll"><div class="egplot" style="--n:${S.length}">
+      <svg width="0" height="0" class="egdefs" aria-hidden="true"><defs><pattern id="${hid}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="eghb"/><line x1="0" y1="0" x2="0" y2="6" class="eghl"/></pattern></defs></svg>
+      <div class="egyax" aria-hidden="true">${T.map(t=>`<span style="bottom:calc(var(--eglab) + ${(t/top*H).toFixed(1)}px)">${fmtT(t)}</span>`).join('')}</div>
+      <div class="eggrid" aria-hidden="true">${T.map(t=>`<i style="bottom:calc(var(--eglab) + ${(t/top*H).toFixed(1)}px)"></i>`).join('')}</div>${dv}
+      <div class="egbars" role="group" aria-label="${esc(sum)}">${S.map(bar).join('')}</div></div></div>
+    ${v==='adv'?`<p class="lbl eglg"><span><i class="egk1"></i>${scope}</span><span><i class="egk2"></i>U.S. domestic</span></p>`:''}
+    ${S.some(e=>e.comparable===false)?`<p class="lbl eglg"><span><i class="egk3"></i>Hatched: a period of a different length or scope, not compared with a year earlier</span></p>`:''}
+    ${none?`<p class="egnote">No ${esc(name[1].toLowerCase())} figures entered yet for these quarters; they come from ${esc(co)}'s quarterly filings and are never estimated.</p>`:''}${basis?`<p class="egnote">${esc(basis)}</p>`:''}`}
+/* the selected quarter, under the chart: revenue, packages, revenue per package, the quarter's links, then the stock */
+function earnDetail(e){if(!e)return '';const co=e.company,v=e.vol,cmp=e.comparable!==false,y=earnYoY(e);
+  const per=e.period&&e.period.months?`${e.period.months}-month period`:'different period',L=[];
+  L.push(`<div class="egrow"><span class="lbl">Revenue</span><span>${earnRevS(e)} · ${!cmp?`— <small>(${esc(per)}; not compared with a year earlier)</small>`:y!=null?`${sgn1(y)} vs a year earlier`:'— vs a year earlier'}</span></div>`);
+  if(earnPkg(co)){
+    if(v&&v.adv_k!=null){const ay=earnAdvYoY(v),pm=v.pieces_m;
+      const tot=cmp&&pm!=null&&v.days?` · about ${pm>=1000?(pm/1000).toFixed(2)+' billion':Math.round(pm)+' million'} in the quarter (calculated: ${+v.days} ${co==='UPS'?'operating days':'days'})`:'';
+      L.push(`<div class="egrow"><span class="lbl">Packages</span><span>${(v.adv_k/1000).toFixed(1)} million a day · ${sgn1(ay)}${v.us_adv_k!=null?` · U.S. domestic ${(v.us_adv_k/1000).toFixed(1)} million`:''}${tot}</span></div>`)}
+    else L.push(`<div class="egrow"><span class="lbl">Packages</span><span>— <small>(not yet entered from the ${esc(co)} filing)</small></span></div>`);
+    L.push(`<div class="egrow"><span class="lbl">Revenue per package</span><span>${v&&v.rpp!=null?`$${(+v.rpp).toFixed(2)} · ${sgn1(earnRppYoY(v))}`:'—'}</span></div>`)}
+  let src='';if(v&&v.src)src=`<p class="lbl egsrc">Package figures: <a class="link" href="${escU(v.src)}" target="_blank" rel="noopener">${v.src===e.filing?'10-Q / 10-K':'source'}</a>${v.checked?`, checked ${esc(DF(v.checked))}`:''}</p>`;
+  return `<div class="eghq"><b>${esc(earnLabel(e))}</b>${e.note?`<small>${esc(e.note)}</small>`:''}</div>${L.join('')}${earnRow(e)}${src}${earnStock(e)}`}
+function earnStock(e){const r=e.rx;if(!r||!r.d1)return '';
+  const w=(k,l)=>r[k]&&r[k].pct!=null?`${l} ${sgn1(r[k].pct)} (S&amp;P 500 ${sgn1(r[k].spx)})`:'';
+  const parts=[w('d1','Stock, first trading day after the report:'),w('d5','5 days'),w('d21','about a month')].filter(Boolean);
+  // one month = 21 trading sessions; until then, roughly when (weekdays, holidays not counted)
+  let wait='';if(!r.d21&&r.base&&r.base.d){let d=r.base.d,k=0;while(k<21){d=addDays(d,1);const wd=new Date(d+'T12:00:00').getDay();if(wd&&wd<6)k++}wait=` · One-month figure available about ${esc(DF(d))}.`}
+  const sr=Array.isArray(r.series)&&r.series.length>2?r.series:null;
+  return `<p class="egstock">${parts.join(' · ')}${wait}<small>Daily closes (${esc(r.src||'')}${r.checked?`, checked ${esc(DF(r.checked))}`:''}) · Not investment advice</small></p>
+    ${sr?`<details class="egrx"><summary>Show stock chart</summary>${earnRxSvg(sr,e)}</details>`:''}`}
+function earnRxSvg(sr,e){const W=300,H=120,P=6,vals=sr.flatMap(x=>[+x[1],+x[2]]).filter(x=>!isNaN(x)),mn=Math.min(0,...vals),mx=Math.max(0,...vals),r=mx-mn||1;
+  const X=i=>P+i/(sr.length-1)*(W-2*P),Y=v=>P+(mx-v)/r*(H-2*P),pl=k=>sr.map((x,i)=>x[k]==null?null:`${X(i).toFixed(1)},${Y(+x[k]).toFixed(1)}`).filter(Boolean).join(' ');
+  const b=sr.findIndex(x=>x[0]===(e.rx.base||{}).d);
+  return `<svg class="egrxs" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(e.company)} share price and the S&amp;P 500, percent from the close before the report, ${esc(sr[0][0])} to ${esc(sr.at(-1)[0])}">
+    <line x1="${P}" x2="${W-P}" y1="${Y(0).toFixed(1)}" y2="${Y(0).toFixed(1)}" class="egz"/>${b>=0?`<line x1="${X(b).toFixed(1)}" x2="${X(b).toFixed(1)}" y1="${P}" y2="${H-P}" class="egz"/>`:''}
+    <polyline points="${pl(2)}" class="egsp"/><polyline points="${pl(1)}" class="egst"/></svg>
+    <p class="lbl eglg"><span><i class="egk1"></i>${esc(e.company)}</span><span><i class="egk4"></i>S&amp;P 500</span> · % from the close before the report</p>`}
+function earnTable(co){const S=earnSeries(co).slice().reverse(),pk=earnPkg(co);
+  const td=x=>`<td class="mono">${x}</td>`;
+  return `<div class="egtw"><table class="egt"><thead><tr><th>Quarter</th><th>Reported</th><th>Revenue</th><th>vs a year earlier</th>${pk?'<th>Packages a day</th><th>U.S. domestic a day</th><th>Revenue per package</th>':''}<th>Stock, first day</th></tr></thead><tbody>${S.map(e=>{const v=e.vol||{},y=earnYoY(e);
+    return `<tr><th scope="row">${esc(earnLabel(e))}</th>${td(esc(DF(e.d)))}${td(earnRevS(e))}${td(e.comparable===false?'— (not comparable)':sgn1(y))}${pk?td(v.adv_k!=null?(v.adv_k/1000).toFixed(1)+' million ('+sgn1(earnAdvYoY(v))+')':'—')+td(v.us_adv_k!=null?(v.us_adv_k/1000).toFixed(1)+' million':'—')+td(v.rpp!=null?'$'+(+v.rpp).toFixed(2):'—'):''}${td(e.rx&&e.rx.d1?sgn1(e.rx.d1.pct)+' (S&amp;P 500 '+sgn1(e.rx.d1.spx)+')':'—')}</tr>`}).join('')}</tbody></table></div>`}
+function earnMarket(co){const m=EARN_MKT;if(!m||!m.cos||m.cos[co]==null)return '';
+  return `<p class="lbl egmkt">U.S. parcel market ${esc(m.year)}: about ${esc(m.total_b)} billion parcels; ${esc(co)} about ${esc(m.cos[co])} billion. Source: ${m.url?`<a class="link" href="${escU(m.url)}" target="_blank" rel="noopener">${esc(m.src)}</a>`:esc(m.src)} (${esc(m.note||'estimate')}).</p>`}
+function earnGlance(co){const S=earnSeries(co);if(!S.length)return '';const pk=earnPkg(co);
+  return `<div class="eglance ${co==='UPS'?'eg-ups':'eg-fdx'}" data-eco="${esc(co)}"><div class="eghd"><b>${co==='FedEx Freight'?'FedEx Freight · ':''}Earnings at a glance</b>
+    ${pk?`<div class="egviews" role="group" aria-label="Chart view">${EARN_VIEWS.map(([k,l])=>`<button type="button" class="chip" data-eview="${k}" aria-pressed="${k===EARN_VIEW}">${l}</button>`).join('')}</div>`:''}</div>
+    <div class="egch">${earnChart(co,EARN_VIEW)}</div>
+    <div class="egdet" aria-live="polite">${earnDetail(S.find(e=>e.q===earnSel(co)))}</div>
+    <details class="egtbl"><summary>Show as table</summary>${earnTable(co)}</details>${earnMarket(co)}</div>`}
+function earnSelect(co,q){if(!earnSeries(co).some(e=>e.q===q))return false;EARN_SEL[co]=q;
+  document.querySelectorAll('#lib .eglance').forEach(g=>{if(g.dataset.eco!==co)return;
+    g.querySelectorAll('[data-ebar]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ebar===q)));
+    g.querySelector('.egdet').innerHTML=earnDetail(earnSeries(co).find(e=>e.q===q))});return true}
+function earnView(v,keep){if(!EARN_VIEWS.some(x=>x[0]===v))return;EARN_VIEW=v;if(!keep)store.set('pw-earn-view',v);
+  document.querySelectorAll('#lib .eglance').forEach(g=>{const sc=g.querySelector('.egscroll'),x=sc?sc.scrollLeft:0;
+    g.querySelector('.egch').innerHTML=earnChart(g.dataset.eco,v);g.querySelectorAll('[data-eview]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.eview===v)));
+    const s2=g.querySelector('.egscroll');if(s2)s2.scrollLeft=x})}
+// the chart opens on the latest quarters; older ones scroll inside the chart, never the page
+function earnScroll(root){(root||document).querySelectorAll('.egscroll').forEach(sc=>{const b=sc.querySelector('.egbar[aria-pressed="true"]');if(!sc.clientWidth)return;
+  sc.scrollLeft=b?Math.max(0,b.offsetLeft+b.offsetWidth-sc.clientWidth+8):sc.scrollWidth})}
+document.addEventListener('toggle',e=>{const d=e.target;if(d.open&&d.classList&&(d.classList.contains('dearn')||d.classList.contains('dcarp'))&&d.querySelector('.egscroll'))earnScroll(d)},true);
+document.addEventListener('click',e=>{const v=e.target.closest('#lib [data-eview]');if(v){earnView(v.dataset.eview);return}
+  const b=e.target.closest('#lib [data-ebar]');if(b)earnSelect(b.dataset.eco,b.dataset.ebar)});
+document.addEventListener('keydown',e=>{const b=e.target.closest&&e.target.closest('#lib [data-ebar]');if(!b)return;
+  const L=[...b.parentElement.querySelectorAll('[data-ebar]')],i=L.indexOf(b),j={ArrowLeft:i-1,ArrowRight:i+1,Home:0,End:L.length-1}[e.key];
+  if(j==null||!L[j])return;e.preventDefault();L[j].focus();L[j].scrollIntoView({block:'nearest',inline:'nearest'});earnSelect(L[j].dataset.eco,L[j].dataset.ebar)});
+// the reader's last view, read once the page has loaded (the first render always starts on revenue)
+addEventListener('load',()=>setTimeout(()=>{const v=store.get('pw-earn-view','rev');if(v!==EARN_VIEW)earnView(v,true)},0));
 function renderDocs(){
   DOCS.forEach(fixLink);setTimeout(docsTabBadge,0);setTimeout(refreshReadAll,0);
   DOC_CHANGES=null;
@@ -8693,15 +8870,11 @@ function renderDocs(){
   const order=c=>{const i=['UPS','FedEx','USPS','OnTrac','Amazon','DHL'].indexOf(c);return c==='Reports'?10:i<0?9:i};
   const sorter=(x,y)=>(y.y||0)-(x.y||0)||(y.eff||'').localeCompare(x.eff||'')||x.n.localeCompare(y.n);
   const ER=c=>EARN.filter(e=>e.company===c||(c==='FedEx'&&e.company==='FedEx Freight'));
-  const earnRow=e=>{const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
-    return `<div class="drow2 erow2"><span class="dn">${esc(e.company==='FedEx Freight'?'FedEx Freight ':'')}${esc(e.q)} earnings</span>
-      <span class="dm">Reported ${DF(e.d)} · Revenue $${e.rev.toFixed(1)}B${e.revYoY!=null?` (${e.revYoY>0?'+':e.revYoY<0?'−':''}${Math.abs(e.revYoY)}% YoY)`:''} · Adj. EPS $${e.eps.toFixed(2)}</span>
-      ${e.take?`<span class="dd">${esc(e.take)}</span>`:''}<span class="elinks">${lk(e.release,'Release')}${lk(e.webcast,'Call recording')}${lk(e.transcript,'Transcript')}${lk(e.filing,'10-Q / 10-K')}</span></div>`};
   const callStrip=c=>{const nx=EARN_NEXT.filter(x=>x.c===c||(c==='FedEx'&&x.c==='FedEx Freight')).filter(x=>x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d));
     const last=ER(c).filter(e=>e.company===c).sort((a,b)=>b.d.localeCompare(a.d))[0];if(!nx.length&&!last)return'';
     const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
     return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
-      ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue $${last.rev.toFixed(1)}B · Adj. EPS $${last.eps.toFixed(2)}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
+      ${last?`<div class="dcr"><span class="lbl dct">Last call</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue ${earnRevS(last)}${last.eps!=null?` · Adj. EPS $${(+last.eps).toFixed(2)}`:''}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
   const yearOf=d=>String(docYear(d)||'Undated');
   // current: not replaced, or still to take effect, or announced but not yet posted (a placeholder for a coming year)
   const docCur=d=>d.cur!==false||(d.eff&&d.eff>TODAY)||(!d.u&&+yearOf(d)>=+TODAY.slice(0,4));
@@ -8719,11 +8892,12 @@ function renderDocs(){
     return `<div class="dtb">${ys.map(y=>{const Y=L.filter(d=>yearOf(d)===y);return fold('dyr',y==='Undated'?'Ongoing / undated':y,Y,`<div class="dyrb">${rowsOf(Y)}</div>`)}).join('')}</div>`};
   const earnFolder=c=>{const E=dq?[]:ER(c);if(!E.length&&!EARN_NEXT.some(x=>x.c===c))return '';
     const ys=[...new Set(E.map(e=>e.d.slice(0,4)))].sort(ysort);
-    const inner=callStrip(c)+(ys.length>1?ys.map(y=>{const Y=E.filter(e=>e.d.slice(0,4)===y).sort((a,b)=>b.d.localeCompare(a.d));
+    // the chart sits above the calls; FedEx Freight (its own company since June 1, 2026) gets its own chart in the FedEx panel
+    const inner=(dq?'':c==='FedEx'?earnGlance('FedEx')+earnGlance('FedEx Freight'):earnGlance(c))+callStrip(c)+(ys.length>1?ys.map(y=>{const Y=E.filter(e=>e.d.slice(0,4)===y).sort((a,b)=>b.d.localeCompare(a.d));
       return `<details class="dyr"><summary><b>${y}</b><span class="lbl">${Y.length}</span></summary><div class="dyrb"><div class="drows">${Y.map(earnRow).join('')}</div></div></details>`}).join('')
       :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
     const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
-    return `<details class="dgrp"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
+    return `<details class="dgrp dearn"><summary><b>Earnings reports</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
   const KINDS=c=>c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents'];
   // carrier › kind of document › year (a kind splits into years once it holds more than 3 documents over several years)
   const typesOf=(L,c)=>KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
@@ -8733,23 +8907,11 @@ function renderDocs(){
     docCar!=='All'&&docCar!=='Regional'?`<div class="panel dcarp ${carCls(docCar)}" data-car="${esc(docCar)}">${typesOf(ds,docCar)}</div>`:
     cars.map(c=>{const L=ds.filter(d=>d.c===c);
       return `<details class="panel dcarp" data-car="${esc(c)}" data-dids="${ids(L)}"${dq?' open':''}><summary><h2>${logoImg(c,'lgm')?`${logoImg(c,'lgm')}<span class="dcn">${esc(c)}</span>`:`<span class="car ${carCls(c)}">${esc(DOC_LABEL(c))}</span>`}</h2>${badge(L)}<span class="lbl">${L.length} document${L.length>1?'s':''}</span></summary>${typesOf(L,c)}</details>`}).join('');
-  docBadges();$('earnNext')&&renderEarnings();renderGuideChanges();if(typeof renderQon==='function')renderQon();
+  docBadges();renderGuideChanges();if(typeof renderQon==='function')renderQon();
 }
 
 {let dqT;$('dq').addEventListener('input',()=>{clearTimeout(dqT);dqT=setTimeout(renderDocs,120)})}
 $('docCar').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;docCar=b.dataset.c;store.set('pw-doccar',docCar);renderDocs()});
-function renderEarnings(){
-  $('earnNext').innerHTML=EARN_NEXT.map(x=>`<div class="erow"><span class="mono eq">${fmtD(x.d,{month:'short',day:'numeric'})}</span><span><b class="${carCls(x.c)}">${esc(x.c)}</b> · ${esc(x.q)}<span class="dd">${esc(x.t)}</span></span><a class="link" href="${escU(x.u)}" target="_blank" rel="noopener">IR page</a></div>`).join('');
-  const lk=(u,l)=>u?`<a href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:`<span class="off">${l}: not posted</span>`;
-  const yrs=[...new Set(EARN.map(e=>+e.d.slice(0,4)))].sort((x,y)=>y-x),thisY=+TODAY.slice(0,4);
-  const row=e=>`<div class="earn"><div class="eh"><b>${esc(e.q)}</b><span class="lbl">Reported ${fmtD(e.d,{month:'short',day:'numeric',year:'numeric'})}</span></div>
-      <div class="ev mono">Revenue $${e.rev.toFixed(1)}B${e.revYoY!=null?` (${e.revYoY>0?'+':e.revYoY<0?'−':''}${Math.abs(e.revYoY)}% YoY)`:''} · Adj. EPS $${e.eps.toFixed(2)}</div>
-      <p class="et">${esc(e.take)}</p>
-      <div class="el">${lk(e.release,'Release')}${lk(e.webcast,'Call recording')}${lk(e.transcript,'Transcript')}${lk(e.filing,'10-Q / 10-K')}</div></div>`;
-  $('earnList').innerHTML=yrs.map(y=>{const list=EARN.filter(e=>+e.d.slice(0,4)===y);
-    return `<details class="panel dyear"><summary><h2>${y}</h2><span class="lbl">${list.length} report${list.length>1?'s':''}</span></summary><div class="dlist">${
-      ['UPS','FedEx'].filter(c=>list.some(e=>e.company===c)).map(c=>`<div class="dcar ${carCls(c)}">${c}<a class="link" style="float:right;min-height:0" href="${EARN_IR[c]}" target="_blank" rel="noopener">All releases</a></div>`+list.filter(e=>e.company===c).sort((a,b)=>b.d.localeCompare(a.d)).map(row).join('')).join('')}</div></details>`}).join('');
-}
 /* Stock watch: two cards side by side that roll through every company; pick any two, or show all */
 const MK_LOGO={UPS:'ups',FDX:'fedex',AMZN:'amazon',DHL:'dhl',FDXF:'FedEx Freight'};
 /* On the live site, quotes and charts come from TradingView's free widgets (official exchange data, delayed);
@@ -8877,7 +9039,8 @@ document.addEventListener('click',e=>{
   pop.style.display='none';
   if(e.target.closest('a'))return;
   const tab=e.target.closest('[data-tab]');if(tab){e.preventDefault();if(tab.closest('nav.tabs')){NAVBACK.length=0;renderBack();navTap(tab.dataset.tab);return}showTab(tab.dataset.tab);return}
-  const g=e.target.closest('[data-goto]');if(g){const [s,v]=g.dataset.goto.split(':');goTo(s,v);return}
+  // section:view[:company[:quarter]]; a quarter label may itself hold a colon, so everything after the company is the quarter
+  const g=e.target.closest('[data-goto]');if(g){const [s,v,a,...r]=g.dataset.goto.split(':');goTo(s,v,a,r.length?r.join(':'):undefined);return}
   const o=e.target.closest('[data-open]');if(o){markRead([o.dataset.open]);openStory(o.dataset.open);return}
   const cb=e.target.closest('[data-card]');if(cb&&!e.target.closest('a,button,.term,details,summary,input,textarea')){markRead([cb.dataset.card]);openStory(cb.dataset.card);return}
   const c=e.target.closest('[data-clock]');if(c){goClock(c.dataset.clock);return}
@@ -9102,14 +9265,16 @@ function profileHTML(p,page){
     ${dc.length?sec('Documents',dc.length,`<div class="pdocs">${dc.slice(0,4).map(d=>`${d.u?`<a class="pdoc" href="${d.u}" target="_blank" rel="noopener">`:'<div class="pdoc">'}<span class="mono">${d.y||'—'}</span><span>${esc(d.n)}</span>${d.u?'<i>↗</i></a>':'</div>'}`).join('')}</div>${dc.length>4?`<button class="link pall" data-cdocs="${esc(p.n)}">All ${dc.length} documents</button>`:''}`):''}
     <div class="pacts">${page?'':`<button class="pact plain pfull" data-cpage="${p.id}"><span><b>Full company page</b><small>Everything on ${esc(p.n)}, year by year</small></span><span class="pgo">›</span></button>`}${dl.map(x=>`<button class="pact" data-deal="${DEALS.indexOf(x)}"><span class="xstamp">${COOP_STAMP}</span><span><b>${esc(x.title||x.target)}</b><small>Deal walkthrough</small></span></button>`).join('')}
       ${nst?`<button class="pact plain" data-newsq="${esc(p.n)}"><span><b>Stories in News</b><small>${nst} mention${nst===1?'':'s'}, newest first</small></span><span class="pgo">›</span></button>`:''}
-      ${ern?`<button class="pact plain" data-goto="docs:earnings"><span><b>Earnings</b><small>Releases, calls and filings</small></span><span class="pgo">›</span></button>`:''}</div>
+      ${ern?`<button class="pact plain" data-goto="docs:earnings:${esc(earnCo(p))}"><span><b>Earnings</b><small>Releases, calls and filings</small></span><span class="pgo">›</span></button>`:''}</div>
     ${p.src?`<p class="lbl msrc">${(p.srcs&&p.srcs.length>1?p.srcs.slice(0,3):[p.src]).map((u,i,a)=>`<a href="${u}" target="_blank" rel="noopener">${a.length>1?'Source '+(i+1):'Profile source'}</a>`).join(' · ')}${p.chk?` · Checked ${fmtD(p.chk,{month:'short',day:'numeric',year:'numeric'})}`:''}</p>`:''}`;
 }
 // every stored document that belongs to or names a company: filed under it, or its name/aliases in the title
 function pDocs(p){const names=[p.n,...(p.al||[])].filter(n=>n&&n.length>2),re=new RegExp('(^|[^A-Za-z0-9])('+names.map(reEsc).join('|')+')(?![A-Za-z0-9])','i');
   const own=d=>names.some(n=>String(d.c).toLowerCase()===n.toLowerCase());
   return DOCS.filter(d=>own(d)||re.test(d.n)).sort((a,b)=>(b.cur!==false)-(a.cur!==false)||(b.y||0)-(a.y||0))}
-function pEarn(p){return p.id==='ups'||p.id==='fedex'}
+function pEarn(p){return !!earnCo(p)}
+// the earnings series a company page leads to: UPS, FedEx, or FedEx Freight (whose rows sit in the FedEx panel)
+function earnCo(p){return p&&({ups:'UPS',fedex:'FedEx',fdxfreight:'FedEx Freight'})[p.id]||null}
 let playerBrowse='all';
 function renderPlayers(){
   renderQon();

@@ -183,3 +183,68 @@ def test_no_code_divides_revenue_by_packages():
     src = (ROOT / "pipeline" / "earnings.py").read_text() + (ROOT / "index.html").read_text()
     assert not re.search(r"rev(?:_m)?\s*/\s*\(?\s*(?:\w+\.)?(?:adv_k|pieces_m)", src)
     assert not re.search(r"(?:earnRev\(e\)|rev_m)\s*/\s*(?:v|e\.vol)\.(?:adv_k|pieces_m)", src)
+
+
+@pytest.fixture
+def page_at():
+    """The app in a real browser at a given width, served from this folder, with every outside request blocked."""
+    pw = pytest.importorskip("playwright.sync_api")
+    import functools, http.server, threading
+    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT))
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *a): pass
+    handler = functools.partial(Quiet, directory=str(ROOT))
+    srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    p = pw.sync_playwright().start()
+    b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
+
+    def open_(width):
+        pg = b.new_page(viewport={"width": width, "height": 860})
+        pg.errors = []
+        pg.on("pageerror", lambda e: pg.errors.append(str(e)))
+        pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
+        pg.add_init_script("try { localStorage.setItem('pw-tour', 'done') } catch (e) {}")
+        pg.goto(f"http://127.0.0.1:{srv.server_address[1]}/index.html", wait_until="load", timeout=60000)
+        pg.wait_for_function("() => typeof PL !== 'undefined' && Object.keys(PL).length > 100 && EARN_NEXT.length && EARN.some(e => e.vol)", timeout=60000)
+        return pg
+    yield open_
+    b.close(); p.stop(); srv.shutdown()
+
+
+def test_page_shows_the_figures_as_printed(page_at):
+    pg = page_at(390)
+    pg.evaluate("() => goTo('docs','earnings','UPS','Q2 2026')")
+    pg.wait_for_timeout(500)
+    det = pg.inner_text('.eglance[data-eco="UPS"] .egdet')
+    for want in ("$22.83B · +7.6% vs a year earlier", "19.0 million a day", "−3.7%", "U.S. domestic 16.0 million",
+                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%",
+                 "Stock, first trading day after the report: −6.6% (S&P 500 +0.2%)", "about a month −6.9% (S&P 500 +3.6%)", "Not investment advice"):
+        assert want in det, (want, det)
+    got = pg.evaluate("""() => {
+      // a FedEx quarter with packages a day but no stated day count, a FedEx Freight quarter, a transition period and a bare row
+      EARN.push({company:'FedEx', q:'T1', d:'2026-10-28', rev:21.5, period:{start:'2026-06-01', end:'2026-09-30', months:4}, comparable:false, revYoY:4.0,
+                 vol:{adv_k:16000, adv_prior_k:15500, days:null, pieces_m:null, us_adv_k:13000, rpp:null, src:'https://example.com/x', checked:'2026-10-30'}},
+                {company:'FedEx Freight', q:'F1', d:'2026-10-29', rev:2.1},
+                {company:'UPS', q:'Bare 1', d:'2026-10-27', rev:21.0});
+      goTo('docs','earnings','FedEx','T1');
+      const fx = document.querySelector('.eglance[data-eco="FedEx"] .egdet').innerText;
+      const ff = document.querySelector('.eglance[data-eco="FedEx Freight"]');
+      earnSelect('UPS', 'Bare 1');
+      const bare = document.querySelector('.eglance[data-eco="UPS"] .egdet').textContent;
+      earnView('adv');
+      const charts = [...document.querySelectorAll('.eglance')].map(g => [g.dataset.eco, g.querySelectorAll('.egbar').length,
+        [...g.querySelectorAll('.egbar')].map(b => b.dataset.eco).every(c => c === g.dataset.eco)]);
+      const hatched = !!document.querySelector('.eglance[data-eco="FedEx"] .egbar[data-ebar="T1"] .eghat') || null;
+      earnView('rev');
+      return {fx, ff: ff && {views: ff.querySelectorAll('[data-eview]').length, text: ff.innerText}, bare, charts,
+              hatched: !!document.querySelector('.eglance[data-eco="FedEx"] .egbar[data-ebar="T1"] .eghat'),
+              divider: !!document.querySelector('.eglance[data-eco="FedEx"] .egdiv')}
+    }""")
+    assert "16.0 million a day" in got["fx"] and "in the quarter" not in got["fx"]          # no stated days: no total
+    assert "4-month period; not compared with a year earlier" in got["fx"] and "+4.0%" not in got["fx"]
+    assert got["ff"]["views"] == 0 and "Packages" not in got["ff"]["text"]                 # FedEx Freight: no package view
+    assert "$21.0B" in got["bare"] and "Packages" in got["bare"] and "—" in got["bare"]   # a bare row still renders
+    assert all(same for _, _, same in got["charts"]) and len({c for c, _, _ in got["charts"]}) == len(got["charts"])
+    assert got["hatched"] and got["divider"]
+    assert pg.errors == []
