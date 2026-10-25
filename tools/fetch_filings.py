@@ -90,28 +90,58 @@ def sec(cik, slug, forms, want_ex99):
             if d: save(f"{slug}-{form.replace('/', '')}-{date}.txt", to_text(d.text), base + doc)
 
 
+def save_any(name, r, u):
+    try:
+        if r.content[:4] == b"%PDF": save(name + ".txt", pdf_text(r.content), u)
+        else: save(name + ".txt", to_text(r.text), u)
+    except Exception as e: LOG.append(f"parse fail {u} {e}")
+
+
+def slug(u):
+    return re.sub(r"[^\w.-]", "_", u.split("://")[-1])[-120:]
+
+
+def releases():
+    """The release and filing links already in data/earnings.json (carrier sites, not sec.gov)."""
+    for e in json.load(open("data/earnings.json")):
+        for k in ("release", "filing"):
+            u = e.get(k)
+            if u and "sec.gov" not in u:
+                r = get(u)
+                if r: save_any(f"{e['company'].replace(' ', '')}-{e['q'].replace(' ', '')}-{k}", r, u)
+
+
+def fedex_statbooks():
+    for fy in (25, 26):
+        for q in (1, 2, 3, 4):
+            for name in (f"FedEx-Q{q}-FY{fy}-Stat-Book.pdf", f"FedEx-Q{q}-FY{fy}-Stat-Book-Final.pdf", f"Q{q}-FY{fy}-Stat-Book.pdf"):
+                u = f"https://s21.q4cdn.com/665674268/files/doc_financials/20{fy}/q{q}/{name}"
+                r = get(u)
+                if r: save_any(f"FedEx-FY{fy}Q{q}-statbook", r, u); break
+
+
 def usps():
-    pages = ["https://about.usps.com/what/financials/financial-conditions-results-reports/",
-             "https://about.usps.com/what/financials/10k-reports/", "https://about.usps.com/what/financials/10q-reports/"]
-    links = set()
-    for p in pages:
-        r = get(p)
-        if not r: continue
-        for h in re.findall(r'href="([^"]+\.pdf)"', r.text, re.I):
-            u = urljoin(p, h)
-            if re.search(r"(10-?[kq]|fy-?20(2[4-6]))", u, re.I): links.add(u)
+    links = {"https://about.usps.com/newsroom/national-releases/2026/0205-usps-reports-first-quarter-fiscal-year-2026-results.pdf",
+             "https://about.usps.com/newsroom/national-releases/2026/0508-usps-reports-second-quarter-fiscal-year-2026-results.pdf",
+             "https://about.usps.com/newsroom/national-releases/2026/0807-usps-reports-third-quarter-fiscal-year-2026-results.pdf"}
+    for y in (2024, 2025, 2026):
+        for p in (f"https://about.usps.com/newsroom/national-releases/{y}/", f"https://about.usps.com/newsroom/national-releases/{y}/default.htm"):
+            r = get(p)
+            if not r: continue
+            for h in re.findall(r'href="([^"]+)"', r.text, re.I):
+                if re.search(r"reports?-(first|second|third|fourth|fiscal|quarter|.*results)", h, re.I) and re.search(r"results|fiscal", h, re.I):
+                    links.add(urljoin(p, h))
     LOG.append("USPS links: " + json.dumps(sorted(links)))
     for u in sorted(links):
-        if not re.search(r"202[4-6]", u): continue
         r = get(u)
-        if r:
-            try: save("USPS-" + re.sub(r"[^\w.-]", "_", u.split("/")[-1]) + ".txt", pdf_text(r.content), u)
-            except Exception as e: LOG.append(f"PDF fail {u} {e}")
+        if r: save_any("USPS-" + slug(u), r, u)
 
 
 if __name__ == "__main__":
     sec(1090727, "UPS", {"10-Q", "10-K", "8-K"}, True)
     sec(1048911, "FDX", {"10-Q", "10-K", "8-K"}, True)
+    releases()
+    fedex_statbooks()
     usps()
     (OUT / "_log.txt").write_text("\n".join(LOG))
     print("\n".join(LOG))
