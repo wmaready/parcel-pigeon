@@ -94,6 +94,53 @@
   "exclusive": true
  },
  {
+  "id": "rv5-ups-sbr-fuel",
+  "date": "2026-10-24",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "UPS adds a 5% fuel surcharge to Small Business Rates and raises them 4.5% on Dec. 21",
+  "sum": "UPS's Small Business Rates page says that from Dec. 21, 2026, Small Business Rates (SBR) rise 4.5% and a 5% fuel surcharge applies to all SBR shipments, domestic and international. The Additional Handling minimum billable weight also goes from 40 to 50 lb. The same page still advertises SBR rates as inclusive of the Delivery Area Surcharge and Fuel Surcharge.",
+  "syn": "UPS's Small Business Rates page says that from Dec. 21, 2026, SBR rates rise 4.5% and a 5% fuel surcharge applies to all SBR shipments, domestic and international. For an SBR customer the two combine to about 9.7% (1.045 x 1.05), before any agreement terms. SBR is advertised as including fuel and delivery area surcharges, so a separate fuel surcharge removes the program's main stated benefit. The Additional Handling minimum billable weight goes from 40 to 50 lb on the same date.",
+  "aff": [
+   {
+    "who": "UPS Small Business Rates shippers",
+    "what": "Rates up 4.5% plus a new 5% fuel surcharge from Dec. 21, 2026: about 9.7% combined before agreement terms."
+   },
+   {
+    "who": "Packages subject to Additional Handling",
+    "what": "Minimum billable weight goes from 40 to 50 lb on Dec. 21, 2026."
+   }
+  ],
+  "imp": "up",
+  "lvl": 3,
+  "plain": "Shippers on UPS Small Business Rates face about 9.7% more (1.045 x 1.05) from Dec. 21, 2026, before any agreement terms. SBR is advertised as including fuel and delivery area surcharges, so this removes the program's main stated benefit.",
+  "why": "Removes a stated SBR benefit: SBR rates are advertised as including the fuel surcharge, and from Dec. 21, 2026 a 5% fuel surcharge applies on top of a 4.5% rate increase.",
+  "tie": null,
+  "act": "2026-12-21",
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)",
+    "imp": "up"
+   }
+  ],
+  "src": "UPS Small Business Rates page",
+  "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+  "srcs": [
+   {
+    "src": "UPS Small Business Rates page",
+    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+    "checked": "2026-10-24"
+   }
+  ],
+  "auto": false,
+  "primary": true,
+  "added": "2026-10-25T12:00:00Z"
+ },
+ {
   "id": "a57a06c26359c",
   "date": "2026-10-23",
   "c": [
@@ -381,7 +428,7 @@
    },
    {
     "d": "2026-11-02",
-    "w": "UPS: Ground diesel price above which the table range extends in $0.09 ",
+    "w": "UPS: Ground diesel price above which the table range extends in $0.09 steps",
     "imp": "info"
    }
   ],
@@ -418,7 +465,7 @@
   "c": [
    "UPS"
   ],
-  "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes",
+  "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling minimum billable weight, ZIP changes",
   "sum": "UPS's Important Updates now say that, effective December 21, 2026, Daily Rates for Ground, Air and International services rise an average net 5.9%. The Additional Handling minimum billable weight goes from 40 to 50 lbs., and the Area Surcharge and zone ZIP lists change. Also new: an origin-ZIP surcharge on Ground and Ground Saver for Qualified customers (December 21, 2026 or later) and a fuel surcharge change effective November 2, 2026. Also: UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026.",
   "plain": "Shippers using UPS Ground, Air or International face an average net 5.9% rate increase. Actual cost depends on each shipper's agreement and profile. Shippers in affected ZIPs may see different Area Surcharges or zones, and Ground/Ground Saver shippers sending from certain origin ZIPs may pay an extra per-package surcharge.",
   "imp": "up",
@@ -535,18 +582,36 @@
   "dates": [
    {
     "d": "2026-12-21",
-    "w": "UPS: Average Daily Rate increase for UPS Ground, UPS Air and Internati",
-    "imp": "up"
-   },
-   {
-    "d": "2026-12-21",
-    "w": "UPS: Additional Handling minimum billable weight",
-    "imp": "up"
-   },
-   {
-    "d": "2026-12-21",
-    "w": "UPS: Area Surcharge ZIP code list",
-    "imp": "up"
+    "w": "UPS 2027 rate increase: 5.9% average (Ground, Air, International)",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "UPS",
+     "pct": 5.9,
+     "src": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    "fees": [
+     [
+      "UPS",
+      "Additional Handling minimum billable weight",
+      "40 lb to 50 lb"
+     ],
+     [
+      "UPS",
+      "Area Surcharge ZIP list",
+      "Changes"
+     ],
+     [
+      "UPS",
+      "ZIP codes aligned to zones",
+      "Change"
+     ],
+     [
+      "UPS",
+      "Origin-ZIP surcharge, Ground and Ground Saver (Qualified customers)",
+      "Amount not yet stated"
+     ]
+    ]
    }
   ],
   "kind": "Alert",
@@ -1498,13 +1563,9 @@
   "act": null,
   "dates": [],
   "added": "2026-10-21T13:08:44Z",
-  "src": "About Amazon",
-  "url": "https://www.aboutamazon.com/company-news/amazon-germany-investment",
+  "src": "Supply Chain 24/7",
+  "url": "https://www.supplychain247.com/article/looking_at_amazons_push_to_open_its_logistics_network_to_all/Data_Warehouse",
   "srcs": [
-   {
-    "src": "About Amazon",
-    "url": "https://www.aboutamazon.com/company-news/amazon-germany-investment"
-   },
    {
     "src": "Supply Chain 24/7",
     "url": "https://www.supplychain247.com/article/looking_at_amazons_push_to_open_its_logistics_network_to_all/Data_Warehouse"
@@ -1926,39 +1987,6 @@
   "exclusive": true,
   "unconf": true,
   "tried": "2026-10-22"
- },
- {
-  "id": "a418fdd3e6f05",
-  "date": "2026-10-18",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "News",
-  "title": "Amazon close to launching Shipping With Amazon, WSJ report says",
-  "sum": "Mashable, citing a Wall Street Journal report based on anonymous sources, said Amazon is close to launching Shipping With Amazon, a national delivery service. It would compete with FedEx, UPS and USPS, launching first in Los Angeles after a trial that began over a year ago, with more cities later. The report said Amazon plans to undercut competitors' prices.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service yet; the service has not launched, and the article cites no Amazon statement. If launched, it would first be available in Los Angeles.",
-  "why": "Report describes a possible Amazon service to ship anything anywhere, priced below FedEx, UPS and USPS, according to anonymous sources.",
-  "score": 7,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T04:48:44Z",
-  "src": "Mashable",
-  "url": "https://mashable.com/article/amazon-may-soon-launch-delivery-service",
-  "srcs": [
-   {
-    "src": "Mashable",
-    "url": "https://mashable.com/article/amazon-may-soon-launch-delivery-service"
-   }
-  ],
-  "auto": true,
-  "thread": "amazon-network-buildout",
-  "upd": 5,
-  "new": "Mashable, citing a Wall Street Journal report with anonymous sources, says Shipping With Amazon would launch first in Los Angeles, expand to more cities, and be priced below competitors; no dated price or service change for shippers is stated.",
-  "exclusive": true
  },
  {
   "id": "ad0f07f43ec5e",
@@ -3578,7 +3606,7 @@
   "cat": "Market reports",
   "kind": "Analysis",
   "title": "Freight index projects record ground and express parcel rates in Q4",
-  "sum": "A quarterly industry freight index released Oct. 13, 2026 projects the ground parcel rate per package at 43.3% above its January 2018 baseline in Q4, up 5.8% year over year. The express index is projected at 20.3%, up 13.8% year over year. The analysis ties the increases to fuel surcharges, peak fees and capacity limits.",
+  "sum": "A quarterly industry freight index released Oct. 13, 2026 projects the ground parcel rate per package at 43.3% above its January 2018 baseline in Q4, up 5.8% year over year. The express index is projected at 20.3%, up 13.8% year over year. The analysis ties the increases to fuel surcharges, peak fees and capacity limits. The analysis comes from investment bank TD Cowen and a parcel analytics firm, FreightWaves reported.",
   "imp": "up",
   "lvl": 2,
   "plain": "According to the analysis, shippers face record ground and express parcel costs in Q4 2026. For packages in ZIP codes moved from extended to remote DAS, the fee rises to $17.75 when FedEx's rate increase takes effect on Jan. 4, 2027.",
@@ -3602,6 +3630,14 @@
    {
     "src": "Supply Chain Dive",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcTRGM3UyOEJMNTJjNjVkQ1RTOUVzdG1MSTdVUkhqRG9HeU8xV1J2QXFqTmlOSGQwMlltVjVzbTZYamNwRFdpbV83QmQtbWkyeVJzWWw1RHVDWGduZ0JMOUU0dUNsTFNKQjRnSTk0SGZGMEk4LUlmRmJOUW5hMU83TzJqNVhqNzAyUEhPb1FsaExKT0RpcEhLVVRwWkg4RkVidWE5RXUyYWg?oc=5"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up"
    }
   ],
   "auto": true,
@@ -3674,39 +3710,6 @@
   "exclusive": true
  },
  {
-  "id": "a25504a8149d3",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Industry analysis projects record parcel prices for Q4 2026",
-  "sum": "An industry analysis released Oct. 13, 2026 projects the ground parcel rate per package index at 43.3% above its January 2018 baseline in Q4, up 5.8% year over year. It projects the express index at 20.3%, up 13.8%. The analysis ties the rise to fuel surcharges, peak fees and constrained capacity.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "According to the analysis, ground and express parcel costs are projected to reach record highs in Q4 2026. Shippers also face a FedEx delivery-area reclassification that takes effect Jan. 4, 2027.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-15T19:02:25Z",
-  "src": "Yahoo Finance",
-  "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html",
-  "srcs": [
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/economy/articles/study-high-fuel-costs-shipping-140000692.html"
-   },
-   {
-    "src": "American Journal of Transportation",
-    "url": "https://www.ajot.com/news/high-fuel-costs-shipping-capacity-constraints-to-drive-pricey-holiday-peak-season"
-   }
-  ],
-  "auto": true,
-  "new": "An industry analysis projects the ground parcel index at 43.3% above its January 2018 baseline and the express index at 20.3% in Q4 2026, both records. It says the fuel surcharge reached 30% in September 2026 with diesel at $6.53 per gallon, so shippers face higher peak-period costs on top of the dated surcharges already filed.",
-  "exclusive": true
- },
- {
   "id": "a4f6519fdbb1c",
   "date": "2026-10-13",
   "c": [
@@ -3763,41 +3766,15 @@
   "edge": true
  },
  {
-  "id": "a6a52b69d2dfc",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Parcel costs near record in 2026 as fuel surcharges and fees climb, analysis says",
-  "sum": "An industry analysis released Tuesday by investment bank TD Cowen and a parcel analytics firm says 2026 is on track to be the most expensive year on record for parcel shipping. It says the average fuel surcharge rose from 7.75% of the transportation rate in the first quarter of 2021 to 30% in September, when diesel peaked at $6.53 per gallon. The ground parcel rate index is projected at 43.3% above its January 2018 baseline in the fourth quarter.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "According to the analysis, shippers face higher fuel surcharges and more accessorial fees across the large carriers. The article says FedEx's 5.9% average general rate increase is effective Jan. 4, and that the delivery area surcharge for ZIP codes moved from extended to remote rises to $17.75.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/parcel-shipping-costs-approach-record-high-as-extra-charges-stack-up"
-   }
-  ],
-  "auto": true
- },
- {
   "id": "a6cc2420ad66e",
   "date": "2026-10-13",
   "c": [
    "USPS"
   ],
   "cat": "Peak season",
-  "kind": "News",
-  "title": "USPS sets Dec. 17 Ground Advantage deadline for Christmas delivery",
-  "sum": "USPS has released its 2026 holiday shipping deadlines, WSYR-TV reported. For delivery before Dec. 25 in the lower 48 states, Ground Advantage and First-Class items are to be sent by Dec. 17, Priority Mail by Dec. 18 and Priority Mail Express by Dec. 19.",
+  "kind": "Reminder",
+  "title": "USPS recommends Dec. 17 Ground Advantage send-by date for the lower 48",
+  "sum": "USPS announced its recommended 2026 holiday send-by dates on Sept. 22, and WSYR-TV repeated them in October. For delivery before Dec. 25 in the lower 48 states, Ground Advantage and First-Class items are to be sent by Dec. 17, Priority Mail by Dec. 18 and Priority Mail Express by Dec. 19. Ground Advantage to Alaska, Hawaii, Puerto Rico and the territories should go by Dec. 16.",
   "imp": "info",
   "lvl": 2,
   "plain": "Shippers using USPS face recommended send-by dates of Dec. 17 (Ground Advantage, First-Class), Dec. 18 (Priority Mail) and Dec. 19 (Priority Mail Express) for delivery before Dec. 25 in the lower 48 states. No change to rates is reported.",
@@ -3836,9 +3813,14 @@
    }
   ],
   "added": "2026-10-15T04:46:44Z",
-  "src": "AOL.com",
-  "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html",
+  "src": "USPS Newsroom",
+  "url": "https://about.usps.com/newsroom/national-releases/2026/0922-usps-recommends-2026-holiday-mailing-shipping-dates.htm",
   "srcs": [
+   {
+    "src": "USPS Newsroom",
+    "url": "https://about.usps.com/newsroom/national-releases/2026/0922-usps-recommends-2026-holiday-mailing-shipping-dates.htm",
+    "checked": "2026-10-24"
+   },
    {
     "src": "AOL.com",
     "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html"
@@ -3846,8 +3828,8 @@
   ],
   "auto": true,
   "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
+  "tried": "2026-10-22",
+  "ann": "2026-09-22"
  },
  {
   "id": "a89d7e4beebd9",
@@ -5987,6 +5969,35 @@
   "upd": 7,
   "new": "DoorDash, which announced its Part 135 certification on July 29, is reported as the eighth certified operator and says commercial flights are expected in fall 2026, but no markets or customer fees have been announced, so nothing changes for shippers yet.",
   "exclusive": true
+ },
+ {
+  "id": "rv5-fedex-freight-spin-done",
+  "date": "2026-06-01",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "FedEx completes FedEx Freight spin-off",
+  "sum": "FedEx completed the FedEx Freight spin-off on June 1, 2026. FedEx Freight is an independent public company (NYSE: FDXF). FedEx kept 19.9% at separation.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "FedEx Freight now trades on its own as FDXF; FedEx kept a 19.9% stake at separation.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "FedEx Newsroom",
+  "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+  "srcs": [
+   {
+    "src": "FedEx Newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+    "checked": "2026-10-24"
+   }
+  ],
+  "auto": false,
+  "primary": true,
+  "thread": "fedex-freight-spin"
  },
  {
   "id": "a13f12c1da7be",
