@@ -5,6 +5,7 @@ Writes data/news.json (live stories) and data/review.json (things a person shoul
 """
 import datetime as dt, difflib, json, os, re, sys, urllib.parse
 import feedparser, requests, trafilatura, yaml
+from common import programs_for, program_brief, apply_benefit_rule
 from common import dedupe_live, record_deal, deal_tokens, deals_merged, DEAL_ENDED, ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_FAST, MODEL_WRITE, is_primary, primary_first, clock_worthy, tier, _words, not_a_source, cycle_of, kind_of
 from scoop import is_covered, notify, PRESS, ask, big, keywords
 
@@ -401,8 +402,42 @@ def gnews(q):
     return "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-US&gl=US&ceid=US:en"
 
 
-# SEC asks automated readers to name themselves with a contact address
-SEC_UA = {"User-Agent": "ParcelPigeon parcel-news reader " + (__import__("os").environ.get("SEC_CONTACT") or "bot@users.noreply.github.com")}
+# SEC asks automated readers to name themselves with a real contact address. The old fallback (a GitHub no-reply
+# address) was refused: 117 failed reads in a row by Oct 24, 2026, so 8-K filings were never read.
+PLACEHOLDER_CONTACTS = ("noreply", "no-reply", "example.com", "example.org", "users.noreply.github.com")
+
+
+def sec_contact():
+    """The SEC_CONTACT secret when it holds a real e-mail address, else None."""
+    c = (os.environ.get("SEC_CONTACT") or "").strip()
+    if not re.search(r"[^@\s]+@[^@\s]+\.[a-z]{2,}", c, re.I) or any(p in c.lower() for p in PLACEHOLDER_CONTACTS):
+        return None
+    return c
+
+
+def sec_ua():
+    """Headers for SEC reads, built at call time from SEC_CONTACT. Filing feeds are skipped without a real contact (see
+    collect); a filing page linked from elsewhere is still tried with the generic name."""
+    return {"User-Agent": "ParcelPigeon parcel-news reader " + (sec_contact() or "bot@users.noreply.github.com")}
+
+
+def sec_contact_missing():
+    """No real SEC_CONTACT: a loud ::error annotation every run, and at most one GitHub issue a day. Never stops the run."""
+    print("::error title=SEC_CONTACT missing::SEC filings are not being read. Add a repository secret SEC_CONTACT holding a "
+          "real e-mail address (Settings > Secrets and variables > Actions); the SEC refuses readers without one.")
+    st, day = load("crash_alert.json", {}), dt.date.today().isoformat()
+    if st.get("SEC_CONTACT") == day:
+        return
+    try:
+        notify("Parcel Pigeon: SEC_CONTACT secret missing, SEC filings not read",
+               "The SEC asks automated readers to give a real contact e-mail in their User-Agent and refuses the rest, so "
+               "company 8-K filings (UPS, FedEx, Amazon, Pitney Bowes) are skipped.\n\nFix: in GitHub, Settings > Secrets and "
+               "variables > Actions > New repository secret, name `SEC_CONTACT`, value: a real e-mail address you read.",
+               labels=("audit",))
+    except Exception as e:
+        print(f"SEC contact alert failed: {e}", file=sys.stderr)
+    st["SEC_CONTACT"] = day
+    save("crash_alert.json", st)
 
 
 # what an 8-K's item numbers mean, so a filing's headline says what it is about
@@ -413,7 +448,7 @@ SEC_ITEMS = {"1.01": "a material agreement", "1.02": "an ended agreement", "2.01
 
 def edgar_items(url, company, cutoff):
     """An SEC company's recent 8-K filings from data.sec.gov (the SEC's structured filings data), as intake items."""
-    j = requests.get(url, headers=SEC_UA, timeout=25)
+    j = requests.get(url, headers=sec_ua(), timeout=25)
     j.raise_for_status()
     rec = (j.json().get("filings") or {}).get("recent") or {}
     cik = str(int(re.search(r"CIK(\d+)", url).group(1)))
@@ -446,9 +481,16 @@ def collect(cfg, primary_only=False):
         feeds += [(f["name"], f["url"], True, f.get("house", False), "rss", None) for f in cfg.get("direct", [])] + \
                  [(q, gnews(q), False, False, "gnews", None) for q in cfg.get("discovery", [])]
     health, today = load("feed_health.json", {}), dt.date.today().isoformat()
+    warned = False
     for name, url, direct, house, kind, company in feeds:
         fh = health.setdefault(name, {"direct": direct})
         if kind == "edgar":
+            if not sec_contact():
+                # without a real contact the SEC refuses the read: say so loudly instead of failing quietly every hour
+                if not warned:
+                    sec_contact_missing(); warned = True
+                fh.update({"err": "SEC_CONTACT secret missing; not read", "fails": fh.get("fails", 0) + 1, "last_try": today})
+                continue
             try:
                 got = edgar_items(url, company, cutoff)
             except Exception as e:
@@ -533,13 +575,13 @@ def gnews_decode(url):
 def edgar_doc(index_url):
     """An SEC filing's index page lists its documents; the press release is exhibit 99 (else the main form)."""
     import requests
-    page = requests.get(index_url, headers=SEC_UA, timeout=25).text
+    page = requests.get(index_url, headers=sec_ua(), timeout=25).text
     docs = re.findall(r'href="(/Archives/edgar/data/[^"]+\.htm)"', page, re.I)
     pick = next((d for d in docs if re.search(r"ex-?99", d, re.I)), docs[0] if docs else None)
     if not pick:
         return None, index_url
     u = "https://www.sec.gov" + pick
-    return trafilatura.extract(requests.get(u, headers=SEC_UA, timeout=25).text, include_tables=True) or None, u
+    return trafilatura.extract(requests.get(u, headers=sec_ua(), timeout=25).text, include_tables=True) or None, u
 
 
 CLAUDE_READS = int(os.environ.get("PP_CLAUDE_READS") or 6)     # pages per run read through Claude's web fetch tool
@@ -579,6 +621,102 @@ def claude_read(url):
     return None
 
 
+META = {}                # final page address -> page_meta(), filled by article_text for the checks below
+STALE_DAYS = 30          # B16: an article published more than this long before we found it isn't news
+
+
+BOILER = re.compile(r"\b(subscribe|sign (up|in)|log ?in|newsletter|cookies?|advertis|create (a|an) (free )?account|"
+                    r"already a (subscriber|member)|enable javascript|privacy policy)\b", re.I)
+
+
+def page_meta(html):
+    """The article's own publish date (article:published_time, or JSON-LD datePublished), its title and its first paragraph."""
+    html = html or ""
+    pub = None
+    m = re.search(r'<meta[^>]+(?:property|name|itemprop)=["\'](?:article:published_time|og:published_time|datePublished)["\'][^>]*'
+                  r'content=["\'](\d{4}-\d{2}-\d{2})', html, re.I) or \
+        re.search(r'<meta[^>]+content=["\'](\d{4}-\d{2}-\d{2})[^"\']*["\'][^>]+(?:property|name|itemprop)=["\']'
+                  r'(?:article:published_time|og:published_time|datePublished)["\']', html, re.I) or \
+        re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', html)
+    if m:
+        pub = m.group(1)
+    # a quoted value ends at its own kind of quote: "UPS's new surcharge" keeps its apostrophe
+    val = r'content=(?:"([^"]*)"|\'([^\']*)\')'
+    t = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+' + val, html, re.I)
+    tt = (t.group(1) if t.group(1) is not None else t.group(2)) if t else None
+    if not tt:
+        t2 = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+        tt = t2.group(1) if t2 else ""
+    d = re.search(r'<meta[^>]+(?:name|property)=["\'](?:description|og:description)["\'][^>]+' + val, html, re.I)
+    dd = (d.group(1) if d.group(1) is not None else d.group(2)) if d else ""
+    first = ""
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", html, re.I | re.S):
+        p = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", p)).strip()
+        if BOILER.search(p[:120]):
+            continue                              # a subscribe, cookie or sign-in banner is not the article's opening
+        if len(p) >= 60:
+            first = p
+            break
+    import html as _h
+    clean = lambda s: _h.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s or ""))).strip()
+    return {"published": pub, "title": clean(tt), "first": clean(first), "desc": clean(dd)}
+
+
+NAME_SKIP = {"the", "a", "an", "new", "says", "said", "report", "reports", "update", "ceo", "cfo", "coo", "us", "u.s", "usa", "inc",
+             "corp", "co", "llc", "ltd", "wsj", "q1", "q2", "q3", "q4", "how", "why", "what", "who", "when", "after", "as", "in", "on",
+             "for", "to", "of", "and", "with", "from", "its", "it", "is", "will", "could", "may", "exclusive", "breaking", "watch"}
+
+
+def key_names(title):
+    """The names a headline is about (people, companies, places): its capitalized words, possessives trimmed."""
+    out = []
+    for w in re.findall(r"[A-Z][A-Za-z0-9&.\-]*(?:'s|’s)?", title or ""):
+        w = re.sub(r"(?:'s|’s)$", "", w).strip(".-")
+        if len(w) >= 3 and w.lower() not in NAME_SKIP and w not in out:
+            out.append(w)
+    return out
+
+
+def content_verified(meta, title):
+    """B17: the page's title, description or first paragraph names every key name in the story's headline. None when the
+    page couldn't be read as HTML (nothing to check), False when a name is missing."""
+    if not meta or not (meta.get("title") or meta.get("first")):
+        return None
+    hay = " ".join([meta.get("title") or "", meta.get("desc") or "", meta.get("first") or ""]).lower()
+    names = key_names(title)
+    if not names:
+        return None
+    hits = sum(bool(re.search(r"(?<![a-z0-9])" + re.escape(n.lower()) + r"(?![a-z0-9])", hay)) for n in names)
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z'’]+", title or "") if w.lower() not in NAME_SKIP]
+    if words and sum(w[0].isupper() for w in words) / len(words) > 0.6:
+        return hits * 2 >= len(names)       # a Title Case headline capitalizes ordinary words too: half its names will do
+    return hits == len(names)
+
+
+def vet_sources(texts, srcs, today=None):
+    """B16 and B17, before a story is written. A source page whose own publish date is more than STALE_DAYS before we found
+    it, or whose title/first paragraph doesn't name the headline's people, companies and places, is left out (its link too).
+    Returns (texts, srcs, problems) with one line per page left out."""
+    today = dt.date.fromisoformat(today) if today else dt.date.today()
+    keep, bad_urls, problems = [], set(), []
+    for it, u, tx in texts:
+        meta = META.get(u) or {}
+        pub = meta.get("published")
+        try:
+            age = (today - dt.date.fromisoformat(pub)).days if pub else None
+        except ValueError:
+            age = None
+        if age is not None and age > STALE_DAYS:
+            problems.append(f"old article: {u} was published {pub}, {age} days before it was found ({today.isoformat()})")
+            bad_urls.add(u); continue
+        if content_verified(meta, it.get("title")) is False:
+            problems.append(f"content_verified:false: {u} ('{meta.get('title', '')[:80]}') doesn't name "
+                            + ", ".join(key_names(it.get("title"))))
+            bad_urls.add(u); continue
+        keep.append((it, u, tx))
+    return keep, [s for s in srcs if s.get("url") not in bad_urls], problems
+
+
 def article_text(url):
     try:
         if "sec.gov/Archives/edgar" in (url or "") and url.rstrip("/").endswith(("-index.htm", "-index.html")):
@@ -591,10 +729,15 @@ def article_text(url):
         r = requests.get(url, headers=BROWSER, timeout=25, allow_redirects=True)
         if "news.google.com" in r.url:
             return None, r.url
+        if r.status_code < 400 and isinstance(r.text, str):
+            META[r.url] = page_meta(r.text)          # the page's own date, title and first paragraph (B16, B17)
         text = trafilatura.extract(r.text, include_comments=False) if r.status_code < 400 else None
         from fetch import is_blocked
         if not text or len(text) < 400 or is_blocked(text):
-            text = claude_read(r.url) or text     # turned away or empty: try once more from Anthropic's servers
+            got = claude_read(r.url)              # turned away or empty: try once more from Anthropic's servers
+            if got:
+                META.pop(r.url, None)             # the meta read above was the bot wall's, not the article's
+            text = got or text
         return (text or None), r.url
     except Exception:
         return (claude_read(url) if url and "news.google.com" not in url else None), url
@@ -1206,6 +1349,19 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
                 if text and len(text) >= 400:
                     texts.append((item, final_url, text))
                 srcs.append({"src": item["src"], "url": final_url})
+            # B16 + B17: an old article found today, or a link to a page about something else, never makes a story
+            had = len(texts)
+            texts, srcs, problems = vet_sources(texts, srcs)
+            if had and not texts:
+                item = members[0][0]
+                kind = "old-article" if all(p.startswith("old article") for p in problems) else "content-mismatch"
+                review.insert(0, {"type": kind, "title": item["title"], "url": item["url"], "src": item["src"], "date": item["date"],
+                                  "content_verified": False if kind == "content-mismatch" else None,
+                                  "note": "Kept out of the feed: " + "; ".join(problems)[:400] +
+                                  (" Publish it by hand only as a clearly labeled Reminder or Background item." if kind == "old-article" else
+                                   " Find the page that really carries this story, or delete this entry.")})
+                print(f"  kept out ({kind}): {item['title'][:80]}")
+                continue
             if not texts:
                 item = members[0][0]
                 review.insert(0, {"type": "headline-only", "title": item["title"], "url": srcs[0]["url"], "src": item["src"], "date": item["date"], "retried": bool(item.get("retry")),
@@ -1215,6 +1371,10 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
             v = members[0][1]
             prompt = "\n\n".join(f"ARTICLE {n+1}\nSource: {it['src']}\nPublished: {it['date']}\nHeadline: {it['title']}\n\n{tx[:9000 // len(texts)]}"
                                    for n, (it, _, tx) in enumerate(texts))
+            # B3: what the named programs advertise as included (data/programs.json), so a removed perk is recognized
+            progs = [p for c in (v.get("carriers") or []) for p in programs_for(c, prompt)]
+            if progs:
+                prompt += "\n\n" + program_brief(progs)
             tkey = (v.get("thread") or "").strip().lower()[:60] or None
             if tkey and not re.match(r"^[a-z0-9][a-z0-9-]{2,59}$", tkey):
                 tkey = None
@@ -1319,6 +1479,9 @@ def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lan
             # to the summary and plain-English effect (which passed) instead of holding the story back
             if numbers_supported(page_text(story), alltext):
                 story.pop("syn", None); story.pop("aff", None)
+            # B3 rule, in code: a change that adds a charge the program says is included is a removed benefit
+            if progs:
+                apply_benefit_rule(story, progs, text=" ".join([story["title"], story["sum"], story["plain"]]))
             # on-cycle or off-cycle, judged by the date the change takes effect (never the date it was announced)
             if story["cat"] in ("Pricing & GRI", "Peak season", "Fees & rules", "Fuel", "Postal") and story.get("act") and story["imp"] in ("up", "down"):
                 cyc = cycle_of((story["c"] or [""])[0], kind_of(story["title"], story["cat"]), story["act"], story.get("ann") or story["date"])

@@ -44,7 +44,9 @@ def oilprice(fuel, carrier, key):
     base = f"https://api.oilpriceapi.com/v1/fuel-surcharge/parcel/{carrier.lower()}"
     hdr = {"Authorization": f"Token {key}"}
     import requests
-    latest = requests.get(base + "/latest", headers=hdr, timeout=20).json().get("data", {})
+    r = requests.get(base + "/latest", headers=hdr, timeout=20)
+    r.raise_for_status()                      # a 401/403/500 is a failure, not an empty week
+    latest = r.json().get("data", {})
     cur = fuel.setdefault("current", {}).setdefault(carrier, {})
     for row in latest.get("service_levels", latest if isinstance(latest, list) else []):
         name = (row.get("service_level") or row.get("name") or "").lower()
@@ -52,7 +54,11 @@ def oilprice(fuel, carrier, key):
         if val is None: continue
         if "ground" in name and "international" not in name: cur["ground"] = float(val)
         elif ("air" in name or "express" in name) and "international" not in name: cur.setdefault("air", float(val))
-    hist = requests.get(base + "/history", params={"service_level": "ground"}, headers=hdr, timeout=20).json().get("data", {}).get("history", [])
+    r = requests.get(base + "/history", params={"service_level": "ground"}, headers=hdr, timeout=20)
+    r.raise_for_status()
+    hist = r.json().get("data", {}).get("history", [])
+    if not hist:
+        raise RuntimeError("the service returned no weekly history")
     h = fuel.setdefault("hist", {}).setdefault(carrier, {})
     for w in hist:
         h[w["effective_date"][:10]] = float(w["surcharge_percent"])
@@ -110,15 +116,37 @@ def eia_spot(fuel):
     return n
 
 
+def loud(msg):
+    """A failure a person must see: a GitHub Actions error annotation (shown on the run page) plus the log line."""
+    print(f"::error title=Fuel surcharges::{msg}", file=sys.stderr)
+
+
+def carriers(fuel):
+    """UPS and FedEx weekly fuel. A missing key or a failing service is logged loudly and recorded in fuel.json "health",
+    never skipped quietly: without it the app keeps showing the last confirmed week (marked as such)."""
+    key = os.environ.get("OILPRICE_API_KEY")
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    health = fuel.setdefault("health", {})
+    for c in ("UPS", "FedEx"):
+        if not key:
+            loud(f"OILPRICE_API_KEY is not set, so {c} weekly fuel was NOT updated. Add the secret in GitHub (Settings > Secrets).")
+            health[c] = {"ok": False, "why": "OILPRICE_API_KEY not set", "at": now, "last_ok": (health.get(c) or {}).get("last_ok")}
+            continue
+        try:
+            n = oilprice(fuel, c, key)
+            print(c, n)
+            health[c] = {"ok": True, "at": now, "last_ok": now}
+        except Exception as e:
+            loud(f"{c} weekly fuel was NOT updated: the fuel-price service failed ({str(e)[:200]}).")
+            health[c] = {"ok": False, "why": str(e)[:200], "at": now, "last_ok": (health.get(c) or {}).get("last_ok")}
+
+
 def main():
     fuel = load("fuel.json", {})
     for name, fn in [("OnTrac", lambda: ontrac(fuel)), ("DHL Express", lambda: dhl_express(fuel)), ("EIA spot (jet, WTI, Brent)", lambda: eia_spot(fuel))]:
         try: print(name, fn())
         except Exception as e: print(f"{name} failed: {e}", file=sys.stderr)
-    if os.environ.get("OILPRICE_API_KEY"):
-        for c in ("UPS", "FedEx"):
-            try: print(c, oilprice(fuel, c, os.environ["OILPRICE_API_KEY"]))
-            except Exception as e: print(f"{c} failed: {e}", file=sys.stderr)
+    carriers(fuel)
     if os.environ.get("EIA_API_KEY"):
         try: print("diesel", eia(fuel, os.environ["EIA_API_KEY"]))
         except Exception as e: print(f"diesel failed: {e}", file=sys.stderr)

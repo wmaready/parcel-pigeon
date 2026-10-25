@@ -41,7 +41,21 @@
      }
     },
     {
-     "run": "pip install -r requirements.txt playwright && python -m playwright install --with-deps chromium"
+     "name": "Install",
+     "id": "pw",
+     "run": "pip install -r requirements.txt\necho \"version=$(python -c 'import importlib.metadata as m; print(m.version(\"playwright\"))')\" >> \"$GITHUB_OUTPUT\"\n"
+    },
+    {
+     "name": "Cache the Playwright browser",
+     "uses": "actions/cache@v4",
+     "with": {
+      "path": "~/.cache/ms-playwright",
+      "key": "playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}"
+     }
+    },
+    {
+     "name": "Install the Playwright browser (Doc watch page pictures)",
+     "run": "python -m playwright install --with-deps chromium\n"
     },
     {
      "name": "Make sure labels exist",
@@ -64,7 +78,7 @@
       "SEC_CONTACT": "${{ secrets.SEC_CONTACT }}"
      },
      "working-directory": "pipeline",
-     "run": "python publish.py || echo \"::warning::publish.py failed\"\npython watch.py || echo \"::warning::watch.py failed\"\npython docwatch.py --batch 15 || true\n# company and regulator sources (SEC filings, Federal Register, press wires, newsrooms) every hour, to be first\npython news.py --primary || echo \"::warning::primary news sweep failed\"\nnode export_seed.js ../index.html ../data/seed.json || true\npython alerts.py || echo \"::warning::alerts.py failed\"\npython audit.py --offline || true\n# the rate clock as a calendar feed (data/rates.ics)\npython ratecal.py || echo \"::warning::ratecal.py failed\"\n"
+     "run": "# B11: every robot step runs; a failure is recorded as an ::error annotation, the run carries on (data is saved and the\n# site deployed), and the last step of the job turns the run red. Nothing is hidden behind '|| true' any more.\nset +e\nFAILED=\"\"\nstep() { name=\"$1\"; shift; \"$@\" && return 0; echo \"::error title=$name failed::$name exited with an error; the run carried on without it\"; FAILED=\"$FAILED $name;\"; return 1; }\nstep publish.py python publish.py\nstep watch.py python watch.py\nstep docwatch.py python docwatch.py --batch 15\n# company and regulator sources (SEC filings, Federal Register, press wires, newsrooms) every hour, to be first\nstep \"news.py --primary\" python news.py --primary\nstep \"seed export\" node export_seed.js ../index.html ../data/seed.json\nstep alerts.py python alerts.py\nstep \"audit.py --offline\" python audit.py --offline\n# the rate clock as a calendar feed (data/rates.ics)\nstep ratecal.py python ratecal.py\necho \"PP_FAILED=$FAILED\" >> \"$GITHUB_ENV\"\n"
     },
     {
      "name": "Save",
@@ -72,7 +86,7 @@
     },
     {
      "name": "Leave raw page copies out of the public site",
-     "run": "rm -rf data/snapshots data/docwatch data/usage.json data/usage_sweep.json data/due.json"
+     "run": "rm -rf data/docwatch data/usage.json data/usage_sweep.json data/due.json\n# raw page text stays out of the public site; the dated page pictures (data/snapshots/<doc>/<date>.jpg) are served\nfind data/snapshots -type f ! -name '*.jpg' -delete 2>/dev/null || true\n"
     },
     {
      "uses": "actions/configure-pages@v5"
@@ -86,6 +100,11 @@
     {
      "id": "deploy",
      "uses": "actions/deploy-pages@v4"
+    },
+    {
+     "name": "Turn the run red if a robot step failed",
+     "if": "always()",
+     "run": "if [ -n \"$PP_FAILED\" ]; then echo \"::error title=Robot steps failed::$PP_FAILED Data was still saved and the site deployed.\"; exit 1; fi\n"
     }
    ]
   }

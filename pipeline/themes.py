@@ -12,7 +12,8 @@ the almanac gains an event, and only state facts and figures found in the almana
 Usage: python themes.py [--force]
 """
 import datetime as dt, json, re, sys
-from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, numbers_supported, cycle_of
+from common import load, save, claude, parse_json, MODEL_FAST, MODEL_WRITE, numbers_supported, cycle_of, stated_years, doc_year, \
+    is_primary, programs_for
 
 BIG = ("UPS", "FedEx", "USPS")
 PRICE_CATS = ("Pricing & GRI", "Peak season", "Fees & rules", "Guide changes", "Fuel", "Postal")
@@ -125,12 +126,170 @@ def patterns(alm, force=False):
     return True
 
 
+# ---------------------------------------------------------------- B6 / B14: "not yet announced" never outlives the announcement
+# When UPS announced its 2027 increase (Oct 22-23, 2026), the Docs note "Not yet published as of Oct 9, 2026", the story
+# "UPS has not yet announced 2027 rates" and the almanac entry "UPS 2027 general rate increase not yet announced" all
+# stayed up, so Ask Coop contradicted the rate clock. Each run, a Pricing & GRI story for a carrier and rate year closes
+# the matching placeholders, or sends them to data/review.json when it can't close them from sourced facts.
+WAITING = re.compile(r"\b(still waiting|waiting (on|for)|not yet (been )?(announced|published|posted)|yet to (announce|publish|post)|"
+                     r"has(n't| not) (yet )?(announced|published|posted))\b", re.I)
+GRI_TEXT = re.compile(r"general rate|\bGRI\b|average (net )?(rate )?increase|rates? (increase|rise)|rate increase", re.I)
+
+
+def nice(d):
+    try:
+        return dt.date.fromisoformat(str(d)[:10]).strftime("%b %-d, %Y")
+    except Exception:
+        return None
+
+
+def rate_year(s):
+    """The rate year a price story is about. Increases that take effect from mid-December are the next year's rates
+    (UPS's 2026 rates took effect Dec 22, 2025); otherwise the effective year, or the one year the headline states."""
+    act = str(s.get("act") or "")
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", act):
+        y, m, d = int(act[:4]), int(act[5:7]), int(act[8:10])
+        return y + 1 if (m == 12 and d >= 15) else y
+    ys = stated_years(s.get("title"))
+    return ys[0] if len(ys) == 1 else None
+
+
+def gri_landed(news):
+    """(carrier, rate year, story) for each published general-rate-increase story: cat 'Pricing & GRI', prices going up,
+    not opinion, not unconfirmed, not itself a 'still waiting' story, and not one program's own price change (SBR)."""
+    out = []
+    for s in news:
+        if not isinstance(s, dict) or s.get("cat") != "Pricing & GRI" or s.get("imp") != "up" or s.get("unconf") \
+                or s.get("kind") in ("Opinion", "Analysis"):
+            continue
+        text = f"{s.get('title') or ''} {s.get('sum') or ''}"
+        if WAITING.search(text) or not GRI_TEXT.search(text) or programs_for(None, s.get("title") or ""):
+            continue
+        y = rate_year(s)
+        if y:
+            out += [(c, y, s) for c in s.get("c") or []]
+    return out
+
+
+def placeholder(e):
+    """An almanac GRI entry that only says the increase isn't announced yet (no announcement, no figure, no date)."""
+    words = " ".join([str(e.get("headline") or ""), str(e.get("note") or "")])
+    return e.get("kind") == "gri" and not e.get("announced") and not e.get("story") and \
+        bool(WAITING.search(words) or (e.get("pct") is None and not e.get("effective")))
+
+
+def gri_pct(s):
+    """The average increase the story states: the news writer's rate clock figure, else a proven audit change."""
+    for d in s.get("dates") or []:
+        fx = (d or {}).get("fx") if isinstance(d, dict) else None
+        if isinstance(fx, dict) and fx.get("t") == "gri" and isinstance(fx.get("pct"), (int, float)):
+            return fx["pct"]
+    for c in s.get("changes") or []:
+        if GRI_TEXT.search(f"{c.get('what') or ''} {c.get('after') or ''}"):
+            m = re.search(r"(\d+(?:\.\d+)?)\s?%", c.get("after") or "")
+            if m:
+                return float(m.group(1))
+    return None
+
+
+def to_review(rv, kind, title, note, story, today):
+    if any(x.get("type") == kind and x.get("title") == title for x in rv if isinstance(x, dict)):
+        return
+    rv.insert(0, {"type": kind, "title": title, "story_id": story.get("id"), "url": story.get("url"), "date": today, "note": note})
+
+
+def close_placeholders(alm, today=None):
+    """Close (or send to review) every placeholder a landed GRI story answers: Docs entries with no link that say "not yet
+    published", "still waiting" stories, and almanac GRI entries with no announcement. Returns what it did, for the log."""
+    today = today or dt.date.today().isoformat()
+    news, seed = load("news.json", []), load("seed.json", {})
+    landed = gri_landed(news)
+    if not landed:
+        return []
+    done, rv = [], load("review.json", [])
+    n_review = len(rv)
+    docs, drop = load("docs.json", []), load("drop.json", [])
+    used = {d.get("u") for d in docs + (seed.get("docs") or []) if d.get("u")}
+    dropped = {d if isinstance(d, str) else d.get("id") for d in drop}
+    docs_changed = drop_changed = False
+    for c, y, s in landed:
+        src = next((x for x in s.get("srcs") or [] if is_primary(x.get("url"))), None)
+        when = f"first reported {nice(s.get('ann') or s.get('date'))}" if not s.get("ann") else f"announced {nice(s['ann'])}"
+        eff = f"takes effect {nice(s['act'])}" if nice(s.get("act")) else "effective date not stated yet"
+        # 1. Docs: the "not yet published" note for this carrier and year
+        for d in docs:
+            if d.get("c") != c or d.get("u") or doc_year(d) != y or not re.search(r"not yet", str(d.get("d") or ""), re.I) or \
+                    not (d.get("t") == "GRI notice" or re.search(r"rate increase|\bGRI\b", d.get("n") or "", re.I)):
+                continue
+            if not src:
+                to_review(rv, "placeholder", d.get("n"), f"{c} {y}: a rate increase story landed ({s.get('title')}) but has no "
+                          f"{c} source to link. Point this Docs entry to {c}'s own announcement.", s, today)
+                continue
+            d.update({"d": f"{c} {y} rate increase {when}; {eff}.", "eff": s.get("act"),
+                      "cur": True, "checked": today, "upd": today, "closed_by": s.get("id")})
+            # the app matches Docs entries by address first: a link another entry already uses (the rate hub page) would
+            # overwrite that entry, so it goes in "see" and this entry keeps matching by name
+            if src["url"] in used:
+                d["see"] = src["url"]
+            else:
+                d["u"] = src["url"]
+            docs_changed = True
+            done.append(f"docs: closed '{d.get('n')}' with story {s.get('id')}")
+        # 2. "Still waiting" stories for this carrier and year, built-in ones included (the app honors drop.json)
+        for w in news + (seed.get("news") or []):
+            if not isinstance(w, dict) or w.get("id") in dropped or w.get("id") == s.get("id") or c not in (w.get("c") or []):
+                continue
+            text = " ".join(str(w.get(k) or "") for k in ("title", "sum", "plain"))
+            title = str(w.get("title") or "")
+            if WAITING.search(text) and str(y) in text and re.search(r"\b" + re.escape(c) + r"\b", title, re.I) \
+                    and not any(re.search(r"\b" + re.escape(o) + r"\b", title) for o in ("UPS", "FedEx", "USPS", "Amazon", "DHL") if o != c) \
+                    and (w.get("date") or "") <= (s.get("date") or ""):
+                drop.append({"id": w["id"], "why": f"Superseded by {s.get('id')}: {s.get('title')}"})
+                dropped.add(w["id"]); drop_changed = True
+                done.append(f"story {w['id']} superseded by {s.get('id')}")
+        # 3. The almanac's placeholder for this carrier, year and kind
+        for e in list(alm):
+            if e.get("carrier") != c or int(e.get("year") or 0) != y or not placeholder(e):
+                continue
+            real = [x for x in alm if x is not e and x.get("carrier") == c and int(x.get("year") or 0) == y
+                    and x.get("kind") == "gri" and not placeholder(x)]
+            old = f"{e.get('headline')} | {e.get('note') or ''} | {'; '.join(map(str, e.get('details') or []))}"
+            if real:
+                alm.remove(e)
+                done.append(f"almanac: removed placeholder {e.get('id')}; {real[0].get('id')} has the announcement")
+            else:
+                pct = gri_pct(s)
+                e.update({"headline": f"{c} {y} rate increase announced" + (f": {pct:g}% average" if pct is not None else ""),
+                          "announced": s.get("ann"), "effective": s.get("act"), "pct": pct,
+                          "details": [str(s.get("title") or "")], "sources": [x["url"] for x in (s.get("srcs") or [])[:3] if x.get("url")],
+                          "story": s.get("id"), "conf": "review",
+                          "note": f"Updated automatically on {today} from story {s.get('id')}; a person should check the figures."})
+                done.append(f"almanac: closed placeholder {e.get('id')} with story {s.get('id')} (sent to review)")
+            to_review(rv, "almanac-placeholder", f"{c} {y} gri", f"Was: {old}. Now answered by story {s.get('id')}: "
+                      f"{s.get('title')}. Check the almanac entry's figures.", s, today)
+    if docs_changed:
+        save("docs.json", docs)
+    if drop_changed:
+        save("drop.json", drop)
+        live = [x for x in news if x.get("id") not in dropped]
+        if len(live) != len(news):
+            save("news.json", live)
+    if len(rv) != n_review:
+        save("review.json", rv[:200])
+    for line in done:
+        print("  placeholders:", line)
+    return done
+
+
 def main():
     alm, st = load("almanac.json", []), load("almanac_state.json", {})
     if not alm:
-        print("themes: no almanac yet"); return
+        print("themes: no almanac yet")
+        close_placeholders(alm)
+        return
     added = grow(alm, st)
-    if added:
+    closed = close_placeholders(alm)
+    if added or any(x.startswith("almanac") for x in closed):
         save("almanac.json", sorted(alm, key=lambda e: (-(e.get("year") or 0), e.get("carrier") or "", e.get("kind") or "")))
     save("almanac_state.json", st)
     patterns(alm, force=added > 0 or "--force" in sys.argv)

@@ -68,22 +68,47 @@
   "carrier": "UPS",
   "year": 2027,
   "kind": "gri",
-  "announced": null,
-  "effective": null,
-  "pct": null,
-  "headline": "UPS 2027 general rate increase not yet announced",
+  "announced": "2026-10-23",
+  "effective": "2026-12-21",
+  "pct": 5.9,
+  "headline": "UPS 2027 GRI: 5.9% average for Ground, Air and International (Daily Rates), effective Dec 21, 2026",
   "details": [
-   "No UPS 2027 GRI announcement found in searches through Oct 21, 2026",
-   "FedEx announced a 5.9% average 2027 GRI (effective Jan 4, 2027) in Sept 2026, per SCD",
-   "UPS has published some 2027 customs brokerage changes (e.g. per-entry fees)"
+   "Daily Rates for UPS Ground, UPS Air and International: average net increase of 5.9%, effective Dec 21, 2026",
+   "Additional Handling minimum billable weight 40 -> 50 lb; Area Surcharge and zone ZIP lists change",
+   "New per-package surcharge on Ground and Ground Saver from certain origin ZIPs for Qualified customers (amount not stated)",
+   "UPS says detailed rate previews will follow; individual impact varies by shipping profile and UPS agreement",
+   "Small Business Rates change separately: +4.5% plus a new 5% fuel surcharge (entry ups-2027-sbr-2026-12-21)"
   ],
   "sources": [
-   "https://www.supplychaindive.com/news/fedex-preps-59-rate-hike-surcharge-increases-for-2027/830903/",
-   "https://www.ups.com/us/en/supplychain/tools/surcharges/brokerage-general-rates"
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
   ],
-  "conf": "partial",
-  "note": "Do not show a 2027 UPS figure. Forecasts (e.g. 5.9%) are not announcements. Re-check when UPS posts 2027 rates.",
-  "id": "ups-2027-gri"
+  "conf": "confirmed",
+  "note": "Announced date: Oct 23, 2026 is when the notice was first found on UPS's Important Updates page (story w84705482dd2f, detected 2026-10-23, UTC). UPS's page prints no posting date, so it may have gone up late on Oct 22 U.S. time.",
+  "id": "ups-2027-gri",
+  "story": "w84705482dd2f"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2027,
+  "kind": "price_change",
+  "announced": null,
+  "effective": "2026-12-21",
+  "pct": 4.5,
+  "headline": "UPS Small Business Rates: +4.5% plus a new 5% fuel surcharge from Dec 21, 2026",
+  "details": [
+   "SBR rates rise 4.5%, effective Dec 21, 2026",
+   "A 5% fuel surcharge applies to all SBR shipments, domestic and international",
+   "About 9.7% combined (1.045 x 1.05) before agreement terms",
+   "The SBR page still advertises SBR rates as inclusive of Delivery Area Surcharge and Fuel Surcharge",
+   "Additional Handling minimum billable weight 40 -> 50 lb"
+  ],
+  "sources": [
+   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+  ],
+  "conf": "confirmed",
+  "note": "From UPS's Small Business Rates page as checked on Oct 24, 2026. The page states no announcement date.",
+  "id": "ups-2027-sbr-2026-12-21",
+  "story": "rv5-ups-sbr-fuel"
  },
  {
   "carrier": "USPS",

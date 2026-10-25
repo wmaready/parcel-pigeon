@@ -69,3 +69,19 @@ def test_logo_from_a_customer_logo_wall_is_rejected():
     assert not foreign_logo("https://www.ontrac.com/wp-content/uploads/2023/03/cropped-wordmark_black-red.png", "ontrac.com", "ontrac")
     assert not foreign_logo("https://dhl.com/apple-touch-icon.png", "dhl.com", "dhlexpress")
     assert not foreign_logo("https://www.odfl.com/x/fullcolorlogo-100x100.png", "odfl.com", "odfl")
+
+
+def test_seed_export_runs_on_the_app(tmp_path):
+    """pipeline/export_seed.js runs the app's built-in data section in Node (no window), every update run. Code added to
+    that section that touches window or document breaks the export; this keeps it runnable."""
+    import shutil, subprocess
+    from pathlib import Path
+    node = shutil.which("node")
+    if not node:
+        import pytest
+        pytest.skip("node not installed")
+    root = Path(__file__).resolve().parent.parent
+    out = tmp_path / "seed.json"
+    r = subprocess.run([node, str(root / "pipeline" / "export_seed.js"), str(root / "index.html"), str(out)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr[-800:]
+    assert out.exists() and "stories" in r.stdout

@@ -464,45 +464,6 @@
    "routine": true
   },
   {
-   "id": "07",
-   "date": "2026-10-03",
-   "c": [
-    "UPS"
-   ],
-   "cat": "Pricing & GRI",
-   "title": "UPS has not yet announced 2027 rates",
-   "sum": "UPS hasn't announced its 2027 GRI. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline.",
-   "imp": "watch",
-   "lvl": 2,
-   "plain": "UPS 2027 list prices are not yet published. FedEx and DHL have each set a 5.9% average.",
-   "who": [
-    "UPS shippers"
-   ],
-   "src": "Mailbox Plus",
-   "url": "https://mailboxplusohio.com/articles/2027-fedex-ups-surcharge-forecast/",
-   "kind": "News",
-   "srcs": [
-    {
-     "src": "UPS newsroom",
-     "url": "https://about.ups.com/us/en/newsroom.html"
-    },
-    {
-     "src": "Supply Chain Dive",
-     "url": "https://supplychaindive.com/news/fedex-preps-59-rate-hike-surcharge-increases-for-2027/830903"
-    },
-    {
-     "src": "The Loadstar",
-     "url": "https://theloadstar.com/?p=325498"
-    },
-    {
-     "src": "Industry analysis",
-     "url": "https://transimpact.com/blog/predictions-for-the-2027-ups-fedex-general-rate-increases-gri",
-     "house": true
-    }
-   ],
-   "routine": true
-  },
-  {
    "id": "05",
    "date": "2026-10-02",
    "c": [
@@ -5575,7 +5536,7 @@
    "news": [
     "01"
    ],
-   "note": "UPS and Amazon Dec 27, FedEx Dec 28. Per-package fees return to $0.50."
+   "note": "UPS and Amazon Dec 27, FedEx Dec 28. Ground residential fees return to $0.50; other services return to their carrier-specific shoulder rates (UPS Air $1.35; FedEx Overnight $1.30, 2Day/Saver $1.20, Ground Economy $2.55)."
   },
   {
    "id": "e15",
@@ -5586,7 +5547,7 @@
    "news": [
     "02"
    ],
-   "note": "U.S. account holders. Some services and surcharges also change; DHL has not listed them."
+   "note": "U.S. account holders. Some services and surcharges also change; DHL has described a change to how its Elevated Risk surcharge is calculated."
   },
   {
    "id": "e10",
@@ -5625,7 +5586,7 @@
   {
    "id": "e13",
    "d": "2027-02-01",
-   "w": "FedEx zone changes for select U.S. ZIP code pairs",
+   "w": "FedEx zones change for select U.S. domestic ZIP pairs",
    "c": "FedEx",
    "imp": "up",
    "news": [
@@ -7414,11 +7375,13 @@
    "t": "GRI notice",
    "n": "UPS 2027 general rate increase",
    "y": 2027,
-   "eff": null,
+   "eff": "2026-12-21",
    "u": null,
-   "d": "Not yet published as of Oct 9, 2026",
-   "cur": false,
-   "checked": "2026-10-09"
+   "story": "w84705482dd2f",
+   "d": "Announced Oct 23, 2026 in UPS's Important Updates: Daily Rates for Ground, Air and International rise an average net 5.9%, effective Dec 21, 2026. Rate previews not yet published by UPS.",
+   "cur": true,
+   "upd": "2026-10-23",
+   "checked": "2026-10-23"
   },
   {
    "c": "FedEx",
@@ -9188,7 +9151,7 @@
    "tk": null,
    "parent": null,
    "hq": "Ottawa, Canada",
-   "yr": "1867",
+   "yr": "1851 (postal service); federal department 1867; Crown corporation 1981",
    "s": "Canada's Crown corporation postal service; owns 91% of courier Purolator.",
    "al": [
     "Postes Canada",
@@ -15459,6 +15422,16 @@
   },
   {
    "a": "fedex",
+   "b": "fdxfreight",
+   "k": "invested",
+   "y": "2026",
+   "d": "2026-06-01",
+   "t": "FedEx retained 19.9% of FedEx Freight at separation, June 1, 2026",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+   "story": null
+  },
+  {
+   "a": "fedex",
    "b": "harbinger",
    "k": "invested",
    "y": "2025",
@@ -18038,16 +18011,18 @@
    "b": "yodel",
    "k": "acquired",
    "y": "2025",
-   "t": "InPost buys Yodel",
-   "url": "https://www.freightwaves.com/news/fedex-group-to-buy-inpost-for-european-out-of-home-parcel-network"
+   "d": "2025-04-17",
+   "t": "InPost acquires 95.5% of Judge Logistics, Yodel's parent, on Apr 17, 2025; PayPoint keeps 4.5%",
+   "url": "https://inpost.eu/sites/default/files/2025-04/Press%20release_Strategic%20Takeover%20of%20Yodel.pdf"
   },
   {
    "a": "inpost",
    "b": "yodel",
    "k": "owns",
    "y": "2025",
-   "t": "InPost owns Yodel",
-   "url": "https://www.freightwaves.com/news/fedex-group-to-buy-inpost-for-european-out-of-home-parcel-network"
+   "d": "2025-04-17",
+   "t": "InPost owns 95.5% of Judge Logistics, Yodel's parent (PayPoint 4.5%)",
+   "url": "https://inpost.eu/sites/default/files/2025-04/Press%20release_Strategic%20Takeover%20of%20Yodel.pdf"
   },
   {
    "a": "inpost",

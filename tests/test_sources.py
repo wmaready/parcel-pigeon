@@ -31,6 +31,18 @@ def test_sources_yaml():
         assert w["kind"] in ("page", "pdf"), w
 
 
+def test_ups_program_pages_are_watched():
+    """B2: UPS posted the Dec 21, 2026 SBR change on its SBR web page; only the SBR PDF was watched, so it was missed."""
+    cfg = yaml.safe_load((ROOT / "pipeline" / "sources.yaml").read_text())
+    pages = {w["url"]: w for w in cfg["watch"] if w["carrier"] == "UPS" and w["kind"] == "page"}
+    for url, name in (("https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "Small Business Rates page"),
+                      ("https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver", "Ground Saver page"),
+                      ("https://www.ups.com/us/en/services/shipping/simple-rate", "Simple Rate page")):
+        assert pages.get(url, {}).get("name") == name, url
+    urls = [w["url"] for w in cfg["watch"]]
+    assert len(urls) == len(set(urls)), "a page is watched twice"
+
+
 def test_spam_sites_are_never_sources():
     from common import not_a_source
     assert not_a_source("EIN Presswire", "https://www.einpresswire.com/article/1")

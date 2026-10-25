@@ -1,7 +1,7 @@
 {
  "ups-amazon-glide-down": {
   "n": "UPS Amazon cutback and network overhaul",
-  "s": "UPS says the Amazon volume reduction finished in Q2 2026, and an analysis now points to higher profit per package and Amazon's entry into B2B logistics.",
+  "s": "UPS says it has completed cutting its Amazon volume by more than half, after closing 23 buildings in early 2026 and planning about 30,000 job cuts for the year.",
   "ids": [
    "h403",
    "h406",
@@ -26,7 +26,7 @@
     "18": "UPS closed 23 buildings in early 2026 and planned about 30,000 job cuts for the year, after 48,000 in 2025, with Amazon cut by over half."
    },
    "intro": "UPS is shrinking Amazon volume and remaking its network, which reshapes one of the biggest U.S. parcel carriers.",
-   "now": "Analysts are split on whether UPS is retreating from B2C parcels; UPS says small package isn't going away. Earnings are Oct 27."
+   "now": "UPS says the Amazon volume reduction and network reconfiguration are complete."
   },
   "was": [
    "ups-parcel-pivot"
@@ -39,26 +39,28 @@
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
-  "s": "FedEx has named leaders for the Freight spin-off, which was on track for June 2026.",
+  "s": "FedEx completed the FedEx Freight spin-off on June 1, 2026; FedEx Freight trades as FDXF and FedEx kept 19.9% at separation.",
   "ids": [
    "h433",
-   "h519"
+   "h519",
+   "rv5-fedex-freight-spin-done"
   ],
   "first": "2024-12-19",
-  "last": "2025-05-19",
+  "last": "2026-06-01",
   "c": [
    "FedEx"
   ],
-  "rv": "27596ef51563",
+  "rv": "eea7d31b6021",
   "cx": {
-   "sig": "27596ef51563",
+   "sig": "eea7d31b6021",
    "v": 3,
    "beats": {
     "h433": "Freight, the largest U.S. LTL carrier with $9.4 billion in fiscal 2024 revenue, is set to split off tax-free within 18 months.",
-    "h519": "John A. Smith will be CEO and R. Brad Martin chairman at separation; a confidential Form 10 followed in August 2025, ticker FDXF."
+    "h519": "John A. Smith will be CEO and R. Brad Martin chairman at separation; a confidential Form 10 followed in August 2025, ticker FDXF.",
+    "rv5-fedex-freight-spin-done": "FedEx completed the spin-off; FedEx Freight trades on the NYSE as FDXF, and FedEx kept 19.9%."
    },
-   "intro": "FedEx is spinning off FedEx Freight, the largest U.S. LTL carrier, into its own public company.",
-   "now": "The target was June 2026, and nothing here confirms completion. Meanwhile, FedEx sold its supply chain unit to CMA CGM for $1.4B."
+   "intro": "FedEx spun off FedEx Freight, the largest U.S. LTL carrier, into its own public company.",
+   "now": "FedEx completed the FedEx Freight spin-off on June 1, 2026. FedEx Freight is an independent public company (NYSE: FDXF). FedEx kept 19.9% at separation."
   }
  },
  "fedex-network-2": {
@@ -83,7 +85,7 @@
     "43": "FedEx is now merging Ground and Express pickup and delivery, and expects the U.S. rollout to be complete by the end of 2027."
    },
    "intro": "FedEx is folding its Ground and Express operations into one network, a shift that shapes how packages get picked up and delivered.",
-   "now": "FedEx expects the U.S. rollout to finish by the end of 2027. Its next rate step is a 5.9% average general rate increase on Jan. 4, 2027."
+   "now": "FedEx expects the U.S. rollout to finish by the end of 2027."
   },
   "rv": "51288bc858e6"
  },
@@ -154,7 +156,7 @@
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds and carriers",
-  "s": "Refunds are flowing to importers, with the U.S. Treasury having paid out about $22 billion in May and $49.2 billion in June, and Amazon is now facing consolidated consumer lawsuits over how it handles its share.",
+  "s": "FedEx, UPS and DHL have begun passing IEEPA tariff refunds to customers, and CBP has started processing refunds for some finally liquidated entries.",
   "ids": [
    "g31",
    "a771628a2eca4"
@@ -174,13 +176,13 @@
    "beats": {
     "a771628a2eca4": "CBP began processing some finally liquidated entries, accepting 477 CAPE declarations; the phase slipped from a late-July target to October."
    },
-   "now": "Refunds are flowing: Treasury paid about $22 billion in May and $49.2 billion in June. UPS and FedEx report earnings Oct. 27 and 28."
+   "now": "CBP has begun processing refunds for some finally liquidated entries, according to an Oct. 6 court filing."
   },
   "rv": "dbe4c7321e1f"
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
-  "s": "FedEx set a 5.9% increase for Jan. 4, 2027 and DHL set 5.9% for Jan. 1, while UPS has not yet announced its 2027 rates.",
+  "s": "UPS set a 5.9% average increase for Dec. 21, 2026, DHL 5.9% for Jan. 1 and FedEx 5.9% for Jan. 4, 2027.",
   "ids": [
    "h401",
    "h421",
@@ -189,18 +191,19 @@
    "h529",
    "12",
    "02",
-   "07"
+   "07",
+   "w84705482dd2f"
   ],
   "first": "2024-01-01",
-  "last": "2026-10-03",
+  "last": "2026-10-23",
   "c": [
    "DHL",
    "FedEx",
    "UPS"
   ],
-  "rv": "4418fe805c66",
+  "rv": "f612ba1f4fb8",
   "cx": {
-   "sig": "4418fe805c66",
+   "sig": "d3a31ea17f90",
    "v": 3,
    "beats": {
     "h401": "FedEx's 5.9% took effect Jan. 1, 2024, after UPS's matching 5.9% began Dec. 26. Both were down from 6.9% a year earlier.",
@@ -209,15 +212,16 @@
     "h426": "UPS also landed on 5.9% for 2025, starting Dec. 23, 2024, a few days ahead of the prior year's Dec. 26 start.",
     "h529": "FedEx's Jan. 5, 2026 increase stayed at 5.9%, and residential delivery went to $6.95 from $6.55.",
     "02": "DHL Express also set 5.9% for U.S. accounts on Jan. 1, 2027. Some services and surcharges change too, but DHL didn't list them.",
-    "07": "UPS hasn't announced its 2027 increase yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline."
+    "07": "UPS hasn't announced its 2027 increase yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline.",
+    "w84705482dd2f": "UPS set a 5.9% average increase for Ground, Air and International Daily Rates from Dec. 21, 2026."
    },
-   "intro": "Carriers keep announcing 5.9% average rate hikes each year, and shippers are waiting on UPS's number for 2027.",
-   "now": "UPS hasn't announced 2027 rates yet. DHL's 5.9% starts Jan. 1 and FedEx's starts Jan. 4, with FedEx zone changes on Feb. 1."
+   "intro": "Carriers keep announcing 5.9% average rate increases each year; UPS, DHL and FedEx have each set 5.9% again.",
+   "now": "UPS's 5.9% average increase takes effect Dec. 21, 2026, DHL's 5.9% on Jan. 1 and FedEx's 5.9% on Jan. 4, 2027."
   }
  },
  "usps-pricing": {
   "n": "USPS shipping price changes",
-  "s": "USPS has put holiday package prices into effect after a series of annual and mid-year increases.",
+  "s": "USPS set July 13, 2025 shipping price increases, with Ground Advantage up about 7.1%, after earlier annual and mid-year changes.",
   "ids": [
    "h402",
    "h409",
@@ -238,7 +242,7 @@
     "h409": "USPS proposed a 25% average Parcel Select increase for July 14, 2024, and no increases for Ground Advantage, Priority Mail or Express.",
     "h430": "The Nov. 2024 proposal for Jan. 19, 2025 had Ground Advantage up about 3.9%. Parcel Select, up about 25% in July, was set for another 9.2%."
    },
-   "now": "The 2026 peak surcharge runs Oct. 4, 2026 to Jan. 17, 2027, on top of a temporary 8% increase. Both expire Jan. 17, with no 2027 filing yet."
+   "now": "No newer verified milestone."
   },
   "apart": [
    "peak-surcharges",
@@ -285,7 +289,7 @@
     "01": "Oversize peak fees already bill at OnTrac, UPS and FedEx; per-package home-delivery fees start Oct 24–26, then rise in late November."
    },
    "intro": "How holiday peak surcharges at UPS, FedEx and USPS have evolved since 2024, and what's billing now.",
-   "now": "Home-delivery peak fees start Oct 24; UPS and FedEx report earnings Oct 27 and 28, and fees step up from Nov 22."
+   "now": "Per-package peak fees begin Oct. 24 to 26; UPS and Amazon rise to $0.75 from Nov. 22 and FedEx to $0.80 from Nov. 23."
   },
   "co": "USPS",
   "apart": [
@@ -321,7 +325,7 @@
  },
  "usps-leadership": {
   "n": "USPS Postmaster General turnover",
-  "s": "Steiner remains Postmaster General and addressed postal customer councils in an official USPS video in early October 2026.",
+  "s": "David Steiner has been Postmaster General since July 2025; a Reuters report in September 2026 said he wants to step down, which USPS denied.",
   "ids": [
    "h506",
    "h515",
@@ -339,7 +343,7 @@
     "h515": "In May 2025 the Board picked David Steiner, a former Waste Management CEO, who said he'd leave the FedEx board before joining USPS.",
     "36": "Reuters reported that Steiner has told associates he wants to resign. USPS said the report has 'absolutely zero validity.'"
    },
-   "now": "Steiner is still Postmaster General and spoke to postal customer councils in an official USPS video in early October 2026."
+   "now": "No newer verified milestone."
   },
   "rv": "7d2b47d4740d",
   "apart": [
@@ -365,7 +369,7 @@
    "v": 3,
    "beats": {},
    "intro": "USPS has reshaped delivery timelines in phases since 2025, and slower estimates affect how shippers promise delivery dates.",
-   "now": "The reportedly longer offshore estimates took effect Oct. 1, 2026, and USPS holiday prices are set to end Jan. 17, 2027."
+   "now": "USPS's longer delivery estimates for packages to and from Guam, Alaska, Hawaii and other areas outside the mainland took effect Oct. 1, 2026."
   },
   "rv": "1eced18a2ca4",
   "apart": [
@@ -393,7 +397,7 @@
    "v": 3,
    "beats": {},
    "intro": "USPS lost money two years running while its package business shifted from growth to shrinking volume, which matters for shippers.",
-   "now": "The 8% temporary increase and 2026 peak rates are both set to expire Jan. 17, 2027, and no 2027 shipping filing has been made yet."
+   "now": "No newer verified milestone."
   },
   "apart": [
    "usps-big-shipper-deals"
@@ -401,7 +405,7 @@
  },
  "parcel-volume-amazon": {
   "n": "Amazon's rise to top U.S. parcel carrier",
-  "s": "Amazon is now the largest U.S. carrier by volume, in a market of about 23 to 24 billion parcels in 2025.",
+  "s": "Amazon is now the largest U.S. carrier by volume; 2025 market totals are 23.9 billion parcels (ShipMatrix) and 23.1 billion (Pitney Bowes).",
   "ids": [
    "h408",
    "h522",
@@ -438,7 +442,7 @@
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
-  "s": "USPS has two new competitive contract filings before the PRC, and the notice does not say whether either involves Amazon or DHL eCommerce.",
+  "s": "USPS signed a new Amazon agreement that trims Amazon's USPS volume by about 20%, an exclusive DHL eCommerce last-mile contract worth over $10 billion, and a same-day delivery pilot for Amazon.",
   "ids": [
    "21",
    "g09",
@@ -458,23 +462,22 @@
     "21": "Reports said Amazon would cut its USPS volume by two-thirds. The new agreement trims it by about 20% instead."
    },
    "intro": "USPS has locked in Amazon and DHL eCommerce as big customers, and shippers watch for what that means for its network.",
-   "now": "The 2026 USPS peak surcharge, stacked on the temporary 8% increase, runs to Jan 17, 2027; no 2027 shipping filing yet."
+   "now": "USPS's same-day pilot for Amazon added Columbia, S.C., from Oct. 20 with a 500-package cap."
   },
   "rv": "e3902d701814",
   "co": "USPS"
  },
  "amazon-network-buildout": {
   "n": "Amazon opens its delivery network to all",
-  "s": "Amazon has opened its logistics network to all businesses, and reports say it is close to launching a national delivery service.",
+  "s": "Amazon has opened its logistics network to outside businesses and added LTL labels for sellers, and a Business Insider report describes a contingency plan to reach about 95% of U.S. ZIP codes by 2029.",
   "ids": [
    "h512",
    "17",
    "34",
-   "05",
-   "a418fdd3e6f05"
+   "05"
   ],
   "first": "2025-04-30",
-  "last": "2026-10-20",
+  "last": "2026-10-02",
   "c": [
    "Amazon",
    "FedEx",
@@ -482,18 +485,17 @@
    "USPS"
   ],
   "cx": {
-   "sig": "c1e29f365ab2",
+   "sig": "ce498ee4d3ad",
    "v": 3,
    "beats": {
     "h512": "Amazon said it would put $4 billion into rural delivery by the end of 2026, passing 200 delivery stations and creating 100,000+ jobs.",
     "17": "Amazon Supply Chain Services bundles freight, warehousing and parcels for outsiders; UPS and FedEx shares each fell about 9 to 10% that day.",
     "34": "Sellers can buy LTL labels through Buy Shipping from October, and regional pricing for heavy, bulky items is due in early 2027.",
-    "05": "Business Insider reported a backup plan, drawn up in case the USPS deal failed, to reach about 95% of U.S. ZIP codes by 2029.",
-    "a418fdd3e6f05": "The WSJ reportedly says Shipping With Amazon is close to launching in Los Angeles, with prices set below rivals'. Sources are anonymous."
+    "05": "Business Insider reported a backup plan, drawn up in case the USPS deal failed, to reach about 95% of U.S. ZIP codes by 2029."
    },
-   "now": "Still reported, not confirmed. Peak fees start Oct. 24, and UPS and FedEx report earnings Oct. 27 and 28."
+   "now": "Next dated step: Amazon's regional delivery pricing for heavy and bulky items arrives in early 2027."
   },
-  "rv": "c1e29f365ab2",
+  "rv": "ce498ee4d3ad",
   "apart": [
    "amazon-labor",
    "last-mile-facility-legislation",
@@ -505,7 +507,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "MassDOT says Amazon has not applied for the state certificate it needs, and a local appeal and site-plan hearing are scheduled for Nov. 2 and Nov. 10.",
+  "s": "MassDOT told Amazon its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough.",
   "ids": [
    "g27",
    "g26",
@@ -535,7 +537,7 @@
     "ac198fadf6127": "MassDOT tells Amazon its Westborough launch, first planned for October, needs a state suitability review first."
    },
    "intro": "Drone delivery is scaling up while the FAA rule and state pushback stay unsettled, which shapes where parcels can fly.",
-   "now": "Amazon's Westborough site awaits a MassDOT safety review and public hearing; Part 108 was still unpublished as of Oct. 9."
+   "now": "Amazon's Westborough drone site awaits a MassDOT suitability review, and the FAA's Part 108 rule was still unpublished as of Oct. 9."
   },
   "rv": "fdf5cbfc70f3",
   "co": "Amazon",

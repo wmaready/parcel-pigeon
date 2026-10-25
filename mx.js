@@ -6,7 +6,7 @@ if(typeof PLAYERS==='undefined'||typeof PEDGES==='undefined'||typeof REALMS==='u
 const assetBase=new URL('./',document.currentScript?.src||document.baseURI);
 const host=document.querySelector('#s-mna .view[data-view="map"]');if(!host)return;
 const COL={national:'#5B8DEF',regional:'#F28DB2',gig:'#FF9B42',retail:'#FF9900',
-  '3pl':'#2EC4B6',global:'#FFCC00',software:'#A57BE0',cold:'#4CC9F0',auto:'#9BE15D',capital:'#B9875A'};
+  '3pl':'#2EC4B6',global:'#FFCC00',software:'#A57BE0',cold:'#4CC9F0',auto:'#9BE15D',capital:'#B9875A',consultancy:'#FF6F91'};
 const KIND={owns:'own',acquired:'own',merged:'own',spun:'own',sold:'own',invested:'inv',partner:'part'};
 const RANK={owns:0,acquired:1,merged:2,spun:3,sold:4,invested:5,partner:6};
 const VERB={owns:'Owns',acquired:'Bought',merged:'Merged with',spun:'Spun off',sold:'Sold',invested:'Invested in',partner:'Partners with'};
@@ -14,6 +14,10 @@ const VERB_IN={owns:'Owned by',acquired:'Bought by',merged:'Merged with',spun:'S
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const OWN={public:'Public',private:'Private',sub:'Subsidiary',pe:'Private equity',gov:'Government',pending:'Going public'};
 const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:null;
+// a curated record (company-foundation.js) lists every source it was checked against and the date it was checked
+const foundSrc=p=>{const L=[...new Set([...(p.srcs||[]),p.src].map(safeUrl).filter(Boolean))],host=u=>{try{const x=new URL(u);return (x.hostname.replace(/^www\./,'')+x.pathname).replace(/\/$/,'')}catch(e){return 'source'}};
+  const d=p.chk&&(typeof fmtD==='function'?fmtD(String(p.chk),{month:'short',day:'numeric',year:'numeric'}):String(p.chk));
+  return `<div class="mx-sec mx-found">${L.map(u=>`<a class="mx-src" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Source: ${esc(host(u))} ↗</a>`).join(' ')}${d?`<p class="mx-empty">Record checked ${esc(d)}</p>`:''}</div>`};
 
 let N=[],E=[],byId={},sig='',sel=null,filt=new Set(REALMS.map(r=>r[0])),T={x:0,y:0,k:1},W=0,H=0,laidOut=false;
 
@@ -72,7 +76,7 @@ wrap.innerHTML=`<div class="mx-top">
 </div>
 <div class="mx-stats" id="mxStats"></div>
 <details class="mx-filters"><summary id="mxFilterLabel">Sectors · All</summary><div class="mx-chips" id="mxChips" role="group" aria-label="Show sectors"></div></details>
-<nav class="mx-crumb" id="mxCrumb" aria-label="Where you are"></nav><div class="mx-geo" id="mxGeoWrap"><div class="mx-gmap" id="mxGeo"></div><div class="mx-gnote" id="mxGnote"></div></div><div class="mx-home" id="mxHome"></div><div class="mx-sect" id="mxSect"></div><div class="mx-co" id="mxCo"></div>
+<nav class="mx-crumb" id="mxCrumb" aria-label="Where you are"></nav><div class="mx-geo" id="mxGeoWrap"><p class="mx-gcov" id="mxGcov"></p><div class="mx-gmap" id="mxGeo"></div><div class="mx-gnote" id="mxGnote"></div></div><div class="mx-home" id="mxHome"></div><div class="mx-sect" id="mxSect"></div><div class="mx-co" id="mxCo"></div>
 <div class="mx-body">
   <div class="mx-stage" id="mxStage">
     <svg id="mxSvg" role="img" aria-label="Network of parcel market players"><g class="mx-g z1" id="mxG"><g id="mxE"></g><g id="mxN"></g></g></svg>
@@ -171,7 +175,7 @@ function panel(){
   ${sec('Invested in',r.inv,'')}
   ${sec('Partners',r.part,'')}
   ${!n.links.length?'<p class="mx-empty">No connections tracked yet.</p>':''}
-  ${url?`<div class="mx-sec"><a class="mx-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`:''}`;
+  ${p.foundation?foundSrc(p):url?`<div class="mx-sec"><a class="mx-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`:''}`;
   side.classList.add('open');side.scrollTop=0;
 }
 function detailOf(n){const s0=sel;sel=n;panel();const h=side.innerHTML;sel=s0;panel();return h.replace('<button class="mx-x" aria-label="Close">&times;</button>','')}
@@ -229,7 +233,8 @@ let curM='home',curSec=null,curCo=null,origin='geo',LMAP=null,LLAY=null,lfP=null
 function leaflet(){if(window.L&&L.map&&L.markerClusterGroup)return Promise.resolve();if(lfP)return lfP;
   const style=path=>new Promise((ok,no)=>{const href=new URL(path,assetBase).href;const old=document.querySelector(`link[data-mx-style="${path}"]`);if(old?.sheet){ok();return}if(old)old.remove();const c=document.createElement('link');c.rel='stylesheet';c.href=href;c.dataset.mxStyle=path;c.onload=ok;c.onerror=()=>{c.remove();no(new Error('Map styles unavailable'))};document.head.appendChild(c)});
   const script=path=>new Promise((ok,no)=>{const j=document.createElement('script');j.src=new URL(path,assetBase).href;j.onload=ok;j.onerror=()=>{j.remove();no(new Error('Map library unavailable'))};document.head.appendChild(j)});
-  // map files normally live in map-assets/; fall back to the site's top level in case an upload flattened the folder
+  // map files live in map-assets/ (moved there Oct 2026). The top-level fallback stays for one release so a cached older
+  // deploy still finds them; remove it after that release.
   const any=(load,name)=>load('map-assets/'+name).catch(()=>load(name));
   lfP=Promise.all([any(style,'leaflet.css'),any(style,'MarkerCluster.css'),(window.L&&L.map?Promise.resolve():any(script,'leaflet.js')).then(()=>any(script,'leaflet.markercluster.js'))]).then(()=>{if(!window.L?.markerClusterGroup)throw new Error('Map clustering unavailable')}).catch(e=>{lfP=null;throw e});return lfP}
 function resetGeo(){if(!LMAP)return;if(!$('mxGeo').offsetWidth){geoResetPending=true;return}geoResetPending=false;LMAP.invalidateSize();LMAP.fitBounds([[24,-125],[50,-66]],{padding:[22,22],animate:false});}
@@ -247,6 +252,9 @@ $('mxGnote').addEventListener('click',e=>{if(e.target.closest('.mx-retry'))geo()
 let geoSig='';
 function drawGeo(){if(!LMAP||typeof wmLoc!=='function')return;
   const big=N.filter(n=>(n.tier<=2||n.deg>=3)&&filt.has(n.p.realm)).map(n=>({n,loc:wmLoc(n.p)})).filter(({loc})=>loc&&!loc.via&&Array.isArray(loc.g)&&loc.g.length===2&&loc.g.every(Number.isFinite));
+  // what the map shows, from the current sector filter: headquarters only, never service coverage
+  const inF=N.filter(n=>filt.has(n.p.realm)).length;
+  $('mxGcov').innerHTML=`Headquarters only, not service coverage. <b>${big.length}</b> of <b>${inF}</b> companies have a mapped location.`;
   const s=JSON.stringify(big.map(({n,loc})=>[n.id,n.p.n,n.p.realm,loc.g]));if(s===geoSig)return;geoSig=s;
   if(LLAY)LLAY.remove();
   LLAY=L.markerClusterGroup({maxClusterRadius:()=>window.innerWidth<600?64:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:true,spiderfyDistanceMultiplier:2.2,animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,
