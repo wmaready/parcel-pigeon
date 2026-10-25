@@ -1,18 +1,28 @@
 {
  "Amazon": {
   "file": "data/guides/amazon.json",
-  "docs": 2,
-  "passages": 86
+  "docs": 6,
+  "passages": 215
+ },
+ "DHL": {
+  "file": "data/guides/dhl.json",
+  "docs": 5,
+  "passages": 51
  },
  "FedEx": {
   "file": "data/guides/fedex.json",
-  "docs": 17,
-  "passages": 811
+  "docs": 19,
+  "passages": 814
+ },
+ "GLS US": {
+  "file": "data/guides/gls-us.json",
+  "docs": 1,
+  "passages": 7
  },
  "OnTrac": {
   "file": "data/guides/ontrac.json",
-  "docs": 6,
-  "passages": 197
+  "docs": 8,
+  "passages": 212
  },
  "Spee-Dee": {
   "file": "data/guides/spee-dee.json",
@@ -21,8 +31,8 @@
  },
  "UPS": {
   "file": "data/guides/ups.json",
-  "docs": 11,
-  "passages": 690
+  "docs": 15,
+  "passages": 848
  },
  "USPS": {
   "file": "data/guides/usps.json",

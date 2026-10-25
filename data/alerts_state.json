@@ -67,7 +67,8 @@
   "a63ee5425135a",
   "a6f025bac3520",
   "ac78f72e7f458",
-  "afb439a13ef25"
+  "afb439a13ef25",
+  "rv5-ups-sbr-fuel"
  ],
  "clock": [
   "e06:7",
@@ -292,35 +293,37 @@
   "ups profit per u s package rises to about 1 16 after amazon ",
   "industry analysis projects record parcel and ltl costs in q4",
   "usps holiday rates on some package products run through mid ",
-  "fareye survey 70 of last mile operators rank fuel a top cost"
+  "fareye survey 70 of last mile operators rank fuel a top cost",
+  "ups adds a 5 fuel surcharge to small business rates and rais"
  ],
  "harvested": [
-  "ac78f72e7f458",
-  "a5d45f26f2219",
-  "a58373f1b7bc3",
-  "wacb825361479",
-  "af8ee5ed067c6",
-  "a57a06c26359c",
-  "aee6669d325da",
-  "a2b81ad721cb8",
-  "a351cab9045c7",
-  "a15404304f17b",
-  "a3a45d7f6db20",
   "a89d7e4beebd9",
-  "a312b45efa358",
-  "wdf959a97bcb6",
-  "w84705482dd2f",
-  "a6e82ba740e99",
+  "a5d45f26f2219",
+  "af8ee5ed067c6",
+  "a6c2418bed0a7",
+  "a72efb5e01b99",
   "a831c709e5809",
-  "a773d361dac4e",
+  "a6e82ba740e99",
+  "w84705482dd2f",
+  "a58373f1b7bc3",
+  "w150132868eae",
+  "ac78f72e7f458",
+  "a351cab9045c7",
   "a2def09bc43bb",
   "aba40a11b6946",
-  "a72efb5e01b99",
   "w599d9089a65d",
-  "a2f683da86bf8",
-  "a6c2418bed0a7",
-  "w150132868eae",
-  "a6cc2420ad66e"
+  "a15404304f17b",
+  "a57a06c26359c",
+  "a773d361dac4e",
+  "wacb825361479",
+  "a312b45efa358",
+  "a2b81ad721cb8",
+  "a6cc2420ad66e",
+  "wdf959a97bcb6",
+  "rv5-ups-sbr-fuel",
+  "aee6669d325da",
+  "a3a45d7f6db20",
+  "a2f683da86bf8"
  ],
  "backfilled": true,
  "recent": [
@@ -1396,6 +1399,22 @@
      "url": "https://www.dcvelocity.com/transportation/ready-for-peak"
     }
    ]
+  },
+  {
+   "id": "rv5-ups-sbr-fuel",
+   "title": "UPS adds a 5% fuel surcharge to Small Business Rates and raises them 4.5% on Dec. 21",
+   "date": "2026-10-24",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+   "srcs": [
+    {
+     "src": "UPS Small Business Rates page",
+     "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+     "checked": "2026-10-24"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1558,6 +1577,10 @@
   "afb439a13ef25": {
    "t": "70% of last-mile firms rank fuel a top cost",
    "m": "Survey only, with no rate or service change; it also covers growing use of AI tools."
+  },
+  "rv5-ups-sbr-fuel": {
+   "t": "UPS adds 5% fuel fee to Small Business Rates",
+   "m": "Takes effect Dec 21: rates rise 4.5% plus 5% fuel surcharge, about 9.7% more for SBR shippers."
   }
  },
  "queue": [],

@@ -1,17 +1,27 @@
 {
- "cursor": 0,
+ "cursor": 15,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "Amazon Shipping U.S. service guide (PDF)"
+   "n": "Amazon Shipping U.S. service guide (PDF)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf",
+    "txt": "data/snapshots/bf2011ebe22c/2026-10-25.txt"
+   }
   },
   "https://ship.amazon.com/service-guide": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "Amazon Shipping service guide page"
+   "n": "Amazon Shipping service guide page",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf",
+    "txt": "data/snapshots/db1415704b8e/2026-10-25.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2026/01/2026-OnCall-Chart.pdf": {
    "hash": "62aa9b6eeaf0",
@@ -219,14 +229,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 116,
+   "fails": 117,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 116,
+   "fails": 117,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
@@ -235,37 +245,67 @@
    "hash": "b2270ea56391",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Ground Economy Bound Printed Matter rates"
+   "n": "2026 FedEx Ground Economy Bound Printed Matter rates",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf",
+    "txt": "data/snapshots/5fe5c90a413f/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf": {
    "hash": "b5fac9a1945c",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Ground Economy Media Mail rates"
+   "n": "2026 FedEx Ground Economy Media Mail rates",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf",
+    "txt": "data/snapshots/d891fbd0b966/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf": {
    "hash": "21c5891a193b",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Ground Economy rates, by ounce"
+   "n": "2026 FedEx Ground Economy rates, by ounce",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf",
+    "txt": "data/snapshots/4b47fe9ee7cb/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf": {
    "hash": "8fcb4c16f4b4",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Ground Economy rates, by pound"
+   "n": "2026 FedEx Ground Economy rates, by pound",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf",
+    "txt": "data/snapshots/7027e9aaf648/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf": {
    "hash": "ea3a5da8a32f",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Retail Rates (PDF)"
+   "n": "2026 FedEx Retail Rates (PDF)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf",
+    "txt": "data/snapshots/3baad68751ad/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf": {
    "hash": "8afec96399b3",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "2026 FedEx Service Guide"
+   "n": "2026 FedEx Service Guide",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf",
+    "txt": "data/snapshots/9fa62bf8dd6d/2026-10-25.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
    "hash": "816453d43d8f",
@@ -478,6 +518,147 @@
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
    "checked": "2026-10-23"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:036e009d-3781-4a60-bf89-314268d5ac8b/original/as/small-busines-cwt-rate-guide-us-en.pdf": {
+   "first": "2026-10-25",
+   "n": "small-busines-cwt-rate-guide-us-en.pdf",
+   "hash": "91c7a72d6439",
+   "checked": "2026-10-25"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
+   "first": "2026-10-25",
+   "n": "small-business-rate-guide-us-en.pdf",
+   "hash": "a5290fff91cb",
+   "checked": "2026-10-25"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:55c43bc5-8b95-483e-b515-9e44541b99a8/original/as/ground-saver-terms-us-en.pdf": {
+   "first": "2026-10-25",
+   "n": "ground-saver-terms-us-en.pdf",
+   "hash": "4b00a0dd2a43",
+   "checked": "2026-10-25"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf": {
+   "first": "2026-10-25",
+   "n": "ups-ground-saver-brand-guidelines-us-en.pdf",
+   "hash": "778400ab2847",
+   "checked": "2026-10-25"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf": {
+   "first": "2026-10-25",
+   "n": "ups-ground-saver-gtl-us-en.pdf",
+   "hash": "1844888184b1",
+   "checked": "2026-10-25"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx": {
+   "n": "2026 FedEx Retail Rates (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.xlsx": {
+   "n": "2026 FedEx Standard List Rates (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ffbe526-135e-47d8-8f50-6dbfc7d52e56/original/as/daily-rates-us-en.xlsx": {
+   "n": "2026 UPS Daily Rate and Service Guide (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:783c4671-6847-424a-aabd-7e5798d1f51d/original/as/ground-saver-over-1lb-us-en.xlsx": {
+   "n": "2026 UPS Ground Saver rates, 1 lb and over (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
+   "hash": "2b6d3ac0bc55",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Amazon Shipping 2026 peak surcharges"
+  },
+  "https://shipping.amazon.com/shipping-policy": {
+   "hash": "59bdb3d710b8",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Amazon Shipping policies"
+  },
+  "https://shipping.amazon.com/shipping-terms-and-conditions": {
+   "hash": "fdfe4754d270",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Amazon Shipping terms and conditions"
+  },
+  "https://ship.amazon.com/site-terms": {
+   "hash": "c48a7f56ed69",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Conditions of Use"
+  },
+  "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
+   "hash": "f7644ecfa383",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce peak surcharge, 2026–27"
+  },
+  "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html": {
+   "hash": "f7644ecfa383",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce surcharge policies page"
+  },
+  "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html": {
+   "hash": "c90c032562c1",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce terms and conditions page"
+  },
+  "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf": {
+   "hash": "c90c032562c1",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce terms of carriage (Jan 2026 version)"
+  },
+  "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026": {
+   "hash": "c79bbd8e6516",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "EU Customs Changes 2026: New €2 Handling Fee & Product Identifier Requirements from 1 November"
+  },
+  "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
+   "hash": "f866279b9dd1",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx Freight rules tariff (moved)"
+  },
+  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
+   "hash": "d1b401132060",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx demand surcharges, 2026–27 season"
+  },
+  "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
+   "hash": "12743cee1be9",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "GLS US billing and invoice guide"
+  },
+  "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
+   "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-10-25"
+  },
+  "https://www.ontrac.com/terms-conditions-additional/": {
+   "hash": "c8d830c9c53b",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "OnTrac additional terms and conditions"
+  },
+  "https://www.ontrac.com/terms-conditions/": {
+   "hash": "2bafd025bd0b",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "OnTrac terms and conditions"
   }
  }
 }

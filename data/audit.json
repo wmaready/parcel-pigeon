@@ -1,5 +1,5 @@
 {
- "run": "2026-10-25T20:47Z",
+ "run": "2026-10-25T21:46Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -58,15 +58,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"USPS holiday rates on some package products run through mid-January\"",
    "ids": [
     "ac78f72e7f458"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS sets Dec. 17 Ground Advantage deadline for Christmas delivery\"",
-   "ids": [
-    "a6cc2420ad66e"
    ],
    "fixed": false
   },
@@ -213,16 +204,6 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
-   "ids": [
-    "07",
-    "w84705482dd2f"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
    "ids": [
     "a45eccf8e24d3",
@@ -306,15 +287,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"USPS holiday rates on some package products run through mid-January\"",
    "ids": [
     "ac78f72e7f458"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS sets Dec. 17 Ground Advantage deadline for Christmas delivery\"",
-   "ids": [
-    "a6cc2420ad66e"
    ],
    "fixed": false
   },
@@ -446,16 +418,6 @@
    "ids": [
     "a80e5b8dd1671",
     "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"UPS has not yet announced 2027 rates\" may be out of date: newer story \"UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling threshold, ZIP changes\"",
-   "ids": [
-    "07",
-    "w84705482dd2f"
    ],
    "fixed": false
   },
