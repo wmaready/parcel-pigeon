@@ -6,7 +6,7 @@ if(typeof PLAYERS==='undefined'||typeof PEDGES==='undefined'||typeof REALMS==='u
 const assetBase=new URL('./',document.currentScript?.src||document.baseURI);
 const host=document.querySelector('#s-mna .view[data-view="map"]');if(!host)return;
 const COL={national:'#5B8DEF',regional:'#F28DB2',gig:'#FF9B42',retail:'#FF9900',
-  '3pl':'#2EC4B6',global:'#FFCC00',software:'#A57BE0',cold:'#4CC9F0',auto:'#9BE15D',capital:'#B9875A'};
+  '3pl':'#2EC4B6',global:'#FFCC00',software:'#A57BE0',cold:'#4CC9F0',auto:'#9BE15D',capital:'#B9875A',consultancy:'#FF6F91'};
 const KIND={owns:'own',acquired:'own',merged:'own',spun:'own',sold:'own',invested:'inv',partner:'part'};
 const RANK={owns:0,acquired:1,merged:2,spun:3,sold:4,invested:5,partner:6};
 const VERB={owns:'Owns',acquired:'Bought',merged:'Merged with',spun:'Spun off',sold:'Sold',invested:'Invested in',partner:'Partners with'};
@@ -14,6 +14,10 @@ const VERB_IN={owns:'Owned by',acquired:'Bought by',merged:'Merged with',spun:'S
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const OWN={public:'Public',private:'Private',sub:'Subsidiary',pe:'Private equity',gov:'Government',pending:'Going public'};
 const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:null;
+// a curated record (company-foundation.js) lists every source it was checked against and the date it was checked
+const foundSrc=p=>{const L=[...new Set([...(p.srcs||[]),p.src].map(safeUrl).filter(Boolean))],host=u=>{try{const x=new URL(u);return (x.hostname.replace(/^www\./,'')+x.pathname).replace(/\/$/,'')}catch(e){return 'source'}};
+  const d=p.chk&&(typeof fmtD==='function'?fmtD(String(p.chk),{month:'short',day:'numeric',year:'numeric'}):String(p.chk));
+  return `<div class="mx-sec mx-found">${L.map(u=>`<a class="mx-src" href="${esc(u)}" target="_blank" rel="noopener noreferrer">Source: ${esc(host(u))} ↗</a>`).join(' ')}${d?`<p class="mx-empty">Record checked ${esc(d)}</p>`:''}</div>`};
 
 let N=[],E=[],byId={},sig='',sel=null,filt=new Set(REALMS.map(r=>r[0])),T={x:0,y:0,k:1},W=0,H=0,laidOut=false;
 
@@ -171,7 +175,7 @@ function panel(){
   ${sec('Invested in',r.inv,'')}
   ${sec('Partners',r.part,'')}
   ${!n.links.length?'<p class="mx-empty">No connections tracked yet.</p>':''}
-  ${url?`<div class="mx-sec"><a class="mx-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`:''}`;
+  ${p.foundation?foundSrc(p):url?`<div class="mx-sec"><a class="mx-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a></div>`:''}`;
   side.classList.add('open');side.scrollTop=0;
 }
 function detailOf(n){const s0=sel;sel=n;panel();const h=side.innerHTML;sel=s0;panel();return h.replace('<button class="mx-x" aria-label="Close">&times;</button>','')}

@@ -198,3 +198,6 @@ section#s-mna .view[data-view="map"] > #mNewP{display:none!important}
 }
 /* B24: the map's coverage line, above the map */
 .mx-gcov{margin:0 0 8px;font-size:12.5px;line-height:1.4;color:var(--ink-2)}.mx-gcov b{color:var(--ink);font-weight:600}
+/* B27: consultancies & shipping intelligence realm */
+.r-consultancy{--rc:#FF6F91}
+.mx-found .mx-src{display:inline-block;margin:0 10px 6px 0}

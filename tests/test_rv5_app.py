@@ -322,3 +322,55 @@ def test_docs_snapshot_links_and_announcement_link(site):
         assert r["after"] and r["other"] == 0
         assert r["see"] == "https://about.ups.example/2027-rates?a=1&b=2" and "Announced" in r["gtxt"] and "Not yet published" not in r["gtxt"]
         assert pg.evaluate(OVERFLOW) is None
+
+
+FOUND = ["transimpact", "shipware", "reveel", "sifted", "ljmgroup", "shipmatrix", "lojistic", "intelligentaudit"]
+
+
+def test_company_foundation_is_the_supplied_file():
+    """B27: company-foundation.js is added exactly as supplied (not regenerated), loaded before company-search.js and before
+    the page builds its company indexes, and the nightly research now takes parcel consultancies."""
+    src = (ROOT / "index.html").read_text(encoding="utf-8")
+    assert src.index('<script src="company-foundation.js"></script>') < src.index("const PLAYERS=") < src.index("const PL=Object.fromEntries(PLAYERS")
+    assert src.index('<script src="company-foundation.js"></script>') < src.index('<script src="company-search.js"></script>')
+    hook = src.index("window.ppCompanyFoundation.merge(PLAYERS)")
+    assert src.index("const PLAYERS=") < hook < src.index("function indexPlayers(){")
+    import hashlib
+    assert hashlib.sha256((ROOT / "company-foundation.js").read_bytes()).hexdigest() == "e2d7c50a89479d479c37ce34a74062d75752d16003ef597743d50003922494c9"
+    import players
+    assert "consultancy" in players.REALMS
+    assert "Parcel consultancies, parcel-spend and invoice-audit firms ARE players" in players.RESEARCH
+    assert "parcel-spend consultancies\nand invoice-audit firms;" not in players.RESEARCH
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_consultancies_on_the_map_and_in_search(site, width):
+    """B27: "Shipware" finds Shipware, never Costco; merging twice adds nothing; existing ids and ownership are kept; no
+    coordinates or ownership are invented; the profile lists its sources and the date the record was checked."""
+    with app(site, width) as pg:
+        ids = pg.evaluate("() => PLAYERS.filter(p => p.foundation).map(p => p.id)")
+        assert sorted(ids) == sorted(FOUND)
+        hits = pg.evaluate("() => ppCompanySearch('Shipware', PLAYERS, PEDGES, RL).map(x => x.p.id)")
+        assert hits and hits[0] == "shipware" and "costco" not in hits
+        assert pg.evaluate("() => { const n = PLAYERS.length; ppCompanyFoundation.merge(PLAYERS); return PLAYERS.length === n }")
+        kept = pg.evaluate("""() => { const L = [{id: 'tix', n: 'TransImpact', al: ['TI'], own: 'pe', parent: 'acme', tk: null, hq: 'Somewhere, NC', yr: '1990'}];
+            ppCompanyFoundation.merge(L); ppCompanyFoundation.merge(L); return L }""")
+        t = [p for p in kept if p["id"] == "tix"]
+        assert len(t) == 1 and t[0]["own"] == "pe" and t[0]["parent"] == "acme" and t[0]["hq"] == "Somewhere, NC" and t[0]["yr"] == "1990"
+        assert len([p for p in kept if p["n"] == "TransImpact"]) == 1
+        fresh = pg.evaluate("() => PLAYERS.filter(p => p.foundation).map(p => ({id: p.id, own: p.own, parent: p.parent, tk: p.tk, geo: p.geo || null, realm: p.realm}))")
+        assert all(f["own"] is None and f["parent"] is None and f["tk"] is None and f["geo"] is None and f["realm"] == "consultancy" for f in fresh), fresh
+        assert not pg.evaluate("() => PEDGES.some(e => ['transimpact','shipware','reveel','sifted','ljmgroup','shipmatrix','lojistic','intelligentaudit'].includes(e.a) || ['transimpact','shipware','reveel','sifted','ljmgroup','shipmatrix','lojistic','intelligentaudit'].includes(e.b))")
+        assert pg.evaluate("() => RL.consultancy") == "Consultancies & shipping intelligence"
+        assert pg.evaluate("() => PLAYERS.filter(p => p.foundation).every(p => !(wmLoc(p) || {}).g)")
+        assert pg.evaluate("() => PSITE.shipware") == "shipware.com"
+        # the market-map profile: every source and "Record checked Oct 18, 2026"
+        pg.click('nav.tabs [data-tab="mna"]')
+        pg.wait_for_timeout(300)
+        pg.fill("#mxQ", "Shipware")
+        pg.wait_for_selector('#mxSugg [data-go="shipware"]', timeout=5000)
+        pg.click('#mxSugg [data-go="shipware"]')
+        pg.wait_for_timeout(400)
+        co = pg.inner_text("#mxCo")
+        assert "Record checked Oct 18, 2026" in co and "Source: shipware.com" in co and "Consultancies & shipping intelligence" in co
+        assert pg.evaluate(OVERFLOW) is None

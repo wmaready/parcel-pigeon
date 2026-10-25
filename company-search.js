@@ -7,18 +7,20 @@
     if (!q) return [];
     const byId = new Map(players.map(p => [p.id, p]));
     const namesOf = p => [p.n, ...(p.al || []), p.tk].filter(Boolean);
-    const contains = text => { const n = norm(text), ws = n.split(' '); return tokens.every(t => t.length <= 3 ? ws.includes(t) : n.includes(t)) || (compact.length > 3 && n.replace(/ /g, '').includes(compact)); };
+    // run-together matching ("ship ware" for "Shipware") is for names only: in prose it crosses words, and "membership
+    // warehouse" would match "Shipware"
+    const contains = (text, name) => { const n = norm(text), ws = n.split(' '); return tokens.every(t => t.length <= 3 ? ws.includes(t) : n.includes(t)) || (!!name && compact.length > 3 && n.replace(/ /g, '').includes(compact)); };
     return players.map(p => {
       const names = namesOf(p);
       const exact = names.find(n => norm(n) === q || norm(n).replace(/ /g, '') === compact);
       if (exact) return { p, score: 0, reason: exact === p.n ? 'Company name' : 'Name / ticker: ' + exact };
-      const name = names.find(n => norm(n).startsWith(q) || contains(n));
+      const name = names.find(n => norm(n).startsWith(q) || contains(n, true));
       if (name) return { p, score: 1, reason: name === p.n ? 'Company name' : 'Name / ticker: ' + name };
       const fields = [[p.hq, 'Headquarters'], [realms[p.realm], 'Sector'], [p.s || p.what, 'Company profile']];
       const field = fields.find(([text]) => text && contains(text));
       if (field) return { p, score: 2, reason: field[1] + ': ' + String(field[0]) };
       const relations = edges.filter(e => e.a === p.id || e.b === p.id);
-      const related = relations.map(e => ({ e, other: byId.get(e.a === p.id ? e.b : e.a) })).find(x => x.other && namesOf(x.other).some(contains));
+      const related = relations.map(e => ({ e, other: byId.get(e.a === p.id ? e.b : e.a) })).find(x => x.other && namesOf(x.other).some(n => contains(n, true)));
       if (related) return { p, score: 3, reason: 'Connection: ' + related.other.n + (related.e.t ? ' · ' + related.e.t : '') };
       const history = (p.hist || []).find(h => contains(h.t));
       if (history) return { p, score: 4, reason: 'History: ' + history.t };
