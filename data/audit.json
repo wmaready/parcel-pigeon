@@ -1,36 +1,37 @@
 {
- "run": "2026-10-25T04:38Z",
+ "run": "2026-10-25T04:48Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 160,
- "doc_cursor": 120,
+ "link_cursor": 200,
+ "doc_cursor": 150,
  "checked_pairs": [
-  "94d1ac334f4e",
-  "0b8aff140a01",
-  "60030262fcea",
-  "bd74f39e4a2a",
-  "4d5dedc8cd29",
-  "c74456d2bddc",
-  "14a3d7429698",
-  "457e37db5347",
-  "0cae9f6a1079",
-  "70042e1b5ea7",
-  "f3a106e02077",
-  "de313bc51fd7",
-  "4621e9e86574",
-  "b54077ea2f7b",
-  "1bc66c00eda3",
-  "7e4a0a07ad2f",
-  "5effb73bc21d",
   "d46a0aebc57e",
-  "dbb89994655f",
-  "5f83fff4b0b8",
-  "62cb3ae5df27",
+  "f3a106e02077",
   "454e4f8f6a6b",
+  "7e4a0a07ad2f",
+  "60030262fcea",
+  "0cae9f6a1079",
+  "4621e9e86574",
+  "5effb73bc21d",
+  "1bc66c00eda3",
+  "14a3d7429698",
+  "6157952e9b11",
+  "bd74f39e4a2a",
+  "62cb3ae5df27",
+  "dbb89994655f",
   "4e8faef9252d",
+  "5f83fff4b0b8",
   "73dcfc31b988",
-  "6bef0a5868e5"
+  "de313bc51fd7",
+  "6bef0a5868e5",
+  "b54077ea2f7b",
+  "c74456d2bddc",
+  "0b8aff140a01",
+  "457e37db5347",
+  "94d1ac334f4e",
+  "70042e1b5ea7",
+  "4d5dedc8cd29"
  ],
  "issues": [
   {
@@ -271,6 +272,13 @@
     "a15404304f17b"
    ],
    "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (404 Client Error: Not Found for url: https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1224.pdf): DHL eCommerce terms of carriage (Dec 2024 version) https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1224.pdf",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -502,6 +510,13 @@
     "a2e0cb230779a",
     "a15404304f17b"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (404 Client Error: Not Found for url: https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1224.pdf): DHL eCommerce terms of carriage (Dec 2024 version) https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1224.pdf",
+   "ids": [],
    "fixed": false
   }
  ]

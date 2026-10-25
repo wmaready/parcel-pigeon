@@ -1741,20 +1741,66 @@
    "pending": false
   },
   {
-   "id": "melaracquisiti2",
-   "n": "Melar Acquisition Sponsor I LLC",
-   "realm": "capital",
-   "own": null,
+   "id": "goshare",
+   "n": "GoShare",
+   "realm": "gig",
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "SPAC / public markets named in Melar shareholders approve SPAC merger with Everli Global.",
-   "al": [],
-   "src": "https://markets.ft.com/data/announce/detail?dockey=600-202610221707BIZWIRE_USPRX____20261022_BW157192-1",
+   "hq": "San Diego, CA, USA",
+   "yr": "2014",
+   "s": "GoShare runs an on-demand marketplace that connects businesses and consumers with independent truck, van and car owners for same-day last-mile and middle-mile delivery, with an API for high-volume shippers.",
+   "al": [
+    "GoShare Inc.",
+    "GoShare, Inc."
+   ],
+   "src": "https://www.uschamber.com/co/good-company/growth-studio/goshare-revolutionizes-delivery",
    "auto": true,
-   "added": "2026-10-22",
-   "story": "a86749c3f1d9f"
+   "added": "2026-10-25",
+   "from": "discover",
+   "site": "goshare.co",
+   "geo": [
+    -117.161,
+    32.716
+   ],
+   "srcs": [
+    "https://www.uschamber.com/co/good-company/growth-studio/goshare-revolutionizes-delivery",
+    "https://www.inc.com/profile/goshare",
+    "https://www.prweb.com/releases/goshare-has-raised-8-million-in-seed-investments-to-improve-big-and-bulky-deliveries-821098076.html"
+   ],
+   "enriched": "2026-10-25",
+   "pending": false
+  },
+  {
+   "id": "mothership",
+   "n": "Mothership",
+   "realm": "gig",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Austin, TX, USA",
+   "yr": "2017",
+   "s": "Mothership runs a tech-enabled marketplace that dispatches independent short-haul carriers for same-day and final-mile freight (palletized and LTL) in 21 U.S. metro markets. It also sells national LTL through carrier partners.",
+   "al": [
+    "Mothership Technologies Inc.",
+    "Mothership Technologies, Inc."
+   ],
+   "src": "https://mothership.com/",
+   "auto": true,
+   "added": "2026-10-25",
+   "from": "discover",
+   "site": "mothership.com",
+   "geo": [
+    -97.743,
+    30.267
+   ],
+   "srcs": [
+    "https://mothership.com/",
+    "https://fintech.global/2022/05/13/mothership-pulls-in-76m-for-freight-technology/",
+    "https://www.builtinaustin.com/articles/mothership-raises-76m-short-haul-freight-tech-hiring"
+   ],
+   "enriched": "2026-10-25",
+   "pending": false
   }
  ],
  "edges": [
@@ -3116,6 +3162,33 @@
    "t": "Led $42M Series B",
    "url": "https://pulse2.com/curri-42-million-in-funding/",
    "story": null
+  },
+  {
+   "a": "mothership",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2022",
+   "t": "Customer: Mothership delivers freight for DoorDash",
+   "url": "https://fintech.global/2022/05/13/mothership-pulls-in-76m-for-freight-technology/",
+   "story": null
+  },
+  {
+   "a": "mothership",
+   "b": "gopuff",
+   "k": "partner",
+   "y": "2022",
+   "t": "Customer: Mothership delivers freight for Gopuff",
+   "url": "https://fintech.global/2022/05/13/mothership-pulls-in-76m-for-freight-technology/",
+   "story": null
+  },
+  {
+   "a": "mothership",
+   "b": "happyreturns",
+   "k": "partner",
+   "y": "2022",
+   "t": "Customer: Mothership provides logistics for Happy Returns",
+   "url": "https://fintech.global/2022/05/13/mothership-pulls-in-76m-for-freight-technology/",
+   "story": null
   }
  ],
  "moves": [
@@ -3414,7 +3487,9 @@
   "uniteddelivery": "2026-10-23",
   "bringg": "2026-10-24",
   "onfleet": "2026-10-24",
-  "curri": "2026-10-25"
+  "curri": "2026-10-25",
+  "goshare": "2026-10-25",
+  "mothership": "2026-10-25"
  },
  "facts": {
   "ups": {
