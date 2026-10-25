@@ -17,7 +17,8 @@ def app_with(site, width=390, files=None, news_extra=None):
         files["data/news.json"] = json.loads((ROOT / "data/news.json").read_text()) + news_extra
     with pw.sync_playwright() as p:
         b = p.chromium.launch(executable_path=os.environ.get("PP_CHROMIUM") or None)
-        pg = b.new_page(viewport={"width": width, "height": 900})
+        # no service worker: it would fetch data files itself, past the routes below
+        pg = b.new_context(viewport={"width": width, "height": 900}, service_workers="block").new_page()
         errors = []
         pg.on("pageerror", lambda e: errors.append(str(e)))
         pg.route(re.compile(r"^https?://(?!127\.0\.0\.1)"), lambda r: r.abort())
@@ -123,3 +124,54 @@ def test_fuel_weeks_per_carrier_and_one_current_value(site, width):
             assert "this week" not in r["sum"] and r["head"] == "Latest posted rates"
         assert "Nov 2, 2026" in r["notice"] and "not labeled an increase" in r["notice"]
         assert pg.evaluate(OVERFLOW) is None
+
+
+ASK = "async q => { const a = await askCoopAnswer(q); const d = document.createElement('div'); d.innerHTML = a.h; return d.textContent }"
+
+
+def test_ask_coop_closes_not_yet_announced_placeholders(site):
+    """B14: once a Pricing & GRI story for the carrier and year exists, Coop never answers "not yet announced"."""
+    alm = json.loads((ROOT / "data/almanac.json").read_text())
+    ph = lambda y: {"carrier": "UPS", "year": y, "kind": "gri", "announced": None, "effective": None, "pct": None, "id": f"ups-{y}-gri",
+                    "headline": f"UPS {y} general rate increase not yet announced", "details": [], "sources": [], "conf": "partial",
+                    "note": "Forecasts are not announcements."}
+    story = {"id": "zzgri2028", "date": "2027-10-22", "c": ["UPS"], "cat": "Pricing & GRI", "kind": "News", "lvl": 3, "imp": "up",
+             "title": "UPS sets its 2028 rate increase, effective Dec 20, 2027", "sum": "x", "plain": "x", "act": "2027-12-20",
+             "url": "https://x.example/gri2028", "srcs": [{"src": "UPS", "url": "https://x.example/gri2028"}]}
+    with app_with(site, 1280, files={"data/almanac.json": alm + [ph(2028), ph(2029)]}, news_extra=[story]) as pg:
+        a = pg.evaluate(ASK, "UPS 2028 rate increase")
+        assert "not yet announced" not in a.lower() and "UPS sets its 2028 rate increase" in a
+        # no story for 2029: the placeholder still answers, so the rule only closes what a story has replaced
+        assert "not yet announced" in pg.evaluate(ASK, "UPS 2029 rate increase").lower()
+        # the live UPS Dec 21, 2026 story closes the real 2027 placeholder the same way
+        assert "not yet announced" not in pg.evaluate(ASK, "UPS 2027 rate increase").lower()
+
+
+def test_ask_coop_programs_fuel_weeks_and_excerpts(site):
+    """B14: program questions answer from data/programs.json first and only for that carrier; fuel names each carrier's own
+    week; guide excerpts show document, year and effective date, and other carriers' notes stay out."""
+    progs = {"programs": [{"id": "ups-sbr", "carrier": "UPS", "program": "UPS Small Business Rates",
+                           "inclusions": [{"text": "Delivery Area Surcharge", "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"},
+                                          {"text": "Fuel Surcharge <b>", "checked": "2026-10-24"}],
+                           "no_fees": ["Address Correction"], "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates", "checked": "2026-10-24"}]}
+    with app_with(site, 1280, files={"data/programs.json": progs}) as pg:
+        a = pg.evaluate(ASK, "Small Business Rates fuel")
+        assert a.startswith("UPS Small Business Rates: advertised as including Delivery Area Surcharge; Fuel Surcharge <b>")
+        assert "Spee-Dee" not in a and "FedEx Ground" not in a and "UPS Ground" in a
+        assert "<b>" not in pg.evaluate("async q => (await askCoopAnswer(q)).h.replace(/<\\/?b>/g, '').replace(/<b class[^>]*>/g, '')", "SBR fuel").replace("&lt;b&gt;", "")
+        f = pg.evaluate(ASK, "UPS fuel surcharge")
+        wk = pg.evaluate("() => FUEL_API.wk(FUEL.wk.UPS.ground)")
+        assert f"({wk})" in f and "in effect from" not in f and "OnTrac" not in f
+        d = pg.evaluate(ASK, "FedEx dim divisor")
+        assert "USPS applies dimensional weight" not in d
+        g = pg.evaluate("""async q => { const a = await askCoopAnswer(q); const box = document.createElement('div'); box.innerHTML = a.h;
+            return [...box.querySelectorAll('.ak-guide')].map(b => b.textContent) }""", "delivery area surcharge")
+        assert g and all(re.search(r"(20\d\d|Year not stated) · (effective|effective date not on file)", x) for x in g), g
+        cy = int(pg.evaluate("() => TODAY.slice(0, 4)"))
+        for x in g:
+            m = re.search(r"(20\d\d) · ", x)
+            if not m or int(m.group(1)) < cy:
+                assert "check the carrier's current version" in x, x
+    # data/programs.json missing: no error, generic answer
+    with app_with(site, 390, files={"data/programs.json": None}) as pg:
+        assert "Fuel" in pg.evaluate(ASK, "Small Business Rates fuel")
