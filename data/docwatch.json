@@ -1,5 +1,5 @@
 {
- "cursor": 30,
+ "cursor": 45,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -71,19 +71,34 @@
    "hash": "0898c2640b82",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 UPS Daily Rate and Service Guide (PDF)"
+   "n": "2026 UPS Daily Rate and Service Guide (PDF)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
+    "txt": "data/snapshots/bf42edf12902/2026-10-25.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf": {
    "hash": "826c8434e317",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 UPS Ground Saver rates, 1 lb and over (PDF)"
+   "n": "2026 UPS Ground Saver rates, 1 lb and over (PDF)",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf",
+    "txt": "data/snapshots/9d0703902e0c/2026-10-25.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf": {
    "hash": "e3db3b1e80c3",
    "first": "2026-10-16",
    "checked": "2026-10-25",
-   "n": "2026 UPS Retail Rate and Service Guide"
+   "n": "2026 UPS Retail Rate and Service Guide",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
+    "txt": "data/snapshots/b51c20a36a18/2026-10-25.txt"
+   }
   },
   "https://pe.usps.com/text/DMM300/283.htm": {
    "hash": "e6babc6a9b6c",
@@ -259,14 +274,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 118,
+   "fails": 119,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 118,
+   "fails": 119,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-25"
@@ -363,20 +378,35 @@
    "hash": "0898c2640b82",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "UPS Daily Rates and Zone Charts page"
+   "n": "UPS Daily Rates and Zone Charts page",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
+    "txt": "data/snapshots/20bd558bfa65/2026-10-25.txt"
+   }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/retail-rates": {
    "hash": "e3db3b1e80c3",
    "first": "2026-10-21",
    "checked": "2026-10-25",
-   "n": "UPS Retail Rates page"
+   "n": "UPS Retail Rates page",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
+    "txt": "data/snapshots/7ba187bfbd08/2026-10-25.txt"
+   }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
    "hash": "10e2e45bcf78",
    "first": "2026-10-21",
    "checked": "2026-10-25",
    "n": "UPS Shipping Zones and Rates hub",
-   "changed": "2026-10-22"
+   "changed": "2026-10-22",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+    "txt": "data/snapshots/45730186d708/2026-10-25.txt"
+   }
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
@@ -437,13 +467,23 @@
    "first": "2026-10-21",
    "n": "2026-RATES-LETTER.pdf",
    "hash": "323ff4aa69ce",
-   "checked": "2026-10-25"
+   "checked": "2026-10-25",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf",
+    "txt": "data/snapshots/c6c9b7a09691/2026-10-25.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf": {
    "first": "2026-10-21",
    "n": "LTL-Rates-2026-version-30.pdf",
    "hash": "ca82afb7dd28",
-   "checked": "2026-10-25"
+   "checked": "2026-10-25",
+   "snap": {
+    "d": "2026-10-25",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf",
+    "txt": "data/snapshots/c7b92690e906/2026-10-25.txt"
+   }
   },
   "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf": {
    "first": "2026-10-21",
@@ -789,6 +829,92 @@
    "first": "2026-10-25",
    "checked": "2026-10-25",
    "n": "2026 UPS Small Business hundredweight rates"
+  },
+  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
+   "hash": "778400ab2847",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "UPS Ground Saver page"
+  },
+  "https://www.ups.com/us/en/services/shipping/simple-rate": {
+   "hash": "d8faf24fe155",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "UPS Simple Rate page"
+  },
+  "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
+   "hash": "a5290fff91cb",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "UPS Small Business Rates page"
+  },
+  "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
+   "hash": "d28481282107",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "Printable version"
+  },
+  "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm": {
+   "hash": "8d1ffdf3d98c",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "USPS 2026 holiday price change announcement"
+  },
+  "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx": {
+   "n": "DHL eCommerce delivery area ZIP list, effective Jan 18, 2026",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf": {
+   "hash": "a2479c22c80b",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "2026 FedEx Ground Economy delivery area ZIP list"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx": {
+   "n": "2026 FedEx delivery area ZIP list (Excel)",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en": {
+   "hash": "bb78e667011c",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx rate tools (zone locator, rate downloads)"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5abedc88-3398-4cec-98b7-08e0bb271544/original/as/area-surcharge-zips-us-en.xlsx": {
+   "n": "UPS delivery and remote area ZIP list",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b38785e4-bf16-448d-ac8c-49e0f7d414d6/original/as/ea-surcharge-en-GLOBAL.xlsx": {
+   "n": "UPS international extended area list",
+   "checked": "2026-10-25",
+   "skip": "spreadsheet"
+  },
+  "https://www.dhl.com/us-en/home/important-information/2026/express-fuel-surcharge-updates.html": {
+   "hash": "1e78bfca5548",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL Express weekly fuel surcharge updates"
+  },
+  "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf": {
+   "hash": "15a2a93345df",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce domestic fuel table, effective May 30, 2026"
+  },
+  "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-jet-fuel-surcharge-effective-from-020126.pdf": {
+   "hash": "59d8e418ba71",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "DHL eCommerce jet fuel surcharge, effective Feb 1, 2026"
+  },
+  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
+   "hash": "9520c595235a",
+   "first": "2026-10-25",
+   "checked": "2026-10-25",
+   "n": "FedEx fuel surcharge page"
   }
  }
 }

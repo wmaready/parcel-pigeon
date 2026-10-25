@@ -1,31 +1,35 @@
 {
  "SEC: UPS 8-K": {
   "direct": true,
-  "err": "SEC_CONTACT secret missing; not read",
-  "fails": 160,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 0
+  "entries": 0,
+  "last_ok": "2026-10-25"
  },
  "SEC: FedEx 8-K": {
   "direct": true,
-  "err": "SEC_CONTACT secret missing; not read",
-  "fails": 160,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 0
+  "entries": 0,
+  "last_ok": "2026-10-25"
  },
  "SEC: Amazon 8-K": {
   "direct": true,
-  "err": "SEC_CONTACT secret missing; not read",
-  "fails": 160,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 0
+  "entries": 0,
+  "last_ok": "2026-10-25"
  },
  "SEC: Pitney Bowes 8-K": {
   "direct": true,
-  "err": "SEC_CONTACT secret missing; not read",
-  "fails": 160,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 0
+  "entries": 0,
+  "last_ok": "2026-10-25"
  },
  "Federal Register: USPS": {
   "direct": true,
@@ -64,7 +68,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 57,
+  "entries": 58,
   "last_ok": "2026-10-25"
  },
  "Wire: GlobeNewswire": {
@@ -80,7 +84,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 13,
+  "entries": 12,
   "last_ok": "2026-10-25"
  },
  "Newsroom: FedEx": {
@@ -96,7 +100,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-25",
-  "entries": 21,
+  "entries": 22,
   "last_ok": "2026-10-25"
  },
  "Newsroom: Amazon": {
