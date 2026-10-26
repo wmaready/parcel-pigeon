@@ -541,3 +541,12 @@ def test_fuel_page_has_no_weekly_summary_text_and_sources_are_folded(site):
         assert pg.query_selector("#fcNote") is None
         assert pg.query_selector("#fuelSrcs details.fsrcd:not([open])")
         assert pg.query_selector("#fcEv") is not None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_tour_closed_right_after_a_step_opens_does_not_error(site, width):
+    """The tour places its spotlight a frame after each step opens; closing it inside that frame left a null overlay
+    ('Cannot read properties of null (reading classList)'), which showed up as a flaky first-screen test."""
+    with app_with(site, width) as pg:
+        pg.evaluate("() => { tourStart(); document.querySelector('[data-pt=skip]').click(); }")
+        pg.wait_for_timeout(600)      # app_with fails the test on any page error

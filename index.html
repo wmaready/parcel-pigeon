@@ -10402,7 +10402,7 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
       <div class="ptb"><button type="button" data-pt="skip" class="ptskip">Skip tour</button><span>${i?'<button type="button" data-pt="back" class="ptback">Back</button>':''}<button type="button" data-pt="next" class="ptnext">${i===STEPS.length-1?'Done':'Next'}</button></span></div>`;
     ov.classList.remove('on');
     setTimeout(()=>{const el=target();if(el){const r=el.getBoundingClientRect();if(r.top<70||r.bottom>innerHeight-90){if(r.height>innerHeight*.44)window.scrollBy({top:r.top-(innerWidth<700?72:140),behavior:'instant'});else el.scrollIntoView({block:'center',behavior:'instant'})}}
-      requestAnimationFrame(()=>{place();ov.classList.add('on');card.querySelector('.ptnext').focus({preventScroll:true})})},s.tab?140:20);
+      requestAnimationFrame(()=>{if(!ov)return;place();ov.classList.add('on');card.querySelector('.ptnext').focus({preventScroll:true})})},s.tab?140:20);
   }
   function place(){if(!ov)return;const el=target(),pad=6,vw=innerWidth,vh=innerHeight;
     let r=el?el.getBoundingClientRect():{left:vw/2,top:vh/2,width:0,height:0,right:vw/2,bottom:vh/2};

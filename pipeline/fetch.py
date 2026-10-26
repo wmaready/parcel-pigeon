@@ -90,11 +90,17 @@ def _impersonate(url, timeout):
     return Page(r.content, dict(r.headers), str(r.url), "chrome-tls")
 
 
+render_error = ""          # why the last render() returned None, for health notes
+
+
 def render(url, timeout=45):
     """Open the page in a real Chromium, open every drop-down, and return the HTML (None if Playwright isn't installed)."""
+    global render_error
+    render_error = ""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
+        render_error = "Playwright is not installed"
         return None
     try:
         with sync_playwright() as p:
@@ -111,6 +117,7 @@ def render(url, timeout=45):
             b.close()
             return html
     except Exception as e:
+        render_error = str(e).strip().splitlines()[0][:160] if str(e).strip() else type(e).__name__
         print(f"  render failed {url}: {e}", file=sys.stderr)
         return None
 
