@@ -327,3 +327,9 @@ def test_fedex_statbook_goes_to_review_with_its_link():
     page = '<a href="https://s21.q4cdn.com/665674268/files/doc_financials/2026/tp/FedEx-Transition-Stat-Book.pdf">Stat Book</a>'
     E.fill_packages(rows, review, "2026-10-29", fetch=lambda u: (_ for _ in ()).throw(AssertionError("no SEC read for FedEx")), fedex_page=page)
     assert review and review[0]["url"].endswith("FedEx-Transition-Stat-Book.pdf") and row_of(rows, "FedEx", "Jun–Sep 2026 transition period")["vol"] is None
+
+
+def test_fedex_package_views_say_freight_is_not_in_them():
+    """Oct 26, 2026: FedEx Freight separated on June 1, 2026; the package figures were always the Federal Express segment."""
+    import re as _re
+    assert 'egfrt' in (ROOT / "index.html").read_text() and "reports shipments, not packages" in (ROOT / "index.html").read_text()
