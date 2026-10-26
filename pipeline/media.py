@@ -60,6 +60,17 @@ def foreign_logo(src, host, pid=""):
     return not any(w in o or o[:4] in w for w in words for o in own if len(o) >= 3)
 
 
+# a page's customer or partner logo wall: its images are other companies' logos, never the page owner's
+CUSTOMER_PATH = re.compile(r"customer|client|partner|testimonial|case-?stud|trusted|logo-?wall", re.I)
+CUSTOMER_AREA = re.compile(r"customers?|clients?|partners?|trusted by|case stud|testimonial|logo[- ]?wall|brands we", re.I)
+NO_OWN_LOGO = {"blujay"}      # BluJay Solutions was folded into E2open in 2021: its old site now shows E2open's and its customers' logos
+
+
+def customer_image(html, pos, src):
+    """True if the <img> at html[pos] sits in a customer/partner area or its file path says customer, partner or case study."""
+    return bool(CUSTOMER_PATH.search(urllib.parse.unquote(urllib.parse.urlsplit(src).path)) or CUSTOMER_AREA.search(html[max(0, pos - 500):pos]))
+
+
 def logo_candidates(domain):
     """Best first: the logo the site itself declares (JSON-LD), the header logo image (often a crisp SVG wordmark),
     then the app icons. Wordmarks read far better than tiny round app icons. A unit with its own page on a parent's
@@ -73,14 +84,15 @@ def logo_candidates(domain):
         for m in re.finditer(r'"logo"\s*:\s*(?:\{[^}]*?"url"\s*:\s*)?"([^"]+)"', html):
             out.append((900, urllib.parse.urljoin(base, m.group(1))))
         head = html[:200000]
-        for tag in re.findall(r"<img[^>]+>", head, re.I):
+        for im in re.finditer(r"<img[^>]+>", head, re.I):
+            tag = im.group(0)
             attrs = tag.lower()
             if "logo" not in attrs:
                 continue
             src = (re.search(r'(?:data-src|src)=["\']([^"\']+)', tag, re.I) or [None, ""])[1]
             if not src or src.startswith("data:") and "svg" not in src[:30]:
                 continue
-            if not src.startswith("data:") and foreign_logo(src, host, domain.split(".")[0]):
+            if not src.startswith("data:") and (foreign_logo(src, host, domain.split(".")[0]) or customer_image(head, im.start(), src)):
                 continue                                  # a customer's or partner's logo from a logo wall
             score = 800 + (60 if src.lower().split("?")[0].endswith(".svg") else 0) + (30 if re.search(r"header|nav|brand", attrs) else 0)
             out.append((score, urllib.parse.urljoin(base, src)))
@@ -212,6 +224,9 @@ def logos(limit=25):
             break
         host = sites[pid].split("/")[0].lower().removeprefix("www.")
         done += 1
+        if pid in NO_OWN_LOGO:
+            idx[pid] = {"checked": TODAY.isoformat(), "host": host}      # shown as a monogram rather than someone else's logo
+            continue
         old = idx.get(pid) if isinstance(idx.get(pid), dict) else {}
         rec = {"checked": TODAY.isoformat(), "host": host}
         rejected = set()

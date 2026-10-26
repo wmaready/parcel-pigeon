@@ -257,7 +257,7 @@ def test_map_coverage_line_follows_the_filter(site, width):
 def test_phone_first_screen(site, width):
     """B25: the tour offer sits in the page under Today's heading and closes on the first section change; Help has "Take
     the tour"; the brief's controls are 44x44 named buttons with a visible keyboard focus; the header tagline folds after
-    the first scroll on a phone; times show in the reader's zone with UTC on tap; Presentation mode quiets the page."""
+    the first scroll on a phone; times show in the reader's zone with UTC on tap; there is no presentation mode."""
     with app_with(site, width, tz="America/Chicago") as pg:
         pg.wait_for_selector(".ptoffer", timeout=8000)
         o = pg.evaluate("""() => { const o = document.querySelector('.ptoffer'); return [getComputedStyle(o).position,
@@ -283,12 +283,8 @@ def test_phone_first_screen(site, width):
         hidden = pg.evaluate("() => getComputedStyle(document.querySelector('.logo .ltag')).display === 'none'")
         assert hidden == (width <= 700)
         pg.evaluate("() => window.scrollTo(0, 0)")
-        pg.click("#presentBtn")
-        st = pg.evaluate("() => [document.body.classList.contains('present'), reduceMotion(), getComputedStyle(document.querySelector('.ticker .track')).animationName, document.getElementById('presentBtn').getAttribute('aria-pressed')]")
-        assert st == [True, True, "none", "true"], st
         assert pg.evaluate(OVERFLOW) is None
-        pg.click("#presentBtn")
-        assert not pg.evaluate("() => document.body.classList.contains('present')")
+        assert pg.query_selector("#presentBtn") is None and not pg.evaluate("() => document.body.classList.contains('present')")
         pg.click(".tdhelp [data-tour]")
         pg.wait_for_selector(".ptour", timeout=5000)
         pg.keyboard.press("Escape")
@@ -572,18 +568,48 @@ def test_map_shows_every_company_and_search_finds_transimpact(site):
 
 
 @pytest.mark.parametrize("width", [390, 1280])
-def test_storylines_roll_up_under_the_three_2026_themes(site, width):
+def test_the_three_2026_themes_are_storylines(site, width):
+    """Oct 26, 2026: the three themes are storylines of their own, at the top of the list, each with Coop's walk-through and
+    the storylines under it; they never take a story from the storyline it already sits in."""
     with app_with(site, width) as pg:
         pg.evaluate("() => goTo('news', 'storylines')")
         pg.wait_for_selector(".stth", timeout=10000)
-        t = pg.evaluate("() => [...document.querySelectorAll('.stth')].map(e => [e.querySelector('h3').textContent, e.querySelectorAll('.thsl .chip').length, e.querySelectorAll('ol li').length])")
-        names = [x[0] for x in t]
-        assert names == ["Continued splintering of eCommerce parcel from B2B/Premium parcel", "Continued battle between UPS-Teamsters",
-                         "Amazon insourcing volume (delivered most parcels in 2025)"], names
-        assert all(c >= 1 and n >= 1 for _, c, n in t), t
-        # a storyline carries the tag of the theme it belongs to, and the page does not overflow
+        t = pg.evaluate("() => [...document.querySelectorAll('.stth')].map(e => [e.querySelector('h3').textContent, e.querySelectorAll('.thsl .chip').length, e.querySelectorAll('ol li').length, !!e.querySelector('.thxgo')])")
+        assert [x[0] for x in t] == ["Splintering of eCommerce parcel from B2B/Premium parcel", "Continued battle between UPS and the Teamsters",
+                                     "Amazon insourcing volume (largest U.S. parcel carrier in 2025)"], t
+        assert all(c >= 1 and n >= 1 and w for _, c, n, w in t), t
+        assert pg.evaluate("() => [...document.querySelectorAll('#nStory > article')].slice(0, 3).every(e => e.classList.contains('stth'))")
         assert pg.evaluate("() => document.querySelectorAll('.stl:not(.stth) .thtag .chip').length") >= 5
+        # a story keeps the chip of its own storyline, not the theme's
+        assert pg.evaluate("() => { const x = thrOf(NEWS.find(n => n.id === 'h503')); return !!x && !THREADS[x.k].theme }")
+        # Coop walks through a theme, and "read all" lists exactly its stories
+        pg.click("#st-theme-ups-teamsters .thxgo")
+        pg.wait_for_selector("#st-theme-ups-teamsters .thx:not([hidden])", timeout=5000)
+        pg.evaluate("() => document.querySelector('#st-theme-ups-teamsters [data-thread=\"theme-ups-teamsters\"]').click()")
+        pg.wait_for_timeout(500)
+        assert pg.evaluate("() => filtered().length") == pg.evaluate("() => THREADS['theme-ups-teamsters'].ids.length")
         assert pg.evaluate(OVERFLOW) is None
+
+
+def test_theme_threads_are_hand_written_and_the_pipeline_leaves_them_be():
+    import json, sys
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    import news
+    from common import h
+    T = json.loads((ROOT / "data/threads.json").read_text())
+    for k in ("theme-ecommerce-split", "theme-ups-teamsters", "theme-amazon-insourcing"):
+        t = T[k]
+        assert t["theme"] is True and len(t["ids"]) >= 10 and t["cx"]["intro"] and t["cx"]["now"], k
+        assert t["cx"]["sig"] == h(",".join(t["ids"])) == t["rv"] and t["cx"]["v"] == news.BEATS_V   # narration is current: not rewritten
+        assert set(t["cx"]["beats"]) == set(t["ids"]), k
+    # a new matching headline joins its theme; an unrelated one does not
+    themes = json.loads((ROOT / "data/themes.json").read_text())["themes"]
+    pool = {"x1": {"id": "x1", "date": "2026-10-30", "title": "Teamsters file grievance over UPS Roadie routing", "c": ["UPS"]},
+            "x2": {"id": "x2", "date": "2026-10-30", "title": "Cold chain firm opens Ohio depot", "c": ["Industry"]}}
+    pool.update({i: {"id": i, "date": "2026-01-01", "title": "old", "c": []} for t in T.values() for i in t["ids"] if i not in pool})
+    news.roll_into_themes(T, pool, themes)
+    assert "x1" in T["theme-ups-teamsters"]["ids"] and "x2" not in T["theme-ups-teamsters"]["ids"]
+    assert T["theme-ups-teamsters"]["last"] == "2026-10-30"
 
 
 def test_phone_bottom_bar_is_an_opaque_layer_and_page_changes_jump(site):

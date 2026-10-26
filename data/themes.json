@@ -4,7 +4,7 @@
  "themes": [
   {
    "id": "ecom-split",
-   "n": "Continued splintering of eCommerce parcel from B2B/Premium parcel",
+   "n": "Splintering of eCommerce parcel from B2B/Premium parcel",
    "bullets": [
     "Emergence of Alternative Carriers: rapid gain in total market share. UPS and FDX pulling back from ecommerce",
     "Growth of marketplace sales and Alt Carrier management tools/platforms/software"
@@ -20,12 +20,13 @@
     "ups-amazon-glide-down"
    ],
    "match": "alternative carrier|regional carrier|marketplace|low-value|cross-border",
-   "stories": "alternative carrier|regional carrier|uniuni|gofo|veho|ontrac|marketplace|temu|shein|de minimis|fedex supply chain|fedex freight|spin-?off|ecommerce|e-commerce",
-   "short": "eCommerce split"
+   "short": "eCommerce split",
+   "thread": "theme-ecommerce-split",
+   "rollup": "alternative carrier|regional carrier|\\bGOFO\\b|\\bVeho\\b|\\bOnTrac\\b|\\bUniUni\\b|Better Trucks|\\bJitsu\\b|de minimis|FedEx (Supply Chain|Freight)|Ground Saver"
   },
   {
    "id": "ups-teamsters",
-   "n": "Continued battle between UPS-Teamsters",
+   "n": "Continued battle between UPS and the Teamsters",
    "bullets": [
     "Beginning to look at 2028 negotiation",
     "Struggle to control labor costs under union pressure. Prevalence of DSP model and Gig model in today's competitive landscape"
@@ -37,12 +38,13 @@
     "royal-mail-cwu-dispute"
    ],
    "match": "teamsters|union|labor|driver choice|collective bargaining",
-   "stories": "teamsters|2028|driver choice|collective bargaining|union|\\bcwu\\b|nlrb|\\bdsp\\b|gig (driver|work)|job cuts|buyout",
-   "short": "UPS–Teamsters"
+   "short": "UPS–Teamsters",
+   "thread": "theme-ups-teamsters",
+   "rollup": "Teamsters|Driver Choice|collective bargaining|Roadie|NLRB.*UPS|UPS.*NLRB|UPS.*2028"
   },
   {
    "id": "amazon-insourcing",
-   "n": "Amazon insourcing volume (delivered most parcels in 2025)",
+   "n": "Amazon insourcing volume (largest U.S. parcel carrier in 2025)",
    "bullets": [],
    "threads": [
     "parcel-volume-amazon",
@@ -54,8 +56,9 @@
     "amazon-jfk8-nlrb"
    ],
    "match": "amazon",
-   "stories": "\\bamazon\\b",
-   "short": "Amazon insourcing"
+   "short": "Amazon insourcing",
+   "thread": "theme-amazon-insourcing",
+   "rollup": "Amazon.*(largest|volume|logistics network|delivery network|insourc)|(UPS|FedEx|USPS).*Amazon (volume|cutback)"
   }
  ]
 }
