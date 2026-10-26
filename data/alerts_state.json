@@ -72,7 +72,8 @@
   "a71e9c34808fa",
   "a794f973354d4",
   "aa1bd42ea784a",
-  "a663794cc9c55"
+  "a663794cc9c55",
+  "a0adb56a55334"
  ],
  "clock": [
   "e06:7",
@@ -239,7 +240,8 @@
   "story:fedex names autozone s jamere jackson as chief financial officer",
   "story:roadie survey 64 of shoppers would quit a retailer after one to four bad deliveries",
   "story:doordash adds 7 99 returns pickup tiktok shop links happy returns",
-  "story:ups fedex fuel surcharges near 29 as holiday delivery prices climb"
+  "story:ups fedex fuel surcharges near 29 as holiday delivery prices climb",
+  "review:a0adb56a55334"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -314,37 +316,39 @@
   "fedex names autozone s jamere jackson as chief financial off",
   "doordash adds 7 99 returns pickup tiktok shop links happy re",
   "roadie survey 64 of shoppers would quit a retailer after one",
-  "ups fedex fuel surcharges near 29 as holiday delivery prices"
+  "ups fedex fuel surcharges near 29 as holiday delivery prices",
+  "usps to add weekly fuel surcharge on package services in jan"
  ],
  "harvested": [
-  "a351cab9045c7",
-  "a58373f1b7bc3",
-  "a312b45efa358",
-  "a3a45d7f6db20",
-  "a5d45f26f2219",
-  "aba40a11b6946",
-  "aee6669d325da",
-  "a663794cc9c55",
   "a6cc2420ad66e",
-  "a15404304f17b",
-  "rv5-ups-sbr-fuel",
-  "a773d361dac4e",
-  "wdf959a97bcb6",
-  "af8ee5ed067c6",
-  "a2b81ad721cb8",
-  "w150132868eae",
-  "a6e82ba740e99",
+  "a663794cc9c55",
   "wacb825361479",
-  "a2def09bc43bb",
-  "ac78f72e7f458",
   "a89d7e4beebd9",
   "a831c709e5809",
-  "a6c2418bed0a7",
+  "aba40a11b6946",
+  "a5d45f26f2219",
+  "a773d361dac4e",
+  "af8ee5ed067c6",
+  "a0adb56a55334",
   "a72efb5e01b99",
+  "a15404304f17b",
+  "a57a06c26359c",
+  "a6c2418bed0a7",
   "w599d9089a65d",
-  "w84705482dd2f",
+  "rv5-ups-sbr-fuel",
+  "a312b45efa358",
+  "aee6669d325da",
+  "wdf959a97bcb6",
   "a2f683da86bf8",
-  "a57a06c26359c"
+  "a3a45d7f6db20",
+  "w150132868eae",
+  "a351cab9045c7",
+  "ac78f72e7f458",
+  "w84705482dd2f",
+  "a2b81ad721cb8",
+  "a58373f1b7bc3",
+  "a2def09bc43bb",
+  "a6e82ba740e99"
  ],
  "backfilled": true,
  "recent": [
@@ -1505,6 +1509,21 @@
      "url": "https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/"
     }
    ]
+  },
+  {
+   "id": "a0adb56a55334",
+   "title": "USPS to add weekly fuel surcharge on package services in January 2027",
+   "date": "2026-10-26",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.supplychaindive.com/news/usps-to-debut-weekly-fuel-fee-in-2027-matching-fedex-ups-practices/872778/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/usps-to-debut-weekly-fuel-fee-in-2027-matching-fedex-ups-practices/872778/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1683,6 +1702,10 @@
   "aa1bd42ea784a": {
    "t": "Roadie: 64% would quit after bad deliveries",
    "m": "Survey: 64% of shoppers would quit a retailer after one to four bad deliveries. No rate or service change."
+  },
+  "a0adb56a55334": {
+   "t": "USPS adds weekly fuel surcharge in Jan 2027",
+   "m": "Covers Ground Advantage, Priority, Express and Parcel Select domestic shipments from January 2027."
   }
  },
  "queue": [],

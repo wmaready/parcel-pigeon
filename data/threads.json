@@ -251,6 +251,7 @@
    "peak-surcharges",
    "usps-big-shipper-deals",
    "usps-finances",
+   "usps-fuel-surcharge",
    "usps-leadership",
    "usps-service-network"
   ]
@@ -299,6 +300,7 @@
   "apart": [
    "usps-big-shipper-deals",
    "usps-finances",
+   "usps-fuel-surcharge",
    "usps-leadership",
    "usps-service-network"
   ]
@@ -929,6 +931,25 @@
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
+  ]
+ },
+ "usps-fuel-surcharge": {
+  "n": "USPS fuel surcharge",
+  "ids": [
+   "a0adb56a55334"
+  ],
+  "first": "2026-10-26",
+  "co": "USPS",
+  "s": "USPS announced on Oct. 26, 2026 a weekly fuel surcharge on four package services starting in January 2027.",
+  "last": "2026-10-26",
+  "c": [
+   "USPS"
+  ],
+  "apart": [
+   "usps-big-shipper-deals",
+   "usps-finances",
+   "usps-leadership",
+   "usps-service-network"
   ]
  }
 }
