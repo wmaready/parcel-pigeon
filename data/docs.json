@@ -184,7 +184,7 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
+  "t": "Rate guide",
   "n": "2026 UPS Small Business Rate Guide",
   "y": 2026,
   "eff": "2026-01-26",
@@ -200,7 +200,7 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
+  "t": "Rate guide",
   "n": "2026 UPS Small Business hundredweight rates",
   "y": 2026,
   "eff": "2025-12-22",
@@ -216,7 +216,7 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
+  "t": "Rate guide",
   "n": "2023 UPS Small Business Rate Guide",
   "y": 2023,
   "eff": "2022-12-27",
@@ -315,7 +315,7 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
+  "t": "Service guide",
   "n": "UPS Ground Saver labeling supplement (v1.8)",
   "y": 2026,
   "eff": "2026-01-02",
@@ -862,7 +862,7 @@
  },
  {
   "c": "FedEx",
-  "t": "Special program",
+  "t": "Rate guide",
   "n": "FedEx Ground Economy rates and zones page",
   "y": 2026,
   "eff": "2026-01-05",
@@ -1272,7 +1272,7 @@
  },
  {
   "c": "FedEx",
-  "t": "Zones & DAS",
+  "t": "Rate guide",
   "n": "FedEx rate tools (zone locator, rate downloads)",
   "y": null,
   "eff": null,
@@ -2386,7 +2386,7 @@
  {
   "c": "USPS",
   "t": "Terms",
-  "n": "Terms of use",
+  "n": "USPS terms of use",
   "y": null,
   "eff": null,
   "u": "https://about.usps.com/who/legal/terms-of-use.htm",
@@ -2420,7 +2420,7 @@
  {
   "c": "Amazon",
   "t": "Terms",
-  "n": "Conditions of Use",
+  "n": "Amazon Shipping conditions of use",
   "y": null,
   "eff": null,
   "u": "https://ship.amazon.com/site-terms",
@@ -2436,7 +2436,7 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
+  "t": "Service guide",
   "n": "UPS Ship API EU PID Requirements v1.2",
   "y": null,
   "eff": null,
@@ -2447,8 +2447,8 @@
  },
  {
   "c": "USPS",
-  "t": "Special program",
-  "n": "USPS dm204",
+  "t": "Service guide",
+  "n": "USPS Handbook DM-204",
   "y": null,
   "eff": null,
   "u": "https://about.usps.com/handbooks/dm204.pdf",
@@ -2458,8 +2458,8 @@
  },
  {
   "c": "USPS",
-  "t": "Special program",
-  "n": "USPS pub25",
+  "t": "Service guide",
+  "n": "USPS Publication 25",
   "y": null,
   "eff": null,
   "u": "https://about.usps.com/publications/pub25.pdf",
@@ -2469,7 +2469,7 @@
  },
  {
   "c": "USPS",
-  "t": "Special program",
+  "t": "Service guide",
   "n": "USPS SKU User Guide",
   "y": null,
   "eff": null,
@@ -2481,7 +2481,7 @@
  {
   "c": "USPS",
   "t": "Rate guide",
-  "n": "USPS July 2026 Price Change   Notice123 PDF   7.10.26",
+  "n": "USPS July 2026 price change, Notice 123 (PDF, Jul 10, 2026)",
   "y": 2026,
   "eff": null,
   "u": "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
@@ -2496,8 +2496,8 @@
  },
  {
   "c": "USPS",
-  "t": "Special program",
-  "n": "USPS SKU User Guide July2026",
+  "t": "Service guide",
+  "n": "USPS SKU User Guide (July 2026)",
   "y": 2026,
   "eff": null,
   "u": "https://pe.usps.com/resources/PriceChange/USPS SKU User Guide_July2026.pdf",
@@ -2513,7 +2513,7 @@
  {
   "c": "OnTrac",
   "t": "Surcharges & fees",
-  "n": "2026 OnTrac AHS%2BLPSRates",
+  "n": "2026 OnTrac Additional Handling and Large Package rates",
   "y": 2026,
   "eff": null,
   "u": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
@@ -2529,7 +2529,7 @@
  {
   "c": "OnTrac",
   "t": "Zones & DAS",
-  "n": "OnTrac ImpactedZIPS 08242026",
+  "n": "OnTrac service alert: impacted ZIP codes (Aug 24, 2026)",
   "y": 2026,
   "eff": null,
   "u": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
@@ -2784,7 +2784,7 @@
  {
   "c": "FedEx",
   "t": "Terms",
-  "n": "FedEx IPIXF TermsCond",
+  "n": "FedEx IPIXF terms and conditions",
   "y": null,
   "eff": null,
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
@@ -2848,7 +2848,7 @@
  {
   "c": "FedEx",
   "t": "Terms",
-  "n": "FedEx FICE TermsCond",
+  "n": "FedEx FICE terms and conditions",
   "y": null,
   "eff": null,
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
@@ -2863,7 +2863,7 @@
  {
   "c": "FedEx",
   "t": "Terms",
-  "n": "FedEx IDP TermsCond",
+  "n": "FedEx IDP terms and conditions",
   "y": null,
   "eff": null,
   "u": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
@@ -2877,8 +2877,8 @@
  },
  {
   "c": "USPS",
-  "t": "Special program",
-  "n": "Printable version",
+  "t": "Peak",
+  "n": "USPS release: Postal Service prepped for the 2026 holiday season",
   "y": 2026,
   "eff": null,
   "u": "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf",
@@ -2899,12 +2899,12 @@
  },
  {
   "c": "UPS",
-  "t": "Surcharges & fees",
-  "n": "UPS fuelsurcharge us en",
+  "t": "Fuel",
+  "n": "UPS fuel surcharge rate-change flyer (PDF)",
   "y": null,
-  "eff": null,
+  "eff": "2026-11-02",
   "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-  "d": "Posted on UPS's Rate and Service Guides page (price change)",
+  "d": "Domestic ground and air fuel tables changing Nov 2, 2026",
   "cur": true,
   "added": "2026-10-23",
   "why": {
@@ -2917,7 +2917,7 @@
  {
   "c": "UPS",
   "t": "Rate guide",
-  "n": "UPS small busines cwt rate guide us en",
+  "n": "UPS Small Business hundredweight rate guide",
   "y": null,
   "eff": null,
   "u": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:036e009d-3781-4a60-bf89-314268d5ac8b/original/as/small-busines-cwt-rate-guide-us-en.pdf",
@@ -2927,8 +2927,8 @@
  },
  {
   "c": "UPS",
-  "t": "Special program",
-  "n": "ups ground saver brand guidelines us en",
+  "t": "Service guide",
+  "n": "UPS Ground Saver brand guidelines",
   "y": null,
   "eff": null,
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
