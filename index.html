@@ -1514,6 +1514,12 @@ details.rcpast>summary .lbl{color:var(--ink-2)}
 .rxrcpt .rc{min-width:280px}
 .strike{text-decoration:line-through;color:#8A7E6E}
 .rxpaths{flex-direction:column;gap:8px;align-items:stretch;max-width:380px}
+.rxgen{display:flex;align-items:center;justify-content:center;gap:var(--sp-4);width:100%;flex-wrap:wrap}
+.rxgen .gdate{display:flex;flex-direction:column;align-items:center;width:72px;border:var(--line) solid var(--grid-strong);border-radius:10px;overflow:hidden;background:var(--panel-2);animation:fxin .5s both}
+.rxgen .gdate i{font-style:normal;font-size:11px;letter-spacing:.08em;background:var(--accent);color:var(--accent-ink);width:100%;text-align:center;padding:2px 0}.rxgen .gdate b{font-size:28px;line-height:1.1}.rxgen .gdate small{color:var(--ink-2);padding-bottom:4px}
+.rxgen .gtx{display:flex;flex-direction:column;gap:6px}.rxgen .gtx>b{font-size:var(--fs-xl)}.rxgen .gtx>span{display:flex;gap:6px;flex-wrap:wrap}
+.rxgf{flex-direction:column;align-items:stretch;gap:6px;max-width:420px}.rxgf .gf{display:flex;justify-content:space-between;gap:var(--sp-3);padding:6px 10px;border:var(--line) solid var(--grid);background:var(--panel-2);border-radius:8px;font-size:13px;animation:fxin .4s both;animation-delay:var(--d,0s)}.rxgf .gf b{white-space:nowrap}
+.rxgen .gq{margin:0;max-width:440px;padding:var(--sp-3) var(--sp-4);border-left:3px solid var(--accent);background:var(--panel-2);border-radius:0 10px 10px 0;color:var(--ink);font-size:14px;line-height:1.45;animation:fxin .5s both}
 .pth{display:flex;justify-content:space-between;padding:10px 12px;border-radius:8px;background:var(--panel-2);border:1px solid var(--grid-strong);opacity:0;animation:fxin .4s forwards}
 .pth.ok b{color:var(--down)}.pth.bad{animation-delay:.4s}.pth.bad b{color:#F26B5B}
 .rxpaths .ytot{margin-top:6px;opacity:0;animation:fxin .4s 1s forwards}
@@ -8327,7 +8333,7 @@ function renderClockList(){
         <span class="reff">${eff} <b>${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}</b>${x.end?` <span class="rrng">· ${span(x)}</span>`:''}${ann||rep1?` <span class="rann">· ${ann?'announced':'first reported'} ${fmtD(ann||rep1,{month:'short',day:'numeric'})}${nd!=null?`, ${nd} days' notice`:''}</span>`:''}</span>
         <span class="rtags">${String(x.c).split(/\s*(?:·|,)\s*/).filter(Boolean).map(c=>logoImg(c,'lgm')||`<span class="rchip ${carCls(c)}">${esc(c)}</span>`).join('')}${fx?`<span class="rtype">${RCX_T[fx.t]}</span>`:''}${offc?OFFC_TAG:''}${x.fees?`<span class="rmeta">${x.fees.length} fees</span>`:''}${st.length?`<span class="rmeta">${st.length} ${st.length>1?'stories':'story'}</span>`:''}</span></span>
       <span class="cdn">${cd}</span></summary>
-      <div class="drbody">${fx?`<button class="rshow" data-rx="${x.id}"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>Show me what this does</b><small>${RCX_T[fx.t]} · Coop walks you through it</small></span></button><div class="xstage rcx" id="rcx-${x.id}" hidden></div>`:''}
+      <div class="drbody"><button class="rshow" data-rx="${x.id}"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>Show me what this does</b><small>${RCX_T[(fx||{t:'gen'}).t]} · Coop walks you through it</small></span></button><div class="xstage rcx" id="rcx-${x.id}" hidden></div>
       ${x.note?`<p class="note">${esc(x.note)}</p>`:''}${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}
       ${st.map(s=>`<button class="storylink" data-open="${s.id}">${esc(s.title)}<small>${IMPACT[s.imp].w} · ${esc(s.plain)}</small></button>`).join('')}</div></details>`};
   const live=DATES.filter(x=>dn(x)<0&&x.end&&daysTo(x.end)>=0);
@@ -8343,7 +8349,7 @@ function renderClockList(){
   $('clockList').innerHTML=h;
 }
 /* ===== Rate clock explainers: Coop shows what each dated change does ===== */
-const RCX_T={gri:'Rate increase',peak:'Peak surcharge',usps:'Holiday prices',perlb:'Per-pound fee',fee:'New fee',zone:'Zone change',das:'Delivery area list',fuel:'Fuel table'};
+const RCX_T={gri:'Rate increase',peak:'Peak surcharge',usps:'Holiday prices',perlb:'Per-pound fee',fee:'New fee',zone:'Zone change',das:'Delivery area list',fuel:'Fuel table',gen:'What changes'};
 function rcxOf(x){if(x.fx&&x.fx.t)return x.fx;if(RCX_MAP[x.id])return RCX_MAP[x.id];
   const w=x.w||'',p=/(\d+(?:\.\d+)?)%/.exec(w);
   if(/general rate increase|rate increase|price increase/i.test(w)&&p){const c=String(x.c).split(/\s*·\s*/)[0];return {t:'gri',car:c,pct:+p[1]}}
@@ -8359,7 +8365,29 @@ function peakTotal(r,vol){const d=(a,b)=>Math.max(0,(T0(b)-T0(a))/864e5+1)/7;let
    Illustrations (a $12 package, 1,000 a week) are labeled as such. Audited Oct 11, 2026. */
 const PEAK_SRC=[['UPS (via Supply Chain Dive)','https://supplychaindive.com/news/ups-preps-higher-holiday-surcharges-for-2026/828936'],['FedEx','https://www.fedex.com/en-us/shipping/rate-changes/peak-surcharges.html'],['Amazon','https://shipping.amazon.com/insights-and-news/peak-surcharge-2026'],['OnTrac','https://www.ontrac.com/surcharges/']];
 const andJoin=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a.at(-1);
-function rcxScenes(x){const f=rcxOf(x),D=fmtD(x.d,{month:'short',day:'numeric'}),fm=d=>fmtD(d,{month:'short',day:'numeric'});
+/* Every dated change can be explained. The animated scenes below cover the kinds with figures (rate increases, peak fees, per-pound
+   fees, flat fees, zones, ZIP lists, fuel tables); anything else, or any of them with a figure missing, gets a plain walk-through
+   built from the entry's own text and its stories, so the button is never dead. */
+const rcxAny=x=>rcxOf(x)||{t:'gen'};
+function rcxScenes(x){let S=[];const prev=RX.x;RX.x=x;
+  if(rcxOf(x)){try{S=rcxScenes0(x)||[];S.forEach(sc=>rcxVis(sc))}catch(e){S=[]}}      // a scene whose picture can't be drawn from its figures is replaced, never left dead
+  RX.x=prev;if(!S.length)return rcxGeneric(x);
+  const st=(x.news||[]).map(id=>NEWS.find(z=>z.id===id)).find(Boolean),own=st?(st.srcs||[]).slice(0,2).map(z=>[z.src||'Source',z.url]).filter(z=>z[1]):[];
+  S.forEach(sc=>{if(!(sc.src&&sc.src.length))sc.src=own});return S}
+const rcxCut=(t,n)=>{t=String(t||'').replace(/\s+/g,' ').trim();return t.length<=n?t:t.slice(0,n-1).replace(/\s+\S*$/,'')+'…'};
+function rcxGeneric(x){const n=daysTo(x.d),D=fmtD(x.d,{weekday:'long',month:'long',day:'numeric'}),cars=String(x.c||'').split(/\s*(?:·|,)\s*/).filter(c=>c&&!/^(Industry|Regional)$/.test(c)),
+    st=(x.news||[]).map(id=>NEWS.find(z=>z.id===id)).filter(Boolean),s0=st[0],fees=(x.fees||[]).map(feeNorm),
+    when=n>1?`**${D}**, in ${n} days`:n===1?`**${D}**, tomorrow`:n===0?`**${D}**, today`:`**${D}**, already past`,
+    src=(s0?(s0.srcs||[]).slice(0,2).map(z=>[z.src||'Source',z.url]):[]).filter(z=>z[1]);
+  const S=[{k:'gwhen',a:'stamp',src,cars,say:`${rcxCut(x.w,150)}. ${x.imp==='info'?'Date':'In effect'}: ${when}${cars.length?`. Concerns ${andJoin(cars)}`:''}.`}];
+  const facts=fees.length?fees.slice(0,5).map(f=>[String(f[0]||f[1]||''),String(f[0]&&f[1]?f[1]:f[2]||'')]).filter(f=>f[0]):[];
+  if(facts.length)S.push({k:'gfacts',a:'wobble',src,facts,say:`What the source lists: ${andJoin(facts.slice(0,3).map(f=>`**${rcxCut(f[0],60)}**${f[1]?` (${rcxCut(f[1],40)})`:''}`))}${facts.length>3?` and ${facts.length-3} more`:''}.`});
+  const plain=x.note||(s0&&s0.plain);
+  if(plain)S.push({k:'gquote',a:'wobble',src,quote:rcxCut(plain,260),say:`In plain terms: ${rcxCut(plain,200)}`});
+  if(s0&&s0.why&&s0.why!==plain)S.push({k:'gquote',a:'faint',src,quote:rcxCut(s0.why,260),say:`Why it matters: ${rcxCut(s0.why,200)}`});
+  if(S.length<2)S.push({k:'gquote',a:'faint',src,quote:rcxCut(x.w,200),say:`That's all the source states so far. Check ${src.length?'the source below':'the carrier'} for the figures that apply to your account.`});
+  return S}
+function rcxScenes0(x){const f=rcxOf(x),D=fmtD(x.d,{month:'short',day:'numeric'}),fm=d=>fmtD(d,{month:'short',day:'numeric'});
   const src=f.src?[[f.car||String(x.c).split(/\s*·\s*/)[0],f.src]]:[];
   if(f.t==='gri'){const base=12,nw=base*(1+f.pct/100),per=Math.round((nw-base)*100)/100,yr=per*1000*52,S=[
     {k:'tag',a:'stamp',src,say:`On ${D}, ${f.car} list rates rise **${f.pct}%** on average. Picture a package that costs **$12.00** today. Same box, same route: **${rm2(nw)}** after ${D}.`,base,nw}];
@@ -8393,9 +8421,14 @@ function rcxScenes(x){const f=rcxOf(x),D=fmtD(x.d,{month:'short',day:'numeric'})
   if(f.t==='perlb'){const fx=[['FedEx',f.src2||f.src],['FedEx',f.src]];return [
     {k:'perlb',a:'stamp',src:fx,say:`FedEx's export demand fee to Canada, Latin America, Europe, Australia and New Zealand went from **$${f.exp[0].toFixed(2)}** to **$${f.exp[1].toFixed(2)} a pound** on ${D}. A 10 lb box: ${rm2(f.exp[0]*10)} becomes **${rm2(f.exp[1]*10)}**.`,f},
     {k:'scale',a:'wobble',src:fx,say:`Imports into the U.S. now pay too: ${andJoin(f.imp.map(([r,v])=>`${r} **$${v.toFixed(2)}/lb**`))}. A 50 lb box from Europe: **${rm2(f.imp[0][1]*50)}**. Both run until further notice, and FedEx's fuel surcharge applies to demand surcharges.`,f}]}
-  if(f.t==='fee'){return [
-    {k:'fee',a:'stamp',src,say:`From ${D}, ${f.car} charges a **${f.items[0][1]} ${f.items[0][0]}** when international trade documents aren't sent electronically, and a **${f.items[1][1]} ${f.items[1][0]}** on shipments started on a paper airbill.`,f},
-    {k:'paths',a:'wobble',src,say:`Same shipment, two paths. Electronic documents: no fee. Paper: **${f.items[0][1]}** every time. At 20 paper shipments a week, that's **${rm0(f.items[0][2]*20*52)} a year**.`,f}]}
+  if(f.t==='fee'){const it=(f.items||[]).filter(i=>Array.isArray(i)&&i[0]&&i[1]);if(!it.length)return [];
+    if(it.length>=2&&/paper/i.test(it.map(i=>i[0]).join(' ')))return [
+      {k:'fee',a:'stamp',src,say:`From ${D}, ${f.car} charges a **${it[0][1]} ${it[0][0]}** when international trade documents aren't sent electronically, and a **${it[1][1]} ${it[1][0]}** on shipments started on a paper airbill.`,f:{...f,items:it},stamp:'PAPER'},
+      {k:'paths',a:'wobble',src,say:`Same shipment, two paths. Electronic documents: no fee. Paper: **${it[0][1]}** every time. At 20 paper shipments a week, that's **${rm0(it[0][2]*20*52)} a year**.`,f:{...f,items:it}}];
+    const S=[{k:'fee',a:'stamp',src,say:`From ${D}, ${f.car} adds ${andJoin(it.map(i=>`a **${i[1]}** ${i[0]}`))}.`,f:{...f,items:it},stamp:'NEW FEE'}];
+    const u=it[0],num=+u[2],cur=(/^[^\d\s]+/.exec(String(u[1]))||['$'])[0],per=/per (line|item|package|parcel|shipment|piece|unit)|each/i.exec(u[0]);
+    if(per&&num>0)S.push({k:'units',a:'wobble',src,f:{...f,items:it},cur,num,unit:per[1]||'unit',say:`The fee is charged **per ${per[1]||'unit'}**, not per box. An illustration: a shipment with **3** ${per[1]||'unit'}s pays **${cur}${(num*3).toFixed(2)}**, and 50 of them a week add up to **${cur}${Math.round(num*3*50*52).toLocaleString('en-US')} a year**.`});
+    return S}
   if(f.t==='zone'){return [
     {k:'rings',a:'wobble',src,say:`From ${D}, ${f.car} reclassifies zones for select U.S. ZIP code pairs. Every rate is priced by zone, so a pair that moves one zone farther out is priced from a costlier column.`,f},
     {k:'cols',a:'stamp',src,say:`An illustration, not ${f.car}'s chart: same box, same miles, a different column. Check the zone charts for your origin ZIPs before ${D}.`,f}]}
@@ -8422,7 +8455,11 @@ function rcxVis(s){
   if(s.k==='max'){const e=USPS_PEAK['Priority Mail Express'][3][1],ga=USPS_PEAK['Ground Advantage'][0][0];return `<div class="xv rxbars rxseason"><div class="rsh">Holiday increase per package</div>${[['Ground Advantage, under 3 lb, near',ga],['Ground Advantage, 26–70 lb, far',USPS_PEAK['Ground Advantage'][3][1]],['Priority Mail, 26–70 lb, far',USPS_PEAK['Priority Mail'][3][1]],['Priority Mail Express, 26–70 lb, far',e]].map(([l,v],i)=>`<div class="rb" style="--d:${i*.25}s"><span>${l}</span><i><u style="--w:${(v/e*100).toFixed(1)}%" class="cc c-usps"></u></i><b>+$${v.toFixed(2)}</b></div>`).join('')}</div>`}
   if(s.k==='perlb')return `<div class="xv rxrcpt fxrcpt"><div class="rc"><div class="rl in d0"><span>Export, 10 lb</span><b></b></div><div class="rl in d1"><span>Demand fee, old ($${s.f.exp[0].toFixed(2)}/lb)</span><b class="strike">${rm2(s.f.exp[0]*10)}</b></div><div class="rl in d2 fuel"><span>Demand fee, now ($${s.f.exp[1].toFixed(2)}/lb)</span><b>${rm2(s.f.exp[1]*10)}</b></div><div class="rstamp">PER LB</div></div></div>`;
   if(s.k==='scale'){const mx=Math.max(...s.f.imp.map(r=>r[1]));return `<div class="xv rxbars rxseason"><div class="rsh">Import demand fee on a 50 lb box, before fuel</div>${s.f.imp.map(([r,v],i)=>`<div class="rb" style="--d:${i*.25}s"><span>From ${esc(r)}</span><i><u style="--w:${(v/mx*100).toFixed(1)}%" class="cc c-fdx"></u></i><b>${rm2(v*50)}</b></div>`).join('')}</div>`}
-  if(s.k==='fee')return `<div class="xv rxrcpt fxrcpt"><div class="rc"><div class="rl in d0"><span>International shipment</span><b></b></div>${s.f.items.map((it,i)=>`<div class="rl in d${i+1} fuel"><span>${esc(it[0])}</span><b>+${it[1]}</b></div>`).join('')}<div class="rstamp">PAPER</div></div></div>`;
+  if(s.k==='fee')return `<div class="xv rxrcpt fxrcpt"><div class="rc"><div class="rl in d0"><span>Shipment</span><b></b></div>${s.f.items.map((it,i)=>`<div class="rl in d${i+1} fuel"><span>${esc(it[0])}</span><b>+${esc(it[1])}</b></div>`).join('')}<div class="rstamp">${esc(s.stamp||'NEW FEE')}</div></div></div>`;
+  if(s.k==='units'){const a=s.num;return `<div class="xv rxpaths"><div class="pth ok"><span>1 ${esc(s.unit)}</span><b>+${esc(s.cur)}${a.toFixed(2)}</b></div><div class="pth bad"><span>3 ${esc(s.unit)}s</span><b>+${esc(s.cur)}${(a*3).toFixed(2)}</b></div><div class="ytot"><span>Illustration · 50 shipments of 3 a week</span><b>${esc(s.cur)}${Math.round(a*3*50*52).toLocaleString('en-US')}</b><span>a year</span></div></div>`}
+  if(s.k==='gwhen'){const n=daysTo(RX.x.d);return `<div class="xv rxgen"><div class="gdate"><i>${esc(fmtD(RX.x.d,{month:'short'}).toUpperCase())}</i><b>${+RX.x.d.slice(8)}</b><small>${esc(fmtD(RX.x.d,{weekday:'short'}))}</small></div><div class="gtx"><b>${n>1?n+' days':n===1?'Tomorrow':n===0?'Today':'In effect'}</b><span>${(s.cars||[]).map(c=>logoImg(c,'lgm')||esc(c)).join(' ')}</span></div></div>`}
+  if(s.k==='gfacts')return `<div class="xv rxgen rxgf">${s.facts.map((f,i)=>`<div class="gf" style="--d:${(i*.2).toFixed(1)}s"><span>${esc(rcxCut(f[0],70))}</span>${f[1]?`<b>${esc(rcxCut(f[1],30))}</b>`:''}</div>`).join('')}</div>`;
+  if(s.k==='gquote')return `<div class="xv rxgen"><blockquote class="gq">${esc(s.quote)}</blockquote></div>`;
   if(s.k==='paths')return `<div class="xv rxpaths"><div class="pth ok"><span>Electronic documents</span><b>No paper fee</b></div><div class="pth bad"><span>Paper documents</span><b>+${s.f.items[0][1]} each</b></div><div class="ytot"><span>20 paper shipments a week × 52</span><b>${rm0(s.f.items[0][2]*20*52)}</b><span>a year</span></div></div>`;
   if(s.k==='rings')return `<div class="xv rxrings"><svg viewBox="0 0 220 140" aria-hidden="true">${[2,3,4,5,6].map((z,i)=>`<circle cx="110" cy="70" r="${14+i*13}" class="rg"/><text x="${110+14+i*13-3}" y="66" class="zl">${z}</text>`).join('')}<circle cx="110" cy="70" r="4" class="org"/><g class="mv"><circle cx="${110+50}" cy="${70+14}" r="4" class="dst"/></g><text x="110" y="136" text-anchor="middle" class="cap">Illustration · origin in the center, zones by distance</text></svg></div>`;
   if(s.k==='cols')return `<div class="xv rxcols"><div class="ct"><div class="chd">${['Zone 2','Zone 3','Zone 4','Zone 5','Zone 6'].map((z,i)=>`<b class="${i===2?'zwas':''} ${i===3?'znow':''}">${z}</b>`).join('')}</div>${[1,2,3].map(r=>`<div class="crw">${[0,1,2,3,4].map(i=>`<i class="${i===2?'zwas':''} ${i===3?'znow':''}"></i>`).join('')}</div>`).join('')}</div><span class="cap">Illustration · the same package, priced from the next column</span></div>`;
