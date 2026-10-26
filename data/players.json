@@ -1801,6 +1801,67 @@
    ],
    "enriched": "2026-10-25",
    "pending": false
+  },
+  {
+   "id": "lalamove",
+   "n": "Lalamove",
+   "realm": "gig",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Hong Kong, Hong Kong",
+   "yr": "2013",
+   "s": "Lalamove is a Hong Kong-based on-demand delivery platform that matches shippers with independent driver partners for same-day and scheduled courier deliveries, including in New York City, Long Island, Westchester and northern and central New Jersey.",
+   "al": [
+    "EasyVan",
+    "Huolala (mainland China brand)",
+    "Lalamove (Hong Kong) Limited",
+    "Lalatech",
+    "Lalatech Holdings"
+   ],
+   "src": "https://www.lalamove.us/en-us/",
+   "auto": true,
+   "added": "2026-10-26",
+   "from": "discover",
+   "site": "lalamove.com",
+   "geo": [
+    114.169,
+    22.319
+   ],
+   "srcs": [
+    "https://www.lalamove.us/en-us/",
+    "https://techcrunch.com/2020/10/08/lalamove-enters-the-us/",
+    "https://www.scmp.com/business/banking-finance/article/3215187/lalatech-start-behind-lalamove-logistics-service-files-hong-kong-ipo-after-turning-its-back-new-york"
+   ],
+   "enriched": "2026-10-26",
+   "pending": false
+  },
+  {
+   "id": "burq",
+   "n": "Burq",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Burq is a last-mile delivery management platform. Through a single API, businesses get dispatch, tracking and routing across a network of hundreds of third-party delivery providers, including DoorDash and Uber.",
+   "al": [
+    "Burq Up",
+    "Burq, Inc."
+   ],
+   "src": "https://www.businesswire.com/news/home/20250123800563/en/Burq-Launches-Last-Mile-Delivery-Innovations-to-Transform-Grocery-Retail-and-Beyond-in-2025",
+   "auto": true,
+   "added": "2026-10-26",
+   "from": "discover",
+   "site": "burqup.com",
+   "srcs": [
+    "https://www.businesswire.com/news/home/20250123800563/en/Burq-Launches-Last-Mile-Delivery-Innovations-to-Transform-Grocery-Retail-and-Beyond-in-2025",
+    "https://www.cbinsights.com/company/burq",
+    "https://www.caplight.com/company/burqup"
+   ],
+   "enriched": "2026-10-26",
+   "pending": false
   }
  ],
  "edges": [
@@ -3189,6 +3250,42 @@
    "t": "Customer: Mothership provides logistics for Happy Returns",
    "url": "https://fintech.global/2022/05/13/mothership-pulls-in-76m-for-freight-technology/",
    "story": null
+  },
+  {
+   "a": "grubhub",
+   "b": "burq",
+   "k": "partner",
+   "y": "2025",
+   "t": "Grubhub partnership for nationwide delivery via Burq",
+   "url": "https://www.businesswire.com/news/home/20250123800563/en/Burq-Launches-Last-Mile-Delivery-Innovations-to-Transform-Grocery-Retail-and-Beyond-in-2025",
+   "story": null
+  },
+  {
+   "a": "burq",
+   "b": "roadie",
+   "k": "partner",
+   "y": "2025",
+   "t": "Collaboration to use Roadie's logistics platform and network",
+   "url": "https://www.caplight.com/company/burqup",
+   "story": null
+  },
+  {
+   "a": "burq",
+   "b": "doordash",
+   "k": "partner",
+   "y": null,
+   "t": "DoorDash is one of the delivery providers in Burq's network",
+   "url": "https://www.cbinsights.com/company/burq",
+   "story": null
+  },
+  {
+   "a": "burq",
+   "b": "uber",
+   "k": "partner",
+   "y": null,
+   "t": "Uber is one of the delivery providers in Burq's network",
+   "url": "https://www.cbinsights.com/company/burq",
+   "story": null
   }
  ],
  "moves": [
@@ -3489,7 +3586,9 @@
   "onfleet": "2026-10-24",
   "curri": "2026-10-25",
   "goshare": "2026-10-25",
-  "mothership": "2026-10-25"
+  "mothership": "2026-10-25",
+  "lalamove": "2026-10-26",
+  "burq": "2026-10-26"
  },
  "facts": {
   "ups": {

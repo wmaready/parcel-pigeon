@@ -141,6 +141,47 @@
   "added": "2026-10-25T12:00:00Z"
  },
  {
+  "id": "a3bcc80e64163",
+  "date": "2026-10-23",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "Instacart explores sale after early talks with Uber, DoorDash",
+  "sum": "Instacart is exploring a sale and has held early talks with Uber and DoorDash, according to The Information. No price or agreement has been announced.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. Talks are preliminary; no buyer, price or agreement has been announced.",
+  "why": "Instacart's market value of roughly $12 billion is less than a third of the $40 billion to $50 billion DoorDash discussed in 2021, per Startup Fortune.",
+  "tie": "Uber partnered with Instacart in 2024; DoorDash discussed buying it in 2021.",
+  "act": null,
+  "dates": [],
+  "src": "The Information",
+  "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
+  "srcs": [
+   {
+    "src": "The Information",
+    "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks"
+   },
+   {
+    "src": "Startup Fortune",
+    "url": "https://startupfortune.com/instacart-explores-a-sale-to-uber-or-doordash-at-a-fraction-of-its-old-price/"
+   },
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-10-23/instacart-rallies-on-report-of-sale-talks-with-uber-doordash"
+   }
+  ],
+  "auto": true,
+  "added": "2026-10-23T00:00:00Z",
+  "restored": "2026-10-26"
+ },
+ {
   "id": "a57a06c26359c",
   "date": "2026-10-23",
   "c": [
@@ -639,47 +680,6 @@
   },
   "exclusive": true,
   "primary": true
- },
- {
-  "id": "a3bcc80e64163",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "Instacart explores sale after early talks with Uber, DoorDash",
-  "sum": "Instacart is exploring a sale and has held early talks with Uber and DoorDash, according to The Information. No price or agreement has been announced.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. Talks are preliminary; no buyer, price or agreement has been announced.",
-  "why": "Instacart's market value of roughly $12 billion is less than a third of the $40 billion to $50 billion DoorDash discussed in 2021, per Startup Fortune.",
-  "tie": "Uber partnered with Instacart in 2024; DoorDash discussed buying it in 2021.",
-  "act": null,
-  "dates": [],
-  "src": "The Information",
-  "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
-  "srcs": [
-   {
-    "src": "The Information",
-    "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks"
-   },
-   {
-    "src": "Startup Fortune",
-    "url": "https://startupfortune.com/instacart-explores-a-sale-to-uber-or-doordash-at-a-fraction-of-its-old-price/"
-   },
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/"
-   },
-   {
-    "src": "Bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-10-23/instacart-rallies-on-report-of-sale-talks-with-uber-doordash"
-   }
-  ],
-  "auto": true,
-  "added": "2026-10-23T00:00:00Z",
-  "restored": "2026-10-26"
  },
  {
   "id": "a2cde9f1bc84b",
@@ -5808,6 +5808,38 @@
   "exclusive": true
  },
  {
+  "id": "a3341a802bc1a",
+  "date": "2026-10-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "C.H. Robinson to buy RXO in stock-and-cash deal",
+  "sum": "C.H. Robinson Worldwide plans to acquire brokerage and transportation services provider RXO in a stock-and-cash transaction with a $5.8 billion implied transaction value, the companies announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
+  "tie": "RXO bought UPS's Coyote Logistics for $1.025 billion in 2024.",
+  "act": null,
+  "dates": [],
+  "src": "RXO and C.H. Robinson (company release)",
+  "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/",
+  "srcs": [
+   {
+    "src": "RXO and C.H. Robinson (company release)",
+    "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/"
+   },
+   {
+    "src": "Trucking Dive",
+    "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/"
+   }
+  ],
+  "auto": true,
+  "updated": "2026-10-05",
+  "restored": "2026-10-26"
+ },
+ {
   "id": "a60770e8e9c32",
   "date": "2026-10-05",
   "c": [
@@ -5883,38 +5915,6 @@
   "auto": true,
   "ann": "2026-10-05",
   "exclusive": true
- },
- {
-  "id": "a3341a802bc1a",
-  "date": "2026-10-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "C.H. Robinson to buy RXO in stock-and-cash deal",
-  "sum": "C.H. Robinson Worldwide plans to acquire brokerage and transportation services provider RXO in a stock-and-cash transaction with a $5.8 billion implied transaction value, the companies announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
-  "tie": "RXO bought UPS's Coyote Logistics for $1.025 billion in 2024.",
-  "act": null,
-  "dates": [],
-  "src": "RXO and C.H. Robinson (company release)",
-  "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/",
-  "srcs": [
-   {
-    "src": "RXO and C.H. Robinson (company release)",
-    "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/"
-   },
-   {
-    "src": "Trucking Dive",
-    "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/"
-   }
-  ],
-  "auto": true,
-  "updated": "2026-10-05",
-  "restored": "2026-10-26"
  },
  {
   "id": "a4af485c67766",
