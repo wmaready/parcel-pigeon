@@ -57,7 +57,7 @@ def test_merge_puts_every_service_into_the_weekly_history(data_dir):
 
 
 def test_a_failed_page_is_loud_and_keeps_what_is_on_file(data_dir, capsys):
-    save("fuel.json", {"hist": {"UPS": {"2026-10-19": 29.25}}, "health": {"UPS": {"ok": True, "last_ok": "2026-10-20T01:00Z", "latest": "2026-10-19"}}})
+    save("fuel.json", {"hist": {"UPS": {"2026-10-19": 29.25}}, "health": {"UPS": {"ok": True, "via": "page", "last_ok": "2026-10-20T01:00Z", "latest": "2026-10-19"}}})
     def boom(u):
         raise RuntimeError("blocked")
     F.main(fetch_text=lambda u: CUR if "historical" not in u else HIS, render_text=boom)
@@ -65,3 +65,15 @@ def test_a_failed_page_is_loud_and_keeps_what_is_on_file(data_dir, capsys):
     assert f["health"]["FedEx"]["ok"] and not f["health"]["UPS"]["ok"] and f["health"]["UPS"]["last_ok"] == "2026-10-20T01:00Z"
     assert f["hist"]["UPS"] == {"2026-10-19": 29.25}                                   # nothing overwritten
     assert "::warning title=UPS fuel page::" in capsys.readouterr().out
+
+
+def test_a_failed_page_never_hides_a_good_fuel_price_service_read(data_dir, capsys):
+    """Oct 26, 2026: the hourly page read failed for UPS 40 minutes after the OilPriceAPI read had worked and marked UPS failed, though
+    its numbers were fine. The page miss is noted next to the good read; the next update run still uses the service."""
+    save("fuel.json", {"hist": {"UPS": {"2026-10-19": 29.25}}, "health": {"UPS": {"ok": True, "at": "2026-10-26T20:55Z", "last_ok": "2026-10-26T20:55Z"}}})
+    def boom(u):
+        raise RuntimeError("could not render the page: Page.goto: Download is starting")
+    F.main(fetch_text=lambda u: CUR if "historical" not in u else HIS, render_text=boom)
+    h = load("fuel.json", {})["health"]["UPS"]
+    assert h["ok"] and h.get("via") != "page" and "Download is starting" in h["page_why"]
+    assert F.UPS_URL.endswith("/fuel-surcharges")                       # the ".page" address makes a browser start a download
