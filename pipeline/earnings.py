@@ -353,10 +353,12 @@ def fill_packages(rows, review, today, fetch=None, fedex_page=None):
                                             "(a figure is missing or didn't check out). Enter it by hand."})
                 continue
             adv, us, d4 = q4
+            rpp4 = filings.q4_rpp(yr, qs)
             r["vol"] = {"adv_k": adv, "adv_prior_k": last["adv_k"], "adv_yoy": round((adv / last["adv_k"] - 1) * 100, 1), "adv_src": "calc",
                         "adv_note": "Calculated: UPS's full-year figure less its first three quarters (UPS doesn't print Q4 on its own)",
                         "scope": "UPS global small package", "basis": "operating days", "days": d4, "us_adv_k": us,
-                        "us_adv_prior_k": last.get("us_adv_k"), "rpp": None, "rpp_prior": None, "pieces_m": round(adv * d4 / 1000, 1),
+                        "us_adv_prior_k": last.get("us_adv_k"), "rpp": rpp4, "rpp_prior": last.get("rpp") if rpp4 else None,
+                        "rpp_src": "calc" if rpp4 else None, "pieces_m": round(adv * d4 / 1000, 1),
                         "pieces_src": "calc", "src": url, "checked": today, "auto": True}
             done.append(f"UPS {r['q']} (calculated)")
         elif r["company"] == "FedEx":
@@ -372,6 +374,24 @@ def fill_packages(rows, review, today, fetch=None, fedex_page=None):
                                     "note": "FedEx's statistical book for this period is posted. Enter the Federal Express segment's total and U.S. "
                                             "domestic packages a day and composite package yield, with this link and today's date as the check date."})
     return done
+
+
+USPS_RPP_NOTE = ("Calculated: USPS's Shipping and Packages revenue divided by its Shipping and Packages pieces. "
+                 "USPS doesn't report revenue per piece; this mixes its Priority, Ground Advantage and Parcel Select pieces, "
+                 "so it isn't comparable with UPS's or FedEx's figures")
+
+
+def fill_usps_rpp(rows):
+    """USPS revenue per package, calculated from the two figures it does report each quarter (segment revenue and pieces)."""
+    for r in rows:
+        v = r.get("vol") or {}
+        if r.get("company") != "USPS" or v.get("rpp") is not None:
+            continue
+        if v.get("sp_rev_m") and v.get("pieces_m"):
+            v["rpp"] = round(v["sp_rev_m"] / v["pieces_m"], 2)
+            if v.get("sp_rev_prior_m") and v.get("pieces_prior_m"):
+                v["rpp_prior"] = round(v["sp_rev_prior_m"] / v["pieces_prior_m"], 2)
+            v["rpp_src"], v["rpp_note"] = "calc", USPS_RPP_NOTE
 
 
 def main():
@@ -391,6 +411,7 @@ def main():
         filled = []
         print(f"::warning title=earnings packages::{e}")
     fill_yoy(rows)
+    fill_usps_rpp(rows)
     for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
         print(f"::warning title=earnings prices::{f}")
     bad = fedex_fy_check(rows, review)

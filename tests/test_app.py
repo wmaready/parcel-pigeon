@@ -261,7 +261,7 @@ def test_earnings_chart_and_stock_watch(site, width):
         assert links[0] == ["Market report ›", "r03"] and links[1][0].startswith("Pitney Bowes") and "pitneybowes.com" in links[1][1], links
         want = {0: ("Q2 2026", "Revenue", "$22.8B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "Revenue per package", "$15.96", "+11.3%"),
                 1: ("FY26 Q4", "$25.0B", "+12.6%", "17.1M", "+1.7%", "$17.90", "+10.9%"),
-                2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "Not reported"),      # USPS: pieces over calendar days, marked ≈
+                2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "≈$5.31"),      # USPS: pieces over calendar days, marked ≈; revenue per package = segment revenue over pieces, marked ≈
                 3: ("U.S. parcel volume", "2025", "23.1 billion parcels (+3.3%)", "Amazon", "6.9B", "30%", "+9%", "USPS", "6.2B", "27%", "−8.8%",
                     "UPS", "4.3B", "19%", "−8.7%", "FedEx", "3.9B", "17%", "+5.1%", "Others", "1.8B", "8%", "+127%", "Pitney Bowes")}
         for i, ws in want.items():

@@ -78,7 +78,11 @@ def ups_year(text):
         return None
     if abs(round((adv[0] / adv[1] - 1) * 100, 1) - adv[2]) > 0.15 or abs(round((us[0] / us[1] - 1) * 100, 1) - us[2]) > 0.15:
         return None
-    return {"days": int(days[0]), "pdays": int(days[1]), "adv": adv[0], "padv": adv[1], "us": us[0], "pus": us[1]}
+    out = {"days": int(days[0]), "pdays": int(days[1]), "adv": adv[0], "padv": adv[1], "us": us[0], "pus": us[1]}
+    rpp = table_row(text, "Average Revenue Per Piece")
+    if rpp and len(rpp) >= 4 and abs(round((rpp[0] / rpp[1] - 1) * 100, 1) - rpp[3]) <= 0.15:   # the full year's revenue per piece, if its printed change checks out
+        out["rpp"], out["prpp"] = rpp[0], rpp[1]
+    return out
 
 
 def q4_from_year(year, quarters):
@@ -93,3 +97,17 @@ def q4_from_year(year, quarters):
     adv = round((year["days"] * year["adv"] - sum(q["days"] * q["adv_k"] for q in quarters)) / d4)
     us = round((year["days"] * year["us"] - sum(q["days"] * q["us_adv_k"] for q in quarters)) / d4)
     return adv, us, d4
+
+
+def q4_rpp(year, quarters):
+    """Fourth-quarter revenue per piece: the full year's revenue (revenue per piece x packages) less the first three
+    quarters', over the fourth quarter's packages. quarters: the three quarters' vol blocks (days, adv_k, rpp). Rounded to
+    the cent, so good to a few cents; None when a figure is missing."""
+    if len(quarters) != 3 or year.get("rpp") is None or any(q.get(k) is None for q in quarters for k in ("days", "adv_k", "rpp")):
+        return None
+    d4 = year["days"] - sum(q["days"] for q in quarters)
+    p4 = year["days"] * year["adv"] - sum(q["days"] * q["adv_k"] for q in quarters)      # thousands of packages
+    if d4 <= 0 or p4 <= 0:
+        return None
+    rev = year["rpp"] * year["days"] * year["adv"] - sum(q["rpp"] * q["days"] * q["adv_k"] for q in quarters)
+    return round(rev / p4, 2)

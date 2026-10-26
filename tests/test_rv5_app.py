@@ -234,14 +234,14 @@ def test_seed_ownership_and_history_corrections(site, width):
 
 @pytest.mark.parametrize("width", [390, 1280])
 def test_map_coverage_line_follows_the_filter(site, width):
-    """B24: above the map, 'Headquarters only, not service coverage. X of Y companies have a mapped location.', both
-    numbers from the current sector filter."""
+    """B24: above the map, 'Headquarters only, not service coverage. X of Y companies are on the map[, N of them at their
+    owner's headquarters].', both numbers from the current sector filter."""
     with app(site, width) as pg:
         pg.click('nav.tabs [data-tab="mna"]')
         pg.wait_for_timeout(300)
         pg.evaluate("() => { const b = document.querySelector('[data-m=\"geo\"]'); b && b.click() }")
-        pg.wait_for_function("() => /companies have a mapped location/.test(document.getElementById('mxGcov').textContent)", timeout=20000)
-        rx = r"^Headquarters only, not service coverage\. (\d+) of (\d+) companies have a mapped location\.$"
+        pg.wait_for_function("() => /companies are on the map/.test(document.getElementById('mxGcov').textContent)", timeout=20000)
+        rx = r"^Headquarters only, not service coverage\. (\d+) of (\d+) companies are on the map(?:, \d+ of them at their owner's headquarters)?\.$"
         m = re.match(rx, pg.inner_text("#mxGcov"))
         total = int(re.search(r"(\d+) companies", pg.inner_text("#mxStats")).group(1))
         assert m and int(m.group(2)) == total and 0 < int(m.group(1)) <= total
@@ -362,7 +362,8 @@ def test_consultancies_on_the_map_and_in_search(site, width):
         assert all(f["own"] is None and f["parent"] is None and f["tk"] is None and f["geo"] is None and f["realm"] == "consultancy" for f in fresh), fresh
         assert not pg.evaluate("() => PEDGES.some(e => ['transimpact','shipware','reveel','sifted','ljmgroup','shipmatrix','lojistic','intelligentaudit'].includes(e.a) || ['transimpact','shipware','reveel','sifted','ljmgroup','shipmatrix','lojistic','intelligentaudit'].includes(e.b))")
         assert pg.evaluate("() => RL.consultancy") == "Consultancies & shipping intelligence"
-        assert pg.evaluate("() => PLAYERS.filter(p => p.foundation).every(p => !(wmLoc(p) || {}).g)")
+        # a position only where a headquarters city is listed, and only city-level (Oct 26, 2026: so a search puts TransImpact on the map)
+        assert pg.evaluate("() => PLAYERS.filter(p => p.foundation).every(p => { const L = wmLoc(p); return p.hq ? !!(L && L.approx && L.g.length >= 2) : !L })")
         assert pg.evaluate("() => PSITE.shipware") == "shipware.com"
         # the market-map profile: every source and "Record checked Oct 18, 2026"
         pg.click('nav.tabs [data-tab="mna"]')
@@ -370,6 +371,8 @@ def test_consultancies_on_the_map_and_in_search(site, width):
         pg.fill("#mxQ", "Shipware")
         pg.wait_for_selector('#mxSugg [data-go="shipware"]', timeout=5000)
         pg.click('#mxSugg [data-go="shipware"]')
+        pg.wait_for_selector("#mxGnote [data-go]", timeout=8000)     # on the map now; its profile is one tap away
+        pg.click("#mxGnote [data-go]")
         pg.wait_for_timeout(400)
         co = pg.inner_text("#mxCo")
         assert "Record checked Oct 18, 2026" in co and "Source: shipware.com" in co and "Consultancies & shipping intelligence" in co
@@ -550,3 +553,40 @@ def test_tour_closed_right_after_a_step_opens_does_not_error(site, width):
     with app_with(site, width) as pg:
         pg.evaluate("() => { tourStart(); document.querySelector('[data-pt=skip]').click(); }")
         pg.wait_for_timeout(600)      # app_with fails the test on any page error
+
+
+def test_map_shows_every_company_and_search_finds_transimpact(site):
+    """Oct 26, 2026: the map showed only 79 of 402 (it hid everything with fewer than three links). Every company with a
+    headquarters, or an owner with one, is on it; clusters keep it readable; searching a company puts it on the map."""
+    with app_with(site, 1280) as pg:
+        pg.click('nav.tabs [data-tab="mna"]')
+        pg.wait_for_selector("#mxGcov b", timeout=20000)
+        pg.wait_for_timeout(1500)
+        nums = pg.evaluate("() => [...document.querySelectorAll('#mxGcov b')].map(b => +b.textContent)")
+        assert nums[0] >= 330 and nums[0] <= nums[1], nums
+        pg.fill("#mxQ", "transimpact")
+        pg.click("#mxSugg [data-go]")
+        pg.wait_for_selector(".mx-found", timeout=8000)
+        note = pg.inner_text("#mxGnote")
+        assert "TransImpact" in note and "Emerald Isle" in note and "Open profile" in note, note
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_storylines_roll_up_under_the_three_2026_themes(site, width):
+    with app_with(site, width) as pg:
+        pg.evaluate("() => goTo('news', 'storylines')")
+        pg.wait_for_selector(".stth", timeout=10000)
+        t = pg.evaluate("() => [...document.querySelectorAll('.stth')].map(e => [e.querySelector('h3').textContent, e.querySelectorAll('.thsl .chip').length, e.querySelectorAll('ol li').length])")
+        names = [x[0] for x in t]
+        assert names == ["Continued splintering of eCommerce parcel from B2B/Premium parcel", "Continued battle between UPS-Teamsters",
+                         "Amazon insourcing volume (delivered most parcels in 2025)"], names
+        assert all(c >= 1 and n >= 1 for _, c, n in t), t
+        # a storyline carries the tag of the theme it belongs to, and the page does not overflow
+        assert pg.evaluate("() => document.querySelectorAll('.stl:not(.stth) .thtag .chip').length") >= 5
+        assert pg.evaluate(OVERFLOW) is None
+
+
+def test_phone_bottom_bar_is_an_opaque_layer_and_page_changes_jump(site):
+    with app_with(site, 390) as pg:
+        s = pg.evaluate("() => { const n = document.querySelector('nav.tabs'), c = getComputedStyle(n); return [c.position, c.backdropFilter, getComputedStyle(document.documentElement).scrollBehavior] }")
+        assert s[0] == "fixed" and s[1] in ("none", "") and s[2] == "auto", s
