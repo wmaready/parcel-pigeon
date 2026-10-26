@@ -2113,6 +2113,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:var(--sat);ba
 /* fuel: official source links */
 .fch .fsrc{white-space:nowrap}
 .fch .car{display:inline-flex;align-items:center;gap:6px}
+.fsrcd summary{cursor:pointer;color:var(--ink-3);font-size:var(--fs-sm);padding:var(--sp-2) var(--sp-4);min-height:32px;display:flex;align-items:center}.fsrcd[open] summary{color:var(--ink-2)}
 .fsrcs{display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-4);align-items:center;padding:var(--sp-3) 0 0;font-size:var(--fs-sm)}
 .fsrcs a{color:var(--ink-2);text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
 .fsrcs a:hover{color:var(--accent)}
@@ -2920,7 +2921,7 @@ body.bio-open{overflow:hidden}
       <p class="fsum" id="fuelSum"></p>
       <div id="fuelNotice"></div>
       <div class="fcards" id="fuelNow"></div>
-      <div class="fsrcs" id="fuelSrcs"></div>
+      <div id="fuelSrcs"></div>
       <details class="about pb"><summary>How to read this</summary><p>Fuel surcharges are a percentage of transportation charges. Changes are in percentage points (diesel in dollars). Red means fuel costs went up, green means they went down. "—" means no published rate for that week.</p></details></div>
     <div class="panel"><div class="ph"><h2 id="fcTitle">Fuel surcharge over time</h2></div>
       <div class="pb fctl">
@@ -2928,7 +2929,7 @@ body.bio-open{overflow:hidden}
         <div class="fccust" id="fcCustom"><label>From <input type="date" id="fcFrom" aria-label="Chart start date"></label><label>To <input type="date" id="fcTo" aria-label="Chart end date"></label><span class="lbl fcspan" id="fcSpan"></span></div>
         <div class="chips wrap" id="fcSeries" role="group" aria-label="Lines to show"></div>
       </div>
-      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fcbrush" id="fcBrush"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
+      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fcbrush" id="fcBrush"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div></div></div>
   </div>
 </section>
 
@@ -8550,7 +8551,7 @@ function renderFuelNow(){
     `<div class="fcard c-dsl"><div class="fch"><span class="car">Diesel</span>${src(FUEL_SRCS.diesel,'EIA · '+fmtD(dn[0]))}</div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. average</span><b class="fval">$${dn[1].toFixed(2)}</b>${chg(dp?dn[1]-dp[1]:null,'$')}${chg(dn[1]-DIESEL_YAGO.v,'$')}</div></div>`+
     `<div class="fcard c-jet"><div class="fch"><span class="car">Jet fuel</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('jet')[0])} ↗</a></div>${hd('$/gal')}<div class="frow"><span class="fsv">U.S. Gulf Coast</span><b class="fval">$${oilNow('jet')[1].toFixed(2)}</b>${chg(oilWk('jet'),'$')}${chg(oilYago('jet'),'$')}</div><p class="fnote">The index UPS and FedEx domestic air and international fuel surcharges are set from.</p></div>`+
     `<div class="fcard c-oil"><div class="fch"><span class="car">Crude oil</span><a class="lbl fsrc" href="${OIL_SRC}" target="_blank" rel="noopener">EIA · ${fmtD(oilNow('wti')[0])} ↗</a></div>${hd('$/bbl')}${['wti','brent'].map(k=>`<div class="frow"><span class="fsv">${k==='wti'?'WTI':'Brent'}</span><b class="fval">$${oilNow(k)[1].toFixed(2)}</b>${chg(oilWk(k),'$')}${chg(oilYago(k),'$')}</div>`).join('')}<p class="fnote">Crude sets the cost of diesel and jet fuel, so it moves first. The 1 yr change compares with the monthly average a year earlier.</p></div>`;
-  $('fuelSrcs')&&($('fuelSrcs').innerHTML='<span class="lbl">Sources</span>'+FUEL_SRC_LIST.map(([l,u])=>`<a href="${escU(u)}" target="_blank" rel="noopener">${l} ↗</a>`).join(''));
+  $('fuelSrcs')&&($('fuelSrcs').innerHTML='<details class="fsrcd"><summary>Sources</summary><div class="fsrcs">'+FUEL_SRC_LIST.map(([l,u])=>`<a href="${escU(u)}" target="_blank" rel="noopener">${l} ↗</a>`).join('')+'</div></details>');
   const u=fuelNow(1),f=fuelNow(2),ua=fuelAt(1,isoD(T0(u[0])-364*864e5)),fa=fuelAt(2,isoD(T0(f[0])-364*864e5));
   const hl=(a,b)=>`${Math.abs(a-b).toFixed(2)} points ${a>=b?'higher':'lower'} than a year ago (${pct(b)})`;
   const wk=d=>`<span${fuelOld(d)?' class="fstale"':''}>${esc(fuelWkTxt(d))}</span>`;
@@ -8581,7 +8582,7 @@ function renderFuelChart(){
   const pxs=[dsl0,jet].filter(s=>s&&s.p.length);const dsl=pxs.length?{p:pxs.flatMap(s=>s.p)}:null;
   const rangeLbl={w12:'last 12 weeks',ytd:'this year',y1:'last 12 months',all:'since 2017'}[fc.range]||`${fmtD(s0,{month:'short',day:'numeric',year:'numeric'})} to ${fmtD(s1,{month:'short',day:'numeric',year:'numeric'})}`;
   $('fcTitle').textContent=`Fuel surcharge${pxs.length?' and '+pxs.map(s=>s.k==='dsl'?'diesel':'jet fuel').join(' and '):''}, ${rangeLbl}`;
-  if(!lines.length&&!(dsl&&dsl.p.length)){$('fc').innerHTML='<div class="empty">Pick at least one line above.</div>';$('fcRead').innerHTML='';$('fcNote').textContent='';fc._geo=null;fcBrush(s0,s1);return}
+  if(!lines.length&&!(dsl&&dsl.p.length)){$('fc').innerHTML='<div class="empty">Pick at least one line above.</div>';$('fcRead').innerHTML='';fc._geo=null;fcBrush(s0,s1);return}
   const narrow=window.innerWidth<620,W=narrow?360:680,H=narrow?250:300,P={l:narrow?42:48,r:dsl?(narrow?44:50):12,t:12,b:28};
   const t0=T0(s0),t1=T0(s1),x=d=>P.l+(T0(d)-t0)/(t1-t0)*(W-P.l-P.r);
   // event dots sit in a band above the lines, staggered into rows so close events never overlap or cover the data
@@ -8616,9 +8617,6 @@ function renderFuelChart(){
   fc._geo={W,P,t0,t1,x,y,yd,lines:all,ev:EV};
   fcBrush(s0,s1);
   fcReadout(null);fevShow(fevOn!=null&&EV.includes(FUEL_EV[fevOn])?fevOn:null);
-  const first=s=>s.p[0],last=s=>s.p.at(-1);
-  $('fcNote').textContent=[...lines.map(s=>`${s.l}: ${pct(first(s)[1])} → ${pct(last(s)[1])}`),...pxs.map(s=>`${s.k==='dsl'?'Diesel':'Jet fuel'}: $${first(s)[1].toFixed(2)} → $${last(s)[1].toFixed(2)}`)].join(' · ')+
-    '. Weekly carrier-published rates the U.S. average on-highway diesel price and U.S. Gulf Coast jet fuel (EIA; jet fuel is monthly before July 2026). Ground fuel is set from diesel about two weeks earlier; air and international follow jet fuel.';
 }
 function fcReadout(d){
   const G=fc._geo;if(!G)return;

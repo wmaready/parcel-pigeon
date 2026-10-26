@@ -3,6 +3,13 @@ error annotation and recorded in data/fuel.json "health"; the free sources still
 import json
 
 
+def _no_page_reads(data_dir):
+    """The live data may say FedEx was just read from its own page, which skips the key path these tests exercise."""
+    f = json.loads((data_dir / "fuel.json").read_text())
+    f.pop("health", None)
+    (data_dir / "fuel.json").write_text(json.dumps(f))
+
+
 def _offline(monkeypatch, fuel):
     for f in ("ontrac", "dhl_express", "eia_spot", "fred_diesel"):
         monkeypatch.setattr(fuel, f, lambda *a, **k: (_ for _ in ()).throw(RuntimeError("offline")))
@@ -10,6 +17,7 @@ def _offline(monkeypatch, fuel):
 
 def test_missing_key_is_logged_loudly(data_dir, monkeypatch, capsys):
     import fuel
+    _no_page_reads(data_dir)
     _offline(monkeypatch, fuel)
     monkeypatch.delenv("OILPRICE_API_KEY", raising=False)
     monkeypatch.delenv("EIA_API_KEY", raising=False)
@@ -22,6 +30,7 @@ def test_missing_key_is_logged_loudly(data_dir, monkeypatch, capsys):
 
 def test_failing_service_is_logged_and_recorded(data_dir, monkeypatch, capsys):
     import fuel
+    _no_page_reads(data_dir)
     _offline(monkeypatch, fuel)
     monkeypatch.setenv("OILPRICE_API_KEY", "x")
     monkeypatch.delenv("EIA_API_KEY", raising=False)
