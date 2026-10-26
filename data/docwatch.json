@@ -1,5 +1,5 @@
 {
- "cursor": 34,
+ "cursor": 49,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 129,
+   "fails": 130,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 129,
+   "fails": 130,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -566,7 +566,12 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
    "hash": "23ab895007fa",
-   "checked": "2026-10-26"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
+    "txt": "data/snapshots/c09c89f34ba1/2026-10-26.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf": {
    "first": "2026-10-21",
@@ -1110,19 +1115,30 @@
    "hash": "778400ab2847",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "UPS Ground Saver page"
+   "n": "UPS Ground Saver page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
+    "txt": "data/snapshots/bff5806b523a/2026-10-26.txt"
+   }
   },
   "https://www.ups.com/us/en/services/shipping/simple-rate": {
    "hash": "d8faf24fe155",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "UPS Simple Rate page"
+   "n": "UPS Simple Rate page",
+   "pic_try": "2026-10-26"
   },
   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
    "hash": "a5290fff91cb",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "UPS Small Business Rates page"
+   "checked": "2026-10-26",
+   "n": "UPS Small Business Rates page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf",
+    "txt": "data/snapshots/19e15226c749/2026-10-26.txt"
+   }
   },
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "d28481282107",
@@ -1138,23 +1154,33 @@
   "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm": {
    "hash": "8d1ffdf3d98c",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "USPS 2026 holiday price change announcement"
+   "checked": "2026-10-26",
+   "n": "USPS 2026 holiday price change announcement",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.pdf",
+    "txt": "data/snapshots/ea5395bda005/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx": {
    "n": "DHL eCommerce delivery area ZIP list, effective Jan 18, 2026",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf": {
    "hash": "a2479c22c80b",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "2026 FedEx Ground Economy delivery area ZIP list"
+   "checked": "2026-10-26",
+   "n": "2026 FedEx Ground Economy delivery area ZIP list",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf",
+    "txt": "data/snapshots/3cd91e511d8d/2026-10-26.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx": {
    "n": "2026 FedEx delivery area ZIP list (Excel)",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en": {
