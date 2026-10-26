@@ -137,11 +137,36 @@ def usps():
         if r: save_any("USPS-" + slug(u), r, u)
 
 
+def pitney():
+    """Pitney Bowes Parcel Shipping Index: the page and every PDF or report page it links to."""
+    seen = set()
+    for p in ("https://www.pitneybowes.com/us/shipping-index.html", "https://www.pitneybowes.com/us/shipping-index/parcel-shipping-index.html",
+              "https://www.pitneybowes.com/us/newsroom.html"):
+        r = get(p)
+        if not r:
+            continue
+        save_any("PB-" + slug(p), r, p)
+        for h in re.findall(r'href="([^"]+)"', r.text, re.I):
+            u = urljoin(p, h)
+            if u in seen or not re.search(r"(shipping-index|parcel-shipping|psi)", u, re.I) or "#" in u:
+                continue
+            seen.add(u)
+            if len(seen) > 25:
+                break
+            rr = get(u)
+            if rr:
+                save_any("PB-" + slug(u), rr, u)
+
+
 if __name__ == "__main__":
-    sec(1090727, "UPS", {"10-Q", "10-K", "8-K"}, True)
-    sec(1048911, "FDX", {"10-Q", "10-K", "8-K"}, True)
-    releases()
-    fedex_statbooks()
-    usps()
+    import sys as _s
+    if "--pb" in _s.argv:
+        pitney()
+    else:
+        sec(1090727, "UPS", {"10-Q", "10-K", "8-K"}, True)
+        sec(1048911, "FDX", {"10-Q", "10-K", "8-K"}, True)
+        releases()
+        fedex_statbooks()
+        usps()
     (OUT / "_log.txt").write_text("\n".join(LOG))
     print("\n".join(LOG))
