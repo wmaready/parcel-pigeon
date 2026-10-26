@@ -1442,6 +1442,10 @@ details.dr.i-flat .rtile i{background:#3A4656;color:var(--ink)}
 .rctoday{display:flex;align-items:center;gap:10px;padding:10px var(--sp-3);font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
 .rctoday::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
 .rctoday b{color:var(--ink)}
+.dl .month.rcgrp{font-size:var(--fs-sm);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+details.rcpast{border-top:var(--line) solid var(--grid-strong)}
+details.rcpast>summary{cursor:pointer;min-height:48px;display:flex;align-items:center;gap:8px;padding:0 var(--sp-3);color:var(--accent);font-size:var(--fs-sm)}
+details.rcpast>summary .lbl{color:var(--ink-2)}
 .drbody{padding:0 var(--sp-3) var(--sp-3) calc(62px + var(--sp-3) * 2)}
 .rshow{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;text-align:left;margin:4px 0 10px;padding:10px 14px;border-radius:10px;border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 14%,var(--panel-2)),var(--panel-2));color:var(--ink);font-weight:650;font-size:var(--fs-md);cursor:pointer}
 .rshow small{font-family:var(--font-mono);font-size:var(--fs-xs);color:var(--ink-2);font-weight:400;text-transform:uppercase;letter-spacing:.06em}
@@ -7820,7 +7824,7 @@ function goStory(id){
   goTo('news','list');
   newsEnsure(id);const el=$('n-'+id);if(el)setTimeout(()=>el.scrollIntoView({block:'start'}),40);
 }
-function goClock(cid){goTo('clock','list');const el=$(cid);if(el){el.open=true;setTimeout(()=>el.scrollIntoView({block:'center'}),40)}}
+function goClock(cid){goTo('clock','list');const el=$(cid);if(el){const p=el.closest('details.rcpast');if(p)p.open=true;el.open=true;setTimeout(()=>el.scrollIntoView({block:'center'}),40)}}
 
 /* ================= TODAY ================= */
 const series=o=>Object.keys(o).sort().map(k=>o[k]);
@@ -8312,12 +8316,12 @@ $('calGrid').addEventListener('click',e=>{const b=e.target.closest('[data-day]')
   const ev=DATES.filter(x=>x.d===calSel);
   $('calDetail').innerHTML=`<span class="lbl">${fmtD(calSel,{weekday:'long',month:'long',day:'numeric',year:'numeric'})}</span>`+(ev.length?ev.map(x=>`<h3><span class="${impCls(x.imp)}">${IMPACT[x.imp].s}</span> ${esc(x.w)}</h3>${x.note?`<p class="note">${esc(x.note)}</p>`:''}${x.fees?'<div class="fees">'+x.fees.map(feeDiv).join('')+'</div>':''}<button class="link" data-clock="${x.id}">Open in list</button>`).join(''):'<p class="note">No announced changes this day.</p>')});
 
+/* The list reads like Today's "Coming up": what just took effect (two days), what is running now (a dated range still on),
+   then next up by month. Everything older folds into "Past changes", newest first. */
 function renderClockList(){
-  let h='',month='',todayDone=false;const MON=d=>fmtD(d,{month:'short'}).toUpperCase();
-  DATES.forEach(x=>{const m=fmtD(x.d,{month:'long',year:'numeric'});
-    const n=daysTo(x.d);
-    if(!todayDone&&n>=0){todayDone=true;h+=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`}
-    if(m!==month){h+=`<div class="month">${m}</div>`;month=m}
+  const MON=d=>fmtD(d,{month:'short'}).toUpperCase(),dn=x=>daysTo(x.d);
+  const item=x=>{
+    const n=dn(x);
     const st=(x.news||[]).map(id=>NEWS.find(s=>s.id===id)).filter(Boolean),fx=rcxOf(x);
     // "announced" only when a source states it (the entry's own ann, or a story's ann); otherwise the earliest story about it
     // is shown as "first reported". Either one only when it came before the change took effect.
@@ -8327,7 +8331,8 @@ function renderClockList(){
     const offc=cost&&cycleOf(String(x.c).split(/\s*(?:·|,)\s*/)[0],fx&&{gri:'gri',peak:'peak',usps:'peak',perlb:'surcharge',fuel:'fuel_table',fee:'surcharge',das:'das',zone:'surcharge'}[fx.t]||kindOf(x.w),x.d,ann||rep1)==='off';
     const eff=x.imp==='info'?(n<0?'Happened':'Happens'):(n<0?'In effect since':'Takes effect');
     const cd=n>1?`<b>${n}</b> days`:n===1?'<b>Tomorrow</b>':n===0?'<b>Today</b>':x.imp==='info'?'Passed':'In effect';
-    h+=`<details class="dr i-${impCls(x.imp)} ${n<0?'past':n<=21?'soon':''}" id="${x.id}"><summary>
+    const on=n<0&&x.end&&daysTo(x.end)>=0;          // a dated range still running isn't past
+    return `<details class="dr i-${impCls(x.imp)} ${on?'soon':n<0?'past':n<=21?'soon':''}" id="${x.id}"><summary>
       <span class="rtile" aria-hidden="true"><i>${MON(x.d)}</i><b>${+x.d.slice(8)}</b><small>${fmtD(x.d,{weekday:'short'})}</small></span>
       <span class="rmain"><span class="w"><span class="${impCls(x.imp)}">${IMPACT[x.imp].s}</span> ${esc(x.w)}</span>
         <span class="reff">${eff} <b>${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}</b>${x.end?` <span class="rrng">· ${span(x)}</span>`:''}${ann||rep1?` <span class="rann">· ${ann?'announced':'first reported'} ${fmtD(ann||rep1,{month:'short',day:'numeric'})}${nd!=null?`, ${nd} days' notice`:''}</span>`:''}</span>
@@ -8335,8 +8340,16 @@ function renderClockList(){
       <span class="cdn">${cd}</span></summary>
       <div class="drbody">${fx?`<button class="rshow" data-rx="${x.id}"><span class="xstamp">${COOP_STAMP}</span><span class="xpt"><b>Show me what this does</b><small>${RCX_T[fx.t]} · Coop walks you through it</small></span></button><div class="xstage rcx" id="rcx-${x.id}" hidden></div>`:''}
       ${x.note?`<p class="note">${esc(x.note)}</p>`:''}${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}
-      ${st.map(s=>`<button class="storylink" data-open="${s.id}">${esc(s.title)}<small>${IMPACT[s.imp].w} · ${esc(s.plain)}</small></button>`).join('')}</div></details>`});
-  if(!todayDone)h+=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`;
+      ${st.map(s=>`<button class="storylink" data-open="${s.id}">${esc(s.title)}<small>${IMPACT[s.imp].w} · ${esc(s.plain)}</small></button>`).join('')}</div></details>`};
+  const live=DATES.filter(x=>dn(x)<0&&x.end&&daysTo(x.end)>=0);
+  const just=DATES.filter(x=>dn(x)<0&&dn(x)>=-2&&!live.includes(x));
+  const next=DATES.filter(x=>dn(x)>=0),past=DATES.filter(x=>dn(x)<-2&&!live.includes(x)).reverse();
+  const months=L=>{let m0='';return L.map(x=>{const m=fmtD(x.d,{month:'long',year:'numeric'});const hd=m!==m0?`<div class="month">${m}</div>`:'';m0=m;return hd+item(x)}).join('')};
+  let h=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`;
+  if(just.length)h+=`<div class="month rcgrp">Just took effect</div>${just.map(item).join('')}`;
+  if(live.length)h+=`<div class="month rcgrp">In effect now</div>${live.map(item).join('')}`;
+  h+=next.length?months(next):'<p class="empty">Nothing dated ahead yet.</p>';
+  if(past.length)h+=`<details class="rcpast"><summary>Past changes <span class="lbl">${past.length}</span></summary>${months(past)}</details>`;
   $('clockList').innerHTML=h;
 }
 /* ===== Rate clock explainers: Coop shows what each dated change does ===== */

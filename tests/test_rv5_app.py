@@ -418,3 +418,26 @@ def test_service_worker_saved_copies(site):
         assert pg.evaluate(OVERFLOW) is None
         b.close()
     assert not errors, errors[:3]
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_rate_clock_list_leads_with_whats_next(site, width):
+    """Oct 26, 2026: the list opens on Today, then what just took effect or is running now, then next up by month; older
+    changes fold into "Past changes", newest first, and a link to one of them still opens it."""
+    with app(site, width) as pg:
+        pg.evaluate("() => goTo('clock','list')")
+        pg.wait_for_timeout(400)
+        got = pg.evaluate("""() => { const L = $('clockList'), kids = [...L.children];
+          const firstItem = kids.find(k => k.matches('details.dr')), past = L.querySelector('details.rcpast');
+          const pastIds = past ? [...past.querySelectorAll('details.dr')].map(d => d.id) : [];
+          const days = id => daysTo(DATES.find(x => x.id === id).d);
+          return {top: kids[0].className, firstFuture: !!firstItem && (days(firstItem.id) >= 0 || !!L.querySelector('.rcgrp')),
+                  topLevelPast: [...L.querySelectorAll(':scope > details.dr')].filter(d => days(d.id) < -2 && !DATES.find(x => x.id === d.id).end).length,
+                  pastClosed: !!past && !past.open, pastNewestFirst: pastIds.every((id, i) => i === 0 || days(pastIds[i - 1]) >= days(id)),
+                  pastAllOld: pastIds.every(id => days(id) < -2), pastId: pastIds[0] || null} }""")
+        assert got["top"] == "rctoday" and got["firstFuture"] and got["topLevelPast"] == 0, got
+        assert got["pastClosed"] and got["pastNewestFirst"] and got["pastAllOld"] and got["pastId"], got
+        pg.evaluate(f"() => goClock('{got['pastId']}')")
+        pg.wait_for_timeout(200)
+        assert pg.evaluate(f"() => document.querySelector('details.rcpast').open && document.getElementById('{got['pastId']}').open")
+        assert pg.evaluate(OVERFLOW) is None
