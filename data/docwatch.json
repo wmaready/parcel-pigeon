@@ -1,5 +1,5 @@
 {
- "cursor": 60,
+ "cursor": 75,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -223,7 +223,12 @@
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
    "hash": "f659dc634fac",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf",
+    "txt": "data/snapshots/d80e5fe8d290/2026-10-26.txt"
+   }
   },
   "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf": {
    "first": "2026-10-21",
@@ -240,13 +245,23 @@
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
    "hash": "c46e4fcc8b83",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
+    "txt": "data/snapshots/a800834b113a/2026-10-26.txt"
+   }
   },
   "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf": {
    "first": "2026-10-21",
    "n": "ImpactedZIPS_08242026.pdf",
    "hash": "aec742c8cd57",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
+    "txt": "data/snapshots/ed3aa5e9069b/2026-10-26.txt"
+   }
   },
   "http://www.speedeedelivery.com/files/2024/2024_ON-CALL_RATES_MULTI.pdf": {
    "first": "2026-10-21",
@@ -304,14 +319,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 120,
+   "fails": 121,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 120,
+   "fails": 121,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -549,7 +564,12 @@
    "first": "2026-10-21",
    "n": "DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
    "hash": "228d4702cf23",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
+    "txt": "data/snapshots/dbf1cd5b88e5/2026-10-26.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
    "first": "2026-10-21",
@@ -573,7 +593,12 @@
    "first": "2026-10-21",
    "n": "PAS_Contiguous_Extended_Remote_2026.pdf",
    "hash": "ffa00e94210b",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
+    "txt": "data/snapshots/60a95b7abf39/2026-10-26.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
    "first": "2026-10-21",
@@ -914,41 +939,48 @@
   "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en": {
    "hash": "bb78e667011c",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "FedEx rate tools (zone locator, rate downloads)"
+   "checked": "2026-10-26",
+   "n": "FedEx rate tools (zone locator, rate downloads)",
+   "pic_try": "2026-10-26"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5abedc88-3398-4cec-98b7-08e0bb271544/original/as/area-surcharge-zips-us-en.xlsx": {
    "n": "UPS delivery and remote area ZIP list",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b38785e4-bf16-448d-ac8c-49e0f7d414d6/original/as/ea-surcharge-en-GLOBAL.xlsx": {
    "n": "UPS international extended area list",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://www.dhl.com/us-en/home/important-information/2026/express-fuel-surcharge-updates.html": {
    "hash": "1e78bfca5548",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL Express weekly fuel surcharge updates"
+   "checked": "2026-10-26",
+   "n": "DHL Express weekly fuel surcharge updates",
+   "pic_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf": {
    "hash": "15a2a93345df",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL eCommerce domestic fuel table, effective May 30, 2026"
+   "checked": "2026-10-26",
+   "n": "DHL eCommerce domestic fuel table, effective May 30, 2026",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf",
+    "txt": "data/snapshots/bee0544c0521/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-jet-fuel-surcharge-effective-from-020126.pdf": {
    "hash": "59d8e418ba71",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "DHL eCommerce jet fuel surcharge, effective Feb 1, 2026"
   },
   "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
    "hash": "9520c595235a",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "FedEx fuel surcharge page"
   },
   "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html": {
