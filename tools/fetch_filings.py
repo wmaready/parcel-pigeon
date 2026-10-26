@@ -158,9 +158,23 @@ def pitney():
                 save_any("PB-" + slug(u), rr, u)
 
 
+def diesel():
+    for u in ("https://fred.stlouisfed.org/graph/fredgraph.csv?id=GASDESW", "https://fred.stlouisfed.org/data/GASDESW.txt",
+              "https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm", "https://www.eia.gov/petroleum/gasdiesel/"):
+        try:
+            import requests as rq
+            r = rq.get(u, timeout=40, headers={"User-Agent": "Mozilla/5.0 (compatible; ParcelPigeon/1.0)"})
+            LOG.append(f"plain requests {r.status_code} {len(r.text)} {u}")
+            (OUT / ("DIESEL-" + slug(u) + ".txt")).write_text(f"SOURCE: {u}\nSTATUS: {r.status_code}\n\n" + r.text[-6000:] + "\n\n=== HEAD ===\n" + r.text[:3000])
+        except Exception as e:
+            LOG.append(f"plain requests ERR {u} {e}")
+
+
 if __name__ == "__main__":
     import sys as _s
-    if "--pb" in _s.argv:
+    if "--diesel" in _s.argv:
+        diesel()
+    elif "--pb" in _s.argv:
         pitney()
     else:
         sec(1090727, "UPS", {"10-Q", "10-K", "8-K"}, True)
