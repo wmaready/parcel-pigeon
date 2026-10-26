@@ -75,6 +75,28 @@ def eia(fuel, key):
     return len(rows)
 
 
+def eia_diesel_page(fuel, html=None):
+    """No-key: EIA's weekly retail price table (the last six Mondays), row "Diesel (On-Highway) - All Types". Taken only when
+    the six dates are Mondays a week apart and every price is a plausible $/gal."""
+    html = html if html is not None else get("https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm").text
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " | ", html))
+    label = "Diesel (On-Highway) - All Types"
+    i = text.find(label)
+    if i < 0:
+        raise RuntimeError("diesel row not found on EIA's weekly table")
+    dates = [f"20{y}-{m}-{d}" for m, d, y in re.findall(r"(\d{2})/(\d{2})/(\d{2})(?!\d)", text[:i])][-6:]
+    vals = [float(v) for v in re.findall(r"\|\s*(\d+\.\d{3})\s*", text[i:i + 800])[:6]]
+    ok = len(dates) == 6 and len(vals) == 6 and all(dt.date.fromisoformat(d).weekday() == 0 for d in dates) \
+        and all((dt.date.fromisoformat(b) - dt.date.fromisoformat(a)).days == 7 for a, b in zip(dates, dates[1:])) \
+        and all(1.0 < v < 12.0 for v in vals)
+    if not ok:
+        raise RuntimeError(f"EIA weekly table didn't check out: dates {dates}, prices {vals}")
+    old = {d: v for d, v in fuel.get("diesel", [])}
+    old.update(dict(zip(dates, vals)))
+    fuel["diesel"] = sorted([[d, v] for d, v in old.items()])
+    return len(vals)
+
+
 def fred_diesel(fuel):
     """No-key fallback: FRED's copy of the EIA weekly U.S. on-highway diesel series."""
     text = get("https://fred.stlouisfed.org/data/GASDESW.txt").text
@@ -89,6 +111,80 @@ def fred_diesel(fuel):
         old.update({d: v for d, v in rows})
         fuel["diesel"] = sorted([[d, v] for d, v in old.items()])
     return len(rows)
+
+
+# ---------------------------------------------------------------- world events on the fuel chart (data/fuel_events.json)
+EV_SWING = 0.25          # an event must sit on a diesel swing of at least this many $/gal within EV_DAYS of its date
+EV_DAYS = 28
+EV_MOVE = 0.30           # a weekly diesel change this big (or a new all-time high) wants an event
+EV_NEAR = 14             # ...unless one is already within this many days
+EV_RECENT = 60           # only moves this recent are looked at (history was checked by hand)
+OIL_WORDS = re.compile(r"\b(diesel|crude|oil|OPEC|refiner(y|ies)|Hormuz|pipeline|hurricane|sanction|tanker|barrel)\b", re.I)
+
+
+def _d(s):
+    return dt.date.fromisoformat(s)
+
+
+def ev_swing(series, d, days=EV_DAYS):
+    """The largest diesel price difference inside [d - days, d + days]."""
+    w = [v for x, v in series if abs((_d(x) - _d(d)).days) <= days]
+    return (max(w) - min(w)) if len(w) > 1 else 0.0
+
+
+def fuel_events(fuel, news, events, review, today=None):
+    """Keep the chart's world events honest and current. Returns (events, notes).
+    1. Every event must sit on a real move: a diesel swing of EV_SWING within EV_DAYS. One that doesn't goes to review.
+    2. A recent big move (weekly change of EV_MOVE or a new all-time high) with no event near it: the robot looks in the
+       published news for an oil or fuel story from that week and adds it with that story's source, marked auto, for a
+       person to confirm; with no such story, it asks in review. Never writes an event without a source."""
+    today = today or dt.date.today().isoformat()
+    series = sorted(v for v in (fuel.get("diesel") or []) if v and v[1] is not None)
+    notes = []
+    if len(series) < 10:
+        return events, notes
+    have = lambda kind, key: any(isinstance(r, dict) and r.get("key") == key for r in review)
+    for e in events:
+        if ev_swing(series, e["d"]) < EV_SWING and not e.get("checked_flat"):
+            key = f"fuel-event-flat|{e['d']}|{e['title'][:40]}"
+            if not have("x", key):
+                review.append({"type": "fuel-event", "key": key, "event": e["title"], "d": e["d"],
+                               "note": f"No diesel move of ${EV_SWING:.2f} within {EV_DAYS} days of this event. Check it still belongs on the chart."})
+                notes.append(f"flat: {e['title']}")
+    hi, moves = 0.0, []
+    for i, (d, v) in enumerate(series):
+        prev = series[i - 1][1] if i else None
+        if (prev is not None and abs(v - prev) >= EV_MOVE) or (hi and v > hi):
+            moves.append((d, v, (v - prev) if prev is not None else 0.0, hi and v > hi))
+        hi = max(hi, v)
+    cut = (_d(today) - dt.timedelta(days=EV_RECENT)).isoformat()
+    used = {e.get("story") for e in events if e.get("story")}
+    for d, v, ch, record in [m for m in moves if m[0] >= cut]:
+        if any(abs((_d(e["d"]) - _d(d)).days) <= EV_NEAR for e in events):
+            continue
+        lo, up = (_d(d) - dt.timedelta(days=10)).isoformat(), (_d(d) + dt.timedelta(days=3)).isoformat()
+        cand = [n for n in news if lo <= (n.get("date") or "") <= up and n.get("url") and n.get("id") not in used
+                and OIL_WORDS.search(n.get("title") or "") and not n.get("unconfirmed")]
+        cand.sort(key=lambda n: (-(int(n.get("lvl") or 1)), n.get("date") or ""))
+        if cand:
+            n = cand[0]
+            why = re.split(r"(?<=[.!?])\s", (n.get("sum") or "").strip())[0]
+            events.append({"d": n["date"], "title": n["title"], "why": why, "src": n.get("src") or "Source", "url": n["url"],
+                           "dir": "up" if ch >= 0 else "down", "story": n["id"], "auto": True, "added": today})
+            used.add(n["id"])
+            review.append({"type": "fuel-event", "key": f"fuel-event-auto|{n['id']}", "event": n["title"], "d": n["date"],
+                           "note": f"Added to the fuel chart for diesel's {'record ' if record else ''}move the week of {d} "
+                                   f"(${v:.2f}, {'+' if ch >= 0 else '−'}${abs(ch):.2f}). Confirm it explains the move."})
+            notes.append(f"added: {n['title']}")
+        else:
+            key = f"fuel-event-missing|{d}"
+            if not have("x", key):
+                review.append({"type": "fuel-event", "key": key, "d": d,
+                               "note": f"Diesel {'set a record' if record else 'moved'} the week of {d} (${v:.2f}, {'+' if ch >= 0 else '−'}${abs(ch):.2f}) "
+                                       "and no world event on the chart explains it. Add one with its source to data/fuel_events.json."})
+                notes.append(f"missing: {d}")
+    events.sort(key=lambda e: e["d"])
+    return events, notes
 
 
 SPOT_ROWS = {"jet": "Kerosene-Type Jet Fuel", "wti": "WTI", "brent": "Brent"}
@@ -147,11 +243,23 @@ def main():
         try: print(name, fn())
         except Exception as e: print(f"{name} failed: {e}", file=sys.stderr)
     carriers(fuel)
-    if os.environ.get("EIA_API_KEY"):
-        try: print("diesel", eia(fuel, os.environ["EIA_API_KEY"]))
-        except Exception as e: print(f"diesel failed: {e}", file=sys.stderr)
-    try: print("diesel (FRED)", fred_diesel(fuel))
-    except Exception as e: print(f"diesel FRED failed: {e}", file=sys.stderr)
+    # diesel: EIA's API with a key, else EIA's own weekly table (no key), else FRED's copy; a miss is loud, never quiet
+    got, why = 0, []
+    for name, fn in [("EIA API", (lambda: eia(fuel, os.environ["EIA_API_KEY"])) if os.environ.get("EIA_API_KEY") else None),
+                     ("EIA weekly table", lambda: eia_diesel_page(fuel)), ("FRED", lambda: fred_diesel(fuel))]:
+        if fn is None or got:
+            continue
+        try:
+            got = fn(); print(f"diesel ({name}):", got)
+        except Exception as e:
+            why.append(f"{name}: {str(e)[:120]}")
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    h = fuel.setdefault("health", {})
+    if got:
+        h["diesel"] = {"ok": True, "at": now, "last_ok": now, "latest": (fuel.get("diesel") or [[None]])[-1][0]}
+    else:
+        print("::warning title=Diesel not updated::" + "; ".join(why))
+        h["diesel"] = {"ok": False, "why": "; ".join(why)[:300], "at": now, "last_ok": (h.get("diesel") or {}).get("last_ok")}
     # current ground = latest history week that has started
     today = dt.date.today().isoformat()
     for c, h in fuel.get("hist", {}).items():
@@ -161,6 +269,18 @@ def main():
             fuel.setdefault("eff", {})[c] = past[-1]
     fuel["updated"] = dt.datetime.utcnow().isoformat(timespec="minutes") + "Z"
     save("fuel.json", fuel)
+    try:
+        fe, review = load("fuel_events.json", {}), load("review.json", [])
+        n0 = len(review)
+        events, notes = fuel_events(fuel, load("news.json", []), list(fe.get("events") or []), review)
+        if notes:
+            fe["events"] = events
+            save("fuel_events.json", fe)
+            print("fuel events:", "; ".join(notes))
+        if len(review) != n0:
+            save("review.json", review)
+    except Exception as e:
+        print(f"::warning title=fuel events::{e}")
 
 
 if __name__ == "__main__":

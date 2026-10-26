@@ -8,6 +8,7 @@ from conftest import ROOT
 
 ROWS = json.loads((ROOT / "data" / "earnings.json").read_text())
 row = lambda c, q: next(r for r in ROWS if r["company"] == c and r["q"] == q)
+row_of = lambda rows, c, q: next(r for r in rows if r["company"] == c and r["q"] == q)
 
 # NYSE holidays inside the fixture windows: Juneteenth (Fri Jun 19, 2026) and Independence Day observed (Fri Jul 3, 2026)
 HOLIDAYS = {"2026-06-19", "2026-07-03"}
@@ -216,10 +217,14 @@ def test_page_shows_the_figures_as_printed(page_at):
     pg = page_at(390)
     pg.evaluate("() => goTo('docs','earnings','UPS','Q2 2026')")
     pg.wait_for_timeout(500)
-    det = pg.inner_text('.eglance[data-eco="UPS"] .egdet')
-    for want in ("$22.83B · +7.6% vs a year earlier", "19.0 million a day", "−3.7%", "U.S. domestic 16.0 million",
-                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%"):
+    det = pg.text_content('.eglance[data-eco="UPS"] .egdet')
+    # three figures with their change, then the take and one row of links: no paragraphs of small print
+    for want in ("Q2 2026", "Reported Jul 28, 2026", "Revenue", "$22.83B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "U.S. 16.0M",
+                 "Revenue per package", "$15.96", "+11.3%", "Release", "10-Q / 10-K"):
         assert want in det, (want, det)
+    assert "checked" not in det and "calculated" not in det and "billion in the quarter" not in det
+    about = pg.text_content('.eglance[data-eco="UPS"] .egabout')                # how figures are counted: one fold
+    assert "operating day" in about and "never estimated" in about and "last checked" in about
     # the earnings page carries no stock lines or stock chart
     assert "Stock" not in det and not pg.query_selector('.eglance .egrx, .eglance .egstock')
     got = pg.evaluate("""() => {
@@ -229,7 +234,7 @@ def test_page_shows_the_figures_as_printed(page_at):
                 {company:'FedEx Freight', q:'F1', d:'2026-10-29', rev:2.1},
                 {company:'UPS', q:'Bare 1', d:'2026-10-27', rev:21.0});
       goTo('docs','earnings','FedEx','T1');
-      const fx = document.querySelector('.eglance[data-eco="FedEx"] .egdet').innerText;
+      const fx = document.querySelector('.eglance[data-eco="FedEx"] .egdet').textContent;
       const ff = document.querySelector('.eglance[data-eco="FedEx Freight"]');
       earnSelect('UPS', 'Bare 1');
       const bare = document.querySelector('.eglance[data-eco="UPS"] .egdet').textContent;
@@ -242,8 +247,8 @@ def test_page_shows_the_figures_as_printed(page_at):
               hatched: !!document.querySelector('.eglance[data-eco="FedEx"] .egbar[data-ebar="T1"] .eghat'),
               divider: !!document.querySelector('.eglance[data-eco="FedEx"] .egdiv')}
     }""")
-    assert "16.0 million a day" in got["fx"] and "in the quarter" not in got["fx"]          # no stated days: no total
-    assert "4-month period; not compared with a year earlier" in got["fx"] and "+4.0%" not in got["fx"]
+    assert "16.0M" in got["fx"] and "U.S. 13.0M" in got["fx"]
+    assert "not comparable" in got["fx"] and "+4.0%" not in got["fx"]                      # a 4-month period: no year-over-year
     assert got["ff"]["views"] == 0 and "Packages" not in got["ff"]["text"]                 # FedEx Freight: no package view
     assert "$21.0B" in got["bare"] and "Packages" in got["bare"] and "—" in got["bare"]   # a bare row still renders
     assert all(same for _, _, same in got["charts"]) and len({c for c, _, _ in got["charts"]}) == len(got["charts"])
@@ -265,3 +270,60 @@ def test_package_backfill_from_the_carriers_own_reports():
     assert (s["rev_m"], s["rev_prior_m"], s["vol"]["pieces_m"], s["vol"]["pieces_prior_m"], s["vol"]["adv_yoy"]) == (19940, 18797, 1554, 1609, -3.4)
     assert s["vol"]["adv_src"] == "calc" and s["vol"]["days"] == 91 and s["vol"]["rpp"] is None
     assert all((r.get("vol") or {}).get("src") and r["vol"].get("checked") for r in ROWS if r["company"] in ("UPS", "FedEx", "USPS"))
+
+
+def _ups_10q(adv="18,500", adv_prior="19,419", adv_yoy="(4.7)"):
+    """A UPS 10-Q's operating statistics as SEC serves them (tables), for a made-up Q3 2026."""
+    tr = lambda *c: "<tr>" + "".join(f"<td>{x}</td>" for x in c) + "</tr>"
+    return ("<html><body><table>" + tr("Operating Days", "64", "64", "190", "190")
+            + tr("Average Daily Package Volume (in thousands)", adv, adv_prior, adv_yoy, "%")
+            + tr("Average Revenue Per Piece", "$", "16.10", "$", "14.82", "$", "1.28", "8.6", "%")
+            + "</table><table>" + tr("Total Average Daily Package Volume", "15,500", "16,150", "(4.0)", "%") + "</table></body></html>")
+
+
+def _sec(doc):
+    subs = {"filings": {"recent": {"form": ["8-K", "10-Q"], "reportDate": ["2026-10-27", "2026-09-30"],
+                                   "accessionNumber": ["0001-26-1", "0001-26-2"], "primaryDocument": ["x.htm", "ups-20260930.htm"]}}}
+    return lambda url: json.dumps(subs) if "submissions" in url else doc
+
+
+def _q3_rows():
+    rows = json.loads(json.dumps(ROWS))
+    rows.append({"company": "UPS", "q": "Q3 2026", "d": "2026-10-27", "rev": 21.9, "period": {"start": "2026-07-01", "end": "2026-09-30", "months": 3},
+                 "vol": None, "checked": False})
+    return rows
+
+
+def test_new_ups_quarter_takes_packages_from_its_10q():
+    rows, review = _q3_rows(), []
+    done = E.fill_packages(rows, review, "2026-10-28", fetch=_sec(_ups_10q()), fedex_page="")
+    v = row_of(rows, "UPS", "Q3 2026")["vol"]
+    assert done == ["UPS Q3 2026"] and not review
+    assert (v["adv_k"], v["adv_prior_k"], v["adv_yoy"], v["days"], v["us_adv_k"], v["rpp"]) == (18500, 19419, -4.7, 64, 15500, 16.1)
+    assert v["src"] == "https://www.sec.gov/Archives/edgar/data/1090727/0001262/ups-20260930.htm" and v["checked"] == "2026-10-28" and v["auto"] is True
+
+
+def test_a_10q_that_doesnt_check_out_goes_to_review():
+    rows, review = _q3_rows(), []
+    # last year's figure in the filing differs from the one on file: nothing is entered
+    assert E.fill_packages(rows, review, "2026-10-28", fetch=_sec(_ups_10q(adv_prior="19,500", adv_yoy="(5.1)")), fedex_page="") == []
+    assert row_of(rows, "UPS", "Q3 2026")["vol"] is None and review and review[0]["type"] == "earnings-check"
+    # a printed change that doesn't match its own figures: nothing is entered either
+    rows, review = _q3_rows(), []
+    assert E.fill_packages(rows, review, "2026-10-28", fetch=_sec(_ups_10q(adv_yoy="(2.0)")), fedex_page="") == []
+    assert row_of(rows, "UPS", "Q3 2026")["vol"] is None and review
+
+
+def test_a_10q_not_filed_yet_waits_quietly():
+    rows, review = _q3_rows(), []
+    subs = {"filings": {"recent": {"form": ["8-K"], "reportDate": ["2026-10-27"], "accessionNumber": ["1"], "primaryDocument": ["x.htm"]}}}
+    assert E.fill_packages(rows, review, "2026-10-27", fetch=lambda u: json.dumps(subs), fedex_page="") == [] and not review
+
+
+def test_fedex_statbook_goes_to_review_with_its_link():
+    rows, review = json.loads(json.dumps(ROWS)), []
+    rows.append({"company": "FedEx", "q": "Jun–Sep 2026 transition period", "d": "2026-10-28", "vol": None, "checked": False,
+                 "period": {"start": "2026-06-01", "end": "2026-09-30", "months": 4}})
+    page = '<a href="https://s21.q4cdn.com/665674268/files/doc_financials/2026/tp/FedEx-Transition-Stat-Book.pdf">Stat Book</a>'
+    E.fill_packages(rows, review, "2026-10-29", fetch=lambda u: (_ for _ in ()).throw(AssertionError("no SEC read for FedEx")), fedex_page=page)
+    assert review and review[0]["url"].endswith("FedEx-Transition-Stat-Book.pdf") and row_of(rows, "FedEx", "Jun–Sep 2026 transition period")["vol"] is None

@@ -12,14 +12,20 @@
    close), and the windows count trading sessions in the price series (1, 5 and 21), never calendar days. The S&P 500
    (^GSPC) is measured over the same sessions. Until 21 sessions have passed the row is "final": false with the windows
    so far; a "final": true row is never recalculated. A failed fetch keeps the last good figures and never writes zeros.
-4. Checks: FedEx's four fiscal-2026 quarterly package averages should average within 3% of the 10-K's full-year figure;
+4. Package figures for a new quarter (Oct 2026): UPS's come from its 10-Q on SEC EDGAR (the filing whose report date is the
+   quarter's end), read only when every printed year-over-year change matches its figures and the prior-year values equal
+   the ones already on file (pipeline/filings.py). A UPS fourth quarter is the 10-K's full year less the three 10-Qs, marked
+   calculated. FedEx's statistical book is found on its results page and sent to review with its link (the Jun-Sep 2026
+   transition period has no earlier layout to check against). Nothing found or nothing that checks out: left empty.
+5. Checks: FedEx's four fiscal-2026 quarterly package averages should average within 3% of the 10-K's full-year figure;
    a package block ("vol") must carry its source and check date. Problems go to data/review.json for a person.
 
 Never calculates revenue per package from total revenue and packages: the figure is the company's own or it is null."""
-import datetime as dt, html, re, sys, time
+import datetime as dt, html, json, os, re, sys, time
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 from common import load, save, get
+import filings
 
 ET = ZoneInfo("America/New_York")
 SYM = {"UPS": "UPS", "FedEx": "FDX", "FedEx Freight": "FDXF"}
@@ -265,6 +271,101 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
     return added
 
 
+UPS_CIK = 1090727
+
+
+def sec_fetch(url):
+    """An SEC read with the SEC_CONTACT secret in the User-Agent (the SEC refuses readers without a real contact)."""
+    import requests
+    c = (os.environ.get("SEC_CONTACT") or "").strip()
+    if "@" not in c:
+        raise RuntimeError("SEC_CONTACT not set")
+    r = requests.get(url, headers={"User-Agent": f"ParcelPigeon earnings reader {c}", "Accept-Encoding": "gzip, deflate"}, timeout=30)
+    r.raise_for_status()
+    return r.text
+
+
+def ups_filing(period_end, form, fetch):
+    """The address of UPS's 10-Q or 10-K whose report date is period_end, or None if it isn't filed yet."""
+    f = json.loads(fetch(f"https://data.sec.gov/submissions/CIK{UPS_CIK:010d}.json"))["filings"]["recent"]
+    for frm, rep, acc, doc in zip(f["form"], f["reportDate"], f["accessionNumber"], f["primaryDocument"]):
+        if frm == form and rep == period_end:
+            return f"https://www.sec.gov/Archives/edgar/data/{UPS_CIK}/{acc.replace('-', '')}/{doc}"
+    return None
+
+
+def fill_packages(rows, review, today, fetch=None, fedex_page=None):
+    """Package figures for recent quarters that have none yet (see 4. above). Returns what was filled."""
+    fetch = fetch or sec_fetch
+    done = []
+    recent = (dt.date.fromisoformat(today) - dt.timedelta(days=75)).isoformat()
+    by = {(r.get("company"), r.get("q")): r for r in rows}
+    for r in rows:
+        if r.get("vol") or (r.get("d") or "") < recent or r.get("company") not in ("UPS", "FedEx"):
+            continue
+        end = (r.get("period") or {}).get("end")
+        key = f"earnings-vol|{r['company']}|{r['q']}"
+        if r["company"] == "UPS" and end and re.fullmatch(r"Q[1-3] \d{4}", r["q"]):
+            try:
+                url = ups_filing(end, "10-Q", fetch)
+            except Exception as e:
+                print(f"earnings: UPS 10-Q lookup: {e}", file=sys.stderr); continue
+            if not url:
+                continue                                   # not filed yet: try again next run
+            v = filings.ups_quarter(filings.to_text(fetch(url)))
+            prev = (by.get(("UPS", f"{r['q'][:2]} {int(r['q'][3:]) - 1}")) or {}).get("vol") or {}
+            ok = v and (not prev.get("adv_k") or prev["adv_k"] == v["adv_prior_k"]) and (not prev.get("us_adv_k") or prev["us_adv_k"] == v["us_adv_prior_k"]) \
+                and (not prev.get("rpp") or abs(prev["rpp"] - v["rpp_prior"]) < 0.005)
+            if not ok:
+                review_add(review, {"type": "earnings-check", "key": key, "company": "UPS", "q": r["q"], "url": url,
+                                    "note": "UPS's 10-Q is filed, but its package figures didn't pass the checks (a printed change didn't match, "
+                                            "or last year's figure differs from the one on file). Enter them by hand from the 10-Q."})
+                continue
+            r["vol"] = {"adv_k": v["adv_k"], "adv_prior_k": v["adv_prior_k"], "adv_yoy": v["adv_yoy"], "scope": "UPS global small package",
+                        "basis": "operating days", "days": v["days"], "us_adv_k": v["us_adv_k"], "us_adv_prior_k": v["us_adv_prior_k"],
+                        "rpp": v["rpp"], "rpp_prior": v["rpp_prior"], "pieces_m": round(v["adv_k"] * v["days"] / 1000, 1), "pieces_src": "calc",
+                        "src": url, "checked": today, "auto": True}
+            r.setdefault("filing", url)
+            done.append(f"UPS {r['q']}")
+        elif r["company"] == "UPS" and end and re.fullmatch(r"Q4 \d{4}", r["q"]):
+            y = int(r["q"][3:])
+            qs = [(by.get(("UPS", f"Q{i} {y}")) or {}).get("vol") or {} for i in (1, 2, 3)]
+            last = (by.get(("UPS", f"Q4 {y - 1}")) or {}).get("vol") or {}
+            try:
+                url = ups_filing(end, "10-K", fetch)
+            except Exception as e:
+                print(f"earnings: UPS 10-K lookup: {e}", file=sys.stderr); continue
+            if not url:
+                continue
+            yr = filings.ups_year(filings.to_text(fetch(url)))
+            q4 = yr and filings.q4_from_year(yr, qs)
+            if not (q4 and last.get("adv_k")):
+                review_add(review, {"type": "earnings-check", "key": key, "company": "UPS", "q": r["q"], "url": url,
+                                    "note": "UPS's 10-K is filed, but the fourth quarter couldn't be calculated from it and the three 10-Qs "
+                                            "(a figure is missing or didn't check out). Enter it by hand."})
+                continue
+            adv, us, d4 = q4
+            r["vol"] = {"adv_k": adv, "adv_prior_k": last["adv_k"], "adv_yoy": round((adv / last["adv_k"] - 1) * 100, 1), "adv_src": "calc",
+                        "adv_note": "Calculated: UPS's full-year figure less its first three quarters (UPS doesn't print Q4 on its own)",
+                        "scope": "UPS global small package", "basis": "operating days", "days": d4, "us_adv_k": us,
+                        "us_adv_prior_k": last.get("us_adv_k"), "rpp": None, "rpp_prior": None, "pieces_m": round(adv * d4 / 1000, 1),
+                        "pieces_src": "calc", "src": url, "checked": today, "auto": True}
+            done.append(f"UPS {r['q']} (calculated)")
+        elif r["company"] == "FedEx":
+            try:
+                page = fedex_page if fedex_page is not None else get("https://investors.fedex.com/financial-information/quarterly-results/default.aspx").text
+            except Exception as e:
+                print(f"earnings: FedEx results page: {e}", file=sys.stderr); continue
+            books = [urljoin("https://investors.fedex.com/", html.unescape(h)) for h in re.findall(r'href="([^"]+\.pdf)"', page, re.I) if re.search(r"stat", h, re.I)]
+            known = {(x.get("vol") or {}).get("src") for x in rows}
+            new = [b for b in books if b not in known]
+            if new:
+                review_add(review, {"type": "earnings-check", "key": key + "|statbook", "company": "FedEx", "q": r["q"], "url": new[0],
+                                    "note": "FedEx's statistical book for this period is posted. Enter the Federal Express segment's total and U.S. "
+                                            "domestic packages a day and composite package yield, with this link and today's date as the check date."})
+    return done
+
+
 def main():
     rows = load("earnings.json", [])
     nxt = load("earnings_next.json", {})
@@ -276,6 +377,11 @@ def main():
         added = add_new_quarters(rows, nxt, review, today)
     except Exception as e:
         added, fails = [], [f"new quarters: {e}"]
+    try:
+        filled = fill_packages(rows, review, today)
+    except Exception as e:
+        filled = []
+        print(f"::warning title=earnings packages::{e}")
     fill_yoy(rows)
     for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
         print(f"::warning title=earnings prices::{f}")
@@ -285,7 +391,7 @@ def main():
     save("earnings.json", rows)
     if len(review) != n_review:
         save("review.json", review)
-    print("earnings:", {"added": added, "rx": sum(1 for r in rows if r.get("rx")), "final": sum(1 for r in rows if (r.get("rx") or {}).get("final")),
+    print("earnings:", {"added": added, "packages": filled, "rx": sum(1 for r in rows if r.get("rx")), "final": sum(1 for r in rows if (r.get("rx") or {}).get("final")),
                         "adv_check": bad})
     if fails:
         for f in fails:
