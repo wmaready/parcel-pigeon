@@ -9974,10 +9974,12 @@ try{store.set('pw-present','')}catch(e){}   // presentation mode was removed: cl
   const MAPREALMS=['national','regional','gig','retail','3pl','global'];
   const POOL=(typeof PLAYERS!=='undefined'?PLAYERS:[]).filter(p=>MAPREALMS.includes(p.realm)&&/USA$/.test(p.hq||'')&&GEO[cityOf(p.hq)]).map(stop);
   let STOPS=[],LV=[];
-  function liveStories(){const read=typeof MS!=='undefined'&&MS.read?MS.read:new Set();
+  // the brief's stories in the order they matter (new first, biggest first): the first dozen are candidates, and drawStops picks
+  // the three that sit well apart on the map
+  function liveStories(max=3){const read=typeof MS!=='undefined'&&MS.read?MS.read:new Set();
     for(const days of [4,10,30]){const L=NEWS.filter(n=>n.kind!=='Alert'&&n.title&&daysTo(n.date)>=-days).sort((a,b)=>(+b.lvl||1)-(+a.lvl||1)||String(b.date).localeCompare(a.date));
-      if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,3)}
-    return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,3)}
+      if(L.length>=3)return [...L.filter(n=>!read.has(n.id)),...L.filter(n=>read.has(n.id))].slice(0,max)}
+    return NEWS.slice().sort((a,b)=>String(b.date).localeCompare(a.date)).slice(0,max)}
   /* the stop for a story. 1) A U.S. place the story itself names (a town getting drone delivery, a facility, a city's
      complaints): the pin goes there, labeled with the story's own company. 2) Else the headquarters of the company the story
      is about (its tag or headline company, never one it only mentions). 3) Else, for a company based abroad, its own city,
@@ -10022,19 +10024,39 @@ try{store.set('pw-present','')}catch(e){}   // presentation mode was removed: cl
       return {id:p.id,c:p.n,city:/USA$/.test(hq)?stop(g.via||p).city:hq.split(',').slice(0,2).join(',').trim(),realm:p.realm,p:px(clampUS(g.g))}}}
     return null};
   window.storyHome=homeOf;   // for the tests
-  function drawStops(){LV=liveStories();const n=Math.max(1,LV.length),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
-    const out=[],realms=new Set(),far=s=>out.every(o=>!o||Math.hypot(o.p[0]-s.p[0],o.p[1]-s.p[1])>=64);
-    // each story at its carrier's headquarters when there's room; otherwise a nearby-looking market-map stop
-    // two stories at the same place sit side by side instead of one moving to a stranger's pin
-    LV.forEach((st0,k)=>{const h=homeOf(st0);if(!h)return;if(!far(h))h.p=[h.p[0]+(k%2?14:-14),h.p[1]+(k%2?-8:8)];out[k]=Object.assign(h,{story:st0.id})});
+  /* Stops are kept well apart so the flight reads: the top story always flies, and each next one is the next-best story whose stop
+     is at least SEP map units from the ones already chosen (84, easing to 44 only when the day's news is all in one region). A story
+     with no place gets a plain pin far from the rest. Anything still too close is pushed apart, so no two stops ever sit on top of
+     each other, even when two stories are about the same city. */
+  const SEP=[84,70,56,44],MIN_APART=44,dist2=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
+  function spreadStops(out){const lo=[10,12],hi=[W-10,H-12];
+    for(let it=0;it<14;it++){let moved=false;
+      for(let a=0;a<out.length;a++)for(let b=a+1;b<out.length;b++){const A=out[a].p,B=out[b].p,d=dist2(A,B);
+        if(d>=MIN_APART)continue;moved=true;let ux=B[0]-A[0],uy=B[1]-A[1];
+        if(d<.5){const an=(a+1)*2.4;ux=Math.cos(an);uy=Math.sin(an)}else{ux/=d;uy/=d}
+        const push=(MIN_APART-(d<.5?0:d))/2+1;
+        A[0]-=ux*push;A[1]-=uy*push;B[0]+=ux*push;B[1]+=uy*push;
+        [A,B].forEach(p=>{p[0]=Math.min(hi[0],Math.max(lo[0],p[0]));p[1]=Math.min(hi[1],Math.max(lo[1],p[1]))})}
+      if(!moved)break}
+    return out}
+  function drawStops(){const cand=liveStories(12),n=Math.max(1,Math.min(3,cand.length)),pool=POOL.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+    const homes=new Map(cand.map(c=>[c.id,homeOf(c)]));
+    let chosen=[];
+    for(const min of [...SEP,0]){chosen=[];
+      for(const c of cand){if(chosen.length>=n)break;const h=homes.get(c.id);
+        if(!h||!chosen.length||chosen.every(x=>!x.h||dist2(x.h.p,h.p)>=min))chosen.push({c,h})}
+      if(chosen.length>=n)break}
+    if(chosen.length<n)cand.forEach(c=>{if(chosen.length<n&&!chosen.some(x=>x.c===c))chosen.push({c,h:homes.get(c.id)})});
+    LV=chosen.map(x=>x.c);
+    const out=[];
+    chosen.forEach((x,k)=>{if(x.h)out[k]=Object.assign({},x.h,{p:x.h.p.slice(),story:x.c.id})});
     // a story with no place and no company of its own gets a plain pin named by its topic, never another company's name
-    for(let k=0;k<n;k++){if(out[k])continue;const s=pool.find(s=>far(s))||pool[k]||{p:[W/2,H/2]};
-      out[k]={id:null,c:(LV[k]&&LV[k].cat)||'Parcel news',city:'',realm:'none',p:s.p,story:LV[k]&&LV[k].id}}
-    STOPS=out.slice(0,n).map(s=>Object.assign({},s)).sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign(s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}));return;
-    // prefer different realms, then fill; keep stops far enough apart for their labels
-    for(const s of pool){if(out.length>=n)break;if(!realms.has(s.realm)&&far(s)){out.push(s);realms.add(s.realm)}}
-    for(const s of pool){if(out.length>=n)break;if(!out.includes(s)&&far(s))out.push(s)}
-    STOPS=out.sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign({},s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}))}
+    for(let k=0;k<n;k++){if(out[k])continue;const far=s=>out.every(o=>!o||dist2(o.p,s.p)>=SEP[1]);
+      const s=pool.find(far)||pool[k]||{p:[W/2,H/2]};
+      out[k]={id:null,c:(LV[k]&&LV[k].cat)||'Parcel news',city:'',realm:'none',p:s.p.slice(),story:LV[k]&&LV[k].id}}
+    spreadStops(out);
+    STOPS=out.slice(0,n).sort((a,b)=>a.p[0]-b.p[0]).map((s,k)=>Object.assign(s,{lab:s.p[1]>H-34?'a':s.p[1]<26?'b':k%2?'a':'b'}))}
+  window.briefStops=()=>STOPS.map(s=>({story:s.story,p:s.p.slice(),c:s.c,city:s.city}));window.briefRedraw=()=>{drawStops();return STOPS.length};
   drawStops();
   const st={i:0,open:false,timer:null,paused:false,anim:null,done:false,hide:null};
   const plain=h=>{const d=document.createElement('div');d.innerHTML=h;return d.textContent};
