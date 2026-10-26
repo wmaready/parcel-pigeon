@@ -1,5 +1,5 @@
 {
- "cursor": 4,
+ "cursor": 19,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -324,14 +324,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 122,
+   "fails": 123,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 122,
+   "fails": 123,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -556,7 +556,7 @@
    "first": "2026-10-21",
    "n": "IPIXF_TermsCond.pdf",
    "hash": "9520c595235a",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf": {
    "first": "2026-10-21",
@@ -626,31 +626,41 @@
    "first": "2026-10-21",
    "n": "9-21-26_Intl_NSS_Demand-Surcharges.pdf",
    "hash": "d1b401132060",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf": {
    "first": "2026-10-21",
    "n": "9-21-26_US-Export-Demand-Surcharges.pdf",
    "hash": "2b6c209bf5c2",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf": {
    "first": "2026-10-21",
    "n": "9-21-26_US-Import-Demand-Surcharges.pdf",
    "hash": "9f9b1f0b82a6",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf": {
    "first": "2026-10-21",
    "n": "FICE_TermsCond.pdf",
    "hash": "30cb066f3355",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
+    "txt": "data/snapshots/3dd393c0b406/2026-10-26.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf": {
    "first": "2026-10-21",
    "n": "IDP_TermsCond.pdf",
    "hash": "787d356e545f",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
+    "txt": "data/snapshots/2a0ecb0ddc2f/2026-10-26.txt"
+   }
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf": {
    "first": "2026-10-23",
@@ -746,57 +756,79 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
    "hash": "f7644ecfa383",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL eCommerce peak surcharge, 2026–27"
+   "checked": "2026-10-26",
+   "n": "DHL eCommerce peak surcharge, 2026–27",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf",
+    "txt": "data/snapshots/c37905f48c8d/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html": {
    "hash": "f7644ecfa383",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL eCommerce surcharge policies page"
+   "checked": "2026-10-26",
+   "n": "DHL eCommerce surcharge policies page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf",
+    "txt": "data/snapshots/ccd1483500ac/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL eCommerce terms and conditions page"
+   "checked": "2026-10-26",
+   "n": "DHL eCommerce terms and conditions page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf",
+    "txt": "data/snapshots/d4fd2761681c/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "DHL eCommerce terms of carriage (Jan 2026 version)"
+   "checked": "2026-10-26",
+   "n": "DHL eCommerce terms of carriage (Jan 2026 version)",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf",
+    "txt": "data/snapshots/90fc0c7567ee/2026-10-26.txt"
+   }
   },
   "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026": {
    "hash": "c79bbd8e6516",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "EU Customs Changes 2026: New €2 Handling Fee & Product Identifier Requirements from 1 November"
+   "checked": "2026-10-26",
+   "n": "EU Customs Changes 2026: New €2 Handling Fee & Product Identifier Requirements from 1 November",
+   "pic_try": "2026-10-26"
   },
   "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
    "hash": "f866279b9dd1",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
-   "n": "FedEx Freight rules tariff (moved)"
+   "checked": "2026-10-26",
+   "n": "FedEx Freight rules tariff (moved)",
+   "pic_try": "2026-10-26"
   },
   "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
    "hash": "d1b401132060",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "FedEx demand surcharges, 2026–27 season"
   },
   "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
    "hash": "12743cee1be9",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "GLS US billing and invoice guide"
   },
   "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
    "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
-   "fails": 1,
+   "fails": 2,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-10-25"
+   "last_try": "2026-10-26"
   },
   "https://www.ontrac.com/terms-conditions-additional/": {
    "hash": "c8d830c9c53b",
