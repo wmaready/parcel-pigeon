@@ -1018,6 +1018,16 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 .esv{text-align:right;white-space:nowrap}.esv small{color:var(--ink-2);margin-left:6px;font-size:11px}
 .esr .etyy{min-width:0;font-size:12px}
 .egcalc{display:block;font-size:11px;color:var(--ink-2);margin-top:2px}
+.eghq{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:4px 0 8px}.eghq b{font-size:16px}
+.egstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.egst{display:flex;flex-direction:column;gap:2px;min-width:0;padding:8px 10px;border:var(--line) solid var(--grid);border-radius:var(--r-md);background:var(--panel)}
+.egst .egv{font-size:1.2rem;font-weight:600;color:var(--ink)}.egst small{font-size:11px;color:var(--ink-2)}
+.egyy{font-family:var(--font-mono);font-size:12.5px}.egyy.flat{color:var(--ink-2);font-family:inherit}
+.egctx{margin:8px 0 0;font-size:12px;color:var(--ink-2)}.egtake{margin:8px 0 0;font-size:var(--fs-sm);line-height:1.45}
+.egl{margin:8px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px}
+.egabout summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-size:12.5px}
+.egabout ul{margin:0 0 8px;padding-left:18px;font-size:12px;color:var(--ink-2);line-height:1.5}
+@media (max-width:520px){.egstats{grid-template-columns:minmax(0,1fr)}.egst{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:2px 10px}.egst .lbl{flex:1 0 100%}}
 .etnote{margin:0;padding:var(--sp-2) var(--sp-3);border-top:var(--line) solid var(--grid)}
 @media (max-width:600px){.etgrid{grid-template-columns:minmax(0,1fr)}}
 .etstk{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;text-align:right;white-space:nowrap;font-size:12.5px;color:var(--ink)}
@@ -8813,45 +8823,47 @@ function earnChart(co,view){
   let dv='';if(co==='FedEx'&&v==='rev'&&TODAY>=EARN_SPLIT){let i=S.findIndex(e=>((e.period&&e.period.start)||e.d)>=EARN_SPLIT);if(i<0)i=S.length;
     if(i>0)dv=`<div class="egdiv${i===S.length?' end':''}" style="left:calc(var(--bw) * ${i})"><span>FedEx Freight separated</span></div>`}
   const sum=`${co} ${name[1].toLowerCase()} by quarter, ${name[2]}: `+S.map((e,i)=>said(e,vals[i])).join('; ');
-  const calc=v==='adv'&&co==='UPS'&&S.some(e=>e.vol&&e.vol.adv_src==='calc')?' Fourth quarters are calculated: the full year less the first three quarters (UPS prints Q4 only as part of the year).':'';
-  const basis={UPS:{rev:'',adv:'Average per operating day. Worldwide small package; U.S. domestic shown lighter.'+calc,rpp:'Average revenue per piece, as UPS reports it. Fourth quarters aren\u2019t printed on their own.'},
-    FedEx:{rev:'',adv:'Average on a 5-day-per-week basis, every quarter as restated in FedEx\u2019s Q4 FY26 stat book. Federal Express segment; U.S. domestic shown lighter.',rpp:'Composite package yield, as FedEx reports it.'},
-    USPS:{rev:'Total operating revenue, all mail and packages.',adv:'Shipping and Packages pieces over the quarter\u2019s calendar days (calculated). USPS reports pieces per quarter, not per day.',rpp:'USPS doesn\u2019t report revenue per package.'}}[co]?.[v]||'';
-  const scope={UPS:'Worldwide small package',FedEx:'Federal Express segment',USPS:'Shipping and Packages'}[co]||co,usIn=S.some(e=>e.vol&&e.vol.us_adv_k!=null);
+  const scope={UPS:'Worldwide',FedEx:'Federal Express',USPS:'Shipping and Packages'}[co]||co,usIn=S.some(e=>e.vol&&e.vol.us_adv_k!=null);
   return `<p class="lbl egunit">${esc(name[2])}</p>
     <div class="egscroll"><div class="egplot" style="--n:${S.length}">
       <svg width="0" height="0" class="egdefs" aria-hidden="true"><defs><pattern id="${hid}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="eghb"/><line x1="0" y1="0" x2="0" y2="6" class="eghl"/></pattern></defs></svg>
       <div class="egyax" aria-hidden="true">${T.map(t=>`<span style="bottom:calc(var(--eglab) + ${(t/top*H).toFixed(1)}px)">${fmtT(t)}</span>`).join('')}</div>
       <div class="eggrid" aria-hidden="true">${T.map(t=>`<i style="bottom:calc(var(--eglab) + ${(t/top*H).toFixed(1)}px)"></i>`).join('')}</div>${dv}
       <div class="egbars" role="group" aria-label="${esc(sum)}">${S.map(bar).join('')}</div></div></div>
-    ${v==='adv'&&usIn?`<p class="lbl eglg"><span><i class="egk1"></i>${scope}</span><span><i class="egk2"></i>U.S. domestic</span></p>`:''}
-    ${S.some(e=>e.comparable===false)?`<p class="lbl eglg"><span><i class="egk3"></i>Hatched: a period of a different length or scope, not compared with a year earlier</span></p>`:''}
-    ${none&&!(co==='USPS'&&v==='rpp')?`<p class="egnote">No ${esc(name[1].toLowerCase())} figures entered yet for these quarters; they come from ${esc(co)}'s quarterly filings and are never estimated.</p>`:''}${basis?`<p class="egnote">${esc(basis)}</p>`:''}`}
-/* the selected quarter, under the chart: revenue, packages, revenue per package, the quarter's links, then the stock */
-function earnDetail(e){if(!e)return '';const co=e.company,v=e.vol,cmp=e.comparable!==false,y=earnYoY(e);
-  const per=e.period&&e.period.months?`${e.period.months}-month period`:'different period',L=[];
-  L.push(`<div class="egrow"><span class="lbl">Revenue</span><span>${earnRevS(e)} · ${!cmp?`— <small>(${esc(per)}; not compared with a year earlier)</small>`:y!=null?`${sgn1(y)} vs a year earlier`:'— vs a year earlier'}</span></div>`);
+    ${(v==='adv'&&usIn)||S.some(e=>e.comparable===false)?`<p class="lbl eglg">${v==='adv'&&usIn?`<span><i class="egk1"></i>${scope}</span><span><i class="egk2"></i>U.S. domestic</span>`:''}${S.some(e=>e.comparable===false)?`<span><i class="egk3"></i>Different-length period</span>`:''}</p>`:''}
+    ${none?`<p class="egnote">${co==='USPS'&&v==='rpp'?'USPS doesn\u2019t report revenue per package.':`No ${esc(name[1].toLowerCase())} figures yet.`}</p>`:''}`}
+/* how each figure is counted, per company: one fold under the chart instead of notes on every view */
+function earnAbout(co){const S=earnSeries(co),calc=S.some(e=>e.vol&&e.vol.adv_src==='calc');
+  const last=S.map(e=>e.vol&&e.vol.checked).filter(Boolean).sort().at(-1);
+  const L={UPS:['Revenue: consolidated, as UPS reports it.','Packages a day: worldwide small package, per operating day; U.S. domestic shown lighter.'+(calc?' Fourth quarters (≈) are calculated: the full year less the first three quarters.':''),'Revenue per package: average revenue per piece, as UPS reports it; not printed for fourth quarters.'],
+    FedEx:['Revenue: consolidated, as FedEx reports it; excludes FedEx Freight from June 1, 2026.','Packages a day: Federal Express segment, five days a week, every quarter as restated in FedEx\u2019s latest stat book; U.S. domestic shown lighter.','Revenue per package: composite package yield, as FedEx reports it.'],
+    USPS:['Revenue: total operating revenue, all mail and packages.','Packages a day (≈): Shipping and Packages pieces over the quarter\u2019s calendar days. USPS reports pieces per quarter, not per day.','Revenue per package: not reported by USPS.']}[co];
+  if(!L)return '';
+  return `<details class="egabout"><summary>About these figures</summary><ul>${L.map(x=>`<li>${esc(x)}</li>`).join('')}<li>From each company\u2019s own releases and filings, never estimated${last?`; last checked ${esc(DF(last))}`:''}. Change is against the same quarter a year earlier.</li></ul></details>`}
+/* the selected quarter, under the chart: three figures with their change, the quarter's one-line take, and its links */
+function earnDetail(e){if(!e)return '';const co=e.company,v=e.vol||{},cmp=e.comparable!==false,y=earnYoY(e);
+  const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
+  const ch=x=>!cmp?'<span class="egyy flat">not comparable</span>':x==null?'':`<span class="egyy ${x>0?'gain':x<0?'loss':'flat'}">${sgn1(x)}</span>`;
+  const st=(l,val,yy,sub,title)=>`<div class="egst"${title?` title="${esc(title)}"`:''}><span class="lbl">${l}</span><span class="mono egv">${val}</span>${yy}${sub?`<small>${sub}</small>`:''}</div>`;
+  const F=[st('Revenue',earnRevS(e),ch(y))];
   if(earnPkg(co)){
-    if(v&&v.adv_k!=null){const ay=earnAdvYoY(v),pm=v.pieces_m;
-      const own=v.pieces_src==='USPS',big=n=>n>=1000?(n/1000).toFixed(2)+' billion':Math.round(n)+' million';
-      const tot=own&&pm!=null?` · ${big(pm)} pieces in the quarter`:cmp&&pm!=null&&v.days&&v.adv_src!=='calc'?` · about ${big(pm)} in the quarter (calculated: ${+v.days} ${co==='UPS'?'operating days':'days'})`:'';
-      L.push(`<div class="egrow"><span class="lbl">Packages</span><span>${v.adv_src==='calc'?'about ':''}${(v.adv_k/1000).toFixed(1)} million a day · ${sgn1(ay)}${v.us_adv_k!=null?` · U.S. domestic ${(v.us_adv_k/1000).toFixed(1)} million`:''}${tot}${v.adv_note?`<small class="egcalc">${esc(v.adv_note)}</small>`:''}</span></div>`)}
-    else L.push(`<div class="egrow"><span class="lbl">Packages</span><span>— <small>(not yet entered from the ${esc(co)} filing)</small></span></div>`);
-    L.push(`<div class="egrow"><span class="lbl">Revenue per package</span><span>${v&&v.rpp!=null?`$${(+v.rpp).toFixed(2)} · ${sgn1(earnRppYoY(v))}`:co==='USPS'?'— <small>(not reported by USPS)</small>':'—'}</span></div>`)}
-  let src='';if(v&&v.src)src=`<p class="lbl egsrc">Package figures: <a class="link" href="${escU(v.src)}" target="_blank" rel="noopener">${v.src===e.filing?'10-Q / 10-K':'source'}</a>${v.checked?`, checked ${esc(DF(v.checked))}`:''}</p>`;
-  return `<div class="eghq"><b>${esc(earnLabel(e))}</b>${e.note?`<small>${esc(e.note)}</small>`:''}</div>${L.join('')}${earnRow(e)}${src}`}
+    F.push(v.adv_k!=null?st('Packages a day',`${v.adv_src==='calc'?'≈':''}${(v.adv_k/1000).toFixed(1)}M`,ch(earnAdvYoY(v)),v.us_adv_k!=null?`U.S. ${(v.us_adv_k/1000).toFixed(1)}M`:v.pieces_src==='USPS'&&v.pieces_m?`${(v.pieces_m/1000).toFixed(2)}B pieces`:'',v.adv_note||'')
+      :st('Packages a day','—','',`not yet entered`));
+    F.push(v.rpp!=null?st('Revenue per package',`$${(+v.rpp).toFixed(2)}`,ch(earnRppYoY(v))):st('Revenue per package','—','',co==='USPS'?'not reported':co==='UPS'&&/^Q4/.test(e.q)?'not printed for Q4':'not yet entered'))}
+  const links=[lk(e.release,'Release'),lk(e.webcast,'Call'),lk(e.transcript,'Transcript'),lk(e.filing,co==='USPS'?'Report':'10-Q / 10-K'),v.src&&v.src!==e.filing&&v.src!==e.release?lk(v.src,'Package figures'):''].filter(Boolean);
+  return `<div class="eghq"><b>${esc(earnLabel(e))}</b><span class="lbl">Reported ${esc(DF(e.d))}</span>${e.checked===false?'<span class="tag">Not yet checked</span>':''}</div>
+    <div class="egstats">${F.join('')}</div>${e.note?`<p class="egctx">${esc(e.note)}</p>`:''}${e.take?`<p class="egtake">${esc(e.take)}</p>`:''}
+    ${links.length?`<p class="elinks egl">${links.join('')}</p>`:''}`}
 function earnTable(co){const S=earnSeries(co).slice().reverse(),pk=earnPkg(co);
   const td=x=>`<td class="mono">${x}</td>`;
   return `<div class="egtw"><table class="egt"><thead><tr><th>Quarter</th><th>Reported</th><th>Revenue</th><th>vs a year earlier</th>${pk?'<th>Packages a day</th><th>U.S. domestic a day</th><th>Revenue per package</th>':''}</tr></thead><tbody>${S.map(e=>{const v=e.vol||{},y=earnYoY(e);
     return `<tr><th scope="row">${esc(earnLabel(e))}</th>${td(esc(DF(e.d)))}${td(earnRevS(e))}${td(e.comparable===false?'— (not comparable)':sgn1(y))}${pk?td(v.adv_k!=null?(v.adv_k/1000).toFixed(1)+' million ('+sgn1(earnAdvYoY(v))+')':'—')+td(v.us_adv_k!=null?(v.us_adv_k/1000).toFixed(1)+' million':'—')+td(v.rpp!=null?'$'+(+v.rpp).toFixed(2):'—'):''}</tr>`}).join('')}</tbody></table></div>`}
-function earnMarket(co){const m=EARN_MKT;if(!m||!m.cos||m.cos[co]==null)return '';
-  return `<p class="lbl egmkt">U.S. parcel market ${esc(m.year)}: about ${esc(m.total_b)} billion parcels; ${esc(co)} about ${esc(m.cos[co])} billion. Source: ${m.url?`<a class="link" href="${escU(m.url)}" target="_blank" rel="noopener">${esc(m.src)}</a>`:esc(m.src)} (${esc(m.note||'estimate')}).</p>`}
 function earnGlance(co){const S=earnSeries(co);if(!S.length)return '';const pk=earnPkg(co);
   return `<div class="eglance ${co==='UPS'?'eg-ups':co==='USPS'?'eg-usps':'eg-fdx'}" data-eco="${esc(co)}"><div class="eghd"><b>${co==='FedEx Freight'?'FedEx Freight · ':''}Earnings at a glance</b>
     ${pk?`<div class="egviews" role="group" aria-label="Chart view">${EARN_VIEWS.map(([k,l])=>`<button type="button" class="chip" data-eview="${k}" aria-pressed="${k===EARN_VIEW}">${l}</button>`).join('')}</div>`:''}</div>
     <div class="egch">${earnChart(co,EARN_VIEW)}</div>
     <div class="egdet" aria-live="polite">${earnDetail(S.find(e=>e.q===earnSel(co)))}</div>
-    <details class="egtbl"><summary>Show as table</summary>${earnTable(co)}</details>${earnMarket(co)}</div>`}
+    <details class="egtbl"><summary>Show as table</summary>${earnTable(co)}</details>${earnAbout(co)}</div>`}
 function earnSelect(co,q){if(!earnSeries(co).some(e=>e.q===q))return false;EARN_SEL[co]=q;
   document.querySelectorAll('#lib .eglance').forEach(g=>{if(g.dataset.eco!==co)return;
     g.querySelectorAll('[data-ebar]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ebar===q)));

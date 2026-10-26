@@ -217,10 +217,14 @@ def test_page_shows_the_figures_as_printed(page_at):
     pg = page_at(390)
     pg.evaluate("() => goTo('docs','earnings','UPS','Q2 2026')")
     pg.wait_for_timeout(500)
-    det = pg.inner_text('.eglance[data-eco="UPS"] .egdet')
-    for want in ("$22.83B · +7.6% vs a year earlier", "19.0 million a day", "−3.7%", "U.S. domestic 16.0 million",
-                 "about 1.22 billion in the quarter (calculated: 64 operating days)", "$15.96 · +11.3%"):
+    det = pg.text_content('.eglance[data-eco="UPS"] .egdet')
+    # three figures with their change, then the take and one row of links: no paragraphs of small print
+    for want in ("Q2 2026", "Reported Jul 28, 2026", "Revenue", "$22.83B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "U.S. 16.0M",
+                 "Revenue per package", "$15.96", "+11.3%", "Release", "10-Q / 10-K"):
         assert want in det, (want, det)
+    assert "checked" not in det and "calculated" not in det and "billion in the quarter" not in det
+    about = pg.text_content('.eglance[data-eco="UPS"] .egabout')                # how figures are counted: one fold
+    assert "operating day" in about and "never estimated" in about and "last checked" in about
     # the earnings page carries no stock lines or stock chart
     assert "Stock" not in det and not pg.query_selector('.eglance .egrx, .eglance .egstock')
     got = pg.evaluate("""() => {
@@ -230,7 +234,7 @@ def test_page_shows_the_figures_as_printed(page_at):
                 {company:'FedEx Freight', q:'F1', d:'2026-10-29', rev:2.1},
                 {company:'UPS', q:'Bare 1', d:'2026-10-27', rev:21.0});
       goTo('docs','earnings','FedEx','T1');
-      const fx = document.querySelector('.eglance[data-eco="FedEx"] .egdet').innerText;
+      const fx = document.querySelector('.eglance[data-eco="FedEx"] .egdet').textContent;
       const ff = document.querySelector('.eglance[data-eco="FedEx Freight"]');
       earnSelect('UPS', 'Bare 1');
       const bare = document.querySelector('.eglance[data-eco="UPS"] .egdet').textContent;
@@ -243,8 +247,8 @@ def test_page_shows_the_figures_as_printed(page_at):
               hatched: !!document.querySelector('.eglance[data-eco="FedEx"] .egbar[data-ebar="T1"] .eghat'),
               divider: !!document.querySelector('.eglance[data-eco="FedEx"] .egdiv')}
     }""")
-    assert "16.0 million a day" in got["fx"] and "in the quarter" not in got["fx"]          # no stated days: no total
-    assert "4-month period; not compared with a year earlier" in got["fx"] and "+4.0%" not in got["fx"]
+    assert "16.0M" in got["fx"] and "U.S. 13.0M" in got["fx"]
+    assert "not comparable" in got["fx"] and "+4.0%" not in got["fx"]                      # a 4-month period: no year-over-year
     assert got["ff"]["views"] == 0 and "Packages" not in got["ff"]["text"]                 # FedEx Freight: no package view
     assert "$21.0B" in got["bare"] and "Packages" in got["bare"] and "—" in got["bare"]   # a bare row still renders
     assert all(same for _, _, same in got["charts"]) and len({c for c, _, _ in got["charts"]}) == len(got["charts"])
