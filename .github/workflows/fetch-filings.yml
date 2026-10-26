@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install curl_cffi pypdf
+      - run: pip install curl_cffi pypdf requests
       - run: python tools/fetch_filings.py --diesel
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
