@@ -5,9 +5,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 3530,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "chrome-tls",
   "copy_of": null
@@ -18,9 +18,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 3530,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "chrome-tls",
   "copy_of": null
@@ -31,9 +31,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 10266,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "chrome-tls",
   "copy_of": null
@@ -44,9 +44,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 1241,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "chrome-tls",
   "copy_of": null
@@ -57,9 +57,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 172944,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "chrome-tls",
   "copy_of": null
@@ -68,37 +68,37 @@
   "carrier": "UPS",
   "name": "Developer portal",
   "fails": 0,
-  "thin": 119,
+  "thin": 120,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 219,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": null,
   "probe": "probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
-  "probe_day": "2026-10-25"
+  "probe_day": "2026-10-26"
  },
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
-  "last_try": "2026-10-25",
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "last_try": "2026-10-26",
   "chars": 1732,
   "last_ok": "2026-10-25",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-17"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 119,
+  "fails": 120,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 315,
   "last_ok": "2026-10-20",
   "blocked": true
@@ -106,39 +106,39 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
-  "last_try": "2026-10-25",
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "last_try": "2026-10-26",
   "chars": 7861,
   "last_ok": "2026-10-25",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-09"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
-  "last_try": "2026-10-25",
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "last_try": "2026-10-26",
   "chars": 8246,
   "last_ok": "2026-10-25",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-22"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
-  "last_try": "2026-10-25",
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "last_try": "2026-10-26",
   "chars": 7463,
   "last_ok": "2026-10-25",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-24"
  },
@@ -148,9 +148,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 5705,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "archive",
   "copy_of": "2026-10-22"
@@ -161,12 +161,12 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 22546,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf": {
   "carrier": "FedEx",
@@ -174,12 +174,12 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 430407,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
   "carrier": "FedEx",
@@ -187,12 +187,12 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 173323,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
   "carrier": "FedEx",
@@ -200,12 +200,12 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 169283,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
   "carrier": "FedEx",
@@ -213,12 +213,12 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "blocked": false,
   "chars": 428211,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://developer.fedex.com/": {
   "carrier": "FedEx",
@@ -226,9 +226,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 341,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -239,9 +239,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 600,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -252,9 +252,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 8616,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -275,9 +275,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 13005,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -288,9 +288,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 1307,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -301,9 +301,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 11607,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -314,9 +314,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 167708,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -327,9 +327,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 1681,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -340,9 +340,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 3581,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -353,9 +353,9 @@
   "fails": 0,
   "thin": 0,
   "err": null,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 2364,
-  "last_ok": "2026-10-25",
+  "last_ok": "2026-10-26",
   "blocked": false,
   "via": "direct",
   "copy_of": null
@@ -367,11 +367,11 @@
   "thin": 0,
   "err": null,
   "blocked": false,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 409,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
   "carrier": "UPS",
@@ -380,11 +380,11 @@
   "thin": 0,
   "err": null,
   "blocked": false,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 751964,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
   "carrier": "UPS",
@@ -393,11 +393,11 @@
   "thin": 0,
   "err": null,
   "blocked": false,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 956,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
   "carrier": "UPS",
@@ -406,11 +406,11 @@
   "thin": 0,
   "err": null,
   "blocked": false,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 2320,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  },
  "https://www.ups.com/us/en/services/shipping/simple-rate": {
   "carrier": "UPS",
@@ -419,10 +419,10 @@
   "thin": 0,
   "err": null,
   "blocked": false,
-  "last_try": "2026-10-25",
+  "last_try": "2026-10-26",
   "chars": 2010,
   "via": "chrome-tls",
   "copy_of": null,
-  "last_ok": "2026-10-25"
+  "last_ok": "2026-10-26"
  }
 }

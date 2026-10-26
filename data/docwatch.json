@@ -1,10 +1,10 @@
 {
- "cursor": 45,
+ "cursor": 60,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Amazon Shipping U.S. service guide (PDF)",
    "snap": {
     "d": "2026-10-25",
@@ -15,7 +15,7 @@
   "https://ship.amazon.com/service-guide": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Amazon Shipping service guide page",
    "snap": {
     "d": "2026-10-25",
@@ -26,7 +26,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2026/01/2026-OnCall-Chart.pdf": {
    "hash": "62aa9b6eeaf0",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 Spee-Dee on-call pickup chart",
    "snap": {
     "d": "2026-10-25",
@@ -37,7 +37,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-Walkin-Counter-Chart.pdf": {
    "hash": "166d3014ae97",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 Spee-Dee rate chart (walk-in counter file)",
    "snap": {
     "d": "2026-10-25",
@@ -48,7 +48,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART.pdf": {
    "hash": "c65a731c3900",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 Spee-Dee standard rate chart",
    "snap": {
     "d": "2026-10-25",
@@ -59,7 +59,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART-MULTIPLE.pdf": {
    "hash": "291ebcf5a19d",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 Spee-Dee standard rate chart, multiple packages",
    "snap": {
     "d": "2026-10-25",
@@ -70,7 +70,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
    "hash": "0898c2640b82",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 UPS Daily Rate and Service Guide (PDF)",
    "snap": {
     "d": "2026-10-25",
@@ -81,7 +81,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf": {
    "hash": "826c8434e317",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 UPS Ground Saver rates, 1 lb and over (PDF)",
    "snap": {
     "d": "2026-10-25",
@@ -92,7 +92,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf": {
    "hash": "e3db3b1e80c3",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 UPS Retail Rate and Service Guide",
    "snap": {
     "d": "2026-10-25",
@@ -103,38 +103,63 @@
   "https://pe.usps.com/text/DMM300/283.htm": {
    "hash": "e6babc6a9b6c",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
-   "n": "DMM 280: USPS Ground Advantage commercial"
+   "checked": "2026-10-26",
+   "n": "DMM 280: USPS Ground Advantage commercial",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/handbooks/dm204.pdf",
+    "txt": "data/snapshots/347c64cdc8cc/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/TEXT/DMM300/Transmittal_Letter.htm": {
    "hash": "e6babc6a9b6c",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
-   "n": "Domestic Mail Manual, Jul 12, 2026 issue notes"
+   "checked": "2026-10-26",
+   "n": "Domestic Mail Manual, Jul 12, 2026 issue notes",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/handbooks/dm204.pdf",
+    "txt": "data/snapshots/899fbd8fc997/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/text/dmm300/Notice123.htm": {
    "hash": "e6babc6a9b6c",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
-   "n": "Notice 123 price list (current)"
+   "checked": "2026-10-26",
+   "n": "Notice 123 price list (current)",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/handbooks/dm204.pdf",
+    "txt": "data/snapshots/7389f7894a8f/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/Archive/PriceFile": {
    "hash": "458725ffd2fd",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
-   "n": "Postal Explorer price and SKU file archive"
+   "checked": "2026-10-26",
+   "n": "Postal Explorer price and SKU file archive",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://pe.usps.com/PriceFile_Archive/USPS SKU Files Format.pdf",
+    "txt": "data/snapshots/01bea9ae4d52/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/PriceChange/Index": {
    "hash": "c48e3cbb51f4",
    "first": "2026-10-16",
-   "checked": "2026-10-25",
-   "n": "Postal Explorer: 2026 holiday price change page"
+   "checked": "2026-10-26",
+   "n": "Postal Explorer: 2026 holiday price change page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
+    "txt": "data/snapshots/dda3b54ebaba/2026-10-26.txt"
+   }
   },
   "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf": {
    "first": "2026-10-21",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
    "hash": "267b04f3b3cd",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://about.usps.com/handbooks/dm204.pdf": {
    "first": "2026-10-21",
@@ -158,7 +183,12 @@
    "first": "2026-10-21",
    "n": "July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
    "hash": "273d6b6754c7",
-   "checked": "2026-10-25"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
+    "txt": "data/snapshots/ccd755cf077c/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf": {
    "first": "2026-10-21",
@@ -182,7 +212,7 @@
    "first": "2026-10-21",
    "n": "2026-OnTrac-Rates.pdf",
    "hash": "2bafd025bd0b",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "snap": {
     "d": "2026-10-25",
     "pdf": "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf",
@@ -199,7 +229,7 @@
    "first": "2026-10-21",
    "n": "ontrac-2024-rates.pdf",
    "hash": "b1c6b16e2ddb",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "snap": {
     "d": "2026-10-25",
     "pdf": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
@@ -274,22 +304,22 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 119,
+   "fails": 120,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
-   "last_try": "2026-10-25"
+   "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 119,
+   "fails": 120,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
-   "last_try": "2026-10-25"
+   "last_try": "2026-10-26"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf": {
    "hash": "b2270ea56391",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Ground Economy Bound Printed Matter rates",
    "snap": {
     "d": "2026-10-25",
@@ -300,7 +330,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf": {
    "hash": "b5fac9a1945c",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Ground Economy Media Mail rates",
    "snap": {
     "d": "2026-10-25",
@@ -311,7 +341,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf": {
    "hash": "21c5891a193b",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Ground Economy rates, by ounce",
    "snap": {
     "d": "2026-10-25",
@@ -322,7 +352,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf": {
    "hash": "8fcb4c16f4b4",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Ground Economy rates, by pound",
    "snap": {
     "d": "2026-10-25",
@@ -333,7 +363,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf": {
    "hash": "ea3a5da8a32f",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Retail Rates (PDF)",
    "snap": {
     "d": "2026-10-25",
@@ -344,7 +374,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf": {
    "hash": "8afec96399b3",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Service Guide",
    "snap": {
     "d": "2026-10-25",
@@ -355,7 +385,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
    "hash": "816453d43d8f",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "2026 FedEx Standard List Rates (PDF)",
    "snap": {
     "d": "2026-10-25",
@@ -366,7 +396,7 @@
   "https://www.fedex.com/en-us/service-guide.html": {
    "hash": "8afec96399b3",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "FedEx Service Guide page",
    "snap": {
     "d": "2026-10-25",
@@ -377,7 +407,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates": {
    "hash": "0898c2640b82",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "UPS Daily Rates and Zone Charts page",
    "snap": {
     "d": "2026-10-25",
@@ -388,7 +418,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/retail-rates": {
    "hash": "e3db3b1e80c3",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "UPS Retail Rates page",
    "snap": {
     "d": "2026-10-25",
@@ -399,7 +429,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
    "hash": "10e2e45bcf78",
    "first": "2026-10-21",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "UPS Shipping Zones and Rates hub",
    "changed": "2026-10-22",
    "snap": {
@@ -467,7 +497,7 @@
    "first": "2026-10-21",
    "n": "2026-RATES-LETTER.pdf",
    "hash": "323ff4aa69ce",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "snap": {
     "d": "2026-10-25",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf",
@@ -478,7 +508,7 @@
    "first": "2026-10-21",
    "n": "LTL-Rates-2026-version-30.pdf",
    "hash": "ca82afb7dd28",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "snap": {
     "d": "2026-10-25",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf",
@@ -603,7 +633,12 @@
    "first": "2026-10-25",
    "n": "small-busines-cwt-rate-guide-us-en.pdf",
    "hash": "91c7a72d6439",
-   "checked": "2026-10-25"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:036e009d-3781-4a60-bf89-314268d5ac8b/original/as/small-busines-cwt-rate-guide-us-en.pdf",
+    "txt": "data/snapshots/b48ada4a6d7c/2026-10-26.txt"
+   }
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
    "first": "2026-10-25",
@@ -627,26 +662,26 @@
    "first": "2026-10-25",
    "n": "ups-ground-saver-gtl-us-en.pdf",
    "hash": "1844888184b1",
-   "checked": "2026-10-25"
+   "checked": "2026-10-26"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx": {
    "n": "2026 FedEx Retail Rates (Excel)",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.xlsx": {
    "n": "2026 FedEx Standard List Rates (Excel)",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ffbe526-135e-47d8-8f50-6dbfc7d52e56/original/as/daily-rates-us-en.xlsx": {
    "n": "2026 UPS Daily Rate and Service Guide (Excel)",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:783c4671-6847-424a-aabd-7e5798d1f51d/original/as/ground-saver-over-1lb-us-en.xlsx": {
    "n": "2026 UPS Ground Saver rates, 1 lb and over (Excel)",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "skip": "spreadsheet"
   },
   "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
@@ -833,7 +868,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
    "hash": "778400ab2847",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "UPS Ground Saver page"
   },
   "https://www.ups.com/us/en/services/shipping/simple-rate": {
@@ -915,6 +950,79 @@
    "first": "2026-10-25",
    "checked": "2026-10-25",
    "n": "FedEx fuel surcharge page"
+  },
+  "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html": {
+   "hash": "f81cc03dc4a2",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "FedEx historical fuel surcharges",
+   "pic_try": "2026-10-26"
+  },
+  "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf": {
+   "hash": "d95e3ea3de42",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "GLS US fuel surcharge matrix"
+  },
+  "https://www.lso.com/lso-fuel-surcharge": {
+   "hash": "754605d79931",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "LSO fuel surcharge page"
+  },
+  "https://www.ontrac.com/west-coast-fuel-surcharge": {
+   "hash": "236add39a25c",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "OnTrac West Coast fuel surcharge"
+  },
+  "https://www.ontrac.com/surchargesandrates/": {
+   "hash": "2bafd025bd0b",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "OnTrac surcharges and rates page"
+  },
+  "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
+   "hash": "482d5b7bc9e6",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025"
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
+   "hash": "8ccf18fc37c2",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "UPS domestic fuel surcharge tables"
+  },
+  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
+   "hash": "b3b5181ba673",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "UPS fuel surcharges page"
+  },
+  "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
+   "hash": "a3deb984fc43",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)"
+  },
+  "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
+   "hash": "7a90d278f5dd",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026"
+  },
+  "https://public-inspection.federalregister.gov/2026-06162.pdf": {
+   "hash": "97f2d2e31dd1",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)"
+  },
+  "https://public-inspection.federalregister.gov/2026-17656.pdf": {
+   "hash": "d032e4e6bd31",
+   "first": "2026-10-26",
+   "checked": "2026-10-26",
+   "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)"
   }
  }
 }

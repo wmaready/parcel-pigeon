@@ -1,0 +1,21 @@
+USPS SKU Price File Format
+Summary
+This is the format for the USPS SKU File (New Format), with details for the column and field definitions for
+the file.
+Column Field Description
+1 SKU The SKU associated to the Rate. See the USPS SKU User Guide
+for complete details.
+2 Rate The rate value.
+3 Increment This value is only used for rates that are variable based on the
+amount purchased for example Insurance. The Increment is the
+amount of the each increment of increase.
+4 IncrementFee This value is only used for rates that are variable based on the
+amount purchased for example Insurance. The Increment Fee is
+the amount charged for each increment of increase.
+5 Max This value is only used for rates that are variable based on the
+amount purchased for example Insurance. The Max is the
+maximum amount allowed.
+6 Section The Postal Statement Section Letter or “Z” if the SKU is not related
+to a Postage Statement.
+7 Line The Postal Statement Line number.
+8 StartDate The Date the rate begins.

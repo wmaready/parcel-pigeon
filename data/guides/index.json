@@ -11,33 +11,38 @@
  },
  "FedEx": {
   "file": "data/guides/fedex.json",
-  "docs": 24,
-  "passages": 1077
+  "docs": 25,
+  "passages": 1079
  },
  "GLS US": {
   "file": "data/guides/gls-us.json",
+  "docs": 2,
+  "passages": 9
+ },
+ "LSO": {
+  "file": "data/guides/lso.json",
   "docs": 1,
-  "passages": 7
+  "passages": 60
  },
  "OnTrac": {
   "file": "data/guides/ontrac.json",
-  "docs": 8,
-  "passages": 212
+  "docs": 10,
+  "passages": 225
  },
  "Spee-Dee": {
   "file": "data/guides/spee-dee.json",
-  "docs": 10,
-  "passages": 54
+  "docs": 11,
+  "passages": 56
  },
  "UPS": {
   "file": "data/guides/ups.json",
-  "docs": 22,
-  "passages": 1487
+  "docs": 24,
+  "passages": 1497
  },
  "USPS": {
   "file": "data/guides/usps.json",
-  "docs": 15,
-  "passages": 982
+  "docs": 19,
+  "passages": 1012
  },
  "Veho": {
   "file": "data/guides/veho.json",
