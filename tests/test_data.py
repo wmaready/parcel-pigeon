@@ -100,3 +100,17 @@ def test_transimpact_carrier_updates_are_in_the_almanac():
     assert alm["ups-2026-gri-2025-12-22"]["announced"] == "2025-10-31"
     # the Reddit-only claim about the EU is not stated as fact
     assert "EU" not in " ".join(alm["fedex-2026-fee-2026-08-03"]["details"])
+
+
+def test_logo_finder_skips_customer_logo_walls():
+    """Oct 26, 2026: BluJay showed Kellanova's logo, Symbotic C&S Wholesale Grocers' and Bringg a customer's: logos taken
+    from a page's customer area or a customer/partner file path are never the page owner's."""
+    from media import customer_image, NO_OWN_LOGO
+    wall = '<h2>Our customers</h2><div><img class="logo" src="/c/cs-logo.svg"></div>'
+    assert customer_image(wall, wall.index("<img"), "/c/cs-logo.svg")
+    assert customer_image('<header><img class="logo" src="/Customer-logos/RF.svg"></header>', 8, "/Customer-logos/RF.svg")
+    hdr = '<header class="top"><a href="/"><img class="logo" src="/wp-content/uploads/symbotic-logo.svg"></a></header>'
+    assert not customer_image(hdr, hdr.index("<img"), "/wp-content/uploads/symbotic-logo.svg")
+    assert "blujay" in NO_OWN_LOGO
+    idx = json.loads((DATA / "logos.json").read_text())
+    assert not any(idx.get(p, {}).get("f") for p in ("blujay",))

@@ -293,7 +293,7 @@ def saga_candidates(threads, company, skip=(), days=365):
         return []
     since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
     word = re.compile(r"(?<![a-z0-9])" + re.escape(str(company).lower()) + r"(?![a-z0-9])")
-    out = [k for k, t in threads.items() if k not in skip and (t.get("last") or "") >= since and
+    out = [k for k, t in threads.items() if k not in skip and not t.get("theme") and (t.get("last") or "") >= since and
            (_co(thread_company(t, k)) == co or word.search((t.get("n") or "").lower() + " " + k.replace("-", " ")))]
     return sorted(out, key=lambda k: threads[k].get("last") or "", reverse=True)[:6]
 
@@ -1257,7 +1257,7 @@ def main():
 
 def _screen_and_write(cfg, live, review, seen, threads, batch, primary_only, lane):
     recent = [s for s in live if s["date"] >= (dt.date.today() - dt.timedelta(days=14)).isoformat()][:60]
-    active = sorted(((k, t) for k, t in threads.items() if (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
+    active = sorted(((k, t) for k, t in threads.items() if not t.get("theme") and (t.get("last") or "") >= (dt.date.today() - dt.timedelta(days=120)).isoformat()),
                     key=lambda kt: kt[1].get("last") or "", reverse=True)[:60]
     head = "RECENT STORIES:\n" + "\n".join(f"{s['id']}: {s['title']}" for s in recent) + \
            "\n\nACTIVE STORYLINES:\n" + ("\n".join(f"{k}: {t.get('n')}" + (f" [{thread_company(t, k)}]" if thread_company(t, k) else "") + f" (last {t.get('last')})"
@@ -1675,6 +1675,32 @@ def milestone_line(s):
 HEDGE = re.compile(r"\b(reported(ly)?|unconfirmed|not (yet )?confirmed|according to|reports?|said to|claims?)\b", re.I)
 
 
+def roll_into_themes(threads, pool, themes=None, per_theme=40):
+    """The year's themes (data/themes.json) are storylines of their own: a new story whose headline matches a theme's
+    "rollup" pattern joins it, so Coop's walk-through of the theme picks it up (the narration reruns when the set changes)."""
+    themes = themes if themes is not None else (load("themes.json", {}) or {}).get("themes") or []
+    for th in themes:
+        t = threads.get(th.get("thread") or "")
+        if not t or not t.get("theme") or not th.get("rollup"):
+            continue
+        try:
+            rx = re.compile(th["rollup"], re.I)
+        except re.error:
+            continue
+        have = set(t.get("ids") or [])
+        dropped = {d if isinstance(d, str) else d.get("id") for d in load("drop.json", [])}
+        new = [s for s in pool.values() if s.get("id") not in have and s.get("id") not in dropped and rx.search(s.get("title") or "")
+               and (s.get("date") or "") >= (t.get("last") or "0000")[:10]]
+        if not new:
+            continue
+        ids = list(t.get("ids") or []) + [s["id"] for s in sorted(new, key=lambda s: s.get("date") or "")]
+        ids = sorted(dict.fromkeys(ids), key=lambda i: (pool.get(i) or {}).get("date") or "")[-per_theme:]
+        t["ids"] = ids
+        dates = [(pool.get(i) or {}).get("date") for i in ids if (pool.get(i) or {}).get("date")]
+        t["first"], t["last"] = min(dates), max(dates)
+        t["c"] = sorted({c for i in ids for c in ((pool.get(i) or {}).get("c") or []) if c not in ("Industry", "Regional")})
+
+
 def write_beats(limit=6):
     """Coop's narration for each storyline's timeline, rewritten when the storyline gets a new story. Every line is checked:
     a line with a number that isn't in the milestones or context is dropped (the app falls back to a plain date cue)."""
@@ -1683,6 +1709,7 @@ def write_beats(limit=6):
         return
     seed, live = load("seed.json", {}), load("news.json", [])
     pool = {s["id"]: s for s in seed.get("news", []) + live if s.get("id")}
+    roll_into_themes(threads, pool)
     done = 0
     for k, t in sorted(threads.items(), key=lambda kv: kv[1].get("last") or "", reverse=True):
         if done >= limit:
@@ -1730,10 +1757,8 @@ published story decide:
 Keep local stories that are industry news (a service like drone delivery starting in a town, a federal raid, a fraud or theft
 ring, a closure under a named national program). A "not yet announced" story stays when the wait matters to shippers (a
 carrier announcing its rate increase late). When genuinely unsure, keep.
-A story marked [DEAL] is also a card in the app's M&A tab, and the two always go together. Keep it when the deal involves a
-company that moves, delivers, fulfils or ships goods: carriers and posts, 3PLs, freight brokers and forwarders, gig and
-same-day delivery platforms (Uber, DoorDash, Instacart and the like), parcel lockers, shipping software. Drop it only when
-the deal has nothing to do with delivery (debt collection, an unrelated SPAC); the M&A card then leaves with it.
+A story marked [DEAL] is also a card in the app's M&A tab and always stays in the news: every M&A story is shown in regular
+news, tied back to its card. Mark it "keep".
 Reply with JSON only: [{"id": "...", "v": "keep"|"drop", "why": "under 10 words"}]"""
 
 REVIEW = """You review one STORYLINE in a small-parcel news app: a subject followed over weeks or months. Decide:
@@ -1764,7 +1789,7 @@ def curate(limit=40):
     # stories behind an M&A card: News and M&A must tell the same story, so a drop takes the card with it
     deals = load("deals.json", [])
     deal_of = {}
-    for d in deals:
+    for d in deals + list(load("seed.json", {}).get("deals") or []):          # built-in M&A cards count too
         for sid in [d.get("story")] + [u.get("story") for u in d.get("updates") or [] if isinstance(u, dict)]:
             if sid:
                 deal_of.setdefault(sid, d)
@@ -1777,16 +1802,12 @@ def curate(limit=40):
     drop = load("drop.json", [])
     have = {d if isinstance(d, str) else d.get("id") for d in drop}
     n = 0
-    gone_deals = []
     for r in res if isinstance(res, list) else []:
         if isinstance(r, dict) and r.get("v") == "drop" and r.get("id") in {x["id"] for x in todo} and r["id"] not in have:
-            drop.append({"id": r["id"], "why": "Editor pass: " + str(r.get("why") or "")[:80]}); n += 1
             if r["id"] in deal_of:
-                gone_deals.append(deal_of[r["id"]])
+                continue                              # the story behind an M&A card always stays in News
+            drop.append({"id": r["id"], "why": "Editor pass: " + str(r.get("why") or "")[:80]}); n += 1
     save("drop.json", drop)
-    if gone_deals:                                    # the M&A card leaves with its story (built-in deals are never touched)
-        save("deals.json", [d for d in deals if not any(d is g for g in gone_deals)])
-        print(f"curate: {len(gone_deals)} M&A card(s) left with their stories: " + "; ".join(str(d.get("title")) for d in gone_deals))
     save("curated.json", sorted(done | {x["id"] for x in todo})[-5000:])
     if n:
         save("news.json", dedupe_live(live))
@@ -1804,6 +1825,8 @@ def review_threads(limit=8):
     dropped = {d if isinstance(d, str) else d.get("id") for d in load("drop.json", [])}
     done, changed = 0, False
     for k, t in list(threads.items()):
+        if t.get("theme"):
+            continue                                   # a year theme is a loose subject by design; it is not reviewed as one arc
         ids = [i for i in t.get("ids", []) if i not in dropped]
         if ids != t.get("ids"):
             t["ids"] = ids; changed = True

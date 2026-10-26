@@ -162,3 +162,32 @@ def test_app_shows_one_terminated_uniuni_deal(site):
         assert pg.evaluate("() => coEvents(PL.uniuni, []).some(e => e.kind === 'ended' && /terminated oct 20, 2026/i.test(e.t))")
         b.close()
     assert not errors, errors[:5]
+
+
+def test_every_mna_card_has_its_story_in_regular_news():
+    """Oct 26, 2026: M&A cards without a story in News (ReturnPro-iF Returns, the InPost deal) or whose story the editor had taken
+    off (Uber-ezCater) left News and M&A telling different stories. Every card has a story on the site, tied back to it."""
+    seed = json.loads((ROOT / "data" / "seed.json").read_text())
+    live = json.loads((ROOT / "data" / "news.json").read_text())
+    stories = {s["id"]: s for s in seed["news"] + live}
+    dropped = {d if isinstance(d, str) else d["id"] for d in json.loads((ROOT / "data" / "drop.json").read_text())}
+    deals = deals_merged(seed["deals"], json.loads((ROOT / "data" / "deals.json").read_text()))
+    bad = [d["title"] for d in deals if not d.get("story") or d["story"] not in stories or d["story"] in dropped]
+    assert not bad, bad
+    assert all(stories[d["story"]]["cat"] in ("M&A", "Regional & alternative") for d in deals)
+
+
+def test_editor_pass_never_takes_the_story_behind_an_mna_card_off_news(data_dir, monkeypatch):
+    import news
+    seed = json.loads((data_dir / "seed.json").read_text())
+    sid = next(d["story"] for d in seed["deals"] if d.get("story"))
+    monkeypatch.setattr(common, "load", common.load)
+    saved = {}
+    monkeypatch.setattr(news, "claude", lambda *a, **k: json.dumps([{"id": sid, "v": "drop", "why": "not parcel"}]))
+    (data_dir / "curated.json").write_text("[]")
+    pool = [x for x in seed["news"] + json.loads((data_dir / "news.json").read_text())]
+    monkeypatch.setattr(news, "load", lambda f, d=None: ({"curated.json": [], "news.json": [x for x in pool if x["id"] == sid],
+                                                          "drop.json": [], "seed.json": seed, "deals.json": []}.get(f, d)))
+    monkeypatch.setattr(news, "save", lambda f, v: saved.__setitem__(f, v))
+    news.curate()
+    assert sid not in {d["id"] for d in saved.get("drop.json", [])}, saved.get("drop.json")

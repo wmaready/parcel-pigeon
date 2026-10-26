@@ -63,6 +63,8 @@ def deal_storyline_issues(deals, threads, stories):
     Returns [(ids, message)]."""
     out = []
     for k, t in (threads or {}).items():
+        if t.get("theme"):
+            continue                                  # a year theme spans many deals; each deal's own storyline is checked
         S = sorted((stories[i] for i in (t.get("ids") or []) if i in stories), key=lambda s: s.get("date") or "")
         if not S:
             continue
