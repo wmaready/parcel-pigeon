@@ -264,11 +264,11 @@ def test_package_backfill_from_the_carriers_own_reports():
     u = row("UPS", "Q1 2024")["vol"]                         # the Q1 2024 10-Q
     assert (u["adv_k"], u["adv_prior_k"], u["days"], u["us_adv_k"], u["rpp"]) == (21199, 21989, 63, 18075, 13.73)
     q4 = row("UPS", "Q4 2025")["vol"]                        # not printed on its own: calculated, and says so
-    assert q4["adv_src"] == "calc" and q4["adv_note"].startswith("Calculated") and q4["rpp"] is None
+    assert q4["adv_src"] == "calc" and q4["adv_note"].startswith("Calculated") and q4["rpp"] == 14.61 and q4["rpp_src"] == "calc"
     assert q4["us_adv_k"] == 19970 and q4["us_adv_prior_k"] == row("UPS", "Q4 2024")["vol"]["us_adv_k"] == 22382   # UPS's own Q4 figures
     s = row("USPS", "FY26 Q3")                               # USPS Q3 FY26 results release
     assert (s["rev_m"], s["rev_prior_m"], s["vol"]["pieces_m"], s["vol"]["pieces_prior_m"], s["vol"]["adv_yoy"]) == (19940, 18797, 1554, 1609, -3.4)
-    assert s["vol"]["adv_src"] == "calc" and s["vol"]["days"] == 91 and s["vol"]["rpp"] is None
+    assert s["vol"]["adv_src"] == "calc" and s["vol"]["days"] == 91 and s["vol"]["rpp"] == 5.31 and s["vol"]["rpp_src"] == "calc"
     assert all((r.get("vol") or {}).get("src") and r["vol"].get("checked") for r in ROWS if r["company"] in ("UPS", "FedEx", "USPS"))
 
 
@@ -346,3 +346,19 @@ def test_usps_expected_date_is_never_read_from_a_page_and_asks_a_person_when_lat
     d = json.loads((ROOT / "data" / "earnings_next.json").read_text())
     u = next(x for x in d["next"] if x["c"] == "USPS")
     assert u["est"] is True and "doesn't announce" in u["t"]
+
+
+def test_ups_q4_and_usps_revenue_per_package_are_calculated_and_labeled():
+    """UPS prints no Q4 revenue per piece; it is the 10-K's full year less the first three quarters. USPS reports segment
+    revenue and pieces, so its figure is revenue over pieces. Both are marked as calculated."""
+    import json
+    from conftest import ROOT
+    rows = {(r["company"], r["q"]): r["vol"] for r in json.loads((ROOT / "data/earnings.json").read_text())}
+    assert rows[("UPS", "Q4 2024")]["rpp"] == 13.44 and rows[("UPS", "Q4 2025")]["rpp"] == 14.61
+    assert rows[("UPS", "Q4 2025")]["rpp_prior"] == 13.44 and rows[("UPS", "Q4 2025")]["rpp_src"] == "calc"
+    assert rows[("USPS", "FY26 Q3")]["rpp"] == round(8250 / 1554, 2) and rows[("USPS", "FY26 Q3")]["rpp_src"] == "calc"
+    assert "isn't comparable" in rows[("USPS", "FY26 Q3")]["rpp_note"]
+    import filings
+    year = {"days": 253, "adv": 22418, "rpp": 13.60}
+    qs = [rows[("UPS", f"Q{i} 2024")] for i in (1, 2, 3)]
+    assert filings.q4_rpp(year, qs) == 13.44 and filings.q4_rpp({"days": 253, "adv": 22418}, qs) is None

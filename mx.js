@@ -209,7 +209,7 @@ q.addEventListener('input',()=>{const L=matches(q.value);
   if(wrap.classList.contains('list'))list();});
 q.addEventListener('keydown',e=>{if(e.key==='Enter'){const b=sugg.querySelector('[data-go]');if(b)b.click()}if(e.key==='Escape'){q.value='';q.dispatchEvent(new Event('input'))}});
 sugg.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(!b)return;sugg.hidden=true;q.value='';G.classList.remove('search');
-  openCo(b.dataset.go)});
+  if(!(origin==='geo'&&showOnMap(b.dataset.go)))openCo(b.dataset.go)});
 document.addEventListener('click',e=>{if(!e.target.closest('.mx-search'))sugg.hidden=true});
 
 $('mxChips').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(!b)return;const r=b.dataset.r;
@@ -249,23 +249,38 @@ function geo(){if(curM!=='geo'||!$('mxGeo').offsetWidth)return;
   if(curM!=='geo')return;
   resetGeo();geoSig='';drawGeo();setTimeout(()=>{if(curM==='geo'){LMAP.invalidateSize();labels()}},400)}).catch(()=>{$('mxGnote').innerHTML='Map unavailable. <button class="mx-retry" type="button">Retry map</button>'})}
 $('mxGnote').addEventListener('click',e=>{if(e.target.closest('.mx-retry'))geo()});
-let geoSig='';
+/* a search on the map puts the company on the map: zoom to its headquarters, ring it, name it, and offer its profile */
+function showOnMap(id){const n=byId[id];if(!n)return false;const loc=typeof wmLoc==='function'?wmLoc(n.p):null;
+  if(!loc||!Array.isArray(loc.g)||loc.g.length<2||!loc.g.slice(0,2).every(Number.isFinite))return false;
+  if(!filt.has(n.p.realm)){filt.add(n.p.realm);chips();applyFilter()}
+  const go=()=>{drawGeo();const m=MARK[id];if(!m||!LMAP)return;
+    const done=()=>{if(FOUND){const o=FOUND.getElement&&FOUND.getElement();o&&o.classList.remove('mx-found')}FOUND=m;
+      const el=m.getElement();el&&el.classList.add('mx-found');m.unbindTooltip();m.bindTooltip(esc(n.p.n),{direction:'top',offset:[0,-16],className:'mx-tip',permanent:true}).openTooltip();
+      $('mxGnote').innerHTML=`<b>${esc(n.p.n)}</b> · ${esc((n.p.hq||'').replace(/, USA$/,''))}${loc.via?` <small>(at ${esc(loc.via.n)}'s headquarters)</small>`:loc.approx?' <small>(city)</small>':''} · <button class="mx-open" type="button" data-go="${esc(id)}">Open profile</button>`};
+    LMAP.setView([loc.g[1],loc.g[0]],Math.max(LMAP.getZoom(),9),{animate:false});LLAY.zoomToShowLayer(m,()=>setTimeout(done,60))};
+  if(curM!=='geo'){curCo=null;curSec=null;mode('geo')}
+  q.value='';sugg.hidden=true;G.classList.remove('search');
+  if(LMAP&&LLAY)go();else leaflet().then(()=>{geo();const t=setInterval(()=>{if(LMAP&&LLAY){clearInterval(t);go()}},120);setTimeout(()=>clearInterval(t),6000)});
+  return true}
+$('mxGnote').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)openCo(b.dataset.go)});
+let geoSig='',MARK={},FOUND=null;
 function drawGeo(){if(!LMAP||typeof wmLoc!=='function')return;
-  const big=N.filter(n=>(n.tier<=2||n.deg>=3)&&filt.has(n.p.realm)).map(n=>({n,loc:wmLoc(n.p)})).filter(({loc})=>loc&&!loc.via&&Array.isArray(loc.g)&&loc.g.length===2&&loc.g.every(Number.isFinite));
+  const big=N.filter(n=>filt.has(n.p.realm)).map(n=>({n,loc:wmLoc(n.p)})).filter(({loc})=>loc&&Array.isArray(loc.g)&&loc.g.length>=2&&loc.g.slice(0,2).every(Number.isFinite));   // a company with no listed address sits at its owner's headquarters
   // what the map shows, from the current sector filter: headquarters only, never service coverage
   const inF=N.filter(n=>filt.has(n.p.realm)).length;
-  $('mxGcov').innerHTML=`Headquarters only, not service coverage. <b>${big.length}</b> of <b>${inF}</b> companies have a mapped location.`;
+  $('mxGcov').innerHTML=`Headquarters only, not service coverage. <b>${big.length}</b> of <b>${inF}</b> companies are on the map${big.some(({loc})=>loc.via)?`, <b>${big.filter(({loc})=>loc.via).length}</b> of them at their owner's headquarters`:''}.`;
   const s=JSON.stringify(big.map(({n,loc})=>[n.id,n.p.n,n.p.realm,loc.g]));if(s===geoSig)return;geoSig=s;
   if(LLAY)LLAY.remove();
   LLAY=L.markerClusterGroup({maxClusterRadius:()=>window.innerWidth<600?64:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true,zoomToBoundsOnClick:true,spiderfyDistanceMultiplier:2.2,animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     iconCreateFunction:cluster=>{const count=cluster.getChildCount();return L.divIcon({className:'mx-cluster',html:`<span class="mx-cluster-face">${count}</span>`,iconSize:[44,44],iconAnchor:[22,22]})}}).addTo(LMAP);
+  MARK={};
   big.forEach(({n,loc})=>{
     const [lon,lat]=loc.g;
     const icon=L.divIcon({className:'mx-marker',html:`<span class="mx-marker-face" style="--c:${COL[n.p.realm]}"><span></span></span>`,iconSize:[44,44],iconAnchor:[22,22]});
     const m=L.marker([lat,lon],{icon,title:n.p.n,alt:n.p.n,keyboard:true,riseOnHover:true,mxMajor:n.tier===1,mxDegree:n.deg});
     m.bindTooltip(esc(n.p.n),{direction:'top',offset:[0,-16],className:'mx-tip',permanent:false});
     m.on('add',()=>{const el=m.getElement();if(el)el.setAttribute('aria-label','Open '+n.p.n+' profile')});
-    m.on('click',()=>openCo(n.id));LLAY.addLayer(m)});
+    m.on('click',()=>openCo(n.id));MARK[n.id]=m;LLAY.addLayer(m)});
   LLAY.on('clusterclick',e=>{const el=e.layer.getElement();if(el)el.setAttribute('aria-label','Explore '+e.layer.getChildCount()+' headquarters')});
   LLAY.on('animationend spiderfied unspiderfied',()=>{document.querySelectorAll('#mxGeo .mx-cluster').forEach(el=>el.setAttribute('aria-label','Explore '+el.textContent+' headquarters'));labels()});
   $('mxGnote').innerHTML=`<b>${big.length}</b> headquarters · <b>${filt.size===REALMS.length?'All sectors':filt.size+' sector'+(filt.size===1?'':'s')}</b>${big.length?'':' · No headquarters in these sectors'}`;

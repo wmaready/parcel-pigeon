@@ -201,3 +201,8 @@ section#s-mna .view[data-view="map"] > #mNewP{display:none!important}
 /* B27: consultancies & shipping intelligence realm */
 .r-consultancy{--rc:#FF6F91}
 .mx-found .mx-src{display:inline-block;margin:0 10px 6px 0}
+
+.mx-marker.mx-found .mx-marker-face{transform:scale(1.35);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 30%,transparent),var(--mx-marker-shadow);animation:mxfound 1.6s ease-in-out 3}
+@keyframes mxfound{50%{box-shadow:0 0 0 14px color-mix(in srgb,var(--c) 0%,transparent),var(--mx-marker-shadow)}}
+@media(prefers-reduced-motion:reduce){.mx-marker.mx-found .mx-marker-face{animation:none}}
+.mx-open{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;min-height:32px}

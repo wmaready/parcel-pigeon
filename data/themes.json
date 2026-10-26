@@ -1,0 +1,61 @@
+{
+ "year": 2026,
+ "note": "The three highest-level themes for the 2026 market. Every storyline and headline should roll up under one of them. A storyline joins a theme when it is listed under \"threads\" or its name and summary match \"match\"; a headline joins when its title matches \"stories\".",
+ "themes": [
+  {
+   "id": "ecom-split",
+   "n": "Continued splintering of eCommerce parcel from B2B/Premium parcel",
+   "bullets": [
+    "Emergence of Alternative Carriers: rapid gain in total market share. UPS and FDX pulling back from ecommerce",
+    "Growth of marketplace sales and Alt Carrier management tools/platforms/software"
+   ],
+   "threads": [
+    "uniuni",
+    "fedex-freight-spin",
+    "fedex-network-2",
+    "de-minimis",
+    "import-export-fees",
+    "peak-surcharges",
+    "usps-big-shipper-deals",
+    "ups-amazon-glide-down"
+   ],
+   "match": "alternative carrier|regional carrier|marketplace|low-value|cross-border",
+   "stories": "alternative carrier|regional carrier|uniuni|gofo|veho|ontrac|marketplace|temu|shein|de minimis|fedex supply chain|fedex freight|spin-?off|ecommerce|e-commerce",
+   "short": "eCommerce split"
+  },
+  {
+   "id": "ups-teamsters",
+   "n": "Continued battle between UPS-Teamsters",
+   "bullets": [
+    "Beginning to look at 2028 negotiation",
+    "Struggle to control labor costs under union pressure. Prevalence of DSP model and Gig model in today's competitive landscape"
+   ],
+   "threads": [
+    "ups-driver-choice-lawsuit",
+    "amazon-labor",
+    "amazon-jfk8-nlrb",
+    "royal-mail-cwu-dispute"
+   ],
+   "match": "teamsters|union|labor|driver choice|collective bargaining",
+   "stories": "teamsters|2028|driver choice|collective bargaining|union|\\bcwu\\b|nlrb|\\bdsp\\b|gig (driver|work)|job cuts|buyout",
+   "short": "UPS–Teamsters"
+  },
+  {
+   "id": "amazon-insourcing",
+   "n": "Amazon insourcing volume (delivered most parcels in 2025)",
+   "bullets": [],
+   "threads": [
+    "parcel-volume-amazon",
+    "amazon-network-buildout",
+    "ups-amazon-glide-down",
+    "last-mile-facility-legislation",
+    "usps-big-shipper-deals",
+    "amazon-labor",
+    "amazon-jfk8-nlrb"
+   ],
+   "match": "amazon",
+   "stories": "\\bamazon\\b",
+   "short": "Amazon insourcing"
+  }
+ ]
+}
