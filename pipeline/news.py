@@ -1730,6 +1730,10 @@ published story decide:
 Keep local stories that are industry news (a service like drone delivery starting in a town, a federal raid, a fraud or theft
 ring, a closure under a named national program). A "not yet announced" story stays when the wait matters to shippers (a
 carrier announcing its rate increase late). When genuinely unsure, keep.
+A story marked [DEAL] is also a card in the app's M&A tab, and the two always go together. Keep it when the deal involves a
+company that moves, delivers, fulfils or ships goods: carriers and posts, 3PLs, freight brokers and forwarders, gig and
+same-day delivery platforms (Uber, DoorDash, Instacart and the like), parcel lockers, shipping software. Drop it only when
+the deal has nothing to do with delivery (debt collection, an unrelated SPAC); the M&A card then leaves with it.
 Reply with JSON only: [{"id": "...", "v": "keep"|"drop", "why": "under 10 words"}]"""
 
 REVIEW = """You review one STORYLINE in a small-parcel news app: a subject followed over weeks or months. Decide:
@@ -1757,7 +1761,15 @@ def curate(limit=40):
     todo = [x for x in pool if x.get("id") not in done][:limit]
     if not todo:
         return
-    text = "\n".join(f"id={x['id']} | {x.get('date')} | {x.get('src')} | {x.get('title')} :: {(x.get('sum') or '')[:260]}" for x in todo)
+    # stories behind an M&A card: News and M&A must tell the same story, so a drop takes the card with it
+    deals = load("deals.json", [])
+    deal_of = {}
+    for d in deals:
+        for sid in [d.get("story")] + [u.get("story") for u in d.get("updates") or [] if isinstance(u, dict)]:
+            if sid:
+                deal_of.setdefault(sid, d)
+    text = "\n".join(f"id={x['id']} | {x.get('date')} | {x.get('src')} | {'[DEAL] ' if x['id'] in deal_of else ''}{x.get('title')} :: "
+                     f"{(x.get('sum') or '')[:260]}" for x in todo)
     try:
         res = parse_json(claude(MODEL_WRITE, CURATE, text, 2500)) or []
     except Exception as e:
@@ -1765,10 +1777,16 @@ def curate(limit=40):
     drop = load("drop.json", [])
     have = {d if isinstance(d, str) else d.get("id") for d in drop}
     n = 0
+    gone_deals = []
     for r in res if isinstance(res, list) else []:
         if isinstance(r, dict) and r.get("v") == "drop" and r.get("id") in {x["id"] for x in todo} and r["id"] not in have:
             drop.append({"id": r["id"], "why": "Editor pass: " + str(r.get("why") or "")[:80]}); n += 1
+            if r["id"] in deal_of:
+                gone_deals.append(deal_of[r["id"]])
     save("drop.json", drop)
+    if gone_deals:                                    # the M&A card leaves with its story (built-in deals are never touched)
+        save("deals.json", [d for d in deals if not any(d is g for g in gone_deals)])
+        print(f"curate: {len(gone_deals)} M&A card(s) left with their stories: " + "; ".join(str(d.get("title")) for d in gone_deals))
     save("curated.json", sorted(done | {x["id"] for x in todo})[-5000:])
     if n:
         save("news.json", dedupe_live(live))

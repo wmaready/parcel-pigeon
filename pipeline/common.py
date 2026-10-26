@@ -584,6 +584,18 @@ def dedupe_live(live):
         log = load("retracted.json", [])
         known = {x.get("id") for x in log}
         save("retracted.json", log + [g for g in gone if g["id"] not in known])
+        # an M&A card whose story merged into a twin follows the twin, so the card and News stay linked
+        twin_of = {g["id"]: g["why"].split(":")[0].replace("Same event as ", "") for g in gone if g["why"].startswith("Same event as ")}
+        if twin_of:
+            dl, moved = load("deals.json", []), False
+            for d in dl:
+                if d.get("story") in twin_of:
+                    d["story"] = twin_of[d["story"]]; moved = True
+                for u in d.get("updates") or []:
+                    if isinstance(u, dict) and u.get("story") in twin_of:
+                        u["story"] = twin_of[u["story"]]; moved = True
+            if moved:
+                save("deals.json", dl)
         print(f"dedupe: removed or merged {len(gone)} stories (repeats of one event, or taken off by the editor)")
     out.sort(key=lambda x: x.get("date") or "", reverse=True)
     return out

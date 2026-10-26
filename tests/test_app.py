@@ -253,21 +253,24 @@ def test_earnings_chart_and_stock_watch(site, width):
         assert pg.evaluate("() => !document.querySelector('.mkc, .mkwatch')")
         cards = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(x => [x.dataset.goto || null, x.textContent.replace(/\\s+/g, ' ')])""")
         assert [c[0] for c in cards] == ["docs:earnings:UPS:Q2 2026", "docs:earnings:FedEx:FY26 Q4", "docs:earnings:USPS:FY26 Q3", None], cards
+        assert pg.evaluate("() => !!document.querySelector('#earnToday .etc:last-child.etshare')")
         want = {0: ("Q2 2026", "Revenue", "$22.8B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "Revenue per package", "$15.96", "+11.3%"),
                 1: ("FY26 Q4", "$25.0B", "+12.6%", "17.1M", "+1.7%", "$17.90", "+10.9%"),
                 2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "Not reported"),      # USPS: pieces over calendar days, marked ≈
-                3: ("Amazon", "doesn't report how many packages")}
+                3: ("U.S. parcel volume", "2025", "23.1 billion parcels (+3.3%)", "Amazon", "6.9B", "30%", "+9%", "USPS", "6.2B", "27%", "−8.8%",
+                    "UPS", "4.3B", "19%", "−8.7%", "FedEx", "3.9B", "17%", "+5.1%", "Others", "1.8B", "8%", "+127%", "Pitney Bowes")}
         for i, ws in want.items():
             for w in ws:
                 assert w in cards[i][1], (w, cards[i][1])
-        assert pg.evaluate("() => [...document.querySelectorAll('#earnToday .etc')].every(x => x.scrollWidth <= x.clientWidth + 1 && !x.querySelector('a, button'))")
+        assert pg.evaluate("() => [...document.querySelectorAll('#earnToday .etc')].every(x => x.scrollWidth <= x.clientWidth + 1)")
+        assert pg.evaluate("() => [...document.querySelectorAll('#earnToday button.etc')].every(x => !x.querySelector('a, button'))")
         # the bottom of Today doesn't move: nothing rotates
         h0 = pg.evaluate("() => document.getElementById('earnToday').offsetHeight")
         pg.wait_for_timeout(6500)
         assert pg.evaluate("() => document.getElementById('earnToday').offsetHeight") == h0
         # the share price sits beside the logo on Today's UPS, FedEx and Amazon cards (USPS has no stock), and not in Docs
         stk = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(c => (c.querySelector('.eth .etstk') || {}).textContent || null)""")
-        assert stk[0].startswith("UPS $") and stk[1].startswith("FDX $") and stk[2] is None and stk[3].startswith("AMZN $"), stk
+        assert stk[0].startswith("UPS $") and stk[1].startswith("FDX $") and stk[2] is None and stk[3] is None, stk
         pg.evaluate("() => goTo('docs')")
         pg.wait_for_timeout(300)
         assert pg.evaluate("() => !document.querySelector('#lib .dstk, #lib .etstk')")

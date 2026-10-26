@@ -59,12 +59,34 @@
  "market": {
   "year": 2025,
   "total_b": 23.1,
+  "prior_total_b": 22.4,
+  "total_yoy": 3.3,
   "cos": {
+   "Amazon Logistics": 6.9,
+   "USPS": 6.2,
    "UPS": 4.3,
-   "FedEx": 3.9
+   "FedEx": 3.9,
+   "Others": 1.8
   },
-  "src": "Pitney Bowes Parcel Shipping Index, 2026 edition",
-  "url": "https://www.pitneybowes.com/us/shipping-index.html",
-  "note": "estimate, U.S. only, won't match company worldwide counts"
+  "prior": {
+   "Amazon Logistics": 6.3,
+   "USPS": 6.9,
+   "UPS": 4.7,
+   "FedEx": 3.7,
+   "Others": 0.8
+  },
+  "yoy": {
+   "Amazon Logistics": 9,
+   "USPS": -8.8,
+   "UPS": -8.7,
+   "FedEx": 5.1,
+   "Others": 127
+  },
+  "others_note": "Regional carriers (OnTrac, GLS, LSO, Spee-Dee) and last-mile startups (Veho, UniUni, GOFO, Jitsu, SpeedX, Better Trucks)",
+  "src": "Pitney Bowes Parcel Shipping Index, 2026 report",
+  "url": "https://www.pitneybowes.com/content/dam/pitneybowes/us/en/shipping-index/dmr-5127-parcel-shipping-index-report-2026-ebook.pdf",
+  "page": "https://www.pitneybowes.com/us/shipping-index.html",
+  "note": "Pitney Bowes estimate, U.S. parcels only; won't match carriers' worldwide counts. Shares are calculated from its volumes.",
+  "checked": "2026-10-26"
  }
 }
