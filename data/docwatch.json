@@ -1,5 +1,5 @@
 {
- "cursor": 75,
+ "cursor": 4,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -285,7 +285,12 @@
    "first": "2026-10-21",
    "n": "Effective_November_14_Fuel_Increase_Explaination.pdf",
    "hash": "84e1e97a7235",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
+    "txt": "data/snapshots/a667938de01e/2026-10-26.txt"
+   }
   },
   "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf": {
    "first": "2026-10-21",
@@ -319,14 +324,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 121,
+   "fails": 122,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 121,
+   "fails": 122,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -488,7 +493,12 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
+    "txt": "data/snapshots/ecb6d6398c7b/2026-10-26.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2024/11/LTL-Rates-2025-version-29-.pdf": {
    "first": "2026-10-21",
@@ -712,25 +722,25 @@
   "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Amazon Shipping 2026 peak surcharges"
   },
   "https://shipping.amazon.com/shipping-policy": {
    "hash": "59bdb3d710b8",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Amazon Shipping policies"
   },
   "https://shipping.amazon.com/shipping-terms-and-conditions": {
    "hash": "fdfe4754d270",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Amazon Shipping terms and conditions"
   },
   "https://ship.amazon.com/site-terms": {
    "hash": "c48a7f56ed69",
    "first": "2026-10-25",
-   "checked": "2026-10-25",
+   "checked": "2026-10-26",
    "n": "Conditions of Use"
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
@@ -1006,37 +1016,66 @@
    "hash": "236add39a25c",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "OnTrac West Coast fuel surcharge"
+   "n": "OnTrac West Coast fuel surcharge",
+   "snap": {
+    "d": "2026-10-26",
+    "img": "data/snapshots/b9d4439ee72f/2026-10-26.jpg"
+   }
   },
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "OnTrac surcharges and rates page"
+   "n": "OnTrac surcharges and rates page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf?v=20261026024203",
+    "txt": "data/snapshots/885ff12d7b54/2026-10-26.txt"
+   }
   },
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025"
+   "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf",
+    "txt": "data/snapshots/acfad159ea95/2026-10-26.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "UPS domestic fuel surcharge tables"
+   "n": "UPS domestic fuel surcharge tables",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf",
+    "txt": "data/snapshots/418d77c43531/2026-10-26.txt"
+   }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "b3b5181ba673",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "UPS fuel surcharges page"
+   "n": "UPS fuel surcharges page",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+    "txt": "data/snapshots/a75715f5baf3/2026-10-26.txt"
+   }
   },
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)"
+   "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://public-inspection.federalregister.gov/2026-21421.pdf?1792413913",
+    "txt": "data/snapshots/e5f2c699239a/2026-10-26.txt"
+   }
   },
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
