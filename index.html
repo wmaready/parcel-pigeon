@@ -8956,7 +8956,7 @@ function renderEarnToday(){const el=$('earnToday');if(!el)return;
     const v=e.vol||{},r=earnRev(e),cmp=e.comparable!==false,nx=EARN_NEXT.filter(x=>x.c===co&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
     const said=`${co} ${earnLabel(e)}, reported ${DF(e.d)}. Open in Docs`;
     return `<button type="button" class="etc ${carCls(co)}" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}" aria-label="${esc(said)}">
-      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(e.q)}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span>${coStock(co)}</span>
+      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(earnShort(e))}${e.checked===false?' <span class="tag" title="Added automatically from the release; not yet checked by a person">New</span>':''}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span>${coStock(co)}</span>
       ${stat('Revenue',r!=null?'$'+r.toFixed(1)+'B':null,cmp?earnYoY(e):null,'')}
       ${stat('Packages a day',v.adv_k!=null?(v.adv_src==='calc'?'≈':'')+(v.adv_k/1000).toFixed(1)+'M':null,cmp?earnAdvYoY(v):null,'Not yet entered')}
       ${stat('Revenue per package',v.rpp!=null?'$'+(+v.rpp).toFixed(2):null,cmp?earnRppYoY(v):null,co==='USPS'?'Not reported':'Not yet entered')}
