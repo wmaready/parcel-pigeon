@@ -237,9 +237,30 @@ def upsraw():
                 (OUT / ("UPSJS-" + slug(v) + ".txt")).write_text(rr.text[:300000])
 
 
+def ti_raw():
+    """The carrier-updates page as served (entries are coloured by carrier) and every page its Read More links go to."""
+    u = "https://transimpact.com/carrier-updates"
+    r = get(u)
+    if not r:
+        return
+    (OUT / "TIRAW-carrier-updates.html").write_text(r.text[:900000])
+    links = []
+    for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*Read More', r.text, re.I):
+        links.append(urljoin(u, m.group(1)))
+    (OUT / "TIRAW-readmore-links.txt").write_text("\n".join(links))
+    for v in dict.fromkeys(links):
+        if any(x in v for x in ("transimpact.com/blog", "transimpact.com/hubfs")):
+            continue                                       # the blog posts were saved by the earlier run
+        rr = get(v)
+        if rr:
+            save_any("TIREAD-" + slug(v), rr, v)
+
+
 if __name__ == "__main__":
     import sys as _s
-    if "--upsraw" in _s.argv:
+    if "--ti2" in _s.argv:
+        ti_raw()
+    elif "--upsraw" in _s.argv:
         upsraw()
     elif "--ti" in _s.argv:
         site("https://transimpact.com/carrier-updates", depth=2, limit=80)
