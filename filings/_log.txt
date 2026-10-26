@@ -1,4 +1,4 @@
-plain requests ERR https://fred.stlouisfed.org/graph/fredgraph.csv?id=GASDESW No module named 'requests'
-plain requests ERR https://fred.stlouisfed.org/data/GASDESW.txt No module named 'requests'
-plain requests ERR https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm No module named 'requests'
-plain requests ERR https://www.eia.gov/petroleum/gasdiesel/ No module named 'requests'
+plain requests ERR https://fred.stlouisfed.org/graph/fredgraph.csv?id=GASDESW HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=40)
+plain requests ERR https://fred.stlouisfed.org/data/GASDESW.txt HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=40)
+plain requests 200 22527 https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm
+plain requests 200 115607 https://www.eia.gov/petroleum/gasdiesel/
