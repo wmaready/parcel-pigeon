@@ -422,25 +422,34 @@ def test_service_worker_saved_copies(site):
 
 @pytest.mark.parametrize("width", [390, 1280])
 def test_rate_clock_list_leads_with_whats_next(site, width):
-    """Oct 26, 2026: the list opens on Today, then what just took effect or is running now, then next up by month; older
-    changes fold into "Past changes", newest first, and a link to one of them still opens it."""
+    """Oct 26, 2026: the list opens on what just took effect or is running now, then the Today marker, then next up by
+    month; older changes fold into "Past changes", newest first, and a link to one of them still opens it. A change on its
+    own day says "Effective today" instead of counting down to zero."""
     with app(site, width) as pg:
         pg.evaluate("() => goTo('clock','list')")
         pg.wait_for_timeout(400)
         got = pg.evaluate("""() => { const L = $('clockList'), kids = [...L.children];
-          const firstItem = kids.find(k => k.matches('details.dr')), past = L.querySelector('details.rcpast');
-          const pastIds = past ? [...past.querySelectorAll('details.dr')].map(d => d.id) : [];
+          const mark = kids.findIndex(k => k.classList.contains('rctoday')), past = L.querySelector('details.rcpast');
           const days = id => daysTo(DATES.find(x => x.id === id).d);
-          return {top: kids[0].className, firstFuture: !!firstItem && (days(firstItem.id) >= 0 || !!L.querySelector('.rcgrp')),
-                  topLevelPast: [...L.querySelectorAll(':scope > details.dr')].filter(d => days(d.id) < -2 && !DATES.find(x => x.id === d.id).end).length,
+          const before = kids.slice(0, mark).filter(k => k.matches('details.dr')), after = kids.slice(mark + 1).filter(k => k.matches('details.dr'));
+          const pastIds = past ? [...past.querySelectorAll('details.dr')].map(d => d.id) : [];
+          return {mark, groups: kids.slice(0, mark).filter(k => k.classList.contains('rcgrp')).length,
+                  beforeNotFuture: before.every(d => days(d.id) < 0), afterFuture: after.length > 0 && after.every(d => days(d.id) >= 0),
                   pastClosed: !!past && !past.open, pastNewestFirst: pastIds.every((id, i) => i === 0 || days(pastIds[i - 1]) >= days(id)),
                   pastAllOld: pastIds.every(id => days(id) < -2), pastId: pastIds[0] || null} }""")
-        assert got["top"] == "rctoday" and got["firstFuture"] and got["topLevelPast"] == 0, got
+        assert got["mark"] >= 0 and got["beforeNotFuture"] and got["afterFuture"], got
+        assert (got["mark"] == 0) == (got["groups"] == 0), got              # a group header leads exactly when something is in effect
         assert got["pastClosed"] and got["pastNewestFirst"] and got["pastAllOld"] and got["pastId"], got
         pg.evaluate(f"() => goClock('{got['pastId']}')")
         pg.wait_for_timeout(200)
         assert pg.evaluate(f"() => document.querySelector('details.rcpast').open && document.getElementById('{got['pastId']}').open")
         assert pg.evaluate(OVERFLOW) is None
+        # the countdown on the day itself
+        txt = pg.evaluate("""() => { DATES.unshift({id: 'zz-today', d: TODAY, w: 'A fee that starts today', c: 'UPS', imp: 'up'}); renderNext();
+          const t = $('next').textContent; DATES.shift(); renderNext(); return t }""")
+        assert "Effective today" in txt and "Days" not in txt, txt
+        txt = pg.evaluate("""() => { const t = $('next').textContent; return t }""")
+        assert "Days" in txt or "Effective today" in txt
 
 
 @pytest.mark.parametrize("width", [390, 1280])
@@ -450,10 +459,13 @@ def test_fuel_chart_custom_range_and_zoom(site, width):
     with app(site, width) as pg:
         pg.evaluate("() => { try { localStorage.removeItem('pw-fuelchart2') } catch (e) {} ; fc.range = 'y1'; goTo('fuel','chart') }")
         pg.wait_for_timeout(400)
-        assert pg.evaluate("() => $('fcCustom').hidden && !!document.querySelector('#fcBrush svg')")
+        # the two dates always show the window on the chart: a preset's dates too
+        assert pg.evaluate("() => !$('fcCustom').hidden && !!document.querySelector('#fcBrush svg') && $('fcTo').value === FUEL.eff && $('fcFrom').value === fcWin()[0]")
+        pg.click('#fcRange [data-r="w12"]')
+        assert pg.evaluate("() => $('fcFrom').value === fcWin()[0] && $('fcTo').value === FUEL.eff && /weeks/.test($('fcSpan').textContent)")
         pg.click('#fcRange [data-r="custom"]')
         pg.wait_for_timeout(200)
-        assert pg.evaluate("() => !$('fcCustom').hidden && $('fcFrom').value && $('fcTo').value === FUEL.eff")
+        assert pg.evaluate("() => fc.range === 'custom' && $('fcFrom').value && $('fcTo').value === FUEL.eff")
         pg.evaluate("""() => { const f = $('fcFrom'), t = $('fcTo'); f.value = '2022-01-03'; t.value = '2022-12-26';
             f.dispatchEvent(new Event('change')); t.dispatchEvent(new Event('change')) }""")
         pg.wait_for_timeout(200)
@@ -471,13 +483,15 @@ def test_fuel_chart_custom_range_and_zoom(site, width):
         pg.wait_for_timeout(300)
         a, b = pg.evaluate("() => fcWin()")
         assert "2017-06-01" < a < "2019-06-01" and "2018-06-01" < b < "2020-06-01", (a, b)
+        # the date boxes follow the bar: whatever it was dragged to
+        assert pg.evaluate("() => $('fcFrom').value === fcWin()[0] && $('fcTo').value === fcWin()[1]")
         # a window is never narrower than four weeks, and the preset buttons still work
         pg.evaluate("() => { fcSetWin('2024-03-01', '2024-03-05'); renderFuelChart() }")
         a, b = pg.evaluate("() => fcWin()")
         assert (pg.evaluate(f"() => (T0('{b}') - T0('{a}')) / 864e5")) >= 28
         pg.click('#fcRange [data-r="w12"]')
         pg.wait_for_timeout(200)
-        assert pg.evaluate("() => fc.range === 'w12' && $('fcCustom').hidden && fcWin()[1] === FUEL.eff")
+        assert pg.evaluate("() => fc.range === 'w12' && !$('fcCustom').hidden && fcWin()[1] === FUEL.eff && $('fcTo').value === FUEL.eff")
         assert pg.evaluate(OVERFLOW) is None
 
 

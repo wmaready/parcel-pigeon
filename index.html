@@ -929,7 +929,7 @@ details.about p{margin:var(--sp-1) 0 0;max-width:72ch;line-height:1.5}
 .nxtop{display:flex;justify-content:space-between;gap:var(--sp-2);margin-bottom:2px}
 .nxk{color:var(--up);font-weight:600}
 .nxhero .count{margin-top:var(--sp-1)}
-.nxhero .count b{font-size:1.8rem}
+.nxhero .count b{font-size:1.8rem}.nxhero .count.today{display:block}.nxhero .count.today b{color:var(--accent);font-size:1.5rem}
 .nxhero .what{margin-top:var(--sp-1);font-size:var(--fs-md)}
 .nxhero .fees{margin-top:var(--sp-2)}
 
@@ -2941,7 +2941,7 @@ body.bio-open{overflow:hidden}
     <div class="panel"><div class="ph"><h2 id="fcTitle">Fuel surcharge over time</h2></div>
       <div class="pb fctl">
         <div class="seg" id="fcRange" role="group" aria-label="Time range"><button data-r="w12">12 wks</button><button data-r="ytd">This year</button><button data-r="y1">1 year</button><button data-r="all">Since 2017</button><button data-r="custom">Custom</button></div>
-        <div class="fccust" id="fcCustom" hidden><label>From <input type="date" id="fcFrom"></label><label>To <input type="date" id="fcTo"></label></div>
+        <div class="fccust" id="fcCustom"><label>From <input type="date" id="fcFrom" aria-label="Chart start date"></label><label>To <input type="date" id="fcTo" aria-label="Chart end date"></label><span class="lbl fcspan" id="fcSpan"></span></div>
         <div class="chips wrap" id="fcSeries" role="group" aria-label="Lines to show"></div>
       </div>
       <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fcbrush" id="fcBrush"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
@@ -7910,11 +7910,11 @@ function renderToday(){
 }
 function renderNext(){
   const x=nextChange();if(!x){$('next').innerHTML='';return}
-  const [D,H,M]=countParts(x.d);
-  $('next').innerHTML=`<button class="nxhero" data-clock="${x.id}" aria-label="Next cost change: ${esc(x.w)}">
+  const [D,H,M]=countParts(x.d),onDay=daysTo(x.d)<=0;      // on the day itself: no countdown to zero, just the fact
+  $('next').innerHTML=`<button class="nxhero" data-clock="${x.id}" aria-label="Next cost change: ${esc(x.w)}${onDay?', effective today':''}">
     <div class="nxtop"><span class="lbl nxk">Next cost change</span><span class="lbl">${carList(x.c)}</span></div>
     <div class="lbl">${fmtD(x.d,{weekday:'long',month:'long',day:'numeric'})}${x.end?' to '+fmtD(x.end,{month:'short',day:'numeric'}):''}</div>
-      <div class="count" role="timer" aria-label="${D} days ${H} hours ${M} minutes"><div><b>${String(D).padStart(2,'0')}</b><span class="lbl">Days</span></div><div><b>${String(H).padStart(2,'0')}</b><span class="lbl">Hrs</span></div><div><b>${String(M).padStart(2,'0')}</b><span class="lbl">Min</span></div></div>
+      ${onDay?`<div class="count today"><b>Effective today</b></div>`:`<div class="count" role="timer" aria-label="${D} days ${H} hours ${M} minutes"><div><b>${String(D).padStart(2,'0')}</b><span class="lbl">Days</span></div><div><b>${String(H).padStart(2,'0')}</b><span class="lbl">Hrs</span></div><div><b>${String(M).padStart(2,'0')}</b><span class="lbl">Min</span></div></div>`}
       <div class="what">${esc(x.w)}</div>
       ${x.fees?`<div class="fees">${x.fees.map(feeDiv).join('')}</div>`:''}</button>`;
 }
@@ -8339,7 +8339,7 @@ function renderClockList(){
     const ann=cost&&sAnn&&sAnn<x.d?sAnn:null,rep1=cost&&!ann&&sRep&&sRep<x.d?sRep:null,nd=noticeDays(ann||rep1,x.d);
     const offc=cost&&cycleOf(String(x.c).split(/\s*(?:·|,)\s*/)[0],fx&&{gri:'gri',peak:'peak',usps:'peak',perlb:'surcharge',fuel:'fuel_table',fee:'surcharge',das:'das',zone:'surcharge'}[fx.t]||kindOf(x.w),x.d,ann||rep1)==='off';
     const eff=x.imp==='info'?(n<0?'Happened':'Happens'):(n<0?'In effect since':'Takes effect');
-    const cd=n>1?`<b>${n}</b> days`:n===1?'<b>Tomorrow</b>':n===0?'<b>Today</b>':x.imp==='info'?'Passed':'In effect';
+    const cd=n>1?`<b>${n}</b> days`:n===1?'<b>Tomorrow</b>':n===0?(x.imp==='info'?'<b>Today</b>':'<b>Effective today</b>'):x.imp==='info'?'Passed':'In effect';
     const on=n<0&&x.end&&daysTo(x.end)>=0;          // a dated range still running isn't past
     return `<details class="dr i-${impCls(x.imp)} ${on?'soon':n<0?'past':n<=21?'soon':''}" id="${x.id}"><summary>
       <span class="rtile" aria-hidden="true"><i>${MON(x.d)}</i><b>${+x.d.slice(8)}</b><small>${fmtD(x.d,{weekday:'short'})}</small></span>
@@ -8354,9 +8354,10 @@ function renderClockList(){
   const just=DATES.filter(x=>dn(x)<0&&dn(x)>=-2&&!live.includes(x));
   const next=DATES.filter(x=>dn(x)>=0),past=DATES.filter(x=>dn(x)<-2&&!live.includes(x)).reverse();
   const months=L=>{let m0='';return L.map(x=>{const m=fmtD(x.d,{month:'long',year:'numeric'});const hd=m!==m0?`<div class="month">${m}</div>`:'';m0=m;return hd+item(x)}).join('')};
-  let h=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`;
+  let h='';
   if(just.length)h+=`<div class="month rcgrp">Just took effect</div>${just.map(item).join('')}`;
   if(live.length)h+=`<div class="month rcgrp">In effect now</div>${live.map(item).join('')}`;
+  h+=`<div class="rctoday"><span>Today</span><b>${fmtD(TODAY,{weekday:'short',month:'short',day:'numeric'})}</b></div>`;
   h+=next.length?months(next):'<p class="empty">Nothing dated ahead yet.</p>';
   if(past.length)h+=`<details class="rcpast"><summary>Past changes <span class="lbl">${past.length}</span></summary>${months(past)}</details>`;
   $('clockList').innerHTML=h;
@@ -8606,8 +8607,10 @@ function renderFuelChart(){
     `<button class="chip" data-s="dsl" aria-pressed="${fc.dsl}">${swatch(DSL_SER)}Diesel $/gal</button>`+
     `<button class="chip" data-s="jet" aria-pressed="${fc.jet}">${swatch(JET_SER)}Jet fuel $/gal</button>`;
   const [s0,s1]=fcWin(),rows=FUELDB.filter(r=>r[0]>=s0&&r[0]<=s1);
-  const cu=fc.range==='custom';$('fcCustom').hidden=!cu;if(cu){const f=$('fcFrom'),t=$('fcTo');[f,t].forEach(i=>{i.min=FUELDB[0][0];i.max=FUEL.eff});
-    if(document.activeElement!==f)f.value=s0;if(document.activeElement!==t)t.value=s1}
+  // the two dates always show the window on the chart, however it was set (a preset, the strip, or typing here)
+  {const f=$('fcFrom'),t=$('fcTo');[f,t].forEach(i=>{i.min=FUELDB[0][0];i.max=FUEL.eff});
+    if(document.activeElement!==f)f.value=s0;if(document.activeElement!==t)t.value=s1;
+    const dd=Math.round((T0(s1)-T0(s0))/864e5);$('fcSpan').textContent=dd>=700?`${(dd/365).toFixed(1).replace(/\.0$/,'')} years`:dd>=120?`${Math.round(dd/30.4)} months`:`${Math.round(dd/7)+1} weeks`}
   const lines=FSER.filter(s=>fc.on.includes(s.k)).map(s=>Object.assign({},s,{p:rows.filter(r=>r[s.i]!=null).map(r=>[r[0],r[s.i]])})).filter(s=>s.p.length);
   const dsl0=fc.dsl?Object.assign({},DSL_SER,{p:DIESELDB.filter(r=>r[0]>=s0&&r[0]<=s1)}):null;
   const jet=fc.jet?Object.assign({},JET_SER,{p:OILDB.jet.filter(r=>r[0]>=s0&&r[0]<=s1)}):null;
