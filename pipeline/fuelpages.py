@@ -135,7 +135,7 @@ def main(fetch_text=None, render_text=None):
         def render_text(u):
             html = fetch.render(u)
             if not html:
-                raise RuntimeError("no browser available to render the page")
+                raise RuntimeError("could not render the page: " + (fetch.render_error or "no reason given"))
             return filings.to_text(html)
     try:
         merge(fuel, "FedEx", fedex_weeks(*[fetch_text(u) for u in FEDEX_URLS]), FEDEX_MAP, today)
