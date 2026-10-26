@@ -1,5 +1,5 @@
 {
- "cursor": 64,
+ "cursor": 4,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -220,7 +220,12 @@
    "first": "2026-10-21",
    "n": "USPS SKU User Guide_July2026.pdf",
    "hash": "5af8e7bf7432",
-   "checked": "2026-10-26"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://pe.usps.com/resources/PriceChange/USPS SKU User Guide_July2026.pdf",
+    "txt": "data/snapshots/507998e442f6/2026-10-26.txt"
+   }
   },
   "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf": {
    "first": "2026-10-21",
@@ -354,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 126,
+   "fails": 127,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 126,
+   "fails": 127,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -798,25 +803,36 @@
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "Amazon Shipping 2026 peak surcharges"
+   "n": "Amazon Shipping 2026 peak surcharges",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf",
+    "txt": "data/snapshots/4c9f0064595a/2026-10-26.txt"
+   }
   },
   "https://shipping.amazon.com/shipping-policy": {
    "hash": "59bdb3d710b8",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "Amazon Shipping policies"
+   "n": "Amazon Shipping policies",
+   "pic_try": "2026-10-26"
   },
   "https://shipping.amazon.com/shipping-terms-and-conditions": {
    "hash": "fdfe4754d270",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "Amazon Shipping terms and conditions"
+   "n": "Amazon Shipping terms and conditions",
+   "pic_try": "2026-10-26"
   },
   "https://ship.amazon.com/site-terms": {
    "hash": "c48a7f56ed69",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "Conditions of Use"
+   "n": "Conditions of Use",
+   "snap": {
+    "d": "2026-10-26",
+    "img": "data/snapshots/c56e34747d41/2026-10-26.jpg"
+   }
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
    "hash": "f7644ecfa383",
@@ -1227,19 +1243,34 @@
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026"
+   "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21317.pdf",
+    "txt": "data/snapshots/58373f1b7bc3/2026-10-26.txt"
+   }
   },
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)"
+   "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://public-inspection.federalregister.gov/2026-06162.pdf",
+    "txt": "data/snapshots/b145442162a8/2026-10-26.txt"
+   }
   },
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
    "checked": "2026-10-26",
-   "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)"
+   "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://public-inspection.federalregister.gov/2026-17656.pdf",
+    "txt": "data/snapshots/abee69e51002/2026-10-26.txt"
+   }
   }
  }
 }
