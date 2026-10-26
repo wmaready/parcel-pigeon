@@ -2964,7 +2964,6 @@ body.bio-open{overflow:hidden}
     <details class="about"><summary>About these documents</summary><p>Every link opens the carrier's, USPS's or the regulator's own copy. Each carrier opens to its next and last earnings call, then one drop-down per year with the documents and earnings reports for that year; "Effective" and "Updated" dates are read from the document itself, checked Oct 9, 2026. Some carriers replace a file at the same address when they update it, so the dates show the version we last checked.</p></details>
   </div>
   <div class="view" data-view="alerts">
-    <div class="panel" style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Rate guide and terms changes</h2><span class="lbl" id="gcCount"></span></div><div id="gcList"></div></div>
     <div class="panel" id="namePanel" hidden style="margin-bottom:var(--sp-4)"><div class="ph"><h2>Your name for comments</h2><span class="lbl" id="nameState"></span></div>
       <form class="pname" id="nameForm"><label class="sr" for="nameIn">Display name</label><input id="nameIn" maxlength="40" placeholder="Display name, e.g. Walter M" autocomplete="nickname"><button type="submit">Save</button>
       <p>Shown on your comments. Others can @mention it, and with phone alerts on you'll get a push when they do. The first device to post with a name keeps it.</p></form></div>
@@ -8164,6 +8163,7 @@ function renderDeals(){
 
 /* ===== Guide-change alerts (from the document watcher) ===== */
 function renderGuideChanges(){
+  if(!$('gcList'))return;       // the Alerts tab is phone alerts only; guide changes show in News and as new markers in the library
   const ws=NEWS.filter(n=>n.cat==='Guide changes').sort((a,b)=>b.date.localeCompare(a.date));
   const watched=DOCS.filter(d=>d.u&&d.t!=='Market report'&&d.cur!==false&&!/\.xlsx?(\?|$)/i.test(d.u)).length;
   $('gcCount').textContent=`Watching ${watched} documents`;

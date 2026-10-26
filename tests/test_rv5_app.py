@@ -507,3 +507,18 @@ def test_today_search_bar_opens_search_and_finds_things(site, width):
         pg.wait_for_function("() => document.querySelectorAll('#cRes .cm-r').length > 2", timeout=5000)
         assert pg.evaluate("() => /UPS/i.test(document.getElementById('cRes').textContent)")
         pg.keyboard.press("Escape")
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_alerts_tab_is_phone_alerts_only(site, width):
+    """Oct 26, 2026: the document watcher's change log (one stale Amazon item) no longer sits on the Alerts tab; guide changes
+    stay in News."""
+    with app(site, width) as pg:
+        pg.evaluate("() => { showTab('docs'); setView.docs('alerts') }")
+        pg.wait_for_timeout(300)
+        assert pg.evaluate("() => !$('gcList') && !/Rate guide and terms changes/.test(document.getElementById('s-docs').textContent)")
+        assert pg.evaluate("() => !!document.querySelector('#prefs') && /Carrier guide changes/.test($('prefs').textContent)")
+        assert pg.evaluate("() => NEWS.some(n => n.cat === 'Guide changes')")
+        pg.evaluate("() => { showTab('docs'); setView.docs('library') }")
+        pg.wait_for_timeout(200)
+        assert pg.evaluate("() => { try { dropOff({id: 'x', car: 'Amazon', doc: 'd'}); return true } catch (e) { return String(e) } }") is True
