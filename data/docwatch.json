@@ -1,5 +1,5 @@
 {
- "cursor": 49,
+ "cursor": 64,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -159,25 +159,45 @@
    "first": "2026-10-21",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
    "hash": "267b04f3b3cd",
-   "checked": "2026-10-26"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
+    "txt": "data/snapshots/c9d5d315a7b7/2026-10-26.txt"
+   }
   },
   "https://about.usps.com/handbooks/dm204.pdf": {
    "first": "2026-10-21",
    "n": "dm204.pdf",
    "hash": "e6babc6a9b6c",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/handbooks/dm204.pdf",
+    "txt": "data/snapshots/9805f5545d35/2026-10-26.txt"
+   }
   },
   "https://about.usps.com/publications/pub25.pdf": {
    "first": "2026-10-21",
    "n": "pub25.pdf",
    "hash": "9d5c365ab973",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://about.usps.com/publications/pub25.pdf",
+    "txt": "data/snapshots/713cbfa3be22/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/resources/Misc/USPS SKU User Guide.pdf": {
    "first": "2026-10-21",
    "n": "USPS SKU User Guide.pdf",
    "hash": "5af8e7bf7432",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://pe.usps.com/resources/Misc/USPS SKU User Guide.pdf",
+    "txt": "data/snapshots/a7a8dba2d447/2026-10-26.txt"
+   }
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf": {
    "first": "2026-10-21",
@@ -200,7 +220,7 @@
    "first": "2026-10-21",
    "n": "USPS SKU User Guide_July2026.pdf",
    "hash": "5af8e7bf7432",
-   "checked": "2026-10-21"
+   "checked": "2026-10-26"
   },
   "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf": {
    "first": "2026-10-21",
@@ -334,14 +354,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 125,
+   "fails": 126,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 125,
+   "fails": 126,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-26"
@@ -736,13 +756,23 @@
    "first": "2026-10-25",
    "n": "ups-ground-saver-brand-guidelines-us-en.pdf",
    "hash": "778400ab2847",
-   "checked": "2026-10-25"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
+    "txt": "data/snapshots/9e234de0a7df/2026-10-26.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf": {
    "first": "2026-10-25",
    "n": "ups-ground-saver-gtl-us-en.pdf",
    "hash": "1844888184b1",
-   "checked": "2026-10-26"
+   "checked": "2026-10-26",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf",
+    "txt": "data/snapshots/c6c550f45440/2026-10-26.txt"
+   }
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx": {
    "n": "2026 FedEx Retail Rates (Excel)",
@@ -998,13 +1028,23 @@
    "hash": "a5290fff91cb",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "2026 UPS Small Business Rate Guide"
+   "n": "2026 UPS Small Business Rate Guide",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf",
+    "txt": "data/snapshots/d3743381dfe9/2026-10-26.txt"
+   }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:0b31f1b2-8a05-4897-8cc0-6c19db7c7d91/original/as/sbr-cwt-final-us-en.pdf": {
    "hash": "836ed90f110d",
    "first": "2026-10-25",
    "checked": "2026-10-26",
-   "n": "2026 UPS Small Business hundredweight rates"
+   "n": "2026 UPS Small Business hundredweight rates",
+   "snap": {
+    "d": "2026-10-26",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:0b31f1b2-8a05-4897-8cc0-6c19db7c7d91/original/as/sbr-cwt-final-us-en.pdf",
+    "txt": "data/snapshots/9c48814ee71d/2026-10-26.txt"
+   }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
    "hash": "778400ab2847",

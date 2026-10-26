@@ -1,0 +1,2014 @@
+Copyright © 2026 USPS. All rights reserved
+USPS SKU User Guide
+Version 3.10.2
+06/05/2026
+USPS SKU User Guide page 1
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Table of Contents
+Standard SKU .......................................................................................................................................................................... 5
+Service ................................................................................................................................................................................. 5
+Type ..................................................................................................................................................................................... 5
+Sub-Type ............................................................................................................................................................................. 6
+Shape ................................................................................................................................................................................... 7
+Variation .............................................................................................................................................................................. 8
+Delivery Type..................................................................................................................................................................... 10
+Ounce ................................................................................................................................................................................ 10
+Entry .................................................................................................................................................................................. 10
+Price Category ................................................................................................................................................................... 11
+Price Type .......................................................................................................................................................................... 12
+Zone .................................................................................................................................................................................. 12
+Weight ............................................................................................................................................................................... 12
+Weight Fraction ................................................................................................................................................................. 12
+Periodicals ............................................................................................................................................................................ 14
+Sub-Type ........................................................................................................................................................................... 14
+Shape ................................................................................................................................................................................. 14
+Piece Level/Bundle Level/Container Level ........................................................................................................................ 15
+Delivery Type..................................................................................................................................................................... 15
+Reserved............................................................................................................................................................................ 15
+Entry .................................................................................................................................................................................. 15
+Price Category ................................................................................................................................................................... 16
+Price Type .......................................................................................................................................................................... 16
+Zone .................................................................................................................................................................................. 16
+Weight ............................................................................................................................................................................... 17
+Weight Fraction ................................................................................................................................................................. 17
+Extra Services and Fees ........................................................................................................................................................ 18
+Extra Service or Surcharge Type ...................................................................................................................................... 18
+Mail Type ........................................................................................................................................................................... 19
+Variation ............................................................................................................................................................................ 20
+Sub-Type ........................................................................................................................................................................... 22
+USPS SKU User Guide page 2
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Add On .............................................................................................................................................................................. 22
+Associated Shape .............................................................................................................................................................. 22
+Associated Sub-Type ......................................................................................................................................................... 23
+Price Type .......................................................................................................................................................................... 23
+Associated Delivery Type .................................................................................................................................................. 23
+Amount ............................................................................................................................................................................. 24
+PO Boxes ............................................................................................................................................................................... 25
+Sub-Type ........................................................................................................................................................................... 25
+Period ................................................................................................................................................................................ 25
+Reserved............................................................................................................................................................................ 25
+Price Type .......................................................................................................................................................................... 25
+Fee Group .......................................................................................................................................................................... 26
+Size .................................................................................................................................................................................... 26
+Number Of ........................................................................................................................................................................ 26
+Services, Fees and Incentives ............................................................................................................................................... 27
+Service Type ...................................................................................................................................................................... 27
+Associated Mail Type ........................................................................................................................................................ 28
+Period ................................................................................................................................................................................ 28
+Fee Type ............................................................................................................................................................................ 29
+Fee Sub-Type ..................................................................................................................................................................... 29
+Associated Shape .............................................................................................................................................................. 30
+Associated Sub-Type ......................................................................................................................................................... 30
+Price Type .......................................................................................................................................................................... 30
+Fee Group .......................................................................................................................................................................... 31
+Amount or Weight ............................................................................................................................................................ 31
+Stationery ............................................................................................................................................................................. 32
+Stationery Type ................................................................................................................................................................. 32
+Shape ................................................................................................................................................................................. 32
+Options .............................................................................................................................................................................. 32
+Sub-Options....................................................................................................................................................................... 33
+Reserved............................................................................................................................................................................ 33
+Count/Amount .................................................................................................................................................................. 33
+AMS ....................................................................................................................................................................................... 34
+AMS Service ...................................................................................................................................................................... 34
+USPS SKU User Guide page 3
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Fee Type ............................................................................................................................................................................ 35
+Fee Sub-Type ..................................................................................................................................................................... 35
+API Type ............................................................................................................................................................................ 35
+API Sub-Type ..................................................................................................................................................................... 36
+Cycles ................................................................................................................................................................................ 36
+Reserved............................................................................................................................................................................ 36
+Count ................................................................................................................................................................................. 36
+Dimension Volume Fees ....................................................................................................................................................... 37
+Fee Type ............................................................................................................................................................................ 37
+Fee Sub-Type ..................................................................................................................................................................... 37
+Variation ............................................................................................................................................................................ 38
+Associated Mail Type ........................................................................................................................................................ 38
+Entry .................................................................................................................................................................................. 39
+Price Category ................................................................................................................................................................... 39
+Price Type .......................................................................................................................................................................... 39
+Zone .................................................................................................................................................................................. 39
+Weight ............................................................................................................................................................................... 40
+Weight Fraction ................................................................................................................................................................. 40
+Volume Fees and Incentives ................................................................................................................................................ 41
+Associated Mail Type ........................................................................................................................................................ 41
+Incentive/Fee .................................................................................................................................................................... 41
+Sub Type ............................................................................................................................................................................ 41
+Shape ................................................................................................................................................................................. 41
+Variation ............................................................................................................................................................................ 42
+Non/Automation ............................................................................................................................................................... 42
+Entry .................................................................................................................................................................................. 42
+Price Category ................................................................................................................................................................... 42
+Price Type .......................................................................................................................................................................... 43
+Weight ............................................................................................................................................................................... 43
+Extra Services and Duty Fees ............................................................................................................................................... 44
+Extra Service or Surcharge Type ....................................................................................................................................... 44
+Mail Type ........................................................................................................................................................................... 44
+Variation ............................................................................................................................................................................ 44
+Associated Shape .............................................................................................................................................................. 45
+USPS SKU User Guide page 4
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Price Type .......................................................................................................................................................................... 45
+Price Group ....................................................................................................................................................................... 45
+Document Control ................................................................................................................................................................ 46
+USPS SKU User Guide page 5
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Each USPS Product and Service can be identified using a Stock Keeping Unit (SKU). Each digit, or group of digits within
+the SKU corresponds to product/service descriptors or rate ingredients to map directly to the appropriate price for the
+Product or Service.
+Standard SKU
+Service
+Type
+If the Type for the Product/Service is Periodicals (H), Extra Service and
+Surcharge (X), PO Boxes (1), Services and Fees (2), Stationery (3), or
+AMS (4), the remainder of the SKU follows alternate definitions than
+the Standard SKU. See sections below for alternate SKU Definitions:
+• For Periodicals, see section titled Periodicals.
+• For Extra Service and Surcharge, see section titled Extra Service.
+• For PO Boxes, see section titled PO Boxes.
+• For Services, Fees and Incentives, see section titled Services,
+Fees and Incentives.
+• For Stationery, see section titled Stationery.
+• For AMS, see section titled AMS.
+• For Dimension Volume Fees, see section titled Dimension
+Volume Fees.
+• For Extra Services and Duty Fees, see section titled Extra
+Services and Duty Fees.
+Code Description
+D Domestic
+I International
+Code Description
+A Airmail
+B Bound Printed Matter
+C ECOMPRO
+D EDDM
+E Priority Mail Express
+F First-Class Mail
+H Periodicals
+I Extra Services and Duty Fees
+L Library
+M Media
+N PMEOD
+O PMOD
+P Priority Mail
+Q ISAL (retired)
+R Return Service
+S USPS Marketing Mail
+U USPS Ground Advantage
+V Parcel Select
+X Extra Service and Surcharge
+Y IPA
+Z Priority Mail Critical Mail
+1 PO Boxes
+2 Services, Fees and Incentives
+3 Stationery
+4 AMS
+5 ePacket
+6 USPS Connect Local
+7 USPS Connect Regional
+8 Dimensional Volume Fees
+9 Volume Incentives and Fees
+USPS SKU User Guide page 6
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Sub-Type
+Code Description
+X None
+A Automation
+B Nonautomation
+C Carrier Route
+D Carrier Route Nonautomation
+E Pending Periodicals
+F Flat Rate
+G USPS Connect Local
+H USPS Connect Regional
+I Irregular (inactive)
+J Nonstandard
+K Share Mail
+L Metered
+M Machinable
+N Nonmachinable
+O USPS Connect Flat Rate
+P Presorted
+Q Automation Disc
+R Regional Rate
+S Simple Samples
+T Permit Reply Mail
+U Cubic
+V Nonpresorted
+W Permit Reply Mail Disc
+Y Nonautomation Disc
+Z Customized
+1 USPS Connect Local Mail
+USPS SKU User Guide page 7
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Shape
+The only classes of mail that use shape to determine a price are First-Class
+Mail International, First-Class Mail, Marketing Mail, USPS Ground
+Advantage, Parcel Select, and Bound Printed Matter.
+Code Description
+X None
+A Bag
+B Box
+C Postcards
+E Envelope
+F Flats or Large Envelope
+H Half Tray
+I Full Tray
+J EMM Tray
+K Tub
+L Letters
+M M-Bag
+N Balloon
+O Oversize
+P Parcel or Package
+Q Keys and IDs
+R Dimensional Weight
+U Pallet
+V Half Pallet Box
+W Full Pallet Box
+USPS SKU User Guide page 8
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Variation
+Conditions Variation
+Component Value Description Value Description
+Service D Domestic 0 Flat Rate Envelope
+Service
+Type
+I International 1 Legal Flat Rate Envelope
+E Priority Mail Express 2 Padded Flat Rate Envelope
+Type
+Sub-Type
+P Priority Mail 3 Gift Card Flat Rate Envelope
+F Flat Rate 4 Small Flat Rate Envelope
+Shape
+E Envelope 5 Window Flat Rate Envelope
+Service
+D Domestic 0 Large Flat Rate Box
+I International 1 Medium Flat Rate Box
+Type E Priority Mail Express 2 Small Flat Rate Box
+P Priority Mail 3 APO/FPO/DPO Large Flat Rate
+Box
+Sub-Type F Flat Rate
+Shape B Box
+Service D Domestic 1 Cubic Tier 1
+Type P Priority Mail 2 Cubic Tier 2
+Sub-Type U Cubic 3 Cubic Tier 3
+4 Cubic Tier 4
+5 Cubic Tier 5
+Service D Domestic 1 Cubic Tier 1
+Type U USPS Ground Advantage 2 Cubic Tier 2
+Sub-Type U Cubic 3 Cubic Tier 3
+4 Cubic Tier 4
+5 Cubic Tier 5
+6 Cubic Tier 6
+7 Cubic Tier 7
+8 Cubic Tier 8
+9 Cubic Tier 9
+0 Cubic Tier 10
+The Variation exists to accommodate unique
+scenarios based on the descriptors or rate ingredients
+provided for Service, Type, Sub-Type, and Shape. The
+columns on the left below show the conditions that
+must be met to select from the Variations.
+USPS SKU User Guide page 9
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Service D Domestic 0 Volume 1-200,000
+Type S USPS Marketing Mail 1 Volume Over 200,000
+Sub-Type S Simple Samples
+Shape P Parcels
+Service D Domestic 0 USPS Ground Advantage
+Type U USPS Ground Advantage 1 USPS Ground Advantage LOR
+Service D Domestic 0 Residual
+Type F First-Class Mail 1 Residual Uniform
+Sub-Type M Machinable
+Shape L Letters
+Price Category R Residual
+Price Type C Commercial
+Service D Domestic 1 Stamped and PVI (Surcharge)
+Type F First-Class Mail
+Sub-Type N Nonmachinable
+Letter L Letter
+Service D Domestic S Semi-postal
+Type F First-Class Mail
+Sub-Type X None
+Shape X None
+Service D Domestic 1 Variation Simplified Addressing
+Type B Bound Printed Matter
+Sub-Type C Carrier Route
+Shape F Flats
+Service D Domestic 0 Small Flat Rate
+Type V Parcel Select 1 Large Flat Rate
+Sub-Type 0 USPS Connect Flat Rate
+Service D Domestic X None
+0 None (Unless otherwise defined)
+USPS SKU User Guide page 10
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Delivery Type
+Ounce
+For Parcel Select SKUs requiring an indicator to differentiate between ounce and pound.
+Entry
+Code Description
+X None
+H Hold for Pickup
+S Sunday/Holiday
+R Return
+Code Description
+X N/A
+O Ounce
+Code Description
+X N/A
+B DHUB
+C DNDC
+D ONDC
+E Full Network
+F DSCF
+G OSCF
+H DADC
+I OADC
+N None
+P RPF
+R RDU
+S RSCF
+U DDU
+V ODMU
+USPS SKU User Guide page 11
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Price Category
+Code Description
+X Not Applicable
+3 3-Digit
+5 5-Digit
+A AADC
+B Basic
+C Basic – CR Bundles/Pallet
+D ADC
+E NDC
+F None (Origin Entry)
+G High Density Plus
+H High Density
+I Target Small
+J Targeted Large
+K Every Door (Saturation) Small
+L Every Door (Saturation) Large
+M Mixed AADC (Inactive)
+N Mixed ADC
+O Mixed NDC (Inactive)
+P Presorted
+Q Nonpresorted
+R Residual
+S Saturation
+T SCF
+U Single-Piece
+V Mixed
+W Direct
+Y High Density CR Bundles/Pallets
+Z Percent
+1 Heavy Printed Matter
+USPS SKU User Guide page 12
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Price Type
+Zone
+Weight
+Weight is the maximum weight for the price cell.
+Weight Fraction
+Weight is the maximum weight for the price cell. Weight Fraction is the
+value after the decimal place. For example, if a USPS Marketing Mail piece
+weighs 3.4 oz., the value would be 4.
+Code Description
+B Commercial Base
+C Commercial Price
+D Commercial Pound Price
+F Full Service
+G Full Service Pound Price
+I Drop Ship
+J Drop Ship Pound Price
+K Incentive
+N Nonprofit Price
+O Nonprofit Pound Price
+P Commercial Plus
+R Retail Price
+S Retail Pound Price
+1 NSA Price
+2 NSA Pound Price
+3 NSA Full Service
+4 NSA Full Service Pound Price
+5 NSA Drop Ship
+6 NSA Drop Ship Pound Price
+A Average Price
+Code Description
+WW Worldwide Nonpresort
+XX N/A
+X0 N/A
+00…20 Numeric Zone
+Code Description
+XX N/A
+00…99 Weight (See next page for
+USPS Ground Advantage.
+Weight in whole ounces for
+First-Class, Parcel Select, USPS
+Marketing Mail, otherwise in
+pounds.)
+Code Description
+X N/A
+0…9 Weight (See next page for
+USPS Ground Advantage.
+Weight in whole ounces for
+First-Class, Parcel Select, USPS
+Marketing Mail, otherwise in
+pounds.)
+USPS SKU User Guide page 13
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+USPS Ground Advantage – Structure for Ounces and Pounds
+USPS Ground Advantage – Commercial
+If Price Type = C and Price Category = U, then weight field is ounces.
+If Price Type = C and Price Category = X, then weight field is pounds.
+Type (2) Shape (4) Price Category (9) Price Type (10) Weight (13-15)
+U P U C OZ.
+U P X C LB.
+U R X C LB.
+USPS Ground Advantage – Retail
+If Price Type = R and Shape = P, then weight field is ounces.
+If Price Type = R and Shape = X or R, then weight field is pounds.
+Type (2) Shape (4) Price Category (9) Price Type (10) Weight (13-15)
+U P X R OZ.
+U X X R LB.
+U R X R LB.
+USPS SKU User Guide page 14
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Periodicals
+For Periodicals, Service & Type (H = Periodicals), remain the same, but the subsequent fields are modified to include
+Periodicals-specific fields.
+Sub-Type
+Shape
+Code Description
+X None
+A Automation
+B Nonautomation
+C Carrier Route
+E Advertising
+G Editorial
+H Firm Bundle
+J Ride Along
+K Addressed
+L Nonadvertising Adjustment
+M Machinable
+N Nonmachinable
+Code Description
+X None
+D Bundle
+F Flats
+L Letters
+P Parcels
+T Tray/Sack
+U Pallet
+USPS SKU User Guide page 15
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Piece Level/Bundle Level/Container Level
+Delivery Type
+Reserved
+This component is not currently in use for the Periodicals SKU and should always be populated with an ‘X’.
+Entry
+Code Description
+X N/A
+3 3-Digit/SCF
+5 5-Digit
+6 Firm
+7 5-Digit/CR
+C Carrier Route
+D ADC
+N Mixed ADC
+Y Barcoded
+Z Nonbarcoded
+Code Description
+I Inside County
+O Outside County
+Code Description
+X N/A
+Code Description
+X N/A
+C DNDC
+D ONDC
+F DSCF
+G OSCF
+H DADC
+I OADC
+N None
+R RDU
+S RSCF
+U DDU
+V ODMU
+USPS SKU User Guide page 16
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Price Category
+Price Type
+Zone
+Code Description
+X N/A
+3 3-Digit
+5 5-Digit
+B Basic
+C Carrier Route
+D ADC
+F None
+H High Density
+N Mixed ADC
+S Saturation
+T SCF/3-Digit
+V Mixed
+Y CR/5-Digit
+Code Description
+A Science-of-Agriculture Price
+C Piece Price
+D Pound Price
+H Bundle Price
+Q Pallet Price
+T Sack Price
+U Discount
+W Tray Price
+Code Description
+00…20 Numeric Zone
+USPS SKU User Guide page 17
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Weight
+Weight Fraction
+Code Description
+00…99 Weight (in whole pounds)
+Code Description
+0…9 Weight Fraction (in pounds)
+USPS SKU User Guide page 18
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Extra Services and Fees
+For Extra Services and Fees, Service & Type (X = Extra Services and Fees), remain the same, but the subsequent fields are
+modified to include Extra Services and Fees specific fields.
+Extra Service or Surcharge Type
+Code Description
+A Adult Signature Required
+B Adult Signature Restricted
+Delivery
+C Collect on Delivery
+D Certificate of Mailing
+E Certified Mail
+F Premium Forwarding Service
+G Registered Mail
+H Special Handling
+I Insurance
+J Restricted Delivery
+K Picture Permit Imprint
+L Parcel Airlift
+M API Services
+N eVS Unmanifested Fee
+O Live Animal and Perishable
+Handling Fee
+P Plus One
+Q Label Delivery
+R Return Receipt
+S Signature Confirmation
+T USPS Tracking
+U Delivery Confirmation
+V Same Day
+W Next Day
+X Extended Coverage
+Y Day Certain Delivery
+Z Sunday/Holiday Delivery
+0 HAZMAT
+1 Nonmachinable
+USPS SKU User Guide page 19
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Mail Type
+2 Detached Address Label
+4 Nonbarcoded Surcharge
+5 Live Animal Transportation Fee
+6 Pickup on Demand
+7 Package Intercept
+8 Package Quality Non-
+Compliance Fee
+9 Full Service Intelligent Mail
+Code Description
+X None
+6 USPS Connect Local
+7 USPS Connect Regional
+B Bound Printed Matter
+E Priority Mail Express
+F First-Class Mail
+H Periodicals
+L Library Mail
+M Media Mail
+O PMOD
+P Priority Mail
+S USPS Marketing Mail
+U USPS Ground Advantage
+V Parcel Select
+USPS SKU User Guide page 20
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Variation
+The Variation exists to accommodate unique scenarios based on the descriptors or rate ingredients provided for Service,
+Type, Sub-Type, and Shape. The columns on the left below show the conditions that must be met to select from the
+Variations.
+Conditions Variation
+Component Value Description Value Description
+Service D Domestic 1 (Form 3606)
+I International 2 (Form 3665)
+Type X Extra Services 3 Additional Copy of PS Form 3817
+Extra Service or Surcharge Type D Certificate of Mailing 4 Additional Copy of PS Form 3606
+5 Additional Copy of PS Form 3665
+Service D Domestic 0 None
+Type X Extra Services 1 Fragile Inactive
+Extra Service or Surcharge Type H Special Handling 2 Hazardous Material Transportation
+3 Live Animal Transportation
+4 Perishables
+5 Cremated Remains
+Service D Domestic 0 Less than 1 million
+Type X Extra Services 1 1 million
+Extra Service or Surcharge Type G Registered Mail 2 2 million
+3 3 million
+4 4 million
+Example 5 5 million
+1,009,000 DXGX1XXXXXX9000 6 6 million
+1,010,000 DXGX1XXXXXX010K 7 7 million
+14,110,000 DXGXEXXXXXX110K 8 8 million
+9 9 million
+A 10 million
+B 11 million
+C 12 million
+D 13 million
+E 14 million
+F 15 million
+Service D Domestic 0 21+
+Type X Extra Service 1 18+
+Extra Service or Surcharge Type A Adult Signature
+Required
+USPS SKU User Guide page 21
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+B Adult Signature
+Restricted Delivery
+Service D Domestic S USPS Marketing Mail
+Type X Extra Service
+Extra Service or Surcharge Type P Plus One
+Service D Domestic X None
+Service D Domestic
+Type X Extra Service
+Extra Service or Surcharge Type O Live Animal and
+Perishable Handling
+Fee
+Mail Type E Priority Mail Express 0 None
+P Priority Mail 1 LOR
+U USPS Ground
+Advantage
+Service D Domestic N NCOA+
+Type X Extra Services A Addressing
+Extra Service or Surcharge Type M API Services T Tracking
+Sub-Type M Monthly
+Associated Shape (Tier) 1 Tier 1
+2 Tier 2
+3 Tier 3
+4 Tier 4
+5 Tier 5
+6 Tier 6
+7 Tier 7
+8 Tier 8
+9 Tier 9
+0 Tier 10
+A Tier 11
+USPS SKU User Guide page 22
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Sub-Type
+Add On
+Associated Shape
+Code Description
+X None
+A After Mailing
+B Bulk
+C Cubic
+E Electronic
+F Flat Rate
+H HAZMAT Handling Fee
+M Monthly
+N HAZMAT Noncompliance Fee
+Code Description
+X N/A
+A Adult Signature Required
+B Adult Signature Restricted Delivery
+C COD Collection Charge
+D Up to $50
+E Custom Order
+F International
+J Restricted Delivery
+Code Description
+X N/A
+B Box
+C Postcards
+E Envelope
+F Flats or Large Envelope
+H Half Try
+I Full Tray
+J EMM Tray
+K Tub
+L Letters
+M M Bag
+N Balloon
+O Oversize
+P Parcels or Package
+Q Keys and IDs
+USPS SKU User Guide page 23
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Associated Sub-Type
+Price Type
+Associated Delivery Type
+Code Description
+X N/A
+A Automation
+B Nonautomation
+C Carrier Route
+D Carrier Route Nonautomation
+F Flat Rate
+I Irregular (inactive)
+J Nonstandard
+M Machinable
+N Nonmachinable
+P Presorted
+Q Automation Disc
+R Regional Rate
+S Simple Samples
+T Permit Reply Mail
+U Cubic
+V Nonpresorted
+W Permit Reply Mail Disc
+Y Nonautomation Disc
+Z Customized
+Code Description
+X N/A
+B Commercial Base Price
+C Commercial Price
+D Commercial Pound Price
+F Full Service
+G Full Service Pound Price
+I Drop Ship Pound Price
+J Drop Ship
+K Incentive
+N Nonprofit Price
+O Nonprofit Pound Price
+P Commercial Plus Price
+R Retail Price
+S Retail Pound Price
+Code Description
+X None
+H Hold for Pickup
+I Inside County
+O Outside County
+R Return
+S Sunday/Holiday
+USPS SKU User Guide page 24
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Amount
+Code Description
+0000…9999 For 10,000 or more use K, i.e. 10K
+For 1,000,000 or more see “X -
+Extra Service and Surcharge –
+Variation”
+X000 N/A
+USPS SKU User Guide page 25
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+PO Boxes
+For PO Boxes, Service & Type (1 = PO Boxes), remain the same, but the subsequent fields are modified to include PO
+Boxes-specific fields.
+Sub-Type
+Period
+Reserved
+These components are not currently in use for the PO Boxes SKU and should always be populated with an ‘XXXXX’.
+Price Type
+Code Description
+A PO Box Fee
+B Key Deposit
+C Key Replacement Fee
+D Lock Replacement Fee
+E Late Payment Fee
+F Street Addressing Fee
+G Signature on File
+Code Description
+X N/A
+3 3-Months
+6 6-Months
+Code Description
+XXXXX N/A
+Code Description
+M Market Dominant
+V Competitive
+USPS SKU User Guide page 26
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Fee Group
+Size
+Number Of
+Code Description
+00 N/A
+0E Group E
+01…44 Remove “C” prefix
+Code Description
+00 N/A
+01…05
+Code Description
+X N/A
+1…9
+USPS SKU User Guide page 27
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Services, Fees and Incentives
+For Services, Fees and Incentives, Service & Type (2 = Services, Fees and Incentives), remain the same, but the
+subsequent fields are modified to include Services, Fees and Incentives -specific fields.
+Service Type
+Code Description
+X N/A
+A Address Correction Service
+B Business Reply Mail
+C Bulk Weight Averaged
+D Call Service
+E Qualified Business Reply Mail
+F Credit Card Authentication Fee
+G Customs Clearance and Delivery
+H Money Transfer Service
+I Direct Container Discount
+J Alaska Bypass Service
+K USPS Tracking Plus
+L Catalog Incentive
+M Money Order
+N Premium Forwarding Service
+O Forward and Return to Sender
+P ACS with Shipper Paid Forward and
+Return to Sender
+Q Shipper Paid Forward and Returns
+R Bulk Parcel Return Service
+S Customized Postage
+T Move Update
+U Permit Imprint
+Y Extended Mail Forwarding Service
+1 Seamless Acceptance Incentive
+2 SCF Pallet Discount
+3 LPC Pallet Discount
+4 5D Scheme Container Discount
+USPS SKU User Guide page 28
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Associated Mail Type
+Period
+Code Description
+X None
+B Bound Printed Matter
+E Priority Mail Express
+F First-Class Mail
+H Periodicals
+L Library Mail
+M Media Mail
+P Priority Mail
+R Parcel Return Service
+S USPS Marketing Mail
+U USPS Ground Advantage
+V Parcel Select
+Code Description
+X N/A
+A Annual
+B 18 Months
+D Daily
+M Monthly
+Q Quarterly
+S Semi Annual
+W Weekly
+Y 6 Months
+Z 10 Years
+1 1 Year
+3 3 Years
+5 5 Years
+7 7 Years
+USPS SKU User Guide page 29
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Fee Type
+Fee Sub-Type
+Code Description
+X N/A
+A Manual Notice
+B Electronic Notice
+C Automated Notice
+D Full-Service Intelligent Mail
+E Forwarding Fee
+F Permit Fee
+G Maintenance Fee
+H Enrollment Fee
+I Application Fee
+J Registration for News Agent
+K Inquiry Fee
+L Mailing Fee
+M Shipment Charge
+N Change of Payee
+O Scan Retention
+P Reserved Number
+Q Foreign-Origin Handling Charge
+R Refunds
+S Accounting Fee
+T Participation Fee
+U Address Change
+V Greater than 70 lbs. or 130" Length +
+Girth Fee
+W Report
+Y Heavy Printed Matter
+Code Description
+X N/A
+A Additional
+B Basic
+C Archive Statement of Tracking
+D Archive Signature Letter
+E Election Boards
+F Storage Fee
+H High Volume
+I IMbA
+O Online
+R Retail
+S Signature
+T Original Entry
+U Reentry
+1 Automation
+2 Nonautomation
+USPS SKU User Guide page 30
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Associated Shape
+Associated Sub-Type
+Price Type
+Code Description
+X N/A
+C Postcards
+F Flats or Large Envelope
+L Letters
+P Parcels of Package
+Q Keys and IDs
+Code Description
+X N/A
+A AADC
+B Basic Carrier Route
+C Carrier Route
+D High Density Plus
+E EDDM
+F 5-Digit Nonmachinable
+G 3-Digit Nonmachinable
+H High Density
+I AADC Machinable
+J ADC
+L Local
+M 3-Digit Machinable
+P Presorted
+R Regional
+S Saturation/EDDM
+T 3-Digit
+Y Saturation
+1 5-D Auto
+2 3-D Auto
+3 5-D Nonauto
+4 3-D Nonauto
+5 5-Digit
+6 Firm
+Code Description
+X N/A
+C Commercial Price
+E Commercial Ounce Price
+N Nonprofit Price
+Q Nonprofit Ounce Price
+R Retail or Residential
+USPS SKU User Guide page 31
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Fee Group
+Amount or Weight
+Code Description
+X X000
+0…9 Money Order:
+0 – Domestic
+1 – APO/DPO
+Code Description
+0000…9999 For over 9999 use K i.e. 10K
+USPS SKU User Guide page 32
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Stationery
+For Stationery, Service & Type (3 = Stationery), remain the same, but the subsequent fields are modified to include
+Stationery-specific fields.
+Stationery Type
+Shape
+Options
+Code Description
+A Plain Stamped Envelopes
+B Personalized Stamped Envelopes
+C Stamped Cards
+D Stamped Envelope Premium Feature
+E Stamped Cards Premium Option
+F Shipping and Handling
+G Stamp Fulfillment Service
+Code Description
+X None
+A Size 6 ¾
+B Size 10
+C Single Card
+D Double Reply-Paid Card
+E Sheet of 40 Cards
+F 4-up Cards
+G Boxes of 50
+H Boxes of 500
+Code Description
+X N/A
+A Custom font
+B Window
+C Pressure Sensitive Seal
+D Printing of return address
+E Font size, style, and/or ink color
+F Monogram
+G 4-Color Logo
+H Custom Order
+P Philatelic Fee
+USPS SKU User Guide page 33
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Sub-Options
+Reserved
+These components are not currently in use for the Stationery SKU and should always be populated with an ‘XXXXX’.
+Count/Amount
+Code Description
+X N/A
+A Each Additional
+Code Description
+XXXXX N/A
+Code Description
+0000…9999 For over 9999 use K i.e. 10K
+USPS SKU User Guide page 34
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+AMS
+For AMS, Service & Type (4 = AMS), remain the same, but the subsequent fields are modified to include AMS-specific
+fields.
+AMS Service
+Code Description
+A Address Sequencing Service
+B AEC
+C AEC II
+D AIS
+E AMS API
+F CRIS Route
+G CASS Certification
+H Change-of-Address Notification Letter
+I Change-of-Address Info
+J City State
+K CDS
+L Correction of Address Lists
+M Delivery Statistics
+N DPV
+O DSF2 Service
+P eLOT Service
+Q 5-Digit ZIP
+R Labeling Lists
+S LACS
+T Mass Certification
+U NCOALink Service
+V Official Zone Charts
+W RDI Service
+X Z4 Change
+Y ZIP + 4 Service
+Z Zip Code Sortation
+1 ZIP Move
+2 99 Percent Accurate Method
+USPS SKU User Guide page 35
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Fee Type
+Fee Sub-Type
+API Type
+Code Description
+X None
+A Per Address
+B City State Delivery Type
+C County Name Retrieval
+D Delivery Statistic Retrieval
+E Mass Manufacturers (MLOCR)
+F Mass End-Users (MLOCR)
+G Mass Manufacturers (Encoder)
+H Mass End-Users (Encoder)
+I Mass IMb Quality Testing
+J International Service Center
+M Minimum Fee
+R Per Record
+S Per State
+T All States or National
+U Reprint
+Y Per Year
+Z ZIP + 4 Retrieval
+Code Description
+X N/A
+A Additional Location
+C Cycle Testing
+P Additional Platform
+Code Description
+X N/A
+A Database License
+D Developer’s Kit
+E End User
+F Data Distributor
+I Interface Developer
+J Interface Distributor
+K Full Service Provider
+L Limited Service Provider
+M Mail Processing Equipment
+N NCOALink Test Audit
+O ANKLink Service Option
+R Resell License
+S RDI API Developers Kit
+T RDI API Developers Kit Resell License
+USPS SKU User Guide page 36
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+API Sub-Type
+Cycles
+Reserved
+These components are not currently in use for the Stationery SKU and should always be populated with an ‘XXX’.
+Count
+Code Description
+X N/A
+A Additional Location
+O ANKLink Service Option
+P Additional Platform
+S Additional Site
+Y Additional Year
+Code Description
+X N/A
+A August – January
+B February, March
+C April
+D May
+E June
+F July
+G After July 31st
+H November – June
+I March – June
+Code Description
+XXX N/A
+Code Description
+0000…9999 For over 9999 use K i.e. 010K
+USPS SKU User Guide page 37
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Dimension Volume Fees
+For Dimension Volume Fees, Service and Type (8 = Dimension Volume Fees) remains the same, but the subsequent fields
+are modified to include Dimension Volume-specific fields.
+Fee Type
+Fee Sub-Type
+Code Description
+1 Nonstandard Length Fees
+2 Nonstandard Characteristics Fee
+7 Dimension Noncompliance Fee
+Code Description
+X N/A
+1 Nonstandard Length Fee > 22”
+2 Nonstandard Length Fee > 30”
+3 Nonstandard Volume Fee > 2 cu. ft.
+USPS SKU User Guide page 38
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Variation
+The Variation exists to accommodate unique
+scenarios based on the descriptors or rate
+ingredients provided for Service, Type, Sub-
+Type, and Shape. The columns on the left below
+show the conditions that must be met to select
+from the Variations.
+Conditions Variation
+Component Value Description Value Description
+Service D Domestic X None
+I International
+Type 8 Dimension Volume Fees
+Fee Type 7 Dimensional Noncompliance Fee
+1 Nonstandard Length Fees
+Fee Sub-Type 1 Nonstandard Length Fee > 22”
+2 Nonstandard Length Fee > 30”
+3 Nonstandard Volume Fee > 2 cu.
+Ft.
+Service D Domestic 1 LOR
+Type 8 Dimensional Volume Fees
+Fee Type 2 Nonstandard Characteristics Fee
+Fee Sub Type X N/A
+Service D Domestic U Cubic
+Type 8 Dimensional Volume Fees
+Fee Type 2 Nonstandard Characteristics Fees
+Associated
+Mail Type
+P Priority Mail
+U USPS Ground Advantage
+Associated Mail Type
+Code Description
+X None
+F First-Class Mail
+U USPS Ground Advantage
+V Parcel Select
+6 USPS Connect Local
+USPS SKU User Guide page 39
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Entry
+Price Category
+Price Type
+Zone
+Code Description
+X N/A
+B DHUB
+C DNDC
+D ONDC
+F DSCF
+G OSCF
+H DADC
+I OADC
+N None
+R RDU
+S RSCF
+U DDU
+V ODMU
+Code Description
+X N/A
+3 3-Digit
+5 5-Digit
+T SCF
+Code Description
+X N/A
+Code Description
+XX/00 N/A
+USPS SKU User Guide page 40
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Weight
+Weight Fraction
+Weight is the maximum weight for the price cell. Weight Fraction is the value after the decimal place. For example, if a
+USPS Marketing Mail piece weighs 3.4 oz., the value would be 4.
+Code Description
+000…999 Weight
+Code Description
+0…9 Weight Fraction
+USPS SKU User Guide page 41
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Volume Fees and Incentives
+For Volume Fees and Incentives, Type (9 = Volume Fees and Incentives), remains the same, but the subsequent fields are
+modified to include volume incentive specific fields.
+Associated Mail Type
+Incentive/Fee
+Sub Type
+Shape
+Code Description
+X None
+S USPS Marketing Mail
+Code Description
+X None
+M Marriage Mail
+Code Description
+X None
+Code Description
+X None
+F Flats
+L Letters
+USPS SKU User Guide page 42
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Variation
+The Variation exists to accommodate unique scenarios based on the descriptors or rate ingredients provided for
+Associated Mail Type, Incentive/Fee, Sub-Type, and Shape. The columns on the left below show the conditions that must
+be met to select from the Variations.
+Conditions Variation
+Component Value Description Value Description
+Service D Domestic 0 None
+Non/Automation
+Entry
+Price Category
+Code Description
+A Automation
+N Nonautomation
+Code Description
+X None
+C DNDC
+F DSCF
+N None
+U DDU
+Code Description
+X N/A
+E EDDM
+G High Density Plus
+S Saturation
+USPS SKU User Guide page 43
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Price Type
+Weight
+Code Description
+X N/A
+C Commercial
+N Nonprofit
+Code Description
+0000…9999 Weight
+USPS SKU User Guide page 44
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Extra Services and Duty Fees
+For Extra Services and Duty Fees, Service & Type (I = Extra Services and Duty Fees), remain the same, but the subsequent
+fields are modified to include Extra Services and Duty Fees specific fields.
+Extra Service or Surcharge Type
+Mail Type
+Variation
+The Variation exists to accommodate unique scenarios based on the descriptors or rate ingredients provided for Service,
+Type, Sub-Type, and Shape. The columns on the left below show the conditions that must be met to select from the
+Variations.
+Code Description
+T USPS DDP Fee
+Code Description
+X None
+E Priority Mail Express
+F First-Class Mail
+P Priority Mail
+Code Description
+X None
+USPS SKU User Guide page 45
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Associated Shape
+Price Type
+Price Group
+Code Description
+X N/A
+P Package
+Code Description
+X N/A
+C Commercial Price
+Code Description
+01-20 Price
+XX N/A
+USPS SKU User Guide page 46
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Document Control
+Version Date Section Sub Section Nature of Amendment
+1.0 4/2/2019 All Initial Release
+2.0 4/4/2019 Standard SKU Type Added “N” – PMEOD
+4/4/2019 Extra Services and
+Surcharges
+Variation Added “0” – 21+ and “1” – 18+ for
+both
+“A” - Adult Signature Required
+“B” - Adult Signature Restricted
+Delivery
+2.1 9/5/2019 Periodicals Price Type Added “W” – Tray Price
+Extra Services and
+Surcharges
+Type Added “N” – eVS Unmanifested Fee
+Services and Fees Period Added:
+“Y” – 6 Months
+“1” – 1 Year
+“3” – 3 Years
+“5” – 5 Years
+“7” – 7 Years
+“Z” – 10 Years
+Fee Type Added:
+“O” – Scan Retention
+“W” – Report
+Fee Sub-Type Added:
+“S” – Signature
+“C” – Archive Statement of
+Tracking
+“D” – Archive Signature Letter
+2.2 5/15/2020 Standard SKU Variation Added:
+International Priority Mail Box A/B
+Standard SKU Type Added “5” – ePacket
+2.3 8/24/2020 Standard SKU Variation Combined Domestic and
+International
+Added Canada
+2.4 9/30/2020 Standard SKU Section Title Changed Section Title
+From “2 - Services and Fees”
+To “2 – Services, Fees and
+Incentives”
+Services and Fees Section Title Changed Section Title
+From “Services and Fees”
+To “Services, Fees and Incentives”
+Type Added Seamless Acceptance
+Incentive
+2.5 11/2/2020 Services, Fees and
+Incentives
+Type Changed description from “K -
+Premium Data Retention and
+USPS SKU User Guide page 47
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Retrieval Service” to “K - USPS
+Tracking Plus”
+Extra Services and
+Surcharges
+Associated Delivery
+Type
+Add “R – Return”
+2.6 12/3/2020 Services, Fees and
+Incentives
+Type Changed description from “V -
+Greater than 70 lbs. Fee” to “V -
+Greater than 70 lbs. or 130" Length +
+Girth Fee ”
+2.7 05/28/2021 Price Category Type Add “Y-High Density CR
+Bundles/Pallets”
+2.8 07/06/2021 Shape Descriptor Added note in to describe when
+Shape is in effect
+2.9 07/14/2021 Fee type Type Add “U-Reprint”
+3.0 07/20/2021 AMS Service Type Remove “Customer” and “Reprint”
+from H
+3.1 11/10/2021 Standard SKU Type Added:
+-USPS Connect Local
+-USPS Connect Regional
+-Dimensional Volume
+Sub Type Added: Pending Periodicals
+Shape Added: Bag
+Entry Added: DHUB
+Price Category Added: Percent
+Variation Added:
+Service:
+-Canada
+-Domestic
+-International
+Type:
+-Dimensional Volume Fees
+Fee Type:
+-Dimensional Noncompliance Fee
+-Nonstandard Length Fees
+Fee Sub Type:
+-Nonstandard Length Fee > 22”
+-Nonstandard Length Fee > 30”
+-Nonstandard Volume Fee > 2 cu. Ft
+Variation:
+-NSA Base Price
+-NSA Retail Price
+-NSA Retail Pound Price
+USPS SKU User Guide page 48
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3.2 11/18/2021 Dimensional
+Volume Fees
+Fee Type, Fee Sub
+Type, Variation, Asso
+Mail Type, Entry,
+Price Category, Price
+Type, Zone, Weight
+Whole, Weight
+Fraction
+Added
+Fee Type:
+Dimensional Noncompliance Fee
+Nonstandard Length Fees
+Fee Sub Type:
+Nonstandard Length Fee > 22”
+Nonstandard Length Fee > 30”
+Nonstandard Volume Fee > 2 cu. ft.
+Variation
+Associated Mail Type:
+Bound Printed Matter
+First-Class Mail
+Global Express Guaranteed
+Library Mail
+Media Mail
+Parcel Select
+Parcel Select Lightweight
+Periodicals
+Priority Mail
+Priority Mail Express
+USPS Connect Local
+USPS Connect Regional
+USPS Marketing Mail
+USPS Retail Ground
+Entry:
+N/A
+DADC
+DDU
+DNDC
+DSCF
+None
+OADC
+ODMU
+ONDC
+OSCF
+RDU
+RSCF
+Price Category:
+N/A
+USPS SKU User Guide page 49
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3-Digit
+5-Digit
+AADC
+ADC
+Basic
+Basic – CR Bundles/Pallet
+Direct
+Every Door (Saturation) Large
+Every Door (Saturation) Small
+High Density
+High Density Plus
+Mixed
+Mixed AADC
+Mixed ADC
+Mixed NDC
+NDC
+None
+Nonpresorted
+Presorted
+Residual
+Saturation
+SCF
+Single-Piece
+Targeted Large
+Targeted Small
+Price Type:
+Commercial
+Commercial Base
+Commercial Plus
+Commercial Pound
+Drop Ship
+Drop Ship Pound
+Full Service
+Full Service Pound
+Incentive
+Nonprofit
+Nonprofit Pound
+NSA Base Price
+NSA Drop Ship
+NSA Drop Ship Pound Price
+NSA Full Service
+NSA Full Service Pound Price
+USPS SKU User Guide page 50
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Zone
+Weight Whole
+Weight Fraction
+3.3 12/01/2021 Standard SKU
+Dimension Volume
+Fees
+Variation Added:
+Variation “S” – Semipostal for
+Domestic – First-Class
+Removed:
+Dimensional Volume Variations from
+Standard SKU Section
+Changed Type from Dimensional
+Volume Fees to Dimension Volume
+Fees
+Corrected SKU Dictionary values for
+Dimension Volume Fees
+3.4 12/20/2021 Extra Services and
+Fees
+Extra Service or
+Surcharge Type
+Added: Plus One
+3.5 1/7/2022 Extra Services and
+Fees
+Extra Service or
+Surcharge Type
+Added: Inactive to M – 10:30
+Delivery
+3.6 6/9/2022 SKU User Guide
+multiple places
+1) Page 4, Update the reference
+From: F | First-Class Mail To: F |
+First-Class Mail/First-Class Package
+Service
+2) Page 7, the Code Description at
+the bottom of the page should have
+a page break above it so that it
+moves to page 8.
+3) Page 8, Update the references
+below:
+From: F | None To: F | None
+(Origin Entry) From: X |
+N/A To: X | Not Applicable
+3.6 6/9/2022 Standard SKU Variation Added Bound Printed Matter
+3.6 6/9/2022 Standard SKU Variation Added:
+Priority Mail Cubic Pricing Table and
+Tiers
+USPS SKU User Guide page 51
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3.6 6/9/2022 Extra Services and
+Fees
+Extra Service or
+Surcharge Type
+Updated:
+Special Handling Fragile (1) to
+Inactive
+3.6 6/9/2022 Services, Fees and
+Incentives
+Service Type Added:
+Direct Container Discount (I)
+Extended Mail Forwarding Service (Y)
+3.6 6/9/2022 Services, Fees, and
+Incentives
+Period
+Added:
+18 Months
+3.6 6/9/2022 Services, Fees and
+Incentives
+Associated Sub-Type Added:
+Basic Carrier Route (B)
+High Density Plus (D)
+High Density (H)
+Saturation/EDDM (S)
+3.6 6/9/2022 Services, Fees and
+Incentives
+Fee Group Added:
+X00 (X)
+3.7 6/19/2022 Formatting Changes
+3.8 7/7/2022 Standard SKU Variation Update to Bound Printed Matter
+3.8.1 9/18/2022 Standard SKU
+Extra Services and
+Fees
+Dimension Volume
+Fees
+Price Type
+Variation
+Mail Type
+Variation
+Sub-Type
+Sub-Type Fee
+Added A: Average Price
+Changed tier 0 thru 9
+Added 6: USPS Connect Local
+Added 7: USPS Connect Local
+Added DXP: Domestic, Extra Service
+and Surcharge, Plus One, USPS
+Marketing Mail
+Added G: USPS Connect Local
+Added H: USPS Connect Local
+Added O: USPS Connect Flat Rate
+Added “X” N/A.
+3.8.2 11/25/2022 Standard SKU
+Service
+Type
+Variation
+Price Type
+Remove: Code C| Canada,
+deprecated.
+Remove: Code R | Parcel Return
+Service
+Remove: 0 | Box A
+1 | Box B
+USPS SKU User Guide page 52
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Extra Services and
+Fees
+Services, Fees and
+Incentives
+AMS
+Extra Service or
+Surcharge Type
+Service Type
+Associated Sub-Type
+AMS Service
+Remove: Code B | Commercial Base
+Price
+Code P | Commercial Plus
+Price
+Added: Q | Label Delivery
+Added: 2 | SCF Pallet Discount
+3 | LPC Pallet Discount
+4 | 5D Scheme Container
+Discount
+Added: Y Saturation
+E | EDDM
+1 | 5-D Auto
+2 | 3-D Auto
+3 | 5-D Nonauto
+4 | 3-D Nonauto
+Remove: Code L | Correction
+Address
+Remove: Code Z | Zip Code
+Sortation
+3.8.3
+12/09/2022 Standard SKU
+P.O. Boxes
+Entry
+Associated Mail Type
+Period
+Weight Fraction
+Mail Type
+Size
+Added: P | RPF
+Added : R | Parcel Return Service
+Added : D | Daily
+Remove: X from XX
+Remove: Associated
+Update: 1…5 to 01…05
+USPS SKU User Guide page 53
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Services, Fees and
+Incentives
+AMS
+Dimension Volume
+Fee
+Associated Mail Type
+Period
+Fee Sub-Type
+Price Category
+AMS Service
+Associated Mail Type
+Added: R | Parcel Return Service
+Added: D | Daily
+Added : F | Storage Fee
+Added: 3 | 3-Digit
+5| 5-Digit
+T| SCF
+Added: R | Parcel Return Service
+Added: D | Daily
+Added: L | Correction of Address
+Lists
+Added: Z | Zip Code Sortation
+Remove: B | Bound Printed Matter
+E | Priority Mail Express
+G | Global Express
+Guaranteed
+H | Periodicals
+L | Library Mail
+M | Media Mail
+P | Priority Mail
+S | USPS Marketing Mail
+7 | USPS Connect Regional
+USPS SKU User Guide page 54
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3.8.4 2/14/2023 Standard SKU Zone Added: X0| N/A
+Extra Services and
+Fees
+Add On Added: D | Up To $50
+E | Custom Order
+F | International
+3.9.0 4/10/2023 Added : Volume
+Fees and Incentives
+Associated Mail Type Added: S|USPS Marketing Mail
+Incentive/Fee Added: M | Marriage Mail
+X | N/A
+Sub Type Added: X | N/A
+Shapes Added: F | Flats
+L | Letters
+X | N/A
+Variation Added: X | N/A
+Non/Automation Added: A | Automation
+N | Nonautomation
+Entry Added: C | DNDC
+D | DDU
+F | DSCF
+N | None
+X | N/A
+Price Category Added: E | EDDM
+S | Saturation
+X | N/A
+Price Type Added: C | Commercial
+N | Nonprofit
+X | N/A
+Weight Whole
+3.9.1 5/12/2023 Standard SKU Type Added: U | USPS Ground Advantage
+Retiring digits marked up:
+T | USPS Retail Ground
+3.9.2 5/22/2023 Standard SKU Type Retiring text for First Class Package
+Service
+3.9.3 6/9/2023 Standard SKU
+Page 11: *USPS
+Ground Advantage
+Tables added to clarify digits used for
+USPS Ground Advantage Pounds and
+Ounces
+Variation Updated:
+From: V | Parcel Select
+To: U | USPS Ground Advantage
+Extra Services and
+Fees
+Mail Type Added: U | USPS Ground Advantage
+Retiring digits marked up:
+T | USPS Retail Ground
+USPS SKU User Guide page 55
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Services, Fees and
+Incentives
+Associated Mail Type Added: U | USPS Ground Advantage
+Dimension Volume
+Fees
+Associated Mail Type Added: U | USPS Ground Advantage
+Retiring digits marked up:
+T | USPS Retail Ground
+3.9.4 7/5/2023 Standard SKU Variation:
+Service: D – Domestic
+Type: B – Bound
+Printed Matter
+Updated:
+From: X | Carrier Route
+X | Flats
+To: C | Carrier Route
+F | Flats
+Variation:
+Service:
+D - Domestic
+I - International
+Type:
+E - Priority Mail
+Express
+P - Priority Mail
+Sub-Type: F - Flat
+Rate
+Shape: E - Envelope
+Added: 0 | Flat Rate Envelope
+Variation:
+Service:
+D - Domestic
+I - International
+Type:
+E - Priority Mail
+Express
+P - Priority Mail
+Sub-Type: F - Flat
+Rate
+Shape: B - Box
+Added: 0 | Large Flat Rate Boxes
+Variation:
+Service: D - Domestic
+Added: 0 | None (Unless otherwise
+defined)
+USPS SKU User Guide page 56
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3.9.5 11/22/2023 Standard SKU Reserved Added:
+X | N/A
+O | Ounce
+3.9.6 12/08/2023 USPS SKU User
+Guide
+Removed:
+T | USPS Retail Ground
+Retiring digits marked up:
+W | Parcel Select Lightweight
+3.9.7 5/17/2024 Services, Fees and
+Incentives
+Fee Sub- Type Added:
+I | IMbA
+Service Type Added:
+L | Catalog Incentive
+Extra Services and
+Fees
+Amount Added:
+X000 | N/A
+3.9.8 11/14/2024 Standard SKU Removed:
+Global Express Guaranteed
+Extra Service and
+Surcharge
+Added:
+N | Live Animal Transportation and
+Perishable Handling Fee
+Removed:
+Global Express Guaranteed
+3.9.9 12/12/2024 Standard SKU Sub-Type Added:
+J | Nonstandard
+Updated:
+Irregular to Irregular (inactive)
+Extra Services and
+Fees
+Associated Sub-Type Added:
+J | Nonstandard
+Updated:
+Irregular to Irregular (inactive)
+Sub-Type Added:
+C | Cubic
+3.9.10 12/23/2024 Standard SKU Sub-Type Updated:
+Permit Reply Mail to Permit Reply
+Mail Disc
+USPS SKU User Guide page 57
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Added:
+1 | USPS Connect Local Mail
+3.9.10 12/23/2024 Extra Service and
+Surcharge
+Extra Service and
+Surcharge Type
+Updated:
+Impb Noncompliance Fee to Package
+Quality Non-Compliance Fee
+3.9.11 6/27/2025 Dimensional
+Volume Fees
+Fee Type Added:
+2 | Nonstandard Characteristics Fee
+Associated Mail Type Added:
+U | USPS Ground Advantage
+Entry Added:
+B | DHUB
+Variation Added:
+1 | LOR
+U | Cubic
+Volume Fees and
+Incentives
+Entry Added:
+U | DDU
+Services, Fees and
+Incentives
+Associated Sub Type Added:
+J | ADC
+3.10.0 1/5/2026 Standard SKU Type Marked retired:
+Q | ISAL
+Added:
+I | Extra Services and Duty Fees
+Added: Extra
+Service or Duty
+Fees
+Added:
+Extra Service or
+Surcharge Type
+Added:
+T | USPS DDP Fee
+Added:
+Mail Type
+Added:
+X | None
+E | Priority Mail Express
+F | First-Class Mail
+P | Priority Mail
+Added:
+Variation
+Added:
+X | None
+USPS SKU User Guide page 58
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Added: Associated
+Shape
+Added:
+X | N/A
+P| Package
+Added: Price Type Added:
+X | N/A
+C | Commercial
+Added: Price Group Added:
+01-20 | Price Group
+XX | N/A
+3.10.1 5/29/2026 Standard SKU Variation Removed:
+4 | DVD Flat Rate Priced Box
+5 | Large Video Flat Rate Priced Box
+Price Category Added:
+1 | Added Heavy Printed Matter
+Updated:
+V | Mixed - IPA
+W | Direct - IPA
+Was:
+V | Mixed-IPA and ISAL
+W | Mixed-IPA and ISAL
+Periodicals Price Category Added:
+V | Mixed
+Extra Services and
+Fees
+Extra Service or
+Surcharge Type
+Updated to:
+M | API Services
+0 | HAZMAT
+Was:
+M | 10:30 Delivery
+0 | Repositionable Notes
+Removed:
+3| Detached Marketing Label
+Mail Type Added:
+O | PMOD
+USPS SKU User Guide page 59
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+Variation Added (5th position of SKU):
+A | Addressing
+N | NCOA+
+T | Tracking
+Added (6th position of SKU):
+M | Monthly
+Added (8th position of SKU):
+1 | Tier 1
+2 | Tier 2
+3 | Tier 3
+4 | Tier 4
+5 | Tier 5
+6 | Tier 6
+7 | Tier 7
+8 | Tier 8
+9 | Tier 9
+0 | Tier 10
+A | Tier 11
+Sub-Type Updated to:
+M | Monthly
+Was:
+M | for Merchandise
+Added:
+H | HAZMAT Handling Fee
+N | HAZMAT Noncompliance Fee
+Services, Fees, and
+Incentives
+Price Category Added:
+Y | Heavy Printed Matter
+Associated Sub-Type Added:
+C | Carrier Route
+M | 3-Digit Machinable
+T | 3-Digit
+6 | Firm
+Volume Incentives
+and Fees
+Price Category Added:
+G | High Density Plus
+USPS SKU User Guide page 60
+Copyright © 2026 USPS. All rights reserved 06/05/2026
+Version Date Section Sub Section Nature of Amendment
+3.10.2 6/5/2026 Standard SKU Price Category Updated:
+M | Mixed AADC (Inactive)
+O | Mixed NDC (Inactive)
+V | Mixed
+W | Direct
+Was:
+M | Mixed AADC
+O | Mixed NDC
+V | Mixed - IPA
+W | Direct - IPA
