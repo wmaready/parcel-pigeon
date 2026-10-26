@@ -253,6 +253,7 @@ def test_earnings_chart_and_stock_watch(site, width):
         assert pg.evaluate("() => !document.querySelector('.mkc, .mkwatch')")
         cards = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(x => [x.dataset.goto || null, x.textContent.replace(/\\s+/g, ' ')])""")
         assert [c[0] for c in cards] == ["docs:earnings:UPS:Q2 2026", "docs:earnings:FedEx:FY26 Q4", "docs:earnings:USPS:FY26 Q3", None], cards
+        assert "Next report expected mid-Nov" in cards[2][1] and "Next report Oct 27" in cards[0][1], cards
         assert pg.evaluate("() => !!document.querySelector('#earnToday .etc:last-child.etshare')")
         assert pg.evaluate("() => document.querySelector('#earnToday h2').textContent === 'Earnings and market'")
         # the volume box points to our market report first, then to Pitney Bowes

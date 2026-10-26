@@ -8926,7 +8926,7 @@ function renderDocs(){
   const callStrip=c=>{const nx=EARN_NEXT.filter(x=>x.c===c||(c==='FedEx'&&x.c==='FedEx Freight')).filter(x=>x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d));
     const last=ER(c).filter(e=>e.company===c).sort((a,b)=>b.d.localeCompare(a.d))[0];if(!nx.length&&!last)return'';
     const lk=(u,l)=>u?`<a class="link" href="${escU(u)}" target="_blank" rel="noopener">${l}</a>`:'';
-    return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">Next call</span><span><b>${fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.s||x.t||'')}${daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
+    return `<div class="dcall">${nx.map(x=>`<div class="dcr"><span class="lbl dct">${x.est?'Expected':c==='USPS'?'Next report':'Next call'}</span><span><b>${x.est?'Mid-November':fmtD(x.d,{weekday:'short',month:'short',day:'numeric'})}</b>${x.c!==c?` · ${esc(x.c)}`:''} · ${esc(x.q)}<small>${esc(x.est?(x.t||x.s||''):(x.s||x.t||''))}${!x.est&&daysTo(x.d)>=0?` · in ${daysTo(x.d)} day${daysTo(x.d)===1?'':'s'}`:''}</small></span>${lk(x.u,'Event page')}</div>`).join('')}
       ${last?`<div class="dcr"><span class="lbl dct">${c==='USPS'?'Last report':'Last call'}</span><span><b>${DF(last.d)}</b> · ${esc(last.q)}<small>Revenue ${earnRevS(last)}${last.eps!=null?` · Adj. EPS $${(+last.eps).toFixed(2)}`:''}</small></span><span class="elinks">${lk(last.release,'Release')}${lk(last.webcast,'Recording')}${lk(last.transcript,'Transcript')}</span></div>`:''}</div>`};
   const yearOf=d=>String(docYear(d)||'Undated');
   // current: not replaced, or still to take effect, or announced but not yet posted (a placeholder for a coming year)
@@ -8950,7 +8950,7 @@ function renderDocs(){
       return `<details class="dyr"><summary><b>${y}</b><span class="lbl">${Y.length}</span></summary><div class="dyrb"><div class="drows">${Y.map(earnRow).join('')}</div></div></details>`}).join('')
       :`<div class="drows">${E.sort((a,b)=>b.d.localeCompare(a.d)).map(earnRow).join('')}</div>`);
     const nx=EARN_NEXT.filter(x=>(x.c===c||(c==='FedEx'&&x.c==='FedEx Freight'))&&x.d>=TODAY).sort((a,b)=>a.d.localeCompare(b.d))[0];
-    return `<details class="dgrp dearn"><summary><b>${c==='USPS'?'Quarterly results':'Earnings reports'}</b><span class="lbl">${nx?`Next call ${fmtD(nx.d)}`:E.length}</span></summary><div class="dtb">${inner}</div></details>`};
+    return `<details class="dgrp dearn"><summary><b>${c==='USPS'?'Quarterly results':'Earnings reports'}</b><span class="lbl">${nx?(nx.est?'Next report expected mid-Nov':`Next call ${fmtD(nx.d)}`):E.length}</span></summary><div class="dtb">${inner}</div></details>`};
   const KINDS=c=>c==='Reports'?[...REPORT_CATS.map(g=>g[0]),'Other reports']:[...DOC_GROUPS.map(g=>g[0]),'Other documents'];
   // carrier › kind of document › year (a kind splits into years once it holds more than 3 documents over several years)
   const typesOf=(L,c)=>KINDS(c).map(g=>[g,L.filter(d=>docGroup(d)===g)]).filter(g=>g[1].length)
@@ -9001,7 +9001,7 @@ function renderEarnToday(){const el=$('earnToday');if(!el)return;
       ${stat('Revenue',r!=null?'$'+r.toFixed(1)+'B':null,cmp?earnYoY(e):null,'')}
       ${stat('Packages a day',v.adv_k!=null?(v.adv_src==='calc'?'≈':'')+(v.adv_k/1000).toFixed(1)+'M':null,cmp?earnAdvYoY(v):null,'Not yet entered')}
       ${stat('Revenue per package',v.rpp!=null?'$'+(+v.rpp).toFixed(2):null,cmp?earnRppYoY(v):null,co==='USPS'?'Not reported':'Not yet entered')}
-      <span class="lbl etn">${nx?`Next report ${esc(fmtD(nx.d,{month:'short',day:'numeric'}))}`:''}<span class="etgo">Earnings ›</span></span></button>`};
+      <span class="lbl etn">${nx?(nx.est?'Next report expected mid-Nov':`Next report ${esc(fmtD(nx.d,{month:'short',day:'numeric'}))}`):''}<span class="etgo">Earnings ›</span></span></button>`};
   const cards=TODAY_EARN.map(card).filter(Boolean),sh=share();
   el.hidden=!cards.length;
   el.innerHTML=`<div class="ph"><h2>Earnings and market</h2><button class="link" data-goto="docs:earnings:UPS">All earnings</button></div>

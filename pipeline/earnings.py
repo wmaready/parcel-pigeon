@@ -233,6 +233,14 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
         if any(r.get("company") == nx["c"] and r.get("q") == nx["q"] for r in rows):
             continue
         key = f"earnings-new|{nx['c']}|{nx['q']}"
+        if nx.get("est"):
+            # an expected date (USPS doesn't announce its results ahead): never read from a page; once it is well past, ask a person
+            if (dt.date.fromisoformat(today) - dt.date.fromisoformat(nx["d"])).days >= 10:
+                review_add(review, {"type": "earnings-missing", "key": key + "|missing", "company": nx["c"], "q": nx["q"], "d": nx["d"], "ir": ir.get(nx["c"]),
+                                    "note": f"{nx['c']} {nx['q']} results were expected around {nx['d']} and aren't in the history. Add the quarter by hand from "
+                                            "USPS's results release (total operating revenue and Shipping and Packages pieces, this year and last), "
+                                            "then set the next expected date."})
+            continue
         try:
             url = find_release(nx, ir, known, fetch)
         except Exception as e:
