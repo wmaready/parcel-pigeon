@@ -41,3 +41,24 @@ def test_history_is_not_reflagged():
     review = []
     FU.fuel_events({"diesel": DIESEL}, [], [dict(e) for e in EVENTS], review, today="2026-10-26")
     assert not any(r["key"].startswith("fuel-event-missing") for r in review), review
+
+
+PAGE = ("<table><tr><th>Area</th><th>09/14/26</th><th>09/21/26</th><th>09/28/26</th><th>10/05/26</th><th>10/12/26</th><th>10/19/26</th></tr>"
+        "<tr><td><b>Regular Gasoline</b></td><td>3.778</td><td>3.760</td><td>3.703</td><td>3.639</td><td>3.600</td><td>3.590</td></tr>"
+        "<tr><td><table><tr><td><B>Diesel (On-Highway) - All Types<B></td></tr></table></td><td class='DataB'>6.285</td><td>6.529</td>"
+        "<td>6.382</td><td>6.199</td><td>6.179</td><td class='Current2'>6.276</td><td><a href='x'>1994-2026</a></td></tr></table>"
+        "<td class='Update'>Release Date: 10/20/2026</td>")
+
+
+def test_diesel_from_eia_weekly_table_without_a_key():
+    f = {"diesel": [["2026-09-07", 5.967]]}
+    assert FU.eia_diesel_page(f, PAGE) == 6
+    assert f["diesel"][-3:] == [["2026-10-05", 6.199], ["2026-10-12", 6.179], ["2026-10-19", 6.276]] and f["diesel"][0] == ["2026-09-07", 5.967]
+
+
+def test_a_table_that_doesnt_check_out_is_refused():
+    import pytest
+    with pytest.raises(RuntimeError):
+        FU.eia_diesel_page({}, PAGE.replace("10/19/26", "10/20/26"))         # not a Monday a week on
+    with pytest.raises(RuntimeError):
+        FU.eia_diesel_page({}, PAGE.replace("Diesel (On-Highway)", "Diesel (Highway)"))

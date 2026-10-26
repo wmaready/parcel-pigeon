@@ -75,6 +75,28 @@ def eia(fuel, key):
     return len(rows)
 
 
+def eia_diesel_page(fuel, html=None):
+    """No-key: EIA's weekly retail price table (the last six Mondays), row "Diesel (On-Highway) - All Types". Taken only when
+    the six dates are Mondays a week apart and every price is a plausible $/gal."""
+    html = html if html is not None else get("https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm").text
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " | ", html))
+    label = "Diesel (On-Highway) - All Types"
+    i = text.find(label)
+    if i < 0:
+        raise RuntimeError("diesel row not found on EIA's weekly table")
+    dates = [f"20{y}-{m}-{d}" for m, d, y in re.findall(r"(\d{2})/(\d{2})/(\d{2})(?!\d)", text[:i])][-6:]
+    vals = [float(v) for v in re.findall(r"\|\s*(\d+\.\d{3})\s*", text[i:i + 800])[:6]]
+    ok = len(dates) == 6 and len(vals) == 6 and all(dt.date.fromisoformat(d).weekday() == 0 for d in dates) \
+        and all((dt.date.fromisoformat(b) - dt.date.fromisoformat(a)).days == 7 for a, b in zip(dates, dates[1:])) \
+        and all(1.0 < v < 12.0 for v in vals)
+    if not ok:
+        raise RuntimeError(f"EIA weekly table didn't check out: dates {dates}, prices {vals}")
+    old = {d: v for d, v in fuel.get("diesel", [])}
+    old.update(dict(zip(dates, vals)))
+    fuel["diesel"] = sorted([[d, v] for d, v in old.items()])
+    return len(vals)
+
+
 def fred_diesel(fuel):
     """No-key fallback: FRED's copy of the EIA weekly U.S. on-highway diesel series."""
     text = get("https://fred.stlouisfed.org/data/GASDESW.txt").text
@@ -221,11 +243,23 @@ def main():
         try: print(name, fn())
         except Exception as e: print(f"{name} failed: {e}", file=sys.stderr)
     carriers(fuel)
-    if os.environ.get("EIA_API_KEY"):
-        try: print("diesel", eia(fuel, os.environ["EIA_API_KEY"]))
-        except Exception as e: print(f"diesel failed: {e}", file=sys.stderr)
-    try: print("diesel (FRED)", fred_diesel(fuel))
-    except Exception as e: print(f"diesel FRED failed: {e}", file=sys.stderr)
+    # diesel: EIA's API with a key, else EIA's own weekly table (no key), else FRED's copy; a miss is loud, never quiet
+    got, why = 0, []
+    for name, fn in [("EIA API", (lambda: eia(fuel, os.environ["EIA_API_KEY"])) if os.environ.get("EIA_API_KEY") else None),
+                     ("EIA weekly table", lambda: eia_diesel_page(fuel)), ("FRED", lambda: fred_diesel(fuel))]:
+        if fn is None or got:
+            continue
+        try:
+            got = fn(); print(f"diesel ({name}):", got)
+        except Exception as e:
+            why.append(f"{name}: {str(e)[:120]}")
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    h = fuel.setdefault("health", {})
+    if got:
+        h["diesel"] = {"ok": True, "at": now, "last_ok": now, "latest": (fuel.get("diesel") or [[None]])[-1][0]}
+    else:
+        print("::warning title=Diesel not updated::" + "; ".join(why))
+        h["diesel"] = {"ok": False, "why": "; ".join(why)[:300], "at": now, "last_ok": (h.get("diesel") or {}).get("last_ok")}
     # current ground = latest history week that has started
     today = dt.date.today().isoformat()
     for c, h in fuel.get("hist", {}).items():
