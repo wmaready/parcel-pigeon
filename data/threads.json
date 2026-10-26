@@ -545,6 +545,7 @@
   "rv": "fdf5cbfc70f3",
   "co": "Amazon",
   "apart": [
+   "amazon-jfk8-nlrb",
    "amazon-labor",
    "amazon-network-buildout",
    "last-mile-facility-legislation",
@@ -574,6 +575,7 @@
    "now": "The Teamsters have sought an appeal of the settlement, and the former drivers' suit seeks class status; no dates are set in the milestones."
   },
   "apart": [
+   "amazon-jfk8-nlrb",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
   ]
@@ -622,6 +624,7 @@
   },
   "co": "Amazon",
   "apart": [
+   "amazon-jfk8-nlrb",
    "amazon-labor",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
@@ -725,5 +728,24 @@
   },
   "co": "UniUni",
   "rv": "045c9e317693"
+ },
+ "amazon-jfk8-nlrb": {
+  "n": "Amazon JFK8 union case",
+  "ids": [
+   "aa0e6e5c54025"
+  ],
+  "first": "2026-10-16",
+  "co": "Amazon",
+  "s": "Amazon and the Teamsters filed briefs on October 16 in the Fifth Circuit over the NLRB's April order to bargain, and the court has not ruled.",
+  "last": "2026-10-16",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "amazon-network-buildout",
+   "parcel-volume-amazon",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ]
  }
 }

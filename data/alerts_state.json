@@ -68,7 +68,10 @@
   "a6f025bac3520",
   "ac78f72e7f458",
   "afb439a13ef25",
-  "rv5-ups-sbr-fuel"
+  "rv5-ups-sbr-fuel",
+  "a71e9c34808fa",
+  "a794f973354d4",
+  "aa1bd42ea784a"
  ],
  "clock": [
   "e06:7",
@@ -230,7 +233,11 @@
   "player:curri",
   "fuel:FedEx:2026-10-26",
   "player:burq",
-  "player:lalamove"
+  "player:lalamove",
+  "more:story:doordash adds 7 99 returns pickup tiktok shop links happy returns,story:fedex names autozone s jamere jackson as chief financial officer,story:roadie survey 64 of shoppers would quit a retailer after one to four bad deliveries",
+  "story:fedex names autozone s jamere jackson as chief financial officer",
+  "story:roadie survey 64 of shoppers would quit a retailer after one to four bad deliveries",
+  "story:doordash adds 7 99 returns pickup tiktok shop links happy returns"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -301,36 +308,39 @@
   "industry analysis projects record parcel and ltl costs in q4",
   "usps holiday rates on some package products run through mid ",
   "fareye survey 70 of last mile operators rank fuel a top cost",
-  "ups adds a 5 fuel surcharge to small business rates and rais"
+  "ups adds a 5 fuel surcharge to small business rates and rais",
+  "fedex names autozone s jamere jackson as chief financial off",
+  "doordash adds 7 99 returns pickup tiktok shop links happy re",
+  "roadie survey 64 of shoppers would quit a retailer after one"
  ],
  "harvested": [
-  "a2f683da86bf8",
-  "a2def09bc43bb",
-  "wacb825361479",
-  "af8ee5ed067c6",
-  "a831c709e5809",
-  "a89d7e4beebd9",
-  "a6e82ba740e99",
-  "a6cc2420ad66e",
-  "a312b45efa358",
-  "a15404304f17b",
-  "a773d361dac4e",
-  "ac78f72e7f458",
-  "aee6669d325da",
-  "a3a45d7f6db20",
+  "a57a06c26359c",
   "a2b81ad721cb8",
-  "a351cab9045c7",
-  "a5d45f26f2219",
-  "rv5-ups-sbr-fuel",
+  "a72efb5e01b99",
+  "wacb825361479",
+  "a831c709e5809",
+  "a3a45d7f6db20",
+  "a2def09bc43bb",
+  "aee6669d325da",
+  "w150132868eae",
+  "a6cc2420ad66e",
+  "a773d361dac4e",
+  "w599d9089a65d",
   "aba40a11b6946",
   "a58373f1b7bc3",
-  "a72efb5e01b99",
+  "a312b45efa358",
+  "a6e82ba740e99",
+  "a2f683da86bf8",
+  "a15404304f17b",
+  "a5d45f26f2219",
   "a6c2418bed0a7",
-  "a57a06c26359c",
-  "w84705482dd2f",
+  "a351cab9045c7",
+  "a89d7e4beebd9",
+  "af8ee5ed067c6",
+  "rv5-ups-sbr-fuel",
   "wdf959a97bcb6",
-  "w150132868eae",
-  "w599d9089a65d"
+  "w84705482dd2f",
+  "ac78f72e7f458"
  ],
  "backfilled": true,
  "recent": [
@@ -1422,6 +1432,55 @@
      "checked": "2026-10-24"
     }
    ]
+  },
+  {
+   "id": "a71e9c34808fa",
+   "title": "FedEx names AutoZone's Jamere Jackson as chief financial officer",
+   "date": "2026-10-26",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
+   "srcs": [
+    {
+     "src": "Reuters",
+     "url": "https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/"
+    },
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/fedex-taps-autozone-executive-to-be-finance-chief"
+    }
+   ]
+  },
+  {
+   "id": "a794f973354d4",
+   "title": "DoorDash adds $7.99 returns pickup; TikTok Shop links Happy Returns",
+   "date": "2026-10-26",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
+   "srcs": [
+    {
+     "src": "Modern Retail",
+     "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss"
+    }
+   ]
+  },
+  {
+   "id": "aa1bd42ea784a",
+   "title": "Roadie survey: 64% of shoppers would quit a retailer after one to four bad deliveries",
+   "date": "2026-10-26",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1588,13 +1647,25 @@
   "rv5-ups-sbr-fuel": {
    "t": "UPS adds 5% fuel fee to Small Business Rates",
    "m": "Takes effect Dec 21: rates rise 4.5% plus 5% fuel surcharge, about 9.7% more for SBR shippers."
+  },
+  "a71e9c34808fa": {
+   "t": "FedEx names Jamere Jackson CFO",
+   "m": "Leadership change only; no change to FedEx rates or service."
+  },
+  "a794f973354d4": {
+   "t": "DoorDash adds $7.99 returns pickup",
+   "m": "Driver return pickups in select cities; TikTok Shop links Happy Returns if brands opt in."
+  },
+  "aa1bd42ea784a": {
+   "t": "Roadie: 64% would quit after bad deliveries",
+   "m": "Survey: 64% of shoppers would quit a retailer after one to four bad deliveries. No rate or service change."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-26",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-10-26T08:47:26.044121-04:00"
+ "last_push": "2026-10-26T11:04:42.121314-04:00"
 }
