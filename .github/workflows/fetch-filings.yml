@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install curl_cffi pypdf requests
-      - run: python tools/fetch_filings.py --diesel
+      - run: python tools/fetch_filings.py --ti
         env:
           SEC_CONTACT: ${{ secrets.SEC_CONTACT }}
       - run: |

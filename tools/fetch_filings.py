@@ -170,9 +170,47 @@ def diesel():
             LOG.append(f"plain requests ERR {u} {e}")
 
 
+def site(base, depth=1, limit=60, tag="TI"):
+    """A site's page and the same-site pages it links to (carrier-updates entries, archives, PDFs)."""
+    from urllib.parse import urlparse
+    host = urlparse(base).netloc.replace("www.", "")
+    seen, todo = set(), [base]
+    for _ in range(depth + 1):
+        nxt = []
+        for u in todo:
+            if u in seen or len(seen) >= limit:
+                continue
+            seen.add(u)
+            r = get(u)
+            if not r:
+                continue
+            save_any(f"{tag}-" + slug(u), r, u)
+            if r.content[:4] == b"%PDF":
+                continue
+            for h in re.findall(r'href="([^"#]+)"', r.text, re.I):
+                v = urljoin(u, h)
+                if urlparse(v).netloc.replace("www.", "") == host and re.search(r"(carrier|update|rate|surcharge|fuel|gri|peak|ups|fedex|usps|dhl|amazon|ontrac|\.pdf)", v, re.I) \
+                        and not re.search(r"\.(png|jpe?g|gif|svg|css|js|webp|ico)(\?|$)", v, re.I):
+                    nxt.append(v)
+        todo = nxt
+
+
+def fuelpages():
+    for u in ("https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges.page",
+              "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+              "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html",
+              "https://www.dhl.com/us-en/home/express/products-and-solutions/products-and-services-overview/surcharges.html"):
+        r = get(u)
+        if r:
+            save_any("FUEL-" + slug(u), r, u)
+
+
 if __name__ == "__main__":
     import sys as _s
-    if "--diesel" in _s.argv:
+    if "--ti" in _s.argv:
+        site("https://transimpact.com/carrier-updates", depth=2, limit=80)
+        fuelpages()
+    elif "--diesel" in _s.argv:
         diesel()
     elif "--pb" in _s.argv:
         pitney()
