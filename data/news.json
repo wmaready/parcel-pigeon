@@ -6124,6 +6124,43 @@
   "unconf": true
  },
  {
+  "id": "dl-inpost-fedex",
+  "date": "2026-09-30",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "FedEx-led group completes €7.8B takeover of InPost",
+  "sum": "A consortium of FedEx, private equity firm Advent, founder Rafał Brzoska's A&R and PPF offered €15.60 a share for European parcel-locker company InPost, about €7.8 billion. The offer settled Sept. 30, 2026, with about 89.8% of shares tendered.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels.",
+  "why": "FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels. InPost gets access to FedEx's air and ground network. InPost stays standalone with Brzoska as CEO.",
+  "tie": "FedEx completes its purchase of TNT Express, its base in Europe",
+  "act": null,
+  "dates": [],
+  "src": "InPost consortium offer (company release)",
+  "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf",
+  "srcs": [
+   {
+    "src": "InPost consortium offer (company release)",
+    "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf"
+   },
+   {
+    "src": "InPost settlement (company release)",
+    "url": "https://inpost.eu/sites/default/files/2026-09/Settlement%20of%20InPost%20Offer%20has%20successfully%20taken%20place_0.pdf"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/fedex-group-to-buy-inpost-for-european-out-of-home-parcel-network"
+   }
+  ],
+  "auto": true,
+  "added": "2026-09-30T00:00:00Z",
+  "restored": "2026-10-26"
+ },
+ {
   "id": "adae683e43adb",
   "date": "2026-09-28",
   "c": [
@@ -6151,6 +6188,39 @@
   "edge": true,
   "exclusive": true,
   "unconf": true
+ },
+ {
+  "id": "dl-returnpro-ifreturns",
+  "date": "2026-09-21",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "ReturnPro buys Madrid returns-software platform iF Returns",
+  "sum": "ReturnPro, a U.S. returns management and resale company, bought iF Returns, a Madrid-based returns software platform used by more than 200 European brands.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S.",
+  "why": "ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S. The company says it will offer the software to existing customers, including Walmart Marketplace sellers. Every exchange in place of a refund changes the mix of return and outbound parcels a retailer ships.",
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "src": "Business Wire",
+  "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach",
+  "srcs": [
+   {
+    "src": "Business Wire",
+    "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach"
+   },
+   {
+    "src": "DC Velocity",
+    "url": "https://www.dcvelocity.com/supply-chain/other-services/reverse-logistics/returnpro-acquires-spanish-reverse-logistics-platform-provider-if-returns"
+   }
+  ],
+  "auto": true,
+  "added": "2026-09-21T00:00:00Z",
+  "restored": "2026-10-26"
  },
  {
   "id": "a03895dd99d3d",
@@ -6276,75 +6346,5 @@
   "auto": true,
   "thread": "ups-driver-choice-lawsuit",
   "exclusive": true
- },
- {
-  "id": "dl-returnpro-ifreturns",
-  "date": "2026-09-21",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "ReturnPro buys Madrid returns-software platform iF Returns",
-  "sum": "ReturnPro, a U.S. returns management and resale company, bought iF Returns, a Madrid-based returns software platform used by more than 200 European brands.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S.",
-  "why": "ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S. The company says it will offer the software to existing customers, including Walmart Marketplace sellers. Every exchange in place of a refund changes the mix of return and outbound parcels a retailer ships.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Business Wire",
-  "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach",
-  "srcs": [
-   {
-    "src": "Business Wire",
-    "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach"
-   },
-   {
-    "src": "DC Velocity",
-    "url": "https://www.dcvelocity.com/supply-chain/other-services/reverse-logistics/returnpro-acquires-spanish-reverse-logistics-platform-provider-if-returns"
-   }
-  ],
-  "auto": true,
-  "added": "2026-09-21T00:00:00Z",
-  "restored": "2026-10-26"
- },
- {
-  "id": "dl-inpost-fedex",
-  "date": "2026-09-30",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "FedEx-led group completes €7.8B takeover of InPost",
-  "sum": "A consortium of FedEx, private equity firm Advent, founder Rafał Brzoska's A&R and PPF offered €15.60 a share for European parcel-locker company InPost, about €7.8 billion. The offer settled Sept. 30, 2026, with about 89.8% of shares tendered.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels.",
-  "why": "FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels. InPost gets access to FedEx's air and ground network. InPost stays standalone with Brzoska as CEO.",
-  "tie": "FedEx completes its purchase of TNT Express, its base in Europe",
-  "act": null,
-  "dates": [],
-  "src": "InPost consortium offer (company release)",
-  "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf",
-  "srcs": [
-   {
-    "src": "InPost consortium offer (company release)",
-    "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf"
-   },
-   {
-    "src": "InPost settlement (company release)",
-    "url": "https://inpost.eu/sites/default/files/2026-09/Settlement%20of%20InPost%20Offer%20has%20successfully%20taken%20place_0.pdf"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/fedex-group-to-buy-inpost-for-european-out-of-home-parcel-network"
-   }
-  ],
-  "auto": true,
-  "added": "2026-09-30T00:00:00Z",
-  "restored": "2026-10-26"
  }
 ]
