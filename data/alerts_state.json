@@ -71,7 +71,8 @@
   "rv5-ups-sbr-fuel",
   "a71e9c34808fa",
   "a794f973354d4",
-  "aa1bd42ea784a"
+  "aa1bd42ea784a",
+  "a663794cc9c55"
  ],
  "clock": [
   "e06:7",
@@ -237,7 +238,8 @@
   "more:story:doordash adds 7 99 returns pickup tiktok shop links happy returns,story:fedex names autozone s jamere jackson as chief financial officer,story:roadie survey 64 of shoppers would quit a retailer after one to four bad deliveries",
   "story:fedex names autozone s jamere jackson as chief financial officer",
   "story:roadie survey 64 of shoppers would quit a retailer after one to four bad deliveries",
-  "story:doordash adds 7 99 returns pickup tiktok shop links happy returns"
+  "story:doordash adds 7 99 returns pickup tiktok shop links happy returns",
+  "story:ups fedex fuel surcharges near 29 as holiday delivery prices climb"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -311,36 +313,38 @@
   "ups adds a 5 fuel surcharge to small business rates and rais",
   "fedex names autozone s jamere jackson as chief financial off",
   "doordash adds 7 99 returns pickup tiktok shop links happy re",
-  "roadie survey 64 of shoppers would quit a retailer after one"
+  "roadie survey 64 of shoppers would quit a retailer after one",
+  "ups fedex fuel surcharges near 29 as holiday delivery prices"
  ],
  "harvested": [
-  "ac78f72e7f458",
-  "wacb825361479",
-  "rv5-ups-sbr-fuel",
-  "a5d45f26f2219",
-  "af8ee5ed067c6",
-  "wdf959a97bcb6",
-  "a58373f1b7bc3",
-  "a6cc2420ad66e",
   "a15404304f17b",
-  "a773d361dac4e",
-  "a2b81ad721cb8",
-  "a351cab9045c7",
-  "w84705482dd2f",
-  "a72efb5e01b99",
-  "a3a45d7f6db20",
-  "a6c2418bed0a7",
-  "aee6669d325da",
-  "w599d9089a65d",
-  "aba40a11b6946",
   "a2f683da86bf8",
-  "a2def09bc43bb",
-  "a831c709e5809",
+  "a58373f1b7bc3",
   "a57a06c26359c",
-  "a89d7e4beebd9",
+  "a5d45f26f2219",
+  "a351cab9045c7",
+  "a831c709e5809",
+  "a773d361dac4e",
+  "a663794cc9c55",
+  "a2b81ad721cb8",
+  "w84705482dd2f",
   "a312b45efa358",
+  "a3a45d7f6db20",
+  "a6e82ba740e99",
+  "af8ee5ed067c6",
+  "ac78f72e7f458",
+  "rv5-ups-sbr-fuel",
+  "a89d7e4beebd9",
+  "w599d9089a65d",
   "w150132868eae",
-  "a6e82ba740e99"
+  "wdf959a97bcb6",
+  "a6c2418bed0a7",
+  "a72efb5e01b99",
+  "aee6669d325da",
+  "wacb825361479",
+  "a2def09bc43bb",
+  "aba40a11b6946",
+  "a6cc2420ad66e"
  ],
  "backfilled": true,
  "recent": [
@@ -1481,6 +1485,26 @@
      "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/"
     }
    ]
+  },
+  {
+   "id": "a663794cc9c55",
+   "title": "UPS, FedEx fuel surcharges near 29% as holiday delivery prices climb",
+   "date": "2026-10-26",
+   "c": [
+    "UPS",
+    "FedEx"
+   ],
+   "url": "https://www.bnnbloomberg.ca/business/international/2026/10/26/us-retailers-face-record-holiday-delivery-prices-from-surcharges-tied-to-costlier-diesel/",
+   "srcs": [
+    {
+     "src": "BNN Bloomberg",
+     "url": "https://www.bnnbloomberg.ca/business/international/2026/10/26/us-retailers-face-record-holiday-delivery-prices-from-surcharges-tied-to-costlier-diesel/"
+    },
+    {
+     "src": "Reuters",
+     "url": "https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1665,7 +1689,7 @@
  "fuelq": {},
  "day": {
   "d": "2026-10-26",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-10-26T11:04:42.121314-04:00"
+ "last_push": "2026-10-26T15:10:02.019720-04:00"
 }
