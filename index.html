@@ -9856,6 +9856,10 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
     // reader takes one current value per carrier and service from FUELDB (fuelSync)
     ['UPS','FedEx'].forEach(c=>{const d=fuel.eff&&fuel.eff[c],cu=fuel.current&&fuel.current[c],r=d&&FUELDB.find(x=>x[0]===d);if(!r||!cu)return;
       Object.entries(FCOL[c]).forEach(([k,i])=>{if(cu[k]!=null&&r[i]==null)r[i]=cu[k]})});
+    // every service week the carriers' own pages gave (ground, air, international), one row per Monday: the week-over-week change
+    // is then between real consecutive weeks. The carrier's own figure replaces an older stored one.
+    if(fuel.hist2)['UPS','FedEx'].forEach(c=>Object.entries(fuel.hist2[c]||{}).forEach(([k,series])=>{const i=(FCOL[c]||{})[k];if(i==null)return;
+      Object.entries(series).forEach(([d,v])=>{if(v==null)return;let r=FUELDB.find(x=>x[0]===d);if(!r){r=[d,...Array(14).fill(null)];FUELDB.push(r)}r[i]=v})}));
     FUELDB.sort((a,b)=>a[0].localeCompare(b[0]));
     fuelSync();ch=true}
   // the day's change counts only when the file says which close it is measured from (prev_date); an older file's change

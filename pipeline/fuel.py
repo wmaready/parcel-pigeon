@@ -224,6 +224,9 @@ def carriers(fuel):
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     health = fuel.setdefault("health", {})
     for c in ("UPS", "FedEx"):
+        pg = health.get(c) or {}
+        if pg.get("via") == "page" and pg.get("ok") and pg.get("latest") and (dt.date.today() - dt.date.fromisoformat(pg["latest"])).days <= 9:
+            continue                          # read from the carrier's own page this week (fuelpages.py): no key needed
         if not key:
             loud(f"OILPRICE_API_KEY is not set, so {c} weekly fuel was NOT updated. Add the secret in GitHub (Settings > Secrets).")
             health[c] = {"ok": False, "why": "OILPRICE_API_KEY not set", "at": now, "last_ok": (health.get(c) or {}).get("last_ok")}
