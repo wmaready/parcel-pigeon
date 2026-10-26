@@ -205,9 +205,43 @@ def fuelpages():
             save_any("FUEL-" + slug(u), r, u)
 
 
+def upsraw():
+    """UPS's fuel page as served (to find where its weekly table comes from), the flyers it links, and a few likely feeds."""
+    u = "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges.page"
+    r = get(u)
+    if not r:
+        return
+    (OUT / "UPSRAW-fuel-page.html").write_text(r.text[:600000])
+    LOG.append(f"UPS raw page {len(r.text)} chars")
+    hrefs = sorted(set(re.findall(r'(?:href|src|data-[\w-]+)="([^"]+)"', r.text)))
+    keep = [h for h in hrefs if re.search(r"(fuel|surcharge|\.pdf|\.json|assets\.ups|/api/|webcontent)", h, re.I)]
+    (OUT / "UPSRAW-links.txt").write_text("\n".join(keep))
+    for h in keep:
+        v = urljoin(u, h)
+        if re.search(r"\.pdf|flyer|fuel", v, re.I) and not re.search(r"\.(png|jpe?g|svg|css|js|woff2?)(\?|$)", v, re.I):
+            rr = get(v)
+            if rr:
+                save_any("UPSLINK-" + slug(v), rr, v)
+    for c in ("https://www.ups.com/assets/resources/webcontent/en_US/fuel-surcharge.json",
+              "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges/_jcr_content.json",
+              "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges.model.json"):
+        rr = get(c)
+        if rr:
+            (OUT / ("UPSFEED-" + slug(c) + ".txt")).write_text(rr.text[:200000])
+    # the tables in the page's scripts
+    for m in re.finditer(r"<script[^>]*src=\"([^\"]+)\"", r.text):
+        v = urljoin(u, m.group(1))
+        if re.search(r"fuel|surcharge", v, re.I):
+            rr = get(v)
+            if rr:
+                (OUT / ("UPSJS-" + slug(v) + ".txt")).write_text(rr.text[:300000])
+
+
 if __name__ == "__main__":
     import sys as _s
-    if "--ti" in _s.argv:
+    if "--upsraw" in _s.argv:
+        upsraw()
+    elif "--ti" in _s.argv:
         site("https://transimpact.com/carrier-updates", depth=2, limit=80)
         fuelpages()
     elif "--diesel" in _s.argv:
