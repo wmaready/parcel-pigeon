@@ -85,3 +85,18 @@ def test_seed_export_runs_on_the_app(tmp_path):
     r = subprocess.run([node, str(root / "pipeline" / "export_seed.js"), str(root / "index.html"), str(out)], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr[-800:]
     assert out.exists() and "stories" in r.stdout
+
+
+def test_transimpact_carrier_updates_are_in_the_almanac():
+    """Entries read from transimpact.com/carrier-updates: present once, sourced, in order, and the carrier page wins on dates."""
+    alm = {e["id"]: e for e in json.loads((DATA / "almanac.json").read_text())}
+    for i in ("fedex-2026-surcharge-2026-03-05", "ups-2026-surcharge-2026-05-31", "ups-2026-fuel-table-2026-06-01",
+              "fedex-2026-fee-2026-07-20", "ups-2026-fuel-table-2026-11-02"):
+        assert alm[i]["sources"] and alm[i]["details"], i
+    assert alm["fedex-2026-fee-2026-07-20"]["conf"] == "confirmed"  # FedEx's page says July 20; TransImpact's list says July 30
+    assert "$17.50" in alm["fedex-2026-fee-2026-07-20"]["headline"]
+    assert alm["fedex-2026-gri-2026-01-05"]["announced"] == "2025-09-12"
+    assert alm["fedex-2027-gri-2027-01-04"]["announced"] == "2026-09-18"
+    assert alm["ups-2026-gri-2025-12-22"]["announced"] == "2025-10-31"
+    # the Reddit-only claim about the EU is not stated as fact
+    assert "EU" not in " ".join(alm["fedex-2026-fee-2026-08-03"]["details"])

@@ -327,3 +327,22 @@ def test_fedex_statbook_goes_to_review_with_its_link():
     page = '<a href="https://s21.q4cdn.com/665674268/files/doc_financials/2026/tp/FedEx-Transition-Stat-Book.pdf">Stat Book</a>'
     E.fill_packages(rows, review, "2026-10-29", fetch=lambda u: (_ for _ in ()).throw(AssertionError("no SEC read for FedEx")), fedex_page=page)
     assert review and review[0]["url"].endswith("FedEx-Transition-Stat-Book.pdf") and row_of(rows, "FedEx", "Jun–Sep 2026 transition period")["vol"] is None
+
+
+def test_fedex_package_views_say_freight_is_not_in_them():
+    """Oct 26, 2026: FedEx Freight separated on June 1, 2026; the package figures were always the Federal Express segment."""
+    import re as _re
+    assert 'egfrt' in (ROOT / "index.html").read_text() and "reports shipments, not packages" in (ROOT / "index.html").read_text()
+
+
+def test_usps_expected_date_is_never_read_from_a_page_and_asks_a_person_when_late():
+    rows, review = [], []
+    nxt = {"next": [{"c": "USPS", "q": "FY26 Q4", "d": "2026-11-14", "est": True, "match": None}], "ir": {"USPS": "https://about.usps.com/newsroom/national-releases/"}}
+    def boom(url):
+        raise AssertionError("no page is read for an expected date")
+    assert E.add_new_quarters(rows, nxt, review, "2026-11-20", fetch=boom, pause=0) == [] and not review      # a few days late: wait
+    assert E.add_new_quarters(rows, nxt, review, "2026-11-25", fetch=boom, pause=0) == []
+    assert [r["type"] for r in review] == ["earnings-missing"] and "USPS" in review[0]["note"]
+    d = json.loads((ROOT / "data" / "earnings_next.json").read_text())
+    u = next(x for x in d["next"] if x["c"] == "USPS")
+    assert u["est"] is True and "doesn't announce" in u["t"]

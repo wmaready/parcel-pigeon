@@ -80,3 +80,19 @@ def test_docs_grouped_by_carrier_then_year(site, width):
         assert len(rows) == len({r["id"] for r in rows}), "a document is listed twice"
         assert not any(re.search(r"(daily|retail) rates us en$", by[r["id"]]["n"]) for r in rows)
         assert pg.evaluate(OVERFLOW) is None
+
+
+def test_docs_are_typed_so_they_land_in_the_right_folder_and_have_real_names():
+    """Oct 26, 2026 (tools/docs_cleanup.py): rate guides aren't filed under programs, fuel files under fuel, and no title
+    is a bare filename."""
+    import json, re
+    docs = json.loads((ROOT / "data" / "docs.json").read_text())
+    t = {(d["c"], d["n"]): d["t"] for d in docs}
+    assert t[("UPS", "2026 UPS Small Business Rate Guide")] == "Rate guide"
+    assert t[("UPS", "UPS Small Business hundredweight rate guide")] == "Rate guide"
+    assert t[("FedEx", "FedEx rate tools (zone locator, rate downloads)")] == "Rate guide"
+    assert t[("UPS", "UPS fuel surcharge rate-change flyer (PDF)")] == "Fuel"
+    assert t[("USPS", "USPS Handbook DM-204")] == "Service guide"
+    assert t[("UPS", "UPS Small Business Rates page")] == "Special program"        # a program page stays a program
+    raw = [d["n"] for d in docs if re.search(r"(\b(us en|TermsCond|ImpactedZIPS)\b|%2B|^Printable version$|^USPS (dm|pub)\d+$)", d["n"])]
+    assert not raw, raw

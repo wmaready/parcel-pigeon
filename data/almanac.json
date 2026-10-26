@@ -3,7 +3,7 @@
   "carrier": "FedEx",
   "year": 2027,
   "kind": "gri",
-  "announced": null,
+  "announced": "2026-09-18",
   "effective": "2027-01-04",
   "pct": 5.9,
   "headline": "FedEx 2027 GRI: 5.9% average; fourth straight 5.9% headline",
@@ -22,7 +22,7 @@
    "https://www.cep-research.com/2026/09/22/fedex-leads-2027-rate-increases/"
   ],
   "conf": "partial",
-  "note": "Announcement date not confirmed (one source says Sept 18, 2026; coverage late Sept 2026). Freight-specific % not found. Service-level % from consultancies.",
+  "note": "FedEx announced Sept 18, 2026 (TransImpact's Key Takeaways PDF, and the date one outlet gave). Freight-specific % not found. Service-level % from consultancies.",
   "id": "fedex-2027-gri-2027-01-04"
  },
  {
@@ -183,11 +183,13 @@
   "headline": "FedEx merges U.S. export and import fuel tables; exports pay more",
   "details": [
    "Separate export and import international fuel surcharge tables consolidated into one table",
-   "Raises export fuel surcharge (reported +3.5 pts) and lowers import"
+   "Raises export fuel surcharge (reported +3.5 pts) and lowers import",
+   "TransImpact: export +3.5% and import -0.75% in effective surcharge, after export +2% and import +2.5% on May 11, 2026"
   ],
   "sources": [
    "https://www.supplychaindive.com/news/fedex-fuel-surcharge-change-raises-heat-on-export-shipments/823062/",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_6-22-26.pdf"
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_6-22-26.pdf",
+   "https://transimpact.com/blog/fedex-consolidates-international-fuel-surcharge-tables/"
   ],
   "conf": "confirmed",
   "note": "+3.5 pt export figure from TransImpact headline only.",
@@ -197,7 +199,7 @@
   "carrier": "FedEx",
   "year": 2026,
   "kind": "gri",
-  "announced": null,
+  "announced": "2025-09-12",
   "effective": "2026-01-05",
   "pct": 5.9,
   "headline": "FedEx 2026 GRI: 5.9% average; Freight 5.9-6.9%",
@@ -215,7 +217,7 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2026.pdf"
   ],
   "conf": "partial",
-  "note": "Announcement date not confirmed: one source says Sept 12, 2025, another 'early October'; trade coverage mid-Sept 2025. Residential surcharge increase ~8.4% per PARCEL Industry.",
+  "note": "FedEx announced Sept 12, 2025 (TransImpact; Supply Chain Dive URL dates the coverage to mid-September). Residential surcharge increase ~8.4% per PARCEL Industry.",
   "id": "fedex-2026-gri-2026-01-05"
  },
  {
@@ -385,7 +387,7 @@
   "carrier": "UPS",
   "year": 2026,
   "kind": "gri",
-  "announced": null,
+  "announced": "2025-10-31",
   "effective": "2025-12-22",
   "pct": 5.9,
   "headline": "UPS 2026 GRI: 5.9% average; residential surcharge $6.50, LPS up ~9-10%",
@@ -402,7 +404,7 @@
    "https://wwwapps.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver"
   ],
   "conf": "confirmed",
-  "note": "Exact announcement date not confirmed (after FedEx's Sept 2025 announcement). A blog claim that Air took effect Jan 6, 2026 is unconfirmed and excluded.",
+  "note": "UPS announced Oct 31, 2025 per TransImpact; the Supply Chain Dive report followed in early November. A blog claim that Air took effect Jan 6, 2026 is unconfirmed and excluded.",
   "id": "ups-2026-gri-2025-12-22"
  },
  {
@@ -681,11 +683,13 @@
   "details": [
    "Any fraction of an inch/cm rounded up to the next whole unit (previously < 0.5 rounded down)",
    "Raises DIM weight on many parcels; can push more packages over AHS and unauthorized thresholds",
-   "UPS adopted the same rule on the same date"
+   "UPS adopted the same rule on the same date",
+   "TransImpact: the Inbound Processing Fee for U.S. import shipments tied to customs clearance also rose"
   ],
   "sources": [
    "https://www.supplychaindive.com/news/fedex-dimensional-weight-calculation-changes/753938/",
-   "https://www.intelligentaudit.com/blog/ups-fedexs-dim-round-up-set-to-reshape-parcel-pricing"
+   "https://www.intelligentaudit.com/blog/ups-fedexs-dim-round-up-set-to-reshape-parcel-pricing",
+   "https://transimpact.com/blog/fedex-announces-several-rate-changes-effective-beginning-in-july-14-and-august-18/"
   ],
   "conf": "confirmed",
   "note": "Announcement date not confirmed.",
@@ -1131,11 +1135,13 @@
   "details": [
    "2% payment processing fee per invoice replaces 2% credit card surcharge",
    "$5 per printed invoice copy; $25 per check or wire payment",
-   "Late payment fee 8% -> 9.9% of past-due balance"
+   "Late payment fee 8% -> 9.9% of past-due balance",
+   "TransImpact lists the invoice-copy, check/wire and late-payment fees as effective March 31, 2025 and the card swap as May 18"
   ],
   "sources": [
    "https://www.supplychaindive.com/news/ups-fuel-surcharge-processing-fee-increases/741921/",
-   "https://parcelindustry.com/article-6462-UPS-2025-Fee-Overhaul-Key-Changes-Every-Shipper-Should-Prepare-For.html"
+   "https://parcelindustry.com/article-6462-UPS-2025-Fee-Overhaul-Key-Changes-Every-Shipper-Should-Prepare-For.html",
+   "https://transimpact.com/blog/ups-to-increase-fuel-surcharge-and-add-other-new-charges/"
   ],
   "conf": "partial",
   "note": "Effective date conflicts: May 18 (SCD) vs May 19 (PARCEL). Effective dates of the other fees not confirmed.",
@@ -3186,5 +3192,483 @@
   "conf": "confirmed",
   "note": "First-Class Package Service and Parcel Select product averages not verified from a primary source (a ProShip blog claims Parcel Select +4.9% / +7% for <=1 lb; not used). PRC docket number not retrieved. No peak surcharge existed in 2018; USPS peak pricing began in 2020.",
   "id": "usps-2018-price-change-2018-01-21"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2025,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2025-02-10",
+  "pct": null,
+  "headline": "FedEx raises domestic fuel surcharge: Express +1 pt, Ground and Home Delivery +1.75 pts",
+  "details": [
+   "Fuel surcharge percentages up 1% for Domestic Express and 1.75% for Ground and Home Delivery, effective Feb 10, 2025",
+   "Came a month after the 5.9% GRI took effect on Jan 6, 2025"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/fedex-updates-domestic-fuel-surcharge-and-ground-economy-das/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2025-fuel-table-2025-02-10"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2025,
+  "kind": "das",
+  "announced": null,
+  "effective": "2025-02-10",
+  "pct": null,
+  "headline": "FedEx Ground Economy Delivery Area Surcharge up 55%: $4.00 to $6.20, Extended $5.35 to $8.30",
+  "details": [
+   "Standard Ground Economy DAS $4.00 to $6.20; Extended DAS $5.35 to $8.30, effective Feb 10, 2025",
+   "TransImpact: in line with the recent UPS SurePost DAS increases"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/fedex-updates-domestic-fuel-surcharge-and-ground-economy-das/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2025-das-2025-02-10"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "price_change",
+  "announced": null,
+  "effective": "2025-03-24",
+  "pct": null,
+  "headline": "UPS zone adjustments for certain origin and destination ZIP code pairs",
+  "details": [
+   "Zone pricing changes for certain origin/destination ZIP code pairs, effective March 24, 2025"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-announces-zone-adjustments-effective-march-24-2025/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page. Which ZIP pairs moved was not listed.",
+  "id": "ups-2025-price-change-2025-03-24"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2025,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2025-06-02",
+  "pct": null,
+  "headline": "FedEx adds a Demand Surcharge on U.S. to Canada exports",
+  "details": [
+   "New Demand Surcharge Fee on exports to Canada effective June 2, 2025"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/fedex-to-add-demand-surcharge-fee-from-us-to-canada/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page. Amount not in the source we read.",
+  "id": "fedex-2025-surcharge-2025-06-02"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2025-06-23",
+  "pct": null,
+  "headline": "UPS Domestic Air fuel surcharge +0.75 pt; UPS and FedEx Ground both reach a record 20%",
+  "details": [
+   "UPS Domestic Air fuel surcharge up 0.75%, matching FedEx Express at 18.75%",
+   "UPS and FedEx Ground fuel surcharges both 20%, a record; the previous peak was FedEx at 19.50% in mid-2022"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-matches-fedex-with-record-high-fuel-surcharge/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2025-fuel-table-2025-06-23"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "fee",
+  "announced": null,
+  "effective": "2025-08-29",
+  "pct": null,
+  "headline": "UPS adds Entry Preparation Charge on Canada-to-U.S. imports ($10 up to $200, $20 from $200.01 to $800)",
+  "details": [
+   "UPS Standard shipments from Canada into the U.S.: $10.00 for value for duty $0.00-$200.00; $20.00 for $200.01-$800.00",
+   "Effective Aug 29, 2025, as the U.S. ended de minimis duty-free entry"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/chaos-in-international-shipping-new-ups-fees-and-mail-suspensions/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2025-fee-2025-08-29"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "fee",
+  "announced": null,
+  "effective": "2025-09-08",
+  "pct": null,
+  "headline": "UPS adds a $2.50 International Processing Fee on select premium import services",
+  "details": [
+   "$2.50 per shipment on UPS Worldwide Express, Worldwide Express Plus and Worldwide Express NA1, effective Sept 8, 2025"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/chaos-in-international-shipping-new-ups-fees-and-mail-suspensions/",
+   "https://www.supplychaindive.com/news/ups-international-processing-fee-worldwide-2025/758526/"
+  ],
+  "conf": "partial",
+  "note": "TransImpact gives Sept 8; the trade outlet reported the fee in late August.",
+  "id": "ups-2025-fee-2025-09-08"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2025,
+  "kind": "peak",
+  "announced": null,
+  "effective": "2025-09-22",
+  "pct": null,
+  "headline": "FedEx 2025 international peak demand surcharges, Sept 22 to Oct 19",
+  "details": [
+   "Import and export demand surcharges apply Sept 22 to Oct 19, 2025",
+   "TransImpact: UPS and FedEx international peak fees run $0.10 to $0.52 per lb depending on the origin and destination"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-and-fedex-announce-2025-international-peak-season-fees/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2025-peak-2025-09-22"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "peak",
+  "announced": null,
+  "effective": "2025-10-26",
+  "pct": null,
+  "headline": "UPS 2025 international peak surge fees, Oct 26 to Jan 17, 2026",
+  "details": [
+   "Import and export surge fees across UPS's full peak window, Oct 26, 2025 to Jan 17, 2026",
+   "Per-lb fees range from $0.10 to $0.52 depending on the origin and destination"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-and-fedex-announce-2025-international-peak-season-fees/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2025-peak-2025-10-26"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2025,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2025-11-24",
+  "pct": null,
+  "headline": "UPS raises international air fuel tables, export and import",
+  "details": [
+   "International Air Export and Import fuel surcharge tables raised across the board, effective Nov 24, 2025",
+   "At $2.35 jet fuel (Nov 20, 2025): 26% on Air Export and 29.75% on Air Import under the new tables"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-updates-international-fuel-surcharge-rates-for-air-services/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2025-fuel-table-2025-11-24"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2025,
+  "kind": "other",
+  "announced": null,
+  "effective": "2025-12-01",
+  "pct": null,
+  "headline": "FedEx suspends its Money-Back Guarantee for all shippers",
+  "details": [
+   "Suspended Dec 1, 2025, citing reduced air capacity from MD-11 safety inspections",
+   "Ground was already excluded from service guarantees; International and Air guarantees suspended",
+   "UPS extended delivery commitments during the disruption; no end date given"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/fedex-suspends-money-back-guarantee-amid-md-11-fleet-inspections/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2025-other-2025-12-01"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-01-18",
+  "pct": null,
+  "headline": "UPS temporary Surge Fee on all U.S. exports except Israel, Jan 18 to Feb 14",
+  "details": [
+   "Applies to exports from the U.S. to all destinations except Israel, Jan 18 to Feb 14, 2026",
+   "Surge fees apply in addition to other charges and are subject to change"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-announces-temporary-surge-fee-for-u.s.-export-shipments/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page. Fee amount not in the source we read.",
+  "id": "ups-2026-surcharge-2026-01-18"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-03-02",
+  "pct": null,
+  "headline": "UPS international ground fuel +1 pt for Canada and Mexico services",
+  "details": [
+   "UPS Standard import and export to and from Canada and Mexico, effective March 2, 2026",
+   "At $3.71 diesel (Feb 16, 2026): 21.75%, up from 20.75%; still reset weekly on the diesel price"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-announces-fuel-surcharge-adjustment-for-international-ground-import/export-services/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-fuel-table-2026-03-02"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-03-05",
+  "pct": null,
+  "headline": "FedEx international demand surcharge on U.S.-Middle East (Zone K) shipments",
+  "details": [
+   "$0.50 per lb on exports to Zone K; $0.70 per lb on imports from Zone K",
+   "In place from March 5, 2026 until further notice"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/parcel-carrier-updates/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2026-surcharge-2026-03-05"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-04-19",
+  "pct": null,
+  "headline": "UPS Surge Emergency Fee: $0.23/lb on U.S. shipments to and from most international destinations",
+  "details": [
+   "Broad per-pound fee from April 19, 2026, calculated on billable weight, with fuel surcharge on top",
+   "Two tiers for inbound shipments from Asia; China and Hong Kong fell from $0.32 to $0.23/lb after April 26",
+   "The March 22 Middle East surcharges stay in place; no end date for either"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-rolls-out-surge-emergency-fee/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-surcharge-2026-04-19"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "price_change",
+  "announced": null,
+  "effective": "2026-04-20",
+  "pct": null,
+  "headline": "FedEx One Rate pricing increases again",
+  "details": [
+   "One Rate pricing increase effective April 20, 2026",
+   "Follows earlier 2026 adjustments, including a February update adding pricing for the FedEx Extra Small Box"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/another-increase-to-fedex-one-rate-pricing-effective-april-20-2026/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page. The size of the increase was not in the source we read.",
+  "id": "fedex-2026-price-change-2026-04-20"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-05-11",
+  "pct": null,
+  "headline": "FedEx raises international fuel surcharges: export +2%, import +2.5%",
+  "details": [
+   "Export surcharges up 2% and import surcharges up 2.5%, effective May 11, 2026",
+   "Followed six weeks later by the June 22 merge of the export and import tables"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/fedex-consolidates-international-fuel-surcharge-tables/",
+   "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "fedex-2026-fuel-table-2026-05-11"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-05-31",
+  "pct": null,
+  "headline": "UPS adds flat Surge Emergency Fees to export accessorials: AHS $8.75, LPS $96, OML $514",
+  "details": [
+   "Flat per-package fees on U.S. export shipments to all destinations from May 31, 2026",
+   "Additional Handling $8.75; Large Package Surcharge $96; Over Maximum Limits $514; fuel surcharge applies on top",
+   "Replace the per-pound model for these charges; in effect until further notice"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-adds-new-surge-emergency-fees-and-higher-fuel-surcharges/"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-surcharge-2026-05-31"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-06-01",
+  "pct": null,
+  "headline": "UPS raises international fuel tables, ground and air",
+  "details": [
+   "International Ground (Canada and Mexico): new table starts at 27.25% at diesel $4.82-$4.94 and reaches 30.25% at $6.26-$6.38, +0.25 pt per $0.12",
+   "International Air Export 41% to 44%; Air Import 44.75% to 47.75%, +0.25 pt per $0.04 of Gulf Coast jet fuel",
+   "Reset every Monday on the latest EIA price"
+  ],
+  "sources": [
+   "https://transimpact.com/blog/ups-adds-new-surge-emergency-fees-and-higher-fuel-surcharges/",
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-fuel-table-2026-06-01"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "das",
+  "announced": null,
+  "effective": "2026-07-20",
+  "pct": null,
+  "headline": "FedEx adds ZIP codes to Delivery Area and Pickup Area Surcharge lists",
+  "details": [
+   "28 standard contiguous U.S., 10 extended and 74 remote ZIP codes added, effective July 20, 2026",
+   "Applies to both Delivery Area Surcharges (DAS) and Pickup Area Surcharges (PAS)"
+  ],
+  "sources": [
+   "https://www.fedex.com/en-us/shipping/rate-changes.html"
+  ],
+  "conf": "confirmed",
+  "note": null,
+  "id": "fedex-2026-das-2026-07-20"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "fee",
+  "announced": null,
+  "effective": "2026-07-20",
+  "pct": null,
+  "headline": "FedEx Disbursement Fee: greater of $17.50 or 2.5% (was $15 or 2%)",
+  "details": [
+   "Disbursement Fee on duty, tax and merchandise processing charges rises from the greater of $15 or 2% to the greater of $17.50 or 2.5%",
+   "Effective July 20, 2026"
+  ],
+  "sources": [
+   "https://www.fedex.com/en-us/shipping/rate-changes.html"
+  ],
+  "conf": "confirmed",
+  "note": "TransImpact lists it under July 30; FedEx's rate-changes page gives July 20.",
+  "id": "fedex-2026-fee-2026-07-20"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-08-01",
+  "pct": null,
+  "headline": "UPS export fuel surcharge +1%",
+  "details": [
+   "TransImpact reports UPS raising its export fuel surcharge by 1% on Aug 1, 2026"
+  ],
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-fuel-table-2026-08-01"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "fee",
+  "announced": null,
+  "effective": "2026-08-03",
+  "pct": null,
+  "headline": "FedEx renames the U.S. Inbound Processing Fee the Inbound Processing Fee",
+  "details": [
+   "Name change effective Aug 3, 2026; FedEx points to its Service Guide for the details"
+  ],
+  "sources": [
+   "https://www.fedex.com/en-us/shipping/rate-changes.html"
+  ],
+  "conf": "confirmed",
+  "note": "A Reddit post says the fee now covers shipments to EU member states; FedEx's page does not say so, so it is left out.",
+  "id": "fedex-2026-fee-2026-08-03"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-08-10",
+  "pct": null,
+  "headline": "UPS Ground and Ground Saver fuel tables +0.5 to 1 pt on the lower bands",
+  "details": [
+   "Lower bands raised 0.5% to 1% and the lower bands expanded, effective Aug 10, 2026",
+   "TransImpact: UPS's previous fuel-table update was April 13, 2026"
+  ],
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver"
+  ],
+  "conf": "partial",
+  "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
+  "id": "ups-2026-fuel-table-2026-08-10"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-11-02",
+  "pct": null,
+  "headline": "UPS changes the domestic Ground, Ground Saver and Air fuel tables",
+  "details": [
+   "UPS's rate-change flyer (published Oct 23, 2026) replaces the U.S. Ground Domestic, Ground Saver and Domestic Air fuel tables on Nov 2, 2026",
+   "Sample points in the flyer: Ground at diesel $6.25-$6.34 is 30.00%; Air at jet fuel $4.41-$4.46 is 33.25%"
+  ],
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+  ],
+  "conf": "confirmed",
+  "note": "Published by UPS; the size of the change against the old table was not computed.",
+  "id": "ups-2026-fuel-table-2026-11-02"
  }
 ]

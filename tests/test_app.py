@@ -253,7 +253,12 @@ def test_earnings_chart_and_stock_watch(site, width):
         assert pg.evaluate("() => !document.querySelector('.mkc, .mkwatch')")
         cards = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etc')].map(x => [x.dataset.goto || null, x.textContent.replace(/\\s+/g, ' ')])""")
         assert [c[0] for c in cards] == ["docs:earnings:UPS:Q2 2026", "docs:earnings:FedEx:FY26 Q4", "docs:earnings:USPS:FY26 Q3", None], cards
+        assert "Next report expected mid-Nov" in cards[2][1] and "Next report Oct 27" in cards[0][1], cards
         assert pg.evaluate("() => !!document.querySelector('#earnToday .etc:last-child.etshare')")
+        assert pg.evaluate("() => document.querySelector('#earnToday h2').textContent === 'Earnings and market'")
+        # the volume box points to our market report first, then to Pitney Bowes
+        links = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etshare .etlinks > *')].map(x => [x.textContent.trim(), x.dataset.open || x.href || ''])""")
+        assert links[0] == ["Market report ›", "r03"] and links[1][0].startswith("Pitney Bowes") and "pitneybowes.com" in links[1][1], links
         want = {0: ("Q2 2026", "Revenue", "$22.8B", "+7.6%", "Packages a day", "19.0M", "−3.7%", "Revenue per package", "$15.96", "+11.3%"),
                 1: ("FY26 Q4", "$25.0B", "+12.6%", "17.1M", "+1.7%", "$17.90", "+10.9%"),
                 2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "Not reported"),      # USPS: pieces over calendar days, marked ≈
@@ -274,6 +279,14 @@ def test_earnings_chart_and_stock_watch(site, width):
         pg.evaluate("() => goTo('docs')")
         pg.wait_for_timeout(300)
         assert pg.evaluate("() => !document.querySelector('#lib .dstk, #lib .etstk')")
+        # FedEx: packages and revenue per package are the Federal Express segment only (not the revenue view)
+        pg.evaluate("() => goTo('docs','earnings','FedEx')")
+        pg.wait_for_timeout(200)
+        notes = {}
+        for v in ("rev", "adv", "rpp"):
+            pg.evaluate(f"() => document.querySelector('.eglance[data-eco=\"FedEx\"] [data-eview=\"{v}\"]').click()")
+            notes[v] = pg.evaluate("() => !!document.querySelector('.eglance[data-eco=\"FedEx\"] .egfrt')")
+        assert notes == {"rev": False, "adv": True, "rpp": True}, notes
         wide = {}
         for co in ("UPS", "FedEx"):
             pg.evaluate(f"() => goTo('docs','earnings','{co}')")
