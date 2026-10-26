@@ -9116,6 +9116,7 @@ function renderTicker(){
   $('ticker').innerHTML=one+one;
 }
 document.addEventListener('click',e=>{
+  if(e.target.closest('[data-tsearch]')){setTimeout(()=>window.ppOpenSearch&&window.ppOpenSearch(),0);return}   // after this click's other handlers (Coop closes its menu on outside clicks)
   const pop=$('pop');
   const t=e.target.closest('.term');if(t){e.stopPropagation();const [k,v]=GMAP[t.dataset.term]||[t.textContent,''];pop.innerHTML=`<b>${esc(k)}</b>${esc(v)}`;pop.style.display='block';const r=t.getBoundingClientRect(),w=Math.min(300,innerWidth-24);pop.style.maxWidth=w+'px';pop.style.left=Math.max(12,Math.min(r.left,innerWidth-w-12))+'px';const h=pop.offsetHeight;pop.style.top=(r.bottom+8+h>innerHeight-90?r.top-h-8:r.bottom+8)+'px';return}
   pop.style.display='none';
@@ -10294,6 +10295,8 @@ addEventListener('scroll',()=>document.body.classList.toggle('hcol',scrollY>24),
   bird.addEventListener('click',e=>{e.stopPropagation();if(placing){el._openAfter=true;return}wake();const now=Date.now();pokes=pokes.filter(x=>now-x<2500);pokes.push(now);
     if(pokes.length>=5){pokes=[];closeMenu();say(pick(['Five taps. In this industry that’s a re-delivery fee.','Keep that up and I’m adding an additional handling charge.']),4000,true);return}
     menu.hidden?openMenu():closeMenu()});
+  // the search bar at the top of Today opens Coop's search (stories, companies, documents) and puts the cursor in it
+  window.ppOpenSearch=()=>{wake();if(menu.hidden)openMenu();const a=menu.querySelector('#cAsk');if(a)setTimeout(()=>{a.focus({preventScroll:true});a.select()},40)};
   const setQuiet=q=>{store.set('pw-coop-quiet',q?'1':'');el.classList.toggle('muted',q);say(q?'Muted. I’ll only talk when you tap me.':'Notes are back on. Try to keep up.',3200,true)};
   el.classList.toggle('muted',quiet());
   bub.addEventListener('click',e=>{e.stopPropagation();if(e.target.closest('[data-cmute]')){setQuiet(!quiet());return}

@@ -479,3 +479,17 @@ def test_fuel_chart_custom_range_and_zoom(site, width):
         pg.wait_for_timeout(200)
         assert pg.evaluate("() => fc.range === 'w12' && $('fcCustom').hidden && fcWin()[1] === FUEL.eff")
         assert pg.evaluate(OVERFLOW) is None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_today_search_bar_opens_search_and_finds_things(site, width):
+    """Oct 26, 2026: the search bar at the top of Today did nothing. It opens Coop's search with the cursor in it, and typing
+    finds stories, companies and documents."""
+    with app(site, width) as pg:
+        pg.evaluate("() => goTo('today','brief')")
+        pg.click('.tsearch')
+        pg.wait_for_function("() => !document.querySelector('.cmenu').hidden && document.activeElement && document.activeElement.id === 'cAsk'", timeout=5000)
+        pg.keyboard.type("UPS", delay=30)
+        pg.wait_for_function("() => document.querySelectorAll('#cRes .cm-r').length > 2", timeout=5000)
+        assert pg.evaluate("() => /UPS/i.test(document.getElementById('cRes').textContent)")
+        pg.keyboard.press("Escape")
