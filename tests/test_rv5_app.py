@@ -532,3 +532,12 @@ def test_docs_has_no_dead_suggestion_box(site, width):
         pg.evaluate("() => { showTab('docs'); setView.docs('library') }")
         pg.wait_for_timeout(300)
         assert pg.evaluate("() => !document.getElementById('dropBox') && !/Drop it|Know something we should have|suggest one/i.test(document.getElementById('s-docs').textContent + (document.querySelector('[data-tour]')||{}).textContent)")
+
+
+def test_fuel_page_has_no_weekly_summary_text_and_sources_are_folded(site):
+    with app_with(site, 1280) as pg:
+        pg.evaluate("() => goTo('fuel','chart')")
+        pg.wait_for_selector("#fc svg")
+        assert pg.query_selector("#fcNote") is None
+        assert pg.query_selector("#fuelSrcs details.fsrcd:not([open])")
+        assert pg.query_selector("#fcEv") is not None
