@@ -1442,6 +1442,14 @@ details.dr.i-flat .rtile i{background:#3A4656;color:var(--ink)}
 .rctoday{display:flex;align-items:center;gap:10px;padding:10px var(--sp-3);font-family:var(--font-mono);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
 .rctoday::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
 .rctoday b{color:var(--ink)}
+.fccust{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}.fccust label{display:flex;align-items:center;gap:6px;font-size:var(--fs-sm);color:var(--ink-2)}
+.fccust input{min-height:40px;padding:0 8px;border:var(--line) solid var(--grid-strong);border-radius:var(--r-md);background:var(--panel);color:var(--ink);font:inherit;color-scheme:dark}
+.fcbrush{margin-top:6px}.fcbs{display:block;width:100%;height:44px;touch-action:none;cursor:ew-resize;border-radius:var(--r-md);background:var(--panel-2)}
+.fcbs:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fcbl{fill:none;stroke:var(--ups);stroke-width:1.5;opacity:.95}.fcbo{fill:var(--bg);opacity:.55}
+.fcbw{fill:color-mix(in srgb,var(--accent) 10%,transparent);stroke:var(--accent);stroke-width:1.5}.fcbh{fill:var(--accent)}
+.fcby{position:relative;height:14px}.fcby span{position:absolute;transform:translateX(-50%);font-family:var(--font-mono);font-size:10px;color:var(--ink-2)}
+.fcbhint{display:block;margin-top:2px}
 .dl .month.rcgrp{font-size:var(--fs-sm);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
 details.rcpast{border-top:var(--line) solid var(--grid-strong)}
 details.rcpast>summary{cursor:pointer;min-height:48px;display:flex;align-items:center;gap:8px;padding:0 var(--sp-3);color:var(--accent);font-size:var(--fs-sm)}
@@ -2932,10 +2940,11 @@ body.bio-open{overflow:hidden}
       <details class="about pb"><summary>How to read this</summary><p>Fuel surcharges are a percentage of transportation charges. Changes are in percentage points (diesel in dollars). Red means fuel costs went up, green means they went down. "—" means no published rate for that week.</p></details></div>
     <div class="panel"><div class="ph"><h2 id="fcTitle">Fuel surcharge over time</h2></div>
       <div class="pb fctl">
-        <div class="seg" id="fcRange" role="group" aria-label="Time range"><button data-r="w12">12 wks</button><button data-r="ytd">This year</button><button data-r="y1">1 year</button><button data-r="all">Since 2017</button></div>
+        <div class="seg" id="fcRange" role="group" aria-label="Time range"><button data-r="w12">12 wks</button><button data-r="ytd">This year</button><button data-r="y1">1 year</button><button data-r="all">Since 2017</button><button data-r="custom">Custom</button></div>
+        <div class="fccust" id="fcCustom" hidden><label>From <input type="date" id="fcFrom"></label><label>To <input type="date" id="fcTo"></label></div>
         <div class="chips wrap" id="fcSeries" role="group" aria-label="Lines to show"></div>
       </div>
-      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
+      <div class="pb" style="padding-top:0"><div id="fc" class="fcwrap"></div><div class="fcbrush" id="fcBrush"></div><div class="fread mono" id="fcRead" aria-live="polite"></div><div class="fcev" id="fcEv" aria-live="polite"></div><p class="note" id="fcNote"></p></div></div>
   </div>
 </section>
 
@@ -8583,24 +8592,33 @@ function renderFuelNow(){
   $('fuelSum').innerHTML=`${carSpan('UPS')} Ground fuel is <b>${pct(u[1])}</b> (${wk(u[0])}), ${hl(u[1],ua)}. ${carSpan('FedEx')} Ground is <b>${pct(f[2])}</b> (${wk(f[0])}), ${hl(f[2],fa)}. Diesel is <b>$${dn[1].toFixed(2)}</b> a gallon, ${Math.round(Math.abs(dn[1]/DIESEL_YAGO.v-1)*100)}% ${dn[1]>=DIESEL_YAGO.v?'above':'below'} a year ago. Jet fuel, which sets air fuel, is <b>$${oilNow('jet')[1].toFixed(2)}</b>, and WTI crude is <b>$${oilNow('wti')[1].toFixed(2)}</b> a barrel.`;
 }
 function fcStart(){const e=T0(FUEL.eff);return {w12:isoD(e-77*864e5),ytd:FUEL.eff.slice(0,4)+'-01-01',y1:isoD(e-364*864e5),all:FUELDB[0][0]}[fc.range]}
+const FC_MIN=28;                                   // the narrowest window, in days
+function fcWin(){const lo=FUELDB[0][0],hi=FUEL.eff;
+  if(fc.range!=='custom'||!fc.from||!fc.to)return [fcStart()||isoD(T0(hi)-364*864e5),hi];
+  let a=fc.from<lo?lo:fc.from>hi?hi:fc.from,b=fc.to>hi?hi:fc.to<lo?lo:fc.to;if(a>b)[a,b]=[b,a];
+  if(T0(b)-T0(a)<FC_MIN*864e5){b=isoD(Math.min(T0(hi),T0(a)+FC_MIN*864e5));a=isoD(Math.min(T0(a),T0(b)-FC_MIN*864e5))}
+  return [a,b]}
+function fcSetWin(a,b){fc.range='custom';fc.from=a;fc.to=b}
 function niceStep(span,n=5){const t=span/n,m=Math.pow(10,Math.floor(Math.log10(t)));return [1,2,2.5,5,10].map(k=>k*m).find(k=>k>=t)||10*m}
 function renderFuelChart(){
   document.querySelectorAll('#fcRange button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===fc.range));
   $('fcSeries').innerHTML=FSER.map(s=>`<button class="chip" data-s="${s.k}" aria-pressed="${fc.on.includes(s.k)}">${swatch(s)}${s.l}</button>`).join('')+
     `<button class="chip" data-s="dsl" aria-pressed="${fc.dsl}">${swatch(DSL_SER)}Diesel $/gal</button>`+
     `<button class="chip" data-s="jet" aria-pressed="${fc.jet}">${swatch(JET_SER)}Jet fuel $/gal</button>`;
-  const s0=fcStart(),rows=FUELDB.filter(r=>r[0]>=s0&&r[0]<=FUEL.eff);
+  const [s0,s1]=fcWin(),rows=FUELDB.filter(r=>r[0]>=s0&&r[0]<=s1);
+  const cu=fc.range==='custom';$('fcCustom').hidden=!cu;if(cu){const f=$('fcFrom'),t=$('fcTo');[f,t].forEach(i=>{i.min=FUELDB[0][0];i.max=FUEL.eff});
+    if(document.activeElement!==f)f.value=s0;if(document.activeElement!==t)t.value=s1}
   const lines=FSER.filter(s=>fc.on.includes(s.k)).map(s=>Object.assign({},s,{p:rows.filter(r=>r[s.i]!=null).map(r=>[r[0],r[s.i]])})).filter(s=>s.p.length);
-  const dsl0=fc.dsl?Object.assign({},DSL_SER,{p:DIESELDB.filter(r=>r[0]>=s0&&r[0]<=FUEL.eff)}):null;
-  const jet=fc.jet?Object.assign({},JET_SER,{p:OILDB.jet.filter(r=>r[0]>=s0&&r[0]<=FUEL.eff)}):null;
+  const dsl0=fc.dsl?Object.assign({},DSL_SER,{p:DIESELDB.filter(r=>r[0]>=s0&&r[0]<=s1)}):null;
+  const jet=fc.jet?Object.assign({},JET_SER,{p:OILDB.jet.filter(r=>r[0]>=s0&&r[0]<=s1)}):null;
   const pxs=[dsl0,jet].filter(s=>s&&s.p.length);const dsl=pxs.length?{p:pxs.flatMap(s=>s.p)}:null;
-  const rangeLbl={w12:'last 12 weeks',ytd:'this year',y1:'last 12 months',all:'since 2017'}[fc.range];
+  const rangeLbl={w12:'last 12 weeks',ytd:'this year',y1:'last 12 months',all:'since 2017'}[fc.range]||`${fmtD(s0,{month:'short',day:'numeric',year:'numeric'})} to ${fmtD(s1,{month:'short',day:'numeric',year:'numeric'})}`;
   $('fcTitle').textContent=`Fuel surcharge${pxs.length?' and '+pxs.map(s=>s.k==='dsl'?'diesel':'jet fuel').join(' and '):''}, ${rangeLbl}`;
-  if(!lines.length&&!(dsl&&dsl.p.length)){$('fc').innerHTML='<div class="empty">Pick at least one line above.</div>';$('fcRead').innerHTML='';$('fcNote').textContent='';fc._geo=null;return}
+  if(!lines.length&&!(dsl&&dsl.p.length)){$('fc').innerHTML='<div class="empty">Pick at least one line above.</div>';$('fcRead').innerHTML='';$('fcNote').textContent='';fc._geo=null;fcBrush(s0,s1);return}
   const narrow=window.innerWidth<620,W=narrow?360:680,H=narrow?250:300,P={l:narrow?42:48,r:dsl?(narrow?44:50):12,t:12,b:28};
-  const t0=T0(s0),t1=T0(FUEL.eff),x=d=>P.l+(T0(d)-t0)/(t1-t0)*(W-P.l-P.r);
+  const t0=T0(s0),t1=T0(s1),x=d=>P.l+(T0(d)-t0)/(t1-t0)*(W-P.l-P.r);
   // event dots sit in a band above the lines, staggered into rows so close events never overlap or cover the data
-  const EV=FUEL_EV.filter(e=>e.d>=s0&&e.d<=FUEL.eff),rowX=[],evRow=EV.map(e=>{const xx=x(e.d);let r=0;while(rowX[r]!=null&&xx-rowX[r]<17)r++;rowX[r]=xx;return r});
+  const EV=FUEL_EV.filter(e=>e.d>=s0&&e.d<=s1),rowX=[],evRow=EV.map(e=>{const xx=x(e.d);let r=0;while(rowX[r]!=null&&xx-rowX[r]<17)r++;rowX[r]=xx;return r});
   const evTop=P.t;if(EV.length)P.t+=rowX.length*17+4;
   // left axis: surcharge %
   const vs=lines.flatMap(s=>s.p.map(p=>p[1]));let mn,mx,st;
@@ -8615,10 +8633,11 @@ function renderFuelChart(){
   for(let k=0;k<=nG;k++){const v=mn+k*st,yy=y(v);grid+=`<line x1="${P.l}" x2="${W-P.r}" y1="${yy}" y2="${yy}" stroke="var(--grid)"/>`;
     if(lines.length)grid+=`<text x="${P.l-6}" y="${yy+4}" text-anchor="end" font-family="var(--font-mono)" font-size="11" fill="var(--ink-2)">${+v.toFixed(2)}%</text>`;
     if(dsl&&dsl.p.length){const dvv=dmn+(dmx-dmn)*k/nG;grid+=`<text x="${W-P.r+6}" y="${yy+4}" text-anchor="start" font-family="var(--font-mono)" font-size="11" fill="var(--ink)">$${dvv.toFixed(2)}</text>`}}
-  const ticks=[];const sd=new Date(s0+'T00:00:00Z');
-  if(fc.range==='w12'){for(let t=t0;t<=t1;t+=14*864e5)ticks.push([isoD(t),fmtD(isoD(t)).toUpperCase()])}
-  else if(fc.range==='all'){for(let yr=sd.getUTCFullYear()+1;yr<=+FUEL.eff.slice(0,4);yr++)if(!narrow||yr%2===0)ticks.push([yr+'-01-01',narrow?"'"+String(yr).slice(2):String(yr)])}
-  else{const stepM=fc.range==='y1'?(narrow?3:2):(narrow?2:1);let m=new Date(Date.UTC(sd.getUTCFullYear(),sd.getUTCMonth()+1,1));while(m.getTime()<=t1){const d=isoD(m.getTime());ticks.push([d,new Date(m).toLocaleDateString('en-US',{month:'short',timeZone:'UTC'}).toUpperCase()+(m.getUTCMonth()===0&&fc.range==='y1'?" '"+String(m.getUTCFullYear()).slice(2):'')]);m=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+stepM,1))}}
+  const ticks=[];const sd=new Date(s0+'T00:00:00Z'),spanD=(t1-t0)/864e5,yrs=spanD>370;
+  if(spanD<=130){const wk=spanD<=50?7:14;for(let t=t0;t<=t1;t+=wk*864e5)ticks.push([isoD(t),fmtD(isoD(t)).toUpperCase()])}
+  else if(spanD>1100){const ys=Math.ceil((spanD/365)/(narrow?5:9));for(let yr=sd.getUTCFullYear()+1;yr<=+s1.slice(0,4);yr++)if(yr%ys===0)ticks.push([yr+'-01-01',narrow?"'"+String(yr).slice(2):String(yr)])}
+  else{const stepM=Math.max(1,Math.ceil((spanD/30.4)/(narrow?5:10)));let m=new Date(Date.UTC(sd.getUTCFullYear(),sd.getUTCMonth()+1,1));
+    while(m.getTime()<=t1){const d=isoD(m.getTime());ticks.push([d,new Date(m).toLocaleDateString('en-US',{month:'short',timeZone:'UTC'}).toUpperCase()+(m.getUTCMonth()===0||(yrs&&ticks.length===0)?" '"+String(m.getUTCFullYear()).slice(2):'')]);m=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+stepM,1))}}
   grid+=ticks.map(([d,l])=>`<line x1="${x(d)}" x2="${x(d)}" y1="${P.t}" y2="${H-P.b}" stroke="var(--grid)" stroke-dasharray="2 4"/><text x="${x(d)}" y="${H-9}" text-anchor="middle" font-family="var(--font-mono)" font-size="11" fill="var(--ink-2)">${l}</text>`).join('');
   const path=(s,yf)=>`<polyline fill="none" stroke="${s.c}" stroke-width="${s.w||2}" stroke-dasharray="${s.d}" stroke-linejoin="round" points="${s.p.map(p=>x(p[0]).toFixed(1)+','+yf(p[1]).toFixed(1)).join(' ')}"/>`;
   const all=[...pxs,...lines];
@@ -8628,6 +8647,7 @@ function renderFuelChart(){
   $('fc').innerHTML=`<svg class="chart" id="fcSvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${$('fcTitle').textContent}">${grid}${pxs.map(s=>path(s,yd)).join('')}${lines.map(s=>path(s,y)).join('')}${evs}<line id="fcCur" x1="0" x2="0" y1="${P.t}" y2="${H-P.b}" stroke="var(--ink-2)" visibility="hidden"/><g id="fcDots"></g></svg>
     <div class="lbl fcax"><span>${lines.length?'Left: fuel surcharge %':''}</span><span>${pxs.length?'Right: '+pxs.map(s=>s.k==='dsl'?'diesel':'jet fuel').join(' and ')+' $/gal':''}</span></div>`;
   fc._geo={W,P,t0,t1,x,y,yd,lines:all,ev:EV};
+  fcBrush(s0,s1);
   fcReadout(null);fevShow(fevOn!=null&&EV.includes(FUEL_EV[fevOn])?fevOn:null);
   const first=s=>s.p[0],last=s=>s.p.at(-1);
   $('fcNote').textContent=[...lines.map(s=>`${s.l}: ${pct(first(s)[1])} → ${pct(last(s)[1])}`),...pxs.map(s=>`${s.k==='dsl'?'Diesel':'Jet fuel'}: $${first(s)[1].toFixed(2)} → $${last(s)[1].toFixed(2)}`)].join(' · ')+
@@ -8653,7 +8673,35 @@ $('fc').addEventListener('pointerleave',e=>{if(e.pointerType==='mouse')fcReadout
 $('fc').addEventListener('click',e=>{const g=e.target.closest('[data-fev]');if(g)fevShow(+g.dataset.fev)});
 $('fc').addEventListener('mouseover',e=>{const g=e.target.closest('[data-fev]');if(g)fevShow(+g.dataset.fev)});
 $('fc').addEventListener('keydown',e=>{const g=e.target.closest('[data-fev]');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();fevShow(+g.dataset.fev)}});
-$('fcRange').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(!b)return;fc.range=b.dataset.r;fcSave();renderFuelChart()});
+$('fcRange').addEventListener('click',e=>{const b=e.target.closest('[data-r]');if(!b)return;
+  if(b.dataset.r==='custom'&&fc.range!=='custom'){const [a,c]=fcWin();fcSetWin(a,c)}else fc.range=b.dataset.r;fcSave();renderFuelChart()});
+['fcFrom','fcTo'].forEach(id=>$(id).addEventListener('change',()=>{const a=$('fcFrom').value,b=$('fcTo').value;if(!a||!b)return;fcSetWin(a,b);fcSave();renderFuelChart()}));
+function fcBrush(s0,s1){const el=$('fcBrush');if(!el)return;const lo=FUELDB[0][0],hi=FUEL.eff,W=680,H=44,L=4,Rr=4;
+  const t0=T0(lo),t1=T0(hi),x=d=>L+(T0(d)-t0)/(t1-t0)*(W-L-Rr);
+  const ser=FUELDB.filter(r=>r[1]!=null).map(r=>[r[0],r[1]]),vs=ser.map(r=>r[1]),mn=Math.min(...vs),mx=Math.max(...vs);
+  const pts=ser.map(r=>`${x(r[0]).toFixed(1)},${(H-6-(r[1]-mn)/(mx-mn||1)*(H-14)).toFixed(1)}`).join(' ');
+  const a=x(s0),b=x(s1);
+  const yrs=[];for(let yr=+lo.slice(0,4)+1;yr<=+hi.slice(0,4);yr++)yrs.push(`<span style="left:${(x(yr+'-01-01')/W*100).toFixed(2)}%">'${String(yr).slice(2)}</span>`);
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" class="fcbs" role="slider" tabindex="0" aria-label="Chart window: drag to move it, drag an edge to resize, or drag anywhere to pick a new span. Arrow keys move it by a week; Shift and arrows resize it."
+      aria-valuetext="${esc(fmtD(s0,{month:'short',day:'numeric',year:'numeric'}))} to ${esc(fmtD(s1,{month:'short',day:'numeric',year:'numeric'}))}">
+    <polyline points="${pts}" class="fcbl" vector-effect="non-scaling-stroke"/>
+    <rect x="${L}" y="0" width="${Math.max(0,a-L)}" height="${H}" class="fcbo"/><rect x="${b}" y="0" width="${Math.max(0,W-Rr-b)}" height="${H}" class="fcbo"/>
+    <rect x="${a}" y="1" width="${Math.max(2,b-a)}" height="${H-2}" class="fcbw" vector-effect="non-scaling-stroke"/><rect x="${a-3}" y="8" width="6" height="${H-16}" class="fcbh"/><rect x="${b-3}" y="8" width="6" height="${H-16}" class="fcbh"/></svg>
+    <div class="fcby" aria-hidden="true">${yrs.join('')}</div><span class="lbl fcbhint">Drag the strip to zoom: move the window, pull its edges, or drag a new span</span>`;
+  fc._br={W,L,Rr,t0,t1,a,b}}
+(function(){const el=$('fcBrush');if(!el)return;let drag=null,raf=0;
+  const at=e=>{const B=fc._br,svg=el.querySelector('svg'),r=svg.getBoundingClientRect(),vx=(e.clientX-r.left)/r.width*B.W;return {vx,t:B.t0+Math.max(0,Math.min(1,(vx-B.L)/(B.W-B.L-B.Rr)))*(B.t1-B.t0)}};
+  const apply=()=>{raf=0;renderFuelChart()};
+  el.addEventListener('pointerdown',e=>{if(!fc._br||!e.target.closest('svg'))return;const B=fc._br,{vx,t}=at(e),[s0,s1]=fcWin(),tol=Math.max(8,(B.W)*.012);
+    drag={mode:Math.abs(vx-B.a)<=tol?'l':Math.abs(vx-B.b)<=tol?'r':vx>B.a&&vx<B.b?'move':'new',t,a:T0(s0),b:T0(s1)};
+    if(drag.mode==='new'){drag.a=drag.b=t}el.setPointerCapture(e.pointerId);e.preventDefault()});
+  el.addEventListener('pointermove',e=>{if(!drag)return;const B=fc._br,{t}=at(e),min=FC_MIN*864e5;let a=drag.a,b=drag.b;
+    if(drag.mode==='move'){const w=b-a;a=Math.max(B.t0,Math.min(B.t1-w,a+(t-drag.t)));b=a+w}
+    else if(drag.mode==='l')a=Math.min(t,b-min);else if(drag.mode==='r')b=Math.max(t,a+min);else{a=Math.min(drag.t,t);b=Math.max(drag.t,t)}
+    if(b-a<min&&drag.mode==='new')return;fcSetWin(isoD(a),isoD(b));if(!raf)raf=requestAnimationFrame(apply)});
+  const end=()=>{if(drag){drag=null;fcSave()}};el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);
+  el.addEventListener('keydown',e=>{if(!e.target.closest('svg')||!/^Arrow(Left|Right)$/.test(e.key))return;e.preventDefault();const [s0,s1]=fcWin(),d=(e.key==='ArrowLeft'?-7:7)*864e5;
+    if(e.shiftKey)fcSetWin(s0,isoD(Math.max(T0(s0)+FC_MIN*864e5,T0(s1)+d)));else fcSetWin(isoD(T0(s0)+d),isoD(T0(s1)+d));fcSave();renderFuelChart();el.querySelector('svg').focus()})})();
 $('fcSeries').addEventListener('click',e=>{const b=e.target.closest('[data-s]');if(!b)return;const k=b.dataset.s;
   if(k==='dsl')fc.dsl=!fc.dsl;else if(k==='jet')fc.jet=!fc.jet;else fc.on=fc.on.includes(k)?fc.on.filter(x=>x!==k):[...fc.on,k];
   fcSave();renderFuelChart()});

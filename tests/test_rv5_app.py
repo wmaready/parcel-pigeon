@@ -441,3 +441,41 @@ def test_rate_clock_list_leads_with_whats_next(site, width):
         pg.wait_for_timeout(200)
         assert pg.evaluate(f"() => document.querySelector('details.rcpast').open && document.getElementById('{got['pastId']}').open")
         assert pg.evaluate(OVERFLOW) is None
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_fuel_chart_custom_range_and_zoom(site, width):
+    """Oct 26, 2026: Custom shows two dates; dragging the overview strip picks a window; the chart, title, ticks and
+    world-event dots follow it; nothing spills off the screen."""
+    with app(site, width) as pg:
+        pg.evaluate("() => { try { localStorage.removeItem('pw-fuelchart2') } catch (e) {} ; fc.range = 'y1'; goTo('fuel','chart') }")
+        pg.wait_for_timeout(400)
+        assert pg.evaluate("() => $('fcCustom').hidden && !!document.querySelector('#fcBrush svg')")
+        pg.click('#fcRange [data-r="custom"]')
+        pg.wait_for_timeout(200)
+        assert pg.evaluate("() => !$('fcCustom').hidden && $('fcFrom').value && $('fcTo').value === FUEL.eff")
+        pg.evaluate("""() => { const f = $('fcFrom'), t = $('fcTo'); f.value = '2022-01-03'; t.value = '2022-12-26';
+            f.dispatchEvent(new Event('change')); t.dispatchEvent(new Event('change')) }""")
+        pg.wait_for_timeout(200)
+        got = pg.evaluate("""() => ({range: fc.range, win: fcWin(), title: $('fcTitle').textContent,
+            ev: [...document.querySelectorAll('#fcSvg .fev')].map(g => FUEL_EV[+g.dataset.fev].d)})""")
+        assert got["range"] == "custom" and got["win"] == ["2022-01-03", "2022-12-26"] and "2022" in got["title"], got
+        assert got["ev"] and all("2022-01-03" <= d <= "2022-12-26" for d in got["ev"]), got
+        # drag a new span on the strip
+        pg.locator('#fcBrush svg').scroll_into_view_if_needed()
+        pg.wait_for_timeout(150)
+        box = pg.locator('#fcBrush svg').bounding_box()
+        y = box["y"] + box["height"] / 2
+        pg.mouse.move(box["x"] + box["width"] * .10, y); pg.mouse.down()
+        pg.mouse.move(box["x"] + box["width"] * .20, y, steps=4); pg.mouse.move(box["x"] + box["width"] * .30, y, steps=4); pg.mouse.up()
+        pg.wait_for_timeout(300)
+        a, b = pg.evaluate("() => fcWin()")
+        assert "2017-06-01" < a < "2019-06-01" and "2018-06-01" < b < "2020-06-01", (a, b)
+        # a window is never narrower than four weeks, and the preset buttons still work
+        pg.evaluate("() => { fcSetWin('2024-03-01', '2024-03-05'); renderFuelChart() }")
+        a, b = pg.evaluate("() => fcWin()")
+        assert (pg.evaluate(f"() => (T0('{b}') - T0('{a}')) / 864e5")) >= 28
+        pg.click('#fcRange [data-r="w12"]')
+        pg.wait_for_timeout(200)
+        assert pg.evaluate("() => fc.range === 'w12' && $('fcCustom').hidden && fcWin()[1] === FUEL.eff")
+        assert pg.evaluate(OVERFLOW) is None
