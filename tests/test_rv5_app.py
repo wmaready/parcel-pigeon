@@ -600,8 +600,9 @@ def test_theme_threads_are_hand_written_and_the_pipeline_leaves_them_be():
     for k in ("theme-ecommerce-split", "theme-ups-teamsters", "theme-amazon-insourcing"):
         t = T[k]
         assert t["theme"] is True and len(t["ids"]) >= 10 and t["cx"]["intro"] and t["cx"]["now"], k
-        assert t["cx"]["sig"] == h(",".join(t["ids"])) == t["rv"] and t["cx"]["v"] == news.BEATS_V   # narration is current: not rewritten
-        assert set(t["cx"]["beats"]) == set(t["ids"]), k
+        assert t["cx"]["v"] == news.BEATS_V and len(t["cx"]["beats"]) >= 10 and set(t["cx"]["beats"]) <= set(t["ids"]), k
+        # stories the pipeline rolled in later are narrated by it; until then the hand-written lines stand (a changed set is the only trigger)
+        assert t["rv"] == t["cx"]["sig"] or t["cx"]["sig"] != h(",".join(t["ids"])), k
     # a new matching headline joins its theme; an unrelated one does not
     themes = json.loads((ROOT / "data/themes.json").read_text())["themes"]
     pool = {"x1": {"id": "x1", "date": "2026-10-30", "title": "Teamsters file grievance over UPS Roadie routing", "c": ["UPS"]},
@@ -616,3 +617,30 @@ def test_phone_bottom_bar_is_an_opaque_layer_and_page_changes_jump(site):
     with app_with(site, 390) as pg:
         s = pg.evaluate("() => { const n = document.querySelector('nav.tabs'), c = getComputedStyle(n); return [c.position, c.backdropFilter, getComputedStyle(document.documentElement).scrollBehavior] }")
         assert s[0] == "fixed" and s[1] in ("none", "") and s[2] == "auto", s
+
+
+def test_every_rate_clock_item_has_a_working_coop_explainer(site):
+    """Oct 26, 2026: the EU per-line fee's "Show me what this does" did nothing: its scene assumed FedEx's paper-document fee and
+    threw. Every dated change now explains itself, a scene that can't be drawn from its figures falls back to a plain walk-through,
+    and the EU fee gets its own."""
+    with app_with(site, 1280) as pg:
+        pg.evaluate("() => goTo('clock', 'list')")
+        pg.wait_for_selector("#clockList details.dr", timeout=8000)
+        pg.evaluate("() => document.querySelectorAll('details.rcpast').forEach(d => d.open = true)")
+        n = pg.evaluate("() => DATES.length")
+        assert pg.evaluate("() => document.querySelectorAll('#clockList [data-rx]').length") == n
+        for i in pg.evaluate("() => DATES.map(x => x.id)"):
+            pg.evaluate("(i) => { const d = document.getElementById(i); d.open = true; d.scrollIntoView({block: 'center'}) }", i)
+            pg.click(f'[data-rx="{i}"]')
+            pg.wait_for_function("(i) => { const e = document.getElementById('rcx-' + i); return e && !e.hidden && e.innerText.length > 40 }", arg=i, timeout=4000)
+            pg.evaluate("() => rcxClose()")
+        # figures the writer left out or filled oddly never kill the explainer
+        odd = pg.evaluate("""() => ['gri', 'fee', 'perlb', 'zone', 'das', 'fuel', 'peak', 'usps'].map(t => {
+            const x = {id: 'zz' + t, d: '2030-01-05', w: 'A test change on ' + t, c: 'UPS', imp: 'up', news: [], fx: {t, car: 'UPS'}};
+            RX.x = x; const S = rcxScenes(x); return [t, S.length, S.every(s => typeof rcxVis(s) === 'string')] })""")
+        assert all(c >= 1 and ok for _, c, ok in odd), odd
+        pg.evaluate("() => goTo('clock', 'list')")
+        pg.evaluate("() => { const d = document.getElementById('xa6e82ba740e991'); d.open = true }")
+        pg.click('[data-rx="xa6e82ba740e991"]')
+        pg.wait_for_selector("#rcx-xa6e82ba740e991 .rxrcpt", timeout=4000)
+        assert "€2.00" in pg.inner_text("#rcx-xa6e82ba740e991")
