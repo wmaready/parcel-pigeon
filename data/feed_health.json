@@ -33,24 +33,24 @@
  },
  "Federal Register: USPS": {
   "direct": true,
-  "err": "403 Client Error: Forbidden for url: https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-26",
-  "entries": 12,
+  "entries": 11,
   "last_ok": "2026-10-26"
  },
  "Federal Register: PRC": {
   "direct": true,
-  "err": "403 Client Error: Forbidden for url: https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-26",
-  "entries": 17,
+  "entries": 16,
   "last_ok": "2026-10-26"
  },
  "Federal Register: de minimis and postal imports": {
   "direct": true,
-  "err": "403 Client Error: Forbidden for url: https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bterm%5D=%22de+min",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-10-26",
   "entries": 2,
   "last_ok": "2026-10-26"
@@ -84,7 +84,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-26",
-  "entries": 11,
+  "entries": 12,
   "last_ok": "2026-10-26"
  },
  "Newsroom: FedEx": {
@@ -100,7 +100,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-26",
-  "entries": 22,
+  "entries": 21,
   "last_ok": "2026-10-26"
  },
  "Newsroom: Amazon": {
@@ -108,7 +108,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-26",
-  "entries": 10,
+  "entries": 11,
   "last_ok": "2026-10-26"
  },
  "TransImpact": {

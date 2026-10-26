@@ -1,5 +1,5 @@
 {
- "run": "2026-10-26T04:24Z",
+ "run": "2026-10-26T04:42Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -257,47 +257,6 @@
     "a15404304f17b"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/): https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/",
-   "ids": [
-    "g26"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='wtaq.com', port=443): Max retries exceeded with url: /2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='wtaq.com', port=443) at 0x7f8bfce0f3b0>, 'Connection to wtaq.com timed out. (connect timeout=15)'))): https://wtaq.com/2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/",
-   "ids": [
-    "a9506be14f8ef"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/): https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/",
-   "ids": [
-    "g31"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -503,47 +462,6 @@
     "a2e0cb230779a",
     "a15404304f17b"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/): https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/",
-   "ids": [
-    "g26"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='wtaq.com', port=443): Max retries exceeded with url: /2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='wtaq.com', port=443) at 0x7f8bfce0f3b0>, 'Connection to wtaq.com timed out. (connect timeout=15)'))): https://wtaq.com/2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/",
-   "ids": [
-    "a9506be14f8ef"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/): https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/",
-   "ids": [
-    "g31"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
-   "ids": [],
    "fixed": false
   }
  ]
