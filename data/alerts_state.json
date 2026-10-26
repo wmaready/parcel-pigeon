@@ -227,7 +227,10 @@
   "more:player:curri,player:goshare,player:mothership",
   "player:mothership",
   "player:goshare",
-  "player:curri"
+  "player:curri",
+  "fuel:FedEx:2026-10-26",
+  "player:burq",
+  "player:lalamove"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -301,33 +304,33 @@
   "ups adds a 5 fuel surcharge to small business rates and rais"
  ],
  "harvested": [
+  "a2f683da86bf8",
+  "wdf959a97bcb6",
+  "ac78f72e7f458",
   "af8ee5ed067c6",
+  "w599d9089a65d",
+  "a3a45d7f6db20",
   "a312b45efa358",
   "a831c709e5809",
-  "w84705482dd2f",
-  "a57a06c26359c",
-  "wdf959a97bcb6",
-  "a15404304f17b",
-  "a351cab9045c7",
-  "rv5-ups-sbr-fuel",
-  "a6c2418bed0a7",
-  "a6e82ba740e99",
-  "aee6669d325da",
-  "a2def09bc43bb",
-  "w150132868eae",
-  "a2b81ad721cb8",
-  "w599d9089a65d",
-  "a2f683da86bf8",
   "a72efb5e01b99",
-  "a89d7e4beebd9",
-  "a3a45d7f6db20",
-  "a6cc2420ad66e",
-  "a5d45f26f2219",
+  "a2def09bc43bb",
+  "a6c2418bed0a7",
   "a773d361dac4e",
-  "a58373f1b7bc3",
-  "ac78f72e7f458",
+  "a351cab9045c7",
+  "a57a06c26359c",
+  "aee6669d325da",
+  "w84705482dd2f",
   "aba40a11b6946",
-  "wacb825361479"
+  "wacb825361479",
+  "a6e82ba740e99",
+  "a5d45f26f2219",
+  "w150132868eae",
+  "a15404304f17b",
+  "a89d7e4beebd9",
+  "a2b81ad721cb8",
+  "rv5-ups-sbr-fuel",
+  "a6cc2420ad66e",
+  "a58373f1b7bc3"
  ],
  "backfilled": true,
  "recent": [
@@ -1587,40 +1590,11 @@
    "m": "Takes effect Dec 21: rates rise 4.5% plus 5% fuel surcharge, about 9.7% more for SBR shippers."
   }
  },
- "queue": [
-  {
-   "kind": "player",
-   "key": "player:lalamove",
-   "at": "2026-10-26T00:23:19.836491-04:00",
-   "t": "New on the map: Lalamove",
-   "m": "Lalamove is a Hong Kong-based on-demand delivery platform that matches shippers with independent driver partners for same-day and scheduled courier deliveries, including in New York City, Long Island, Westchester and northern and central New Jersey.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=lalamove"
-  },
-  {
-   "kind": "player",
-   "key": "player:burq",
-   "at": "2026-10-26T00:23:19.836509-04:00",
-   "t": "New on the map: Burq",
-   "m": "Burq is a last-mile delivery management platform. Through a single API, businesses get dispatch, tracking and routing across a network of hundreds of third-party delivery providers, including DoorDash and Uber.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=burq"
-  }
- ],
- "fuelq": {
-  "FedEx": [
-   "2026-10-26",
-   28.75,
-   29.0
-  ]
- },
+ "queue": [],
+ "fuelq": {},
  "day": {
-  "d": "2026-10-25",
-  "n": 1
+  "d": "2026-10-26",
+  "n": 2
  },
- "last_push": "2026-10-25T07:33:13.234132-04:00"
+ "last_push": "2026-10-26T08:47:26.044121-04:00"
 }

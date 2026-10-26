@@ -1,5 +1,5 @@
 {
- "run": "2026-10-26T10:59Z",
+ "run": "2026-10-26T11:52Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -114,7 +114,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "msg": "3 news feeds failing or empty: SEC: UPS 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },
@@ -320,7 +320,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "msg": "3 news feeds failing or empty: SEC: UPS 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },
