@@ -2597,22 +2597,6 @@ body.akopen{overflow:hidden}@media (max-width:620px){.akwrap.answered .akchips{d
 /* folding dropdowns handles its own scroll correction, the same on every browser */
 html{overflow-anchor:none}
 
-/* Docs: "Drop it here" suggestion box */
-.dropbox{display:flex;flex-direction:column;gap:10px;margin-top:var(--sp-4);border-style:dashed;border-color:rgba(91,141,239,.45)}
-.dropbox .dbh{display:flex;gap:12px;align-items:flex-start}
-.dropbox .dbh b{display:block;color:var(--ink);font-size:var(--fs-md,15px)}
-.dropbox .dbh small{display:block;color:var(--ink-2);font-size:var(--fs-sm,13px);line-height:1.4;margin-top:2px}
-.dropbox .dbic{flex:none;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:rgba(91,141,239,.12);color:#8FB1F5}
-.dropbox .dbic svg{width:20px;height:20px}
-.dropbox .dbk{display:flex;gap:6px;flex-wrap:wrap}
-.dropbox .dbk button{font:inherit;font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--grid-strong,#2A3644);background:none;color:var(--ink-2);cursor:pointer;min-height:32px}
-.dropbox .dbk button[aria-pressed="true"]{background:rgba(91,141,239,.16);border-color:rgba(91,141,239,.6);color:var(--ink)}
-.dropbox .dbrow{display:flex;gap:8px}
-.dropbox input{flex:1;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border-radius:8px;border:1px solid var(--grid-strong,#2A3644);background:var(--bg,#07090C);color:var(--ink)}
-.dropbox .dbgo{flex:none;font:inherit;font-weight:600;padding:0 16px;border-radius:8px;border:0;background:#5B8DEF;color:#fff;cursor:pointer;min-height:44px}
-.dropbox .dbst{margin:0;font-size:var(--fs-sm,13px);color:var(--ink-2);min-height:1em}
-.dropbox .dbst:empty{display:none}
-.dropbox{padding:16px}
 
 /* light logos sit on a dark tile so they stay readable */
 .lgo.lgdk{--lbg:#1F2935;background:#1F2935!important;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 1px 2px rgba(0,0,0,.35)}
@@ -2955,12 +2939,6 @@ body.bio-open{overflow:hidden}
   <div class="view" data-view="library"><div class="qon" data-qfor="dq" hidden></div>
     <div class="chips" id="docCar" role="group" aria-label="Carrier" style="margin-bottom:var(--sp-3)"></div>
     <div id="lib"></div>
-    <form class="panel dropbox" id="dropBox" autocomplete="off"><div class="dbh"><span class="dbic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l2.5-7h11L20 13v6H4z"/><path d="M4 13h5l1 2h4l1-2h5"/><path d="M12 3v6M9.5 6.5L12 9l2.5-2.5"/></svg></span>
-      <span><b>Know something we should have?</b><small>An article, a company in the market, or a carrier document. Drop it here and we'll take a look.</small></span></div>
-      <div class="dbk" role="group" aria-label="What is it?"><button type="button" data-dk="article" aria-pressed="true">Article</button><button type="button" data-dk="company" aria-pressed="false">Company</button><button type="button" data-dk="document" aria-pressed="false">Document</button></div>
-      <div class="dbrow"><input id="dbWhat" maxlength="400" placeholder="Paste a link, or type a company name" aria-label="Link or name"><button type="submit" class="dbgo">Drop it</button></div>
-      <input id="dbNote" maxlength="600" placeholder="Anything we should know? (optional)" aria-label="Note" hidden>
-      <p class="dbst" id="dbState" aria-live="polite"></p></form>
     <details class="about"><summary>About these documents</summary><p>Every link opens the carrier's, USPS's or the regulator's own copy. Each carrier opens to its next and last earnings call, then one drop-down per year with the documents and earnings reports for that year; "Effective" and "Updated" dates are read from the document itself, checked Oct 9, 2026. Some carriers replace a file at the same address when they update it, so the dates show the version we last checked.</p></details>
   </div>
   <div class="view" data-view="alerts">
@@ -7367,20 +7345,6 @@ document.addEventListener('toggle',e=>{const d=e.target;if(!(d instanceof HTMLDe
   [...d.parentElement.children].forEach(x=>{if(x===d||x.tagName!=='DETAILS'||!x.open)return;const r=x.getBoundingClientRect(),h0=r.height;x.open=false;if(r.top<top)dh+=h0-x.getBoundingClientRect().height});
   if(dh>0)window.scrollBy({top:-dh,behavior:'instant'});TIDY.observe(d)},true);
 
-/* ===== "Drop it here" (Docs): readers suggest an article, a company or a document. With the Parcel Pigeon API it's
-   sent in the app; before that, it opens a ready-to-send GitHub issue. ===== */
-setTimeout(()=>{const f=$('dropBox');if(!f)return;let kind='article';const w=$('dbWhat'),note=$('dbNote'),st=$('dbState');
-  const ph={article:'Link to the article',company:'Company name or website',document:'Link to the document'};
-  f.addEventListener('click',e=>{const b=e.target.closest('[data-dk]');if(!b)return;kind=b.dataset.dk;f.querySelectorAll('[data-dk]').forEach(x=>x.setAttribute('aria-pressed',x===b));w.placeholder=ph[kind];w.focus()});
-  w.addEventListener('focus',()=>{note.hidden=false});
-  f.addEventListener('submit',async e=>{e.preventDefault();const what=w.value.trim(),nt=note.value.trim();if(!what){st.textContent='Add a link or a name first.';w.focus();return}
-    const api=window.PP_API;
-    if(api){st.textContent='Sending…';try{const r=await fetch(api+'/suggest',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({kind,what,note:nt,device:typeof rxDev==='function'?rxDev():''})}),j=await r.json();
-        st.textContent=j.ok?'Got it. Thanks for the tip.':(j.reason||'Something went wrong. Try again.');if(j.ok){w.value='';note.value='';note.hidden=true}}catch(err){st.textContent='Couldn\u2019t send it. Check your connection and try again.'}return}
-    const title=`Suggestion (${kind}): ${what.slice(0,80)}`,body=`**${kind}** suggested in the app.\n\n${what}${nt?'\n\n> '+nt:''}`;
-    window.open(`https://github.com/wmaready/parcel-pigeon/issues/new?labels=suggestion&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`,'_blank','noopener');
-    st.textContent='Opened GitHub with your suggestion filled in. Press Create to send it.'})},0);
-
 /* ===== Storylines: ongoing subjects followed over weeks or months, like a newsroom thread (UPS–Teamsters contract,
    USPS's network plan, de minimis). Each update says what's new; every story shows the thread so far.
    pipeline/news.py writes data/threads.json: {key: {n: name, s: where it stands, ids: [story ids, oldest first], first, last, c}} ===== */
@@ -10396,7 +10360,7 @@ if(/^#alerts?$/.test(location.hash))setTimeout(()=>goTo('docs','alerts'),300);
     {tab:'mna',v:'deals',sel:['#nDeals .card','#vs-mna'],t:'Deals',x:'Every acquisition, sale and spin-off, with what changes for parcel. Coop explains each one in a few pictures.'},
     {tab:'clock',v:'list',sel:['#clockList>details','#clockList'],t:'Rate clock',x:'Every dated cost change ahead: rate increases, surcharges, fees. Many have a “Show me” that plays out what it does to a real box.'},
     {tab:'fuel',v:'chart',sel:'#fuelNow',t:'Fuel',x:'This week’s fuel surcharges by carrier, next to the diesel and jet fuel prices behind them.'},
-    {tab:'docs',v:'library',sel:['#lib .dcarp','#lib'],t:'Docs',x:'Every carrier rate guide, service guide and notice. New and revised documents are flagged, and you can suggest one with “Drop it here.”'},
+    {tab:'docs',v:'library',sel:['#lib .dcarp','#lib'],t:'Docs',x:'Every carrier rate guide, service guide and notice. New and revised documents are flagged.'},
     {tab:'docs',v:'alerts',sel:'#pushPanel',t:'Alerts',x:'Turn on phone alerts and pick your carriers. Big news arrives as it breaks, two at most at once, and never overnight.'}];
   let ov,spot,card,i=0,onKey,onResize;
   const RMo=()=>typeof reduceMotion==='function'&&reduceMotion();

@@ -522,3 +522,13 @@ def test_alerts_tab_is_phone_alerts_only(site, width):
         pg.evaluate("() => { showTab('docs'); setView.docs('library') }")
         pg.wait_for_timeout(200)
         assert pg.evaluate("() => { try { dropOff({id: 'x', car: 'Amazon', doc: 'd'}); return true } catch (e) { return String(e) } }") is True
+
+
+@pytest.mark.parametrize("width", [390, 1280])
+def test_docs_has_no_dead_suggestion_box(site, width):
+    """Oct 26, 2026: "Know something we should have?" only opened a GitHub issue page (and nothing reads those). Removed;
+    nothing in Docs promises to take submissions."""
+    with app(site, width) as pg:
+        pg.evaluate("() => { showTab('docs'); setView.docs('library') }")
+        pg.wait_for_timeout(300)
+        assert pg.evaluate("() => !document.getElementById('dropBox') && !/Drop it|Know something we should have|suggest one/i.test(document.getElementById('s-docs').textContent + (document.querySelector('[data-tour]')||{}).textContent)")
