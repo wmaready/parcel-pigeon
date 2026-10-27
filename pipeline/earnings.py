@@ -279,6 +279,43 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
     return added
 
 
+def fill_call_links(rows, nxt, today, fetch=None):
+    """The call's recording link for a quarter that was just reported: the investor-relations calendar lists the event
+    (".../detail/<id>/q3-2026-...-earnings-conference-call"). It is the same link the older quarters carry; filled only
+    when exactly one such link names the quarter, and never replaced once set. Returns the quarters filled."""
+    cal = nxt.get("ir_cal") or {}
+    got, pages = [], {}
+    for r in rows:
+        co, u = r.get("company"), cal.get(r.get("company"))
+        if not u or r.get("webcast") or not r.get("d") or (dt.date.fromisoformat(today) - dt.date.fromisoformat(r["d"])).days > 45:
+            continue
+        slug = re.sub(r"[^a-z0-9]+", "-", str(r.get("label") or r.get("q") or "").lower()).strip("-")
+        if not slug:
+            continue
+        try:
+            if u not in pages:
+                pages[u] = (fetch or (lambda x: get(x).text))(u)
+        except Exception as e:
+            print(f"earnings: {co} call calendar: {e}", file=sys.stderr)
+            pages[u] = ""
+        hits = {urljoin(u, html.unescape(h)) for h in re.findall(r'href="([^"]+)"', pages[u])
+                if slug in h.lower() and "conference-call" in h.lower() and "/detail/" in h.lower()}
+        if len(hits) == 1:
+            r["webcast"] = hits.pop()
+            got.append(f"{co} {r['q']}")
+    return got
+
+
+def prune_next(rows, nxt):
+    """Drops a "next call" entry once that quarter's results are in the history, so a call that has happened is never
+    shown as upcoming. Returns True when something was removed."""
+    have = {(r.get("company"), r.get("q")) for r in rows}
+    keep = [x for x in nxt.get("next") or [] if (x.get("c"), x.get("q")) not in have]
+    changed = len(keep) != len(nxt.get("next") or [])
+    nxt["next"] = keep
+    return changed
+
+
 UPS_CIK = 1090727
 
 
@@ -410,6 +447,11 @@ def main():
     except Exception as e:
         filled = []
         print(f"::warning title=earnings packages::{e}")
+    try:
+        for q in fill_call_links(rows, nxt, today):
+            print(f"earnings: call link for {q}")
+    except Exception as e:
+        print(f"::warning title=earnings call links::{e}")
     fill_yoy(rows)
     fill_usps_rpp(rows)
     for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
@@ -418,6 +460,14 @@ def main():
     for x in vol_problems(rows):
         fails.append(f"{x}: package figures without a source or check date")
     save("earnings.json", rows)
+    before = {x.get("c") for x in nxt.get("next") or []}
+    if prune_next(rows, nxt):
+        save("earnings_next.json", nxt)
+        for co in sorted(before - {x.get("c") for x in nxt["next"]}):
+            if co in nxt.get("ir", {}):
+                review_add(review, {"type": "earnings-next-missing", "key": f"earnings-next|{co}|{today[:7]}", "company": co, "ir": nxt["ir"][co],
+                                    "note": f"{co}'s latest results are in and no next call is listed. Add the next date to data/earnings_next.json from "
+                                            "the company's investor-relations calendar (time, session, quarter and the release address text to match)."})
     if len(review) != n_review:
         save("review.json", review)
     print("earnings:", {"added": added, "packages": filled, "rx": sum(1 for r in rows if r.get("rx")), "final": sum(1 for r in rows if (r.get("rx") or {}).get("final")),

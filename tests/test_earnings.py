@@ -94,7 +94,7 @@ def test_final_rows_are_never_rewritten_and_failures_keep_the_last_figures():
     up = next(r for r in rows if r["company"] == "UPS" and r["q"] == "Q2 2026")
     assert json.dumps(up["rx"]) == final
 
-    rows = json.loads(json.dumps(ROWS))
+    rows = [r for r in json.loads(json.dumps(ROWS)) if not (r["company"] == "UPS" and r["q"] == "Q3 2026")]   # the live file may already hold it
     rows.append({"company": "UPS", "q": "Q3 2026", "d": "2026-10-27", "rev": 21.0, "rx": {"src": "Yahoo daily close", "d1": {"d": "2026-10-27", "pct": 1.0, "spx": 0.5}, "final": False}})
 
     def broken(sym, lo, hi):
@@ -269,7 +269,7 @@ def test_package_backfill_from_the_carriers_own_reports():
     s = row("USPS", "FY26 Q3")                               # USPS Q3 FY26 results release
     assert (s["rev_m"], s["rev_prior_m"], s["vol"]["pieces_m"], s["vol"]["pieces_prior_m"], s["vol"]["adv_yoy"]) == (19940, 18797, 1554, 1609, -3.4)
     assert s["vol"]["adv_src"] == "calc" and s["vol"]["days"] == 91 and s["vol"]["rpp"] == 5.31 and s["vol"]["rpp_src"] == "calc"
-    assert all((r.get("vol") or {}).get("src") and r["vol"].get("checked") for r in ROWS if r["company"] in ("UPS", "FedEx", "USPS"))
+    assert all((r.get("vol") or {}).get("src") and r["vol"].get("checked") for r in ROWS if r["company"] in ("UPS", "FedEx", "USPS") and r.get("vol"))   # a quarter just reported waits for its 10-Q with vol null
 
 
 def _ups_10q(adv="18,500", adv_prior="19,419", adv_yoy="(4.7)"):
@@ -288,7 +288,7 @@ def _sec(doc):
 
 
 def _q3_rows():
-    rows = json.loads(json.dumps(ROWS))
+    rows = [r for r in json.loads(json.dumps(ROWS)) if not (r["company"] == "UPS" and r["q"] == "Q3 2026")]   # the live file may already hold it
     rows.append({"company": "UPS", "q": "Q3 2026", "d": "2026-10-27", "rev": 21.9, "period": {"start": "2026-07-01", "end": "2026-09-30", "months": 3},
                  "vol": None, "checked": False})
     return rows
@@ -362,3 +362,18 @@ def test_ups_q4_and_usps_revenue_per_package_are_calculated_and_labeled():
     year = {"days": 253, "adv": 22418, "rpp": 13.60}
     qs = [rows[("UPS", f"Q{i} 2024")] for i in (1, 2, 3)]
     assert filings.q4_rpp(year, qs) == 13.44 and filings.q4_rpp({"days": 253, "adv": 22418}, qs) is None
+
+
+def test_reported_call_leaves_next_and_its_recording_link_is_filled():
+    rows = [{"company": "UPS", "q": "Q3 2026", "label": "Q3 2026", "d": "2026-10-27", "webcast": None}]
+    nxt = {"next": [{"c": "UPS", "q": "Q3 2026", "d": "2026-10-27"}, {"c": "FedEx", "q": "Q", "d": "2026-10-28"}],
+           "ir_cal": {"UPS": "https://investors.ups.com/news-events/ir-calendar"}}
+    page = '<a href="/news-events/ir-calendar/detail/11100/q3-2026-united-parcel-service-inc-earnings-conference-call">x</a><a href="/detail/9/q2-2026-earnings-conference-call">y</a>'
+    assert E.fill_call_links(rows, nxt, "2026-10-27", fetch=lambda u: page) == ["UPS Q3 2026"]
+    assert rows[0]["webcast"].endswith("/detail/11100/q3-2026-united-parcel-service-inc-earnings-conference-call")
+    assert E.fill_call_links(rows, nxt, "2026-10-27", fetch=lambda u: 1 / 0) == []          # set once, never read again
+    assert E.prune_next(rows, nxt) and [x["c"] for x in nxt["next"]] == ["FedEx"]
+    assert not E.prune_next(rows, nxt)
+    two = '<a href="/detail/1/q3-2026-a-conference-call">a</a><a href="/detail/2/q3-2026-b-conference-call">b</a>'
+    rows[0]["webcast"] = None
+    assert E.fill_call_links(rows, nxt, "2026-10-27", fetch=lambda u: two) == [] and rows[0]["webcast"] is None     # ambiguous: left empty
