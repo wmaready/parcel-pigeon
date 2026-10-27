@@ -76,14 +76,20 @@
   "a0adb56a55334",
   "w8465aa718dc6",
   "wb8827e8c126e",
-  "aa3051ff662bd"
+  "aa3051ff662bd",
+  "a3623effd6df4",
+  "a502c5e23a41d",
+  "a8eed9de41636",
+  "a92007e6e1c20",
+  "ae89309b5e834",
+  "af86a262d4dcb"
  ],
  "clock": [
   "e06:7",
   "e06:1"
  ],
  "fuel": {
-  "OnTrac": "2026-10-26",
+  "OnTrac": "2026-11-02",
   "UPS": "2026-10-26",
   "FedEx": "2026-10-26"
  },
@@ -253,7 +259,15 @@
   "player:globaleonlinel",
   "player:passportglobal",
   "fuel:UPS:2026-10-26",
-  "story:ups expects q4 u s volume to dip as amazon cutback meets peak"
+  "story:ups expects q4 u s volume to dip as amazon cutback meets peak",
+  "fuel:OnTrac:2026-11-02",
+  "more:story:amazon flies mk30 drones from markham illinois faa file shows draft,story:amazon plans 20 000 smart glasses for delivery drivers by end of 2027,story:blue dart launches international parcel connect for india us b2c parcels,story:doordash and tiktok shop add return options for shoppers,story:doordash in advanced talks to acquire instacart wsj reports,story:fedex network 2 0 puts express and ground parcels in one mesquite facility",
+  "story:amazon flies mk30 drones from markham illinois faa file shows draft",
+  "story:amazon plans 20 000 smart glasses for delivery drivers by end of 2027",
+  "story:blue dart launches international parcel connect for india us b2c parcels",
+  "story:fedex network 2 0 puts express and ground parcels in one mesquite facility",
+  "story:doordash in advanced talks to acquire instacart wsj reports",
+  "story:doordash and tiktok shop add return options for shoppers"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -332,40 +346,46 @@
   "usps to add weekly fuel surcharge on package services in jan",
   "ups ship api eu pid guide now says product identifier fields",
   "ups developer portal sets nov 1 2026 date for eu product ide",
-  "ups expects q4 u s volume to dip as amazon cutback meets pea"
+  "ups expects q4 u s volume to dip as amazon cutback meets pea",
+  "fedex network 2 0 puts express and ground parcels in one mes",
+  "doordash and tiktok shop add return options for shoppers",
+  "blue dart launches international parcel connect for india us",
+  "amazon plans 20 000 smart glasses for delivery drivers by en",
+  "doordash in advanced talks to acquire instacart wsj reports",
+  "amazon flies mk30 drones from markham illinois faa file show"
  ],
  "harvested": [
-  "wb8827e8c126e",
-  "a2f683da86bf8",
-  "a57a06c26359c",
-  "a0adb56a55334",
-  "wdf959a97bcb6",
-  "rv5-ups-sbr-fuel",
-  "a663794cc9c55",
-  "af8ee5ed067c6",
-  "aee6669d325da",
-  "w8465aa718dc6",
-  "a2b81ad721cb8",
-  "a351cab9045c7",
-  "a15404304f17b",
-  "aba40a11b6946",
-  "a72efb5e01b99",
-  "a3a45d7f6db20",
-  "a2def09bc43bb",
-  "w84705482dd2f",
-  "a58373f1b7bc3",
-  "a6cc2420ad66e",
   "a6c2418bed0a7",
-  "a6e82ba740e99",
-  "ac78f72e7f458",
+  "rv5-ups-sbr-fuel",
+  "af8ee5ed067c6",
+  "w84705482dd2f",
   "a773d361dac4e",
-  "a312b45efa358",
-  "a5d45f26f2219",
-  "a89d7e4beebd9",
+  "aee6669d325da",
+  "a2b81ad721cb8",
+  "a663794cc9c55",
+  "a58373f1b7bc3",
+  "wb8827e8c126e",
+  "wacb825361479",
+  "a57a06c26359c",
+  "a6cc2420ad66e",
+  "a72efb5e01b99",
   "w150132868eae",
+  "a2f683da86bf8",
+  "a312b45efa358",
   "w599d9089a65d",
+  "a89d7e4beebd9",
+  "aba40a11b6946",
+  "a15404304f17b",
+  "a2def09bc43bb",
+  "ac78f72e7f458",
+  "wdf959a97bcb6",
+  "a351cab9045c7",
+  "a5d45f26f2219",
   "a831c709e5809",
-  "wacb825361479"
+  "w8465aa718dc6",
+  "a6e82ba740e99",
+  "a0adb56a55334",
+  "a3a45d7f6db20"
  ],
  "backfilled": true,
  "recent": [
@@ -1590,6 +1610,108 @@
      "url": "https://www.supplychaindive.com/news/ups-gears-up-for-peak-season-with-less-amazon-volume-in-tow/872845/"
     }
    ]
+  },
+  {
+   "id": "a3623effd6df4",
+   "title": "FedEx Network 2.0 puts Express and Ground parcels in one Mesquite facility",
+   "date": "2026-10-26",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.supplychaindive.com/news/inside-fedexs-network-20-overhaul/833618/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/inside-fedexs-network-20-overhaul/833618/"
+    }
+   ]
+  },
+  {
+   "id": "a502c5e23a41d",
+   "title": "DoorDash and TikTok Shop add return options for shoppers",
+   "date": "2026-10-26",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/",
+   "srcs": [
+    {
+     "src": "Modern Retail",
+     "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/"
+    }
+   ]
+  },
+  {
+   "id": "a8eed9de41636",
+   "title": "Blue Dart launches International Parcel Connect for India-US B2C parcels",
+   "date": "2026-10-26",
+   "c": [
+    "DHL"
+   ],
+   "url": "https://www.stattimes.com/amp/supply-chain/blue-dart-targets-us-market-with-international-parcel-connect-1361052",
+   "srcs": [
+    {
+     "src": "The STAT Trade Times",
+     "url": "https://www.stattimes.com/amp/supply-chain/blue-dart-targets-us-market-with-international-parcel-connect-1361052"
+    }
+   ]
+  },
+  {
+   "id": "a92007e6e1c20",
+   "title": "Amazon plans 20,000 smart glasses for delivery drivers by end of 2027",
+   "date": "2026-10-26",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.supplychain247.com/article/amazon-smart-delivery-glasses-driver-rollout",
+   "srcs": [
+    {
+     "src": "Supply Chain 24/7",
+     "url": "https://www.supplychain247.com/article/amazon-smart-delivery-glasses-driver-rollout"
+    }
+   ]
+  },
+  {
+   "id": "ae89309b5e834",
+   "title": "DoorDash in advanced talks to acquire Instacart, WSJ reports",
+   "date": "2026-10-26",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html",
+   "srcs": [
+    {
+     "src": "CNBC",
+     "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html"
+    },
+    {
+     "src": "WSJ",
+     "url": "https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18"
+    },
+    {
+     "src": "Reuters",
+     "url": "https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/"
+    },
+    {
+     "src": "MarketWatch",
+     "url": "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1"
+    }
+   ]
+  },
+  {
+   "id": "af86a262d4dcb",
+   "title": "Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft",
+   "date": "2026-10-26",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://dronexl.co/2026/10/26/amazon-drones-fly-markham-chicago-suburbs-faa-draft/",
+   "srcs": [
+    {
+     "src": "DroneXL",
+     "url": "https://dronexl.co/2026/10/26/amazon-drones-fly-markham-chicago-suburbs-faa-draft/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1784,13 +1906,37 @@
   "aa3051ff662bd": {
    "t": "UPS adds $10.70 Protected Delivery fee",
    "m": "Protected Delivery costs $10.70 per shipment and takes effect Nov 16 for shippers."
+  },
+  "a3623effd6df4": {
+   "t": "FedEx merges Express, Ground at Mesquite",
+   "m": "Express and Ground now share Mesquite building and vans; full Network 2.0 completion slated 2027."
+  },
+  "a502c5e23a41d": {
+   "t": "DoorDash, TikTok Shop add return options",
+   "m": "DoorDash returns pickup costs $7.99; TikTok Shop adds Happy Returns drop-off where brands opt in."
+  },
+  "a8eed9de41636": {
+   "t": "Blue Dart launches India-US parcel service",
+   "m": "Eligible India B2C parcels of 50g to 11kg can ship to the US, Standard or Expedited."
+  },
+  "a92007e6e1c20": {
+   "t": "Amazon plans 20,000 driver smart glasses",
+   "m": "No change to shipper rates or service; Amazon says wearing the glasses is optional for drivers."
+  },
+  "ae89309b5e834": {
+   "t": "DoorDash in talks to acquire Instacart",
+   "m": "WSJ reports advanced talks only; no terms announced and no change to rates or service."
+  },
+  "af86a262d4dcb": {
+   "t": "Amazon drones fly from Markham, Illinois",
+   "m": "Up to five pounds, within about eight miles of Markham; Amazon says deliveries cost under $5."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-27",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-10-27T13:03:51.703602-04:00"
+ "last_push": "2026-10-27T15:09:32.396207-04:00"
 }

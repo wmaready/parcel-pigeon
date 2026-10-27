@@ -3,7 +3,6 @@
   "n": "UPS Amazon cutback and network overhaul",
   "s": "UPS is heading into its first peak season after cutting Amazon volume by more than half, with Q4 U.S. volume forecast to dip slightly year over year.",
   "ids": [
-   "h403",
    "h406",
    "h503",
    "h511",
@@ -18,16 +17,13 @@
    "UPS"
   ],
   "cx": {
-   "sig": "8754e0e28dbf",
+   "sig": "155222208660",
    "v": 3,
    "beats": {
-    "h406": "Investor day: about 200 U.S. facilities to close or consolidate, 400 automated buildings by 2028, $3 billion in savings targeted.",
-    "h503": "Amazon, nearly 12% of revenue and UPS's largest customer, will be cut by more than half by the second half of 2026.",
-    "h511": "Specifics follow: about 20,000 jobs in 2025 and 73 buildings by end of June, targeting about $1 billion in savings.",
-    "18": "UPS closed 23 buildings in early 2026 and planned about 30,000 job cuts for the year, after 48,000 in 2025, with Amazon cut by over half."
+    "h511": "In April 2025 UPS put numbers on the cuts: about 20,000 jobs and 73 buildings by the end of June, targeting about $1 billion in savings."
    },
-   "intro": "UPS is shrinking Amazon volume and remaking its network, which reshapes one of the biggest U.S. parcel carriers.",
-   "now": "UPS says the Amazon volume reduction and network reconfiguration are complete."
+   "intro": "UPS is shrinking its Amazon business and rebuilding its network; shippers now face their first peak season after the cutback.",
+   "now": "UPS projects Q4 U.S. revenue up 3%; peak-week fees take effect Nov. 22 and peak surcharges end at every major carrier Jan. 15, 2027."
   },
   "was": [
    "ups-parcel-pivot"
@@ -36,7 +32,7 @@
   "apart": [
    "ups-driver-choice-lawsuit"
   ],
-  "rv": "8754e0e28dbf"
+  "rv": "155222208660"
  },
  "fedex-freight-spin": {
   "n": "FedEx Freight spin-off",
@@ -66,32 +62,35 @@
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
-  "s": "Earlier coverage says FedEx expects the U.S. rollout of merged Ground and Express pickup and delivery to be complete by the end of 2027.",
+  "s": "FedEx says Network 2.0 will be 62% complete by the end of 2026, with full completion slated for 2027.",
   "ids": [
    "h411",
    "h413",
-   "43"
+   "43",
+   "a3623effd6df4"
   ],
   "first": "2024-06-01",
-  "last": "2026-10-11",
+  "last": "2026-10-26",
   "c": [
    "FedEx"
   ],
   "cx": {
-   "sig": "51288bc858e6",
+   "sig": "d50658bb95f0",
    "v": 3,
    "beats": {
-    "h411": "On June 1, 2024, FedEx Express, Ground and Services became one company, Federal Express Corp., with FedEx Freight kept separate.",
-    "h413": "FedEx said DRIVE cut $1.8 billion in costs, and Network 2.0 launched in Canada, its largest market yet. A Freight review also began.",
-    "43": "FedEx is now merging Ground and Express pickup and delivery, and expects the U.S. rollout to be complete by the end of 2027."
+    "h411": "On June 1, 2024, Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
+    "h413": "Network 2.0 reached Canada, its largest market yet, as FedEx said DRIVE cut $1.8 billion in structural costs that year.",
+    "43": "By Nov. 2025, FedEx was merging Ground and Express pickup and delivery, with the U.S. rollout expected done by end of 2027.",
+    "a3623effd6df4": "At FedEx's Mesquite, Texas, facility, Express and Ground parcels now share the building and vans; 62% done by end of 2026."
    },
-   "intro": "FedEx is folding its Ground and Express operations into one network, a shift that shapes how packages get picked up and delivered.",
-   "now": "FedEx expects the U.S. rollout to finish by the end of 2027."
+   "intro": "FedEx is merging its Express and Ground networks into one, changing how parcels get picked up and delivered.",
+   "now": "FedEx targets 62% done by the end of 2026 and full completion in 2027; it reports earnings Oct. 28."
   },
-  "rv": "51288bc858e6",
+  "rv": "d50658bb95f0",
   "apart": [
    "fedex-freight-spin"
-  ]
+  ],
+  "co": "FedEx"
  },
  "usps-air-cargo": {
   "n": "USPS air cargo shifts from FedEx to UPS",
@@ -515,7 +514,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "MassDOT told Amazon its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough.",
+  "s": "Amazon's drones are flying from Markham, Illinois, while the FAA's public Chicago file remains a July draft and Massachusetts reviews Amazon's Westborough plan.",
   "ids": [
    "g27",
    "g26",
@@ -523,31 +522,24 @@
    "a94cd39741afc",
    "af529411b3b18",
    "a86fd472c4cfb",
-   "a56e459aac1af",
-   "ac198fadf6127"
+   "af86a262d4dcb"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-22",
+  "last": "2026-10-26",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "cf4b47d581f7",
+   "sig": "6e104812189f",
    "v": 3,
    "beats": {
-    "a86fd472c4cfb": "DoorDash gets FAA Part 135 certification, reportedly the eighth operator cleared; flights expected fall 2026, markets TBD.",
-    "g27": "Amazon says Prime Air will reach almost 500 towns by end of 2026, up from 11 U.S. locations, at $2.99 a delivery for Prime members.",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, for nearly 20 metros; over three million customers have access so far.",
-    "g26": "Meanwhile, Part 108 went to White House review July 10 and was unpublished Oct. 9; until then, waivers or Part 135 are needed.",
-    "a56e459aac1af": "Sixteen Mass. legislators ask for a drone task force and a pause on applications; Healey's office is \"evaluating our options.\"",
-    "ac198fadf6127": "MassDOT tells Amazon its Westborough launch, first planned for October, needs a state suitability review first."
+    "a60770e8e9c32": "Wing and Walmart said Denver and Seattle come in 2027, taking them to nearly 20 metros after reaching more than three million customers."
    },
-   "intro": "Drone delivery is scaling up while the FAA rule and state pushback stay unsettled, which shapes where parcels can fly.",
-   "now": "Amazon's Westborough drone site awaits a MassDOT suitability review, and the FAA's Part 108 rule was still unpublished as of Oct. 9."
+   "intro": "Drone delivery is scaling fast while the FAA's Part 108 rule sits unpublished, so shippers watch who can fly and where."
   },
-  "rv": "fdf5cbfc70f3",
+  "rv": "ae54c427f36e",
   "co": "Amazon",
   "apart": [
    "amazon-jfk8-nlrb",
@@ -896,26 +888,13 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "9a635b8c7a0a",
+   "sig": "fbae65d1b7d0",
    "v": 3,
    "beats": {
-    "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
-    "h503": "UPS said it will cut Amazon volume by more than half by the second half of 2026; UPS shares fell more than 14%.",
-    "h511": "UPS said it will cut about 20,000 jobs and close 73 buildings as Amazon volume shrinks.",
-    "h512": "Amazon said it will invest $4 billion by the end of 2026 to expand its rural delivery network to more than 200 delivery stations.",
-    "h517": "FedEx confirmed a multi-year deal to deliver large packages for Amazon; Amazon said it does not replace UPS capacity.",
-    "19": "Amazon handled 6.7 billion parcels in 2025 versus 6.6 billion for USPS, the largest U.S. carrier by volume; UPS still earns the most revenue.",
-    "r01": "ShipMatrix: Amazon Logistics grew 9.9% to 6.7 billion parcels in 2025 while USPS and UPS each fell 8.6%.",
-    "21": "After reports Amazon would cut its USPS volume by two-thirds, the two agreed to a cut of about 20%.",
-    "18": "UPS closed 23 buildings and planned about 30,000 job cuts after cutting Amazon volume by more than half.",
-    "17": "Amazon opened its logistics network, freight, warehousing and parcel delivery, to outside businesses; UPS and FedEx shares each fell about 9 to 10%.",
-    "05": "Business Insider reported 'Project Aurelian,' a backup plan to extend Amazon's own delivery to about 95% of U.S. ZIP codes by 2029.",
-    "aba40a11b6946": "An Amazon vice president said the network opened to all businesses after sellers asked to use it for off-Amazon volume.",
-    "ae3846ec1ac41": "Jefferies said Amazon could grow U.S. delivery stations from about 575 to 950 by 2030 and carry more third-party parcels.",
-    "a63ee5425135a": "An analysis says UPS's U.S. profit per package rose to about $1.16 from about $0.93 after the Amazon cutback; the math is the author's."
+    "r01": "An industry analysis put Amazon at 6.7 billion parcels in 2025, just ahead of USPS at 6.6 billion. UPS was at 4.4 billion, down 8.6%."
    },
-   "intro": "Amazon is moving more of its volume into its own network and opening that network to others. It was the largest U.S. parcel carrier by volume in 2025.",
-   "now": "UPS has finished its Amazon cutback, USPS kept most of Amazon's volume, and Amazon is selling its network to outside businesses."
+   "intro": "Amazon has gone from big customer to biggest parcel carrier, and UPS is shrinking to match. Shippers face a changing market.",
+   "now": "UPS's Amazon cutback is done, and peak is the first test. Peak-week fees start Nov. 22, with home deliveries at $0.75–$0.80 a package."
   },
   "apart": [
    "amazon-jfk8-nlrb",
@@ -945,5 +924,19 @@
    "usps-service-network"
   ],
   "rv": "0564ccfc2ad3"
+ },
+ "doordash-instacart-deal": {
+  "n": "DoorDash–Instacart deal",
+  "ids": [
+   "ae89309b5e834"
+  ],
+  "first": "2026-10-26",
+  "co": "DoorDash",
+  "s": "WSJ reported on Oct. 26, 2026 that DoorDash is in advanced talks to acquire Instacart; no agreement has been announced.",
+  "last": "2026-10-26",
+  "c": [
+   "Industry"
+  ],
+  "rv": "787f4ecf7a7d"
  }
 }

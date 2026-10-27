@@ -1,5 +1,112 @@
 [
  {
+  "title": "DoorDash in talks to buy Instacart",
+  "buyer": "DoorDash",
+  "target": "Instacart",
+  "value": "Undisclosed",
+  "status": "Pending",
+  "ann": null,
+  "closed": null,
+  "ended": null,
+  "latest": "WSJ reported advanced talks on Oct. 26, 2026; no agreement announced in the source.",
+  "sum": "DoorDash is in advanced talks to acquire Instacart, according to the Wall Street Journal as discussed by CNBC. No value or terms were given.",
+  "who": [
+   [
+    "Buyer",
+    "DoorDash",
+    "A delivery company that CNBC describes as a rival of Instacart."
+   ],
+   [
+    "Target",
+    "Instacart",
+    "A delivery company that DoorDash is reportedly in advanced talks to acquire."
+   ]
+  ],
+  "why": "The report concerns two companies CNBC describes as delivery rivals. The source gives no deal value, terms or timetable, and no earlier related deals are mentioned.",
+  "parties": [
+   {
+    "name": "DoorDash",
+    "role": "Buyer",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Instacart",
+    "role": "Target",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "DoorDash",
+   "c": [
+    {
+     "n": "Instacart",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Based on WSJ reporting of talks; no deal has been announced in the source.",
+  "ties": [
+   {
+    "d": "2026-10-26",
+    "t": "DoorDash adds $7.99 returns pickup; TikTok Shop links Happy Returns",
+    "story": "a794f973354d4"
+   },
+   {
+    "d": "2026-10-23",
+    "t": "Instacart explores sale after early talks with Uber, DoorDash",
+    "story": "a3bcc80e64163"
+   },
+   {
+    "d": "2026-10-22",
+    "t": "Lowe's starts drone delivery pilot near Charlotte with DoorDash and Wing",
+    "story": "a2cde9f1bc84b"
+   },
+   {
+    "d": "2026-10-21",
+    "t": "Kohl's adds Uber Eats, DoorDash and Instacart same-day delivery for holidays",
+    "story": "a4d34002e71df"
+   }
+  ],
+  "d": "2026-10-26",
+  "story": "ae89309b5e834",
+  "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html",
+  "srcs": [
+   {
+    "src": "CNBC",
+    "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html"
+   },
+   {
+    "src": "WSJ",
+    "url": "https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18"
+   },
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/"
+   },
+   {
+    "src": "MarketWatch",
+    "url": "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1"
+   }
+  ],
+  "checked": "2026-10-26",
+  "updates": [
+   {
+    "d": "2026-10-26",
+    "t": "DoorDash in advanced talks to acquire Instacart, WSJ reports",
+    "story": "ae89309b5e834"
+   }
+  ]
+ },
+ {
   "title": "Uber or DoorDash may buy Instacart",
   "buyer": "Undisclosed (Uber and DoorDash held early talks)",
   "target": "Instacart",

@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T18:51Z",
+ "run": "2026-10-27T19:09Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -129,6 +129,16 @@
   },
   {
    "sev": "med",
+   "type": "older-break",
+   "msg": "\"FedEx Network 2.0 puts Express and Ground parcels in one Mesquite facility\" (2026-10-26) looks like a later report of \"FedEx Network 2.0 merges Ground and Express pickup and delivery\" (2025-11-14). Check whether it is new.",
+   "ids": [
+    "a3623effd6df4",
+    "43"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
    "type": "feed-dead",
    "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
@@ -234,20 +244,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT says Amazon has not applied for Westborough drone pad certificate\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a80e5b8dd1671"
+    "af86a262d4dcb"
    ],
    "fixed": false
   },
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Shein agrees to $100 million FTC settlement over delivery complaints\"",
    "ids": [
     "a709757714d80",
-    "aeb385569416d"
+    "a93db469c6b01"
    ],
    "fixed": false
   },
@@ -346,6 +356,16 @@
   },
   {
    "sev": "med",
+   "type": "older-break",
+   "msg": "\"FedEx Network 2.0 puts Express and Ground parcels in one Mesquite facility\" (2026-10-26) looks like a later report of \"FedEx Network 2.0 merges Ground and Express pickup and delivery\" (2025-11-14). Check whether it is new.",
+   "ids": [
+    "a3623effd6df4",
+    "43"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
    "type": "feed-dead",
    "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
@@ -451,20 +471,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"MassDOT says Amazon has not applied for Westborough drone pad certificate\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a80e5b8dd1671"
+    "af86a262d4dcb"
    ],
    "fixed": false
   },
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Police: $963,000 in trading cards stolen from FedEx truck in Southern California\"",
+   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"Shein agrees to $100 million FTC settlement over delivery complaints\"",
    "ids": [
     "a709757714d80",
-    "aeb385569416d"
+    "a93db469c6b01"
    ],
    "fixed": false
   },
