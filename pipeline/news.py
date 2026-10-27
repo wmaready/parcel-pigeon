@@ -1720,6 +1720,14 @@ def write_beats(limit=6):
         sig = h(",".join(ids))
         if (t.get("cx") or {}).get("sig") == sig and (t.get("cx") or {}).get("v") == BEATS_V:
             continue
+        old = t.get("cx") or {}
+        theme_old = t.get("theme") and len(old.get("beats") or {}) >= 10          # a hand-written year theme keeps its walk-through
+        if theme_old:
+            fresh = [i for i in ids if i not in old["beats"]]
+            if not fresh:
+                t["cx"] = {**old, "sig": sig, "v": BEATS_V}
+                continue
+            ids = fresh[-8:]                                  # only the stories added since get new lines; the rest stay as written
         S = sorted((pool[i] for i in ids), key=lambda s: s.get("date") or "")
         if len(S) > 8:
             ix = sorted({0, *[round(i * (len(S) - 1) / 7) for i in range(1, 7)], len(S) - 1})
@@ -1738,7 +1746,9 @@ def write_beats(limit=6):
         beats = {i: v.strip() for i, v in (got.get("beats") or {}).items()
                  if i in ids and ok(v, 140) and (i not in unconf or HEDGE.search(v))}
         cx = {"sig": sig, "v": BEATS_V, "beats": beats}
-        if ok(got.get("intro"), 130):
+        if theme_old:
+            cx = {**old, "sig": sig, "v": BEATS_V, "beats": {**old["beats"], **beats}}
+        elif ok(got.get("intro"), 130):
             cx["intro"] = got["intro"].strip()
         if ok(got.get("now"), 150):
             cx["now"] = got["now"].strip()
