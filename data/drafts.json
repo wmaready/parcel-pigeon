@@ -2,6 +2,143 @@
  {
   "status": "published",
   "story": {
+   "id": "wb8827e8c126e",
+   "date": "2026-10-27",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS developer portal sets Nov 1, 2026 date for EU Product Identifier rule",
+   "sum": "The UPS developer portal notice about the EU Product Identifier (PID) requirement for certain B2C shipments entering the EU now states an effective date of November 1, 2026. The earlier notice gave no date. The link to updated Ship documentation for the PID requirements is unchanged.",
+   "plain": "Shippers sending B2C parcels into the EU, and developers integrating UPS Ship, now have a date by which PID data must be supplied. The notice does not say which product categories are covered or what happens to shipments without PID data.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "International",
+   "act": "2026-11-01",
+   "inferred": null,
+   "detected": "2026-10-27",
+   "changes": [
+    {
+     "what": "Effective date added to the EU PID requirement notice for B2C shipments entering the EU",
+     "before": "No effective date stated",
+     "after": "Effective November 1, 2026",
+     "effective": "2026-11-01",
+     "who": "Shippers sending certain B2C shipments into the EU, and developers using UPS Ship",
+     "impact": "Adds a firm compliance date; the requirement itself is unchanged"
+    }
+   ],
+   "verdict": "rule change",
+   "unknowns": [
+    "Which products or shipment types count as 'certain' B2C shipments",
+    "Any UPS fees or penalties for shipments missing PID data",
+    "Whether the updated Ship documentation linked in the notice changed along with the date"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-01",
+     "w": "UPS: Effective date added to the EU PID requirement notice for B2C shipments entering the EU",
+     "imp": "info"
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Developer portal (spotted by Parcel Pigeon)",
+   "url": "https://developer.ups.com/",
+   "srcs": [
+    {
+     "src": "UPS Developer portal",
+     "url": "https://developer.ups.com/"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "service change (UPS_Ship_API_EU_PID_Requirements_v1.1.pdf), rule change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w8465aa718dc6",
+   "date": "2026-10-27",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS Ship API EU PID guide now says Product Identifier fields are not yet in production",
+   "sum": "UPS's EU Product Identifier developer guide previously said the PID fields were in the Ship API production environment. It now says they are \"not yet available\" there, with final production timing to come later. The ProductIDTypeCode field now lists a length of 4, and the sample request shows the exempt indicator as the string \"false\" instead of a boolean. No effective date is stated. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-27, so it is treated as in effect from then.",
+   "plain": "Developers and shippers integrating with UPS Ship API for non-EU-to-EU B2C sales should not expect to send PID data in production yet. No fees or prices are involved, and the field names and requirements are otherwise unchanged.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Technology & tools",
+   "act": "2026-10-27",
+   "inferred": true,
+   "detected": "2026-10-27",
+   "changes": [
+    {
+     "what": "Production availability of the Product Identifier fields in UPS Ship API",
+     "before": "Fields are in the UPS Ship API production environment",
+     "after": "Fields are not yet available in the UPS Ship API production environment; final production timing to be communicated later",
+     "effective": null,
+     "who": "Partners and shippers integrating UPS Ship API for non-EU to EU B2C \"For Sale\" shipments",
+     "impact": "Availability status reversed from in production to not yet available"
+    },
+    {
+     "what": "ProductIDTypeCode field length specification",
+     "before": "No length specified (only \"See values below\")",
+     "after": "Length listed as 4",
+     "effective": null,
+     "who": "Developers building the ProductIdentifier request element",
+     "impact": "Length of 4 now stated; type code values 0100, 0200 and 0300 unchanged"
+    },
+    {
+     "what": "Sample request format for ProductIdentifierExemptIndicator",
+     "before": "Value shown as a boolean: false",
+     "after": "Value shown as a quoted string: \"false\"",
+     "effective": null,
+     "who": "Developers building the Product request element",
+     "impact": "Sample formatting only; the field spec still lists the allowed values as True / False"
+    }
+   ],
+   "verdict": "service change",
+   "unknowns": [
+    "Final production date for the PID fields has not been given",
+    "Whether this file version (v1.1) deliberately supersedes the posted v1.2 cannot be confirmed",
+    "Whether the \"4\" length for ProductIDTypeCode and the string-format sample reflect a real API change or only documentation edits"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Developer portal (spotted by Parcel Pigeon)",
+   "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "srcs": [
+    {
+     "src": "UPS Developer portal",
+     "url": "https://developer.ups.com/"
+    },
+    {
+     "src": "UPS: UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+     "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "service change (UPS_Ship_API_EU_PID_Requirements_v1.1.pdf), rule change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+      "old": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "published",
+  "story": {
    "id": "w599d9089a65d",
    "date": "2026-10-23",
    "c": [

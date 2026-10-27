@@ -2935,5 +2935,22 @@
   "d": "Posted on UPS's Ground Saver page page",
   "cur": true,
   "seen": "2026-10-25"
+ },
+ {
+  "c": "UPS",
+  "t": "Special program",
+  "n": "UPS Ship API EU PID Requirements v1.1",
+  "y": null,
+  "eff": null,
+  "u": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+  "d": "Posted on UPS's Developer portal page (service change)",
+  "cur": true,
+  "added": "2026-10-27",
+  "why": {
+   "how": "replaced",
+   "when": "2026-10-27",
+   "where": "UPS's Developer portal page",
+   "prev": "UPS_Ship_API_EU_PID_Requirements_v1.2.pdf"
+  }
  }
 ]

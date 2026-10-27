@@ -73,7 +73,9 @@
   "a794f973354d4",
   "aa1bd42ea784a",
   "a663794cc9c55",
-  "a0adb56a55334"
+  "a0adb56a55334",
+  "w8465aa718dc6",
+  "wb8827e8c126e"
  ],
  "clock": [
   "e06:7",
@@ -317,38 +319,42 @@
   "doordash adds 7 99 returns pickup tiktok shop links happy re",
   "roadie survey 64 of shoppers would quit a retailer after one",
   "ups fedex fuel surcharges near 29 as holiday delivery prices",
-  "usps to add weekly fuel surcharge on package services in jan"
+  "usps to add weekly fuel surcharge on package services in jan",
+  "ups ship api eu pid guide now says product identifier fields",
+  "ups developer portal sets nov 1 2026 date for eu product ide"
  ],
  "harvested": [
-  "ac78f72e7f458",
-  "a6e82ba740e99",
-  "a6cc2420ad66e",
-  "wdf959a97bcb6",
-  "a6c2418bed0a7",
   "a351cab9045c7",
   "a0adb56a55334",
-  "a5d45f26f2219",
-  "a72efb5e01b99",
+  "a663794cc9c55",
+  "a2def09bc43bb",
   "w599d9089a65d",
-  "af8ee5ed067c6",
+  "a58373f1b7bc3",
+  "a6c2418bed0a7",
   "aba40a11b6946",
+  "ac78f72e7f458",
+  "a5d45f26f2219",
   "w150132868eae",
-  "a312b45efa358",
-  "w84705482dd2f",
-  "a89d7e4beebd9",
+  "a831c709e5809",
+  "a57a06c26359c",
+  "a2b81ad721cb8",
+  "af8ee5ed067c6",
   "rv5-ups-sbr-fuel",
   "a773d361dac4e",
-  "a58373f1b7bc3",
-  "aee6669d325da",
+  "a89d7e4beebd9",
   "a15404304f17b",
-  "a3a45d7f6db20",
-  "a663794cc9c55",
-  "a831c709e5809",
-  "a2def09bc43bb",
-  "a57a06c26359c",
-  "wacb825361479",
+  "aee6669d325da",
+  "w84705482dd2f",
+  "wb8827e8c126e",
+  "w8465aa718dc6",
   "a2f683da86bf8",
-  "a2b81ad721cb8"
+  "wacb825361479",
+  "a3a45d7f6db20",
+  "a6e82ba740e99",
+  "a72efb5e01b99",
+  "wdf959a97bcb6",
+  "a312b45efa358",
+  "a6cc2420ad66e"
  ],
  "backfilled": true,
  "recent": [
@@ -1524,6 +1530,40 @@
      "url": "https://www.supplychaindive.com/news/usps-to-debut-weekly-fuel-fee-in-2027-matching-fedex-ups-practices/872778/"
     }
    ]
+  },
+  {
+   "id": "w8465aa718dc6",
+   "title": "UPS Ship API EU PID guide now says Product Identifier fields are not yet in production",
+   "date": "2026-10-27",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "srcs": [
+    {
+     "src": "UPS Developer portal",
+     "url": "https://developer.ups.com/"
+    },
+    {
+     "src": "UPS: UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+     "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf"
+    }
+   ]
+  },
+  {
+   "id": "wb8827e8c126e",
+   "title": "UPS developer portal sets Nov 1, 2026 date for EU Product Identifier rule",
+   "date": "2026-10-27",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://developer.ups.com/",
+   "srcs": [
+    {
+     "src": "UPS Developer portal",
+     "url": "https://developer.ups.com/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1706,9 +1746,48 @@
   "a0adb56a55334": {
    "t": "USPS adds weekly fuel surcharge in Jan 2027",
    "m": "Covers Ground Advantage, Priority, Express and Parcel Select domestic shipments from January 2027."
+  },
+  "w8465aa718dc6": {
+   "t": "UPS Ship API EU PID data not live yet",
+   "m": "Shippers and developers should not expect to send PID data in production yet; no fees involved."
+  },
+  "wb8827e8c126e": {
+   "t": "UPS sets Nov 1, 2026 EU PID deadline",
+   "m": "Shippers sending B2C parcels into the EU must supply PID data; takes effect Nov 1, 2026."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:ups ship api eu pid guide now says product identifier fields are not yet in production",
+   "id": "w8465aa718dc6",
+   "t": "UPS Ship API EU PID data not live yet",
+   "m": "Shippers and developers should not expect to send PID data in production yet; no fees involved.",
+   "big": false,
+   "at": "2026-10-27T00:44:36.518907-04:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=w8465aa718dc6"
+  },
+  {
+   "kind": "story",
+   "key": "story:ups developer portal sets nov 1 2026 date for eu product identifier rule",
+   "id": "wb8827e8c126e",
+   "t": "UPS sets Nov 1, 2026 EU PID deadline",
+   "m": "Shippers sending B2C parcels into the EU must supply PID data; takes effect Nov 1, 2026.",
+   "big": false,
+   "at": "2026-10-27T00:44:36.518946-04:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=wb8827e8c126e"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-26",

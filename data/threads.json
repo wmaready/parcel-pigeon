@@ -280,21 +280,22 @@
    "UPS",
    "USPS"
   ],
-  "rv": "51da35db195e",
+  "rv": "9a15926ec048",
   "cx": {
-   "sig": "51da35db195e",
+   "sig": "9a15926ec048",
    "v": 3,
    "beats": {
-    "h416": "UPS posted 2024 peak tables in July, adding a second fee for shippers above 20,000 weekly packages; fees start Sept. 29.",
-    "h418": "FedEx announced a similar two-tier setup in August, including new $0.30–$0.55 Ground residential fees from Sept. 30.",
-    "h419": "USPS proposed its own temporary increase for Oct. 6 to Jan. 19; commercial Ground Advantage rises $0.35 to $5.50 in Zones 5–9.",
-    "h523": "FedEx's 2025 fees start Sept. 29, with residential demand at $0.40–$0.65 a package, up from $0.30–$0.55 in 2024.",
-    "h525": "USPS filed 2025 holiday increases for Oct. 5 to Jan. 18, now including Parcel Select, pending PRC review.",
-    "h527": "UPS announced its 2025 fees in September: oversize fees from Sept. 28, demand surcharges of $0.40–$2.05 from Oct. 26.",
-    "01": "Oversize peak fees already bill at OnTrac, UPS and FedEx; per-package home-delivery fees start Oct 24–26, then rise in late November."
+    "h416": "UPS posted its 2024 peak tables in July, adding a second demand fee for customers over 20,000 weekly packages.",
+    "h418": "FedEx followed in August with a similar two-tier setup, including $0.30–$0.55 on Ground and Home Delivery residential.",
+    "h419": "USPS proposed its own temporary increase for Oct. 6 to Jan. 19 on Priority Mail Express, Priority Mail and Ground Advantage.",
+    "h523": "FedEx's 2025 peak fees start Sept. 29, with residential demand at $0.40–$0.65 a package, up from $0.30–$0.55 in 2024.",
+    "h527": "UPS's fees start Sept. 28 and demand surcharges Oct. 26; high-volume customers pay up to $8.75, matching FedEx's top rate.",
+    "06": "USPS holiday prices began Oct. 4 on four products, averaging near 6% per trade press, through Jan. 16.",
+    "01": "Oversize peak fees have billed since Sep 26–28; per-package fees start Oct 24–26, then climb to $0.75–$0.80 in late November.",
+    "a663794cc9c55": "At $6.28 diesel, UPS's fuel surcharge is 29.5% and FedEx's 29%; an industry index sees Q4 ground pricing up 5.8%, express 13.8%."
    },
-   "intro": "How holiday peak surcharges at UPS, FedEx and USPS have evolved since 2024, and what's billing now.",
-   "now": "Per-package peak fees begin Oct. 24 to 26; UPS and Amazon rise to $0.75 from Nov. 22 and FedEx to $0.80 from Nov. 23."
+   "intro": "Carriers keep layering peak fees over the holidays, and shippers pay them on top of base rates and fuel charges.",
+   "now": "Per-package peak fees are billing now; UPS and FedEx report earnings Oct. 27 and 28, and home-delivery fees step up in late November."
   },
   "co": "USPS",
   "apart": [
@@ -749,7 +750,8 @@
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
-  ]
+  ],
+  "rv": "62f7c774dd33"
  },
  "theme-ecommerce-split": {
   "n": "Splintering of eCommerce parcel from B2B/Premium parcel",
@@ -849,24 +851,13 @@
   "theme": true,
   "rv": "f43f274d40c8",
   "cx": {
-   "sig": "f43f274d40c8",
+   "sig": "521ba13863c0",
    "v": 3,
    "beats": {
-    "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
-    "h511": "UPS said it will cut about 20,000 positions in 2025 and close 73 buildings by the end of June.",
-    "a13f12c1da7be": "UPS and the Teamsters settled the Driver Choice dispute, capping it at 7,500 drivers and barring another severance program until July 31, 2028.",
-    "g33": "An NLRB judge approved an Amazon DSP settlement without a joint-employer finding; the Teamsters called it a 'sham settlement'.",
-    "g32": "Teamsters delegates voted to challenge UPS over routing work to its Roadie gig subsidiary; UPS says it complies with the contract.",
-    "50": "An analyst argued the 2028 outcome will reshape the market: a hard line leaning on Roadie could let UPS dominate, concessions could shrink it.",
-    "35": "Teamsters president Sean O'Brien said a strike is likely when the contract ends July 31, 2028.",
-    "nr59b2c5": "Amazon added $1.9 billion to its Delivery Service Partner program for 2027, aimed at lifting delivery associate pay to nearly $24 an hour.",
-    "acb44dbafb712": "An NLRB judge ruled UPS unlawfully restricted union insignia on safety vests; UPS plans to appeal.",
-    "a66617050d4e9": "Analysts are split on whether UPS's pivot to premium and logistics services means leaving parts of parcel, as the 2028 talks near.",
-    "abaae70647f04": "UPS and the Teamsters agreed to offer Driver Choice nationwide: $150,000 early-retirement payments, capped at 7,500 drivers.",
-    "a57a06c26359c": "Amazon TOM Team drivers at an Indiana facility joined Teamsters Local 142 and asked Amazon to recognize the union."
+    "h406": "At its March 2024 investor day, UPS said it would close or consolidate about 200 U.S. facilities and have 400 automated buildings by 2028."
    },
-   "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
-   "now": "Driver Choice is capped at 7,500 drivers, the Teamsters are challenging UPS over Roadie, and a 2028 strike is called likely."
+   "intro": "UPS is shrinking its network while the Teamsters push back on buyouts and gig work. The contract ends July 31, 2028.",
+   "now": "Driver Choice is set at 7,500 drivers, and the contract expires July 31, 2028. UPS reports quarterly earnings Oct 27."
   },
   "apart": [
    "ups-amazon-glide-down",
@@ -950,6 +941,7 @@
    "usps-finances",
    "usps-leadership",
    "usps-service-network"
-  ]
+  ],
+  "rv": "0564ccfc2ad3"
  }
 }
