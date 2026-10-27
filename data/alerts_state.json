@@ -75,7 +75,8 @@
   "a663794cc9c55",
   "a0adb56a55334",
   "w8465aa718dc6",
-  "wb8827e8c126e"
+  "wb8827e8c126e",
+  "aa3051ff662bd"
  ],
  "clock": [
   "e06:7",
@@ -83,7 +84,7 @@
  ],
  "fuel": {
   "OnTrac": "2026-10-26",
-  "UPS": "2026-10-19",
+  "UPS": "2026-10-26",
   "FedEx": "2026-10-26"
  },
  "players": [
@@ -250,7 +251,9 @@
   "story:ups developer portal sets nov 1 2026 date for eu product identifier rule",
   "story:ups ship api eu pid guide now says product identifier fields are not yet in production",
   "player:globaleonlinel",
-  "player:passportglobal"
+  "player:passportglobal",
+  "fuel:UPS:2026-10-26",
+  "story:ups expects q4 u s volume to dip as amazon cutback meets peak"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -328,40 +331,41 @@
   "ups fedex fuel surcharges near 29 as holiday delivery prices",
   "usps to add weekly fuel surcharge on package services in jan",
   "ups ship api eu pid guide now says product identifier fields",
-  "ups developer portal sets nov 1 2026 date for eu product ide"
+  "ups developer portal sets nov 1 2026 date for eu product ide",
+  "ups expects q4 u s volume to dip as amazon cutback meets pea"
  ],
  "harvested": [
-  "wb8827e8c126e",
-  "aee6669d325da",
-  "a6e82ba740e99",
-  "a2f683da86bf8",
-  "a57a06c26359c",
-  "a2def09bc43bb",
-  "a2b81ad721cb8",
-  "a312b45efa358",
-  "a15404304f17b",
-  "a89d7e4beebd9",
-  "w150132868eae",
-  "a6cc2420ad66e",
-  "w8465aa718dc6",
-  "w84705482dd2f",
-  "a663794cc9c55",
-  "w599d9089a65d",
-  "a5d45f26f2219",
-  "a0adb56a55334",
   "a58373f1b7bc3",
-  "a6c2418bed0a7",
-  "ac78f72e7f458",
-  "a3a45d7f6db20",
-  "a773d361dac4e",
-  "wdf959a97bcb6",
-  "wacb825361479",
-  "a831c709e5809",
-  "rv5-ups-sbr-fuel",
   "aba40a11b6946",
+  "w84705482dd2f",
+  "wacb825361479",
+  "wb8827e8c126e",
+  "af8ee5ed067c6",
   "a72efb5e01b99",
+  "a2def09bc43bb",
+  "a3a45d7f6db20",
+  "a6cc2420ad66e",
+  "w599d9089a65d",
+  "a89d7e4beebd9",
+  "a6e82ba740e99",
+  "w8465aa718dc6",
+  "a57a06c26359c",
+  "a2b81ad721cb8",
   "a351cab9045c7",
-  "af8ee5ed067c6"
+  "a0adb56a55334",
+  "rv5-ups-sbr-fuel",
+  "a663794cc9c55",
+  "aee6669d325da",
+  "a15404304f17b",
+  "ac78f72e7f458",
+  "a773d361dac4e",
+  "a831c709e5809",
+  "a6c2418bed0a7",
+  "a2f683da86bf8",
+  "wdf959a97bcb6",
+  "a312b45efa358",
+  "a5d45f26f2219",
+  "w150132868eae"
  ],
  "backfilled": true,
  "recent": [
@@ -1571,6 +1575,21 @@
      "url": "https://developer.ups.com/"
     }
    ]
+  },
+  {
+   "id": "aa3051ff662bd",
+   "title": "UPS expects Q4 U.S. volume to dip as Amazon cutback meets peak",
+   "date": "2026-10-27",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.supplychaindive.com/news/ups-gears-up-for-peak-season-with-less-amazon-volume-in-tow/872845/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/ups-gears-up-for-peak-season-with-less-amazon-volume-in-tow/872845/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1761,13 +1780,17 @@
   "wb8827e8c126e": {
    "t": "UPS sets Nov 1, 2026 EU PID deadline",
    "m": "Shippers sending B2C parcels into the EU must supply PID data; takes effect Nov 1, 2026."
+  },
+  "aa3051ff662bd": {
+   "t": "UPS adds $10.70 Protected Delivery fee",
+   "m": "Protected Delivery costs $10.70 per shipment and takes effect Nov 16 for shippers."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-27",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-10-27T07:50:18.345208-04:00"
+ "last_push": "2026-10-27T13:03:51.703602-04:00"
 }
