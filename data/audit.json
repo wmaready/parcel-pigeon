@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T13:10Z",
+ "run": "2026-10-27T13:59Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -94,8 +94,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
@@ -116,7 +116,21 @@
   {
    "sev": "high",
    "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -304,8 +318,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
@@ -326,7 +340,21 @@
   {
    "sev": "high",
    "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
