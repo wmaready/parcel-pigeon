@@ -9779,7 +9779,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-deliver]')
     try{sessionStorage.removeItem('pp-new-retry')}catch(e){}
     goTo('news','list');
     setTimeout(()=>{const els=have.map(i=>$('n-'+i)).filter(Boolean);
-      els.forEach((el,k)=>{el.dataset.landlbl='New in your alert';el.classList.remove('landed');void el.offsetWidth;el.classList.add('landed');setTimeout(()=>el.classList.remove('landed'),8000);if(!k)el.scrollIntoView({block:'center'})})},500)};
+      if(els[0]){els[0].dataset.landlbl='From your alert';els[0].scrollIntoView({block:'center'});els[0].classList.remove('landed');void els[0].offsetWidth;els[0].classList.add('landed');setTimeout(()=>els[0].classList.remove('landed'),6000)}},500)};
   setTimeout(go,600)}}
 // (Coop's delivery animation is retired: new documents now show as badges on the Docs folders)
 

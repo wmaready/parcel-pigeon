@@ -742,7 +742,12 @@ def count_today(state, n=1):
 def rollup_body(items):
     """The roll-up's lines: up to four stories, or three plus "+N more in the app". Unconfirmed ones say so."""
     shown = items if len(items) <= LIST_LINES else items[:LIST_LINES - 1]
-    line = lambda q: "• " + ("Unconfirmed: " + compact(q["t"], 30) if q.get("unconf") else compact(q["t"], 42))
+    # each line leads with the carrier (UPS: ...), so the lock screen says at a glance who each story is about
+    def line(q):
+        pre = (q["co"] + ": ") if q.get("co") and not q["t"].lower().startswith(q["co"].lower()) else ""
+        if q.get("unconf"):
+            return "• Unconfirmed: " + compact(q["t"], 30)
+        return "• " + pre + compact(q["t"], 42 - len(pre))
     return "\n".join(line(q) for q in shown) + (f"\n+{len(items) - len(shown)} more in the app" if len(items) > len(shown) else "")
 
 
@@ -818,7 +823,7 @@ def send_queued(state):
             words = "stories" if all(q["kind"] == "story" for q in rest) else "updates"
             # one bullet per story, biggest first, so a glance at the lock screen reads like a short list (four lines at most)
             body = rollup_body(rest)
-            r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", body,
+            r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}: tap to read", body,
                      news_link(rest), audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
             if delivered(r):
@@ -901,7 +906,8 @@ def run():
         big = big and not s.get("unconf")
         return {"kind": "story", "key": "story:" + norm(s["title"]), "id": s["id"], "t": c["t"], "m": m, "big": big, "at": now_et().isoformat(),
                 "lvl": push_level(s), "unconf": bool(s.get("unconf")), "topic": topic_of(s), "notable": big or notable(s),
-                "mask": mask_of(s.get("c")), "url": story_link(s, big)}
+                "mask": mask_of(s.get("c")), "url": story_link(s, big),
+                "co": next((x for x in (s.get("c") or []) if x in BIG4), None)}
     def seen(s):
         state["stories"].append(s["id"]); state["titles"].append(norm(s.get("title"))[:60])
     for s in majors:
