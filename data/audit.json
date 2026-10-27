@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T09:48Z",
+ "run": "2026-10-27T10:53Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -93,9 +93,16 @@
    "fixed": true
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -109,7 +116,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -123,7 +130,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "3 news feeds failing or empty: SEC: UPS 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },
@@ -296,9 +303,16 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -312,7 +326,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -326,7 +340,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "3 news feeds failing or empty: SEC: UPS 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
    "fixed": false
   },
