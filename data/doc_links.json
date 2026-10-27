@@ -237,6 +237,238 @@
   "content_verified": false,
   "state": "broken",
   "why": "HTTP 404",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf": {
+  "http_status": 404,
+  "final_url": "https://cdn.gls-us.com/media/Fuel-Surcharge-Dec-2025.pdf",
+  "content_verified": false,
+  "state": "broken",
+  "why": "HTTP 404",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.gls-us.com/peak-season-surcharge-2024": {
+  "http_status": 200,
+  "final_url": "https://gls-group.com/US/en/home/",
+  "content_verified": false,
+  "state": "wrong-page",
+  "why": "redirected to a home or section page",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
+  "http_status": 200,
+  "final_url": "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.logisticsmgmt.com/article/august_shipments_and_expenditures_see_annual_gains_reports_cass_freight_index": {
+  "http_status": 403,
+  "final_url": "https://www.logisticsmgmt.com/article/august_shipments_and_expenditures_see_annual_gains_reports_cass_freight_index",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (403)",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.lso.com/lso-fuel-surcharge": {
+  "http_status": 200,
+  "final_url": "https://www.lso.com/lso-fuel-surcharge",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.lso.com/news/lone-star-overnight-announces-annual-gri-and-peak-surcharge-2023": {
+  "http_status": 200,
+  "final_url": "https://www.lso.com/news/lone-star-overnight-announces-annual-gri-and-peak-surcharge-2023",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.nrf.com/research/2025-retail-returns-landscape": {
+  "http_status": 200,
+  "final_url": "https://nrf.com/research/2025-retail-returns-landscape",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/supplemental-surcharges": {
+  "http_status": 404,
+  "final_url": "https://www.ontrac.com/supplemental-surcharges",
+  "content_verified": false,
+  "state": "broken",
+  "why": "HTTP 404",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/surchargesandrates/": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/surchargesandrates/",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/terms-conditions-additional/": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/terms-conditions-additional/",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/terms-conditions/": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/terms-conditions/",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/west-coast-fuel-surcharge": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/west-coast-fuel-surcharge/",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth": {
+  "http_status": 200,
+  "final_url": "https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.pitneybowes.com/us/shipping-index.html": {
+  "http_status": 200,
+  "final_url": "https://www.pitneybowes.com/us/shipping-index.html",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.prc.gov/sites/default/files/reports/FY25FinancialReport.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.prc.gov/sites/default/files/reports/FY25FinancialReport.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.salesforce.com/events/webinars/2026-salesforce-holiday-predictions/": {
+  "http_status": 200,
+  "final_url": "https://www.salesforce.com/events/webinars/2026-salesforce-holiday-predictions/?bc=OTH",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.shipstation.com/en-gb/guides/shipstation-2026-merchant-insights-report.md": {
+  "http_status": 200,
+  "final_url": "https://www.shipstation.com/en-gb/guides/shipstation-2026-merchant-insights-report.md",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.shipveho.com/service-guide/last-mile-delivery": {
+  "http_status": 404,
+  "final_url": "https://www.shipveho.com/service-guide/last-mile-delivery",
+  "content_verified": false,
+  "state": "broken",
+  "why": "HTTP 404",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.the-lmi.com/september-2026-logistics-managers-index.html": {
+  "http_status": 200,
+  "final_url": "https://www.the-lmi.com/september-2026-logistics-managers-index.html",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ups.com/assets/resources/media/en_US/SurePost_Terms.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.ups.com/assets/resources/media/en_US/SurePost_Terms.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ups.com/assets/resources/webcontent/en_US/rate-service-guide-pr.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.ups.com/assets/resources/webcontent/en_US/rate-service-guide-pr.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ups.com/us/en/services/shipping/simple-rate": {
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/services/shipping/simple-rate",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-10-27T04:51Z"
+ },
+ "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-10-27T04:51Z"
  }
 }

@@ -168,7 +168,11 @@
   "f": "data/files/ups-2025-ups-rate-and-service-guide-puerto-rico-e4b25c.pdf",
   "fh": "b68ee9869d3efd921adc4796d61c332b357eec1a",
   "fat": "2026-10-22",
-  "fsz": 1388016
+  "fsz": 1388016,
+  "http_status": 200,
+  "final_url": "https://www.ups.com/assets/resources/webcontent/en_US/rate-service-guide-pr.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "UPS",
@@ -180,7 +184,11 @@
   "d": "Program overview",
   "cur": true,
   "upd": "2026-02-24",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "UPS",
@@ -311,7 +319,11 @@
   "f": "data/files/ups-ups-ground-saver-terms-effective-mar-31-2025-1f45f3.pdf",
   "fh": "14c8d25411e9ceef879efcf30752450c37b83867",
   "fat": "2026-10-22",
-  "fsz": 169806
+  "fsz": 169806,
+  "http_status": 200,
+  "final_url": "https://www.ups.com/assets/resources/media/en_US/SurePost_Terms.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "UPS",
@@ -339,7 +351,11 @@
   "d": "Flat-rate program; rates are in the daily rate guide",
   "cur": true,
   "upd": "2026-03-11",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/services/shipping/simple-rate",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "UPS",
@@ -1670,7 +1686,11 @@
   "u": "https://www.ontrac.com/surchargesandrates/",
   "d": "Fuel index effective Apr 4, 2026 (27.00% for Oct 5–11, 2026), accessorials and 2026–27 demand surcharges",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/surchargesandrates/",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "OnTrac",
@@ -1681,7 +1701,11 @@
   "u": "https://www.ontrac.com/west-coast-fuel-surcharge",
   "d": "PADD 5 diesel index; tables posted through Oct 18, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/west-coast-fuel-surcharge/",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "OnTrac",
@@ -1709,7 +1733,11 @@
   "d": "Covers the merged LaserShip network",
   "cur": true,
   "upd": "2026-01-05",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/terms-conditions/",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "OnTrac",
@@ -1721,7 +1749,11 @@
   "d": "Dimensional weight, claims, size limits",
   "cur": true,
   "upd": "2026-02-19",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/terms-conditions-additional/",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "Amazon",
@@ -2053,7 +2085,11 @@
   "u": "https://www.lso.com/lso-fuel-surcharge",
   "d": "Fuel basis effective Apr 11, 2022; weekly table on the page stops at Oct 2021",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.lso.com/lso-fuel-surcharge",
+  "content_verified": true,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "LSO",
@@ -2076,7 +2112,11 @@
   "d": "5.9% GRI Jan 1, 2024; peak Oct 30, 2023 to Jan 7, 2024",
   "cur": false,
   "upd": "2023-10-04",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.lso.com/news/lone-star-overnight-announces-annual-gri-and-peak-surcharge-2023",
+  "content_verified": true,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "LSO",
@@ -2229,7 +2269,11 @@
   "d": "Retired by the carrier, last seen date not on file; the link now opens the GLS homepage (checked Oct 24, 2026)",
   "cur": false,
   "checked": "2026-10-24",
-  "fchk": "2026-10-27"
+  "fchk": "2026-10-27",
+  "http_status": 404,
+  "final_url": "https://cdn.gls-us.com/media/Fuel-Surcharge-Dec-2025.pdf",
+  "content_verified": false,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "GLS US",
@@ -2299,7 +2343,7 @@
   "http_status": 404,
   "final_url": "https://cdn.gls-us.com/media/GLS-2023-Priority-Rates.pdf",
   "content_verified": false,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "GLS US",
@@ -2310,7 +2354,11 @@
   "u": "https://www.gls-us.com/peak-season-surcharge-2024",
   "d": "Retired by the carrier, last seen date not on file; the link now opens the GLS homepage (checked Oct 24, 2026)",
   "cur": false,
-  "checked": "2026-10-24"
+  "checked": "2026-10-24",
+  "http_status": 200,
+  "final_url": "https://gls-group.com/US/en/home/",
+  "content_verified": false,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "Veho",
@@ -2333,7 +2381,11 @@
   "u": "https://www.shipveho.com/service-guide/last-mile-delivery",
   "d": "Retired by the carrier, last seen date not on file; the link now goes to Veho's Knowledge Hub, and Doc watch gets 404 Not Found (last try Oct 25, 2026)",
   "cur": false,
-  "checked": "2026-10-24"
+  "checked": "2026-10-24",
+  "http_status": 404,
+  "final_url": "https://www.shipveho.com/service-guide/last-mile-delivery",
+  "content_verified": false,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "FedEx",
@@ -2359,7 +2411,11 @@
   "u": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
   "d": "Found with: OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page",
   "cur": true,
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "OnTrac",
@@ -2370,7 +2426,11 @@
   "u": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
   "d": "Found with: OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page",
   "cur": true,
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "http_status": 200,
+  "final_url": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "OnTrac",
@@ -2381,7 +2441,11 @@
   "u": "https://www.ontrac.com/supplemental-surcharges",
   "d": "Found with: OnTrac lists 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page",
   "cur": true,
-  "added": "2026-10-11"
+  "added": "2026-10-11",
+  "http_status": 404,
+  "final_url": "https://www.ontrac.com/supplemental-surcharges",
+  "content_verified": false,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "USPS",
@@ -2415,7 +2479,11 @@
    "story": "aee6669d325da",
    "title": "GOFO adds 4% emergency fuel surcharge from Oct. 26",
    "when": "2026-10-13"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "Amazon",
@@ -2734,7 +2802,11 @@
   "u": "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2024/2024_KC_LETTER.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "Spee-Dee",
@@ -2745,7 +2817,11 @@
   "u": "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2024/LTL_Rates_2024_Version_28.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "USPS",
@@ -2810,7 +2886,11 @@
   "f": "data/files/spee-dee-spee-dee-2025-expansion-letter-0895da.pdf",
   "fh": "8c6ff55e7df1c1542c596acb0bfa757a786f5f53",
   "fat": "2026-10-23",
-  "fsz": 155121
+  "fsz": 155121,
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "Spee-Dee",
@@ -2826,7 +2906,11 @@
   "f": "data/files/spee-dee-spee-dee-2025-expansion-letter-update-4c0e35.pdf",
   "fh": "6b129f11627faf277447d77af0575901c91b8e28",
   "fat": "2026-10-23",
-  "fsz": 151866
+  "fsz": 151866,
+  "http_status": 200,
+  "final_url": "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-27T04:51Z"
  },
  {
   "c": "DHL",

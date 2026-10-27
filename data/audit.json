@@ -1,48 +1,50 @@
 {
- "run": "2026-10-27T04:44Z",
+ "run": "2026-10-27T04:51Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 240,
- "doc_cursor": 180,
+ "link_cursor": 280,
+ "doc_cursor": 210,
  "checked_pairs": [
-  "70042e1b5ea7",
-  "4621e9e86574",
-  "a625dd5720a9",
-  "c1419d4e7cb6",
-  "62cb3ae5df27",
-  "4d5dedc8cd29",
-  "73dcfc31b988",
-  "6bef0a5868e5",
-  "0cae9f6a1079",
+  "457e37db5347",
+  "0ee2e50bd13d",
+  "94d1ac334f4e",
+  "5effb73bc21d",
+  "4e8faef9252d",
   "2988f97e477e",
   "f3a106e02077",
-  "6157952e9b11",
-  "5effb73bc21d",
-  "f7e5ad4ade89",
-  "14a3d7429698",
   "1bc66c00eda3",
-  "c74456d2bddc",
-  "454e4f8f6a6b",
-  "dbb89994655f",
-  "60030262fcea",
-  "5f83fff4b0b8",
-  "803f70b9b286",
   "0b8aff140a01",
-  "de313bc51fd7",
+  "60030262fcea",
+  "4621e9e86574",
+  "73dcfc31b988",
   "2f24e1d5d0e2",
-  "d46a0aebc57e",
-  "b8d8ea16bc5f",
-  "4e8faef9252d",
-  "d72a23005aba",
-  "0ee2e50bd13d",
-  "bd74f39e4a2a",
-  "b54077ea2f7b",
-  "5b4926c2c24d",
-  "94d1ac334f4e",
-  "457e37db5347",
+  "d73b3089178a",
   "006e0976c74d",
-  "7e4a0a07ad2f"
+  "4d5dedc8cd29",
+  "b54077ea2f7b",
+  "6157952e9b11",
+  "62cb3ae5df27",
+  "dbb89994655f",
+  "0cae9f6a1079",
+  "6bef0a5868e5",
+  "d72a23005aba",
+  "b8d8ea16bc5f",
+  "7e4a0a07ad2f",
+  "bd74f39e4a2a",
+  "5b4926c2c24d",
+  "c1419d4e7cb6",
+  "454e4f8f6a6b",
+  "c74456d2bddc",
+  "de313bc51fd7",
+  "a625dd5720a9",
+  "d46a0aebc57e",
+  "f7e5ad4ade89",
+  "5f83fff4b0b8",
+  "70042e1b5ea7",
+  "803f70b9b286",
+  "14a3d7429698",
+  "5e124f1a493a"
  ],
  "issues": [
   {
@@ -247,6 +249,104 @@
     "a15404304f17b"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240417690112/en",
+   "ids": [
+    "h408"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240723590067/en/UPS-Releases-2Q-2024-Earnings/",
+   "ids": [
+    "h414"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20250108660127/en/UPS-Completes-Acquisitions-of-Healthcare-Cold-Chain-Logistics-Providers-Frigo-Trans-and-BPL",
+   "ids": [
+    "h502"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20250519981127/en",
+   "ids": [
+    "h519"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20260610322824/en/From-Cart-to-Cookout-Omaha-Steaks-and-Roadie-Power-Same-Day-Delivery-for-Fathers-Day",
+   "ids": [
+    "g12"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20260921920176/en/Amazon-Invests-Another-%241.9-Billion-in-the-Delivery-Service-Partner-Program-with-New-Safety-Initiatives-and-AI-Powered-Technology",
+   "ids": [
+    "nr59b2c5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (500 Server Error: Internal Server Error for url: https://www.census.gov/retail/ecommerce.html): https://www.census.gov/retail/ecommerce.html",
+   "ids": [
+    "r16"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -442,6 +542,104 @@
     "a2e0cb230779a",
     "a15404304f17b"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240417690112/en",
+   "ids": [
+    "h408"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240723590067/en/UPS-Releases-2Q-2024-Earnings/",
+   "ids": [
+    "h414"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20250108660127/en/UPS-Completes-Acquisitions-of-Healthcare-Cold-Chain-Logistics-Providers-Frigo-Trans-and-BPL",
+   "ids": [
+    "h502"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20250519981127/en",
+   "ids": [
+    "h519"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20260610322824/en/From-Cart-to-Cookout-Omaha-Steaks-and-Roadie-Power-Same-Day-Delivery-for-Fathers-Day",
+   "ids": [
+    "g12"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20260921920176/en/Amazon-Invests-Another-%241.9-Billion-in-the-Delivery-Service-Partner-Program-with-New-Safety-Initiatives-and-AI-Powered-Technology",
+   "ids": [
+    "nr59b2c5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (500 Server Error: Internal Server Error for url: https://www.census.gov/retail/ecommerce.html): https://www.census.gov/retail/ecommerce.html",
+   "ids": [
+    "r16"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
+   "ids": [],
    "fixed": false
   }
  ]
