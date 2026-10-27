@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T17:59Z",
+ "run": "2026-10-27T18:51Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -131,6 +131,13 @@
    "sev": "med",
    "type": "feed-dead",
    "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "ids": [],
    "fixed": false
   },
@@ -341,6 +348,13 @@
    "sev": "med",
    "type": "feed-dead",
    "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "ids": [],
    "fixed": false
   },
