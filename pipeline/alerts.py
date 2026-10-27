@@ -106,6 +106,22 @@ def short(s, n):
     return s if len(s) <= n else s[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
+SPLITS = re.compile(r"\s*(?::|;|\u2014|\u2013| - |, | as | after | while | amid | with | but | as the | following )\s*", re.I)
+
+
+def compact(s, n):
+    """A title that fits one line of a phone alert without trailing off: the whole thing if it fits, else the first clause
+    that does, else whole words that fit (never an ellipsis in the middle of an idea)."""
+    s = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s or "")).strip()
+    if len(s) <= n:
+        return s
+    first = SPLITS.split(s, 1)[0].strip()
+    if 12 <= len(first) <= n:
+        return first
+    cut = s[:n + 1].rsplit(" ", 1)[0].rstrip(" ,;:-\u2013\u2014")
+    return cut if len(cut) >= 12 else s[:n].rstrip()
+
+
 def audience(extra, mask):
     """OneSignal filters: the extra conditions, for every reader whose carrier number shares a bit with mask."""
     if not mask or mask == 31:
@@ -127,7 +143,7 @@ def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 
 
-TITLE_MAX = 50                           # iOS shows about one line of bold title; Android cuts a little later
+TITLE_MAX = 38                           # one line of the bold title on a phone lock screen (about 38 characters); longer ones were cut with an ellipsis
 BODY_MAX = 120                           # about three lines under the title on an iPhone lock screen
 LIST_LINES, LIST_MAX = 4, 200            # a roll-up: at most four lines (iOS shows about four before "more")
 
@@ -154,7 +170,7 @@ def push(heading, body, url, filters=None, ids=None, ttl=86400, key=None, after=
         return None
     # iOS shows the app name on top, then this title in bold, then the message
     text = fit_lines(body) if lines else short(body, BODY_MAX)       # a list keeps its line breaks: one story per line
-    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": short(heading, TITLE_MAX)}, "contents": {"en": text},
+    msg = {"app_id": APP_ID, "isAnyWeb": True, "headings": {"en": compact(heading, TITLE_MAX)}, "contents": {"en": text},
            "url": url, "chrome_web_icon": ICON, "firefox_icon": ICON, "ttl": ttl}
     if topic:
         msg["web_push_topic"] = re.sub(r"[^A-Za-z0-9_-]", "-", topic)[:32]
@@ -218,6 +234,12 @@ def story_link(s, big=False):
     return f"{SITE}#{'alert' if big else 'story'}={s['id']}"
 
 
+def news_link(items):
+    """The roll-up opens the News list at the first story with every listed story marked (#new=id,id,...)."""
+    ids = [q["id"] for q in items if q.get("kind") == "story" and q.get("id")][:6]
+    return f"{SITE}#new={','.join(ids)}" if ids else SITE + "#news"
+
+
 def company_link(pid):
     """Opening a push about a company opens its company page (the same #c= link the app's Share button makes)."""
     return f"{SITE}#c={pid}"
@@ -237,7 +259,7 @@ def flags(s):
 
 
 COPY_PROMPT = """Write phone notification text for each parcel-shipping news story. For each: "t" a short headline,
-at most 45 characters, plain and specific (carrier + what changed, e.g. "UPS adds $1.25 peak fee"); "m" one short sentence,
+at most 36 characters so it fits one line of a phone alert without being cut, plain and specific (carrier + what changed, e.g. "UPS adds $1.25 peak fee"); "m" one short sentence,
 at most 100 characters, saying what it means for shippers or when it starts. When "takes_effect" is given, a start date
 must be that date, worded like "takes effect Jan 4"; "announced" is only when it was announced, never when it starts.
 Don't call anything confirmed, official, off-cycle or unconfirmed (the app adds those labels). No emoji, no hype, no
@@ -272,7 +294,7 @@ def push_copy(stories, state):
             for s in need:
                 g = got.get(s["id"]) or {}
                 if g.get("t") and g.get("m") and numbers_ok(g["t"] + " " + g["m"], s):
-                    cache[s["id"]] = {"t": short(g["t"], 50), "m": short(g["m"], 110)}
+                    cache[s["id"]] = {"t": compact(g["t"], TITLE_MAX), "m": short(g["m"], 110)}
                 elif g.get("t"):
                     print(f"  push copy for {s['id']} had a figure that isn't in the story; using the headline instead")
         except Exception as e:
@@ -283,7 +305,7 @@ def push_copy(stories, state):
         c = cache.get(s["id"])
         if not c:
             first = re.split(r"(?<=[.!?])\s", short(s.get("plain") or s.get("sum") or "", 400))[0]
-            c = {"t": short(s["title"], 50), "m": short(first, 110)}
+            c = {"t": compact(s["title"], TITLE_MAX), "m": short(first, 110)}
         out[s["id"]] = c
     if len(cache) > 1500:
         for k in list(cache)[:-1500]:
@@ -354,7 +376,7 @@ def open_review(s, test=False, copy=None):
     auto = now_et() + dt.timedelta(hours=AUTO_SEND_HOURS)
     if quiet(auto) and not test:
         auto = next_morning(auto)
-    c = copy or {"t": short(s["title"], 50), "m": short(s.get("plain") or s.get("sum") or "", 110)}
+    c = copy or {"t": compact(s["title"], TITLE_MAX), "m": short(s.get("plain") or s.get("sum") or "", 110)}
     title, msg, url = c["t"], (" · ".join(flags(s)) + ": " if flags(s) else "") + c["m"], story_link(s, big=True)
     body = ((f"@{OWNER} **TEST ALERT.** This is a practice run of the approval flow. Replying `send` pushes it to "
              f"**your phone only**, never to readers.\n\n") if test else "") + (f"@{OWNER} a major alert is ready. **Nothing has gone to readers yet.**\n\n"
@@ -720,7 +742,7 @@ def count_today(state, n=1):
 def rollup_body(items):
     """The roll-up's lines: up to four stories, or three plus "+N more in the app". Unconfirmed ones say so."""
     shown = items if len(items) <= LIST_LINES else items[:LIST_LINES - 1]
-    line = lambda q: "• " + ("Unconfirmed: " + short(q["t"], 33) if q.get("unconf") else short(q["t"], 46))
+    line = lambda q: "• " + ("Unconfirmed: " + compact(q["t"], 30) if q.get("unconf") else compact(q["t"], 42))
     return "\n".join(line(q) for q in shown) + (f"\n+{len(items) - len(shown)} more in the app" if len(items) > len(shown) else "")
 
 
@@ -797,7 +819,7 @@ def send_queued(state):
             # one bullet per story, biggest first, so a glance at the lock screen reads like a short list (four lines at most)
             body = rollup_body(rest)
             r = push(f"{len(rest)} {'more' if lead else 'new'} parcel {words}", body,
-                     SITE + "#news", audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
+                     news_link(rest), audience([], union_mask(rest)) or None, lines=True, key="more:" + ",".join(sorted(q["key"] for q in rest)),
                      after=now_et() + dt.timedelta(minutes=SPACING_MIN) if lead and not quiet(now_et() + dt.timedelta(minutes=SPACING_MIN)) else None)
             if delivered(r):
                 SENT.extend(q["key"] for q in rest); count_today(state); sent += 1

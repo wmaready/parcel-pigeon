@@ -210,3 +210,23 @@ def test_stalled_queue_opens_one_issue_a_day(data_dir, monkeypatch):
     assert A.stalled({"queue": [{"at": "2026-10-23T09:00:00-04:00"}], "last_push": "2026-10-15T09:00:00-04:00"}, now) is None
     assert A.stalled({"queue": [], "last_push": "2026-10-15T09:00:00-04:00"}, now) is None
     assert A.stalled({"queue": [{"at": "2026-10-21T09:00:00-04:00"}], "last_push": "2026-10-23T08:00:00-04:00"}, now) is None
+
+
+def test_alert_titles_fit_one_line_without_an_ellipsis():
+    import alerts as A
+    for t in ["USPS to add weekly fuel surcharge on package services in January 2027",
+              "UPS, FedEx fuel surcharges near 29% as holiday delivery prices climb",
+              "DoorDash adds $7.99 returns pickup; TikTok Shop links Happy Returns",
+              "UPS adds a 5% fuel surcharge to Small Business Rates and raises them 4.5% on Dec. 21"]:
+        c = A.compact(t, A.TITLE_MAX)
+        assert len(c) <= A.TITLE_MAX and "…" not in c and len(c) >= 12, c
+    assert A.compact("UPS adds $1.25 peak fee", A.TITLE_MAX) == "UPS adds $1.25 peak fee"
+    assert A.compact("DoorDash adds $7.99 returns pickup; TikTok Shop links Happy Returns", 38) == "DoorDash adds $7.99 returns pickup"
+    assert all("…" not in l for l in A.rollup_body([{"t": "USPS to add weekly fuel surcharge on package services in January 2027"}] * 3).split("\n"))
+
+
+def test_rollup_opens_the_news_list_with_its_stories_marked():
+    import alerts as A
+    link = A.news_link([{"kind": "story", "id": "a1"}, {"kind": "clock", "id": "x"}, {"kind": "story", "id": "b2"}])
+    assert link.endswith("#new=a1,b2")
+    assert A.news_link([{"kind": "clock"}]).endswith("#news")
