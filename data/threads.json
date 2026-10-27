@@ -1,7 +1,7 @@
 {
  "ups-amazon-glide-down": {
   "n": "UPS Amazon cutback and network overhaul",
-  "s": "UPS is heading into its first peak season after cutting Amazon volume by more than half, with Q4 U.S. volume forecast to dip slightly year over year.",
+  "s": "UPS says it has completed cutting its Amazon volume by more than half, after closing 23 buildings in early 2026 and planning about 30,000 job cuts for the year.",
   "ids": [
    "h406",
    "h503",
@@ -23,7 +23,7 @@
     "h511": "In April 2025 UPS put numbers on the cuts: about 20,000 jobs and 73 buildings by the end of June, targeting about $1 billion in savings."
    },
    "intro": "UPS is shrinking its Amazon business and rebuilding its network; shippers now face their first peak season after the cutback.",
-   "now": "UPS projects Q4 U.S. revenue up 3%; peak-week fees take effect Nov. 22 and peak surcharges end at every major carrier Jan. 15, 2027."
+   "now": "UPS says the Amazon volume reduction and network reconfiguration are complete."
   },
   "was": [
    "ups-parcel-pivot"
@@ -84,7 +84,7 @@
     "a3623effd6df4": "At FedEx's Mesquite, Texas, facility, Express and Ground parcels now share the building and vans; 62% done by end of 2026."
    },
    "intro": "FedEx is merging its Express and Ground networks into one, changing how parcels get picked up and delivered.",
-   "now": "FedEx targets 62% done by the end of 2026 and full completion in 2027; it reports earnings Oct. 28."
+   "now": "FedEx expects the U.S. rollout to finish by the end of 2027."
   },
   "rv": "d50658bb95f0",
   "apart": [
@@ -295,7 +295,7 @@
     "a663794cc9c55": "At $6.28 diesel, UPS's fuel surcharge is 29.5% and FedEx's 29%; an industry index sees Q4 ground pricing up 5.8%, express 13.8%."
    },
    "intro": "Carriers keep layering peak fees over the holidays, and shippers pay them on top of base rates and fuel charges.",
-   "now": "Per-package peak fees are billing now; UPS and FedEx report earnings Oct. 27 and 28, and home-delivery fees step up in late November."
+   "now": "Per-package peak fees begin Oct. 24 to 26; UPS and Amazon rise to $0.75 from Nov. 22 and FedEx to $0.80 from Nov. 23."
   },
   "co": "USPS",
   "apart": [
@@ -514,7 +514,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's drones are flying from Markham, Illinois, while the FAA's public Chicago file remains a July draft and Massachusetts reviews Amazon's Westborough plan.",
+  "s": "MassDOT told Amazon its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough.",
   "ids": [
    "g27",
    "g26",
@@ -537,7 +537,8 @@
    "beats": {
     "a60770e8e9c32": "Wing and Walmart said Denver and Seattle come in 2027, taking them to nearly 20 metros after reaching more than three million customers."
    },
-   "intro": "Drone delivery is scaling fast while the FAA's Part 108 rule sits unpublished, so shippers watch who can fly and where."
+   "intro": "Drone delivery is scaling fast while the FAA's Part 108 rule sits unpublished, so shippers watch who can fly and where.",
+   "now": "Amazon's Westborough drone site awaits a MassDOT suitability review, and the FAA's Part 108 rule was still unpublished as of Oct. 9."
   },
   "rv": "ae54c427f36e",
   "co": "Amazon",
@@ -844,13 +845,24 @@
   "theme": true,
   "rv": "f43f274d40c8",
   "cx": {
-   "sig": "521ba13863c0",
+   "sig": "f43f274d40c8",
    "v": 3,
    "beats": {
-    "h406": "At its March 2024 investor day, UPS said it would close or consolidate about 200 U.S. facilities and have 400 automated buildings by 2028."
+    "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
+    "h511": "UPS said it will cut about 20,000 positions in 2025 and close 73 buildings by the end of June.",
+    "a13f12c1da7be": "UPS and the Teamsters settled the Driver Choice dispute, capping it at 7,500 drivers and barring another severance program until July 31, 2028.",
+    "g33": "An NLRB judge approved an Amazon DSP settlement without a joint-employer finding; the Teamsters called it a 'sham settlement'.",
+    "g32": "Teamsters delegates voted to challenge UPS over routing work to its Roadie gig subsidiary; UPS says it complies with the contract.",
+    "50": "An analyst argued the 2028 outcome will reshape the market: a hard line leaning on Roadie could let UPS dominate, concessions could shrink it.",
+    "35": "Teamsters president Sean O'Brien said a strike is likely when the contract ends July 31, 2028.",
+    "nr59b2c5": "Amazon added $1.9 billion to its Delivery Service Partner program for 2027, aimed at lifting delivery associate pay to nearly $24 an hour.",
+    "acb44dbafb712": "An NLRB judge ruled UPS unlawfully restricted union insignia on safety vests; UPS plans to appeal.",
+    "a66617050d4e9": "Analysts are split on whether UPS's pivot to premium and logistics services means leaving parts of parcel, as the 2028 talks near.",
+    "abaae70647f04": "UPS and the Teamsters agreed to offer Driver Choice nationwide: $150,000 early-retirement payments, capped at 7,500 drivers.",
+    "a57a06c26359c": "Amazon TOM Team drivers at an Indiana facility joined Teamsters Local 142 and asked Amazon to recognize the union."
    },
-   "intro": "UPS is shrinking its network while the Teamsters push back on buyouts and gig work. The contract ends July 31, 2028.",
-   "now": "Driver Choice is set at 7,500 drivers, and the contract expires July 31, 2028. UPS reports quarterly earnings Oct 27."
+   "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
+   "now": "Driver Choice is capped at 7,500 drivers, the Teamsters are challenging UPS over Roadie, and a 2028 strike is called likely."
   },
   "apart": [
    "ups-amazon-glide-down",
@@ -888,13 +900,26 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "fbae65d1b7d0",
+   "sig": "9a635b8c7a0a",
    "v": 3,
    "beats": {
-    "r01": "An industry analysis put Amazon at 6.7 billion parcels in 2025, just ahead of USPS at 6.6 billion. UPS was at 4.4 billion, down 8.6%."
+    "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
+    "h503": "UPS said it will cut Amazon volume by more than half by the second half of 2026; UPS shares fell more than 14%.",
+    "h511": "UPS said it will cut about 20,000 jobs and close 73 buildings as Amazon volume shrinks.",
+    "h512": "Amazon said it will invest $4 billion by the end of 2026 to expand its rural delivery network to more than 200 delivery stations.",
+    "h517": "FedEx confirmed a multi-year deal to deliver large packages for Amazon; Amazon said it does not replace UPS capacity.",
+    "19": "Amazon handled 6.7 billion parcels in 2025 versus 6.6 billion for USPS, the largest U.S. carrier by volume; UPS still earns the most revenue.",
+    "r01": "ShipMatrix: Amazon Logistics grew 9.9% to 6.7 billion parcels in 2025 while USPS and UPS each fell 8.6%.",
+    "21": "After reports Amazon would cut its USPS volume by two-thirds, the two agreed to a cut of about 20%.",
+    "18": "UPS closed 23 buildings and planned about 30,000 job cuts after cutting Amazon volume by more than half.",
+    "17": "Amazon opened its logistics network, freight, warehousing and parcel delivery, to outside businesses; UPS and FedEx shares each fell about 9 to 10%.",
+    "05": "Business Insider reported 'Project Aurelian,' a backup plan to extend Amazon's own delivery to about 95% of U.S. ZIP codes by 2029.",
+    "aba40a11b6946": "An Amazon vice president said the network opened to all businesses after sellers asked to use it for off-Amazon volume.",
+    "ae3846ec1ac41": "Jefferies said Amazon could grow U.S. delivery stations from about 575 to 950 by 2030 and carry more third-party parcels.",
+    "a63ee5425135a": "An analysis says UPS's U.S. profit per package rose to about $1.16 from about $0.93 after the Amazon cutback; the math is the author's."
    },
-   "intro": "Amazon has gone from big customer to biggest parcel carrier, and UPS is shrinking to match. Shippers face a changing market.",
-   "now": "UPS's Amazon cutback is done, and peak is the first test. Peak-week fees start Nov. 22, with home deliveries at $0.75–$0.80 a package."
+   "intro": "Amazon is moving more of its volume into its own network and opening that network to others. It was the largest U.S. parcel carrier by volume in 2025.",
+   "now": "UPS has finished its Amazon cutback, USPS kept most of Amazon's volume, and Amazon is selling its network to outside businesses."
   },
   "apart": [
    "amazon-jfk8-nlrb",
