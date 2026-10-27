@@ -9768,6 +9768,19 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-deliver]')
       highlight(el,/[&?]c=1/.test(H0)?'Someone mentioned you':'From your alert');
       // a story alert opens the story itself (the feed stays highlighted underneath for when you go back)
       setTimeout(()=>{openStory(id);if(/[&?]c=1/.test(H0))setTimeout(()=>{const b=document.querySelector('#storySheet [data-cmt]');if(b&&b.getAttribute('aria-expanded')!=='true')b.click()},400)},900)};setTimeout(go,600)}}
+// #new=<id>,<id>… from a "N more stories" alert: land on the News list at the first story and mark every story the alert listed.
+// If the stories aren't in the data yet (the site was still publishing, or an old copy was served) reload once and look again.
+{const H1=location.hash||'',m=/^#new=([\w,-]+)/.exec(H1);if(m){window.PP_LANDING=Date.now();try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+  const ids=m[1].split(',').filter(Boolean).slice(0,8);let tries=0;
+  const go=()=>{const have=ids.filter(i=>NEWS.some(n=>n.id===i));
+    if(!have.length){if(tries++<16)return setTimeout(go,250);
+      let again=false;try{again=sessionStorage.getItem('pp-new-retry')==='1';sessionStorage.setItem('pp-new-retry','1')}catch(e){}
+      if(!again){location.replace(location.pathname+location.search+'#new='+ids.join(','));location.reload()}else{goTo('news','list')}return}
+    try{sessionStorage.removeItem('pp-new-retry')}catch(e){}
+    goTo('news','list');
+    setTimeout(()=>{const els=have.map(i=>$('n-'+i)).filter(Boolean);
+      if(els[0]){els[0].dataset.landlbl='From your alert';els[0].scrollIntoView({block:'center'});els[0].classList.remove('landed');void els[0].offsetWidth;els[0].classList.add('landed');setTimeout(()=>els[0].classList.remove('landed'),6000)}},500)};
+  setTimeout(go,600)}}
 // (Coop's delivery animation is retired: new documents now show as badges on the Docs folders)
 
 /* Coop's gradients live once in an always-rendered SVG, so every copy of him paints correctly even when another copy sits in a hidden section */
