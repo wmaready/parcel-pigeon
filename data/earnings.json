@@ -3505,5 +3505,32 @@
    "rpp_src": "calc",
    "rpp_note": "Calculated: USPS's Shipping and Packages revenue divided by its Shipping and Packages pieces. USPS doesn't report revenue per piece; this mixes its Priority, Ground Advantage and Parcel Select pieces, so it isn't comparable with UPS's or FedEx's figures"
   }
+ },
+ {
+  "company": "UPS",
+  "q": "Q3 2026",
+  "d": "2026-10-27",
+  "rev": 22.9,
+  "revYoY": null,
+  "eps": 1.69,
+  "take": null,
+  "release": "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings",
+  "transcript": null,
+  "webcast": null,
+  "filing": null,
+  "period": {
+   "start": "2026-07-01",
+   "end": "2026-09-30",
+   "months": 3
+  },
+  "label": "Q3 2026",
+  "rel_time": null,
+  "rev_m": null,
+  "rev_prior_m": null,
+  "yoy_src": null,
+  "comparable": true,
+  "vol": null,
+  "checked": false,
+  "headline": "UPS Releases 3Q 2026 Earnings"
  }
 ]

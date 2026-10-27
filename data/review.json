@@ -186,6 +186,14 @@
   "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  },
  {
+  "type": "earnings-new",
+  "key": "earnings-new|UPS|Q3 2026",
+  "company": "UPS",
+  "q": "Q3 2026",
+  "url": "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings",
+  "note": "Added automatically from the release (checked: false). Check revenue, EPS and the period against the release; add the summary line, call and filing links, and packages a day, operating days and revenue per piece from the 10-Q with its address and check date; then set checked: true."
+ },
+ {
   "type": "headline-only",
   "title": "UPS adds key feature for TikTok Shop ahead of the holidays (UPS:NYSE)",
   "url": "https://seekingalpha.com/news/4657064-ups-adds-key-feature-for-tiktok-shop-ahead-of-the-holidays",
