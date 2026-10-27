@@ -33,7 +33,7 @@ def test_unconfirmed_never_leads_a_busy_run(monkeypatch):
     A.send_queued({"queue": q})
     assert len(sent) == 1, sent                     # one roll-up, no stand-alone alert for the unconfirmed story
     heading, body, url, kw = sent[0]
-    assert heading == "5 new parcel stories" and kw.get("lines")
+    assert heading == "5 new parcel stories: tap to read" and kw.get("lines")
     assert len(body.split("\n")) <= 4 and body.endswith("+2 more in the app")
     assert "Unconfirmed: Big claim" in body
 
