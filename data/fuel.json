@@ -346,15 +346,12 @@
   "UPS": "2026-10-19",
   "FedEx": "2026-10-26"
  },
- "updated": "2026-10-27T13:09Z",
+ "updated": "2026-10-27T15:05Z",
  "health": {
   "UPS": {
-   "ok": false,
-   "via": "page",
-   "why": "could not render the page: Page.goto: Download is starting",
-   "at": "2026-10-27T14:52Z",
-   "last_ok": "2026-10-27T13:09Z",
-   "latest": null
+   "ok": true,
+   "at": "2026-10-27T15:05Z",
+   "last_ok": "2026-10-27T15:05Z"
   },
   "FedEx": {
    "ok": true,
@@ -365,8 +362,8 @@
   },
   "diesel": {
    "ok": true,
-   "at": "2026-10-27T13:09Z",
-   "last_ok": "2026-10-27T13:09Z",
+   "at": "2026-10-27T15:05Z",
+   "last_ok": "2026-10-27T15:05Z",
    "latest": "2026-10-26"
   }
  },
