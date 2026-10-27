@@ -460,8 +460,14 @@ def main():
     for x in vol_problems(rows):
         fails.append(f"{x}: package figures without a source or check date")
     save("earnings.json", rows)
+    before = {x.get("c") for x in nxt.get("next") or []}
     if prune_next(rows, nxt):
         save("earnings_next.json", nxt)
+        for co in sorted(before - {x.get("c") for x in nxt["next"]}):
+            if co in nxt.get("ir", {}):
+                review_add(review, {"type": "earnings-next-missing", "key": f"earnings-next|{co}|{today[:7]}", "company": co, "ir": nxt["ir"][co],
+                                    "note": f"{co}'s latest results are in and no next call is listed. Add the next date to data/earnings_next.json from "
+                                            "the company's investor-relations calendar (time, session, quarter and the release address text to match)."})
     if len(review) != n_review:
         save("review.json", review)
     print("earnings:", {"added": added, "packages": filled, "rx": sum(1 for r in rows if r.get("rx")), "final": sum(1 for r in rows if (r.get("rx") or {}).get("final")),
