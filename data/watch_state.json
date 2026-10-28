@@ -155,8 +155,7 @@
   "checked": "2026-10-28",
   "pdfs": [],
   "lines": 477,
-  "told": [],
-  "pend": "292f791c4068"
+  "told": []
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "checked": "2026-10-28",
@@ -226,7 +225,7 @@
   "lines": 176,
   "told": [],
   "pend": "36f53d812229",
-  "fail_runs": 3
+  "fail_runs": 4
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-10-28",
@@ -320,7 +319,8 @@
   ],
   "lines": 13,
   "told": [],
-  "pend": "15ab2b2ba194"
+  "pend": "15ab2b2ba194",
+  "fail_runs": 1
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
   "checked": "2026-10-28",
