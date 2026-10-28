@@ -9,7 +9,11 @@
   "d": "Hub for all U.S. rate guides and Important Updates notices (Aug 2 to Sep 27, 2026 notices posted)",
   "cur": true,
   "upd": "2026-10-08",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -21,7 +25,11 @@
   "d": "Daily rate guide downloads; zone charts by origin ZIP",
   "cur": true,
   "upd": "2025-12-22",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -50,7 +58,11 @@
   "d": "Spreadsheet version of the daily rate guide",
   "cur": true,
   "checked": "2026-10-09",
-  "fchk": "2026-10-28"
+  "fchk": "2026-10-28",
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ffbe526-135e-47d8-8f50-6dbfc7d52e56/original/as/daily-rates-us-en.xlsx",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -61,7 +73,11 @@
   "u": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/retail-rates",
   "d": "Retail rate guide downloads",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/retail-rates",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -93,7 +109,11 @@
   "f": "data/files/ups-2026-ups-retail-rate-and-service-guide-dec-22-2025-edition-ac6976.pdf",
   "fh": "a04dbb5b63fd3b1ad09b4290b4f3707c1f8be2af",
   "fat": "2026-10-21",
-  "fsz": 6017357
+  "fsz": 6017357,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn%3Aaaid%3Aaem%3A2f5d50bd-53e4-4ad1-882b-f06e9f3ad9f3/original/as/ak-hi-retail-rates-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -220,7 +240,11 @@
   "f": "data/files/ups-2026-ups-small-business-hundredweight-rates-9c4881.pdf",
   "fh": "a4b4adb566e905dc5e9936a4f15ee7da9319cc4a",
   "fat": "2026-10-21",
-  "fsz": 303536
+  "fsz": 303536,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:0b31f1b2-8a05-4897-8cc0-6c19db7c7d91/original/as/sbr-cwt-final-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -243,7 +267,11 @@
   "d": "Ground Saver (formerly SurePost): rates effective May 6, 2026, terms, data files; $5 non-compliant label fee from Aug 2, 2026",
   "cur": true,
   "upd": "2026-06-18",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -378,7 +406,11 @@
   "d": "Weekly ground and air fuel tables with 90-day history",
   "cur": true,
   "upd": "2026-09-07",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -410,7 +442,11 @@
   "f": "data/files/ups-ups-domestic-fuel-surcharge-tables-418d77.pdf",
   "fh": "81ed0a3e63cbb3c3736e2ff729b382c8ac127d21",
   "fat": "2026-10-21",
-  "fsz": 148373
+  "fsz": 148373,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -427,7 +463,11 @@
   "f": "data/files/ups-ups-demand-surcharges-2026-27-season-b716b8.pdf",
   "fh": "0c3894cf55ced7c0f6d0d6ee22509cc770191632",
   "fat": "2026-10-21",
-  "fsz": 113643
+  "fsz": 113643,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -444,7 +484,11 @@
   "f": "data/files/ups-ups-demand-surcharges-2024-25-season-c097b6.pdf",
   "fh": "f9842c6ea96d0591326859d0d23c0d20ea9ec621",
   "fat": "2026-10-23",
-  "fsz": 173347
+  "fsz": 173347,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:23128a38-1908-4e5e-aa11-b7281b9fb937/original/as/peak-demand-surcharges-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -461,7 +505,11 @@
   "f": "data/files/ups-ups-surge-emergency-fee-update-da32d2.pdf",
   "fh": "afc5a0f447b9bfa0dd72c30e541ba5dd3674acb2",
   "fat": "2026-10-21",
-  "fsz": 146213
+  "fsz": 146213,
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -472,7 +520,11 @@
   "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges",
   "d": "Dimensional divisor changed Jul 12, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -506,7 +558,11 @@
   "d": "Index of the tariff and other terms",
   "cur": true,
   "upd": "2026-08-17",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/us/en/support/shipping-support/legal-terms-conditions",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",
@@ -1482,7 +1538,11 @@
   "d": "Priority Mail Express, Priority Mail, Ground Advantage and Parcel Select, Oct 4, 2026 to Jan 17, 2027",
   "cur": true,
   "upd": "2026-08-25",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm",
+  "content_verified": true,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1499,7 +1559,11 @@
   "f": "data/files/usps-usps-july-2026-competitive-price-changes-b2a938.pdf",
   "fh": "263454eb20ae76260390ddfd9d1700e7a91c25f5",
   "fat": "2026-10-21",
-  "fsz": 170774
+  "fsz": 170774,
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2026/0511-usps-recommends-competitive-price-changes-for-july-2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1516,7 +1580,11 @@
   "f": "data/files/usps-usps-transportation-related-temporary-price-change-a12367.pdf",
   "fh": "e5d8636cbf07b017e41d26c31468471bee7c5459",
   "fat": "2026-10-21",
-  "fsz": 168340
+  "fsz": 168340,
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1533,7 +1601,11 @@
   "f": "data/files/usps-usps-january-2026-competitive-prices-d2de7c.pdf",
   "fh": "a03657b77984f125aaf7f6471ca73ba2384645b7",
   "fat": "2026-10-21",
-  "fsz": 184656
+  "fsz": 184656,
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2025/1114-usps-recommends-new-competitive-prices-for-2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1545,7 +1617,11 @@
   "d": "",
   "cur": false,
   "upd": "2025-05-09",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2025/0509-usps-recommends-new-shipping-services-prices-for-2025.htm",
+  "content_verified": true,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1557,7 +1633,11 @@
   "d": "",
   "cur": false,
   "upd": "2024-11-15",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2024/1115-usps-recommends-new-competitive-prices-for-2025.htm",
+  "content_verified": true,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -1574,7 +1654,11 @@
   "f": "data/files/usps-usps-january-2024-competitive-prices-0c74a3.pdf",
   "fh": "476789cf57ee2471a531f46519b92fc0e082d025",
   "fat": "2026-10-23",
-  "fsz": 191692
+  "fsz": 191692,
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2023/1115-usps-announces-new-competitive-prices-for-2024.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -2462,7 +2546,11 @@
    "story": "ac1d01500ab14",
    "title": "USPS relocates Coffee Springs, AL Post Office operations to Geneva",
    "when": "2026-10-12"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://about.usps.com/who/legal/terms-of-use.htm",
+  "content_verified": true,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "GOFO",
@@ -2522,7 +2610,11 @@
   "u": "https://about.usps.com/handbooks/dm204.pdf",
   "d": "Posted on USPS's Price change center page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "https://about.usps.com/handbooks/dm204.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -2533,7 +2625,11 @@
   "u": "https://about.usps.com/publications/pub25.pdf",
   "d": "Posted on USPS's Price change center page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "https://about.usps.com/publications/pub25.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "USPS",
@@ -2619,7 +2715,11 @@
   "u": "http://www.speedeedelivery.com/files/2024/2024_ON-CALL_RATES_MULTI.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "http://www.speedeedelivery.com/files/2024/2024_ON-CALL_RATES_MULTI.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "Spee-Dee",
@@ -2630,7 +2730,11 @@
   "u": "http://www.speedeedelivery.com/files/2024/2024_Rate_Chart.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "http://www.speedeedelivery.com/files/2024/2024_Rate_Chart.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "Spee-Dee",
@@ -2641,7 +2745,11 @@
   "u": "http://www.speedeedelivery.com/files/2024/2024_WALK-IN_COUNTER_RATES_MULTI.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": false,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "http://www.speedeedelivery.com/files/2024/2024_WALK-IN_COUNTER_RATES_MULTI.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "Spee-Dee",
@@ -2652,7 +2760,11 @@
   "u": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "Spee-Dee",
@@ -2663,7 +2775,11 @@
   "u": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
   "d": "Posted on Spee-Dee's Service updates page",
   "cur": true,
-  "seen": "2026-10-21"
+  "seen": "2026-10-21",
+  "http_status": 200,
+  "final_url": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "Spee-Dee",
@@ -2979,7 +3095,11 @@
   "f": "data/files/usps-printable-version-0ed3f0.pdf",
   "fh": "a082041ca4ec2958f4dee2d0c3f9ad88da65fcb9",
   "fat": "2026-10-23",
-  "fsz": 182730
+  "fsz": 182730,
+  "http_status": 200,
+  "final_url": "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf",
+  "content_verified": null,
+  "checked_at": "2026-10-28T05:00Z"
  },
  {
   "c": "UPS",

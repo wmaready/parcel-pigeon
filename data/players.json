@@ -1953,6 +1953,105 @@
    ],
    "enriched": "2026-10-28",
    "pending": false
+  },
+  {
+   "id": "4pxworldwideex",
+   "n": "4PX Worldwide Express",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "parent": "cainiao",
+   "hq": "Shenzhen, China",
+   "yr": "2004",
+   "s": "Shenzhen-based cross-border e-commerce logistics provider that consolidates parcels from China, runs direct lines and overseas warehouses (including in the U.S.), and typically hands parcels to destination postal or courier networks such as USPS for final delivery.",
+   "al": [
+    "4PX",
+    "4PX Express",
+    "Shenzhen 4PX Express Co., Ltd.",
+    "Shenzhen 4PX Information and Technology Co., Ltd.",
+    "Shenzhen 4PX Worldwide Express Co., Ltd.",
+    "递四方"
+   ],
+   "src": "https://en.4px.com/",
+   "auto": true,
+   "added": "2026-10-28",
+   "from": "discover",
+   "site": "4px.com",
+   "geo": [
+    114.058,
+    22.543
+   ],
+   "srcs": [
+    "https://en.4px.com/",
+    "https://www.singpost.com/corporate/media-centre/singpost-unwinds-qsi-minority-cross-shareholdings",
+    "https://www.ordertracker.com/carriers/4px"
+   ],
+   "enriched": "2026-10-28",
+   "pending": false
+  },
+  {
+   "id": "aramex",
+   "n": "Aramex PJSC",
+   "realm": "global",
+   "own": "public",
+   "tk": "DFM: ARMX",
+   "parent": null,
+   "hq": "Dubai, United Arab Emirates",
+   "yr": "1982",
+   "s": "Dubai-headquartered, DFM-listed courier, freight forwarding and logistics group that runs international and domestic express delivery and owns the U.S.-based package-forwarding platform MyUS.",
+   "al": [
+    "Aramex",
+    "Aramex International"
+   ],
+   "src": "https://feeds.dfm.ae/documents/2022/Oct/19/d506e2cb-cc7a-4afb-b16d-a4ce8b0742d8/ARMX_PR_E_19_10_2022.pdf",
+   "auto": true,
+   "added": "2026-10-28",
+   "from": "discover",
+   "site": "aramex.com",
+   "geo": [
+    55.271,
+    25.205
+   ],
+   "srcs": [
+    "https://feeds.dfm.ae/documents/2022/Oct/19/d506e2cb-cc7a-4afb-b16d-a4ce8b0742d8/ARMX_PR_E_19_10_2022.pdf",
+    "https://www.thenationalnews.com/business/technology/2022/10/19/aramex-completes-acquisition-of-e-commerce-platform-myus-in-265m-deal/",
+    "https://www.myus.com/about/news/myus-acquisition-by-aramex/"
+   ],
+   "enriched": "2026-10-28",
+   "pending": false
+  },
+  {
+   "id": "myusaccessusas",
+   "n": "MyUS (Access USA Shipping, LLC)",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "parent": "aramex",
+   "hq": "Sarasota, FL, USA",
+   "yr": "1997",
+   "s": "MyUS is a Sarasota-based international package-forwarding and consolidation platform that gives overseas shoppers a U.S. (and UK) address, then consolidates their parcels and ships them to over 220 countries and territories.",
+   "al": [
+    "Access USA Shipping",
+    "Access USA Shipping, Inc.",
+    "Access USA Shipping, LLC",
+    "MyUS.com"
+   ],
+   "src": "https://www.myus.com/about/news/myus-acquisition-by-aramex/",
+   "auto": true,
+   "added": "2026-10-28",
+   "from": "discover",
+   "site": "myus.com",
+   "geo": [
+    -82.531,
+    27.336
+   ],
+   "srcs": [
+    "https://www.myus.com/about/news/myus-acquisition-by-aramex/",
+    "https://feeds.dfm.ae/documents/2022/Oct/19/d506e2cb-cc7a-4afb-b16d-a4ce8b0742d8/ARMX_PR_E_19_10_2022.pdf",
+    "https://www.parcelandpostaltechnologyinternational.com/news/aramex-acquires-cross-border-e-commerce-platform.html"
+   ],
+   "enriched": "2026-10-28",
+   "pending": false
   }
  ],
  "edges": [
@@ -3440,6 +3539,42 @@
    "t": "Landmark handles U.S.-to-Canada parcels and hands them to Canada Post for delivery",
    "url": "https://www.insidelogistics.ca/general/landmark-global-opens-border-facility-71321/",
    "story": null
+  },
+  {
+   "a": "cainiao",
+   "b": "4pxworldwideex",
+   "k": "owns",
+   "y": "2025",
+   "t": "Cainiao majority owner of 4PX; bought SingPost/QSI's 17.61% stake",
+   "url": "https://www.singpost.com/corporate/media-centre/singpost-unwinds-qsi-minority-cross-shareholdings",
+   "story": null
+  },
+  {
+   "a": "4pxworldwideex",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "USPS is the typical U.S. last-mile carrier for 4PX parcels",
+   "url": "https://www.ordertracker.com/carriers/4px",
+   "story": null
+  },
+  {
+   "a": "aramex",
+   "b": "myusaccessusas",
+   "k": "acquired",
+   "y": "2022",
+   "t": "Acquired MyUS for about $265M cash",
+   "url": "https://feeds.dfm.ae/documents/2022/Oct/19/d506e2cb-cc7a-4afb-b16d-a4ce8b0742d8/ARMX_PR_E_19_10_2022.pdf",
+   "story": null
+  },
+  {
+   "a": "aramex",
+   "b": "myusaccessusas",
+   "k": "owns",
+   "y": "2022",
+   "t": "MyUS operates as a business unit in Aramex's Courier segment",
+   "url": "https://www.myus.com/about/news/myus-acquisition-by-aramex/",
+   "story": null
   }
  ],
  "moves": [
@@ -3745,7 +3880,10 @@
   "burq": "2026-10-26",
   "passportglobal": "2026-10-27",
   "globaleonlinel": "2026-10-27",
-  "landmarkglobal": "2026-10-28"
+  "landmarkglobal": "2026-10-28",
+  "4pxworldwideex": "2026-10-28",
+  "aramex": "2026-10-28",
+  "myusaccessusas": "2026-10-28"
  },
  "facts": {
   "ups": {
