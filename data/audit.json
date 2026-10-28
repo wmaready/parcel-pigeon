@@ -1,5 +1,5 @@
 {
- "run": "2026-10-27T23:39Z",
+ "run": "2026-10-28T00:58Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -94,8 +94,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
@@ -335,8 +335,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: probe failed: HTTPSConnectionPool(host='developer.ups.com', port=443): Read timed out. (read timeout=25)",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
