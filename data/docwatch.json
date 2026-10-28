@@ -1,5 +1,5 @@
 {
- "cursor": 59,
+ "cursor": 74,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 171,
+   "fails": 172,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-28"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 171,
+   "fails": 172,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-28"
@@ -1279,7 +1279,8 @@
     "d": "2026-10-28",
     "img": "data/snapshots/b9d4439ee72f/2026-10-28.jpg",
     "prev": "data/snapshots/b9d4439ee72f/2026-10-27.jpg"
-   }
+   },
+   "pic_try": "2026-10-28"
   },
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "2bafd025bd0b",
