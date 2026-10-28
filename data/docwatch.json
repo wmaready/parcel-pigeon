@@ -1,5 +1,5 @@
 {
- "cursor": 29,
+ "cursor": 44,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -326,7 +326,7 @@
    "first": "2026-10-21",
    "n": "LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
    "hash": "6f4963e4976c",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 169,
+   "fails": 170,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-28"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 169,
+   "fails": 170,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-28"
@@ -555,7 +555,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
    "hash": "bffd7b9dbf5b",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
@@ -566,7 +566,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
    "hash": "23ab895007fa",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
@@ -657,7 +657,7 @@
    "first": "2026-10-21",
    "n": "OneRate-Pricing_2026.pdf",
    "hash": "15395631186d",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
@@ -1011,13 +1011,13 @@
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx": {
    "n": "2026 holiday prices, Notice 123 (Excel)",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "skip": "spreadsheet"
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf": {
    "hash": "c48e3cbb51f4",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "2026 holiday prices, Notice 123 (PDF)",
    "snap": {
     "d": "2026-10-26",
@@ -1027,13 +1027,13 @@
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
    "n": "2026 holiday prices, SKU price files (Excel)",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "skip": "spreadsheet"
   },
   "https://about.usps.com/who/legal/terms-of-use.htm": {
    "hash": "7b29a8b90772",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "Terms of use",
    "snap": {
     "d": "2026-10-26",
@@ -1043,7 +1043,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf": {
    "hash": "0bf70104e05e",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "USPS transportation-related temporary price change",
    "snap": {
     "d": "2026-10-26",
@@ -1054,7 +1054,7 @@
   "https://shipveho.com/client/terms": {
    "hash": "016c9d745ba3",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "Veho client terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -1064,9 +1064,9 @@
   "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html": {
    "hash": "b1ab54f802c4",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "DHL Express 2027 U.S. price adjustment",
-   "pic_try": "2026-10-27"
+   "pic_try": "2026-10-28"
   },
   "https://www.fedex.com/en-us/shipping/fedex-smartpost/rates-zones/chart.html": {
    "hash": "21c5891a193b",
@@ -1082,7 +1082,7 @@
   "https://www.fedex.com/en-us/shipping/rate-changes.html": {
    "hash": "816453d43d8f",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "FedEx rate changes page",
    "snap": {
     "d": "2026-10-26",
@@ -1115,7 +1115,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
    "hash": "778400ab2847",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "UPS Ground Saver page",
    "snap": {
     "d": "2026-10-26",
@@ -1144,7 +1144,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "d28481282107",
    "first": "2026-10-25",
-   "checked": "2026-10-27",
+   "checked": "2026-10-28",
    "n": "Printable version",
    "snap": {
     "d": "2026-10-26",
@@ -1376,10 +1376,10 @@
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "hash": "283fdc3b3b09",
    "checked": "2026-10-27",
-   "fails": 4,
-   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectionError)",
+   "fails": 5,
+   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectTimeout)",
    "blocked": true,
-   "last_try": "2026-10-27"
+   "last_try": "2026-10-28"
   }
  }
 }

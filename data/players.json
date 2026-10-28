@@ -1926,18 +1926,33 @@
   {
    "id": "landmarkglobal",
    "n": "Landmark Global",
-   "realm": "regional",
-   "own": null,
+   "realm": "global",
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
+   "hq": "Santa Barbara, CA, USA",
    "yr": null,
-   "s": "Santa Barbara-based, carrier-neutral cross-border parcel logistics provider that delivers into the U.S. and domestically in the U.S. and Canada, and is part of the Belgian group bpostgroup (now bnode)",
-   "al": [],
-   "src": "https://landmarkglobal.com/eu/en/news-insights/exploring-us-cross-border-e-commerce-shipping/",
+   "s": "Landmark Global is the cross-border brand of bnode (formerly bpostgroup). It provides carrier-neutral international parcel delivery, customs clearance, returns management and fulfillment, and it runs cross-border flows between the U.S. and Canada.",
+   "al": [
+    "Landmark Global, Inc.",
+    "Landmark Global, a bpost company"
+   ],
+   "src": "https://press.bnode.com/bpostgroup-becomes-bnode",
    "auto": true,
    "added": "2026-10-27",
-   "from": "discover"
+   "from": "discover",
+   "site": "landmarkglobal.com",
+   "geo": [
+    -119.698,
+    34.421
+   ],
+   "srcs": [
+    "https://press.bnode.com/bpostgroup-becomes-bnode",
+    "https://www.prnewswire.com/news-releases/bpost-belgium-purchases-a-majority-interest-in-landmark-global-us-185852862.html",
+    "https://www.insidelogistics.ca/general/landmark-global-opens-border-facility-71321/"
+   ],
+   "enriched": "2026-10-28",
+   "pending": false
   }
  ],
  "edges": [
@@ -3407,6 +3422,24 @@
    "t": "Blue Dart launches International Parcel Connect powered by DHL eCommerce",
    "url": "https://www.stattimes.com/amp/supply-chain/blue-dart-targets-us-market-with-international-parcel-connect-1361052",
    "story": "a8eed9de41636"
+  },
+  {
+   "a": "bpost",
+   "b": "landmarkglobal",
+   "k": "acquired",
+   "y": "2013",
+   "t": "bpost bought a majority stake in Landmark Global (full ownership later)",
+   "url": "https://www.prnewswire.com/news-releases/bpost-belgium-purchases-a-majority-interest-in-landmark-global-us-185852862.html",
+   "story": null
+  },
+  {
+   "a": "landmarkglobal",
+   "b": "canadapost",
+   "k": "partner",
+   "y": null,
+   "t": "Landmark handles U.S.-to-Canada parcels and hands them to Canada Post for delivery",
+   "url": "https://www.insidelogistics.ca/general/landmark-global-opens-border-facility-71321/",
+   "story": null
   }
  ],
  "moves": [
@@ -3711,7 +3744,8 @@
   "lalamove": "2026-10-26",
   "burq": "2026-10-26",
   "passportglobal": "2026-10-27",
-  "globaleonlinel": "2026-10-27"
+  "globaleonlinel": "2026-10-27",
+  "landmarkglobal": "2026-10-28"
  },
  "facts": {
   "ups": {
