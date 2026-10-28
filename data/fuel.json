@@ -348,15 +348,12 @@
   "UPS": "2026-10-26",
   "FedEx": "2026-10-26"
  },
- "updated": "2026-10-28T13:18Z",
+ "updated": "2026-10-28T15:09Z",
  "health": {
   "UPS": {
-   "ok": false,
-   "via": "page",
-   "why": "could not render the page: Page.goto: Download is starting",
-   "at": "2026-10-28T14:54Z",
-   "last_ok": "2026-10-28T13:18Z",
-   "latest": null
+   "ok": true,
+   "at": "2026-10-28T15:09Z",
+   "last_ok": "2026-10-28T15:09Z"
   },
   "FedEx": {
    "ok": true,
@@ -366,10 +363,10 @@
    "latest": "2026-10-26"
   },
   "diesel": {
-   "ok": true,
-   "at": "2026-10-28T13:18Z",
-   "last_ok": "2026-10-28T13:18Z",
-   "latest": "2026-10-26"
+   "ok": false,
+   "why": "EIA weekly table: 503 Server Error: Service Unavailable for url: https://www.eia.gov/dnav/pet/pet_pri_gnd_dcus_nus_w.htm",
+   "at": "2026-10-28T15:09Z",
+   "last_ok": "2026-10-28T13:18Z"
   }
  },
  "diesel": [
