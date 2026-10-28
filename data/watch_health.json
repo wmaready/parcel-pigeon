@@ -67,11 +67,11 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 0,
+  "fails": 1,
   "thin": 155,
-  "err": null,
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
-  "blocked": false,
+  "blocked": true,
   "chars": 247,
   "via": "archive",
   "copy_of": "2026-10-09",
@@ -82,7 +82,7 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 8,
+  "fails": 9,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 167,
+  "fails": 168,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
@@ -106,13 +106,13 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
   "chars": 7861,
   "last_ok": "2026-10-28",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-19"
  },
@@ -132,7 +132,7 @@
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 5,
+  "fails": 6,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
@@ -145,7 +145,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 5,
+  "fails": 6,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-10-28",
