@@ -1,0 +1,97 @@
+UPS Ship API Developer Guidance
+EU Product Identifier (PID) Requirements
+Overview
+The European Union (EU) is implementing new import requirements that will require Product Identifier
+(PID) information for certain business-to-consumer (B2C) shipments entering the EU. UPS Ship API
+integrations will need to support Product Identifier (PID) data elements for qualifying shipments.
+Note: Regulatory exemption criteria are determined by applicable EU requirements. Additional
+guidance regarding exemption eligibility will be communicated as it becomes available.
+Important Notice
+The Product Identifier fields described in this document are not yet available in the UPS Ship API
+production environment. This guidance is being provided to support partner planning and development
+efforts. Additional information, including final production timing, will be communicated through the UPS
+Developer Portal and future UPS communications.
+Shipments Impacted
+The PID requirements are expected to apply when all the following conditions are met:
+• Shipment origin is outside the European Union
+• Shipment destination is within the European Union
+• Shipment is identified as Business-to-Consumer (B2C)
+• Shipment is designated as a sale transaction ("For Sale")
+Existing Data Elements Used
+The following existing Ship API elements will continue to be used to determine whether PID
+requirements apply.
+Field Description Values
+ReasonForExport Indicates shipment export reason
+ShipperType Identifies shipper as Business or Consumer
+01 = Business, 02 = Consumer/Individual
+ConsigneeType Identifies receiver as Business or Consumer 01 = Business, 02 = Consumer/Individual
+Existing Field Locations
+Field XPath
+ReasonForExpo
+rt
+/ShipmentRequest/Shipment/ShipmentServiceOptions/InternationalForms/ReasonFor
+Export
+ShipperType /ShipmentRequest/Shipment/ShipperType
+ConsigneeType /ShipmentRequest/Shipment/ConsigneeType
+New Product Identifier Data Elements
+The following new fields will be introduced to support EU Product Identifier requirements.
+Field Description
+ProductIdentifierExemptIndicator Indicates whether the product qualifies for a regulatory exemption
+ProductIdentifier Container for Product ID information
+ProductID Product identifier value
+ProductIDTypeCode Indicates Product ID type
+ProductIdentifierExemptIndicator
+For qualifying EU inbound B2C sale transactions, the ProductIdentifierExemptIndicator will default to
+false. This field is used to identify products that qualify for regulatory exemptions.
+New Field Specifications
+Field XPath Length Allowed Values
+ProductIdentifierE
+xemptIndicator
+/ShipmentRequest/Shipment/ShipmentServiceOptions/InternationalForms/Pro
+duct/ ProductIdentifierExemptIndicator 1 True / False
+ProductIdentifier /ShipmentRequest/Shipment/ShipmentServiceOptions/InternationalForms/Product/ProductIdentifier Container N/A
+ProductID
+/ ShipmentRequest
+/Shipment/ShipmentServiceOptions/InternationalForms/Product/ProductIdent
+ifier/ProductID
+100 Text
+ProductIDTypeC
+ode
+/ ShipmentRequest
+/Shipment/ShipmentServiceOptions/InternationalForms/Product/ProductIdent
+ifier/ProductIDTypeCode
+See
+values
+below
+Product ID Type Codes
+ProductIDTypeCode Description Requirement
+0100 Merchant Product Identifier Required when ProductIdentifierExemptIndicator = False
+0200 Manufacturer Product Identifier Required when ProductIdentifierExemptIndicator = False
+0300 Standardized Product Identifier Optional
+Sample Request Structure
+{
+"Product": {
+" ProductIdentifierExemptIndicator ": “false”,
+"ProductIdentifier": [
+{
+"ProductID": "SKU-12345",
+"ProductIDTypeCode": "0100"
+},
+{
+"ProductID": "MFG-67890",
+"ProductIDTypeCode": "0200"
+},
+{
+"ProductID": "HS-1234567890",
+"ProductIDTypeCode": "0300"
+}
+]
+}
+}
+Partner Action Required
+Partners should:
+1. Review the new Product Identifier requirements.
+2. Assess the impact on current UPS Ship API integrations.
+3. Begin development and testing planning activities.
+4. Determine an expected implementation timeline.
+5. Communicate anticipated readiness dates to UPS.

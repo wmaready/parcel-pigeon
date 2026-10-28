@@ -1,5 +1,5 @@
 {
- "run": "2026-10-28T19:53Z",
+ "run": "2026-10-28T20:48Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -93,9 +93,9 @@
    "fixed": true
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -147,14 +147,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "msg": "1 news feeds failing or empty: SEC: Amazon 8-K",
    "ids": [],
    "fixed": false
   },
@@ -327,9 +320,9 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -381,14 +374,7 @@
   {
    "sev": "med",
    "type": "feed-dead",
-   "msg": "2 news feeds failing or empty: SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "msg": "1 news feeds failing or empty: SEC: Amazon 8-K",
    "ids": [],
    "fixed": false
   },
