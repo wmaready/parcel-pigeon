@@ -1,20 +1,17 @@
 {
- "week": "2026-10-27",
- "newest": "2026-10-27",
+ "week": "2026-10-29",
+ "newest": "2026-10-28",
  "items": [
-  "<b>USPS to add weekly fuel surcharge.</b> Starting in January 2027, USPS will apply a fuel surcharge to domestic Ground Advantage, Priority Mail, Priority Mail Express and Parcel Select shipments. It will be a percentage of base postage, updated weekly from diesel and jet fuel prices, and negotiated contracts may have customized applicability language.",
-  "<b>UPS Small Business Rates gain fuel surcharge.</b> From Dec. 21, 2026, UPS raises Small Business Rates 4.5% and applies a 5% fuel surcharge to all SBR shipments, domestic and international, for a combined increase of about 9.7%. The Additional Handling minimum billable weight also rises from 40 to 50 lb, and the program was previously advertised as including fuel and delivery area surcharges.",
-  "<b>UPS sets Nov. 1 for EU Product Identifier.</b> The UPS developer portal now gives an effective date of Nov. 1, 2026 for the EU Product Identifier requirement on certain B2C shipments entering the EU; the earlier notice had no date. The notice does not say which product categories are covered or what happens to shipments without PID data."
+  "<b>UPS sets $10.70 Protected Delivery fee.</b> UPS will offer Protected Delivery at $10.70 per shipment starting Nov. 16, according to its website. On its earnings call, UPS said it expects U.S. daily volume up about 25% from Q3 to Q4 but slightly lower year over year because of reduced Amazon deliveries.",
+  "<b>UPS Ship API EU PID fields not live.</b> UPS's developer guide had said the Product Identifier fields were in Ship API production. It now says they are \"not yet available\" there, with final production timing to come later.",
+  "<b>Blue Dart launches India-to-US parcel service.</b> International Parcel Connect, powered by DHL eCommerce, launched Oct. 26 for eligible B2C parcels of 50 grams to 11 kilograms, with Standard or Expedited delivery. Blue Dart plans to extend it to the UK, EU, Canada and Australia, and no pricing was stated."
  ],
  "ids": [
-  "a0adb56a55334",
-  "rv5-ups-sbr-fuel",
-  "wb8827e8c126e"
+  "aa3051ff662bd",
+  "w8465aa718dc6",
+  "a8eed9de41636"
  ],
  "history": [
-  "Amazon mapped its own delivery to 95% of ZIP codes",
-  "UPS and FedEx now sell verified-handoff delivery",
-  "DoorDash launched $7.99 courier returns",
   "EU adds €2 per-line handling fee.",
   "USPS rule shifts customs charges to mailers.",
   "USPS slows Ground Advantage to Hawaii, Alaska.",
@@ -29,6 +26,9 @@
   "GLS US expands parcel service to El Paso.",
   "USPS to add weekly fuel surcharge.",
   "UPS Small Business Rates gain fuel surcharge.",
-  "UPS sets Nov. 1 for EU Product Identifier."
+  "UPS sets Nov. 1 for EU Product Identifier.",
+  "UPS sets $10.70 Protected Delivery fee.",
+  "UPS Ship API EU PID fields not live.",
+  "Blue Dart launches India-to-US parcel service."
  ]
 }
