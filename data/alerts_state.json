@@ -85,7 +85,8 @@
   "af86a262d4dcb",
   "afd8784e2b179",
   "ae2ec177094e3",
-  "a82e057190718"
+  "a82e057190718",
+  "a66453dab48f7"
  ],
  "clock": [
   "e06:7",
@@ -285,7 +286,8 @@
   "more:player:globalpost,story:fedex posts 22 9b quarterly revenue raises 2026 outlook,story:pitney bowes reports q3 revenue of 456 million down 1",
   "story:fedex posts 22 9b quarterly revenue raises 2026 outlook",
   "story:pitney bowes reports q3 revenue of 456 million down 1",
-  "player:globalpost"
+  "player:globalpost",
+  "story:doordash to buy instacart in deal worth about 17 billion"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -373,43 +375,44 @@
   "amazon flies mk30 drones from markham illinois faa file show",
   "ups cites revenue growth in all segments for q3 2026",
   "pitney bowes reports q3 revenue of 456 million down 1",
-  "fedex posts 22 9b quarterly revenue raises 2026 outlook"
+  "fedex posts 22 9b quarterly revenue raises 2026 outlook",
+  "doordash to buy instacart in deal worth about 17 billion"
  ],
  "harvested": [
-  "a5d45f26f2219",
-  "a2b81ad721cb8",
-  "a82e057190718",
-  "a3a45d7f6db20",
-  "afd8784e2b179",
-  "w599d9089a65d",
-  "a89d7e4beebd9",
-  "aba40a11b6946",
   "a0adb56a55334",
-  "wb8827e8c126e",
-  "a6c2418bed0a7",
-  "a58373f1b7bc3",
-  "wacb825361479",
-  "a6cc2420ad66e",
-  "aee6669d325da",
-  "af8ee5ed067c6",
-  "a2f683da86bf8",
-  "a312b45efa358",
-  "rv5-ups-sbr-fuel",
-  "ae2ec177094e3",
-  "w84705482dd2f",
-  "a773d361dac4e",
-  "a663794cc9c55",
-  "a2def09bc43bb",
-  "a351cab9045c7",
+  "a15404304f17b",
   "a57a06c26359c",
+  "a773d361dac4e",
+  "a2b81ad721cb8",
+  "a2f683da86bf8",
+  "a6c2418bed0a7",
+  "a2def09bc43bb",
+  "a89d7e4beebd9",
+  "a5d45f26f2219",
+  "a3a45d7f6db20",
+  "a72efb5e01b99",
   "w150132868eae",
   "w8465aa718dc6",
-  "a15404304f17b",
-  "a72efb5e01b99",
+  "wb8827e8c126e",
+  "afd8784e2b179",
+  "a312b45efa358",
+  "wacb825361479",
   "a6e82ba740e99",
-  "ac78f72e7f458",
+  "w599d9089a65d",
+  "rv5-ups-sbr-fuel",
+  "a6cc2420ad66e",
   "wdf959a97bcb6",
-  "a831c709e5809"
+  "a82e057190718",
+  "a831c709e5809",
+  "w84705482dd2f",
+  "aee6669d325da",
+  "aba40a11b6946",
+  "ae2ec177094e3",
+  "ac78f72e7f458",
+  "af8ee5ed067c6",
+  "a351cab9045c7",
+  "a58373f1b7bc3",
+  "a663794cc9c55"
  ],
  "backfilled": true,
  "recent": [
@@ -1789,6 +1792,33 @@
      "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000126/fedexrecastexhibit991.htm"
     }
    ]
+  },
+  {
+   "id": "a66453dab48f7",
+   "title": "DoorDash to buy Instacart in deal worth about $17 billion",
+   "date": "2026-10-29",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.cnn.com/2026/10/29/business/doordash-instacart-acquisition",
+   "srcs": [
+    {
+     "src": "CNN",
+     "url": "https://www.cnn.com/2026/10/29/business/doordash-instacart-acquisition"
+    },
+    {
+     "src": "Forbes",
+     "url": "https://www.forbes.com/sites/zacharyfolk/2026/10/29/doordash-will-acquire-instacart-in-17-billion-deal/"
+    },
+    {
+     "src": "Bloomberg.com",
+     "url": "https://www.bloomberg.com/news/videos/2026-10-29/doordash-to-buy-rival-instacart-in-17-billion-deal-video"
+    },
+    {
+     "src": "WSJ",
+     "url": "https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2019,13 +2049,17 @@
   "a82e057190718": {
    "t": "FedEx 5.9% avg parcel rate hike",
    "m": "Average parcel rates rise 5.9%, and the increase takes effect Jan 4 for shippers."
+  },
+  "a66453dab48f7": {
+   "t": "DoorDash to buy Instacart, ~$17B",
+   "m": "No parcel rate or service change announced; the deal is expected to close in the coming months."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-10-29",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-10-29T07:04:38.869627-04:00"
+ "last_push": "2026-10-29T13:13:57.338643-04:00"
 }
