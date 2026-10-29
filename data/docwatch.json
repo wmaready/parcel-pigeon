@@ -1,5 +1,5 @@
 {
- "cursor": 38,
+ "cursor": 53,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 200,
+   "fails": 201,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 200,
+   "fails": 201,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
@@ -1376,16 +1376,13 @@
    "first": "2026-10-27",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "hash": "283fdc3b3b09",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "last_try": "2026-10-29",
    "snap": {
     "d": "2026-10-28",
     "pdf": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
     "txt": "data/snapshots/04e3e48834d1/2026-10-28.txt"
-   },
-   "fails": 2,
-   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: refused)",
-   "blocked": true
+   }
   }
  }
 }
