@@ -7,15 +7,6 @@
   "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
  },
  {
-  "type": "headline-only",
-  "title": "FedEx files SEC Form 8-K: results of operations",
-  "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
-  "src": "FedEx SEC filing",
-  "date": "2026-10-28",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
   "type": "page-picture",
   "title": "FedEx: FedEx historical fuel surcharges",
   "url": "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html",
@@ -250,6 +241,24 @@
   "company": "UPS",
   "ir": "https://investors.ups.com/news-events/press-releases",
   "note": "UPS's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
+ },
+ {
+  "type": "earnings-missing",
+  "key": "earnings-new|FedEx Freight|Jun–Sep 2026 transition period|missing",
+  "company": "FedEx Freight",
+  "q": "Jun–Sep 2026 transition period",
+  "d": "2026-10-29",
+  "ir": "https://ir.fedexfreight.com/financial-information/quarterly-results",
+  "note": "The release wasn't found automatically. Add this quarter by hand from the company's release: revenue, adjusted EPS, then packages a day, operating days and revenue per piece from the 10-Q."
+ },
+ {
+  "type": "headline-only",
+  "title": "FedEx files SEC Form 8-K: results of operations",
+  "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
+  "src": "FedEx SEC filing",
+  "date": "2026-10-28",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  },
  {
   "type": "headline-only",

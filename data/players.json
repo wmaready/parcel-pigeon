@@ -2052,6 +2052,65 @@
    ],
    "enriched": "2026-10-28",
    "pending": false
+  },
+  {
+   "id": "globalpost",
+   "n": "GlobalPost",
+   "realm": "global",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": "2016",
+   "s": "GlobalPost is an Auctane-owned international and domestic shipping provider for small and mid-sized e-commerce sellers. It consolidates parcels and hands them to postal carriers such as USPS, and its Global Direct Entry service injects cross-border parcels into the USPS network for U.S. final delivery.",
+   "al": [
+    "Global Post",
+    "GlobalPost International"
+   ],
+   "src": "https://www.goglobalpost.com/global-direct-entry/",
+   "auto": true,
+   "added": "2026-10-29",
+   "from": "discover",
+   "site": "goglobalpost.com",
+   "srcs": [
+    "https://www.goglobalpost.com/global-direct-entry/",
+    "https://www.goglobalpost.com/faqs/",
+    "https://www.avalara.com/us/en/about/customer-stories/global-post.html"
+   ],
+   "enriched": "2026-10-29",
+   "pending": false
+  },
+  {
+   "id": "quadientparcel",
+   "n": "Quadient (Parcel Pending by Quadient)",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Owns Parcel Pending and, since December 2024, Package Concierge, and supplies smart parcel locker systems to U.S. apartment communities, campuses, retailers and carriers.",
+   "al": [],
+   "src": "https://www.quadient.com/en-int/news/Quadient-acquires-package-concierge-in-the-usa-and-exceeds-25000-global-footprint",
+   "auto": true,
+   "added": "2026-10-29",
+   "from": "discover"
+  },
+  {
+   "id": "luxerone",
+   "n": "Luxer One",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Sacramento-based maker of smart package locker systems for U.S. residential, retail, office and university sites, owned by ASSA ABLOY since 2018.",
+   "al": [],
+   "src": "https://www.prnewswire.com/news-releases/assa-abloy-acquires-luxer-one-in-the-us-300768697.html",
+   "auto": true,
+   "added": "2026-10-29",
+   "from": "discover"
   }
  ],
  "edges": [
@@ -3575,6 +3634,24 @@
    "t": "MyUS operates as a business unit in Aramex's Courier segment",
    "url": "https://www.myus.com/about/news/myus-acquisition-by-aramex/",
    "story": null
+  },
+  {
+   "a": "auctane",
+   "b": "globalpost",
+   "k": "owns",
+   "y": null,
+   "t": "GlobalPost is an Auctane brand",
+   "url": "https://www.goglobalpost.com/faqs/",
+   "story": null
+  },
+  {
+   "a": "globalpost",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Global Direct Entry injects parcels into the USPS network for final delivery",
+   "url": "https://www.goglobalpost.com/global-direct-entry/",
+   "story": null
   }
  ],
  "moves": [
@@ -3883,7 +3960,8 @@
   "landmarkglobal": "2026-10-28",
   "4pxworldwideex": "2026-10-28",
   "aramex": "2026-10-28",
-  "myusaccessusas": "2026-10-28"
+  "myusaccessusas": "2026-10-28",
+  "globalpost": "2026-10-29"
  },
  "facts": {
   "ups": {
