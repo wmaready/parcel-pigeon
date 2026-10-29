@@ -1,5 +1,5 @@
 {
- "cursor": 9,
+ "cursor": 24,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -231,7 +231,7 @@
    "first": "2026-10-21",
    "n": "2026-OnTrac-AHS%2BLPSRates.pdf",
    "hash": "9e9cbfe236b7",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 193,
+   "fails": 194,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 193,
+   "fails": 194,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
@@ -611,7 +611,7 @@
    "first": "2026-10-21",
    "n": "IPIXF_TermsCond.pdf",
    "hash": "9520c595235a",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
@@ -691,7 +691,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_Intl_NSS_Demand-Surcharges.pdf",
    "hash": "d1b401132060",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
@@ -702,7 +702,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_US-Export-Demand-Surcharges.pdf",
    "hash": "2b6c209bf5c2",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
@@ -713,7 +713,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_US-Import-Demand-Surcharges.pdf",
    "hash": "9f9b1f0b82a6",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf",
@@ -724,7 +724,7 @@
    "first": "2026-10-21",
    "n": "FICE_TermsCond.pdf",
    "hash": "30cb066f3355",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
@@ -735,7 +735,7 @@
    "first": "2026-10-21",
    "n": "IDP_TermsCond.pdf",
    "hash": "787d356e545f",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
@@ -919,14 +919,14 @@
   "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
    "hash": "f866279b9dd1",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "FedEx Freight rules tariff (moved)",
-   "pic_try": "2026-10-28"
+   "pic_try": "2026-10-29"
   },
   "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
    "hash": "d1b401132060",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "FedEx demand surcharges, 2026–27 season",
    "snap": {
     "d": "2026-10-26",
@@ -937,7 +937,7 @@
   "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
    "hash": "12743cee1be9",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "GLS US billing and invoice guide",
    "snap": {
     "d": "2026-10-26",
@@ -947,15 +947,15 @@
   },
   "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
    "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
-   "fails": 15,
+   "fails": 16,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-10-28"
+   "last_try": "2026-10-29"
   },
   "https://www.ontrac.com/terms-conditions-additional/": {
    "hash": "c8d830c9c53b",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "OnTrac additional terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -965,7 +965,7 @@
   "https://www.ontrac.com/terms-conditions/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "OnTrac terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -975,15 +975,15 @@
   },
   "https://www.ontrac.com/supplemental-surcharges": {
    "n": "Supplemental Surcharges",
-   "fails": 15,
+   "fails": 16,
    "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
    "blocked": false,
-   "last_try": "2026-10-28"
+   "last_try": "2026-10-29"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:c6bf8a2f-018f-4aa0-838b-ffc1a75eb1d9/original/as/terms-carriage-us-en.pdf": {
    "hash": "2272bb1c9949",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "2026 UPS Tariff / Terms and Conditions of Service",
    "snap": {
     "d": "2026-10-26",

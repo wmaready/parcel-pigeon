@@ -84,7 +84,8 @@
   "ae89309b5e834",
   "af86a262d4dcb",
   "afd8784e2b179",
-  "ae2ec177094e3"
+  "ae2ec177094e3",
+  "a82e057190718"
  ],
  "clock": [
   "e06:7",
@@ -366,42 +367,44 @@
   "doordash in advanced talks to acquire instacart wsj reports",
   "amazon flies mk30 drones from markham illinois faa file show",
   "ups cites revenue growth in all segments for q3 2026",
-  "pitney bowes reports q3 revenue of 456 million down 1"
+  "pitney bowes reports q3 revenue of 456 million down 1",
+  "fedex posts 22 9b quarterly revenue raises 2026 outlook"
  ],
  "harvested": [
-  "w8465aa718dc6",
-  "ae2ec177094e3",
   "af8ee5ed067c6",
-  "ac78f72e7f458",
-  "wacb825361479",
-  "w599d9089a65d",
-  "a15404304f17b",
-  "a0adb56a55334",
-  "aee6669d325da",
-  "afd8784e2b179",
-  "a58373f1b7bc3",
-  "a5d45f26f2219",
-  "rv5-ups-sbr-fuel",
-  "a312b45efa358",
-  "w84705482dd2f",
-  "a72efb5e01b99",
+  "w8465aa718dc6",
   "wdf959a97bcb6",
-  "a831c709e5809",
-  "a57a06c26359c",
-  "wb8827e8c126e",
-  "a2def09bc43bb",
-  "a663794cc9c55",
-  "a6c2418bed0a7",
-  "a351cab9045c7",
-  "a89d7e4beebd9",
+  "w599d9089a65d",
+  "rv5-ups-sbr-fuel",
   "a773d361dac4e",
-  "w150132868eae",
-  "a6cc2420ad66e",
+  "a82e057190718",
+  "a15404304f17b",
+  "a5d45f26f2219",
   "a2b81ad721cb8",
-  "a3a45d7f6db20",
   "aba40a11b6946",
+  "a2f683da86bf8",
+  "a0adb56a55334",
   "a6e82ba740e99",
-  "a2f683da86bf8"
+  "a6c2418bed0a7",
+  "ae2ec177094e3",
+  "a6cc2420ad66e",
+  "w84705482dd2f",
+  "a58373f1b7bc3",
+  "a351cab9045c7",
+  "wb8827e8c126e",
+  "a312b45efa358",
+  "a57a06c26359c",
+  "ac78f72e7f458",
+  "a89d7e4beebd9",
+  "aee6669d325da",
+  "wacb825361479",
+  "afd8784e2b179",
+  "a3a45d7f6db20",
+  "a72efb5e01b99",
+  "a831c709e5809",
+  "a2def09bc43bb",
+  "w150132868eae",
+  "a663794cc9c55"
  ],
  "backfilled": true,
  "recent": [
@@ -1762,6 +1765,25 @@
      "url": "https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter"
     }
    ]
+  },
+  {
+   "id": "a82e057190718",
+   "title": "FedEx posts $22.9B quarterly revenue, raises 2026 outlook",
+   "date": "2026-10-28",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-reports-strong-third-quarter-results-cy26",
+   "srcs": [
+    {
+     "src": "FedEx newsroom",
+     "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-reports-strong-third-quarter-results-cy26"
+    },
+    {
+     "src": "FedEx SEC filing",
+     "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000126/fedexrecastexhibit991.htm"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1988,6 +2010,10 @@
   "ae2ec177094e3": {
    "t": "Pitney Bowes Q3 revenue down 1%",
    "m": "Pitney Bowes reported Q3 revenue of $456 million, with no change to rates or service for shippers."
+  },
+  "a82e057190718": {
+   "t": "FedEx 5.9% avg parcel rate hike",
+   "m": "Average parcel rates rise 5.9%, and the increase takes effect Jan 4 for shippers."
   }
  },
  "queue": [
@@ -2006,6 +2032,22 @@
    "mask": null,
    "url": "https://wmaready.github.io/parcel-pigeon/#story=ae2ec177094e3",
    "co": null
+  },
+  {
+   "kind": "story",
+   "key": "story:fedex posts 22 9b quarterly revenue raises 2026 outlook",
+   "id": "a82e057190718",
+   "t": "FedEx 5.9% avg parcel rate hike",
+   "m": "Average parcel rates rise 5.9%, and the increase takes effect Jan 4 for shippers.",
+   "big": false,
+   "at": "2026-10-29T00:53:07.727436-04:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": false,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a82e057190718",
+   "co": "FedEx"
   }
  ],
  "fuelq": {},

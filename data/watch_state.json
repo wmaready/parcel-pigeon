@@ -93,7 +93,7 @@
   "pend": "4d341f89308d"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "checked": "2026-10-28",
+  "checked": "2026-10-29",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
@@ -220,12 +220,10 @@
   "told": []
  },
  "https://www.uniuni.com/news/": {
-  "checked": "2026-10-28",
+  "checked": "2026-10-29",
   "pdfs": [],
-  "lines": 176,
-  "told": [],
-  "pend": "36f53d812229",
-  "fail_runs": 12
+  "lines": 178,
+  "told": []
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-10-29",
@@ -312,15 +310,13 @@
   "told": []
  },
  "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
-  "checked": "2026-10-28",
+  "checked": "2026-10-29",
   "pdfs": [
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:036e009d-3781-4a60-bf89-314268d5ac8b/original/as/small-busines-cwt-rate-guide-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf"
   ],
-  "lines": 13,
-  "told": [],
-  "pend": "15ab2b2ba194",
-  "fail_runs": 9
+  "lines": 17,
+  "told": []
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
   "checked": "2026-10-29",
