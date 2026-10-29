@@ -221,6 +221,10 @@
   "2026-11-02": [
    37.5,
    41.25
+  ],
+  "2026-11-09": [
+   37.75,
+   41.5
   ]
  },
  "spot": {
@@ -348,15 +352,12 @@
   "UPS": "2026-10-26",
   "FedEx": "2026-10-26"
  },
- "updated": "2026-10-29T04:58Z",
+ "updated": "2026-10-29T11:03Z",
  "health": {
   "UPS": {
-   "ok": false,
-   "via": "page",
-   "why": "could not render the page: Page.goto: Download is starting",
-   "at": "2026-10-29T10:47Z",
-   "last_ok": "2026-10-29T04:58Z",
-   "latest": null
+   "ok": true,
+   "at": "2026-10-29T11:03Z",
+   "last_ok": "2026-10-29T11:03Z"
   },
   "FedEx": {
    "ok": true,
@@ -367,8 +368,8 @@
   },
   "diesel": {
    "ok": true,
-   "at": "2026-10-29T04:58Z",
-   "last_ok": "2026-10-29T04:58Z",
+   "at": "2026-10-29T11:03Z",
+   "last_ok": "2026-10-29T11:03Z",
    "latest": "2026-10-26"
   }
  },
