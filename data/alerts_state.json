@@ -83,7 +83,8 @@
   "a92007e6e1c20",
   "ae89309b5e834",
   "af86a262d4dcb",
-  "afd8784e2b179"
+  "afd8784e2b179",
+  "ae2ec177094e3"
  ],
  "clock": [
   "e06:7",
@@ -364,41 +365,43 @@
   "amazon plans 20 000 smart glasses for delivery drivers by en",
   "doordash in advanced talks to acquire instacart wsj reports",
   "amazon flies mk30 drones from markham illinois faa file show",
-  "ups cites revenue growth in all segments for q3 2026"
+  "ups cites revenue growth in all segments for q3 2026",
+  "pitney bowes reports q3 revenue of 456 million down 1"
  ],
  "harvested": [
-  "wb8827e8c126e",
-  "a831c709e5809",
+  "w8465aa718dc6",
+  "ae2ec177094e3",
+  "af8ee5ed067c6",
   "ac78f72e7f458",
-  "aee6669d325da",
-  "a312b45efa358",
-  "a58373f1b7bc3",
   "wacb825361479",
   "w599d9089a65d",
-  "a3a45d7f6db20",
   "a15404304f17b",
+  "a0adb56a55334",
+  "aee6669d325da",
+  "afd8784e2b179",
+  "a58373f1b7bc3",
+  "a5d45f26f2219",
+  "rv5-ups-sbr-fuel",
+  "a312b45efa358",
+  "w84705482dd2f",
+  "a72efb5e01b99",
+  "wdf959a97bcb6",
+  "a831c709e5809",
+  "a57a06c26359c",
+  "wb8827e8c126e",
+  "a2def09bc43bb",
+  "a663794cc9c55",
+  "a6c2418bed0a7",
+  "a351cab9045c7",
+  "a89d7e4beebd9",
+  "a773d361dac4e",
+  "w150132868eae",
   "a6cc2420ad66e",
   "a2b81ad721cb8",
-  "a351cab9045c7",
-  "a57a06c26359c",
-  "w150132868eae",
-  "w8465aa718dc6",
-  "a0adb56a55334",
-  "a89d7e4beebd9",
-  "a663794cc9c55",
-  "a2def09bc43bb",
-  "a6c2418bed0a7",
-  "a72efb5e01b99",
-  "a5d45f26f2219",
-  "a6e82ba740e99",
-  "rv5-ups-sbr-fuel",
-  "afd8784e2b179",
-  "w84705482dd2f",
-  "wdf959a97bcb6",
+  "a3a45d7f6db20",
   "aba40a11b6946",
-  "a2f683da86bf8",
-  "a773d361dac4e",
-  "af8ee5ed067c6"
+  "a6e82ba740e99",
+  "a2f683da86bf8"
  ],
  "backfilled": true,
  "recent": [
@@ -1744,6 +1747,21 @@
      "url": "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-3q-2026-earnings.html"
     }
    ]
+  },
+  {
+   "id": "ae2ec177094e3",
+   "title": "Pitney Bowes reports Q3 revenue of $456 million, down 1%",
+   "date": "2026-10-28",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
+   "srcs": [
+    {
+     "src": "Business Wire",
+     "url": "https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter"
+    }
+   ]
   }
  ],
  "copy": {
@@ -1966,9 +1984,30 @@
   "afd8784e2b179": {
    "t": "UPS reports Q3 2026 revenue growth",
    "m": "Revenue rose across all UPS segments in Q3 2026; no rate or service changes are stated."
+  },
+  "ae2ec177094e3": {
+   "t": "Pitney Bowes Q3 revenue down 1%",
+   "m": "Pitney Bowes reported Q3 revenue of $456 million, with no change to rates or service for shippers."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:pitney bowes reports q3 revenue of 456 million down 1",
+   "id": "ae2ec177094e3",
+   "t": "Pitney Bowes Q3 revenue down 1%",
+   "m": "Pitney Bowes reported Q3 revenue of $456 million, with no change to rates or service for shippers.",
+   "big": false,
+   "at": "2026-10-29T00:06:03.027630-04:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": false,
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=ae2ec177094e3",
+   "co": null
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-28",

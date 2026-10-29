@@ -1,5 +1,5 @@
 {
- "cursor": 70,
+ "cursor": 9,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 192,
+   "fails": 193,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 192,
+   "fails": 193,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-29"
@@ -746,7 +746,7 @@
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
    "hash": "b3b5181ba673",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -832,7 +832,7 @@
   "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Amazon Shipping 2026 peak surcharges",
    "snap": {
     "d": "2026-10-26",
@@ -843,22 +843,22 @@
   "https://shipping.amazon.com/shipping-policy": {
    "hash": "59bdb3d710b8",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Amazon Shipping policies",
-   "pic_try": "2026-10-28",
+   "pic_try": "2026-10-29",
    "last_try": "2026-10-27"
   },
   "https://shipping.amazon.com/shipping-terms-and-conditions": {
    "hash": "fdfe4754d270",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Amazon Shipping terms and conditions",
-   "pic_try": "2026-10-28"
+   "pic_try": "2026-10-29"
   },
   "https://ship.amazon.com/site-terms": {
    "hash": "c48a7f56ed69",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Conditions of Use",
    "snap": {
     "d": "2026-10-26",
@@ -868,7 +868,7 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
    "hash": "f7644ecfa383",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "DHL eCommerce peak surcharge, 2026–27",
    "snap": {
     "d": "2026-10-26",
@@ -879,7 +879,7 @@
   "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html": {
    "hash": "f7644ecfa383",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "DHL eCommerce surcharge policies page",
    "snap": {
     "d": "2026-10-26",
@@ -890,7 +890,7 @@
   "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "DHL eCommerce terms and conditions page",
    "snap": {
     "d": "2026-10-26",
@@ -901,7 +901,7 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "DHL eCommerce terms of carriage (Jan 2026 version)",
    "snap": {
     "d": "2026-10-26",
@@ -912,9 +912,9 @@
   "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026": {
    "hash": "c79bbd8e6516",
    "first": "2026-10-25",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "EU Customs Changes 2026: New €2 Handling Fee & Product Identifier Requirements from 1 November",
-   "pic_try": "2026-10-28"
+   "pic_try": "2026-10-29"
   },
   "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
    "hash": "f866279b9dd1",
@@ -1317,7 +1317,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "b3b5181ba673",
    "first": "2026-10-26",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-10-26",
@@ -1328,7 +1328,7 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
@@ -1340,7 +1340,7 @@
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
     "d": "2026-10-26",
@@ -1352,7 +1352,7 @@
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -1363,7 +1363,7 @@
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
-   "checked": "2026-10-28",
+   "checked": "2026-10-29",
    "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
    "snap": {
     "d": "2026-10-26",
