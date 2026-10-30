@@ -1,5 +1,5 @@
 {
- "cursor": 135,
+ "cursor": 9,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 237,
+   "fails": 238,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 237,
+   "fails": 238,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
@@ -1935,37 +1935,77 @@
    "hash": "e54e5c2f97e2",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "UPS Q4 2025 10-Q filing"
+   "n": "UPS Q4 2025 10-Q filing",
+   "snap": {
+    "d": "2026-10-30",
+    "img": "data/snapshots/aebbaa378eb1/2026-10-30.jpg"
+   }
   },
   "https://investors.ups.com/news-events/ir-calendar/detail/10960/q4-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "75515863f11e",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "UPS Q4 2025 earnings call"
+   "n": "UPS Q4 2025 earnings call",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://investors.ups.com/_assets/_717a17014125966b6706e2c168c91902/ups/news/2026-01-27_UPS_Releases_4Q_2025_Earnings_and_Provides_2026_2154.pdf",
+    "txt": "data/snapshots/b5da4573602c/2026-10-30.txt"
+   }
   },
   "https://investors.ups.com/news-events/press-releases/detail/2154/ups-releases-4q-2025-earnings-and-provides-2026-guidance": {
    "hash": "75515863f11e",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "UPS Q4 2025 results release"
+   "n": "UPS Q4 2025 results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://investors.ups.com/_assets/_717a17014125966b6706e2c168c91902/ups/news/2026-01-27_UPS_Releases_4Q_2025_Earnings_and_Provides_2026_2154.pdf",
+    "txt": "data/snapshots/f53516ee4a6b/2026-10-30.txt"
+   }
   },
   "https://about.usps.com/newsroom/national-releases/2026/0205-usps-reports-first-quarter-fiscal-year-2026-results.pdf": {
    "hash": "8971a6e37b25",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "USPS FY26 Q1 results release"
+   "n": "USPS FY26 Q1 results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://about.usps.com/newsroom/national-releases/2026/0205-usps-reports-first-quarter-fiscal-year-2026-results.pdf",
+    "txt": "data/snapshots/66dffdc2b3f2/2026-10-30.txt"
+   }
   },
   "https://about.usps.com/newsroom/national-releases/2026/0508-usps-reports-second-quarter-fiscal-year-2026-results.pdf": {
    "hash": "08a05d511434",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "USPS FY26 Q2 results release"
+   "n": "USPS FY26 Q2 results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://about.usps.com/newsroom/national-releases/2026/0508-usps-reports-second-quarter-fiscal-year-2026-results.pdf",
+    "txt": "data/snapshots/6996b538f8d6/2026-10-30.txt"
+   }
   },
   "https://about.usps.com/newsroom/national-releases/2026/0807-usps-reports-third-quarter-fiscal-year-2026-results.pdf": {
    "hash": "0dff7ed282a6",
    "first": "2026-10-30",
    "checked": "2026-10-30",
-   "n": "USPS FY26 Q3 results release"
+   "n": "USPS FY26 Q3 results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://about.usps.com/newsroom/national-releases/2026/0807-usps-reports-third-quarter-fiscal-year-2026-results.pdf",
+    "txt": "data/snapshots/d51a92bd6615/2026-10-30.txt"
+   }
+  },
+  "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf": {
+   "hash": "3e34532fdf4e",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx calendar Q3 2026 results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf",
+    "txt": "data/snapshots/e5b825a04c10/2026-10-30.txt"
+   }
   }
  }
 }
