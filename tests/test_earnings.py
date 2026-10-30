@@ -387,3 +387,13 @@ def test_earnings_links_are_filed_in_docs_once():
     assert len(first) == 2 and {d["t"] for d in docs} == {"Earnings"} and docs[0]["n"] == "UPS Q3 2026 results release"
     rows[0]["filing"] = "https://investors.ups.com/10q"
     assert E.file_earnings_docs(rows, docs, "2026-10-30") == ["UPS Q3 2026 10-Q filing"] and len(docs) == 3
+
+
+def test_new_ups_quarter_shows_its_change_from_rounded_figures_until_exact_ones_arrive():
+    rows = [{"company": "UPS", "q": "Q3 2025", "rev": 21.4, "revYoY": -2.0, "period": {"start": "2025-07-01", "end": "2025-09-30", "months": 3}},
+            {"company": "UPS", "q": "Q3 2026", "rev": 22.9, "revYoY": None, "period": {"start": "2026-07-01", "end": "2026-09-30", "months": 3}}]
+    E.fill_yoy(rows)
+    assert rows[1]["revYoY"] == 7.0 and rows[1]["yoy_src"] == "calc-rounded"
+    rows[1].update(rev_m=22940, rev_prior_m=21420)
+    E.fill_yoy(rows)
+    assert rows[1]["revYoY"] == 7.1 and rows[1]["yoy_src"] == "calc"

@@ -162,9 +162,18 @@ def fill_yoy(rows):
             if r.get("revYoY") is not None and r.get("yoy_src") != "release":
                 r["revYoY"], r["yoy_src"] = None, None
             continue
-        if r.get("revYoY") is None and r.get("rev_m") and r.get("rev_prior_m"):
+        if (r.get("revYoY") is None or r.get("yoy_src") == "calc-rounded") and r.get("rev_m") and r.get("rev_prior_m"):
             r["revYoY"] = round((r["rev_m"] / r["rev_prior_m"] - 1) * 100, 1)
             r["yoy_src"] = "calc"
+        elif r.get("revYoY") is None and r.get("company") == "UPS" and r.get("rev") and r.get("period"):
+            # a new quarter shows its change at once, from the two rounded $B figures (good to about a tenth of a point of
+            # rounding either way); the exact figures replace it when the 10-Q gives them. UPS only: FedEx's prior year
+            # included Freight, which separated June 1, 2026.
+            end = r["period"].get("end") or ""
+            prev = next((x for x in rows if x.get("company") == "UPS" and x.get("rev") and (x.get("period") or {}).get("end") == f"{int(end[:4]) - 1}{end[4:]}"), None) if end else None
+            if prev:
+                r["revYoY"] = round((r["rev"] / prev["rev"] - 1) * 100, 1)
+                r["yoy_src"] = "calc-rounded"
 
 
 # ------------------------------------------------------------------ checks
