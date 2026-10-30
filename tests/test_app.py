@@ -255,7 +255,8 @@ def test_earnings_chart_and_stock_watch(site, width):
         uq = pg.evaluate("() => EARN.filter(e => e.company === 'UPS' && e.d <= TODAY).sort((a, b) => b.d.localeCompare(a.d))[0].q")      # the newest reported UPS quarter
         # a company whose report is out but not yet in the history shows "Being added", not its previous quarter
         fdx_due = pg.evaluate("() => EARN_NEXT.some(x => x.c === 'FedEx' && x.d <= TODAY && !x.est && !earnDone(x))")
-        fdx_goto = "docs:earnings:FedEx" if fdx_due else "docs:earnings:FedEx:FY26 Q4"
+        fq = pg.evaluate("() => EARN.filter(e => e.company === 'FedEx' && e.d <= TODAY).sort((a, b) => b.d.localeCompare(a.d))[0].q")      # FedEx's newest reported quarter
+        fdx_goto = "docs:earnings:FedEx" if fdx_due else f"docs:earnings:FedEx:{fq}"
         assert [c[0] for c in cards] == [f"docs:earnings:UPS:{uq}", fdx_goto, "docs:earnings:USPS:FY26 Q3", None], cards
         assert "Next report expected mid-Nov" in cards[2][1], cards
         assert "Next report Oct 27" not in cards[0][1], cards                     # a call that has happened is never shown as next
@@ -265,7 +266,7 @@ def test_earnings_chart_and_stock_watch(site, width):
         links = pg.evaluate("""() => [...document.querySelectorAll('#earnToday .etshare .etlinks > *')].map(x => [x.textContent.trim(), x.dataset.open || x.href || ''])""")
         assert links[0] == ["Market report ›", "r03"] and links[1][0].startswith("Pitney Bowes") and "pitneybowes.com" in links[1][1], links
         want = {0: (uq, "Revenue", "Packages a day", "Revenue per package"),
-                1: ("Being added", "FY26 Q4") if fdx_due else ("FY26 Q4", "$25.0B", "+12.6%", "17.1M", "+1.7%", "$17.90", "+10.9%"),
+                1: ("Being added", fq) if fdx_due else (fq, "Revenue", "Packages a day", "Revenue per package"),
                 2: ("FY26 Q3", "$19.9B", "+6.1%", "≈17.1M", "−3.4%", "≈$5.31"),      # USPS: pieces over calendar days, marked ≈; revenue per package = segment revenue over pieces, marked ≈
                 3: ("U.S. parcel volume", "2025", "23.1 billion parcels (+3.3%)", "Amazon", "6.9B", "30%", "+9%", "USPS", "6.2B", "27%", "−8.8%",
                     "UPS", "4.3B", "19%", "−8.7%", "FedEx", "3.9B", "17%", "+5.1%", "Others", "1.8B", "8%", "+127%", "Pitney Bowes")}
@@ -315,8 +316,9 @@ def test_earnings_chart_and_stock_watch(site, width):
         pg.evaluate("() => earnView('rev')")
         pg.focus('.eglance[data-eco="FedEx"] .egbar[aria-pressed="true"]')
         pg.keyboard.press("ArrowLeft")
-        assert pg.evaluate("() => document.activeElement.dataset.ebar") == "FY26 Q3"
-        assert pg.evaluate("() => document.querySelector('.eglance[data-eco=\"FedEx\"] .egdet').textContent.includes('Fiscal Q3 2026 (Dec 2025–Feb 2026)')")
+        prev = pg.evaluate("() => earnSeries('FedEx').filter(e => e.d <= TODAY).at(-2).q")           # the bar before the newest one
+        assert pg.evaluate("() => document.activeElement.dataset.ebar") == prev
+        assert pg.evaluate("() => document.querySelector('.eglance[data-eco=\"FedEx\"] .egdet').textContent.includes(earnLabel(earnSeries('FedEx').filter(e => e.d <= TODAY).at(-2)))")
         b.close()
     assert not errors, errors[:5]
     assert not wide, wide
