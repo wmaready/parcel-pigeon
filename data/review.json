@@ -298,5 +298,14 @@
   "date": "2026-10-27",
   "retried": false,
   "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "earnings-missing",
+  "key": "earnings-new|FedEx|Jun–Sep 2026 transition period|missing",
+  "company": "FedEx",
+  "q": "Jun–Sep 2026 transition period",
+  "d": "2026-10-28",
+  "ir": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+  "note": "The release wasn't found automatically. Add this quarter by hand from the company's release: revenue, adjusted EPS, then packages a day, operating days and revenue per piece from the 10-Q."
  }
 ]

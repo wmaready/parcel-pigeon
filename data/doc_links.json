@@ -917,7 +917,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-10-30T05:00Z"
  },
  "https://filexfer.ups.com/assets/resources/media/en_US/daily_rates_prior_year.pdf": {
   "http_status": 200,
@@ -925,7 +925,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-10-30T05:00Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/CWT%20_Preview.pdf": {
   "http_status": 200,
@@ -933,7 +933,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-10-30T05:00Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/Daily_US48_Preview.pdf": {
   "http_status": 200,
@@ -941,7 +941,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-10-30T05:00Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/terms_service_us.pdf": {
   "http_status": 200,
@@ -949,6 +949,206 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
+  "http_status": 200,
+  "final_url": "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf": {
+  "http_status": 200,
+  "final_url": "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf": {
+  "http_status": 404,
+  "final_url": "https://cdn.gls-us.com/media/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
+  "content_verified": false,
+  "state": "broken",
+  "why": "HTTP 404",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://images.fedex.com/content/dam/fedex/us-united-states/services/DAS_Intra_Hawaii_2023.txt": {
+  "http_status": 200,
+  "final_url": "https://images.fedex.com/content/dam/fedex/us-united-states/services/DAS_Intra_Hawaii_2023.txt",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://lso.com/news/lone-star-overnight-announces-annual-general-rate-increase-gri-effective-jan-2-2022": {
+  "http_status": 200,
+  "final_url": "https://www.lso.com/news/lone-star-overnight-announces-annual-general-rate-increase-gri-effective-jan-2-2022",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
+  "http_status": 200,
+  "final_url": "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://news.adobe.com/news/downloads/pdfs/2026/09/adi-holiday-forecast-release-9-26.pdf": {
+  "http_status": 200,
+  "final_url": "https://news.adobe.com/news/downloads/pdfs/2026/09/adi-holiday-forecast-release-9-26.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf": {
+  "http_status": 200,
+  "final_url": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf": {
+  "http_status": 200,
+  "final_url": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf?v=20261009174051": {
+  "http_status": 200,
+  "final_url": "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf?v=20261009174051",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf?v=20261009174051": {
+  "http_status": 200,
+  "final_url": "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf?v=20261009174051",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/NHTML/DMMArchive20240121/Notice123.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20240121/Notice123.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/NHTML/DMMArchive20240714/Notice123.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20240714/Notice123.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/NHTML/DMMArchive20241104/Notice123.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20241104/Notice123.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/NHTML/DMMArchive20260406/Notice123.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20260406/Notice123.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/NHTML/DMMArchive20260712/Notice123.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20260712/Notice123.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/Archive/PriceFile": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/Archive/PriceFile",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/PriceChange/Index": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/PriceChange/Index",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/TEXT/DMM300/Transmittal_Letter.htm": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/TEXT/DMM300/Transmittal_Letter.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/Misc/USPS SKU User Guide.pdf": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/Misc/USPS%20SKU%20User%20Guide.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/July%202026%20Price%20Change%20-%20Notice123%20PDF%20-%207.10.26.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/PriceChange/October%202021%20-%20Notice123.pdf": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/October%202021%20-%20Notice123.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-30T05:00Z"
  }
 }
