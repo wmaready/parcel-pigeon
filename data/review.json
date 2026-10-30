@@ -298,5 +298,12 @@
   "chp": 15.91,
   "asof": "Oct 30, 2026 19:06 UTC",
   "note": "One-day move over 15% held back from the Stock watch. Check the quote; if it is right, add \"approved\": true here and it shows on the next run."
+ },
+ {
+  "type": "earnings-next-missing",
+  "key": "earnings-next|FedEx|2026-10",
+  "company": "FedEx",
+  "ir": "https://investors.fedex.com/news-and-events/earnings-releases/default.aspx",
+  "note": "FedEx's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
  }
 ]
