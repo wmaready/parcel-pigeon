@@ -129,7 +129,7 @@
   "dates": [
    {
     "d": "2026-12-21",
-    "w": "UPS 2027 rates and surcharges take effect",
+    "w": "UPS 2027 rate increase: 5.9% average (Ground, Air, International)",
     "imp": "up",
     "fx": {
      "t": "gri",
@@ -138,6 +138,21 @@
      "src": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
     },
     "fees": [
+     [
+      "UPS",
+      "Additional Handling minimum billable weight",
+      "40 lb to 50 lb"
+     ],
+     [
+      "UPS",
+      "Area Surcharge ZIP list",
+      "Changes"
+     ],
+     [
+      "UPS",
+      "ZIP codes aligned to zones",
+      "Change"
+     ],
      [
       "UPS",
       "Residential surcharge, Ground",
@@ -255,7 +270,13 @@
    "Domestic Air was not compared: weekly jet fuel prices UPS used are not on file",
    "The old table itself is not on file; the comparison uses what UPS actually charged each week"
   ],
-  "dates": [],
+  "dates": [
+   {
+    "d": "2026-11-02",
+    "w": "UPS: new Ground, Ground Saver and Domestic Air fuel surcharge tables take effect",
+    "imp": "up"
+   }
+  ],
   "kind": "Alert",
   "src": "Parcel Pigeon analysis of UPS's fuel tables and EIA diesel prices",
   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -2320,18 +2341,15 @@
   "dates": [
    {
     "d": "2026-11-02",
-    "w": "UPS: U.S. Ground Domestic and Ground Saver fuel surcharge table",
-    "imp": "info"
-   },
-   {
-    "d": "2026-11-02",
-    "w": "UPS: Domestic Air fuel surcharge table",
-    "imp": "info"
-   },
-   {
-    "d": "2026-11-02",
-    "w": "UPS: Ground diesel price above which the table range extends in $0.09 steps",
-    "imp": "info"
+    "w": "UPS: new Ground, Ground Saver and Domestic Air fuel surcharge tables take effect",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Ground fuel surcharge, same diesel price",
+      "+0.50 point"
+     ]
+    ]
    }
   ],
   "kind": "Alert",
