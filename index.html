@@ -8931,9 +8931,9 @@ function earnDetail(e){if(!e)return '';const co=e.company,v=e.vol||{},cmp=e.comp
   const st=(l,val,yy,sub,title)=>`<div class="egst"${title?` title="${esc(title)}"`:''}><span class="lbl">${l}</span><span class="mono egv">${val}</span>${yy}${sub?`<small>${sub}</small>`:''}</div>`;
   const F=[st('Revenue',earnRevS(e),ch(y))];
   if(earnPkg(co)){
-    F.push(v.adv_k!=null?st('Packages a day',`${v.adv_src==='calc'?'≈':''}${(v.adv_k/1000).toFixed(1)}M`,ch(earnAdvYoY(v)),v.us_adv_k!=null?`U.S. ${(v.us_adv_k/1000).toFixed(1)}M`:v.pieces_src==='USPS'&&v.pieces_m?`${(v.pieces_m/1000).toFixed(2)}B pieces`:'',v.adv_note||'')
+    F.push(v.adv_k!=null?st('Packages a day',`${v.adv_src==='calc'?'≈':''}${(v.adv_k/1000).toFixed(1)}M`,ch(earnAdvYoY(v)),v.us_adv_k!=null?`U.S. ${(v.us_adv_k/1000).toFixed(1)}M`:v.pieces_src==='USPS'&&v.pieces_m?`${(v.pieces_m/1000).toFixed(2)}B pieces`:'',v.adv_note||v.calc_note||'')
       :st('Packages a day','—','',`not yet entered`));
-    F.push(v.rpp!=null?st('Revenue per package',`${v.rpp_src==='calc'?'≈':''}$${(+v.rpp).toFixed(2)}`,ch(earnRppYoY(v)),v.rpp_src==='calc'?(co==='USPS'?'segment revenue ÷ pieces':'calculated from the 10-K'):'',v.rpp_note):st('Revenue per package','—','',co==='USPS'?'not reported':co==='UPS'&&/^Q4/.test(e.q)?'not printed for Q4':'not yet entered'))}
+    F.push(v.rpp!=null?st('Revenue per package',`${v.rpp_src==='calc'?'≈':''}$${(+v.rpp).toFixed(2)}`,ch(earnRppYoY(v)),v.rpp_src==='calc'?(co==='USPS'?'segment revenue ÷ pieces':v.calc_note?'weighted from the two segments':'calculated from the 10-K'):'',v.rpp_note):st('Revenue per package','—','',co==='USPS'?'not reported':co==='UPS'&&/^Q4/.test(e.q)?'not printed for Q4':'not yet entered'))}
   const links=[lk(e.release,'Release'),lk(e.webcast,'Call'),lk(e.transcript,'Transcript'),lk(e.filing,co==='USPS'?'Report':'10-Q / 10-K'),v.src&&v.src!==e.filing&&v.src!==e.release?lk(v.src,'Package figures'):''].filter(Boolean);
   return `<div class="eghq"><b>${esc(earnLabel(e))}</b><span class="lbl">Reported ${esc(DF(e.d))}</span>${e.checked===false?'<span class="tag">Not yet checked</span>':''}</div>
     <div class="egstats">${F.join('')}</div>${e.note?`<p class="egctx">${esc(e.note)}</p>`:''}${e.take?`<p class="egtake">${esc(e.take)}</p>`:''}

@@ -3594,5 +3594,50 @@
    ],
    "final": false
   }
+ },
+ {
+  "company": "FedEx",
+  "q": "Q3 2026",
+  "d": "2026-10-28",
+  "rev": 22.9,
+  "revYoY": 11.9,
+  "eps": 3.74,
+  "take": "Revenue rose 12% to $22.9B; FedEx raised its calendar 2026 adjusted EPS outlook to $18.00-$18.60 and said parcel rates rise an average 5.9% on Jan 4, 2027.",
+  "release": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf",
+  "transcript": null,
+  "webcast": null,
+  "filing": null,
+  "period": {
+   "start": "2026-07-01",
+   "end": "2026-09-30",
+   "months": 3
+  },
+  "label": "Calendar Q3 2026",
+  "rel_time": null,
+  "rev_m": 22855,
+  "rev_prior_m": 20432,
+  "yoy_src": "calc",
+  "comparable": true,
+  "note": "Continuing operations; FedEx Freight separated June 1, 2026 and the year-earlier quarter is restated without it. Adjusted EPS (GAAP $1.21)",
+  "vol": {
+   "adv_k": 17198,
+   "adv_prior_k": 17041,
+   "adv_yoy": 0.9,
+   "adv_src": "calc",
+   "scope": "Federal Express segment",
+   "basis": "five days a week",
+   "days": 64,
+   "us_adv_k": 14370,
+   "us_adv_prior_k": 14094,
+   "rpp": 17.81,
+   "rpp_prior": 16.3,
+   "rpp_src": "calc",
+   "pieces_m": null,
+   "src": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf",
+   "checked": "2026-10-30",
+   "calc_note": "Express U.S. Domestic plus Express International: average daily packages added, and revenue per package weighted by volume, from the two segments' printed figures"
+  },
+  "checked": true,
+  "headline": "FedEx Reports Strong Third Quarter Results"
  }
 ]
