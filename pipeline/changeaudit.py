@@ -23,6 +23,11 @@ Rules:
 - Compare like with like: same fee, same weight break, same zone. Say the size of the move when both numbers are there
   (e.g. "$8.75 -> $9.25, +$0.50 per package").
 - A file with no earlier version: list its key terms (effective date, main prices, thresholds, who it applies to) as changes with before = null.
+- A newly announced price, fee, surcharge or threshold change is a key change even when its amount, scope or qualifying customers
+  are not yet published ("details to follow", "December 21, 2026 or later"). List it as its own change with before = null and the
+  amount "not yet stated", set its "effective" (and "act") to the earliest date the text gives, never null when a date is given,
+  and put what is still missing in "unknowns". Give it lvl 3 when it adds or raises a charge on a main service (Ground, Air,
+  international) for many shippers, so it reaches the rate clock and the top of the news instead of being dropped as vague.
 - "relisting": the "new" file is the same document as before, an older year re-linked, or only its link moved.
 - "cosmetic": formatting, navigation, page dates, reordering, typo fixes. Routine weekly fuel percentage updates are cosmetic
   unless the fuel TABLE itself changed.
