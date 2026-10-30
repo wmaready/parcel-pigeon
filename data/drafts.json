@@ -1,5 +1,1199 @@
 [
  {
+  "status": "same as published",
+  "story": {
+   "id": "w6f3354b4a5df",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide",
+   "sum": "UPS posted a 2027 Small Business Rates guide that replaces the 2026 guide effective January 26, 2026. Next Day Air Early rates are higher in every zone and weight shown, for example the zone 102 letter rate goes from $46.75 to $47.50 and the 35 lb zone 124 rate from $278.68 to $289.87. No effective date for the 2027 rates appears in the Next Day Air Early pages. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Small Business Rates accounts shipping Next Day Air Early will pay roughly 1.6% to 4% more per package on the rows compared. Increases are larger in dollars at higher weights and in the far zones.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "Next Day Air Early letter rate, zone 102",
+     "before": "$46.75",
+     "after": "$47.50",
+     "effective": null,
+     "who": "Small Business Rates accounts shipping Next Day Air Early letters in zone 102",
+     "impact": "+$0.75 per letter (about +1.6%)"
+    },
+    {
+     "what": "Next Day Air Early letter rate, zone 124",
+     "before": "$92.39",
+     "after": "$95.20",
+     "effective": null,
+     "who": "Small Business Rates accounts shipping Next Day Air Early letters in zone 124",
+     "impact": "+$2.81 per letter (about +3.0%)"
+    },
+    {
+     "what": "Next Day Air Early 1 lb rate, zone 102",
+     "before": "$49.86",
+     "after": "$50.75",
+     "effective": null,
+     "who": "Small Business Rates accounts shipping 1 lb Next Day Air Early packages in zone 102",
+     "impact": "+$0.89 per package (about +1.8%)"
+    },
+    {
+     "what": "Next Day Air Early 35 lb rate, zone 102 and zone 124",
+     "before": "$89.95 (zone 102); $278.68 (zone 124)",
+     "after": "$92.65 (zone 102); $289.87 (zone 124)",
+     "effective": null,
+     "who": "Small Business Rates accounts shipping 35 lb Next Day Air Early packages",
+     "impact": "+$2.70 in zone 102 (about +3.0%); +$11.19 in zone 124 (about +4.0%)"
+    },
+    {
+     "what": "Next Day Air Early 36 lb rate, zones 102 through 124",
+     "before": "$91.15 (zone 102); $190.16 (zone 105); $283.64 (zone 124)",
+     "after": "$93.90 (zone 102); $197.37 (zone 105); $295.05 (zone 124)",
+     "effective": null,
+     "who": "Small Business Rates accounts shipping 36 lb Next Day Air Early packages",
+     "impact": "+$2.75 in zone 102; +$7.21 in zone 105; +$11.41 in zone 124"
+    },
+    {
+     "what": "Rate guide edition",
+     "before": "2026 UPS Rate Guide, Small Business Rates, updated January 26, 2026",
+     "after": "2027 UPS Rates, Small Business Rates, 2027 Rates",
+     "effective": null,
+     "who": "All UPS accounts with Small Business Rates agreements",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "Effective date of the 2027 rates is not shown in the Next Day Air Early pages.",
+    "Whether the $30.00 Next Day Air Early surcharge note from the 2026 guide still applies is not shown in the new pages.",
+    "Rates for Next Day Air, Ground, 2nd Day Air, international services, fees and surcharges could not be compared; only Next Day Air Early pages were available."
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Small Business Rates page (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c7c5f2c8-58fd-4d2b-91a0-19cfedfeefe8/original/as/preview-ups-small-business-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Small Business Rates page",
+     "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+    },
+    {
+     "src": "UPS: preview-ups-small-business-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c7c5f2c8-58fd-4d2b-91a0-19cfedfeefe8/original/as/preview-ups-small-business-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (preview-ups-small-business-package-rates.pdf), new document (preview-ups-small-business-cwt-package-rates.pdf), cosmetic",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c7c5f2c8-58fd-4d2b-91a0-19cfedfeefe8/original/as/preview-ups-small-business-package-rates.pdf",
+      "old": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+     }
+    ]
+   }
+  },
+  "twin": "wbfc38914b368"
+ },
+ {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/163",
+  "story": {
+   "id": "w91588ddb11ed",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii",
+   "sum": "UPS posted a 2027 Small Business rate file for UPS Hundredweight Service covering Tiers 1-7, Alaska and Hawaii. It lists per-pound rates for the air services (Next Day Air, Next Day Air Saver, 2nd Day Air A.M., 2nd Day Air) and per-hundredweight-unit rates for 3 Day Select and Ground. UPS Ground Tier 1 zone 2 at 200-499 lbs is $44.85 and Tier 7 is $65.28. No effective date appears in the file. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Small businesses shipping heavy freight-style loads of 100+ lbs (air) or 200+ lbs (Ground, 3 Day Select) under the Hundredweight tiers will use these rates. Prices rise with tier, so Tier 7 Ground zone 2 at 200-499 lbs costs $20.43 per hundredweight unit more than Tier 1.",
+   "imp": "info",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "New 2027 Small Business UPS Hundredweight Service rate file posted",
+     "before": null,
+     "after": "Covers Tiers 1-7, Alaska and Hawaii, domestic, with guaranteed air options plus 3 Day Select and Ground",
+     "effective": null,
+     "who": "Small business shippers on UPS Hundredweight Service",
+     "impact": null
+    },
+    {
+     "what": "Ground Hundredweight rates, Tier 1, 200-499 lbs, zones 2-8 and 44-46 (per hundredweight unit)",
+     "before": null,
+     "after": "Zone 2 $44.85, zone 8 $120.93, zone 44 $353.16, zone 45 $399.11, zone 46 $380.81",
+     "effective": null,
+     "who": "Tier 1 Ground shipments of 200-499 lbs",
+     "impact": null
+    },
+    {
+     "what": "Ground Hundredweight rates, Tier 7, 200-499 lbs, zones 2-8 and 44-46 (per hundredweight unit)",
+     "before": null,
+     "after": "Zone 2 $65.28, zone 8 $169.13, zone 44 $484.31, zone 45 $548.00, zone 46 $522.25",
+     "effective": null,
+     "who": "Tier 7 Ground shipments of 200-499 lbs",
+     "impact": "Zone 2 is $20.43 per unit above Tier 1 ($44.85 vs $65.28)"
+    },
+    {
+     "what": "Next Day Air Hundredweight rate per pound, Tier 1, 100 lbs or more",
+     "before": null,
+     "after": "Zone 102 $2.31 up to zone 108 $7.50; zones 124-126 $7.82, $6.76, $8.42",
+     "effective": null,
+     "who": "Tier 1 Next Day Air shipments of 100+ lbs",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Hundredweight rate per pound, Tier 7, 100 lbs or more",
+     "before": null,
+     "after": "Zone 102 $2.59 up to zone 108 $10.29; zones 124-126 $11.51, $8.67, $11.76",
+     "effective": null,
+     "who": "Tier 7 Next Day Air shipments of 100+ lbs",
+     "impact": "Zone 102 is $0.28 per pound above Tier 1 ($2.31 vs $2.59)"
+    },
+    {
+     "what": "Ground minimum charge, Tier 1 (Tiers 2-5 show the same figures)",
+     "before": null,
+     "after": "$71.26 for zones 2-8; $346.89 for zones 44 and 45; $421.90 for zone 46",
+     "effective": null,
+     "who": "Small Ground Hundredweight shipments billed at the minimum",
+     "impact": null
+    },
+    {
+     "what": "Ground minimum charge, Tier 7",
+     "before": null,
+     "after": "$98.45 for zones 2-8; $539.09 for zones 44 and 45; $571.91 for zone 46",
+     "effective": null,
+     "who": "Tier 7 Ground Hundredweight shipments billed at the minimum",
+     "impact": "Zones 2-8 are $27.19 above the Tier 1 minimum ($71.26 vs $98.45)"
+    },
+    {
+     "what": "3 Day Select minimum charge, Tier 7",
+     "before": null,
+     "after": "$103.13 for zones 302-308 (Tiers 1-5 are $75.01, Tier 6 is $76.88)",
+     "effective": null,
+     "who": "Tier 7 3 Day Select Hundredweight shipments billed at the minimum",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rates is not stated",
+    "Criteria for assignment to Tiers 1-7 are not given",
+    "The Alaska and Hawaii tables are cut off, so their full rates cannot be confirmed",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Small Business Rates page (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Small Business Rates page",
+     "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+    },
+    {
+     "src": "UPS: preview-ups-small-business-cwt-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (preview-ups-small-business-package-rates.pdf), new document (preview-ups-small-business-cwt-package-rates.pdf), cosmetic",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf",
+      "old": null
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w598474791ea7",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 preview rate tables and flags higher value-added service fees",
+   "sum": "UPS replaced its note that detailed rate previews would come later with links to 2027 preview rates: Daily Package, Alaska/Hawaii Daily Package and Hundredweight. It also now says rates for certain Value-Added services and Other Charges will increase, with a preview document. The average net 5.9% increase for Ground, Air and International Daily Rates is unchanged. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers with UPS Ground, Air, International, Alaska/Hawaii or Hundredweight services can now check the 2027 rate previews against their own volumes. Customers who use value-added services or pay other charges should expect higher fees. The size of those increases is only in the linked previews.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "2027 UPS Daily Package Rates preview posted",
+     "before": "More detailed rate previews to be available at a later date",
+     "after": "Preview 2027 UPS Daily Package Rates now linked",
+     "effective": null,
+     "who": "Shippers using UPS Ground, UPS Air and International services",
+     "impact": null
+    },
+    {
+     "what": "2027 preview rates posted for Alaska and Hawaii",
+     "before": null,
+     "after": "Preview 2027 UPS Alaska and Hawaii Daily Package Rates now linked",
+     "effective": null,
+     "who": "Shippers sending to or from Alaska and Hawaii",
+     "impact": null
+    },
+    {
+     "what": "2027 preview rates posted for Hundredweight services",
+     "before": null,
+     "after": "Preview 2027 UPS Hundredweight Service Package Rates now linked",
+     "effective": null,
+     "who": "Shippers using UPS Hundredweight services",
+     "impact": null
+    },
+    {
+     "what": "Rates for certain Value-Added services and Other Charges will increase",
+     "before": null,
+     "after": "UPS says rates for certain Value-Added services and Other Charges will increase, with a preview document linked",
+     "effective": null,
+     "who": "Shippers that use value-added services or incur other package charges",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rate changes is not stated on the page",
+    "Which value-added services and other charges rise, and by how much, is only in the linked preview documents",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://ups.com/rateupdates",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "w9c03b8f99b5f"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w30a8a414530d",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Daily Rates for Next Day Air Early and Next Day Air",
+   "sum": "UPS posted a new 2027 Daily Rates file with domestic Next Day Air Early and Next Day Air prices by weight (Letter to 150 lbs for Early) and zone. For example, a 1 lb Next Day Air Early package in zone 102 is $77.99, and a 1 lb Next Day Air package in zone 102 is $47.99. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers using UPS Next Day Air or Next Day Air Early will price packages from this table once it takes effect. Next Day Air Early runs $30.00 above Next Day Air at the same weight in zone 102 for the Letter and 1 lb rows. The size of the change from current rates cannot be measured.",
+   "imp": "info",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "Next Day Air Early Letter rate, zones 102-108 and 124",
+     "before": null,
+     "after": "Letter: $69.73 (zone 102), $77.84 (103), $90.20 (104), $94.39 (105), $95.81 (106), $103.02 (107), $106.12 (108), $117.32 (124)",
+     "effective": null,
+     "who": "Domestic Next Day Air Early letter shipments",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 1 lb rate, zones 102-108 and 124",
+     "before": null,
+     "after": "1 lb: $77.99 (zone 102) up to $163.60 (zone 124)",
+     "effective": null,
+     "who": "Domestic Next Day Air Early packages at 1 lb",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 150 lb rate, zones 102-108 and 124",
+     "before": null,
+     "after": "150 lbs: $506.34 (zone 102) up to $2,172.21 (zone 124)",
+     "effective": null,
+     "who": "Heaviest Domestic Next Day Air Early packages priced in the table",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Letter rate, zones 102-108, 124-126",
+     "before": null,
+     "after": "Letter: $39.73 (zone 102) up to $95.22 (zone 126); zone 125 is $63.49",
+     "effective": null,
+     "who": "Domestic Next Day Air letter shipments",
+     "impact": "$30.00 below the same Next Day Air Early zone 102 Letter rate ($69.73)"
+    },
+    {
+     "what": "Next Day Air 1 lb rate, zones 102-108, 124-126",
+     "before": null,
+     "after": "1 lb: $47.99 (zone 102) up to $133.70 (zone 126); zone 125 is $101.78",
+     "effective": null,
+     "who": "Domestic Next Day Air packages at 1 lb",
+     "impact": "$30.00 below the same Next Day Air Early zone 102 1 lb rate ($77.99)"
+    },
+    {
+     "what": "Zone coverage of the new rate tables",
+     "before": null,
+     "after": "Next Day Air Early lists zones 102-108 and 124; Next Day Air also lists zones 125 and 126",
+     "effective": null,
+     "who": "Shippers sending Next Day Air or Next Day Air Early to these zones",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "No effective date for the 2027 rates appears in the text provided",
+    "The text provided stops at 49 lbs in the Next Day Air table, so higher Next Day Air weights and other services (e.g., Deferred, Ground) are not visible",
+    "A block of per-pound prices for dimensional weight over 150 lbs ($3.18, $4.49, $8.23, $9.68, $9.88, $11.98, $12.80, $14.28) appears, but which zones they apply to cannot be confirmed",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: preview-ups-daily-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+      "old": null
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wbfc38914b368"
+ },
+ {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/162",
+  "story": {
+   "id": "w6530210d0d45",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii",
+   "sum": "UPS posted a 2027 rate document for UPS Hundredweight Service covering Tiers 1-7 plus Alaska and Hawaii. It lists per-pound Next Day Air, Next Day Air Saver, 2nd Day Air A.M. and 2nd Day Air rates, per-hundredweight 3 Day Select and Ground rates, and minimum charges by tier. No effective date is stated beyond the \"2027 Rates\" heading. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers of heavy multi-package freight under UPS Hundredweight Service will use these tables. Ground rates and minimum charges rise steadily from Tier 1 to Tier 7; for example, the Tier 7 Ground minimum in zones 2-8 is $131.00 versus $91.00 in Tier 1.",
+   "imp": "info",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "New 2027 UPS Hundredweight Service rate document, Tiers 1-7, Alaska and Hawaii",
+     "before": null,
+     "after": "2027 domestic rates for UPS Hundredweight Service in seven tiers plus an Alaska table",
+     "effective": null,
+     "who": "Shippers on UPS Hundredweight Service",
+     "impact": null
+    },
+    {
+     "what": "Tier 1 Next Day Air rate per pound, 100 lbs. or more, zones 102-108, 124-126",
+     "before": null,
+     "after": "$2.95 (zone 102) up to $10.66 (zone 126) per pound",
+     "effective": null,
+     "who": "Tier 1 shippers using Next Day Air Hundredweight",
+     "impact": null
+    },
+    {
+     "what": "Tier 1 Ground rate per hundredweight unit, 200 to 499 lbs.",
+     "before": null,
+     "after": "$57.06 (zone 2) to $153.80 (zone 8); $458.06, $524.86 and $493.94 for zones 44, 45 and 46",
+     "effective": null,
+     "who": "Tier 1 shippers using Ground Hundredweight",
+     "impact": null
+    },
+    {
+     "what": "Tier 1 3 Day Select rate per hundredweight unit, 200 to 499 lbs.",
+     "before": null,
+     "after": "$74.90 (zone 302) to $339.10 (zone 308)",
+     "effective": null,
+     "who": "Tier 1 shippers using 3 Day Select Hundredweight",
+     "impact": null
+    },
+    {
+     "what": "Tier 7 Ground rate per hundredweight unit, 200 to 499 lbs.",
+     "before": null,
+     "after": "$83.04 (zone 2) to $215.12 (zone 8); $619.34, $700.71 and $661.56 for zones 44, 45 and 46",
+     "effective": null,
+     "who": "Tier 7 shippers using Ground Hundredweight",
+     "impact": "Zone 2 is $25.98 above Tier 1 ($83.04 vs $57.06)"
+    },
+    {
+     "what": "Ground minimum charge, Tiers 1-5",
+     "before": null,
+     "after": "$91.00 in zones 2-8; $445.00 in zones 44 and 45; $540.00 in zone 46 (3 Day Select minimum $96.00)",
+     "effective": null,
+     "who": "Tier 1-5 Ground and 3 Day Select hundredweight shipments",
+     "impact": null
+    },
+    {
+     "what": "Ground minimum charge, Tier 6",
+     "before": null,
+     "after": "$96.00 in zones 2-8; $610.00 in zones 44 and 45; $645.00 in zone 46 (3 Day Select minimum $101.00)",
+     "effective": null,
+     "who": "Tier 6 Ground and 3 Day Select hundredweight shipments",
+     "impact": null
+    },
+    {
+     "what": "Ground minimum charge, Tier 7",
+     "before": null,
+     "after": "$131.00 in zones 2-8; $720.00 in zones 44 and 45; $755.00 in zone 46 (3 Day Select minimum $138.00)",
+     "effective": null,
+     "who": "Tier 7 Ground and 3 Day Select hundredweight shipments",
+     "impact": null
+    },
+    {
+     "what": "Alaska Ground Hundredweight rates published by tier",
+     "before": null,
+     "after": "Alaska Tier 1 Ground rates begin at $96.08 in zone 2 and run to $435.95 in zone 10",
+     "effective": null,
+     "who": "Shippers on UPS Hundredweight Service to or from Alaska",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Exact effective date is not stated beyond the 2027 rate year",
+    "Alaska and Hawaii tables are incomplete, and rates for Alaska Tiers 4-7 and Hawaii could not be read",
+    "Whether the Alaska table's other columns (48 contiguous states, Hawaii, Puerto Rico) map to specific zones could not be confirmed",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: preview-ups-hundredweight-service-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+      "old": null
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/161",
+  "story": {
+   "id": "w1d3722b512bc",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts revised 2027 value-added service and accessorial rates, effective Dec 21, 2026",
+   "sum": "UPS posted a rate notice with new domestic and international value-added service and other charges effective December 21, 2026, compared with the rates in force through December 20, 2026. Nearly every accessorial rises, for example Additional Handling (weight, zone 2) goes from $46.50 to $50.50 and the Ground residential surcharge from $6.50 to $7.10. UPS My Choice for Business Reschedule Delivery moves from $0.00 to $9.99.",
+   "plain": "Any shipper paying UPS accessorial charges is affected. Typical increases are $0.40 to $1.50 on per-package surcharges and several dollars on handling, large package and dangerous goods fees. Large Package Surcharges rise by about $20 to $44.",
+   "imp": "up",
+   "lvl": 3,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "Additional Handling - weight, zones 2 and 7+",
+     "before": null,
+     "after": "Zone 2 $50.50; zone 7+ $63.75",
+     "effective": "2026-12-21",
+     "who": "Packages over the weight threshold for Additional Handling",
+     "impact": "Zone 2: $46.50 -> $50.50, +$4.00 per package; zone 7+: $58.75 -> $63.75, +$5.00 per package"
+    },
+    {
+     "what": "Additional Handling - dimensions (length, width, length+girth, cube), zones 2 and 7+",
+     "before": null,
+     "after": "Zone 2 $32.75; zone 7+ $44.00",
+     "effective": "2026-12-21",
+     "who": "Packages over the dimensional thresholds for Additional Handling",
+     "impact": "Zone 2: $30.00 -> $32.75, +$2.75 per package; zone 7+: $40.50 -> $44.00, +$3.50 per package"
+    },
+    {
+     "what": "Additional Handling - packaging, zones 2 and 7+",
+     "before": null,
+     "after": "Zone 2 $29.25; zone 7+ $36.75",
+     "effective": "2026-12-21",
+     "who": "Packages with non-standard packaging",
+     "impact": "Zone 2: $26.75 -> $29.25, +$2.50 per package; zone 7+: $33.75 -> $36.75, +$3.00 per package"
+    },
+    {
+     "what": "Domestic Residential Surcharge, Ground and Air",
+     "before": null,
+     "after": "Ground $7.10; Air $7.60",
+     "effective": "2026-12-21",
+     "who": "Residential deliveries",
+     "impact": "Ground: $6.50 -> $7.10, +$0.60; Air: $7.00 -> $7.60, +$0.60 per package"
+    },
+    {
+     "what": "Domestic Delivery Area Surcharge, Ground Residential and Extended Residential",
+     "before": null,
+     "after": "Ground Residential $7.15; Extended Residential $9.65",
+     "effective": "2026-12-21",
+     "who": "Ground shipments to residential addresses in delivery areas",
+     "impact": "Residential: $6.55 -> $7.15, +$0.60; Extended Residential: $8.85 -> $9.65, +$0.80 per package. Ground Commercial: $4.50 -> $4.90, +$0.40"
+    },
+    {
+     "what": "Delivery Area Surcharge CWT (per shipment), Ground Residential",
+     "before": null,
+     "after": "$35.50 per shipment",
+     "effective": "2026-12-21",
+     "who": "Hundredweight shipments to residential delivery areas",
+     "impact": "$32.50 -> $35.50, +$3.00 per shipment"
+    },
+    {
+     "what": "Large Package Surcharge, Commercial, zones 2 and 7+",
+     "before": null,
+     "after": "Zone 2 $250.00; zone 7+ $330.00",
+     "effective": "2026-12-21",
+     "who": "Commercial large packages",
+     "impact": "Zone 2: $219.50 -> $250.00, +$30.50; zone 7+: $286.00 -> $330.00, +$44.00 per package"
+    },
+    {
+     "what": "Large Package Surcharge, Residential, zones 2 and 7+",
+     "before": null,
+     "after": "Zone 2 $276.25; zone 7+ $359.25",
+     "effective": "2026-12-21",
+     "who": "Residential large packages",
+     "impact": "Zone 2: $254.50 -> $276.25, +$21.75; zone 7+: $331.00 -> $359.25, +$28.25 per package"
+    },
+    {
+     "what": "Remote Area Surcharge, Alaska, Hawaii and US 48",
+     "before": null,
+     "after": "Alaska $49.75; Hawaii $18.00; US 48 $18.00",
+     "effective": "2026-12-21",
+     "who": "Shipments to remote areas",
+     "impact": "Alaska: $46.25 -> $49.75, +$3.50; Hawaii and US 48: $16.50 -> $18.00, +$1.50 per package"
+    },
+    {
+     "what": "Address Correction fee, Air and Ground, and per-shipment maximum",
+     "before": null,
+     "after": "$27.50 per correction; maximum $190.25 per shipment",
+     "effective": "2026-12-21",
+     "who": "Shipments with incorrect delivery addresses",
+     "impact": "$25.25 -> $27.50, +$2.25 per correction; maximum $175.25 -> $190.25, +$15.00"
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "The two Declared Value for Carriage rows ($1.70 per $100 with $5.10 minimum to $1.84 per $100 with $5.52 minimum, and $1.70 per $100 with $5.10 minimum to $1.99 per $100 with $5.97 minimum) have unclear row labels, so which service each applies to is unconfirmed",
+    "Only a sample of the changed fees is itemized here; other zone and weight rows also change",
+    "Details are said to be in the 2027 UPS Rate and Service Guide, available December 21, 2026, which has not been reviewed",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-12-21",
+     "w": "UPS: Additional Handling - weight, zones 2 and 7+",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "Additional Handling - dimensions (length, width, length+girth, cube), zones 2 and 7+",
+       "Zone 2: $30.00 -> $32.75, +$2.75 per package; zone 7+: $40.50 -> $44.00, +$3.50 per package"
+      ],
+      [
+       "UPS",
+       "Additional Handling - packaging, zones 2 and 7+",
+       "Zone 2: $26.75 -> $29.25, +$2.50 per package; zone 7+: $33.75 -> $36.75, +$3.00 per package"
+      ],
+      [
+       "UPS",
+       "Domestic Residential Surcharge, Ground and Air",
+       "Ground: $6.50 -> $7.10, +$0.60; Air: $7.00 -> $7.60, +$0.60 per package"
+      ],
+      [
+       "UPS",
+       "Domestic Delivery Area Surcharge, Ground Residential and Extended Residential",
+       "Residential: $6.55 -> $7.15, +$0.60; Extended Residential: $8.85 -> $9.65, +$0.80 per package. Ground Commercial: $4.50 -> $4.90, +$0.40"
+      ],
+      [
+       "UPS",
+       "Delivery Area Surcharge CWT (per shipment), Ground Residential",
+       "$32.50 -> $35.50, +$3.00 per shipment"
+      ],
+      [
+       "UPS",
+       "Large Package Surcharge, Commercial, zones 2 and 7+",
+       "Zone 2: $219.50 -> $250.00, +$30.50; zone 7+: $286.00 -> $330.00, +$44.00 per package"
+      ],
+      [
+       "UPS",
+       "Large Package Surcharge, Residential, zones 2 and 7+",
+       "Zone 2: $254.50 -> $276.25, +$21.75; zone 7+: $331.00 -> $359.25, +$28.25 per package"
+      ],
+      [
+       "UPS",
+       "Remote Area Surcharge, Alaska, Hawaii and US 48",
+       "Alaska: $46.25 -> $49.75, +$3.50; Hawaii and US 48: $16.50 -> $18.00, +$1.50 per package"
+      ],
+      [
+       "UPS",
+       "Address Correction fee, Air and Ground, and per-shipment maximum",
+       "$25.25 -> $27.50, +$2.25 per correction; maximum $175.25 -> $190.25, +$15.00"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: preview-changes-package-value-added-services-other-charges.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+      "old": null
+     }
+    ]
+   }
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w9c03b8f99b5f",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
+   "sum": "UPS replaced its note that detailed rate previews would come \"at a later date\" with links to 2027 preview rate tables. The tables cover Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates. UPS also states that rates for certain Value-Added services and Other Charges will increase, and links a preview of those changes. The previously announced average net 5.9% Daily Rate increase and the Additional Handling minimum billable weight change from 40 lbs. to 50 lbs. are unchanged. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers using UPS Ground, Air or international services can now check the 2027 rates for their own lanes and services. Those with accessorial charges (value-added services and other charges) face increases UPS has not quantified on this page.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "2027 preview rate tables posted (Daily, Alaska/Hawaii, Hundredweight)",
+     "before": "Detailed rate previews were to be available at a later date",
+     "after": "Preview links are now listed for 2027 UPS Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates",
+     "effective": null,
+     "who": "Shippers using UPS Ground, UPS Air and international services, including Alaska, Hawaii and Hundredweight shippers",
+     "impact": "Lane-level 2027 pricing is now available; the stated average net increase remains 5.9%"
+    },
+    {
+     "what": "Rates for certain Value-Added services and Other Charges will increase, with a preview document linked",
+     "before": null,
+     "after": "UPS states rates for certain Value-Added services and Other Charges will increase and links a preview of the changes",
+     "effective": null,
+     "who": "Shippers that pay value-added service fees or other charges on UPS packages",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Which value-added services and other charges rise, and by how much, is not stated on the page itself",
+    "Effective date of the 2027 rates and charges is not stated in the page text",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": []
+   }
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "wbfc38914b368",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early",
+   "sum": "UPS posted a 2027 Daily Rates file with domestic price tables for UPS Next Day Air Early (zones 102-108 and 124) and UPS Next Day Air (zones 102-108 and 124-126). In zone 102 a Next Day Air Early letter is $69.73 against $39.73 for Next Day Air, and a 1 lb package is $77.99 against $47.99. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers using UPS domestic next-day air services get the 2027 daily prices to plan against. Next Day Air Early costs $30 more than Next Day Air for a letter and for a 1 lb package in zones 102, 103 and 124. Whether this is an increase over current rates cannot be determined.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "New 2027 Daily Rates file covering domestic Next Day Air Early and Next Day Air",
+     "before": null,
+     "after": "Rate tables by weight (letter and 1 lb to 150 lbs) and zone. Next Day Air Early covers zones 102-108 and 124. Next Day Air covers zones 102-108 and 124-126.",
+     "effective": null,
+     "who": "Shippers of UPS domestic next-day air packages",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early letter rate by zone",
+     "before": null,
+     "after": "$69.73 in zone 102, rising to $106.12 in zone 108 and $117.32 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early letter shipments",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 1 lb rate by zone",
+     "before": null,
+     "after": "$77.99 in zone 102, $152.80 in zone 108, $163.60 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early 1 lb packages",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 150 lb rate by zone",
+     "before": null,
+     "after": "$506.34 in zone 102, $1,949.62 in zone 108, $2,172.21 in zone 124",
+     "effective": null,
+     "who": "Heavy Next Day Air Early packages",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air letter rate by zone",
+     "before": null,
+     "after": "$39.73 in zone 102, $76.12 in zone 108, $87.32 in zone 124, $63.49 in zone 125, $95.22 in zone 126",
+     "effective": null,
+     "who": "Next Day Air letter shipments",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air 1 lb rate by zone",
+     "before": null,
+     "after": "$47.99 in zone 102, $122.80 in zone 108, $133.60 in zone 124, $101.78 in zone 125, $133.70 in zone 126",
+     "effective": null,
+     "who": "Next Day Air 1 lb packages",
+     "impact": null
+    },
+    {
+     "what": "Per-pound pricing for dimensional weight over 150 lbs",
+     "before": null,
+     "after": "A per-pound price schedule applies to dimensional weight above 150 lbs. Listed figures include $3.18, $4.49, $8.23, $9.68, $9.88, $11.98, $12.80 and $14.28.",
+     "effective": null,
+     "who": "Oversize or lightweight-bulky packages with dimensional weight above 150 lbs",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rates is not stated",
+    "Next Day Air tables are cut off after 49 lbs, so higher weights are not confirmed",
+    "Which zone or service each dimensional-weight per-pound figure applies to is unclear",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-ups-daily-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+      "old": null
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/160",
+  "story": {
+   "id": "w500a5bdc762c",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii",
+   "sum": "UPS posted a 2027 rate document for UPS Hundredweight Service covering Tiers 1-7, Alaska and Hawaii. It lists per-pound Next Day Air and 2nd Day Air rates for shipments of 100 lbs or more, per-hundredweight 3 Day Select and Ground rates by weight bracket, and minimum charges for each tier. No effective date is stated. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+   "plain": "Shippers moving heavy multi-package freight under Hundredweight pricing will use these rates in 2027. Rates rise with each tier; for example, Ground zone 2 at 200-499 lbs runs $57.06 in Tier 1 and $83.04 in Tier 7 (+$25.98 per hundredweight unit).",
+   "imp": "info",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-10-30",
+   "inferred": true,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "New 2027 UPS Hundredweight Service rate document covering Tiers 1-7, Alaska and Hawaii",
+     "before": null,
+     "after": "2027 rates for domestic Hundredweight Service across Tiers 1-7, plus Alaska and Hawaii",
+     "effective": null,
+     "who": "Shippers on UPS Hundredweight Service pricing",
+     "impact": null
+    },
+    {
+     "what": "Tier 1 UPS Next Day Air rate per pound, 100 lbs or more (zones 102-108, 124-126)",
+     "before": null,
+     "after": "$2.95 in zone 102 up to $9.53 in zone 108; $9.89, $8.43 and $10.66 in zones 124-126",
+     "effective": null,
+     "who": "Tier 1 shippers sending Next Day Air shipments of 100 lbs or more",
+     "impact": null
+    },
+    {
+     "what": "Tier 7 UPS Next Day Air rate per pound, 100 lbs or more (zones 102-108, 124-126)",
+     "before": null,
+     "after": "$3.29 in zone 102 up to $13.20 in zone 108; $14.70, $10.97 and $15.01 in zones 124-126",
+     "effective": null,
+     "who": "Tier 7 shippers sending Next Day Air shipments of 100 lbs or more",
+     "impact": "Zone 102 is $0.34 per pound above Tier 1 ($2.95 -> $3.29)"
+    },
+    {
+     "what": "Tier 1 UPS Ground rate per hundredweight unit, 200 to 499 lbs (zones 2-8, 44-46)",
+     "before": null,
+     "after": "$57.06 in zone 2 up to $153.80 in zone 8; $458.06, $524.86 and $493.94 in zones 44-46",
+     "effective": null,
+     "who": "Tier 1 Ground Hundredweight shipments of 200-499 lbs",
+     "impact": null
+    },
+    {
+     "what": "Tier 7 UPS Ground rate per hundredweight unit, 200 to 499 lbs (zones 2-8, 44-46)",
+     "before": null,
+     "after": "$83.04 in zone 2 up to $215.12 in zone 8; $619.34, $700.71 and $661.56 in zones 44-46",
+     "effective": null,
+     "who": "Tier 7 Ground Hundredweight shipments of 200-499 lbs",
+     "impact": "Zone 2 is $25.98 above Tier 1 ($57.06 -> $83.04)"
+    },
+    {
+     "what": "UPS Ground minimum charge, Tiers 1-5",
+     "before": null,
+     "after": "$91.00 per shipment in zones 2-8; $445.00 in zones 44 and 45; $540.00 in zone 46",
+     "effective": null,
+     "who": "Tier 1-5 Ground Hundredweight shippers with light shipments",
+     "impact": null
+    },
+    {
+     "what": "UPS Ground minimum charge, Tier 7",
+     "before": null,
+     "after": "$131.00 per shipment in zones 2-8; $720.00 in zones 44 and 45; $755.00 in zone 46",
+     "effective": null,
+     "who": "Tier 7 Ground Hundredweight shippers with light shipments",
+     "impact": "Zones 2-8 are $40.00 above the Tier 1-5 minimum ($91.00 -> $131.00)"
+    },
+    {
+     "what": "UPS 3 Day Select minimum charge, Tiers 1-5 and Tier 7",
+     "before": null,
+     "after": "$96.00 per shipment in Tiers 1-5; $101.00 in Tier 6; $138.00 in Tier 7 (zones 302-308)",
+     "effective": null,
+     "who": "3 Day Select Hundredweight shippers with light shipments",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rates is not stated",
+    "Alaska and Hawaii Ground tables are cut off after Tier 4, so later tiers and Hawaii rates could not be confirmed",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-ups-hundredweight-service-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+      "old": null
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/159",
+  "story": {
+   "id": "w68c1687d28a1",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026",
+   "sum": "UPS posted a rate sheet for value-added services and other charges. It lists the rates effective through 12/20/2026 beside new rates effective 12/21/2026. Most domestic and international accessorial charges rise, a few stay flat, and UPS My Choice for Business rescheduled delivery goes from $0.00 to $9.99.",
+   "plain": "Any shipper paying accessorial charges on UPS domestic or international parcels is affected, especially those with oversize, residential, remote-area or signature shipments. Most listed charges rise roughly 8-10%, and some Large Package Surcharges rise more (up to about 15%).",
+   "imp": "up",
+   "lvl": 3,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-10-30",
+   "changes": [
+    {
+     "what": "Additional Handling - Weight, zone 2",
+     "before": null,
+     "after": "$50.50 (zone 7+: $63.75)",
+     "effective": "2026-12-21",
+     "who": "Domestic packages charged Additional Handling for weight",
+     "impact": "Zone 2: $46.50 -> $50.50 (+$4.00); zone 7+: $58.75 -> $63.75 (+$5.00)"
+    },
+    {
+     "what": "Additional Handling - Dimensions, zone 2",
+     "before": null,
+     "after": "$32.75 (zone 7+: $44.00)",
+     "effective": "2026-12-21",
+     "who": "Domestic packages charged Additional Handling for dimensions",
+     "impact": "Zone 2: $30.00 -> $32.75 (+$2.75); zone 7+: $40.50 -> $44.00 (+$3.50)"
+    },
+    {
+     "what": "Additional Handling - Packaging, zone 2",
+     "before": null,
+     "after": "$29.25 (zone 7+: $36.75)",
+     "effective": "2026-12-21",
+     "who": "Domestic packages charged Additional Handling for packaging",
+     "impact": "Zone 2: $26.75 -> $29.25 (+$2.50); zone 7+: $33.75 -> $36.75 (+$3.00)"
+    },
+    {
+     "what": "Large Package Surcharge - Commercial, zone 2",
+     "before": null,
+     "after": "$250.00 (zone 7+: $330.00)",
+     "effective": "2026-12-21",
+     "who": "Domestic commercial Large Packages",
+     "impact": "Zone 2: $219.50 -> $250.00 (+$30.50); zone 7+: $286.00 -> $330.00 (+$44.00)"
+    },
+    {
+     "what": "Large Package Surcharge - Residential, zone 2",
+     "before": null,
+     "after": "$276.25 (zone 7+: $359.25)",
+     "effective": "2026-12-21",
+     "who": "Domestic residential Large Packages",
+     "impact": "Zone 2: $254.50 -> $276.25 (+$21.75); zone 7+: $331.00 -> $359.25 (+$28.25)"
+    },
+    {
+     "what": "Residential Surcharge - Ground",
+     "before": null,
+     "after": "$7.10 (Air: $7.60)",
+     "effective": "2026-12-21",
+     "who": "Domestic residential deliveries",
+     "impact": "Ground: $6.50 -> $7.10 (+$0.60); Air: $7.00 -> $7.60 (+$0.60)"
+    },
+    {
+     "what": "Delivery Area Surcharge - Ground Residential",
+     "before": null,
+     "after": "$7.15 (Extended: $9.65)",
+     "effective": "2026-12-21",
+     "who": "Domestic ground and air deliveries to surcharged areas",
+     "impact": "Ground Residential: $6.55 -> $7.15 (+$0.60); Extended: $8.85 -> $9.65 (+$0.80); Commercial: $4.50 -> $4.90 (+$0.40)"
+    },
+    {
+     "what": "Remote Area Surcharge - US 48",
+     "before": null,
+     "after": "$18.00 (Hawaii $18.00; Alaska $49.75)",
+     "effective": "2026-12-21",
+     "who": "Domestic shipments to remote areas",
+     "impact": "US 48 and Hawaii: $16.50 -> $18.00 (+$1.50); Alaska: $46.25 -> $49.75 (+$3.50)"
+    },
+    {
+     "what": "Delivery Confirmation - Signature Required",
+     "before": null,
+     "after": "$8.40 (Adult Signature Required: $10.25)",
+     "effective": "2026-12-21",
+     "who": "Domestic shipments with signature options",
+     "impact": "Signature Required: $7.70 -> $8.40 (+$0.70); Adult Signature: $9.35 -> $10.25 (+$0.90)"
+    },
+    {
+     "what": "Address Correction (Air and Ground)",
+     "before": null,
+     "after": "$27.50 per correction; maximum per shipment $190.25",
+     "effective": "2026-12-21",
+     "who": "Domestic shipments with corrected addresses",
+     "impact": "$25.25 -> $27.50 (+$2.25); maximum per shipment $175.25 -> $190.25 (+$15.00)"
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Several lines carry no label (e.g., per-$100 declared value rates of $1.84/$1.99 and the second Delivery Area Surcharge import rate of $6.00), so the service each applies to could not be confirmed",
+    "Details are said to be in the 2027 UPS Rate and Service Guide, which is not part of this file",
+    "Delivery Intercept, international Extended/Remote Area Surcharges, Paper Commercial Invoice and International Processing Fee show no change",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-12-21",
+     "w": "UPS: Additional Handling - Weight, zone 2",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "Additional Handling - Dimensions, zone 2",
+       "Zone 2: $30.00 -> $32.75 (+$2.75); zone 7+: $40.50 -> $44.00 (+$3.50)"
+      ],
+      [
+       "UPS",
+       "Additional Handling - Packaging, zone 2",
+       "Zone 2: $26.75 -> $29.25 (+$2.50); zone 7+: $33.75 -> $36.75 (+$3.00)"
+      ],
+      [
+       "UPS",
+       "Large Package Surcharge - Commercial, zone 2",
+       "Zone 2: $219.50 -> $250.00 (+$30.50); zone 7+: $286.00 -> $330.00 (+$44.00)"
+      ],
+      [
+       "UPS",
+       "Large Package Surcharge - Residential, zone 2",
+       "Zone 2: $254.50 -> $276.25 (+$21.75); zone 7+: $331.00 -> $359.25 (+$28.25)"
+      ],
+      [
+       "UPS",
+       "Residential Surcharge - Ground",
+       "Ground: $6.50 -> $7.10 (+$0.60); Air: $7.00 -> $7.60 (+$0.60)"
+      ],
+      [
+       "UPS",
+       "Delivery Area Surcharge - Ground Residential",
+       "Ground Residential: $6.55 -> $7.15 (+$0.60); Extended: $8.85 -> $9.65 (+$0.80); Commercial: $4.50 -> $4.90 (+$0.40)"
+      ],
+      [
+       "UPS",
+       "Remote Area Surcharge - US 48",
+       "US 48 and Hawaii: $16.50 -> $18.00 (+$1.50); Alaska: $46.25 -> $49.75 (+$3.50)"
+      ],
+      [
+       "UPS",
+       "Delivery Confirmation - Signature Required",
+       "Signature Required: $7.70 -> $8.40 (+$0.70); Adult Signature: $9.35 -> $10.25 (+$0.90)"
+      ],
+      [
+       "UPS",
+       "Address Correction (Air and Ground)",
+       "$25.25 -> $27.50 (+$2.25); maximum per shipment $175.25 -> $190.25 (+$15.00)"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-changes-package-value-added-services-other-charges.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+      "old": null
+     }
+    ]
+   }
+  }
+ },
+ {
   "status": "not material",
   "date": "2026-10-29",
   "page": "https://www.uniuni.com/news/",

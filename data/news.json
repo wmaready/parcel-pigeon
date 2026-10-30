@@ -1,5 +1,169 @@
 [
  {
+  "id": "w9c03b8f99b5f",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
+  "sum": "UPS replaced its note that detailed rate previews would come \"at a later date\" with links to 2027 preview rate tables. The tables cover Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates. UPS also states that rates for certain Value-Added services and Other Charges will increase, and links a preview of those changes. The previously announced average net 5.9% Daily Rate increase and the Additional Handling minimum billable weight change from 40 lbs. to 50 lbs. are unchanged. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+  "plain": "Shippers using UPS Ground, Air or international services can now check the 2027 rates for their own lanes and services. Those with accessorial charges (value-added services and other charges) face increases UPS has not quantified on this page.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-10-30",
+  "inferred": true,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "2027 preview rate tables posted (Daily, Alaska/Hawaii, Hundredweight)",
+    "before": "Detailed rate previews were to be available at a later date",
+    "after": "Preview links are now listed for 2027 UPS Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates",
+    "effective": null,
+    "who": "Shippers using UPS Ground, UPS Air and international services, including Alaska, Hawaii and Hundredweight shippers",
+    "impact": "Lane-level 2027 pricing is now available; the stated average net increase remains 5.9%"
+   },
+   {
+    "what": "Rates for certain Value-Added services and Other Charges will increase, with a preview document linked",
+    "before": null,
+    "after": "UPS states rates for certain Value-Added services and Other Charges will increase and links a preview of the changes",
+    "effective": null,
+    "who": "Shippers that pay value-added service fees or other charges on UPS packages",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Which value-added services and other charges rise, and by how much, is not stated on the page itself",
+   "Effective date of the 2027 rates and charges is not stated in the page text",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+   "dropped": 0,
+   "compared": []
+  }
+ },
+ {
+  "id": "wbfc38914b368",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early",
+  "sum": "UPS posted a 2027 Daily Rates file with domestic price tables for UPS Next Day Air Early (zones 102-108 and 124) and UPS Next Day Air (zones 102-108 and 124-126). In zone 102 a Next Day Air Early letter is $69.73 against $39.73 for Next Day Air, and a 1 lb package is $77.99 against $47.99. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then.",
+  "plain": "Shippers using UPS domestic next-day air services get the 2027 daily prices to plan against. Next Day Air Early costs $30 more than Next Day Air for a letter and for a 1 lb package in zones 102, 103 and 124. Whether this is an increase over current rates cannot be determined.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-10-30",
+  "inferred": true,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "New 2027 Daily Rates file covering domestic Next Day Air Early and Next Day Air",
+    "before": null,
+    "after": "Rate tables by weight (letter and 1 lb to 150 lbs) and zone. Next Day Air Early covers zones 102-108 and 124. Next Day Air covers zones 102-108 and 124-126.",
+    "effective": null,
+    "who": "Shippers of UPS domestic next-day air packages",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air Early letter rate by zone",
+    "before": null,
+    "after": "$69.73 in zone 102, rising to $106.12 in zone 108 and $117.32 in zone 124",
+    "effective": null,
+    "who": "Next Day Air Early letter shipments",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air Early 1 lb rate by zone",
+    "before": null,
+    "after": "$77.99 in zone 102, $152.80 in zone 108, $163.60 in zone 124",
+    "effective": null,
+    "who": "Next Day Air Early 1 lb packages",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air Early 150 lb rate by zone",
+    "before": null,
+    "after": "$506.34 in zone 102, $1,949.62 in zone 108, $2,172.21 in zone 124",
+    "effective": null,
+    "who": "Heavy Next Day Air Early packages",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air letter rate by zone",
+    "before": null,
+    "after": "$39.73 in zone 102, $76.12 in zone 108, $87.32 in zone 124, $63.49 in zone 125, $95.22 in zone 126",
+    "effective": null,
+    "who": "Next Day Air letter shipments",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air 1 lb rate by zone",
+    "before": null,
+    "after": "$47.99 in zone 102, $122.80 in zone 108, $133.60 in zone 124, $101.78 in zone 125, $133.70 in zone 126",
+    "effective": null,
+    "who": "Next Day Air 1 lb packages",
+    "impact": null
+   },
+   {
+    "what": "Per-pound pricing for dimensional weight over 150 lbs",
+    "before": null,
+    "after": "A per-pound price schedule applies to dimensional weight above 150 lbs. Listed figures include $3.18, $4.49, $8.23, $9.68, $9.88, $11.98, $12.80 and $14.28.",
+    "effective": null,
+    "who": "Oversize or lightweight-bulky packages with dimensional weight above 150 lbs",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Effective date of the 2027 rates is not stated",
+   "Next Day Air tables are cut off after 49 lbs, so higher weights are not confirmed",
+   "Which zone or service each dimensional-weight per-pound figure applies to is unclear",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: preview-ups-daily-package-rates.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+     "old": null
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "a66453dab48f7",
   "date": "2026-10-29",
   "c": [

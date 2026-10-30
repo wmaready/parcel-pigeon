@@ -1,7 +1,16 @@
 {
- "run": "2026-10-30T03:55Z",
+ "run": "2026-10-30T04:57Z",
  "clock_add": [],
- "clock_link": [],
+ "clock_link": [
+  {
+   "clock": "e07",
+   "story": "w9c03b8f99b5f"
+  },
+  {
+   "clock": "e07",
+   "story": "wbfc38914b368"
+  }
+ ],
  "clock_unlink": [],
  "link_cursor": 360,
  "doc_cursor": 54,
@@ -57,6 +66,24 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-10-27 \"UPS (Oct 27) and FedEx (Oct 28) report quarterly earnings\"",
+   "ids": [
+    "w9c03b8f99b5f"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early\" to rate clock entry 2026-10-27 \"UPS (Oct 27) and FedEx (Oct 28) report quarterly earnings\"",
+   "ids": [
+    "wbfc38914b368"
+   ],
+   "fixed": true
+  },
+  {
    "sev": "high",
    "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
@@ -93,9 +120,9 @@
    "fixed": true
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -116,7 +143,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -313,9 +340,9 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -336,7 +363,7 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },

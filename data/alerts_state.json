@@ -86,7 +86,9 @@
   "afd8784e2b179",
   "ae2ec177094e3",
   "a82e057190718",
-  "a66453dab48f7"
+  "a66453dab48f7",
+  "w9c03b8f99b5f",
+  "wbfc38914b368"
  ],
  "clock": [
   "e06:7",
@@ -376,43 +378,47 @@
   "ups cites revenue growth in all segments for q3 2026",
   "pitney bowes reports q3 revenue of 456 million down 1",
   "fedex posts 22 9b quarterly revenue raises 2026 outlook",
-  "doordash to buy instacart in deal worth about 17 billion"
+  "doordash to buy instacart in deal worth about 17 billion",
+  "ups posts 2027 preview package rate tables and flags higher ",
+  "ups posts 2027 daily rates for domestic next day air and nex"
  ],
  "harvested": [
   "rv5-ups-sbr-fuel",
-  "ac78f72e7f458",
-  "w8465aa718dc6",
-  "a6cc2420ad66e",
-  "a89d7e4beebd9",
   "a2b81ad721cb8",
-  "a58373f1b7bc3",
-  "a6e82ba740e99",
-  "w84705482dd2f",
-  "a15404304f17b",
-  "a0adb56a55334",
-  "a663794cc9c55",
-  "a5d45f26f2219",
-  "a773d361dac4e",
-  "afd8784e2b179",
-  "a351cab9045c7",
-  "w599d9089a65d",
-  "a2f683da86bf8",
-  "ae2ec177094e3",
-  "aee6669d325da",
+  "w150132868eae",
+  "a2def09bc43bb",
   "wdf959a97bcb6",
-  "a82e057190718",
-  "a312b45efa358",
-  "a6c2418bed0a7",
+  "a15404304f17b",
+  "ae2ec177094e3",
   "a831c709e5809",
-  "a72efb5e01b99",
-  "a57a06c26359c",
+  "w9c03b8f99b5f",
+  "a5d45f26f2219",
+  "wbfc38914b368",
+  "a663794cc9c55",
+  "w84705482dd2f",
+  "a0adb56a55334",
+  "a6cc2420ad66e",
+  "afd8784e2b179",
   "af8ee5ed067c6",
+  "a57a06c26359c",
+  "a2f683da86bf8",
+  "a89d7e4beebd9",
+  "a6e82ba740e99",
+  "a6c2418bed0a7",
   "aba40a11b6946",
+  "ac78f72e7f458",
+  "a351cab9045c7",
+  "a58373f1b7bc3",
+  "a312b45efa358",
+  "a3a45d7f6db20",
+  "w8465aa718dc6",
+  "a72efb5e01b99",
   "wacb825361479",
   "wb8827e8c126e",
-  "a3a45d7f6db20",
-  "w150132868eae",
-  "a2def09bc43bb"
+  "a82e057190718",
+  "a773d361dac4e",
+  "aee6669d325da",
+  "w599d9089a65d"
  ],
  "backfilled": true,
  "recent": [
@@ -1819,6 +1825,40 @@
      "url": "https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f"
     }
    ]
+  },
+  {
+   "id": "w9c03b8f99b5f",
+   "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    }
+   ]
+  },
+  {
+   "id": "wbfc38914b368",
+   "title": "UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early",
+   "date": "2026-10-30",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-ups-daily-package-rates.pdf",
+     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2053,9 +2093,50 @@
   "a66453dab48f7": {
    "t": "DoorDash to buy Instacart, ~$17B",
    "m": "No parcel rate or service change announced; the deal is expected to close in the coming months."
+  },
+  "w9c03b8f99b5f": {
+   "t": "UPS 2027 tables flag higher fees",
+   "m": "Check 2027 rates by lane; accessorial charges rise by amounts UPS has not quantified."
+  },
+  "wbfc38914b368": {
+   "t": "UPS Next Day Air Early: $30 more",
+   "m": "Next Day Air Early costs $30 more than Next Day Air for 1 lb packages in zones 102, 103, 124."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:ups posts 2027 preview package rate tables and flags higher value added fees",
+   "id": "w9c03b8f99b5f",
+   "t": "UPS 2027 tables flag higher fees",
+   "m": "Check 2027 rates by lane; accessorial charges rise by amounts UPS has not quantified.",
+   "big": false,
+   "at": "2026-10-30T00:57:15.356924-04:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "rates",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=w9c03b8f99b5f",
+   "co": "UPS"
+  },
+  {
+   "kind": "story",
+   "key": "story:ups posts 2027 daily rates for domestic next day air and next day air early",
+   "id": "wbfc38914b368",
+   "t": "UPS Next Day Air Early: $30 more",
+   "m": "Next Day Air Early costs $30 more than Next Day Air for 1 lb packages in zones 102, 103, 124.",
+   "big": false,
+   "at": "2026-10-30T00:57:15.356967-04:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "rates",
+   "notable": true,
+   "mask": 1,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=wbfc38914b368",
+   "co": "UPS"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-10-29",
