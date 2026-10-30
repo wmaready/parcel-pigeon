@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:xa6e82ba740e991@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261102
 SUMMARY:▲ EU €2 per-line handling fee applies to non-EU distance sales
@@ -24,7 +24,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e08@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261124
 SUMMARY:▲ Peak-week fees rise: home deliveries go to $0.75–$0.80 a pack
@@ -43,37 +43,8 @@ TRANSP:TRANSPARENT
 CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
-UID:xw68c1687d28a10@parcel-pigeon
-DTSTAMP:20261030T054903Z
-DTSTART;VALUE=DATE:20261221
-DTEND;VALUE=DATE:20261222
-SUMMARY:▲ UPS: Additional Handling - Weight\, zone 2
-DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nUPS · Additional H
- andling - Dimensions\, zone 2: Zone 2: $30.00 -> $32.75 (+$2.75)\; zone 7+
- : $40.50 -> $44.00 (+$3.50)\nUPS · Additional Handling - Packaging\, zone
-  2: Zone 2: $26.75 -> $29.25 (+$2.50)\; zone 7+: $33.75 -> $36.75 (+$3.00)
- \nUPS · Large Package Surcharge - Commercial\, zone 2: Zone 2: $219.50 ->
-  $250.00 (+$30.50)\; zone 7+: $286.00 -> $330.00 (+$44.00)\nUPS · Large P
- ackage Surcharge - Residential\, zone 2: Zone 2: $254.50 -> $276.25 (+$21.
- 75)\; zone 7+: $331.00 -> $359.25 (+$28.25)\nUPS · Residential Surcharge 
- - Ground: Ground: $6.50 -> $7.10 (+$0.60)\; Air: $7.00 -> $7.60 (+$0.60)\n
- UPS · Delivery Area Surcharge - Ground Residential: Ground Residential: $
- 6.55 -> $7.15 (+$0.60)\; Extended: $8.85 -> $9.65 (+$0.80)\; Commercial: $
- 4.50 -> $4.90 (+$0.40)\nUPS · Remote Area Surcharge - US 48: US 48 and Ha
- waii: $16.50 -> $18.00 (+$1.50)\; Alaska: $46.25 -> $49.75 (+$3.50)\nUPS 
- · Delivery Confirmation - Signature Required: Signature Required: $7.70 -
- > $8.40 (+$0.70)\; Adult Signature: $9.35 -> $10.25 (+$0.90)\nUPS · Addre
- ss Correction (Air and Ground): $25.25 -> $27.50 (+$2.25)\; maximum per sh
- ipment $175.25 -> $190.25 (+$15.00)\nStory: UPS posts 2027 value-added ser
- vice and other charge rates\, effective Dec 21\, 2026\nOn Parcel Pigeon: h
- ttps://wmaready.github.io/parcel-pigeon/#s=w68c1687d28a1
-URL:https://wmaready.github.io/parcel-pigeon/#s=w68c1687d28a1
-TRANSP:TRANSPARENT
-CATEGORIES:Rate change
-END:VEVENT
-BEGIN:VEVENT
 UID:xrv5-ups-sbr-fuel0@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS Small Business Rates: 4.5% increase plus a new 5% fuel surc
@@ -88,7 +59,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xw84705482dd2f0@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS 2027 rate increase: 5.9% average (Ground\, Air\, Internatio
@@ -106,7 +77,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e09@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261229
 SUMMARY:▼ Peak-week fees end: home-delivery peak fee drops back to $0.50 
@@ -124,7 +95,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e15@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:▲ DHL Express 2027 rate increase for U.S. accounts: 5.9% average
@@ -139,7 +110,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e10@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:▲ FedEx 2027 general rate increase: 5.9% average
@@ -152,7 +123,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e11@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270118
 SUMMARY:▼ Peak surcharges end at every major carrier\; USPS holiday price
@@ -169,7 +140,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e12@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:▲ FedEx paper document fees start
@@ -184,7 +155,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e13@parcel-pigeon
-DTSTAMP:20261030T054903Z
+DTSTAMP:20261030T060639Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:▲ FedEx zones change for select U.S. domestic ZIP pairs
