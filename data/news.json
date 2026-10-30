@@ -2217,6 +2217,62 @@
   ]
  },
  {
+  "id": "ups-origin-zip-surcharge",
+  "date": "2026-10-23",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS adds a surcharge on Ground and Ground Saver packages from certain origin ZIPs; details not yet released",
+  "sum": "UPS's Important Updates page says a new surcharge will apply to Ground and Ground Saver packages shipped from certain origin ZIP codes by Qualified customers, effective December 21, 2026 or later. UPS has not published the amount, the origin ZIPs or the qualifying criteria, and said details are due in early November. It is not in the 2027 rate and surcharge documents UPS posted October 30.",
+  "plain": "If you ship Ground or Ground Saver from a major origin, expect an extra per-package fee, but the size and the ZIPs are unknown. Watch for UPS's early-November details.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-23",
+  "verdict": "price change",
+  "unknowns": [
+   "Amount of the surcharge",
+   "Which origin ZIPs and which customers qualify",
+   "Exact effective date (UPS says December 21, 2026 or later)"
+  ],
+  "changes": [
+   {
+    "what": "New origin-ZIP surcharge, Ground and Ground Saver",
+    "before": null,
+    "after": "Applies to Qualified customers shipping from certain origin ZIPs; amount not stated",
+    "effective": "2026-12-21",
+    "who": "Ground and Ground Saver shippers from the affected origin ZIPs",
+    "impact": "Cost not yet known"
+   }
+  ],
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS: new origin-ZIP surcharge on Ground and Ground Saver (Qualified customers), amount not yet released",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Origin-ZIP surcharge, Ground and Ground Saver",
+      "Amount not yet stated"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true
+ },
+ {
   "id": "w599d9089a65d",
   "date": "2026-10-23",
   "c": [
@@ -7989,61 +8045,5 @@
   "auto": true,
   "thread": "ups-driver-choice-lawsuit",
   "exclusive": true
- },
- {
-  "id": "ups-origin-zip-surcharge",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS adds a surcharge on Ground and Ground Saver packages from certain origin ZIPs; details not yet released",
-  "sum": "UPS's Important Updates page says a new surcharge will apply to Ground and Ground Saver packages shipped from certain origin ZIP codes by Qualified customers, effective December 21, 2026 or later. UPS has not published the amount, the origin ZIPs or the qualifying criteria, and said details are due in early November. It is not in the 2027 rate and surcharge documents UPS posted October 30.",
-  "plain": "If you ship Ground or Ground Saver from a major origin, expect an extra per-package fee, but the size and the ZIPs are unknown. Watch for UPS's early-November details.",
-  "imp": "up",
-  "lvl": 3,
-  "cat": "Pricing & GRI",
-  "act": "2026-12-21",
-  "inferred": null,
-  "detected": "2026-10-23",
-  "verdict": "price change",
-  "unknowns": [
-   "Amount of the surcharge",
-   "Which origin ZIPs and which customers qualify",
-   "Exact effective date (UPS says December 21, 2026 or later)"
-  ],
-  "changes": [
-   {
-    "what": "New origin-ZIP surcharge, Ground and Ground Saver",
-    "before": null,
-    "after": "Applies to Qualified customers shipping from certain origin ZIPs; amount not stated",
-    "effective": "2026-12-21",
-    "who": "Ground and Ground Saver shippers from the affected origin ZIPs",
-    "impact": "Cost not yet known"
-   }
-  ],
-  "dates": [
-   {
-    "d": "2026-12-21",
-    "w": "UPS: new origin-ZIP surcharge on Ground and Ground Saver (Qualified customers), amount not yet released",
-    "imp": "up",
-    "fees": [
-     [
-      "UPS",
-      "Origin-ZIP surcharge, Ground and Ground Saver",
-      "Amount not yet stated"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-  "srcs": [
-   {
-    "src": "UPS Rate and Service Guides",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-   }
-  ],
-  "auto": true
  }
 ]
