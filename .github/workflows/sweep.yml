@@ -61,7 +61,7 @@
      "working-directory": "pipeline",
      "env": {
       "ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}",
-      "PP_MONTHLY_BUDGET": "${{ vars.PP_MONTHLY_BUDGET || '75' }}",
+      "PP_MONTHLY_BUDGET": "${{ vars.PP_MONTHLY_BUDGET || '85' }}",
       "PW_SWEEP_CALLS": "${{ inputs.calls || vars.SWEEP_CALLS || '40' }}",
       "PP_FETCH_PROXY": "${{ secrets.PP_FETCH_PROXY }}",
       "PP_LEDGER": "usage_sweep.json"

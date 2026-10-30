@@ -68,7 +68,7 @@
      "name": "Publish approved drafts, check carrier pages, send alerts",
      "env": {
       "ANTHROPIC_API_KEY": "${{ secrets.ANTHROPIC_API_KEY }}",
-      "PP_MONTHLY_BUDGET": "${{ vars.PP_MONTHLY_BUDGET || '75' }}",
+      "PP_MONTHLY_BUDGET": "${{ vars.PP_MONTHLY_BUDGET || '85' }}",
       "NTFY_TOPIC": "${{ secrets.NTFY_TOPIC }}",
       "GITHUB_TOKEN": "${{ github.token }}",
       "ONESIGNAL_APP_ID": "${{ secrets.ONESIGNAL_APP_ID }}",
