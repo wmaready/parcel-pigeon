@@ -1,26 +1,18 @@
 {
- "run": "2026-10-30T05:49Z",
+ "run": "2026-10-30T06:06Z",
  "clock_add": [],
  "clock_link": [
   {
-   "clock": "xw68c1687d28a10",
+   "clock": "xrv5-ups-sbr-fuel0",
    "story": "w500a5bdc762c"
   },
   {
-   "clock": "xw68c1687d28a10",
-   "story": "w91588ddb11ed"
-  },
-  {
-   "clock": "xw68c1687d28a10",
+   "clock": "xrv5-ups-sbr-fuel0",
    "story": "w9c03b8f99b5f"
   },
   {
    "clock": "xwb8827e8c126e0",
    "story": "wa9c423a83880"
-  },
-  {
-   "clock": "xw68c1687d28a10",
-   "story": "wbfc38914b368"
   }
  ],
  "clock_unlink": [],
@@ -80,7 +72,7 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
+   "msg": "Linked \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)\"",
    "ids": [
     "w500a5bdc762c"
    ],
@@ -89,16 +81,7 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
-   "ids": [
-    "w91588ddb11ed"
-   ],
-   "fixed": true
-  },
-  {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
+   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-12-21 \"UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)\"",
    "ids": [
     "w9c03b8f99b5f"
    ],
@@ -110,15 +93,6 @@
    "msg": "Linked \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\" to rate clock entry 2026-11-01 \"UPS: Effective date added to the EU PID requirement notice for B2C shipments entering the EU\"",
    "ids": [
     "wa9c423a83880"
-   ],
-   "fixed": true
-  },
-  {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
-   "ids": [
-    "wbfc38914b368"
    ],
    "fixed": true
   },
@@ -306,26 +280,6 @@
    "ids": [
     "a80e5b8dd1671",
     "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026\" and \"UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026\"",
-   "ids": [
-    "w599d9089a65d",
-    "w68c1687d28a1"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" and \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\"",
-   "ids": [
-    "w500a5bdc762c",
-    "w91588ddb11ed"
    ],
    "fixed": false
   },
@@ -556,26 +510,6 @@
    "ids": [
     "a80e5b8dd1671",
     "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026\" and \"UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026\"",
-   "ids": [
-    "w599d9089a65d",
-    "w68c1687d28a1"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" and \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\"",
-   "ids": [
-    "w500a5bdc762c",
-    "w91588ddb11ed"
    ],
    "fixed": false
   },
