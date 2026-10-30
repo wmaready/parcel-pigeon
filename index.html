@@ -9050,6 +9050,12 @@ function renderEarnToday(){const el=$('earnToday');if(!el)return;
       <span class="lbl etn etlinks">${m.story&&NEWS.some(n=>n.id===m.story)?`<button type="button" class="link" data-open="${esc(m.story)}">Market report ›</button>`:''}<a class="link" href="${escU(m.url||m.page)}" target="_blank" rel="noopener">${esc(m.src)} ↗</a></span></div>`};
   const card=co=>{const e=earnSeries(co).filter(x=>x.d<=TODAY).at(-1);if(!e)return '';
     const v=e.vol||{},r=earnRev(e),cmp=e.comparable!==false,nx=EARN_NEXT.filter(x=>x.c===co&&x.d>=TODAY&&!earnDone(x)).sort((a,b)=>a.d.localeCompare(b.d))[0];
+    // a report that is out but not yet in the history: say so, never show the previous quarter as the latest
+    const due=EARN_NEXT.filter(x=>x.c===co&&x.d<=TODAY&&x.d>e.d&&!x.est&&!earnDone(x)).sort((a,b)=>b.d.localeCompare(a.d))[0];
+    if(due)return `<button type="button" class="etc ${carCls(co)}" data-goto="docs:earnings:${esc(co)}" aria-label="${esc(co+' reported '+DF(due.d)+'; figures are being added. Open in Docs')}">
+      <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(due.label||due.q)} <span class="tag" title="The company has reported; its figures are not entered yet">Reported</span></b><small>Reported ${esc(fmtD(due.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span>${coStock(co)}</span>
+      ${stat('Revenue',null,null,'Being added')}${stat('Packages a day',null,null,'Being added')}${stat('Revenue per package',null,null,'Being added')}
+      <span class="lbl etn">Previous: ${esc(earnShort(e))}<span class="etgo">Earnings ›</span></span></button>`;
     const said=`${co} ${earnLabel(e)}, reported ${DF(e.d)}. Open in Docs`;
     return `<button type="button" class="etc ${carCls(co)}" data-goto="docs:earnings:${esc(co)}:${esc(e.q)}" aria-label="${esc(said)}">
       <span class="eth">${logoImg(co,'lgs',co)||`<b>${esc(co)}</b>`}<span class="etq"><b>${esc(earnShort(e))}${e.checked===false?' <span class="tag" title="Added automatically from the release; not yet checked by a person">New</span>':''}</b><small>Reported ${esc(fmtD(e.d,{month:'short',day:'numeric',year:'numeric'}))}</small></span>${coStock(co)}</span>
