@@ -1,13 +1,14 @@
 """The two lanes that skip the day's pacing, each with a hard cap: breaking news (news.py) and the nightly company
 research slot (players.py --slot). Plus: a paused research run no longer stops the phone alerts."""
-import json, re
+import datetime as dt, json, re
 import pytest
 import common
 from common import h, save, load
 
 
 # ---------------------------------------------------------------- breaking lane
-def item(n, title, src="UPS", tier=0, date="2026-10-22"):
+def item(n, title, src="UPS", tier=0, date=None):
+    date = date or (dt.date.today() - dt.timedelta(days=1)).isoformat()          # always inside the news window
     return {"title": title, "url": f"https://example.com/{n}", "summary": "parcel", "date": date, "src": src,
             "direct": True, "house": False, "tier": tier}
 
@@ -54,6 +55,7 @@ def lane(data_dir, monkeypatch):
     monkeypatch.setattr(N, "is_covered", lambda t, days=4: ["FreightWaves"])
     monkeypatch.setattr(N, "publish_extras", lambda *a, **k: None)
     monkeypatch.setattr(common, "paused", lambda extra=False: "$1.25 spent today of the $1.22 built up so far")
+    monkeypatch.setattr(common, "month_full", lambda: None)          # not the real month's spend: the live ledger can be near the limit
     for f, v in (("news.json", []), ("seen.json", []), ("review.json", []), ("breaking.json", {}),
                  ("threads.json", {"x": {"n": "x", "ids": [], "last": "2000-01-01"}})):
         save(f, v)
