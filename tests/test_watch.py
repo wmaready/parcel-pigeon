@@ -119,3 +119,26 @@ def test_robot_notes_hold_the_story(page, monkeypatch):
     monkeypatch.setattr(W, "audit", lambda carrier, name, url, old, new, note="": dict(replies[url]))
     W.main()
     assert load("news.json", []) == [] and asked and "robot notes" in asked[0][-1]
+
+
+def test_preview_files_are_named_typed_and_dated_as_next_years_documents():
+    import datetime
+    from common import doc_from_filename as f
+    d = datetime.date(2026, 10, 30)
+    assert f("UPS", "preview-ups-daily-package-rates.pdf", d) == ("Rate guide", "2027 UPS Daily Package Rates (preview)", 2027)
+    assert f("UPS", "preview-ups-hundredweight-service-package-rates.pdf", d)[0] == "Rate guide"      # "service" in the name, but these are rates
+    k, n, y = f("UPS", "preview-changes-package-value-added-services-other-charges.pdf", d)
+    assert k == "Surcharges & fees" and y == 2027 and n.startswith("2027 UPS ") and n.endswith("(preview)")
+    assert f("UPS", "preview-ups-small-business-cwt-package-rates.pdf", d)[1] == "2027 UPS Small Business Hundredweight Package Rates (preview)"
+    assert f("UPS", "2026-ups-daily-rate-and-service-guide.pdf", d)[2] == 2026                         # a stated year is never overridden
+
+
+def test_a_gap_worked_out_from_two_printed_prices_is_not_an_unsupported_number():
+    import changeaudit as C
+    new = "Additional Handling Weight Zone 2 $46.50 $50.50 Residential Surcharge $6.50 $7.10"
+    res = {"material": True, "title": "UPS posts rates", "summary": "Residential surcharge rises $0.60 to $7.10", "effect": "Additional Handling up $4.00",
+           "changes": [{"what": "AH", "before": None, "after": "$50.50", "quote_new": "Additional Handling Weight Zone 2 $46.50 $50.50", "impact": "$46.50 -> $50.50 (+$4.00)"},
+                       {"what": "RES", "before": None, "after": "$7.10", "quote_new": "Residential Surcharge $6.50 $7.10", "impact": "$6.50 -> $7.10 (+$0.60)"}]}
+    assert C.verify(res, None, new)["unsupported"] == []
+    res["summary"] = "Fee rises $9.99 to $7.10"                      # a figure that is nowhere is still held
+    assert C.verify(res, None, new)["unsupported"] == ["$9.99"]

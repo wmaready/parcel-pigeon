@@ -492,6 +492,36 @@ def stated_years(text):
     return sorted({int(y) for y in re.findall(r"(?<![\d.])(20[1-3]\d)(?![\d.]?\d)", _DATE_YEAR.sub(" ", str(text or "")))})
 
 
+ACRONYMS = {"ups": "UPS", "usps": "USPS", "dhl": "DHL", "gri": "GRI", "us": "U.S.", "fedex": "FedEx", "ontrac": "OnTrac", "ahs": "AHS", "das": "DAS", "zip": "ZIP"}
+
+
+def doc_from_filename(carrier, filename, today=None):
+    """(type, readable name, year) for a file a carrier just posted, from its file name. A "preview" file is next
+    year's rates (UPS: "2027 Preview Package Rates"), named as such; a value-added/other-charges file is a surcharge
+    document and a "... service package rates" file a rate guide, not a service guide."""
+    import datetime as _dt
+    today = today or _dt.date.today()
+    low = filename.lower()
+    kind = ("Surcharges & fees" if re.search(r"surcharge|ahs|lps|accessor|fee|value.?added|other.?charges", low) and "zip" not in low else
+            "Zones & DAS" if re.search(r"zip|zone|area|das", low) else "Fuel" if "fuel" in low else
+            "Service guide" if re.search(r"service.?guide", low) else "Terms" if re.search(r"terms|tariff|condition", low) else
+            "Rate guide" if re.search(r"rate|price", low) else "Service guide" if "service" in low else "Special program")
+    raw = re.sub(r"\s+", " ", re.sub(r"[-_]+", " ", re.sub(r"\.(pdf|xlsx?)$", "", filename, flags=re.I))).strip()
+    preview = bool(re.search(r"\bpreview\b", raw, re.I))
+    year = doc_year({"c": carrier, "n": raw, "u": filename})
+    if preview and not year and today.month >= 8:
+        year = today.year + 1
+    if not preview:
+        name = raw
+        return kind, (f"{carrier} {name}" if carrier.lower() not in name.lower() else name), year
+    words = [w for w in re.sub(r"(?i)\bpreview\b", " ", raw).split() if w.lower() != carrier.lower() and not re.fullmatch(r"20\d\d", w)]
+    text = re.sub(r"(?i)\bvalue added\b", "value-added", " ".join(words))
+    text = re.sub(r"(?i)\bcwt\b", "hundredweight", text)
+    small = {"and", "of", "to", "for", "the", "or"}
+    title = " ".join(ACRONYMS.get(w.lower()) or ("-".join(p.capitalize() for p in w.split("-")) if w.lower() not in small else w.lower()) for w in text.split())
+    return kind, f"{year} {carrier} {title} (preview)".strip() if year else f"{carrier} {title} (preview)", year
+
+
 def doc_year(d):
     if d.get("c") != "Reports":
         t = stated_years(d.get("n"))

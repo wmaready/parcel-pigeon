@@ -154,6 +154,15 @@ def verify(res, old, new):
         for x in b:
             for y in a:
                 derived |= {round(abs(y - x), 2), round(abs(y - x) / x * 100, 1) if x else None, round(abs(y - x) / x * 100) if x else None}
+    # a table that prints the old and the new price side by side ("$46.50 -> $50.50 (+$4.00)") has no separate "before":
+    # the gap and the percentage between two figures the texts do contain, inside one change, are worked out, not invented
+    both = (old or "") + "\n" + new
+    for c in kept:
+        pool = [x for x in nums(" ".join(str(c.get(k) or "") for k in ("before", "after", "impact"))) if not numbers_supported(f"{x:g}", both)]
+        for i, x in enumerate(pool):
+            for y in pool[i + 1:]:
+                lo, hi = sorted((x, y))
+                derived |= {round(hi - lo, 2), round((hi - lo) / lo * 100, 1) if lo else None, round((hi - lo) / lo * 100) if lo else None}
     res["unsupported"] = [m for m in missing if nums(m) and nums(m)[0] not in derived]
     return res
 
