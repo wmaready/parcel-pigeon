@@ -209,10 +209,15 @@ def text_of(page):
 
 def read_release(url, fetch=None):
     """Headline, revenue ($ billions as printed) and adjusted diluted EPS from a release page."""
-    page = (fetch or (lambda u: get(u).text))(url)
-    m = re.search(r"(?is)<h1[^>]*>(.*?)</h1>", page) or re.search(r"(?is)<title[^>]*>(.*?)</title>", page)
-    head = text_of(m.group(1)) if m else ""
-    t = text_of(page)
+    if url.lower().split("?")[0].endswith(".pdf") and fetch is None:       # FedEx posts its release as a PDF
+        from changeaudit import file_text
+        t = re.sub(r"\s+", " ", file_text(url, max_pages=6) or "").strip()
+        head = t[:120]
+    else:
+        page = (fetch or (lambda u: get(u).text))(url)
+        m = re.search(r"(?is)<h1[^>]*>(.*?)</h1>", page) or re.search(r"(?is)<title[^>]*>(.*?)</title>", page)
+        head = text_of(m.group(1)) if m else ""
+        t = text_of(page)
     rev = re.search(r"(?i)\b(?:consolidated\s+)?revenues?\s+(?:of|was|were|totaled)\s+\$\s?(\d{1,3}(?:\.\d{1,2})?)\s*billion", t)
     eps = re.search(r"(?i)\badjusted\s+diluted\s+(?:earnings\s+per\s+share|EPS)\s+(?:of|was|were)\s+\$\s?(\d{1,2}\.\d{2})", t)
     return {"headline": head, "rev": float(rev.group(1)) if rev else None, "eps": float(eps.group(1)) if eps else None}
@@ -251,7 +256,7 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
                                             "then set the next expected date."})
             continue
         try:
-            url = find_release(nx, ir, known, fetch)
+            url = nx.get("release") or find_release(nx, ir, known, fetch)       # a release address given by hand wins
         except Exception as e:
             print(f"earnings: {nx['c']} release page: {e}", file=sys.stderr)
             url = None

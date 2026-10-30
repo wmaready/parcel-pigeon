@@ -409,3 +409,11 @@ def test_same_week_links_tie_the_report_to_rate_changes_once():
     rows = [{"company": "UPS", "q": "Q3 2026", "d": "2026-10-27"}]
     got = events.same_week_links(stories, rows, "2026-10-30")
     assert [(l["a"], l["b"]) for l in got] == [("e1", "r1")]
+
+
+def test_a_release_address_given_by_hand_is_read_without_searching_the_ir_page():
+    url = "https://investors.ups.com/news-events/press-releases/detail/9999/ups-releases-3q-2026-earnings"
+    nxt = {"ir": {}, "next": [dict(NXT["next"][0], release=url)]}
+    rows, review = [], []
+    added = E.add_new_quarters(rows, nxt, review, "2026-10-27", fetch={url: RELEASE}.__getitem__, pause=0)
+    assert added == ["UPS Q3 2026"] and rows[0]["release"] == url
