@@ -162,9 +162,18 @@ def fill_yoy(rows):
             if r.get("revYoY") is not None and r.get("yoy_src") != "release":
                 r["revYoY"], r["yoy_src"] = None, None
             continue
-        if r.get("revYoY") is None and r.get("rev_m") and r.get("rev_prior_m"):
+        if (r.get("revYoY") is None or r.get("yoy_src") == "calc-rounded") and r.get("rev_m") and r.get("rev_prior_m"):
             r["revYoY"] = round((r["rev_m"] / r["rev_prior_m"] - 1) * 100, 1)
             r["yoy_src"] = "calc"
+        elif r.get("revYoY") is None and r.get("company") == "UPS" and r.get("rev") and r.get("period"):
+            # a new quarter shows its change at once, from the two rounded $B figures (good to about a tenth of a point of
+            # rounding either way); the exact figures replace it when the 10-Q gives them. UPS only: FedEx's prior year
+            # included Freight, which separated June 1, 2026.
+            end = r["period"].get("end") or ""
+            prev = next((x for x in rows if x.get("company") == "UPS" and x.get("rev") and (x.get("period") or {}).get("end") == f"{int(end[:4]) - 1}{end[4:]}"), None) if end else None
+            if prev:
+                r["revYoY"] = round((r["rev"] / prev["rev"] - 1) * 100, 1)
+                r["yoy_src"] = "calc-rounded"
 
 
 # ------------------------------------------------------------------ checks
@@ -276,6 +285,26 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
                             "note": "Added automatically from the release (checked: false). Check revenue, EPS and the period against the release; "
                                     "add the summary line, call and filing links, and packages a day, operating days and revenue per piece from the 10-Q "
                                     "with its address and check date; then set checked: true."})
+    return added
+
+
+def file_earnings_docs(rows, docs, today):
+    """Each quarter's release, call and 10-Q go into the Docs library the day they are known, so they are there before the
+    news is. A row's links are filed as they appear (the release first, the call and filing later). Returns what was added."""
+    have = {d.get("u") for d in docs if d.get("u")}
+    added = []
+    for r in rows:
+        if r.get("company") not in ("UPS", "FedEx", "FedEx Freight", "USPS"):
+            continue
+        for key, label in (("release", "results release"), ("webcast", "earnings call"), ("transcript", "call transcript"), ("filing", "10-Q filing")):
+            u = r.get(key)
+            if not u or u in have:
+                continue
+            docs.append({"c": r["company"], "t": "Earnings", "n": f"{r['company']} {r.get('label') or r['q']} {label}", "y": int(str((r.get("period") or {}).get("end") or r.get("d") or today)[:4]),
+                         "eff": None, "u": u, "d": r.get("headline") or f"{r['company']} {r.get('label') or r['q']}, reported {r.get('d')}",
+                         "cur": True, "added": today})
+            have.add(u)
+            added.append(f"{r['company']} {r['q']} {label}")
     return added
 
 
@@ -454,6 +483,15 @@ def main():
         print(f"::warning title=earnings call links::{e}")
     fill_yoy(rows)
     fill_usps_rpp(rows)
+    try:
+        docs = load("docs.json", [])
+        filed = file_earnings_docs(rows, docs, today)
+        for q in filed:
+            print(f"earnings: filed {q} in Docs")
+        if filed:
+            save("docs.json", docs)
+    except Exception as e:
+        print(f"::warning title=earnings docs::{e}")
     for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
         print(f"::warning title=earnings prices::{f}")
     bad = fedex_fy_check(rows, review)

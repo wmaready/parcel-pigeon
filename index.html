@@ -8034,10 +8034,13 @@ function storyAffects(n,S){S=S||storyParts(n);
 function storyCoLinks(n){const L=(typeof storyCos==='function'?storyCos(n,true):[]).filter(id=>PL[id]).slice(0,6);if(!L.length)return '';
   return `<p class="sco"><span class="lbl">Company pages</span>${L.map(id=>`<button type="button" class="pchip" data-sco="${esc(id)}">${esc(PL[id].n)}</button>`).join('')}</p>`}
 /* Story page: the rate clock dates and the carrier documents behind a story, side by side, each one tap away */
-function keyLinks(n){const D=clockFor(n.id).slice().sort((a,b)=>a.d.localeCompare(b.d)),R=relDocs(n);if(!D.length&&!R.length)return '';
+const EVENTS=[];   // same-week ties from the pipeline (data/events.json): an earnings report and the rate or guide changes around it
+const weekOf=n=>EVENTS.filter(l=>l.a===n.id||l.b===n.id).map(l=>({s:NEWS.find(x=>x.id===(l.a===n.id?l.b:l.a)),why:l.why})).filter(x=>x.s);
+function keyLinks(n){const D=clockFor(n.id).slice().sort((a,b)=>a.d.localeCompare(b.d)),R=relDocs(n),W=weekOf(n).slice(0,4);if(!D.length&&!R.length&&!W.length)return '';
   const dRow=x=>{const k=daysTo(x.d);return `<button type="button" class="kl" data-clock="${x.id}"><span class="kli kcal" aria-hidden="true"><i>${fmtD(x.d,{month:'short'}).toUpperCase()}</i><b>${+x.d.slice(8)}</b></span><span class="klt"><b>${esc(x.w)}</b><small>${k>0?`In ${k} day${k===1?'':'s'}`:k===0?'Today':'In effect'} · open on the rate clock</small></span><span class="klgo" aria-hidden="true">›</span></button>`};
   const rRow=d=>`<div class="kl kdoc"><span class="kli" aria-hidden="true">${logoImg(d.c,'lgx')||'<span class="kdi">PDF</span>'}</span><span class="klt"><b>${esc(d.n)}</b><small>${esc(d.c)} · ${fmtOf(d.u)}</small></span><span class="kla">${d.u?`<a class="dact pri" href="${escU(d.u)}" target="_blank" rel="noopener">Open ↗</a>`:''}<button type="button" class="dact" data-gdoc="${docDomId(d)}">In Docs</button></span></div>`;
-  return `<section class="keyl"><div class="lbl">${D.length&&R.length?'Key dates & documents':D.length?'Key dates':'Documents'}</div>${D.map(dRow).join('')}${R.slice(0,4).map(rRow).join('')}</section>`}
+  const wRow=x=>`<button type="button" class="kl" data-open="${esc(x.s.id)}"><span class="klt"><b>${esc(x.s.title)}</b><small>${esc(x.why)} · same week</small></span><span class="klgo" aria-hidden="true">›</span></button>`;
+  return `<section class="keyl"><div class="lbl">${D.length&&R.length?'Key dates & documents':D.length?'Key dates':R.length?'Documents':'Same week'}</div>${D.map(dRow).join('')}${R.slice(0,4).map(rRow).join('')}${W.length&&(D.length||R.length)?'<div class="lbl">Same week</div>':''}${W.map(wRow).join('')}</section>`}
 /* Carrier page and guide changes: what changed, before and after, proven from both versions */
 function chgTable(n){const ch=(n.changes||[]).filter(c=>c&&typeof c==='object'&&c.after);if(!ch.length)return '';
   const a=n.audit||{},cmp=(a.compared||[]).filter(x=>x.old&&x.new);
@@ -8779,7 +8782,7 @@ const fmtOf=u=>!u?'':/\.xlsx(\?|$)/i.test(u)?'Excel':/\.pdf(\?|$)/i.test(u)||/\/
 /* Docs: carrier first, then the kind of document, newest first; every row says why it's in the library */
 const DOC_GROUPS=[['Rate guides',['Rate guide']],['GRI & peak season',['GRI notice','Peak']],
   ['Off-cycle announcements',[]],['Surcharges, fees & programs',['Surcharges & fees','Special program']],
-  ['Fuel, zones & ZIP lists',['Fuel','Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Filings',['Regulatory filing']],
+  ['Fuel, zones & ZIP lists',['Fuel','Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Earnings',['Earnings']],['Filings',['Regulatory filing']],
   ['Market reports',['Market report']]];
 // a price notice taking effect outside the annual increase window and peak season (same rule as the rate clock's Off-cycle tag)
 const DOC_KIND={'GRI notice':'gri','Peak':'peak','Surcharges & fees':'surcharge','Special program':'program'};
@@ -9882,8 +9885,9 @@ function clockWorthy(n,d){const t=(d&&d.w||'')+' '+(n.title||'');if(NOT_CLOCK.te
   if(lvl>=3)return true;if(n.cat&&!CLOCK_CATS.has(n.cat))return false;return imp==='up'||imp==='down'||lvl>=2}
 (async function(){
   const j=async p=>{const get=async u=>{try{const r=await fetch(u,{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}};return (/github\.io$/.test(location.hostname)?null:await get('https://wmaready.github.io/parcel-pigeon/'+p))||await get(p)};
-  const [news,fuel,brief,deals,audit,mk,docs,earn,pls,enx]=await Promise.all([j('data/news.json'),j('data/fuel.json'),j('data/brief.json'),j('data/deals.json'),j('data/audit.json'),j('data/markets.json'),j('data/docs.json'),j('data/earnings.json'),j('data/players.json'),j('data/earnings_next.json')]);
+  const [news,fuel,brief,deals,audit,mk,docs,earn,pls,enx,evs]=await Promise.all([j('data/news.json'),j('data/fuel.json'),j('data/brief.json'),j('data/deals.json'),j('data/audit.json'),j('data/markets.json'),j('data/docs.json'),j('data/earnings.json'),j('data/players.json'),j('data/earnings_next.json'),j('data/events.json')]);
   let ch=false;
+  if(evs&&Array.isArray(evs.links)){EVENTS.splice(0,EVENTS.length,...evs.links.filter(l=>l&&l.a&&l.b));ch=true}
   // one card per transaction: a pipeline update to a deal already on the list (a closing, a breach notice, a termination)
   // is laid over that card, matched loosely (dealSame), never added as a second card
   if(Array.isArray(deals)&&deals.length){deals.forEach(x=>{if(!x||!x.target)return;const y=DEALS.find(y=>dealSame(y,x));if(!y){DEALS.push(Object.assign({},x));return}dealOverlay(y,x)});ch=true}

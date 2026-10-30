@@ -21,6 +21,8 @@ Checks
   fuel-stale         fuel data more than 8 days old
   brief-stale        60-second brief mentions something no current story supports (Claude check)
   numbers            story and its rate clock entry disagree on a fee or date (Claude check)
+  earnings-sync      a company has reported (its listed date has passed) but a surface is missing: no earnings row for the Today card and
+                     bar graph, no release in Docs, no story in News, or no package figures after three days
   link-broken        a source link no longer opens
   doc-link-broken    a document library link no longer opens
   no-primary         price, peak or fee story with no carrier source behind it (the carrier's site is the source of truth)
@@ -85,6 +87,32 @@ def deal_storyline_issues(deals, threads, stories):
 
 
 WRONG_TITLE = re.compile(r"access denied|request access|page not found|404|error|sign in|log in", re.I)
+
+
+def earnings_sync_issues(rows, nxt, docs, stories, today):
+    """One event, every surface. For each reported date on the earnings calendar the history row (Today card, bar graph),
+    the filed release (Docs) and the story (News) must all exist; package figures are due within three days."""
+    out, doc_urls = [], {d.get("u") for d in docs if d.get("u")}
+    seen = {(r.get("company"), r.get("q")): r.get("d") for r in rows if r.get("d")}          # reported rows (UPS's date leaves the calendar once reported)
+    for nx in nxt.get("next") or []:
+        if nx.get("d") and not nx.get("est"):
+            seen.setdefault((nx["c"], nx["q"]), nx["d"])
+    for (co, q), d in sorted(seen.items(), key=lambda kv: kv[1]):
+        if d > today or days(d, today) > 21 or co not in ("UPS", "FedEx", "FedEx Freight"):
+            continue
+        row = next((r for r in rows if r.get("company") == co and r.get("q") == q), None)
+        if not row:
+            out.append(("high", f"{co} reported on {d} ({q}) but there is no earnings row, so the Today card and bar graph are not updated", []))
+            continue
+        if not any(row.get(k) in doc_urls for k in ("release", "webcast", "filing") if row.get(k)):
+            out.append(("high", f"{co} {q}: the release is not filed in Docs", []))
+        near = [t for t in stories.values() if co in t.get("c", []) and t.get("cat") == "Earnings & markets"
+                and -1 <= days(d, t.get("date") or "1970-01-01") <= 3]
+        if not near:
+            out.append(("high", f"{co} {q}: no earnings story in News within three days of {d}", []))
+        if days(d, today) >= 3 and not (row.get("vol") or {}).get("adv_k"):
+            out.append(("med", f"{co} {q}: packages a day and revenue per package are still empty three days after the report", []))
+    return out
 
 
 def _depth(path):
@@ -300,6 +328,10 @@ def main():
                    and t["date"] >= (TODAY - dt.timedelta(days=60)).isoformat() and doc["t"] == "GRI"]
             if hit:
                 issue("high", "doc-pending", f"Library still shows \"{doc['n']}\" as not published, but \"{hit[0]['title']}\" exists", [hit[0]["id"]])
+
+    # 8b. earnings: row, Docs, News and package figures all follow a report
+    for sev, msg, ids in earnings_sync_issues(load("earnings.json", []), load("earnings_next.json", {}), docs, stories, ISO):
+        issue(sev, "earnings-sync", msg, ids)
 
     # 9. fuel
     fuel = seed.get("fuel", {})

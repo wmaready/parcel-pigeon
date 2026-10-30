@@ -144,3 +144,14 @@ def test_a_closed_docs_entry_is_never_rewritten(files):
     T.close_placeholders([dict(PLACE)], today="2026-10-26")
     again = next(d for d in load("docs.json", []) if d["n"] == "UPS 2027 general rate increase")
     assert again == first
+
+
+def test_a_dated_new_charge_that_says_its_amount_is_not_yet_published_is_not_a_placeholder(files):
+    surcharge = {"id": "ups-origin-zip-surcharge", "date": "2026-10-23", "c": ["UPS"], "cat": "Pricing & GRI", "imp": "up", "lvl": 3,
+                 "act": "2026-12-21", "title": "UPS adds a surcharge on Ground packages from certain origin ZIPs; details not yet released",
+                 "sum": "Effective December 21, 2026 or later. UPS has not yet published the amount, the origin ZIPs or the qualifying customers.",
+                 "url": "https://x.example/s"}
+    save("news.json", [GRI, surcharge])
+    T.close_placeholders([dict(PLACE)], today="2026-10-25")
+    assert "ups-origin-zip-surcharge" not in {d["id"] for d in load("drop.json", [])}
+    assert "07" in {d["id"] for d in load("drop.json", [])}            # the real "still waiting" note still goes

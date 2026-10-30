@@ -377,3 +377,35 @@ def test_reported_call_leaves_next_and_its_recording_link_is_filled():
     two = '<a href="/detail/1/q3-2026-a-conference-call">a</a><a href="/detail/2/q3-2026-b-conference-call">b</a>'
     rows[0]["webcast"] = None
     assert E.fill_call_links(rows, nxt, "2026-10-27", fetch=lambda u: two) == [] and rows[0]["webcast"] is None     # ambiguous: left empty
+
+
+def test_earnings_links_are_filed_in_docs_once():
+    rows = [{"company": "UPS", "q": "Q3 2026", "label": "Q3 2026", "d": "2026-10-27", "headline": "UPS Releases 3Q 2026 Earnings",
+             "release": "https://investors.ups.com/r", "webcast": "https://investors.ups.com/w", "filing": None, "transcript": None}]
+    docs = []
+    first = E.file_earnings_docs(rows, docs, "2026-10-30")
+    assert len(first) == 2 and {d["t"] for d in docs} == {"Earnings"} and docs[0]["n"] == "UPS Q3 2026 results release"
+    rows[0]["filing"] = "https://investors.ups.com/10q"
+    assert E.file_earnings_docs(rows, docs, "2026-10-30") == ["UPS Q3 2026 10-Q filing"] and len(docs) == 3
+
+
+def test_new_ups_quarter_shows_its_change_from_rounded_figures_until_exact_ones_arrive():
+    rows = [{"company": "UPS", "q": "Q3 2025", "rev": 21.4, "revYoY": -2.0, "period": {"start": "2025-07-01", "end": "2025-09-30", "months": 3}},
+            {"company": "UPS", "q": "Q3 2026", "rev": 22.9, "revYoY": None, "period": {"start": "2026-07-01", "end": "2026-09-30", "months": 3}}]
+    E.fill_yoy(rows)
+    assert rows[1]["revYoY"] == 7.0 and rows[1]["yoy_src"] == "calc-rounded"
+    rows[1].update(rev_m=22940, rev_prior_m=21420)
+    E.fill_yoy(rows)
+    assert rows[1]["revYoY"] == 7.1 and rows[1]["yoy_src"] == "calc"
+
+
+def test_same_week_links_tie_the_report_to_rate_changes_once():
+    import events
+    stories = [{"id": "e1", "c": ["UPS"], "cat": "Earnings & markets", "date": "2026-10-27", "lvl": 2},
+               {"id": "e2", "c": ["UPS"], "cat": "Earnings & markets", "date": "2026-10-27", "lvl": 1},
+               {"id": "r1", "c": ["UPS"], "cat": "Pricing & GRI", "date": "2026-10-30", "lvl": 3},
+               {"id": "r2", "c": ["FedEx"], "cat": "Pricing & GRI", "date": "2026-10-30", "lvl": 3},
+               {"id": "r3", "c": ["UPS"], "cat": "Pricing & GRI", "date": "2026-09-01", "lvl": 3}]
+    rows = [{"company": "UPS", "q": "Q3 2026", "d": "2026-10-27"}]
+    got = events.same_week_links(stories, rows, "2026-10-30")
+    assert [(l["a"], l["b"]) for l in got] == [("e1", "r1")]

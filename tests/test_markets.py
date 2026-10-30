@@ -55,6 +55,7 @@ def test_a_move_over_15_percent_keeps_the_last_good_values(data_dir, monkeypatch
     big = markets.from_chart(chart([100.0, 100.0, 120.0], 120.0))          # +20% in a day
     ok = markets.from_chart(chart([100.0, 100.0, 101.0], 101.0))
     before = load("markets.json", {})["UPS"]
+    (data_dir / "review.json").write_text("[]")                            # not the live review list's held moves
     mk, rv = run(monkeypatch, {"UPS": big, "FDX": ok})
     assert mk["UPS"] == before                                             # untouched
     assert mk["FDX"]["chp"] == 1.0 and mk["FDX"]["prev_date"] == "2026-10-22"
