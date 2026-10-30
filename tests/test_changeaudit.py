@@ -133,3 +133,13 @@ def test_ordinary_words_are_not_robot_notes():
     clean = {"title": "UPS posts new version of its rate guide", "sum": "The previous version of the guide did not include a residential fee.",
              "plain": "Shippers see the new fee.", "changes": [{"what": "Residential fee", "after": "$6.10 per package"}]}
     assert C.robot_leaks(clean) == []
+
+
+def test_earnings_sync_flags_every_missing_surface():
+    import audit
+    nxt = {"next": [{"c": "UPS", "q": "Q3 2026", "d": "2026-10-27"}, {"c": "FedEx", "q": "Transition", "d": "2026-10-28"}]}
+    rows = [{"company": "UPS", "q": "Q3 2026", "release": "https://r", "vol": None}]
+    stories = {"a": {"c": ["UPS"], "cat": "Earnings & markets", "date": "2026-10-27"}}
+    got = audit.earnings_sync_issues(rows, nxt, [{"u": "https://r"}], stories, "2026-10-30")
+    assert [m.split(":")[0].split(" reported")[0] for _, m, _ in got] == ["UPS Q3 2026", "FedEx"]     # UPS: no volume yet; FedEx: no row
+    assert audit.earnings_sync_issues(rows, nxt, [], {}, "2026-10-30")[0][1].startswith("UPS Q3 2026: the release is not filed")
