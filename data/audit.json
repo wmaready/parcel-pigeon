@@ -1,15 +1,7 @@
 {
- "run": "2026-10-30T06:06Z",
+ "run": "2026-10-30T06:58Z",
  "clock_add": [],
  "clock_link": [
-  {
-   "clock": "xrv5-ups-sbr-fuel0",
-   "story": "w500a5bdc762c"
-  },
-  {
-   "clock": "xrv5-ups-sbr-fuel0",
-   "story": "w9c03b8f99b5f"
-  },
   {
    "clock": "xwb8827e8c126e0",
    "story": "wa9c423a83880"
@@ -70,22 +62,13 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)\"",
+   "sev": "high",
+   "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"UPS adds a surcharge on Ground and Ground Saver packages from certain origin ZIPs; details not yet released\"",
    "ids": [
-    "w500a5bdc762c"
+    "ups-origin-zip-surcharge"
    ],
-   "fixed": true
-  },
-  {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-12-21 \"UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)\"",
-   "ids": [
-    "w9c03b8f99b5f"
-   ],
-   "fixed": true
+   "fixed": false
   },
   {
    "sev": "med",
@@ -159,13 +142,6 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -346,6 +322,15 @@
   },
   {
    "sev": "high",
+   "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"UPS adds a surcharge on Ground and Ground Saver packages from certain origin ZIPs; details not yet released\"",
+   "ids": [
+    "ups-origin-zip-surcharge"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
    "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
@@ -389,13 +374,6 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
