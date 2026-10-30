@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T19:53Z",
+ "run": "2026-10-30T20:46Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -103,8 +103,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
@@ -305,6 +305,27 @@
     "a2e0cb230779a",
     "a5aadb5b56a84"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "earnings-sync",
+   "msg": "UPS Q3 2026: packages a day and revenue per package are still empty three days after the report",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "earnings-sync",
+   "msg": "FedEx reported on 2026-10-28 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "earnings-sync",
+   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
    "fixed": false
   }
  ],
@@ -347,8 +368,8 @@
   },
   {
    "sev": "med",
-   "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
+   "type": "watch-stale",
+   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
    "ids": [],
    "fixed": false
   },
@@ -549,6 +570,27 @@
     "a2e0cb230779a",
     "a5aadb5b56a84"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "earnings-sync",
+   "msg": "UPS Q3 2026: packages a day and revenue per package are still empty three days after the report",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "earnings-sync",
+   "msg": "FedEx reported on 2026-10-28 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "earnings-sync",
+   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
    "fixed": false
   }
  ]
