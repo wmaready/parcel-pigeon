@@ -1,5 +1,100 @@
 [
  {
+  "id": "wa9c423a83880",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price",
+  "sum": "UPS's new Ground and Ground Saver fuel surcharge table, effective Nov 2, 2026, charges 0.50 percentage point more than the old table at the same diesel price. Parcel Pigeon ran the diesel price UPS used in each of the last six weeks (EIA, $6.18 to $6.53 a gallon) through the new table: every week came out 0.50 point higher than the surcharge UPS charged, for example 30.00% instead of 29.50% for the week of Oct 26. At the Oct 26 diesel price of $6.35, the Nov 2 surcharge is 30.25% under the new table, against 29.50% this week. The Domestic Air table was not compared.",
+  "plain": "UPS Ground and Ground Saver shippers pay about 0.5 point more in fuel surcharge from Nov 2 than the old table would have charged at the same diesel price. On $100,000 a month of Ground transportation charges that is about $500 a month. Fuel surcharges apply to transportation charges and to certain other charges.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Fuel",
+  "act": "2026-11-02",
+  "inferred": null,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "UPS Ground fuel surcharge, week of Sep 21 (diesel $6.29)",
+    "before": "29.50% charged",
+    "after": "30.00% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Sep 28 (diesel $6.53)",
+    "before": "30.25% charged",
+    "after": "30.75% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Oct 5 (diesel $6.38)",
+    "before": "29.75% charged",
+    "after": "30.25% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Oct 12 (diesel $6.20)",
+    "before": "29.25% charged",
+    "after": "29.75% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Oct 19 (diesel $6.18)",
+    "before": "29.25% charged",
+    "after": "29.75% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Oct 26 (diesel $6.28)",
+    "before": "29.50% charged",
+    "after": "30.00% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.50 point"
+   },
+   {
+    "what": "UPS Ground fuel surcharge, week of Nov 2 (diesel $6.35)",
+    "before": "29.50% this week",
+    "after": "30.25% under the Nov 2 table",
+    "effective": "2026-11-02",
+    "who": "UPS Ground and Ground Saver shippers",
+    "impact": "+0.75 point: 0.50 from the new table, 0.25 from the higher diesel price"
+   }
+  ],
+  "verdict": "analysis",
+  "unknowns": [
+   "Domestic Air was not compared: weekly jet fuel prices UPS used are not on file",
+   "The old table itself is not on file; the comparison uses what UPS actually charged each week"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "Parcel Pigeon analysis of UPS's fuel tables and EIA diesel prices",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS fuel surcharge tables, effective Nov 2, 2026",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   },
+   {
+    "src": "UPS fuel surcharges",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+   }
+  ],
+  "auto": true,
+  "primary": true
+ },
+ {
   "id": "w9c03b8f99b5f",
   "date": "2026-10-30",
   "c": [
