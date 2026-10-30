@@ -25,7 +25,7 @@
    "50597b804888"
   ],
   "pend": "64f2de4dd5ff",
-  "fail_runs": 1
+  "fail_runs": 2
  },
  "https://ups.com/rateupdates": {
   "checked": "2026-10-29",
@@ -50,7 +50,7 @@
    "9b476fb38494"
   ],
   "pend": "64f2de4dd5ff",
-  "fail_runs": 1
+  "fail_runs": 2
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
   "checked": "2026-10-30",
@@ -97,7 +97,7 @@
   "pend": "4d341f89308d"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "checked": "2026-10-29",
+  "checked": "2026-10-30",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
@@ -115,7 +115,7 @@
   "told": []
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
-  "checked": "2026-10-29",
+  "checked": "2026-10-30",
   "pdfs": [],
   "lines": 69,
   "told": []
@@ -269,7 +269,7 @@
   "told": []
  },
  "https://developer.ups.com/": {
-  "checked": "2026-10-29",
+  "checked": "2026-10-30",
   "pdfs": [
    "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf"
   ],
@@ -322,7 +322,7 @@
   "lines": 17,
   "told": [],
   "pend": "a6fc3924eb6c",
-  "fail_runs": 1
+  "fail_runs": 2
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
   "checked": "2026-10-30",

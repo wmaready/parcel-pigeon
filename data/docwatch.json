@@ -1,5 +1,5 @@
 {
- "cursor": 20,
+ "cursor": 35,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 214,
+   "fails": 215,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 214,
+   "fails": 215,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
@@ -492,7 +492,8 @@
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
     "txt": "data/snapshots/45730186d708/2026-10-30.txt",
     "prev_d": "2026-10-29"
-   }
+   },
+   "pic_try": "2026-10-30"
   },
   "https://www.shipveho.com/service-guide/last-mile-delivery": {
    "n": "Veho service guide: last-mile delivery",
@@ -505,7 +506,7 @@
    "first": "2026-10-21",
    "n": "surge-fee-us-en.pdf",
    "hash": "edf2fa3b4179",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
@@ -516,7 +517,7 @@
    "first": "2026-10-21",
    "n": "demand-surcharges-us-en.pdf",
    "hash": "10e2e45bcf78",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
@@ -781,7 +782,7 @@
    "first": "2026-10-25",
    "n": "ground-saver-terms-us-en.pdf",
    "hash": "4b00a0dd2a43",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:55c43bc5-8b95-483e-b515-9e44541b99a8/original/as/ground-saver-terms-us-en.pdf",
@@ -956,7 +957,7 @@
   "https://www.ontrac.com/terms-conditions-additional/": {
    "hash": "c8d830c9c53b",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "OnTrac additional terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -966,7 +967,7 @@
   "https://www.ontrac.com/terms-conditions/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "OnTrac terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -976,15 +977,15 @@
   },
   "https://www.ontrac.com/supplemental-surcharges": {
    "n": "Supplemental Surcharges",
-   "fails": 19,
+   "fails": 20,
    "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
    "blocked": false,
-   "last_try": "2026-10-29"
+   "last_try": "2026-10-30"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:c6bf8a2f-018f-4aa0-838b-ffc1a75eb1d9/original/as/terms-carriage-us-en.pdf": {
    "hash": "2272bb1c9949",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "2026 UPS Tariff / Terms and Conditions of Service",
    "snap": {
     "d": "2026-10-26",
@@ -994,15 +995,15 @@
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges": {
    "n": "UPS Mail Innovations domestic surcharges",
-   "fails": 19,
+   "fails": 20,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-10-29"
+   "last_try": "2026-10-30"
   },
   "https://www.ups.com/us/en/support/shipping-support/legal-terms-conditions": {
    "hash": "0cf8a2c84b64",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "UPS legal terms and conditions page",
    "snap": {
     "d": "2026-10-26",
@@ -1012,13 +1013,13 @@
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx": {
    "n": "2026 holiday prices, Notice 123 (Excel)",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "skip": "spreadsheet"
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf": {
    "hash": "c48e3cbb51f4",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "2026 holiday prices, Notice 123 (PDF)",
    "snap": {
     "d": "2026-10-26",
@@ -1028,13 +1029,13 @@
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
    "n": "2026 holiday prices, SKU price files (Excel)",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "skip": "spreadsheet"
   },
   "https://about.usps.com/who/legal/terms-of-use.htm": {
    "hash": "7b29a8b90772",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "Terms of use",
    "snap": {
     "d": "2026-10-26",
@@ -1044,7 +1045,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf": {
    "hash": "0bf70104e05e",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "USPS transportation-related temporary price change",
    "snap": {
     "d": "2026-10-26",
@@ -1145,7 +1146,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "d28481282107",
    "first": "2026-10-25",
-   "checked": "2026-10-29",
+   "checked": "2026-10-30",
    "n": "Printable version",
    "snap": {
     "d": "2026-10-26",
