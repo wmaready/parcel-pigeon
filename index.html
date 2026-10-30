@@ -8779,7 +8779,7 @@ const fmtOf=u=>!u?'':/\.xlsx(\?|$)/i.test(u)?'Excel':/\.pdf(\?|$)/i.test(u)||/\/
 /* Docs: carrier first, then the kind of document, newest first; every row says why it's in the library */
 const DOC_GROUPS=[['Rate guides',['Rate guide']],['GRI & peak season',['GRI notice','Peak']],
   ['Off-cycle announcements',[]],['Surcharges, fees & programs',['Surcharges & fees','Special program']],
-  ['Fuel, zones & ZIP lists',['Fuel','Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Filings',['Regulatory filing']],
+  ['Fuel, zones & ZIP lists',['Fuel','Zones & DAS']],['Service guides & terms',['Service guide','Terms']],['Earnings',['Earnings']],['Filings',['Regulatory filing']],
   ['Market reports',['Market report']]];
 // a price notice taking effect outside the annual increase window and peak season (same rule as the rate clock's Off-cycle tag)
 const DOC_KIND={'GRI notice':'gri','Peak':'peak','Surcharges & fees':'surcharge','Special program':'program'};

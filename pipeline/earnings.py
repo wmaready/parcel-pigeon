@@ -279,6 +279,26 @@ def add_new_quarters(rows, nxt, review, today, fetch=None, pause=2.0):
     return added
 
 
+def file_earnings_docs(rows, docs, today):
+    """Each quarter's release, call and 10-Q go into the Docs library the day they are known, so they are there before the
+    news is. A row's links are filed as they appear (the release first, the call and filing later). Returns what was added."""
+    have = {d.get("u") for d in docs if d.get("u")}
+    added = []
+    for r in rows:
+        if r.get("company") not in ("UPS", "FedEx", "FedEx Freight", "USPS"):
+            continue
+        for key, label in (("release", "results release"), ("webcast", "earnings call"), ("transcript", "call transcript"), ("filing", "10-Q filing")):
+            u = r.get(key)
+            if not u or u in have:
+                continue
+            docs.append({"c": r["company"], "t": "Earnings", "n": f"{r['company']} {r.get('label') or r['q']} {label}", "y": int(str(r.get("d") or today)[:4]),
+                         "eff": None, "u": u, "d": r.get("headline") or f"{r['company']} {r.get('label') or r['q']}, reported {r.get('d')}",
+                         "cur": True, "added": today})
+            have.add(u)
+            added.append(f"{r['company']} {r['q']} {label}")
+    return added
+
+
 def fill_call_links(rows, nxt, today, fetch=None):
     """The call's recording link for a quarter that was just reported: the investor-relations calendar lists the event
     (".../detail/<id>/q3-2026-...-earnings-conference-call"). It is the same link the older quarters carry; filled only
@@ -454,6 +474,15 @@ def main():
         print(f"::warning title=earnings call links::{e}")
     fill_yoy(rows)
     fill_usps_rpp(rows)
+    try:
+        docs = load("docs.json", [])
+        filed = file_earnings_docs(rows, docs, today)
+        for q in filed:
+            print(f"earnings: filed {q} in Docs")
+        if filed:
+            save("docs.json", docs)
+    except Exception as e:
+        print(f"::warning title=earnings docs::{e}")
     for f in update_reactions(rows, today):          # the price service failing keeps the last good figures: a warning
         print(f"::warning title=earnings prices::{f}")
     bad = fedex_fy_check(rows, review)

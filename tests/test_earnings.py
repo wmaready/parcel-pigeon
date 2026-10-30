@@ -377,3 +377,13 @@ def test_reported_call_leaves_next_and_its_recording_link_is_filled():
     two = '<a href="/detail/1/q3-2026-a-conference-call">a</a><a href="/detail/2/q3-2026-b-conference-call">b</a>'
     rows[0]["webcast"] = None
     assert E.fill_call_links(rows, nxt, "2026-10-27", fetch=lambda u: two) == [] and rows[0]["webcast"] is None     # ambiguous: left empty
+
+
+def test_earnings_links_are_filed_in_docs_once():
+    rows = [{"company": "UPS", "q": "Q3 2026", "label": "Q3 2026", "d": "2026-10-27", "headline": "UPS Releases 3Q 2026 Earnings",
+             "release": "https://investors.ups.com/r", "webcast": "https://investors.ups.com/w", "filing": None, "transcript": None}]
+    docs = []
+    first = E.file_earnings_docs(rows, docs, "2026-10-30")
+    assert len(first) == 2 and {d["t"] for d in docs} == {"Earnings"} and docs[0]["n"] == "UPS Q3 2026 results release"
+    rows[0]["filing"] = "https://investors.ups.com/10q"
+    assert E.file_earnings_docs(rows, docs, "2026-10-30") == ["UPS Q3 2026 10-Q filing"] and len(docs) == 3
