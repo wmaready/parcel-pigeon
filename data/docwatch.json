@@ -1,5 +1,5 @@
 {
- "cursor": 60,
+ "cursor": 75,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 232,
+   "fails": 233,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 232,
+   "fails": 233,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
@@ -1340,7 +1340,10 @@
     "pdf": "https://public-inspection.federalregister.gov/2026-21421.pdf?1792413913",
     "txt": "data/snapshots/e5f2c699239a/2026-10-26.txt"
    },
-   "last_try": "2026-10-27"
+   "last_try": "2026-10-30",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false
   },
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
@@ -1352,7 +1355,10 @@
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21317.pdf",
     "txt": "data/snapshots/58373f1b7bc3/2026-10-26.txt"
    },
-   "last_try": "2026-10-27"
+   "last_try": "2026-10-30",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false
   },
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
