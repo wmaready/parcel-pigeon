@@ -397,3 +397,15 @@ def test_new_ups_quarter_shows_its_change_from_rounded_figures_until_exact_ones_
     rows[1].update(rev_m=22940, rev_prior_m=21420)
     E.fill_yoy(rows)
     assert rows[1]["revYoY"] == 7.1 and rows[1]["yoy_src"] == "calc"
+
+
+def test_same_week_links_tie_the_report_to_rate_changes_once():
+    import events
+    stories = [{"id": "e1", "c": ["UPS"], "cat": "Earnings & markets", "date": "2026-10-27", "lvl": 2},
+               {"id": "e2", "c": ["UPS"], "cat": "Earnings & markets", "date": "2026-10-27", "lvl": 1},
+               {"id": "r1", "c": ["UPS"], "cat": "Pricing & GRI", "date": "2026-10-30", "lvl": 3},
+               {"id": "r2", "c": ["FedEx"], "cat": "Pricing & GRI", "date": "2026-10-30", "lvl": 3},
+               {"id": "r3", "c": ["UPS"], "cat": "Pricing & GRI", "date": "2026-09-01", "lvl": 3}]
+    rows = [{"company": "UPS", "q": "Q3 2026", "d": "2026-10-27"}]
+    got = events.same_week_links(stories, rows, "2026-10-30")
+    assert [(l["a"], l["b"]) for l in got] == [("e1", "r1")]
