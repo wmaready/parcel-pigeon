@@ -1,5 +1,6 @@
 """The published data files the app reads must stay valid and consistent."""
 import json
+import re
 from conftest import ROOT
 from common import canon
 
@@ -30,6 +31,8 @@ def test_patterns_figures_come_from_almanac():
     from themes import compact
     from common import numbers_supported
     src = compact(json.loads((DATA / "almanac.json").read_text()))
+    fuel = (DATA / "fuel.json").read_text()   # the diesel price is stored to three places and quoted to two
+    src += " " + fuel + " " + " ".join(f"{float(x):.2f}" for x in re.findall(r"\b\d+\.\d{3}\b", fuel))
     for it in json.loads((DATA / "patterns.json").read_text()).get("items", []):
         assert not numbers_supported(it["t"] + " " + it["body"], src), it["t"]
 
