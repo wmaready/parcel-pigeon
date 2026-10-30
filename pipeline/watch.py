@@ -7,7 +7,7 @@ Needs: ANTHROPIC_API_KEY. For issues: GITHUB_TOKEN and GITHUB_REPOSITORY (set au
 import datetime as dt, difflib, io, json, os, re, sys, urllib.parse
 import requests, trafilatura, yaml
 from pypdf import PdfReader
-from common import pdf_to_text, ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls, doc_key, doc_year
+from common import doc_from_filename, pdf_to_text, ROOT, DATA, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, clock_worthy, canon, known_doc_urls, doc_key, doc_year
 from scoop import is_covered, notify, ask, big
 from common import dedupe_live, same_event
 from changeaudit import audit, file_text, predecessor, snapshot, remember, story_fields, robot_leaks
@@ -116,20 +116,14 @@ def file_into_library(lib, item, fu, res, baseline=False):
     if doc_key(fu) in known_doc_urls(lib):          # also the same file at another address
         return
     name = urllib.parse.unquote(fu.split("?")[0].rstrip("/").split("/")[-1])
-    low = name.lower()
-    kind = ("Surcharges & fees" if re.search(r"surcharge|ahs|lps|accessor|fee", low) and "zip" not in low else
-            "Zones & DAS" if re.search(r"zip|zone|area|das", low) else "Fuel" if "fuel" in low else
-            "Service guide" if "service" in low else "Terms" if re.search(r"terms|tariff|condition", low) else
-            "Rate guide" if re.search(r"rate|price", low) else "Special program")
-    pretty = re.sub(r"\s+", " ", re.sub(r"[-_]+", " ", re.sub(r"\.(pdf|xlsx?)$", "", name, flags=re.I))).strip()
-    year = doc_year({"c": item["carrier"], "n": pretty, "u": fu})     # the year the file states (name, then upload folder)
+    kind, label, year = doc_from_filename(item["carrier"], name)
     if baseline:
         # a file that was already on the carrier's page when we first saw it: filed and watched, but not "new"
-        lib.append({"c": item["carrier"], "t": kind, "n": f"{item['carrier']} {pretty}" if item["carrier"].lower() not in pretty.lower() else pretty,
+        lib.append({"c": item["carrier"], "t": kind, "n": label,
                     "y": year, "eff": None, "u": fu, "d": f"Posted on {item['carrier']}'s {item['name']} page",
                     "cur": not (year and year < dt.date.today().year), "seen": dt.date.today().isoformat()})
         return
-    lib.append({"c": item["carrier"], "t": kind, "n": f"{item['carrier']} {pretty}" if item["carrier"].lower() not in pretty.lower() else pretty,
+    lib.append({"c": item["carrier"], "t": kind, "n": label,
                 "y": year, "eff": None, "u": fu, "d": f"Posted on {item['carrier']}'s {item['name']} page" +
                 (f" ({res.get('verdict')})" if res and res.get("verdict") else ""),
                 "cur": not (year and year < dt.date.today().year), "added": dt.date.today().isoformat(),

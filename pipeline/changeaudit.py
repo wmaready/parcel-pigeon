@@ -8,7 +8,7 @@ proven is dropped, and if nothing survives the change isn't published as news.
 Used by watch.py (carrier pages and the files they link) and docwatch.py (documents in the library).
 """
 import difflib, gzip, io, json, re, sys
-from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, programs_for, program_brief, apply_benefit_rule
+from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, programs_for, program_brief, apply_benefit_rule, stated_effective
 
 SNAP = ROOT / "data" / "docwatch"            # same text snapshots docwatch keeps, so a file's "before" is always on hand
 MAX_TEXT = 14000
@@ -154,6 +154,15 @@ def verify(res, old, new):
         for x in b:
             for y in a:
                 derived |= {round(abs(y - x), 2), round(abs(y - x) / x * 100, 1) if x else None, round(abs(y - x) / x * 100) if x else None}
+    # a table that prints the old and the new price side by side ("$46.50 -> $50.50 (+$4.00)") has no separate "before":
+    # the gap and the percentage between two figures the texts do contain, inside one change, are worked out, not invented
+    both = (old or "") + "\n" + new
+    for c in kept:
+        pool = [x for x in nums(" ".join(str(c.get(k) or "") for k in ("before", "after", "impact"))) if not numbers_supported(f"{x:g}", both)]
+        for i, x in enumerate(pool):
+            for y in pool[i + 1:]:
+                lo, hi = sorted((x, y))
+                derived |= {round(hi - lo, 2), round((hi - lo) / lo * 100, 1) if lo else None, round((hi - lo) / lo * 100) if lo else None}
     res["unsupported"] = [m for m in missing if nums(m) and nums(m)[0] not in derived]
     return res
 
@@ -181,6 +190,9 @@ def audit(carrier, name, url, old, new, note=""):
         return None
     res.pop("why", None); res.pop("benefit", None)       # only the code rule below writes these
     res = verify(res, old or "", new or "")
+    stated = stated_effective(new)                     # a footer line the audit's excerpt may not have reached
+    if stated and not res.get("act") and not any(c.get("effective") for c in res.get("changes") or []):
+        res["act"] = stated
     if progs and res.get("material"):
         apply_benefit_rule(res, progs, res.get("changes") or [])     # proven changes only
     return res
