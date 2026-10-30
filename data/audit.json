@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T04:57Z",
+ "run": "2026-10-30T05:00Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -12,8 +12,8 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 360,
- "doc_cursor": 54,
+ "link_cursor": 400,
+ "doc_cursor": 84,
  "checked_pairs": [
   "457e37db5347",
   "0ee2e50bd13d",
@@ -300,6 +300,22 @@
     "a15404304f17b"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Read timed out. (read timeout=15)): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
+   "ids": [
+    "a5e5d0db945cf"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -519,6 +535,22 @@
     "a2e0cb230779a",
     "a15404304f17b"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Read timed out. (read timeout=15)): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
+   "ids": [
+    "a5e5d0db945cf"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
+   "ids": [],
    "fixed": false
   }
  ]
