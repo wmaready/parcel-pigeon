@@ -142,3 +142,15 @@ def test_a_gap_worked_out_from_two_printed_prices_is_not_an_unsupported_number()
     assert C.verify(res, None, new)["unsupported"] == []
     res["summary"] = "Fee rises $9.99 to $7.10"                      # a figure that is nowhere is still held
     assert C.verify(res, None, new)["unsupported"] == ["$9.99"]
+
+
+def test_a_footer_date_in_the_document_dates_the_story_not_first_sighting():
+    from common import stated_effective, apply_doc_effective
+    assert stated_effective("DAILY RATES   Effective December 21, 2026   ©2026 UPS") == "2026-12-21"
+    assert stated_effective("Effective through 12/20/2026   Effective 12/21/2026") is None            # numeric columns are not a stated date
+    assert stated_effective("effective December 21, 2026 ... effective January 5, 2027") is None       # two dates: no guess
+    story = {"inferred": True, "act": "2026-10-30", "url": "https://x.com/a/rates.pdf?z=1", "srcs": [{"url": "https://x.com/a/rates.pdf"}],
+             "sum": "UPS posted rates. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-10-30, so it is treated as in effect from then."}
+    assert apply_doc_effective(story, [{"u": "https://x.com/a/rates.pdf", "eff": "2026-12-21"}])
+    assert story["act"] == "2026-12-21" and story["inferred"] is None and "December 21, 2026" in story["sum"] and "treated as in effect" not in story["sum"]
+    assert not apply_doc_effective({"inferred": True, "srcs": [{"url": "https://x.com/b.pdf"}]}, [{"u": "https://x.com/a/rates.pdf", "eff": "2026-12-21"}])

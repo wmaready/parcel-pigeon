@@ -3,7 +3,7 @@
 Edits you make to the TITLE / SUMMARY / EFFECT lines in the issue are used. Only the repo owner's replies count."""
 import json, os, re, sys
 import requests
-from common import load, save
+from common import load, save, apply_doc_effective
 
 FIELDS = {"TITLE": "title", "SUMMARY": "sum", "EFFECT": "plain"}
 GO = re.compile(r"^(run|publish|yes|ok|okay|send|approve|approved|go)\b", re.I)
@@ -67,6 +67,7 @@ def main():
                     story.pop({"sum": "syn", "plain": "aff"}.get(key, ""), None)
                 story[key] = f.group(1).strip()
         story.pop("unsupported_numbers", None)
+        apply_doc_effective(story, load("docs.json", []))      # the library knows the date the document prints
         extras = story.pop("_extras", None) or {}
         if not any(s.get("id") == story["id"] for s in live):
             live.insert(0, story); changed = True

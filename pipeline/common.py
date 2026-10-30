@@ -521,6 +521,38 @@ def doc_from_filename(carrier, filename, today=None):
     title = " ".join(ACRONYMS.get(w.lower()) or ("-".join(p.capitalize() for p in w.split("-")) if w.lower() not in small else w.lower()) for w in text.split())
     return kind, f"{year} {carrier} {title} (preview)".strip() if year else f"{carrier} {title} (preview)", year
 
+_MONTH_NAMES = "January|February|March|April|May|June|July|August|September|October|November|December"
+NOTE_INFERRED = re.compile(r"\s*The carrier's page doesn't state an effective date\. This change was first seen on the carrier's own site on [0-9-]+, so it is treated as in effect from then\.")
+
+
+def stated_effective(text):
+    """The one date a carrier file says its rates take effect ("Effective December 21, 2026", often printed in a page footer,
+    far past the part of the text an audit reads). None if there is no such date or more than one different date."""
+    import datetime as _dt
+    found = set()
+    for m, d, y in re.findall(rf"(?i)\beffective\s+(?:on\s+)?({_MONTH_NAMES})\s+(\d{{1,2}}),?\s+(20\d\d)", text or ""):
+        try:
+            found.add(_dt.datetime.strptime(f"{m.title()} {int(d)} {y}", "%B %d %Y").date().isoformat())
+        except ValueError:
+            pass
+    return found.pop() if len(found) == 1 else None
+
+
+def apply_doc_effective(story, docs):
+    """A story dated from first sighting ("inferred") whose source document is in the library with a known effective date
+    takes that date instead, and the "treated as in effect from then" sentence goes. Returns True when it changed."""
+    if not story.get("inferred"):
+        return False
+    urls = {doc_key(s.get("url") or "") for s in story.get("srcs") or []} | {doc_key(story.get("url") or "")}
+    eff = next((d.get("eff") for d in docs if d.get("eff") and doc_key(d.get("u") or "") in urls), None)
+    if not eff:
+        return False
+    import datetime as _dt
+    nice = _dt.date.fromisoformat(eff).strftime("%B %-d, %Y")
+    story["act"], story["inferred"] = eff, None
+    story["sum"] = NOTE_INFERRED.sub(f" The document states these rates are effective {nice}.", story.get("sum") or "")
+    return True
+
 
 def doc_year(d):
     if d.get("c") != "Reports":

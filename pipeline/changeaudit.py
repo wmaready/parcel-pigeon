@@ -8,7 +8,7 @@ proven is dropped, and if nothing survives the change isn't published as news.
 Used by watch.py (carrier pages and the files they link) and docwatch.py (documents in the library).
 """
 import difflib, gzip, io, json, re, sys
-from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, programs_for, program_brief, apply_benefit_rule
+from common import ROOT, load, save, h, get, claude, parse_json, numbers_supported, MODEL_WRITE, programs_for, program_brief, apply_benefit_rule, stated_effective
 
 SNAP = ROOT / "data" / "docwatch"            # same text snapshots docwatch keeps, so a file's "before" is always on hand
 MAX_TEXT = 14000
@@ -190,6 +190,9 @@ def audit(carrier, name, url, old, new, note=""):
         return None
     res.pop("why", None); res.pop("benefit", None)       # only the code rule below writes these
     res = verify(res, old or "", new or "")
+    stated = stated_effective(new)                     # a footer line the audit's excerpt may not have reached
+    if stated and not res.get("act") and not any(c.get("effective") for c in res.get("changes") or []):
+        res["act"] = stated
     if progs and res.get("material"):
         apply_benefit_rule(res, progs, res.get("changes") or [])     # proven changes only
     return res

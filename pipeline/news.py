@@ -1720,6 +1720,7 @@ def write_beats(limit=6):
         sig = h(",".join(ids))
         if (t.get("cx") or {}).get("sig") == sig and (t.get("cx") or {}).get("v") == BEATS_V:
             continue
+        member_src = " ".join(" ".join(str(pool[i].get(f) or "") for f in ("title", "sum", "plain", "tie", "new", "why", "date", "act", "ann")) for i in ids)
         old = t.get("cx") or {}
         theme_old = t.get("theme") and len(old.get("beats") or {}) >= 10          # a hand-written year theme keeps its walk-through
         if theme_old:
@@ -1748,9 +1749,11 @@ def write_beats(limit=6):
         cx = {"sig": sig, "v": BEATS_V, "beats": beats}
         if theme_old:
             cx = {**old, "sig": sig, "v": BEATS_V, "beats": {**old["beats"], **beats}}
-        elif ok(got.get("intro"), 130):
+        # the storyline's own lines ("where it stands", the intro) must rest on its member stories, not on the wider context
+        member_ok = lambda line, n: ok(line, n) and not numbers_supported(line, member_src)
+        if not theme_old and member_ok(got.get("intro"), 130):
             cx["intro"] = got["intro"].strip()
-        if ok(got.get("now"), 150):
+        if member_ok(got.get("now"), 150):
             cx["now"] = got["now"].strip()
         t["cx"] = cx
         print(f"  storyline narration: {k} ({len(beats)} of {len(S)} steps)")
