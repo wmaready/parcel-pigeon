@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T02:03Z",
+ "run": "2026-10-30T02:56Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -142,6 +142,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "ids": [],
    "fixed": false
   },
   {
@@ -362,6 +369,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "ids": [],
    "fixed": false
   },
   {
