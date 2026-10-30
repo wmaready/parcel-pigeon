@@ -1,13 +1,25 @@
 {
- "run": "2026-10-30T05:00Z",
+ "run": "2026-10-30T05:49Z",
  "clock_add": [],
  "clock_link": [
   {
-   "clock": "e07",
+   "clock": "xw68c1687d28a10",
+   "story": "w500a5bdc762c"
+  },
+  {
+   "clock": "xw68c1687d28a10",
+   "story": "w91588ddb11ed"
+  },
+  {
+   "clock": "xw68c1687d28a10",
    "story": "w9c03b8f99b5f"
   },
   {
-   "clock": "e07",
+   "clock": "xwb8827e8c126e0",
+   "story": "wa9c423a83880"
+  },
+  {
+   "clock": "xw68c1687d28a10",
    "story": "wbfc38914b368"
   }
  ],
@@ -68,7 +80,25 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-10-27 \"UPS (Oct 27) and FedEx (Oct 28) report quarterly earnings\"",
+   "msg": "Linked \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
+   "ids": [
+    "w500a5bdc762c"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
+   "ids": [
+    "w91588ddb11ed"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts 2027 preview package rate tables and flags higher value-added fees\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
    "ids": [
     "w9c03b8f99b5f"
    ],
@@ -77,7 +107,16 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early\" to rate clock entry 2026-10-27 \"UPS (Oct 27) and FedEx (Oct 28) report quarterly earnings\"",
+   "msg": "Linked \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\" to rate clock entry 2026-11-01 \"UPS: Effective date added to the EU PID requirement notice for B2C shipments entering the EU\"",
+   "ids": [
+    "wa9c423a83880"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early\" to rate clock entry 2026-12-21 \"UPS: Additional Handling - Weight, zone 2\"",
    "ids": [
     "wbfc38914b368"
    ],
@@ -91,6 +130,15 @@
     "nrb01db6"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source UPS fuel surcharges moved ahead of press coverage on \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\"",
+   "ids": [
+    "wa9c423a83880"
+   ],
+   "fixed": true
   },
   {
    "sev": "high",
@@ -234,6 +282,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
+   "ids": [
+    "ad66ad94a48fa",
+    "a5aadb5b56a84"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
    "ids": [
     "a4a63ed69f438",
@@ -252,6 +310,26 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026\" and \"UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026\"",
+   "ids": [
+    "w599d9089a65d",
+    "w68c1687d28a1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" and \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\"",
+   "ids": [
+    "w500a5bdc762c",
+    "w91588ddb11ed"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
@@ -264,10 +342,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"DroneXL sets Wing's 43 dBA noise claim against Amazon MK30 data\"",
    "ids": [
     "a5876cb3ae6f1",
-    "af86a262d4dcb"
+    "a78c94fa3a273"
    ],
    "fixed": false
   },
@@ -294,27 +372,11 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"USPS issues interim rule on customs charges for international mailers\"",
+   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"PRC notices USPS filings for two new competitive shipping contracts\"",
    "ids": [
     "a2e0cb230779a",
-    "a15404304f17b"
+    "a5aadb5b56a84"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Read timed out. (read timeout=15)): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
-   "ids": [
-    "a5e5d0db945cf"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
-   "ids": [],
    "fixed": false
   }
  ],
@@ -470,6 +532,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
+   "ids": [
+    "ad66ad94a48fa",
+    "a5aadb5b56a84"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
    "ids": [
     "a4a63ed69f438",
@@ -488,6 +560,26 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026\" and \"UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026\"",
+   "ids": [
+    "w599d9089a65d",
+    "w68c1687d28a1"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii\" and \"UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii\"",
+   "ids": [
+    "w500a5bdc762c",
+    "w91588ddb11ed"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
@@ -500,10 +592,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"DroneXL sets Wing's 43 dBA noise claim against Amazon MK30 data\"",
    "ids": [
     "a5876cb3ae6f1",
-    "af86a262d4dcb"
+    "a78c94fa3a273"
    ],
    "fixed": false
   },
@@ -530,27 +622,11 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"USPS issues interim rule on customs charges for international mailers\"",
+   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"PRC notices USPS filings for two new competitive shipping contracts\"",
    "ids": [
     "a2e0cb230779a",
-    "a15404304f17b"
+    "a5aadb5b56a84"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Read timed out. (read timeout=15)): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
-   "ids": [
-    "a5e5d0db945cf"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
-   "ids": [],
    "fixed": false
   }
  ]

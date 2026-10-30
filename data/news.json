@@ -1,5 +1,475 @@
 [
  {
+  "id": "w68c1687d28a1",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 value-added service and other charge rates, effective Dec 21, 2026",
+  "sum": "UPS posted a rate sheet for value-added services and other charges. It lists the rates effective through 12/20/2026 beside new rates effective 12/21/2026. Most domestic and international accessorial charges rise, a few stay flat, and UPS My Choice for Business rescheduled delivery goes from $0.00 to $9.99.",
+  "plain": "Any shipper paying accessorial charges on UPS domestic or international parcels is affected, especially those with oversize, residential, remote-area or signature shipments. Most listed charges rise roughly 8-10%, and some Large Package Surcharges rise more (up to about 15%).",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "Additional Handling - Weight, zone 2",
+    "before": null,
+    "after": "$50.50 (zone 7+: $63.75)",
+    "effective": "2026-12-21",
+    "who": "Domestic packages charged Additional Handling for weight",
+    "impact": "Zone 2: $46.50 -> $50.50 (+$4.00); zone 7+: $58.75 -> $63.75 (+$5.00)"
+   },
+   {
+    "what": "Additional Handling - Dimensions, zone 2",
+    "before": null,
+    "after": "$32.75 (zone 7+: $44.00)",
+    "effective": "2026-12-21",
+    "who": "Domestic packages charged Additional Handling for dimensions",
+    "impact": "Zone 2: $30.00 -> $32.75 (+$2.75); zone 7+: $40.50 -> $44.00 (+$3.50)"
+   },
+   {
+    "what": "Additional Handling - Packaging, zone 2",
+    "before": null,
+    "after": "$29.25 (zone 7+: $36.75)",
+    "effective": "2026-12-21",
+    "who": "Domestic packages charged Additional Handling for packaging",
+    "impact": "Zone 2: $26.75 -> $29.25 (+$2.50); zone 7+: $33.75 -> $36.75 (+$3.00)"
+   },
+   {
+    "what": "Large Package Surcharge - Commercial, zone 2",
+    "before": null,
+    "after": "$250.00 (zone 7+: $330.00)",
+    "effective": "2026-12-21",
+    "who": "Domestic commercial Large Packages",
+    "impact": "Zone 2: $219.50 -> $250.00 (+$30.50); zone 7+: $286.00 -> $330.00 (+$44.00)"
+   },
+   {
+    "what": "Large Package Surcharge - Residential, zone 2",
+    "before": null,
+    "after": "$276.25 (zone 7+: $359.25)",
+    "effective": "2026-12-21",
+    "who": "Domestic residential Large Packages",
+    "impact": "Zone 2: $254.50 -> $276.25 (+$21.75); zone 7+: $331.00 -> $359.25 (+$28.25)"
+   },
+   {
+    "what": "Residential Surcharge - Ground",
+    "before": null,
+    "after": "$7.10 (Air: $7.60)",
+    "effective": "2026-12-21",
+    "who": "Domestic residential deliveries",
+    "impact": "Ground: $6.50 -> $7.10 (+$0.60); Air: $7.00 -> $7.60 (+$0.60)"
+   },
+   {
+    "what": "Delivery Area Surcharge - Ground Residential",
+    "before": null,
+    "after": "$7.15 (Extended: $9.65)",
+    "effective": "2026-12-21",
+    "who": "Domestic ground and air deliveries to surcharged areas",
+    "impact": "Ground Residential: $6.55 -> $7.15 (+$0.60); Extended: $8.85 -> $9.65 (+$0.80); Commercial: $4.50 -> $4.90 (+$0.40)"
+   },
+   {
+    "what": "Remote Area Surcharge - US 48",
+    "before": null,
+    "after": "$18.00 (Hawaii $18.00; Alaska $49.75)",
+    "effective": "2026-12-21",
+    "who": "Domestic shipments to remote areas",
+    "impact": "US 48 and Hawaii: $16.50 -> $18.00 (+$1.50); Alaska: $46.25 -> $49.75 (+$3.50)"
+   },
+   {
+    "what": "Delivery Confirmation - Signature Required",
+    "before": null,
+    "after": "$8.40 (Adult Signature Required: $10.25)",
+    "effective": "2026-12-21",
+    "who": "Domestic shipments with signature options",
+    "impact": "Signature Required: $7.70 -> $8.40 (+$0.70); Adult Signature: $9.35 -> $10.25 (+$0.90)"
+   },
+   {
+    "what": "Address Correction (Air and Ground)",
+    "before": null,
+    "after": "$27.50 per correction; maximum per shipment $190.25",
+    "effective": "2026-12-21",
+    "who": "Domestic shipments with corrected addresses",
+    "impact": "$25.25 -> $27.50 (+$2.25); maximum per shipment $175.25 -> $190.25 (+$15.00)"
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Several lines carry no label (e.g., per-$100 declared value rates of $1.84/$1.99 and the second Delivery Area Surcharge import rate of $6.00), so the service each applies to could not be confirmed",
+   "Details are said to be in the 2027 UPS Rate and Service Guide, which is not part of this file",
+   "Delivery Intercept, international Extended/Remote Area Surcharges, Paper Commercial Invoice and International Processing Fee show no change",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS: Additional Handling - Weight, zone 2",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Additional Handling - Dimensions, zone 2",
+      "Zone 2: $30.00 -> $32.75 (+$2.75); zone 7+: $40.50 -> $44.00 (+$3.50)"
+     ],
+     [
+      "UPS",
+      "Additional Handling - Packaging, zone 2",
+      "Zone 2: $26.75 -> $29.25 (+$2.50); zone 7+: $33.75 -> $36.75 (+$3.00)"
+     ],
+     [
+      "UPS",
+      "Large Package Surcharge - Commercial, zone 2",
+      "Zone 2: $219.50 -> $250.00 (+$30.50); zone 7+: $286.00 -> $330.00 (+$44.00)"
+     ],
+     [
+      "UPS",
+      "Large Package Surcharge - Residential, zone 2",
+      "Zone 2: $254.50 -> $276.25 (+$21.75); zone 7+: $331.00 -> $359.25 (+$28.25)"
+     ],
+     [
+      "UPS",
+      "Residential Surcharge - Ground",
+      "Ground: $6.50 -> $7.10 (+$0.60); Air: $7.00 -> $7.60 (+$0.60)"
+     ],
+     [
+      "UPS",
+      "Delivery Area Surcharge - Ground Residential",
+      "Ground Residential: $6.55 -> $7.15 (+$0.60); Extended: $8.85 -> $9.65 (+$0.80); Commercial: $4.50 -> $4.90 (+$0.40)"
+     ],
+     [
+      "UPS",
+      "Remote Area Surcharge - US 48",
+      "US 48 and Hawaii: $16.50 -> $18.00 (+$1.50); Alaska: $46.25 -> $49.75 (+$3.50)"
+     ],
+     [
+      "UPS",
+      "Delivery Confirmation - Signature Required",
+      "Signature Required: $7.70 -> $8.40 (+$0.70); Adult Signature: $9.35 -> $10.25 (+$0.90)"
+     ],
+     [
+      "UPS",
+      "Address Correction (Air and Ground)",
+      "$25.25 -> $27.50 (+$2.25); maximum per shipment $175.25 -> $190.25 (+$15.00)"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: preview-changes-package-value-added-services-other-charges.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
+     "old": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "w500a5bdc762c",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 Hundredweight Service rates for Tiers 1-7, Alaska and Hawaii",
+  "sum": "UPS posted a 2027 rate document for UPS Hundredweight Service covering Tiers 1-7, Alaska and Hawaii. It lists per-pound Next Day Air and 2nd Day Air rates for shipments of 100 lbs or more, per-hundredweight 3 Day Select and Ground rates by weight bracket, and minimum charges for each tier. No effective date is stated. The document states these rates are effective December 21, 2026.",
+  "plain": "Shippers moving heavy multi-package freight under Hundredweight pricing will use these rates in 2027. Rates rise with each tier; for example, Ground zone 2 at 200-499 lbs runs $57.06 in Tier 1 and $83.04 in Tier 7 (+$25.98 per hundredweight unit).",
+  "imp": "info",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "New 2027 UPS Hundredweight Service rate document covering Tiers 1-7, Alaska and Hawaii",
+    "before": null,
+    "after": "2027 rates for domestic Hundredweight Service across Tiers 1-7, plus Alaska and Hawaii",
+    "effective": null,
+    "who": "Shippers on UPS Hundredweight Service pricing",
+    "impact": null
+   },
+   {
+    "what": "Tier 1 UPS Next Day Air rate per pound, 100 lbs or more (zones 102-108, 124-126)",
+    "before": null,
+    "after": "$2.95 in zone 102 up to $9.53 in zone 108; $9.89, $8.43 and $10.66 in zones 124-126",
+    "effective": null,
+    "who": "Tier 1 shippers sending Next Day Air shipments of 100 lbs or more",
+    "impact": null
+   },
+   {
+    "what": "Tier 7 UPS Next Day Air rate per pound, 100 lbs or more (zones 102-108, 124-126)",
+    "before": null,
+    "after": "$3.29 in zone 102 up to $13.20 in zone 108; $14.70, $10.97 and $15.01 in zones 124-126",
+    "effective": null,
+    "who": "Tier 7 shippers sending Next Day Air shipments of 100 lbs or more",
+    "impact": "Zone 102 is $0.34 per pound above Tier 1 ($2.95 -> $3.29)"
+   },
+   {
+    "what": "Tier 1 UPS Ground rate per hundredweight unit, 200 to 499 lbs (zones 2-8, 44-46)",
+    "before": null,
+    "after": "$57.06 in zone 2 up to $153.80 in zone 8; $458.06, $524.86 and $493.94 in zones 44-46",
+    "effective": null,
+    "who": "Tier 1 Ground Hundredweight shipments of 200-499 lbs",
+    "impact": null
+   },
+   {
+    "what": "Tier 7 UPS Ground rate per hundredweight unit, 200 to 499 lbs (zones 2-8, 44-46)",
+    "before": null,
+    "after": "$83.04 in zone 2 up to $215.12 in zone 8; $619.34, $700.71 and $661.56 in zones 44-46",
+    "effective": null,
+    "who": "Tier 7 Ground Hundredweight shipments of 200-499 lbs",
+    "impact": "Zone 2 is $25.98 above Tier 1 ($57.06 -> $83.04)"
+   },
+   {
+    "what": "UPS Ground minimum charge, Tiers 1-5",
+    "before": null,
+    "after": "$91.00 per shipment in zones 2-8; $445.00 in zones 44 and 45; $540.00 in zone 46",
+    "effective": null,
+    "who": "Tier 1-5 Ground Hundredweight shippers with light shipments",
+    "impact": null
+   },
+   {
+    "what": "UPS Ground minimum charge, Tier 7",
+    "before": null,
+    "after": "$131.00 per shipment in zones 2-8; $720.00 in zones 44 and 45; $755.00 in zone 46",
+    "effective": null,
+    "who": "Tier 7 Ground Hundredweight shippers with light shipments",
+    "impact": "Zones 2-8 are $40.00 above the Tier 1-5 minimum ($91.00 -> $131.00)"
+   },
+   {
+    "what": "UPS 3 Day Select minimum charge, Tiers 1-5 and Tier 7",
+    "before": null,
+    "after": "$96.00 per shipment in Tiers 1-5; $101.00 in Tier 6; $138.00 in Tier 7 (zones 302-308)",
+    "effective": null,
+    "who": "3 Day Select Hundredweight shippers with light shipments",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Effective date of the 2027 rates is not stated",
+   "Alaska and Hawaii Ground tables are cut off after Tier 4, so later tiers and Hawaii rates could not be confirmed",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: preview-ups-hundredweight-service-package-rates.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
+     "old": null
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
+  "id": "w91588ddb11ed",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii",
+  "sum": "UPS posted a 2027 Small Business rate file for UPS Hundredweight Service covering Tiers 1-7, Alaska and Hawaii. It lists per-pound rates for the air services (Next Day Air, Next Day Air Saver, 2nd Day Air A.M., 2nd Day Air) and per-hundredweight-unit rates for 3 Day Select and Ground. UPS Ground Tier 1 zone 2 at 200-499 lbs is $44.85 and Tier 7 is $65.28. No effective date appears in the file. The document states these rates are effective December 21, 2026.",
+  "plain": "Small businesses shipping heavy freight-style loads of 100+ lbs (air) or 200+ lbs (Ground, 3 Day Select) under the Hundredweight tiers will use these rates. Prices rise with tier, so Tier 7 Ground zone 2 at 200-499 lbs costs $20.43 per hundredweight unit more than Tier 1.",
+  "imp": "info",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "New 2027 Small Business UPS Hundredweight Service rate file posted",
+    "before": null,
+    "after": "Covers Tiers 1-7, Alaska and Hawaii, domestic, with guaranteed air options plus 3 Day Select and Ground",
+    "effective": null,
+    "who": "Small business shippers on UPS Hundredweight Service",
+    "impact": null
+   },
+   {
+    "what": "Ground Hundredweight rates, Tier 1, 200-499 lbs, zones 2-8 and 44-46 (per hundredweight unit)",
+    "before": null,
+    "after": "Zone 2 $44.85, zone 8 $120.93, zone 44 $353.16, zone 45 $399.11, zone 46 $380.81",
+    "effective": null,
+    "who": "Tier 1 Ground shipments of 200-499 lbs",
+    "impact": null
+   },
+   {
+    "what": "Ground Hundredweight rates, Tier 7, 200-499 lbs, zones 2-8 and 44-46 (per hundredweight unit)",
+    "before": null,
+    "after": "Zone 2 $65.28, zone 8 $169.13, zone 44 $484.31, zone 45 $548.00, zone 46 $522.25",
+    "effective": null,
+    "who": "Tier 7 Ground shipments of 200-499 lbs",
+    "impact": "Zone 2 is $20.43 per unit above Tier 1 ($44.85 vs $65.28)"
+   },
+   {
+    "what": "Next Day Air Hundredweight rate per pound, Tier 1, 100 lbs or more",
+    "before": null,
+    "after": "Zone 102 $2.31 up to zone 108 $7.50; zones 124-126 $7.82, $6.76, $8.42",
+    "effective": null,
+    "who": "Tier 1 Next Day Air shipments of 100+ lbs",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air Hundredweight rate per pound, Tier 7, 100 lbs or more",
+    "before": null,
+    "after": "Zone 102 $2.59 up to zone 108 $10.29; zones 124-126 $11.51, $8.67, $11.76",
+    "effective": null,
+    "who": "Tier 7 Next Day Air shipments of 100+ lbs",
+    "impact": "Zone 102 is $0.28 per pound above Tier 1 ($2.31 vs $2.59)"
+   },
+   {
+    "what": "Ground minimum charge, Tier 1 (Tiers 2-5 show the same figures)",
+    "before": null,
+    "after": "$71.26 for zones 2-8; $346.89 for zones 44 and 45; $421.90 for zone 46",
+    "effective": null,
+    "who": "Small Ground Hundredweight shipments billed at the minimum",
+    "impact": null
+   },
+   {
+    "what": "Ground minimum charge, Tier 7",
+    "before": null,
+    "after": "$98.45 for zones 2-8; $539.09 for zones 44 and 45; $571.91 for zone 46",
+    "effective": null,
+    "who": "Tier 7 Ground Hundredweight shipments billed at the minimum",
+    "impact": "Zones 2-8 are $27.19 above the Tier 1 minimum ($71.26 vs $98.45)"
+   },
+   {
+    "what": "3 Day Select minimum charge, Tier 7",
+    "before": null,
+    "after": "$103.13 for zones 302-308 (Tiers 1-5 are $75.01, Tier 6 is $76.88)",
+    "effective": null,
+    "who": "Tier 7 3 Day Select Hundredweight shipments billed at the minimum",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Effective date of the 2027 rates is not stated",
+   "Criteria for assignment to Tiers 1-7 are not given",
+   "The Alaska and Hawaii tables are cut off, so their full rates cannot be confirmed",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Small Business Rates page (spotted by Parcel Pigeon)",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf",
+  "srcs": [
+   {
+    "src": "UPS Small Business Rates page",
+    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+   },
+   {
+    "src": "UPS: preview-ups-small-business-cwt-package-rates.pdf",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change (preview-ups-small-business-package-rates.pdf), new document (preview-ups-small-business-cwt-package-rates.pdf), cosmetic",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf",
+     "old": null
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
+  "id": "w9c03b8f99b5f",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
+  "sum": "UPS replaced its note that detailed rate previews would come \"at a later date\" with links to 2027 preview rate tables. The tables cover Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates. UPS also states that rates for certain Value-Added services and Other Charges will increase, and links a preview of those changes. The previously announced average net 5.9% Daily Rate increase and the Additional Handling minimum billable weight change from 40 lbs. to 50 lbs. are unchanged. UPS's 2027 rate documents state they take effect December 21, 2026.",
+  "plain": "Shippers using UPS Ground, Air or international services can now check the 2027 rates for their own lanes and services. Those with accessorial charges (value-added services and other charges) face increases UPS has not quantified on this page.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-10-30",
+  "changes": [
+   {
+    "what": "2027 preview rate tables posted (Daily, Alaska/Hawaii, Hundredweight)",
+    "before": "Detailed rate previews were to be available at a later date",
+    "after": "Preview links are now listed for 2027 UPS Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates",
+    "effective": null,
+    "who": "Shippers using UPS Ground, UPS Air and international services, including Alaska, Hawaii and Hundredweight shippers",
+    "impact": "Lane-level 2027 pricing is now available; the stated average net increase remains 5.9%"
+   },
+   {
+    "what": "Rates for certain Value-Added services and Other Charges will increase, with a preview document linked",
+    "before": null,
+    "after": "UPS states rates for certain Value-Added services and Other Charges will increase and links a preview of the changes",
+    "effective": null,
+    "who": "Shippers that pay value-added service fees or other charges on UPS packages",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Which value-added services and other charges rise, and by how much, is not stated on the page itself",
+   "Effective date of the 2027 rates and charges is not stated in the page text",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
+   "dropped": 0,
+   "compared": []
+  }
+ },
+ {
   "id": "wa9c423a83880",
   "date": "2026-10-30",
   "c": [
@@ -92,63 +562,8 @@
    }
   ],
   "auto": true,
-  "primary": true
- },
- {
-  "id": "w9c03b8f99b5f",
-  "date": "2026-10-30",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
-  "sum": "UPS replaced its note that detailed rate previews would come \"at a later date\" with links to 2027 preview rate tables. The tables cover Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates. UPS also states that rates for certain Value-Added services and Other Charges will increase, and links a preview of those changes. The previously announced average net 5.9% Daily Rate increase and the Additional Handling minimum billable weight change from 40 lbs. to 50 lbs. are unchanged. UPS's 2027 rate documents state they take effect December 21, 2026.",
-  "plain": "Shippers using UPS Ground, Air or international services can now check the 2027 rates for their own lanes and services. Those with accessorial charges (value-added services and other charges) face increases UPS has not quantified on this page.",
-  "imp": "up",
-  "lvl": 2,
-  "cat": "Pricing & GRI",
-  "act": "2026-12-21",
-  "inferred": null,
-  "detected": "2026-10-30",
-  "changes": [
-   {
-    "what": "2027 preview rate tables posted (Daily, Alaska/Hawaii, Hundredweight)",
-    "before": "Detailed rate previews were to be available at a later date",
-    "after": "Preview links are now listed for 2027 UPS Daily Package Rates, Alaska and Hawaii Daily Package Rates, and Hundredweight Service Package Rates",
-    "effective": null,
-    "who": "Shippers using UPS Ground, UPS Air and international services, including Alaska, Hawaii and Hundredweight shippers",
-    "impact": "Lane-level 2027 pricing is now available; the stated average net increase remains 5.9%"
-   },
-   {
-    "what": "Rates for certain Value-Added services and Other Charges will increase, with a preview document linked",
-    "before": null,
-    "after": "UPS states rates for certain Value-Added services and Other Charges will increase and links a preview of the changes",
-    "effective": null,
-    "who": "Shippers that pay value-added service fees or other charges on UPS packages",
-    "impact": null
-   }
-  ],
-  "verdict": "new document",
-  "unknowns": [
-   "Which value-added services and other charges rise, and by how much, is not stated on the page itself",
-   "Effective date of the 2027 rates and charges is not stated in the page text",
-   "Older version not on file"
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-  "srcs": [
-   {
-    "src": "UPS Rate and Service Guides",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "new document (preview-ups-hundredweight-service-package-rates.pdf), new document (preview-changes-package-value-added-services-other-charges.pdf), new document (preview-ups-daily-package-rates.pdf), new document",
-   "dropped": 0,
-   "compared": []
-  }
+  "primary": true,
+  "offc": true
  },
  {
   "id": "wbfc38914b368",
@@ -295,12 +710,22 @@
    {
     "src": "WSJ",
     "url": "https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-10-29/doordash-to-buy-instacart-in-17-billion-deal"
+   },
+   {
+    "src": "Supply Chain Brain",
+    "url": "https://www.supplychainbrain.com/articles/45114-doordashs-17-billion-instacart-deal-aimed-at-walmart-amazon"
+   },
+   {
+    "src": "The Verge",
+    "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement"
    }
   ],
   "auto": true,
   "ann": "2026-10-29",
-  "thread": "doordash-instacart-deal",
-  "upd": 2,
   "new": "The Oct. 26, 2026 talks report has become a announced deal at roughly $17 billion and $65 per share, and the AELP has urged regulators to block it; no change to shipper rates or service has been announced.",
   "syn": "DoorDash said on Oct. 29, 2026 that it will acquire Instacart for roughly $17 billion in cash and stock, paying $65 per share, according to CNN. CNN put the premium at roughly 25% over Instacart's Oct. 22 close, while Forbes cited 26%. The companies said they expect to close in the coming months. They estimate customers could save $100 million per year on membership fees by not holding both DashPass and Instacart+. The American Economic Liberties Project, an anti-monopoly group, has urged regulators to block the deal, saying the combined firm would control nearly 60% of the third-party grocery delivery market.",
   "aff": [
@@ -321,6 +746,335 @@
     "what": "No change to rates or service has been announced."
    }
   ]
+ },
+ {
+  "id": "a693bd740033a",
+  "date": "2026-10-29",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "Landmark Global launches Shopify app for cross-border shipping",
+  "sum": "Landmark Global has launched the Landmark Shopify App on the Shopify App Store for merchants on Shopify Basic and Shopify Plus. The app lets merchants calculate landed costs, offer shipping options and generate labels within Shopify. It runs on Mercury, the company's API-driven logistics platform.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Shopify Basic and Shopify Plus merchants can now install the app to connect to Landmark Global's international shipping services. The company did not announce any change to rates or service terms.",
+  "why": "Shopify Basic and Shopify Plus merchants can now run Landmark Global's international shipping from inside their store, including landed-cost quotes at checkout.",
+  "score": 3,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:44:52Z",
+  "src": "Post & Parcel",
+  "url": "https://postandparcel.info/163190/news/e-commerce/landmark-global-our-industry-is-changing/",
+  "srcs": [
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163190/news/e-commerce/landmark-global-our-industry-is-changing/"
+   }
+  ],
+  "auto": true,
+  "syn": "Landmark Global has launched an app on the Shopify App Store for merchants using Shopify Basic and Shopify Plus. According to the company, merchants can set international shipping preferences, calculate landed costs in real time including duties and taxes, offer shipping options, and generate labels and manage fulfillment workflows inside Shopify. The app connects to Landmark Global's international delivery network through its Mercury platform. The company said setup is guided and can take as little as ten minutes without complex IT integration.",
+  "aff": [
+   {
+    "who": "Shopify Basic and Shopify Plus merchants",
+    "what": "Can connect to Landmark Global's international shipping services from within Shopify."
+   },
+   {
+    "who": "Cross-border checkout",
+    "what": "Landed cost, including duties and taxes, can be shown to shoppers before purchase."
+   },
+   {
+    "who": "Fulfillment workflows",
+    "what": "Labels and shipping workflows can be managed in Shopify without switching systems."
+   }
+  ]
+ },
+ {
+  "id": "a78c94fa3a273",
+  "date": "2026-10-29",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Analysis",
+  "title": "DroneXL sets Wing's 43 dBA noise claim against Amazon MK30 data",
+  "sum": "In an Oct. 29 LinkedIn post, Wing said it has completed more than one million US deliveries this year and put its cruise noise at 43 dBA. DroneXL compared that figure with FAA filings on Amazon's MK30, which list a delivery hover sound exposure level of 92.1 decibels at 25 feet. Wing is due to present to Manchester, Missouri, aldermen on Nov. 2.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. The item concerns noise figures and local approvals for drone delivery sites in Missouri and Texas.",
+  "why": "Noise led residents' objections in Kirkwood, and Wing is seeking about seven St. Louis-area Walmart nests, so local approvals shape where drone delivery can expand.",
+  "score": 5,
+  "tie": "Wing and Walmart said in October 2026 they would add Denver and Seattle drone delivery in 2027, and Wing is now pursuing about seven St. Louis-area Walmart nests.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:43:06Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/10/29/wing-good-neighbor-drone-noise-43-dba-amazon-richardson/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/10/29/wing-good-neighbor-drone-noise-43-dba-amazon-richardson/"
+   }
+  ],
+  "auto": true,
+  "new": "Wing published a 43 dBA cruise-noise figure on Oct. 29 and is due in Manchester, Missouri, on Nov. 2 and 4, while DroneXL compared it with FAA data on Amazon's MK30; shipper rates and service are unchanged.",
+  "syn": "Wing, which is owned by Alphabet, said in an Oct. 29 LinkedIn post that it has completed more than one million US deliveries this year and that a cruising drone measures 43 dBA. DroneXL, in an analysis that includes its own commentary, said that figure covers cruise only. It cited Kirkwood, Missouri, documents putting Wing's delivery hover at about 62 to 63 decibels, and FAA filings putting Amazon's MK30 hover at 92.1 decibels at 25 feet. DroneXL said SEL and Leq are different measures, so the figures do not compare directly. Wing is due to present to Manchester's Board of Aldermen on Nov. 2.",
+  "aff": [
+   {
+    "who": "Manchester, Missouri",
+    "what": "Wing presents to the Board of Aldermen Nov. 2 and holds a City Hall open house Nov. 4."
+   },
+   {
+    "who": "Kirkwood, Missouri",
+    "what": "The council let a Wing permit its planners recommended lapse without a motion on Oct. 15."
+   },
+   {
+    "who": "Residents under Amazon routes",
+    "what": "A Richardson, Texas, resident logged 52 Amazon drones over her yard on one Friday in September, the NYT reported."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a9262c9dbbf32",
+  "date": "2026-10-29",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Uber, Amazon, Instacart sue to block NYC delivery deactivation law",
+  "sum": "Uber Technologies, Amazon and Instacart filed a federal lawsuit arguing that a New York City law barring them from deactivating delivery workers is unconstitutional, Bloomberg Law reported. They want the court to block the statute, which takes effect in January.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to shipper rates or service has been announced. The city law is due to take effect in January unless the court blocks it.",
+  "why": "The suit targets a New York City rule on deactivating contracted delivery workers at app-based companies, due to take effect in January.",
+  "score": 6,
+  "tie": "Amazon warned in October 2026 that it could move roughly 5,000 delivery jobs out of New York City over a separate bill, the Delivery Protection Act, The Times of India reported.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:42:36Z",
+  "src": "Bloomberg Law News",
+  "url": "https://news.bloomberglaw.com/litigation/uber-amazon-sue-to-block-nyc-delivery-driver-deactivation-law",
+  "srcs": [
+   {
+    "src": "Bloomberg Law News",
+    "url": "https://news.bloomberglaw.com/litigation/uber-amazon-sue-to-block-nyc-delivery-driver-deactivation-law"
+   },
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/"
+   },
+   {
+    "src": "Seeking Alpha",
+    "url": "https://seekingalpha.com/news/4660659-amazon-uber-instacart-challenge-nyc-delivery-worker-law"
+   }
+  ],
+  "auto": true,
+  "new": "Uber, Amazon and Instacart filed a lawsuit against a separate NYC law on deactivating delivery workers, and no change to shipper rates or service has been announced.",
+  "syn": "Uber Technologies, Amazon and Instacart filed a federal lawsuit contending that New York City's law prohibiting them from deactivating delivery workers is unconstitutional, according to Bloomberg Law. The law bars a delivery service from deactivating a contracted worker without established just cause, such as misconduct, or a bona fide economic reason. The companies want the court to block it before it takes effect in January, saying it would cause immediate and irreparable harm.",
+  "aff": [
+   {
+    "who": "Uber, Amazon and Instacart",
+    "what": "Plaintiffs asking a federal court to block the law before it takes effect in January."
+   },
+   {
+    "who": "Contracted delivery workers in NYC",
+    "what": "Law bars deactivation without just cause or a bona fide economic reason."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service has been announced."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "a937c0cd57518",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "Analysis",
+  "title": "Analyst: on-time rate hides cost of upgrades and split parcels",
+  "sum": "Basem Fawzy, an analytics consultant, argues in a Parcel Industry piece that on-time delivery records an order as a success whether or not it needed an unplanned fix. In his illustrative scenario of 1,000 orders, 940 (94%) arrive on time but only 78% do so without intervention, and spending runs $2,000 over a $9,000 plan.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The piece is one author's view on how shippers could report delivery performance, and its figures are scenario assumptions.",
+  "why": "In the author's illustrative case, a 94% on-time rate sits beside a 22.2% transport overrun that the on-time rate alone does not show.",
+  "score": 3,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:45:16Z",
+  "src": "Parcel Industry",
+  "url": "https://parcelindustry.com/article-6731-What-On-Time-Delivery-Misses.html",
+  "srcs": [
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6731-What-On-Time-Delivery-Misses.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Basem Fawzy, who owns an analytics consultancy, writes in Parcel Industry that an on-time delivery score treats a planned delivery and an expensive rescue as the same result. His scenario assumes 1,000 delivered orders with a planned transport cost of $9 each. Of those, 940 (94%) arrive on time, but 160 of them needed an unplanned upgrade or split shipment, so only 78% of all orders arrive on time without intervention. Modeled transport spending reaches $11,000 against a $9,000 plan, a 22.2% overrun. He recommends reporting interventions and their cost beside the on-time percentage. The figures are scenario assumptions with calculations developed for the article, not market data.",
+  "aff": [
+   {
+    "who": "Parcel managers",
+    "what": "The author suggests tracking unplanned interventions and their cost next to the on-time percentage."
+   },
+   {
+    "who": "Orders in the scenario",
+    "what": "940 of 1,000 arrive on time, and 160 of those needed an unplanned upgrade or split shipment."
+   },
+   {
+    "who": "Modeled transport spend",
+    "what": "Spending rises from $9,000 to $11,000: $1,680 from upgrades and $320 from split shipments."
+   }
+  ]
+ },
+ {
+  "id": "a9f4ed4757f82",
+  "date": "2026-10-29",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "Amazon Q3 shipping costs rise 11% as units shipped grow 12%",
+  "sum": "Amazon reported third-quarter revenue of $201.9 billion, up 12%, and operating income of $28.1 billion on Thursday. Shipping costs rose 11% year over year against 12% growth in units shipped. CEO Andy Jassy said transportation cost pressure is expected to continue into the fourth quarter.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No new rate or fee change was announced. Amazon said its existing fuel surcharge for Fulfillment by Amazon sellers does not fully offset higher fuel and linehaul costs.",
+  "why": "Amazon said fuel and linehaul costs will weigh more in Q4 and that its FBA fuel surcharge does not fully offset them.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:41:14Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3"
+   }
+  ],
+  "auto": true,
+  "syn": "Amazon reported third-quarter revenue of $201.9 billion, up 12% from $180.2 billion, and operating income of $28.1 billion, up 61%, after the market closed on Thursday. Shipping costs rose 11% year over year, compared with 12% growth in units shipped, and 8% excluding fuel and linehaul inflation. CFO Brian Olsavsky cited higher fuel and line haul rates. Jassy said the impact would be somewhat higher in the fourth quarter than in the third, and that the fuel surcharge Amazon applied earlier this year to Fulfillment by Amazon sellers does not fully offset the increases.",
+  "aff": [
+   {
+    "who": "Fulfillment by Amazon sellers",
+    "what": "A fuel surcharge introduced earlier this year remains; Jassy said it does not fully offset Amazon's higher costs."
+   },
+   {
+    "who": "Amazon's transportation costs",
+    "what": "Fuel and linehaul pressure is expected to be somewhat higher in Q4 than in Q3, according to Jassy."
+   },
+   {
+    "who": "Prime members",
+    "what": "Amazon said it delivered more than 1.5 billion items same-day or overnight in the quarter ended Sept. 30."
+   }
+  ]
+ },
+ {
+  "id": "ab0fbedd02a19",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Market reports",
+  "kind": "News",
+  "title": "Kenco survey: 43% of shoppers plan to spend more this peak",
+  "sum": "Kenco's 2026 Peak Season Consumer Report found that 43% of the North American consumers it surveyed plan to spend more this peak season, up from 20% a year earlier. In the survey, 73% said they consider free shipping standard, 48% expect two-day delivery and 47% expect free returns. The survey was fielded in August 2026 and polled more than 350 consumers.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The survey reports shopper expectations: 73% see free shipping as standard, 48% expect two-day delivery and 47% expect free returns.",
+  "why": "The survey shows free shipping, fast delivery and free returns remain widespread shopper expectations, costs that 3PLs and retailers absorb, per Kenco's executive.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:43:34Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/kenco-survey-shoppers-plan-more-peak-spending",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/kenco-survey-shoppers-plan-more-peak-spending"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "syn": "Kenco's 2026 Peak Season Consumer Report found that 43% of the North American consumers it surveyed plan to spend more this peak season, compared with 20% a year earlier. Another 39% expect to spend about the same and 18% plan to spend less, down from 28% in 2025. Frank Loewen, Kenco's senior vice president of retail operations, told FreightWaves the rise could reflect higher household budgets or expected price increases. He said free-shipping expectations push costs onto 3PLs and retailers, and that Kenco responds by placing inventory close to population centers and carriers and by using robotics. The survey was fielded in August 2026 and polled more than 350 consumers, up from 250 for the 2025 report.",
+  "aff": [
+   {
+    "who": "Online shoppers",
+    "what": "73% consider free shipping standard, 48% expect two-day delivery, 47% expect free returns and 40% expect real-time tracking."
+   },
+   {
+    "who": "Retailers",
+    "what": "32% of respondents said they would stop shopping with a retailer after encountering hidden fees; 80% said inaccurate stock levels hurt trust."
+   },
+   {
+    "who": "3PLs and retailers",
+    "what": "Loewen said free-shipping expectations put pressure on 3PLs and retailers, with costs absorbed elsewhere in the value chain."
+   },
+   {
+    "who": "Returns",
+    "what": "Only 5% said return policies don't matter when choosing where to shop; Loewen said more retailers now charge for returns."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "ae474dc39ba6c",
+  "date": "2026-10-29",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Matternet and Swisslog's TransLogic partner on hospital drone delivery",
+  "sum": "Matternet and TransLogic, a Swisslog Healthcare company, announced on Oct. 29, 2026 a partnership to bring drone delivery to hospital systems. In the first year the companies will work in California, Florida and Arizona, using Matternet's M3 drone, which carries packages up to 11 pounds within a 10-mile radius.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for parcel shippers. The partnership targets hospital-to-facility delivery of items such as lab specimens and medications.",
+  "why": "TransLogic's sales team will offer M3 systems to its 3,000+ hospital customers, including more than 2,300 in North America.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:43:16Z",
+  "src": "markets.businessinsider.com",
+  "url": "https://markets.businessinsider.com/news/stocks/matternet-partners-with-swisslog-healthcare-s-translogic-to-bring-drone-delivery-to-thousands-of-north-american-hospitals-1036684364",
+  "srcs": [
+   {
+    "src": "markets.businessinsider.com",
+    "url": "https://markets.businessinsider.com/news/stocks/matternet-partners-with-swisslog-healthcare-s-translogic-to-bring-drone-delivery-to-thousands-of-north-american-hospitals-1036684364"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "syn": "Matternet and TransLogic, a Swisslog Healthcare company, announced a partnership on Oct. 29, 2026 to link hospitals' internal pneumatic tube networks with drone delivery between facilities. During the first year, the companies will work to bring drone delivery to hospital systems in California, Florida and Arizona. The TransLogic sales team will act as a distribution channel for Matternet's M3 systems to its 3,000+ hospital customers globally, including more than 2,300 in North America. The companies said they will also explore adding installation, support and maintenance services.",
+  "aff": [
+   {
+    "who": "Hospital systems",
+    "what": "Access to M3 drone delivery through TransLogic's sales team; first-year focus on California, Florida and Arizona."
+   },
+   {
+    "who": "Hospital courier logistics",
+    "what": "Drones to move items between facilities, which Matternet said often rely on costly, slow ground couriers."
+   },
+   {
+    "who": "Parcel shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a82e057190718",
@@ -412,6 +1166,102 @@
   "exclusive": true
  },
  {
+  "id": "afd85f88c590a",
+  "date": "2026-10-28",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "FedEx says parcel-focused customers are adding air freight business",
+  "sum": "FedEx CEO Raj Subramaniam said on a Q3 earnings call Wednesday that the carrier is winning air freight business from customers it has mainly served in parcel, including an AI data center customer. International freight revenue grew 28% year over year in the quarter, according to EVP Brie Carere.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. FedEx said it is expanding air freight and vertical-specific services for some business customers.",
+  "why": "FedEx says B2B makes up 60% of its revenue, and the company is leaning toward data center, automotive and other high-value shippers.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:43:27Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/fedex-drawing-parcel-focused-shippers-to-its-air-freight-services/873182/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/fedex-drawing-parcel-focused-shippers-to-its-air-freight-services/873182/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-28",
+  "syn": "FedEx CEO Raj Subramaniam said on a Q3 earnings call Wednesday that the carrier is capturing more air freight business from customers it has traditionally served mainly in parcel. He said FedEx recently won new air freight business from an AI data center customer after a relationship of more than 40 years. Business-to-business, which makes up 60% of FedEx's revenue, drove most of the quarter's revenue growth, according to Subramaniam. Supply Chain Dive reported that FedEx is leaning less on general e-commerce volume shipped directly to consumers.",
+  "aff": [
+   {
+    "who": "International freight",
+    "what": "Revenue grew 28% year over year in Q3, and average daily freight pounds rose 15%, FedEx said."
+   },
+   {
+    "who": "Automotive shippers",
+    "what": "FedEx has onboarded 13 major automotive customers to flexible pickup and integrated logistics offerings, according to Carere."
+   },
+   {
+    "who": "Data center customers",
+    "what": "FedEx offers SenseAware and Surround visibility tools and tailored security coverage, per its website."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "a7a5696865d95",
+  "date": "2026-10-27",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "UPS raises 2026 revenue and profit forecasts after third quarter",
+  "sum": "UPS raised its annual revenue and profit forecasts after third-quarter adjusted earnings of $1.69 per share, above analysts' average estimate of $1.63. The company now expects 2026 revenue of $92.6 billion, up from $91.2 billion, and adjusted profit of about $7.28 per share. It expects fourth-quarter average daily volume to be down 1.3 per cent.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service was announced. UPS expects total average daily volume to be down 1.3 per cent in the fourth quarter as it becomes more selective about the packages it delivers.",
+  "why": "UPS, the largest U.S. parcel carrier, is projecting higher revenue on lower peak-quarter volume, which indicates it is prioritizing revenue per parcel.",
+  "score": 6,
+  "tie": "UPS said in January 2025 it would cut Amazon volume by more than half, and in April 2026 it said it had completed the reconfiguration.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:40:40Z",
+  "src": "BNN Bloomberg",
+  "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/27/ups-raises-annual-forecasts-as-higher-margin-parcels-drive-quarterly-profit-beat/",
+  "srcs": [
+   {
+    "src": "BNN Bloomberg",
+    "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/27/ups-raises-annual-forecasts-as-higher-margin-parcels-drive-quarterly-profit-beat/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-27",
+  "new": "UPS raised its 2026 forecasts to $92.6 billion in revenue and $7.28 adjusted EPS and projected Q4 total daily volume down 1.3%, with no change to shipper rates or service announced.",
+  "syn": "UPS raised its 2026 revenue forecast to $92.6 billion from $91.2 billion and its adjusted profit forecast to about $7.28 per share from $7.22, after third-quarter adjusted profit of $1.69 per share beat analysts' average estimate of $1.63. CEO Carol Tome said the focus on more lucrative business lets UPS earn more on slightly fewer peak-season packages. UPS expects fourth-quarter average daily volume to be down 1.3 per cent, with domestic revenue up roughly 3 per cent and international revenue up an estimated 7 per cent.",
+  "aff": [
+   {
+    "who": "Peak-season volume",
+    "what": "UPS expects total average daily volume down 1.3 per cent in the fourth quarter as it is more selective about packages."
+   },
+   {
+    "who": "UPS domestic unit",
+    "what": "Third-quarter adjusted operating margin rose to 7 per cent from 6.4 per cent a year earlier."
+   },
+   {
+    "who": "UPS international package unit",
+    "what": "Third-quarter adjusted operating margin was 14.9 per cent, against 14.8 per cent last year."
+   },
+   {
+    "who": "UPS cost savings",
+    "what": "UPS has saved $1.8 billion through September against a $3 billion target for this year."
+   }
+  ]
+ },
+ {
   "id": "aa3051ff662bd",
   "date": "2026-10-27",
   "c": [
@@ -462,6 +1312,57 @@
     "what": "Small and medium-sized businesses were 35.1% of UPS U.S. volume in Q3, up about 240 basis points."
    }
   ]
+ },
+ {
+  "id": "aef1ff74eee53",
+  "date": "2026-10-27",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "UPS CFO says core volume returned to growth in Q3 2026",
+  "sum": "UPS CFO Brian Dykes told Fortune on Oct. 27 that core volume returned to growth in the third quarter, with revenue of $22.9 billion against $22.29 billion expected. UPS raised full-year revenue, profit and free-cash-flow guidance for a second consecutive quarter and is targeting 100,000 seasonal hires in the U.S.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service was announced. UPS expects U.S. daily volume to rise about 25% from Q3 to Q4 and plans 100,000 seasonal hires.",
+  "why": "UPS's shift away from lower-return volume shapes capacity and peak staffing at a major U.S. carrier, which targets 100,000 seasonal hires.",
+  "score": 6,
+  "tie": "The interview follows UPS's April 2026 report that it had completed its Amazon volume reduction and network reconfiguration, and its Oct. 27, 2026 earnings-call outlook for Q4 U.S. volume.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:40:19Z",
+  "src": "Fortune",
+  "url": "https://fortune.com/2026/10/28/ups-cfo-strategic-overhaul-behind-22-billion-quarter/",
+  "srcs": [
+   {
+    "src": "Fortune",
+    "url": "https://fortune.com/2026/10/28/ups-cfo-strategic-overhaul-behind-22-billion-quarter/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-27",
+  "new": "UPS's CFO said core volume grew in Q3 2026 and the company raised full-year guidance, and UPS expects needing fewer rented aircraft, trailers and trucks for peak because of less lower-return e-commerce volume.",
+  "syn": "UPS CFO Brian Dykes told Fortune that the company's strategy of shedding lower-return volume, including scaling back Amazon, is beginning to pay off, with core volume returning to growth in the third quarter. UPS reported Q3 2026 revenue of $22.9 billion, versus $22.29 billion expected, and operating profit of $1.7 billion, or $2.1 billion adjusted. U.S. small and midsize business volume rose 3.7% and enterprise volume about 1%, Dykes said. For the holiday season, UPS expects U.S. daily volume to rise about 25% from Q3 to Q4 and is targeting 100,000 seasonal hires to handle an additional 4 million pieces per day.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service was announced."
+   },
+   {
+    "who": "Peak season capacity",
+    "what": "UPS expects U.S. daily volume up about 25% Q3 to Q4, with 100,000 seasonal hires targeted."
+   },
+   {
+    "who": "Seasonal hiring",
+    "what": "UPS will try to hire at least 40,000 people during its peak hiring weekend, Nov. 6-7."
+   },
+   {
+    "who": "Data center shippers",
+    "what": "UPS said it is pursuing roughly 100 active prospects in data center construction freight."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "afd8784e2b179",
@@ -769,6 +1670,37 @@
   ]
  },
  {
+  "id": "a5aadb5b56a84",
+  "date": "2026-10-26",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "PRC notices USPS filings for two new competitive shipping contracts",
+  "sum": "The Postal Regulatory Commission noticed two Postal Service requests to add negotiated service agreements to the Competitive product list, both accepted October 26, 2026. Comments on one, an international service contract, are due November 3, 2026.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or service for shippers. The filings concern individual negotiated agreements, and terms are partly filed under seal.",
+  "why": "The filings add negotiated contracts to USPS's Competitive product list, which covers parcel services sold to individual customers at negotiated rates.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:42:42Z",
+  "src": "Federal Register: PRC",
+  "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22086/new-postal-products",
+  "srcs": [
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22086/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-26",
+  "exclusive": true
+ },
+ {
   "id": "a663794cc9c55",
   "date": "2026-10-26",
   "c": [
@@ -908,6 +1840,54 @@
     "what": "Choose whether to accept returns through Happy Returns."
    }
   ]
+ },
+ {
+  "id": "a85b9e9638a12",
+  "date": "2026-10-26",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon North Haven drone decision not before 2027, Freda says",
+  "sum": "North Haven First Selectman Michael Freda said after an Oct. 26 regional meeting that no decision on Amazon's plan for up to 1,000 Prime Air drone deliveries a day from its North Haven, Connecticut, warehouse will come until 2027, WTNH reported. Connecticut's DEEP, which is reviewing the plan, has received more than 1,000 public comment letters. DroneXL said DEEP told a CT Mirror columnist its ruling would come by mid-November.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for parcel shippers. Amazon's North Haven drone plan remains under review, with no launch date set.",
+  "why": "Amazon's plan covers up to 1,000 Prime Air drone deliveries a day from one warehouse, across a 7.5-mile zone, and its timing is still unsettled.",
+  "score": 4,
+  "tie": "Amazon told NBC 5 Chicago in October 2026 that it has about 21 MK30 drones at its Markham, Illinois, center, while the FAA index still listed that site's environmental assessment as a July draft.",
+  "act": null,
+  "dates": [],
+  "added": "2026-10-30T05:44:37Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/10/29/amazon-north-haven-drone-decision-2027-deep-1000-comments/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/10/29/amazon-north-haven-drone-decision-2027-deep-1000-comments/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-26",
+  "new": "A local official now says no North Haven decision will come until 2027, while DEEP reportedly targets mid-November; this changes nothing for shippers' rates or service.",
+  "syn": "North Haven First Selectman Michael Freda said after an Oct. 26 meeting of the region's mayors and first selectmen that no decision on Amazon's North Haven Prime Air plan will be made until 2027, according to WTNH. The plan calls for up to 1,000 drone deliveries a day. Connecticut's DEEP has received more than 1,000 public comment letters. DroneXL reported that DEEP told a CT Mirror columnist its final ruling would come by mid-November, and that it found no DEEP or FAA record carrying a 2027 date. It is unclear which decision Freda's date refers to.",
+  "aff": [
+   {
+    "who": "North Haven-area residents",
+    "what": "Amazon says it will keep meeting community members and stakeholders in the coming months; no public session date is given."
+   },
+   {
+    "who": "Amazon Prime Air North Haven plan",
+    "what": "Up to 1,000 drone deliveries a day within a 7.5-mile zone; DEEP's coastal ruling, per DroneXL, is due by mid-November."
+   },
+   {
+    "who": "Connecticut municipalities",
+    "what": "State law bars towns from regulating commercial drone operations, per DroneXL; North Haven's zoning panel approved the site 5-0 on May 4."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a8eed9de41636",
@@ -1089,7 +2069,6 @@
   ],
   "auto": true,
   "ann": "2026-10-26",
-  "thread": "doordash-instacart-deal",
   "syn": "DoorDash is in advanced talks to acquire delivery rival Instacart, according to new reporting by the Wall Street Journal. CNBC's MacKenzie Sigalos discussed the report on Oct. 26, 2026. The CNBC segment gives no price, terms or timetable, and no agreement is described as signed.",
   "aff": [
    {
@@ -1127,8 +2106,6 @@
   ],
   "auto": true,
   "ann": "2026-10-26",
-  "thread": "drone-delivery",
-  "upd": 9,
   "new": "Amazon's MK30 drones are now reported flying in the Chicago suburbs, about 21 from Markham, though the FAA's Chicago assessment still shows a draft, which adds a live Illinois service to the Massachusetts permit disputes.",
   "syn": "Amazon's MK30 delivery drones are flying from its Markham, Illinois, fulfillment center, where the company told NBC 5 Chicago it has about 21 of them. NBC 5 reported on Oct. 26 that Amazon has not officially launched the rollout and plans more centers, while the Village of Homewood told residents the service has launched. DroneXL reported that the FAA's drone review index, last updated Oct. 14, lists the Chicago assessment for three Prime Air hubs as a July 2026 draft, with comment closed Aug. 14 and no final decision posted. DroneXL said no public FAA document names the authorization under which Markham flies.",
   "aff": [
@@ -1192,7 +2169,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-10-27",
+  "tried": "2026-10-30",
   "unconf": true
  },
  {
@@ -1567,7 +2544,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-10-27",
+  "tried": "2026-10-30",
   "unconf": true
  },
  {
@@ -2089,12 +3066,10 @@
    }
   ],
   "auto": true,
-  "thread": "last-mile-facility-legislation",
-  "upd": 6,
   "new": "The Chronicle reports both sides digging in, with Amazon citing more than 40 DSPs and 5,000 employees at risk and a source saying Amazon rejected rewritten versions; no change for shippers yet since the bill has not advanced to a vote.",
   "edge": true,
   "exclusive": true,
-  "tried": "2026-10-27",
+  "tried": "2026-10-30",
   "unconf": true
  },
  {
@@ -2317,7 +3292,7 @@
   "auto": true,
   "edge": true,
   "exclusive": true,
-  "tried": "2026-10-27",
+  "tried": "2026-10-30",
   "unconf": true
  },
  {
@@ -2411,7 +3386,7 @@
   ],
   "auto": true,
   "exclusive": true,
-  "tried": "2026-10-27",
+  "tried": "2026-10-30",
   "unconf": true
  },
  {

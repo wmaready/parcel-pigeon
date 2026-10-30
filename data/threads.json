@@ -1,7 +1,7 @@
 {
  "ups-amazon-glide-down": {
   "n": "UPS Amazon cutback and network overhaul",
-  "s": "UPS says it has completed cutting its Amazon volume by more than half, after closing 23 buildings in early 2026 and planning about 30,000 job cuts for the year.",
+  "s": "UPS says the Amazon scale-down finished in Q2 and has raised its 2026 revenue and profit outlook.",
   "ids": [
    "h406",
    "h503",
@@ -514,33 +514,35 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "MassDOT told Amazon its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough.",
+  "s": "Amazon's North Haven drone plan awaits a Connecticut DEEP ruling, while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb",
-   "af86a262d4dcb"
+   "a86fd472c4cfb"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-26",
+  "last": "2026-10-29",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "6e104812189f",
+   "sig": "2c9f9ae85f13",
    "v": 3,
    "beats": {
-    "a60770e8e9c32": "Wing and Walmart said Denver and Seattle come in 2027, taking them to nearly 20 metros after reaching more than three million customers."
+    "a86fd472c4cfb": "DoorDash announced Part 135 certification on July 29, reportedly the eighth cleared operator. Flights are expected in fall 2026.",
+    "g27": "Amazon plans Prime Air drone sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
+    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, reaching nearly 20 metros and 270+ Walmart stores.",
+    "g26": "Part 108 went to White House review July 10 and was still unpublished Oct. 9. Until then BVLOS needs waivers or Part 135."
    },
-   "intro": "Drone delivery is scaling fast while the FAA's Part 108 rule sits unpublished, so shippers watch who can fly and where.",
-   "now": "Amazon's Westborough drone site awaits a MassDOT suitability review, and the FAA's Part 108 rule was still unpublished as of Oct. 9."
+   "intro": "Drone delivery keeps expanding while the FAA's Part 108 rule stays unpublished, a new last-mile option for shippers to watch.",
+   "now": "Part 108 was still unpublished as of Oct. 9. Amazon's North Haven plan awaits a Connecticut DEEP ruling, reportedly not before 2027."
   },
-  "rv": "ae54c427f36e",
+  "rv": "8c5c1cf4aba8",
   "co": "Amazon",
   "apart": [
    "amazon-jfk8-nlrb",
@@ -598,27 +600,28 @@
    "abf7a28de14a5",
    "ad0f07f43ec5e",
    "a45eccf8e24d3",
-   "a4a63ed69f438",
    "a831c709e5809"
   ],
   "first": "2026-10-13",
-  "s": "The bill has majority Council support and the mayor's backing, but Speaker Julie Menin has not scheduled a vote as of Oct. 22, 2026.",
-  "last": "2026-10-22",
+  "s": "The companies' federal suit against the deactivation law is pending, the law is due to take effect in January, and the Delivery Protection Act (Intro. 518) was still moving through the legislative process as of Oct. 22.",
+  "last": "2026-10-29",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "f56e28f446c5",
+  "rv": "d7a31751e5de",
   "cx": {
-   "sig": "db79badb0547",
+   "sig": "232e51750f0c",
    "v": 3,
    "beats": {
-    "ad0f07f43ec5e": "Amazon warned it could close warehouses and move roughly 5,000 jobs; analysts say all 15 city last-mile stations could close.",
-    "a45eccf8e24d3": "Mayor Mamdani reportedly accused Amazon and others of spending heavily to scare New Yorkers, and said he'll join national labor leaders."
+    "abf7a28de14a5": "Bronx DSP operators reportedly oppose the bill, which has supermajority council support but hasn't been called for a vote.",
+    "ad0f07f43ec5e": "Amazon warns it could move roughly 5,000 delivery jobs out of the city; analysts say all 15 last-mile stations could close.",
+    "a45eccf8e24d3": "Mamdani reportedly says Amazon and other opponents are spending heavily to scare New Yorkers, and he'll join labor leaders.",
+    "a831c709e5809": "Teamsters rallied at City Hall Oct. 22, saying Amazon spent over $8 million against the bill; Speaker Menin hasn't set a vote."
    },
-   "now": "Majority Council support and the mayor's backing, but Speaker Menin hasn't scheduled a vote as of Oct. 22; nothing changes for shippers yet."
+   "intro": "NYC's Delivery Protection Act would make Amazon hire its last-mile drivers directly, so shippers watch for delivery changes."
   },
   "co": "Amazon",
   "apart": [
@@ -951,20 +954,5 @@
    "usps-service-network"
   ],
   "rv": "0564ccfc2ad3"
- },
- "doordash-instacart-deal": {
-  "n": "DoorDash–Instacart deal",
-  "ids": [
-   "ae89309b5e834",
-   "a66453dab48f7"
-  ],
-  "first": "2026-10-26",
-  "co": "DoorDash",
-  "s": "DoorDash announced on Oct. 29, 2026 that it will buy Instacart for roughly $17 billion; closing is expected in the coming months.",
-  "last": "2026-10-29",
-  "c": [
-   "Industry"
-  ],
-  "rv": "787f4ecf7a7d"
  }
 }

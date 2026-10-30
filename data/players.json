@@ -2082,35 +2082,118 @@
   },
   {
    "id": "quadientparcel",
-   "n": "Quadient (Parcel Pending by Quadient)",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
+   "n": "Quadient",
+   "realm": "software",
+   "own": "public",
+   "tk": "QDT",
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Owns Parcel Pending and, since December 2024, Package Concierge, and supplies smart parcel locker systems to U.S. apartment communities, campuses, retailers and carriers.",
-   "al": [],
-   "src": "https://www.quadient.com/en-int/news/Quadient-acquires-package-concierge-in-the-usa-and-exceeds-25000-global-footprint",
+   "hq": "Bagneux, France",
+   "yr": "1924",
+   "s": "Quadient is a French company that sells mail and shipping automation and operates and supplies smart parcel locker systems (Parcel Pending by Quadient, plus Package Concierge in the U.S.) for apartment communities, campuses, retailers and carriers.",
+   "al": [
+    "Neopost",
+    "Neopost S.A.",
+    "Package Concierge",
+    "Parcel Pending",
+    "Parcel Pending by Quadient",
+    "Quadient S.A.",
+    "Quadient SA"
+   ],
+   "src": "https://invest.quadient.com/en/newsroom/2998773",
    "auto": true,
    "added": "2026-10-29",
-   "from": "discover"
+   "from": "discover",
+   "site": "quadient.com",
+   "geo": [
+    2.311,
+    48.797
+   ],
+   "srcs": [
+    "https://invest.quadient.com/en/newsroom/2998773",
+    "https://www.parcelpending.com/en-us/blog/quadient-package-concierge-acquisition/",
+    "https://www.parcelpending.com/en-us/blog/parcel-pending-announces-acquisition-by-neopost/"
+   ],
+   "enriched": "2026-10-30",
+   "pending": false
   },
   {
    "id": "luxerone",
    "n": "Luxer One",
-   "realm": "regional",
-   "own": null,
+   "realm": "software",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": "Sacramento, CA, USA",
+   "yr": null,
+   "s": "Luxer One makes smart package lockers, package rooms and related software that let carriers drop off parcels and recipients collect them at multifamily, retail, office and university sites.",
+   "al": [
+    "Luxer Lockers",
+    "Luxer One Smart Package Lockers"
+   ],
+   "src": "https://www.assaabloy.com/group/en/news-media/press-releases/id.5dae6077be3ea8af",
+   "auto": true,
+   "added": "2026-10-29",
+   "from": "discover",
+   "site": "luxerone.com",
+   "geo": [
+    -121.494,
+    38.582
+   ],
+   "srcs": [
+    "https://www.assaabloy.com/group/en/news-media/press-releases/id.5dae6077be3ea8af",
+    "https://www.prnewswire.com/news-releases/luxer-one-acquired-by-assa-abloy-in-the-us-300768917.html",
+    "https://butterflymx.com/blog/luxer-one-package-locker-review/"
+   ],
+   "enriched": "2026-10-30",
+   "pending": false
+  },
+  {
+   "id": "annexbrandsinc",
+   "n": "Annex Brands, Inc.",
+   "realm": "retail",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "San Diego, CA, USA",
+   "yr": "1985",
+   "s": "Franchisor of more than 800 retail packing, shipping and business service centers in the U.S., Canada and Mexico (PostalAnnex, Pak Mail, AIM Mail Centers, Postal Connections and others) that ship with UPS, FedEx, USPS and DHL.",
+   "al": [
+    "Annex Brands",
+    "Postal Annex, Inc.",
+    "PostalAnnex"
+   ],
+   "src": "https://www.prnewswire.com/news-releases/annex-brands-expands-national-footprint-overnight-with-acquisition-of-postal-connections-business-service-centers-302760103.html",
+   "auto": true,
+   "added": "2026-10-30",
+   "from": "discover",
+   "site": "annexbrands.com",
+   "geo": [
+    -117.161,
+    32.716
+   ],
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/annex-brands-expands-national-footprint-overnight-with-acquisition-of-postal-connections-business-service-centers-302760103.html",
+    "https://www.annexbrands.com/news/2026-05-01/annex-brands-expands-national-footprint-overnight-acquisition-postal-connections",
+    "https://sdbj.com/franchise/signed-sealed-delivered/"
+   ],
+   "enriched": "2026-10-30",
+   "pending": false
+  },
+  {
+   "id": "instacartmaple",
+   "n": "Instacart (Maplebear Inc.)",
+   "realm": "3pl",
+   "own": "sub",
    "tk": null,
    "parent": null,
    "hq": null,
    "yr": null,
-   "s": "Sacramento-based maker of smart package locker systems for U.S. residential, retail, office and university sites, owned by ASSA ABLOY since 2018.",
+   "s": "Grocery delivery and fulfillment technology platform",
+   "role": "Grocery delivery and fulfillment technology platform",
    "al": [],
-   "src": "https://www.prnewswire.com/news-releases/assa-abloy-acquires-luxer-one-in-the-us-300768697.html",
+   "src": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
    "auto": true,
-   "added": "2026-10-29",
-   "from": "discover"
+   "added": "2026-10-30"
   }
  ],
  "edges": [
@@ -3679,6 +3762,51 @@
    "t": "Uber bought Postmates for $2.65 billion in 2020",
    "url": "https://www.cnn.com/2026/10/29/business/doordash-instacart-acquisition",
    "story": "a66453dab48f7"
+  },
+  {
+   "a": "quadientparcel",
+   "b": "geopost",
+   "k": "partner",
+   "y": null,
+   "t": "Geopost adopted Quadient parcel lockers",
+   "url": "https://www.cep-research.com/2020/01/30/quadient-reaches-10000-parcel-locker-milestone/",
+   "story": null
+  },
+  {
+   "a": "annexbrandsinc",
+   "b": "happyreturns",
+   "k": "partner",
+   "y": "2026",
+   "t": "Annex Brands shipping outlets added as Happy Returns Return Bars",
+   "url": "https://www.supplychaindive.com/news/ups-happy-returns-expands-reach-to-10k-drop-off-locations/818019/",
+   "story": null
+  },
+  {
+   "a": "annexbrandsinc",
+   "b": "ups",
+   "k": "partner",
+   "y": "2026",
+   "t": "Annex Brands locations are UPS Authorized Shipping Outlets",
+   "url": "https://about.ups.com/us/en/our-stories/customer-first/the-largest-box-free--label-free-return-network-in-the-u-s--is-b.html",
+   "story": null
+  },
+  {
+   "a": "doordash",
+   "b": "deliveroo",
+   "k": "acquired",
+   "y": "2026",
+   "t": "DoorDash completed its purchase of Deliveroo",
+   "url": "https://www.bloomberg.com/news/articles/2026-10-29/doordash-to-buy-instacart-in-17-billion-deal",
+   "story": "a80451e3cacaa"
+  },
+  {
+   "a": "landmarkglobal",
+   "b": "shopify",
+   "k": "partner",
+   "y": "2026",
+   "t": "Landmark Global launches app on the Shopify App Store",
+   "url": "https://postandparcel.info/163190/news/e-commerce/landmark-global-our-industry-is-changing/",
+   "story": "a693bd740033a"
   }
  ],
  "moves": [
@@ -3919,6 +4047,18 @@
    "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
    "t": "Stord acquires AMS Fulfillment",
    "story": "a351cab9045c7"
+  },
+  {
+   "id": "instacartmaple",
+   "k": "pending",
+   "parent": null,
+   "from": null,
+   "pend": "doordash",
+   "into": null,
+   "d": "2026-10-29",
+   "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+   "t": "DoorDash announced a definitive agreement to acquire Instacart for about $17 billion at $65 per share in cash and stock, and the deal has not yet closed.",
+   "role": "Grocery delivery and fulfillment technology platform"
   }
  ],
  "checks": {
@@ -3988,7 +4128,10 @@
   "4pxworldwideex": "2026-10-28",
   "aramex": "2026-10-28",
   "myusaccessusas": "2026-10-28",
-  "globalpost": "2026-10-29"
+  "globalpost": "2026-10-29",
+  "quadientparcel": "2026-10-30",
+  "luxerone": "2026-10-30",
+  "annexbrandsinc": "2026-10-30"
  },
  "facts": {
   "ups": {
