@@ -195,6 +195,9 @@ watch:
   - {carrier: FedEx,  kind: pdf,  name: 2027 Delivery Area Surcharge ZIPs, url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf"}
   - {carrier: FedEx,  kind: pdf,  name: 2027 Pickup Area Surcharge ZIPs, url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf"}
   - {carrier: FedEx,  kind: pdf,  name: 2026 Standard List Rates,  url: "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf"}
+  - {carrier: FedEx,  kind: page, name: Earnings releases,         url: "https://investors.fedex.com/news-and-events/earnings-releases/default.aspx"}
+  - {carrier: UPS,    kind: page, name: Earnings press releases,   url: "https://investors.ups.com/news-events/press-releases"}
+  - {carrier: USPS,   kind: page, name: Financials and reports,    url: "https://about.usps.com/what/financials/"}
   - {carrier: FedEx,  kind: page, name: Developer portal,          url: "https://developer.fedex.com/"}
   # USPS
   - {carrier: USPS,   kind: page, name: Price change center,       url: "https://pe.usps.com/PriceChange/Index"}
