@@ -300,7 +300,7 @@ def file_earnings_docs(rows, docs, today):
             u = r.get(key)
             if not u or u in have:
                 continue
-            docs.append({"c": r["company"], "t": "Earnings", "n": f"{r['company']} {r.get('label') or r['q']} {label}", "y": int(str(r.get("d") or today)[:4]),
+            docs.append({"c": r["company"], "t": "Earnings", "n": f"{r['company']} {r.get('label') or r['q']} {label}", "y": int(str((r.get("period") or {}).get("end") or r.get("d") or today)[:4]),
                          "eff": None, "u": u, "d": r.get("headline") or f"{r['company']} {r.get('label') or r['q']}, reported {r.get('d')}",
                          "cur": True, "added": today})
             have.add(u)

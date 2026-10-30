@@ -244,7 +244,9 @@ def close_placeholders(alm, today=None):
                 continue
             text = " ".join(str(w.get(k) or "") for k in ("title", "sum", "plain"))
             title = str(w.get("title") or "")
-            if WAITING.search(text) and str(y) in text and re.search(r"\b" + re.escape(c) + r"\b", title, re.I) \
+            # a placeholder has no effective date; a story that announces a dated charge and says its amount is "not yet
+            # published" is news, not a "still waiting" note (the UPS origin-ZIP surcharge was dropped this way)
+            if not w.get("act") and WAITING.search(text) and str(y) in text and re.search(r"\b" + re.escape(c) + r"\b", title, re.I) \
                     and not any(re.search(r"\b" + re.escape(o) + r"\b", title) for o in ("UPS", "FedEx", "USPS", "Amazon", "DHL") if o != c) \
                     and (w.get("date") or "") <= (s.get("date") or ""):
                 drop.append({"id": w["id"], "why": f"Superseded by {s.get('id')}: {s.get('title')}"})
