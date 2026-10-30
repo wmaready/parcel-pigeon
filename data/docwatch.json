@@ -1,5 +1,5 @@
 {
- "cursor": 90,
+ "cursor": 105,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 234,
+   "fails": 235,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 234,
+   "fails": 235,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-30"
@@ -1596,6 +1596,130 @@
    "first": "2026-10-30",
    "checked": "2026-10-30",
    "n": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026) 10-Q filing"
+  },
+  "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf": {
+   "hash": "ac3ec297df57",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026) call transcript",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+    "txt": "data/snapshots/0a203e2d0a0e/2026-10-30.txt"
+   }
+  },
+  "https://events.q4inc.com/attendee/676762251": {
+   "n": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026) earnings call",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-10-30"
+  },
+  "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Third-Quarter-Results/default.aspx": {
+   "hash": "b583c58aeb31",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026) results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/09/CodeConduct-English.pdf",
+    "txt": "data/snapshots/f4442d022110/2026-10-30.txt"
+   }
+  },
+  "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FedEX-10K-Form.pdf": {
+   "hash": "48979e5f59a4",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q4 2025 (Mar–May 2025) 10-Q filing",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FedEX-10K-Form.pdf",
+    "txt": "data/snapshots/7dd3d1986af2/2026-10-30.txt"
+   }
+  },
+  "https://events.q4inc.com/attendee/438607205": {
+   "n": "FedEx Fiscal Q4 2025 (Mar–May 2025) earnings call",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-10-30"
+  },
+  "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx": {
+   "hash": "a8989c12df02",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q4 2025 (Mar–May 2025) results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FedEx-Q4-FY25-Earnings-Release.pdf",
+    "txt": "data/snapshots/cb0cad2b9807/2026-10-30.txt"
+   }
+  },
+  "https://www.sec.gov/Archives/edgar/data/0001048911/000104891126000105/fdx-20260531.htm": {
+   "hash": "259f8f2c8fbf",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q4 2026 (Mar–May 2026) 10-Q filing",
+   "pic_try": "2026-10-30"
+  },
+  "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf": {
+   "hash": "f7303d303f2c",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q4 2026 (Mar–May 2026) call transcript",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+    "txt": "data/snapshots/9f70d89cc416/2026-10-30.txt"
+   }
+  },
+  "https://events.q4inc.com/attendee/858038331": {
+   "n": "FedEx Fiscal Q4 2026 (Mar–May 2026) earnings call",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-10-30"
+  },
+  "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Fourth-Quarter-and-Full-Year-Results/default.aspx": {
+   "hash": "e4fc711ceb57",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "FedEx Fiscal Q4 2026 (Mar–May 2026) results release",
+   "snap": {
+    "d": "2026-10-30",
+    "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/FedEx-Q4-FY26-Earnings-Release.pdf",
+    "txt": "data/snapshots/c4ec6d045c33/2026-10-30.txt"
+   }
+  },
+  "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000028/ups-20240331.htm": {
+   "hash": "a4654260114e",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "UPS Q1 2024 10-Q filing"
+  },
+  "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call": {
+   "hash": "9dca35058cbe",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "UPS Q1 2024 earnings call"
+  },
+  "https://investors.ups.com/news-events/press-releases/detail/2119/ups-releases-1q-2024-earnings": {
+   "hash": "9dca35058cbe",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "UPS Q1 2024 results release"
+  },
+  "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm": {
+   "hash": "dbb20a3b312e",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "UPS Q1 2025 10-Q filing"
+  },
+  "https://investors.ups.com/news-events/ir-calendar/detail/10890/q1-2025-united-parcel-service-inc-earnings-conference-call": {
+   "hash": "e94b8cb31c7c",
+   "first": "2026-10-30",
+   "checked": "2026-10-30",
+   "n": "UPS Q1 2025 earnings call"
   }
  }
 }
