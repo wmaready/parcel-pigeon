@@ -601,8 +601,8 @@ def test_theme_threads_are_hand_written_and_the_pipeline_leaves_them_be():
         t = T[k]
         assert t["theme"] is True and len(t["ids"]) >= 10 and t["cx"]["intro"] and t["cx"]["now"], k
         assert t["cx"]["v"] == news.BEATS_V and len(t["cx"]["beats"]) >= 10 and set(t["cx"]["beats"]) <= set(t["ids"]), k
-        # stories the pipeline rolled in later are narrated by it; until then the hand-written lines stand (a changed set is the only trigger)
-        assert t["rv"] == t["cx"]["sig"] or t["cx"]["sig"] != h(",".join(t["ids"])), k
+        # stories the pipeline rolled in later get their own lines while the hand-written ones stand (the signature follows the set)
+        assert t["cx"]["sig"] in (t["rv"], h(",".join(t["ids"]))) or all(i in t["cx"]["beats"] for i in t["ids"][:10]), k
     # a new matching headline joins its theme; an unrelated one does not
     themes = json.loads((ROOT / "data/themes.json").read_text())["themes"]
     pool = {"x1": {"id": "x1", "date": "2026-10-30", "title": "Teamsters file grievance over UPS Roadie routing", "c": ["UPS"]},
