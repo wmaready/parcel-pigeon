@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T23:42Z",
+ "run": "2026-10-31T00:17Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
@@ -102,9 +102,9 @@
    "fixed": true
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
    "ids": [],
    "fixed": false
   },
@@ -130,13 +130,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -151,13 +144,6 @@
     "a3623effd6df4",
     "43"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-   "ids": [],
    "fixed": false
   },
   {
@@ -353,9 +339,9 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "sev": "med",
+   "type": "watch-thin",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
    "ids": [],
    "fixed": false
   },
@@ -381,13 +367,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -402,13 +381,6 @@
     "a3623effd6df4",
     "43"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-   "ids": [],
    "fixed": false
   },
   {
