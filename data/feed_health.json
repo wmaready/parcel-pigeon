@@ -60,7 +60,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 88,
+  "entries": 65,
   "last_ok": "2026-10-31"
  },
  "Wire: Business Wire": {
@@ -68,7 +68,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 63,
+  "entries": 68,
   "last_ok": "2026-10-31"
  },
  "Wire: GlobeNewswire": {
@@ -76,7 +76,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 100,
+  "entries": 73,
   "last_ok": "2026-10-31"
  },
  "Newsroom: UPS": {
@@ -84,7 +84,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 6,
+  "entries": 7,
   "last_ok": "2026-10-31"
  },
  "Newsroom: FedEx": {
@@ -204,7 +204,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 86,
+  "entries": 72,
   "last_ok": "2026-10-31"
  },
  "site:bloomberg.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -220,7 +220,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 59,
+  "entries": 70,
   "last_ok": "2026-10-31"
  },
  "site:apnews.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -236,7 +236,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 98,
+  "entries": 75,
   "last_ok": "2026-10-31"
  },
  "site:axios.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -252,7 +252,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 94,
+  "entries": 99,
   "last_ok": "2026-10-31"
  },
  "site:nytimes.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -268,7 +268,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 91,
+  "entries": 88,
   "last_ok": "2026-10-31"
  },
  "site:fortune.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -276,7 +276,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 100,
+  "entries": 38,
   "last_ok": "2026-10-31"
  },
  "site:techcrunch.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -284,7 +284,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 9,
+  "entries": 8,
   "last_ok": "2026-10-31"
  },
  "site:ttnews.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -292,7 +292,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 48,
+  "entries": 42,
   "last_ok": "2026-10-31"
  },
  "site:joc.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -364,7 +364,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 6,
+  "entries": 5,
   "last_ok": "2026-10-31"
  },
  "site:retaildive.com UPS OR FedEx OR USPS OR \"Postal Service\" OR parcel OR \"Amazon Shipping\" OR OnTrac OR \"last mile\"": {
@@ -380,7 +380,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 2,
+  "entries": 1,
   "last_ok": "2026-10-31"
  },
  "site:parcelindustry.com carrier OR parcel OR shipping OR UPS OR FedEx": {
@@ -388,7 +388,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 2,
+  "entries": 1,
   "last_ok": "2026-10-31"
  },
  "site:parcelindustry.com column OR opinion OR negotiation OR audit": {
@@ -396,7 +396,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 1,
+  "entries": 0,
   "last_ok": "2026-10-31"
  },
  "site:logisticsmgmt.com parcel OR express OR \"small package\"": {
@@ -404,7 +404,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 46,
+  "entries": 48,
   "last_ok": "2026-10-31"
  },
  "site:freightwaves.com parcel OR UPS OR FedEx OR USPS OR Amazon": {
@@ -436,7 +436,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 46,
+  "entries": 47,
   "last_ok": "2026-10-31"
  },
  "site:modernretail.co shipping OR delivery": {
@@ -475,7 +475,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 8,
+  "entries": 7,
   "last_ok": "2026-10-31"
  },
  "\"Spee-Dee\" delivery": {
@@ -547,7 +547,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 1,
+  "entries": 2,
   "last_ok": "2026-10-31"
  },
  "\"DHL eCommerce\"": {
@@ -555,7 +555,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 8,
+  "entries": 9,
   "last_ok": "2026-10-31"
  },
  "SpeedX OR \"Dragonfly Shipping\" OR \"United Delivery Service\"": {
@@ -579,7 +579,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 3,
+  "entries": 2,
   "last_ok": "2026-10-31"
  },
  "courier acquires OR acquisition last mile": {
@@ -587,7 +587,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 2,
+  "entries": 3,
   "last_ok": "2026-10-31"
  },
  "last-mile delivery funding OR raises OR SPAC OR IPO": {
@@ -603,7 +603,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 26,
+  "entries": 40,
   "last_ok": "2026-10-31"
  },
  "UPS surcharge OR \"rate increase\"": {
@@ -611,7 +611,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 9,
+  "entries": 30,
   "last_ok": "2026-10-31"
  },
  "FedEx surcharge OR \"rate increase\"": {
@@ -627,7 +627,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 19,
+  "entries": 17,
   "last_ok": "2026-10-31"
  },
  "\"demand surcharge\" OR \"peak surcharge\"": {
@@ -643,7 +643,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 5,
+  "entries": 6,
   "last_ok": "2026-10-31"
  },
  "Teamsters UPS": {
@@ -651,7 +651,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 8,
+  "entries": 9,
   "last_ok": "2026-10-31"
  },
  "\"de minimis\" shipping": {
@@ -659,7 +659,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 12,
+  "entries": 10,
   "last_ok": "2026-10-31"
  },
  "parcel carrier news": {
@@ -667,7 +667,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 25,
+  "entries": 44,
   "last_ok": "2026-10-31"
  },
  "site:freightwaves.com commentary parcel OR UPS OR FedEx OR USPS": {
@@ -683,7 +683,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 22,
+  "entries": 21,
   "last_ok": "2026-10-31"
  },
  "parcel industry analyst OR opinion UPS FedEx Amazon": {
@@ -691,7 +691,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 7,
+  "entries": 10,
   "last_ok": "2026-10-31"
  },
  "last mile delivery industry news": {
@@ -699,7 +699,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 28,
+  "entries": 58,
   "last_ok": "2026-10-31"
  },
  "UPS API OR \"UPS developer\" OR \"UPS.com\" new tool": {
@@ -715,7 +715,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 7,
+  "entries": 9,
   "last_ok": "2026-10-31"
  },
  "USPS API OR \"USPS Web Tools\" OR \"USPS Ship\"": {
@@ -723,7 +723,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 19,
+  "entries": 7,
   "last_ok": "2026-10-31"
  },
  "carrier RFID OR robotics OR AI parcel": {
@@ -731,7 +731,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 11,
+  "entries": 10,
   "last_ok": "2026-10-31"
  },
  "shipping software carrier integration": {
@@ -739,7 +739,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 19,
+  "entries": 20,
   "last_ok": "2026-10-31"
  },
  "UPS strategy OR \"Carol Tome\" OR \"investor day\"": {
@@ -747,7 +747,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 22,
+  "entries": 23,
   "last_ok": "2026-10-31"
  },
  "FedEx strategy OR \"Network 2.0\" OR \"Raj Subramaniam\"": {
@@ -755,7 +755,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 40,
+  "entries": 24,
   "last_ok": "2026-10-31"
  },
  "\"Postmaster General\" OR \"USPS plan\"": {
@@ -763,7 +763,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 5,
+  "entries": 7,
   "last_ok": "2026-10-31"
  },
  "DoorDash retail delivery OR returns OR partnership": {
@@ -779,7 +779,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 30,
+  "entries": 31,
   "last_ok": "2026-10-31"
  },
  "Instacart OR Shipt OR Gopuff retailer partnership same-day delivery": {
@@ -787,7 +787,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 25,
+  "entries": 39,
   "last_ok": "2026-10-31"
  },
  "same-day delivery expansion Walmart OR Target OR \"Home Depot\" OR Lowe's OR \"Best Buy\" OR Costco OR Kroger OR \"Dollar General\"": {
@@ -795,7 +795,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 30,
+  "entries": 10,
   "last_ok": "2026-10-31"
  },
  "Roadie OR Veho OR OnTrac OR \"Better Trucks\" partnership retailer": {
@@ -835,7 +835,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 24,
+  "entries": 32,
   "last_ok": "2026-10-31"
  },
  "AI agent shipping OR \"parcel audit\" OR \"rate shopping\" launch": {
@@ -851,7 +851,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 30,
+  "entries": 49,
   "last_ok": "2026-10-31"
  },
  "delivery robot Serve Robotics OR Starship OR Coco": {
@@ -859,7 +859,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 48,
+  "entries": 25,
   "last_ok": "2026-10-31"
  },
  "UPS \"EZ Rates\" OR \"EZ pricing\"": {
@@ -898,7 +898,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 57,
+  "entries": 28,
   "last_ok": "2026-10-31"
  },
  "holiday e-commerce forecast Adobe OR Deloitte OR NRF OR Salesforce": {
@@ -906,7 +906,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 22,
+  "entries": 17,
   "last_ok": "2026-10-31"
  },
  "returns report NRF OR Narvar OR \"Happy Returns\"": {
@@ -938,7 +938,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 18,
+  "entries": 32,
   "last_ok": "2026-10-31"
  },
  "NLRB Amazon DSP OR Teamsters UPS grievance": {
@@ -953,7 +953,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 6,
+  "entries": 7,
   "last_ok": "2026-10-31"
  },
  "antitrust Amazon logistics OR fulfillment": {
@@ -969,7 +969,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 54,
+  "entries": 52,
   "last_ok": "2026-10-31"
  },
  "FedEx news parcel OR shipping": {
@@ -977,7 +977,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 26,
+  "entries": 42,
   "last_ok": "2026-10-31"
  },
  "USPS packages OR \"Ground Advantage\" OR \"Priority Mail\" news": {
@@ -985,7 +985,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 37,
+  "entries": 16,
   "last_ok": "2026-10-31"
  },
  "\"Amazon Logistics\" OR \"Amazon Shipping\" OR \"Amazon delivery\"": {
@@ -993,7 +993,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 50,
+  "entries": 44,
   "last_ok": "2026-10-31"
  },
  "\"Ground Saver\" OR \"SurePost\" OR \"Ground Economy\"": {
@@ -1017,7 +1017,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 18,
+  "entries": 17,
   "last_ok": "2026-10-31"
  },
  "e-commerce shipping costs shippers 2026": {
@@ -1025,7 +1025,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 31,
+  "entries": 21,
   "last_ok": "2026-10-31"
  },
  "parcel volume 2026 OR \"parcel volumes\"": {
@@ -1033,7 +1033,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 48,
+  "entries": 45,
   "last_ok": "2026-10-31"
  },
  "\"FedEx Freight\" OR \"UPS Supply Chain\" parcel": {
@@ -1057,7 +1057,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 27,
+  "entries": 26,
   "last_ok": "2026-10-31"
  },
  "site:parcelandpostaltechnologyinternational.com": {
@@ -1080,7 +1080,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-10-31",
-  "entries": 41,
+  "entries": 37,
   "last_ok": "2026-10-31"
  },
  "site:retailtouchpoints.com shipping OR delivery OR returns": {
