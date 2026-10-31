@@ -989,7 +989,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-10-31T04:58Z"
  },
  "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
   "http_status": 200,
@@ -997,7 +997,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-10-31T04:58Z"
  },
  "https://news.adobe.com/news/downloads/pdfs/2026/09/adi-holiday-forecast-release-9-26.pdf": {
   "http_status": 200,
@@ -1005,7 +1005,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-10-31T04:58Z"
  },
  "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf": {
   "http_status": 200,
@@ -1150,5 +1150,221 @@
   "state": "opens",
   "why": "opens; content not confirmed",
   "checked_at": "2026-10-30T05:00Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10946/q3-2025-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10946/q3-2025-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10960/q4-2025-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10960/q4-2025-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10988/q1-2026-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10988/q1-2026-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/11021/q2-2026-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/11021/q2-2026-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/11022/q3-2026-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/11022/q3-2026-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2119/ups-releases-1q-2024-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2119/ups-releases-1q-2024-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2131/ups-releases-3q-2024-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2131/ups-releases-3q-2024-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2135/ups-releases-4q-2024-earnings-and-provides-2025-guidance": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2135/ups-releases-4q-2024-earnings-and-provides-2025-guidance",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2142/ups-releases-1q-2025-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2142/ups-releases-1q-2025-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2146/ups-releases-2q-2025-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2146/ups-releases-2q-2025-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2150/ups-releases-3q-2025-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2150/ups-releases-3q-2025-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2154/ups-releases-4q-2025-earnings-and-provides-2026-guidance": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2154/ups-releases-4q-2025-earnings-and-provides-2026-guidance",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2164/ups-releases-2q-2026-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2164/ups-releases-2q-2026-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000028/ups-20240331.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000028/ups-20240331.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000064/ups-20240930.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000064/ups-20240930.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000019/ups-20241231.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000019/ups-20241231.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-25-049661/ups-20250930.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-25-049661/ups-20250930.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-008432/ups-20251231.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-008432/ups-20251231.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-031154/ups-20260331.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-031154/ups-20260331.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
+ },
+ "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-053249/ups-20260630.htm": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-053249/ups-20260630.htm",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-10-31T04:58Z"
  }
 }

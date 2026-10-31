@@ -1,50 +1,55 @@
 {
- "run": "2026-10-31T04:48Z",
+ "run": "2026-10-31T04:58Z",
  "clock_add": [],
  "clock_link": [],
  "clock_unlink": [],
- "link_cursor": 400,
- "doc_cursor": 84,
+ "link_cursor": 440,
+ "doc_cursor": 114,
  "checked_pairs": [
-  "457e37db5347",
-  "0ee2e50bd13d",
-  "94d1ac334f4e",
-  "5effb73bc21d",
-  "4e8faef9252d",
-  "2988f97e477e",
-  "f3a106e02077",
+  "5f83fff4b0b8",
   "1bc66c00eda3",
-  "0b8aff140a01",
-  "60030262fcea",
-  "4621e9e86574",
-  "73dcfc31b988",
-  "2f24e1d5d0e2",
-  "d73b3089178a",
-  "006e0976c74d",
-  "4d5dedc8cd29",
-  "b54077ea2f7b",
-  "6157952e9b11",
-  "62cb3ae5df27",
-  "dbb89994655f",
-  "0cae9f6a1079",
-  "6bef0a5868e5",
-  "d72a23005aba",
-  "b8d8ea16bc5f",
-  "7e4a0a07ad2f",
-  "bd74f39e4a2a",
+  "803f70b9b286",
   "5b4926c2c24d",
   "c1419d4e7cb6",
-  "454e4f8f6a6b",
   "c74456d2bddc",
-  "de313bc51fd7",
-  "a625dd5720a9",
-  "d46a0aebc57e",
-  "f7e5ad4ade89",
-  "5f83fff4b0b8",
+  "b54077ea2f7b",
+  "dbb89994655f",
+  "7e4a0a07ad2f",
+  "bb9d125105c0",
+  "4621e9e86574",
+  "60030262fcea",
   "70042e1b5ea7",
-  "803f70b9b286",
+  "0ee2e50bd13d",
+  "454e4f8f6a6b",
+  "d46a0aebc57e",
+  "d73b3089178a",
+  "0cae9f6a1079",
+  "de313bc51fd7",
+  "94d1ac334f4e",
+  "0b8aff140a01",
+  "006e0976c74d",
+  "558e73ee4967",
+  "4d5dedc8cd29",
+  "f3a106e02077",
+  "457e37db5347",
+  "6157952e9b11",
+  "87f9bbae47ee",
   "14a3d7429698",
-  "5e124f1a493a"
+  "62cb3ae5df27",
+  "b8d8ea16bc5f",
+  "5e124f1a493a",
+  "c61435232c81",
+  "f7e5ad4ade89",
+  "2988f97e477e",
+  "4e8faef9252d",
+  "cf51efba6984",
+  "6bef0a5868e5",
+  "bd74f39e4a2a",
+  "a625dd5720a9",
+  "5effb73bc21d",
+  "2f24e1d5d0e2",
+  "73dcfc31b988",
+  "d72a23005aba"
  ],
  "issues": [
   {
@@ -306,6 +311,51 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Max retries exceeded with url: /finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.indiablooms.com', port=443) at 0x7fc998353c20>, 'Connection to www.indiablooms.com timed out. (connect timeout=15)'))): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
+   "ids": [
+    "a5e5d0db945cf"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
+   "ids": [
+    "nr0ee0b5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1): https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
+   "ids": [
+    "h522"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
+   "ids": [
+    "h412"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -549,6 +599,51 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.indiablooms.com', port=443): Max retries exceeded with url: /finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.indiablooms.com', port=443) at 0x7fc998353c20>, 'Connection to www.indiablooms.com timed out. (connect timeout=15)'))): https://www.indiablooms.com/finance/faster-deliveries-wider-reach-india-post-blue-dart-seal-nationwide-parcel-services-deal/details",
+   "ids": [
+    "a5e5d0db945cf"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
+   "ids": [
+    "nr0ee0b5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1): https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
+   "ids": [
+    "h522"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
+   "ids": [
+    "h412"
+   ],
    "fixed": false
   }
  ]
