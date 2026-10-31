@@ -1,5 +1,5 @@
 {
- "cursor": 33,
+ "cursor": 48,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 249,
+   "fails": 250,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 249,
+   "fails": 250,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
@@ -659,7 +659,7 @@
    "first": "2026-10-21",
    "n": "OneRate-Pricing_2026.pdf",
    "hash": "15395631186d",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
@@ -1035,7 +1035,7 @@
   "https://about.usps.com/who/legal/terms-of-use.htm": {
    "hash": "7b29a8b90772",
    "first": "2026-10-25",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Terms of use",
    "snap": {
     "d": "2026-10-26",
@@ -1045,7 +1045,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf": {
    "hash": "0bf70104e05e",
    "first": "2026-10-25",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "USPS transportation-related temporary price change",
    "snap": {
     "d": "2026-10-26",
@@ -1056,7 +1056,7 @@
   "https://shipveho.com/client/terms": {
    "hash": "016c9d745ba3",
    "first": "2026-10-25",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Veho client terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -1066,9 +1066,9 @@
   "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html": {
    "hash": "b1ab54f802c4",
    "first": "2026-10-25",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "DHL Express 2027 U.S. price adjustment",
-   "pic_try": "2026-10-30"
+   "pic_try": "2026-10-31"
   },
   "https://www.fedex.com/en-us/shipping/fedex-smartpost/rates-zones/chart.html": {
    "hash": "21c5891a193b",
@@ -1147,7 +1147,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "d28481282107",
    "first": "2026-10-25",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Printable version",
    "snap": {
     "d": "2026-10-26",
@@ -1380,12 +1380,15 @@
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "hash": "283fdc3b3b09",
    "checked": "2026-10-31",
-   "last_try": "2026-10-30",
+   "last_try": "2026-10-31",
    "snap": {
     "d": "2026-10-28",
     "pdf": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
     "txt": "data/snapshots/04e3e48834d1/2026-10-28.txt"
-   }
+   },
+   "fails": 1,
+   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectTimeout)",
+   "blocked": true
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf": {
    "first": "2026-10-30",
