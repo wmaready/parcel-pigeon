@@ -1,5 +1,5 @@
 {
- "cursor": 78,
+ "cursor": 93,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 252,
+   "fails": 253,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 252,
+   "fails": 253,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
@@ -1524,7 +1524,7 @@
   },
   "https://events.q4inc.com/attendee/622711393": {
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) earnings call",
-   "fails": 2,
+   "fails": 3,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-10-31"
@@ -1586,7 +1586,7 @@
   },
   "https://events.q4inc.com/attendee/395375543": {
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) earnings call",
-   "fails": 2,
+   "fails": 3,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-10-31"
