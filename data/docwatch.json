@@ -1,5 +1,5 @@
 {
- "cursor": 48,
+ "cursor": 63,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 250,
+   "fails": 251,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 250,
+   "fails": 251,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
@@ -1142,7 +1142,8 @@
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c7c5f2c8-58fd-4d2b-91a0-19cfedfeefe8/original/as/preview-ups-small-business-package-rates.pdf",
     "txt": "data/snapshots/19e15226c749/2026-10-31.txt",
     "prev_d": "2026-10-30"
-   }
+   },
+   "pic_try": "2026-10-31"
   },
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "d28481282107",
