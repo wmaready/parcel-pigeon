@@ -1,5 +1,5 @@
 {
- "cursor": 69,
+ "cursor": 84,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -315,7 +315,7 @@
    "first": "2026-10-21",
    "n": "Effective_November_14_Fuel_Increase_Explaination.pdf",
    "hash": "84e1e97a7235",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "snap": {
     "d": "2026-10-26",
     "pdf": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 242,
+   "fails": 243,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 242,
+   "fails": 243,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-10-31"
@@ -540,7 +540,7 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
@@ -748,7 +748,7 @@
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
    "hash": "b3b5181ba673",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -1288,7 +1288,7 @@
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "OnTrac surcharges and rates page",
    "snap": {
     "d": "2026-10-26",
@@ -1299,7 +1299,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
    "snap": {
     "d": "2026-10-26",
@@ -1310,7 +1310,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "UPS domestic fuel surcharge tables",
    "snap": {
     "d": "2026-10-26",
@@ -1321,7 +1321,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "b3b5181ba673",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-10-26",
@@ -1332,37 +1332,31 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://public-inspection.federalregister.gov/2026-21421.pdf?1792413913",
     "txt": "data/snapshots/e5f2c699239a/2026-10-26.txt"
    },
-   "last_try": "2026-10-30",
-   "fails": 1,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false
+   "last_try": "2026-10-30"
   },
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21317.pdf",
     "txt": "data/snapshots/58373f1b7bc3/2026-10-26.txt"
    },
-   "last_try": "2026-10-30",
-   "fails": 1,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false
+   "last_try": "2026-10-30"
   },
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -1373,7 +1367,7 @@
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
    "snap": {
     "d": "2026-10-26",
@@ -1484,7 +1478,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf": {
    "hash": "fbc675f00e4b",
    "first": "2026-10-30",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1495,7 +1489,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
    "hash": "c2c0a5750888",
    "first": "2026-10-30",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1506,7 +1500,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/edf17e3e-640b-438c-808f-99664c427646.pdf": {
    "hash": "74e90f22afc4",
    "first": "2026-10-30",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1517,7 +1511,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf": {
    "hash": "8ba6b61d9f95",
    "first": "2026-10-30",
-   "checked": "2026-10-30",
+   "checked": "2026-10-31",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) call transcript",
    "snap": {
     "d": "2026-10-30",
