@@ -1,7 +1,12 @@
 {
- "run": "2026-11-01T02:53Z",
+ "run": "2026-11-01T03:58Z",
  "clock_add": [],
- "clock_link": [],
+ "clock_link": [
+  {
+   "clock": "xw9c03b8f99b5f0",
+   "story": "wf5014bc150e9"
+  }
+ ],
  "clock_unlink": [],
  "link_cursor": 440,
  "doc_cursor": 114,
@@ -60,6 +65,15 @@
     "nrb01db6"
    ],
    "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS 2027 rate increase: 5.9% average (Ground, Air, International)\"",
+   "ids": [
+    "wf5014bc150e9"
+   ],
+   "fixed": true
   },
   {
    "sev": "high",
@@ -170,6 +184,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "ids": [],
    "fixed": false
   },
   {
@@ -428,6 +449,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "docs-blocked",
+   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
+   "ids": [],
    "fixed": false
   },
   {

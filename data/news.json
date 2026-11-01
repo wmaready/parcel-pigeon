@@ -1,5 +1,99 @@
 [
  {
+  "id": "wf5014bc150e9",
+  "date": "2026-11-01",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide",
+  "sum": "UPS replaced the 2026 Small Business Rates guide (effective January 26, 2026) with a 2027 rate table. Every Next Day Air Early cell compared is higher; for example the Zone 102 letter rate rose from $46.75 to $47.50 and the 5 lb Zone 106 rate from $82.00 to $84.34.",
+  "plain": "Small Business Rates accounts shipping Next Day Air Early pay more per package. In the cells compared the increase ranges from $0.75 on a Zone 102 letter to $9.66 on heavy Zone 107/108 packages.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-11-01",
+  "changes": [
+   {
+    "what": "Next Day Air Early letter rate, Zone 102",
+    "before": "$46.75",
+    "after": "$47.50",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping Next Day Air Early letters in Zone 102",
+    "impact": "$46.75 -> $47.50, +$0.75 per letter"
+   },
+   {
+    "what": "Next Day Air Early letter rate, Zone 124",
+    "before": "$92.39",
+    "after": "$95.20",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping Next Day Air Early letters in Zone 124",
+    "impact": "$92.39 -> $95.20, +$2.81 per letter"
+   },
+   {
+    "what": "Next Day Air Early 5 lb rate, Zone 106",
+    "before": "$82.00",
+    "after": "$84.34",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping 5 lb Next Day Air Early packages to Zone 106",
+    "impact": "$82.00 -> $84.34, +$2.34 per package"
+   },
+   {
+    "what": "Next Day Air Early 35 lb rate, Zone 108",
+    "before": "$244.63",
+    "after": "$254.29",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping 35 lb Next Day Air Early packages to Zone 108",
+    "impact": "$244.63 -> $254.29, +$9.66 per package"
+   },
+   {
+    "what": "Next Day Air Early 36 lb rate, Zone 102",
+    "before": "$91.15",
+    "after": "$93.90",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping 36 lb Next Day Air Early packages to Zone 102",
+    "impact": "$91.15 -> $93.90, +$2.75 per package"
+   },
+   {
+    "what": "Next Day Air Early 36 lb rate, Zone 107",
+    "before": "$244.77",
+    "after": "$254.43",
+    "effective": null,
+    "who": "Small Business Rates accounts shipping 36 lb Next Day Air Early packages to Zone 107",
+    "impact": "$244.77 -> $254.43, +$9.66 per package"
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Whether the 2026 note that Next Day Air Early is billed as a rate plus a separate $30.00 surcharge still applies in 2027 cannot be confirmed",
+   "Rates for Ground, other domestic services, international services, and value-added or other charges in the 2027 guide are not shown, so changes to them cannot be confirmed",
+   "Zone 124 rates for 36 lb and above could not be compared because the 2026 figures are cut off"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "exclusive": false,
+  "src": "UPS",
+  "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+  "srcs": [
+   {
+    "src": "UPS: UPS Small Business Rates page",
+    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+     "old": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "w9c03b8f99b5f",
   "date": "2026-10-30",
   "c": [
