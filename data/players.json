@@ -2354,6 +2354,40 @@
    "pending": true,
    "added": "2026-10-29",
    "story": "a9077d9364cd5"
+  },
+  {
+   "id": "vfcorp",
+   "n": "VF Corp.",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Parent of The North Face, Vans and Timberland, which joined DoorDash with 350+ stores.",
+   "al": [],
+   "src": "https://netchoice.org/from-the-store-shelf-to-your-doorstep-doordash-and-macys-collaborate/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-09-30",
+   "story": "a01f901de27c2"
+  },
+  {
+   "id": "keyfoodstoresc",
+   "n": "Key Food Stores Co-Operative",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Co-Operative of family-owned and -operated supermarkets in the Northeast and Florida",
+   "al": [],
+   "src": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-27",
+   "story": "a8523160884a0"
   }
  ],
  "edges": [
@@ -4048,6 +4082,33 @@
    "t": "PackRobot click-and-collect terminal deployed in a U.S. Walmart store",
    "url": "https://www.vabaeestisona.com/estonian-cleveron-hopes-to-install-thousands-of-package-terminals-across-us/",
    "story": null
+  },
+  {
+   "a": "doordash",
+   "b": "vfcorp",
+   "k": "partner",
+   "y": "2026",
+   "t": "DoorDash adds The North Face, Vans and Timberland",
+   "url": "https://netchoice.org/from-the-store-shelf-to-your-doorstep-doordash-and-macys-collaborate/",
+   "story": "a01f901de27c2"
+  },
+  {
+   "a": "uber",
+   "b": "keyfoodstoresc",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber Eats and Key Food Co-Op partner on grocery delivery",
+   "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
+   "story": "a8523160884a0"
+  },
+  {
+   "a": "wonder",
+   "b": "avride",
+   "k": "partner",
+   "y": "2026",
+   "t": "Wonder and Avride expand robot delivery partnership to four US cities",
+   "url": "https://roboticsandautomationnews.com/2026/10/28/avride-delivery-robots-expand-to-four-us-cities-through-wonder-partnership/106416/",
+   "story": "a9fac6c751c97"
   }
  ],
  "moves": [

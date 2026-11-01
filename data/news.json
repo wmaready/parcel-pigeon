@@ -1388,6 +1388,94 @@
   "exclusive": true
  },
  {
+  "id": "a3dd54f8a339b",
+  "date": "2026-10-28",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Zipline adds onboard sound modeling to quiet its drone flights",
+  "sum": "Zipline has introduced onboard sound modeling that dynamically optimizes its drones' flight trajectories to enable quieter flying, Aviation Week reported. The report cites growing public concern over noise from drone deliveries, and says operators are preparing to scale up across the U.S. once the FAA publishes a rule.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The sound modeling affects how Zipline's drones fly, not what shippers pay.",
+  "why": "Noise complaints could shape where and how drone delivery operators scale across the U.S. as they prepare for an expected FAA publication.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T20:57:56Z",
+  "src": "Aviation Week",
+  "url": "https://aviationweek.com/business-aviation/safety-ops-regulation/drone-delivery-providers-move-reduce-noise-nuisance",
+  "srcs": [
+   {
+    "src": "Aviation Week",
+    "url": "https://aviationweek.com/business-aviation/safety-ops-regulation/drone-delivery-providers-move-reduce-noise-nuisance"
+   }
+  ],
+  "auto": true,
+  "new": "Zipline's onboard sound modeling for quieter flights is new, and noise concerns are now cited as an issue as operators prepare to scale; the earlier coverage had not mentioned noise, and nothing changes yet for shippers' rates or service.",
+  "syn": "Zipline has introduced onboard sound modeling to dynamically optimize the flight trajectories of its drones and enable quieter flying, according to Aviation Week. The report points to growing public concern over noise from drone deliveries. It says drone delivery operators are preparing to scale up operations across the U.S. once the FAA publishes a rule. The full article is behind a subscription.",
+  "aff": [
+   {
+    "who": "Zipline drone deliveries",
+    "what": "Onboard sound modeling adjusts flight trajectories to enable quieter flying."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a61bdd264bc0d",
+  "date": "2026-10-28",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Northglenn council approves ordinance regulating drone delivery hubs",
+  "sum": "Northglenn City Council in Colorado approved an ordinance regulating drone delivery hubs, the sites where drones take off and land, KDVR reported. Walmart and Wing have announced plans to fly orders in the Denver metro next year but have not filed an application, according to the city's planning director.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. Any company wanting to run a drone hub in Northglenn would now need a special use permit, and Walmart and Wing have not applied.",
+  "why": "Local siting rules for drone hubs could shape where Walmart and Wing launch Denver-area delivery, which the companies plan for next year.",
+  "score": 4,
+  "tie": "Walmart and Wing announced in October 2026 that they would add Denver and Seattle drone delivery in 2027.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T20:59:13Z",
+  "src": "AOL.com",
+  "url": "https://www.aol.com/articles/northglenn-1st-metro-city-regulate-235620000.html",
+  "srcs": [
+   {
+    "src": "AOL.com",
+    "url": "https://www.aol.com/articles/northglenn-1st-metro-city-regulate-235620000.html"
+   }
+  ],
+  "auto": true,
+  "new": "Northglenn approved local rules for drone delivery hubs ahead of Walmart and Wing's planned Denver-metro launch, with no application filed yet and no change to shipper prices or service.",
+  "syn": "Northglenn City Council approved an ordinance regulating drone delivery hubs, KDVR reported. The city's director of planning and development, Becky Smith, said Walmart and Wing asked about drone regulations earlier this year. The companies have not filed an application. The ordinance covers screening, noise and buffers from sensitive uses such as residential areas, while the FAA regulates drones in the air, Smith said. A special use permit lets a company operate for one year, during which the city can evaluate the impacts.",
+  "aff": [
+   {
+    "who": "Drone delivery operators",
+    "what": "A special use permit is required to run a hub in Northglenn; it allows operation for one year before the city evaluates impacts."
+   },
+   {
+    "who": "Walmart and Wing",
+    "what": "Have not filed an application; they plan to start flying Denver-metro orders next year, with packages up to five pounds in as fast as 30 minutes."
+   },
+   {
+    "who": "Nearby residents",
+    "what": "The ordinance regulates screening, noise and buffers from residential areas around launch and landing sites."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a82e057190718",
   "date": "2026-10-28",
   "c": [
@@ -1435,6 +1523,57 @@
     "what": "Cash on hand of $8 billion included about $2.7 billion in IEEPA tariff refunds held for refund to customers."
    }
   ],
+  "exclusive": true
+ },
+ {
+  "id": "a9fac6c751c97",
+  "date": "2026-10-28",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wonder and Avride expand robot delivery to four US cities",
+  "sum": "Wonder is expanding its partnership with autonomous technology developer Avride to robot delivery in Jersey City and Hoboken in New Jersey, Arlington County in Virginia, and Philadelphia, Pennsylvania. The robots will serve dozens of additional merchants on the Grubhub marketplace, including at least one Wonder location in each market. Wonder said nearly 20 percent of deliveries from its Jersey City location have been completed by robots since the pilot began in October 2025.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Customers ordering from eligible Grubhub marketplace restaurants in the four markets may be assigned a robot if they opt in and live within the service area. Participating restaurants pay no additional cost, according to the announcement.",
+  "why": "Robot delivery is moving from campuses into dense urban neighborhoods on the Grubhub marketplace, which adds an autonomous option to local delivery.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:00:26Z",
+  "src": "Robotics & Automation News",
+  "url": "https://roboticsandautomationnews.com/2026/10/28/avride-delivery-robots-expand-to-four-us-cities-through-wonder-partnership/106416/",
+  "srcs": [
+   {
+    "src": "Robotics & Automation News",
+    "url": "https://roboticsandautomationnews.com/2026/10/28/avride-delivery-robots-expand-to-four-us-cities-through-wonder-partnership/106416/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-28",
+  "syn": "Wonder is expanding its partnership with autonomous technology developer Avride to scale robot delivery across Jersey City and Hoboken in New Jersey, Arlington County in Virginia, and Philadelphia, Pennsylvania. The expansion adds dozens of merchants on the Grubhub marketplace, including at least one Wonder location in each market, with more to follow. It builds on a Jersey City pilot that began in October 2025, the first time Wonder enabled autonomous delivery on its marketplace beyond Grubhub's college campus operations. Wonder and Avride also continue to operate on dozens of campuses, including a program at The Ohio State University with 120 robots completing up to 2,000 deliveries per day.",
+  "aff": [
+   {
+    "who": "Grubhub marketplace customers",
+    "what": "May be assigned a robot for delivery if they opt in and their address is within the service area."
+   },
+   {
+    "who": "Participating restaurants",
+    "what": "Robot delivery is offered at no additional cost to restaurants that opt in, with training and support."
+   },
+   {
+    "who": "Jersey City deliveries",
+    "what": "Nearly 20 percent of deliveries from Wonder's Jersey City location have been completed by robots."
+   },
+   {
+    "who": "Campus programs",
+    "what": "Ohio State program runs 120 robots completing up to 2,000 deliveries per day."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -1559,6 +1698,102 @@
   "edge": true
  },
  {
+  "id": "a0cdcf384a3bf",
+  "date": "2026-10-27",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "Analysis",
+  "title": "Amazon same-day network plans raise last-mile real estate demand",
+  "sum": "Commercial Observer reported on Oct. 27, 2026 that Amazon's preliminary same-day plans, first reported by Business Insider in September, are drawing attention in industrial real estate. The plans call for more than 1,000 locations, within 10 miles of 80 percent of U.S. Prime members. Amazon said the planning documents are subject to significant revision and are not finalized.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. Amazon said the same-day planning documents are preliminary and not final.",
+  "why": "Amazon's plan would put same-day sites within 10 miles of 80 percent of U.S. Prime members, per Business Insider, and the article ties it to rising last-mile costs.",
+  "score": 4,
+  "tie": "Business Insider reported preliminary plans for Amazon's same-day expansion, code-named Project Mercury, in September 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:01:14Z",
+  "src": "Commercial Observer",
+  "url": "https://commercialobserver.com/2026/10/amazon-same-day-delivery-logistics-real-estate/",
+  "srcs": [
+   {
+    "src": "Commercial Observer",
+    "url": "https://commercialobserver.com/2026/10/amazon-same-day-delivery-logistics-real-estate/"
+   }
+  ],
+  "auto": true,
+  "syn": "Commercial Observer reported on Oct. 27, 2026 on Amazon's preliminary same-day delivery plans, which Business Insider first reported in September under the code name Project Mercury. The plan would expand the network to more than 1,000 locations, place facilities within 10 miles of 80 percent of U.S. Prime members, and make roughly 90,000 frequently purchased items available almost instantly. Amazon said the documents are subject to significant revision. The article says Amazon paid $195 million this summer for a 1.2 million-square-foot Chicago warehouse for last-mile delivery. Industry executives quoted say demand for infill and last-mile space is rising.",
+  "aff": [
+   {
+    "who": "Amazon same-day network",
+    "what": "Preliminary plan: more than 1,000 locations and roughly 90,000 items; Amazon says it is not final."
+   },
+   {
+    "who": "Last-mile industrial real estate",
+    "what": "Cushman & Wakefield's Jason Tolliver said final-mile space has the tightest vacancy of any industrial segment."
+   },
+   {
+    "who": "Delivery costs",
+    "what": "Analysts estimate over half of delivery cost is last mile; diesel is up 75 percent since the war in Iran began, per a CSU professor."
+   },
+   {
+    "who": "Last-mile sites",
+    "what": "Link Logistics' Brandon Page estimated fewer than 5 percent have automated sorting technology."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a239a5a2c2a5e",
+  "date": "2026-10-27",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Sprouts adds Shipt same-day delivery from more than 500 stores",
+  "sum": "Sprouts Farmers Market has partnered with Shipt to offer same-day delivery from more than 500 stores nationwide, according to Simply Wall St. Customers can order through the Shipt Marketplace. Separately, Chief Technology Officer James Bahrenburg has stepped down and will stay on as an advisor during a transition period.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Sprouts customers can now place orders through the Shipt Marketplace for same-day delivery from local Sprouts stores. No change to carrier rates or surcharges is reported.",
+  "why": "The Shipt tie-up gives a grocery chain with 500+ stores a same-day delivery channel that uses an existing network instead of in-house delivery.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:00:46Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/sprouts-farmers-market-sfm-brings-221725975.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sprouts-farmers-market-sfm-brings-221725975.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Sprouts Farmers Market (NasdaqGS:SFM) has partnered with Shipt to offer same-day delivery from more than 500 stores nationwide, according to Simply Wall St. Customers can place Sprouts orders directly through the Shipt Marketplace for delivery from local stores. The grocer also said its Chief Technology Officer, James Bahrenburg, has stepped down and will stay on as an advisor during a transition period. Simply Wall St's commentary says the advisory period runs through March 2027 and describes the Shipt arrangement as a link to an existing same-day network rather than an in-house build.",
+  "aff": [
+   {
+    "who": "Sprouts customers",
+    "what": "Can order through the Shipt Marketplace for same-day delivery from local Sprouts stores."
+   },
+   {
+    "who": "Sprouts store network",
+    "what": "More than 500 stores nationwide are covered by the same-day delivery offer."
+   },
+   {
+    "who": "Sprouts technology leadership",
+    "what": "CTO James Bahrenburg has stepped down and will advise during a transition period."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a7a5696865d95",
   "date": "2026-10-27",
   "c": [
@@ -1607,6 +1842,52 @@
     "what": "UPS has saved $1.8 billion through September against a $3 billion target for this year."
    }
   ]
+ },
+ {
+  "id": "a8523160884a0",
+  "date": "2026-10-27",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Key Food Co-Op brings 300+ member stores to Uber Eats",
+  "sum": "Uber Technologies and Key Food Stores Co-Operative announced on October 27, 2026 a partnership to offer grocery delivery from more than 300 Key Food member stores in the Northeast and Florida through Uber Eats. Customers can order on-demand or scheduled delivery from participating stores, according to the companies.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to parcel rates or service. Shoppers in the Northeast and Florida can order from participating Key Food member stores via the Uber Eats app.",
+  "why": "The tie-up adds more than 300 independent supermarkets across the Northeast and Florida to Uber Eats' grocery delivery marketplace.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T20:59:30Z",
+  "src": "Logistics Manager",
+  "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
+  "srcs": [
+   {
+    "src": "Logistics Manager",
+    "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/small-business/articles/key-food-stores-co-op-120000698.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-27",
+  "syn": "Uber Technologies and Key Food Stores Co-Operative announced on October 27, 2026 a partnership to bring grocery delivery from more than 300 Key Food member stores across the Northeast and Florida to Uber Eats. Customers can shop stores in Key Food's Family of Supermarkets, including Key Food, Food Universe, SuperFresh, The Food Emporium and Food Dynasty, with on-demand and scheduled delivery. Uber said the partnership builds on its investment in grocery and retail with national and regional supermarket brands. According to Logistics Manager, the offer is open to eligible Co-Op stores, which can opt in as the rollout continues.",
+  "aff": [
+   {
+    "who": "Key Food member stores",
+    "what": "More than 300 stores in the Northeast and Florida can offer delivery via Uber Eats; eligible stores can opt in as the rollout continues."
+   },
+   {
+    "who": "Grocery shoppers in the Northeast and Florida",
+    "what": "Can order from participating stores in the Uber Eats app, with on-demand and scheduled delivery."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "aa3051ff662bd",
@@ -1757,6 +2038,49 @@
     "what": "UPS said it is pursuing roughly 100 active prospects in data center construction freight."
    }
   ],
+  "exclusive": true
+ },
+ {
+  "id": "af856b9bd82fe",
+  "date": "2026-10-27",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air recruits EU drone approvals head",
+  "sum": "Amazon Prime Air is advertising for an EU Head of Regulatory Approvals for drone delivery, according to Unmanned Airspace. The listing says the role would own the EU approval programme from first authority conversation to authorisation granted. It follows a recent Prime Air advertisement for a regulatory expert in Australia.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. The listing describes preparation for EU drone approvals; no EU service has been announced.",
+  "why": "The listing shows Amazon preparing to seek drone delivery approvals in the EU, though it states no launch date, location or service terms.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:01:31Z",
+  "src": "Unmanned airspace",
+  "url": "https://www.unmannedairspace.info/uncategorized/amazon-eyes-eu-entry-for-prime-air/",
+  "srcs": [
+   {
+    "src": "Unmanned airspace",
+    "url": "https://www.unmannedairspace.info/uncategorized/amazon-eyes-eu-entry-for-prime-air/"
+   }
+  ],
+  "auto": true,
+  "new": "Amazon Prime Air is seeking EU regulatory approvals, a step outside the US-focused earlier coverage, but the listing gives no launch date, so nothing changes yet for shippers.",
+  "syn": "Amazon Prime Air has advertised for an EU Head of Regulatory Approvals for drone delivery, Unmanned Airspace reported. The listing says the hire would be Amazon's named contact with the European Union Aviation Safety Agency (EASA) and national aviation authorities, and would sign submissions and cover both operational and airworthiness sides of each application. Amazon says that after securing initial authorisations it intends to scale across EU member states. The listing follows a recent advertisement for a regulatory expert in Australia.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   },
+   {
+    "who": "Prime Air EU plans",
+    "what": "Amazon is hiring to secure initial authorisations, then intends to scale across EU member states."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -2062,6 +2386,59 @@
     "what": "FedEx is looking to increase the Mesquite facility's capacity, particularly on weekends."
    }
   ]
+ },
+ {
+  "id": "a3fa21d4c267a",
+  "date": "2026-10-26",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "NYC Council Member asks DOT to curb Amazon on-foot delivery hubs",
+  "sum": "Council Member Phil Wong wrote to DOT Commissioner Mike Flynn on Monday asking the agency to act on Amazon delivery trucks that he alleges serve as mobile distribution hubs in Council District 30. Amazon said it is taking immediate action and reviewing delivery locations across the city. DOT said it is exploring a microhub pilot program.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. Amazon said it is reviewing delivery locations across New York City, and DOT is exploring a microhub pilot.",
+  "why": "Amazon said more than 1,300 DSP workers use pushcarts in New York City, so curb rules and a microhub pilot could shape its on-foot delivery model.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:01:53Z",
+  "src": "QNS.com",
+  "url": "https://qns.com/2026/10/wong-amazon-mobile-delivery-hubs-dot/",
+  "srcs": [
+   {
+    "src": "QNS.com",
+    "url": "https://qns.com/2026/10/wong-amazon-mobile-delivery-hubs-dot/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-26",
+  "syn": "Council Member Phil Wong asked DOT Commissioner Mike Flynn in a Monday letter to act on Amazon's alleged use of large trucks as mobile distribution hubs in Council District 30, Queens. Wong said couriers deliver on foot from trucks parked on residential streets, which he said block hydrants, take parking spaces and slow traffic. Amazon said it met Wong, passed feedback to its delivery service partners and is reviewing delivery locations. DOT said it has told Amazon to follow curb rules and is exploring a microhub pilot and LockerNYC.",
+  "aff": [
+   {
+    "who": "Amazon on-foot delivery in Queens",
+    "what": "Amazon said it is reviewing delivery locations citywide and passed residents' concerns to the DSPs running the program."
+   },
+   {
+    "who": "District 30 residents",
+    "what": "Wong said trucks operate at over a dozen locations, from 8 a.m. until 10 p.m., and he asked DOT for immediate relief."
+   },
+   {
+    "who": "NYC curb and loading rules",
+    "what": "Wong asked DOT to clarify parking and loading rules and coordinate with the NYPD on enforcement of the three-hour limit."
+   },
+   {
+    "who": "NYC microhub program",
+    "what": "DOT said it is exploring a microhub pilot that would give Amazon space to use smaller modes of transport instead of vans."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-11-01",
+  "unconf": true
  },
  {
   "id": "a502c5e23a41d",
@@ -4293,6 +4670,55 @@
   "exclusive": true
  },
  {
+  "id": "a681e7d298264",
+  "date": "2026-10-20",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Coco, Serve Robotics face Illinois biometric suits over delivery robots",
+  "sum": "Two class-action lawsuits filed in Cook County, Illinois, allege that delivery robots from Coco Robotics and Serve Robotics scan faces and hands and share the data with AI companies without consent. Both companies deny collecting biometric data. The suits cite the Illinois Biometric Information Privacy Act, which carries fines of $1,000 to $5,000 per violation.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. The suits are unresolved, and Chicago's robot delivery pilot is set to end in May 2027 unless officials extend it, according to TechEDT.",
+  "why": "Sidewalk robots deliver DoorDash and Uber Eats orders in Chicago, and the suits seek to apply Illinois biometric law to them.",
+  "score": 4,
+  "tie": "The suits were first reported in October 2026, when ABC7 Chicago said Coco and Serve denied collecting biometric data or identifying individuals.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T21:00:16Z",
+  "src": "AP News",
+  "url": "https://apnews.com/article/chicago-food-delivery-robots-biometric-data-lawsuits-16ead54eb7dc7c6eacbf011c53b9b20d",
+  "srcs": [
+   {
+    "src": "AP News",
+    "url": "https://apnews.com/article/chicago-food-delivery-robots-biometric-data-lawsuits-16ead54eb7dc7c6eacbf011c53b9b20d"
+   },
+   {
+    "src": "BroBible",
+    "url": "https://brobible.com/culture/article/food-delivery-robots-accused-scanning-faces-sharing-data-ai/"
+   }
+  ],
+  "auto": true,
+  "new": "The article adds plaintiff details (a September 2025 DoorDash order, three Uber Eats deliveries), the allegation that data went to OpenAI and others, the $1,000-$5,000 per-violation fines and the May 2027 end of Chicago's pilot; shippers see no change to service.",
+  "syn": "Two class-action lawsuits in Cook County, Illinois, claim that autonomous delivery robots from Coco Robotics and Serve Robotics collected facial features and hand shapes without written notice or permission, and shared the data with AI companies. One plaintiff says he ordered groceries through DoorDash in September 2025 and a Coco robot arrived. Another says he received three Uber Eats deliveries by Serve robot. Coco called the suit \"frivolous\" and Serve said its systems are not designed to identify individuals. The Illinois privacy law allows fines of $1,000 to $5,000 per violation.",
+  "aff": [
+   {
+    "who": "Coco Robotics",
+    "what": "Sued over claims its robots captured faces, hands and body shape via cameras and LiDAR; it says it collected no biometric data in Chicago."
+   },
+   {
+    "who": "Serve Robotics",
+    "what": "Sued over claims it collected video and sensor data and licensed it to third parties; it says the data is not used to identify people."
+   },
+   {
+    "who": "Chicago robot delivery pilot",
+    "what": "Set to end in May 2027 unless officials extend it, according to TechEDT."
+   }
+  ]
+ },
+ {
   "id": "a6e82ba740e99",
   "date": "2026-10-20",
   "c": [
@@ -5197,7 +5623,6 @@
    }
   ],
   "auto": true,
-  "thread": "robot-biometric-suits",
   "exclusive": true,
   "unconf": true,
   "tried": "2026-10-22"
