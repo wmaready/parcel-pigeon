@@ -3,26 +3,19 @@
   "0": "2026-10-23",
   "1": "2026-10-24",
   "2": "2026-10-27",
-  "3": "2026-10-29"
+  "3": "2026-10-29",
+  "4": "2026-11-01"
  },
- "day": "2026-10-29",
+ "day": "2026-11-01",
  "calls": 1,
  "queue": [
   {
-   "n": "GoLocker",
-   "what": "Runs public parcel lockers across New York City (targeting 1,000 locations by the 2026 holiday season) and partners with the PUDO network.",
-   "url": "https://www.freightwaves.com/news/new-york-city-parcel-lockers-reduce-delivery-costs-porch-piracy",
-   "realm": "regional",
-   "seg": 3,
-   "found": "2026-10-29"
-  },
-  {
-   "n": "Cleveron AS",
-   "what": "Estonian maker of robotic parcel terminals and grocery click-and-collect lockers, with North American deployments and U.S. partners.",
-   "url": "https://www.reportprime.com/smart-parcel-delivery-locker-r7277/company",
-   "realm": "regional",
-   "seg": 3,
-   "found": "2026-10-29"
+   "n": "Favor Delivery",
+   "what": "H-E-B-owned Texas gig delivery platform whose more than 100,000 independent Runners deliver restaurant orders, groceries and everyday essentials in more than 400 Texas cities.",
+   "url": "https://www.favordelivery.com/",
+   "realm": "gig",
+   "seg": 4,
+   "found": "2026-11-01"
   }
  ]
 }

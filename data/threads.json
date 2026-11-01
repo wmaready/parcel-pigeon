@@ -30,6 +30,7 @@
   ],
   "co": "UPS",
   "apart": [
+   "carrier-gri",
    "ups-driver-choice-lawsuit"
   ],
   "rv": "155222208660"
@@ -185,7 +186,7 @@
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
-  "s": "UPS set a 5.9% average increase for Dec. 21, 2026, DHL 5.9% for Jan. 1 and FedEx 5.9% for Jan. 4, 2027.",
+  "s": "UPS, FedEx and DHL Express have each set a 5.9% average increase for the turn of 2027, and UPS's takes effect Dec. 21, 2026.",
   "ids": [
    "h401",
    "h421",
@@ -220,7 +221,11 @@
    },
    "intro": "Carriers keep announcing 5.9% average rate increases each year; UPS, DHL and FedEx have each set 5.9% again.",
    "now": "UPS's 5.9% average increase takes effect Dec. 21, 2026, DHL's 5.9% on Jan. 1 and FedEx's 5.9% on Jan. 4, 2027."
-  }
+  },
+  "co": "UPS",
+  "apart": [
+   "ups-driver-choice-lawsuit"
+  ]
  },
  "usps-pricing": {
   "n": "USPS shipping price changes",
@@ -514,7 +519,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's North Haven drone plan awaits a Connecticut DEEP ruling, while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
+  "s": "Drone delivery is expanding under waivers and Part 135 certificates while the FAA's Part 108 rule remained unpublished as of Oct. 9, and local noise objections are emerging.",
   "ids": [
    "g27",
    "g26",
@@ -870,6 +875,7 @@
    "now": "Driver Choice is capped at 7,500 drivers; the Teamsters' president calls a strike likely when the contract ends July 31, 2028."
   },
   "apart": [
+   "carrier-gri",
    "ups-amazon-glide-down",
    "ups-driver-choice-lawsuit"
   ]

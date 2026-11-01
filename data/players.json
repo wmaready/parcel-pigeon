@@ -2273,6 +2273,53 @@
     "https://dronelife.com/2026/07/16/matternet-adds-beeline-uas-to-part-135-drone-delivery-operator-network-DRONELIFE"
    ],
    "enriched": "2026-11-01"
+  },
+  {
+   "id": "cleveronas",
+   "n": "Cleveron AS",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Viljandi, Estonia",
+   "yr": "2007",
+   "s": "Estonian technology company that designs and makes robotic parcel terminals and parcel lockers, with software, for click-and-collect and parcel handover and returns at retailers and logistics companies.",
+   "al": [
+    "Cleveron"
+   ],
+   "src": "https://www.euipo.europa.eu/en/designs/designeuropa-awards/awards-2023/cleveron",
+   "auto": true,
+   "added": "2026-11-01",
+   "from": "discover",
+   "site": "cleveron.com",
+   "geo": [
+    25.59,
+    58.364
+   ],
+   "srcs": [
+    "https://www.euipo.europa.eu/en/designs/designeuropa-awards/awards-2023/cleveron",
+    "https://www.crunchbase.com/organization/cleveron",
+    "https://tracxn.com/d/companies/cleveron/__7eSjkLv4eOvUppH5iYR26NMAbqtxaWpaOAeGf-mVInQ"
+   ],
+   "enriched": "2026-11-01",
+   "pending": false
+  },
+  {
+   "id": "ingrammicro",
+   "n": "Ingram Micro",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Technology products distributor that UPS said uses its RFID labeling capability.",
+   "al": [],
+   "src": "https://www.supplychaindive.com/news/ups-aims-to-double-rfid-labeled-volume-from-customer-locations/872946/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-30",
+   "story": "aa95a154e3d38"
   }
  ],
  "edges": [
@@ -3958,6 +4005,15 @@
    "t": "Seed investor",
    "url": "https://seedtable.com/companies/matternet",
    "story": "a89f005fb1862"
+  },
+  {
+   "a": "cleveronas",
+   "b": "walmart",
+   "k": "partner",
+   "y": null,
+   "t": "PackRobot click-and-collect terminal deployed in a U.S. Walmart store",
+   "url": "https://www.vabaeestisona.com/estonian-cleveron-hopes-to-install-thousands-of-package-terminals-across-us/",
+   "story": null
   }
  ],
  "moves": [
@@ -4285,7 +4341,8 @@
   "annexbrandsinc": "2026-10-30",
   "instacartmaple": "2026-11-01",
   "packagehubbusi": "2026-11-01",
-  "matternet": "2026-11-01"
+  "matternet": "2026-11-01",
+  "cleveronas": "2026-11-01"
  },
  "facts": {
   "ups": {

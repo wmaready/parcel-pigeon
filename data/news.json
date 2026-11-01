@@ -94,6 +94,50 @@
   }
  },
  {
+  "id": "aa95a154e3d38",
+  "date": "2026-10-30",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "UPS sets RFID labeling at 315 customer sites, 3 million packages a day",
+  "sum": "UPS has set up RFID labeling capabilities for shipments at 315 upstream customer locations, CEO Carol Tomé said on its Q3 earnings call. The program covers 3 million packages a day, up from 2.2 million reported in July, and Tomé said it is expected to reach 6 million a day in 2027.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Shippers at participating UPS customer locations can have RFID labels applied before pickup, which UPS said gives them earlier visibility. No rate or fee change was reported.",
+  "why": "RFID labels applied at shipper sites give earlier package visibility; UPS says the program covers 3 million packages a day, with 6 million expected in 2027.",
+  "score": 5,
+  "tie": "The 3 million daily packages compare with the 2.2 million per day UPS reported in July 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T05:07:30Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/ups-aims-to-double-rfid-labeled-volume-from-customer-locations/872946/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/ups-aims-to-double-rfid-labeled-volume-from-customer-locations/872946/"
+   }
+  ],
+  "auto": true,
+  "syn": "UPS has set up RFID labeling for shipments at 315 upstream customer locations, CEO Carol Tomé said on the company's Q3 earnings call. The program now covers 3 million packages a day, up from 2.2 million reported in July, and Tomé said it is expected to reach 6 million a day in 2027. Tomé said an early RFID label gives shippers more visibility and reduces confusion over missed pickups for UPS. Ingram Micro and a high-end jeweler are among the shippers using it.",
+  "aff": [
+   {
+    "who": "Shippers at 315 customer locations",
+    "what": "RFID labeling capability is in place; UPS vehicles scan labels automatically at pickup."
+   },
+   {
+    "who": "Daily RFID volume from customer sites",
+    "what": "3 million packages a day, up from 2.2 million in July; expected to reach 6 million a day in 2027."
+   },
+   {
+    "who": "UPS network automation",
+    "what": "Nearly 70% of UPS packages will flow through an automated process in Q4, up from 66.5% at the end of 2025, per Tomé."
+   }
+  ]
+ },
+ {
   "id": "w9c03b8f99b5f",
   "date": "2026-10-30",
   "c": [
@@ -389,6 +433,56 @@
   "offc": true
  },
  {
+  "id": "a619cd4242386",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Peak season",
+  "kind": "Opinion",
+  "title": "ePost Global VP says tariffs reshape cross-border returns costs",
+  "sum": "Helaine Rich, vice president of strategic sales & administration at ePost Global, argues in an opinion piece that tariff and customs changes are raising the cost of cross-border returns. She says U.S. retailers saw nearly $850 billion in returns last year and that the end of de minimis exemptions exposes returned parcels to per-parcel and per-HS-code fees.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No carrier rate or service change is announced. The author describes how duty and tariff changes affect what cross-border returns cost merchants.",
+  "why": "U.S. retailers had nearly $850 billion in returns last year, and Rich says duties on cross-border returns can be paid twice.",
+  "score": 3,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T05:10:22Z",
+  "src": "Supply Chain Brain",
+  "url": "https://www.supplychainbrain.com/blogs/1-think-tank/post/45101-why-brands-need-to-rethink-their-returns-strategy-before-peak-season",
+  "srcs": [
+   {
+    "src": "Supply Chain Brain",
+    "url": "https://www.supplychainbrain.com/blogs/1-think-tank/post/45101-why-brands-need-to-rethink-their-returns-strategy-before-peak-season"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "syn": "In an opinion piece, Helaine Rich of ePost Global says returns are becoming a second peak with greater cost and complexity. She cites nearly $850 billion in U.S. merchandise returns last year, the end of de minimis exemptions, and tariff increases as high as 50% in some markets. She also points to the next phase of the EU's customs reform on November 1 and says merchants that refund duties and taxes pay them twice when a product crosses a border again. She cites a National Retail Federation finding that 9% of returns are fraudulent, and says return volumes at processing facilities can double from one truckload per week to two during peak.",
+  "aff": [
+   {
+    "who": "Cross-border merchants",
+    "what": "Per-parcel and per-HS-code fees now apply to shipments that previously moved duty-free, the author says."
+   },
+   {
+    "who": "Merchants refunding duties and taxes",
+    "what": "They pay the duty twice when a returned product crosses the border again, according to the author."
+   },
+   {
+    "who": "Returns processing facilities",
+    "what": "Volumes can double from one truckload per week to two during peak, the author says."
+   },
+   {
+    "who": "Retailers selling into Canada",
+    "what": "The author notes Canada's CREDITS program, which needs enrollment and documentation, as a way to reclaim duties on returns."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a66453dab48f7",
   "date": "2026-10-29",
   "c": [
@@ -510,21 +604,22 @@
   "id": "a78c94fa3a273",
   "date": "2026-10-29",
   "c": [
-   "Amazon"
+   "Amazon",
+   "Industry"
   ],
   "cat": "Drones & robots",
   "kind": "Analysis",
-  "title": "DroneXL sets Wing's 43 dBA noise claim against Amazon MK30 data",
-  "sum": "In an Oct. 29 LinkedIn post, Wing said it has completed more than one million US deliveries this year and put its cruise noise at 43 dBA. DroneXL compared that figure with FAA filings on Amazon's MK30, which list a delivery hover sound exposure level of 92.1 decibels at 25 feet. Wing is due to present to Manchester, Missouri, aldermen on Nov. 2.",
+  "title": "Wing cites 43 dBA cruise noise as Amazon drones draw Texas complaints",
+  "sum": "In a LinkedIn post on Thursday, Wing said it has completed more than one million US deliveries this year and put its drone's cruise noise at 43 dBA. DroneXL reported that the figure covers cruise, not the delivery hover, and that Richardson, Texas, residents are complaining about Amazon Prime Air flights. Wing presents to Manchester, Missouri's Board of Aldermen on November 2.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service for shippers. The item concerns noise figures and local approvals for drone delivery sites in Missouri and Texas.",
-  "why": "Noise led residents' objections in Kirkwood, and Wing is seeking about seven St. Louis-area Walmart nests, so local approvals shape where drone delivery can expand.",
+  "plain": "No change to rates or service. Wing's planned St. Louis-area Walmart nests depend on local approvals.",
+  "why": "Local noise objections stalled a Wing nest in Kirkwood, Missouri, as Wing seeks about seven St. Louis-area Walmart nests.",
   "score": 5,
-  "tie": "Wing and Walmart said in October 2026 they would add Denver and Seattle drone delivery in 2027, and Wing is now pursuing about seven St. Louis-area Walmart nests.",
+  "tie": "Wing and Walmart said in October 2026 they would expand drone delivery to the Denver and Seattle metros in 2027.",
   "act": null,
   "dates": [],
-  "added": "2026-10-30T05:43:06Z",
+  "added": "2026-11-01T05:07:52Z",
   "src": "DroneXL",
   "url": "https://dronexl.co/2026/10/29/wing-good-neighbor-drone-noise-43-dba-amazon-richardson/",
   "srcs": [
@@ -534,20 +629,20 @@
    }
   ],
   "auto": true,
-  "new": "Wing published a 43 dBA cruise-noise figure on Oct. 29 and is due in Manchester, Missouri, on Nov. 2 and 4, while DroneXL compared it with FAA data on Amazon's MK30; shipper rates and service are unchanged.",
-  "syn": "Wing, which is owned by Alphabet, said in an Oct. 29 LinkedIn post that it has completed more than one million US deliveries this year and that a cruising drone measures 43 dBA. DroneXL, in an analysis that includes its own commentary, said that figure covers cruise only. It cited Kirkwood, Missouri, documents putting Wing's delivery hover at about 62 to 63 decibels, and FAA filings putting Amazon's MK30 hover at 92.1 decibels at 25 feet. DroneXL said SEL and Leq are different measures, so the figures do not compare directly. Wing is due to present to Manchester's Board of Aldermen on Nov. 2.",
+  "new": "Noise has become a local-approval issue: Kirkwood, Missouri, let a Wing permit lapse on October 15 and Manchester hears Wing on November 2, with no change to shipper rates or fees.",
+  "syn": "Wing, owned by Alphabet, said in a LinkedIn post that its flights must stay quiet for people who didn't order anything, and that it has completed more than one million US deliveries this year. DroneXL reported that Wing's 43 dBA figure is for cruise at 150 to 200 feet, while Kirkwood, Missouri's planning report put the delivery hover at about 63 decibels. Amazon's MK30 is rated at 92.1 decibels (sound exposure level, measured 25 feet away) in its delivery hover, per an FAA filing cited by DroneXL. Local approvals for drone nests are a factor in how fast Wing and Amazon can expand.",
   "aff": [
    {
-    "who": "Manchester, Missouri",
-    "what": "Wing presents to the Board of Aldermen Nov. 2 and holds a City Hall open house Nov. 4."
+    "who": "Wing delivery sites near St. Louis",
+    "what": "Wing presents to Manchester's aldermen on November 2 and holds an open house on November 4, seeking about seven Walmart nests."
    },
    {
-    "who": "Kirkwood, Missouri",
-    "what": "The council let a Wing permit its planners recommended lapse without a motion on Oct. 15."
+    "who": "Kirkwood, Missouri nest proposal",
+    "what": "The council let a permit its planners recommended die without a motion on October 15."
    },
    {
-    "who": "Residents under Amazon routes",
-    "what": "A Richardson, Texas, resident logged 52 Amazon drones over her yard on one Friday in September, the NYT reported."
+    "who": "Residents under Amazon drone routes",
+    "what": "A Richardson, Texas, resident logged 52 Prime Air drones over her yard on one Friday in September, per The New York Times."
    }
   ],
   "exclusive": true
@@ -943,6 +1038,42 @@
   "exclusive": true
  },
  {
+  "id": "af3020ebb8445",
+  "date": "2026-10-28",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "Analysis",
+  "title": "UPS shares rise almost 6% as analysts split on 2027 outlook",
+  "sum": "A Loadstar analysis says UPS has finished its planned cut in Amazon volume and raised its outlook for the second quarter running, and its shares rose almost 6%. It says sell-side analysts are split on 2027 earnings.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The item covers UPS's financial outlook and analyst views.",
+  "why": "The analysis says the split concerns how much of UPS's improvement lasts once fuel surcharges and one-off cash benefits are set aside.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T05:08:37Z",
+  "src": "The Loadstar",
+  "url": "https://theloadstar.com/analysis-ups-the-cash-line-matters-just-as-much-as-the-earnings-beat/",
+  "srcs": [
+   {
+    "src": "The Loadstar",
+    "url": "https://theloadstar.com/analysis-ups-the-cash-line-matters-just-as-much-as-the-earnings-beat/"
+   }
+  ],
+  "auto": true,
+  "syn": "A Loadstar analysis, which cites FreightWaves reporting, says UPS has finished the planned reduction in Amazon volume it has discussed for 18 months. It says UPS is growing the volume it wants and lifting revenue per parcel faster than cost. UPS raised its outlook for the second quarter running, and the shares rose almost 6%. According to the analysis, forecasts for 2026 are converging on guidance, but sell-side analysts are split on 2027 over fuel surcharges, one-off cash benefits and a steep fourth-quarter margin ramp.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ]
+ },
+ {
   "id": "afd85f88c590a",
   "date": "2026-10-28",
   "c": [
@@ -1087,6 +1218,54 @@
    {
     "who": "SMB shippers",
     "what": "Small and medium-sized businesses were 35.1% of UPS U.S. volume in Q3, up about 240 basis points."
+   }
+  ]
+ },
+ {
+  "id": "ae9948d192dd1",
+  "date": "2026-10-27",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Peak season",
+  "kind": "Opinion",
+  "title": "ProShip author says peak plans should cover variability, not just volume",
+  "sum": "A ProShip strategic marketing manager argues in an opinion piece that peak performance depends on labor, carrier constraints and cost swings as well as volume. The piece cites Challenger, Gray & Christmas data showing retailers added 461,500 seasonal jobs in the fourth quarter of 2025, the fewest since 2008.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service comes from this piece. It is an opinion article recommending that shippers set carrier contingency plans and response thresholds before peak.",
+  "why": "The piece collects peak-season labor, surcharge and fuel figures that bear on shippers' costs and delivery performance, as seen by a shipping software vendor.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-01T05:09:03Z",
+  "src": "Parcel Industry",
+  "url": "https://parcelindustry.com/article-6727-Plan-for-Peak-Variability-Not-Just-Volume.html",
+  "srcs": [
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6727-Plan-for-Peak-Variability-Not-Just-Volume.html"
+   }
+  ],
+  "auto": true,
+  "syn": "In an opinion piece published by Parcel Industry, Evan Knauss of ProShip, a multi-carrier shipping software provider, argues that peak season is a variability challenge as much as a volume one. She cites Challenger, Gray & Christmas figures: retailers added 461,500 seasonal jobs in the fourth quarter of 2025, the fewest since 2008, and the firm expects 450,000 this year. She also cites U.S. Census Bureau data showing e-commerce sales grew nearly 6% in the fourth quarter of 2025, and says UPS plans to hire more than 100,000 seasonal workers this year, down from 125,000 in 2024. The piece says USPS added a 6% peak surcharge on top of an 8% increase earlier this year, and that UPS ground fuel surcharges reached over 29% in October.",
+  "aff": [
+   {
+    "who": "Parcel shippers",
+    "what": "The author urges cross-training staff, early onboarding of alternative carriers and predefined triggers for rerouting shipments."
+   },
+   {
+    "who": "USPS shippers",
+    "what": "The piece says USPS added a 6% peak surcharge on top of the 8% increase implemented earlier this year."
+   },
+   {
+    "who": "UPS Ground shippers",
+    "what": "The piece says UPS ground fuel surcharges reached over 29%, effective in October."
+   },
+   {
+    "who": "Seasonal labor",
+    "what": "The piece says retailers added 461,500 seasonal jobs in the fourth quarter of 2025, and UPS plans to hire more than 100,000 this year."
    }
   ]
  },
@@ -1946,7 +2125,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-10-31",
+  "tried": "2026-11-01",
   "unconf": true
  },
  {
@@ -2221,6 +2400,111 @@
   "exclusive": true
  },
  {
+  "id": "a8b925f5373a7",
+  "date": "2026-10-23",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "Analysis",
+  "title": "UPS 2027 increase runs above 5.9% on light packages, fees, analyses find",
+  "sum": "Two industry analyses of UPS's published 2026 and 2027 rates, both dated Oct. 30, 2026, say the average net 5.9% increase effective Dec. 21, 2026 hides larger rises on the lightest packages, minimum charges and accessorials. One analysis puts the most-used accessorials at an average 9.93% increase. UPS is also raising the Additional Handling minimum billable weight from 40 lbs to 50 lbs.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "From Dec. 21, 2026, UPS Daily Rates rise an average net 5.9%. According to the analyses, light packages, minimum charges and common surcharges rise faster than that, and the Additional Handling minimum weight rises to 50 lbs.",
+  "why": "The analyses say the 5.9% average masks larger rises on common fees and light packages, which affect most UPS shippers.",
+  "score": 7,
+  "tie": "UPS announced the Dec. 21, 2026 increase, the 50 lb Additional Handling minimum and the ZIP changes in October 2026, and these analyses compare the published rate tables behind that announcement.",
+  "act": "2026-12-21",
+  "dates": [
+   {
+    "d": "2026-11-02",
+    "w": "UPS fuel tables for Ground, Ground Saver, Domestic Air rise by up to 0.5%",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-11-16",
+    "w": "UPS Protected Delivery launches at $10.70 per shipment",
+    "imp": "info",
+    "fx": {
+     "t": "fee",
+     "car": "UPS",
+     "items": [
+      [
+       "UPS Protected Delivery, per shipment",
+       "$10.70",
+       10.7
+      ]
+     ]
+    }
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS Daily Rates rise an average net 5.9%",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "UPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2026-12-21",
+    "w": "Additional Handling minimum billable weight rises from 40 to 50 lbs",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-12-21",
+    "w": "Area surcharge ZIP codes and zone alignments change",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-21",
+    "w": "New Surge Fee for some Ground and Ground Saver origin ZIPs",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-01T05:07:08Z",
+  "src": "TransImpact",
+  "url": "https://transimpact.com/blog/2027-ups-gri",
+  "srcs": [
+   {
+    "src": "TransImpact",
+    "url": "https://transimpact.com/blog/2027-ups-gri"
+   },
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6732-Light-Packages-Heavy-Fees-Inside-the-2027-UPS-General-Rate-Increase-(GRI).html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-23",
+  "new": "Industry analyses of UPS's published rate tables say light packages, minimum charges and accessorials rise above the 5.9% average, so shippers' increases depend on package weight and the charges that apply.",
+  "syn": "UPS will raise Daily Rates for Ground, Air and International services by an average net 5.9% on Dec. 21, 2026, the fourth year in a row at that figure. Two industry analyses of the 2026 and 2027 published rates, both dated Oct. 30, 2026, say the increases vary widely by service, weight and charge. One says the most-used accessorials rise an average 9.93%, and that the commercial Large Package Surcharge rises 13.96%, from an average $254.50 to $290. The other says no UPS domestic service reaches 5.9% when averaged across weights from 1 to 150 lbs, because heavier packages rose least. The UPS Ground average is 5.67%. The analyses say the lightest weight breaks, minimum charges and accessorials run above 5.9%.",
+  "aff": [
+   {
+    "who": "Additional Handling shippers",
+    "what": "Minimum billable weight rises from 40 to 50 lbs on Dec. 21, 2026; the charge itself rises an average 8.92%."
+   },
+   {
+    "who": "Light-package shippers",
+    "what": "Ground 1–5 lb rises 6.13%; 3 Day Select 1–10 lb rises 6.41% and Next Day Air 1–10 lb 6.25% (zone 2–8 average)."
+   },
+   {
+    "who": "Minimum-charge shippers",
+    "what": "Ground minimum goes from $11.99 to $12.70 (5.92%); 3 Day Select rises 6.92% to $18.07."
+   },
+   {
+    "who": "Accessorial payers",
+    "what": "Residential Surcharge averages $7.35 from $6.75; Address Correction $27.50 from $25.25; DAS rises 8.97%."
+   }
+  ]
+ },
+ {
   "id": "a93db469c6b01",
   "date": "2026-10-23",
   "c": [
@@ -2321,7 +2605,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-10-31",
+  "tried": "2026-11-01",
   "unconf": true
  },
  {
@@ -2885,7 +3169,7 @@
   "new": "The Chronicle reports both sides digging in, with Amazon citing more than 40 DSPs and 5,000 employees at risk and a source saying Amazon rejected rewritten versions; no change for shippers yet since the bill has not advanced to a vote.",
   "edge": true,
   "exclusive": true,
-  "tried": "2026-10-31",
+  "tried": "2026-11-01",
   "unconf": true
  },
  {

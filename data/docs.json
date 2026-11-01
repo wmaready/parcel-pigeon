@@ -1458,7 +1458,11 @@
   "u": "https://pe.usps.com/text/dmm300/Notice123.htm",
   "d": "Shows holiday prices effective Oct 4, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/text/dmm300/Notice123.htm",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1474,7 +1478,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/PriceChange/Index",
   "content_verified": true,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1494,7 +1498,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1514,7 +1518,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice%20123%20-%20Final.xlsx",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1534,7 +1538,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1549,7 +1553,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20260712/Notice123.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1564,7 +1568,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20260406/Notice123.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1579,7 +1583,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20241104/Notice123.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:11Z"
  },
  {
   "c": "USPS",
@@ -1594,7 +1598,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20240714/Notice123.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:11Z"
  },
  {
   "c": "USPS",
@@ -1609,7 +1613,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/NHTML/DMMArchive20240121/Notice123.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:11Z"
  },
  {
   "c": "USPS",
@@ -1624,7 +1628,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/PriceChange/October%202021%20-%20Notice123.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1639,7 +1643,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/Archive/PriceFile",
   "content_verified": true,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1651,7 +1655,11 @@
   "d": "Mailing standards and price eligibility",
   "cur": true,
   "upd": "2026-07-12",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/text/DMM300/283.htm",
+  "content_verified": true,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1666,7 +1674,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/TEXT/DMM300/Transmittal_Letter.htm",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1815,7 +1823,11 @@
   "f": "data/files/usps-prc-order-9703-docket-cp2026-10-2026-holiday-prices-abee69.pdf",
   "fh": "2862ff612a57d15adf7d1bfbcb1d92b7ce530ee2",
   "fat": "2026-10-21",
-  "fsz": 235068
+  "fsz": 235068,
+  "http_status": 200,
+  "final_url": "https://public-inspection.federalregister.gov/2026-17656.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1832,7 +1844,11 @@
   "f": "data/files/usps-prc-order-9571-docket-cp2026-8-july-2026-prices-a6a741.pdf",
   "fh": "70e7b44cc30ae2d9890988dd04932ae170021a49",
   "fat": "2026-10-21",
-  "fsz": 239523
+  "fsz": 239523,
+  "http_status": 200,
+  "final_url": "https://public-inspection.federalregister.gov/2026-09798.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1849,7 +1865,11 @@
   "f": "data/files/usps-prc-order-9490-docket-cp2026-4-8-temporary-increase-b14544.pdf",
   "fh": "bea20307837dccb73cb334d73f5ce4293272cf66",
   "fat": "2026-10-21",
-  "fsz": 232622
+  "fsz": 232622,
+  "http_status": 200,
+  "final_url": "https://public-inspection.federalregister.gov/2026-06162.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1866,7 +1886,11 @@
   "f": "data/files/usps-prc-order-9360-docket-cp2026-2-january-2026-prices-c14e14.pdf",
   "fh": "a0444dfadd1882ef5d8e0803c753c78382c2f450",
   "fat": "2026-10-21",
-  "fsz": 236417
+  "fsz": 236417,
+  "http_status": 200,
+  "final_url": "https://public-inspection.federalregister.gov/2025-20650.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -1883,7 +1907,11 @@
   "f": "data/files/usps-prc-order-9084-docket-cp2025-10-2025-holiday-prices-6ca310.pdf",
   "fh": "7957917cc8c75112177a2d694284d6ac58c31509",
   "fat": "2026-10-23",
-  "fsz": 244041
+  "fsz": 244041,
+  "http_status": 200,
+  "final_url": "https://public-inspection.federalregister.gov/2025-15631.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "OnTrac",
@@ -2816,7 +2844,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/Misc/USPS%20SKU%20User%20Guide.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -2836,7 +2864,7 @@
   "http_status": 200,
   "final_url": "https://pe.usps.com/resources/PriceChange/July%202026%20Price%20Change%20-%20Notice123%20PDF%20-%207.10.26.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "USPS",
@@ -2852,7 +2880,11 @@
   "f": "data/files/usps-usps-sku-user-guide-july2026-507998.pdf",
   "fh": "2742939aabc86ac3e72237defca2de46d3d77100",
   "fat": "2026-10-22",
-  "fsz": 1767060
+  "fsz": 1767060,
+  "http_status": 200,
+  "final_url": "https://pe.usps.com/resources/PriceChange/USPS%20SKU%20User%20Guide_July2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "OnTrac",
@@ -2872,7 +2904,7 @@
   "http_status": 200,
   "final_url": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:11Z"
  },
  {
   "c": "OnTrac",
@@ -2892,7 +2924,7 @@
   "http_status": 200,
   "final_url": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-01T05:11Z"
  },
  {
   "c": "Spee-Dee",
@@ -3921,7 +3953,11 @@
   "u": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf",
   "d": "FedEx Fiscal Q1 2025 (Jun–Aug 2024), reported 2024-09-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "FedEx",
@@ -4308,7 +4344,11 @@
   "u": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/10/Policy-on-Political-Contributions.pdf",
   "d": "Posted on FedEx's Earnings releases page",
   "cur": true,
-  "seen": "2026-10-30"
+  "seen": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/10/Policy-on-Political-Contributions.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "FedEx",
@@ -4319,7 +4359,11 @@
   "u": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/09/CodeConduct-English.pdf",
   "d": "Posted on FedEx's Earnings releases page",
   "cur": true,
-  "seen": "2026-10-30"
+  "seen": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/09/CodeConduct-English.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "FedEx",
@@ -4330,7 +4374,11 @@
   "u": "https://s21.q4cdn.com/665674268/files/doc_downloads/guidelines/Policy-on-Limitation-of-Severance-Benefits.pdf",
   "d": "Posted on FedEx's Earnings releases page",
   "cur": true,
-  "seen": "2026-10-30"
+  "seen": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_downloads/guidelines/Policy-on-Limitation-of-Severance-Benefits.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-01T05:12Z"
  },
  {
   "c": "FedEx",
