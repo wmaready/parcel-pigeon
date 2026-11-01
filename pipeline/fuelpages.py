@@ -16,7 +16,7 @@ import filings
 
 MONTH = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
 FEDEX_URLS = ["https://www.fedex.com/en-us/shipping/fuel-surcharge.html", "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html"]
-UPS_URL = "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges.page"
+UPS_URL = "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"      # the public address; the ".page" form makes a browser start a file download
 UPS_COLS = ["Domestic Ground Surcharge", "Domestic Air Surcharge", "International Air Export Surcharge", "International Air Import Surcharge",
             "International Ground Export Import Surcharge"]
 DATE = r"([A-Za-z]{3,9})\.?\s+(\d{1,2}),\s+(\d{4})"
@@ -120,6 +120,12 @@ UPS_MAP = {s: s for s in ("ground", "air", "intlExport", "intlImport", "intlGrou
 
 def fail(fuel, carrier, why):
     prev = (fuel.setdefault("health", {}).get(carrier) or {})
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    if prev.get("ok") and prev.get("via") != "page":      # the fuel-price service read this carrier fine earlier: note the page miss, don't mark it failed
+        prev.update({"page_why": str(why)[:300], "page_at": now})
+        fuel["health"][carrier] = prev
+        print(f"::warning title={carrier} fuel page::{str(why)[:200]}")
+        return
     fuel["health"][carrier] = {"ok": False, "via": "page", "why": str(why)[:300], "at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                                "last_ok": prev.get("last_ok"), "latest": prev.get("latest")}
     print(f"::warning title={carrier} fuel page::{str(why)[:200]}")
