@@ -1,5 +1,5 @@
 {
- "cursor": 135,
+ "cursor": 9,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 284,
+   "fails": 285,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-01"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 284,
+   "fails": 285,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-01"
@@ -854,7 +854,11 @@
    "first": "2026-10-25",
    "checked": "2026-11-01",
    "n": "Amazon Shipping terms and conditions",
-   "pic_try": "2026-11-01"
+   "pic_try": "2026-11-01",
+   "fails": 1,
+   "err": "404 Client Error: Not Found for url: https://shipping.amazon.com/shipping-terms-and-conditions",
+   "blocked": false,
+   "last_try": "2026-11-01"
   },
   "https://ship.amazon.com/site-terms": {
    "hash": "c48a7f56ed69",
