@@ -1,5 +1,5 @@
 {
- "run": "2026-11-01T13:18Z",
+ "run": "2026-11-01T13:55Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -124,9 +124,9 @@
    "fixed": true
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -145,13 +145,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -166,13 +159,6 @@
     "a3623effd6df4",
     "43"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-   "ids": [],
    "fixed": false
   },
   {
@@ -378,9 +364,9 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -399,13 +385,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -420,13 +399,6 @@
     "a3623effd6df4",
     "43"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "docs-blocked",
-   "msg": "1 watched carrier documents can't be read (bot protection): UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-   "ids": [],
    "fixed": false
   },
   {
