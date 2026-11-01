@@ -644,3 +644,19 @@ def test_every_rate_clock_item_has_a_working_coop_explainer(site):
         pg.click('[data-rx="xa6e82ba740e991"]')
         pg.wait_for_selector("#rcx-xa6e82ba740e991 .rxrcpt", timeout=4000)
         assert "€2.00" in pg.inner_text("#rcx-xa6e82ba740e991")
+
+
+def test_brief_stops_never_sit_on_top_of_each_other(site):
+    """Oct 26, 2026: two brief stories about the same city (or two Eastern carriers) were drawn almost on top of each other, so the
+    pigeon's flight couldn't be followed. The three stops are chosen well apart, and anything still close is pushed apart."""
+    with app_with(site, 1280) as pg:
+        pg.wait_for_function("() => typeof briefRedraw === 'function'", timeout=10000)
+        gaps = pg.evaluate("""() => { const out = [];
+            const gap = () => { const S = briefStops(); let m = 1e9; for (let a = 0; a < S.length; a++) for (let b = a + 1; b < S.length; b++) m = Math.min(m, Math.hypot(S[a].p[0] - S[b].p[0], S[a].p[1] - S[b].p[1])); return [S.length, m] };
+            for (let i = 0; i < 25; i++) { briefRedraw(); out.push(gap()) }
+            // the day's news is all UPS and USPS (Atlanta and Washington, about 50 units apart): still never on top of each other
+            const today = new Date().toISOString().slice(0, 10), mk = (i, c, t) => ({id: 'zzb' + i, date: today, c: [c], cat: 'Pricing & GRI', kind: 'News', title: t, sum: t, lvl: 3, imp: 'up', plain: t, srcs: [], src: 'x', url: 'https://x.example/' + i});
+            for (let i = 0; i < 8; i++) NEWS.unshift(mk(i, i % 2 ? 'USPS' : 'UPS', (i % 2 ? 'USPS' : 'UPS') + ' test story number ' + i));
+            for (let i = 0; i < 25; i++) { briefRedraw(); out.push(gap()) }
+            return out }""")
+        assert all(n == 3 and m >= 44 for n, m in gaps), [g for g in gaps if g[1] < 44 or g[0] != 3][:4]
