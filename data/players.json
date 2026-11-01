@@ -2246,54 +2246,33 @@
   },
   {
    "id": "matternet",
-   "n": "Matternet",
+   "n": "Matternet, Inc.",
    "realm": "auto",
-   "own": null,
-   "tk": null,
+   "own": "public",
+   "tk": "MTTN",
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Develops autonomous drone delivery systems and has served healthcare systems since 2017 in Europe and 2019 in the US.",
-   "al": [],
-   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "hq": "Mountain View, CA, USA",
+   "yr": "2011",
+   "s": "Matternet designs, builds and operates autonomous drone networks for package delivery across healthcare, commerce and logistics. It runs them through FAA Part 135 operating partners such as UPS Flight Forward, Ameriflight and Beeline UAS.",
+   "al": [
+    "Matternet"
+   ],
+   "src": "https://www.matternet.com/newsroom/matternet-announces-swisslog-partnership",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-10-29",
-   "story": "a89f005fb1862"
-  },
-  {
-   "id": "translogic",
-   "n": "TransLogic",
-   "realm": "software",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Swisslog Healthcare company supplying transport automation, including pneumatic tube systems, for hospitals.",
-   "al": [],
-   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-29",
-   "story": "a89f005fb1862"
-  },
-  {
-   "id": "swissloghealth",
-   "n": "Swisslog Healthcare",
-   "realm": "software",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Parent of TransLogic, providing automated hospital transport solutions.",
-   "al": [],
-   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-29",
-   "story": "a89f005fb1862"
+   "story": "a89f005fb1862",
+   "site": "matternet.com",
+   "geo": [
+    -122.084,
+    37.386
+   ],
+   "srcs": [
+    "https://www.matternet.com/newsroom/matternet-announces-swisslog-partnership",
+    "https://www.nasdaq.com/press-release/matternet-worlds-only-faa-type-certified-drone-delivery-platform-begins-trading-otcqb",
+    "https://dronelife.com/2026/07/16/matternet-adds-beeline-uas-to-part-135-drone-delivery-operator-network-DRONELIFE"
+   ],
+   "enriched": "2026-11-01"
   }
  ],
  "edges": [
@@ -3909,24 +3888,6 @@
    "story": "a693bd740033a"
   },
   {
-   "a": "translogic",
-   "b": "matternet",
-   "k": "partner",
-   "y": "2026",
-   "t": "TransLogic and Matternet partner on hospital drone logistics",
-   "url": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "story": "a89f005fb1862"
-  },
-  {
-   "a": "swissloghealth",
-   "b": "translogic",
-   "k": "owns",
-   "y": "2026",
-   "t": "TransLogic is a Swisslog Healthcare company",
-   "url": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "story": "a89f005fb1862"
-  },
-  {
    "a": "doordash",
    "b": "instacartmaple",
    "k": "acquired",
@@ -3979,6 +3940,24 @@
    "t": "No-box/no-label returns drop-off network launch",
    "url": "https://www.marketscreener.com/quote/stock/PITNEY-BOWES-INC-13938/news/Pitney-Bowes-and-PackageHub-Launch-National-No-Box-No-Label-Returns-Drop-off-Network-45666934/",
    "story": null
+  },
+  {
+   "a": "matternet",
+   "b": "ups",
+   "k": "partner",
+   "y": "2019",
+   "t": "Drone delivery partnership for U.S. healthcare (WakeMed, Raleigh NC) via UPS Flight Forward",
+   "url": "https://www.suasnews.com/2020/02/matternet-raises-strategic-investment-from-mckesson-ventures/",
+   "story": "a89f005fb1862"
+  },
+  {
+   "a": "a16z",
+   "b": "matternet",
+   "k": "invested",
+   "y": "2016",
+   "t": "Seed investor",
+   "url": "https://seedtable.com/companies/matternet",
+   "story": "a89f005fb1862"
   }
  ],
  "moves": [
@@ -4305,7 +4284,8 @@
   "luxerone": "2026-10-30",
   "annexbrandsinc": "2026-10-30",
   "instacartmaple": "2026-11-01",
-  "packagehubbusi": "2026-11-01"
+  "packagehubbusi": "2026-11-01",
+  "matternet": "2026-11-01"
  },
  "facts": {
   "ups": {
