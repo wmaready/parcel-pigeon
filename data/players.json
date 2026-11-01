@@ -2182,50 +2182,118 @@
   {
    "id": "instacartmaple",
    "n": "Instacart (Maplebear Inc.)",
-   "realm": "3pl",
-   "own": "sub",
-   "tk": null,
+   "realm": "gig",
+   "own": "public",
+   "tk": "CART",
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Grocery delivery and fulfillment technology platform",
+   "hq": "San Francisco, CA, USA",
+   "yr": "2012",
+   "s": "Instacart operates a grocery technology and delivery marketplace in the U.S. and Canada. Independent contractor shoppers pick and deliver orders from retailers to customers, and the company also sells software to retailers.",
    "role": "Grocery delivery and fulfillment technology platform",
-   "al": [],
-   "src": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+   "al": [
+    "Instacart",
+    "Maplebear",
+    "Maplebear Inc."
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
    "auto": true,
-   "added": "2026-10-30"
+   "added": "2026-10-30",
+   "site": "instacart.com",
+   "geo": [
+    -122.419,
+    37.775
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1579091/000157909125000015/Financial_Report.xlsx",
+    "https://www.sec.gov/Archives/edgar/data/0001792789/000114036126041111/ef20084547_ex99-1.htm"
+   ],
+   "enriched": "2026-11-01",
+   "pending": false
   },
   {
    "id": "packagehubbusi",
    "n": "PackageHub Business Centers",
-   "realm": "regional",
-   "own": null,
+   "realm": "retail",
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
+   "hq": "Richardson, TX, USA",
    "yr": null,
-   "s": "Nationally branded network of about 1,300 independent shipping and business stores that offer package receiving and carrier shipping; many were added to the Happy Returns Return Bar network in 2026.",
-   "al": [],
+   "s": "PackageHub Business Centers is a franchise-style national brand that unites independently owned retail shipping and business stores, which offer package receiving and multi-carrier shipping (UPS, FedEx, USPS and others), and many of which serve as UPS/Happy Returns Return Bar drop-off points.",
+   "al": [
+    "PBC",
+    "PBC, LLC",
+    "PackageHub",
+    "PackageHub Business Centers, LLC"
+   ],
    "src": "https://www.rscentral.org/Programs/RS-Programs/PackageHub-Business-Centers",
    "auto": true,
    "added": "2026-10-31",
-   "from": "discover"
+   "from": "discover",
+   "site": "packagehub.com",
+   "geo": [
+    -96.73,
+    32.948
+   ],
+   "srcs": [
+    "https://www.rscentral.org/Programs/RS-Programs/PackageHub-Business-Centers",
+    "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-and-happy-returns-cement-position-as-largest-box-free-label-.html",
+    "https://www.prnewswire.com/news-releases/packagehub-business-centers-signs-1-200th-franchise-store-becoming-second-largest-network-in-the-us-302455823.html"
+   ],
+   "enriched": "2026-11-01",
+   "pending": false
   },
   {
-   "id": "pudoinc",
-   "n": "PUDO Inc.",
-   "realm": "regional",
+   "id": "matternet",
+   "n": "Matternet",
+   "realm": "auto",
    "own": null,
    "tk": null,
    "parent": null,
    "hq": null,
    "yr": null,
-   "s": "Operates a network of nearly 2,000 U.S. and Canadian retail pickup and drop-off points for carriers and e-tailers, and consolidates returns from those points.",
+   "s": "Develops autonomous drone delivery systems and has served healthcare systems since 2017 in Europe and 2019 in the US.",
    "al": [],
-   "src": "https://www.freightwaves.com/news/new-york-city-parcel-lockers-reduce-delivery-costs-porch-piracy",
+   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
    "auto": true,
-   "added": "2026-10-31",
-   "from": "discover"
+   "pending": true,
+   "added": "2026-10-29",
+   "story": "a89f005fb1862"
+  },
+  {
+   "id": "translogic",
+   "n": "TransLogic",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Swisslog Healthcare company supplying transport automation, including pneumatic tube systems, for hospitals.",
+   "al": [],
+   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-29",
+   "story": "a89f005fb1862"
+  },
+  {
+   "id": "swissloghealth",
+   "n": "Swisslog Healthcare",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Parent of TransLogic, providing automated hospital transport solutions.",
+   "al": [],
+   "src": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-29",
+   "story": "a89f005fb1862"
   }
  ],
  "edges": [
@@ -3839,6 +3907,78 @@
    "t": "Landmark Global launches app on the Shopify App Store",
    "url": "https://postandparcel.info/163190/news/e-commerce/landmark-global-our-industry-is-changing/",
    "story": "a693bd740033a"
+  },
+  {
+   "a": "translogic",
+   "b": "matternet",
+   "k": "partner",
+   "y": "2026",
+   "t": "TransLogic and Matternet partner on hospital drone logistics",
+   "url": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "story": "a89f005fb1862"
+  },
+  {
+   "a": "swissloghealth",
+   "b": "translogic",
+   "k": "owns",
+   "y": "2026",
+   "t": "TransLogic is a Swisslog Healthcare company",
+   "url": "https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "story": "a89f005fb1862"
+  },
+  {
+   "a": "doordash",
+   "b": "instacartmaple",
+   "k": "acquired",
+   "y": "2026",
+   "t": "DoorDash agreed Oct 2026 to acquire Instacart for about $17B (pending, not closed)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001792789/000114036126041111/ef20084547_ex99-1.htm",
+   "story": null
+  },
+  {
+   "a": "instacartmaple",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2024",
+   "t": "Uber Eats powers the restaurant delivery tab inside the Instacart app",
+   "url": "https://www.fastcompany.com/91631671/doordash-acquiring-instacart-restaurants-grocery",
+   "story": null
+  },
+  {
+   "a": "packagehubbusi",
+   "b": "happyreturns",
+   "k": "partner",
+   "y": "2026",
+   "t": "PackageHub stores added to Return Bar network",
+   "url": "https://about.ups.com/us/en/newsroom/press-releases/customer-first/ups-and-happy-returns-cement-position-as-largest-box-free-label-.html",
+   "story": null
+  },
+  {
+   "a": "packagehubbusi",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "National agreement for UPS Authorized Shipping Outlet program",
+   "url": "https://www.rscentral.org/Programs/RS-Programs/PackageHub-Business-Centers",
+   "story": null
+  },
+  {
+   "a": "packagehubbusi",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "FedEx partnership for independent stores",
+   "url": "https://www.rscentral.org/Programs/RS-Programs/PackageHub-Business-Centers",
+   "story": null
+  },
+  {
+   "a": "packagehubbusi",
+   "b": "pitneybowes",
+   "k": "partner",
+   "y": null,
+   "t": "No-box/no-label returns drop-off network launch",
+   "url": "https://www.marketscreener.com/quote/stock/PITNEY-BOWES-INC-13938/news/Pitney-Bowes-and-PackageHub-Launch-National-No-Box-No-Label-Returns-Drop-off-Network-45666934/",
+   "story": null
   }
  ],
  "moves": [
@@ -4163,7 +4303,9 @@
   "globalpost": "2026-10-29",
   "quadientparcel": "2026-10-30",
   "luxerone": "2026-10-30",
-  "annexbrandsinc": "2026-10-30"
+  "annexbrandsinc": "2026-10-30",
+  "instacartmaple": "2026-11-01",
+  "packagehubbusi": "2026-11-01"
  },
  "facts": {
   "ups": {
