@@ -1,5 +1,5 @@
 {
- "run": "2026-11-01T12:53Z",
+ "run": "2026-11-01T13:18Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -266,6 +266,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
+   "ids": [
+    "a9f4ed4757f82",
+    "abfc3f60e3202"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
@@ -278,10 +288,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Wing cites 43 dBA cruise noise as Amazon drones draw Texas complaints\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon withdraws Westborough drone delivery application\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a78c94fa3a273"
+    "a4702db049fcd"
    ],
    "fixed": false
   },
@@ -510,6 +520,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
+   "ids": [
+    "a9f4ed4757f82",
+    "abfc3f60e3202"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
@@ -522,10 +542,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Wing cites 43 dBA cruise noise as Amazon drones draw Texas complaints\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon withdraws Westborough drone delivery application\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a78c94fa3a273"
+    "a4702db049fcd"
    ],
    "fixed": false
   },

@@ -100,7 +100,8 @@
   "a9f4ed4757f82",
   "ab0fbedd02a19",
   "ae474dc39ba6c",
-  "wf5014bc150e9"
+  "wf5014bc150e9",
+  "a43b1ba7bd71d"
  ],
  "clock": [
   "e06:7",
@@ -429,51 +430,52 @@
   "analyst on time rate hides cost of upgrades and split parcel",
   "amazon q3 shipping costs rise 11 as units shipped grow 12",
   "kenco survey 43 of shoppers plan to spend more this peak",
-  "matternet and swisslog s translogic partner on hospital dron"
+  "matternet and swisslog s translogic partner on hospital dron",
+  "fedex dataworks and stripe plan joint smb financing tool for"
  ],
  "harvested": [
-  "afd8784e2b179",
+  "wb8827e8c126e",
   "a2b81ad721cb8",
-  "w8465aa718dc6",
-  "wacb825361479",
+  "af8ee5ed067c6",
+  "a312b45efa358",
+  "a72efb5e01b99",
+  "w599d9089a65d",
+  "w500a5bdc762c",
+  "aba40a11b6946",
+  "a663794cc9c55",
+  "wdf959a97bcb6",
+  "a89d7e4beebd9",
+  "w9c03b8f99b5f",
+  "wa9c423a83880",
+  "a0adb56a55334",
   "a6e82ba740e99",
   "w68c1687d28a1",
-  "a72efb5e01b99",
-  "wb8827e8c126e",
-  "wa9c423a83880",
-  "w91588ddb11ed",
-  "a89d7e4beebd9",
-  "a57a06c26359c",
-  "ac78f72e7f458",
-  "a312b45efa358",
-  "a0adb56a55334",
-  "aee6669d325da",
-  "a351cab9045c7",
-  "w9c03b8f99b5f",
-  "ae2ec177094e3",
-  "a773d361dac4e",
-  "w84705482dd2f",
-  "a831c709e5809",
-  "rv5-ups-sbr-fuel",
-  "a89f005fb1862",
-  "a6cc2420ad66e",
-  "a6c2418bed0a7",
-  "w599d9089a65d",
-  "aba40a11b6946",
-  "a58373f1b7bc3",
-  "w150132868eae",
-  "a999409ce7860",
   "a3a45d7f6db20",
-  "a15404304f17b",
-  "w500a5bdc762c",
-  "a2def09bc43bb",
   "a2f683da86bf8",
-  "af8ee5ed067c6",
-  "a5d45f26f2219",
-  "a663794cc9c55",
+  "a6c2418bed0a7",
+  "a15404304f17b",
+  "rv5-ups-sbr-fuel",
+  "a831c709e5809",
+  "aee6669d325da",
   "wbfc38914b368",
+  "a2def09bc43bb",
+  "w91588ddb11ed",
+  "w8465aa718dc6",
+  "a89f005fb1862",
+  "w150132868eae",
+  "a57a06c26359c",
+  "a999409ce7860",
+  "wacb825361479",
+  "afd8784e2b179",
+  "w84705482dd2f",
+  "ae2ec177094e3",
+  "ac78f72e7f458",
+  "a773d361dac4e",
+  "a351cab9045c7",
   "wf5014bc150e9",
-  "wdf959a97bcb6",
+  "a5d45f26f2219",
+  "a6cc2420ad66e",
+  "a58373f1b7bc3",
   "a82e057190718"
  ],
  "backfilled": true,
@@ -2066,6 +2068,21 @@
      "url": "https://markets.businessinsider.com/news/stocks/matternet-partners-with-swisslog-healthcare-s-translogic-to-bring-drone-delivery-to-thousands-of-north-american-hospitals-1036684364"
     }
    ]
+  },
+  {
+   "id": "a43b1ba7bd71d",
+   "title": "FedEx Dataworks and Stripe plan joint SMB financing tool for 2027",
+   "date": "2026-10-31",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://smallbiztrends.com/fedex-and-stripe-team-up-to-transform-financing-for-small-businesses/",
+   "srcs": [
+    {
+     "src": "Small Business Trends",
+     "url": "https://smallbiztrends.com/fedex-and-stripe-team-up-to-transform-financing-for-small-businesses/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2344,9 +2361,30 @@
   "ae474dc39ba6c": {
    "t": "Matternet-Swisslog hospital drones",
    "m": "Partnership targets hospital deliveries of lab specimens and medications; no parcel rate change."
+  },
+  "a43b1ba7bd71d": {
+   "t": "FedEx, Stripe plan SMB financing",
+   "m": "First tool planned early 2027. No change to FedEx rates or service; 50+ payment methods planned."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:fedex dataworks and stripe plan joint smb financing tool for 2027",
+   "id": "a43b1ba7bd71d",
+   "t": "FedEx, Stripe plan SMB financing",
+   "m": "First tool planned early 2027. No change to FedEx rates or service; 50+ payment methods planned.",
+   "big": false,
+   "at": "2026-11-01T08:18:51.604240-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": false,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a43b1ba7bd71d",
+   "co": "FedEx"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-11-01",

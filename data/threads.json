@@ -63,7 +63,7 @@
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
-  "s": "FedEx says Network 2.0 will be 62% complete by the end of 2026, with full completion slated for 2027.",
+  "s": "FedEx says Network 2.0 will be 62% done by the end of 2026, with full completion slated for 2027.",
   "ids": [
    "h411",
    "h413",
@@ -519,35 +519,36 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding under waivers and Part 135 certificates while the FAA's Part 108 rule remained unpublished as of Oct. 9, and local noise objections are emerging.",
+  "s": "Amazon's Westborough, Mass., drone proposal faces local, state and congressional pushback, and a MassDOT certificate and hearing are pending.",
   "ids": [
    "g27",
    "g26",
    "a60770e8e9c32",
    "a94cd39741afc",
    "af529411b3b18",
-   "a86fd472c4cfb"
+   "a86fd472c4cfb",
+   "a4c5211e7180f"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-29",
+  "last": "2026-10-30",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "2c9f9ae85f13",
+   "sig": "aa27b6474e14",
    "v": 3,
    "beats": {
-    "a86fd472c4cfb": "DoorDash announced Part 135 certification on July 29, reportedly the eighth cleared operator. Flights are expected in fall 2026.",
-    "g27": "Amazon plans Prime Air drone sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, reaching nearly 20 metros and 270+ Walmart stores.",
-    "g26": "Part 108 went to White House review July 10 and was still unpublished Oct. 9. Until then BVLOS needs waivers or Part 135."
+    "a86fd472c4cfb": "DoorDash got Part 135 certification and launched DoorDash Air, reportedly the eighth cleared operator; flights due fall 2026.",
+    "g27": "Amazon's plan: almost 500 towns, 30 million people, up from 11 locations. Prime pays $2.99 per delivery, others $4.99.",
+    "a60770e8e9c32": "Wing and Walmart plan Denver and Seattle in 2027, nearing 20 metros; over three million customers have had access so far.",
+    "g26": "The FAA's Part 108 rule went to White House review July 10, after missing a Feb. 1 deadline; unpublished as of Oct. 9.",
+    "a4c5211e7180f": "Amazon began Prime Air in Nampa, Idaho on Oct. 30: MK-30 drones, packages up to five pounds, 7.5 miles, daytime only."
    },
-   "intro": "Drone delivery keeps expanding while the FAA's Part 108 rule stays unpublished, a new last-mile option for shippers to watch.",
-   "now": "Part 108 was still unpublished as of Oct. 9. Amazon's North Haven plan awaits a Connecticut DEEP ruling, reportedly not before 2027."
+   "now": "Part 108 was still unpublished as of Oct. 9, and Amazon withdrew its Westborough, Mass., drone delivery application on Oct. 30."
   },
-  "rv": "8c5c1cf4aba8",
+  "rv": "6d519878b224",
   "co": "Amazon",
   "apart": [
    "amazon-jfk8-nlrb",
@@ -961,5 +962,19 @@
    "usps-service-network"
   ],
   "rv": "0564ccfc2ad3"
+ },
+ "doordash-instacart-deal": {
+  "n": "DoorDash–Instacart deal",
+  "ids": [
+   "a71834ca45b0d"
+  ],
+  "first": "2026-10-29",
+  "co": "DoorDash",
+  "s": "DoorDash and Instacart announced the $17 billion acquisition on Oct. 29, 2026, and it awaits federal approval.",
+  "last": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "rv": "2aeb47beb7fd"
  }
 }
