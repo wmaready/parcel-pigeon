@@ -121,7 +121,7 @@
  },
  "de-minimis": {
   "n": "End of de minimis and low-value imports",
-  "s": "CBP has suspended de minimis for postal shipments indefinitely and set a $2,500 informal entry process, while formal-entry compliance for certain postal goods is now due Jan. 20, 2027.",
+  "s": "Duty-free de minimis treatment remains suspended for all countries, and CBP has proposed earlier filing deadlines for low-value imports.",
   "ids": [
    "h420",
    "h504",
@@ -131,7 +131,7 @@
    "a2f683da86bf8"
   ],
   "first": "2024-09-13",
-  "last": "2026-10-22",
+  "last": "2026-10-29",
   "c": [
    "FedEx",
    "Industry",
@@ -519,7 +519,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's Westborough, Mass., drone proposal faces local, state and congressional pushback, and a MassDOT certificate and hearing are pending.",
+  "s": "Drone delivery is expanding at several operators while the FAA's Part 108 rule remained unpublished as of Oct. 9, and local reaction is now emerging.",
   "ids": [
    "g27",
    "g26",
@@ -781,10 +781,11 @@
    "52",
    "a66617050d4e9",
    "afb6fa67940a7",
-   "ups-origin-zip-surcharge"
+   "ups-origin-zip-surcharge",
+   "a9077d9364cd5"
   ],
   "first": "2024-02-21",
-  "last": "2026-10-23",
+  "last": "2026-10-29",
   "c": [
    "Amazon",
    "DHL",
@@ -797,7 +798,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "33780749fe06",
+   "sig": "26b7ab2fe39b",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -820,7 +821,9 @@
     "rv5-fedex-freight-spin-done": "FedEx completed the FedEx Freight spin-off on June 1, 2026; Freight now trades separately as FDXF.",
     "52": "FedEx sold FedEx Supply Chain to CMA CGM for $1.4 billion; it folds into CEVA Logistics.",
     "a66617050d4e9": "Analysts disagree on whether UPS's stated focus on premium and logistics services means it will leave parts of parcel delivery.",
-    "afb6fa67940a7": "MAK terminated the UniUni purchase agreement on Oct. 20; the planned go-public deal will not proceed."
+    "afb6fa67940a7": "MAK terminated the UniUni purchase agreement on Oct. 20; the planned go-public deal will not proceed.",
+    "ups-origin-zip-surcharge": "UPS flags a new Ground and Ground Saver surcharge for certain origin ZIPs from Dec. 21; amount and ZIPs aren't published.",
+    "a9077d9364cd5": "Reportedly, NextSmartShip's CEO argues brands can mix China and U.S. fulfillment post-de minimis; it's opinion, no new rule."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
    "now": "Details are due in early November. The surcharge wasn't in the 2027 rate documents UPS posted Oct. 30, and it starts Dec. 21, 2026 or later."
@@ -966,15 +969,17 @@
  "doordash-instacart-deal": {
   "n": "DoorDash–Instacart deal",
   "ids": [
-   "a71834ca45b0d"
+   "a71834ca45b0d",
+   "a4841c296ce57",
+   "a0083f4a65c16"
   ],
   "first": "2026-10-29",
   "co": "DoorDash",
-  "s": "DoorDash and Instacart announced the $17 billion acquisition on Oct. 29, 2026, and it awaits federal approval.",
+  "s": "DoorDash and Instacart announced a definitive agreement on October 29, 2026; closing is expected at the end of 2027 or in the first half of 2028, pending a stockholder vote and antitrust reviews.",
   "last": "2026-10-29",
   "c": [
    "Industry"
   ],
-  "rv": "2aeb47beb7fd"
+  "rv": "8c11caa80de3"
  }
 }
