@@ -1,5 +1,5 @@
 {
- "run": "2026-11-01T05:12Z",
+ "run": "2026-11-01T05:51Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -342,24 +342,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html): https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html",
-   "ids": [
-    "62"
-   ],
-   "fixed": false
   }
  ],
  "open": [
@@ -617,24 +599,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html): https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html",
-   "ids": [
-    "62"
-   ],
    "fixed": false
   }
  ]
