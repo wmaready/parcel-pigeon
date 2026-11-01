@@ -162,7 +162,7 @@
   "told": []
  },
  "https://www.fedex.com/en-us/service-guide.html": {
-  "checked": "2026-10-27",
+  "checked": "2026-11-01",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
@@ -184,7 +184,8 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
   ],
   "lines": 52,
-  "told": []
+  "told": [],
+  "pend": "a4d0d79d82ea"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-01",
