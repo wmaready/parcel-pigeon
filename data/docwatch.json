@@ -1,5 +1,5 @@
 {
- "cursor": 27,
+ "cursor": 42,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 305,
+   "fails": 306,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 305,
+   "fails": 306,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
@@ -504,13 +504,15 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf": {
    "first": "2026-10-21",
    "n": "surge-fee-us-en.pdf",
-   "hash": "edf2fa3b4179",
+   "hash": "05e079e51d61",
    "checked": "2026-11-02",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-02",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
-    "txt": "data/snapshots/da32d254d054/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/da32d254d054/2026-11-02.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-02"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf": {
    "first": "2026-10-21",
