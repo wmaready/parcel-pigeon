@@ -1,5 +1,55 @@
 [
  {
+  "id": "a0b5708b9f70d",
+  "date": "2026-11-02",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "FedEx faces 13 consolidated tariff class actions in Memphis",
+  "sum": "Thirteen proposed class actions over duties and tariff-related charges FedEx billed on imported shipments are combined as In re FedEx Tariff Litigation in the Western District of Tennessee, according to a class action news site. The plaintiffs' consolidated complaint is proposed for Nov. 4, 2026, with FedEx's response proposed for Dec. 4. The allegations are unproven and no class has been certified.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service, and there is nothing for shippers to claim in the lawsuit. FedEx's separate refund program for IEEPA duties continues.",
+  "why": "The suits target duties FedEx billed as carrier and customs broker; its own refund program, about $800 million slated, runs separately.",
+  "score": 5,
+  "tie": "In August 2026, FedEx was reported to have begun issuing about $800 million in IEEPA tariff refunds to customers, a program the article describes as separate from the lawsuit.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:21:57Z",
+  "src": "openclassactions.com",
+  "url": "https://openclassactions.com/lawsuits/tariffs/fedex-tariff-refund-class-action-lawsuit.php",
+  "srcs": [
+   {
+    "src": "openclassactions.com",
+    "url": "https://openclassactions.com/lawsuits/tariffs/fedex-tariff-refund-class-action-lawsuit.php"
+   }
+  ],
+  "auto": true,
+  "thread": "tariff-refunds",
+  "upd": 3,
+  "new": "The 13 FedEx suits are consolidated with interim class counsel appointed and a proposed Nov. 4 complaint date; shippers' refunds still come through FedEx's own program, not the lawsuit.",
+  "syn": "Thirteen proposed class actions allege FedEx improperly charged and kept duties, tariffs and related brokerage fees on imported shipments after the Supreme Court ruled on Feb. 20, 2026 that the International Emergency Economic Powers Act does not authorize tariffs. A federal judge consolidated them on June 1, 2026 as In re FedEx Tariff Litigation, No. 2:26-cv-02181-TLP, and interim class counsel was appointed on Sept. 11. According to the article, FedEx has not been found liable, no class is certified and there is no settlement or claim form. Separately, FedEx has said it will pass IEEPA refunds it receives from the government to the customers who paid.",
+  "aff": [
+   {
+    "who": "FedEx import customers",
+    "what": "Proposed nationwide class covers customers assessed IEEPA tariff-related amounts; no class certified and nothing to claim."
+   },
+   {
+    "who": "FedEx refund recipients",
+    "what": "FedEx's own program had about $800 million slated for customers at fiscal Q4 end; first refunds were around Aug. 10, 2026."
+   },
+   {
+    "who": "Case schedule",
+    "what": "Consolidated complaint proposed for Nov. 4, 2026 and FedEx's response for Dec. 4; the court docketed an order Oct. 30."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-02",
+  "unconf": true
+ },
+ {
   "id": "a0ec7d6444ab6",
   "date": "2026-11-02",
   "c": [
@@ -43,6 +93,51 @@
     "what": "Per the comment, sellers can buy LTL labels through Amazon."
    }
   ]
+ },
+ {
+  "id": "a632e64bf8af4",
+  "date": "2026-11-02",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Market reports",
+  "kind": "News",
+  "title": "Amazon Logistics tops US parcel volume in 2025 with 6.9B, Pitney Bowes index shows",
+  "sum": "Amazon Logistics became the largest US carrier by parcel volume in 2025, handling 6.9 billion parcels and nearly 30% of the market, according to the Pitney Bowes Parcel Shipping Index as cited by Electronics Weekly. USPS volume fell from 6.9 billion in 2024 to 6.2 billion in 2025.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The figures describe 2025 US parcel volume by carrier.",
+  "why": "Amazon's 6.9 billion parcels put it ahead of USPS, UPS and FedEx in US volume, per the index, a change in who carries the most US parcels.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:21:21Z",
+  "src": "Electronics Weekly",
+  "url": "https://www.electronicsweekly.com/blogs/mannerisms/genius/amazon-delivering-more-parcels-than-traditional-carriers-2026-11/",
+  "srcs": [
+   {
+    "src": "Electronics Weekly",
+    "url": "https://www.electronicsweekly.com/blogs/mannerisms/genius/amazon-delivering-more-parcels-than-traditional-carriers-2026-11/"
+   }
+  ],
+  "auto": true,
+  "syn": "Amazon Logistics became the largest US carrier by parcel volume in 2025, handling 6.9 billion parcels and nearly 30% of the total market, according to the Pitney Bowes Parcel Shipping Index, as cited by Electronics Weekly. USPS fell from 6.9 billion parcels in 2024 to 6.2 billion in 2025. UPS handled 4.3 billion and FedEx 3.9 billion, while alternative and regional carriers more than doubled their combined volume to 1.8 billion, partly driven by Shein and Temu, the report said.",
+  "aff": [
+   {
+    "who": "USPS",
+    "what": "Parcel volume fell from 6.9 billion in 2024 to 6.2 billion in 2025."
+   },
+   {
+    "who": "UPS and FedEx",
+    "what": "Handled 4.3 billion and 3.9 billion parcels in 2025, respectively."
+   },
+   {
+    "who": "Regional and alternative carriers",
+    "what": "Collective volume more than doubled to 1.8 billion parcels in 2025."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "a6f20c2dad5d6",
@@ -836,13 +931,9 @@
   "act": null,
   "dates": [],
   "added": "2026-11-01T17:00:36Z",
-  "src": "PPC Land",
-  "url": "https://ppc.land/doordash-agrees-to-buy-instacart-for-17bn-closing-as-late-as-2028/",
+  "src": "Business Insider Africa",
+  "url": "https://africa.businessinsider.com/retail/what-doordash-says-its-dollar17-billion-deal-for-instacart-means-for-delivery-workers/bfrgm2f",
   "srcs": [
-   {
-    "src": "PPC Land",
-    "url": "https://ppc.land/doordash-agrees-to-buy-instacart-for-17bn-closing-as-late-as-2028/"
-   },
    {
     "src": "Business Insider Africa",
     "url": "https://africa.businessinsider.com/retail/what-doordash-says-its-dollar17-billion-deal-for-instacart-means-for-delivery-workers/bfrgm2f"
@@ -850,10 +941,6 @@
    {
     "src": "Business Insider Africa",
     "url": "https://africa.businessinsider.com/retail/doordash-plans-to-buy-instacart-for-dollar17-billion-creating-a-delivery-powerhouse/9wyvbwx"
-   },
-   {
-    "src": "PYMNTS.com",
-    "url": "https://www.pymnts.com/news/delivery/2026/doordash-will-pay-17-billion-to-acquire-instacart/"
    },
    {
     "src": "CNN",
@@ -892,6 +979,18 @@
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNRy1CUmJ3TmdZZTVBN3A1TVhnczBlNG1yOGctaEltSVBheHZDSFd0Rm1hbEJ0QzFNbTd4ZlVLak1UUHdZcElXaTNzMk9kaG9sQ3BzZ0JUeUhyUXZoV0VmdEcxY3pUY3B4WXlDVlc2YzJlU3hlUlNhUDlrSl9kVXJKMkI2djRoVHBpcExaWEkwOThxd3ZVX3F4R0dRMlJ5bE9lbFFMY3NTLUNXTnBLbVhOSDBiOUZjUmlOVjhmbEFERTFRUlZnczd0blYtQjFWZw?oc=5"
    },
    {
+    "src": "Business Insider",
+    "url": "https://www.businessinsider.com/doordash-to-acquire-instacart-maintain-brand-identity-2026-10"
+   },
+   {
+    "src": "Financial Times",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVExaNWpVMHBJZ2JqWEVtTFhWWURId0l2UGhIbkRIODFRcDlGMnpLNVdXR215a3lyRzkwbVFvamRjcnlBNll2VkZsaXIxRTBNNVo2SThxYml6M1ZmbXVpaERWN25GZERJdEFVdlNCMWc0QXhnU1h3VUlTeHNjN2pTbmN0RG8?oc=5"
+   },
+   {
+    "src": "PYMNTS.com",
+    "url": "https://www.pymnts.com/news/delivery/2026/doordash-will-pay-17-billion-to-acquire-instacart/"
+   },
+   {
     "src": "Supply Chain Brain",
     "url": "https://www.supplychainbrain.com/articles/45114-doordashs-17-billion-instacart-deal-aimed-at-walmart-amazon"
    },
@@ -900,8 +999,8 @@
     "url": "https://www.theverge.com/business/1021981/doordash-instacart-acquisition-announcement"
    },
    {
-    "src": "Business Insider",
-    "url": "https://www.businessinsider.com/doordash-to-acquire-instacart-maintain-brand-identity-2026-10"
+    "src": "PPC Land",
+    "url": "https://ppc.land/doordash-agrees-to-buy-instacart-for-17bn-closing-as-late-as-2028/"
    }
   ],
   "auto": true,
@@ -921,7 +1020,8 @@
     "what": "No change now; the two companies operate separately until closing, expected end of 2027 or first half of 2028."
    }
   ],
-  "edge": true
+  "edge": true,
+  "updated": "2026-10-29"
  },
  {
   "id": "a619cd4242386",
@@ -1377,6 +1477,51 @@
   ]
  },
  {
+  "id": "aa86ca7d6b23c",
+  "date": "2026-10-29",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Manna moves HQ to Tulsa, pauses European expansion",
+  "sum": "Irish drone delivery firm Manna has moved CEO Bobby Healy and its headquarters to Oklahoma and plans to hire 1,000 people over three years, The Drone Girl reported. Healy said Manna has paused European operations because it believes U.S. operations are open, with the FAA preparing to finalize Part 108.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. Manna's Tulsa bases are capable of 24 deliveries per hour, according to the company.",
+  "why": "A drone delivery firm with nearly 400,000 commercial flights is shifting its operations and manufacturing to the U.S. ahead of the FAA's Part 108 BVLOS rule.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:22:04Z",
+  "src": "The Drone Girl",
+  "url": "https://www.thedronegirl.com/2026/11/02/why-manna-paused-europe-to-go-all-in-on-us-drone-delivery/amp/",
+  "srcs": [
+   {
+    "src": "The Drone Girl",
+    "url": "https://www.thedronegirl.com/2026/11/02/why-manna-paused-europe-to-go-all-in-on-us-drone-delivery/amp/"
+   }
+  ],
+  "auto": true,
+  "syn": "Irish drone delivery company Manna has relocated CEO Bobby Healy to Oklahoma, where its new headquarters and manufacturing are based, The Drone Girl reported. The company plans to hire 1,000 people over the next three years and has paused everything in Europe, Healy said. He cited the FAA's expected finalization of 14 CFR Part 108, the framework for routine beyond visual line of sight drone operations, proposed in August 2025. Manna has opened three additional operational bases in Tulsa, each capable of 24 deliveries per hour, and has nearly 400,000 commercial delivery flights.",
+  "aff": [
+   {
+    "who": "Manna European operations",
+    "what": "Paused; no current plans to expand across Europe, per Healy."
+   },
+   {
+    "who": "Tulsa, Oklahoma",
+    "what": "New HQ, manufacturing and three additional operational bases; 1,000 jobs planned over three years."
+   },
+   {
+    "who": "Drone delivery operators",
+    "what": "FAA Part 108 would replace case-by-case BVLOS waivers under Part 107, per the article."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "aaeb8e06115e4",
   "date": "2026-10-29",
   "c": [
@@ -1513,6 +1658,103 @@
   "exclusive": true,
   "tried": "2026-11-02",
   "unconf": true
+ },
+ {
+  "id": "ac96d40154fd1",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Avride extends Philadelphia delivery robots to Grubhub and Wonder",
+  "sum": "Avride is expanding its Philadelphia robot delivery partnership to Wonder and Grubhub, which joins Uber Eats on Center City sidewalks, according to PhillyVoice as summarized by PHILADELPHIA.Today. Grubhub restaurants can now opt in, starting with Wonder's Rittenhouse food hall. Avride has not said whether its Philadelphia fleet will grow.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Grubhub restaurants in Philadelphia can now opt in to robot delivery, starting with Wonder's Rittenhouse food hall. No change to carrier rates or fees is reported.",
+  "why": "Sidewalk robots now serve a second and third delivery platform in Center City, and Pennsylvania law treats them as pedestrians.",
+  "score": 4,
+  "tie": "Avride's robots began delivering Uber Eats orders in Philadelphia in March, according to the report.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:23:47Z",
+  "src": "PHILADELPHIA.Today",
+  "url": "https://philadelphia.today/2026/10/philadelphia-delivery-robots-grubhub-wonder/",
+  "srcs": [
+   {
+    "src": "PHILADELPHIA.Today",
+    "url": "https://philadelphia.today/2026/10/philadelphia-delivery-robots-grubhub-wonder/"
+   }
+  ],
+  "auto": true,
+  "syn": "Avride, whose robots began delivering Uber Eats orders in Philadelphia in March, is expanding its partnership with Wonder and Grubhub, which Wonder acquired in 2024, PhillyVoice reported. Grubhub restaurants can opt in to robot delivery, starting with Wonder's Rittenhouse food hall. The rollout builds on a 2025 Jersey City pilot where robots handle nearly 20 percent of Wonder's local deliveries. The robots have drawn complaints about blocked sidewalks and threats to human delivery jobs, and Avride said vandalism cases did not affect its service area expansion plans.",
+  "aff": [
+   {
+    "who": "Grubhub restaurants in Philadelphia",
+    "what": "Can now opt in to robot delivery, starting with Wonder's Rittenhouse food hall."
+   },
+   {
+    "who": "Center City sidewalks",
+    "what": "Grubhub and Wonder join Uber Eats in sending robot deliveries across Center City."
+   },
+   {
+    "who": "Wonder deliveries in Jersey City",
+    "what": "Robots handle nearly 20 percent of local deliveries after a 2025 pilot."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "acea1f3ac7ddc",
+  "date": "2026-10-29",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "News",
+  "title": "Amazon says Whole Foods outgrows its grocery segment; same-day fresh expands",
+  "sum": "Amazon executives said on the Oct. 29 Q3 earnings call that Whole Foods is growing faster than the rest of Amazon's grocery segment in sales and profit, according to FoodNavigator. CEO Andy Jassy said Amazon delivered 1.5 billion items to Prime customers same day or overnight in the quarter and is on track to cut cost to serve per unit for a fourth year.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for parcel shippers. The items are Amazon executives' statements on its grocery and delivery strategy.",
+  "why": "Amazon's same-day push, 1.5 billion Prime items in one quarter, shows the scale of fast delivery that carriers and shippers compete against.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:22:52Z",
+  "src": "FoodNavigator.com",
+  "url": "https://www.foodnavigator.com/Article/2026/11/02/amazon-bets-on-faster-grocery-delivery-and-whole-foods/",
+  "srcs": [
+   {
+    "src": "FoodNavigator.com",
+    "url": "https://www.foodnavigator.com/Article/2026/11/02/amazon-bets-on-faster-grocery-delivery-and-whole-foods/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "syn": "Amazon executives said on the Oct. 29 Q3 earnings call that Whole Foods Market is growing faster than the rest of Amazon's grocery segment in sales and profit, per FoodNavigator. CEO Andy Jassy said Amazon delivered 1.5 billion items to Prime customers same day or overnight in the quarter. He said Amazon is on track to reduce cost to serve per unit for the fourth consecutive year. CFO Brian Olsavsky said Whole Foods is rolling out small-format Daily Shop stores of 3,330 to 10,000 square feet.",
+  "aff": [
+   {
+    "who": "Prime customers",
+    "what": "1.5 billion items delivered same day or overnight globally in Q3, Jassy said."
+   },
+   {
+    "who": "Amazon grocery",
+    "what": "Fresh groceries and everyday essentials grew roughly three times faster than other store sections, Jassy said."
+   },
+   {
+    "who": "Whole Foods stores",
+    "what": "Small-format Daily Shop markets of 3,330 to 10,000 square feet are rolling out, Olsavsky said."
+   },
+   {
+    "who": "Amazon Fresh",
+    "what": "58 US and 19 UK stores closed in late 2025 and early 2026; it stays online-only."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a25bb6b7e4225",
@@ -2155,6 +2397,48 @@
     "what": "Small and medium-sized businesses were 35.1% of UPS U.S. volume in Q3, up about 240 basis points."
    }
   ]
+ },
+ {
+  "id": "ad3e669e92093",
+  "date": "2026-10-27",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Walmart and Wing seek about seven drone hubs in St. Louis region",
+  "sum": "Walmart and Wing Aviation have approached six St. Louis-area cities about operating drone \"nests\" from Walmart stores, according to city meeting minutes cited by the St. Louis Business Journal. None of the cities has approved a hub so far. Wing said it aims to launch about seven hubs at once.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. Drone delivery in the St. Louis area has not launched, and no city has approved a hub.",
+  "why": "A seven-hub launch would open Walmart drone delivery to tens of thousands of St. Louis-area households at once, but no city has approved a site.",
+  "score": 4,
+  "tie": "Walmart and Wing said in October 2026 that they would add Denver and Seattle drone delivery in 2027, and the St. Louis plan is a separate market rollout.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:23:31Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/technology/articles/walmarts-drone-delivery-push-expands-135621546.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/technology/articles/walmarts-drone-delivery-push-expands-135621546.html"
+   }
+  ],
+  "auto": true,
+  "new": "Wing and Walmart are now seeking about seven hubs in the St. Louis region, with six cities approached and none yet approving; this does not change rates or service for shippers.",
+  "syn": "Walmart and its drone delivery provider, Wing Aviation, have approached St. Charles, Wentzville, Kirkwood, Maplewood, Manchester and Glen Carbon about running drone nests from local Walmart stores, according to city meeting minutes cited by the St. Louis Business Journal. None of the cities has approved a hub so far. Wing spokeswoman Jessie Poole-Strang said the goal is to open about seven hubs at once rather than a single pilot site, which would make the service available to tens of thousands of households at launch.",
+  "aff": [
+   {
+    "who": "St. Louis-area households",
+    "what": "A launch of about seven hubs would reach tens of thousands of households at once, per Wing."
+   },
+   {
+    "who": "Six St. Louis-area cities",
+    "what": "St. Charles, Wentzville, Kirkwood, Maplewood, Manchester and Glen Carbon have been approached; none has approved a hub."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "ae9948d192dd1",
@@ -3059,6 +3343,54 @@
   ]
  },
  {
+  "id": "ad354637eaab5",
+  "date": "2026-10-26",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon starts drone deliveries from Markham center near Chicago",
+  "sum": "Amazon's drone delivery service is operating from its fulfillment center in Markham, serving a handful of Chicago suburbs, NBC 5 Chicago reported. Amazon said it has deployed approximately 21 drones that carry packages of up to five pounds as far as eight miles. Some residents have complained about noise and safety, the report said.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Amazon is making drone deliveries to some customers near its Markham fulfillment center, though the company has not officially launched the rollout. Nothing changes in rates for other shippers.",
+  "why": "Amazon says its Markham drones carry up to five pounds up to eight miles at under $5 a delivery, with more sites planned.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:22:30Z",
+  "src": "NBC 5 Chicago",
+  "url": "https://www.nbcchicago.com/news/local/amazon-drone-deliveries-whir-to-live-over-chicago-suburbs/4007558/",
+  "srcs": [
+   {
+    "src": "NBC 5 Chicago",
+    "url": "https://www.nbcchicago.com/news/local/amazon-drone-deliveries-whir-to-live-over-chicago-suburbs/4007558/"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 8,
+  "new": "Amazon's drones are now in use from its Markham, Illinois, facility, with approximately 21 drones deployed and further centers planned, but the company has not yet officially launched the rollout, and nothing changes in shipper rates or service.",
+  "syn": "Amazon's drone delivery service has begun operating from its fulfillment center in Markham, serving a handful of Chicago suburbs, according to NBC 5 Chicago. Amazon said it has deployed approximately 21 drones, each able to carry up to five pounds as far as eight miles, and said each delivery will cost less than $5. The company has not yet officially launched the rollout and plans to deploy drones at additional centers in the coming weeks, the report said. Some residents have raised noise and safety concerns.",
+  "aff": [
+   {
+    "who": "Customers near Markham",
+    "what": "Some south suburban residents are receiving drone deliveries of packages up to five pounds within eight miles."
+   },
+   {
+    "who": "Amazon delivery costs",
+    "what": "Amazon said drone delivery will cost less than $5 per delivery."
+   },
+   {
+    "who": "Nearby residents",
+    "what": "Some residents cited noise and safety concerns about the drones."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "ae89309b5e834",
   "date": "2026-10-26",
   "c": [
@@ -3679,7 +4011,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-01",
+  "tried": "2026-11-02",
   "unconf": true
  },
  {
@@ -8283,6 +8615,54 @@
   "auto": true
  },
  {
+  "id": "ab4ff3b03130e",
+  "date": "2026-10-09",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Chicago residents sue Coco, Serve over delivery robot biometric data",
+  "sum": "Two Chicago residents filed proposed class-action lawsuits in Cook County on Oct. 9 alleging robots run by Coco Robotics and Serve Robotics captured facial and hand measurements without consent, Digital Trends reported, citing The Associated Press. Both companies have denied the allegations. The suits cite Illinois' Biometric Information Privacy Act.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. The allegations have not been decided in court.",
+  "why": "The suits test how Illinois biometric law applies to sidewalk delivery robots, which operate under a Chicago pilot set to expire in May 2027.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T17:23:55Z",
+  "src": "Digital Trends",
+  "url": "https://www.digitaltrends.com/computing/next-time-you-see-a-delivery-robot-maybe-hide-your-face/",
+  "srcs": [
+   {
+    "src": "Digital Trends",
+    "url": "https://www.digitaltrends.com/computing/next-time-you-see-a-delivery-robot-maybe-hide-your-face/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-09",
+  "syn": "Two Chicago residents filed proposed class-action lawsuits in Cook County on Oct. 9 alleging that delivery robots run by Coco Robotics and Serve Robotics captured their facial and hand measurements without consent, according to Digital Trends, citing The Associated Press. The complaints invoke Illinois' Biometric Information Privacy Act and say cameras and LiDAR sensors gathered the data. Both companies have denied the claims. The outcome could affect how delivery robots collect, store and share data, and Chicago's pilot program for the machines is set to expire in May 2027 unless renewed.",
+  "aff": [
+   {
+    "who": "Coco Robotics and Serve Robotics",
+    "what": "Face a proposed class action in Cook County over alleged biometric data collection; both deny the claims."
+   },
+   {
+    "who": "Delivery robot customers and passersby",
+    "what": "Complaints allege faces and hands were scanned; the claims are allegations, not findings."
+   },
+   {
+    "who": "Chicago robot pilot program",
+    "what": "Set to expire in May 2027 unless city officials renew it."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "unconf": true
+ },
+ {
   "id": "ab665e6db5daf",
   "date": "2026-10-09",
   "c": [
@@ -9500,222 +9880,5 @@
   "edge": true,
   "exclusive": true,
   "unconf": true
- },
- {
-  "id": "dl-returnpro-ifreturns",
-  "date": "2026-09-21",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "ReturnPro buys Madrid returns-software platform iF Returns",
-  "sum": "ReturnPro, a U.S. returns management and resale company, bought iF Returns, a Madrid-based returns software platform used by more than 200 European brands.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S.",
-  "why": "ReturnPro adds the customer-facing returns and exchange step to the processing and resale work it already does, and gets its first platform outside the U.S. The company says it will offer the software to existing customers, including Walmart Marketplace sellers. Every exchange in place of a refund changes the mix of return and outbound parcels a retailer ships.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Business Wire",
-  "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach",
-  "srcs": [
-   {
-    "src": "Business Wire",
-    "url": "https://www.financialcontent.com/article/bizwire-2026-9-21-returnpro-acquires-if-returns-expanding-technology-capabilities-and-global-reach"
-   },
-   {
-    "src": "DC Velocity",
-    "url": "https://www.dcvelocity.com/supply-chain/other-services/reverse-logistics/returnpro-acquires-spanish-reverse-logistics-platform-provider-if-returns"
-   }
-  ],
-  "auto": true,
-  "added": "2026-09-21T00:00:00Z",
-  "restored": "2026-10-26"
- },
- {
-  "id": "a7da5e9dc67de",
-  "date": "2026-09-16",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "EU applies €2 handling fee to all non-EU parcels from 1 November",
-  "sum": "A €2 handling fee on every consignment from a non-EU country took effect on 1 November under Regulation (EU) 2026/2108 of 16 September 2026, Il Sole 24 Ore reported. It applies regardless of the value of the goods and comes on top of a €3 charge per item category in force since 1 July for consignments of up to €150.",
-  "imp": "up",
-  "lvl": 1,
-  "plain": "From 1 November, every consignment entering the EU from a non-EU country carries a €2 handling fee, whatever its value. It adds to the €3 per-item-category charge that has applied since 1 July to consignments up to €150.",
-  "why": "The fee applies to every non-EU consignment regardless of value, on top of the €3 per-item-category charge on parcels up to €150 in place since 1 July.",
-  "score": 5,
-  "tie": null,
-  "act": "2026-11-01",
-  "dates": [
-   {
-    "d": "2028-07-01",
-    "w": "Use of the European Customs Data Hub becomes mandatory",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-02T13:35:10Z",
-  "src": "Il Sole 24 ORE",
-  "url": "https://en.ilsole24ore.com/art/e-commerce-sales-delivery-costs-the-new-european-handling-fee-AJzshVpB",
-  "srcs": [
-   {
-    "src": "Il Sole 24 ORE",
-    "url": "https://en.ilsole24ore.com/art/e-commerce-sales-delivery-costs-the-new-european-handling-fee-AJzshVpB"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-09-16",
-  "syn": "The EU handling fee of €2 per consignment from non-EU countries came into force on 1 November under Regulation (EU) 2026/2108 of 16 September 2026, according to Il Sole 24 Ore. It applies regardless of goods value and is meant to cover rising customs check costs until the European Customs Data Hub becomes mandatory on 1 July 2028. It adds to the €3 charge per customs category on consignments up to €150, in force since 1 July 2026 for two years under Regulation 2026/382. The newspaper put the total for a parcel with two products in different customs categories at 12.20 euros including VAT.",
-  "aff": [
-   {
-    "who": "All non-EU consignments into the EU",
-    "what": "€2 handling fee per consignment regardless of value, in force from 1 November 2026."
-   },
-   {
-    "who": "Consignments up to €150 (distance sales)",
-    "what": "€3 charge per customs item category, in place since 1 July 2026 for two years; the de minimis exemption is abolished."
-   },
-   {
-    "who": "Two-item parcel in different customs categories",
-    "what": "Il Sole 24 Ore puts the total at 12.20 euros including VAT."
-   },
-   {
-    "who": "Italian low-value imports",
-    "what": "Customs agency: declarations for non-EU parcels under €150 fell 31% from January to September 2026."
-   }
-  ],
-  "edge": true,
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "a03895dd99d3d",
-  "date": "2026-07-30",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "News",
-  "title": "Amazon recovers about $600M in tariff refunds, to repay traceable orders only",
-  "sum": "Amazon received about $600 million in refunds of IEEPA tariffs the Supreme Court struck down, CFO Brian Olsavsky said on the July 30, 2026 earnings call, as reported by Fortune. Olsavsky said customers will be repaid automatically only where a specific tariff can be tied to a specific order. On October 2, the federal multidistrict litigation panel consolidated six lawsuits over the refunds in the Western District of Washington, according to Bloomberg Law.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to carrier rates or service. Amazon said it will credit customers automatically only where a tariff can be traced to an order, and has given no payment date or per-customer amount.",
-  "why": "Amazon's roughly $600 million is small against the $166 billion in IEEPA duties Reuters estimates were owed to importers.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T18:49:47Z",
-  "src": "Pasquale Pillitteri",
-  "url": "https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable",
-  "srcs": [
-   {
-    "src": "Pasquale Pillitteri",
-    "url": "https://pasqualepillitteri.it/en/news/24936/amazon-tariff-refunds-600-million-customers-traceable"
-   }
-  ],
-  "auto": true,
-  "new": "Amazon, not a carrier, disclosed about $600 million in refunds and said it will repay customers only where a tariff is traceable to an order, while six consumer lawsuits were consolidated on October 2; this adds a retailer-side track to the earlier carrier and CBP coverage.",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a86fd472c4cfb",
-  "date": "2026-07-29",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "DoorDash earns FAA Part 135 air carrier certification, launches DoorDash Air",
-  "sum": "DoorDash said on July 29, 2026 that it earned Part 135 air carrier certification from the FAA and launched DoorDash Air, a drone delivery program designed and built in-house by DoorDash Labs. Startup Fortune, citing DroneXL and PickDrones, reported it is the eighth operator cleared to run beyond-visual-line-of-sight drone deliveries as an air carrier. The company says it still needs additional operational approvals and expects commercial deliveries to begin in fall 2026.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service yet. DoorDash has not named its first markets or announced drone delivery pricing, and it expects commercial deliveries to begin in fall 2026.",
-  "why": "DoorDash says 20%+ of its orders last year were 3-5 miles, the range its drone program targets.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-18T22:44:21Z",
-  "src": "Startup Fortune",
-  "url": "https://startupfortune.com/doordash-just-became-an-faa-licensed-air-carrier-for-drone-delivery/",
-  "srcs": [
-   {
-    "src": "Startup Fortune",
-    "url": "https://startupfortune.com/doordash-just-became-an-faa-licensed-air-carrier-for-drone-delivery/"
-   }
-  ],
-  "auto": true,
-  "thread": "drone-delivery",
-  "upd": 7,
-  "new": "DoorDash, which announced its Part 135 certification on July 29, is reported as the eighth certified operator and says commercial flights are expected in fall 2026, but no markets or customer fees have been announced, so nothing changes for shippers yet.",
-  "exclusive": true
- },
- {
-  "id": "rv5-fedex-freight-spin-done",
-  "date": "2026-06-01",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "News",
-  "title": "FedEx completes FedEx Freight spin-off",
-  "sum": "FedEx completed the FedEx Freight spin-off on June 1, 2026. FedEx Freight is an independent public company (NYSE: FDXF). FedEx kept 19.9% at separation.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "FedEx Freight now trades on its own as FDXF; FedEx kept a 19.9% stake at separation.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "FedEx Newsroom",
-  "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
-  "srcs": [
-   {
-    "src": "FedEx Newsroom",
-    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
-    "checked": "2026-10-24"
-   }
-  ],
-  "auto": false,
-  "primary": true,
-  "thread": "fedex-freight-spin"
- },
- {
-  "id": "a13f12c1da7be",
-  "date": "2026-04-05",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "UPS, Teamsters settle Driver Choice buyout dispute, cap at 7,500 drivers",
-  "sum": "UPS and the Teamsters reached a settlement on April 5, 2026 that caps the Driver Choice Program, a voluntary buyout offer to full-time drivers, at 7,500 drivers, according to LawFold.com. The deal also bars UPS from offering another severance program until the contract expires on July 31, 2028.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The settlement limits how many full-time UPS drivers can take the buyout and bars further severance programs until July 31, 2028.",
-  "why": "The settlement limits UPS's driver buyouts to 7,500 and blocks new severance offers through the contract's July 2028 expiry, per LawFold.com.",
-  "score": 6,
-  "tie": "The settlement follows the Teamsters' February 2026 federal lawsuit in Massachusetts and UPS's March 2026 withdrawal of the offer in 13 central states.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T10:46:38Z",
-  "src": "LawFold.com",
-  "url": "https://lawfold.com/ups-driver-choice-program-lawsuit/",
-  "srcs": [
-   {
-    "src": "LawFold.com",
-    "url": "https://lawfold.com/ups-driver-choice-program-lawsuit/"
-   }
-  ],
-  "auto": true,
-  "thread": "ups-driver-choice-lawsuit",
-  "exclusive": true
  }
 ]

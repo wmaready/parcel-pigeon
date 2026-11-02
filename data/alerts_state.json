@@ -106,7 +106,9 @@
   "a6f20c2dad5d6",
   "ab83f6e5411b4",
   "acb0ee4be247f",
-  "af46ea22d168d"
+  "af46ea22d168d",
+  "a0b5708b9f70d",
+  "a632e64bf8af4"
  ],
  "clock": [
   "e06:7",
@@ -346,7 +348,9 @@
   "story:doordash serve robotics launch footpath robot delivery pilot on gold coast",
   "story:globaldata doordash instacart profit hinges on efficiency retailer trust",
   "story:scurri survey 67 of shoppers would accept slower peak delivery for lower cost",
-  "story:postnord q3 operating income rises to sek 237 million on 6 parcel growth"
+  "story:postnord q3 operating income rises to sek 237 million on 6 parcel growth",
+  "story:amazon logistics tops us parcel volume in 2025 with 6 9b pitney bowes index shows",
+  "story:fedex faces 13 consolidated tariff class actions in memphis"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -452,52 +456,54 @@
   "postnord q3 operating income rises to sek 237 million on 6 p",
   "scurri survey 67 of shoppers would accept slower peak delive",
   "globaldata doordash instacart profit hinges on efficiency re",
-  "doordash serve robotics launch footpath robot delivery pilot"
+  "doordash serve robotics launch footpath robot delivery pilot",
+  "fedex faces 13 consolidated tariff class actions in memphis",
+  "amazon logistics tops us parcel volume in 2025 with 6 9b pit"
  ],
  "harvested": [
-  "ae2ec177094e3",
-  "wdf959a97bcb6",
-  "a57a06c26359c",
-  "wacb825361479",
-  "rv5-ups-sbr-fuel",
-  "ac78f72e7f458",
-  "a2def09bc43bb",
-  "w91588ddb11ed",
   "a999409ce7860",
-  "afd8784e2b179",
-  "w84705482dd2f",
-  "w599d9089a65d",
-  "a6cc2420ad66e",
-  "a663794cc9c55",
-  "af8ee5ed067c6",
-  "a89f005fb1862",
-  "w8465aa718dc6",
-  "a831c709e5809",
-  "aee6669d325da",
-  "a773d361dac4e",
-  "w9c03b8f99b5f",
-  "a5d45f26f2219",
-  "a2f683da86bf8",
-  "wf5014bc150e9",
-  "a2b81ad721cb8",
-  "wbfc38914b368",
-  "a6e82ba740e99",
-  "w68c1687d28a1",
-  "a82e057190718",
-  "w500a5bdc762c",
-  "a351cab9045c7",
   "w150132868eae",
   "a72efb5e01b99",
-  "a6c2418bed0a7",
-  "a3a45d7f6db20",
-  "wb8827e8c126e",
-  "a312b45efa358",
   "a89d7e4beebd9",
-  "a0adb56a55334",
-  "aba40a11b6946",
+  "w8465aa718dc6",
+  "a15404304f17b",
+  "a2b81ad721cb8",
+  "a6c2418bed0a7",
+  "a351cab9045c7",
+  "a89f005fb1862",
+  "a2def09bc43bb",
+  "rv5-ups-sbr-fuel",
+  "ac78f72e7f458",
+  "a831c709e5809",
+  "a6cc2420ad66e",
+  "a663794cc9c55",
+  "a3a45d7f6db20",
   "a58373f1b7bc3",
+  "aee6669d325da",
+  "wf5014bc150e9",
+  "a773d361dac4e",
+  "a2f683da86bf8",
+  "w599d9089a65d",
+  "wacb825361479",
+  "w84705482dd2f",
+  "w9c03b8f99b5f",
+  "a312b45efa358",
+  "afd8784e2b179",
+  "af8ee5ed067c6",
+  "a6e82ba740e99",
+  "a82e057190718",
+  "w91588ddb11ed",
+  "w500a5bdc762c",
+  "wb8827e8c126e",
+  "a0adb56a55334",
+  "a5d45f26f2219",
+  "wbfc38914b368",
+  "wdf959a97bcb6",
+  "w68c1687d28a1",
   "wa9c423a83880",
-  "a15404304f17b"
+  "aba40a11b6946",
+  "a57a06c26359c",
+  "ae2ec177094e3"
  ],
  "backfilled": true,
  "recent": [
@@ -2179,6 +2185,36 @@
      "url": "https://retailworldmagazine.com.au/doordash-and-serve-robotics-trial-robot-delivery/"
     }
    ]
+  },
+  {
+   "id": "a0b5708b9f70d",
+   "title": "FedEx faces 13 consolidated tariff class actions in Memphis",
+   "date": "2026-11-02",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://openclassactions.com/lawsuits/tariffs/fedex-tariff-refund-class-action-lawsuit.php",
+   "srcs": [
+    {
+     "src": "openclassactions.com",
+     "url": "https://openclassactions.com/lawsuits/tariffs/fedex-tariff-refund-class-action-lawsuit.php"
+    }
+   ]
+  },
+  {
+   "id": "a632e64bf8af4",
+   "title": "Amazon Logistics tops US parcel volume in 2025 with 6.9B, Pitney Bowes index shows",
+   "date": "2026-11-02",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.electronicsweekly.com/blogs/mannerisms/genius/amazon-delivering-more-parcels-than-traditional-carriers-2026-11/",
+   "srcs": [
+    {
+     "src": "Electronics Weekly",
+     "url": "https://www.electronicsweekly.com/blogs/mannerisms/genius/amazon-delivering-more-parcels-than-traditional-carriers-2026-11/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2481,13 +2517,21 @@
   "af46ea22d168d": {
    "t": "DoorDash robot pilot on Gold Coast",
    "m": "Nearby customers can pick robot delivery at checkout when a robot is available. No other changes."
+  },
+  "a0b5708b9f70d": {
+   "t": "FedEx faces 13 tariff class actions",
+   "m": "Lawsuits over tariffs were consolidated in Memphis. No change to FedEx rates or service, and nothing for…"
+  },
+  "a632e64bf8af4": {
+   "t": "Amazon Logistics leads 2025 parcel",
+   "m": "Amazon Logistics moved 6.9B US parcels in 2025, most of any carrier, per a Pitney Bowes index. No change to…"
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-02",
-  "n": 3
+  "n": 5
  },
- "last_push": "2026-11-02T10:13:46.345426-05:00"
+ "last_push": "2026-11-02T13:19:31.911018-05:00"
 }
