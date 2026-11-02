@@ -2306,54 +2306,34 @@
   },
   {
    "id": "ingrammicro",
-   "n": "Ingram Micro",
-   "realm": "software",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Technology products distributor that UPS said uses its RFID labeling capability.",
-   "al": [],
-   "src": "https://www.supplychaindive.com/news/ups-aims-to-double-rfid-labeled-volume-from-customer-locations/872946/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-30",
-   "story": "aa95a154e3d38"
-  },
-  {
-   "id": "massblueskies",
-   "n": "Mass Blue Skies",
-   "realm": "auto",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Advocacy group credited by lawmakers for raising concerns about the drone plan",
-   "al": [],
-   "src": "https://www.wbur.org/news/2026/10/31/amazon-drops-westborough-drone-delivery-plan-after-pushback",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-30",
-   "story": "a4702db049fcd"
-  },
-  {
-   "id": "nextsmartship",
-   "n": "NextSmartShip",
+   "n": "Ingram Micro Holding Corporation",
    "realm": "3pl",
-   "own": null,
-   "tk": null,
+   "own": "public",
+   "tk": "INGM",
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Fulfillment provider with 20+ centers in 13 countries serving over 2,000 DTC brands, according to the article",
-   "al": [],
-   "src": "https://www.scmr.com/article/the-end-of-de-minimis-doesnt-mean-the-end-of-china-based-fulfillment",
+   "hq": "Irvine, CA, USA",
+   "yr": "1979",
+   "s": "Ingram Micro is a technology distributor. It is a large UPS parcel shipper that applies RFID labels to UPS-bound packages at its Texas warehouse. It still offers supply chain services, including reverse logistics, after selling most of its Commerce & Lifecycle Services (CLS) business to CMA CGM in 2022.",
+   "al": [
+    "Ingram Micro",
+    "Ingram Micro Inc."
+   ],
+   "src": "https://www.supplychaindive.com/news/ups-rfid-sensor-hub-expansion-2026/817288/",
    "auto": true,
-   "pending": true,
-   "added": "2026-10-29",
-   "story": "a9077d9364cd5"
+   "pending": false,
+   "added": "2026-10-30",
+   "story": "aa95a154e3d38",
+   "site": "ingrammicro.com",
+   "geo": [
+    -117.826,
+    33.685
+   ],
+   "srcs": [
+    "https://www.supplychaindive.com/news/ups-rfid-sensor-hub-expansion-2026/817288/",
+    "https://www.supplychaindive.com/news/ups-aims-to-double-rfid-labeled-volume-from-customer-locations/872946/",
+    "https://www.platinumequity.com/news/ingram-micro-begins-trading-on-nyse/"
+   ],
+   "enriched": "2026-11-02"
   },
   {
    "id": "vfcorp",
@@ -4109,6 +4089,42 @@
    "t": "Wonder and Avride expand robot delivery partnership to four US cities",
    "url": "https://roboticsandautomationnews.com/2026/10/28/avride-delivery-robots-expand-to-four-us-cities-through-wonder-partnership/106416/",
    "story": "a9fac6c751c97"
+  },
+  {
+   "a": "platinum",
+   "b": "ingrammicro",
+   "k": "acquired",
+   "y": "2021",
+   "t": "Platinum Equity acquired Ingram Micro from HNA ($7.2B); still largest shareholder after 2024 IPO",
+   "url": "https://www.platinumequity.com/news/ingram-micro-begins-trading-on-nyse/",
+   "story": "aa95a154e3d38"
+  },
+  {
+   "a": "ingrammicro",
+   "b": "cmacgm",
+   "k": "sold",
+   "y": "2022",
+   "t": "Sold Commerce & Lifecycle Services (CLS) to CMA CGM Group for about $3B",
+   "url": "https://www.channele2e.com/news/ingram-completes-3b-cls-asset-sale-distributor-mulls-more-acquisitions",
+   "story": "aa95a154e3d38"
+  },
+  {
+   "a": "ingrammicro",
+   "b": "ingramcls",
+   "k": "sold",
+   "y": "2022",
+   "t": "CLS business sold to CMA CGM in April 2022",
+   "url": "https://www.channele2e.com/news/ingram-completes-3b-cls-asset-sale-distributor-mulls-more-acquisitions",
+   "story": "aa95a154e3d38"
+  },
+  {
+   "a": "ingrammicro",
+   "b": "ups",
+   "k": "partner",
+   "y": "2026",
+   "t": "Ingram Micro is a flagship UPS customer for RFID labeling at its Texas warehouse",
+   "url": "https://www.supplychaindive.com/news/ups-rfid-sensor-hub-expansion-2026/817288/",
+   "story": "aa95a154e3d38"
   }
  ],
  "moves": [
@@ -4437,7 +4453,8 @@
   "instacartmaple": "2026-11-01",
   "packagehubbusi": "2026-11-01",
   "matternet": "2026-11-01",
-  "cleveronas": "2026-11-01"
+  "cleveronas": "2026-11-01",
+  "ingrammicro": "2026-11-02"
  },
  "facts": {
   "ups": {
