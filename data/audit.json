@@ -1,5 +1,5 @@
 {
- "run": "2026-11-02T05:16Z",
+ "run": "2026-11-02T06:13Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -124,9 +124,9 @@
    "fixed": true
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -148,6 +148,13 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -337,69 +344,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html): https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html",
-   "ids": [
-    "62"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/): https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/",
-   "ids": [
-    "ae89309b5e834"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/): https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
-   "ids": [
-    "a71e9c34808fa"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/): https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/",
-   "ids": [
-    "a3bcc80e64163"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/): https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/",
-   "ids": [
-    "a93db469c6b01"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/): https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/",
-   "ids": [
-    "a663794cc9c55"
-   ],
    "fixed": false
   }
  ],
@@ -441,9 +385,9 @@
    "fixed": false
   },
   {
-   "sev": "med",
-   "type": "watch-stale",
-   "msg": "Carrier page not read in over a day: UPS Developer portal (blocked by the carrier's site (block page after rendering; no proxy or archive copy)) https://developer.ups.com/",
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: UPS Developer portal https://developer.ups.com/. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -465,6 +409,13 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -654,69 +605,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html): https://www.prnewswire.com/news-releases/gofo-highlights-shifts-in-us-parcel-delivery-at-parcel-forum-2026-releases-new-industry-white-paper-302889591.html",
-   "ids": [
-    "62"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/): https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/",
-   "ids": [
-    "ae89309b5e834"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/): https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
-   "ids": [
-    "a71e9c34808fa"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/): https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/",
-   "ids": [
-    "a3bcc80e64163"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/): https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/",
-   "ids": [
-    "a93db469c6b01"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/): https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/",
-   "ids": [
-    "a663794cc9c55"
-   ],
    "fixed": false
   }
  ]
