@@ -108,7 +108,10 @@
   "acb0ee4be247f",
   "af46ea22d168d",
   "a0b5708b9f70d",
-  "a632e64bf8af4"
+  "a632e64bf8af4",
+  "a6ba18049bc99",
+  "ab7ddc386edae",
+  "ac9066ef18c45"
  ],
  "clock": [
   "e06:7",
@@ -350,7 +353,11 @@
   "story:scurri survey 67 of shoppers would accept slower peak delivery for lower cost",
   "story:postnord q3 operating income rises to sek 237 million on 6 parcel growth",
   "story:amazon logistics tops us parcel volume in 2025 with 6 9b pitney bowes index shows",
-  "story:fedex faces 13 consolidated tariff class actions in memphis"
+  "story:fedex faces 13 consolidated tariff class actions in memphis",
+  "more:story:industry analysis projects 2 4 billion peak season parcels up 4,story:parcel market shifts as private networks and new carriers grow dc velocity reports,story:usps audit finds mail recovery center returned under 1 of items",
+  "story:usps audit finds mail recovery center returned under 1 of items",
+  "story:parcel market shifts as private networks and new carriers grow dc velocity reports",
+  "story:industry analysis projects 2 4 billion peak season parcels up 4"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -458,52 +465,56 @@
   "globaldata doordash instacart profit hinges on efficiency re",
   "doordash serve robotics launch footpath robot delivery pilot",
   "fedex faces 13 consolidated tariff class actions in memphis",
-  "amazon logistics tops us parcel volume in 2025 with 6 9b pit"
+  "amazon logistics tops us parcel volume in 2025 with 6 9b pit",
+  "industry analysis projects 2 4 billion peak season parcels u",
+  "parcel market shifts as private networks and new carriers gr",
+  "usps audit finds mail recovery center returned under 1 of it"
  ],
  "harvested": [
-  "ae2ec177094e3",
-  "wacb825361479",
-  "w8465aa718dc6",
-  "a3a45d7f6db20",
-  "wa9c423a83880",
-  "a351cab9045c7",
-  "a5d45f26f2219",
-  "a6c2418bed0a7",
-  "wbfc38914b368",
-  "a663794cc9c55",
-  "a89f005fb1862",
-  "a0adb56a55334",
+  "a6cc2420ad66e",
+  "af8ee5ed067c6",
+  "w599d9089a65d",
   "a2def09bc43bb",
+  "w84705482dd2f",
+  "wa9c423a83880",
+  "w9c03b8f99b5f",
+  "rv5-ups-sbr-fuel",
+  "a72efb5e01b99",
+  "w8465aa718dc6",
+  "a6ba18049bc99",
+  "a89f005fb1862",
+  "a2f683da86bf8",
+  "wb8827e8c126e",
+  "w68c1687d28a1",
+  "a351cab9045c7",
   "a15404304f17b",
   "a831c709e5809",
-  "w599d9089a65d",
-  "a6cc2420ad66e",
-  "wdf959a97bcb6",
-  "a72efb5e01b99",
-  "w150132868eae",
-  "a2b81ad721cb8",
-  "a2f683da86bf8",
-  "w500a5bdc762c",
   "ac78f72e7f458",
-  "a89d7e4beebd9",
-  "aba40a11b6946",
-  "afd8784e2b179",
-  "a58373f1b7bc3",
-  "a57a06c26359c",
-  "a773d361dac4e",
   "a82e057190718",
-  "w9c03b8f99b5f",
-  "af8ee5ed067c6",
-  "rv5-ups-sbr-fuel",
-  "wb8827e8c126e",
-  "w84705482dd2f",
+  "a0adb56a55334",
+  "aba40a11b6946",
+  "a3a45d7f6db20",
   "w91588ddb11ed",
-  "aee6669d325da",
+  "wdf959a97bcb6",
   "a312b45efa358",
+  "a2b81ad721cb8",
+  "w150132868eae",
+  "a57a06c26359c",
   "wf5014bc150e9",
-  "w68c1687d28a1",
+  "wbfc38914b368",
+  "a6c2418bed0a7",
+  "aee6669d325da",
+  "ae2ec177094e3",
   "a999409ce7860",
-  "a6e82ba740e99"
+  "a58373f1b7bc3",
+  "a773d361dac4e",
+  "w500a5bdc762c",
+  "a89d7e4beebd9",
+  "a6e82ba740e99",
+  "a5d45f26f2219",
+  "a663794cc9c55",
+  "wacb825361479",
+  "afd8784e2b179"
  ],
  "backfilled": true,
  "recent": [
@@ -2215,6 +2226,51 @@
      "url": "https://www.electronicsweekly.com/blogs/mannerisms/genius/amazon-delivering-more-parcels-than-traditional-carriers-2026-11/"
     }
    ]
+  },
+  {
+   "id": "a6ba18049bc99",
+   "title": "Industry analysis projects 2.4 billion peak-season parcels, up 4%",
+   "date": "2026-11-02",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says"
+    }
+   ]
+  },
+  {
+   "id": "ab7ddc386edae",
+   "title": "Parcel market shifts as private networks and new carriers grow, DC Velocity reports",
+   "date": "2026-11-02",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers",
+   "srcs": [
+    {
+     "src": "DC Velocity",
+     "url": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers"
+    }
+   ]
+  },
+  {
+   "id": "ac9066ef18c45",
+   "title": "USPS audit finds Mail Recovery Center returned under 1% of items",
+   "date": "2026-11-02",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://federalnewsnetwork.com/agency-oversight/2026/11/a-new-audit-digs-into-the-postal-services-system-for-handling-undeliverable-packages/",
+   "srcs": [
+    {
+     "src": "Federal News Network",
+     "url": "https://federalnewsnetwork.com/agency-oversight/2026/11/a-new-audit-digs-into-the-postal-services-system-for-handling-undeliverable-packages/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2525,13 +2581,25 @@
   "a632e64bf8af4": {
    "t": "Amazon Logistics leads 2025 parcel",
    "m": "Amazon Logistics moved 6.9B US parcels in 2025, most of any carrier, per a Pitney Bowes index. No change to…"
+  },
+  "a6ba18049bc99": {
+   "t": "2.4B peak parcels projected, up 4%",
+   "m": "No new rate change; retailers pay ~16% more than a year ago, and FedEx, UPS plan 5.9% hikes in 2027."
+  },
+  "ab7ddc386edae": {
+   "t": "Parcel shift: private networks grow",
+   "m": "No rate or service change; covers pricing complexity, new carriers and retailer delivery networks."
+  },
+  "ac9066ef18c45": {
+   "t": "USPS audit: <1% of items returned",
+   "m": "No rate or service change; USPS weighs automatic collection from original shippers, disposal fees."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-02",
-  "n": 5
+  "n": 6
  },
- "last_push": "2026-11-02T13:19:31.911018-05:00"
+ "last_push": "2026-11-02T16:06:06.235161-05:00"
 }

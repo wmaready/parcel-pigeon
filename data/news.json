@@ -140,6 +140,54 @@
   "exclusive": true
  },
  {
+  "id": "a6ba18049bc99",
+  "date": "2026-11-02",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Peak season",
+  "kind": "Analysis",
+  "title": "Industry analysis projects 2.4 billion peak-season parcels, up 4%",
+  "sum": "Parcel carriers will deliver about 2.4 billion packages this peak season, up 4% from a year earlier, according to an industry analysis reported by FreightWaves on Nov. 2, 2026. An extra shopping day aids the increase. The volume would be the highest for the industry since 2022.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No new rate change takes effect. Retailers are paying about 16% more for parcel shipping than a year ago, and FedEx and UPS plan to repeat 5.9% general rate increases in 2027.",
+  "why": "Peak volume is projected at its highest since 2022 while retailers' parcel rates are up 16% year over year, according to the analysis and a freight index.",
+  "score": 7,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T21:02:29Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says"
+   }
+  ],
+  "auto": true,
+  "syn": "An industry analysis projects about 2.4 billion parcels during the current peak season, up 4% from the same period last year, helped by an extra shopping day. It would be the highest volume since 2022. A freight index puts retailers' parcel shipping rates up 16% year over year, driven by fuel surcharges, new fees and general rate increases. The analysis also shows volume shifting in the first half of 2026: Amazon and FedEx gained while UPS and USPS lost.",
+  "aff": [
+   {
+    "who": "Retail shippers",
+    "what": "Parcel shipping rates are up 16% from last year, according to the latest freight index."
+   },
+   {
+    "who": "Fuel surcharge payers",
+    "what": "Fuel surcharges are about 30% of the transportation rate, mostly from formula changes, the index said."
+   },
+   {
+    "who": "FedEx and UPS shippers",
+    "what": "Both carriers applied 5.9% general rate increases this year and announced plans to repeat them in 2027."
+   },
+   {
+    "who": "Peak workforce",
+    "what": "UPS will hire 100,000 seasonal workers (109,000 last year); Amazon 300,000 (up 20%); USPS 10,000."
+   }
+  ]
+ },
+ {
   "id": "a6f20c2dad5d6",
   "date": "2026-11-02",
   "c": [
@@ -147,17 +195,17 @@
   ],
   "cat": "Earnings & markets",
   "kind": "News",
-  "title": "PostNord Q3 operating income rises to SEK 237 million on 6% parcel growth",
-  "sum": "PostNord reported third-quarter 2026 net sales of SEK 8,930 million (8,473), with parcel volumes up 6 percent and mail volumes down 16 percent. Operating income was SEK 237 million (106), and adjusted operating income was SEK 330 million (166). The company said it is reshaping its Danish operations into a pure parcel business.",
+  "title": "PostNord Q3 operating income rises to SEK 237 million as parcel volumes grow 6%",
+  "sum": "PostNord reported third-quarter 2026 net sales of SEK 8,930 million (8,473), with parcel volumes up 6 percent and mail volumes down 16 percent. Operating income was SEK 237 million (106). The company said it is reshaping its Danish operations into a pure parcel business.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service is announced. PostNord said it is preparing a future move to two fixed delivery days in Sweden, with pilot projects under way and no date given.",
-  "why": "PostNord's Q3 shows parcel volumes growing 6% as mail falls 16%, while Denmark's shift to a pure parcel business weighs on earnings.",
+  "plain": "No change to rates or service is announced. PostNord said it is preparing a future move to two fixed delivery days in Swedish mail and is converting Denmark to a parcel-only operation.",
+  "why": "PostNord's Q3 results show parcel volumes up 6% as mail falls 16%, with Denmark moving to a parcel-only model after the national mail service ended.",
   "score": 4,
   "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-11-02T13:35:55Z",
+  "added": "2026-11-02T21:03:54Z",
   "src": "Post & Parcel",
   "url": "https://postandparcel.info/163214/news/e-commerce/postnord-continues-reshaping-its-danish-operations-into-a-pure-parcel-business/",
   "srcs": [
@@ -168,22 +216,70 @@
   ],
   "auto": true,
   "ann": "2026-11-02",
-  "syn": "PostNord reported third-quarter 2026 net sales of SEK 8,930 million (8,473), up 4 percent in fixed currency for like-for-like units. Parcel volumes rose 6 percent (18) and mail volumes fell 16 percent (–12). Operating income was SEK 237 million (106), an operating margin of 2.7 percent (1.3); adjusted operating income was SEK 330 million (166). The company said earnings in Denmark continue to be affected by the end of the national mail service, which cost synergies between parcel and former mail operations, and that it is turning the Danish business into a focused parcel operation.",
+  "syn": "PostNord reported third-quarter 2026 net sales of SEK 8,930 million (8,473), up 4 percent in fixed currency for like-for-like units. Parcel volumes rose 6 percent (18) and mail volumes fell 16 percent (-12). Operating income was SEK 237 million (106), an operating margin of 2.7 percent (1.3), and adjusted operating income was SEK 330 million (166). The company said Denmark's earnings were affected by the transition after the national mail service was discontinued, and it is rebuilding that business as a focused parcel operation.",
   "aff": [
    {
     "who": "Danish parcel operations",
-    "what": "PostNord said it is transforming the Danish business into a pure parcel operation, adapting capacity and the cost base."
+    "what": "PostNord is transforming its Danish business into a pure parcel business, adapting capacity and the cost base."
    },
    {
     "who": "Swedish mail",
-    "what": "PostNord said it continued preparing a transition to two fixed delivery days, with pilot projects before a wider roll-out."
+    "what": "PostNord is preparing a transition to two fixed delivery days, with pilot projects under way before a wider roll-out."
    },
    {
-    "who": "Parcel volumes",
-    "what": "Q3 parcel volumes rose 6 percent (18); January–September volumes rose 9 percent (12)."
+    "who": "Shippers",
+    "what": "No change to rates or service is stated."
    }
   ],
   "edge": true
+ },
+ {
+  "id": "ab7ddc386edae",
+  "date": "2026-11-02",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "Analysis",
+  "title": "Parcel market shifts as private networks and new carriers grow, DC Velocity reports",
+  "sum": "DC Velocity reported views from Ryder, Gartner, Davinci Micro Fulfillment and OnTrac on a parcel market with more carrier choices and more complex pricing. Gartner's Chris Kina said the market is softening while carriers add surcharges. OnTrac's Vijay Ramachandram said UPS and FedEx combined have changed rates more than 20 times in 18 months.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The article gives industry views on pricing complexity, new carriers and retailer-run delivery networks.",
+  "why": "Shippers face more carrier choices and more frequent UPS and FedEx rate changes, according to executives quoted in the feature.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T21:02:44Z",
+  "src": "DC Velocity",
+  "url": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers",
+  "srcs": [
+   {
+    "src": "DC Velocity",
+    "url": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers"
+   }
+  ],
+  "auto": true,
+  "syn": "DC Velocity collected industry views on a parcel market it describes as changing rapidly. Gartner's Chris Kina said the market is softening rather than expanding, and that carriers keep adding surcharges despite weak or declining volumes, which he called a margin-defense move. He said asset-light providers using AI promise up to 40% price savings, and that Walmart has expanded store fulfillment delivery to cover 93% of the population. OnTrac's Vijay Ramachandram said UPS and FedEx combined have changed rates more than 20 times in the last 18 months, which makes price certainty harder for shippers using several carriers.",
+  "aff": [
+   {
+    "who": "Shippers using several carriers",
+    "what": "Ramachandram said frequent rate changes make price certainty harder as spend is spread across more carriers."
+   },
+   {
+    "who": "UPS and FedEx",
+    "what": "Kina said their footprint and asset advantage is being chipped away by local, regional and specialist providers."
+   },
+   {
+    "who": "Retailer-run delivery networks",
+    "what": "Kina said retailers are investing billions in private networks that he expects to gain parcel market share."
+   },
+   {
+    "who": "Online shoppers and sellers",
+    "what": "Ramachandram said retailers are raising free-shipping minimums, so order and package sizes are rising."
+   }
+  ]
  },
  {
   "id": "ab83f6e5411b4",
@@ -230,6 +326,55 @@
    }
   ],
   "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "ac9066ef18c45",
+  "date": "2026-11-02",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS audit finds Mail Recovery Center returned under 1% of items",
+  "sum": "An audit by the USPS Office of Inspector General found the Postal Service's Mail Recovery Center returned less than 1% of items it received to customers, against management's reported 39%. Heidi Einsweiler, the OIG's Director of Sales, Marketing and International Mail Audits, said the agency lost about $109 million in a little over two years on returned packages that warehouses refused and did not pay postage for.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. Einsweiler said USPS is evaluating automatic collection from the original shipper and a cost-benefit analysis of disposal fees.",
+  "why": "USPS is weighing automatic charges to the original label buyer and disposal fees for undeliverable packages, which could reach commercial shippers.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-02T21:03:27Z",
+  "src": "Federal News Network",
+  "url": "https://federalnewsnetwork.com/agency-oversight/2026/11/a-new-audit-digs-into-the-postal-services-system-for-handling-undeliverable-packages/",
+  "srcs": [
+   {
+    "src": "Federal News Network",
+    "url": "https://federalnewsnetwork.com/agency-oversight/2026/11/a-new-audit-digs-into-the-postal-services-system-for-handling-undeliverable-packages/"
+   }
+  ],
+  "auto": true,
+  "syn": "A USPS Office of Inspector General audit of the Mail Recovery Center, which handles undeliverable packages the Postal Service calls dead mail, found management reported returning about 39% of items to customers while the actual figure was less than 1%. Einsweiler, the OIG's Director of Sales, Marketing and International Mail Audits, said a faulty weight-based estimate understated package volume by about four times, and that spreadsheet errors caused double counting. She also said USPS lost about $109 million in a little over two years because warehouses listed as return addresses refused items and postage, and USPS had no way to charge the shipper who bought the label. According to Einsweiler, USPS is evaluating auto-collection methods and disposal fees.",
+  "aff": [
+   {
+    "who": "Commercial shippers and warehouses",
+    "what": "USPS is evaluating automatic charges to the original label buyer for refused returns, per the OIG official."
+   },
+   {
+    "who": "Shippers of undeliverable packages",
+    "what": "USPS is running a cost-benefit analysis of disposal fees; no fee has been announced."
+   },
+   {
+    "who": "Customers with lost mail",
+    "what": "Less than 1% of items received were returned, against the 39% management reported."
+   },
+   {
+    "who": "USPS Mail Recovery Center",
+    "what": "Volume was underestimated by about four times, which Einsweiler said affects staffing and leaves room for theft."
+   }
+  ],
   "exclusive": true
  },
  {
@@ -519,6 +664,10 @@
    {
     "src": "Idaho News 6",
     "url": "https://www.kivitv.com/nampa/amazon-prime-air-launches-drone-delivery-service-in-nampa"
+   },
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/02/amazon-prime-air-nampa-idaho-drone-delivery-launch/"
    }
   ],
   "auto": true,
@@ -9747,138 +9896,5 @@
   "upd": 10,
   "new": "Wing and Walmart announced Denver and Seattle for 2027, which would bring their network to nearly 20 US metros and more than 270 Walmart stores, with no change to parcel carrier rates or service.",
   "exclusive": true
- },
- {
-  "id": "acb44dbafb712",
-  "date": "2026-10-05",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "NLRB judge rules UPS unlawfully restricted union insignia on safety vests",
-  "sum": "An NLRB administrative law judge ruled on October 5 that UPS unlawfully maintained and enforced overly broad rules limiting union insignia on safety vests, according to reports cited by Hoodline. UPS said it plans to appeal. The decision is a recommended order, not a final board order.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The recommended order would require UPS to rescind the policies and post a notice at its Atlanta facility, and UPS plans to appeal.",
-  "why": "The recommended order targets a UPS dress-code policy at its Atlanta facility and remains subject to appeal, so no final board order exists yet.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T19:05:12Z",
-  "src": "Hoodline",
-  "url": "https://hoodline.com/2026/10/atlanta-ups-vest-policy-ruled-unlawful-company-vows-appeal/",
-  "srcs": [
-   {
-    "src": "Hoodline",
-    "url": "https://hoodline.com/2026/10/atlanta-ups-vest-policy-ruled-unlawful-company-vows-appeal/"
-   },
-   {
-    "src": "Bloomberg Law News",
-    "url": "https://news.bloomberglaw.com/daily-labor-report/ups-safety-vest-dress-policy-violates-labor-law-nlrb-judge-says"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-05",
-  "exclusive": true
- },
- {
-  "id": "a4af485c67766",
-  "date": "2026-10-01",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "USPS extends delivery estimates for packages to and from Guam, Hawaii",
-  "sum": "The U.S. Postal Service changed service expectations for Priority Mail and Ground Advantage packages to and from Guam, Alaska, Hawaii, Puerto Rico and other locations outside the mainland, with some shipments now expected to take 10 days or more. USPS spokesman John Hyatt said the estimates better align with USPS's operational capabilities. The change took effect Oct. 1, and prices are unchanged, he said.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "Priority Mail and Ground Advantage packages to and from Alaska, Hawaii, Guam, Puerto Rico and other noncontiguous locations have longer delivery estimates from Oct. 1, with some at 10 days or more. Prices are unchanged, and packages already in transit before that date are not affected.",
-  "tie": "The change follows an Oct. 9, 2026 report on longer delivery standards for Hawaii, and USPS's March 2025 announcement of service standard changes under its Delivering for America plan.",
-  "act": "2026-10-01",
-  "dates": [],
-  "added": "2026-10-16T18:59:43Z",
-  "src": "guampdn.com",
-  "url": "https://www.guampdn.com/news/usps-sets-new-10-day-timeline-for-packages-mail-to-guam/article_6d670b63-437c-4555-80af-2d0168ffe92d.html",
-  "srcs": [
-   {
-    "src": "guampdn.com",
-    "url": "https://www.guampdn.com/news/usps-sets-new-10-day-timeline-for-packages-mail-to-guam/article_6d670b63-437c-4555-80af-2d0168ffe92d.html"
-   }
-  ],
-  "auto": true,
-  "thread": "usps-service-network",
-  "upd": 4,
-  "new": "USPS said the longer estimates, with some shipments at 10 days or more, apply beyond Hawaii to Alaska, American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, the U.S. Virgin Islands, Micronesia, the Marshall Islands and Palau; prices are unchanged and noncontiguous Ground Advantage will primarily use surface transportation.",
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "dl-inpost-fedex",
-  "date": "2026-09-30",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "FedEx-led group completes €7.8B takeover of InPost",
-  "sum": "A consortium of FedEx, private equity firm Advent, founder Rafał Brzoska's A&R and PPF offered €15.60 a share for European parcel-locker company InPost, about €7.8 billion. The offer settled Sept. 30, 2026, with about 89.8% of shares tendered.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels.",
-  "why": "FedEx gets a large stake in Europe's biggest out-of-home delivery network, which costs less than doorstep delivery, and access to it for its own European parcels. InPost gets access to FedEx's air and ground network. InPost stays standalone with Brzoska as CEO.",
-  "tie": "FedEx completes its purchase of TNT Express, its base in Europe",
-  "act": null,
-  "dates": [],
-  "src": "InPost consortium offer (company release)",
-  "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf",
-  "srcs": [
-   {
-    "src": "InPost consortium offer (company release)",
-    "url": "https://inpost.eu/sites/default/files/2026-02/InPost%2C%20Advent%2C%20FedEx%2C%20A%26R%20and%20PPF%20announce%20agreement%20on%20recommended%20all-cash%20offer%20for%20all%20InPost%20shares_1.pdf"
-   },
-   {
-    "src": "InPost settlement (company release)",
-    "url": "https://inpost.eu/sites/default/files/2026-09/Settlement%20of%20InPost%20Offer%20has%20successfully%20taken%20place_0.pdf"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/fedex-group-to-buy-inpost-for-european-out-of-home-parcel-network"
-   }
-  ],
-  "auto": true,
-  "added": "2026-09-30T00:00:00Z",
-  "restored": "2026-10-26"
- },
- {
-  "id": "adae683e43adb",
-  "date": "2026-09-28",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Diocese of Fort Worth presses FedEx on mifepristone shipping risk",
-  "sum": "At FedEx's annual meeting on Sept. 28, the Diocese of Fort Worth, Texas, sponsored a shareholder proposal asking the company to report on legal, regulatory and reputational risks of shipping mifepristone into states where abortion is illegal, the National Catholic Register reported. The board opposed the proposal, and final votes had not been tallied when the diocese spoke with EWTN News.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to FedEx rates or service. The proposal asked the board to report within a year on risk oversight and did not ask the company to stop shipping the drug.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "National Catholic Register",
-  "url": "https://www.ncregister.com/cna/fort-worth-diocese-presses-fedex-on-risk-of-shipping-mifepristone",
-  "srcs": [
-   {
-    "src": "National Catholic Register",
-    "url": "https://www.ncregister.com/cna/fort-worth-diocese-presses-fedex-on-risk-of-shipping-mifepristone"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "unconf": true
  }
 ]
