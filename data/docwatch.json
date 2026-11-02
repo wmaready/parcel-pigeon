@@ -1,5 +1,5 @@
 {
- "cursor": 42,
+ "cursor": 57,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 306,
+   "fails": 307,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 306,
+   "fails": 307,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
@@ -1128,11 +1128,12 @@
    }
   },
   "https://www.ups.com/us/en/services/shipping/simple-rate": {
-   "hash": "d8faf24fe155",
+   "hash": "0891bcac2bee",
    "first": "2026-10-25",
    "checked": "2026-11-02",
    "n": "UPS Simple Rate page",
-   "pic_try": "2026-11-02"
+   "pic_try": "2026-11-02",
+   "changed": "2026-11-02"
   },
   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
    "hash": "4358be4b1dfc",
@@ -1389,8 +1390,8 @@
     "pdf": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
     "txt": "data/snapshots/04e3e48834d1/2026-10-28.txt"
    },
-   "fails": 2,
-   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectionError)",
+   "fails": 3,
+   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectTimeout)",
    "blocked": true
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf": {
