@@ -2017,7 +2017,11 @@
   "d": "Rates and fees are in Shipper Central (login required)",
   "cur": true,
   "upd": "2025-05-31",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://shipping.amazon.com/shipping-terms-and-conditions",
+  "content_verified": true,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Amazon",
@@ -2028,7 +2032,11 @@
   "u": "https://ship.amazon.com/service-guide",
   "d": "",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://ship.amazon.com/service-guide",
+  "content_verified": true,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Amazon",
@@ -2060,7 +2068,11 @@
   "d": "",
   "cur": true,
   "upd": "2025-05-31",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://shipping.amazon.com/shipping-policy",
+  "content_verified": true,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Amazon",
@@ -2072,7 +2084,11 @@
   "d": "Oct 25, 2026 to Jan 16, 2027",
   "cur": true,
   "upd": "2026-09-02",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026",
+  "content_verified": true,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "DHL",
@@ -2476,7 +2492,11 @@
   "f": "data/files/spee-dee-2025-spee-dee-on-call-rates-multiple-packages-dd8965.pdf",
   "fh": "86eebdb0be166712d81a8407607c3ecbca3e8d0c",
   "fat": "2026-10-23",
-  "fsz": 187482
+  "fsz": 187482,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025_ON-CALL_RATES_MULTI.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -2487,7 +2507,11 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2022/11/2023_On-Call_Rate_Chart.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2022/11/2023_On-Call_Rate_Chart.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -2498,7 +2522,11 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2022/01/2022-ON-CALL-RATES.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2022/01/2022-ON-CALL-RATES.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -2525,7 +2553,11 @@
   "u": "https://speedeedelivery.com/wp-content/uploads/2023/06/Fuel-Surcharge-Index-Nov-2022-v2.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2023/06/Fuel-Surcharge-Index-Nov-2022-v2.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "GLS US",
@@ -2650,7 +2682,11 @@
   "d": "Main terms updated Apr 4, 2025; data terms Aug 15, 2025",
   "cur": true,
   "upd": "2025-04-04",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.shipveho.com/client/terms",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Veho",
@@ -2784,7 +2820,11 @@
    "story": "wacb825361479",
    "title": "Amazon Shipping posts full Service Guide with list rates, effective July 9, 2026",
    "when": "2026-10-15"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://ship.amazon.com/site-terms",
+  "content_verified": true,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "UPS",
@@ -3015,7 +3055,11 @@
   "f": "data/files/spee-dee-spee-dee-2025-rates-letter-38154b.pdf",
   "fh": "2e872b8e735f913f988ce4cc68f31090263c182e",
   "fat": "2026-10-23",
-  "fsz": 139711
+  "fsz": 139711,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025-RATES-LETTER.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3031,7 +3075,11 @@
   "f": "data/files/spee-dee-spee-dee-2025-standard-rate-chart-0b3b37.pdf",
   "fh": "7b23182a3727ca8d78736426514cd2674570e230",
   "fat": "2026-10-23",
-  "fsz": 425490
+  "fsz": 425490,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025-STANDARD-RATE-CHART.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3047,7 +3095,11 @@
   "f": "data/files/spee-dee-spee-dee-2025-walk-in-counter-rates-chart-1c9c75.pdf",
   "fh": "692632420e1f0479b10702da3e7c6a3c23d5b002",
   "fat": "2026-10-23",
-  "fsz": 144993
+  "fsz": 144993,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2024/11/2025_WALK-IN_COUNTER_RATES_CHART.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3063,7 +3115,11 @@
   "f": "data/files/spee-dee-spee-dee-ltl-rates-2025-version-29-b83e57.pdf",
   "fh": "69aaa6d17a016d5247175f1b696cb4a66844410c",
   "fat": "2026-10-23",
-  "fsz": 302161
+  "fsz": 302161,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2024/11/LTL-Rates-2025-version-29-.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3079,7 +3135,11 @@
   "f": "data/files/spee-dee-spee-dee-spee-dee-deliver-hot-solutions-companies-c15e29.pdf",
   "fh": "f5fd7a91fb476b5720ba2baed257ea10d29879af",
   "fat": "2026-10-23",
-  "fsz": 1260899
+  "fsz": 1260899,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3095,7 +3155,11 @@
   "f": "data/files/spee-dee-spee-dee-spee-dee-delivery-press-release-shipit-c09c89.pdf",
   "fh": "e27b7c1db05890c1a984d5f293a88c007d59388f",
   "fat": "2026-10-23",
-  "fsz": 219711
+  "fsz": 219711,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "Spee-Dee",
@@ -3979,7 +4043,11 @@
   "u": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/1f3ac603-1839-4c15-8875-dcbcd2494084.pdf",
   "d": "FedEx Fiscal Q2 2025 (Sep–Nov 2024), reported 2024-12-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/1f3ac603-1839-4c15-8875-dcbcd2494084.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4006,7 +4074,11 @@
   "f": "data/files/fedex-fedex-fiscal-q3-2025-dec-2024-feb-2025-10-q-filing-645076.pdf",
   "fh": "cd699a785f1ecc2afad305a02dd400eba356f869",
   "fat": "2026-10-30",
-  "fsz": 1095155
+  "fsz": 1095155,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/8ed131d2-5652-42df-9a04-df4c3e51d26c.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4044,7 +4116,11 @@
   "f": "data/files/fedex-fedex-fiscal-q4-2025-mar-may-2025-10-q-filing-7dd3d1.pdf",
   "fh": "88797ae721f5da3adb06220b814592dfe2dbca71",
   "fat": "2026-10-30",
-  "fsz": 2058770
+  "fsz": 2058770,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FedEX-10K-Form.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4082,7 +4158,11 @@
   "f": "data/files/fedex-fedex-fiscal-q1-2026-jun-aug-2025-call-transcript-902742.pdf",
   "fh": "19f89c32f893dc37f96b408819bbb009659628e8",
   "fat": "2026-10-30",
-  "fsz": 262131
+  "fsz": 262131,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4098,7 +4178,11 @@
   "f": "data/files/fedex-fedex-fiscal-q1-2026-jun-aug-2025-10-q-filing-edc381.pdf",
   "fh": "64051153a71b07079faf6529ca29d05d63f43c9d",
   "fat": "2026-10-30",
-  "fsz": 1056663
+  "fsz": 1056663,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/edf17e3e-640b-438c-808f-99664c427646.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4136,7 +4220,11 @@
   "f": "data/files/fedex-fedex-fiscal-q2-2026-sep-nov-2025-call-transcript-76f96e.pdf",
   "fh": "f9359438e39ffc7a1c0de6a22fffcdeca9f3b011",
   "fat": "2026-10-30",
-  "fsz": 261050
+  "fsz": 261050,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4152,7 +4240,11 @@
   "f": "data/files/fedex-fedex-fiscal-q2-2026-sep-nov-2025-10-q-filing-6984da.pdf",
   "fh": "d0861b9cb248dba38c01bedd7527e607bc5b9523",
   "fat": "2026-10-30",
-  "fsz": 3417473
+  "fsz": 3417473,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/f3731273-fa15-493d-8274-c5df40f0e885.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4190,7 +4282,11 @@
   "f": "data/files/fedex-fedex-fiscal-q3-2026-dec-2025-feb-2026-call-transcript-0a203e.pdf",
   "fh": "160305bf759c906c6b0317e64fdf84cb67052883",
   "fat": "2026-10-30",
-  "fsz": 259167
+  "fsz": 259167,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4206,7 +4302,11 @@
   "f": "data/files/fedex-fedex-fiscal-q3-2026-dec-2025-feb-2026-10-q-filing-9a11b8.pdf",
   "fh": "a70eeb06ecfa8242cd422bb30b654776af9bcc6c",
   "fat": "2026-10-30",
-  "fsz": 1150564
+  "fsz": 1150564,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/76e601ba-f92f-407d-bab0-cd80ff4810c2.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4244,7 +4344,11 @@
   "f": "data/files/fedex-fedex-fiscal-q4-2026-mar-may-2026-call-transcript-9f70d8.pdf",
   "fh": "9943989a84611e67937c552d4453afa8a54ceed4",
   "fat": "2026-10-30",
-  "fsz": 254423
+  "fsz": 254423,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  },
  {
   "c": "FedEx",
@@ -4394,6 +4498,10 @@
   "f": "data/files/fedex-fedex-calendar-q3-2026-results-release-e5b825.pdf",
   "fh": "3bbc0202c8f14e322e576d9be5eb9c28dcf1e4ae",
   "fat": "2026-10-30",
-  "fsz": 209239
+  "fsz": 209239,
+  "http_status": 200,
+  "final_url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-02T05:16Z"
  }
 ]

@@ -2336,38 +2336,35 @@
    "enriched": "2026-11-02"
   },
   {
-   "id": "vfcorp",
-   "n": "VF Corp.",
-   "realm": "retail",
-   "own": null,
+   "id": "favordelivery",
+   "n": "Favor Delivery",
+   "realm": "gig",
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Parent of The North Face, Vans and Timberland, which joined DoorDash with 350+ stores.",
-   "al": [],
-   "src": "https://netchoice.org/from-the-store-shelf-to-your-doorstep-doordash-and-macys-collaborate/",
+   "hq": "Austin, TX, USA",
+   "yr": "2013",
+   "s": "Favor is an Austin-based on-demand delivery app, wholly owned by H-E-B, where independent contract drivers called Runners deliver restaurant orders, groceries and other goods in more than 400 Texas cities.",
+   "al": [
+    "Favor",
+    "NeighborFavor Inc."
+   ],
+   "src": "https://newsroom.heb.com/h-e-b-and-favor-delivery-to-join-forces/",
    "auto": true,
-   "pending": true,
-   "added": "2026-09-30",
-   "story": "a01f901de27c2"
-  },
-  {
-   "id": "keyfoodstoresc",
-   "n": "Key Food Stores Co-Operative",
-   "realm": "retail",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Co-Operative of family-owned and -operated supermarkets in the Northeast and Florida",
-   "al": [],
-   "src": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-27",
-   "story": "a8523160884a0"
+   "added": "2026-11-02",
+   "from": "discover",
+   "site": "favordelivery.com",
+   "geo": [
+    -97.743,
+    30.267
+   ],
+   "srcs": [
+    "https://newsroom.heb.com/h-e-b-and-favor-delivery-to-join-forces/",
+    "https://www.favordelivery.com/faq/favor",
+    "https://progressivegrocer.com/h-e-b-acquire-delivery-service-favor"
+   ],
+   "enriched": "2026-11-02",
+   "pending": false
   }
  ],
  "edges": [
@@ -4064,24 +4061,6 @@
    "story": null
   },
   {
-   "a": "doordash",
-   "b": "vfcorp",
-   "k": "partner",
-   "y": "2026",
-   "t": "DoorDash adds The North Face, Vans and Timberland",
-   "url": "https://netchoice.org/from-the-store-shelf-to-your-doorstep-doordash-and-macys-collaborate/",
-   "story": "a01f901de27c2"
-  },
-  {
-   "a": "uber",
-   "b": "keyfoodstoresc",
-   "k": "partner",
-   "y": "2026",
-   "t": "Uber Eats and Key Food Co-Op partner on grocery delivery",
-   "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
-   "story": "a8523160884a0"
-  },
-  {
    "a": "wonder",
    "b": "avride",
    "k": "partner",
@@ -4454,7 +4433,8 @@
   "packagehubbusi": "2026-11-01",
   "matternet": "2026-11-01",
   "cleveronas": "2026-11-01",
-  "ingrammicro": "2026-11-02"
+  "ingrammicro": "2026-11-02",
+  "favordelivery": "2026-11-02"
  },
  "facts": {
   "ups": {
