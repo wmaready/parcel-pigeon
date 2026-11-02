@@ -1,5 +1,5 @@
 {
- "run": "2026-11-02T13:07Z",
+ "run": "2026-11-02T13:37Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -265,9 +265,29 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT says Amazon needs state approval for Westborough drones\"",
+   "ids": [
+    "a80e5b8dd1671",
+    "a8f4ad910c577"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
    "ids": [
     "a80e5b8dd1671",
+    "ac198fadf6127"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon needs state approval for Westborough drones\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a8f4ad910c577",
     "ac198fadf6127"
    ],
    "fixed": false
@@ -526,9 +546,29 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT says Amazon needs state approval for Westborough drones\"",
+   "ids": [
+    "a80e5b8dd1671",
+    "a8f4ad910c577"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
    "ids": [
     "a80e5b8dd1671",
+    "ac198fadf6127"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"MassDOT says Amazon needs state approval for Westborough drones\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
+   "ids": [
+    "a8f4ad910c577",
     "ac198fadf6127"
    ],
    "fixed": false

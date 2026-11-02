@@ -481,15 +481,14 @@
  },
  "amazon-network-buildout": {
   "n": "Amazon opens its delivery network to all",
-  "s": "Amazon has opened its logistics network to outside businesses and added LTL labels for sellers, and a Business Insider report describes a contingency plan to reach about 95% of U.S. ZIP codes by 2029.",
+  "s": "Amazon has opened its logistics network to outside businesses and sellers, and a Loadstar comment on 2 November 2026 describes it as a carrier for hire.",
   "ids": [
-   "h512",
    "17",
    "34",
    "05"
   ],
   "first": "2025-04-30",
-  "last": "2026-10-02",
+  "last": "2026-11-02",
   "c": [
    "Amazon",
    "FedEx",
@@ -497,17 +496,14 @@
    "USPS"
   ],
   "cx": {
-   "sig": "ce498ee4d3ad",
+   "sig": "06b808572ae5",
    "v": 3,
    "beats": {
-    "h512": "Amazon said it would put $4 billion into rural delivery by the end of 2026, passing 200 delivery stations and creating 100,000+ jobs.",
-    "17": "Amazon Supply Chain Services bundles freight, warehousing and parcels for outsiders; UPS and FedEx shares each fell about 9 to 10% that day.",
-    "34": "Sellers can buy LTL labels through Buy Shipping from October, and regional pricing for heavy, bulky items is due in early 2027.",
-    "05": "Business Insider reported a backup plan, drawn up in case the USPS deal failed, to reach about 95% of U.S. ZIP codes by 2029."
+    "34": "Sellers can buy LTL labels through Amazon Buy Shipping from October, and regional pricing for heavy, bulky items follows in early 2027."
    },
-   "now": "Next dated step: Amazon's regional delivery pricing for heavy and bulky items arrives in early 2027."
+   "now": "A Loadstar comment on Nov. 2 calls Amazon Logistics a carrier for hire; regional pricing for bulky items is due in early 2027."
   },
-  "rv": "ce498ee4d3ad",
+  "rv": "06b808572ae5",
   "apart": [
    "amazon-labor",
    "last-mile-facility-legislation",
@@ -519,7 +515,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "US drone delivery is expanding under waivers and Part 135 certificates while the FAA's Part 108 rule remains unpublished, and Amazon is now preparing EU approvals.",
+  "s": "Drone delivery is expanding among operators while federal rules remain unfinished, and Massachusetts is now requiring its own state approval for Amazon's Westborough plan.",
   "ids": [
    "g27",
    "g26",
@@ -952,21 +948,5 @@
    "usps-service-network"
   ],
   "rv": "0564ccfc2ad3"
- },
- "doordash-instacart-deal": {
-  "n": "DoorDash–Instacart deal",
-  "ids": [
-   "a71834ca45b0d",
-   "a4841c296ce57",
-   "a0083f4a65c16"
-  ],
-  "first": "2026-10-29",
-  "co": "DoorDash",
-  "s": "DoorDash and Instacart announced a definitive agreement on October 29, 2026; closing is expected at the end of 2027 or in the first half of 2028, pending a stockholder vote and antitrust reviews.",
-  "last": "2026-10-29",
-  "c": [
-   "Industry"
-  ],
-  "rv": "8c11caa80de3"
  }
 }
