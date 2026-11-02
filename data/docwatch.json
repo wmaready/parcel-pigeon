@@ -1,5 +1,5 @@
 {
- "cursor": 63,
+ "cursor": 78,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 298,
+   "fails": 299,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 298,
+   "fails": 299,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-02"
@@ -1226,7 +1226,7 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-jet-fuel-surcharge-effective-from-020126.pdf": {
    "hash": "59d8e418ba71",
    "first": "2026-10-25",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "DHL eCommerce jet fuel surcharge, effective Feb 1, 2026",
    "snap": {
     "d": "2026-10-26",
@@ -1237,7 +1237,7 @@
   "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
    "hash": "9520c595235a",
    "first": "2026-10-25",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "FedEx fuel surcharge page",
    "snap": {
     "d": "2026-10-26",
@@ -1248,15 +1248,15 @@
   "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html": {
    "hash": "e62886e079c7",
    "first": "2026-10-26",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "FedEx historical fuel surcharges",
-   "pic_try": "2026-11-01",
+   "pic_try": "2026-11-02",
    "changed": "2026-11-01"
   },
   "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf": {
    "hash": "d95e3ea3de42",
    "first": "2026-10-26",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "GLS US fuel surcharge matrix",
    "snap": {
     "d": "2026-10-26",
@@ -1267,7 +1267,7 @@
   "https://www.lso.com/lso-fuel-surcharge": {
    "hash": "754605d79931",
    "first": "2026-10-26",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "LSO fuel surcharge page",
    "snap": {
     "d": "2026-10-26",
@@ -1278,14 +1278,13 @@
   "https://www.ontrac.com/west-coast-fuel-surcharge": {
    "hash": "236add39a25c",
    "first": "2026-10-26",
-   "checked": "2026-11-01",
+   "checked": "2026-11-02",
    "n": "OnTrac West Coast fuel surcharge",
    "snap": {
-    "d": "2026-11-01",
-    "img": "data/snapshots/b9d4439ee72f/2026-11-01.jpg",
-    "prev": "data/snapshots/b9d4439ee72f/2026-10-31.jpg"
-   },
-   "pic_try": "2026-11-01"
+    "d": "2026-11-02",
+    "img": "data/snapshots/b9d4439ee72f/2026-11-02.jpg",
+    "prev": "data/snapshots/b9d4439ee72f/2026-11-01.jpg"
+   }
   },
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "2bafd025bd0b",
