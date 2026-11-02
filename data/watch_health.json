@@ -67,7 +67,7 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 2,
+  "fails": 3,
   "thin": 177,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
@@ -82,7 +82,7 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 14,
+  "fails": 15,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 301,
+  "fails": 302,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
@@ -106,7 +106,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 12,
+  "fails": 13,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
@@ -119,7 +119,7 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 9,
+  "fails": 10,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
@@ -132,28 +132,28 @@
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 0,
+  "fails": 1,
   "thin": 0,
-  "err": null,
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-02",
   "chars": 7463,
   "last_ok": "2026-11-02",
-  "blocked": false,
+  "blocked": true,
   "via": "archive",
   "copy_of": "2026-10-26"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 6,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-11-02",
-  "chars": 5705,
+  "chars": 5704,
   "last_ok": "2026-11-02",
-  "blocked": true,
+  "blocked": false,
   "via": "archive",
-  "copy_of": "2026-10-22"
+  "copy_of": "2026-10-25"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf": {
   "carrier": "FedEx",
