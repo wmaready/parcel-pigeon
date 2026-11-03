@@ -50,6 +50,49 @@
   "exclusive": true
  },
  {
+  "id": "a1d4d1ad40132",
+  "date": "2026-11-03",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "Yamato Holdings plans price talks with big clients as it shifts to profit",
+  "sum": "Yamato Holdings plans to negotiate price increases with major corporate clients as it shifts focus from volume to profitability, President Toshiyuki Sakurai told Nikkei. The article describes plans to trim the network, raise prices and use AI to optimize operations.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Yamato plans to negotiate price increases with major corporate clients. No dates or rates are given in the source.",
+  "why": "Yamato's planned price talks with major corporate clients signal a shift from volume to profit at a Japanese express delivery group.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T19:17:43Z",
+  "src": "Nikkei Asia",
+  "url": "https://asia.nikkei.com/editor-s-picks/interview/japan-s-yamato-targets-leaner-delivery-service-in-push-for-profit-president",
+  "srcs": [
+   {
+    "src": "Nikkei Asia",
+    "url": "https://asia.nikkei.com/editor-s-picks/interview/japan-s-yamato-targets-leaner-delivery-service-in-push-for-profit-president"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-03",
+  "syn": "Yamato Holdings plans to negotiate price increases with major corporate clients as it shifts focus from volume to profitability, President Toshiyuki Sakurai told Nikkei. The group also plans to trim its network and use AI to optimize operations. It aims to lift the slim operating profit margin of its express delivery segment.",
+  "aff": [
+   {
+    "who": "Major corporate clients of Yamato",
+    "what": "Yamato plans to negotiate price increases with them; no rates or dates are given."
+   },
+   {
+    "who": "Yamato delivery network",
+    "what": "Network to be trimmed and optimized with AI, per the headline and summary."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a260cc6a2e05e",
   "date": "2026-11-03",
   "c": [
@@ -154,6 +197,42 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a6f1220bef28a",
+  "date": "2026-11-03",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "Opinion",
+  "title": "Op-ed: Healthcare audit lessons apply to parcel billing, executive says",
+  "sum": "In an opinion piece published by Parcel Industry, Rob Gelb, a chief executive in the parcel cost-management field, argues that parcel shipping shares healthcare's concentrated market and information imbalance. He calls for auditing rights, independent billing verification and ongoing review of carrier charges.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The piece is one executive's view on auditing carrier billing.",
+  "why": "The piece gives one executive's case for ongoing carrier-bill auditing; it announces no rate, fee or service change.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T19:17:09Z",
+  "src": "Parcel Industry",
+  "url": "https://parcelindustry.com/article-6734-What-Healthcare-Taught-Me-About-the-Economics-of-Parcel-Shipping.html",
+  "srcs": [
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6734-What-Healthcare-Taught-Me-About-the-Economics-of-Parcel-Shipping.html"
+   }
+  ],
+  "auto": true,
+  "syn": "This is an opinion piece by Rob Gelb, a chief executive in the parcel cost-management field, published by Parcel Industry. He draws on his healthcare background to argue that parcel buyers face a concentrated carrier market and an information imbalance. He says shippers should seek clear auditing rights and independent verification of billing. He also says AI combined with expert review delivered savings six to ten percentage points higher than purely AI-driven models in healthcare. For a company with $10 million to $25 million in annual revenue, he says cutting expenses by five to ten percentage points of revenue equals $500,000 to $2.5 million in annual savings, assuming no offsetting costs.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ]
  },
  {
   "id": "a920867c2e49d",
@@ -504,6 +583,51 @@
    {
     "who": "Sellers shipping bulky goods",
     "what": "Per the comment, sellers can buy LTL labels through Amazon."
+   }
+  ]
+ },
+ {
+  "id": "a40c99078f690",
+  "date": "2026-11-02",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Fuel",
+  "kind": "News",
+  "title": "Benchmark diesel price falls 6 cts to $6.292/gal as futures slide",
+  "sum": "The Department of Energy/EIA average weekly retail diesel price fell 6 cts to $6.292/gallon, effective Monday and published Tuesday, FreightWaves reported. December ULSD futures settled Monday at $4.4216/g, and Brent fell 10.94% on hopes of U.S.-Israel-Iran talks.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "The weekly benchmark used for most fuel surcharges is 6 cts/g lower at $6.292/gallon. Carrier surcharge tables were not part of the report.",
+  "why": "The EIA weekly diesel average is the benchmark behind most fuel surcharges, and futures volatility could move it in coming weeks.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T19:16:26Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/benchmark-diesel-price-is-down-so-is-futures-market-in-a-big-way",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/benchmark-diesel-price-is-down-so-is-futures-market-in-a-big-way"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "syn": "The Department of Energy/Energy Information Administration average weekly retail diesel price fell 6 cts to $6.292/gallon, effective Monday and published Tuesday, according to FreightWaves. Futures fell much more on Monday: December ULSD settled at $4.4216/g, the lowest settlement since October 6, while Brent fell 10.94% and West Texas Intermediate 7.36% on hopeful news about U.S., Israel and Iran negotiations. FreightWaves said the retail price would not yet reflect that drop, and that Tuesday's report of the sides being 'far from a deal' sent ULSD back up 8.94 cts/g to $4.5110/g at about 11:30 a.m.",
+  "aff": [
+   {
+    "who": "Shippers paying diesel-indexed fuel surcharges",
+    "what": "The benchmark price used for most fuel surcharges fell 6 cts/g to $6.292/gallon, effective Monday."
+   },
+   {
+    "who": "Diesel futures market",
+    "what": "December ULSD settled at $4.4216/g Monday, down 25.45 cts/g from the prior day for that contract."
+   },
+   {
+    "who": "Oil price outlook",
+    "what": "Goldman Sachs raised its December Brent forecast to $105/b from $90, per FreightWaves."
    }
   ]
  },
@@ -1163,6 +1287,63 @@
    {
     "who": "FedEx customers",
     "what": "Stripe to add over 50 new payment methods globally."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a6077c6ca1c53",
+  "date": "2026-10-31",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Philadelphia bill would tax sidewalk robot deliveries, driverless freight",
+  "sum": "Philadelphia Councilmember Jim Harrity has proposed charging robot delivery operators 50 cents per delivery or 5% of the order's cost, whichever is larger, according to Yahoo Finance. The measure would also tax driverless taxis and add a 3% tax on driverless freight vehicles, and the rates could change in committee, per PhillyVoice.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No charge is in effect. If the bill passes, robot delivery operators in Philadelphia would pay 50 cents per delivery or 5% of the order, whichever is larger.",
+  "why": "The proposal would add a per-delivery charge for robot delivery operators in Philadelphia, though a 2020 state law limits how far the city can regulate the devices.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T19:16:57Z",
+  "src": "CNN",
+  "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec",
+  "srcs": [
+   {
+    "src": "CNN",
+    "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/policy/articles/78-old-arrested-blocking-uber-130000649.html"
+   }
+  ],
+  "auto": true,
+  "thread": "philly-delivery-robot-tax",
+  "upd": 2,
+  "new": "The latest coverage adds the bill's reach to driverless taxis and a 3% tax on driverless freight vehicles, registration and quarterly reporting requirements, and the state-law limits on city authority; it is still a proposal, so nothing changes for shippers yet.",
+  "syn": "Philadelphia Councilmember Jim Harrity has proposed charging robot delivery operators 50 cents per delivery or 5% of the order's cost, whichever is larger, with proceeds to help fund free transit passes for low-income residents, according to Yahoo Finance. The bill would also charge driverless taxis like Waymo $1 per ride or 5% of the fare and add a 3% tax on driverless freight vehicles, with company registration and quarterly reports required. Harrity said it aims to protect jobs and to help cover city wage and business tax revenue the technologies could displace. A 2020 state law, Act 106, gives PennDOT regulatory authority over the devices and bars municipalities from regulating how they operate, with exceptions such as banning them where deemed hazardous.",
+  "aff": [
+   {
+    "who": "Robot delivery operators in Philadelphia",
+    "what": "Would pay 50 cents per delivery or 5% of the order's cost, whichever is larger, and register with the city."
+   },
+   {
+    "who": "Driverless freight vehicles",
+    "what": "Would face a 3% tax under the proposal."
+   },
+   {
+    "who": "Driverless taxi services",
+    "what": "Would pay $1 per ride or 5% of the fare, per Yahoo Finance."
+   },
+   {
+    "who": "Uber Eats robot deliveries",
+    "what": "Robots are run by third-party company Avride, not Uber itself, per Yahoo Finance."
    }
   ],
   "edge": true,
@@ -10107,146 +10288,6 @@
   "auto": true,
   "ann": "2026-10-07",
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a1aa254b64150",
-  "date": "2026-10-07",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Deals & partnerships",
-  "kind": "News",
-  "title": "Stripe and FedEx partner on financing for small businesses",
-  "sum": "Stripe and FedEx said Tuesday in a joint press release that they will combine FedEx's data analytics unit, Dataworks, with Stripe's lending arm to create financing options for small and medium-sized businesses. The companies said they aim to expand access to financing for tens of thousands of such businesses. They said they aim to scale the offering into services by early next year.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to FedEx shipping rates or service. The companies plan financing options for small businesses based on shipment and supply chain data, with services targeted by early next year.",
-  "tie": "The partnership follows Stripe's purchase of embedded financing company Parafin, announced in a Sept. 30 news release, according to Payments Dive.",
-  "act": null,
-  "dates": [],
-  "src": "Payments Dive",
-  "url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368/",
-  "srcs": [
-   {
-    "src": "Payments Dive",
-    "url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a33bc705c98ef",
-  "date": "2026-10-07",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Avride and Sodexo Campus agree to scale delivery robots at US campuses",
-  "sum": "Avride and Sodexo Campus announced an agreement to expand autonomous robot delivery across Sodexo Campus partner colleges and universities in the US. Sodexo Campus works with approximately 425 higher education institutions, and Avride said it has completed more than 600,000 autonomous deliveries.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for parcel shippers. The agreement covers campus food delivery robots at participating Sodexo Campus schools.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Robotics & Automation News",
-  "url": "https://roboticsandautomationnews.com/2026/10/07/avride-and-sodexo-to-scale-delivery-robots-across-us-campuses/105608/",
-  "srcs": [
-   {
-    "src": "Robotics & Automation News",
-    "url": "https://roboticsandautomationnews.com/2026/10/07/avride-and-sodexo-to-scale-delivery-robots-across-us-campuses/105608/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a36eb398124b9",
-  "date": "2026-10-07",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "Analysis",
-  "title": "24/7 Wall St. analysis questions UPS dividend coverage from free cash flow",
-  "sum": "A 24/7 Wall St. analysis says UPS's $6.56 annualized dividend yields about 7.03% at $93.26 a share, and that 2025 dividends paid equaled 113.3% of operating cash flow minus capex. The piece cites management's July 28 call, where UPS said it still plans to pay around $5.4 billion in dividends in 2026, subject to Board approval. The outlet puts forecast free cash flow at approximately $5.5 billion.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The piece is an outside view of UPS's dividend and cash flow, not a carrier announcement.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "24/7 Wall St.",
-  "url": "https://247wallst.com/investing/2026/10/07/ups-the-dividend-yield-is-the-whole-story-and-that-is-the-problem/",
-  "srcs": [
-   {
-    "src": "24/7 Wall St.",
-    "url": "https://247wallst.com/investing/2026/10/07/ups-the-dividend-yield-is-the-whole-story-and-that-is-the-problem/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "a3da056a73eb1",
-  "date": "2026-10-07",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Sereact robots sort Zalando returns at two CEVA sites in Europe",
-  "sum": "Sereact said in an Oct. 7 announcement that its AI-powered robots are sorting returned clothing for Zalando at CEVA Logistics sites in Greven, Germany, and Świebodzin, Poland. The companies called it the first phase of a plan to scale returns automation across Europe. PYMNTS also cited UPS's Happy Returns, Amazon and Walmart as automating parts of returns or fulfillment.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for parcel shippers. Returned fashion items for Zalando are now sorted by robots at two CEVA fulfillment sites in Germany and Poland.",
-  "tie": "Zalando joined Sereact's $116 million Series B round as a strategic investor in July, according to the release.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T18:58:50Z",
-  "src": "PYMNTS.com",
-  "url": "https://www.pymnts.com/news/artificial-intelligence/2026/ai-robots-are-ready-for-whatever-shoppers-send-back/",
-  "srcs": [
-   {
-    "src": "PYMNTS.com",
-    "url": "https://www.pymnts.com/news/artificial-intelligence/2026/ai-robots-are-ready-for-whatever-shoppers-send-back/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a59aef18724ff",
-  "date": "2026-10-07",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Linnworks report: 4.3% of peak 2025 shipments hit unseen surcharge",
-  "sum": "Linnworks published a report analysing almost 70 million consignments from the 2025 peak season in the UK and US, including 68.9 million from 1,671 UK-based sellers. Using Shippo benchmark data, it found 4.3% of shipments triggered a post-purchase surcharge not shown at checkout. Linnworks said many of the same surcharge mechanisms return for peak 2026, some at higher rates.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service from the report itself. Linnworks said some peak 2026 surcharges are already confirmed at higher levels than in 2025.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Insight DIY",
-  "url": "https://www.insightdiy.co.uk/news/linnworks-report-highlights-hidden-cost-of-peak-season-shipping-for-retailers/16908.htm",
-  "srcs": [
-   {
-    "src": "Insight DIY",
-    "url": "https://www.insightdiy.co.uk/news/linnworks-report-highlights-hidden-cost-of-peak-season-shipping-for-retailers/16908.htm"
-   }
-  ],
-  "auto": true,
   "exclusive": true
  }
 ]
