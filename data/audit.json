@@ -1,5 +1,5 @@
 {
- "run": "2026-11-02T23:44Z",
+ "run": "2026-11-03T00:19Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -159,6 +159,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "feed-dead",
+   "msg": "1 news feeds failing or empty: SEC: UPS 8-K",
+   "ids": [],
    "fixed": false
   },
   {
@@ -426,6 +433,13 @@
     "a3623effd6df4",
     "43"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "feed-dead",
+   "msg": "1 news feeds failing or empty: SEC: UPS 8-K",
+   "ids": [],
    "fixed": false
   },
   {
