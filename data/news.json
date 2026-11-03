@@ -3550,6 +3550,58 @@
   "exclusive": true
  },
  {
+  "id": "a97f1a35db884",
+  "date": "2026-10-27",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "UPS raises 2026 forecasts, expects fourth-quarter volume down 1.3%",
+  "sum": "UPS raised its 2026 revenue and adjusted profit forecasts after third-quarter results on Oct. 27, Reuters reported. The company expects total average daily volume to fall 1.3% in the fourth quarter as it becomes more selective about the packages it delivers. CEO Carol Tome said the focus on more lucrative business lets UPS earn more on slightly fewer packages.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "The sources describe no change to UPS rates or service for shippers. UPS expects slightly lower fourth-quarter volume as it focuses on more profitable packages.",
+  "why": "UPS is the largest parcel carrier, and its fourth-quarter plan for lower volume and higher revenue per parcel shapes holiday capacity.",
+  "score": 5,
+  "tie": "UPS said it completed its Amazon delivery reductions in the second quarter, and the July forecast it has now raised was $7.22 per share.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T23:03:14Z",
+  "src": "Central Oregon Daily",
+  "url": "https://www.centraloregondaily.com/news/consumer/united-parcel-service-expects-fatter-holiday-profits-on-slightly-slimmer-volume/article_767d6715-8af0-565b-ac18-31bc8677400f.html",
+  "srcs": [
+   {
+    "src": "Central Oregon Daily",
+    "url": "https://www.centraloregondaily.com/news/consumer/united-parcel-service-expects-fatter-holiday-profits-on-slightly-slimmer-volume/article_767d6715-8af0-565b-ac18-31bc8677400f.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-27",
+  "syn": "UPS raised its annual forecasts after third-quarter earnings on Oct. 27, according to Reuters. It now expects 2026 adjusted profit of around $7.28 per share, up from $7.22 forecast in July, and revenue of $92.6 billion, up from $91.2 billion. Total average daily volume is expected to fall 1.3% in the fourth quarter as UPS becomes more selective, after it cut deliveries of unprofitable packages for Amazon, its largest customer. Executives said a widening gap between cost per parcel and revenue per parcel will improve margins.",
+  "aff": [
+   {
+    "who": "UPS fourth-quarter volume",
+    "what": "Total average daily volume is expected to be down 1.3% as UPS becomes more selective."
+   },
+   {
+    "who": "UPS domestic and international revenue",
+    "what": "Executives forecast a roughly 3% rise in domestic revenue and an estimated 7% rise in international revenue."
+   },
+   {
+    "who": "UPS full-year outlook",
+    "what": "Adjusted profit forecast is around $7.28 per share and revenue $92.6 billion for 2026."
+   },
+   {
+    "who": "Amazon deliveries",
+    "what": "UPS said it completed its Amazon delivery reductions in the second quarter."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-03",
+  "unconf": true
+ },
+ {
   "id": "aa3051ff662bd",
   "date": "2026-10-27",
   "c": [
@@ -4032,6 +4084,10 @@
    {
     "src": "Supply Chain Dive",
     "url": "https://www.supplychaindive.com/news/usps-to-debut-weekly-fuel-fee-in-2027-matching-fedex-ups-practices/872778/"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/policy/articles/usps-putting-permanent-gas-surcharge-153000765.html"
    }
   ],
   "auto": true,
@@ -10412,34 +10468,6 @@
   ],
   "auto": true,
   "new": "Amazon said it is adding Tracy to a 500-city Prime Air expansion, with fees of $2.99 to $4.99 on smaller orders, so shippers and retailers in the area face another drone delivery competitor operating under existing waivers or certificates.",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a065c14c4ccd7",
-  "date": "2026-10-07",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "UPS routed F-35 parts through Hong Kong in error, Bloomberg reports",
-  "sum": "UPS mistakenly routed sensitive components from Lockheed Martin's F-35 fighter through Hong Kong, Bloomberg News reported Wednesday, as summarized by Seeking Alpha. An employee failed to see a warning that the shipment was subject to U.S. arms-export restrictions, according to the report.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The report concerns a routing error on a single restricted defense shipment.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Seeking Alpha",
-  "url": "https://seekingalpha.com/news/4651173-ups-error-routed-sensitive-fminus-35-parts-through-hong-kong",
-  "srcs": [
-   {
-    "src": "Seeking Alpha",
-    "url": "https://seekingalpha.com/news/4651173-ups-error-routed-sensitive-fminus-35-parts-through-hong-kong"
-   }
-  ],
-  "auto": true,
   "edge": true,
   "exclusive": true
  }

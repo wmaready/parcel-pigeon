@@ -131,6 +131,29 @@
  {
   "carrier": "UPS",
   "year": 2027,
+  "kind": "gri",
+  "announced": "2026-11-01",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS 2027 Small Business Rates guide raises Next Day Air Early rates",
+  "details": [
+   "UPS replaced the 2026 Small Business Rates guide (effective January 26, 2026) with a 2027 rate table",
+   "Every Next Day Air Early cell compared is higher than in the 2026 guide",
+   "Zone 102 letter rate rose from $46.75 to $47.50",
+   "5 lb Zone 106 rate rose from $82.00 to $84.34",
+   "Increase in compared cells ranges from $0.75 (Zone 102 letter) to $9.66 (heavy Zone 107/108 packages)"
+  ],
+  "id": "ups-2027-gri-2026-11-01",
+  "sources": [
+   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+  ],
+  "story": "wf5014bc150e9",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2027,
   "kind": "price_change",
   "announced": null,
   "effective": "2026-12-21",
@@ -528,6 +551,28 @@
   "id": "fedex-2026-surcharge-2026-03-05"
  },
  {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-11-02",
+  "pct": null,
+  "headline": "FedEx adds U.S. import Demand Surcharge for Vietnam-origin shipments",
+  "details": [
+   "New Vietnam-to-U.S. surcharge of $0.36 per lb. for priority-class services",
+   "New Vietnam-to-U.S. surcharge of $0.27 per lb. for economy-class services",
+   "Effective Nov. 2, 2026"
+  ],
+  "id": "fedex-2026-surcharge-2026-11-02",
+  "sources": [
+   "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
+  ],
+  "story": "w0b8720b6a0e7",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
   "carrier": "Industry",
   "year": 2026,
   "kind": "policy",
@@ -745,6 +790,29 @@
  {
   "carrier": "UPS",
   "year": 2026,
+  "kind": "fuel_table",
+  "announced": "2026-11-03",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS raises fuel surcharge extension price thresholds for diesel and jet fuel tables",
+  "details": [
+   "Diesel-indexed table extension threshold moved from $4.99 to $5.80 (+$0.81)",
+   "Jet-fuel-indexed table extension threshold moved from $3.01 to $3.56 (+$0.55)",
+   "Increment sizes unchanged: 0.25% surcharge steps; $0.09/$0.27 diesel and $0.05/$0.21 jet price ranges",
+   "No effective date stated",
+   "Rate year not stated in the story; year set from the announcement date"
+  ],
+  "id": "ups-2026-fuel-table-2026-11-03",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+  ],
+  "story": "wf7fe771e76cd",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
   "kind": "gri",
   "announced": "2025-10-31",
   "effective": "2025-12-22",
@@ -931,6 +999,30 @@
   "conf": "partial",
   "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
   "id": "ups-2026-surcharge-2026-05-31"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": "2026-10-23",
+  "effective": "2026-12-21",
+  "pct": null,
+  "headline": "New origin-ZIP surcharge on UPS Ground and Ground Saver for Qualified customers; amount not released",
+  "details": [
+   "Applies to Ground and Ground Saver packages shipped from certain origin ZIP codes",
+   "Applies to Qualified customers",
+   "Effective December 21, 2026 or later",
+   "Amount, origin ZIPs and qualifying criteria not yet published",
+   "Details were due in early November",
+   "Not included in the 2027 rate and surcharge documents posted October 30"
+  ],
+  "id": "ups-2026-surcharge-2026-12-21",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+  ],
+  "story": "ups-origin-zip-surcharge",
+  "conf": "confirmed",
+  "auto": true
  },
  {
   "carrier": "USPS",
