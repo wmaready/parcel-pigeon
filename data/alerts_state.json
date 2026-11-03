@@ -124,7 +124,8 @@
   "ade0362073c48",
   "a1d4d1ad40132",
   "a6f1220bef28a",
-  "a40c99078f690"
+  "a40c99078f690",
+  "w0b8720b6a0e7"
  ],
  "clock": [
   "e06:7",
@@ -520,57 +521,59 @@
   "fedex ceo shifts focus from commodity parcels thestreet anal",
   "yamato holdings plans price talks with big clients as it shi",
   "op ed healthcare audit lessons apply to parcel billing execu",
-  "benchmark diesel price falls 6 cts to 6 292 gal as futures s"
+  "benchmark diesel price falls 6 cts to 6 292 gal as futures s",
+  "fedex raises u s import demand surcharge for europe and isra"
  ],
  "harvested": [
+  "a72efb5e01b99",
   "wdf959a97bcb6",
-  "w8465aa718dc6",
-  "w91588ddb11ed",
-  "w500a5bdc762c",
+  "ac78f72e7f458",
+  "a89d7e4beebd9",
+  "a999409ce7860",
+  "w0b8720b6a0e7",
+  "a3a45d7f6db20",
+  "a2def09bc43bb",
+  "wacb825361479",
+  "rv5-ups-sbr-fuel",
+  "wf7fe771e76cd",
+  "a6e82ba740e99",
   "a663794cc9c55",
   "wb8827e8c126e",
-  "a0adb56a55334",
-  "ac78f72e7f458",
   "aba40a11b6946",
-  "a5d45f26f2219",
-  "a72efb5e01b99",
-  "a2b81ad721cb8",
-  "wf5014bc150e9",
-  "a567030ffc76c",
-  "afd8784e2b179",
-  "a351cab9045c7",
-  "wa9c423a83880",
-  "w68c1687d28a1",
-  "w150132868eae",
-  "wacb825361479",
-  "w84705482dd2f",
-  "a6cc2420ad66e",
   "a57a06c26359c",
-  "a6e82ba740e99",
-  "a773d361dac4e",
-  "a9b77b62dcd89",
-  "w599d9089a65d",
-  "a6ba18049bc99",
-  "a89f005fb1862",
-  "a3a45d7f6db20",
-  "a2f683da86bf8",
-  "a89d7e4beebd9",
-  "a6c2418bed0a7",
-  "a999409ce7860",
-  "aee6669d325da",
-  "a40c99078f690",
+  "a2b81ad721cb8",
+  "wa9c423a83880",
+  "a0adb56a55334",
+  "a5d45f26f2219",
   "w9c03b8f99b5f",
   "a15404304f17b",
-  "wbfc38914b368",
-  "a2def09bc43bb",
-  "ae2ec177094e3",
-  "af8ee5ed067c6",
-  "a260cc6a2e05e",
-  "a312b45efa358",
-  "rv5-ups-sbr-fuel",
-  "a58373f1b7bc3",
-  "wf7fe771e76cd",
+  "a773d361dac4e",
+  "a6ba18049bc99",
   "a82e057190718",
+  "w500a5bdc762c",
+  "wf5014bc150e9",
+  "w599d9089a65d",
+  "wbfc38914b368",
+  "w84705482dd2f",
+  "a6c2418bed0a7",
+  "w91588ddb11ed",
+  "af8ee5ed067c6",
+  "a58373f1b7bc3",
+  "w68c1687d28a1",
+  "a312b45efa358",
+  "w150132868eae",
+  "a567030ffc76c",
+  "a6cc2420ad66e",
+  "a260cc6a2e05e",
+  "afd8784e2b179",
+  "a89f005fb1862",
+  "aee6669d325da",
+  "a40c99078f690",
+  "a9b77b62dcd89",
+  "ae2ec177094e3",
+  "w8465aa718dc6",
+  "a2f683da86bf8",
+  "a351cab9045c7",
   "a831c709e5809"
  ],
  "backfilled": true,
@@ -2523,6 +2526,25 @@
      "url": "https://www.freightwaves.com/news/benchmark-diesel-price-is-down-so-is-futures-market-in-a-big-way"
     }
    ]
+  },
+  {
+   "id": "w0b8720b6a0e7",
+   "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
+   "date": "2026-11-03",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+   "srcs": [
+    {
+     "src": "FedEx Demand surcharges",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
+    },
+    {
+     "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2897,9 +2919,30 @@
   "a40c99078f690": {
    "t": "Diesel benchmark down 6c to $6.292",
    "m": "Weekly benchmark behind most fuel surcharges. Carrier surcharge tables were not in the report."
+  },
+  "w0b8720b6a0e7": {
+   "t": "FedEx raises import demand surcharge",
+   "m": "Importers from Europe or Israel pay $0.03 more per lb.; Vietnam added. Takes effect Nov 2."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:fedex raises u s import demand surcharge for europe and israel adds vietnam",
+   "id": "w0b8720b6a0e7",
+   "t": "FedEx raises import demand surcharge",
+   "m": "Importers from Europe or Israel pay $0.03 more per lb.; Vietnam added. Takes effect Nov 2.",
+   "big": false,
+   "at": "2026-11-03T15:02:14.079307-05:00",
+   "lvl": 2,
+   "unconf": false,
+   "topic": "rates",
+   "notable": true,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=w0b8720b6a0e7",
+   "co": "FedEx"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-11-03",

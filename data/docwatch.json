@@ -1,5 +1,5 @@
 {
- "cursor": 47,
+ "cursor": 62,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 344,
+   "fails": 345,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 344,
+   "fails": 345,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -2129,6 +2129,12 @@
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22409.pdf",
     "txt": "data/snapshots/c0747e042d57/2026-11-03.txt"
    }
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf": {
+   "first": "2026-11-03",
+   "n": "11-2-26_US-Import-Demand-Surcharges.pdf",
+   "hash": "d1897b4b71f9",
+   "checked": "2026-11-03"
   }
  }
 }

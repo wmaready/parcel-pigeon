@@ -1,5 +1,106 @@
 [
  {
+  "status": "not material",
+  "date": "2026-11-03",
+  "page": "https://www.ontrac.com/surchargesandrates/",
+  "verdicts": "cosmetic"
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w0b8720b6a0e7",
+   "date": "2026-11-03",
+   "c": [
+    "FedEx"
+   ],
+   "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
+   "sum": "FedEx's U.S. import Demand Surcharge for Europe and Israel origins rises from $0.25 to $0.28 per lb. for parcel and freight, effective Nov. 2, 2026 until further notice. The same date brings a new Vietnam-to-U.S. surcharge of $0.36 per lb. for the priority-class services and $0.27 per lb. for the economy-class services. The $0.25 rate now applies only through Nov. 1, 2026. All other listed origins keep their rates.",
+   "plain": "Importers shipping from Europe or Israel to the U.S. pay $0.03 more per lb. from Nov. 2. Vietnam-origin U.S. imports now carry a per-lb. demand surcharge. The $1 parcel and $50 freight minimums are unchanged.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-11-02",
+   "inferred": null,
+   "detected": "2026-11-03",
+   "changes": [
+    {
+     "what": "Europe-to-U.S. Demand Surcharge, parcel and freight",
+     "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
+     "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
+     "effective": "2026-11-02",
+     "who": "U.S. import parcel and freight shipments originating in Europe",
+     "impact": "$0.25 -> $0.28, +$0.03 per lb."
+    },
+    {
+     "what": "Israel-to-U.S. Demand Surcharge, parcel and freight",
+     "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
+     "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
+     "effective": "2026-11-02",
+     "who": "U.S. import parcel and freight shipments originating in Israel",
+     "impact": "$0.25 -> $0.28, +$0.03 per lb."
+    },
+    {
+     "what": "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
+     "before": null,
+     "after": "$0.36 per lb. (priority-class services) and $0.27 per lb. (economy-class services), effective Nov. 2, 2026 until further notice",
+     "effective": "2026-11-02",
+     "who": "U.S. import shipments originating in Vietnam",
+     "impact": "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "Whether the page and document date change (Sept. 4 to Oct. 23, 2026) reflects any other edits is not confirmed.",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-02",
+     "w": "FedEx: Europe-to-U.S. Demand Surcharge, parcel and freight",
+     "imp": "up",
+     "fees": [
+      [
+       "FedEx",
+       "Israel-to-U.S. Demand Surcharge, parcel and freight",
+       "$0.25 -> $0.28, +$0.03 per lb."
+      ],
+      [
+       "FedEx",
+       "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
+       "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "FedEx Demand surcharges (spotted by Parcel Pigeon)",
+   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+   "srcs": [
+    {
+     "src": "FedEx Demand surcharges",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
+    },
+    {
+     "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (11-2-26_US-Import-Demand-Surcharges.pdf), cosmetic",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+      "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
   "status": "published",
   "story": {
    "id": "wf7fe771e76cd",

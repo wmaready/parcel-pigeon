@@ -182,16 +182,20 @@
   "pend": "4d341f89308d"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "checked": "2026-11-01",
+  "checked": "2026-11-03",
   "pdfs": [
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf"
   ],
   "lines": 52,
   "told": [],
-  "pend": "a4d0d79d82ea",
-  "fail_runs": 6
+  "told2": [
+   "5f7b3533a2ed",
+   "525ba7c8e519",
+   "635a86987c63"
+  ],
+  "told_until": "2026-12-03"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-03",
@@ -259,8 +263,7 @@
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf"
   ],
   "lines": 109,
-  "told": [],
-  "pend": "7c7e09c6014f"
+  "told": []
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-03",
