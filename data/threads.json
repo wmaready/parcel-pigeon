@@ -336,14 +336,14 @@
  },
  "usps-leadership": {
   "n": "USPS Postmaster General turnover",
-  "s": "David Steiner has been Postmaster General since July 2025; a Reuters report in September 2026 said he wants to step down, which USPS denied.",
+  "s": "The source still identifies David Steiner as Postmaster General and CEO as of November 2, 2026, and reports no resignation.",
   "ids": [
    "h506",
    "h515",
    "36"
   ],
   "first": "2025-03-24",
-  "last": "2026-10-07",
+  "last": "2026-11-02",
   "c": [
    "USPS"
   ],
@@ -360,7 +360,8 @@
   "apart": [
    "usps-big-shipper-deals",
    "usps-finances"
-  ]
+  ],
+  "co": "USPS"
  },
  "usps-service-network": {
   "n": "USPS service standards and processing changes",
@@ -513,7 +514,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is expanding Prime Air toward nearly 500 cities and towns by the end of 2026, while the FAA's Part 108 rule had not been published as of Oct. 9.",
+  "s": "Walmart and Wing are expanding drone delivery to more metros, while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
@@ -521,30 +522,26 @@
    "a94cd39741afc",
    "af529411b3b18",
    "a86fd472c4cfb",
-   "a4c5211e7180f",
    "ad354637eaab5",
    "a8f4d2b454015"
   ],
   "first": "2025-03-31",
-  "last": "2026-10-30",
+  "last": "2026-11-02",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "228359915158",
+   "sig": "f7035f5de3e5",
    "v": 3,
    "beats": {
-    "g27": "Amazon plans to grow Prime Air from 11 U.S. locations to almost 500 towns, at $2.99 for Prime members ($4.99 for others).",
-    "a60770e8e9c32": "Wing and Walmart add Denver and Seattle in 2027, nearing 20 metros; more than three million customers already have access.",
-    "g26": "Part 108 went to White House review July 10 but was unpublished as of Oct. 9; until then, BVLOS needs waivers or Part 135.",
-    "ad354637eaab5": "Near Chicago, Amazon's Markham center runs about 21 drones (up to 5 lbs, 8 miles); some residents cite noise and safety.",
-    "a4c5211e7180f": "Amazon launched Prime Air in Nampa, Idaho on Oct. 30, using MK-30 drones within 7.5 miles, daytime only."
+    "g27": "Amazon said Prime Air would reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations. Fees start at $2.99."
    },
-   "intro": "Drone delivery is spreading to more metros, but the FAA's Part 108 rule is still unpublished."
+   "intro": "Drone delivery is spreading to more towns, but the FAA's Part 108 rule is still unpublished. Shippers watch it for scale.",
+   "now": "As of Oct. 9, Part 108 was still unpublished, so waivers or Part 135 certificates remain the route for routine BVLOS delivery."
   },
-  "rv": "198da5af7896",
+  "rv": "e5a61a88bcea",
   "co": "Amazon",
   "apart": [
    "amazon-jfk8-nlrb",
@@ -743,6 +740,7 @@
   "n": "Splintering of eCommerce parcel from B2B/Premium parcel",
   "s": "UPS has cut Amazon volume by more than half and FedEx has spun off Freight and sold Supply Chain, while GOFO, Veho, OnTrac and other alternative carriers keep expanding. UniUni's go-public deal was terminated on Oct. 20.",
   "ids": [
+   "rv5-fedex-freight-spin-done",
    "h404",
    "h417",
    "h501",
@@ -758,17 +756,17 @@
    "18",
    "60",
    "g09",
-   "rv5-fedex-freight-spin-done",
    "nrf79508",
    "54",
    "52",
    "a66617050d4e9",
    "afb6fa67940a7",
    "ups-origin-zip-surcharge",
-   "a9077d9364cd5"
+   "a9077d9364cd5",
+   "a089340bc097e"
   ],
   "first": "2024-02-21",
-  "last": "2026-10-29",
+  "last": "2026-11-03",
   "c": [
    "Amazon",
    "DHL",
@@ -781,7 +779,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "ee732ee4f2a3",
+   "sig": "5562eb51bd75",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -806,7 +804,8 @@
     "a66617050d4e9": "Analysts disagree on whether UPS's stated focus on premium and logistics services means it will leave parts of parcel delivery.",
     "afb6fa67940a7": "MAK terminated the UniUni purchase agreement on Oct. 20; the planned go-public deal will not proceed.",
     "ups-origin-zip-surcharge": "UPS flags a new Ground and Ground Saver surcharge for certain origin ZIPs from Dec. 21; amount and ZIPs aren't published.",
-    "a9077d9364cd5": "Reportedly, NextSmartShip's CEO argues brands can mix China and U.S. fulfillment post-de minimis; it's opinion, no new rule."
+    "a9077d9364cd5": "Reportedly, NextSmartShip's CEO argues brands can mix China and U.S. fulfillment post-de minimis; it's opinion, no new rule.",
+    "a089340bc097e": "CMA CGM closed its $1.4 billion FedEx Supply Chain purchase (closing date Oct. 1), with multi-year ocean and air freight deals alongside."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
    "now": "Details are due in early November. The surcharge wasn't in the 2027 rate documents UPS posted Oct. 30, and it starts Dec. 21, 2026 or later."
@@ -950,5 +949,33 @@
    "usps-service-network"
   ],
   "rv": "0564ccfc2ad3"
+ },
+ "canada-post-home-delivery-ending": {
+  "n": "Canada Post ends home delivery",
+  "ids": [
+   "ad1631e1cb62c"
+  ],
+  "first": "2026-11-03",
+  "co": "Canada Post",
+  "s": "Canada Post has published a GTA conversion schedule running from late 2026 to 2031, with accommodation program criticism ongoing.",
+  "last": "2026-11-03",
+  "c": [
+   "Regional"
+  ],
+  "rv": "64f60d7446bb"
+ },
+ "philly-delivery-robot-tax": {
+  "n": "Philadelphia delivery robot fee",
+  "ids": [
+   "a6077c6ca1c53"
+  ],
+  "first": "2026-10-31",
+  "co": "Uber Eats",
+  "s": "Councilmember Jim Harrity proposed a per-delivery robot fee in early November 2026; the bill is in committee and rates could change.",
+  "last": "2026-10-31",
+  "c": [
+   "Industry"
+  ],
+  "rv": "b33f887cc707"
  }
 }

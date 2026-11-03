@@ -1,5 +1,55 @@
 [
  {
+  "id": "a089340bc097e",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "CMA CGM completes $1.4 billion purchase of FedEx Supply Chain",
+  "sum": "CMA CGM Group completed its acquisition of FedEx Supply Chain from FedEx Corp. for an enterprise value of $1.4 billion, according to Logistics Manager. CMA CGM and FedEx also executed multi-year commercial agreements covering ocean and air freight.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to FedEx parcel rates or service is stated. FedEx Supply Chain warehouse operations move to CMA CGM's logistics unit, CEVA Logistics.",
+  "why": "The deal nearly triples CEVA's North American contract logistics footprint and ties CMA CGM to FedEx through ocean and air freight agreements.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T13:30:23Z",
+  "src": "LM - Logistics Manager",
+  "url": "https://logistics-manager.com/cma-cgm-completes-1-4-billion-acquisition-of-fedex-supply-chain-and-enters-strategic-freight-partnership/",
+  "srcs": [
+   {
+    "src": "LM - Logistics Manager",
+    "url": "https://logistics-manager.com/cma-cgm-completes-1-4-billion-acquisition-of-fedex-supply-chain-and-enters-strategic-freight-partnership/"
+   }
+  ],
+  "auto": true,
+  "syn": "CMA CGM Group has completed its acquisition of FedEx Supply Chain from FedEx Corp. for an enterprise value of $1.4 billion, Logistics Manager reported. The purchase nearly triples the North American contract logistics footprint of CMA CGM's logistics subsidiary, CEVA Logistics, adding about 34 million square feet of warehouse space across 150 facilities. CMA CGM becomes a preferred non-exclusive ocean carrier for FedEx, and the companies plan an air freight capacity-sharing agreement on long-haul lanes such as Asia–Europe.",
+  "aff": [
+   {
+    "who": "CEVA Logistics",
+    "what": "Adds about 34 million square feet across 150 facilities; reaches more than 240 North American locations."
+   },
+   {
+    "who": "Workforce",
+    "what": "Nearly 10,000 former FedEx Supply Chain team members join a combined workforce of approximately 20,000."
+   },
+   {
+    "who": "FedEx ocean freight",
+    "what": "CMA CGM becomes a preferred non-exclusive ocean carrier for FedEx containerized freight."
+   },
+   {
+    "who": "Asia–Europe air cargo",
+    "what": "The companies plan an air freight capacity-sharing agreement on major long-haul lanes."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a567030ffc76c",
   "date": "2026-11-03",
   "c": [
@@ -43,6 +93,121 @@
     "what": "New five-times-weekly connection from Asia Pacific via Anchorage."
    }
   ],
+  "exclusive": true
+ },
+ {
+  "id": "a9b77b62dcd89",
+  "date": "2026-11-03",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "USPS says it is ready for 2026 peak with 164 new sorting machines",
+  "sum": "USPS said on Nov. 3, 2026 that it is prepared for the holiday season, citing 673 package sorting machines added over six years, 164 of them this year. It plans to hire a little more than 10,000 seasonal employees, down from 40,000 a few years ago. USPS said it delivered mail and packages in 2.5 days on average in 2025.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service levels was announced. USPS said Ground Advantage, Priority Mail and Priority Mail Express remain available during the holidays.",
+  "why": "USPS is cutting seasonal hiring to about 10,000 from 40,000 while adding sorting capacity, which shows how it plans to handle peak parcel volume.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T13:31:14Z",
+  "src": "USPS",
+  "url": "https://news.usps.com/2026/11/03/usps-is-geared-up-to-deliver-for-the-holidays/",
+  "srcs": [
+   {
+    "src": "USPS",
+    "url": "https://news.usps.com/2026/11/03/usps-is-geared-up-to-deliver-for-the-holidays/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-03",
+  "syn": "USPS announced on Nov. 3, 2026 that it is prepared for the holiday peak, pointing to investment in technology and infrastructure. Postmaster General David Steiner said USPS has enough capacity for peak season. USPS said it added 673 package sorting machines over six years, including 164 this year, and will hire a little more than 10,000 seasonal employees, down from 40,000 a few years ago. It also cited new tracking, facilities, vehicles and returns options.",
+  "aff": [
+   {
+    "who": "Package processing",
+    "what": "673 sorting machines added in six years, including 164 this year, per USPS."
+   },
+   {
+    "who": "Seasonal staffing",
+    "what": "USPS will hire a little more than 10,000 seasonal employees, versus 40,000 a few years ago."
+   },
+   {
+    "who": "Package tracking",
+    "what": "New platform is nearly four times faster and can update within a minute of scanning, USPS said."
+   },
+   {
+    "who": "Returns",
+    "what": "31,000+ retail drop-off locations, 3,000+ kiosks and free carrier pickup are available, USPS said."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "ad1631e1cb62c",
+  "date": "2026-11-03",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Canada Post publishes schedule to end GTA home delivery through 2031",
+  "sum": "Canada Post has released a schedule for converting Greater Toronto Area neighbourhoods from home delivery to community mailboxes, according to the Toronto Star. The earliest conversions, covering 18,000 Etobicoke addresses, take effect later this month, and the last areas are scheduled for 2031. Canada Post also said it will begin weekend parcel delivery to community mailboxes and post offices in the GTA this weekend.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "GTA addresses will move from home delivery to community mailboxes in phases, starting later this month in northwestern Etobicoke and ending in 2031. Weekend parcel delivery to community mailboxes and post offices in the GTA begins this weekend.",
+  "why": "Canada Post is moving the four million homes that still get door delivery to community mailboxes, with GTA areas converting in stages through 2031.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [
+   {
+    "d": "2027-01-01",
+    "w": "Canada Post converts parts of Durham and Peel to community mailboxes",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2031-01-01",
+    "w": "Canada Post converts downtown Toronto and North York areas",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-03T13:30:55Z",
+  "src": "Toronto Star",
+  "url": "https://www.thestar.com/business/canada-post-is-ending-home-delivery-in-toronto-use-our-interactive-map-to-see-when-your-area-changes/article_75576656-978b-4775-85a5-f334d25b0776.html",
+  "srcs": [
+   {
+    "src": "Toronto Star",
+    "url": "https://www.thestar.com/business/canada-post-is-ending-home-delivery-in-toronto-use-our-interactive-map-to-see-when-your-area-changes/article_75576656-978b-4775-85a5-f334d25b0776.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-03",
+  "thread": "canada-post-home-delivery-ending",
+  "syn": "Canada Post has issued a full schedule for converting Greater Toronto Area neighbourhoods from home delivery to community mailboxes, the Toronto Star reported. The earliest conversions, in northwestern Etobicoke, take effect later this month and cover 18,000 addresses announced in March. Parts of Durham and Peel regions follow in 2027, and dense downtown and North York areas are scheduled last, in 2031. Canada Post said the order reflects national planning, operational requirements and logistical considerations rather than a single geographic criterion. The conversions follow federal approval in September 2025 of a restructuring that includes ending home delivery for the four million homes that still receive it.",
+  "aff": [
+   {
+    "who": "Etobicoke addresses",
+    "what": "18,000 addresses in northwestern Etobicoke convert to community mailboxes, with the first changes taking effect later this month."
+   },
+   {
+    "who": "Durham and Peel residents",
+    "what": "Parts of Pickering, Ajax, Mississauga and Brampton are scheduled to convert in 2027."
+   },
+   {
+    "who": "Downtown Toronto and North York residents",
+    "what": "The most densely populated areas are scheduled to convert last, in 2031."
+   },
+   {
+    "who": "GTA parcel recipients",
+    "what": "Weekend parcel delivery to community mailboxes and post offices begins in the GTA this weekend."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -92,7 +257,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
  },
  {
@@ -192,18 +357,18 @@
    "Industry"
   ],
   "cat": "Peak season",
-  "kind": "Analysis",
-  "title": "Industry analysis projects 2.4 billion peak-season parcels, up 4%",
-  "sum": "Parcel carriers will deliver about 2.4 billion packages this peak season, up 4% from a year earlier, according to an industry analysis reported by FreightWaves on Nov. 2, 2026. An extra shopping day aids the increase. The volume would be the highest for the industry since 2022.",
+  "kind": "News",
+  "title": "Peak-season parcel volume seen up 4% at 2.4 billion packages",
+  "sum": "Carriers will deliver about 2.4 billion packages this peak season, up 4% from a year earlier, according to an industry analysis cited by FreightWaves on Nov. 2, 2026. The projected volume would be the highest since 2022. Retailers' parcel shipping rates are 16% higher than last year, according to the same report.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No new rate change takes effect. Retailers are paying about 16% more for parcel shipping than a year ago, and FedEx and UPS plan to repeat 5.9% general rate increases in 2027.",
-  "why": "Peak volume is projected at its highest since 2022 while retailers' parcel rates are up 16% year over year, according to the analysis and a freight index.",
-  "score": 7,
+  "plain": "No dated change to rates or service. Shippers face peak volume projected at 2.4 billion packages and parcel rates 16% above last year, according to the analyses cited.",
+  "why": "Peak volume would be the highest since 2022 while shippers' parcel rates are up 16% from last year, per industry analyses.",
+  "score": 6,
   "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-11-02T21:02:29Z",
+  "added": "2026-11-03T13:30:08Z",
   "src": "FreightWaves",
   "url": "https://www.freightwaves.com/news/parcel-shipping-demand-to-increase-4-during-holidays-shipmatrix-says",
   "srcs": [
@@ -213,23 +378,23 @@
    }
   ],
   "auto": true,
-  "syn": "An industry analysis projects about 2.4 billion parcels during the current peak season, up 4% from the same period last year, helped by an extra shopping day. It would be the highest volume since 2022. A freight index puts retailers' parcel shipping rates up 16% year over year, driven by fuel surcharges, new fees and general rate increases. The analysis also shows volume shifting in the first half of 2026: Amazon and FedEx gained while UPS and USPS lost.",
+  "syn": "An industry analysis estimates carriers will deliver about 2.4 billion packages this peak season, up 4% from the same period last year and the most since 2022. An extra shopping day helps the increase, according to the analysis. Retailers' parcel rates are up 16% from last year, driven by fuel surcharges, new fees and general rate increases. Fuel surcharges are about 30% of the transportation rate, according to the TD Cowen/AFS Freight Index. In the first half of 2026, Amazon and FedEx volumes rose while UPS and USPS volumes fell.",
   "aff": [
    {
-    "who": "Retail shippers",
-    "what": "Parcel shipping rates are up 16% from last year, according to the latest freight index."
+    "who": "Peak-season volume",
+    "what": "About 2.4 billion packages expected, up 4% year over year and the highest since 2022."
    },
    {
-    "who": "Fuel surcharge payers",
-    "what": "Fuel surcharges are about 30% of the transportation rate, mostly from formula changes, the index said."
+    "who": "Retail shippers",
+    "what": "Parcel shipping rates are up 16% from last year; fuel surcharges are about 30% of the transportation rate."
    },
    {
     "who": "FedEx and UPS shippers",
-    "what": "Both carriers applied 5.9% general rate increases this year and announced plans to repeat them in 2027."
+    "what": "Both carriers implemented 5.9% general rate increases this year and announced plans to repeat them in 2027."
    },
    {
-    "who": "Peak workforce",
-    "what": "UPS will hire 100,000 seasonal workers (109,000 last year); Amazon 300,000 (up 20%); USPS 10,000."
+    "who": "Carrier volumes, H1 2026",
+    "what": "Amazon up 9.7%, FedEx up 4.6%, UPS down 5.7%, USPS down 3.1%."
    }
   ]
  },
@@ -375,6 +540,57 @@
   "exclusive": true
  },
  {
+  "id": "abd558f62c436",
+  "date": "2026-11-02",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Walmart and Wing open drone delivery ceremony in West Memphis",
+  "sum": "Walmart, Wing and West Memphis, Arkansas officials held a ribbon-cutting Monday for what the city called the Mid-South's first drone delivery service. WREG reported the service was not yet available in West Memphis at about 3 p.m. that day. Standard delivery fees apply per order, and Walmart+ members can get free drone delivery on eligible orders for a limited time, the city said.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Drone delivery was not yet available in West Memphis at about 3 p.m. Monday, WREG reported. Standard fees apply per order, with free delivery for Walmart+ members on eligible orders for a limited time.",
+  "why": "Walmart aims to serve 40 million customers with drone delivery by 2027, and West Memphis is a new market for the Wing partnership.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T13:33:00Z",
+  "src": "WREG.com",
+  "url": "https://wreg.com/news/walmart-brings-drone-delivery-to-west-memphis/amp/",
+  "srcs": [
+   {
+    "src": "WREG.com",
+    "url": "https://wreg.com/news/walmart-brings-drone-delivery-to-west-memphis/amp/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "new": "Walmart and Wing held a ribbon-cutting in West Memphis, Arkansas, though the service was not yet available there that afternoon, so shippers there cannot yet use it.",
+  "syn": "Walmart, Wing Drone Delivery and West Memphis, Arkansas officials held a ribbon-cutting Monday for what the city said is the Mid-South's first drone delivery service. WREG reported that at about 3 p.m. the service was not yet available in West Memphis. Walmart aims to serve 40 million customers with the service by 2027, according to the report. Walmart announced in June that it would bring the service to Memphis, which is listed as a coming-soon location.",
+  "aff": [
+   {
+    "who": "West Memphis customers",
+    "what": "Drone delivery was not yet available in West Memphis at about 3 p.m. Monday; eligibility is checked at wing.com/get-delivery."
+   },
+   {
+    "who": "Walmart+ members",
+    "what": "Free drone delivery on eligible orders for a limited time, the city said."
+   },
+   {
+    "who": "Other Walmart customers",
+    "what": "Standard delivery fees apply per order, the city said."
+   },
+   {
+    "who": "Memphis customers",
+    "what": "Memphis is listed under coming-soon locations on the Wing delivery site."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "ac9066ef18c45",
   "date": "2026-11-02",
   "c": [
@@ -453,8 +669,53 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
+ },
+ {
+  "id": "aeb57c7f2b89f",
+  "date": "2026-11-02",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "Analysis",
+  "title": "Costco expands Uber Eats delivery from 17 states to nationwide",
+  "sum": "Costco said on its fourth-quarter fiscal 2026 earnings call that its Uber Eats partnership has grown from 17 states to nationwide coverage, alongside a broader DoorDash rollout, according to a Zacks Investment Research analysis. Management said digitally enabled sales topped $33 billion in fiscal 2026, up more than 20%.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to shipper rates or service. Costco members can order same-day delivery through Uber Eats nationwide and through a wider DoorDash rollout.",
+  "why": "Costco's same-day delivery now runs through three marketplaces (Uber Eats, DoorDash, Instacart), widening on-demand delivery volume for gig networks.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T13:32:51Z",
+  "src": "The Globe and Mail",
+  "url": "https://www.theglobeandmail.com/investing/markets/stocks/WMT/pressreleases/8596269/can-costcos-doordash-and-uber-eats-expansion-drive-incremental-sales/",
+  "srcs": [
+   {
+    "src": "The Globe and Mail",
+    "url": "https://www.theglobeandmail.com/investing/markets/stocks/WMT/pressreleases/8596269/can-costcos-doordash-and-uber-eats-expansion-drive-incremental-sales/"
+   }
+  ],
+  "auto": true,
+  "syn": "An analysis from Zacks Investment Research, published by The Globe and Mail on Nov. 2, 2026, reports that Costco's Uber Eats partnership expanded from 17 states to nationwide coverage, with a broader rollout of its DoorDash partnership. Costco management said on its fourth-quarter fiscal 2026 earnings call that these sales have been largely incremental and that average delivery times across the three platforms, including Instacart, are under an hour. Management said digitally enabled sales exceeded $33 billion in fiscal 2026, growing more than 20%, and rose 19% in September. The article is an analysis and includes the author's own view of the stock.",
+  "aff": [
+   {
+    "who": "Costco members",
+    "what": "Uber Eats delivery now covers all states, up from 17; the DoorDash partnership is rolling out more widely."
+   },
+   {
+    "who": "Delivery times",
+    "what": "Average delivery across Uber Eats, DoorDash and Instacart is under an hour; most same-day orders can be done in 45 minutes on request."
+   },
+   {
+    "who": "Costco digital sales",
+    "what": "Digitally enabled sales exceeded $33 billion in fiscal 2026, up more than 20%; September rose 19%."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "af46ea22d168d",
@@ -638,6 +899,69 @@
   "exclusive": true
  },
  {
+  "id": "a6077c6ca1c53",
+  "date": "2026-10-31",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Philadelphia councilmember proposes per-delivery fee on sidewalk robots",
+  "sum": "Philadelphia Councilmember Jim Harrity has proposed charging robot operators 50 cents per delivery or 5% of the order's cost, whichever is larger, according to MoneyWise. The proposal follows the October 14 arrest of 78-year-old Carolyn Marvin for blocking an Uber Eats delivery robot, CNN reported.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No fee is in effect. If the Council passes the bill, it would not take effect until January 2028, and the sources do not say whether operators would pass the cost to customers.",
+  "why": "A per-trip fee on robot deliveries would differ from the flat permit fees MoneyWise says most other cities charge, and applies to operators of delivery robots.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [
+   {
+    "d": "2028-01-01",
+    "w": "Proposed Philadelphia robot delivery fee would start if bill passes",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-03T13:34:00Z",
+  "src": "CNN",
+  "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec",
+  "srcs": [
+   {
+    "src": "CNN",
+    "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec"
+   },
+   {
+    "src": "MoneyWise.com",
+    "url": "https://moneywise.com/news/top-stories/philadelphia-robot-delivery-tax-proposal"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-03",
+  "thread": "philly-delivery-robot-tax",
+  "syn": "Philadelphia Councilmember Jim Harrity has proposed a fee on sidewalk delivery robots: 50 cents per delivery or 5% of the order's cost, whichever is larger, with proceeds meant to fund free transit passes for low-income residents, according to MoneyWise. The bill would also charge driverless taxi services $1 per ride or 5% of the fare and add a 3% tax on driverless freight vehicles. It follows the October 14 arrest of retired professor Carolyn Marvin, who was cited for disorderly conduct after blocking an Uber Eats robot, CNN reported. MoneyWise said a 2020 state law, Act 106, limits how municipalities can regulate the devices, and the rates could change in committee.",
+  "aff": [
+   {
+    "who": "Robot delivery operators",
+    "what": "Would pay 50 cents per delivery or 5% of the order, whichever is larger, and register with the city and file quarterly reports."
+   },
+   {
+    "who": "Customers of robot delivery",
+    "what": "A $40 order would carry a $2 fee and an $8 order the 50-cent minimum; the sources do not say if it would be passed on."
+   },
+   {
+    "who": "Driverless taxi and freight services",
+    "what": "Would face $1 per ride or 5% of the fare, and a 3% tax on driverless freight vehicles."
+   },
+   {
+    "who": "Timing",
+    "what": "If passed, the fee would not take effect until January 2028."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a4702db049fcd",
   "date": "2026-10-30",
   "c": [
@@ -718,8 +1042,6 @@
   ],
   "auto": true,
   "ann": "2026-10-30",
-  "thread": "drone-delivery",
-  "upd": 8,
   "new": "Amazon began Prime Air drone deliveries in Nampa on Oct. 30, adding a location to its list of service areas; the source gives no fees, so nothing is stated on price changes for shippers.",
   "exclusive": true
  },
@@ -1463,7 +1785,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
  },
  {
@@ -1652,6 +1974,10 @@
    {
     "src": "FreightWaves",
     "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/amazon-retailers-paid-more-for-freight-in-3q"
    }
   ],
   "auto": true,
@@ -1851,7 +2177,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
  },
  {
@@ -3177,7 +3503,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
  },
  {
@@ -7994,6 +8320,56 @@
   "tried": "2026-10-22"
  },
  {
+  "id": "aaec755626d1e",
+  "date": "2026-10-13",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "Burq publishes 'earned autonomy' doctrine for AI delivery decisions",
+  "sum": "Burq cofounders Salman and Shaban Habib published \"Earned Autonomy: A Deployment Doctrine for AI in the Physical World\" on Oct. 13, according to FreightWaves. It says AI should start each business segment with no authority and gain more only on evidence from live orders, with a person signing off at each step.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. Burq described how retailers can trial its AI in a mode that leaves operations unchanged.",
+  "why": "Burq's software picks among fleet, gig, parcel, LTL and drone delivery, so how retailers hand AI that authority bears on carrier routing decisions.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T13:33:08Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-13",
+  "syn": "Burq cofounders Salman and Shaban Habib published \"Earned Autonomy: A Deployment Doctrine for AI in the Physical World\" on Oct. 13, the first of a series called Intelligence Notes, FreightWaves reported. The doctrine says AI should begin each segment of a business with no authority and earn more only on evidence from live orders, with a person signing off at each step. Burq's software chooses among a retailer's own fleet, gig providers, parcel and LTL carriers, and drones. Salman Habib said the doctrine is already built into a product customers use.",
+  "aff": [
+   {
+    "who": "Retailers evaluating AI delivery software",
+    "what": "Shadow mode logs what Burq's AI would have decided, with operations unchanged, and reports after 30, 60 or 90 days."
+   },
+   {
+    "who": "Dispatchers",
+    "what": "Each segment moves from Manual to Shadow, Review and Autonomous; the retailer sets the bar, such as 90% agreement in Habib's example."
+   },
+   {
+    "who": "Burq customers",
+    "what": "Every decision is logged in a Decision Ledger, one row per order, which customers can export as a CSV file."
+   },
+   {
+    "who": "Burq customers' data",
+    "what": "Customers can choose data used only for their own deliveries or opt in to anonymized network-wide performance data."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "abb1592acae84",
   "date": "2026-10-13",
   "c": [
@@ -9719,274 +10095,6 @@
   "auto": true,
   "thread": "delivery-robot-rules",
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a98427817a41d",
-  "date": "2026-10-07",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Glendale caps sidewalk delivery robots at two operators, 30 robots each",
-  "sum": "The Glendale City Council voted on September 22 to adopt a one-year pilot program, according to Crescenta Valley Weekly and Glendale News-Press. It limits personal delivery device operators to two, each with no more than 30 robots on city sidewalks. Operating agreements require ADA accessibility, a four-foot pedestrian clearance path, liability insurance and monthly data reporting.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "In Glendale, only two sidewalk delivery robot operators can run during the one-year pilot, each with up to 30 robots, under accessibility, insurance and reporting conditions. The sources give no effect on parcel carrier rates or fees.",
-  "tie": "The council voted on March 31 to direct staff to prepare proposals that could include a temporary moratorium on sidewalk delivery robots, according to Restaurant Business Magazine.",
-  "act": null,
-  "dates": [],
-  "src": "Hoodline",
-  "url": "https://hoodline.com/2026/10/glendale-caps-sidewalk-delivery-robots-at-60-after-months-of-ada-complaints/",
-  "srcs": [
-   {
-    "src": "Hoodline",
-    "url": "https://hoodline.com/2026/10/glendale-caps-sidewalk-delivery-robots-at-60-after-months-of-ada-complaints/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "a2b81ad721cb8",
-  "date": "2026-10-06",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Fees & rules",
-  "kind": "News",
-  "title": "Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19",
-  "sum": "Poshmark will stop covering any part of the $50 USPS hazardous materials noncompliance fee on October 19, Value Added Resource reported. Sellers have paid $5 since August 1, after the marketplace covered the full $50 when USPS introduced the charge on July 12. Poshmark is directing sellers to remove or cover old HAZMAT markings on reused packaging.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "From October 19, Poshmark sellers whose shipments are flagged for HAZMAT noncompliance will pay the full $50 USPS fee instead of $5.",
-  "tie": "The change follows USPS's July 12 launch of the $50 fee and Poshmark's August 1 move to charge sellers $5 while absorbing $45.",
-  "act": "2026-10-19",
-  "dates": [
-   {
-    "d": "2026-10-19",
-    "w": "Poshmark sellers pay full $50 USPS HAZMAT fee",
-    "imp": "up",
-    "fx": {
-     "t": "fee",
-     "car": "USPS",
-     "items": [
-      [
-       "HAZMAT noncompliance fee on commercial packages",
-       "$50.00",
-       50
-      ]
-     ]
-    }
-   }
-  ],
-  "src": "Value Added Resource",
-  "url": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/",
-  "srcs": [
-   {
-    "src": "Value Added Resource",
-    "url": "https://www.valueaddedresource.net/poshmark-ends-usps-hazmat-fee-protection/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true,
-  "offc": true
- },
- {
-  "id": "a2def09bc43bb",
-  "date": "2026-10-06",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Peak season",
-  "kind": "News",
-  "title": "Adobe forecasts $9.9B in US online spend during Prime Big Deal Days",
-  "sum": "Adobe forecasts consumers will spend $9.9 billion online on Oct. 6 and 7 during Amazon's Prime Big Deal Days, a 9.2% increase from last year's two-day event, according to MediaPost. Adobe expects $95.8 billion in total online spending in October, up 8% from October 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to shipper rates or service. The forecast points to higher online order volume on Oct. 6 and 7, with competing Walmart and Target events running over similar dates.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "MediaPost",
-  "url": "https://www.mediapost.com/publications/article/418508/forecast-amazon-prime-big-deal-days-to-reach-99.html?edition",
-  "srcs": [
-   {
-    "src": "MediaPost",
-    "url": "https://www.mediapost.com/publications/article/418508/forecast-amazon-prime-big-deal-days-to-reach-99.html?edition"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a2f580fcbb2de",
-  "date": "2026-10-06",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "GOFO wins 2026 CSCMP Supply Chain Innovation Award for ATLAS platform",
-  "sum": "GOFO, a last-mile delivery carrier, said it received the 2026 Supply Chain Innovation Award from CSCMP and SupplyChainBrain at CSCMP EDGE 2026 in Nashville on Oct. 6. The award recognizes GOFO ATLAS, its in-house operations platform. GOFO said it delivered more than 100 million parcels in 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service.",
-  "why": "GOFO says its network covers 47 states and over 75% of the U.S. population, so the award concerns a carrier with a sizable footprint among alternative last-mile options.",
-  "score": 3,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T13:09:03Z",
-  "src": "AOL.com",
-  "url": "https://www.aol.com/articles/gofo-wins-2026-cscmp-supply-170700000.html",
-  "srcs": [
-   {
-    "src": "AOL.com",
-    "url": "https://www.aol.com/articles/gofo-wins-2026-cscmp-supply-170700000.html"
-   },
-   {
-    "src": "PR Newswire",
-    "url": "https://www.prnewswire.com/news-releases/gofo-wins-2026-cscmp-supply-chain-innovation-award-302914419.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-06",
-  "exclusive": true
- },
- {
-  "id": "abc292bc10d49",
-  "date": "2026-10-06",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Royal Mail raises parcel prices by up to £1.45 from Oct. 6",
-  "sum": "Royal Mail's parcel price increases took effect Tuesday, Oct. 6, across Standard, Tracked, Special Delivery and Signed For services, according to the Chester Standard. Increases run up to £1.45. The largest is on 1st Class medium parcels up to 20kg, which rise from £15.45 to £16.90. The smallest listed is 25p, on Tracked 48 small parcels up to 2kg (£4.45 to £4.70).",
-  "imp": "up",
-  "lvl": 1,
-  "plain": "Royal Mail customers pay more for Standard, Tracked and Signed For parcels from Oct. 6. Listed rises range from 25p to £1.45 depending on service and weight band. The article gives no figures for Special Delivery.",
-  "tie": null,
-  "act": "2026-10-06",
-  "dates": [],
-  "src": "Chester Standard",
-  "url": "https://www.chesterstandard.co.uk/news/26613752.royal-mail-parcel-delivery-prices-increase-1-45/",
-  "srcs": [
-   {
-    "src": "Chester Standard",
-    "url": "https://www.chesterstandard.co.uk/news/26613752.royal-mail-parcel-delivery-prices-increase-1-45/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "offc": true
- },
- {
-  "id": "aec10b9813ef5",
-  "date": "2026-10-06",
-  "c": [
-   "Regional"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "Evri Group agrees to acquire US cross-border firm Cross Border Connect",
-  "sum": "Evri Group said it has agreed to acquire Cross Border Connect (CBC), a Boca Raton, Florida-based logistics enablement provider for delivery and returns. Financial terms were not disclosed. CBC CEO Chris Lentjes will continue to lead the business, according to the release.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. Evri said the deal is meant to support customers moving parcels between the UK, Europe and the US, particularly on the UK-US lane.",
-  "tie": "The deal follows Evri's 2025 acquisition of Coll-8, whose customs clearance expertise Evri said combines with CBC's US capabilities.",
-  "act": null,
-  "dates": [],
-  "src": "Parcel and Postal Technology International",
-  "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html",
-  "srcs": [
-   {
-    "src": "Parcel and Postal Technology International",
-    "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/evri-group-agrees-to-acquire-us-logistics-firm-cross-border-connect.html"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a3341a802bc1a",
-  "date": "2026-10-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "C.H. Robinson to buy RXO in stock-and-cash deal",
-  "sum": "C.H. Robinson Worldwide plans to acquire brokerage and transportation services provider RXO in a stock-and-cash transaction with a $5.8 billion implied transaction value, the companies announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The deal is expected to close in the first half of 2027, subject to regulatory clearance and RXO shareholder approval.",
-  "tie": "RXO bought UPS's Coyote Logistics for $1.025 billion in 2024.",
-  "act": null,
-  "dates": [],
-  "src": "RXO and C.H. Robinson (company release)",
-  "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/",
-  "srcs": [
-   {
-    "src": "RXO and C.H. Robinson (company release)",
-    "url": "https://rxo.com/news/c-h-robinson-to-acquire-rxo-redefining-the-future-of-third-party-logistics-while-unlocking-significant-shareholder-value/"
-   },
-   {
-    "src": "Trucking Dive",
-    "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/"
-   }
-  ],
-  "auto": true,
-  "updated": "2026-10-05",
-  "restored": "2026-10-26"
- },
- {
-  "id": "a60770e8e9c32",
-  "date": "2026-10-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Wing and Walmart to add Denver and Seattle drone delivery in 2027",
-  "sum": "Wing and Walmart are expanding drone delivery to the Denver and Seattle metros in 2027, bringing the service to nearly 20 major US metros. The partnership has given more than three million customers access to drone delivery to date, per the announcement.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Eligible Walmart customers in the Denver and Seattle metros are due to see a drone delivery option in the Walmart app or on Walmart.com once service is available in 2027. No change to carrier rates or service for parcel shippers.",
-  "tie": "The expansion follows October 2026 coverage of drone delivery regulation, including the FAA's unpublished Part 108 rule and the FCC's planned Oct. 29 vote on 800 MHz drone use.",
-  "act": null,
-  "dates": [],
-  "src": "Robotics & Automation News",
-  "url": "https://roboticsandautomationnews.com/2026/10/05/wing-and-walmart-to-expand-largest-drone-delivery-network-in-the-us/105521/",
-  "srcs": [
-   {
-    "src": "Robotics & Automation News",
-    "url": "https://roboticsandautomationnews.com/2026/10/05/wing-and-walmart-to-expand-largest-drone-delivery-network-in-the-us/105521/"
-   },
-   {
-    "src": "Austin American-Statesman",
-    "url": "https://www.statesman.com/business/technology/article/austin-round-rock-drone-delivery-zipline-22468323.php"
-   },
-   {
-    "src": "NEWStalk 870",
-    "url": "https://newstalk870.am/ixp/1135/p/walmart-drones-arrive-pacific-northwest/"
-   },
-   {
-    "src": "voz.us",
-    "url": "https://voz.us/en/society/261009/39816/walmart-will-expand-its-drone-delivery-service-to-nearly-20-markets-by-2027.html"
-   }
-  ],
-  "auto": true,
-  "thread": "drone-delivery",
-  "upd": 10,
-  "new": "Wing and Walmart announced Denver and Seattle for 2027, which would bring their network to nearly 20 US metros and more than 270 Walmart stores, with no change to parcel carrier rates or service.",
   "exclusive": true
  }
 ]

@@ -1,5 +1,5 @@
 {
- "run": "2026-11-03T13:05Z",
+ "run": "2026-11-03T13:34Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -104,24 +104,6 @@
     "ac78f72e7f458"
    ],
    "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19\"",
-   "ids": [
-    "a2b81ad721cb8"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "primary-not-first",
-   "msg": "Carrier source PR Newswire moved ahead of press coverage on \"GOFO wins 2026 CSCMP Supply Chain Innovation Award for ATLAS platform\"",
-   "ids": [
-    "a2f580fcbb2de"
-   ],
-   "fixed": true
   },
   {
    "sev": "med",
@@ -392,15 +374,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"USPS holiday rates on some package products run through mid-January\"",
    "ids": [
     "ac78f72e7f458"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Poshmark ends seller cover for USPS $50 HAZMAT fee from Oct. 19\"",
-   "ids": [
-    "a2b81ad721cb8"
    ],
    "fixed": false
   },
