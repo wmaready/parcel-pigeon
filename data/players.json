@@ -2367,38 +2367,35 @@
    "pending": false
   },
   {
-   "id": "davincimicrofu",
-   "n": "Davinci Micro Fulfillment",
-   "realm": "3pl",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Runs a network of small warehouses with AI-enabled inventory and shipment optimization for small and mid-sized e-commerce sellers",
-   "al": [],
-   "src": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-02",
-   "story": "ab7ddc386edae"
-  },
-  {
    "id": "shipium",
    "n": "Shipium",
    "realm": "software",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Provides multicarrier management software used by Davinci",
-   "al": [],
-   "src": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers",
+   "hq": "Seattle, WA, USA",
+   "yr": "2019",
+   "s": "Shipium sells enterprise shipping software that picks carriers and services, sets delivery promises, runs shipping execution and analytics across fulfillment networks, and works alongside existing WMS, OMS, TMS and ERP systems.",
+   "al": [
+    "Shipium Corp.",
+    "Shipium Corporation"
+   ],
+   "src": "https://www.shipium.com/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-02",
-   "story": "ab7ddc386edae"
+   "story": "ab7ddc386edae",
+   "site": "shipium.com",
+   "geo": [
+    -122.332,
+    47.606
+   ],
+   "srcs": [
+    "https://www.shipium.com/",
+    "https://www.geekwire.com/2022/solving-the-prime-problem-shipium-lands-27m-to-help-online-retailers-compete-with-amazon/",
+    "https://pitchbook.com/profiles/company/343183-96"
+   ],
+   "enriched": "2026-11-03"
   }
  ],
  "edges": [
@@ -4174,15 +4171,6 @@
    "t": "Coco robot delivered a DoorDash order named in a Chicago lawsuit",
    "url": "https://www.digitaltrends.com/computing/next-time-you-see-a-delivery-robot-maybe-hide-your-face/",
    "story": "ab4ff3b03130e"
-  },
-  {
-   "a": "davincimicrofu",
-   "b": "shipium",
-   "k": "partner",
-   "y": "2026",
-   "t": "Davinci uses Shipium multicarrier software to optimize inventory and shipping costs",
-   "url": "https://www.dcvelocity.com/transportation/parcel-market-being-reshaped-by-technology-private-networks-new-competitors-surging-costs-and-increasingly-savvy-shippers",
-   "story": "ab7ddc386edae"
   }
  ],
  "moves": [
@@ -4513,7 +4501,8 @@
   "matternet": "2026-11-01",
   "cleveronas": "2026-11-01",
   "ingrammicro": "2026-11-02",
-  "favordelivery": "2026-11-02"
+  "favordelivery": "2026-11-02",
+  "shipium": "2026-11-03"
  },
  "facts": {
   "ups": {
