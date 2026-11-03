@@ -200,11 +200,16 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-03",
   "pdfs": [
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf"
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf"
   ],
-  "lines": 67,
+  "lines": 69,
   "told": [],
-  "pend": "de702e3a61dd"
+  "told2": [
+   "5b616f672a25",
+   "7362c35c2fea"
+  ],
+  "told_until": "2026-12-03"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-03",

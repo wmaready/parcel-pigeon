@@ -1,5 +1,5 @@
 {
- "cursor": 77,
+ "cursor": 92,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 346,
+   "fails": 347,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 346,
+   "fails": 347,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -1530,7 +1530,7 @@
   },
   "https://events.q4inc.com/attendee/622711393": {
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) earnings call",
-   "fails": 12,
+   "fails": 13,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -2136,6 +2136,12 @@
    "first": "2026-11-03",
    "n": "11-2-26_US-Import-Demand-Surcharges.pdf",
    "hash": "d1897b4b71f9",
+   "checked": "2026-11-03"
+  },
+  "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf": {
+   "first": "2026-11-03",
+   "n": "fuel_surcharge_effective_11-9-26.pdf",
+   "hash": "a8112e9226a6",
    "checked": "2026-11-03"
   }
  }

@@ -1,5 +1,78 @@
 [
  {
+  "status": "same as published",
+  "story": {
+   "id": "w33c3e44aa9cf",
+   "date": "2026-11-03",
+   "c": [
+    "FedEx"
+   ],
+   "title": "FedEx announces fuel surcharge table update for domestic services, Nov. 9, 2026",
+   "sum": "FedEx added a notice that it will adjust the fuel surcharges and update the tables for FedEx domestic services effective Nov. 9, 2026. The weekly rates also moved: the Ground rate for Nov. 2–8 is 29.25%, up from 28.75% for Oct. 19–25. The trigger-point rows for each surcharge level are unchanged, and the lists only shifted to show higher fuel price bands.",
+   "plain": "Shippers on FedEx domestic services should expect different fuel surcharge tables from Nov. 9, 2026, though the new values are not yet shown. Ground and Home Delivery shippers currently pay 0.50 percentage points more than in the week of Oct. 19.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-09",
+   "inferred": null,
+   "detected": "2026-11-03",
+   "changes": [
+    {
+     "what": "Announced fuel surcharge adjustment and table update for FedEx domestic services",
+     "before": null,
+     "after": "FedEx will adjust the fuel surcharges and update the tables for FedEx domestic services, effective Nov. 9, 2026",
+     "effective": "2026-11-09",
+     "who": "Shippers using FedEx domestic services",
+     "impact": "New table values not yet shown on the page"
+    },
+    {
+     "what": "Latest weekly fuel surcharge rates (Nov. 2–8 week vs Oct. 19–25 week)",
+     "before": "Ground/Home Delivery/Intl Ground 28.75%; domestic package 32.00%; domestic express freight $0.708 per lb.; Export & Import 44.50%",
+     "after": "Ground/Home Delivery/Intl Ground 29.25%; domestic package 33.25%; domestic express freight $0.728 per lb.; Export & Import 45.75%",
+     "effective": "2026-11-02",
+     "who": "Ground, Home Delivery, International Ground and pickup shippers; domestic package, express freight and Export & Import shippers",
+     "impact": "Ground +0.50 points; domestic package +1.25 points; express freight +$0.020 per lb.; Export & Import +1.25 points"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The new surcharge percentages and trigger points effective Nov. 9, 2026 are not shown.",
+    "Whether the Nov. 9 update changes the table structure or only the percentages.",
+    "The $1.38/kg surcharge effective April 6, 2026 appears in the new page; whether it was on the earlier version is unknown."
+   ],
+   "dates": [
+    {
+     "d": "2026-11-02",
+     "w": "FedEx: Latest weekly fuel surcharge rates (Nov. 2–8 week vs Oct. 19–25 week)",
+     "imp": "up"
+    },
+    {
+     "d": "2026-11-09",
+     "w": "FedEx: Announced fuel surcharge adjustment and table update for FedEx domestic services",
+     "imp": "up"
+    }
+   ],
+   "kind": "Alert",
+   "src": "FedEx Fuel surcharge (spotted by Parcel Pigeon)",
+   "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+   "srcs": [
+    {
+     "src": "FedEx Fuel surcharge",
+     "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "relisting (fuel_surcharge_effective_11-9-26.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wf7bb9227b2de"
+ },
+ {
   "status": "not material",
   "date": "2026-11-03",
   "page": "https://www.ontrac.com/surchargesandrates/",
