@@ -1,5 +1,66 @@
 [
  {
+  "status": "published",
+  "story": {
+   "id": "wf7fe771e76cd",
+   "date": "2026-11-03",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS raises fuel surcharge table extension thresholds for diesel and jet fuel",
+   "sum": "UPS changed the price point at which its fuel surcharge extension formula applies. For the diesel-indexed table it moved from $4.99 to $5.80 (+$0.81), and for the jet-fuel-indexed table from $3.01 to $3.56 (+$0.55). The increment sizes (0.25% steps in surcharge, $0.09/$0.27 diesel and $0.05/$0.21 jet price ranges) are unchanged. No effective date is stated.",
+   "plain": "Shippers paying UPS fuel surcharges are affected only if fuel prices fall outside the published range, where the extension formula applies. The change suggests the published table now covers higher fuel prices, but the surcharge percentages in the table itself can't be compared.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-02",
+   "inferred": null,
+   "detected": "2026-11-03",
+   "changes": [
+    {
+     "what": "Diesel fuel surcharge table: price point above/below which the range extension rules apply",
+     "before": "$4.99",
+     "after": "$5.80",
+     "effective": null,
+     "who": "Shipments whose fuel surcharge is based on the diesel price table",
+     "impact": "$4.99 -> $5.80, +$0.81 per gallon; increments unchanged ($0.09 above, $0.27 below, 0.25% surcharge steps)"
+    },
+    {
+     "what": "Jet fuel surcharge table: price point above/below which the range extension rules apply",
+     "before": "$3.01",
+     "after": "$3.56",
+     "effective": null,
+     "who": "Shipments whose fuel surcharge is based on the jet fuel price table",
+     "impact": "$3.01 -> $3.56, +$0.55 per gallon; increments unchanged ($0.05 above, $0.21 below, 0.25% surcharge steps)"
+    }
+   ],
+   "verdict": "rule change",
+   "unknowns": [
+    "The surcharge percentages and price bands in the fuel tables themselves are not shown, so any change in the percentage charged can't be confirmed.",
+    "No effective date is stated for the new thresholds.",
+    "Which UPS services each table applies to is not stated in the changed sections."
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "srcs": [
+    {
+     "src": "UPS Fuel surcharges",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "rule change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
   "status": "not material",
   "date": "2026-11-03",
   "page": "https://www.fedex.com/en-us/shipping/rate-changes.html",

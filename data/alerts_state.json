@@ -117,7 +117,8 @@
   "a9b77b62dcd89",
   "ad1631e1cb62c",
   "abd558f62c436",
-  "aeb57c7f2b89f"
+  "aeb57c7f2b89f",
+  "wf7fe771e76cd"
  ],
  "clock": [
   "e06:7",
@@ -379,7 +380,8 @@
   "story:costco expands uber eats delivery from 17 states to nationwide",
   "story:walmart and wing open drone delivery ceremony in west memphis",
   "story:canada post publishes schedule to end gta home delivery through 2031",
-  "story:cma cgm completes 1 4 billion purchase of fedex supply chain"
+  "story:cma cgm completes 1 4 billion purchase of fedex supply chain",
+  "story:ups raises fuel surcharge table extension thresholds for diesel and jet fuel"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -496,55 +498,57 @@
   "usps says it is ready for 2026 peak with 164 new sorting mac",
   "canada post publishes schedule to end gta home delivery thro",
   "walmart and wing open drone delivery ceremony in west memphi",
-  "costco expands uber eats delivery from 17 states to nationwi"
+  "costco expands uber eats delivery from 17 states to nationwi",
+  "ups raises fuel surcharge table extension thresholds for die"
  ],
  "harvested": [
-  "a999409ce7860",
-  "a58373f1b7bc3",
-  "a6c2418bed0a7",
-  "wacb825361479",
-  "a2f683da86bf8",
-  "rv5-ups-sbr-fuel",
-  "a3a45d7f6db20",
-  "wa9c423a83880",
-  "ac78f72e7f458",
-  "afd8784e2b179",
-  "a351cab9045c7",
-  "a9b77b62dcd89",
-  "a57a06c26359c",
-  "wf5014bc150e9",
-  "aba40a11b6946",
-  "a82e057190718",
-  "a0adb56a55334",
-  "a567030ffc76c",
-  "a6ba18049bc99",
-  "w9c03b8f99b5f",
-  "wb8827e8c126e",
-  "a773d361dac4e",
-  "a831c709e5809",
-  "w599d9089a65d",
-  "w8465aa718dc6",
-  "a663794cc9c55",
-  "a5d45f26f2219",
-  "a15404304f17b",
-  "a6e82ba740e99",
-  "a89d7e4beebd9",
-  "wbfc38914b368",
-  "w150132868eae",
-  "a72efb5e01b99",
-  "ae2ec177094e3",
-  "w68c1687d28a1",
-  "aee6669d325da",
-  "af8ee5ed067c6",
-  "w500a5bdc762c",
-  "w84705482dd2f",
-  "a2b81ad721cb8",
-  "a6cc2420ad66e",
   "a89f005fb1862",
+  "ac78f72e7f458",
+  "a6c2418bed0a7",
+  "ae2ec177094e3",
+  "aba40a11b6946",
+  "a831c709e5809",
+  "a89d7e4beebd9",
+  "af8ee5ed067c6",
+  "wbfc38914b368",
+  "a58373f1b7bc3",
+  "w8465aa718dc6",
+  "wa9c423a83880",
+  "a2b81ad721cb8",
+  "aee6669d325da",
+  "a351cab9045c7",
+  "rv5-ups-sbr-fuel",
+  "w150132868eae",
   "a312b45efa358",
+  "a82e057190718",
+  "w84705482dd2f",
+  "wacb825361479",
+  "wf7fe771e76cd",
+  "a6cc2420ad66e",
+  "a3a45d7f6db20",
+  "a9b77b62dcd89",
+  "wdf959a97bcb6",
   "a2def09bc43bb",
+  "a999409ce7860",
+  "a72efb5e01b99",
+  "a57a06c26359c",
+  "a6ba18049bc99",
   "w91588ddb11ed",
-  "wdf959a97bcb6"
+  "afd8784e2b179",
+  "w9c03b8f99b5f",
+  "w68c1687d28a1",
+  "a0adb56a55334",
+  "a663794cc9c55",
+  "w599d9089a65d",
+  "wf5014bc150e9",
+  "w500a5bdc762c",
+  "a15404304f17b",
+  "a2f683da86bf8",
+  "a5d45f26f2219",
+  "a6e82ba740e99",
+  "a773d361dac4e",
+  "a567030ffc76c",
+  "wb8827e8c126e"
  ],
  "backfilled": true,
  "recent": [
@@ -2391,6 +2395,21 @@
      "url": "https://www.theglobeandmail.com/investing/markets/stocks/WMT/pressreleases/8596269/can-costcos-doordash-and-uber-eats-expansion-drive-incremental-sales/"
     }
    ]
+  },
+  {
+   "id": "wf7fe771e76cd",
+   "title": "UPS raises fuel surcharge table extension thresholds for diesel and jet fuel",
+   "date": "2026-11-03",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "srcs": [
+    {
+     "src": "UPS Fuel surcharges",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2737,13 +2756,17 @@
   "aeb57c7f2b89f": {
    "t": "Costco expands Uber Eats nationwide",
    "m": "Members get same-day Uber Eats delivery nationwide; no change to shipper rates or service."
+  },
+  "wf7fe771e76cd": {
+   "t": "UPS raises fuel surcharge thresholds",
+   "m": "Takes effect Nov 2, 2026. Affects shippers only when fuel prices fall outside the published range."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-03",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-11-03T08:34:36.233598-05:00"
+ "last_push": "2026-11-03T12:00:58.539762-05:00"
 }
