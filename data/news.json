@@ -1,5 +1,98 @@
 [
  {
+  "id": "wf7bb9227b2de",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx posts fuel surcharge tables effective Nov. 9, 2026",
+  "sum": "FedEx's fuel surcharge page now shows tables effective Nov. 9, 2026. The domestic package table runs from 34.00% to 35.50% and the Ground, Home Delivery and International Ground table runs from 30.00% to 31.50%. The express freight table runs from $0.740 to $0.764 per lb. The earlier version on file is a different document (International Premium terms effective Jan. 5, 2026), so no old-versus-new percentage comparison is possible.",
+  "plain": "Shippers using FedEx Express, Ground, Home Delivery, International Ground or express freight services pay surcharges set by these tables from Nov. 9, 2026. The size of the move from the prior week's rates cannot be determined.",
+  "imp": "info",
+  "lvl": 1,
+  "cat": "Guide changes",
+  "act": "2026-11-09",
+  "inferred": null,
+  "detected": "2026-11-03",
+  "changes": [
+   {
+    "what": "Domestic and U.S.–Puerto Rico package services fuel surcharge table (jet fuel index)",
+    "before": null,
+    "after": "34.00% at $4.46–$4.51 per gallon, rising 0.25 point per bracket to 35.50% at $4.76–$4.81",
+    "effective": "2026-11-09",
+    "who": "FedEx domestic and U.S. to Puerto Rico package shipments",
+    "impact": null
+   },
+   {
+    "what": "FedEx Ground, Home Delivery, International Ground and pickup services fuel surcharge table (diesel index)",
+    "before": null,
+    "after": "30.00% at $6.07–$6.16 per gallon, rising 0.25 point per bracket to 31.50% at $6.61–$6.70",
+    "effective": "2026-11-09",
+    "who": "FedEx Ground, Home Delivery, International Ground and pickup shipments",
+    "impact": null
+   },
+   {
+    "what": "Domestic express freight fuel surcharge table (per rated pound)",
+    "before": null,
+    "after": "$0.740 per lb. at $4.46–$4.51 jet fuel, rising to $0.764 per lb. at $4.76–$4.81",
+    "effective": "2026-11-09",
+    "who": "FedEx domestic and U.S. to Puerto Rico express freight shipments",
+    "impact": null
+   },
+   {
+    "what": "Step rule for jet fuel based percentages",
+    "before": null,
+    "after": "Below $3.51 jet fuel, surcharge moves 0.25% per $0.21 change; at and above $3.51, 0.25% per $0.05 change",
+    "effective": "2026-11-09",
+    "who": "Package services shippers on the jet fuel based surcharge",
+    "impact": null
+   },
+   {
+    "what": "Step rule for diesel fuel based percentages",
+    "before": null,
+    "after": "Below $5.71 diesel, surcharge moves 0.25% per $0.27 change; at and above $5.71, 0.25% per $0.09 change",
+    "effective": "2026-11-09",
+    "who": "Ground, Home Delivery and International Ground shippers",
+    "impact": null
+   },
+   {
+    "what": "Table extension trigger points for the Ground and diesel table",
+    "before": null,
+    "after": "Table is extended if the diesel index falls below $6.07 or rises above $6.70",
+    "effective": "2026-11-09",
+    "who": "Ground, Home Delivery and International Ground shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Whether the table structure changed or only the weekly percentages were updated cannot be confirmed.",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "FedEx",
+  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+  "srcs": [
+   {
+    "src": "FedEx: FedEx fuel surcharge page",
+    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "w0b8720b6a0e7",
   "date": "2026-11-03",
   "c": [
