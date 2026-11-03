@@ -1,63 +1,5 @@
 [
  {
-  "id": "wf7fe771e76cd",
-  "date": "2026-11-03",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS raises fuel surcharge table extension thresholds for diesel and jet fuel",
-  "sum": "UPS changed the price point at which its fuel surcharge extension formula applies. For the diesel-indexed table it moved from $4.99 to $5.80 (+$0.81), and for the jet-fuel-indexed table from $3.01 to $3.56 (+$0.55). The increment sizes (0.25% steps in surcharge, $0.09/$0.27 diesel and $0.05/$0.21 jet price ranges) are unchanged. No effective date is stated.",
-  "plain": "Shippers paying UPS fuel surcharges are affected only if fuel prices fall outside the published range, where the extension formula applies. The change suggests the published table now covers higher fuel prices, but the surcharge percentages in the table itself can't be compared.",
-  "imp": "watch",
-  "lvl": 2,
-  "cat": "Fuel",
-  "act": "2026-11-02",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Diesel fuel surcharge table: price point above/below which the range extension rules apply",
-    "before": "$4.99",
-    "after": "$5.80",
-    "effective": null,
-    "who": "Shipments whose fuel surcharge is based on the diesel price table",
-    "impact": "$4.99 -> $5.80, +$0.81 per gallon; increments unchanged ($0.09 above, $0.27 below, 0.25% surcharge steps)"
-   },
-   {
-    "what": "Jet fuel surcharge table: price point above/below which the range extension rules apply",
-    "before": "$3.01",
-    "after": "$3.56",
-    "effective": null,
-    "who": "Shipments whose fuel surcharge is based on the jet fuel price table",
-    "impact": "$3.01 -> $3.56, +$0.55 per gallon; increments unchanged ($0.05 above, $0.21 below, 0.25% surcharge steps)"
-   }
-  ],
-  "verdict": "rule change",
-  "unknowns": [
-   "The surcharge percentages and price bands in the fuel tables themselves are not shown, so any change in the percentage charged can't be confirmed.",
-   "No effective date is stated for the new thresholds.",
-   "Which UPS services each table applies to is not stated in the changed sections."
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
-  "srcs": [
-   {
-    "src": "UPS Fuel surcharges",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "rule change",
-   "dropped": 0,
-   "compared": []
-  },
-  "exclusive": true,
-  "primary": true
- },
- {
   "id": "a089340bc097e",
   "date": "2026-11-03",
   "c": [
@@ -108,6 +50,66 @@
   "exclusive": true
  },
  {
+  "id": "a260cc6a2e05e",
+  "date": "2026-11-03",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Whatnot makes US sellers pay USPS weight adjustments from Nov. 4",
+  "sum": "Whatnot will make US sellers responsible for USPS weight-based shipping adjustments on shipments sent on or after November 4, according to Value Added Resource. The marketplace had covered additional postage when packages weighed more than declared. It said sellers can appeal charges within 45 days.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "From November 4, Whatnot sellers pay any extra postage USPS assesses when a package weighs more than declared on a Whatnot label. Whatnot still covers adjustments for earlier shipments, incorrect dimensions, hazmat labeling and UPS shipments for now.",
+  "why": "Whatnot sellers will bear USPS postage corrections on overweight packages that the marketplace previously absorbed, starting with November 4 shipments.",
+  "score": 4,
+  "tie": "The change follows Whatnot's June announcement of August shipping changes, after which USPS Flat Rate stayed available and some rates differed from those first announced.",
+  "act": "2026-11-04",
+  "dates": [
+   {
+    "d": "2026-11-04",
+    "w": "Whatnot sellers become liable for USPS weight adjustments",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-03T17:20:25Z",
+  "src": "Value Added Resource",
+  "url": "https://www.valueaddedresource.net/whatnot-usps-weight-adjustments/",
+  "srcs": [
+   {
+    "src": "Value Added Resource",
+    "url": "https://www.valueaddedresource.net/whatnot-usps-weight-adjustments/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-03",
+  "syn": "Whatnot will stop covering USPS weight-based carrier adjustments on November 4, making US sellers responsible for additional postage when packages weigh more than declared on Whatnot-generated labels. Whatnot said the charges are assessed by USPS, with no additional Whatnot fee. The change applies to shipments sent on or after that date. Sellers whose first Whatnot sale was on or after September 5, 2026 are exempt from the initial rollout. Sellers have 45 days from the charge date to appeal, with USPS making the final decision in a process that can take up to 90 days.",
+  "aff": [
+   {
+    "who": "Whatnot US sellers",
+    "what": "Pay USPS weight-based adjustments on labels for shipments sent on or after November 4."
+   },
+   {
+    "who": "Sellers who first sold on or after Sept. 5, 2026",
+    "what": "Exempt from the initial rollout; Whatnot will send separate notice before the policy applies."
+   },
+   {
+    "who": "Sellers disputing charges",
+    "what": "Have 45 days to appeal via the Carrier Adjustments dashboard; USPS decides, which can take up to 90 days."
+   },
+   {
+    "who": "UPS shipments",
+    "what": "Whatnot continues to cover adjustments for now."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-11-03",
+  "unconf": true
+ },
+ {
   "id": "a567030ffc76c",
   "date": "2026-11-03",
   "c": [
@@ -152,6 +154,53 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a920867c2e49d",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx to bring Network 2.0 to Los Angeles, other markets after holidays",
+  "sum": "FedEx plans to extend its Network 2.0 integration to Los Angeles and other markets after the holiday season, Supply Chain Dive reported on Nov. 3, 2026. The integration is already complete in markets including Dallas and San Francisco, and the plan is slated to wrap up in 2027.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "FedEx is expected to bring its combined Express and Ground network to Los Angeles and other markets after the holidays. The source does not state any change to rates or service levels.",
+  "why": "Network 2.0 merges FedEx's Ground and Express pickup and delivery, and more markets, including Los Angeles, are slated to follow after the holidays.",
+  "score": 6,
+  "tie": "In October 2026, Supply Chain Dive reported from a FedEx facility in Mesquite, Texas, where Express and Ground shipments move together, and FedEx's CEO had said in September that Network 2.0 would be 62% done by the end of the year.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T17:19:26Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/"
+   }
+  ],
+  "auto": true,
+  "thread": "fedex-network-2",
+  "upd": 5,
+  "new": "FedEx will bring Network 2.0 to Los Angeles and other markets after the holidays, while Dallas and San Francisco are already complete; the source states no change to shipper rates or service.",
+  "syn": "FedEx plans to bring its Network 2.0 integration to Los Angeles and other markets after the holiday season, according to Supply Chain Dive on Nov. 3, 2026. The integration is already complete in markets such as Dallas and San Francisco as the carrier prepares for peak season. The plan is slated to wrap up in 2027. Network 2.0 merges FedEx's historically separate Ground and Express pickup and delivery operations.",
+  "aff": [
+   {
+    "who": "Los Angeles and other markets",
+    "what": "Network 2.0 integration of Ground and Express operations is slated to arrive after the holidays."
+   },
+   {
+    "who": "Dallas and San Francisco",
+    "what": "Integration is already complete, ahead of peak season."
+   },
+   {
+    "who": "Shippers",
+    "what": "The source does not state any change to rates or service."
+   }
+  ]
  },
  {
   "id": "a9b77b62dcd89",
@@ -267,6 +316,101 @@
   ],
   "edge": true,
   "exclusive": true
+ },
+ {
+  "id": "ade0362073c48",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "Analysis",
+  "title": "FedEx CEO shifts focus from commodity parcels, TheStreet analysis says",
+  "sum": "A TheStreet analysis published Nov. 3, 2026 says FedEx CEO Raj Subramaniam is moving the company away from commodity parcels and toward data centers, healthcare and automotive customers. The piece says the company's Q3 results show the shift is working. The retrieved text contains no figures.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is stated. The article describes FedEx's strategy and customer mix, not a pricing or service change.",
+  "why": "The analysis describes a change in the customer mix FedEx is pursuing, away from commodity parcel volume toward other sectors.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-03T17:19:56Z",
+  "src": "TheStreet",
+  "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base",
+  "srcs": [
+   {
+    "src": "TheStreet",
+    "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base"
+   }
+  ],
+  "auto": true,
+  "syn": "A TheStreet analysis published Nov. 3, 2026 describes FedEx CEO Raj Subramaniam as shifting the company away from commodity parcels and toward data centers, healthcare and automotive customers. The article, tagged as opinion and analysis, says the company's Q3 numbers show the approach is working. The retrieved text does not include the underlying figures or any change to shipper rates or service.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service is stated in the source."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "wf7fe771e76cd",
+  "date": "2026-11-03",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS raises fuel surcharge table extension thresholds for diesel and jet fuel",
+  "sum": "UPS changed the price point at which its fuel surcharge extension formula applies. For the diesel-indexed table it moved from $4.99 to $5.80 (+$0.81), and for the jet-fuel-indexed table from $3.01 to $3.56 (+$0.55). The increment sizes (0.25% steps in surcharge, $0.09/$0.27 diesel and $0.05/$0.21 jet price ranges) are unchanged. No effective date is stated.",
+  "plain": "Shippers paying UPS fuel surcharges are affected only if fuel prices fall outside the published range, where the extension formula applies. The change suggests the published table now covers higher fuel prices, but the surcharge percentages in the table itself can't be compared.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Fuel",
+  "act": "2026-11-02",
+  "inferred": null,
+  "detected": "2026-11-03",
+  "changes": [
+   {
+    "what": "Diesel fuel surcharge table: price point above/below which the range extension rules apply",
+    "before": "$4.99",
+    "after": "$5.80",
+    "effective": null,
+    "who": "Shipments whose fuel surcharge is based on the diesel price table",
+    "impact": "$4.99 -> $5.80, +$0.81 per gallon; increments unchanged ($0.09 above, $0.27 below, 0.25% surcharge steps)"
+   },
+   {
+    "what": "Jet fuel surcharge table: price point above/below which the range extension rules apply",
+    "before": "$3.01",
+    "after": "$3.56",
+    "effective": null,
+    "who": "Shipments whose fuel surcharge is based on the jet fuel price table",
+    "impact": "$3.01 -> $3.56, +$0.55 per gallon; increments unchanged ($0.05 above, $0.21 below, 0.25% surcharge steps)"
+   }
+  ],
+  "verdict": "rule change",
+  "unknowns": [
+   "The surcharge percentages and price bands in the fuel tables themselves are not shown, so any change in the percentage charged can't be confirmed.",
+   "No effective date is stated for the new thresholds.",
+   "Which UPS services each table applies to is not stated in the changed sections."
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+  "srcs": [
+   {
+    "src": "UPS Fuel surcharges",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "rule change",
+   "dropped": 0,
+   "compared": []
+  },
+  "exclusive": true,
+  "primary": true
  },
  {
   "id": "a0b5708b9f70d",
@@ -774,6 +918,74 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a9eac1c65a497",
+  "date": "2026-11-01",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "Analysis",
+  "title": "ParcelHero: EU €2 handling fee and product IDs start 1 November",
+  "sum": "ParcelHero said the EU's new €2 handling fee per item and mandatory Product Identifiers took effect on 1 November 2026, on top of the €3 customs duty introduced on 1 July. According to ParcelHero, both charges are counted per product line, so a parcel with three product lines carries €15 in charges.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "From 1 November 2026, B2C parcels entering the EU carry a €2 handling fee per product line on top of the €3 duty, and every item needs product identifiers or risks a hold or rejection.",
+  "why": "UK and other non-EU sellers shipping B2C parcels to the EU face per-product-line charges and data requirements as peak season volumes build.",
+  "score": 5,
+  "tie": null,
+  "act": "2026-11-01",
+  "dates": [
+   {
+    "d": "2026-11-01",
+    "w": "EU €2 handling fee and mandatory product IDs apply to B2C parcels",
+    "imp": "up",
+    "fx": {
+     "t": "fee",
+     "car": "EU customs",
+     "items": [
+      [
+       "Handling fee per product line",
+       "€2.00",
+       2
+      ]
+     ]
+    }
+   }
+  ],
+  "added": "2026-11-03T17:20:04Z",
+  "src": "Post & Parcel",
+  "url": "https://postandparcel.info/163227/news/e-commerce/parcelhero-the-eus-customs-changes-were-aimed-at-the-flood-of-ultra-cheap-e-commerce-imports/",
+  "srcs": [
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163227/news/e-commerce/parcelhero-the-eus-customs-changes-were-aimed-at-the-flood-of-ultra-cheap-e-commerce-imports/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-01",
+  "thread": "eu-low-value-imports",
+  "syn": "ParcelHero, in an industry commentary, said the EU brought in a €2 handling fee and mandatory Product Identifiers (PIDs) on 1 November 2026. These follow the 1 July 2026 end of duty-free treatment for low-value parcels and a flat €3 duty on most B2C parcels worth €150 or less. ParcelHero's David Jinks said both charges are counted per HS code line, giving a minimum of €5 before VAT and postage. ParcelHero said customs can hold, delay or reject parcels with missing data.",
+  "aff": [
+   {
+    "who": "B2C parcels to the EU",
+    "what": "€2 handling fee per product line from 1 November 2026, also applying to parcels above €150."
+   },
+   {
+    "who": "Parcels worth €150 or less",
+    "what": "€3 customs duty per product line since 1 July 2026; ParcelHero says minimum charges are €5."
+   },
+   {
+    "who": "Merchants selling to EU consumers",
+    "what": "Each item needs up to three product identifiers at variant level; missing data risks hold, delay or rejection."
+   },
+   {
+    "who": "Private senders",
+    "what": "Personal gifts worth €45 or under sent person to person remain exempt if declared correctly, ParcelHero said."
+   }
+  ],
+  "edge": true
  },
  {
   "id": "af46ea22d168d",
@@ -4156,7 +4368,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-02",
+  "tried": "2026-11-03",
   "unconf": true
  },
  {
@@ -8385,17 +8597,17 @@
   ],
   "cat": "Technology & tools",
   "kind": "News",
-  "title": "Burq publishes 'earned autonomy' doctrine for AI delivery decisions",
-  "sum": "Burq cofounders Salman and Shaban Habib published \"Earned Autonomy: A Deployment Doctrine for AI in the Physical World\" on Oct. 13, according to FreightWaves. It says AI should start each business segment with no authority and gain more only on evidence from live orders, with a person signing off at each step.",
+  "title": "Burq outlines staged-autonomy model for delivery-routing AI",
+  "sum": "Burq cofounder Salman Habib told FreightWaves the company's delivery-decision software earns authority one segment at a time, such as parcel, LTL or gig. Habib and cofounder Shaban Habib set out the approach Oct. 13 in a paper called \"Earned Autonomy.\"",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service. Burq described how retailers can trial its AI in a mode that leaves operations unchanged.",
-  "why": "Burq's software picks among fleet, gig, parcel, LTL and drone delivery, so how retailers hand AI that authority bears on carrier routing decisions.",
+  "plain": "No change to rates or service. Burq described how retailers can trial its AI in a read-only Shadow mode before it makes live decisions.",
+  "why": "Burq's software picks among fleets, gig, parcel, LTL and drones for retailers' orders, and the paper sets how much authority its AI gets over those choices.",
   "score": 4,
   "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-11-03T13:33:08Z",
+  "added": "2026-11-03T17:20:11Z",
   "src": "FreightWaves",
   "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai",
   "srcs": [
@@ -8406,23 +8618,19 @@
   ],
   "auto": true,
   "ann": "2026-10-13",
-  "syn": "Burq cofounders Salman and Shaban Habib published \"Earned Autonomy: A Deployment Doctrine for AI in the Physical World\" on Oct. 13, the first of a series called Intelligence Notes, FreightWaves reported. The doctrine says AI should begin each segment of a business with no authority and earn more only on evidence from live orders, with a person signing off at each step. Burq's software chooses among a retailer's own fleet, gig providers, parcel and LTL carriers, and drones. Salman Habib said the doctrine is already built into a product customers use.",
+  "syn": "Burq, whose software chooses how each retailer order is delivered, laid out an \"Earned Autonomy\" doctrine on Oct. 13, according to cofounder Salman Habib in an interview with FreightWaves. Under it, AI starts each segment, such as parcel, LTL or gig, with no authority and moves up four rungs (Manual, Shadow, Review, Autonomous) on evidence from live orders. Habib said the retailer sets the promotion bar, for example 90% agreement with dispatchers, and a rule breach demotes a segment automatically. Every decision is logged in a Decision Ledger that customers can export as a CSV file.",
   "aff": [
    {
-    "who": "Retailers evaluating AI delivery software",
-    "what": "Shadow mode logs what Burq's AI would have decided, with operations unchanged, and reports after 30, 60 or 90 days."
+    "who": "Retailers weighing AI routing",
+    "what": "Can start in Shadow mode, where the AI reads decisions and reports after 30, 60 or 90 days, Habib said."
    },
    {
     "who": "Dispatchers",
-    "what": "Each segment moves from Manual to Shadow, Review and Autonomous; the retailer sets the bar, such as 90% agreement in Habib's example."
+    "what": "Approve each step; the retailer sets the bar, such as 90% agreement, for full autonomy."
    },
    {
     "who": "Burq customers",
-    "what": "Every decision is logged in a Decision Ledger, one row per order, which customers can export as a CSV file."
-   },
-   {
-    "who": "Burq customers' data",
-    "what": "Customers can choose data used only for their own deliveries or opt in to anonymized network-wide performance data."
+    "what": "Can choose own-data-only use or opt in to anonymized network-wide performance data, Habib said."
    }
   ],
   "edge": true
@@ -10039,120 +10247,6 @@
    }
   ],
   "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a63ee22ebda65",
-  "date": "2026-10-07",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "News",
-  "title": "DoorDash adds Macy's, Anthropologie, Vans to retail Marketplace",
-  "sum": "DoorDash said it is adding Macy's, Anthropologie, The North Face, Vans and Timberland to its U.S. retail Marketplace, with delivery in as little as an hour. DoorDash also plans a nationwide rollout in November of a return pickup service with a flat $7.99 fee, according to the Texarkana Gazette.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Shoppers can order from the five brands through DoorDash with delivery in as little as an hour. DoorDash's return pickup service, now in a handful of U.S. markets, is slated to go nationwide in November at a flat $7.99.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Fibre2Fashion",
-  "url": "https://www.fibre2fashion.com/news/prime-content/retail-marketi-intelligence-news/macy-s-anthropologie-vans-turn-stores-into-1-hour-hubs-via-doordash-314047-newsdetails.htm",
-  "srcs": [
-   {
-    "src": "Fibre2Fashion",
-    "url": "https://www.fibre2fashion.com/news/prime-content/retail-marketi-intelligence-news/macy-s-anthropologie-vans-turn-stores-into-1-hour-hubs-via-doordash-314047-newsdetails.htm"
-   },
-   {
-    "src": "Texarkana Gazette",
-    "url": "https://www.texarkanagazette.com/news/2026/oct/11/doordash-partners-with-macys-anthropologie-and/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a6af45469a9a9",
-  "date": "2026-10-07",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "CEVA deploys AI robotic returns handling for Zalando in Germany, Poland",
-  "sum": "CEVA Logistics said it has deployed an AI-powered, automated returns handling system at sites in Greven, Germany, and Świebodzin, Poland, handling inventory for retailer Zalando. The system uses dual-arm robots running Sereact's \"Cortex\" physical AI platform and is delivered under a Robotics-as-a-Service model, according to DC Velocity's report of the announcement.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to shipper rates or service. The deployment affects returns handling for Zalando at two European sites.",
-  "tie": "The partners said Zalando joined Sereact's $116 million Series B financing round as a strategic investor in July 2026.",
-  "act": null,
-  "dates": [],
-  "src": "DC Velocity",
-  "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system",
-  "srcs": [
-   {
-    "src": "DC Velocity",
-    "url": "https://www.dcvelocity.com/material-handling/order-fulfillment-packing/robotic-picking-and-loading/ceva-logistics-deploys-robotic-automated-returns-handling-system"
-   }
-  ],
-  "auto": true,
-  "edge": true
- },
- {
-  "id": "a9506be14f8ef",
-  "date": "2026-10-07",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "UPS plans 100,000 seasonal hires, about 9% fewer than 2025",
-  "sum": "UPS said on Oct. 7 it would hire 100,000 seasonal employees in the US ahead of the holiday season, about 9% fewer than in 2025. Reuters reported it is the second straight year of reduced seasonal recruitment. The workers will help sort, move and deliver packages during the holiday rush, UPS said.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or fees was announced. UPS is adding seasonal staff for the holiday rush, with fewer hires than in 2025.",
-  "tie": "In January 2026, UPS said it would cut up to 30,000 operational jobs and close 24 facilities in 2026, according to Reuters.",
-  "act": null,
-  "dates": [],
-  "src": "WTAQ",
-  "url": "https://wtaq.com/2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/",
-  "srcs": [
-   {
-    "src": "WTAQ",
-    "url": "https://wtaq.com/2026/10/07/ups-to-hire-100000-temporary-workers-ahead-of-peak-holiday-season/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a965bfb9edb0f",
-  "date": "2026-10-07",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "San Jose sets 5 mph limit, $100-$500 fines for delivery robots",
-  "sum": "San Jose's City Council approved regulations on Tuesday that set a 5 mph sidewalk speed limit for delivery robots and fines of $100 to $500 for devices that block curbs and crosswalks, SiliconValley.com reported. Operators need one-year permits and a $10,000 maintenance and repair deposit, with annual per-robot fees of $200 for sidewalk devices and $250 for road models.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Delivery robot operators in San Jose, including Coco Robotics and Serve Robotics, must hold permits, pay deposits and per-robot fees, and face citations or impoundment for violations. Rates for shippers do not change.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "SiliconValley.com",
-  "url": "https://www.siliconvalley.com/2026/10/07/san-jose-sets-fines-regulations-for-delivery-robots/",
-  "srcs": [
-   {
-    "src": "SiliconValley.com",
-    "url": "https://www.siliconvalley.com/2026/10/07/san-jose-sets-fines-regulations-for-delivery-robots/"
-   }
-  ],
-  "auto": true,
-  "thread": "delivery-robot-rules",
-  "edge": true,
   "exclusive": true
  }
 ]

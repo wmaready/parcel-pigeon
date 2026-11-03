@@ -58,31 +58,28 @@
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
-  "s": "FedEx says Network 2.0 will be 62% done by the end of 2026, with full completion slated for 2027.",
+  "s": "FedEx is integrating Ground and Express pickup and delivery market by market, with completion slated for 2027.",
   "ids": [
    "h411",
    "h413",
    "43",
-   "a3623effd6df4"
+   "a3623effd6df4",
+   "a920867c2e49d"
   ],
   "first": "2024-06-01",
-  "last": "2026-10-26",
+  "last": "2026-11-03",
   "c": [
    "FedEx"
   ],
   "cx": {
-   "sig": "d50658bb95f0",
+   "sig": "93f256b1c8c6",
    "v": 3,
    "beats": {
-    "h411": "On June 1, 2024, Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
-    "h413": "Network 2.0 reached Canada, its largest market yet, as FedEx said DRIVE cut $1.8 billion in structural costs that year.",
-    "43": "By Nov. 2025, FedEx was merging Ground and Express pickup and delivery, with the U.S. rollout expected done by end of 2027.",
-    "a3623effd6df4": "At FedEx's Mesquite, Texas, facility, Express and Ground parcels now share the building and vans; 62% done by end of 2026."
+    "a3623effd6df4": "In Mesquite, Texas, Express and Ground parcels now share a building and vans. The CEO said Network 2.0 would be 62% done by year-end."
    },
-   "intro": "FedEx is merging its Express and Ground networks into one, changing how parcels get picked up and delivered.",
-   "now": "FedEx expects the U.S. rollout to finish by the end of 2027."
+   "now": "Dallas and San Francisco are done, Los Angeles is next after the holidays, and full completion is slated for 2027."
   },
-  "rv": "d50658bb95f0",
+  "rv": "93f256b1c8c6",
   "apart": [
    "fedex-freight-spin"
   ],
@@ -977,5 +974,18 @@
    "Industry"
   ],
   "rv": "b33f887cc707"
+ },
+ "eu-low-value-imports": {
+  "n": "EU low-value import charges",
+  "ids": [
+   "a9eac1c65a497"
+  ],
+  "first": "2026-11-01",
+  "s": "The EU's €3 duty has applied since 1 July 2026 and the €2 handling fee and product ID rules since 1 November 2026; ParcelHero says fuller reform is expected around mid-2028.",
+  "last": "2026-11-01",
+  "c": [
+   "Industry"
+  ],
+  "rv": "95d0d1b342d2"
  }
 }

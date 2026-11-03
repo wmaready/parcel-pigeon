@@ -1,5 +1,23 @@
 [
  {
+  "type": "headline-only",
+  "title": "How UPS and FedEx Are Riding Diesel Costs to Higher Revenues",
+  "url": "https://www.wsj.com/podcasts/whats-news/how-ups-and-fedex-are-riding-diesel-costs-to-higher-revenues/2973662b-9d2e-4f7a-aaeb-30edeed15134",
+  "src": "WSJ",
+  "date": "2026-10-30",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "USPS cuts back on spending as cash is expected to run out in 2027",
+  "url": "https://www.supplychain247.com/article/usps_cuts_back_on_spending_as_cash_is_expected_to_run_out_in_2027/gorbel",
+  "src": "Supply Chain 24/7",
+  "date": "2026-11-03",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
   "type": "page-picture",
   "title": "FedEx: FedEx Fiscal Q4 2026 (Mar–May 2026) 10-Q filing",
   "url": "https://www.sec.gov/Archives/edgar/data/0001048911/000104891126000105/fdx-20260531.htm",
@@ -489,14 +507,5 @@
   "company": "FedEx",
   "ir": "https://investors.fedex.com/news-and-events/earnings-releases/default.aspx",
   "note": "FedEx's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
- },
- {
-  "type": "headline-only",
-  "title": "How UPS and FedEx Are Riding Diesel Costs to Higher Revenues",
-  "url": "https://www.wsj.com/podcasts/whats-news/how-ups-and-fedex-are-riding-diesel-costs-to-higher-revenues/2973662b-9d2e-4f7a-aaeb-30edeed15134",
-  "src": "WSJ",
-  "date": "2026-10-30",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  }
 ]

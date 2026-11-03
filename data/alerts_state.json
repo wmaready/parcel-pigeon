@@ -118,7 +118,10 @@
   "ad1631e1cb62c",
   "abd558f62c436",
   "aeb57c7f2b89f",
-  "wf7fe771e76cd"
+  "wf7fe771e76cd",
+  "a260cc6a2e05e",
+  "a920867c2e49d",
+  "ade0362073c48"
  ],
  "clock": [
   "e06:7",
@@ -126,7 +129,7 @@
  ],
  "fuel": {
   "OnTrac": "2026-11-02",
-  "UPS": "2026-10-26",
+  "UPS": "2026-11-02",
   "FedEx": "2026-11-02"
  },
  "players": [
@@ -381,7 +384,8 @@
   "story:walmart and wing open drone delivery ceremony in west memphis",
   "story:canada post publishes schedule to end gta home delivery through 2031",
   "story:cma cgm completes 1 4 billion purchase of fedex supply chain",
-  "story:ups raises fuel surcharge table extension thresholds for diesel and jet fuel"
+  "story:ups raises fuel surcharge table extension thresholds for diesel and jet fuel",
+  "fuel:UPS:2026-11-02"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -499,56 +503,60 @@
   "canada post publishes schedule to end gta home delivery thro",
   "walmart and wing open drone delivery ceremony in west memphi",
   "costco expands uber eats delivery from 17 states to nationwi",
-  "ups raises fuel surcharge table extension thresholds for die"
+  "ups raises fuel surcharge table extension thresholds for die",
+  "whatnot makes us sellers pay usps weight adjustments from no",
+  "fedex to bring network 2 0 to los angeles other markets afte",
+  "fedex ceo shifts focus from commodity parcels thestreet anal"
  ],
  "harvested": [
-  "a89f005fb1862",
-  "ac78f72e7f458",
-  "a6c2418bed0a7",
-  "ae2ec177094e3",
-  "aba40a11b6946",
-  "a831c709e5809",
-  "a89d7e4beebd9",
-  "af8ee5ed067c6",
-  "wbfc38914b368",
-  "a58373f1b7bc3",
-  "w8465aa718dc6",
-  "wa9c423a83880",
-  "a2b81ad721cb8",
-  "aee6669d325da",
-  "a351cab9045c7",
-  "rv5-ups-sbr-fuel",
-  "w150132868eae",
   "a312b45efa358",
-  "a82e057190718",
-  "w84705482dd2f",
-  "wacb825361479",
-  "wf7fe771e76cd",
-  "a6cc2420ad66e",
-  "a3a45d7f6db20",
-  "a9b77b62dcd89",
-  "wdf959a97bcb6",
-  "a2def09bc43bb",
+  "w8465aa718dc6",
+  "a567030ffc76c",
   "a999409ce7860",
-  "a72efb5e01b99",
-  "a57a06c26359c",
-  "a6ba18049bc99",
-  "w91588ddb11ed",
-  "afd8784e2b179",
-  "w9c03b8f99b5f",
-  "w68c1687d28a1",
-  "a0adb56a55334",
-  "a663794cc9c55",
-  "w599d9089a65d",
-  "wf5014bc150e9",
-  "w500a5bdc762c",
-  "a15404304f17b",
-  "a2f683da86bf8",
+  "a3a45d7f6db20",
+  "rv5-ups-sbr-fuel",
+  "ae2ec177094e3",
+  "wacb825361479",
   "a5d45f26f2219",
+  "a15404304f17b",
+  "wdf959a97bcb6",
+  "w150132868eae",
+  "a2b81ad721cb8",
+  "a260cc6a2e05e",
+  "a58373f1b7bc3",
+  "wbfc38914b368",
+  "a6c2418bed0a7",
+  "af8ee5ed067c6",
+  "a82e057190718",
+  "a89d7e4beebd9",
+  "a663794cc9c55",
+  "w9c03b8f99b5f",
+  "wb8827e8c126e",
+  "wa9c423a83880",
+  "afd8784e2b179",
+  "a57a06c26359c",
+  "aba40a11b6946",
+  "wf7fe771e76cd",
+  "a89f005fb1862",
+  "a6ba18049bc99",
+  "w599d9089a65d",
+  "w84705482dd2f",
+  "a6cc2420ad66e",
+  "wf5014bc150e9",
+  "a0adb56a55334",
+  "a72efb5e01b99",
+  "a2f683da86bf8",
+  "a831c709e5809",
+  "ac78f72e7f458",
+  "w500a5bdc762c",
+  "a351cab9045c7",
+  "a9b77b62dcd89",
   "a6e82ba740e99",
   "a773d361dac4e",
-  "a567030ffc76c",
-  "wb8827e8c126e"
+  "aee6669d325da",
+  "w91588ddb11ed",
+  "a2def09bc43bb",
+  "w68c1687d28a1"
  ],
  "backfilled": true,
  "recent": [
@@ -2410,6 +2418,51 @@
      "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
     }
    ]
+  },
+  {
+   "id": "a260cc6a2e05e",
+   "title": "Whatnot makes US sellers pay USPS weight adjustments from Nov. 4",
+   "date": "2026-11-03",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.valueaddedresource.net/whatnot-usps-weight-adjustments/",
+   "srcs": [
+    {
+     "src": "Value Added Resource",
+     "url": "https://www.valueaddedresource.net/whatnot-usps-weight-adjustments/"
+    }
+   ]
+  },
+  {
+   "id": "a920867c2e49d",
+   "title": "FedEx to bring Network 2.0 to Los Angeles, other markets after holidays",
+   "date": "2026-11-03",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/"
+    }
+   ]
+  },
+  {
+   "id": "ade0362073c48",
+   "title": "FedEx CEO shifts focus from commodity parcels, TheStreet analysis says",
+   "date": "2026-11-03",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base",
+   "srcs": [
+    {
+     "src": "TheStreet",
+     "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base"
+    }
+   ]
   }
  ],
  "copy": {
@@ -2760,9 +2813,70 @@
   "wf7fe771e76cd": {
    "t": "UPS raises fuel surcharge thresholds",
    "m": "Takes effect Nov 2, 2026. Affects shippers only when fuel prices fall outside the published range."
+  },
+  "a260cc6a2e05e": {
+   "t": "Whatnot sellers pay USPS weight fees",
+   "m": "Takes effect Nov 4. Sellers pay USPS postage if a package weighs more than its Whatnot label."
+  },
+  "a920867c2e49d": {
+   "t": "FedEx Network 2.0 expands to LA",
+   "m": "Express and Ground network reaches LA and other markets after the holidays. No rate change."
+  },
+  "ade0362073c48": {
+   "t": "FedEx CEO shifts focus from parcels",
+   "m": "TheStreet analysis: FedEx shifting from commodity parcels. No pricing or service change."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:fedex ceo shifts focus from commodity parcels thestreet analysis says",
+   "id": "ade0362073c48",
+   "t": "FedEx CEO shifts focus from parcels",
+   "m": "TheStreet analysis: FedEx shifting from commodity parcels. No pricing or service change.",
+   "big": false,
+   "at": "2026-11-03T12:20:48.678665-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=ade0362073c48",
+   "co": "FedEx"
+  },
+  {
+   "kind": "story",
+   "key": "story:fedex to bring network 2 0 to los angeles other markets after holidays",
+   "id": "a920867c2e49d",
+   "t": "FedEx Network 2.0 expands to LA",
+   "m": "Update 5 · FedEx Network 2.0 integration: Express and Ground network reaches LA and other markets after the holidays. No rate change.",
+   "big": false,
+   "at": "2026-11-03T12:20:48.678636-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 2,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a920867c2e49d",
+   "co": "FedEx"
+  },
+  {
+   "kind": "story",
+   "key": "story:whatnot makes us sellers pay usps weight adjustments from nov 4",
+   "id": "a260cc6a2e05e",
+   "t": "Whatnot sellers pay USPS weight fees",
+   "m": "Unconfirmed: Takes effect Nov 4. Sellers pay USPS postage if a package weighs more than its Whatnot label.",
+   "big": false,
+   "at": "2026-11-03T12:20:48.678253-05:00",
+   "lvl": 1,
+   "unconf": true,
+   "topic": "rates",
+   "notable": false,
+   "mask": 4,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a260cc6a2e05e",
+   "co": "USPS"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-11-03",
