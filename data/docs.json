@@ -677,7 +677,11 @@
   "u": "https://ups.com/assets/resources/media/terms_service_us.pdf",
   "d": "Older tariff",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": 200,
+  "final_url": "https://www.ups.com/assets/resources/media/terms_service_us.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "UPS",
@@ -2104,7 +2108,11 @@
   "f": "data/files/dhl-2026-dhl-express-service-and-rate-guide-u-s-b533b4.pdf",
   "fh": "044f292c650fc4d72b93fa97f44055a4e569e477",
   "fat": "2026-10-22",
-  "fsz": 3418778
+  "fsz": 3418778,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:10Z"
  },
  {
   "c": "DHL",
@@ -2120,7 +2128,11 @@
   "f": "data/files/dhl-2026-dhl-express-u-s-domestic-retail-rate-and-service-guide-4680b2.pdf",
   "fh": "f6ada3a592d74d3f2f189a499bbb4db67ad2445a",
   "fat": "2026-10-22",
-  "fsz": 1044911
+  "fsz": 1044911,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "DHL",
@@ -2132,7 +2144,11 @@
   "d": "5.9% average",
   "cur": true,
   "upd": "2026-09-25",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:15Z"
  },
  {
   "c": "DHL",
@@ -2144,7 +2160,11 @@
   "d": "5.9% average",
   "cur": false,
   "upd": "2025-09-26",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/us-en/home/press/press-archive/2025/dhl-express-announces-annual-price-adjustments-in-the-us.html",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:15Z"
  },
  {
   "c": "DHL",
@@ -2172,7 +2192,11 @@
   "d": "Weekly updates since Apr 13, 2026",
   "cur": true,
   "upd": "2026-03-31",
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/us-en/home/important-information/2026/express-fuel-surcharge-updates.html",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:14Z"
  },
  {
   "c": "DHL",
@@ -2183,7 +2207,11 @@
   "u": "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html",
   "d": "Monthly fuel table (October 2026), DAS list effective Jan 18, 2026, peak documents",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:14Z"
  },
  {
   "c": "DHL",
@@ -2199,7 +2227,11 @@
   "f": "data/files/dhl-dhl-ecommerce-domestic-fuel-table-effective-may-30-2026-bee054.pdf",
   "fh": "d7a8fc1f133eb219724654191eb167698999ce32",
   "fat": "2026-10-22",
-  "fsz": 87761
+  "fsz": 87761,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-053026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:11Z"
  },
  {
   "c": "DHL",
@@ -2215,7 +2247,11 @@
   "f": "data/files/dhl-dhl-ecommerce-domestic-fuel-table-feb-1-to-may-29-2026-02935d.pdf",
   "fh": "01790487027bd5f6b9e8a3cb0f623637dd69b36d",
   "fat": "2026-10-22",
-  "fsz": 86384
+  "fsz": 86384,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/dec-us-fuel-surcharges-domestic-effective-020126-052926.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:11Z"
  },
  {
   "c": "DHL",
@@ -2231,7 +2267,11 @@
   "f": "data/files/dhl-dhl-ecommerce-jet-fuel-surcharge-effective-feb-1-2026-6b04d9.pdf",
   "fh": "891ace333b81e3d28d031b286440a983e4197cec",
   "fat": "2026-10-22",
-  "fsz": 103539
+  "fsz": 103539,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-jet-fuel-surcharge-effective-from-020126.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:12Z"
  },
  {
   "c": "DHL",
@@ -2247,7 +2287,11 @@
   "f": "data/files/dhl-dhl-ecommerce-historical-fuel-surcharges-jun-aug-2025-bff371.pdf",
   "fh": "ecd3d8614d2e7be32a96b8afc7448cd75b5c87df",
   "fat": "2026-10-23",
-  "fsz": 79478
+  "fsz": 79478,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-fuel-surcharges-historic.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:11Z"
  },
  {
   "c": "DHL",
@@ -2263,7 +2307,11 @@
   "f": "data/files/dhl-dhl-ecommerce-delivery-area-zip-list-effective-jan-18-2026-7f9b10.xlsx",
   "fh": "7177fa1303fb80440b18abcc497232e931caa219",
   "fat": "2026-10-22",
-  "fsz": 258724
+  "fsz": 258724,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:10Z"
  },
  {
   "c": "DHL",
@@ -2279,7 +2327,11 @@
   "f": "data/files/dhl-dhl-ecommerce-delivery-area-zip-list-effective-jan-19-2025-2e6d00.xlsx",
   "fh": "1c2ae9bf370a17560d59dcd3c74c09421d8efaf9",
   "fat": "2026-10-23",
-  "fsz": 259271
+  "fsz": 259271,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20250119.xlsx",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:10Z"
  },
  {
   "c": "DHL",
@@ -2296,7 +2348,11 @@
   "f": "data/files/dhl-dhl-ecommerce-peak-surcharge-2026-27-c37905.pdf",
   "fh": "37a92cf2f852af610a7667237f4bf130bdf7d0fd",
   "fat": "2026-10-22",
-  "fsz": 107069
+  "fsz": 107069,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:12Z"
  },
  {
   "c": "DHL",
@@ -2307,7 +2363,11 @@
   "u": "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html",
   "d": "Current terms of carriage, effective Jan 25, 2026",
   "cur": true,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:14Z"
  },
  {
   "c": "DHL",
@@ -2323,7 +2383,11 @@
   "f": "data/files/dhl-dhl-ecommerce-terms-of-carriage-jan-2026-version-90fc0c.pdf",
   "fh": "2f9c3caa0ae403c26e7c8b1820eb23a9967bc0d1",
   "fat": "2026-10-22",
-  "fsz": 116674
+  "fsz": 116674,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:13Z"
  },
  {
   "c": "DHL",
@@ -2339,7 +2403,11 @@
   "f": "data/files/dhl-dhl-ecommerce-terms-of-carriage-dec-2024-version-305fff.pdf",
   "fh": "fe0841e9f1cfd7955428cb2bb4f8f98d991d8045",
   "fat": "2026-10-23",
-  "fsz": 122465
+  "fsz": 122465,
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1224.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:13Z"
  },
  {
   "c": "DHL",
@@ -2350,7 +2418,11 @@
   "u": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1222.pdf",
   "d": "",
   "cur": false,
-  "checked": "2026-10-09"
+  "checked": "2026-10-09",
+  "http_status": null,
+  "final_url": "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1222.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:12Z"
  },
  {
   "c": "LSO",
@@ -2428,7 +2500,11 @@
   "f": "data/files/spee-dee-2026-spee-dee-standard-rate-chart-410a16.pdf",
   "fh": "792733266730858556bcbf4b7ad146f9afef7ada",
   "fat": "2026-10-22",
-  "fsz": 421297
+  "fsz": 421297,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -2444,7 +2520,11 @@
   "f": "data/files/spee-dee-2026-spee-dee-standard-rate-chart-multiple-packages-ebde4f.pdf",
   "fh": "e4b6f4f2d57b68899926ee531ca99a652e07565e",
   "fat": "2026-10-22",
-  "fsz": 421765
+  "fsz": 421765,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-STANDARD-RATE-CHART-MULTIPLE.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -2460,7 +2540,11 @@
   "f": "data/files/spee-dee-2026-spee-dee-on-call-pickup-chart-55b76d.pdf",
   "fh": "1ae9ad33d9c1f1500e30190d32d3b69123304ce2",
   "fat": "2026-10-22",
-  "fsz": 676512
+  "fsz": 676512,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2026/01/2026-OnCall-Chart.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -2476,7 +2560,11 @@
   "f": "data/files/spee-dee-2026-spee-dee-rate-chart-walk-in-counter-file-9e263d.pdf",
   "fh": "5d6fa2181b6d9fd9084e8afe6b2afea58fbd05f0",
   "fat": "2026-10-22",
-  "fsz": 462514
+  "fsz": 462514,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-Walkin-Counter-Chart.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -2542,7 +2630,11 @@
   "f": "data/files/spee-dee-spee-dee-index-based-fuel-surcharges-effective-nov-17-2025-acfad1.pdf",
   "fh": "48ba5aab3304648f863b091b0c0072d630a1035c",
   "fat": "2026-10-23",
-  "fsz": 131641
+  "fsz": 131641,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -3175,7 +3267,11 @@
   "f": "data/files/spee-dee-spee-dee-2026-rates-letter-c6c9b7.pdf",
   "fh": "832b4dc98dcad7b04f40d3ce2fed7643c20f172d",
   "fat": "2026-10-22",
-  "fsz": 219808
+  "fsz": 219808,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/2026-RATES-LETTER.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -3191,7 +3287,11 @@
   "f": "data/files/spee-dee-spee-dee-ltl-rates-2026-version-30-c7b926.pdf",
   "fh": "bc915774bcecbd79460142c66b5f312c78f5a7a8",
   "fat": "2026-10-22",
-  "fsz": 947022
+  "fsz": 947022,
+  "http_status": 200,
+  "final_url": "https://speedeedelivery.com/wp-content/uploads/2025/11/LTL-Rates-2026-version-30.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:09Z"
  },
  {
   "c": "Spee-Dee",
@@ -3238,7 +3338,11 @@
    "story": "a58373f1b7bc3",
    "title": "USPS finalizes live animal mailing rules in Publication 52",
    "when": "2026-10-19"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:15Z"
  },
  {
   "c": "USPS",
@@ -3327,7 +3431,11 @@
    "story": "a6e82ba740e99",
    "title": "EU to apply €2 per-line handling fee on non-EU shipments from 1 Nov",
    "when": "2026-10-20"
-  }
+  },
+  "http_status": null,
+  "final_url": "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026",
+  "content_verified": null,
+  "checked_at": "2026-11-03T05:13Z"
  },
  {
   "c": "FedEx",

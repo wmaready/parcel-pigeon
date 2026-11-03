@@ -2396,6 +2396,93 @@
     "https://pitchbook.com/profiles/company/343183-96"
    ],
    "enriched": "2026-11-03"
+  },
+  {
+   "id": "easyship",
+   "n": "Easyship",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Easyship is a multi-carrier shipping software and API platform that lets e-commerce merchants compare courier rates, buy labels and handle cross-border tax and duties, with integrations for carriers such as USPS, DHL, FedEx and UPS.",
+   "al": [
+    "Easyship Fulfilment Services Ltd",
+    "Easyship Inc"
+   ],
+   "src": "https://www.cbinsights.com/company/easyship",
+   "auto": true,
+   "added": "2026-11-03",
+   "from": "discover",
+   "site": "easyship.com",
+   "srcs": [
+    "https://www.cbinsights.com/company/easyship",
+    "https://pitchbook.com/profiles/company/109621-09",
+    "https://www.prweb.com/releases/loop-simplifies-return-shipping-and-boosts-savings-with-easyship-integration-302082791.html"
+   ],
+   "enriched": "2026-11-03",
+   "pending": false
+  },
+  {
+   "id": "shiphawk",
+   "n": "ShipHawk",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Santa Barbara, CA, USA",
+   "yr": "2012",
+   "s": "ShipHawk develops shipping software that provides multi-carrier rating, dispatch and document generation to automate shipping and logistics operations. It also sells a warehouse management system, acquired with Acuity Global in 2022.",
+   "al": [
+    "Hawk Applications Corp."
+   ],
+   "src": "https://pitchbook.com/profiles/company/56799-28",
+   "auto": true,
+   "added": "2026-11-03",
+   "from": "discover",
+   "site": "shiphawk.com",
+   "geo": [
+    -119.698,
+    34.421
+   ],
+   "srcs": [
+    "https://pitchbook.com/profiles/company/56799-28",
+    "https://www.crunchbase.com/organization/shiphawk",
+    "https://www.crunchbase.com/organization/shiphawk/signals_and_news"
+   ],
+   "enriched": "2026-11-03",
+   "pending": false
+  },
+  {
+   "id": "shipperhq",
+   "n": "ShipperHQ",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Austin, TX, USA",
+   "yr": null,
+   "s": "ShipperHQ is a SaaS shipping and checkout platform that gives e-commerce merchants live multi-carrier and LTL rates, shipping rules, delivery dates and duties and taxes at checkout. It works through platform apps (Shopify, BigCommerce, Adobe Commerce/Magento, Salesforce Commerce Cloud), an API and an SDK.",
+   "al": [
+    "ShipperHQ Inc."
+   ],
+   "src": "https://leadiq.com/c/shipperhq/5a1dabca2300005e00a0d5cf",
+   "auto": true,
+   "added": "2026-11-03",
+   "from": "discover",
+   "site": "shipperhq.com",
+   "geo": [
+    -97.743,
+    30.267
+   ],
+   "srcs": [
+    "https://leadiq.com/c/shipperhq/5a1dabca2300005e00a0d5cf",
+    "https://www.prweb.com/releases/shipperhq-launches-duties--taxes-feature-powered-by-dhl-ecommerce-amid-rising-global-tariffs-302408478.html",
+    "https://www.prweb.com/releases/auctane_partners_with_shipperhq_to_offer_tailored_e_commerce_checkout_experiences/prweb17704701.htm"
+   ],
+   "enriched": "2026-11-03",
+   "pending": false
   }
  ],
  "edges": [
@@ -4171,6 +4258,42 @@
    "t": "Coco robot delivered a DoorDash order named in a Chicago lawsuit",
    "url": "https://www.digitaltrends.com/computing/next-time-you-see-a-delivery-robot-maybe-hide-your-face/",
    "story": "ab4ff3b03130e"
+  },
+  {
+   "a": "easyship",
+   "b": "loop",
+   "k": "partner",
+   "y": "2024",
+   "t": "Ship by Loop Worldwide is powered by Easyship",
+   "url": "https://www.prweb.com/releases/loop-simplifies-return-shipping-and-boosts-savings-with-easyship-integration-302082791.html",
+   "story": null
+  },
+  {
+   "a": "easyship",
+   "b": "shein",
+   "k": "partner",
+   "y": "2025",
+   "t": "SHEIN Marketplace shipping integration",
+   "url": "https://parsers.vc/startup/easyship.com/",
+   "story": null
+  },
+  {
+   "a": "auctane",
+   "b": "shipperhq",
+   "k": "partner",
+   "y": "2021",
+   "t": "Auctane (ShipStation/ShipEngine) partnership for checkout rates and delivery options",
+   "url": "https://www.prweb.com/releases/auctane_partners_with_shipperhq_to_offer_tailored_e_commerce_checkout_experiences/prweb17704701.htm",
+   "story": null
+  },
+  {
+   "a": "dhlecom",
+   "b": "shipperhq",
+   "k": "partner",
+   "y": "2025",
+   "t": "Duties & Taxes feature powered by DHL eCommerce calculator",
+   "url": "https://www.prweb.com/releases/shipperhq-launches-duties--taxes-feature-powered-by-dhl-ecommerce-amid-rising-global-tariffs-302408478.html",
+   "story": null
   }
  ],
  "moves": [
@@ -4502,7 +4625,10 @@
   "cleveronas": "2026-11-01",
   "ingrammicro": "2026-11-02",
   "favordelivery": "2026-11-02",
-  "shipium": "2026-11-03"
+  "shipium": "2026-11-03",
+  "easyship": "2026-11-03",
+  "shiphawk": "2026-11-03",
+  "shipperhq": "2026-11-03"
  },
  "facts": {
   "ups": {

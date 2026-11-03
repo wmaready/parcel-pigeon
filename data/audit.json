@@ -1,5 +1,5 @@
 {
- "run": "2026-11-03T05:01Z",
+ "run": "2026-11-03T05:15Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,8 +8,8 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 520,
- "doc_cursor": 174,
+ "link_cursor": 560,
+ "doc_cursor": 204,
  "checked_pairs": [
   "70042e1b5ea7",
   "6157952e9b11",
@@ -365,6 +365,69 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/): https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/): https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
+   "ids": [
+    "a71e9c34808fa"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/): https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/",
+   "ids": [
+    "a3bcc80e64163"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/): https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/",
+   "ids": [
+    "a93db469c6b01"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/): https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/",
+   "ids": [
+    "a663794cc9c55"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
+   "ids": [
+    "36"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -645,6 +708,69 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/): https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/): https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
+   "ids": [
+    "a71e9c34808fa"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/): https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/",
+   "ids": [
+    "a3bcc80e64163"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/): https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/",
+   "ids": [
+    "a93db469c6b01"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/): https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/",
+   "ids": [
+    "a663794cc9c55"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
+   "ids": [
+    "36"
+   ],
    "fixed": false
   }
  ]
