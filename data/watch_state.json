@@ -186,7 +186,7 @@
   "lines": 52,
   "told": [],
   "pend": "a4d0d79d82ea",
-  "fail_runs": 4
+  "fail_runs": 5
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-03",
@@ -195,7 +195,8 @@
   ],
   "lines": 67,
   "told": [],
-  "pend": "6cb538384da5"
+  "pend": "6cb538384da5",
+  "fail_runs": 1
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-03",
@@ -219,7 +220,7 @@
   "lines": 53,
   "told": [],
   "pend": "6642f6b904ab",
-  "fail_runs": 5
+  "fail_runs": 6
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-03",
