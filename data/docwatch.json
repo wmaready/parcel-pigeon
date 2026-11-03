@@ -1,5 +1,5 @@
 {
- "cursor": 9,
+ "cursor": 24,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 332,
+   "fails": 333,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 332,
+   "fails": 333,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -951,7 +951,7 @@
   },
   "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
    "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
-   "fails": 33,
+   "fails": 34,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -979,7 +979,7 @@
   },
   "https://www.ontrac.com/supplemental-surcharges": {
    "n": "Supplemental Surcharges",
-   "fails": 33,
+   "fails": 34,
    "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
    "blocked": false,
    "last_try": "2026-11-03"
@@ -2124,6 +2124,17 @@
     "d": "2026-10-30",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3_cy/FedEx-Q3-2026-Earnings-Release.pdf",
     "txt": "data/snapshots/e5b825a04c10/2026-10-30.txt"
+   }
+  },
+  "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products": {
+   "hash": "be937369d8b6",
+   "first": "2026-11-03",
+   "checked": "2026-11-03",
+   "n": "Postal Regulatory Commission notice: New Postal Products (91 FR 69281)",
+   "snap": {
+    "d": "2026-11-03",
+    "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22409.pdf",
+    "txt": "data/snapshots/c0747e042d57/2026-11-03.txt"
    }
   }
  }
