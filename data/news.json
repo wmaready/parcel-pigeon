@@ -1,190 +1,5 @@
 [
  {
-  "id": "wf7bb9227b2de",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "title": "FedEx posts fuel surcharge tables effective Nov. 9, 2026",
-  "sum": "FedEx's fuel surcharge page now shows tables effective Nov. 9, 2026. The domestic package table runs from 34.00% to 35.50% and the Ground, Home Delivery and International Ground table runs from 30.00% to 31.50%. The express freight table runs from $0.740 to $0.764 per lb. The earlier version on file is a different document (International Premium terms effective Jan. 5, 2026), so no old-versus-new percentage comparison is possible.",
-  "plain": "Shippers using FedEx Express, Ground, Home Delivery, International Ground or express freight services pay surcharges set by these tables from Nov. 9, 2026. The size of the move from the prior week's rates cannot be determined.",
-  "imp": "info",
-  "lvl": 1,
-  "cat": "Guide changes",
-  "act": "2026-11-09",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Domestic and U.S.–Puerto Rico package services fuel surcharge table (jet fuel index)",
-    "before": null,
-    "after": "34.00% at $4.46–$4.51 per gallon, rising 0.25 point per bracket to 35.50% at $4.76–$4.81",
-    "effective": "2026-11-09",
-    "who": "FedEx domestic and U.S. to Puerto Rico package shipments",
-    "impact": null
-   },
-   {
-    "what": "FedEx Ground, Home Delivery, International Ground and pickup services fuel surcharge table (diesel index)",
-    "before": null,
-    "after": "30.00% at $6.07–$6.16 per gallon, rising 0.25 point per bracket to 31.50% at $6.61–$6.70",
-    "effective": "2026-11-09",
-    "who": "FedEx Ground, Home Delivery, International Ground and pickup shipments",
-    "impact": null
-   },
-   {
-    "what": "Domestic express freight fuel surcharge table (per rated pound)",
-    "before": null,
-    "after": "$0.740 per lb. at $4.46–$4.51 jet fuel, rising to $0.764 per lb. at $4.76–$4.81",
-    "effective": "2026-11-09",
-    "who": "FedEx domestic and U.S. to Puerto Rico express freight shipments",
-    "impact": null
-   },
-   {
-    "what": "Step rule for jet fuel based percentages",
-    "before": null,
-    "after": "Below $3.51 jet fuel, surcharge moves 0.25% per $0.21 change; at and above $3.51, 0.25% per $0.05 change",
-    "effective": "2026-11-09",
-    "who": "Package services shippers on the jet fuel based surcharge",
-    "impact": null
-   },
-   {
-    "what": "Step rule for diesel fuel based percentages",
-    "before": null,
-    "after": "Below $5.71 diesel, surcharge moves 0.25% per $0.27 change; at and above $5.71, 0.25% per $0.09 change",
-    "effective": "2026-11-09",
-    "who": "Ground, Home Delivery and International Ground shippers",
-    "impact": null
-   },
-   {
-    "what": "Table extension trigger points for the Ground and diesel table",
-    "before": null,
-    "after": "Table is extended if the diesel index falls below $6.07 or rises above $6.70",
-    "effective": "2026-11-09",
-    "who": "Ground, Home Delivery and International Ground shippers",
-    "impact": null
-   }
-  ],
-  "verdict": "new document",
-  "unknowns": [
-   "Whether the table structure changed or only the weekly percentages were updated cannot be confirmed.",
-   "Older version not on file"
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "exclusive": true,
-  "src": "FedEx",
-  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-  "srcs": [
-   {
-    "src": "FedEx: FedEx fuel surcharge page",
-    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "new document",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
-    }
-   ]
-  }
- },
- {
-  "id": "w0b8720b6a0e7",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
-  "sum": "FedEx's U.S. import Demand Surcharge for Europe and Israel origins rises from $0.25 to $0.28 per lb. for parcel and freight, effective Nov. 2, 2026 until further notice. The same date brings a new Vietnam-to-U.S. surcharge of $0.36 per lb. for the priority-class services and $0.27 per lb. for the economy-class services. The $0.25 rate now applies only through Nov. 1, 2026. All other listed origins keep their rates.",
-  "plain": "Importers shipping from Europe or Israel to the U.S. pay $0.03 more per lb. from Nov. 2. Vietnam-origin U.S. imports now carry a per-lb. demand surcharge. The $1 parcel and $50 freight minimums are unchanged.",
-  "imp": "up",
-  "lvl": 2,
-  "cat": "Pricing & GRI",
-  "act": "2026-11-02",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Europe-to-U.S. Demand Surcharge, parcel and freight",
-    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
-    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
-    "effective": "2026-11-02",
-    "who": "U.S. import parcel and freight shipments originating in Europe",
-    "impact": "$0.25 -> $0.28, +$0.03 per lb."
-   },
-   {
-    "what": "Israel-to-U.S. Demand Surcharge, parcel and freight",
-    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
-    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
-    "effective": "2026-11-02",
-    "who": "U.S. import parcel and freight shipments originating in Israel",
-    "impact": "$0.25 -> $0.28, +$0.03 per lb."
-   },
-   {
-    "what": "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
-    "before": null,
-    "after": "$0.36 per lb. (priority-class services) and $0.27 per lb. (economy-class services), effective Nov. 2, 2026 until further notice",
-    "effective": "2026-11-02",
-    "who": "U.S. import shipments originating in Vietnam",
-    "impact": "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
-   }
-  ],
-  "verdict": "price change",
-  "unknowns": [
-   "Whether the page and document date change (Sept. 4 to Oct. 23, 2026) reflects any other edits is not confirmed.",
-   "Older version not on file"
-  ],
-  "dates": [
-   {
-    "d": "2026-11-02",
-    "w": "FedEx: Europe-to-U.S. Demand Surcharge, parcel and freight",
-    "imp": "up",
-    "fees": [
-     [
-      "FedEx",
-      "Israel-to-U.S. Demand Surcharge, parcel and freight",
-      "$0.25 -> $0.28, +$0.03 per lb."
-     ],
-     [
-      "FedEx",
-      "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
-      "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "FedEx Demand surcharges (spotted by Parcel Pigeon)",
-  "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-  "srcs": [
-   {
-    "src": "FedEx Demand surcharges",
-    "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
-   },
-   {
-    "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
-    "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "price change (11-2-26_US-Import-Demand-Surcharges.pdf), cosmetic",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-     "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
-    }
-   ]
-  },
-  "exclusive": true,
-  "primary": true
- },
- {
   "id": "a089340bc097e",
   "date": "2026-11-03",
   "c": [
@@ -617,6 +432,191 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "w0b8720b6a0e7",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
+  "sum": "FedEx's U.S. import Demand Surcharge for Europe and Israel origins rises from $0.25 to $0.28 per lb. for parcel and freight, effective Nov. 2, 2026 until further notice. The same date brings a new Vietnam-to-U.S. surcharge of $0.36 per lb. for the priority-class services and $0.27 per lb. for the economy-class services. The $0.25 rate now applies only through Nov. 1, 2026. All other listed origins keep their rates.",
+  "plain": "Importers shipping from Europe or Israel to the U.S. pay $0.03 more per lb. from Nov. 2. Vietnam-origin U.S. imports now carry a per-lb. demand surcharge. The $1 parcel and $50 freight minimums are unchanged.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-11-02",
+  "inferred": null,
+  "detected": "2026-11-03",
+  "changes": [
+   {
+    "what": "Europe-to-U.S. Demand Surcharge, parcel and freight",
+    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
+    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
+    "effective": "2026-11-02",
+    "who": "U.S. import parcel and freight shipments originating in Europe",
+    "impact": "$0.25 -> $0.28, +$0.03 per lb."
+   },
+   {
+    "what": "Israel-to-U.S. Demand Surcharge, parcel and freight",
+    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
+    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
+    "effective": "2026-11-02",
+    "who": "U.S. import parcel and freight shipments originating in Israel",
+    "impact": "$0.25 -> $0.28, +$0.03 per lb."
+   },
+   {
+    "what": "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
+    "before": null,
+    "after": "$0.36 per lb. (priority-class services) and $0.27 per lb. (economy-class services), effective Nov. 2, 2026 until further notice",
+    "effective": "2026-11-02",
+    "who": "U.S. import shipments originating in Vietnam",
+    "impact": "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Whether the page and document date change (Sept. 4 to Oct. 23, 2026) reflects any other edits is not confirmed.",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-02",
+    "w": "FedEx: Europe-to-U.S. Demand Surcharge, parcel and freight",
+    "imp": "up",
+    "fees": [
+     [
+      "FedEx",
+      "Israel-to-U.S. Demand Surcharge, parcel and freight",
+      "$0.25 -> $0.28, +$0.03 per lb."
+     ],
+     [
+      "FedEx",
+      "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
+      "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "FedEx Demand surcharges (spotted by Parcel Pigeon)",
+  "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+  "srcs": [
+   {
+    "src": "FedEx Demand surcharges",
+    "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
+   },
+   {
+    "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
+    "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change (11-2-26_US-Import-Demand-Surcharges.pdf), cosmetic",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+     "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
+  "id": "wf7bb9227b2de",
+  "date": "2026-11-03",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx posts fuel surcharge tables effective Nov. 9, 2026",
+  "sum": "FedEx's fuel surcharge page now shows tables effective Nov. 9, 2026. The domestic package table runs from 34.00% to 35.50% and the Ground, Home Delivery and International Ground table runs from 30.00% to 31.50%. The express freight table runs from $0.740 to $0.764 per lb. The earlier version on file is a different document (International Premium terms effective Jan. 5, 2026), so no old-versus-new percentage comparison is possible.",
+  "plain": "Shippers using FedEx Express, Ground, Home Delivery, International Ground or express freight services pay surcharges set by these tables from Nov. 9, 2026. The size of the move from the prior week's rates cannot be determined.",
+  "imp": "info",
+  "lvl": 1,
+  "cat": "Guide changes",
+  "act": "2026-11-09",
+  "inferred": null,
+  "detected": "2026-11-03",
+  "changes": [
+   {
+    "what": "Domestic and U.S.–Puerto Rico package services fuel surcharge table (jet fuel index)",
+    "before": null,
+    "after": "34.00% at $4.46–$4.51 per gallon, rising 0.25 point per bracket to 35.50% at $4.76–$4.81",
+    "effective": "2026-11-09",
+    "who": "FedEx domestic and U.S. to Puerto Rico package shipments",
+    "impact": null
+   },
+   {
+    "what": "FedEx Ground, Home Delivery, International Ground and pickup services fuel surcharge table (diesel index)",
+    "before": null,
+    "after": "30.00% at $6.07–$6.16 per gallon, rising 0.25 point per bracket to 31.50% at $6.61–$6.70",
+    "effective": "2026-11-09",
+    "who": "FedEx Ground, Home Delivery, International Ground and pickup shipments",
+    "impact": null
+   },
+   {
+    "what": "Domestic express freight fuel surcharge table (per rated pound)",
+    "before": null,
+    "after": "$0.740 per lb. at $4.46–$4.51 jet fuel, rising to $0.764 per lb. at $4.76–$4.81",
+    "effective": "2026-11-09",
+    "who": "FedEx domestic and U.S. to Puerto Rico express freight shipments",
+    "impact": null
+   },
+   {
+    "what": "Step rule for jet fuel based percentages",
+    "before": null,
+    "after": "Below $3.51 jet fuel, surcharge moves 0.25% per $0.21 change; at and above $3.51, 0.25% per $0.05 change",
+    "effective": "2026-11-09",
+    "who": "Package services shippers on the jet fuel based surcharge",
+    "impact": null
+   },
+   {
+    "what": "Step rule for diesel fuel based percentages",
+    "before": null,
+    "after": "Below $5.71 diesel, surcharge moves 0.25% per $0.27 change; at and above $5.71, 0.25% per $0.09 change",
+    "effective": "2026-11-09",
+    "who": "Ground, Home Delivery and International Ground shippers",
+    "impact": null
+   },
+   {
+    "what": "Table extension trigger points for the Ground and diesel table",
+    "before": null,
+    "after": "Table is extended if the diesel index falls below $6.07 or rises above $6.70",
+    "effective": "2026-11-09",
+    "who": "Ground, Home Delivery and International Ground shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Whether the table structure changed or only the weekly percentages were updated cannot be confirmed.",
+   "Older version not on file"
+  ],
+  "dates": [],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "FedEx",
+  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+  "srcs": [
+   {
+    "src": "FedEx: FedEx fuel surcharge page",
+    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
+    }
+   ]
+  }
  },
  {
   "id": "wf7fe771e76cd",
@@ -10440,38 +10440,6 @@
    }
   ],
   "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a1839b8938952",
-  "date": "2026-10-07",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "PRC seeks comment on USPS plan for retiree health top-up costs",
-  "sum": "The Postal Regulatory Commission published a notice acknowledging an Oct. 7, 2026 Postal Service petition to start a rulemaking on analytical principles for periodic reports. The petition proposes treating retiree health benefit top-up payments as variable to the same degree and distributed in the same manner as all labor. Comments are due Nov. 19, 2026.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service takes effect from this notice. It opens a public comment period on how the Postal Service attributes retiree health top-up costs in its periodic reports.",
-  "why": "The proposal sets how USPS attributes $726 million in FY 2026 retiree health expenses to products, which feeds the Commission's periodic cost reports.",
-  "score": 2,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:49:14Z",
-  "src": "Federal Register: PRC",
-  "url": "https://www.federalregister.gov/documents/2026/10/14/2026-21000/periodic-reporting",
-  "srcs": [
-   {
-    "src": "Federal Register: PRC",
-    "url": "https://www.federalregister.gov/documents/2026/10/14/2026-21000/periodic-reporting"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-07",
   "edge": true,
   "exclusive": true
  }
