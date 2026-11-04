@@ -1,5 +1,5 @@
 {
- "cursor": 124,
+ "cursor": 139,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 378,
+   "fails": 379,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 378,
+   "fails": 379,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
@@ -436,9 +436,6 @@
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf",
     "txt": "data/snapshots/9fa62bf8dd6d/2026-10-25.txt"
    },
-   "fails": 1,
-   "err": "blocked by the carrier's site (plain: block page; impersonate: Timeout; browser: refused; proxy: refused; archive: refused)",
-   "blocked": true,
    "last_try": "2026-11-04"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
