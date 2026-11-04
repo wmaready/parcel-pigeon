@@ -131,18 +131,17 @@
    "USPS"
   ],
   "cx": {
-   "sig": "8228a3beb91d",
+   "sig": "8a4df98750b9",
    "v": 3,
    "beats": {
-    "h420": "Proposal to curb de minimis on tariffed goods; White House said shipments grew from about 140 million to over 1 billion a year.",
-    "h504": "USPS said Feb. 4 it would stop taking China and Hong Kong parcels, then reversed a day later to work with CBP on duties.",
-    "h513": "De minimis ended May 2 for China and Hong Kong; postal shipments faced 120% duty or $100 per item, rising to $200 on June 1.",
-    "h526": "Aug. 29: de minimis ended for all countries, and the UPU said at least 25 countries halted postal shipments to the U.S.",
-    "a55e20dc9f8f3": "Oct. 8: CBP proposed entry type 11 imports be filed on or before arrival, not within 15 days; comments are due Dec. 7.",
-    "a2f683da86bf8": "CBP pushed formal-entry compliance for certain postal goods from Oct. 22, 2026 to Jan. 20, 2027, giving shippers more time."
+    "h420": "Sept. 2024: a proposal to curb the $800 exemption for tariffed goods, as shipments grew from about 140 million to over 1 billion a year.",
+    "h504": "USPS stopped taking China and Hong Kong parcels Feb. 4, then reversed a day later to work with CBP on collecting duties.",
+    "h513": "May 2, 2025: the exemption ends for China and Hong Kong; postal parcels face 120% of value or $100 per item, rising to $200 on June 1.",
+    "h526": "Aug. 29: it ends for all countries, and the UPU says at least 25 countries halted postal shipments to the U.S.",
+    "a2f683da86bf8": "CBP pushed a postal formal-entry date from Oct. 22, 2026 to Jan. 20, 2027; it also proposed earlier filing deadlines Oct. 8."
    },
-   "intro": "De minimis duty-free entry for $800-or-less parcels is gone, and CBP keeps tightening low-value import rules.",
-   "now": "Postal formal-entry compliance is now due Jan. 20, 2027, and comments on CBP's earlier-filing proposal are due Dec. 7."
+   "intro": "How duty-free $800 imports ended, first for China and then for everyone, and what that means for shippers.",
+   "now": "De minimis stays suspended for all countries; the formal-entry compliance date for certain postal goods is now Jan. 20, 2027."
   },
   "was": [
    "cbp-low-value-import-filing"
@@ -515,7 +514,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Walmart and Wing are expanding drone delivery to more metros, while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
+  "s": "Amazon is flying MK30 drones from Markham near Chicago while the FAA's Chicago review has no posted decision and the Part 108 rule was unpublished as of October.",
   "ids": [
    "g27",
    "g26",
@@ -985,15 +984,27 @@
  "eu-low-value-imports": {
   "n": "EU low-value import charges",
   "ids": [
-   "a9eac1c65a497"
+   "a9eac1c65a497",
+   "aa7358e9cf2dd"
   ],
   "first": "2026-11-01",
-  "s": "DHL says the EU customs reform, agreed politically on 26 March 2026, is moving toward implementation over the coming years.",
-  "last": "2026-11-03",
+  "s": "The EU Product Identifier requirement for B2C shipments up to EUR 150 has applied since 1 November 2026, alongside the per-item charges reported earlier.",
+  "last": "2026-11-04",
   "c": [
    "DHL",
    "Industry"
   ],
-  "rv": "95d0d1b342d2"
+  "rv": "9f6c236be972",
+  "co": "DHL",
+  "apart": [
+   "usps-big-shipper-deals"
+  ],
+  "cx": {
+   "sig": "9f6c236be972",
+   "v": 3,
+   "beats": {},
+   "intro": "The EU now charges per-item fees and requires product IDs on low-value B2C imports, which adds cost and data work for shippers.",
+   "now": "The product ID rule has applied since 1 November 2026, so shippers need line-item data on every B2C parcel up to EUR 150 headed into the EU."
+  }
  }
 }

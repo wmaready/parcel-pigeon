@@ -133,6 +133,57 @@
   ]
  },
  {
+  "id": "aa7358e9cf2dd",
+  "date": "2026-11-04",
+  "c": [
+   "DHL"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "DHL details EU product ID data rule for B2C shipments up to EUR 150",
+  "sum": "DHL said Product Identifiers became a mandatory customs data element on 1 November 2026 for B2C shipments valued up to EUR 150 imported into the EU27. Shippers must give a Merchant PID and a Non-Standardized Manufacturer PID at line-item level. DHL said missing data may cause clearance delays, holds or return-to-origin.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "From 1 November 2026, B2C shipments valued up to EUR 150 entering the EU27 need a Merchant PID and a Non-Standardized Manufacturer PID for each line item. DHL said missing mandatory data may delay clearance, hold shipments or send them back to origin.",
+  "why": "B2C shipments up to EUR 150 entering the EU27 now need line-item PID data, and DHL said missing data can bring holds or return-to-origin.",
+  "score": 6,
+  "tie": null,
+  "act": "2026-11-01",
+  "dates": [],
+  "added": "2026-11-04T17:16:38Z",
+  "src": "DHL",
+  "url": "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments",
+  "srcs": [
+   {
+    "src": "DHL",
+    "url": "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments"
+   }
+  ],
+  "auto": true,
+  "thread": "eu-low-value-imports",
+  "upd": 2,
+  "new": "DHL's advisory sets out the data shippers must provide: a Merchant PID and a Non-Standardized Manufacturer PID per line item, and warns missing data may cause delays, holds or return-to-origin.",
+  "img": "data/img/aa7358e9cf2dd-w.webp",
+  "thumb": "data/img/aa7358e9cf2dd-s.webp",
+  "imgc": "Image: DHL",
+  "syn": "DHL said Product Identifiers (PIDs) became a mandatory customs data element on 1 November 2026 for B2C shipments valued up to EUR 150 imported into the EU27. The requirement comes under the EU Customs Reform and is meant to improve product traceability, strengthen consumer protection and help customs authorities identify non-compliant products. Shippers must supply a Merchant PID and a Non-Standardized Manufacturer PID at line-item level, and a Standardized Manufacturer PID such as a GTIN, EAN or UPC where available. DHL said missing mandatory PID information may result in clearance delays, shipment holds or return-to-origin.",
+  "aff": [
+   {
+    "who": "B2C shippers to the EU27",
+    "what": "Merchant PID and Non-Standardized Manufacturer PID required per line item on shipments up to EUR 150 from 1 November 2026."
+   },
+   {
+    "who": "Shipments missing PID data",
+    "what": "May face customs clearance delays, holds or return-to-origin, according to DHL."
+   },
+   {
+    "who": "Products with a standard code",
+    "what": "A Standardized Manufacturer PID (GTIN, EAN or UPC) should be provided where available."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a089340bc097e",
   "date": "2026-11-03",
   "c": [
@@ -1126,6 +1177,57 @@
    {
     "who": "Mail preparation standards",
     "what": "New standards support changes implemented since the April 7, 2025, version, per the notice."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "ab01558e8d147",
+  "date": "2026-11-02",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Analysis",
+  "title": "Dolton directs Amazon drone complaints from residents to Amazon, FAA",
+  "sum": "Amazon's MK30 delivery drones are flying over Dolton, Illinois, and village officials have begun telling residents to take concerns to Amazon or the FAA, CBS Chicago reported on Nov. 2. DroneXL reported that Homewood gave residents a similar message on Oct. 26 and that the FAA's public file for the Chicago hubs still ends at a July draft with no decision posted.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or fees. Dolton officials are telling residents to take drone concerns to Amazon or the FAA, and the FAA's Chicago environmental review has no posted decision.",
+  "why": "Residents near Amazon's Markham drone hub, which has 21 MK30s, are being routed to Amazon and the FAA while the FAA's Chicago review shows no decision.",
+  "score": 4,
+  "tie": "Amazon began drone deliveries from its Markham fulfillment center in October 2026, with about 21 drones, and some residents complained about noise and safety.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T17:17:21Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/04/amazon-drones-dolton-illinois-village-sends-residents-to-faa/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/04/amazon-drones-dolton-illinois-village-sends-residents-to-faa/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "new": "South-suburban villages Dolton and Homewood are directing residents' drone complaints to Amazon or the FAA, and DroneXL reported that the FAA's Chicago file still ends at a July draft; there is no change to shipper rates or service.",
+  "syn": "Amazon's MK30 drones are flying over Dolton, Illinois, and village officials have begun telling residents to take concerns to Amazon or the FAA, CBS Chicago reported on Nov. 2. Homewood told its residents on Oct. 26 that it cannot ground or quiet the drones, per the Country Herald. DroneXL reported that the FAA's public file for the Chicago hubs, checked Nov. 4, ends at a July draft with no decision posted. It also reported that 15 states have asked the Second Circuit to set aside the FAA's July 28 national environmental finding. DroneXL's author said he reads the Markham site as operating under that finding.",
+  "aff": [
+   {
+    "who": "Dolton residents",
+    "what": "Told by village officials to take drone concerns to Amazon or the FAA, per CBS Chicago (Nov. 2)."
+   },
+   {
+    "who": "Homewood residents",
+    "what": "Told the village cannot ground or quiet the drones, per the Country Herald (Oct. 26)."
+   },
+   {
+    "who": "Markham drone operations",
+    "what": "Amazon told CBS the site has 21 drones handling small deliveries while drivers carry everything else."
+   },
+   {
+    "who": "Chicago-area drone delivery approval",
+    "what": "FAA's index lists only the July draft for Markham, Matteson and West Chicago; comment closed Aug. 14."
    }
   ],
   "exclusive": true
@@ -10463,73 +10565,5 @@
   "ann": "2026-10-08",
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a504bfb1748d7",
-  "date": "2026-10-08",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Connecticut man gets 2 years for $3.5M Amazon Relay fraud scheme",
-  "sum": "Ameer Nasir, 25, of Trumbull, Connecticut, was sentenced to 24 months in federal prison plus three years of supervised release, FreightWaves reported. Prosecutors linked 23 trucking accounts he registered with Amazon Logistics to more than 1,000 trailer movements that never occurred. The court ordered $3,547,090.93 in restitution, and he must report to prison Nov. 12.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The case concerns past fraud on Amazon's Relay trucking platform, which ran from December 2019 through February 2021.",
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2026-11-12",
-    "w": "Nasir must report to federal prison",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/man-gets-2-years-for-3-5m-amazon-fraud-using-23-trucking-accounts",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/man-gets-2-years-for-3-5m-amazon-fraud-using-23-trucking-accounts"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "a55e20dc9f8f3",
-  "date": "2026-10-08",
-  "c": [
-   "USPS",
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "CBP proposes earlier filing deadlines for low-value imports, postal entries",
-  "sum": "U.S. Customs and Border Protection proposed in an Oct. 8 Federal Register filing that entry type 11 imports be filed on or before arrival rather than within 15 days, and that postal entry type 13 require more data. Public comments are due Dec. 7.",
-  "imp": "watch",
-  "lvl": 2,
-  "plain": "If adopted, importers of goods valued at $2,500 or less would face earlier filing deadlines and additional data requirements. CBP said the changes would result in higher shipping costs for imports under both entry types; no effective date is stated.",
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2026-12-07",
-    "w": "Public comment deadline on CBP low-value import proposal",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/cbp-eyes-earlier-filing-deadlines-for-low-cost-imports-postal-changes/832877/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/cbp-eyes-earlier-filing-deadlines-for-low-cost-imports-postal-changes/832877/"
-   }
-  ],
-  "auto": true,
-  "thread": "cbp-low-value-import-filing"
  }
 ]

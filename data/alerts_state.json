@@ -129,7 +129,8 @@
   "wf7bb9227b2de",
   "a2f60a03dddd7",
   "a4f6ca9e3591e",
-  "a65c5bec8c7d2"
+  "a65c5bec8c7d2",
+  "aa7358e9cf2dd"
  ],
  "clock": [
   "e06:7",
@@ -412,7 +413,8 @@
   "more:story:amazon deploys thousands of smart glasses to delivery drivers,story:shipstation and acumatica expand partnership for erp shipping,story:veho launches pulse ai for post purchase delivery data analysis",
   "story:amazon deploys thousands of smart glasses to delivery drivers",
   "story:veho launches pulse ai for post purchase delivery data analysis",
-  "story:shipstation and acumatica expand partnership for erp shipping"
+  "story:shipstation and acumatica expand partnership for erp shipping",
+  "story:dhl details eu product id data rule for b2c shipments up to eur 150"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -541,64 +543,66 @@
   "fedex posts fuel surcharge tables effective nov 9 2026",
   "shipstation and acumatica expand partnership for erp shippin",
   "veho launches pulse ai for post purchase delivery data analy",
-  "amazon deploys thousands of smart glasses to delivery driver"
+  "amazon deploys thousands of smart glasses to delivery driver",
+  "dhl details eu product id data rule for b2c shipments up to "
  ],
  "harvested": [
-  "a89f005fb1862",
-  "a3a45d7f6db20",
+  "af8ee5ed067c6",
   "a89d7e4beebd9",
-  "wf7fe771e76cd",
-  "a831c709e5809",
-  "w599d9089a65d",
+  "rv5-ups-sbr-fuel",
+  "w91588ddb11ed",
+  "w8465aa718dc6",
+  "a260cc6a2e05e",
+  "a9b77b62dcd89",
+  "a4f6ca9e3591e",
+  "w500a5bdc762c",
+  "a999409ce7860",
+  "wf5014bc150e9",
+  "a0adb56a55334",
+  "wa9c423a83880",
+  "ae12ca75552ef",
   "wf7bb9227b2de",
   "a72efb5e01b99",
-  "a999409ce7860",
-  "a0adb56a55334",
-  "a312b45efa358",
+  "a15404304f17b",
+  "a831c709e5809",
+  "aee6669d325da",
+  "a3a45d7f6db20",
   "w0b8720b6a0e7",
-  "ae12ca75552ef",
-  "a260cc6a2e05e",
-  "wdf959a97bcb6",
-  "ac78f72e7f458",
-  "a58373f1b7bc3",
-  "a5d45f26f2219",
-  "a4f6ca9e3591e",
-  "a57a06c26359c",
-  "a6e82ba740e99",
-  "wacb825361479",
-  "wa9c423a83880",
-  "a9b77b62dcd89",
+  "ae2ec177094e3",
+  "wb8827e8c126e",
+  "w599d9089a65d",
   "wbfc38914b368",
-  "a2f683da86bf8",
-  "aaf63e9db25a0",
-  "aba40a11b6946",
-  "w9c03b8f99b5f",
-  "a6c2418bed0a7",
-  "a6cc2420ad66e",
-  "a82e057190718",
-  "a773d361dac4e",
-  "w84705482dd2f",
-  "w91588ddb11ed",
-  "a2f60a03dddd7",
   "a567030ffc76c",
+  "aa7358e9cf2dd",
+  "w84705482dd2f",
+  "a58373f1b7bc3",
+  "w9c03b8f99b5f",
+  "a6cc2420ad66e",
+  "a57a06c26359c",
+  "a2f60a03dddd7",
   "a2b81ad721cb8",
   "w150132868eae",
+  "a6c2418bed0a7",
+  "a89f005fb1862",
+  "a6e82ba740e99",
+  "ac78f72e7f458",
+  "a82e057190718",
   "a40c99078f690",
-  "afd8784e2b179",
-  "aee6669d325da",
-  "w8465aa718dc6",
-  "w500a5bdc762c",
-  "a15404304f17b",
   "a663794cc9c55",
-  "ae2ec177094e3",
-  "w68c1687d28a1",
-  "a2def09bc43bb",
+  "wdf959a97bcb6",
   "a6ba18049bc99",
-  "wf5014bc150e9",
-  "af8ee5ed067c6",
-  "wb8827e8c126e",
-  "rv5-ups-sbr-fuel",
-  "a351cab9045c7"
+  "wf7fe771e76cd",
+  "w68c1687d28a1",
+  "afd8784e2b179",
+  "wacb825361479",
+  "a2def09bc43bb",
+  "aaf63e9db25a0",
+  "a312b45efa358",
+  "aba40a11b6946",
+  "a773d361dac4e",
+  "a351cab9045c7",
+  "a5d45f26f2219",
+  "a2f683da86bf8"
  ],
  "backfilled": true,
  "recent": [
@@ -2629,6 +2633,21 @@
      "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/"
     }
    ]
+  },
+  {
+   "id": "aa7358e9cf2dd",
+   "title": "DHL details EU product ID data rule for B2C shipments up to EUR 150",
+   "date": "2026-11-04",
+   "c": [
+    "DHL"
+   ],
+   "url": "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments",
+   "srcs": [
+    {
+     "src": "DHL",
+     "url": "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments"
+    }
+   ]
   }
  ],
  "copy": {
@@ -3023,13 +3042,17 @@
   "a65c5bec8c7d2": {
    "t": "Amazon gives drivers smart glasses",
    "m": "Driver tool showing navigation and drop-off instructions; no rate or service changes announced."
+  },
+  "aa7358e9cf2dd": {
+   "t": "DHL adds EU product ID rule Nov 1",
+   "m": "B2C shipments up to EUR 150 into the EU27 need product IDs; takes effect Nov 1, 2026."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-04",
-  "n": 3
+  "n": 4
  },
- "last_push": "2026-11-04T10:12:01.238368-05:00"
+ "last_push": "2026-11-04T12:18:01.847664-05:00"
 }
