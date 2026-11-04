@@ -2483,6 +2483,63 @@
    ],
    "enriched": "2026-11-03",
    "pending": false
+  },
+  {
+   "id": "swapswapcommer",
+   "n": "Swap Commerce",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Swap is a commerce operating system for e-commerce brands that began with returns and exchanges and now also covers cross-border shipping and logistics, duties and tax, tracking and demand planning.",
+   "al": [
+    "Swap",
+    "Swap Commerce Ltd",
+    "Swap Global"
+   ],
+   "src": "https://www.digitalcommerce360.com/2026/01/07/swap-series-c-funding-100-million-us-expansion/",
+   "auto": true,
+   "added": "2026-11-04",
+   "from": "discover",
+   "site": "swap-commerce.com",
+   "srcs": [
+    "https://www.digitalcommerce360.com/2026/01/07/swap-series-c-funding-100-million-us-expansion/",
+    "https://tech.eu/2026/01/07/e-commerce-operating-startup-swap-raises-100m/",
+    "https://www.linkedin.com/company/sw-ap"
+   ],
+   "enriched": "2026-11-04",
+   "pending": false
+  },
+  {
+   "id": "trove",
+   "n": "Trove",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": "2012",
+   "s": "Trove runs branded resale, trade-in and returns-processing platforms for brands and retailers, including condition grading, pricing and routing of returned items, backed by partner-operated warehouse and logistics facilities in North America and Europe.",
+   "al": [
+    "Trove Recommerce",
+    "Trove Recommerce, Inc.",
+    "Yerdle",
+    "Yerdle Recommerce"
+   ],
+   "src": "https://www.retaildive.com/news/trove-30-million-series-e-funding/690619/",
+   "auto": true,
+   "added": "2026-11-04",
+   "from": "discover",
+   "site": "trove.com",
+   "srcs": [
+    "https://www.retaildive.com/news/trove-30-million-series-e-funding/690619/",
+    "https://www.finsmes.com/2023/08/trove-raises-30m-in-series-e-funding.html",
+    "https://www.ypog.law/en/press/ypog-advises-reverse-supply-on-acquisition-by-us-recommerce-platform-trove"
+   ],
+   "enriched": "2026-11-04",
+   "pending": false
   }
  ],
  "edges": [
@@ -4638,7 +4695,9 @@
   "shipium": "2026-11-03",
   "easyship": "2026-11-03",
   "shiphawk": "2026-11-03",
-  "shipperhq": "2026-11-03"
+  "shipperhq": "2026-11-03",
+  "swapswapcommer": "2026-11-04",
+  "trove": "2026-11-04"
  },
  "facts": {
   "ups": {

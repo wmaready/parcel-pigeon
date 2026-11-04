@@ -3534,7 +3534,7 @@
   "headline": "UPS Releases 3Q 2026 Earnings",
   "rx": {
    "src": "Yahoo daily close",
-   "checked": "2026-11-03",
+   "checked": "2026-11-04",
    "session": "pre",
    "base": {
     "d": "2026-10-26",
@@ -3605,6 +3605,11 @@
      "2026-11-02",
      9.36,
      -1.76
+    ],
+    [
+     "2026-11-03",
+     8.82,
+     -1.4
     ]
    ],
    "final": false
@@ -3656,7 +3661,7 @@
   "headline": "FedEx Reports Strong Third Quarter Results",
   "rx": {
    "src": "Yahoo daily close",
-   "checked": "2026-11-03",
+   "checked": "2026-11-04",
    "session": "post",
    "base": {
     "d": "2026-10-28",
@@ -3712,6 +3717,11 @@
      "2026-11-02",
      4.49,
      -2.62
+    ],
+    [
+     "2026-11-03",
+     4.41,
+     -2.26
     ]
    ],
    "final": false

@@ -821,7 +821,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -841,7 +841,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.xlsx",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -862,7 +862,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -882,7 +882,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.xlsx",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -897,7 +897,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_StandardListRates_2021.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -913,7 +913,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_StandardListRates_2019.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -934,7 +934,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -954,7 +954,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -989,7 +989,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1041,7 +1041,11 @@
   "f": "data/files/fedex-2026-fedex-ground-economy-rates-by-pound-7027e9.pdf",
   "fh": "8fc00324f2d617864649c881600b831f96ab2763",
   "fat": "2026-10-21",
-  "fsz": 98785
+  "fsz": 98785,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1057,7 +1061,11 @@
   "f": "data/files/fedex-2026-fedex-ground-economy-rates-by-ounce-4b47fe.pdf",
   "fh": "b15df230cb59db4be5baf26066703bc02d8eaea0",
   "fat": "2026-10-21",
-  "fsz": 85593
+  "fsz": 85593,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1073,7 +1081,11 @@
   "f": "data/files/fedex-2026-fedex-ground-economy-media-mail-rates-d891fb.pdf",
   "fh": "0a638a90a1c942aad9f4f47c665612fa97da35e7",
   "fat": "2026-10-21",
-  "fsz": 106620
+  "fsz": 106620,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1089,7 +1101,11 @@
   "f": "data/files/fedex-2026-fedex-ground-economy-bound-printed-matter-rates-5fe5c9.pdf",
   "fh": "8e482ea807387547de33b53ee15b8e182ed22c80",
   "fat": "2026-10-21",
-  "fsz": 84997
+  "fsz": 84997,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1125,7 +1141,11 @@
   "f": "data/files/fedex-2025-fedex-ground-economy-rates-by-ounce-2b158d.pdf",
   "fh": "d2ce5b81d7fac0b68f540e9a9f5f579b149621c0",
   "fat": "2026-10-23",
-  "fsz": 84865
+  "fsz": 84865,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2025.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1145,7 +1165,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_Returns_2025.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1208,7 +1228,11 @@
   "f": "data/files/fedex-fedex-u-s-export-demand-surcharges-effective-sep-21-2026-47b151.pdf",
   "fh": "2320deb4c3d5725390954193edcb3471bd2763f0",
   "fat": "2026-10-21",
-  "fsz": 77145
+  "fsz": 77145,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1225,7 +1249,11 @@
   "f": "data/files/fedex-fedex-u-s-import-demand-surcharges-effective-sep-21-2026-e3355d.pdf",
   "fh": "c6105cc2bb36b3f3eb84e2c1e1316e606fe2c83a",
   "fat": "2026-10-21",
-  "fsz": 130156
+  "fsz": 130156,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1242,7 +1270,11 @@
   "f": "data/files/fedex-fedex-international-non-standard-demand-fees-effective-sep-21-20-978d12.pdf",
   "fh": "ea86102957389b89a36f29768d42cd384d713e40",
   "fat": "2026-10-21",
-  "fsz": 79084
+  "fsz": 79084,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1258,7 +1290,11 @@
   "f": "data/files/fedex-2027-fedex-delivery-area-zip-list-pdf-ea9c65.pdf",
   "fh": "5b8103fcc7330466a2c0fda03bbe0012d0f8e18e",
   "fat": "2026-10-21",
-  "fsz": 279870
+  "fsz": 279870,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1274,7 +1310,11 @@
   "f": "data/files/fedex-2027-fedex-delivery-area-zip-list-excel-dab896.xlsx",
   "fh": "eb327c8d3b18be235f5a429a9c839d31375d133a",
   "fat": "2026-10-21",
-  "fsz": 289988
+  "fsz": 289988,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.xlsx",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1310,7 +1350,11 @@
   "f": "data/files/fedex-2026-fedex-delivery-area-zip-list-pdf-dbf1cd.pdf",
   "fh": "149265b73a78078582f6326ba55a5645874507ec",
   "fat": "2026-10-21",
-  "fsz": 336467
+  "fsz": 336467,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1326,7 +1370,11 @@
   "f": "data/files/fedex-2026-fedex-delivery-area-zip-list-excel-04bdba.xlsx",
   "fh": "6c87fa7bfae62ca54e8d387a518ef0dea233c149",
   "fat": "2026-10-21",
-  "fsz": 275892
+  "fsz": 275892,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1362,7 +1410,11 @@
   "f": "data/files/fedex-2026-fedex-ground-economy-delivery-area-zip-list-3cd91e.pdf",
   "fh": "fa22899e8c3c1ae7f0af53d31d839fa934bbe83d",
   "fat": "2026-10-21",
-  "fsz": 328626
+  "fsz": 328626,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -1421,7 +1473,11 @@
   "f": "data/files/fedex-2024-fedex-delivery-area-zip-changes-dd7352.pdf",
   "fh": "dade2d1983968ecc0926e256ac7d14cec1ff0a4d",
   "fat": "2026-10-23",
-  "fsz": 130523
+  "fsz": 130523,
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Zip_Code_Changes_2024.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -3359,7 +3415,11 @@
    "story": "ae5f2c699239a",
    "title": "PRC notices three new USPS standardized competitive contracts",
    "when": "2026-10-15"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products",
+  "content_verified": true,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -3374,7 +3434,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "Spee-Dee",
@@ -3450,7 +3510,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -3465,7 +3525,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "USPS",
@@ -4627,7 +4687,11 @@
    "story": "ac0747e042d57",
    "title": "PRC seeks comment on USPS Priority Mail, Ground Advantage contract",
    "when": "2026-10-29"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",
@@ -4644,7 +4708,11 @@
    "when": "2026-11-03",
    "where": "FedEx's Demand surcharges page",
    "prev": "9-21-26_US-Import-Demand-Surcharges.pdf"
-  }
+  },
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-04T05:13Z"
  },
  {
   "c": "FedEx",

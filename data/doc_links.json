@@ -5,7 +5,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf": {
   "http_status": 200,
@@ -13,7 +13,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf": {
   "http_status": 200,
@@ -21,7 +21,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.xlsx": {
   "http_status": 200,
@@ -29,7 +29,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_StandardListRates_2019.pdf": {
   "http_status": 200,
@@ -37,7 +37,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_StandardListRates_2021.pdf": {
   "http_status": 200,
@@ -45,7 +45,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
   "http_status": 200,
@@ -53,7 +53,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.xlsx": {
   "http_status": 200,
@@ -61,7 +61,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.pdf": {
   "http_status": 200,
@@ -69,7 +69,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2027.xlsx": {
   "http_status": 200,
@@ -77,7 +77,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf": {
   "http_status": 200,
@@ -85,7 +85,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf": {
   "http_status": 200,
@@ -93,7 +93,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf": {
   "http_status": 200,
@@ -101,7 +101,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-26T04:24Z"
+  "checked_at": "2026-11-04T05:13Z"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf": {
   "http_status": 200,
@@ -1942,5 +1942,141 @@
   "state": "opens",
   "why": "opens; content not confirmed",
   "checked_at": "2026-11-03T05:15Z"
+ },
+ "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
+  "http_status": 200,
+  "final_url": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products": {
+  "http_status": 200,
+  "final_url": "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.xlsx": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.xlsx",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Zip_Code_Changes_2024.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Zip_Code_Changes_2024.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2025.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2025.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
+ },
+ "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf": {
+  "http_status": 200,
+  "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (200)",
+  "checked_at": "2026-11-04T05:13Z"
  }
 }
