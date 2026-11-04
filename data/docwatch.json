@@ -1,5 +1,5 @@
 {
- "cursor": 4,
+ "cursor": 19,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 370,
+   "fails": 371,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 370,
+   "fails": 371,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
@@ -2164,6 +2164,13 @@
     "pdf": "https://public-inspection.federalregister.gov/2026-22505.pdf?1793713514",
     "txt": "data/snapshots/e12ca75552ef/2026-11-04.txt"
    }
+  },
+  "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments": {
+   "hash": "2c3a4984e56a",
+   "first": "2026-11-04",
+   "checked": "2026-11-04",
+   "n": "EU Product Identifier (PID) Requirement for B2C Shipments 2026",
+   "pic_try": "2026-11-04"
   }
  }
 }
