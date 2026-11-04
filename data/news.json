@@ -2002,6 +2002,52 @@
   "exclusive": true
  },
  {
+  "id": "aa5d4a9b2f57e",
+  "date": "2026-10-30",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Analysis",
+  "title": "Wing and Zipline cut drone noise as suburban pushback grows",
+  "sum": "The Drone Girl reports that noise complaints and community acceptance are a bottleneck for suburban drone delivery, alongside the pending federal Part 108 rule. Wing says its drones average 43 dBA Leq in overflight. Zipline says a software update cut its peak volume by 24% and per-flight sound exposure by 68% against its 2025 fleet.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The article describes how Wing and Zipline are reducing drone noise to address community pushback.",
+  "why": "Local noise complaints can influence municipal decisions on drone delivery, per The Drone Girl, a factor for operators expanding into suburbs.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T19:21:30Z",
+  "src": "The Drone Girl",
+  "url": "https://www.thedronegirl.com/2026/11/04/drone-delivery-noise-privacy-nimbyism-wing-zipline/?amp",
+  "srcs": [
+   {
+    "src": "The Drone Girl",
+    "url": "https://www.thedronegirl.com/2026/11/04/drone-delivery-noise-privacy-nimbyism-wing-zipline/?amp"
+   }
+  ],
+  "auto": true,
+  "syn": "In an analysis piece, The Drone Girl says community acceptance, and noise in particular, is one of the main challenges for drone delivery as it scales across the U.S., in addition to the awaited final Part 108 rule. The article says local councils and neighborhood associations are increasingly debating drones, and that local governments influence land use and hub zoning. Wing says it engineered low-pitch propellers and that its drones average 43 dBA Leq in overflight. Zipline says its software update cut peak volume by 24% and per-flight sound exposure by 68% versus its 2025 fleet, and trimmed 53 seconds off average flight times.",
+  "aff": [
+   {
+    "who": "Wing delivery neighborhoods",
+    "what": "Wing says its drones cruise at 150 to 200 feet and average 43 dBA Leq in overflight."
+   },
+   {
+    "who": "Zipline delivery neighborhoods",
+    "what": "Zipline says peak volume fell 24% and sound exposure per flight fell 68% versus its 2025 fleet."
+   },
+   {
+    "who": "Zipline flight times",
+    "what": "Zipline says average flight times are 53 seconds shorter after the software upgrade."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "aa95a154e3d38",
   "date": "2026-10-30",
   "c": [
@@ -10500,69 +10546,6 @@
    }
   ],
   "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a08213a493737",
-  "date": "2026-10-08",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "News",
-  "title": "Shipt names Raj Kapoor CEO, effective Oct. 18, 2026",
-  "sum": "Shipt announced that Raj Kapoor will rejoin the company as CEO effective Oct. 18, 2026. He succeeds Kamau Witherspoon, who has led Shipt for more than four years and will remain in his role through late October. Kapoor was Shipt's COO from 2022 to 2025 and has been senior vice president of marketplace at Target since 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The announcement covers a leadership change at Shipt, a Target subsidiary that offers same-day delivery and Target Last Mile Delivery.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Mass Market Retailers",
-  "url": "https://massmarketretailers.com/raj-kapoor-returns-to-shipt-as-next-ceo/",
-  "srcs": [
-   {
-    "src": "Mass Market Retailers",
-    "url": "https://massmarketretailers.com/raj-kapoor-returns-to-shipt-as-next-ceo/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a2e0cb230779a",
-  "date": "2026-10-08",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "USPS files to add international service contract 128 to competitive list",
-  "sum": "The Postal Service said it filed a request with the Postal Regulatory Commission on October 8, 2026 to add a Priority Mail Express International, Priority Mail International & First-Class Package International Service contract (Contract 128) to the Competitive Product List. The Federal Register notice is dated October 15, 2026 and cites Docket Nos. MC2027-4 and K2027-4.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to published rates or service for most shippers. The filing adds one negotiated international contract to the Mail Classification Schedule, pending Postal Regulatory Commission review.",
-  "why": "Negotiated service agreements set contract terms for individual customers, so the filing covers a single agreement rather than published rates for all shippers.",
-  "score": 3,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:49:09Z",
-  "src": "Federal Register: USPS",
-  "url": "https://www.federalregister.gov/documents/2026/10/15/2026-21081/international-product-change-priority-mail-express-international-priority-mail-international-and",
-  "srcs": [
-   {
-    "src": "Federal Register: USPS",
-    "url": "https://www.federalregister.gov/documents/2026/10/15/2026-21081/international-product-change-priority-mail-express-international-priority-mail-international-and"
-   },
-   {
-    "src": "Federal Register: PRC",
-    "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21274/new-postal-products"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-08",
   "edge": true,
   "exclusive": true
  }

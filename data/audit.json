@@ -1,5 +1,5 @@
 {
- "run": "2026-11-04T19:06Z",
+ "run": "2026-11-04T19:21Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -163,16 +163,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS files to add international service contract 128 to competitive list\" and \"USPS files notice to add shipping services contract to NSA list\"",
-   "ids": [
-    "a2e0cb230779a",
-    "a89329fa0cdbb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
    "ids": [
     "a7d88cb8247eb",
@@ -327,16 +317,6 @@
    "ids": [
     "af3f3854829a2",
     "a392500587e33"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"PRC notices USPS filings for two new competitive shipping contracts\"",
-   "ids": [
-    "a2e0cb230779a",
-    "a5aadb5b56a84"
    ],
    "fixed": false
   },
@@ -440,16 +420,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS files to add international service contract 128 to competitive list\" and \"USPS files notice to add shipping services contract to NSA list\"",
-   "ids": [
-    "a2e0cb230779a",
-    "a89329fa0cdbb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
    "ids": [
     "a7d88cb8247eb",
@@ -604,16 +574,6 @@
    "ids": [
     "af3f3854829a2",
     "a392500587e33"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"USPS files to add international service contract 128 to competitive list\" may be out of date: newer story \"PRC notices USPS filings for two new competitive shipping contracts\"",
-   "ids": [
-    "a2e0cb230779a",
-    "a5aadb5b56a84"
    ],
    "fixed": false
   },
