@@ -67,11 +67,11 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 0,
+  "fails": 1,
   "thin": 188,
-  "err": null,
+  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-04",
-  "blocked": false,
+  "blocked": true,
   "chars": 247,
   "via": "archive",
   "copy_of": "2026-10-09",
@@ -82,7 +82,7 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 68,
+  "fails": 69,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-04",
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 355,
+  "fails": 356,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-04",
@@ -106,7 +106,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 2,
+  "fails": 3,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-04",
@@ -119,7 +119,7 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 1,
+  "fails": 2,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-04",
@@ -145,13 +145,13 @@
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 2,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-11-04",
   "chars": 5704,
-  "last_ok": "2026-11-03",
-  "blocked": true,
+  "last_ok": "2026-11-04",
+  "blocked": false,
   "via": "archive",
   "copy_of": "2026-10-25"
  },
