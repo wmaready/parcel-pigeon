@@ -130,7 +130,8 @@
   "a2f60a03dddd7",
   "a4f6ca9e3591e",
   "a65c5bec8c7d2",
-  "aa7358e9cf2dd"
+  "aa7358e9cf2dd",
+  "a947eb28a3ca3"
  ],
  "clock": [
   "e06:7",
@@ -414,7 +415,8 @@
   "story:amazon deploys thousands of smart glasses to delivery drivers",
   "story:veho launches pulse ai for post purchase delivery data analysis",
   "story:shipstation and acumatica expand partnership for erp shipping",
-  "story:dhl details eu product id data rule for b2c shipments up to eur 150"
+  "story:dhl details eu product id data rule for b2c shipments up to eur 150",
+  "story:gofo adds shopify tracking integration including in the shop app"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -544,65 +546,67 @@
   "shipstation and acumatica expand partnership for erp shippin",
   "veho launches pulse ai for post purchase delivery data analy",
   "amazon deploys thousands of smart glasses to delivery driver",
-  "dhl details eu product id data rule for b2c shipments up to "
+  "dhl details eu product id data rule for b2c shipments up to ",
+  "gofo adds shopify tracking integration including in the shop"
  ],
  "harvested": [
-  "a82e057190718",
-  "a6ba18049bc99",
-  "a0adb56a55334",
-  "a260cc6a2e05e",
-  "a663794cc9c55",
-  "afd8784e2b179",
-  "a89f005fb1862",
-  "a312b45efa358",
-  "a72efb5e01b99",
-  "ae2ec177094e3",
-  "aa7358e9cf2dd",
-  "aaf63e9db25a0",
-  "a15404304f17b",
-  "a773d361dac4e",
-  "wbfc38914b368",
-  "a2f683da86bf8",
-  "w68c1687d28a1",
-  "a6c2418bed0a7",
-  "rv5-ups-sbr-fuel",
-  "a2b81ad721cb8",
-  "wf7fe771e76cd",
-  "w150132868eae",
-  "w8465aa718dc6",
-  "wf7bb9227b2de",
-  "a58373f1b7bc3",
-  "wf5014bc150e9",
-  "a351cab9045c7",
-  "ae12ca75552ef",
-  "a5d45f26f2219",
   "a2f60a03dddd7",
-  "wb8827e8c126e",
-  "w500a5bdc762c",
-  "a40c99078f690",
-  "a6cc2420ad66e",
-  "a9b77b62dcd89",
-  "w84705482dd2f",
-  "a2def09bc43bb",
-  "wacb825361479",
-  "a57a06c26359c",
-  "a3a45d7f6db20",
-  "a6e82ba740e99",
-  "w9c03b8f99b5f",
-  "a4f6ca9e3591e",
-  "ac78f72e7f458",
-  "a831c709e5809",
-  "w91588ddb11ed",
-  "w0b8720b6a0e7",
-  "a999409ce7860",
-  "a567030ffc76c",
+  "a2b81ad721cb8",
   "wdf959a97bcb6",
-  "aba40a11b6946",
-  "wa9c423a83880",
+  "a15404304f17b",
+  "wf7bb9227b2de",
+  "a351cab9045c7",
+  "a4f6ca9e3591e",
+  "w68c1687d28a1",
+  "w150132868eae",
+  "a567030ffc76c",
+  "a89f005fb1862",
   "a89d7e4beebd9",
-  "af8ee5ed067c6",
+  "wbfc38914b368",
+  "a82e057190718",
+  "afd8784e2b179",
   "aee6669d325da",
-  "w599d9089a65d"
+  "af8ee5ed067c6",
+  "a773d361dac4e",
+  "rv5-ups-sbr-fuel",
+  "a0adb56a55334",
+  "a40c99078f690",
+  "a831c709e5809",
+  "aaf63e9db25a0",
+  "a6e82ba740e99",
+  "a2f683da86bf8",
+  "w599d9089a65d",
+  "w0b8720b6a0e7",
+  "wacb825361479",
+  "w500a5bdc762c",
+  "ae2ec177094e3",
+  "a3a45d7f6db20",
+  "a5d45f26f2219",
+  "a57a06c26359c",
+  "w9c03b8f99b5f",
+  "a663794cc9c55",
+  "w8465aa718dc6",
+  "a6ba18049bc99",
+  "wf5014bc150e9",
+  "a6cc2420ad66e",
+  "a2def09bc43bb",
+  "wb8827e8c126e",
+  "wa9c423a83880",
+  "a6c2418bed0a7",
+  "a947eb28a3ca3",
+  "aba40a11b6946",
+  "a72efb5e01b99",
+  "w84705482dd2f",
+  "a58373f1b7bc3",
+  "ae12ca75552ef",
+  "aa7358e9cf2dd",
+  "wf7fe771e76cd",
+  "a9b77b62dcd89",
+  "w91588ddb11ed",
+  "a312b45efa358",
+  "a999409ce7860",
+  "a260cc6a2e05e",
+  "ac78f72e7f458"
  ],
  "backfilled": true,
  "recent": [
@@ -2648,6 +2652,21 @@
      "url": "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments"
     }
    ]
+  },
+  {
+   "id": "a947eb28a3ca3",
+   "title": "GOFO adds Shopify tracking integration, including in the Shop app",
+   "date": "2026-11-04",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/gofo-announces-real-time-delivery-tracking-integration-with-shopify-302929780.html",
+   "srcs": [
+    {
+     "src": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/gofo-announces-real-time-delivery-tracking-integration-with-shopify-302929780.html"
+    }
+   ]
   }
  ],
  "copy": {
@@ -3046,13 +3065,17 @@
   "aa7358e9cf2dd": {
    "t": "DHL adds EU product ID rule Nov 1",
    "m": "B2C shipments up to EUR 150 into the EU27 need product IDs; takes effect Nov 1, 2026."
+  },
+  "a947eb28a3ca3": {
+   "t": "GOFO adds Shopify tracking integration",
+   "m": "Shopify merchants on GOFO can show shipment progress and delivery updates, including in the Shop app. No…"
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-04",
-  "n": 4
+  "n": 5
  },
- "last_push": "2026-11-04T12:18:01.847664-05:00"
+ "last_push": "2026-11-04T16:11:59.347740-05:00"
 }

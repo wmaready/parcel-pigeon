@@ -133,6 +133,52 @@
   ]
  },
  {
+  "id": "a947eb28a3ca3",
+  "date": "2026-11-04",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "GOFO adds Shopify tracking integration, including in the Shop app",
+  "sum": "GOFO, a last-mile delivery carrier, announced on Nov. 4, 2026 an integration with Shopify in which it works as a tracking partner. GOFO delivery updates will appear in Shopify order information for merchants and natively in the Shop app for consumers.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Shopify merchants who use GOFO can see shipment progress and delivery updates alongside order information, and shoppers can view progress in the Shop app. The release gives no rate changes or start date.",
+  "why": "Shopify merchants shipping with GOFO, which says it covers over 75% of the U.S. population, get delivery tracking inside Shopify and the Shop app.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T21:11:19Z",
+  "src": "PR Newswire",
+  "url": "https://www.prnewswire.com/news-releases/gofo-announces-real-time-delivery-tracking-integration-with-shopify-302929780.html",
+  "srcs": [
+   {
+    "src": "PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/gofo-announces-real-time-delivery-tracking-integration-with-shopify-302929780.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-04",
+  "syn": "GOFO, a technology-driven last-mile delivery carrier, announced on Nov. 4, 2026 an integration with Shopify under which it works as a tracking partner. Delivery information will appear within Shopify's order experience for merchants and natively in the consumer Shop app. GOFO said the integration is designed to create a more consistent post-purchase experience. The company said it operates across 47 states through 300+ hubs and stations.",
+  "aff": [
+   {
+    "who": "Shopify merchants using GOFO",
+    "what": "Shipment progress and delivery updates will be available within Shopify alongside order information."
+   },
+   {
+    "who": "Shoppers with GOFO-delivered orders",
+    "what": "Delivery progress will be viewable within the Shop app."
+   },
+   {
+    "who": "Merchant operations and customer service teams",
+    "what": "GOFO said easier access to delivery information can support faster responses to order-status inquiries."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "aa7358e9cf2dd",
   "date": "2026-11-04",
   "c": [
@@ -1138,6 +1184,57 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "aa55fa1542116",
+  "date": "2026-11-02",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Westborough official withdraws zoning ruling on Amazon drone pad",
+  "sum": "Westborough, Massachusetts building commissioner William Hezlitt withdrew on Nov. 2 the Aug. 26 zoning ruling that classified Amazon's Prime Air drone pad at 64 Otis Street as an accessory use, according to DroneXL. The letter followed Amazon's Oct. 30 request to withdraw its site-plan application. An Amazon spokesperson said the company will file a revised project soon.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. Amazon's Westborough drone pad has no zoning classification, and any revised proposal needs a new zoning review.",
+  "why": "Westborough would have been New England's first drone delivery facility, and its town voted 510 to 13 on Oct. 19 to ban commercial drone launch pads.",
+  "score": 5,
+  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns, and in October 2026 its drone deliveries were reported operating from Markham, near Chicago.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T21:11:13Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/04/amazon-westborough-drone-zoning-ruling-vacated-new-review/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/04/amazon-westborough-drone-zoning-ruling-vacated-new-review/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "new": "Westborough withdrew its Aug. 26 zoning ruling after Amazon pulled its application, so any revised Westborough plan starts over; no change to Prime Air service elsewhere was reported.",
+  "syn": "Westborough's building commissioner, William Hezlitt, withdrew the Aug. 26 zoning ruling on Amazon's Prime Air drone pad in a Nov. 2 letter. The ruling had classified the pad at the 64 Otis Street warehouse as an accessory use. The letter says Amazon's own withdrawal left it with no active application to cover, and that a revised proposal needs a new zoning review. Amazon had asked on Oct. 30 to withdraw its site-plan application, and its spokesperson said a revised project will be filed after talks with local stakeholders. The town voted 510 to 13 on Oct. 19 to ban commercial drone launch pads and drop zones.",
+  "aff": [
+   {
+    "who": "Amazon Prime Air Westborough pad",
+    "what": "Revised proposal needs a new zoning review; the Aug. 26 ruling no longer covers it."
+   },
+   {
+    "who": "Residents' zoning appeal",
+    "what": "The Zoning Board of Appeals continued the appeal without ruling; it is to return in early December, per the Boston Globe."
+   },
+   {
+    "who": "Town drone ban bylaw",
+    "what": "Sent to the attorney general Oct. 22; MassDOT's Aeronautics Division must also approve it, per the town."
+   },
+   {
+    "who": "Amazon's drone pad plan",
+    "what": "MassDOT told Amazon on Oct. 22 it needs a state certificate of approval and had no application."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "aaf63e9db25a0",
@@ -10487,66 +10584,6 @@
   ],
   "auto": true,
   "ann": "2026-10-09",
-  "exclusive": true
- },
- {
-  "id": "af8ee5ed067c6",
-  "date": "2026-10-09",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Peak season",
-  "kind": "Analysis",
-  "title": "UPS adds RFID tracking and PIN delivery for holiday peak, plans ~100,000 hires",
-  "sum": "UPS entered the holiday season in early October 2026 with plans to hire about 100,000 seasonal workers and new services: RFID-powered tracking, Protected Delivery PIN verification for high-value parcels, expanded pickup visibility, Happy Returns returns, Roadie same-day and bulky delivery, and limited-edition holiday packaging. The Yahoo Finance analysis, which frames the news for investors, ties the additions to the UPS Secure Commerce suite launched in late September 2026.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Shippers using UPS have access to new tracking, delivery-verification, returns and same-day or bulky delivery options for the holiday season. The article does not state any price or fee change.",
-  "tie": "The services are bundled with the UPS Secure Commerce suite, which the article says launched in late September 2026 and combines InsureShield, Parcel Pro and CommerceShield.",
-  "act": null,
-  "dates": [],
-  "src": "Yahoo Finance",
-  "url": "https://finance.yahoo.com/markets/stocks/articles/ups-holiday-rfid-secure-delivery-161219200.html",
-  "srcs": [
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/ups-holiday-rfid-secure-delivery-161219200.html"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "afe8c0cd539f3",
-  "date": "2026-10-09",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "News",
-  "title": "Amazon cuts single-use plastic share of North American shipments to 27%",
-  "sum": "Amazon said the share of its North American shipments using single-use plastic packaging fell from 65% in 2023 to 27% in 2025, according to an AP report. About 11% of its global orders ship in original manufacturer packaging, the company said. Amazon is also rolling out 30-minute delivery in a growing number of cities this year.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service is announced. Amazon is lighter and less boxed in its packaging, and 30-minute delivery is being rolled out in a growing number of cities.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Hartford Courant",
-  "url": "https://www.courant.com/2026/10/10/amazons-delivery-box-a-symbol-of-instant-gratification-and-convenience/",
-  "srcs": [
-   {
-    "src": "Hartford Courant",
-    "url": "https://www.courant.com/2026/10/10/amazons-delivery-box-a-symbol-of-instant-gratification-and-convenience/"
-   },
-   {
-    "src": "The Independent",
-    "url": "https://www.independent.co.uk/news/business/amazon-box-delivery-change-meterial-b3064144.html"
-   }
-  ],
-  "auto": true,
-  "edge": true,
   "exclusive": true
  }
 ]
