@@ -133,6 +133,58 @@
   ]
  },
  {
+  "id": "a6b6e2758bc4e",
+  "date": "2026-11-04",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Earnings & markets",
+  "kind": "News",
+  "title": "UPS third-quarter revenue rises 6.7% to $22.85B as volume falls 4.2%",
+  "sum": "UPS reported third-quarter 2026 revenue of $22.85B, up 6.7% from $21.42B a year earlier, according to a summary of its 10-Q filed Nov. 4, 2026. Net income fell 11.3% to $1.16B and diluted EPS fell 11.6% to $1.37, while global daily package volume declined 4.2%.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No direct change to rates or service is stated. UPS said revenue rose on fuel surcharges and a higher-yielding mix while package volume fell.",
+  "why": "UPS cut major-customer volume and shifted toward higher-yield mix, with daily package volume down 4.2% in the quarter.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T23:03:33Z",
+  "src": "TradingView",
+  "url": "https://www.tradingview.com/news/tradingview:c0d00ac303167:0-ups-3q-2026-revenue-22-85b-eps-1-37-10-q-summary/",
+  "srcs": [
+   {
+    "src": "TradingView",
+    "url": "https://www.tradingview.com/news/tradingview:c0d00ac303167:0-ups-3q-2026-revenue-22-85b-eps-1-37-10-q-summary/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-04",
+  "syn": "UPS reported third-quarter 2026 revenue of $22.85B, up 6.7% from $21.42B a year earlier, according to a summary of its 10-Q dated Nov. 4, 2026. Net income fell 11.3% to $1.16B and diluted EPS fell 11.6% to $1.37. Global daily package volume declined 4.2% as UPS reduced major-customer volume and focused on revenue quality, with small and midsize business growth partly offsetting the decrease. Revenue gains reflected higher fuel surcharges and improved revenue quality.",
+  "aff": [
+   {
+    "who": "UPS package volume",
+    "what": "Global daily package volume declined 4.2% as UPS reduced major-customer volume."
+   },
+   {
+    "who": "UPS revenue",
+    "what": "Revenue rose 6.7% to $22.85B on fuel surcharges and a higher-yielding mix."
+   },
+   {
+    "who": "UPS network",
+    "what": "UPS closed 47 buildings and expects nearly $3 billion in program benefits in 2026."
+   },
+   {
+    "who": "International network",
+    "what": "Investments include an expanded Incheon hub, a new Philippines air hub and a Taiwan logistics center."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-04",
+  "unconf": true
+ },
+ {
   "id": "a947eb28a3ca3",
   "date": "2026-11-04",
   "c": [
@@ -10549,41 +10601,6 @@
   ],
   "auto": true,
   "new": "Lowe's has started a drone delivery pilot in Matthews, North Carolina with Wing and DoorDash, adding a home improvement retailer to the drone delivery sites reported earlier; shippers see no change in rates, and the service covers small items of about 2.5 pounds.",
-  "exclusive": true
- },
- {
-  "id": "af3f3854829a2",
-  "date": "2026-10-09",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Google, UPS face California privacy class action over package tracking box",
-  "sum": "Two California residents, Lennie Woodley and Joseph Schrant, filed a class-action privacy complaint against Google and UPS in the Northern District of California, according to MediaPost. They allege a package-tracking box on a Google search page sends user data to outside companies beyond the tracking number. Google and UPS had not responded to MediaPost's request for comment.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The complaint is a pending lawsuit and none of its allegations have been decided.",
-  "why": "The suit targets a Google tracking feature tied to UPS, which could affect how consumers' tracking lookups handle data.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T16:56:18Z",
-  "src": "MediaPost",
-  "url": "https://www.mediapost.com/publications/article/418698/google-ups-hit-with-privacy-suit-over-package-tra.html",
-  "srcs": [
-   {
-    "src": "MediaPost",
-    "url": "https://www.mediapost.com/publications/article/418698/google-ups-hit-with-privacy-suit-over-package-tra.html"
-   },
-   {
-    "src": "Top Class Actions",
-    "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/google-ups-class-action-alleges-package-tracking-system-shares-users-private-data/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-09",
   "exclusive": true
  }
 ]
