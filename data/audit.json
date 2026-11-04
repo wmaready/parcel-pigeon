@@ -1,5 +1,5 @@
 {
- "run": "2026-11-04T13:06Z",
+ "run": "2026-11-04T13:32Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -281,6 +281,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
+   "ids": [
+    "aaf63e9db25a0",
+    "ae12ca75552ef"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Council Member asks DOT to curb Amazon on-foot delivery hubs\"",
@@ -544,6 +554,16 @@
    "ids": [
     "a9f4ed4757f82",
     "abfc3f60e3202"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
+   "ids": [
+    "aaf63e9db25a0",
+    "ae12ca75552ef"
    ],
    "fixed": false
   },

@@ -149,7 +149,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-03",
+  "tried": "2026-11-04",
   "unconf": true
  },
  {
@@ -723,7 +723,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-03",
+  "tried": "2026-11-04",
   "unconf": true
  },
  {
@@ -956,6 +956,48 @@
   "edge": true
  },
  {
+  "id": "aaf63e9db25a0",
+  "date": "2026-11-02",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4",
+  "sum": "The Postal Service announced in the Federal Register the issuance of its Domestic Mail Manual, updated November 2, 2026, and its incorporation by reference into the Code of Federal Regulations. The rule is effective November 4, 2026.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is stated in the notice. It incorporates the DMM updated November 2, 2026, by reference, effective November 4, 2026.",
+  "why": "The DMM sets USPS's official prices and standards for all domestic mailing services, so the updated issue is the reference text for mailers.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T13:30:49Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22498/domestic-mail-manual-incorporation-by-reference",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22498/domestic-mail-manual-incorporation-by-reference"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "syn": "The Postal Service announced in the Federal Register that it has issued the Mailing Standards of the United States Postal Service, Domestic Mail Manual (DMM), updated November 2, 2026. The rule amends 39 CFR part 111 to incorporate the issue by reference, effective November 4, 2026. According to the notice, the DMM provides USPS's official prices and standards for all domestic mailing services, and this issue adds standards to support mail preparation changes implemented since the version updated on April 7, 2025.",
+  "aff": [
+   {
+    "who": "Domestic mailers",
+    "what": "The DMM updated Nov. 2, 2026, is incorporated by reference in 39 CFR part 111, effective Nov. 4, 2026."
+   },
+   {
+    "who": "Mail preparation standards",
+    "what": "New standards support changes implemented since the April 7, 2025, version, per the notice."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "ab7ddc386edae",
   "date": "2026-11-02",
   "c": [
@@ -1180,7 +1222,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-03",
+  "tried": "2026-11-04",
   "unconf": true
  },
  {
@@ -2464,7 +2506,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-03",
+  "tried": "2026-11-04",
   "unconf": true
  },
  {
@@ -2856,7 +2898,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-03",
+  "tried": "2026-11-04",
   "unconf": true
  },
  {
@@ -10356,133 +10398,5 @@
   ],
   "auto": true,
   "thread": "cbp-low-value-import-filing"
- },
- {
-  "id": "a5da325d3b048",
-  "date": "2026-10-08",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "Opinion",
-  "title": "Amazon targets 5,000 drivers in smart glasses by end of 2026",
-  "sum": "Amazon aims to have 5,000 delivery drivers wearing AI smart glasses by the end of 2026 and more than 20,000 by the end of 2027, according to a Bloomberg opinion piece by Dave Lee that cites Amazon executive Viraj Chatterjee. Amazon says the glasses track a driver's shift from start to finish, give hands-free guidance and are meant to speed deliveries and cut errors. Lee wrote that the company risks another privacy controversy.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates, fees or service terms for shippers. The item concerns equipment for Amazon's own delivery drivers.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Science, Public Health Policy and the Law",
-  "url": "https://publichealthpolicyjournal.com/amazon-delivery-driver-smart-glasses-will-snap-pictures-of-everything-more/",
-  "srcs": [
-   {
-    "src": "Science, Public Health Policy and the Law",
-    "url": "https://publichealthpolicyjournal.com/amazon-delivery-driver-smart-glasses-will-snap-pictures-of-everything-more/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a673b7f464607",
-  "date": "2026-10-08",
-  "c": [
-   "Regional"
-  ],
-  "cat": "International",
-  "kind": "News",
-  "title": "Canada Post works to resume EU parcel shipping before holiday season",
-  "sum": "Canada Post said it is working on solutions to resume personal and business shipping to the EU ahead of the Christmas season. It paused package delivery to nine EU countries, including France and Germany, on July 1 after the EU changed its customs and import VAT rules.",
-  "imp": "watch",
-  "lvl": 2,
-  "plain": "Canada Post parcel delivery to nine EU countries remains suspended while the carrier seeks a compliant approach. Regular letter mail is not affected.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "VOCM",
-  "url": "https://vocm.com/2026/10/08/canada-post-hopes-to-allow-shipping-to-eu-before-holiday-rush/",
-  "srcs": [
-   {
-    "src": "VOCM",
-    "url": "https://vocm.com/2026/10/08/canada-post-hopes-to-allow-shipping-to-eu-before-holiday-rush/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true
- },
- {
-  "id": "a771628a2eca4",
-  "date": "2026-10-08",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "CBP starts processing IEEPA tariff refunds for finally liquidated entries",
-  "sum": "U.S. Customs and Border Protection has begun processing some finally liquidated entries from plaintiffs the Court of International Trade ruled entitled to refunds of IEEPA tariffs, according to an Oct. 6 court filing. CBP has accepted 477 CAPE declarations covering 425,517 entries, and the capability is expected to handle roughly $11.4 billion, or 6.9%, of IEEPA tariffs.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Importers that sued for refunds and submitted a valid importer of record number to CBP by July 30, 2026, can now apply through the CAPE portal for refunds on finally liquidated entries. Plaintiffs that submitted a number after July 30 must await further CBP instructions, with no timeframe given.",
-  "tie": "CBP had targeted the end of July for this third phase of its CAPE rollout but delayed implementation until October, per Supply Chain Dive.",
-  "act": null,
-  "dates": [],
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/cbp-starts-paying-out-ieepa-tariff-refunds-for-finally-liquidated-entries/832411/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/cbp-starts-paying-out-ieepa-tariff-refunds-for-finally-liquidated-entries/832411/"
-   },
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOanN4bHhsYV9NcEJ6Vzk1ZnQxY3NXU1I0VjRfVUdlRkZvWThxWVE0LUN0NVlrenY1RnFRbjNFT1RkbVdlQTcwZjE3MVc4VF9IenRmVHlIZy1EUjM5V1VKeXZLMzl4dk52SXkxQnZ2QWkxUG44aGYwQWwyUGszUUlHUVN0blBYNUN5QUt3TFVNeGxnN3haZlZnZGl0X05WWUFVR1A4VkxZWnVEMEUzdFRvai12Sk1ha2NuTUE?oc=5"
-   },
-   {
-    "src": "The Independent",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTU9LWExvRk1QRVhaYVVKdnJOMVJqZ01HVFh0cEpwMzJUTVk0dWNwSmllNG9NSFFkcll0VU8wMU5WbXJNb0R6Z19TU2U0NWxXVlBacXNlel9kQzRmODlFQUFOX3djZUJjZXFYMGJPaEJtLTRQa1N2cElPQzRlNEZpdkl6VDdmX0VVdkhjRjdTWHJsTDdwUE92QmFybUpmUUt2LWphbGVQY3A2Zw?oc=5"
-   },
-   {
-    "src": "AL Circle",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUjg4aWVucUFNYlVEZXJsVzR2Y2IzZ05FaVhiX2VBZlo2ZklZU0lrVTdtaEVEdTd6c3lfQVdJcjYtcXl4WWJVVXVVZ2kyaWdfbkxjSDYwRGhNLW1IOWRodktPZmJaNkVJZ09SQlBPREZ3cTIyWkYyaGIxaGk1N21HajUxQWQtU1ljQVNvQmNyd3dYWmtYVXhfc05xMXJzYXJ4d2d4dUR4OVhXV3dIY1RF?oc=5"
-   }
-  ],
-  "auto": true,
-  "updated": "2026-10-06",
-  "thread": "tariff-refunds",
-  "upd": 2
- },
- {
-  "id": "a8844a160deb6",
-  "date": "2026-10-08",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Drivers file overtime suits against FedEx in federal courts nationwide",
-  "sum": "More than 200 drivers filed nearly identical suits in South Carolina last week, including 38 in Charleston federal court on Oct. 8-9, alleging FedEx owes them overtime under the Fair Labor Standards Act. The drivers' lead attorney said FedEx faces roughly 10,000 individual suits across every federal district. FedEx said on Oct. 15 that its service providers must comply with wage and hour laws for their employees.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The suits concern overtime pay for drivers employed by FedEx's contracted service providers.",
-  "why": "The suits challenge the independent service provider model FedEx uses for delivery drivers, with roughly 10,000 cases in every federal district, per the drivers' attorney.",
-  "score": 4,
-  "tie": "A Pennsylvania court ruled in May that the drivers could not sue FedEx together in a nationwide class action, according to the article, which led to the one-by-one filings.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-18T10:47:00Z",
-  "src": "Post and Courier",
-  "url": "https://www.postandcourier.com/business/charleston-sc-fedex-lawsuits-drivers-overtime/article_0c503b67-81c2-4c91-b2d7-ff6dd12d96e2.html",
-  "srcs": [
-   {
-    "src": "Post and Courier",
-    "url": "https://www.postandcourier.com/business/charleston-sc-fedex-lawsuits-drivers-overtime/article_0c503b67-81c2-4c91-b2d7-ff6dd12d96e2.html"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true
  }
 ]

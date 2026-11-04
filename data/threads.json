@@ -168,10 +168,14 @@
    "UPS"
   ],
   "cx": {
-   "sig": "9ed4430a8062",
+   "sig": "b222fce080c2",
    "v": 3,
-   "beats": {},
-   "intro": "After the Supreme Court struck down IEEPA tariffs, carriers are sending refunds to shippers while lawsuits target FedEx."
+   "beats": {
+    "g31": "FedEx started $800M in refunds with no application needed; UPS applied for $500M and DHL filed claims where it was importer.",
+    "a0b5708b9f70d": "Reportedly, 13 suits are now combined in Memphis with interim class counsel; no class is certified and the claims are unproven."
+   },
+   "intro": "Carriers are passing on IEEPA tariff refunds while FedEx faces class actions; shippers want their money back.",
+   "now": "Reportedly, a consolidated complaint is proposed for Nov. 4 and FedEx's reply Dec. 4; refunds still run through its own program."
   },
   "rv": "9ed4430a8062",
   "co": "FedEx",
@@ -946,7 +950,7 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "0564ccfc2ad3"
+  "rv": "40f72b296ce9"
  },
  "canada-post-home-delivery-ending": {
   "n": "Canada Post ends home delivery",
@@ -955,7 +959,7 @@
   ],
   "first": "2026-11-03",
   "co": "Canada Post",
-  "s": "Canada Post has published a GTA conversion schedule running from late 2026 to 2031, with accommodation program criticism ongoing.",
+  "s": "Canada Post is converting nearly four million door-to-door addresses to community mailboxes, with first conversions begun in Sept-Îles and Winnipeg the week of Oct. 19.",
   "last": "2026-11-03",
   "c": [
    "Regional"
@@ -983,9 +987,10 @@
    "a9eac1c65a497"
   ],
   "first": "2026-11-01",
-  "s": "The €3 duty (since 1 July 2026) and the €2 handling fee with mandatory product IDs (since 1 November 2026) are in force; a fuller EU customs reform is expected around mid 2028, per the analysis.",
+  "s": "DHL says the EU customs reform, agreed politically on 26 March 2026, is moving toward implementation over the coming years.",
   "last": "2026-11-03",
   "c": [
+   "DHL",
    "Industry"
   ],
   "rv": "95d0d1b342d2"
