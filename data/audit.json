@@ -1,5 +1,5 @@
 {
- "run": "2026-11-04T22:04Z",
+ "run": "2026-11-04T22:33Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -137,13 +137,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -325,13 +318,6 @@
     "af3f3854829a2",
     "a392500587e33"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "earnings-sync",
-   "msg": "UPS Q3 2026: packages a day and revenue per package are still empty three days after the report",
-   "ids": [],
    "fixed": false
   },
   {
@@ -401,13 +387,6 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -589,13 +568,6 @@
     "af3f3854829a2",
     "a392500587e33"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "earnings-sync",
-   "msg": "UPS Q3 2026: packages a day and revenue per package are still empty three days after the report",
-   "ids": [],
    "fixed": false
   },
   {
