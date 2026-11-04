@@ -1184,6 +1184,49 @@
   "unconf": true
  },
  {
+  "id": "ae12ca75552ef",
+  "date": "2026-11-02",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS issues new International Mail Manual, effective Nov. 4, 2026",
+  "sum": "The Postal Service issued a new edition of the International Mail Manual on Nov. 2, 2026, and incorporated it by reference in the Code of Federal Regulations in a final rule effective Nov. 4, 2026. The edition includes Postal Bulletin revisions through Oct. 1, 2026, and replaces all previous editions.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "The new International Mail Manual replaces all earlier editions as of Nov. 4, 2026. The filing does not state any price change.",
+  "why": "The manual sets USPS standards for all international mailing services, so the new edition is the current reference for shippers using those services.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-04T13:06:37Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-02",
+  "syn": "The Postal Service issued a new edition of the International Mail Manual on Nov. 2, 2026. A final rule published in the Federal Register (91 FR 69504) incorporates it by reference in the Code of Federal Regulations, effective Nov. 4, 2026. The manual gives USPS standards for all international mailing services and references the applicable prices. It was updated with Postal Bulletin revisions through Oct. 1, 2026, and replaces all previous editions.",
+  "aff": [
+   {
+    "who": "International mail users",
+    "what": "New manual edition replaces all previous editions, effective Nov. 4, 2026."
+   },
+   {
+    "who": "Mail preparation standards",
+    "what": "The edition reflects standards and preparation changes implemented since the April 7, 2025 version."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "aeb57c7f2b89f",
   "date": "2026-11-02",
   "c": [
@@ -10441,34 +10484,5 @@
   "auto": true,
   "exclusive": true,
   "unconf": true
- },
- {
-  "id": "a8b1647850acb",
-  "date": "2026-10-08",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon Prime Air adds Tracy, Calif., in 500-city drone delivery expansion",
-  "sum": "Amazon is adding Tracy, Calif., to Prime Air drone delivery as part of a 500-city U.S. expansion, according to an announcement reported by the Tracy Press. Service from the East Grant Line Road fulfillment center is to begin within the next few months, covering packages up to five pounds within a 7.5-mile radius.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Amazon customers near the Tracy fulfillment center are to be able to choose drone delivery for eligible items of five pounds or less within the next few months. Amazon said delivery is free for Prime members on orders over $50, $2.99 for Prime members on orders under $50 and $4.99 for non-Prime members.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "ttownmedia.com",
-  "url": "https://www.ttownmedia.com/tracy_press/amazon-prime-air-drone-delivery-coming-to-tracy/article_70e62855-9d21-4a82-a79e-b3b629d34bf7.html",
-  "srcs": [
-   {
-    "src": "ttownmedia.com",
-    "url": "https://www.ttownmedia.com/tracy_press/amazon-prime-air-drone-delivery-coming-to-tracy/article_70e62855-9d21-4a82-a79e-b3b629d34bf7.html"
-   }
-  ],
-  "auto": true,
-  "new": "Amazon said it is adding Tracy to a 500-city Prime Air expansion, with fees of $2.99 to $4.99 on smaller orders, so shippers and retailers in the area face another drone delivery competitor operating under existing waivers or certificates.",
-  "edge": true,
-  "exclusive": true
  }
 ]
