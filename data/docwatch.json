@@ -1,5 +1,5 @@
 {
- "cursor": 59,
+ "cursor": 74,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 364,
+   "fails": 365,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 364,
+   "fails": 365,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-04"
@@ -2152,6 +2152,17 @@
     "d": "2026-11-03",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
     "txt": "data/snapshots/e9cb97d15e91/2026-11-03.txt"
+   }
+  },
+  "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
+   "hash": "00356ade2f6e",
+   "first": "2026-11-04",
+   "checked": "2026-11-04",
+   "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
+   "snap": {
+    "d": "2026-11-04",
+    "pdf": "https://public-inspection.federalregister.gov/2026-22505.pdf?1793713514",
+    "txt": "data/snapshots/e12ca75552ef/2026-11-04.txt"
    }
   }
  }
