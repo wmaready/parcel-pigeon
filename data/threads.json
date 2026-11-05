@@ -447,6 +447,7 @@
   },
   "apart": [
    "amazon-labor",
+   "amazon-uber-eats-prime",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
   ]
@@ -927,6 +928,7 @@
   "apart": [
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
+   "amazon-uber-eats-prime",
    "drone-delivery",
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
@@ -981,7 +983,10 @@
    "Industry",
    "Regional"
   ],
-  "rv": "b33f887cc707"
+  "rv": "b33f887cc707",
+  "apart": [
+   "amazon-uber-eats-prime"
+  ]
  },
  "eu-low-value-imports": {
   "n": "EU low-value import charges",
@@ -1008,5 +1013,25 @@
    "intro": "The EU now charges per-item fees and requires product IDs on low-value B2C imports, which adds cost and data work for shippers.",
    "now": "The product ID rule has applied since 1 November 2026, so shippers need line-item data on every B2C parcel up to EUR 150 headed into the EU."
   }
+ },
+ "amazon-uber-eats-prime": {
+  "n": "Amazon–Uber Eats Prime benefit",
+  "ids": [],
+  "first": "2026-11-05",
+  "co": "Amazon",
+  "s": "Amazon launched Uber Eats ordering for U.S. Prime members with $0 delivery fee on orders of $25 or more on Nov. 5, 2026.",
+  "last": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "amazon-jfk8-nlrb",
+   "amazon-network-buildout",
+   "drone-delivery",
+   "last-mile-facility-legislation",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ],
+  "rv": "da39a3ee5e6b"
  }
 }
