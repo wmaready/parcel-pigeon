@@ -68,7 +68,7 @@
   "carrier": "UPS",
   "name": "Developer portal",
   "fails": 0,
-  "thin": 218,
+  "thin": 219,
   "err": null,
   "last_try": "2026-11-05",
   "blocked": false,
@@ -82,7 +82,7 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 123,
+  "fails": 124,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-05",
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 410,
+  "fails": 411,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-05",
@@ -119,13 +119,13 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 3,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-11-05",
   "chars": 8412,
   "last_ok": "2026-11-05",
-  "blocked": true,
+  "blocked": false,
   "via": "archive",
   "copy_of": "2026-11-03"
  },
