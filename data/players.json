@@ -2743,6 +2743,23 @@
    "pending": true,
    "added": "2026-11-05",
    "story": "a3d768115c0e6"
+  },
+  {
+   "id": "aurora",
+   "n": "Aurora",
+   "realm": "auto",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Autonomous trucking company working with FedEx on linehaul since 2021",
+   "al": [],
+   "src": "https://newsroom.fedex.com/newsroom/global-english/fedex-makes-the-holidays-smarter-with-ai-enabled-tools-robotics-and-predictive-technology",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-05",
+   "story": "a84ca5863e582"
   }
  ],
  "edges": [
@@ -4698,6 +4715,24 @@
    "t": "Depop offers integrated shipping through Evri in the UK",
    "url": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
    "story": "a3d768115c0e6"
+  },
+  {
+   "a": "fedex",
+   "b": "aurora",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx works with Aurora on autonomous linehaul trucking since 2021",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-makes-the-holidays-smarter-with-ai-enabled-tools-robotics-and-predictive-technology",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "fedex",
+   "b": "berkshiregrey",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx deploys Berkshire Grey robots for trailer loading and unloading",
+   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-makes-the-holidays-smarter-with-ai-enabled-tools-robotics-and-predictive-technology",
+   "story": "a84ca5863e582"
   }
  ],
  "moves": [
