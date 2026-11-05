@@ -1,5 +1,139 @@
 [
  {
+  "title": "Investors fund Zipline $1.5B round",
+  "buyer": "Paradigm, WCM Investment Management, Layer Global",
+  "target": "Zipline",
+  "value": "$1.5 billion",
+  "status": "Closed",
+  "ann": "2026-11-05",
+  "closed": null,
+  "ended": null,
+  "latest": "Zipline announced the $1.5 billion round at a $21.5 billion valuation, reported Nov. 5, 2026.",
+  "sum": "Paradigm, WCM Investment Management and Layer Global led a $1.5 billion funding round in Zipline, valuing it at $21.5 billion.",
+  "who": [
+   [
+    "Target",
+    "Zipline",
+    "Drone delivery company that began with medical deliveries in Africa and now serves consumers in the U.S. and other markets."
+   ],
+   [
+    "Backer",
+    "Paradigm",
+    "Co-lead investor in the round."
+   ],
+   [
+    "Backer",
+    "WCM Investment Management",
+    "Co-lead investor in the round."
+   ],
+   [
+    "Backer",
+    "Layer Global",
+    "Co-lead investor in the round."
+   ]
+  ],
+  "why": "The round follows more than $600 million raised in January 2026 at a $7.6 billion valuation. Funds are to support manufacturing, hiring and delivery infrastructure. Zipline also has agreements with Walmart and Uber for a national delivery network.",
+  "parties": [
+   {
+    "name": "Zipline",
+    "role": "Target",
+    "realm": "Drones, robots & autonomous delivery",
+    "hq": null,
+    "founded": null,
+    "size": "150 million commercial autonomous miles flown",
+    "history": [
+     {
+      "y": "2026",
+      "t": "Announced more than $600 million at a $7.6 billion valuation in January."
+     },
+     {
+      "y": "2026",
+      "t": "Raised $1.5 billion at a $21.5 billion valuation."
+     }
+    ]
+   },
+   {
+    "name": "Paradigm",
+    "role": "Backer",
+    "realm": "Private equity / investor",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "WCM Investment Management",
+    "role": "Backer",
+    "realm": "Private equity / investor",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Layer Global",
+    "role": "Backer",
+    "realm": "Private equity / investor",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "Zipline",
+   "c": []
+  },
+  "note": "Other investors include Uber, Fidelity, Valor Equity Partners, Tiger Global, J.P. Morgan, ARK Invest and Salesforce Ventures.",
+  "ties": [
+   {
+    "d": "2026-11-05",
+    "t": "Walmart signs Zipline deal to add 300 drone delivery sites",
+    "story": "af4470d3440cc"
+   },
+   {
+    "d": "2026-11-02",
+    "t": "GlobalData: DoorDash-Instacart profit hinges on efficiency, retailer trust",
+    "story": "acb0ee4be247f"
+   },
+   {
+    "d": "2026-10-30",
+    "t": "Wing and Zipline cut drone noise as suburban pushback grows",
+    "story": "aa5d4a9b2f57e"
+   },
+   {
+    "d": "2026-10-29",
+    "t": "ePost Global VP says tariffs reshape cross-border returns costs",
+    "story": "a619cd4242386"
+   }
+  ],
+  "d": "2026-11-05",
+  "story": "a51635acddd06",
+  "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+  "srcs": [
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites"
+   },
+   {
+    "src": "Dronelife",
+    "url": "https://dronelife.com/2026/11/05/zipline-1-5-billion-funding-drone-delivery/"
+   },
+   {
+    "src": "StreetInsider",
+    "url": "https://www.streetinsider.com/Reuters/Drone+delivery+startup+Zipline+valued+at+%2421.5+billion+in+latest+funding+round/27295547.html"
+   }
+  ],
+  "checked": "2026-11-05",
+  "updates": [
+   {
+    "d": "2026-11-05",
+    "t": "Zipline raises $1.5 billion at $21.5 billion valuation",
+    "story": "a51635acddd06"
+   }
+  ]
+ },
+ {
   "buyer": "CMA CGM (CEVA Logistics)",
   "target": "FedEx Supply Chain",
   "title": "CMA CGM buys FedEx Supply Chain",
@@ -50,7 +184,7 @@
   "ann": null,
   "closed": null,
   "ended": null,
-  "latest": "Proposed deal announced the week before Nov. 2, 2026; regulatory outcome not yet reported.",
+  "latest": "Deal pending; grocers voiced concerns in the week after announcement, Business Insider reported Nov. 5, 2026.",
   "sum": "DoorDash is in advanced talks to acquire Instacart, according to the Wall Street Journal as discussed by CNBC. No value or terms were given.",
   "who": [
    [
@@ -118,7 +252,7 @@
     "story": "a4d34002e71df"
    }
   ],
-  "d": "2026-11-02",
+  "d": "2026-11-05",
   "story": "ae89309b5e834",
   "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html",
   "srcs": [
@@ -201,9 +335,13 @@
    {
     "src": "Grocery Dive",
     "url": "https://www.grocerydive.com/news/instacart-doordash-acquisition-experts-grocery-ecommerce/873377/"
+   },
+   {
+    "src": "Business Insider",
+    "url": "https://www.businessinsider.com/doordash-instacart-deal-worries-small-grocers-over-power-2026-11"
    }
   ],
-  "checked": "2026-11-02",
+  "checked": "2026-11-05",
   "updates": [
    {
     "d": "2026-10-26",

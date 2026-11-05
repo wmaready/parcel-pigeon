@@ -1,5 +1,5 @@
 {
- "run": "2026-11-05T13:10Z",
+ "run": "2026-11-05T13:41Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -179,16 +179,6 @@
    "type": "feed-dead",
    "msg": "3 news feeds failing or empty: SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
-   "ids": [
-    "a7d88cb8247eb",
-    "ae5f2c699239a"
-   ],
    "fixed": false
   },
   {
@@ -440,16 +430,6 @@
    "type": "feed-dead",
    "msg": "3 news feeds failing or empty: SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"PRC notes three USPS competitive contract filings; comments due Oct. 20\" and \"PRC notices three new USPS standardized competitive contracts\"",
-   "ids": [
-    "a7d88cb8247eb",
-    "ae5f2c699239a"
-   ],
    "fixed": false
   },
   {

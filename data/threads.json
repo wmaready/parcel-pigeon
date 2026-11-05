@@ -515,7 +515,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's Westborough, Mass. drone pad now needs a new zoning review, while the FAA's Part 108 rule was unpublished as of Oct. 9.",
+  "s": "Drone delivery is expanding, with the FAA Part 108 final rule still awaited and community noise concerns rising.",
   "ids": [
    "g27",
    "g26",
@@ -523,26 +523,26 @@
    "a94cd39741afc",
    "af529411b3b18",
    "a86fd472c4cfb",
-   "ad354637eaab5",
-   "a8f4d2b454015"
+   "a8f4d2b454015",
+   "af4470d3440cc",
+   "acad7456be9cb"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-02",
+  "last": "2026-11-05",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "f7035f5de3e5",
+   "sig": "31d65cb191a1",
    "v": 3,
    "beats": {
-    "g27": "Amazon said Prime Air would reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations. Fees start at $2.99."
+    "g27": "Amazon says Prime Air will launch near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations."
    },
-   "intro": "Drone delivery is spreading to more towns, but the FAA's Part 108 rule is still unpublished. Shippers watch it for scale.",
-   "now": "As of Oct. 9, Part 108 was still unpublished, so waivers or Part 135 certificates remain the route for routine BVLOS delivery."
+   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule is still unpublished, which matters for who can fly routinely."
   },
-  "rv": "e5a61a88bcea",
+  "rv": "5b44b20f99ae",
   "co": "Amazon",
   "apart": [
    "amazon-jfk8-nlrb",
@@ -576,6 +576,7 @@
   },
   "apart": [
    "amazon-jfk8-nlrb",
+   "amazon-uber-eats-prime",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
   ]
@@ -995,8 +996,8 @@
    "aa7358e9cf2dd"
   ],
   "first": "2026-11-01",
-  "s": "The EU Product Identifier requirement for B2C shipments up to EUR 150 has applied since 1 November 2026, alongside the per-item charges reported earlier.",
-  "last": "2026-11-04",
+  "s": "A €3 charge on parcels under €150 has applied since July and a €2 levy since 1 November, and Shein is responding by expanding EU-based fulfilment.",
+  "last": "2026-11-05",
   "c": [
    "DHL",
    "Industry"
@@ -1019,7 +1020,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon launched Uber Eats ordering for U.S. Prime members with $0 delivery fee on orders of $25 or more on Nov. 5, 2026.",
+  "s": "Amazon named Uber Eats its U.S. Prime restaurant delivery partner on Nov. 5, 2026, and its Grubhub agreement ended the same day.",
   "last": "2026-11-05",
   "c": [
    "Amazon"
@@ -1031,6 +1032,18 @@
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
+  ],
+  "rv": "da39a3ee5e6b"
+ },
+ "doordash-instacart-deal": {
+  "n": "DoorDash–Instacart deal",
+  "ids": [],
+  "first": "2026-11-05",
+  "co": "DoorDash",
+  "s": "DoorDash's $17 billion deal for Instacart is pending, and some local grocers voiced concerns in early November 2026.",
+  "last": "2026-11-05",
+  "c": [
+   "Industry"
   ],
   "rv": "da39a3ee5e6b"
  }

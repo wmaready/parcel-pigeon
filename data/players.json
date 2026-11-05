@@ -2626,6 +2626,72 @@
    ],
    "enriched": "2026-11-05",
    "pending": false
+  },
+  {
+   "id": "justeattakeawa",
+   "n": "Just Eat Takeaway",
+   "realm": "gig",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Former owner of Grubhub that agreed to a 2024 equity deal with Amazon",
+   "al": [],
+   "src": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-05",
+   "story": "a11c4cff40ea4"
+  },
+  {
+   "id": "paradigm",
+   "n": "Paradigm",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Co-lead investor in Zipline's funding round",
+   "al": [],
+   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-05",
+   "story": "a51635acddd06"
+  },
+  {
+   "id": "wcminvestmentm",
+   "n": "WCM Investment Management",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Co-lead investor in the round.",
+   "al": [],
+   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "auto": true,
+   "added": "2026-11-05",
+   "story": "a51635acddd06"
+  },
+  {
+   "id": "layerglobal",
+   "n": "Layer Global",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Co-lead investor in the round.",
+   "al": [],
+   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "auto": true,
+   "added": "2026-11-05",
+   "story": "a51635acddd06"
   }
  ],
  "edges": [
@@ -4509,6 +4575,33 @@
    "t": "Amazon and Uber Eats launch Prime restaurant delivery benefit",
    "url": "https://press.aboutamazon.com/2026/11/amazon-launches-partnership-with-uber-eats-featuring-0-delivery-fee-for-prime-members",
    "story": "a7ba9b8d54ef4"
+  },
+  {
+   "a": "amazon",
+   "b": "grubhub",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon and Grubhub end Prime commercial agreement",
+   "url": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
+   "story": "a11c4cff40ea4"
+  },
+  {
+   "a": "justeattakeawa",
+   "b": "grubhub",
+   "k": "sold",
+   "y": "2026",
+   "t": "Just Eat Takeaway announces plan to sell Grubhub to Wonder",
+   "url": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
+   "story": "a11c4cff40ea4"
+  },
+  {
+   "a": "paradigm",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2026",
+   "t": "Paradigm co-leads Zipline's $1.5 billion round",
+   "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "story": "a51635acddd06"
   }
  ],
  "moves": [
