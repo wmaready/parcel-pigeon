@@ -2540,6 +2540,92 @@
    ],
    "enriched": "2026-11-04",
    "pending": false
+  },
+  {
+   "id": "archive",
+   "n": "Archive",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": "2021",
+   "s": "Archive provides resale-intelligence and warehouse-management software that lets brands run branded resale programs. These programs reclaim supply from returns, past-season inventory, consumer listings and in-store trade-ins, and are integrated with logistics companies.",
+   "al": [
+    "Archive Resale",
+    "Archive Resale, Inc."
+   ],
+   "src": "https://www.businesswire.com/news/home/20250204532945/en/Archive-Raises-$30-Million-in-Series-B-Funding-to-Drive-Profitable-Resale-for-Brands",
+   "auto": true,
+   "added": "2026-11-05",
+   "from": "discover",
+   "site": "archiveresale.com",
+   "srcs": [
+    "https://www.businesswire.com/news/home/20250204532945/en/Archive-Raises-$30-Million-in-Series-B-Funding-to-Drive-Profitable-Resale-for-Brands",
+    "https://www.archiveresale.com/blog/archive-secures-30-million-in-series-b-funding",
+    "https://techcrunch.com/2025/02/04/archive-raises-30m-to-solve-fashions-pollution-problem-with-online-resales/"
+   ],
+   "enriched": "2026-11-05",
+   "pending": false
+  },
+  {
+   "id": "aftership",
+   "n": "AfterShip",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "AfterShip is a post-purchase software company that gives e-commerce merchants shipment tracking across 1,000+ carriers, branded tracking pages, delivery notifications, returns and shipping tools.",
+   "al": [
+    "AfterShip Ltd."
+   ],
+   "src": "https://www.businesswire.com/news/home/20230323005174/en/AfterShip-Launches-Integration-with-Happy-Returns-to-Streamline-Online-Returns-in-the-U.S.",
+   "auto": true,
+   "added": "2026-11-05",
+   "from": "discover",
+   "site": "aftership.com",
+   "srcs": [
+    "https://www.businesswire.com/news/home/20230323005174/en/AfterShip-Launches-Integration-with-Happy-Returns-to-Streamline-Online-Returns-in-the-U.S.",
+    "https://www.finsmes.com/2021/04/aftership-raises-66m-in-series-b-funding.html",
+    "https://pitchbook.com/profiles/company/63306-82"
+   ],
+   "enriched": "2026-11-05",
+   "pending": false
+  },
+  {
+   "id": "routerouteappl",
+   "n": "Route",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Lehi, UT, USA",
+   "yr": "2018",
+   "s": "Route is a post-purchase platform for e-commerce merchants that sells shopper-funded, licensed package protection against lost, stolen or damaged parcels, along with branded package tracking and, since its January 2026 acquisition of Frate Returns, returns and exchanges.",
+   "al": [
+    "Route App Inc",
+    "Route App, Inc.",
+    "Route Protection & Tracking",
+    "RouteApp LLC"
+   ],
+   "src": "https://www.prnewswire.com/news-releases/post-purchase-boom-route-announces-40-million-series-c-at-a-1-4-billion-valuation-302181158.html",
+   "auto": true,
+   "added": "2026-11-05",
+   "from": "discover",
+   "site": "route.com",
+   "geo": [
+    -111.851,
+    40.392
+   ],
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/post-purchase-boom-route-announces-40-million-series-c-at-a-1-4-billion-valuation-302181158.html",
+    "https://www.linkedin.com/company/route-app",
+    "https://apps.shopify.com/route"
+   ],
+   "enriched": "2026-11-05",
+   "pending": false
   }
  ],
  "edges": [
@@ -4360,6 +4446,60 @@
    "t": "GOFO integrates delivery tracking with Shopify and the Shop app",
    "url": "https://www.prnewswire.com/news-releases/gofo-announces-real-time-delivery-tracking-integration-with-shopify-302929780.html",
    "story": "a947eb28a3ca3"
+  },
+  {
+   "a": "bcv",
+   "b": "archive",
+   "k": "invested",
+   "y": "2025",
+   "t": "Returning investor in $30M Series B",
+   "url": "https://www.archiveresale.com/blog/archive-secures-30-million-in-series-b-funding",
+   "story": null
+  },
+  {
+   "a": "tigerglobal",
+   "b": "aftership",
+   "k": "invested",
+   "y": "2021",
+   "t": "Led $66M Series B",
+   "url": "https://www.finsmes.com/2021/04/aftership-raises-66m-in-series-b-funding.html",
+   "story": null
+  },
+  {
+   "a": "aftership",
+   "b": "happyreturns",
+   "k": "partner",
+   "y": "2023",
+   "t": "Returns integration for U.S. merchants",
+   "url": "https://www.businesswire.com/news/home/20230323005174/en/AfterShip-Launches-Integration-with-Happy-Returns-to-Streamline-Online-Returns-in-the-U.S.",
+   "story": null
+  },
+  {
+   "a": "aftership",
+   "b": "tiktokshop",
+   "k": "partner",
+   "y": "2023",
+   "t": "AfterShip Feed integration",
+   "url": "https://www.businesswire.com/news/home/20230920455054/en/AfterShip-Partners-with-TikTok-Shop-on-Next-Chapter-of-Social-Commerce",
+   "story": null
+  },
+  {
+   "a": "aftership",
+   "b": "ascs",
+   "k": "partner",
+   "y": null,
+   "t": "AfterShip Feed integrates with Multichannel Fulfillment",
+   "url": "https://supplychain.amazon.com/integrations/aftership",
+   "story": null
+  },
+  {
+   "a": "routerouteappl",
+   "b": "shopify",
+   "k": "partner",
+   "y": null,
+   "t": "Shopify App Store integration for package protection, tracking and returns",
+   "url": "https://apps.shopify.com/route",
+   "story": null
   }
  ],
  "moves": [
@@ -4718,7 +4858,10 @@
   "shiphawk": "2026-11-03",
   "shipperhq": "2026-11-03",
   "swapswapcommer": "2026-11-04",
-  "trove": "2026-11-04"
+  "trove": "2026-11-04",
+  "archive": "2026-11-05",
+  "aftership": "2026-11-05",
+  "routerouteappl": "2026-11-05"
  },
  "facts": {
   "ups": {

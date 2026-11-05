@@ -6,18 +6,43 @@
   "3": "2026-10-29",
   "4": "2026-11-01",
   "5": "2026-11-03",
-  "6": "2026-11-04"
+  "6": "2026-11-04",
+  "7": "2026-11-05"
  },
- "day": "2026-11-04",
+ "day": "2026-11-05",
  "calls": 1,
  "queue": [
   {
-   "n": "Archive",
-   "what": "Resale-intelligence software that routes returned and used items to resale, backed by a $30M raise in 2025.",
-   "url": "https://www.ecommercelogistician.com/p/ecommerce-returns-as-a-vc-backed",
+   "n": "parcelLab",
+   "what": "Enterprise post-purchase platform that monitors parcel delivery across carriers, predicts delays, and sends branded tracking updates and returns portals to retailers, backed by a $112M Series C led by",
+   "url": "https://parcellab.com/blog/parcellab-the-operations-experience-management-platform-secures-112m-to-help-global-brands-deliver-a-seamless-experience/",
    "realm": "software",
-   "seg": 6,
-   "found": "2026-11-04"
+   "seg": 7,
+   "found": "2026-11-05"
+  },
+  {
+   "n": "DispatchTrack",
+   "what": "Last-mile delivery software that combines route optimization, delivery execution, real-time tracking and customer delivery-experience tools, with reported funding of about $144M from Spectrum Equity.",
+   "url": "https://tracxn.com/d/companies/dispatchtrack/__bzUXYgaD7wqHg3jUmglaqEUb5NLh4arQsskMw6xF33o",
+   "realm": "software",
+   "seg": 7,
+   "found": "2026-11-05"
+  },
+  {
+   "n": "Wise Systems",
+   "what": "Cambridge, MA provider of AI dispatch and route-optimization software for delivery fleets, which raised a $50M Series C led by Tiger Global in 2021.",
+   "url": "https://www.freightwaves.com/news/wise-systems-raises-50m-to-expedite-last-mile-product-development",
+   "realm": "software",
+   "seg": 7,
+   "found": "2026-11-05"
+  },
+  {
+   "n": "Parcel Perform",
+   "what": "Carrier-independent delivery-experience platform that aggregates tracking data from 700+ carriers for e-commerce brands. It raised a $20M Series A with plans for a North American headquarters.",
+   "url": "https://www.finsmes.com/2021/08/parcel-perform-raises-us20m-in-series-a-funding.html",
+   "realm": "software",
+   "seg": 7,
+   "found": "2026-11-05"
   }
  ]
 }

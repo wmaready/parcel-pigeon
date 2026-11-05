@@ -1,5 +1,5 @@
 {
- "run": "2026-11-05T05:13Z",
+ "run": "2026-11-05T05:18Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,8 +8,8 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 600,
- "doc_cursor": 234,
+ "link_cursor": 640,
+ "doc_cursor": 264,
  "checked_pairs": [
   "2361691e9a1b",
   "d46a0aebc57e",
@@ -316,6 +316,50 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.thenewstribune.com', port=443): Read timed out. (read timeout=15)): https://www.thenewstribune.com/news/local/article317609638.html",
+   "ids": [
+    "accf814d7d663"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -554,6 +598,50 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.thenewstribune.com', port=443): Read timed out. (read timeout=15)): https://www.thenewstribune.com/news/local/article317609638.html",
+   "ids": [
+    "accf814d7d663"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
    "ids": [],
    "fixed": false
   }

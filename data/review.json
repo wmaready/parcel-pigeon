@@ -40,15 +40,6 @@
  },
  {
   "type": "headline-only",
-  "title": "Breaking down Canada Post's plan to end door-to-door mail delivery",
-  "url": "https://www.cbc.ca/player/play/video/9.7408332",
-  "src": "CBC",
-  "date": "2026-11-04",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
   "title": "Message to drone delivery companies: Keep it down",
   "url": "https://www.axios.com/2026/11/04/message-to-drone-delivery-companies-keep-it-down",
   "src": "Axios",
@@ -637,5 +628,14 @@
   "company": "FedEx",
   "ir": "https://investors.fedex.com/news-and-events/earnings-releases/default.aspx",
   "note": "FedEx's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
+ },
+ {
+  "type": "headline-only",
+  "title": "Breaking down Canada Post's plan to end door-to-door mail delivery",
+  "url": "https://www.cbc.ca/player/play/video/9.7408332",
+  "src": "CBC",
+  "date": "2026-11-04",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  }
 ]
