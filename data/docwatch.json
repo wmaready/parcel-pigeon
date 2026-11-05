@@ -1,5 +1,5 @@
 {
- "cursor": 114,
+ "cursor": 129,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 387,
+   "fails": 388,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-05"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 387,
+   "fails": 388,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-05"
@@ -1774,7 +1774,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm": {
    "hash": "dbb20a3b312e",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1784,7 +1784,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10890/q1-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1795,7 +1795,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2142/ups-releases-1q-2025-earnings": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2025 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1806,7 +1806,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-031154/ups-20260331.htm": {
    "hash": "b47f494fa342",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2026 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1816,7 +1816,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10988/q1-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2026 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1827,7 +1827,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q1 2026 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1838,7 +1838,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm": {
    "hash": "8462e8684be8",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2024 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1848,7 +1848,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2024 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1859,7 +1859,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2024 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1870,7 +1870,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm": {
    "hash": "dba218f5950f",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1880,7 +1880,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1891,7 +1891,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2146/ups-releases-2q-2025-earnings": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2025 results release",
    "snap": {
     "d": "2026-10-31",
@@ -1902,7 +1902,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-053249/ups-20260630.htm": {
    "hash": "39c2fd911d95",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2026 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1912,7 +1912,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/11021/q2-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "f6578815130d",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2026 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1923,7 +1923,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2164/ups-releases-2q-2026-earnings": {
    "hash": "f6578815130d",
    "first": "2026-10-30",
-   "checked": "2026-11-04",
+   "checked": "2026-11-05",
    "n": "UPS Q2 2026 results release",
    "snap": {
     "d": "2026-10-31",
