@@ -2726,6 +2726,23 @@
    "pending": true,
    "added": "2026-10-28",
    "story": "aa9e48dce32e7"
+  },
+  {
+   "id": "vinted",
+   "n": "Vinted",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Secondhand marketplace offering free or discounted delivery to US shoppers",
+   "al": [],
+   "src": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-05",
+   "story": "a3d768115c0e6"
   }
  ],
  "edges": [
@@ -4663,6 +4680,24 @@
    "t": "Deutsche Post is part of DHL",
    "url": "https://www.rte.ie/news/business/2026/1105/1598145-dhl-expects-to-hit-2026-targets/",
    "story": "a34d0c6e054ad"
+  },
+  {
+   "a": "depop",
+   "b": "usps",
+   "k": "partner",
+   "y": "2026",
+   "t": "Depop Shipping in the US runs through USPS",
+   "url": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "depop",
+   "b": "evri",
+   "k": "partner",
+   "y": "2026",
+   "t": "Depop offers integrated shipping through Evri in the UK",
+   "url": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
+   "story": "a3d768115c0e6"
   }
  ],
  "moves": [

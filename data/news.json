@@ -49,6 +49,57 @@
   "unconf": true
  },
  {
+  "id": "a3d768115c0e6",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Depop ends independent shipping for new US listings",
+  "sum": "Depop stopped allowing independent shipping on new US listings on October 28, 2026, according to its updated US shipping guidance. All new listings must use Depop Shipping through USPS. Listings set to \"Other\" before that date keep the setting until they sell.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "Since October 28, 2026, US Depop sellers must use Depop Shipping through USPS for every new listing. Older listings set to \"Other\" keep independent shipping until they sell, and relisting switches them to Depop Shipping.",
+  "why": "US Depop sellers lose the option to buy their own postage on new listings, moving those parcels onto USPS labels the platform provides.",
+  "score": 4,
+  "tie": null,
+  "act": "2026-10-28",
+  "dates": [],
+  "added": "2026-11-05T21:19:39Z",
+  "src": "Value Added Resource",
+  "url": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
+  "srcs": [
+   {
+    "src": "Value Added Resource",
+    "url": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/"
+   }
+  ],
+  "auto": true,
+  "syn": "Depop ended independent shipping for new US listings on October 28, 2026, according to its updated US shipping guidance. New listings must use Depop Shipping through USPS, with buyers paying for shipping and sellers receiving prepaid labels or QR codes. Listings set to \"Other\" before that date keep it until they sell, and deleting and relisting switches them to Depop Shipping. Depop warns that using another method can invalidate seller protection. The change follows eBay's July 30 completion of its $1.4 billion acquisition of Depop.",
+  "aff": [
+   {
+    "who": "US Depop sellers, new listings",
+    "what": "Must use Depop Shipping through USPS from October 28, 2026; \"Other\" is no longer available."
+   },
+   {
+    "who": "Grandfathered listings",
+    "what": "Listings set to \"Other\" before October 28 keep it until sold; relisting switches them to Depop Shipping."
+   },
+   {
+    "who": "Sellers using other labels",
+    "what": "Shipping with another method on Depop Shipping orders can invalidate seller protection and lead to cancellation and refund."
+   },
+   {
+    "who": "UK sellers",
+    "what": "Independent shipping remains available alongside integrated shipping through Evri."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-05",
+  "unconf": true
+ },
+ {
   "id": "a44924e18ff35",
   "date": "2026-11-05",
   "c": [
@@ -480,6 +531,57 @@
    {
     "who": "Shippers",
     "what": "No change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "ad851d9e2eb69",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Serve Robotics reports Q3 revenue of $2.8M, raises 2026 guidance to $12M",
+  "sum": "Serve Robotics reported third-quarter 2026 revenue of $2.8 million on Nov. 5, up 313% year over year, and raised its full-year revenue guidance to $12 million. The company said daily average deliveries tripled in the quarter and that it launched its first international city, in Australia, in October.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for parcel shippers. The release covers the company's financial results and its expansion into Australia.",
+  "why": "The results show scale and growth at a sidewalk delivery robot operator, a segment of last-mile delivery, from $2.8 million in quarterly revenue.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-05T21:19:53Z",
+  "src": "GlobeNewswire",
+  "url": "https://www.globenewswire.com/news-release/2026/11/05/3397043/0/en/serve-robotics-announces-third-quarter-2026-results.html",
+  "srcs": [
+   {
+    "src": "GlobeNewswire",
+    "url": "https://www.globenewswire.com/news-release/2026/11/05/3397043/0/en/serve-robotics-announces-third-quarter-2026-results.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "syn": "Serve Robotics, a Nasdaq-listed autonomy and robotics company, announced third-quarter results for the period ended Sept. 30, 2026. Revenue was $2.8 million, up 313% year over year, and the company raised its 2026 revenue guidance to $12 million. It said daily average deliveries tripled with new delivery partners, recurring revenue was 69% of the total, and cash and marketable securities were over $198 million. It also announced Serve Physical AI Services, which makes its fleet technology available to other robot makers, according to CEO Ali Kashani.",
+  "aff": [
+   {
+    "who": "Serve Robotics",
+    "what": "Q3 revenue of $2.8 million, up 313%; 2026 revenue guidance raised to $12 million."
+   },
+   {
+    "who": "Delivery volumes",
+    "what": "Daily average deliveries tripled in Q3 with new delivery partners, the company said."
+   },
+   {
+    "who": "Australia",
+    "what": "Serve said it launched its first international city there in October."
+   },
+   {
+    "who": "Other robot makers",
+    "what": "Serve Physical AI Services makes Serve's fleet technology available to them, the company said."
    }
   ],
   "edge": true,
@@ -10768,94 +10870,5 @@
   ],
   "auto": true,
   "edge": true
- },
- {
-  "id": "a029653b40c6e",
-  "date": "2026-10-11",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "USPS suspends mail delivery and retail service in 60 Northwest Florida ZIP codes",
-  "sum": "The USPS Florida 1 District said on Sunday, Oct. 11, 2026, that it suspended mail delivery and retail services in 60 ZIP codes in Northwest Florida after severe weather tied to Hurricane Isaias. The suspension took effect immediately, and USPS has not given a reopening date.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Mail and package delivery and post office retail services are suspended in the 60 affected ZIP codes, and USPS has given no date for resuming them. USPS said no alternative postal locations are available for affected customers.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "WIOD",
-  "url": "https://wiod.iheart.com/featured/florida-news/content/2026-10-11-usps-suspends-mail-delivery-in-60-northwest-florida-zip-codes/",
-  "srcs": [
-   {
-    "src": "WIOD",
-    "url": "https://wiod.iheart.com/featured/florida-news/content/2026-10-11-usps-suspends-mail-delivery-in-60-northwest-florida-zip-codes/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a5a4a6c9a9a91",
-  "date": "2026-10-11",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Orlando trucking owner pleads guilty in $1M USPS Freight Auction fraud",
-  "sum": "Khayyam Arif Oglu Farajov, 40, owner of Talishco LLC in Orlando, pleaded guilty to one wire fraud count and one money laundering count, federal prosecutors announced Friday. DOJ said he falsely marked USPS Freight Auction shipments as delivered and collected more than $1 million. He agreed to forfeit two seized brokerage accounts and pay $993,979 in restitution, and the court has not scheduled sentencing.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to USPS rates or service. The case concerns payments to a supplier in the USPS Freight Auction bulk-mail trucking program.",
-  "tie": "DOJ announced the indictment in March 2026, and a 2024 federal audit of USPS Freight Auction proof-of-delivery controls covered the same period as the scheme.",
-  "act": null,
-  "dates": [],
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/orlando-trucking-owner-pleads-guilty-in-1m-usps-freight-auction-fraud",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/orlando-trucking-owner-pleads-guilty-in-1m-usps-freight-auction-fraud"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPdE1heE8wN2FVQ2hEdkNLdHdObHRVdF9jY3AzblREbDFLVFozZGkzOTZIMlA1NnN3YVVlU2o3cm5jdkE2N0dpOGI4X2JSRXJ1YjR5ZS1jR0pBVDhtNVhJVXRQOENDcWpTdDJJZzJWOHZNeTlmejhBbk5YU3JGTlJjQTZNM0V4bWhDZGdILV82T2dCSFJNZkJFRWhlVjV0eFItWUFiTElB?oc=5"
-   }
-  ],
-  "auto": true,
-  "updated": "2026-10-11"
- },
- {
-  "id": "ac0d92b34ccce",
-  "date": "2026-10-11",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Partnerships",
-  "kind": "News",
-  "title": "ShipStation adds Ship with Walmart rates and $100 lost-package cover",
-  "sum": "ShipStation announced Ship with Walmart, giving Walmart Marketplace sellers access to Walmart-negotiated shipping rates inside its platform, plus up to $100 in protection on lost-item claims for eligible orders shipped on time. The service covers U.S. domestic shipments only. ShipStation's blog says rates may be as much as 60% below the market rate.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Walmart Marketplace sellers on ShipStation can buy Walmart-negotiated labels alongside their existing carrier accounts, with up to $100 of lost-item protection on eligible on-time orders. It applies to U.S. domestic shipments only.",
-  "why": "Walmart Marketplace sellers using ShipStation get another rate option for U.S. domestic parcels, though savings depend on each seller's own lanes and weights.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T20:47:16Z",
-  "src": "MarketScale",
-  "url": "https://www.marketscale.com/industries/retail/shipstation-now-offers-walmart-shipping-rates-with-up-to-100-lost-package-protection",
-  "srcs": [
-   {
-    "src": "MarketScale",
-    "url": "https://www.marketscale.com/industries/retail/shipstation-now-offers-walmart-shipping-rates-with-up-to-100-lost-package-protection"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
  }
 ]

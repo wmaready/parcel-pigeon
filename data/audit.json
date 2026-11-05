@@ -1,5 +1,5 @@
 {
- "run": "2026-11-05T21:15Z",
+ "run": "2026-11-05T21:20Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -85,6 +85,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Depop ends independent shipping for new US listings\"",
+   "ids": [
+    "a3d768115c0e6"
    ],
    "fixed": false
   },
@@ -340,6 +349,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Depop ends independent shipping for new US listings\"",
+   "ids": [
+    "a3d768115c0e6"
    ],
    "fixed": false
   },
