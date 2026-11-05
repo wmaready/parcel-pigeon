@@ -4707,6 +4707,53 @@
   ]
  },
  {
+  "id": "a3759cbad145e",
+  "date": "2026-10-26",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS files international Contract 129 with PRC for competitive list",
+  "sum": "The Postal Service said it filed a request on October 26, 2026 with the Postal Regulatory Commission to add Priority Mail Express International, Priority Mail International & First-Class Package International Service Contract 129 to the Competitive Product List. The Commission's notice, published November 5, invites public comment, with comments due November 10, 2026.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to published rates or service for shippers. The contract is a negotiated agreement under Commission review, and the USPS notice does not name its customer or give prices.",
+  "why": "The filing adds one more negotiated international service contract to USPS's competitive product list; it is open for public comment until November 10.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-05T12:04:14Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22594/international-product-change-priority-mail-express-international-priority-mail-international-and",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22594/international-product-change-priority-mail-express-international-priority-mail-international-and"
+   },
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22582/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-26",
+  "new": "USPS filed international service Contract 129 with the Postal Regulatory Commission, but the notices name no counterparty, so the sources do not link it to the Amazon or DHL eCommerce deals and nothing changes for shippers.",
+  "syn": "The Postal Service gave notice in the Federal Register on November 5, 2026 that it had filed a request with the Postal Regulatory Commission on October 26. The request would add Priority Mail Express International, Priority Mail International & First-Class Package International Service Contract 129 to the list of Negotiated Service Agreements in the Competitive Product List. The filing is docketed as MC2027-17 and K2027-18. The Commission published its own notice the same day, inviting public comment by November 10, 2026. The USPS notice does not name the contract's customer or give prices.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to published rates or service; the contract is a negotiated agreement under Commission review."
+   },
+   {
+    "who": "Public commenters",
+    "what": "Comments on the filing are due to the Postal Regulatory Commission by November 10, 2026."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a3fa21d4c267a",
   "date": "2026-10-26",
   "c": [
@@ -10586,67 +10633,6 @@
   ],
   "auto": true,
   "new": "Zipline started Round Rock deliveries on October 9, with the FAA comment period closing October 11; the draft would cap Austin at 30,000 deliveries a day, and the item adds a Zipline Texas launch to the expansion news from Wing and Walmart.",
-  "exclusive": true
- },
- {
-  "id": "ac39181d4b6af",
-  "date": "2026-10-09",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "FCC to vote Oct. 29 on lifting 800 MHz cellular ban for drones",
-  "sum": "The FCC will vote on October 29, 2026 on a draft order that exempts drones from the airborne ban in the 800 MHz Cellular band, Chairman Brendan Carr announced on October 7. The draft says the ban began as a 1984 policy and was codified in 1991 for airplane phones. If adopted, the rule takes effect 30 days after Federal Register publication.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to shipper rates or service now. If adopted, drones could use the band for networked operations, including last-mile delivery, which the draft names among its use cases.",
-  "tie": "The FCC first asked about dropping the ban in January 2023 and revisited it in the April 2026 public notice DA 26-314, according to DroneXL.",
-  "act": null,
-  "dates": [
-   {
-    "d": "2026-10-29",
-    "w": "FCC votes on draft order opening 800 MHz band to drones",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/09/fcc-800-mhz-cellular-band-drones-october-29-vote/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/09/fcc-800-mhz-cellular-band-drones-october-29-vote/"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "af1f31a54a5cb",
-  "date": "2026-10-09",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Lowe's starts Wing and DoorDash drone delivery pilot in Matthews, NC",
-  "sum": "Lowe's has launched a drone delivery pilot at its Matthews, North Carolina store, according to Unmanned Airspace. The service aims to deliver orders in 20 minutes and runs with Wing and DoorDash, which already operate drone delivery in the Charlotte area.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Lowe's customers near the Matthews, North Carolina store can get eligible orders by drone, with a stated goal of 20 minutes. No change to rates or service for other shippers.",
-  "tie": "Wing also announced an expansion with Walmart to Denver and Seattle in 2027, as covered in October 2026.",
-  "act": null,
-  "dates": [],
-  "src": "Unmanned airspace",
-  "url": "https://www.unmannedairspace.info/uncategorized/lowes-launches-drone-delivery-service-in-north-carolina/",
-  "srcs": [
-   {
-    "src": "Unmanned airspace",
-    "url": "https://www.unmannedairspace.info/uncategorized/lowes-launches-drone-delivery-service-in-north-carolina/"
-   }
-  ],
-  "auto": true,
-  "new": "Lowe's has started a drone delivery pilot in Matthews, North Carolina with Wing and DoorDash, adding a home improvement retailer to the drone delivery sites reported earlier; shippers see no change in rates, and the service covers small items of about 2.5 pounds.",
   "exclusive": true
  }
 ]
