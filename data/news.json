@@ -49,6 +49,54 @@
   "unconf": true
  },
  {
+  "id": "a44924e18ff35",
+  "date": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "Former Amazon DSP driver files class action over alleged no-poach scheme",
+  "sum": "A former Delivery Service Partner driver from Washington state filed a class action in New Jersey federal court against Amazon.com Inc., Amazon.com Services LLC and Amazon Logistics Inc., Top Class Actions reported on Nov. 5, 2026. The plaintiff claims Amazon uses its control over delivery companies and a hidden no-poach practice to keep driver pay low, affecting hundreds of thousands of drivers in the U.S.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to shipper rates or service. The claims are allegations in a newly filed suit.",
+  "why": "The suit challenges the DSP model, in which separately owned companies deliver Amazon packages; the plaintiff cites hundreds of thousands of drivers.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-05T19:18:54Z",
+  "src": "Top Class Actions",
+  "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/amazon-class-action-lawsuit-claims-no-poach-scheme-suppresses-driver-wages/",
+  "srcs": [
+   {
+    "src": "Top Class Actions",
+    "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/amazon-class-action-lawsuit-claims-no-poach-scheme-suppresses-driver-wages/"
+   }
+  ],
+  "auto": true,
+  "thread": "amazon-driver-no-poach-suit",
+  "syn": "A former Delivery Service Partner (DSP) driver from Washington state filed a class action in New Jersey federal court against Amazon.com Inc., Amazon.com Services LLC and Amazon Logistics Inc., according to Top Class Actions on Nov. 5, 2026. The plaintiff claims Amazon orchestrated a wage suppression scheme affecting hundreds of thousands of drivers across the U.S. The suit alleges Amazon uses its control over delivery companies and a hidden no-poach practice to keep driver pay low. DSPs are separately owned companies that deliver Amazon packages.",
+  "aff": [
+   {
+    "who": "DSP drivers",
+    "what": "Plaintiff claims a wage suppression scheme affects hundreds of thousands of drivers across the U.S."
+   },
+   {
+    "who": "Amazon",
+    "what": "Named with Amazon.com Services LLC and Amazon Logistics Inc. as defendants in a New Jersey federal court class action."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-05",
+  "unconf": true
+ },
+ {
   "id": "a4d019f238b32",
   "date": "2026-11-05",
   "c": [
@@ -204,6 +252,53 @@
     "what": "AI is used to enable fast-but-reliable delivery promises, Iannone said."
    }
   ]
+ },
+ {
+  "id": "a97e88eebc599",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Opinion",
+  "title": "Zipline CEO details path to $21.5 billion valuation after $1.5B raise",
+  "sum": "Zipline CEO Keller Rinaudo Cliffton posted a thread on X after the company's $1.5 billion raise at a $21.5 billion valuation, saying the company \"almost died\" about two years ago. He said Zipline has grown flight volume about 100 times in 18 months, per DroneXL, which also published its own commentary on Amazon's drone program.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for parcel shippers. Zipline said it makes more than a million deliveries a year per metro, and Walmart has signed for 300 more supercenters.",
+  "why": "Walmart's 300 additional supercenters and a $1.5 billion raise mark a scale-up in US drone delivery, per Zipline's own figures.",
+  "score": 5,
+  "tie": "Walmart signed a multi-year agreement with Zipline to add 300 drone delivery sites, as reported earlier on Nov. 5, 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-05T19:18:15Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/05/zipline-founder-thread-cow-farm-near-death-21-5-billion/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/05/zipline-founder-thread-cow-farm-near-death-21-5-billion/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "Zipline's CEO detailed a $1.5 billion raise at a $21.5 billion valuation and said flight volume is up about 100 times in 18 months, while Amazon withdrew its Westborough, Mass., pad application on Oct. 30; no change to shipper rates or service is stated.",
+  "syn": "Zipline CEO Keller Rinaudo Cliffton wrote on X, after Thursday's $1.5 billion raise at a $21.5 billion valuation, that investors long did not see the company as investable and that it almost died about two years ago while building its Platform 2 aircraft. He said flight volume has grown about 100 times in 18 months, that Dallas-Fort Worth deliveries top one million for 2026, and that Walmart has signed for 300 more supercenters. Zipline said it has flown more than 150 million autonomous miles with no safety incidents; DroneXL noted two Zipline aircraft came down under parachute in Texas this summer with nobody hurt. The article closes with the DroneXL editor's opinion on Amazon's MK30 drone.",
+  "aff": [
+   {
+    "who": "Walmart drone delivery",
+    "what": "Walmart has signed for 300 more supercenters, per Zipline's release as cited by DroneXL."
+   },
+   {
+    "who": "Dallas-Fort Worth deliveries",
+    "what": "Zipline's count in the metro is above one million for 2026."
+   },
+   {
+    "who": "Amazon Prime Air in Westborough, Mass.",
+    "what": "Amazon withdrew its pad application on Oct. 30, eleven days after a 510 to 13 town vote; it says it will resubmit."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "a9c683935be22",
@@ -10761,62 +10856,6 @@
    }
   ],
   "auto": true,
-  "exclusive": true
- },
- {
-  "id": "w150132868eae",
-  "date": "2026-10-11",
-  "c": [
-   "OnTrac"
-  ],
-  "cat": "Documents",
-  "title": "OnTrac posts 2026 rate, AHS/LPS and area surcharge ZIP files on its rates page",
-  "sum": "OnTrac's own Surcharges and rates page now lists four newly posted PDF files: 2026 rates, 2026 AHS and LPS rates, an area surcharge ZIP code list and a 2024 rates file.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "OnTrac's Surcharges and rates page now links four PDF documents that were not previously listed: a 2026 rates file, a 2026 file covering AHS and LPS rates, an area surcharge ZIP code list and a 2024 rates file. This was posted on the carrier's own page. The change shows only the file links, not their contents, so any price, surcharge or effective-date changes in the documents are not visible here. The 2024 file may be an archived guide rather than a new one.",
-  "act": null,
-  "dates": [],
-  "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
-  "url": "https://www.ontrac.com/surchargesandrates/",
-  "srcs": [
-   {
-    "src": "OnTrac Surcharges and rates (spotted by Parcel Pigeon)",
-    "url": "https://www.ontrac.com/surchargesandrates/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a155d90ac7d0a",
-  "date": "2026-10-10",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Zipline launches drone delivery in Round Rock, Texas",
-  "sum": "Zipline has launched drone delivery in Round Rock, Texas, its first site in the Austin area, KABB reported. Customers within about three miles of the site can order through the Zipline app, which lists 25 participating businesses. Zipline said it has had no serious injuries after more than 135 million commercial autonomous miles.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Customers within about three miles of the Zipline site can order from participating businesses by drone. No change to parcel carrier rates or service.",
-  "why": "Zipline's first Austin-area site adds a drone option for local merchants, with plans for more sites across the metro, according to the company's community engagement lead.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T18:49:52Z",
-  "src": "KABB",
-  "url": "https://foxsanantonio.com/newsletter-daily/zipline-launches-drone-delivery-service-in-round-rock-for-groceries-food-and-more",
-  "srcs": [
-   {
-    "src": "KABB",
-    "url": "https://foxsanantonio.com/newsletter-daily/zipline-launches-drone-delivery-service-in-round-rock-for-groceries-food-and-more"
-   }
-  ],
-  "auto": true,
-  "new": "KABB reports Zipline's Round Rock service lists 25 participating businesses within about three miles of the site, and the company plans more sites across the Austin metro; this does not change rates or service for most parcel shippers.",
   "exclusive": true
  }
 ]

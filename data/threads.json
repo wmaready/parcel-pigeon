@@ -515,7 +515,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding, with the FAA Part 108 final rule still awaited and community noise concerns rising.",
+  "s": "The FAA's Part 108 rule was unpublished as of Oct. 9, while Zipline has raised $1.5 billion and Walmart has signed for 300 more sites.",
   "ids": [
    "g27",
    "g26",
@@ -545,6 +545,7 @@
   "rv": "5b44b20f99ae",
   "co": "Amazon",
   "apart": [
+   "amazon-driver-no-poach-suit",
    "amazon-jfk8-nlrb",
    "amazon-labor",
    "amazon-network-buildout",
@@ -925,6 +926,7 @@
    "now": "UPS has finished its Amazon cutback, USPS kept most of Amazon's volume, and Amazon is selling its network to outside businesses."
   },
   "apart": [
+   "amazon-driver-no-poach-suit",
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
    "amazon-uber-eats-prime",
@@ -1018,12 +1020,13 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber launched the Prime benefit on Nov. 5, 2026, and Amazon is ending its Grubhub benefit.",
+  "s": "Amazon Prime members can order Uber Eats through Amazon with $0 delivery on eligible orders of $25 or more, as of Nov. 5, 2026.",
   "last": "2026-11-05",
   "c": [
    "Amazon"
   ],
   "apart": [
+   "amazon-driver-no-poach-suit",
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
    "drone-delivery",
@@ -1044,5 +1047,25 @@
    "Industry"
   ],
   "rv": "da39a3ee5e6b"
+ },
+ "amazon-driver-no-poach-suit": {
+  "n": "Amazon DSP driver no-poach suit",
+  "ids": [
+   "a44924e18ff35"
+  ],
+  "first": "2026-11-05",
+  "co": "Amazon",
+  "s": "A former DSP driver filed a class action in New Jersey federal court in early November 2026; the claims are unproven allegations.",
+  "last": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "amazon-network-buildout",
+   "last-mile-facility-legislation",
+   "ups-amazon-glide-down",
+   "usps-big-shipper-deals"
+  ],
+  "rv": "37e9a1ee53e9"
  }
 }
