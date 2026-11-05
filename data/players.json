@@ -2692,6 +2692,40 @@
    "auto": true,
    "added": "2026-11-05",
    "story": "a51635acddd06"
+  },
+  {
+   "id": "depop",
+   "n": "Depop",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Marketplace recently acquired by eBay",
+   "al": [],
+   "src": "https://www.supplychaindive.com/news/ebay-trims-depop-shipping-rates-bolsters-delivery-features/873710/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-05",
+   "story": "a74df5c94691e"
+  },
+  {
+   "id": "stripecapital",
+   "n": "Stripe Capital",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Financing unit that Dataworks is helping explore supply chain intelligence for small and medium business financing",
+   "al": [],
+   "src": "https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-28",
+   "story": "aa9e48dce32e7"
   }
  ],
  "edges": [
@@ -4602,6 +4636,33 @@
    "t": "Paradigm co-leads Zipline's $1.5 billion round",
    "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
    "story": "a51635acddd06"
+  },
+  {
+   "a": "ebay",
+   "b": "depop",
+   "k": "acquired",
+   "y": "2026",
+   "t": "EBay acquires Depop",
+   "url": "https://www.supplychaindive.com/news/ebay-trims-depop-shipping-rates-bolsters-delivery-features/873710/",
+   "story": "a74df5c94691e"
+  },
+  {
+   "a": "fedex",
+   "b": "stripecapital",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx Dataworks helps Stripe Capital explore supply chain intelligence for financing",
+   "url": "https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots",
+   "story": "aa9e48dce32e7"
+  },
+  {
+   "a": "dhlexpress",
+   "b": "dhl",
+   "k": "owns",
+   "y": "2026",
+   "t": "Deutsche Post is part of DHL",
+   "url": "https://www.rte.ie/news/business/2026/1105/1598145-dhl-expects-to-hit-2026-targets/",
+   "story": "a34d0c6e054ad"
   }
  ],
  "moves": [

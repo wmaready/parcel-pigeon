@@ -1,6 +1,69 @@
 [
  {
   "type": "headline-only",
+  "title": "Zipline moves into a larger headquarters as it prepares massive drone-delivery expansion",
+  "url": "https://www.bizjournals.com/sanfrancisco/news/2026/11/04/zipline-new-headquarters-south-city-healthpeak.html",
+  "src": "The Business Journals",
+  "date": "2026-11-04",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "One year later, fatal UPS crash leaves pilots searching for answers | Exclusive",
+  "url": "https://www.kentucky.com/news/state/kentucky/article317937050.html",
+  "src": "Lexington Herald Leader",
+  "date": "2026-11-05",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "Skydio, Zipline, DoorDash expand Bay Area drone production - San Francisco Business Times",
+  "url": "https://www.bizjournals.com/sanfrancisco/news/2026/11/05/drone-manufacturing-zipline-skydio-doordash-elroy.html",
+  "src": "The Business Journals",
+  "date": "2026-11-05",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "Germany’s DHL Group to Step Up Investments in Growth Push",
+  "url": "https://www.wsj.com/business/earnings/germanys-dhl-group-to-step-up-investments-in-growth-push-8a2c16ab",
+  "src": "WSJ",
+  "date": "2026-11-05",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "old-article",
+  "title": "FedEx rolls out QR code checks for high-value deliveries",
+  "url": "https://www.supplychain247.com/article/fedex_rolls_out_qr_code_checks_for_high_value_deliveries/3",
+  "src": "Supply Chain 24/7",
+  "date": "2026-11-04",
+  "content_verified": null,
+  "note": "Kept out of the feed: old article: https://www.supplychain247.com/article/fedex_rolls_out_qr_code_checks_for_high_value_deliveries/3 was published 2026-09-18, 48 days before it was found (2026-11-05) Publish it by hand only as a clearly labeled Reminder or Background item."
+ },
+ {
+  "type": "old-article",
+  "title": "UPS launches Secure Commerce platform to help shippers manage supply chain risk",
+  "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUnliRkcwY0JTWjRaUzl5eTBsSlMxQ1pUNmZVeXAxcmJ0RWRpenR0bGtnUU5KajBld010M2MyaFpRTnRtR0dGRnBndW5lRFdHZG03dnl0Sm5kYTdqeDVYSTJnSUVKa2MxR3hoMXhvVWh5U1RiVVpNbjBoVXNkUWJGeVp4Tm4zT0J1YVhtTmpBSmtNYW53d0Q0bm9PN2tsTDVodE1FRnYwQWIydlp6Qm55OWdPc25Cd0hhRlRBZllfaXBJSzBvZWllSmpJSQ?oc=5",
+  "src": "Supply Chain 24/7",
+  "date": "2026-11-04",
+  "content_verified": null,
+  "note": "Kept out of the feed: old article: https://www.supplychain247.com/article/ups_launches_secure_commerce_platform_to_help_shippers_manage_supply_chain_risk/epson_robots was published 2026-10-01, 35 days before it was found (2026-11-05) Publish it by hand only as a clearly labeled Reminder or Background item."
+ },
+ {
+  "type": "old-article",
+  "title": "UPS workers' union leader explains what's at stake as strike edges closer",
+  "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQ0QyUUlBbHUzSlF6b0lqRm1OSERHUG9TVnBvNDQySFBJN2JWQzY0MjBENVg5Sk5OeThpWUVpZjNNZEJyal8xdUlSX09abm1iSEJaTkxHVldja0tCVDhsa1UwbGE4anZkT1A3WE5VMW1zMlM5SXE5eXNyczRpaG0wcVN6S1R1X1ZGcXNnUjhucWp3Q0JMYnRQVDdJQm5PR0IwWUHSAacBQVVfeXFMTUZESkM5N0lMMUdWU0N6aEszcGxub1JIMlhmbTNNWEZQYXRTRHJqd2xSRHFXSkptbDVybFBRNW1fQk8wWVBJQ09NaXN0YVBhZXJZU2gtVkJXaG83X0lPVWE4Vy1tbXdlSVdTQmY1dnVxV0tUVFIwUWQ4ZjJZR2hIZ3cwaWlHeEtsZzZDbXdMMEhRSjR1YW1hY0pCMUJFclNhdTZtcDdOb2M?oc=5",
+  "src": "ABC News - Breaking News, Latest News and Videos",
+  "date": "2026-11-03",
+  "content_verified": null,
+  "note": "Kept out of the feed: old article: https://abcnews.com/Business/ups-workers-union-leader-explains-stake-strike-edges/story?id=100839350 was published 2023-07-07, 1217 days before it was found (2026-11-05) Publish it by hand only as a clearly labeled Reminder or Background item."
+ },
+ {
+  "type": "headline-only",
   "title": "Breaking down Canada Post's plan to end door-to-door mail delivery",
   "url": "https://www.cbc.ca/player/play/video/9.7408332",
   "src": "CBC",
@@ -662,68 +725,5 @@
   "company": "FedEx",
   "ir": "https://investors.fedex.com/news-and-events/earnings-releases/default.aspx",
   "note": "FedEx's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
- },
- {
-  "type": "headline-only",
-  "title": "Zipline moves into a larger headquarters as it prepares massive drone-delivery expansion",
-  "url": "https://www.bizjournals.com/sanfrancisco/news/2026/11/04/zipline-new-headquarters-south-city-healthpeak.html",
-  "src": "The Business Journals",
-  "date": "2026-11-04",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "Germany’s DHL Group to Step Up Investments in Growth Push",
-  "url": "https://www.wsj.com/business/earnings/germanys-dhl-group-to-step-up-investments-in-growth-push-8a2c16ab",
-  "src": "WSJ",
-  "date": "2026-11-05",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "One year later, fatal UPS crash leaves pilots searching for answers | Exclusive",
-  "url": "https://www.kentucky.com/news/state/kentucky/article317937050.html",
-  "src": "Lexington Herald Leader",
-  "date": "2026-11-05",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "DHL Group continues its growth trajectory in the third quarter and significantly increases revenue and earnings",
-  "url": "https://group.dhl.com/en/media-relations/press-releases/2026/dhl-group-financial-figures-q3-2026.html",
-  "src": "DHL Group",
-  "date": "2026-11-05",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "DHL expects to hit 2026 targets, helped by peak end-of-year demand despite high fuel costs",
-  "url": "https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
-  "src": "Reuters",
-  "date": "2026-11-05",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "10-Q - 11/04/2026 - United Parcel Service, Inc.",
-  "url": "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-070246/0001628280-26-070246.pdf",
-  "src": "UPS",
-  "date": "2026-11-05",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "FedEx rolls out QR code checks for high-value deliveries",
-  "url": "https://www.supplychain247.com/article/fedex_rolls_out_qr_code_checks_for_high_value_deliveries/3",
-  "src": "Supply Chain 24/7",
-  "date": "2026-11-04",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  }
 ]
