@@ -2664,65 +2664,89 @@
    "own": null,
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Co-lead investor in the round.",
+   "hq": "New York, NY, USA",
+   "yr": "2026",
+   "s": "New York growth-technology investment firm founded by former General Atlantic co-president Anton Levy. It co-led Zipline's $1.5 billion round in November 2026, which funds U.S. drone delivery manufacturing and network expansion.",
    "al": [],
-   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "src": "https://pulse2.com/zipline-raises-1-5-billion-at-21-5-billion-valuation-to-build-nationwide-drone-delivery-network/",
    "auto": true,
    "added": "2026-11-05",
-   "story": "a51635acddd06"
+   "story": "a51635acddd06",
+   "geo": [
+    -74.006,
+    40.713
+   ],
+   "srcs": [
+    "https://pulse2.com/zipline-raises-1-5-billion-at-21-5-billion-valuation-to-build-nationwide-drone-delivery-network/",
+    "https://www.bloomberg.com/news/articles/2026-02-09/general-atlantic-veteran-levy-launches-tech-focused-layer-global",
+    "https://privateequitylist.com/investors/layer-global"
+   ],
+   "enriched": "2026-11-06",
+   "pending": false
   },
   {
    "id": "depop",
    "n": "Depop",
    "realm": "retail",
-   "own": null,
+   "own": "sub",
    "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Marketplace recently acquired by eBay",
-   "al": [],
+   "parent": "ebay",
+   "hq": "London, United Kingdom",
+   "yr": "2011",
+   "s": "Depop is a peer-to-peer fashion resale marketplace, owned by eBay since July 2026, that runs a seller shipping program with prepaid labels and now uses eBay's carrier rates.",
+   "al": [
+    "Depop Limited"
+   ],
    "src": "https://www.supplychaindive.com/news/ebay-trims-depop-shipping-rates-bolsters-delivery-features/873710/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-05",
-   "story": "a74df5c94691e"
-  },
-  {
-   "id": "stripecapital",
-   "n": "Stripe Capital",
-   "realm": "software",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Financing unit that Dataworks is helping explore supply chain intelligence for small and medium business financing",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-28",
-   "story": "aa9e48dce32e7"
+   "story": "a74df5c94691e",
+   "site": "depop.com",
+   "geo": [
+    -0.128,
+    51.507
+   ],
+   "srcs": [
+    "https://www.supplychaindive.com/news/ebay-trims-depop-shipping-rates-bolsters-delivery-features/873710/",
+    "https://www.sec.gov/Archives/edgar/data/0001370637/000137063726000092/etsy-20260930.htm",
+    "https://digitalcommerce360.com/article/ebay-sales"
+   ],
+   "enriched": "2026-11-06"
   },
   {
    "id": "vinted",
    "n": "Vinted",
    "realm": "retail",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Secondhand marketplace offering free or discounted delivery to US shoppers",
-   "al": [],
-   "src": "https://www.valueaddedresource.net/depop-ends-independent-shipping-us-au/",
+   "hq": "Vilnius, Lithuania",
+   "yr": "2008",
+   "s": "Lithuanian peer-to-peer second-hand marketplace that sets shipping for its sellers and buyers, runs its own Vinted Go locker and pick-up network in Europe and the U.S., and offers prepaid labels through carriers including USPS, FedEx, SpeedX and Better Trucks in the U.S.",
+   "al": [
+    "Mano Drabužiai",
+    "Vinted Go",
+    "Vinted Group",
+    "Vinted Group UAB",
+    "Vinted UAB"
+   ],
+   "src": "https://en.wikipedia.org/wiki/Vinted",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-05",
-   "story": "a3d768115c0e6"
+   "story": "a3d768115c0e6",
+   "site": "vinted.com",
+   "geo": [
+    25.28,
+    54.687
+   ],
+   "srcs": [
+    "https://en.wikipedia.org/wiki/Vinted",
+    "https://eqtgroup.com/about/current-portfolio/vinted",
+    "https://www.vinted.com/help/755-shipping-routes-and-providers-for-sellers"
+   ],
+   "enriched": "2026-11-06"
   },
   {
    "id": "aurora",
@@ -4652,15 +4676,6 @@
    "story": "a74df5c94691e"
   },
   {
-   "a": "fedex",
-   "b": "stripecapital",
-   "k": "partner",
-   "y": "2026",
-   "t": "FedEx Dataworks helps Stripe Capital explore supply chain intelligence for financing",
-   "url": "https://www.freightwaves.com/news/us-army-enlists-fedex-to-modernize-logistics-at-depots",
-   "story": "aa9e48dce32e7"
-  },
-  {
    "a": "dhlexpress",
    "b": "dhl",
    "k": "owns",
@@ -4713,6 +4728,87 @@
    "t": "Co-led Zipline's 2026 round",
    "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
    "story": "a51635acddd06"
+  },
+  {
+   "a": "layerglobal",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2026",
+   "t": "Co-led $1.5B round at $21.5B valuation",
+   "url": "https://pulse2.com/zipline-raises-1-5-billion-at-21-5-billion-valuation-to-build-nationwide-drone-delivery-network/",
+   "story": "a51635acddd06"
+  },
+  {
+   "a": "etsy",
+   "b": "depop",
+   "k": "sold",
+   "y": "2026",
+   "t": "Etsy sold Depop to eBay for $1.2B plus adjustments",
+   "url": "https://investors.etsy.com/news-events/press-releases/detail/217/mailto:ir@EARTH.com",
+   "story": "a74df5c94691e"
+  },
+  {
+   "a": "etsy",
+   "b": "depop",
+   "k": "acquired",
+   "y": "2021",
+   "t": "Etsy acquired Depop (announced June 2021)",
+   "url": "https://investors.etsy.com/news-events/press-releases/detail/81/etsy-to-acquire-global-fashion-resale-marketplace-depop",
+   "story": "a74df5c94691e"
+  },
+  {
+   "a": "eqt",
+   "b": "vinted",
+   "k": "invested",
+   "y": "2021",
+   "t": "EQT Growth portfolio company",
+   "url": "https://eqtgroup.com/about/current-portfolio/vinted",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "vinted",
+   "b": "speedx",
+   "k": "partner",
+   "y": null,
+   "t": "Vinted Go partners with SpeedX for U.S. shipping",
+   "url": "https://www.vinted.com/help/1549",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "vinted",
+   "b": "bettertrucks",
+   "k": "partner",
+   "y": null,
+   "t": "Integrated U.S. shipping option",
+   "url": "https://www.vinted.com/help/755-shipping-routes-and-providers-for-sellers",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "vinted",
+   "b": "fedex",
+   "k": "partner",
+   "y": null,
+   "t": "Integrated U.S. shipping option",
+   "url": "https://www.vinted.com/help/755-shipping-routes-and-providers-for-sellers",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "vinted",
+   "b": "usps",
+   "k": "partner",
+   "y": null,
+   "t": "Integrated U.S. shipping option",
+   "url": "https://www.vinted.com/help/755-shipping-routes-and-providers-for-sellers",
+   "story": "a3d768115c0e6"
+  },
+  {
+   "a": "vinted",
+   "b": "inpost",
+   "k": "partner",
+   "y": "2025",
+   "t": "Eight-country delivery contract through 2027 (InPost and Mondial Relay)",
+   "url": "https://inpost.eu/news-inpost-and-vinted-signed-new-partnership",
+   "story": "a3d768115c0e6"
   }
  ],
  "moves": [
@@ -5075,7 +5171,10 @@
   "archive": "2026-11-05",
   "aftership": "2026-11-05",
   "routerouteappl": "2026-11-05",
-  "paradigm": "2026-11-06"
+  "paradigm": "2026-11-06",
+  "layerglobal": "2026-11-06",
+  "depop": "2026-11-06",
+  "vinted": "2026-11-06"
  },
  "facts": {
   "ups": {

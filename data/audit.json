@@ -1,5 +1,5 @@
 {
- "run": "2026-11-06T05:06Z",
+ "run": "2026-11-06T05:14Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,8 +8,8 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 640,
- "doc_cursor": 264,
+ "link_cursor": 680,
+ "doc_cursor": 294,
  "checked_pairs": [
   "2361691e9a1b",
   "d46a0aebc57e",
@@ -324,6 +324,38 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f): https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f",
+   "ids": [
+    "a0083f4a65c16"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18): https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
+   "ids": [],
+   "fixed": false
   }
  ],
  "open": [
@@ -570,6 +602,38 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f): https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f",
+   "ids": [
+    "a0083f4a65c16"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18): https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18",
+   "ids": [
+    "ae89309b5e834"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
    "ids": [],
    "fixed": false
   }
