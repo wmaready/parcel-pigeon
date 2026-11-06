@@ -1,5 +1,5 @@
 {
- "cursor": 20,
+ "cursor": 35,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 440,
+   "fails": 441,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 440,
+   "fails": 441,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -532,14 +532,16 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf": {
    "first": "2026-10-21",
    "n": "demand-surcharges-us-en.pdf",
-   "hash": "10e2e45bcf78",
+   "hash": "0c16b1024ec4",
    "checked": "2026-11-06",
    "snap": {
     "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
     "txt": "data/snapshots/b716b819faa2/2026-11-06.txt",
     "prev_d": "2026-10-26"
-   }
+   },
+   "changed": "2026-11-06",
+   "pic_try": "2026-11-06"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
    "first": "2026-10-21",
@@ -970,7 +972,7 @@
   },
   "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
    "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
-   "fails": 44,
+   "fails": 45,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -998,7 +1000,7 @@
   },
   "https://www.ontrac.com/supplemental-surcharges": {
    "n": "Supplemental Surcharges",
-   "fails": 44,
+   "fails": 45,
    "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1016,7 +1018,7 @@
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges": {
    "n": "UPS Mail Innovations domestic surcharges",
-   "fails": 44,
+   "fails": 45,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1038,7 +1040,7 @@
    "skip": "spreadsheet"
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf": {
-   "hash": "c48e3cbb51f4",
+   "hash": "2aa35e296478",
    "first": "2026-10-25",
    "checked": "2026-11-06",
    "n": "2026 holiday prices, Notice 123 (PDF)",
@@ -1047,7 +1049,9 @@
     "pdf": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf",
     "txt": "data/snapshots/1153f62b9b5d/2026-11-06.txt",
     "prev_d": "2026-10-26"
-   }
+   },
+   "changed": "2026-11-06",
+   "pic_try": "2026-11-06"
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
    "n": "2026 holiday prices, SKU price files (Excel)",
@@ -2245,14 +2249,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 2,
+   "fails": 3,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 2,
+   "fails": 3,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
