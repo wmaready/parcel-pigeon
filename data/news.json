@@ -103,6 +103,57 @@
   "exclusive": true
  },
  {
+  "id": "ab483d15094ae",
+  "date": "2026-11-06",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wing to invest up to $125M in Texas drone manufacturing",
+  "sum": "Wing, the Alphabet-owned drone delivery company, announced plans to invest up to $125 million in U.S. drone manufacturing over the next two years, according to Dronelife. The investment supports a 15,000-square-foot facility in Fort Worth, Texas, with capacity for tens of thousands of aircraft a year and up to 100 manufacturing jobs.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The investment supports Wing's planned fleet growth as it expands delivery to nearly 20 U.S. markets by 2027.",
+  "why": "Wing operates from more than 70 U.S. sites and plans nearly 20 markets reaching over 40 million people by 2027, so it needs more aircraft.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-06T21:02:52Z",
+  "src": "WSJ",
+  "url": "https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b",
+  "srcs": [
+   {
+    "src": "WSJ",
+    "url": "https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b"
+   },
+   {
+    "src": "Dronelife",
+    "url": "https://dronelife.com/2026/11/06/wing-us-drone-manufacturing-investment/"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 10,
+  "new": "Wing announced up to $125 million in U.S. manufacturing investment and a Fort Worth plant, adding aircraft supply to its planned expansion; no change to shipper rates or service.",
+  "syn": "Wing, the drone delivery company owned by Alphabet, announced plans to invest up to $125 million in U.S. drone manufacturing over the next two years, Dronelife reported. The money supports a 15,000-square-foot facility in Fort Worth, Texas, able to produce tens of thousands of aircraft annually and to create up to 100 jobs. Wing operates from more than 70 U.S. sites and plans to reach more than 40 million Americans in nearly 20 markets by 2027.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   },
+   {
+    "who": "Wing delivery markets",
+    "what": "Wing plans nearly 20 U.S. markets, reaching over 40 million Americans, by 2027."
+   },
+   {
+    "who": "Wing fleet",
+    "what": "Fort Worth facility to produce tens of thousands of aircraft annually, with up to 100 jobs."
+   }
+  ]
+ },
+ {
   "id": "adbdc9a506e95",
   "date": "2026-11-06",
   "c": [
@@ -11194,64 +11245,6 @@
    {
     "src": "RiverheadLOCAL",
     "url": "https://riverheadlocal.com/2026/10/12/fedex-closes-calverton-facility-as-part-of-nationwide-network-overhaul/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a2de36ed1ca48",
-  "date": "2026-10-12",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "GLS US launches GLS Connect digital shipping platform",
-  "sum": "GLS US, a regional parcel carrier serving the Western U.S. and Texas, announced GLS Connect on October 12, 2026. The platform combines domestic and international shipping, tracking, reporting, pickup scheduling and account and billing tools in one portal. GLS said customers can begin using it now via \"Try the New Portal\" on the GLS website login screen.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "GLS customers can switch to the new GLS Connect portal now, and existing address books, billing information, account settings and available shipment history carry over. The announcement states no change to rates or fees.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "EIN Presswire",
-  "url": "https://www.einpresswire.com/article/948054024/gls-launches-gls-connect-advancing-its-digital-shipping-experience",
-  "srcs": [
-   {
-    "src": "EIN Presswire",
-    "url": "https://www.einpresswire.com/article/948054024/gls-launches-gls-connect-advancing-its-digital-shipping-experience"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a35479919b63a",
-  "date": "2026-10-12",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "FedEx adds duty and tax payments to Import Tool in Asia Pacific",
-  "sum": "FedEx added an integrated duty and tax payment function to the FedEx Import Tool and expanded where the tool is available, according to a company release cited by PYMNTS. The tool is now offered in Australia, Indonesia, Japan, Malaysia, New Zealand, the Philippines, Singapore, South Korea and Thailand.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Importers in the listed Asia Pacific countries can pay duties and taxes through the FedEx Import Tool. The release does not state any change to rates or fees.",
-  "why": "Importers in nine Asia Pacific markets can now pay duties and taxes inside the FedEx clearance tool, per the release.",
-  "score": 4,
-  "tie": "FedEx first launched the FedEx Import Tool in Australia, Japan, South Korea and Taiwan in October 2024.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T10:47:04Z",
-  "src": "PYMNTS.com",
-  "url": "https://www.pymnts.com/shipping/2026/fedex-adds-duty-and-tax-payments-to-apac-import-tool/",
-  "srcs": [
-   {
-    "src": "PYMNTS.com",
-    "url": "https://www.pymnts.com/shipping/2026/fedex-adds-duty-and-tax-payments-to-apac-import-tool/"
    }
   ],
   "auto": true,

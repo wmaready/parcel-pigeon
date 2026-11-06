@@ -517,7 +517,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "The FAA's Part 108 rule was unpublished as of Oct. 9, while Zipline has raised $1.5 billion and Walmart has signed for 300 more sites.",
+  "s": "Drone operators are adding capacity while the FAA's Part 108 BVLOS rule was still described as proposed in the latest coverage.",
   "ids": [
    "g27",
    "g26",
@@ -527,24 +527,25 @@
    "a86fd472c4cfb",
    "a8f4d2b454015",
    "af4470d3440cc",
-   "acad7456be9cb"
+   "acad7456be9cb",
+   "ab483d15094ae"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-05",
+  "last": "2026-11-06",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "31d65cb191a1",
+   "sig": "f074c69f01a1",
    "v": 3,
    "beats": {
-    "g27": "Amazon says Prime Air will launch near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations."
+    "g26": "The FAA sent Part 108 to White House review July 10 after missing a Feb. 1 deadline; until it's final, BVLOS needs waivers or Part 135."
    },
-   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule is still unpublished, which matters for who can fly routinely."
+   "now": "Part 108 was still unpublished as of Oct. 9, so operators keep expanding under waivers or Part 135 certificates while they wait."
   },
-  "rv": "5b44b20f99ae",
+  "rv": "f98e62096e41",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -1029,7 +1030,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber announced the Prime restaurant delivery benefit on November 5, 2026, with the Prime Visa 5% back offer running through December 5, 2026.",
+  "s": "Amazon and Uber Eats launched the Prime restaurant delivery benefit on November 5, with Prime Visa 5% back running through December 5.",
   "last": "2026-11-05",
   "c": [
    "Amazon"
