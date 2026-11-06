@@ -1,5 +1,5 @@
 {
- "cursor": 141,
+ "cursor": 5,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 438,
+   "fails": 439,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 438,
+   "fails": 439,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -2235,6 +2235,58 @@
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf",
     "txt": "data/snapshots/69530f9de000/2026-11-06.txt",
     "prev_d": "2026-11-05"
+   }
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - List of Postage Statement Changes.xlsx": {
+   "n": "January 2027 Postage Statements Change Log",
+   "checked": "2026-11-06",
+   "skip": "spreadsheet"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
+   "n": "January 2027 Postage Statements Redlines",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-06"
+  },
+  "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
+   "n": "July 2026 Postage Statements",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-06"
+  },
+  "https://postcalc.usps.com/ServiceCommitments": {
+   "hash": "2aa35e296478",
+   "first": "2026-11-06",
+   "checked": "2026-11-06",
+   "n": "Service Commitments",
+   "snap": {
+    "d": "2026-11-06",
+    "pdf": "https://pe.usps.com/cpim/ftp/manuals/dmm300/Notice123.pdf",
+    "txt": "data/snapshots/61869164f206/2026-11-06.txt"
+   }
+  },
+  "https://postcalc.usps.com/DomesticZoneChart": {
+   "hash": "2aa35e296478",
+   "first": "2026-11-06",
+   "checked": "2026-11-06",
+   "n": "Zone Charts",
+   "snap": {
+    "d": "2026-11-06",
+    "pdf": "https://pe.usps.com/cpim/ftp/manuals/dmm300/Notice123.pdf",
+    "txt": "data/snapshots/51b22514039a/2026-11-06.txt"
+   }
+  },
+  "https://pe.usps.com/FederalRegisterNotice/Index": {
+   "hash": "e6babc6a9b6c",
+   "first": "2026-11-06",
+   "checked": "2026-11-06",
+   "n": "Federal Register Notices",
+   "snap": {
+    "d": "2026-11-06",
+    "pdf": "https://about.usps.com/handbooks/dm204.pdf",
+    "txt": "data/snapshots/8943aac994c5/2026-11-06.txt"
    }
   }
  }
