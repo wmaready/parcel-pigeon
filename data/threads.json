@@ -262,7 +262,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Peak fees are billing at UPS, FedEx and OnTrac, and fuel surcharges near 29% are pushing fourth-quarter 2026 price forecasts above last year's.",
+  "s": "Peak surcharges from UPS, FedEx and USPS are in effect through the end of the holiday season, and small retailers report rising shipping costs.",
   "ids": [
    "h416",
    "h418",
@@ -275,7 +275,7 @@
    "a663794cc9c55"
   ],
   "first": "2024-07-26",
-  "last": "2026-10-26",
+  "last": "2026-11-06",
   "c": [
    "Amazon",
    "FedEx",
@@ -550,6 +550,7 @@
    "amazon-jfk8-nlrb",
    "amazon-labor",
    "amazon-network-buildout",
+   "amazon-teamsters-organizing",
    "last-mile-facility-legislation",
    "parcel-volume-amazon",
    "ups-amazon-glide-down",
@@ -822,22 +823,23 @@
   "n": "Continued battle between UPS and the Teamsters",
   "s": "The Driver Choice buyout is capped at 7,500 drivers, the Teamsters are challenging UPS over its Roadie gig deliveries, and the union's president has called a strike likely when the contract ends July 31, 2028.",
   "ids": [
+   "a13f12c1da7be",
+   "acb44dbafb712",
    "h406",
    "h511",
-   "a13f12c1da7be",
    "g33",
    "g32",
    "50",
    "nr59b2c5",
    "35",
-   "acb44dbafb712",
    "a66617050d4e9",
    "abaae70647f04",
    "a57a06c26359c",
-   "aa1bd42ea784a"
+   "aa1bd42ea784a",
+   "ae889f02f359e"
   ],
   "first": "2024-03-26",
-  "last": "2026-10-26",
+  "last": "2026-11-05",
   "c": [
    "Amazon",
    "FedEx",
@@ -847,7 +849,7 @@
   "theme": true,
   "rv": "f43f274d40c8",
   "cx": {
-   "sig": "02299e47f9fa",
+   "sig": "32799a418fa2",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -967,7 +969,7 @@
   ],
   "first": "2026-11-03",
   "co": "Canada Post",
-  "s": "Canada Post is converting nearly four million door-to-door addresses to community mailboxes, with first conversions begun in Sept-Îles and Winnipeg the week of Oct. 19.",
+  "s": "Canada Post is converting nearly four million door-to-door addresses to community mailboxes over the coming years, with the first conversions under way and weekend parcel delivery being introduced.",
   "last": "2026-11-03",
   "c": [
    "Regional"
@@ -1032,6 +1034,7 @@
    "amazon-driver-no-poach-suit",
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
+   "amazon-teamsters-organizing",
    "drone-delivery",
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
@@ -1065,10 +1068,30 @@
   ],
   "apart": [
    "amazon-network-buildout",
+   "amazon-teamsters-organizing",
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
   ],
   "rv": "37e9a1ee53e9"
+ },
+ "amazon-teamsters-organizing": {
+  "n": "Amazon–Teamsters organizing",
+  "ids": [
+   "ae889f02f359e"
+  ],
+  "first": "2026-11-05",
+  "co": "Amazon",
+  "s": "The Teamsters claim to have organized TOM drivers at three Amazon sites, including OIL9 in Indiana, while Amazon denies any certified bargaining unit.",
+  "last": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "amazon-network-buildout",
+   "last-mile-facility-legislation",
+   "ups-amazon-glide-down"
+  ],
+  "rv": "cbf84f50f7ff"
  }
 }

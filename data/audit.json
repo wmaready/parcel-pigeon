@@ -1,5 +1,5 @@
 {
- "run": "2026-11-06T13:08Z",
+ "run": "2026-11-06T13:33Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -71,6 +71,15 @@
    "fixed": false
   },
   {
+   "sev": "high",
+   "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"Small retailers report higher holiday shipping costs as fuel rises\"",
+   "ids": [
+    "adbdc9a506e95"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "med",
    "type": "date-not-on-clock",
    "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS 2027 rate increase: 5.9% average (Ground, Air, International)\"",
@@ -85,6 +94,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Small retailers report higher holiday shipping costs as fuel rises\"",
+   "ids": [
+    "adbdc9a506e95"
    ],
    "fixed": false
   },
@@ -366,10 +384,28 @@
   },
   {
    "sev": "high",
+   "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"Small retailers report higher holiday shipping costs as fuel rises\"",
+   "ids": [
+    "adbdc9a506e95"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
    "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Small retailers report higher holiday shipping costs as fuel rises\"",
+   "ids": [
+    "adbdc9a506e95"
    ],
    "fixed": false
   },
