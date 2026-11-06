@@ -2628,54 +2628,34 @@
    "pending": false
   },
   {
-   "id": "justeattakeawa",
-   "n": "Just Eat Takeaway",
-   "realm": "gig",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Former owner of Grubhub that agreed to a 2024 equity deal with Amazon",
-   "al": [],
-   "src": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-05",
-   "story": "a11c4cff40ea4"
-  },
-  {
    "id": "paradigm",
    "n": "Paradigm",
    "realm": "capital",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Co-lead investor in Zipline's funding round",
-   "al": [],
-   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
+   "hq": "San Francisco, CA, USA",
+   "yr": "2018",
+   "s": "Paradigm is a San Francisco technology investment firm that co-led Zipline's $1.5 billion round in November 2026, a round that values the drone delivery company at $21.5 billion.",
+   "al": [
+    "Paradigm Operations LP"
+   ],
+   "src": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-05",
-   "story": "a51635acddd06"
-  },
-  {
-   "id": "wcminvestmentm",
-   "n": "WCM Investment Management",
-   "realm": "capital",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Co-lead investor in the round.",
-   "al": [],
-   "src": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
-   "auto": true,
-   "added": "2026-11-05",
-   "story": "a51635acddd06"
+   "story": "a51635acddd06",
+   "site": "paradigm.xyz",
+   "geo": [
+    -122.419,
+    37.775
+   ],
+   "srcs": [
+    "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
+    "https://en.wikipedia.org/wiki/Paradigm_(venture_capital_firm)",
+    "https://www.crunchbase.com/organization/paradigm-b23a"
+   ],
+   "enriched": "2026-11-06"
   },
   {
    "id": "layerglobal",
@@ -4654,15 +4634,6 @@
    "story": "a11c4cff40ea4"
   },
   {
-   "a": "justeattakeawa",
-   "b": "grubhub",
-   "k": "sold",
-   "y": "2026",
-   "t": "Just Eat Takeaway announces plan to sell Grubhub to Wonder",
-   "url": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
-   "story": "a11c4cff40ea4"
-  },
-  {
    "a": "paradigm",
    "b": "zipline",
    "k": "invested",
@@ -4733,6 +4704,15 @@
    "t": "FedEx deploys Berkshire Grey robots for trailer loading and unloading",
    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-makes-the-holidays-smarter-with-ai-enabled-tools-robotics-and-predictive-technology",
    "story": "a84ca5863e582"
+  },
+  {
+   "a": "paradigm",
+   "b": "layerglobal",
+   "k": "partner",
+   "y": "2026",
+   "t": "Co-led Zipline's 2026 round",
+   "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
+   "story": "a51635acddd06"
   }
  ],
  "moves": [
@@ -5094,7 +5074,8 @@
   "trove": "2026-11-04",
   "archive": "2026-11-05",
   "aftership": "2026-11-05",
-  "routerouteappl": "2026-11-05"
+  "routerouteappl": "2026-11-05",
+  "paradigm": "2026-11-06"
  },
  "facts": {
   "ups": {
