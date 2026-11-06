@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:e08@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261124
 SUMMARY:▲ Peak-week fees rise: home deliveries go to $0.75–$0.80 a pack
@@ -30,8 +30,102 @@ TRANSP:TRANSPARENT
 CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
+UID:xa3bd243da7c6c0@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:▲ UPS daily rates rise an average net 5.9%
+DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
+ 2026.\nStory: UPS Dec 21 rate increase reaches 2026 budgets\, analysis say
+ s\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=a3bd243da
+ 7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c0-ann@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Announced: UPS daily rates rise an average net 5.9%
+DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=a3bd243da7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c1@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:▲ Additional Handling minimum billable weight rises to 50 lbs
+DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
+ 2026.\nStory: UPS Dec 21 rate increase reaches 2026 budgets\, analysis say
+ s\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=a3bd243da
+ 7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c1-ann@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Announced: Additional Handling minimum billable weight rises to 50 
+ lbs
+DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=a3bd243da7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c2@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:▲ UPS Small Business Rates rise 4.5%\, new 5% fuel surcharge
+DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nStory: UPS Dec 21 r
+ ate increase reaches 2026 budgets\, analysis says\nOn Parcel Pigeon: https
+ ://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c4@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:▲ New UPS Surge Fee starts on Ground and Ground Saver\; amount no
+ t announced
+DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
+ 2026.\nStory: UPS Dec 21 rate increase reaches 2026 budgets\, analysis say
+ s\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=a3bd243da
+ 7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa3bd243da7c6c4-ann@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Announced: New UPS Surge Fee starts on Ground and Ground Saver\; am
+ ount not announced
+DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=a3bd243da7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
+END:VEVENT
+BEGIN:VEVENT
 UID:xw9c03b8f99b5f0@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS 2027 rate increase: 5.9% average (Ground\, Air\, Internatio
@@ -50,104 +144,8 @@ TRANSP:TRANSPARENT
 CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
-UID:xrv5-ups-sbr-fuel0@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261221
-DTEND;VALUE=DATE:20261222
-SUMMARY:▲ UPS Small Business Rates: 4.5% increase plus a new 5% fuel surc
- harge (about 9.7% combined)
-DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nStory: UPS adds a 5
- % fuel surcharge to Small Business Rates and raises them 4.5% on Dec. 21\n
- On Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=rv5-ups-sbr-
- fuel
-URL:https://wmaready.github.io/parcel-pigeon/#s=rv5-ups-sbr-fuel
-TRANSP:TRANSPARENT
-CATEGORIES:Rate change
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a72@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261221
-DTEND;VALUE=DATE:20261222
-SUMMARY:▲ UPS Daily Rates rise an average net 5.9%
-DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
- 2026.\nStory: UPS 2027 increase runs above 5.9% on light packages\, fees\,
-  analyses find\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon
- /#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Rate change
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a72-ann@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Announced: UPS Daily Rates rise an average net 5.9%
-DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
- .github.io/parcel-pigeon/#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Announcement
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a73@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261221
-DTEND;VALUE=DATE:20261222
-SUMMARY:▲ Additional Handling minimum billable weight rises from 40 to 50
-  lbs
-DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
- 2026.\nStory: UPS 2027 increase runs above 5.9% on light packages\, fees\,
-  analyses find\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon
- /#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Rate change
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a73-ann@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Announced: Additional Handling minimum billable weight rises from 4
- 0 to 50 lbs
-DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
- .github.io/parcel-pigeon/#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Announcement
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a75@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261221
-DTEND;VALUE=DATE:20261222
-SUMMARY:▲ New Surge Fee for some Ground and Ground Saver origin ZIPs
-DESCRIPTION:Carriers: UPS\nTakes effect Dec 21\, 2026.\nAnnounced Oct 23\, 
- 2026.\nStory: UPS 2027 increase runs above 5.9% on light packages\, fees\,
-  analyses find\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon
- /#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Rate change
-END:VEVENT
-BEGIN:VEVENT
-UID:xa8b925f5373a75-ann@parcel-pigeon
-DTSTAMP:20261105T002611Z
-DTSTART;VALUE=DATE:20261023
-DTEND;VALUE=DATE:20261024
-SUMMARY:Announced: New Surge Fee for some Ground and Ground Saver origin ZI
- Ps
-DESCRIPTION:Takes effect Dec 21\, 2026.\nOn Parcel Pigeon: https://wmaready
- .github.io/parcel-pigeon/#s=a8b925f5373a7
-URL:https://wmaready.github.io/parcel-pigeon/#s=a8b925f5373a7
-TRANSP:TRANSPARENT
-CATEGORIES:Announcement
-END:VEVENT
-BEGIN:VEVENT
 UID:e09@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261229
 SUMMARY:▼ Peak-week fees end: home-delivery peak fee drops back to $0.50 
@@ -164,8 +162,21 @@ TRANSP:TRANSPARENT
 CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
+UID:xa3bd243da7c6c5@parcel-pigeon
+DTSTAMP:20261106T150622Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:▼ UPS peak demand surcharges step down to lower rates
+DESCRIPTION:Carriers: UPS\nTakes effect Dec 27\, 2026.\nStory: UPS Dec 21 r
+ ate increase reaches 2026 budgets\, analysis says\nOn Parcel Pigeon: https
+ ://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+URL:https://wmaready.github.io/parcel-pigeon/#s=a3bd243da7c6c
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
 UID:e15@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:▲ DHL Express 2027 rate increase for U.S. accounts: 5.9% average
@@ -180,7 +191,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e10@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:▲ FedEx 2027 general rate increase: 5.9% average
@@ -193,7 +204,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e11@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270118
 SUMMARY:▼ Peak surcharges end at every major carrier\; USPS holiday price
@@ -210,7 +221,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e12@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:▲ FedEx paper document fees start
@@ -225,7 +236,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e13@parcel-pigeon
-DTSTAMP:20261105T002611Z
+DTSTAMP:20261106T150622Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:▲ FedEx zones change for select U.S. domestic ZIP pairs

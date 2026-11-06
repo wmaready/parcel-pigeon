@@ -1,5 +1,110 @@
 [
  {
+  "id": "a3bd243da7c6c",
+  "date": "2026-11-06",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "Analysis",
+  "title": "UPS Dec 21 rate increase reaches 2026 budgets, analysis says",
+  "sum": "An industry analysis published Nov. 6, 2026 says the UPS general rate increase, an average net 5.9%, takes effect Dec. 21, 2026, putting 11 days of 2027 rates into calendar-year 2026 budgets. It says all 20 of the most common UPS surcharges rise more than 5.9%, averaging 9.1%. UPS Small Business Rates rise 4.5% and get a new 5% fuel surcharge.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "From Dec. 21, 2026, UPS daily rates for Ground, Air and International rise an average net 5.9%, and the Additional Handling minimum billable weight goes from 40 lbs to 50 lbs. Small Business Rates rise 4.5% and take a new 5% fuel surcharge.",
+  "why": "Removes a stated SBR benefit: Fuel Surcharge was advertised as included in UPS Small Business Rates.",
+  "score": 6,
+  "tie": "The analysis builds on UPS's October 2026 notice of the Dec. 21 increase, the 50 lb Additional Handling minimum and ZIP changes, and on the Nov. 2, 2026 fuel table change that notice listed.",
+  "act": "2026-12-21",
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS daily rates rise an average net 5.9%",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "UPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2026-12-21",
+    "w": "Additional Handling minimum billable weight rises to 50 lbs",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS Small Business Rates rise 4.5%, new 5% fuel surcharge",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS area surcharge ZIP codes and zone alignments change",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2026-12-21",
+    "w": "New UPS Surge Fee starts on Ground and Ground Saver; amount not announced",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2026-12-27",
+    "w": "UPS peak demand surcharges step down to lower rates",
+    "imp": "down",
+    "fx": null
+   },
+   {
+    "d": "2027-01-16",
+    "w": "Last day of UPS peak demand surcharges",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-06T15:06:06Z",
+  "src": "TransImpact",
+  "url": "https://transimpact.com/blog/the-2027-ups-gri-starts-in-your-2026-budget",
+  "srcs": [
+   {
+    "src": "TransImpact",
+    "url": "https://transimpact.com/blog/the-2027-ups-gri-starts-in-your-2026-budget"
+   }
+  ],
+  "auto": true,
+  "thread": "carrier-gri",
+  "upd": 4,
+  "new": "An industry analysis adds the timing effect on 2026 budgets, a new Surge Fee with no announced amount, a 4.5% rise and new 5% fuel surcharge for Small Business Rates, and surcharge increases averaging 9.1%.",
+  "syn": "An industry analysis published Nov. 6, 2026 says the UPS general rate increase takes effect Dec. 21, 2026, so a calendar-year 2026 budget absorbs 11 days of 2027 rates. Six of those days, Dec. 21 through Dec. 26, fall in the highest-priced weeks of UPS peak demand surcharges. The analysis says UPS set the average net increase at 5.9% for the fourth year in a row, and that the 20 most common surcharges rise an average 9.1%, up from 6.9% in 2026. It also says fuel, charged as a percentage of transportation charges, rises along with the base rates.",
+  "aff": [
+   {
+    "who": "UPS Ground, Air and International shippers",
+    "what": "Daily rates rise an average net 5.9% on Dec. 21, 2026."
+   },
+   {
+    "who": "Shippers paying common UPS surcharges",
+    "what": "The 20 most common surcharges rise an average 9.1%; Residential Ground goes from $6.50 to $7.10 (9.23%)."
+   },
+   {
+    "who": "Packages that trigger Additional Handling",
+    "what": "Minimum billable weight rises from 40 to 50 lbs, and the average charge rises 8.9% to $42.46, from Dec. 21."
+   },
+   {
+    "who": "UPS Small Business Rates shippers",
+    "what": "Rates rise 4.5% and a new 5% fuel surcharge applies to all Small Business Rates from Dec. 21."
+   }
+  ],
+  "benefit": {
+   "program": "ups-sbr",
+   "what": "Fuel Surcharge",
+   "src": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
+   "checked": "2026-10-24"
+  },
+  "exclusive": true
+ },
+ {
   "id": "adbdc9a506e95",
   "date": "2026-11-06",
   "c": [
