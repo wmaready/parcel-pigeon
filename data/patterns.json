@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-06",
  "items": [
   {
-   "t": "GRI holds at 5.9% for a fourth year; UPS date moves to Dec. 21",
-   "body": "UPS announced its 2027 GRI on Oct. 23, 2026: an average net 5.9%, effective Dec. 21, 2026. The effective dates of its GRIs were Dec. 22, 2025 (2026 GRI), Dec. 23, 2024 (2025 GRI), Dec. 26, 2023 (2024 GRI) and Dec. 27, 2022 (2023 GRI). FedEx announced its 2027 GRI on Sept. 18, 2026 (5.9%, effective Jan. 4, 2027), against announcement on Sept. 12, 2025 and effect on Jan. 5, 2026 for the 2026 GRI. Both carriers set 5.9% for 2024 through 2027, after 6.9% for 2023 and 4.9% for FedEx's 2018 GRI.",
+   "t": "UPS and FedEx both set 5.9% for 2027; UPS notice is shorter",
+   "body": "UPS's 2027 general rate increase averages 5.9%, announced Oct. 23, 2026 and effective Dec. 21, 2026; FedEx's also averages 5.9%, announced Sept. 18, 2026 and effective Jan. 4, 2027. Both carriers also averaged 5.9% for 2024, 2025 and 2026, after 4.9% in 2018 and 6.9% in 2023. UPS's 2026 increase was announced Oct. 31, 2025 and took effect Dec. 22, 2025, and its 2019 increase was announced Dec. 5, 2018 and took effect Dec. 26, 2018, about 3 weeks' notice.",
    "carriers": [
     "UPS",
     "FedEx"
@@ -11,99 +11,91 @@
    "refs": [
     "ups-2027-gri",
     "ups-2026-gri-2025-12-22",
-    "ups-2025-gri-2024-12-23",
-    "ups-2024-gri-2023-12-26",
-    "ups-2023-gri-2022-12-27",
+    "ups-2019-gri-2018-12-26",
     "fedex-2027-gri-2027-01-04",
-    "fedex-2026-gri-2026-01-05",
-    "fedex-2023-gri-2023-01-02",
-    "fedex-2018-gri-2018-01-01"
+    "fedex-2018-gri-2018-01-01",
+    "fedex-2023-gri-2023-01-02"
    ]
   },
   {
-   "t": "UPS fee lines rise faster than the 5.9% average; AHS weight to 50 lb",
-   "body": "UPS's 2027 fee document, effective Dec. 21, 2026, shows most fees rising by a median of about 9%, against the 5.9% average net on rates. Residential Ground goes to $7.10 from $6.50; the 2026 GRI moved it from $6.10 to $6.50 and the 2022 GRI from $4.45 to $4.85. The Additional Handling minimum billable weight, introduced at 40 lb with the 2025 GRI, goes to 50 lb. FedEx's 2027 GRI lists a residential delivery charge moving from $6.95 to $7.35, service not specified in the source.",
+   "t": "UPS surcharges rise faster than the 5.9% average again",
+   "body": "An analysis published Nov. 6, 2026 says all 20 of the most common UPS surcharges rise more than 5.9%, averaging 9.1%, effective Dec. 21, 2026. Ground residential goes to $7.10 from $6.50, after $6.10 to $6.50 in the 2026 increase and $4.45 to $4.85 in the 2022 increase. The Additional Handling minimum billable weight moves to 50 lb from 40 lb, the 40 lb minimum having been added with the 2025 increase.",
    "carriers": [
-    "UPS",
-    "FedEx"
+    "UPS"
    ],
    "refs": [
+    "a3bd243da7c6c",
     "w9c03b8f99b5f",
-    "a8b925f5373a7",
     "ups-2026-gri-2025-12-22",
     "ups-2022-gri-2021-12-26",
     "ups-2025-gri-2024-12-23",
-    "ups-2027-dim-2026-10-23",
-    "fedex-2027-gri-2027-01-04"
+    "ups-2027-dim-2026-10-23"
    ]
   },
   {
-   "t": "Fuel surcharges near 29%, against a 20% record in June 2025",
-   "body": "On Oct. 26, 2026, UPS's fuel surcharge was 29.5% and FedEx's 29% at an average diesel price of $6.28. UPS's Ground table, posted Oct. 23 and effective Nov. 2, charges 0.50 point more than the old table at the same diesel price; FedEx tables effective Nov. 9 run from 30.00% to 31.50% for Ground. In June 2025, UPS and FedEx Ground both reached 20%, a record above FedEx's 19.50% in mid-2022. UPS also moved its extension thresholds from $4.99 to $5.80 for diesel and $3.01 to $3.56 for jet fuel in a Nov. 3 change with no effective date stated.",
-   "carriers": [
-    "UPS",
-    "FedEx"
-   ],
-   "refs": [
-    "a663794cc9c55",
-    "w599d9089a65d",
-    "wa9c423a83880",
-    "wf7bb9227b2de",
-    "wf7fe771e76cd",
-    "ups-2025-fuel-table-2025-06-23"
-   ]
-  },
-  {
-   "t": "2026 peak fees above 2025 and 2024 at FedEx and UPS",
-   "body": "FedEx's 2026 peak window (Nov. 23 - Dec. 27) lists Ground residential at $0.80 (vs. $0.65 in 2025), Additional Handling at $11.85 (vs. $10.90) and Oversize at $117.25 (vs. $108.50). FedEx announced the 2026 charges on July 22, 2026, against July 8 in 2025. UPS's Large Package peak is $117.50, against $107 in 2025 and $99 in 2024; Over Maximum Limits is $590, against $540 and $495.",
+   "t": "Peak fees step up on 2025 levels; USPS peak sits on the 8%",
+   "body": "For the Nov. 23 to Dec. 27, 2026 window, FedEx lists Ground residential at $0.80 (vs $0.65 in 2025) and Additional Handling at $11.85 (vs $10.90). UPS lists Large Package at $117.50 (vs $107 in 2025) and Over Maximum Limits at $590 (vs $540). USPS retail Priority Mail and Ground Advantage Zones 1-4, 0-3 lb carry +$0.50, against +$0.40 in 2025 and +$0.30 in 2024, and this year's peak runs alongside the temporary 8% increase.",
    "carriers": [
     "FedEx",
-    "UPS"
+    "UPS",
+    "USPS"
    ],
    "refs": [
     "fedex-2026-peak-2026-09-28",
     "fedex-2025-peak-2025-09-29",
     "ups-2026-peak-2026-09-27",
     "ups-2025-peak-2025-09-28",
-    "ups-2024-peak-2024-09-29"
+    "usps-2026-peak-2026-10-04",
+    "usps-2025-peak-2025-10-05",
+    "usps-2024-peak-2024-10-06"
    ]
   },
   {
-   "t": "USPS stacks peak fees on an 8% temporary rise; fuel surcharge due",
-   "body": "USPS announced a temporary 8% increase on parcel base postage on Mar. 25, 2026, in effect Apr. 26, 2026 to Jan. 17, 2027, and the 2026 peak surcharge (Oct. 4 - Jan. 17, 2027) sits on top of it. For Priority Mail and Ground Advantage in Zones 1-4, 0-3 lb, the peak add-on is $0.50, against $0.40 in 2025 and $0.30 in 2024. USPS announced on Oct. 26, 2026 a weekly fuel surcharge on Ground Advantage, Priority Mail, Priority Mail Express and Parcel Select from January 2027; in 2021 USPS had noted no fuel surcharge. Other mid-year changes: Parcel Select +25% (July 2024), Priority Mail +6.3% (July 2025), Ground Advantage Commercial +11.8% (July 2026).",
+   "t": "Fuel surcharges near 29%, up from the 20% reached in 2025",
+   "body": "In June 2025 UPS and FedEx Ground fuel surcharges both reached 20%, a record at the time; the previous peak was FedEx at 19.50% in mid-2022. Reuters, citing company tables at a $6.28 diesel average, put UPS at 29.5% and FedEx at 29% in October 2026. UPS's table effective Nov. 2, 2026 charges 0.50 point more than the old one at the same diesel price, and FedEx's tables effective Nov. 9 run from 30.00% to 31.50% for Ground; UPS's other 2026 domestic table changes took effect Jan. 5, Mar. 9 and Aug. 10.",
+   "carriers": [
+    "UPS",
+    "FedEx"
+   ],
+   "refs": [
+    "ups-2025-fuel-table-2025-06-23",
+    "a663794cc9c55",
+    "wa9c423a83880",
+    "wf7bb9227b2de",
+    "ups-2026-fuel-table-2026-01-05",
+    "ups-2026-fuel-table-2026-03-09",
+    "ups-2026-fuel-table-2026-08-10"
+   ]
+  },
+  {
+   "t": "USPS 2026 adds a temporary 8% and a July change to the usual two",
+   "body": "USPS's January 2026 change, effective Jan. 18, 2026, raised Priority Mail about 6.6% and Ground Advantage about 7.8%, against 3.2% and 3.9% in January 2025. A temporary 8% base-postage increase, announced Mar. 25, 2026, took effect Apr. 26 and runs through Jan. 17, 2027. July changes also came in 2024 (Parcel Select +25%) and 2025 (Priority Mail +6.3%, Ground Advantage +7.1%); in July 2026 Ground Advantage Commercial rose an average 11.8% as ounce tiers were removed.",
    "carriers": [
     "USPS"
    ],
    "refs": [
+    "usps-2026-price-change-2026-01-18",
+    "usps-2025-price-change-2025-01-19",
     "usps-2026-price-change-2026-04-26",
-    "usps-2026-peak-2026-10-04",
-    "usps-2025-peak-2025-10-05",
-    "usps-2024-peak-2024-10-06",
-    "a0adb56a55334",
-    "usps-2027-surcharge-2027-01-01",
-    "usps-2021-price-change-2021-01-24",
     "usps-2024-price-change-2024-07-14",
     "usps-2025-price-change-2025-07-13",
     "usps-2026-price-change-2026-07-12"
    ]
   },
   {
-   "t": "New in 2026: per-pound country fees, origin-ZIP charge, SBR fuel fee",
-   "body": "In 2025 the per-pound fees in the almanac were international peak fees of $0.10 to $0.52 per lb. In 2026, FedEx set $0.50 (export) and $0.70 (import) per lb for Zone K from Mar. 5, UPS set $1.34 per lb for U.S.-Middle East from Mar. 22, and FedEx added Vietnam-origin imports at $0.36 and $0.27 per lb on Nov. 2. UPS announced on Oct. 23 an origin-ZIP surcharge on Ground and Ground Saver for Qualified customers, effective Dec. 21, 2026 or later, with no amount published. UPS Small Business Rates also get a 5% fuel surcharge alongside +4.5%, about 9.7% combined before agreement terms.",
+   "t": "New in 2026: USPS fuel surcharge, UPS origin-ZIP fee, import fees",
+   "body": "USPS announced Oct. 26, 2026 a weekly fuel surcharge on four package services starting January 2027; in January 2021 USPS had noted no fuel, residential or regular Saturday delivery surcharges. UPS announced Oct. 23 a new origin-ZIP surcharge on Ground and Ground Saver for Qualified customers, effective Dec. 21, 2026 or later with the amount not released, and a 5% fuel surcharge on Small Business Rates. FedEx added per-pound U.S. import demand fees on Nov. 2, 2026 ($0.36 and $0.27 for Vietnam; Europe and Israel $0.25 to $0.28), where 2025 international peak fees ran $0.10 to $0.52 per lb.",
    "carriers": [
-    "UPS",
-    "FedEx"
+    "Industry"
    ],
    "refs": [
-    "fedex-2025-peak-2025-09-22",
-    "ups-2025-peak-2025-10-26",
-    "fedex-2026-surcharge-2026-03-05",
-    "ups-2026-surcharge-2026-03-22",
+    "usps-2027-surcharge-2027-01-01",
+    "usps-2021-price-change-2021-01-24",
+    "ups-2027-surcharge-2026-10-23",
+    "ups-2027-sbr-2026-12-21",
     "fedex-2026-surcharge-2026-11-02",
     "w0b8720b6a0e7",
-    "ups-2027-surcharge-2026-10-23",
-    "ups-origin-zip-surcharge",
-    "ups-2027-sbr-2026-12-21"
+    "ups-2025-peak-2025-10-26"
    ]
   }
  ]
