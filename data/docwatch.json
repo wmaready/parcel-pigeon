@@ -1,5 +1,5 @@
 {
- "cursor": 36,
+ "cursor": 51,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 431,
+   "fails": 432,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 431,
+   "fails": 432,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -2228,9 +2228,10 @@
    "checked": "2026-11-06",
    "n": "Shipping Deadlines",
    "snap": {
-    "d": "2026-11-05",
+    "d": "2026-11-06",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf",
-    "txt": "data/snapshots/69530f9de000/2026-11-05.txt"
+    "txt": "data/snapshots/69530f9de000/2026-11-06.txt",
+    "prev_d": "2026-11-05"
    }
   }
  }
