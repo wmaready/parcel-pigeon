@@ -1,145 +1,5 @@
 [
  {
-  "id": "we85aee3857d1",
-  "date": "2026-11-06",
-  "c": [
-   "FedEx"
-  ],
-  "title": "FedEx posts International Premium and IXF Terms and Conditions effective Jan. 5, 2026",
-  "sum": "The FedEx fuel surcharge URL now carries the FedEx International Premium and International Express Freight (IXF) Terms and Conditions, effective January 5, 2026. The document sets the liability cap at US$1.65 per US$100 of value above $100 or US$9.07 per pound (US$20/kg), whichever is greater. It also sets out how rates are applied and what FedEx covers.",
-  "plain": "Shippers using FedEx International Premium or IXF are bound by these terms, including the liability cap and no-insurance rule. The earlier domestic fuel surcharge tables are not part of this document.",
-  "imp": "watch",
-  "lvl": 2,
-  "cat": "Guide changes",
-  "act": "2026-01-05",
-  "inferred": null,
-  "detected": "2026-11-06",
-  "changes": [
-   {
-    "what": "New International Premium and IXF Terms and Conditions posted",
-    "before": null,
-    "after": "Worldwide terms for FedEx International Premium and FedEx International Express Freight, effective January 5, 2026",
-    "effective": "2026-01-05",
-    "who": "Shippers using FedEx International Premium or International Express Freight, including shipments on FedEx air waybills",
-    "impact": null
-   },
-   {
-    "what": "Liability limit for loss or damage",
-    "before": null,
-    "after": "US$1.65 per US$100 of value in excess of $100, or US$9.07 per pound (US$20/kg), whichever is greater",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shipments",
-    "impact": null
-   },
-   {
-    "what": "No insurance coverage provided",
-    "before": null,
-    "after": "FedEx provides no insurance of any kind; shippers bear the risk or buy their own insurance",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shippers",
-    "impact": null
-   },
-   {
-    "what": "Scope of rates",
-    "before": null,
-    "after": "Rates cover airport-to-airport transportation only and exclude pickup, delivery, terminal and storage charges unless otherwise indicated",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shipments",
-    "impact": null
-   },
-   {
-    "what": "Rate currency basis",
-    "before": null,
-    "after": "Rates and charges are shown per kilo in the currency of the origin country, or in U.S. Dollars where used as a local currency",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shipments",
-    "impact": null
-   },
-   {
-    "what": "Which rates apply to a shipment",
-    "before": null,
-    "after": "Rates, charges and conditions in effect on the date the air waybill is issued apply",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shipments",
-    "impact": null
-   },
-   {
-    "what": "Rates and conditions can change without notice",
-    "before": null,
-    "after": "All published rates, charges, regulations and Service Conditions are subject to change without notice",
-    "effective": "2026-01-05",
-    "who": "International Premium and IXF shippers",
-    "impact": null
-   }
-  ],
-  "verdict": "new document",
-  "unknowns": [
-   "Whether the domestic fuel surcharge tables remain available elsewhere on the page",
-   "The document text ends partway through the liability section, so later terms are unconfirmed",
-   "Older version not on file"
-  ],
-  "dates": [
-   {
-    "d": "2026-01-05",
-    "w": "FedEx: New International Premium and IXF Terms and Conditions posted",
-    "imp": "info",
-    "fees": [
-     [
-      "FedEx",
-      "Liability limit for loss or damage",
-      "US$1.65 per US$100 of value in excess of $100, or US$9.07 per pound (US$20/kg), whichever is greater"
-     ],
-     [
-      "FedEx",
-      "No insurance coverage provided",
-      "FedEx provides no insurance of any kind; shippers bear the risk or buy their own insurance"
-     ],
-     [
-      "FedEx",
-      "Scope of rates",
-      "Rates cover airport-to-airport transportation only and exclude pickup, delivery, terminal and storage charges unless otherwise indicated"
-     ],
-     [
-      "FedEx",
-      "Rate currency basis",
-      "Rates and charges are shown per kilo in the currency of the origin country, or in U.S. Dollars where used as a local currency"
-     ],
-     [
-      "FedEx",
-      "Which rates apply to a shipment",
-      "Rates, charges and conditions in effect on the date the air waybill is issued apply"
-     ],
-     [
-      "FedEx",
-      "Rates and conditions can change without notice",
-      "All published rates, charges, regulations and Service Conditions are subject to change without notice"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "exclusive": true,
-  "src": "FedEx",
-  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-  "srcs": [
-   {
-    "src": "FedEx: FedEx fuel surcharge page",
-    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "new document",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
-    }
-   ]
-  }
- },
- {
   "id": "a3bd243da7c6c",
   "date": "2026-11-06",
   "c": [
@@ -329,6 +189,146 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "we85aee3857d1",
+  "date": "2026-11-06",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx posts International Premium and IXF Terms and Conditions effective Jan. 5, 2026",
+  "sum": "The FedEx fuel surcharge URL now carries the FedEx International Premium and International Express Freight (IXF) Terms and Conditions, effective January 5, 2026. The document sets the liability cap at US$1.65 per US$100 of value above $100 or US$9.07 per pound (US$20/kg), whichever is greater. It also sets out how rates are applied and what FedEx covers.",
+  "plain": "Shippers using FedEx International Premium or IXF are bound by these terms, including the liability cap and no-insurance rule. The earlier domestic fuel surcharge tables are not part of this document.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-01-05",
+  "inferred": null,
+  "detected": "2026-11-06",
+  "changes": [
+   {
+    "what": "New International Premium and IXF Terms and Conditions posted",
+    "before": null,
+    "after": "Worldwide terms for FedEx International Premium and FedEx International Express Freight, effective January 5, 2026",
+    "effective": "2026-01-05",
+    "who": "Shippers using FedEx International Premium or International Express Freight, including shipments on FedEx air waybills",
+    "impact": null
+   },
+   {
+    "what": "Liability limit for loss or damage",
+    "before": null,
+    "after": "US$1.65 per US$100 of value in excess of $100, or US$9.07 per pound (US$20/kg), whichever is greater",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shipments",
+    "impact": null
+   },
+   {
+    "what": "No insurance coverage provided",
+    "before": null,
+    "after": "FedEx provides no insurance of any kind; shippers bear the risk or buy their own insurance",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shippers",
+    "impact": null
+   },
+   {
+    "what": "Scope of rates",
+    "before": null,
+    "after": "Rates cover airport-to-airport transportation only and exclude pickup, delivery, terminal and storage charges unless otherwise indicated",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shipments",
+    "impact": null
+   },
+   {
+    "what": "Rate currency basis",
+    "before": null,
+    "after": "Rates and charges are shown per kilo in the currency of the origin country, or in U.S. Dollars where used as a local currency",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shipments",
+    "impact": null
+   },
+   {
+    "what": "Which rates apply to a shipment",
+    "before": null,
+    "after": "Rates, charges and conditions in effect on the date the air waybill is issued apply",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shipments",
+    "impact": null
+   },
+   {
+    "what": "Rates and conditions can change without notice",
+    "before": null,
+    "after": "All published rates, charges, regulations and Service Conditions are subject to change without notice",
+    "effective": "2026-01-05",
+    "who": "International Premium and IXF shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Whether the domestic fuel surcharge tables remain available elsewhere on the page",
+   "The document text ends partway through the liability section, so later terms are unconfirmed",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-01-05",
+    "w": "FedEx: New International Premium and IXF Terms and Conditions posted",
+    "imp": "info",
+    "fees": [
+     [
+      "FedEx",
+      "Liability limit for loss or damage",
+      "US$1.65 per US$100 of value in excess of $100, or US$9.07 per pound (US$20/kg), whichever is greater"
+     ],
+     [
+      "FedEx",
+      "No insurance coverage provided",
+      "FedEx provides no insurance of any kind; shippers bear the risk or buy their own insurance"
+     ],
+     [
+      "FedEx",
+      "Scope of rates",
+      "Rates cover airport-to-airport transportation only and exclude pickup, delivery, terminal and storage charges unless otherwise indicated"
+     ],
+     [
+      "FedEx",
+      "Rate currency basis",
+      "Rates and charges are shown per kilo in the currency of the origin country, or in U.S. Dollars where used as a local currency"
+     ],
+     [
+      "FedEx",
+      "Which rates apply to a shipment",
+      "Rates, charges and conditions in effect on the date the air waybill is issued apply"
+     ],
+     [
+      "FedEx",
+      "Rates and conditions can change without notice",
+      "All published rates, charges, regulations and Service Conditions are subject to change without notice"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "FedEx",
+  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+  "srcs": [
+   {
+    "src": "FedEx: FedEx fuel surcharge page",
+    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
+     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
+    }
+   ]
+  }
  },
  {
   "id": "a20c66b35275d",
@@ -2238,7 +2238,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-05",
+  "tried": "2026-11-06",
   "unconf": true
  },
  {
@@ -2839,7 +2839,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-05",
+  "tried": "2026-11-06",
   "unconf": true
  },
  {
@@ -4173,7 +4173,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-05",
+  "tried": "2026-11-06",
   "unconf": true
  },
  {
@@ -4565,7 +4565,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-05",
+  "tried": "2026-11-06",
   "unconf": true
  },
  {
@@ -5391,7 +5391,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-05",
+  "tried": "2026-11-06",
   "unconf": true
  },
  {
