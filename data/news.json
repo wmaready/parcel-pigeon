@@ -1,5 +1,90 @@
 [
  {
+  "id": "w86cfd39b48f5",
+  "date": "2026-11-06",
+  "c": [
+   "USPS"
+  ],
+  "title": "USPS lists January 2027 price change effective Jan. 17, 2027, with postage statement files",
+  "sum": "USPS's Price Change Center now has a \"January 2027 Price Change\" section effective January 17, 2027. It includes two newly posted files, Postage Statements Redlines and Postage Statements Change Log, both marked revised 11/06/2026. The existing Time-Limited 2026 Price Change entry (October 4, 2026 through January 17, 2027) is still listed.",
+  "plain": "Mailers and shippers who use USPS postage statements will see revised statement forms for the January 2027 price change. The page shows no price amounts, so the size of the increase or decrease can't be determined from it.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2027-01-17",
+  "inferred": null,
+  "detected": "2026-11-06",
+  "changes": [
+   {
+    "what": "New January 2027 Price Change section added to the Price Change Center",
+    "before": null,
+    "after": "January 2027 Price Change, effective January 17, 2027",
+    "effective": "2027-01-17",
+    "who": "Shippers and mailers using USPS services affected by the January 2027 price change",
+    "impact": null
+   },
+   {
+    "what": "January 2027 Postage Statements Redlines posted",
+    "before": null,
+    "after": "Redlines file listed under Postage Statements, revised 11/06/2026",
+    "effective": "2027-01-17",
+    "who": "Mailers who prepare USPS postage statements",
+    "impact": null
+   },
+   {
+    "what": "January 2027 Postage Statements Change Log posted",
+    "before": null,
+    "after": "Change log file listed under Postage Statements, revised 11/06/2026",
+    "effective": "2027-01-17",
+    "who": "Mailers who prepare USPS postage statements",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Which products and prices change on January 17, 2027 is not stated on the page",
+   "What the postage statement revisions contain is not shown",
+   "What happens to the Time-Limited 2026 Price Change prices after January 17, 2027 is not stated",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS: New January 2027 Price Change section added to the Price Change Center",
+    "imp": "info",
+    "fees": [
+     [
+      "USPS",
+      "January 2027 Postage Statements Redlines posted",
+      "Redlines file listed under Postage Statements, revised 11/06/2026"
+     ],
+     [
+      "USPS",
+      "January 2027 Postage Statements Change Log posted",
+      "Change log file listed under Postage Statements, revised 11/06/2026"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "USPS Price change center (spotted by Parcel Pigeon)",
+  "url": "https://pe.usps.com/PriceChange/Index",
+  "srcs": [
+   {
+    "src": "USPS Price change center",
+    "url": "https://pe.usps.com/PriceChange/Index"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": []
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "a3bd243da7c6c",
   "date": "2026-11-06",
   "c": [
