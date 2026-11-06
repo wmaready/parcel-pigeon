@@ -1,5 +1,5 @@
 {
- "cursor": 21,
+ "cursor": 36,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 430,
+   "fails": 431,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 430,
+   "fails": 431,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -535,9 +535,10 @@
    "hash": "10e2e45bcf78",
    "checked": "2026-11-06",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
-    "txt": "data/snapshots/b716b819faa2/2026-10-26.txt"
+    "txt": "data/snapshots/b716b819faa2/2026-11-06.txt",
+    "prev_d": "2026-10-26"
    }
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
@@ -996,7 +997,7 @@
   },
   "https://www.ontrac.com/supplemental-surcharges": {
    "n": "Supplemental Surcharges",
-   "fails": 43,
+   "fails": 44,
    "err": "404 Client Error: Not Found for url: https://www.ontrac.com/supplemental-surcharges",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1014,7 +1015,7 @@
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:1ac32b4c-735b-473a-b218-97bcbb5d3ebf/original/as/Mail-Innovations-Surcharges": {
    "n": "UPS Mail Innovations domestic surcharges",
-   "fails": 43,
+   "fails": 44,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1041,9 +1042,10 @@
    "checked": "2026-11-06",
    "n": "2026 holiday prices, Notice 123 (PDF)",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-06",
     "pdf": "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20Notice123%20PDF%20-%20Final.pdf",
-    "txt": "data/snapshots/1153f62b9b5d/2026-10-26.txt"
+    "txt": "data/snapshots/1153f62b9b5d/2026-11-06.txt",
+    "prev_d": "2026-10-26"
    }
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited%20OCT%202026%20Price%20Change%20-%20SKU%20Price%20Files%20-%20Excel.xlsx": {
