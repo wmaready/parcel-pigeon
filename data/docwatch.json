@@ -1,5 +1,5 @@
 {
- "cursor": 125,
+ "cursor": 140,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -68,15 +68,17 @@
    }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf": {
-   "hash": "0898c2640b82",
+   "hash": "99aeba562556",
    "first": "2026-10-16",
    "checked": "2026-11-06",
    "n": "2026 UPS Daily Rate and Service Guide (PDF)",
    "snap": {
-    "d": "2026-10-25",
+    "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-    "txt": "data/snapshots/bf42edf12902/2026-10-25.txt"
-   }
+    "txt": "data/snapshots/bf42edf12902/2026-11-06.txt",
+    "prev_d": "2026-10-25"
+   },
+   "changed": "2026-11-06"
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf": {
    "hash": "826c8434e317",
@@ -90,15 +92,17 @@
    }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf": {
-   "hash": "e3db3b1e80c3",
+   "hash": "b03f3e75f2bb",
    "first": "2026-10-16",
    "checked": "2026-11-06",
    "n": "2026 UPS Retail Rate and Service Guide",
    "snap": {
-    "d": "2026-10-25",
+    "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
-    "txt": "data/snapshots/b51c20a36a18/2026-10-25.txt"
-   }
+    "txt": "data/snapshots/b51c20a36a18/2026-11-06.txt",
+    "prev_d": "2026-10-25"
+   },
+   "changed": "2026-11-06"
   },
   "https://pe.usps.com/text/DMM300/283.htm": {
    "hash": "e6babc6a9b6c",
@@ -145,26 +149,30 @@
    }
   },
   "https://pe.usps.com/PriceChange/Index": {
-   "hash": "c48e3cbb51f4",
+   "hash": "2aa35e296478",
    "first": "2026-10-16",
    "checked": "2026-11-06",
    "n": "Postal Explorer: 2026 holiday price change page",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-06",
     "pdf": "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf",
-    "txt": "data/snapshots/dda3b54ebaba/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/dda3b54ebaba/2026-11-06.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-06"
   },
   "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf": {
    "first": "2026-10-21",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
-   "hash": "267b04f3b3cd",
+   "hash": "be655383991c",
    "checked": "2026-11-06",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-06",
     "pdf": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.2.pdf",
-    "txt": "data/snapshots/c9d5d315a7b7/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/c9d5d315a7b7/2026-11-06.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-06"
   },
   "https://about.usps.com/handbooks/dm204.pdf": {
    "first": "2026-10-21",
@@ -202,13 +210,15 @@
   "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf": {
    "first": "2026-10-21",
    "n": "July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
-   "hash": "273d6b6754c7",
+   "hash": "cbed3462db0e",
    "checked": "2026-11-06",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-06",
     "pdf": "https://pe.usps.com/resources/PriceChange/July 2026 Price Change - Notice123 PDF - 7.10.26.pdf",
-    "txt": "data/snapshots/ccd755cf077c/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/ccd755cf077c/2026-11-06.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-06"
   },
   "https://pe.usps.com/resources/PriceChange/Time-Limited OCT 2026 Price Change - Notice123 PDF - Final.pdf": {
    "first": "2026-10-21",
@@ -359,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 427,
+   "fails": 428,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 427,
+   "fails": 428,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -461,26 +471,30 @@
    }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/daily-rates": {
-   "hash": "0898c2640b82",
+   "hash": "99aeba562556",
    "first": "2026-10-21",
    "checked": "2026-11-06",
    "n": "UPS Daily Rates and Zone Charts page",
    "snap": {
-    "d": "2026-10-25",
+    "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
-    "txt": "data/snapshots/20bd558bfa65/2026-10-25.txt"
-   }
+    "txt": "data/snapshots/20bd558bfa65/2026-11-06.txt",
+    "prev_d": "2026-10-25"
+   },
+   "changed": "2026-11-06"
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/retail-rates": {
-   "hash": "e3db3b1e80c3",
+   "hash": "b03f3e75f2bb",
    "first": "2026-10-21",
    "checked": "2026-11-06",
    "n": "UPS Retail Rates page",
    "snap": {
-    "d": "2026-10-25",
+    "d": "2026-11-06",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
-    "txt": "data/snapshots/7ba187bfbd08/2026-10-25.txt"
-   }
+    "txt": "data/snapshots/7ba187bfbd08/2026-11-06.txt",
+    "prev_d": "2026-10-25"
+   },
+   "changed": "2026-11-06"
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
    "hash": "e69e0ffbc33d",
