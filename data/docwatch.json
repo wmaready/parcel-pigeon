@@ -1,5 +1,5 @@
 {
- "cursor": 80,
+ "cursor": 95,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -359,14 +359,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 424,
+   "fails": 425,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 424,
+   "fails": 425,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1331,7 +1331,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "b3b5181ba673",
    "first": "2026-10-26",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-10-26",
@@ -1342,7 +1342,7 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
@@ -1354,7 +1354,7 @@
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
     "d": "2026-10-26",
@@ -1366,7 +1366,7 @@
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -1377,7 +1377,7 @@
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
    "snap": {
     "d": "2026-10-26",
@@ -1488,7 +1488,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf": {
    "hash": "fbc675f00e4b",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1499,7 +1499,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
    "hash": "c2c0a5750888",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1510,7 +1510,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/edf17e3e-640b-438c-808f-99664c427646.pdf": {
    "hash": "74e90f22afc4",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1521,7 +1521,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf": {
    "hash": "8ba6b61d9f95",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) call transcript",
    "snap": {
     "d": "2026-10-30",
@@ -1531,15 +1531,15 @@
   },
   "https://events.q4inc.com/attendee/622711393": {
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) earnings call",
-   "fails": 20,
+   "fails": 21,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-05"
+   "last_try": "2026-11-06"
   },
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
    "hash": "2af5fcbbdb62",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1550,7 +1550,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/1f3ac603-1839-4c15-8875-dcbcd2494084.pdf": {
    "hash": "b4550d0ef0fd",
    "first": "2026-10-30",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "FedEx Fiscal Q2 2025 (Sep–Nov 2024) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -2125,7 +2125,7 @@
   "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products": {
    "hash": "be937369d8b6",
    "first": "2026-11-03",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "Postal Regulatory Commission notice: New Postal Products (91 FR 69281)",
    "snap": {
     "d": "2026-11-03",
@@ -2159,7 +2159,7 @@
   "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
    "hash": "00356ade2f6e",
    "first": "2026-11-04",
-   "checked": "2026-11-05",
+   "checked": "2026-11-06",
    "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
    "snap": {
     "d": "2026-11-04",
@@ -2177,10 +2177,10 @@
   },
   "https://about.usps.com/resources/publications.htm?cat=notices": {
    "n": "Notices",
-   "fails": 5,
+   "fails": 6,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-05"
+   "last_try": "2026-11-06"
   },
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
