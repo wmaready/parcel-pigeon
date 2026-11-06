@@ -1,5 +1,5 @@
 {
- "cursor": 96,
+ "cursor": 111,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 435,
+   "fails": 436,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 435,
+   "fails": 436,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1614,7 +1614,7 @@
   },
   "https://events.q4inc.com/attendee/395375543": {
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) earnings call",
-   "fails": 21,
+   "fails": 22,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1676,7 +1676,7 @@
   },
   "https://events.q4inc.com/attendee/676762251": {
    "n": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026) earnings call",
-   "fails": 21,
+   "fails": 22,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
@@ -1705,7 +1705,7 @@
   },
   "https://events.q4inc.com/attendee/438607205": {
    "n": "FedEx Fiscal Q4 2025 (Mar–May 2025) earnings call",
-   "fails": 21,
+   "fails": 22,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-06"
