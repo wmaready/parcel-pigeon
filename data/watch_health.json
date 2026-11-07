@@ -67,22 +67,22 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 3,
-  "thin": 231,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "fails": 0,
+  "thin": 232,
+  "err": null,
   "last_try": "2026-11-07",
-  "blocked": true,
+  "blocked": false,
   "chars": 247,
   "via": "archive",
   "copy_of": "2026-10-09",
   "last_ok": null,
   "probe": "HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
-  "probe_day": "2026-11-06"
+  "probe_day": "2026-11-07"
  },
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 163,
+  "fails": 164,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 450,
+  "fails": 451,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
@@ -106,7 +106,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 21,
+  "fails": 22,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
@@ -119,7 +119,7 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 28,
+  "fails": 29,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
@@ -132,7 +132,7 @@
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 10,
+  "fails": 11,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
@@ -145,7 +145,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 31,
+  "fails": 32,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-07",
