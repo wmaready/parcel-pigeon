@@ -2840,6 +2840,23 @@
    ],
    "enriched": "2026-11-07",
    "pending": false
+  },
+  {
+   "id": "tractorsupplyc",
+   "n": "Tractor Supply Co.",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Rural lifestyle retailer with almost 2,500 stores in 49 states that ships via parcel carriers, gig networks and a private fleet.",
+   "al": [],
+   "src": "https://finance.yahoo.com/small-business/articles/shippers-spread-parcel-volume-carrier-120000904.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-04",
+   "story": "a6f2352872a5f"
   }
  ],
  "edges": [
@@ -4957,6 +4974,15 @@
    "t": "Listed as an ecosystem partner",
    "url": "https://ir.aurora.tech/",
    "story": "a84ca5863e582"
+  },
+  {
+   "a": "wonder",
+   "b": "doordash",
+   "k": "partner",
+   "y": "2026",
+   "t": "Wonder and DoorDash partner on campus dining in a $425 million deal",
+   "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/",
+   "story": "a5e96a35d94b6"
   }
  ],
  "moves": [

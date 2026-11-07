@@ -514,6 +514,78 @@
   "exclusive": true
  },
  {
+  "id": "a23a4d6fd271d",
+  "date": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Amazon raises FBA fees from Jan. 15; storage rules change Feb. 1",
+  "sum": "Amazon said most Fulfillment by Amazon fee changes take effect Jan. 15, with an average increase of about 0.8% of the average item's selling price. Storage charges change Feb. 1, according to the announcement as reported by PYMNTS. Amazon will keep its fuel and logistics surcharge.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "Sellers using Fulfillment by Amazon face an average fee increase of about 0.8% of the average item's selling price from Jan. 15, though some products will cost less to ship. Storage charges change Feb. 1.",
+  "why": "Independent merchants account for more than 60% of sales in Amazon's store, and FBA users face an average fee rise of about 0.8% of item price.",
+  "score": 4,
+  "tie": null,
+  "act": "2027-01-15",
+  "dates": [
+   {
+    "d": "2027-01-15",
+    "w": "Most Amazon FBA fee changes take effect; average rise about 0.8%",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-02-01",
+    "w": "Amazon drops storage utilization surcharge; aging charge becomes one monthly rate",
+    "imp": "info",
+    "fx": null
+   },
+   {
+    "d": "2027-02-01",
+    "w": "Amazon low-inventory assessment uses shipments before and after, 28 days of supply",
+    "imp": "info",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-07T13:17:05Z",
+  "src": "PYMNTS.com",
+  "url": "https://www.pymnts.com/news/retail/2026/amazon-raises-seller-fees-walmart-expands-drone-delivery/",
+  "srcs": [
+   {
+    "src": "Amazon",
+    "url": "https://ship.amazon.com/service-guide"
+   },
+   {
+    "src": "PYMNTS.com",
+    "url": "https://www.pymnts.com/news/retail/2026/amazon-raises-seller-fees-walmart-expands-drone-delivery/"
+   }
+  ],
+  "auto": true,
+  "syn": "Amazon announced fee changes for sellers who use Fulfillment by Amazon, according to PYMNTS. Most changes take effect Jan. 15, with an average increase of about 0.8% of the average item's selling price, while some products will cost less to ship depending on size, type and price. On Feb. 1, Amazon will drop its storage utilization surcharge and fold a separate aging-inventory charge into one monthly rate based on how long goods stay in its warehouses. Sellers whose goods move within six months will pay the same or less for storage, and those whose goods sit longer will pay more, the announcement said.",
+  "aff": [
+   {
+    "who": "FBA sellers",
+    "what": "Average fee increase of about 0.8% of the average item's selling price; most changes take effect Jan. 15."
+   },
+   {
+    "who": "Sellers with slow-moving stock",
+    "what": "Storage costs rise for goods held beyond six months under a single monthly rate from Feb. 1."
+   },
+   {
+    "who": "Sellers with fast-moving stock",
+    "what": "Storage costs stay the same or fall for goods that move within six months, from Feb. 1."
+   },
+   {
+    "who": "Sellers assessed for low inventory",
+    "what": "From Feb. 1, shipments in the four weeks before and after an assessment decide whether stock fell below 28 days of supply."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "a34d0c6e054ad",
   "date": "2026-11-05",
   "c": [
@@ -559,7 +631,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -610,7 +682,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -658,7 +730,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -773,6 +845,52 @@
     "what": "Median delivery time was 19 minutes from checkout in October, according to Zipline."
    }
   ]
+ },
+ {
+  "id": "a5e96a35d94b6",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "Wonder confidentially files for IPO",
+  "sum": "Wonder, the food delivery and food technology company founded by Marc Lore, said on Thursday it confidentially filed for an initial public offering, according to TechCrunch. The share count and price range have not been disclosed. In July the company said it raised more than $650 million at a valuation of around $9 billion.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. The filing is confidential, and the offering size and price range are not yet disclosed.",
+  "why": "Wonder owns Grubhub and runs campus dining at 450 colleges and other sites; the filing is a step toward listing on public markets.",
+  "score": 4,
+  "tie": "In July, Wonder announced a funding round of more than $650 million that valued the company at around $9 billion.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-07T13:16:00Z",
+  "src": "TechCrunch",
+  "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/",
+  "srcs": [
+   {
+    "src": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "syn": "Wonder, the food delivery and food technology company founded in 2018 by Marc Lore, announced on Thursday that it has confidentially filed for an IPO, TechCrunch reported. It has not disclosed how many shares it plans to offer or the expected price range. The company has acquired Blue Apron, Grubhub, Tastemade and Spyce, and has a $425 million partnership with DoorDash for campus dining. In July it said it raised more than $650 million at a valuation of around $9 billion.",
+  "aff": [
+   {
+    "who": "Wonder investors",
+    "what": "Accel, GV, AllianceBernstein and ARK Invest backed the July round that valued Wonder at around $9 billion."
+   },
+   {
+    "who": "Food delivery market",
+    "what": "Wonder would be a public company competing with DoorDash and Uber Eats."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true
  },
  {
   "id": "a74df5c94691e",
@@ -1433,8 +1551,56 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
+ },
+ {
+  "id": "a6f2352872a5f",
+  "date": "2026-11-04",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "Tractor Supply splits parcel volume across carriers as surcharges rise",
+  "sum": "Tractor Supply Co. executive Kyle Langley said at FarEye's Last Mile Leaders America 2026 conference in August that the retailer spreads volume across carriers by package type. He cited surcharges as a reason. FarEye's survey found 45.8% of U.S. delivery operators said delivery costs are rising faster than revenue.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No carrier rates or rules change with this item. A Tractor Supply executive described splitting volume among carriers by package type and region, with some volume going to a private fleet.",
+  "why": "Surcharges now move parcel costs alongside the annual GRI, and a retailer with almost 2,500 stores says it uses several carriers to limit the effect.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-07T13:15:39Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/small-business/articles/shippers-spread-parcel-volume-carrier-120000904.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/small-business/articles/shippers-spread-parcel-volume-carrier-120000904.html"
+   }
+  ],
+  "auto": true,
+  "syn": "At FarEye's Last Mile Leaders America 2026 conference in August, panelists described why shippers are moving from single-carrier agreements to several carriers. Tractor Supply Co.'s Kyle Langley said surcharges and package-type definitions make carrier costs less predictable than the annual general rate increase alone. He said the retailer can redirect packages to another carrier when one carrier applies surcharges to bigger packages. FarEye's Eye on the Last Mile America 2026 report found 45.8% of U.S. delivery operators said delivery costs are rising faster than revenue, and median last-mile costs rose 12% for a second year.",
+  "aff": [
+   {
+    "who": "Shippers using one carrier",
+    "what": "Langley said one carrier blends a shipper's whole package mix into a single cost, which can leave the largest and smallest packages at unfavorable rates."
+   },
+   {
+    "who": "Shippers using several carriers",
+    "what": "Langley said rate shopping can shift volume enough to drop a shipper into a lower discount tier with another carrier."
+   },
+   {
+    "who": "U.S. delivery operators",
+    "what": "FarEye's survey: 45.8% said costs rise faster than revenue; 88% said costs grow as fast as revenue or faster."
+   },
+   {
+    "who": "Tractor Supply deliveries",
+    "what": "The retailer ships through parcel carriers, gig networks and a private fleet started about two years ago, handling loads up to 10,000 pounds."
+   }
+  ]
  },
  {
   "id": "a947eb28a3ca3",
@@ -1767,7 +1933,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -3468,6 +3634,10 @@
    {
     "src": "MassLive",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPb2k3UU1iVzdCMldYVUNPQWJHR1U4VEM1dHlvN1lPd2NheVNfcXpzMDRKNUR6bUQ5Nm5SZUcxUXNMMXZ6dEFPZ1dhWTMtMmdIelVvTEdQN1RnNkIxbDh3UW9iTFlYQXpEdTZFWFU2cmVkVUp1UmdRb2RKN0VMWXJWUzBudmNnd3hDNjNzMUFiNGROS0FPRTV2aXBKVlBwWVdGcGJlNG5HNENlU0oxMzYtY1BLOVdCQ09VVlJsRU5oeF9uZDZyWDAzdmlnLXlqUkw2QklR?oc=5"
+   },
+   {
+    "src": "Lowell Sun",
+    "url": "https://www.lowellsun.com/2026/11/06/amazon-drops-westboro-drone-delivery-plan-after-pushback/"
    }
   ],
   "auto": true,
@@ -6338,6 +6508,14 @@
    {
     "src": "FreightWaves",
     "url": "https://www.freightwaves.com/news/fedex-taps-autozone-executive-to-be-finance-chief"
+   },
+   {
+    "src": "FedEx newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-names-jamere-jackson-as-executive-vice-president-and-chief-financial-officer"
+   },
+   {
+    "src": "ad-hoc-news.de",
+    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-jamere-jackson-named-as-next-finance-chief/70473837"
    }
   ],
   "auto": true,
@@ -11148,107 +11326,6 @@
    }
   ],
   "auto": true,
-  "exclusive": true
- },
- {
-  "id": "aee6669d325da",
-  "date": "2026-10-13",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Fuel",
-  "kind": "News",
-  "title": "GOFO adds 4% emergency fuel surcharge from Oct. 26",
-  "sum": "GOFO will apply a 4% emergency fuel surcharge to base delivery rates across all U.S. regions from Oct. 26, 2026, according to a notice to partners described in an industry analysis. GOFO said U.S. on-highway diesel prices have risen about 40% since July. The carrier is not adding peak surcharges this year.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "Shippers sending volume through GOFO pay 4% more on base delivery rates from Oct. 26, 2026. The surcharge stays while the national diesel average is above $5.46 per gallon, and GOFO has said it will add no peak surcharges.",
-  "tie": "The industry analysis notes that the UPS international air import fuel surcharge reached 47.75% in September, citing the same fuel market.",
-  "act": "2026-10-26",
-  "dates": [
-   {
-    "d": "2026-10-25",
-    "w": "UPS and Amazon Shipping begin per-package residential demand fees",
-    "imp": "up",
-    "fx": null
-   },
-   {
-    "d": "2026-10-26",
-    "w": "GOFO 4% emergency fuel surcharge takes effect; FedEx demand fees begin",
-    "imp": "up",
-    "fx": null
-   }
-  ],
-  "src": "TransImpact",
-  "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season",
-  "srcs": [
-   {
-    "src": "TransImpact",
-    "url": "https://transimpact.com/blog/gofo-adds-a-4-emergency-fuel-surcharge-at-peak-season"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "offc": true
- },
- {
-  "id": "af4d09d3e8033",
-  "date": "2026-10-13",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Cold chain",
-  "kind": "News",
-  "title": "FedEx Europe launches online portal for temperature-controlled pharma shipments",
-  "sum": "FedEx Europe has launched an online portal for pharmaceutical and life sciences shippers to book and manage temperature-controlled shipments in 26 European markets. The portal gives access to FedEx Temp-Assure Advantage and was introduced ahead of the year-end peak season. FedEx told Air Cargo News the offering covers air and road transport for consignments of up to 68 kg, according to IndexBox.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Pharma and life sciences shippers in the 26 covered European markets can onboard, order pre-conditioned packaging, schedule shipments and manage returns online for non-freight domestic and intra-European moves. The sources state no change to rates or fees.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "STAT Times",
-  "url": "https://www.stattimes.com/amp/pharma/fedex-launches-pharma-shipping-portal-across-europe-1360917",
-  "srcs": [
-   {
-    "src": "STAT Times",
-    "url": "https://www.stattimes.com/amp/pharma/fedex-launches-pharma-shipping-portal-across-europe-1360917"
-   },
-   {
-    "src": "IndexBox",
-    "url": "https://www.indexbox.io/blog/fedex-europe-launches-online-portal-for-temperature-controlled-pharma-shipments/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a0bfa0d132415",
-  "date": "2026-10-12",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "FedEx closes Calverton, N.Y., facility under Network 2.0 consolidation",
-  "sum": "FedEx has permanently closed its Edwards Avenue facility in Calverton, N.Y., as part of its Network 2.0 strategy, spokesperson David Westrick said in an emailed statement. Package drop-off for customers who used the site moves to the Middle Island, N.Y., location, according to Westrick.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Customers who dropped off packages at the Calverton site can use the FedEx location at 750 Middle Country Rd. in Middle Island, N.Y. No change to rates was stated.",
-  "tie": "The closure follows the April 2023 plan to consolidate Express, Ground and the services division into Federal Express Corporation, which took effect June 1, 2024, according to company filings cited in the article.",
-  "act": null,
-  "dates": [],
-  "src": "RiverheadLOCAL",
-  "url": "https://riverheadlocal.com/2026/10/12/fedex-closes-calverton-facility-as-part-of-nationwide-network-overhaul/",
-  "srcs": [
-   {
-    "src": "RiverheadLOCAL",
-    "url": "https://riverheadlocal.com/2026/10/12/fedex-closes-calverton-facility-as-part-of-nationwide-network-overhaul/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
   "exclusive": true
  }
 ]

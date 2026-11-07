@@ -1,5 +1,5 @@
 {
- "run": "2026-11-07T12:56Z",
+ "run": "2026-11-07T13:17Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -111,6 +111,15 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "primary-attached",
+   "msg": "Attached carrier-site source https://ship.amazon.com/service-guide to \"Amazon raises FBA fees from Jan. 15; storage rules change Feb. 1\"",
+   "ids": [
+    "a23a4d6fd271d"
+   ],
+   "fixed": true
+  },
+  {
    "sev": "high",
    "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Depop ends independent shipping for new US listings\"",
@@ -143,6 +152,15 @@
    "msg": "Carrier source UPS fuel surcharges moved ahead of press coverage on \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\"",
    "ids": [
     "wa9c423a83880"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source FedEx newsroom moved ahead of press coverage on \"FedEx names AutoZone's Jamere Jackson as chief financial officer\"",
+   "ids": [
+    "a71e9c34808fa"
    ],
    "fixed": true
   },

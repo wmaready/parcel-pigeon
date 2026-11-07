@@ -1,5 +1,110 @@
 [
  {
+  "title": "Wonder files confidentially for IPO",
+  "buyer": "Public investors (offering not yet priced)",
+  "target": "Wonder",
+  "value": "Undisclosed",
+  "status": "Pending",
+  "ann": "2026-11-05",
+  "closed": null,
+  "ended": null,
+  "latest": "Wonder said it confidentially filed for an IPO on 2026-11-05; share count and price range undisclosed.",
+  "sum": "Wonder confidentially filed for an initial public offering, announced on Thursday. It has not disclosed the number of shares or the expected price range.",
+  "who": [
+   [
+    "Target",
+    "Wonder",
+    "Food technology company founded in 2018 by Marc Lore that runs multi-brand food hall-style locations and handles preparation and delivery."
+   ]
+  ],
+  "why": "Wonder has grown through acquisitions of Blue Apron, Grubhub, Tastemade and Spyce, and has a $425 million partnership with DoorDash. It raised more than $650 million at a valuation of around $9 billion in July. A listing would put it in public markets against DoorDash and Uber Eats.",
+  "parties": [
+   {
+    "name": "Wonder",
+    "role": "Target",
+    "realm": "Gig / on-demand delivery",
+    "hq": null,
+    "founded": "2018",
+    "size": "Valued at around $9 billion in July funding round",
+    "history": [
+     {
+      "y": "2018",
+      "t": "Founded by Marc Lore."
+     },
+     {
+      "y": "2026",
+      "t": "Announced a funding round of more than $650 million at a valuation of around $9 billion."
+     }
+    ]
+   }
+  ],
+  "tree": {
+   "n": "Wonder",
+   "c": [
+    {
+     "n": "Blue Apron",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Grubhub",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Tastemade",
+     "nw": 0,
+     "c": []
+    },
+    {
+     "n": "Spyce",
+     "nw": 0,
+     "c": []
+    }
+   ]
+  },
+  "note": "Confidential filing; no pricing or share terms disclosed.",
+  "ties": [
+   {
+    "d": "2026-10-29",
+    "t": "Avride extends Philadelphia delivery robots to Grubhub and Wonder",
+    "story": "ac96d40154fd1"
+   },
+   {
+    "d": "2026-10-28",
+    "t": "Wonder and Avride expand robot delivery to four US cities",
+    "story": "a9fac6c751c97"
+   },
+   {
+    "d": "2026-10-19",
+    "t": "USPS finalizes live animal mailing rules in Publication 52",
+    "story": "a58373f1b7bc3"
+   },
+   {
+    "d": "2026-09-15",
+    "t": "DoorDash to buy Grubhub's campus dining unit for $300 million and invest $125 million in Wonder",
+    "story": "nrb55540"
+   }
+  ],
+  "d": "2026-11-05",
+  "story": "a5e96a35d94b6",
+  "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/",
+  "srcs": [
+   {
+    "src": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/"
+   }
+  ],
+  "checked": "2026-11-05",
+  "updates": [
+   {
+    "d": "2026-11-05",
+    "t": "Wonder confidentially files for IPO",
+    "story": "a5e96a35d94b6"
+   }
+  ]
+ },
+ {
   "title": "Investors fund Zipline $1.5B round",
   "buyer": "Paradigm, WCM Investment Management, Layer Global",
   "target": "Zipline",
@@ -184,7 +289,7 @@
   "ann": null,
   "closed": null,
   "ended": null,
-  "latest": "A Forbes column dated 2026-11-02 refers to the $17B buy; the source gives no closing date.",
+  "latest": "DoorDash announced the deal the week before Modern Retail's Nov. 7, 2026 episode; no closing date is given.",
   "sum": "DoorDash is in advanced talks to acquire Instacart, according to the Wall Street Journal as discussed by CNBC. No value or terms were given.",
   "who": [
    [
@@ -252,7 +357,7 @@
     "story": "a4d34002e71df"
    }
   ],
-  "d": "2026-11-05",
+  "d": "2026-11-07",
   "story": "ae89309b5e834",
   "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html",
   "srcs": [
@@ -347,9 +452,13 @@
    {
     "src": "The Economist",
     "url": "https://www.economist.com/business/2026/11/05/can-a-doordash-instacart-fusion-stand-up-to-amazon-and-walmart"
+   },
+   {
+    "src": "Modern Retail",
+    "url": "https://www.modernretail.co/podcasts/how-delivery-apps-came-to-be-discovery-platforms/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss"
    }
   ],
-  "checked": "2026-11-05",
+  "checked": "2026-11-07",
   "updates": [
    {
     "d": "2026-10-26",
