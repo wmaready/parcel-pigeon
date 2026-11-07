@@ -2028,6 +2028,72 @@
   "unconf": true
  },
  {
+  "id": "a4da2ea7295e1",
+  "date": "2026-11-03",
+  "c": [
+   "DHL"
+  ],
+  "cat": "International",
+  "kind": "News",
+  "title": "DHL: EU €2 handling fee, product IDs apply to B2C imports from 1 Nov",
+  "sum": "DHL said a €2 EU handling fee per import customs declaration line item and mandatory Product Identifier data apply to B2C shipments entering the EU27 from 1 November 2026. DHL said the requirements apply regardless of shipment value and are EU rules, not specific to DHL Express.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "From 1 November 2026, B2C shipments from non-EU countries into the EU27 carry a €2 fee per customs declaration line item, whatever the goods' value. Product identification data must also be supplied for each applicable line item.",
+  "why": "The fee applies per customs line item on B2C goods shipped into the EU27 from outside the bloc, regardless of value, according to DHL.",
+  "score": 6,
+  "tie": null,
+  "act": "2026-11-01",
+  "dates": [
+   {
+    "d": "2026-11-01",
+    "w": "EU €2 handling fee and Product Identifier rule start for B2C imports",
+    "imp": "up",
+    "fx": {
+     "t": "fee",
+     "car": "DHL",
+     "items": [
+      [
+       "Per import customs declaration line item, B2C shipments into the EU",
+       "€2.00",
+       2
+      ]
+     ]
+    }
+   }
+  ],
+  "added": "2026-11-07T22:55:18Z",
+  "src": "DHL",
+  "url": "https://www.dhl.com/discover/en-vn/logistics-advice/import-export-advice/eu-customs-changes-2026",
+  "srcs": [
+   {
+    "src": "DHL",
+    "url": "https://www.dhl.com/discover/en-vn/logistics-advice/import-export-advice/eu-customs-changes-2026"
+   }
+  ],
+  "auto": true,
+  "new": "DHL's Vietnam page states the €2 fee applies per customs declaration line item regardless of goods' value and that the rules are EU requirements applying across express carriers, not DHL-specific.",
+  "img": "data/img/a4da2ea7295e1-w.webp",
+  "thumb": "data/img/a4da2ea7295e1-s.webp",
+  "imgc": "Image: DHL",
+  "syn": "DHL said two changes under the EU Customs Reform take effect on 1 November 2026 for B2C shipments imported into the EU's 27 member states. A mandatory €2 EU handling fee applies per import customs declaration line item regardless of value, and Product Identifier (PID) data must be provided for each applicable line item. DHL said the requirements cover businesses in Vietnam and other non-EU countries and apply across express carriers. It said the fee is intended to help cover rising costs of customs supervision and processing as international e-commerce shipments grow.",
+  "aff": [
+   {
+    "who": "B2C exporters shipping to the EU27",
+    "what": "€2 handling fee per import customs declaration line item from 1 November 2026, regardless of shipment value."
+   },
+   {
+    "who": "Shippers of applicable B2C line items",
+    "what": "Mandatory Product Identifier data must be provided for each applicable line item to support EU customs clearance."
+   },
+   {
+    "who": "Businesses in Vietnam and other non-EU countries",
+    "what": "Both requirements apply to them; DHL said they are EU rules and apply across express carriers."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a567030ffc76c",
   "date": "2026-11-03",
   "c": [
