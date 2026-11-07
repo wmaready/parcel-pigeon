@@ -1,5 +1,47 @@
 [
  {
+  "id": "ac89be3e5da8f",
+  "date": "2026-11-07",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "FedEx appoints Jamere Jackson as chief financial officer",
+  "sum": "FedEx said Jamere Jackson will become chief financial officer effective Nov. 30. He succeeds Claude Russ, who has been interim CFO since June 1. Jackson has been CFO of AutoZone since January 2021.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service.",
+  "why": "The appointment fills the CFO role at FedEx, which has had an interim finance chief since June 1; it does not itself change rates or service.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-07T17:00:11Z",
+  "src": "FedEx newsroom",
+  "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-names-jamere-jackson-as-executive-vice-president-and-chief-financial-officer",
+  "srcs": [
+   {
+    "src": "FedEx newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-names-jamere-jackson-as-executive-vice-president-and-chief-financial-officer"
+   },
+   {
+    "src": "Freightweek",
+    "url": "https://www.freightweek.org/index.php/en/latest-news/10332-fedex-appoints-jamere-jackson-as-cfo"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-07",
+  "syn": "FedEx announced the appointment of Jamere Jackson as chief financial officer, effective Nov. 30. He succeeds Claude Russ, who has served as interim CFO since June 1. Jackson has been AutoZone's CFO since January 2021, and previously held CFO roles at Hertz Global Holdings and Nielsen Holdings. The announcement concerns FedEx's finance leadership and does not itself change shipper rates or service.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a3bd243da7c6c",
   "date": "2026-11-06",
   "c": [
@@ -1603,6 +1645,55 @@
   ]
  },
  {
+  "id": "a72dc67ee31dc",
+  "date": "2026-11-04",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Postal caucus presses USPS on $19.5 billion borrowing request",
+  "sum": "Rep. Nikki Budzinski (IL-13) led 13 members of the Congressional Postal Service Caucus in a bipartisan letter dated Nov. 4, 2026 to Postmaster General David Steiner. The letter asks how USPS would use a requested $19.5 billion increase in borrowing authority, which would raise the limit from $15 billion to $34.5 billion. The lawmakers ask for briefings during the Nov. 9-20 House session and replies by Nov. 13.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. Congress has not acted on the request to raise USPS's borrowing limit from $15 billion to $34.5 billion.",
+  "why": "The outcome of USPS's borrowing request could affect the finances of a carrier that, per the letter, loses upwards of $9 billion annually.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-07T17:00:20Z",
+  "src": "RiverBender.com",
+  "url": "https://www.riverbender.com/news/details/budzinski-leads-bipartisan-postal-caucus-in-pressing-usps-for-answers-on-195-billion-borrowing-request-98150.cfm",
+  "srcs": [
+   {
+    "src": "RiverBender.com",
+    "url": "https://www.riverbender.com/news/details/budzinski-leads-bipartisan-postal-caucus-in-pressing-usps-for-answers-on-195-billion-borrowing-request-98150.cfm"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-04",
+  "thread": "usps-finances",
+  "upd": 3,
+  "new": "Members of Congress are now questioning USPS's $19.5 billion borrowing authority request and asking whether it would fund on-time delivery or more network changes; no rate or service change results yet for shippers.",
+  "syn": "Rep. Nikki Budzinski (IL-13) led 13 members of the Congressional Postal Service Caucus in a bipartisan letter dated Nov. 4, 2026 to Postmaster General David Steiner. The letter seeks details on how USPS would spend a requested $19.5 billion increase in statutory borrowing authority, which would lift the limit from $15 billion to $34.5 billion. The members say service has declined from network changes under the Mail Processing Facility Review and Regional Transportation Optimization, and ask whether the money would improve on-time delivery or fund more such changes. They request briefings during the Nov. 9-20 House session and written answers by Nov. 13.",
+  "aff": [
+   {
+    "who": "USPS borrowing authority",
+    "what": "USPS has asked Congress to raise the limit by $19.5 billion, from $15 billion to $34.5 billion."
+   },
+   {
+    "who": "Mail service in rural areas",
+    "what": "The letter says network changes have hurt service, especially in rural communities, and asks how funds would improve on-time delivery."
+   },
+   {
+    "who": "USPS finances",
+    "what": "The letter says USPS continues to lose upwards of $9 billion annually."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a947eb28a3ca3",
   "date": "2026-11-04",
   "c": [
@@ -2544,7 +2635,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -3145,7 +3236,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -3638,6 +3729,10 @@
    {
     "src": "Lowell Sun",
     "url": "https://www.lowellsun.com/2026/11/06/amazon-drops-westboro-drone-delivery-plan-after-pushback/"
+   },
+   {
+    "src": "NBC Boston",
+    "url": "https://www.nbcboston.com/news/local/amazon-drops-westborough-drone-delivery-plan-after-pushback/4042282/"
    }
   ],
   "auto": true,
@@ -4483,7 +4578,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -4875,7 +4970,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-06",
+  "tried": "2026-11-07",
   "unconf": true
  },
  {
@@ -11242,90 +11337,5 @@
    }
   ],
   "auto": true
- },
- {
-  "id": "abe2fa039ab25",
-  "date": "2026-10-13",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Westborough ZBA to hear Amazon drone pad appeal Nov. 2; town meeting votes on bylaw",
-  "sum": "Westborough, Massachusetts, will hold a Zoning Board of Appeals hearing on Monday, Nov. 2 at 7:05 p.m. on residents' appeal against Amazon's Prime Air drone launch pad at 64 Otis Street, according to a town agenda posted Oct. 9. The Planning Board voted Oct. 6 to continue the site plan hearing to Nov. 10 at Amazon's request, and a Special Town Meeting on Oct. 19 takes up a new bylaw on unmanned aircraft.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. Amazon's planned drone launch pad in Westborough remains under local review, and the town page says the company is still seeking site-specific FAA approvals.",
-  "tie": "The hearing follows DroneXL's October 2026 reports that the Westborough launch hinged on a zoning appeal and that the Planning Board voted Oct. 6 to continue the site plan to Nov. 10.",
-  "act": null,
-  "dates": [],
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/12/amazon-westborough-drone-appeal-zba-november-2-town-meeting-bylaw/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/12/amazon-westborough-drone-appeal-zba-november-2-town-meeting-bylaw/"
-   }
-  ],
-  "auto": true,
-  "new": "Westborough has set the Nov. 2 zoning appeal hearing and scheduled an Oct. 19 town meeting vote on a drone bylaw, after Amazon asked for its Planning Board hearing to wait; this does not change prices or service for shippers.",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "acfb1fc321df8",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Technology & tools",
-  "kind": "Opinion",
-  "title": "SHIP.com CEO says platforms should embed shipping for AI-led peak",
-  "sum": "In an opinion piece, SHIP.com founder and CEO Joe DiSorbo argues that AI-driven shopping has sped up the front end of commerce while independent sellers' shipping work stays manual. He cites Visa Acceptance Solutions' 2026 index, in which 47% of online shoppers used AI in their latest purchase, and a Bringg study in which 51% of US shoppers would abandon a purchase without an on-time delivery estimate.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The article is an opinion on how commerce platforms could build rate comparison, address validation, batch processing and tracking alerts into seller workflows.",
-  "why": "The piece, from a shipping software vendor's CEO, frames shipping automation for independent marketplace sellers as a holiday 2026 issue, citing Visa and Bringg survey figures.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T20:46:56Z",
-  "src": "Parcel Industry",
-  "url": "https://parcelindustry.com/article-6722-The-AI-Powered-Holiday-Shopping-Season-Is-Here-Can-Shipping-Keep-Up.html",
-  "srcs": [
-   {
-    "src": "Parcel Industry",
-    "url": "https://parcelindustry.com/article-6722-The-AI-Powered-Holiday-Shopping-Season-Is-Here-Can-Shipping-Keep-Up.html"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "ae72963e7f424",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Survey: 37% of Sri Lankan e-commerce exporters lack full de minimis awareness",
-  "sum": "An ODI Global report, 'E-commerce and international trade in Sri Lanka', found that 27% of surveyed e-commerce exporters are not aware of de minimis and a further 10% are unsure, The Morning reported. Among non-e-commerce exporters, only 32% were aware of the threshold benefits. The findings rest on a survey of 953 exporters and importers.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The report says gaps in de minimis knowledge may limit how Sri Lankan exporters set prices, choose markets and plan shipping for direct-to-consumer sales.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "The Morning",
-  "url": "https://www.themorning.lk/articles/Vv0O9MwdcjRYERedqSQ6",
-  "srcs": [
-   {
-    "src": "The Morning",
-    "url": "https://www.themorning.lk/articles/Vv0O9MwdcjRYERedqSQ6"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
  }
 ]
