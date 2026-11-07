@@ -1,5 +1,5 @@
 {
- "cursor": 124,
+ "cursor": 139,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 457,
+   "fails": 458,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-07"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 457,
+   "fails": 458,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-07"
@@ -1853,7 +1853,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q1 2026 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1864,7 +1864,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm": {
    "hash": "8462e8684be8",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2024 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1874,7 +1874,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2024 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1885,7 +1885,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2024 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1896,7 +1896,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm": {
    "hash": "dba218f5950f",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1906,7 +1906,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1917,7 +1917,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2146/ups-releases-2q-2025-earnings": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2025 results release",
    "snap": {
     "d": "2026-10-31",
@@ -1928,7 +1928,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-053249/ups-20260630.htm": {
    "hash": "39c2fd911d95",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2026 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1938,7 +1938,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/11021/q2-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "f6578815130d",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2026 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1949,7 +1949,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2164/ups-releases-2q-2026-earnings": {
    "hash": "f6578815130d",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q2 2026 results release",
    "snap": {
     "d": "2026-10-31",
@@ -1960,7 +1960,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000064/ups-20240930.htm": {
    "hash": "705e53f16227",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q3 2024 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1970,7 +1970,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10834/q3-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "89bd3c3fed01",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q3 2024 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1981,7 +1981,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2131/ups-releases-3q-2024-earnings": {
    "hash": "89bd3c3fed01",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q3 2024 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1992,7 +1992,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-25-049661/ups-20250930.htm": {
    "hash": "587f8299ad42",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q3 2025 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -2002,7 +2002,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10946/q3-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "658f3ee32de5",
    "first": "2026-10-30",
-   "checked": "2026-11-06",
+   "checked": "2026-11-07",
    "n": "UPS Q3 2025 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -2254,14 +2254,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 19,
+   "fails": 20,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-07"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 19,
+   "fails": 20,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-07"
