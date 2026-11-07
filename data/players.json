@@ -2780,20 +2780,66 @@
    "enriched": "2026-11-07"
   },
   {
-   "id": "efficiencyente",
-   "n": "Efficiency Enterprises",
-   "realm": "3pl",
-   "own": "sub",
+   "id": "parcellab",
+   "n": "parcelLab",
+   "realm": "software",
+   "own": "private",
    "tk": null,
-   "parent": "ryder",
-   "hq": null,
+   "parent": null,
+   "hq": "Munich, Germany",
    "yr": null,
-   "s": "Regional truck and trailer leasing, rental and maintenance",
-   "role": "Regional truck and trailer leasing, rental and maintenance",
-   "al": [],
-   "src": "https://www.ryder.com/en-us/newsroom",
+   "s": "parcelLab is a Munich-based software company whose post-purchase platform monitors parcels across carriers, predicts delivery delays, and sends branded tracking updates and returns portals for retailers.",
+   "al": [
+    "ParcelLab",
+    "parcelLab GmbH"
+   ],
+   "src": "https://parcellab.com/blog/parcellab-the-operations-experience-management-platform-secures-112m-to-help-global-brands-deliver-a-seamless-experience/",
    "auto": true,
-   "added": "2026-11-07"
+   "added": "2026-11-07",
+   "from": "discover",
+   "site": "parcellab.com",
+   "geo": [
+    11.582,
+    48.135
+   ],
+   "srcs": [
+    "https://parcellab.com/blog/parcellab-the-operations-experience-management-platform-secures-112m-to-help-global-brands-deliver-a-seamless-experience/",
+    "https://www.endeit.com/posts/endeit-capital-invests-in-german-based-parcellab",
+    "https://www.forbes.com/sites/ninawolpow/2021/05/11/parcellab-nets-112-million-series-c-hopes-to-disrupt-us-e-comm-logistics/"
+   ],
+   "enriched": "2026-11-07",
+   "pending": false
+  },
+  {
+   "id": "dispatchtrack",
+   "n": "DispatchTrack",
+   "realm": "software",
+   "own": "pe",
+   "tk": null,
+   "parent": null,
+   "hq": "Campbell, CA, USA",
+   "yr": "2010",
+   "s": "DispatchTrack sells cloud-based last-mile delivery management software that covers route optimization, driver mobile apps with proof of delivery, real-time tracking and customer delivery-experience tools.",
+   "al": [
+    "DispatchTrack, Inc.",
+    "DispatchTrack, LLC"
+   ],
+   "src": "https://www.dispatchtrack.com/company/about-us",
+   "auto": true,
+   "added": "2026-11-07",
+   "from": "discover",
+   "site": "dispatchtrack.com",
+   "geo": [
+    -121.95,
+    37.287
+   ],
+   "srcs": [
+    "https://www.dispatchtrack.com/company/about-us",
+    "https://www.dispatchtrack.com/company/news/funding-spectrum-equity",
+    "https://techcrunch.com/2020/05/12/dispatchtrack-a-last-mile-logistics-platform-raises-144m-in-its-first-ever-funding/"
+   ],
+   "enriched": "2026-11-07",
+   "pending": false
   }
  ],
  "edges": [
@@ -5289,7 +5335,9 @@
   "layerglobal": "2026-11-06",
   "depop": "2026-11-06",
   "vinted": "2026-11-06",
-  "aurora": "2026-11-07"
+  "aurora": "2026-11-07",
+  "parcellab": "2026-11-07",
+  "dispatchtrack": "2026-11-07"
  },
  "facts": {
   "ups": {
