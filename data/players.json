@@ -2750,20 +2750,50 @@
   },
   {
    "id": "aurora",
-   "n": "Aurora",
+   "n": "Aurora Innovation, Inc.",
    "realm": "auto",
-   "own": null,
-   "tk": null,
+   "own": "public",
+   "tk": "AUR",
    "parent": null,
+   "hq": "Pittsburgh, PA, USA",
+   "yr": "2017",
+   "s": "Aurora develops the Aurora Driver, a self-driving system for heavy trucks, and runs commercial driverless trucking routes in the U.S., including hauling FedEx freight between Dallas and Houston.",
+   "al": [
+    "Aurora",
+    "Aurora Driver"
+   ],
+   "src": "https://ir.aurora.tech/",
+   "auto": true,
+   "pending": false,
+   "added": "2026-11-05",
+   "story": "a84ca5863e582",
+   "site": "aurora.tech",
+   "geo": [
+    -79.996,
+    40.441
+   ],
+   "srcs": [
+    "https://ir.aurora.tech/",
+    "https://www.businesswire.com/news/home/20260722856350/en/Aurora-Launches-Second-Generation-Driverless-Trucks-in-U.S.-to-Meet-Customer-Demand",
+    "https://www.sec.gov/Archives/edgar/data/1828108/000182810822000092/aurora-2q22xshareholder_.htm"
+   ],
+   "enriched": "2026-11-07"
+  },
+  {
+   "id": "efficiencyente",
+   "n": "Efficiency Enterprises",
+   "realm": "3pl",
+   "own": "sub",
+   "tk": null,
+   "parent": "ryder",
    "hq": null,
    "yr": null,
-   "s": "Autonomous trucking company working with FedEx on linehaul since 2021",
+   "s": "Regional truck and trailer leasing, rental and maintenance",
+   "role": "Regional truck and trailer leasing, rental and maintenance",
    "al": [],
-   "src": "https://newsroom.fedex.com/newsroom/global-english/fedex-makes-the-holidays-smarter-with-ai-enabled-tools-robotics-and-predictive-technology",
+   "src": "https://www.ryder.com/en-us/newsroom",
    "auto": true,
-   "pending": true,
-   "added": "2026-11-05",
-   "story": "a84ca5863e582"
+   "added": "2026-11-07"
   }
  ],
  "edges": [
@@ -4827,6 +4857,60 @@
    "t": "Serve Robotics delivers with Wonder",
    "url": "https://techcrunch.com/2026/11/05/serve-robotics-launches-new-business-to-become-the-aws-for-robots/",
    "story": "a20c66b35275d"
+  },
+  {
+   "a": "aurora",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2021",
+   "t": "Commercial autonomous trucking pilot, Texas lanes",
+   "url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810822000092/aurora-2q22xshareholder_.htm",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "uber",
+   "b": "aurora",
+   "k": "invested",
+   "y": "2021",
+   "t": "Uber invested $400M in Aurora alongside the Uber ATG sale",
+   "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "uber",
+   "b": "aurora",
+   "k": "sold",
+   "y": "2021",
+   "t": "Uber sold its ATG self-driving unit to Aurora",
+   "url": "https://www.cnbc.com/2020/12/07/uber-sells-atg-self-driving-unit-to-aurora-.html",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "aurora",
+   "b": "uberfreight",
+   "k": "partner",
+   "y": null,
+   "t": "Autonomous trucking partner",
+   "url": "https://ir.aurora.tech/",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "aurora",
+   "b": "schneider",
+   "k": "partner",
+   "y": "2022",
+   "t": "Aurora Driver trucks to haul freight for Schneider",
+   "url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810822000092/aurora-2q22xshareholder_.htm",
+   "story": "a84ca5863e582"
+  },
+  {
+   "a": "aurora",
+   "b": "ryder",
+   "k": "partner",
+   "y": null,
+   "t": "Listed as an ecosystem partner",
+   "url": "https://ir.aurora.tech/",
+   "story": "a84ca5863e582"
   }
  ],
  "moves": [
@@ -5101,6 +5185,18 @@
    "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
    "t": "Stord announced on Oct. 21, 2026 that it had acquired AMS Fulfillment, a third-party logistics provider, in its largest acquisition to date. Axios Pro reported ",
    "role": "Third-party logistics provider for e-commerce brands"
+  },
+  {
+   "id": "efficiencyente",
+   "k": "bought",
+   "parent": "ryder",
+   "from": null,
+   "pend": null,
+   "into": null,
+   "d": "2026-11-01",
+   "url": "https://www.ryder.com/en-us/newsroom",
+   "t": "Ryder said it completed its acquisition of Efficiency Enterprises, a regional fleet management, maintenance and leasing provider with six East Coast locations, ",
+   "role": "Regional truck and trailer leasing, rental and maintenance"
   }
  ],
  "checks": {
@@ -5192,7 +5288,8 @@
   "paradigm": "2026-11-06",
   "layerglobal": "2026-11-06",
   "depop": "2026-11-06",
-  "vinted": "2026-11-06"
+  "vinted": "2026-11-06",
+  "aurora": "2026-11-07"
  },
  "facts": {
   "ups": {
