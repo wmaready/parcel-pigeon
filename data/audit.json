@@ -1,5 +1,5 @@
 {
- "run": "2026-11-07T05:06Z",
+ "run": "2026-11-07T05:55Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -360,16 +360,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
-   "fixed": false
   }
  ],
  "open": [
@@ -649,16 +639,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025): https://cep-research.com/news/ups-matches-fedex-dhl-with-59-us-rates-hike-for-2025",
-   "ids": [
-    "h426",
-    "h427"
-   ],
    "fixed": false
   }
  ]
