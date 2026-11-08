@@ -1,5 +1,5 @@
 {
- "cursor": 77,
+ "cursor": 92,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 474,
+   "fails": 475,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-08"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 474,
+   "fails": 475,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-08"
@@ -559,7 +559,7 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
@@ -767,7 +767,7 @@
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
    "hash": "b3b5181ba673",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -1332,7 +1332,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
    "snap": {
     "d": "2026-10-26",
@@ -1343,7 +1343,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "UPS domestic fuel surcharge tables",
    "snap": {
     "d": "2026-10-26",
@@ -1354,7 +1354,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "b3b5181ba673",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-10-26",
@@ -1365,7 +1365,7 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
@@ -1377,7 +1377,7 @@
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
     "d": "2026-10-26",
@@ -1389,7 +1389,7 @@
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -1400,7 +1400,7 @@
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
    "snap": {
     "d": "2026-10-26",
@@ -1515,7 +1515,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf": {
    "hash": "b358c79c4a0f",
    "first": "2026-10-30",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) 10-Q filing",
    "snap": {
     "d": "2026-11-06",
@@ -1529,7 +1529,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
    "hash": "c2c0a5750888",
    "first": "2026-10-30",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) results release",
    "snap": {
     "d": "2026-10-30",
@@ -2155,7 +2155,7 @@
   "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products": {
    "hash": "be937369d8b6",
    "first": "2026-11-03",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "Postal Regulatory Commission notice: New Postal Products (91 FR 69281)",
    "snap": {
     "d": "2026-11-03",
@@ -2189,7 +2189,7 @@
   "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
    "hash": "00356ade2f6e",
    "first": "2026-11-04",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
    "snap": {
     "d": "2026-11-04",
@@ -2207,10 +2207,10 @@
   },
   "https://about.usps.com/resources/publications.htm?cat=notices": {
    "n": "Notices",
-   "fails": 10,
+   "fails": 11,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-07"
+   "last_try": "2026-11-08"
   },
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
@@ -2255,14 +2255,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 36,
+   "fails": 37,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-08"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 36,
+   "fails": 37,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-08"
@@ -2292,7 +2292,7 @@
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
    "first": "2026-11-06",
-   "checked": "2026-11-07",
+   "checked": "2026-11-08",
    "n": "Federal Register Notices",
    "snap": {
     "d": "2026-11-06",
