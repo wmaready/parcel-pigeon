@@ -2843,20 +2843,66 @@
   },
   {
    "id": "tractorsupplyc",
-   "n": "Tractor Supply Co.",
+   "n": "Tractor Supply Company",
    "realm": "retail",
-   "own": null,
+   "own": "public",
+   "tk": "TSCO",
+   "parent": null,
+   "hq": "Brentwood, TN, USA",
+   "yr": "1938",
+   "s": "Rural lifestyle retailer that ships e-commerce orders through parcel carriers (such as FedEx and UPS), gig delivery networks (Roadie, DoorDash, Instacart) and its own final-mile private fleet and hub network, which handles bulky items.",
+   "al": [
+    "TSC",
+    "TSCO",
+    "Tractor Supply Co /DE/",
+    "Tractor Supply Co."
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/916365/000091636521000052/tsco-20201226.htm",
+   "auto": true,
+   "pending": false,
+   "added": "2026-11-04",
+   "story": "a6f2352872a5f",
+   "site": "tractorsupply.com",
+   "geo": [
+    -86.783,
+    36.033
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/916365/000091636521000052/tsco-20201226.htm",
+    "https://stockanalysis.com/stocks/tsco/company/",
+    "https://www.supplychaindive.com/news/tractor-supply-final-mile-delivery-expansion/735784/"
+   ],
+   "enriched": "2026-11-08"
+  },
+  {
+   "id": "wisesystems",
+   "n": "Wise Systems",
+   "realm": "software",
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Rural lifestyle retailer with almost 2,500 stores in 49 states that ships via parcel carriers, gig networks and a private fleet.",
-   "al": [],
-   "src": "https://finance.yahoo.com/small-business/articles/shippers-spread-parcel-volume-carrier-120000904.html",
+   "hq": "Cambridge, MA, USA",
+   "yr": "2014",
+   "s": "Wise Systems sells AI-driven route-planning, dispatch and driver-app software that plans and re-optimizes last-mile delivery routes for parcel and courier fleets and other delivery fleets.",
+   "al": [
+    "Wise Systems, Inc."
+   ],
+   "src": "https://www.wisesystems.com/resources/parcel-and-courier/",
    "auto": true,
-   "pending": true,
-   "added": "2026-11-04",
-   "story": "a6f2352872a5f"
+   "added": "2026-11-08",
+   "from": "discover",
+   "site": "wisesystems.com",
+   "geo": [
+    -71.11,
+    42.374
+   ],
+   "srcs": [
+    "https://www.wisesystems.com/resources/parcel-and-courier/",
+    "https://www.freightwaves.com/news/wise-systems-raises-50m-to-expedite-last-mile-product-development",
+    "https://sap.io/wise-systems-raises-50-million-in-series-c-financing/"
+   ],
+   "enriched": "2026-11-08",
+   "pending": false
   }
  ],
  "edges": [
@@ -4983,6 +5029,69 @@
    "t": "Wonder and DoorDash partner on campus dining in a $425 million deal",
    "url": "https://techcrunch.com/2026/11/05/food-delivery-startup-wonder-files-for-ipo-as-it-explores-its-next-big-bite/",
    "story": "a5e96a35d94b6"
+  },
+  {
+   "a": "roadie",
+   "b": "tractorsupplyc",
+   "k": "partner",
+   "y": null,
+   "t": "same-day gig delivery provider for Tractor Supply",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-final-mile-delivery-expansion/735784/",
+   "story": "a6f2352872a5f"
+  },
+  {
+   "a": "doordash",
+   "b": "tractorsupplyc",
+   "k": "partner",
+   "y": null,
+   "t": "same-day delivery provider for Tractor Supply",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-final-mile-delivery-expansion/735784/",
+   "story": "a6f2352872a5f"
+  },
+  {
+   "a": "fedex",
+   "b": "tractorsupplyc",
+   "k": "partner",
+   "y": null,
+   "t": "parcel carrier used by Tractor Supply",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-final-mile-delivery-expansion/735784/",
+   "story": "a6f2352872a5f"
+  },
+  {
+   "a": "ups",
+   "b": "tractorsupplyc",
+   "k": "partner",
+   "y": null,
+   "t": "parcel carrier used by Tractor Supply",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-final-mile-delivery-expansion/735784/",
+   "story": "a6f2352872a5f"
+  },
+  {
+   "a": "instacartmaple",
+   "b": "tractorsupplyc",
+   "k": "partner",
+   "y": "2026",
+   "t": "same-day delivery partnership",
+   "url": "https://www.supplychaindive.com/news/tractor-supply-taps-instacart-for-same-day-delivery/825664/",
+   "story": "a6f2352872a5f"
+  },
+  {
+   "a": "tigerglobal",
+   "b": "wisesystems",
+   "k": "invested",
+   "y": "2021",
+   "t": "Led $50M Series C",
+   "url": "https://www.freightwaves.com/news/wise-systems-raises-50m-to-expedite-last-mile-product-development",
+   "story": null
+  },
+  {
+   "a": "wisesystems",
+   "b": "doordash",
+   "k": "partner",
+   "y": null,
+   "t": "DoorDash Dial integration for third-party delivery capacity",
+   "url": "https://www.wisesystems.com/resources/auto-parts-distribution/",
+   "story": null
   }
  ],
  "moves": [
@@ -5363,7 +5472,9 @@
   "vinted": "2026-11-06",
   "aurora": "2026-11-07",
   "parcellab": "2026-11-07",
-  "dispatchtrack": "2026-11-07"
+  "dispatchtrack": "2026-11-07",
+  "tractorsupplyc": "2026-11-08",
+  "wisesystems": "2026-11-08"
  },
  "facts": {
   "ups": {
