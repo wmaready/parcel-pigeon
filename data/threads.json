@@ -978,16 +978,27 @@
  "canada-post-home-delivery-ending": {
   "n": "Canada Post ends home delivery",
   "ids": [
-   "ad1631e1cb62c"
+   "ad1631e1cb62c",
+   "a58a7825e26bf"
   ],
   "first": "2026-11-03",
   "co": "Canada Post",
-  "s": "Canada Post is converting nearly four million door-to-door addresses to community mailboxes over the coming years, with the first conversions under way and weekend parcel delivery being introduced.",
+  "s": "Canada Post is converting nearly four million door-to-door addresses to community mailboxes, with first conversions begun in October 2026 and GTA areas scheduled through 2031.",
   "last": "2026-11-03",
   "c": [
+   "Industry",
    "Regional"
   ],
-  "rv": "64f60d7446bb"
+  "rv": "81d2a6d4aff5",
+  "cx": {
+   "sig": "81d2a6d4aff5",
+   "v": 3,
+   "beats": {
+    "ad1631e1cb62c": "GTA's schedule runs to 2031, starting with 18,000 Etobicoke addresses this month; weekend parcel delivery starts this weekend."
+   },
+   "intro": "Canada Post is moving nearly four million addresses to community mailboxes; weekend parcel delivery is coming too.",
+   "now": "Etobicoke's 18,000 addresses are the first GTA conversions, due later this month, and the schedule runs through 2031."
+  }
  },
  "philly-delivery-robot-tax": {
   "n": "Philadelphia delivery robot fee",

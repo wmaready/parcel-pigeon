@@ -2903,6 +2903,23 @@
    ],
    "enriched": "2026-11-08",
    "pending": false
+  },
+  {
+   "id": "tatamotors",
+   "n": "Tata Motors",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Indian automaker supplying electric trucks to Amazon",
+   "al": [],
+   "src": "https://electrek.co/2026/11/06/amazon-set-to-deploy-more-than-3000-tata-electric-delivery-trucks/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-07",
+   "story": "a171c4e676860"
   }
  ],
  "edges": [
@@ -5092,6 +5109,15 @@
    "t": "DoorDash Dial integration for third-party delivery capacity",
    "url": "https://www.wisesystems.com/resources/auto-parts-distribution/",
    "story": null
+  },
+  {
+   "a": "amazon",
+   "b": "tatamotors",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon and Tata Motors deploy 3,000 electric trucks in India",
+   "url": "https://electrek.co/2026/11/06/amazon-set-to-deploy-more-than-3000-tata-electric-delivery-trucks/",
+   "story": "a171c4e676860"
   }
  ],
  "moves": [

@@ -2701,7 +2701,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-07",
+  "tried": "2026-11-08",
   "unconf": true
  },
  {
@@ -3302,7 +3302,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-07",
+  "tried": "2026-11-08",
   "unconf": true
  },
  {
@@ -4644,7 +4644,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-07",
+  "tried": "2026-11-08",
   "unconf": true
  },
  {
@@ -5036,7 +5036,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-07",
+  "tried": "2026-11-08",
   "unconf": true
  },
  {
@@ -8152,6 +8152,60 @@
   "edge": true,
   "exclusive": true,
   "tried": "2026-11-01",
+  "unconf": true
+ },
+ {
+  "id": "a58a7825e26bf",
+  "date": "2026-10-22",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Canada Post details weekend parcel delivery and retail review plans",
+  "sum": "Canada Post outlined its modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. The plan includes weekend parcel delivery, a review of post office locations and the conversion of nearly four million addresses to community mailboxes. The corporation reported a $482 million loss before tax for the first six months of 2026.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "Canada Post is introducing weekend parcel delivery and more parcel pickup and drop-off options. No new rates or effective dates were given in the article.",
+  "why": "Canada Post's parcel revenue rose 20.7% in Q2 as it adds weekend delivery and more drop-off options, which changes service choices for Canadian shippers.",
+  "score": 6,
+  "tie": "In November 2026, Canada Post published a schedule to end home delivery in the Greater Toronto Area through 2031, according to the Toronto Star.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-08T13:14:28Z",
+  "src": "DiscoverHumboldt",
+  "url": "https://www.discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services",
+  "srcs": [
+   {
+    "src": "DiscoverHumboldt",
+    "url": "https://www.discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-22",
+  "thread": "canada-post-home-delivery-ending",
+  "upd": 2,
+  "new": "At its Oct. 22 annual meeting, Canada Post tied the delivery conversions to broader plans for weekend parcel delivery, retail reviews and small business services, and reported a 20.7% rise in Q2 parcel revenue and a $482 million six-month pre-tax loss.",
+  "syn": "Canada Post outlined its modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. The plan covers weekend parcel delivery, more send, receive and return options, reviews of post office locations that start in urban areas, and the conversion of nearly four million door-to-door addresses to community mailboxes. The corporation reported a loss before tax of $482 million for the first six months of 2026, while Q2 parcel revenue rose 20.7% year over year and operating costs fell $119 million. The first conversions began in Sept-Îles, Que., and Winnipeg, Man., the week of Oct. 19.",
+  "aff": [
+   {
+    "who": "Parcel shippers",
+    "what": "Canada Post is introducing weekend parcel delivery and more send, receive and return options; no dates or rates were given."
+   },
+   {
+    "who": "Small businesses",
+    "what": "Canada Post says it is expanding shipping options, shipping discounts, marketing tools and e-commerce solutions."
+   },
+   {
+    "who": "Door-to-door addresses",
+    "what": "Nearly four million addresses are to move to community mailboxes over the coming years; first conversions began the week of Oct. 19."
+   },
+   {
+    "who": "Rural and remote communities",
+    "what": "Canada Post says retail reviews will start largely in urban areas while it keeps its commitment to rural, remote and Indigenous services."
+   }
+  ],
+  "exclusive": true,
   "unconf": true
  },
  {
@@ -11373,35 +11427,5 @@
    }
   ],
   "edge": true
- },
- {
-  "id": "abb1592acae84",
-  "date": "2026-10-13",
-  "c": [
-   "Regional",
-   "Industry"
-  ],
-  "cat": "Regional & alternative",
-  "kind": "News",
-  "title": "Walmart adds eight carriers to approved list for seller-fulfilled orders",
-  "sum": "Walmart Marketplace said Oct. 13 that sellers fulfilling their own orders may now use eight more parcel carriers: UniUni, SpeedX, Exelot, SwiftX, TForce Final Mile, Gofo, OSM Worldwide and DoorDash. Metropolitan Warehouse & Delivery is also available for freight shipments, according to Supply Chain Dive.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "Walmart Marketplace sellers who ship their own orders can now use eight more approved parcel carriers. Walmart's top preferred carriers remain the Postal Service, FedEx and UPS, and shipping with a non-approved carrier may lead to suppression, suspension or termination.",
-  "why": "Sellers on Walmart's marketplace gain more carrier choices, and the retailer says non-approved carriers risk suppression, suspension or termination.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T14:57:50Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/walmart-approves-8-more-parcel-carriers-for-seller-fulfilled-shipping/833259/"
-   }
-  ],
-  "auto": true
  }
 ]
