@@ -5041,6 +5041,60 @@
   "edge": true
  },
  {
+  "id": "ab2e3fb6c1366",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "DoorDash targets $500M in net synergies from Instacart deal",
+  "sum": "DoorDash said it expects 500 million dollars in incremental net synergies by the third year after its roughly 17 billion dollar acquisition of Instacart. The companies announced the $65-per-share deal on October 29, 2026, and it is expected to close between late 2027 and the first half of 2028.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for now. DoorDash and Instacart stay separate companies until the deal closes, expected between late 2027 and the first half of 2028.",
+  "why": "The deal would combine two large grocery delivery platforms, and DoorDash plans to open restaurant and grocery categories across both services.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-08T20:56:18Z",
+  "src": "SuaraGarut.ID",
+  "url": "https://suaragarut.id/en/doordash-instacart-merger-synergies",
+  "srcs": [
+   {
+    "src": "SuaraGarut.ID",
+    "url": "https://suaragarut.id/en/doordash-instacart-merger-synergies"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "thread": "doordash-instacart-deal",
+  "syn": "DoorDash plans to acquire Instacart for roughly 17 billion dollars, or 65 dollars per share, according to the companies' joint announcement on October 29, 2026. DoorDash CFO Ravi Inukonda said the company expects 500 million dollars in incremental net synergies by year three, net of investments. DoorDash named four sources: more order volume, advertising, software sold to grocery partners and fulfillment accuracy. Closing is expected between late 2027 and the first half of 2028 and depends on Instacart stockholder approval, the Hart-Scott-Rodino waiting period and approvals in Canada and Israel.",
+  "aff": [
+   {
+    "who": "Order volume",
+    "what": "DoorDash plans to offer its restaurant listings on Instacart; categories exclusive to one platform could become available on both."
+   },
+   {
+    "who": "CPG advertisers",
+    "what": "Inukonda said advertisers would reach a larger customer base; Instacart's Q3 advertising and other revenue was $331M, up 23%."
+   },
+   {
+    "who": "Grocery retail partners",
+    "what": "DoorDash could cross-sell Instacart's software products to grocers already on its platform."
+   },
+   {
+    "who": "Delivery accuracy",
+    "what": "CEO Tony Xu said DashMart accuracy is near perfect, versus the low 90s for third-party stores."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-11-08",
+  "unconf": true
+ },
+ {
   "id": "abfc3f60e3202",
   "date": "2026-10-29",
   "c": [
@@ -11427,51 +11481,5 @@
   "exclusive": true,
   "unconf": true,
   "tried": "2026-10-22"
- },
- {
-  "id": "aaec755626d1e",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "Burq outlines staged-autonomy model for delivery-routing AI",
-  "sum": "Burq cofounder Salman Habib told FreightWaves the company's delivery-decision software earns authority one segment at a time, such as parcel, LTL or gig. Habib and cofounder Shaban Habib set out the approach Oct. 13 in a paper called \"Earned Autonomy.\"",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. Burq described how retailers can trial its AI in a read-only Shadow mode before it makes live decisions.",
-  "why": "Burq's software picks among fleets, gig, parcel, LTL and drones for retailers' orders, and the paper sets how much authority its AI gets over those choices.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T17:20:11Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/burq-earned-autonomy-delivery-ai"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-13",
-  "syn": "Burq, whose software chooses how each retailer order is delivered, laid out an \"Earned Autonomy\" doctrine on Oct. 13, according to cofounder Salman Habib in an interview with FreightWaves. Under it, AI starts each segment, such as parcel, LTL or gig, with no authority and moves up four rungs (Manual, Shadow, Review, Autonomous) on evidence from live orders. Habib said the retailer sets the promotion bar, for example 90% agreement with dispatchers, and a rule breach demotes a segment automatically. Every decision is logged in a Decision Ledger that customers can export as a CSV file.",
-  "aff": [
-   {
-    "who": "Retailers weighing AI routing",
-    "what": "Can start in Shadow mode, where the AI reads decisions and reports after 30, 60 or 90 days, Habib said."
-   },
-   {
-    "who": "Dispatchers",
-    "what": "Approve each step; the retailer sets the bar, such as 90% agreement, for full autonomy."
-   },
-   {
-    "who": "Burq customers",
-    "what": "Can choose own-data-only use or opt in to anonymized network-wide performance data, Habib said."
-   }
-  ],
-  "edge": true
  }
 ]
