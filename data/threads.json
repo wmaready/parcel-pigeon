@@ -979,17 +979,18 @@
   "n": "Canada Post ends home delivery",
   "ids": [
    "ad1631e1cb62c",
-   "a58a7825e26bf"
+   "a58a7825e26bf",
+   "ae5575e0e6612"
   ],
   "first": "2026-11-03",
   "co": "Canada Post",
-  "s": "Canada Post is converting nearly four million addresses to community mailboxes, with first conversions under way and weekend parcel delivery being introduced.",
+  "s": "Canada Post is converting nearly four million addresses to community mailboxes, with first conversions begun in October 2026 and GTA areas scheduled through 2031.",
   "last": "2026-11-03",
   "c": [
    "Industry",
    "Regional"
   ],
-  "rv": "81d2a6d4aff5",
+  "rv": "283331b36ef0",
   "cx": {
    "sig": "81d2a6d4aff5",
    "v": 3,
@@ -1049,7 +1050,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "TheStreet reported on Nov. 7, 2026 that Prime members can skip delivery fees on Uber Eats orders of $25 or more, replacing Grubhub.",
+  "s": "Amazon and Uber announced the Prime benefit on Nov. 5, 2026, and Amazon is ending Grubhub+ as an ongoing Prime perk.",
   "last": "2026-11-07",
   "c": [
    "Amazon"
@@ -1105,5 +1106,19 @@
    "ups-amazon-glide-down"
   ],
   "rv": "cbf84f50f7ff"
+ },
+ "depop-shipping-shift": {
+  "n": "Depop shipping shift",
+  "ids": [
+   "a87f6e01fb676"
+  ],
+  "first": "2026-11-09",
+  "co": "eBay",
+  "s": "eBay is hiring to build a US pickup and drop-off network and plans a limited seller drop-off test in Q4, while Depop requires its own shipping for new US listings.",
+  "last": "2026-11-09",
+  "c": [
+   "Industry"
+  ],
+  "rv": "e33c1ca05a25"
  }
 }
