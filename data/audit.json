@@ -1,5 +1,5 @@
 {
- "run": "2026-11-09T05:24Z",
+ "run": "2026-11-09T09:56Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -168,15 +168,6 @@
   },
   {
    "sev": "med",
-   "type": "primary-attached",
-   "msg": "Attached carrier-site source https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates to \"UPS sets 5.9% average net rate increase for Dec. 21, 2026\"",
-   "ids": [
-    "af946d108e1e1"
-   ],
-   "fixed": true
-  },
-  {
-   "sev": "med",
    "type": "watch-thin",
    "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 369 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
    "ids": [],
@@ -193,6 +184,13 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -364,13 +362,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }
@@ -470,6 +461,13 @@
    "fixed": false
   },
   {
+   "sev": "high",
+   "type": "watch-blocked",
+   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Demand surcharges https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
+   "ids": [],
+   "fixed": false
+  },
+  {
    "sev": "med",
    "type": "watch-stale",
    "msg": "Carrier page not read in over a day: USPS PRC daily filings (404 Client Error: Not Found for url: https://www.prc.gov/dockets/daily) https://www.prc.gov/dockets/daily",
@@ -637,13 +635,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }

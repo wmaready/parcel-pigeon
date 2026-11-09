@@ -1,5 +1,5 @@
 {
- "cursor": 150,
+ "cursor": 14,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 499,
+   "fails": 500,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-09"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 499,
+   "fails": 500,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-09"
@@ -632,7 +632,7 @@
    "first": "2026-10-21",
    "n": "IPIXF_TermsCond.pdf",
    "hash": "9520c595235a",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
@@ -745,7 +745,7 @@
    "first": "2026-10-21",
    "n": "FICE_TermsCond.pdf",
    "hash": "30cb066f3355",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
@@ -756,7 +756,7 @@
    "first": "2026-10-21",
    "n": "IDP_TermsCond.pdf",
    "hash": "787d356e545f",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
@@ -853,7 +853,7 @@
   "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
    "hash": "2b6d3ac0bc55",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "Amazon Shipping 2026 peak surcharges",
    "snap": {
     "d": "2026-10-26",
@@ -864,23 +864,23 @@
   "https://shipping.amazon.com/shipping-policy": {
    "hash": "59bdb3d710b8",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "Amazon Shipping policies",
-   "pic_try": "2026-11-08",
+   "pic_try": "2026-11-09",
    "last_try": "2026-10-27"
   },
   "https://shipping.amazon.com/shipping-terms-and-conditions": {
    "hash": "fdfe4754d270",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "Amazon Shipping terms and conditions",
-   "pic_try": "2026-11-08",
+   "pic_try": "2026-11-09",
    "last_try": "2026-11-01"
   },
   "https://ship.amazon.com/site-terms": {
    "hash": "c48a7f56ed69",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "Conditions of Use",
    "snap": {
     "d": "2026-10-26",
@@ -890,7 +890,7 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-ecommerce-peak-surcharge_2026-2027.pdf": {
    "hash": "e76d84d35fa9",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "DHL eCommerce peak surcharge, 2026–27",
    "snap": {
     "d": "2026-11-07",
@@ -903,7 +903,7 @@
   "https://www.dhl.com/us-en/home/ecommerce-solutions/business-help-center/surcharge-policies.html": {
    "hash": "e76d84d35fa9",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "DHL eCommerce surcharge policies page",
    "snap": {
     "d": "2026-11-07",
@@ -916,7 +916,7 @@
   "https://www.dhl.com/us-en/home/ecommerce/business-help-center/terms-and-conditions.html": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "DHL eCommerce terms and conditions page",
    "snap": {
     "d": "2026-10-26",
@@ -927,7 +927,7 @@
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/pdf/us-en-dhl-ecommerce-terms-and-conditions-of-carriage-1225.pdf": {
    "hash": "c90c032562c1",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "DHL eCommerce terms of carriage (Jan 2026 version)",
    "snap": {
     "d": "2026-10-26",
@@ -938,16 +938,16 @@
   "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026": {
    "hash": "c79bbd8e6516",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "EU Customs Changes 2026: New €2 Handling Fee & Product Identifier Requirements from 1 November",
-   "pic_try": "2026-11-08"
+   "pic_try": "2026-11-09"
   },
   "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
    "hash": "f866279b9dd1",
    "first": "2026-10-25",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "FedEx Freight rules tariff (moved)",
-   "pic_try": "2026-11-08"
+   "pic_try": "2026-11-09"
   },
   "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
    "hash": "d1b401132060",
@@ -2131,7 +2131,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0807-usps-reports-third-quarter-fiscal-year-2026-results.pdf": {
    "hash": "0dff7ed282a6",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "n": "USPS FY26 Q3 results release",
    "snap": {
     "d": "2026-10-30",
@@ -2166,7 +2166,7 @@
    "first": "2026-11-03",
    "n": "11-2-26_US-Import-Demand-Surcharges.pdf",
    "hash": "d1897b4b71f9",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "snap": {
     "d": "2026-11-03",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
@@ -2253,14 +2253,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 61,
+   "fails": 62,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-09"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 61,
+   "fails": 62,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-09"
