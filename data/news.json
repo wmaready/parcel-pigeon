@@ -2751,7 +2751,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -3352,7 +3352,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -5073,7 +5073,6 @@
   ],
   "auto": true,
   "ann": "2026-10-29",
-  "thread": "doordash-instacart-deal",
   "syn": "DoorDash plans to acquire Instacart for roughly 17 billion dollars, or 65 dollars per share, according to the companies' joint announcement on October 29, 2026. DoorDash CFO Ravi Inukonda said the company expects 500 million dollars in incremental net synergies by year three, net of investments. DoorDash named four sources: more order volume, advertising, software sold to grocery partners and fulfillment accuracy. Closing is expected between late 2027 and the first half of 2028 and depends on Instacart stockholder approval, the Hart-Scott-Rodino waiting period and approvals in Canada and Israel.",
   "aff": [
    {
@@ -5461,6 +5460,68 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a6789c81882e3",
+  "date": "2026-10-28",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "Instacart posts Q3 revenue of $1.095 billion, cancels call amid DoorDash deal",
+  "sum": "Instacart reported third-quarter revenue up 17% to $1.095 billion on November 5, canceled its earnings call and pulled financial guidance, according to Startup Fortune. DoorDash agreed on October 29 to buy Instacart for about $17 billion at $65 a share in cash and stock, with closing expected between the end of 2027 and the first half of 2028.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to carrier rates or service for parcel shippers. DoorDash said it expects to keep Instacart's brand and app after the deal closes.",
+  "why": "The deal would join two large U.S. grocery and local delivery platforms; DoorDash reported 993 million orders in the third quarter.",
+  "score": 7,
+  "tie": "The update follows DoorDash's Oct. 2026 statement that it expects $500 million in net synergies by the third year after the Instacart acquisition.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-09T11:17:18Z",
+  "src": "CNBC",
+  "url": "https://www.cnbc.com/2026/10/28/doordash-instacart-maplebear.html",
+  "srcs": [
+   {
+    "src": "CNBC",
+    "url": "https://www.cnbc.com/2026/10/28/doordash-instacart-maplebear.html"
+   },
+   {
+    "src": "Startup Fortune",
+    "url": "https://startupfortune.com/doordash-agrees-to-buy-instacart-for-17-billion-in-cash-and-stock-deal/"
+   },
+   {
+    "src": "Startup Fortune",
+    "url": "https://startupfortune.com/doordash-agrees-to-buy-instacart-for-roughly-17-billion-in-cash-and-stock/"
+   },
+   {
+    "src": "The New York Times",
+    "url": "https://www.nytimes.com/2026/10/29/technology/doordash-instacart-acquisition-delivery.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "new": "Instacart reported Q3 results on Nov. 5 and withdrew guidance, and the sources add the shareholder election terms and required approvals; nothing changes yet for shippers' rates or service.",
+  "syn": "DoorDash agreed on October 29 to acquire Instacart for about $17 billion, paying $65 a share in cash and stock, a 26% premium to Instacart's October 22 close. Instacart shareholders can choose all cash, 0.3372 DoorDash shares, or $48.75 in cash plus 0.0843 shares, with stock capped at 25% of the deal. On November 5, Instacart reported third-quarter revenue of $1.095 billion, canceled its earnings call and pulled guidance. The deal needs Hart-Scott-Rodino clearance, approval in Canada and Israel, and an Instacart shareholder vote, and MLex expects an in-depth antitrust investigation.",
+  "aff": [
+   {
+    "who": "Instacart shareholders",
+    "what": "Can take $65.00 in cash, 0.3372 DoorDash shares, or $48.75 plus 0.0843 shares; stock is capped at 25%."
+   },
+   {
+    "who": "Grocery delivery market",
+    "what": "Combines the top two third-party U.S. grocery delivery players; FTC and state review expected, per MLex."
+   },
+   {
+    "who": "Instacart users and grocers",
+    "what": "DoorDash expects to retain Instacart's brand, enterprise technology products and app after closing."
+   },
+   {
+    "who": "Parcel shippers",
+    "what": "No change to rates or service."
+   }
+  ]
  },
  {
   "id": "a82e057190718",
@@ -8560,6 +8621,58 @@
   "exclusive": true
  },
  {
+  "id": "abf75579538e6",
+  "date": "2026-10-22",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Canada Post outlines modernization plan, weekend parcel delivery",
+  "sum": "Canada Post outlined its modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. The plan covers weekend parcel delivery, a retail network review focused largely on urban areas, and conversion of nearly four million addresses to community mailboxes. The Crown corporation reported a $482 million loss before tax for the first six months of 2026.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Canada Post is introducing weekend parcel delivery and expanding options to send, receive and return packages. Nearly four million door-to-door addresses are to move to community mailboxes over the coming years.",
+  "why": "Canada Post is adding weekend parcel delivery and small-business shipping support while converting nearly four million addresses to community mailboxes.",
+  "score": 4,
+  "tie": "The report repeats the Oct. 22 strategy details covered in October 2026 and the GTA conversion schedule reported in November 2026.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-09T11:17:53Z",
+  "src": "DiscoverHumboldt",
+  "url": "https://discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services",
+  "srcs": [
+   {
+    "src": "DiscoverHumboldt",
+    "url": "https://discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-22",
+  "new": "A further report adds that Canada Post's second-quarter parcel revenue rose 20.7 per cent and operating costs fell $119 million, and that the first conversions began in Sept-Îles and Winnipeg the week of Oct. 19; weekend parcel delivery is described as being introduced.",
+  "syn": "Canada Post set out a modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. It includes weekend parcel delivery, more parcel pickup and drop-off locations through alternative retail models, and shipping discounts, marketing tools and e-commerce solutions for small businesses. The corporation recorded a $482 million loss before tax in the first six months of 2026, while second-quarter parcel revenue rose 20.7 per cent from a year earlier and operating costs fell $119 million.",
+  "aff": [
+   {
+    "who": "Parcel shippers",
+    "what": "Weekend parcel delivery is being introduced, with more options to send, receive and return packages."
+   },
+   {
+    "who": "Small businesses",
+    "what": "Canada Post is expanding shipping options, competitive pricing and business services, including shipping discounts and e-commerce tools."
+   },
+   {
+    "who": "Door-to-door addresses",
+    "what": "Nearly four million addresses are to convert to community mailboxes; first conversions began in Sept-Îles and Winnipeg the week of Oct. 19."
+   },
+   {
+    "who": "Post office customers",
+    "what": "Location reviews start largely in urban areas, with rural, remote and Indigenous services to be protected."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "ac198fadf6127",
   "date": "2026-10-22",
   "c": [
@@ -11425,103 +11538,5 @@
   "auto": true,
   "new": "Earlier coverage covered GOFO's 4% emergency fuel surcharge; this adds the roughly 20-cent futures jump and Kingston's view that depleted inventories and renewed Strait of Hormuz disruption could push diesel higher, though no new carrier surcharge is announced.",
   "edge": true
- },
- {
-  "id": "a6cc2420ad66e",
-  "date": "2026-10-13",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Peak season",
-  "kind": "Reminder",
-  "title": "USPS recommends Dec. 17 Ground Advantage send-by date for the lower 48",
-  "sum": "USPS announced its recommended 2026 holiday send-by dates on Sept. 22, and WSYR-TV repeated them in October. For delivery before Dec. 25 in the lower 48 states, Ground Advantage and First-Class items are to be sent by Dec. 17, Priority Mail by Dec. 18 and Priority Mail Express by Dec. 19. Ground Advantage to Alaska, Hawaii, Puerto Rico and the territories should go by Dec. 16.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "Shippers using USPS face recommended send-by dates of Dec. 17 (Ground Advantage, First-Class), Dec. 18 (Priority Mail) and Dec. 19 (Priority Mail Express) for delivery before Dec. 25 in the lower 48 states. No change to rates is reported.",
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2026-12-09",
-    "w": "USPS international First-Class and Priority Mail Intl deadline",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-12-16",
-    "w": "USPS Ground Advantage deadline for AK, HI, PR, territories",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-12-17",
-    "w": "USPS Ground Advantage and First-Class deadline, lower 48",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-12-18",
-    "w": "USPS Priority Mail deadline, lower 48",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-12-19",
-    "w": "USPS Priority Mail Express deadline, lower 48",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-10-15T04:46:44Z",
-  "src": "USPS Newsroom",
-  "url": "https://about.usps.com/newsroom/national-releases/2026/0922-usps-recommends-2026-holiday-mailing-shipping-dates.htm",
-  "srcs": [
-   {
-    "src": "USPS Newsroom",
-    "url": "https://about.usps.com/newsroom/national-releases/2026/0922-usps-recommends-2026-holiday-mailing-shipping-dates.htm",
-    "checked": "2026-10-24"
-   },
-   {
-    "src": "AOL.com",
-    "url": "https://www.aol.com/articles/watch-cny-usps-announces-2026-183720000.html"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "tried": "2026-10-22",
-  "ann": "2026-09-22"
- },
- {
-  "id": "a89d7e4beebd9",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Peak season",
-  "kind": "Analysis",
-  "title": "Analysis: 2026 peak shipping season starts earlier and spreads over more weeks",
-  "sum": "In an analysis published 13 October 2026 in Global Trade Magazine, author Tomasz Jeleń says shippers are moving goods earlier and shipments are spread more evenly across sea, air and warehousing. He cites about 60% of sea sailings on schedule, a 29% rise in China–Europe trains in the first quarter, and a nearly 33% year-on-year fall in low-value air shipments after the EU's 1 July customs change.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No carrier price or service change is announced. The piece is the author's view that shippers are shipping earlier, and it says freight rates have risen on some lanes.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "Global Trade Magazine",
-  "url": "https://www.globaltrademag.com/peak-shipping-season-2026-higher-volumes-and-shipments-more-spread-over-time/",
-  "srcs": [
-   {
-    "src": "Global Trade Magazine",
-    "url": "https://www.globaltrademag.com/peak-shipping-season-2026-higher-volumes-and-shipments-more-spread-over-time/"
-   },
-   {
-    "src": "PR Newswire",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSlVNWUk4YXREUXRRTHAwcFB3LTNnbFZXWEhPM0tSenZPdnR2WmdQMi1FUGF1WjBMTkNJQkRHTlpkR2IzMmlFSGpoLXdfU2pnWmZRQXNOSmJfMjRkQzRXakd3ZkZFN211VjI2WXIydWJEUzlBZlhsMzNNZDdzVWpIeWw0OWpnWW40dEZHN1JPTlZaQzRucWYzQk1GYUZFTUsteXpBMFBJWEhFSDBKYUxkOHk0M1JLVjFwUWxsZTV6NGU0SXRJeHRhUGtNOTVIYWFvZXVuNDRBUUJBVms?oc=5"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "updated": "2026-10-13"
  }
 ]
