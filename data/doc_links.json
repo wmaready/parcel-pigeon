@@ -885,7 +885,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://fedex.com/content/dam/fedex/us-united-states/services/DAS_Zip_Code_Changes_2025.pdf": {
   "http_status": 200,
@@ -893,7 +893,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2025.pdf": {
   "http_status": 200,
@@ -901,7 +901,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Zip_Code_Changes_2025.pdf": {
   "http_status": 200,
@@ -909,7 +909,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2025.pdf": {
   "http_status": 200,
@@ -917,7 +917,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://filexfer.ups.com/assets/resources/media/en_US/daily_rates_prior_year.pdf": {
   "http_status": 200,
@@ -925,7 +925,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/CWT%20_Preview.pdf": {
   "http_status": 200,
@@ -933,7 +933,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/Daily_US48_Preview.pdf": {
   "http_status": 200,
@@ -941,7 +941,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://filexfer.ups.com/assets/resources/webcontent/en_US/terms_service_us.pdf": {
   "http_status": 200,
@@ -949,7 +949,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
   "http_status": 200,
@@ -957,7 +957,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf": {
   "http_status": 200,
@@ -965,7 +965,7 @@
   "content_verified": null,
   "state": "opens",
   "why": "opens; content not confirmed",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf": {
   "http_status": 404,
@@ -973,7 +973,7 @@
   "content_verified": false,
   "state": "broken",
   "why": "HTTP 404",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  "https://images.fedex.com/content/dam/fedex/us-united-states/services/DAS_Intra_Hawaii_2023.txt": {
   "http_status": 200,
@@ -981,7 +981,7 @@
   "content_verified": null,
   "state": "blocked",
   "why": "blocked (200)",
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:24Z"
  },
  "https://lso.com/news/lone-star-overnight-announces-annual-general-rate-increase-gri-effective-jan-2-2022": {
   "http_status": 200,
@@ -2166,5 +2166,141 @@
   "state": "opens",
   "why": "opens; content not confirmed",
   "checked_at": "2026-11-08T05:05Z"
+ },
+ "https://events.q4inc.com/attendee/395375543": {
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/395375543",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:23Z"
+ },
+ "https://events.q4inc.com/attendee/438607205": {
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/438607205",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:23Z"
+ },
+ "https://events.q4inc.com/attendee/622711393": {
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/622711393",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:23Z"
+ },
+ "https://events.q4inc.com/attendee/676762251": {
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/676762251",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:23Z"
+ },
+ "https://events.q4inc.com/attendee/858038331": {
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/858038331",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:23Z"
+ },
+ "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
+  "http_status": null,
+  "final_url": "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (no answer)",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-q3-2026-20261105.pdf": {
+  "http_status": null,
+  "final_url": "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-q3-2026-20261105.pdf",
+  "content_verified": null,
+  "state": "blocked",
+  "why": "blocked (no answer)",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-Second-Quarter-Diluted-EPS-of-3.03-and-Adjusted-Diluted-EPS-of-4.05/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-Second-Quarter-Diluted-EPS-of-3.03-and-Adjusted-Diluted-EPS-of-4.05/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Strong-Second-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Strong-Second-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Third-Quarter-Diluted-EPS-of-3-76-and-Adjusted-Diluted-EPS-of-4-51/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Third-Quarter-Diluted-EPS-of-3-76-and-Adjusted-Diluted-EPS-of-4-51/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Fourth-Quarter-and-Full-Year-Results/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Fourth-Quarter-and-Full-Year-Results/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Third-Quarter-Results/default.aspx": {
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Third-Quarter-Results/default.aspx",
+  "content_verified": null,
+  "state": "opens",
+  "why": "opens; content not confirmed",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-11-09T05:24Z"
+ },
+ "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call": {
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "state": "opens",
+  "why": "title names the document",
+  "checked_at": "2026-11-09T05:24Z"
  }
 }

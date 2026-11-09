@@ -692,9 +692,13 @@
   "act": null,
   "dates": [],
   "added": "2026-11-05T17:31:51Z",
-  "src": "RTE.ie",
-  "url": "https://www.rte.ie/news/business/2026/1105/1598145-dhl-expects-to-hit-2026-targets/",
+  "src": "Reuters",
+  "url": "https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
   "srcs": [
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/"
+   },
    {
     "src": "RTE.ie",
     "url": "https://www.rte.ie/news/business/2026/1105/1598145-dhl-expects-to-hit-2026-targets/"
@@ -719,8 +723,8 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-08",
-  "unconf": true
+  "tried": "2026-11-09",
+  "updated": "2026-11-05"
  },
  {
   "id": "a3d768115c0e6",
@@ -770,7 +774,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -818,7 +822,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -1639,7 +1643,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -2070,7 +2074,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-08",
+  "tried": "2026-11-09",
   "unconf": true
  },
  {
@@ -7691,6 +7695,75 @@
   "unconf": true
  },
  {
+  "id": "af946d108e1e1",
+  "date": "2026-10-23",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "UPS sets 5.9% average net rate increase for Dec. 21, 2026",
+  "sum": "UPS says published daily rates for Ground, Air and international services will rise an average net 5.9% from December 21, 2026, according to its shipping rates page as cited by AD HOC NEWS. The Additional Handling minimum billable weight goes from 40 lb to 50 lb, and delivery-area surcharge ZIP codes and zone alignments change. UPS said the effect on individual shippers depends on shipment characteristics and contract terms.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "UPS daily rates rise an average net 5.9% from Dec. 21, 2026, and Additional Handling packages are billed at a 50 lb minimum instead of 40 lb. The effect on each shipper depends on package profile and contract terms.",
+  "why": "The 5.9% average net increase covers UPS Ground, Air and international daily rates, though UPS says the effect varies by shipment and contract.",
+  "score": 5,
+  "tie": "UPS's Important Updates listed the same Dec. 21, 2026 increase in October 2026, together with new fuel surcharge tables effective Nov. 2, 2026.",
+  "act": "2026-12-21",
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "UPS daily rates rise an average net 5.9%",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "UPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2026-12-21",
+    "w": "UPS Additional Handling minimum billable weight 50 lb",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-09T05:21:59Z",
+  "src": "ad-hoc-news.de",
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311",
+  "srcs": [
+   {
+    "src": "UPS",
+    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
+   },
+   {
+    "src": "ad-hoc-news.de",
+    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-23",
+  "new": "The article restates UPS's already announced Dec. 21, 2026 increase with no new figures or dates, so nothing changes for shippers beyond the October announcement.",
+  "syn": "UPS says published daily rates for Ground, Air and international services will rise an average net 5.9% from December 21, 2026, per its shipping rates page as reported by AD HOC NEWS. The Additional Handling minimum billable weight rises from 40 lb to 50 lb, and delivery-area surcharge ZIP codes and the alignment of certain ZIP codes to zones change. UPS said the impact on individual shipping costs depends on shipment characteristics and customer contract terms, so the average will not apply evenly.",
+  "aff": [
+   {
+    "who": "UPS Ground, Air and international shippers",
+    "what": "Published daily rates rise an average net 5.9% from Dec. 21, 2026; impact varies by shipment and contract."
+   },
+   {
+    "who": "Additional Handling packages",
+    "what": "Minimum billable weight rises from 40 lb to 50 lb."
+   },
+   {
+    "who": "Delivery-area surcharge and zone ZIP codes",
+    "what": "The delivery-area surcharge ZIP lists and the zone alignment of certain ZIP codes change."
+   }
+  ],
+  "exclusive": true,
+  "unconf": true
+ },
+ {
   "id": "afb439a13ef25",
   "date": "2026-10-23",
   "c": [
@@ -11451,35 +11524,5 @@
   "auto": true,
   "exclusive": true,
   "updated": "2026-10-13"
- },
- {
-  "id": "a95a909440075",
-  "date": "2026-10-13",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "Opinion",
-  "title": "Earthjustice analyst urges New York action on Amazon delivery",
-  "sum": "In an opinion piece in City Limits, Sasan Saadat, a senior research and policy analyst at Earthjustice, argues that Amazon and other e-commerce delivery vehicles have worsened traffic, air quality and safety in New York City. He cites 3,602 tickets for blocking bus lanes and transit routes and 2,162 for speeding in school zones over four years. He urges the City Council to pass the Delivery Protection Act and the Assembly to pass a state warehouse emissions bill.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The piece is one author's view and advocates for proposed city and state legislation that has not been enacted.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "City Limits",
-  "url": "https://citylimits.org/opinion-a-safe-healthy-new-york-starts-with-protecting-delivery-workers/",
-  "srcs": [
-   {
-    "src": "City Limits",
-    "url": "https://citylimits.org/opinion-a-safe-healthy-new-york-starts-with-protecting-delivery-workers/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
  }
 ]

@@ -2905,21 +2905,72 @@
    "pending": false
   },
   {
-   "id": "tatamotors",
-   "n": "Tata Motors",
+   "id": "fortnaformerly",
+   "n": "FORTNA",
    "realm": "software",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Indian automaker supplying electric trucks to Amazon",
-   "al": [],
-   "src": "https://electrek.co/2026/11/06/amazon-set-to-deploy-more-than-3000-tata-electric-delivery-trucks/",
+   "hq": "Atlanta, GA, USA",
+   "yr": "1946",
+   "s": "FORTNA designs and integrates warehouse and distribution automation, including parcel sortation and conveyors, robotics, and warehouse execution and controls software, for omnichannel retailers and parcel operators.",
+   "al": [
+    "FORTNA Inc.",
+    "Fortna",
+    "Fortna Inc.",
+    "H. E. Fortna Brothers Inc.",
+    "MHS",
+    "MHS Global",
+    "Material Handling Systems"
+   ],
+   "src": "https://www.fortna.com/about/",
    "auto": true,
-   "pending": true,
-   "added": "2026-11-07",
-   "story": "a171c4e676860"
+   "added": "2026-11-09",
+   "from": "discover",
+   "site": "fortna.com",
+   "geo": [
+    -84.388,
+    33.749
+   ],
+   "srcs": [
+    "https://www.fortna.com/about/",
+    "https://www.dcvelocity.com/articles/54401-mhs-fortna-combine-to-form-multinational-e-commerce-and-logistics-automation-company",
+    "https://finance.yahoo.com/markets/stocks/articles/fortna-reaches-agreement-strengthen-financial-110000458.html"
+   ],
+   "enriched": "2026-11-09",
+   "pending": false
+  },
+  {
+   "id": "picklerobotcom",
+   "n": "Pickle Robot Company",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Charlestown, MA, USA",
+   "yr": "2018",
+   "s": "Pickle Robot builds AI-driven mobile robots that unload boxes from trucks, trailers and import containers, and it is expanding toward parcel-type freight for logistics operators and parcel carriers such as UPS.",
+   "al": [
+    "Pickle Robot",
+    "Pickle Robot Co.",
+    "Pickle Robotics"
+   ],
+   "src": "https://www.ttnews.com/articles/ups-robots-unload-trucks",
+   "auto": true,
+   "added": "2026-11-09",
+   "from": "discover",
+   "site": "picklerobot.com",
+   "geo": [
+    -71.06,
+    42.378
+   ],
+   "srcs": [
+    "https://www.ttnews.com/articles/ups-robots-unload-trucks",
+    "https://www.therobotreport.com/pickle-robot-gets-orders-over-30-unloading-systems-plus-50m-funding/",
+    "https://techcrunch.com/2025/12/18/pickle-robot-adds-tesla-veteran-as-first-cfo/"
+   ],
+   "enriched": "2026-11-09",
+   "pending": false
   }
  ],
  "edges": [
@@ -5111,13 +5162,40 @@
    "story": null
   },
   {
-   "a": "amazon",
-   "b": "tatamotors",
+   "a": "fortnaformerly",
+   "b": "berkshiregrey",
    "k": "partner",
-   "y": "2026",
-   "t": "Amazon and Tata Motors deploy 3,000 electric trucks in India",
-   "url": "https://electrek.co/2026/11/06/amazon-set-to-deploy-more-than-3000-tata-electric-delivery-trucks/",
-   "story": "a171c4e676860"
+   "y": null,
+   "t": "Listed FORTNA ecosystem/alliance partner",
+   "url": "https://www.fortna.com/about/alliance-partners/",
+   "story": null
+  },
+  {
+   "a": "fortnaformerly",
+   "b": "blueyonder",
+   "k": "partner",
+   "y": null,
+   "t": "Listed FORTNA ecosystem/alliance partner",
+   "url": "https://www.fortna.com/about/alliance-partners/",
+   "story": null
+  },
+  {
+   "a": "fortnaformerly",
+   "b": "dematic",
+   "k": "partner",
+   "y": null,
+   "t": "Listed FORTNA ecosystem/alliance partner",
+   "url": "https://www.fortna.com/about/alliance-partners/",
+   "story": null
+  },
+  {
+   "a": "ups",
+   "b": "picklerobotcom",
+   "k": "partner",
+   "y": "2025",
+   "t": "UPS reportedly buying about 400 Pickle unloading robots for about $120M; customer since a few years earlier",
+   "url": "https://www.ttnews.com/articles/ups-robots-unload-trucks",
+   "story": null
   }
  ],
  "moves": [
@@ -5500,7 +5578,9 @@
   "parcellab": "2026-11-07",
   "dispatchtrack": "2026-11-07",
   "tractorsupplyc": "2026-11-08",
-  "wisesystems": "2026-11-08"
+  "wisesystems": "2026-11-08",
+  "fortnaformerly": "2026-11-09",
+  "picklerobotcom": "2026-11-09"
  },
  "facts": {
   "ups": {

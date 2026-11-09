@@ -161,7 +161,7 @@
   "http_status": 200,
   "final_url": "https://filexfer.ups.com/assets/resources/webcontent/en_US/Daily_US48_Preview.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "UPS",
@@ -176,7 +176,7 @@
   "http_status": 200,
   "final_url": "https://filexfer.ups.com/assets/resources/media/en_US/daily_rates_prior_year.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "UPS",
@@ -196,7 +196,7 @@
   "http_status": 200,
   "final_url": "https://filexfer.ups.com/assets/resources/webcontent/en_US/CWT%20_Preview.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "UPS",
@@ -287,7 +287,7 @@
   "http_status": 200,
   "final_url": "https://es-us.ups.com/assets/resources/webcontent/en_US/Small_Business_Rate_Guide_2023.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "UPS",
@@ -666,7 +666,7 @@
   "http_status": 200,
   "final_url": "https://filexfer.ups.com/assets/resources/webcontent/en_US/terms_service_us.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "UPS",
@@ -1010,7 +1010,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2025.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -1125,7 +1125,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2025.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -1435,7 +1435,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Zip_Code_Changes_2025.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -1456,7 +1456,7 @@
   "http_status": 200,
   "final_url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Zip_Code_Changes_2025.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-29T05:01Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -1492,7 +1492,7 @@
   "http_status": 200,
   "final_url": "https://images.fedex.com/content/dam/fedex/us-united-states/services/DAS_Intra_Hawaii_2023.txt",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -2753,7 +2753,7 @@
   "http_status": 404,
   "final_url": "https://cdn.gls-us.com/media/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
   "content_verified": false,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "GLS US",
@@ -2773,7 +2773,7 @@
   "http_status": 200,
   "final_url": "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "GLS US",
@@ -2788,7 +2788,7 @@
   "http_status": 200,
   "final_url": "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf",
   "content_verified": null,
-  "checked_at": "2026-10-30T05:00Z"
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "GLS US",
@@ -3779,7 +3779,11 @@
   "u": "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call",
   "d": "UPS Q1 2024, reported 2024-04-23",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "UPS",
@@ -3820,7 +3824,11 @@
   "u": "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call",
   "d": "UPS Q2 2024, reported 2024-07-23",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call",
+  "content_verified": true,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "UPS",
@@ -4194,7 +4202,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx",
   "d": "FedEx Fiscal Q1 2025 (Jun–Aug 2024), reported 2024-09-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4220,7 +4232,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-Second-Quarter-Diluted-EPS-of-3.03-and-Adjusted-Diluted-EPS-of-4.05/default.aspx",
   "d": "FedEx Fiscal Q2 2025 (Sep–Nov 2024), reported 2024-12-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-Second-Quarter-Diluted-EPS-of-3.03-and-Adjusted-Diluted-EPS-of-4.05/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4246,7 +4262,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Third-Quarter-Diluted-EPS-of-3-76-and-Adjusted-Diluted-EPS-of-4-51/default.aspx",
   "d": "FedEx Fiscal Q3 2025 (Dec 2024–Feb 2025), reported 2025-03-20",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Third-Quarter-Diluted-EPS-of-3-76-and-Adjusted-Diluted-EPS-of-4-51/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4277,7 +4297,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
   "d": "FedEx Fiscal Q4 2025 (Mar–May 2025), reported 2025-06-24",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4288,7 +4312,11 @@
   "u": "https://events.q4inc.com/attendee/438607205",
   "d": "FedEx Fiscal Q4 2025 (Mar–May 2025), reported 2025-06-24",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/438607205",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -4319,7 +4347,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
   "d": "FedEx Fiscal Q1 2026 (Jun–Aug 2025), reported 2025-09-18",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4330,7 +4362,11 @@
   "u": "https://events.q4inc.com/attendee/622711393",
   "d": "FedEx Fiscal Q1 2026 (Jun–Aug 2025), reported 2025-09-18",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/622711393",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -4381,7 +4417,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Strong-Second-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
   "d": "FedEx Fiscal Q2 2026 (Sep–Nov 2025), reported 2025-12-18",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Strong-Second-Quarter-Earnings-Growth-Year-Over-Year/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4392,7 +4432,11 @@
   "u": "https://events.q4inc.com/attendee/395375543",
   "d": "FedEx Fiscal Q2 2026 (Sep–Nov 2025), reported 2025-12-18",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/395375543",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -4443,7 +4487,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Third-Quarter-Results/default.aspx",
   "d": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026), reported 2026-03-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Third-Quarter-Results/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4454,7 +4502,11 @@
   "u": "https://events.q4inc.com/attendee/676762251",
   "d": "FedEx Fiscal Q3 2026 (Dec 2025–Feb 2026), reported 2026-03-19",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/676762251",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -4505,7 +4557,11 @@
   "u": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Fourth-Quarter-and-Full-Year-Results/default.aspx",
   "d": "FedEx Fiscal Q4 2026 (Mar–May 2026), reported 2026-06-23",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Reports-Strong-Fourth-Quarter-and-Full-Year-Results/default.aspx",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",
@@ -4516,7 +4572,11 @@
   "u": "https://events.q4inc.com/attendee/858038331",
   "d": "FedEx Fiscal Q4 2026 (Mar–May 2026), reported 2026-06-23",
   "cur": true,
-  "added": "2026-10-30"
+  "added": "2026-10-30",
+  "http_status": 200,
+  "final_url": "https://events.q4inc.com/attendee/858038331",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:23Z"
  },
  {
   "c": "FedEx",
@@ -4846,7 +4906,11 @@
   "f": "data/files/dhl-press-release-pdf-164-5-kb-b647b8.pdf",
   "fh": "505f2134fdd84da3d4096336d3f178fdb3ab7c09",
   "fat": "2026-11-05",
-  "fsz": 168460
+  "fsz": 168460,
+  "http_status": null,
+  "final_url": "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-q3-2026-20261105.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "DHL",
@@ -4868,7 +4932,11 @@
   "f": "data/files/dhl-financial-highlights-q3-2026-pdf-107-7-kb-cededa.pdf",
   "fh": "8fdf872b2a45ea219b943b0780295cb0787fcbe4",
   "fat": "2026-11-05",
-  "fsz": 110319
+  "fsz": 110319,
+  "http_status": null,
+  "final_url": "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf",
+  "content_verified": null,
+  "checked_at": "2026-11-09T05:24Z"
  },
  {
   "c": "FedEx",

@@ -340,7 +340,7 @@
  },
  "current": {
   "OnTrac": {
-   "ground": 27.0
+   "ground": 26.75
   },
   "UPS": {
    "air": 32.75,
@@ -355,19 +355,16 @@
   }
  },
  "eff": {
-  "OnTrac": "2026-11-02",
+  "OnTrac": "2026-11-09",
   "UPS": "2026-11-02",
   "FedEx": "2026-11-02"
  },
- "updated": "2026-11-08T22:53Z",
+ "updated": "2026-11-09T05:19Z",
  "health": {
   "UPS": {
-   "ok": false,
-   "via": "page",
-   "why": "could not render the page: Page.goto: Download is starting",
-   "at": "2026-11-09T02:08Z",
-   "last_ok": "2026-11-08T22:53Z",
-   "latest": null
+   "ok": true,
+   "at": "2026-11-09T05:19Z",
+   "last_ok": "2026-11-09T05:19Z"
   },
   "FedEx": {
    "ok": true,
@@ -378,8 +375,8 @@
   },
   "diesel": {
    "ok": true,
-   "at": "2026-11-08T22:53Z",
-   "last_ok": "2026-11-08T22:53Z",
+   "at": "2026-11-09T05:19Z",
+   "last_ok": "2026-11-09T05:19Z",
    "latest": "2026-11-02"
   }
  },

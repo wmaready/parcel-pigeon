@@ -662,6 +662,26 @@
  {
   "carrier": "UPS",
   "year": 2026,
+  "kind": "das",
+  "announced": "2026-10-23",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS changes delivery-area surcharge ZIP codes and zone alignments",
+  "details": [
+   "Delivery-area surcharge ZIP codes change",
+   "Zone alignments change"
+  ],
+  "id": "ups-2026-das-2026-10-23",
+  "sources": [
+   "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311"
+  ],
+  "story": "af946d108e1e1",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
   "kind": "deal",
   "date": "2026-01",
   "headline": "UPS and USPS finalize renewed Ground Saver final-mile agreement",
@@ -880,6 +900,28 @@
   "conf": "confirmed",
   "note": "UPS announced Oct 31, 2025 per TransImpact; the Supply Chain Dive report followed in early November. A blog claim that Air took effect Jan 6, 2026 is unconfirmed and excluded.",
   "id": "ups-2026-gri-2025-12-22"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "gri",
+  "announced": "2026-10-23",
+  "effective": "2026-12-21",
+  "pct": 5.9,
+  "headline": "UPS sets 5.9% average net rate increase effective Dec. 21, 2026",
+  "details": [
+   "Published daily rates for Ground, Air and international services rise an average net 5.9%",
+   "Effective from December 21, 2026",
+   "Source cited: UPS shipping rates page, as reported by AD HOC NEWS",
+   "Effect on individual shippers depends on shipment characteristics and contract terms"
+  ],
+  "id": "ups-2026-gri-2026-12-21",
+  "sources": [
+   "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311"
+  ],
+  "story": "af946d108e1e1",
+  "conf": "confirmed",
+  "auto": true
  },
  {
   "carrier": "UPS",

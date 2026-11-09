@@ -7,9 +7,75 @@
   "4": "2026-11-01",
   "5": "2026-11-03",
   "6": "2026-11-04",
-  "7": "2026-11-05"
+  "7": "2026-11-05",
+  "8": "2026-11-09"
  },
- "day": "2026-11-05",
+ "day": "2026-11-09",
  "calls": 1,
- "queue": []
+ "queue": [
+  {
+   "n": "Plus One Robotics",
+   "what": "San Antonio company that supplies AI vision software and robotic parcel-induction cells (InductOne) used in FedEx parcel hubs.",
+   "url": "https://www.plusonerobotics.com/inductone",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Ambi Robotics",
+   "what": "Emeryville, CA developer of AI-powered robotic parcel-sorting systems (AmbiSort) deployed across U.S. sort hubs for Pitney Bowes and others, with about $64–67M raised.",
+   "url": "https://ambirobotics.com/media/ambi-robotics-raises-32m/",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Locus Robotics",
+   "what": "Wilmington, MA maker of autonomous mobile robots for picking and fulfillment, used by 3PLs, retailers and UPS and DHL Supply Chain.",
+   "url": "https://www.automatedwarehouseonline.com/locus-robotics-customers-launches-locus-array-fully-autonomous-fulfillment/",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Geek+",
+   "what": "Warehouse robotics supplier whose goods-to-person and sorting robots serve fulfillment centers, including UPS and Walmart.",
+   "url": "https://standardbots.com/guides/warehouse-robotics-companies",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "BEUMER Group",
+   "what": "German material-handling maker whose cross-belt and loop sorters are used in parcel and postal hubs.",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/parcel-sortation-system-market.asp",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Bastian Solutions",
+   "what": "U.S. systems integrator (Toyota Industries group) that designs and installs multi-vendor sortation and automation for North American parcel and e-commerce operations.",
+   "url": "https://www.rksort.com/who-are-the-main-parcel-sortation-equipment-manufacturers-globally/",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Siemens Logistics",
+   "what": "Supplier of singulation, scanning and sortation systems for express and postal parcel hubs, part of Körber since the Körber acquisition.",
+   "url": "https://www.rksort.com/who-are-the-main-parcel-sortation-equipment-manufacturers-globally/",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  },
+  {
+   "n": "Körber Supply Chain Automation",
+   "what": "Warehouse automation and software group that offers robotic parcel and item handling (VarioPick) and integrates automation for fulfillment and parcel operations.",
+   "url": "https://www.koerber.com/en/about-us/news-and-press/koerber-logimat-2026",
+   "realm": "software",
+   "seg": 8,
+   "found": "2026-11-09"
+  }
+ ]
 }
