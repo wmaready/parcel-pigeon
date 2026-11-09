@@ -1,5 +1,51 @@
 [
  {
+  "id": "adc002570b1d6",
+  "date": "2026-11-09",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx adds weekly 777F flights between China and U.S. ahead of peak",
+  "sum": "FedEx said on Nov. 9, 2026 that it has expanded China-U.S. connectivity, with four of five new weekly Boeing 777F flights linking Shanghai and Guangzhou to the United States. It also introduced a five-times-weekly connection from China to Dallas–Fort Worth via Anchorage.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "FedEx has added weekly Boeing 777F capacity between China and the U.S., and a new five-times-weekly China connection to Dallas–Fort Worth. FedEx did not announce any rate or fee changes.",
+  "why": "The added trans-Pacific lift gives China-U.S. air cargo shippers more weekly FedEx capacity, including a new gateway to Dallas–Fort Worth.",
+  "score": 6,
+  "tie": "The company's release says the expansion follows a five-times-weekly Guangzhou-Sydney flight launched earlier in 2026 and 2025 upgrades to China's links with Southeast Asia and Paris.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-09T20:49:53Z",
+  "src": "FedEx newsroom",
+  "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
+  "srcs": [
+   {
+    "src": "FedEx newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-09",
+  "syn": "FedEx announced on Nov. 9, 2026 that it expanded China-U.S. connectivity with four of five new weekly Boeing 777F flights. Three weekly flights link Shanghai to Anchorage and Memphis via Osaka, Japan, and a fourth links Guangzhou directly to Anchorage and Memphis. FedEx also introduced a five-times-weekly connection for China customers to Dallas–Fort Worth via Anchorage. FedEx said the added capacity is meant to serve semiconductor, AI infrastructure, advanced manufacturing and premium e-commerce shippers ahead of year-end demand.",
+  "aff": [
+   {
+    "who": "Shanghai shippers",
+    "what": "Three new weekly 777F flights to Anchorage and Memphis via Osaka, Japan, according to FedEx."
+   },
+   {
+    "who": "Guangzhou shippers",
+    "what": "A new weekly direct 777F flight to Anchorage and Memphis, according to FedEx."
+   },
+   {
+    "who": "China customers shipping to Dallas–Fort Worth",
+    "what": "A new five-times-weekly connection via Anchorage, according to FedEx."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a55bc15c5ae50",
   "date": "2026-11-08",
   "c": [
@@ -11510,33 +11556,5 @@
   "auto": true,
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a5d45f26f2219",
-  "date": "2026-10-13",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Fuel",
-  "kind": "Analysis",
-  "title": "Diesel futures jump 20 cents in two hours on CME, FreightWaves reports",
-  "sum": "Ultra-low sulfur diesel futures on the CME rose roughly 20 cents in about two hours Tuesday morning after briefly trading negative the day before, according to FreightWaves. FreightWaves energy markets analyst John Kingston said inventories have been drawn down and that prices could push back above $6 per gallon.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No carrier has changed rates in this item. Kingston said the diesel move is a concern for anyone exposed to diesel costs, and he warned of possible further price increases.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/diesel-prices-surge-20-cents-why-the-fuel-market-is-in-crisis"
-   }
-  ],
-  "auto": true,
-  "new": "Earlier coverage covered GOFO's 4% emergency fuel surcharge; this adds the roughly 20-cent futures jump and Kingston's view that depleted inventories and renewed Strait of Hormuz disruption could push diesel higher, though no new carrier surcharge is announced.",
-  "edge": true
  }
 ]
