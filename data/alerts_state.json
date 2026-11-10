@@ -169,7 +169,12 @@
   "a6954a545e2a4",
   "a3a4fa02bef84",
   "a7a2b3653e806",
-  "ac76faae14382"
+  "ac76faae14382",
+  "a2b7282f9b8a5",
+  "a3e9a11040d78",
+  "aa5b99c3750c6",
+  "ad4e67498312c",
+  "afdc261933474"
  ],
  "clock": [
   "e06:7",
@@ -177,7 +182,7 @@
  ],
  "fuel": {
   "OnTrac": "2026-11-09",
-  "UPS": "2026-11-02",
+  "UPS": "2026-11-09",
   "FedEx": "2026-11-02"
  },
  "players": [
@@ -524,7 +529,22 @@
   "story:peak 2026 claim windows start at ship date for fedex usps at delivery for ups",
   "story:ebay hires to build us pickup and drop off network for ebay and depop",
   "story:mcdonald s names uber preferred app delivery partner in 14 markets",
-  "story:gofo white paper says us last mile market is realigning"
+  "story:gofo white paper says us last mile market is realigning",
+  "fuel:UPS:2026-11-09",
+  "more:player:ambirobotics,player:locusrobotics,player:plusonerobotic,story:amazon alternative carriers gain parcel volume in first half of 2026,story:amazon wins uk caa approval to expand darlington drone delivery to 8 000,story:dhl ecommerce report finds 66 of us shoppers abandon carts over delivery options,story:fedex opens alzenau road hub in germany adding 85 jobs,story:nampa residents report amazon prime air drone noise since oct 30 launch,story:nampa residents say amazon delivery drones disrupt daily lives,story:nrf september imports hit 2 37m teu busiest month of 2026,story:nyc councilman wong pulls co sponsorship of delivery protection act,story:usps reports 6 5 billion net loss for fiscal 2026 down from 9 0 billion,story:wing walmart add memphis drone delivery on track to serve 40m by 2027",
+  "story:nampa residents say amazon delivery drones disrupt daily lives",
+  "story:fedex opens alzenau road hub in germany adding 85 jobs",
+  "story:nampa residents report amazon prime air drone noise since oct 30 launch",
+  "story:amazon wins uk caa approval to expand darlington drone delivery to 8 000",
+  "story:amazon alternative carriers gain parcel volume in first half of 2026",
+  "story:wing walmart add memphis drone delivery on track to serve 40m by 2027",
+  "story:dhl ecommerce report finds 66 of us shoppers abandon carts over delivery options",
+  "story:usps reports 6 5 billion net loss for fiscal 2026 down from 9 0 billion",
+  "story:nrf september imports hit 2 37m teu busiest month of 2026",
+  "story:nyc councilman wong pulls co sponsorship of delivery protection act",
+  "player:locusrobotics",
+  "player:ambirobotics",
+  "player:plusonerobotic"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -693,163 +713,93 @@
   "nampa residents report amazon prime air drone noise since oc",
   "nyc councilman wong pulls co sponsorship of delivery protect",
   "fedex opens alzenau road hub in germany adding 85 jobs",
-  "nrf september imports hit 2 37m teu busiest month of 2026"
+  "nrf september imports hit 2 37m teu busiest month of 2026",
+  "usps reports 6 5 billion net loss for fiscal 2026 down from ",
+  "dhl ecommerce report finds 66 of us shoppers abandon carts o",
+  "wing walmart add memphis drone delivery on track to serve 40",
+  "amazon alternative carriers gain parcel volume in first half",
+  "nampa residents say amazon delivery drones disrupt daily liv"
  ],
  "harvested": [
-  "a999409ce7860",
-  "ae0ee67bc4b67",
-  "a3d768115c0e6",
-  "a15404304f17b",
-  "aa51e82b50d12",
-  "w86cfd39b48f5",
-  "a0adb56a55334",
-  "wb8827e8c126e",
-  "w599d9089a65d",
-  "a72efb5e01b99",
-  "wf7fe771e76cd",
-  "a831c709e5809",
-  "a23a4d6fd271d",
-  "af8ee5ed067c6",
-  "aead0203aab18",
-  "aaf63e9db25a0",
-  "a2f60a03dddd7",
-  "a567030ffc76c",
-  "we85aee3857d1",
-  "a351cab9045c7",
-  "a6c2418bed0a7",
-  "w68c1687d28a1",
-  "wbfc38914b368",
-  "wa9c423a83880",
-  "a9b77b62dcd89",
-  "a069325035b44",
-  "a4f6ca9e3591e",
-  "a6e82ba740e99",
-  "wf5014bc150e9",
-  "ac89be3e5da8f",
-  "w0b8720b6a0e7",
-  "a773d361dac4e",
-  "w84705482dd2f",
-  "a312b45efa358",
-  "wacb825361479",
-  "adbdc9a506e95",
-  "a58373f1b7bc3",
-  "a3bd243da7c6c",
-  "a2f683da86bf8",
+  "a6cc2420ad66e",
   "a663794cc9c55",
-  "adc002570b1d6",
-  "a82e057190718",
-  "ac78f72e7f458",
-  "a5d45f26f2219",
-  "a89f005fb1862",
   "af589de326934",
+  "wdf959a97bcb6",
+  "a260cc6a2e05e",
+  "wacb825361479",
+  "a72efb5e01b99",
+  "a84ca5863e582",
+  "aba40a11b6946",
+  "a57a06c26359c",
+  "a58373f1b7bc3",
+  "aead0203aab18",
+  "a9b77b62dcd89",
+  "ac89be3e5da8f",
+  "a5d45f26f2219",
   "afd8784e2b179",
-  "a40c99078f690",
-  "rv5-ups-sbr-fuel",
+  "w68c1687d28a1",
+  "w86cfd39b48f5",
+  "a3d768115c0e6",
+  "aa51e82b50d12",
+  "a999409ce7860",
+  "a15404304f17b",
+  "a351cab9045c7",
+  "a74df5c94691e",
+  "wf5014bc150e9",
+  "a2b7282f9b8a5",
+  "w84705482dd2f",
+  "adc002570b1d6",
   "a947eb28a3ca3",
   "a2b81ad721cb8",
-  "ad851d9e2eb69",
-  "a84ca5863e582",
-  "wf7bb9227b2de",
   "a3a45d7f6db20",
-  "wdf959a97bcb6",
-  "acfef8560e2ac",
-  "w150132868eae",
+  "ad7d0b7072901",
+  "wf7fe771e76cd",
+  "aee6669d325da",
+  "a3bd243da7c6c",
   "a6ba18049bc99",
   "aa7358e9cf2dd",
-  "a2def09bc43bb",
-  "ae12ca75552ef",
-  "a260cc6a2e05e",
-  "ae2ec177094e3",
-  "w9c03b8f99b5f",
-  "w500a5bdc762c",
-  "a6cc2420ad66e",
-  "a74df5c94691e",
-  "a89d7e4beebd9",
-  "ad7d0b7072901",
-  "aba40a11b6946",
   "w8465aa718dc6",
-  "a57a06c26359c",
-  "aee6669d325da",
-  "w91588ddb11ed"
+  "w9c03b8f99b5f",
+  "wa9c423a83880",
+  "a4f6ca9e3591e",
+  "a069325035b44",
+  "w0b8720b6a0e7",
+  "a312b45efa358",
+  "a831c709e5809",
+  "a0adb56a55334",
+  "w599d9089a65d",
+  "a82e057190718",
+  "rv5-ups-sbr-fuel",
+  "we85aee3857d1",
+  "ae0ee67bc4b67",
+  "a2f683da86bf8",
+  "a567030ffc76c",
+  "ae12ca75552ef",
+  "w91588ddb11ed",
+  "wb8827e8c126e",
+  "w150132868eae",
+  "a773d361dac4e",
+  "wbfc38914b368",
+  "a89f005fb1862",
+  "acfef8560e2ac",
+  "adbdc9a506e95",
+  "w500a5bdc762c",
+  "ae2ec177094e3",
+  "a89d7e4beebd9",
+  "a2def09bc43bb",
+  "a6e82ba740e99",
+  "a23a4d6fd271d",
+  "a40c99078f690",
+  "wf7bb9227b2de",
+  "ac78f72e7f458",
+  "ad851d9e2eb69",
+  "a2f60a03dddd7",
+  "af8ee5ed067c6",
+  "aaf63e9db25a0",
+  "a6c2418bed0a7"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a81cb824398de",
-   "title": "FBI, USPS inspectors probe suspicious mailings to election officials",
-   "date": "2026-10-15",
-   "c": [
-    "USPS"
-   ],
-   "url": "https://www.aol.com/articles/us-postal-outlines-plans-handle-152104000.html",
-   "srcs": [
-    {
-     "src": "AOL.com",
-     "url": "https://www.aol.com/articles/us-postal-outlines-plans-handle-152104000.html"
-    }
-   ]
-  },
-  {
-   "id": "a709757714d80",
-   "title": "Two Cook County suits accuse Coco, Serve robots of biometric scans",
-   "date": "2026-10-16",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://hoodline.com/2026/10/two-cook-county-lawsuits-accuse-coco-serve-robotics-of-scanning-faces-on-sidewalks/",
-   "srcs": [
-    {
-     "src": "Hoodline",
-     "url": "https://hoodline.com/2026/10/two-cook-county-lawsuits-accuse-coco-serve-robotics-of-scanning-faces-on-sidewalks/"
-    }
-   ]
-  },
-  {
-   "id": "abf7a28de14a5",
-   "title": "Bronx Amazon DSP operators oppose NYC Delivery Protection Act",
-   "date": "2026-10-16",
-   "c": [
-    "Amazon",
-    "FedEx"
-   ],
-   "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
-   "srcs": [
-    {
-     "src": "Bronx Times",
-     "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/"
-    }
-   ]
-  },
-  {
-   "id": "af85980b179b5",
-   "title": "UPS launches Secure Commerce suite for shipping fraud and loss protection",
-   "date": "2026-10-16",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://theatlanta100.com/business/business-news/2026/10/16/ups-strengthens-shipping-security-with-new-commerce-platform/17863",
-   "srcs": [
-    {
-     "src": "The Atlanta 100",
-     "url": "https://theatlanta100.com/business/business-news/2026/10/16/ups-strengthens-shipping-security-with-new-commerce-platform/17863"
-    }
-   ]
-  },
-  {
-   "id": "a666569771590",
-   "title": "Oregon lawmakers press USPS on mail delivery problems on state's north coast",
-   "date": "2026-10-16",
-   "c": [
-    "USPS"
-   ],
-   "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/",
-   "srcs": [
-    {
-     "src": "Merkley (.gov)",
-     "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/"
-    }
-   ]
-  },
   {
    "id": "a33c3c3ba8e14",
    "title": "Kirkwood council kills Walmart-Wing drone delivery proposal",
@@ -3176,6 +3126,89 @@
      "url": "https://www.dcvelocity.com/transportation/maritime-ocean/ports/nrf-import-cargo-still-strong-at-end-of-tariff-extended-peak-season"
     }
    ]
+  },
+  {
+   "id": "a2b7282f9b8a5",
+   "title": "USPS reports $6.5 billion net loss for fiscal 2026, down from $9.0 billion",
+   "date": "2026-11-10",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.globenewswire.com/news-release/2026/11/10/3399990/0/en/u-s-postal-service-reports-fiscal-year-2026-results.html",
+   "srcs": [
+    {
+     "src": "GlobeNewswire",
+     "url": "https://www.globenewswire.com/news-release/2026/11/10/3399990/0/en/u-s-postal-service-reports-fiscal-year-2026-results.html"
+    },
+    {
+     "src": "markets.businessinsider.com",
+     "url": "https://markets.businessinsider.com/news/stocks/u-s-postal-service-reports-fiscal-year-2026-results-1036743484"
+    },
+    {
+     "src": "FEDweek",
+     "url": "https://www.fedweek.com/fedweek/usps-reports-fewer-hours-and-higher-labor-costs-retirement-squeeze-in-fy2026/"
+    }
+   ]
+  },
+  {
+   "id": "a3e9a11040d78",
+   "title": "DHL eCommerce report finds 66% of US shoppers abandon carts over delivery options",
+   "date": "2026-11-10",
+   "c": [
+    "DHL"
+   ],
+   "url": "https://www.ajot.com/news/dhl-study-identifies-10-trends-shaping-u.s-e-commerce-this-holiday-season",
+   "srcs": [
+    {
+     "src": "American Journal of Transportation",
+     "url": "https://www.ajot.com/news/dhl-study-identifies-10-trends-shaping-u.s-e-commerce-this-holiday-season"
+    }
+   ]
+  },
+  {
+   "id": "aa5b99c3750c6",
+   "title": "Wing, Walmart add Memphis drone delivery, on track to serve 40M by 2027",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.forbes.com/sites/johnkoetsier/2026/11/10/wing--walmart-bring-drone-delivery-to-memphis-on-track-to-serve-40-million-by-2027/",
+   "srcs": [
+    {
+     "src": "Forbes",
+     "url": "https://www.forbes.com/sites/johnkoetsier/2026/11/10/wing--walmart-bring-drone-delivery-to-memphis-on-track-to-serve-40-million-by-2027/"
+    }
+   ]
+  },
+  {
+   "id": "ad4e67498312c",
+   "title": "Amazon, alternative carriers gain parcel volume in first half of 2026",
+   "date": "2026-11-10",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.supplychaindive.com/news/amazon-alternative-carriers-gained-parcel-volume-in-2026s-first-half/873932/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/amazon-alternative-carriers-gained-parcel-volume-in-2026s-first-half/873932/"
+    }
+   ]
+  },
+  {
+   "id": "afdc261933474",
+   "title": "Nampa residents say Amazon delivery drones disrupt daily lives",
+   "date": "2026-11-10",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.kivitv.com/videos/nampa/nampa-neighbors-say-amazon-delivery-drones-are-disrupting-their-daily-lives",
+   "srcs": [
+    {
+     "src": "Idaho News 6",
+     "url": "https://www.kivitv.com/videos/nampa/nampa-neighbors-say-amazon-delivery-drones-are-disrupting-their-daily-lives"
+    }
+   ]
   }
  ],
  "copy": {
@@ -3726,127 +3759,33 @@
   "ac76faae14382": {
    "t": "September imports hit 2.37M TEU",
    "m": "Busiest month of 2026 for container imports; no direct parcel impact expected."
+  },
+  "a2b7282f9b8a5": {
+   "t": "USPS loss narrows to $6.5B in FY2026",
+   "m": "No new rates or fees are set; USPS says price increases will continue to be part of its strategy."
+  },
+  "a3e9a11040d78": {
+   "t": "DHL: 66% of shoppers abandon carts",
+   "m": "Survey report on shopper attitudes toward delivery options; no change to rates or service."
+  },
+  "aa5b99c3750c6": {
+   "t": "Walmart drones coming to Memphis",
+   "m": "Wing and Walmart drone delivery is coming to Memphis; no start date, fees or area given."
+  },
+  "ad4e67498312c": {
+   "t": "Amazon gains share of parcel volume",
+   "m": "Carrier shift in parcel volume in the first half of 2026; no change to rates or service."
+  },
+  "afdc261933474": {
+   "t": "Amazon drones draw Nampa complaints",
+   "m": "Residents say Amazon delivery drones disrupt daily life; no change to shipper rates or service."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:fedex opens alzenau road hub in germany adding 85 jobs",
-   "id": "a7a2b3653e806",
-   "t": "FedEx opens Alzenau hub in Germany",
-   "m": "The hub adds 85 jobs and German handling capacity for the peak season.",
-   "big": false,
-   "at": "2026-11-10T07:48:50.709218-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 2,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a7a2b3653e806",
-   "co": "FedEx"
-  },
-  {
-   "kind": "story",
-   "key": "story:nampa residents report amazon prime air drone noise since oct 30 launch",
-   "id": "a6954a545e2a4",
-   "t": "Nampa residents report drone noise",
-   "m": "Neighbors in Nampa complain of Prime Air drone noise since the Oct. 30 launch.",
-   "big": false,
-   "at": "2026-11-10T07:48:50.708847-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a6954a545e2a4",
-   "co": "Amazon"
-  },
-  {
-   "kind": "story",
-   "key": "story:amazon wins uk caa approval to expand darlington drone delivery to 8 000",
-   "id": "a3c674e8d68e4",
-   "t": "Amazon drones expand in Darlington",
-   "m": "Prime members within 7.5 miles get free drone delivery for items up to 5 lbs.",
-   "big": false,
-   "at": "2026-11-10T07:48:50.708796-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a3c674e8d68e4",
-   "co": "Amazon"
-  },
-  {
-   "kind": "story",
-   "key": "story:nrf september imports hit 2 37m teu busiest month of 2026",
-   "id": "ac76faae14382",
-   "t": "September imports hit 2.37M TEU",
-   "m": "Busiest month of 2026 for container imports; no direct parcel impact expected.",
-   "big": false,
-   "at": "2026-11-10T07:48:50.709234-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=ac76faae14382",
-   "co": null
-  },
-  {
-   "kind": "story",
-   "key": "story:nyc councilman wong pulls co sponsorship of delivery protection act",
-   "id": "a3a4fa02bef84",
-   "t": "Wong pulls support for delivery bill",
-   "m": "Unconfirmed: Update 6 · NYC Delivery Protection Act fight: If passed, Amazon-commissioned research estimates $5.20 more per package for New Yorkers.",
-   "big": false,
-   "at": "2026-11-10T07:48:50.709198-05:00",
-   "lvl": 1,
-   "unconf": true,
-   "topic": "news",
-   "notable": false,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a3a4fa02bef84",
-   "co": "Amazon"
-  },
-  {
-   "kind": "player",
-   "key": "player:locusrobotics",
-   "at": "2026-11-10T07:48:50.710584-05:00",
-   "t": "New on the map: Locus Robotics",
-   "m": "Locus Robotics makes autonomous mobile robots and software that help warehouse workers pick and fulfill e-commerce and retail orders, with customers including 3PLs, retailers and healthcare distributors.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=locusrobotics"
-  },
-  {
-   "kind": "player",
-   "key": "player:ambirobotics",
-   "at": "2026-11-10T07:48:50.710579-05:00",
-   "t": "New on the map: Ambi Robotics",
-   "m": "Ambi Robotics builds AI-powered robotic parcel sortation systems (AmbiSort A-Series and B-Series, run on its AmbiOS software) that are deployed in U.S. e-commerce and logistics hubs, including those of Pitney Bowes.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=ambirobotics"
-  },
-  {
-   "kind": "player",
-   "key": "player:plusonerobotic",
-   "at": "2026-11-10T07:48:50.710568-05:00",
-   "t": "New on the map: Plus One Robotics",
-   "m": "Plus One Robotics provides AI vision software (PickOne), remote human supervision (Yonder) and robotic parcel-induction cells (InductOne) that carriers and logistics operators use to singulate and induct parcels onto sorters.",
-   "lvl": 0,
-   "topic": "deals",
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#c=plusonerobotic"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-10",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-11-10T07:36:50.151038-05:00"
+ "last_push": "2026-11-10T13:03:22.699530-05:00"
 }

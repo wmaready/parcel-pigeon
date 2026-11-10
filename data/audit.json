@@ -1,5 +1,5 @@
 {
- "run": "2026-11-10T12:49Z",
+ "run": "2026-11-10T18:03Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -348,27 +348,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or Project Aurelian, the 39,400-ZIP-code / 99.9%-of-demand contingency plan by 2029. Nothing about Amazon's ZIP coverage or a USPS deal appears in the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery or any recipient-PIN requirement, nor the $10.70 UPS price. They mention a paid FedEx Authenticated Delivery upgrade in the U.S. and Canada, but give no price, no QR-code requirement, and no 'select express services' limit. The $20 FedEx figure is unsupported.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash, its $7.99 courier returns, the Dasher pickup-without-label process, participating brands (Macy's, Anthropologie, VF), or DoorDash-designed drones. None of this is supported.",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -624,27 +603,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or Project Aurelian, the 39,400-ZIP-code / 99.9%-of-demand contingency plan by 2029. Nothing about Amazon's ZIP coverage or a USPS deal appears in the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery or any recipient-PIN requirement, nor the $10.70 UPS price. They mention a paid FedEx Authenticated Delivery upgrade in the U.S. and Canada, but give no price, no QR-code requirement, and no 'select express services' limit. The $20 FedEx figure is unsupported.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash, its $7.99 courier returns, the Dasher pickup-without-label process, participating brands (Macy's, Anthropologie, VF), or DoorDash-designed drones. None of this is supported.",
    "ids": [],
    "fixed": false
   }

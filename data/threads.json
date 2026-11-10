@@ -150,13 +150,14 @@
   "co": "CBP"
  },
  "tariff-refunds": {
-  "n": "IEEPA tariff refunds and carriers",
-  "s": "UPS has sued CBP at the Court of International Trade for IEEPA refunds and interest on finally liquidated entries, having received some $500m so far.",
+  "n": "Carriers and IEEPA tariff refunds",
+  "s": "UPS has taken its claim for IEEPA refunds and interest to the Court of International Trade, while CBP's CAPE process is in its third phase.",
   "ids": [
    "g31",
    "a771628a2eca4",
    "a0b5708b9f70d",
-   "ab649604d2f05"
+   "ab649604d2f05",
+   "a9e7e5653557c"
   ],
   "first": "2026-08-13",
   "last": "2026-11-06",
@@ -168,14 +169,17 @@
    "UPS"
   ],
   "cx": {
-   "sig": "ccd095dd2f66",
+   "sig": "873651560c1b",
    "v": 3,
    "beats": {
-    "a0b5708b9f70d": "Reportedly, 13 class actions against FedEx are now combined in Memphis, though refunds still flow through FedEx's own program, not the suit.",
-    "ab649604d2f05": "UPS has received about $500m from CBP and passed on roughly $230m, so it sued to force refunds and interest on finally liquidated entries."
-   }
+    "g31": "After the February ruling, FedEx began $800M in refunds, UPS applied for $500M, and DHL filed claims as importer of record.",
+    "a0b5708b9f70d": "Reportedly, 13 FedEx tariff suits are combined in Tennessee; no class is certified, and refunds run through FedEx's own program.",
+    "a9e7e5653557c": "UPS sued CBP at the trade court for refunds plus interest; it had passed on about $230M of ~$500M received by early October."
+   },
+   "intro": "Carriers are passing along IEEPA tariff refunds, and shippers want to know when their share arrives.",
+   "now": "UPS's suit against CBP is now at the trade court; in the FedEx case, a response is reportedly proposed for Dec. 4."
   },
-  "rv": "5667619a4d89",
+  "rv": "2c749d2ced41",
   "co": "FedEx",
   "apart": [
    "fedex-freight-spin",
@@ -391,28 +395,29 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "USPS is asking Congress to raise its borrowing limit to $34.5 billion while lawmakers press for details on spending and service.",
+  "s": "USPS reported a $6.5 billion fiscal 2026 net loss and renewed its calls for legislative reforms, including a higher borrowing limit.",
   "ids": [
    "h429",
    "r14",
-   "a72dc67ee31dc"
+   "a72dc67ee31dc",
+   "a2b7282f9b8a5"
   ],
   "first": "2024-11-14",
-  "last": "2026-11-04",
+  "last": "2026-11-10",
   "c": [
    "USPS"
   ],
-  "rv": "f4f1414f5a06",
+  "rv": "75531c5f6493",
   "cx": {
-   "sig": "f4f1414f5a06",
+   "sig": "75531c5f6493",
    "v": 3,
    "beats": {
-    "h429": "In fiscal 2024 USPS lost $9.5 billion even as packages rose to 7.25 billion pieces and transportation expense fell $1.3 billion.",
-    "r14": "By fiscal 2025, package volume fell 6.0% to about 6.5 billion pieces and revenue was flat, while the net loss was about $9 billion.",
-    "a72dc67ee31dc": "On Nov. 4, 2026, 13 caucus members asked how USPS would use $19.5 billion more, lifting its limit from $15 billion to $34.5 billion."
+    "h429": "Fiscal 2024 ended with a $9.5 billion loss, even as package pieces rose to 7.25 billion from 7.06 billion.",
+    "r14": "The PRC found fiscal 2025 package volume fell 6.0% to about 6.5 billion pieces, while package revenue rose just 0.1%.",
+    "a72dc67ee31dc": "A bipartisan letter from postal caucus members asks how USPS would use a $19.5B borrowing increase, from $15B to $34.5B.",
+    "a2b7282f9b8a5": "Fiscal 2026 loss narrowed to $6.5 billion from $9.0 billion; package revenue rose 5.1% even as volume fell 5.3%."
    },
-   "intro": "USPS is losing billions while package volume slips, and it wants a much higher borrowing limit. Shippers rely on its network.",
-   "now": "Lawmakers want briefings during the Nov. 9-20 House session and replies by Nov. 13; no rate or service change has resulted yet."
+   "intro": "USPS losses, falling package volume and a borrowing request, with USPS saying price increases will continue."
   },
   "apart": [
    "usps-big-shipper-deals"
@@ -522,7 +527,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is expanding Prime Air toward almost 500 towns while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
+  "s": "Amazon, Walmart with Zipline, and Wing are expanding drone delivery while the FAA's Part 108 rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
@@ -533,7 +538,6 @@
    "a8f4d2b454015",
    "af4470d3440cc",
    "acad7456be9cb",
-   "ab483d15094ae",
    "ae04c4bdd5e4e",
    "a704b11d94f38"
   ],
@@ -545,14 +549,17 @@
    "Regional"
   ],
   "cx": {
-   "sig": "f074c69f01a1",
+   "sig": "31d65cb191a1",
    "v": 3,
    "beats": {
-    "g26": "The FAA sent Part 108 to White House review July 10 after missing a Feb. 1 deadline; until it's final, BVLOS needs waivers or Part 135."
+    "g27": "Amazon plans to go from 11 U.S. locations to almost 500 towns by end of 2026, with $2.99 fees for Prime ($4.99 for others).",
+    "g26": "The FAA's Part 108 rule went to White House review July 10, after missing a Feb. 1 deadline. As of Oct. 9 it wasn't published.",
+    "af4470d3440cc": "Walmart and Zipline, partners since 2021 with over 2 million deliveries, signed a deal for 300 more sites. Locations weren't disclosed."
    },
-   "now": "Part 108 was still unpublished as of Oct. 9, so operators keep expanding under waivers or Part 135 certificates while they wait."
+   "intro": "Drone delivery is scaling up, but the FAA's Part 108 rule is still unpublished, a hurdle for routine long-range flights.",
+   "now": "As of Oct. 9, Part 108 was unpublished, so routine BVLOS delivery still needs waivers or Part 135 certificates."
   },
-  "rv": "31dae4580f3a",
+  "rv": "d7cfdf9c3d2b",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -760,6 +767,7 @@
   "s": "UPS has cut Amazon volume by more than half and FedEx has spun off Freight and sold Supply Chain, while GOFO, Veho, OnTrac and other alternative carriers keep expanding. UniUni's go-public deal was terminated on Oct. 20.",
   "ids": [
    "rv5-fedex-freight-spin-done",
+   "a66617050d4e9",
    "h404",
    "h417",
    "h501",
@@ -778,17 +786,17 @@
    "nrf79508",
    "54",
    "52",
-   "a66617050d4e9",
    "afb6fa67940a7",
    "ups-origin-zip-surcharge",
    "a9077d9364cd5",
    "a089340bc097e",
    "a4f6ca9e3591e",
    "a947eb28a3ca3",
-   "a069325035b44"
+   "a069325035b44",
+   "ad4e67498312c"
   ],
   "first": "2024-02-21",
-  "last": "2026-11-09",
+  "last": "2026-11-10",
   "c": [
    "Amazon",
    "DHL",
@@ -801,7 +809,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "d3b6d97e66c8",
+   "sig": "2289c29579ab",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -911,10 +919,11 @@
    "ae3846ec1ac41",
    "a63ee5425135a",
    "aa3051ff662bd",
-   "a632e64bf8af4"
+   "a632e64bf8af4",
+   "ad4e67498312c"
   ],
   "first": "2024-04-17",
-  "last": "2026-11-02",
+  "last": "2026-11-10",
   "c": [
    "Amazon",
    "FedEx",
@@ -924,7 +933,7 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "3208a8d5b096",
+   "sig": "5e60dbe3ff32",
    "v": 3,
    "beats": {
     "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
@@ -942,7 +951,8 @@
     "ae3846ec1ac41": "Jefferies said Amazon could grow U.S. delivery stations from about 575 to 950 by 2030 and carry more third-party parcels.",
     "a63ee5425135a": "An analysis says UPS's U.S. profit per package rose to about $1.16 from about $0.93 after the Amazon cutback; the math is the author's.",
     "aa3051ff662bd": "On its Q3 call, UPS said Q4 U.S. daily volume should rise about 25% from Q3 but dip year over year on less Amazon volume.",
-    "a632e64bf8af4": "Amazon Logistics handled 6.9 billion parcels in 2025, nearly 30% of the market, while USPS slipped from 6.9 billion to 6.2 billion."
+    "a632e64bf8af4": "Amazon Logistics handled 6.9 billion parcels in 2025, nearly 30% of the market, while USPS slipped from 6.9 billion to 6.2 billion.",
+    "ad4e67498312c": "An industry analysis says Amazon and alternative carriers gained parcel volume in H1 2026, as Amazon relies less on UPS."
    },
    "intro": "Amazon is moving more of its volume into its own network and opening that network to others. It was the largest U.S. parcel carrier by volume in 2025.",
    "now": "UPS has finished its Amazon cutback, USPS kept most of Amazon's volume, and Amazon is selling its network to outside businesses."
