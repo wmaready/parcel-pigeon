@@ -1,5 +1,5 @@
 {
- "cursor": 89,
+ "cursor": 104,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 505,
+   "fails": 506,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-10"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 505,
+   "fails": 506,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-10"
@@ -1516,7 +1516,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf": {
    "hash": "b358c79c4a0f",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) 10-Q filing",
    "snap": {
     "d": "2026-11-06",
@@ -1530,7 +1530,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
    "hash": "c2c0a5750888",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1541,7 +1541,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/edf17e3e-640b-438c-808f-99664c427646.pdf": {
    "hash": "74e90f22afc4",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1552,7 +1552,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf": {
    "hash": "8ba6b61d9f95",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) call transcript",
    "snap": {
     "d": "2026-10-30",
@@ -1562,15 +1562,15 @@
   },
   "https://events.q4inc.com/attendee/622711393": {
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) earnings call",
-   "fails": 28,
+   "fails": 29,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-08"
+   "last_try": "2026-11-10"
   },
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
    "hash": "2af5fcbbdb62",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1581,7 +1581,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/1f3ac603-1839-4c15-8875-dcbcd2494084.pdf": {
    "hash": "b4550d0ef0fd",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q2 2025 (Sep–Nov 2024) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1592,7 +1592,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-Second-Quarter-Diluted-EPS-of-3.03-and-Adjusted-Diluted-EPS-of-4.05/default.aspx": {
    "hash": "64b89d5dc949",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q2 2025 (Sep–Nov 2024) results release",
    "snap": {
     "d": "2026-10-30",
@@ -1603,7 +1603,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/f3731273-fa15-493d-8274-c5df40f0e885.pdf": {
    "hash": "2fa1596d42d4",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1614,7 +1614,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf": {
    "hash": "42532897cc7d",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) call transcript",
    "snap": {
     "d": "2026-10-31",
@@ -1624,15 +1624,15 @@
   },
   "https://events.q4inc.com/attendee/395375543": {
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) earnings call",
-   "fails": 28,
+   "fails": 29,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-08"
+   "last_try": "2026-11-10"
   },
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Strong-Second-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
    "hash": "9c3727c1e671",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q2 2026 (Sep–Nov 2025) results release",
    "snap": {
     "d": "2026-10-31",
@@ -1643,7 +1643,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/8ed131d2-5652-42df-9a04-df4c3e51d26c.pdf": {
    "hash": "3b00acfdcaff",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q3 2025 (Dec 2024–Feb 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1654,7 +1654,7 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Third-Quarter-Diluted-EPS-of-3-76-and-Adjusted-Diluted-EPS-of-4-51/default.aspx": {
    "hash": "9fca8cd99025",
    "first": "2026-10-30",
-   "checked": "2026-11-08",
+   "checked": "2026-11-10",
    "n": "FedEx Fiscal Q3 2025 (Dec 2024–Feb 2025) results release",
    "snap": {
     "d": "2026-10-31",
@@ -2163,7 +2163,10 @@
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22409.pdf",
     "txt": "data/snapshots/c0747e042d57/2026-11-03.txt"
    },
-   "last_try": "2026-11-05"
+   "last_try": "2026-11-10",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf": {
    "first": "2026-11-03",
@@ -2256,14 +2259,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 67,
+   "fails": 68,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-10"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 67,
+   "fails": 68,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-10"

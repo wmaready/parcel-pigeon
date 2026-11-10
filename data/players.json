@@ -2971,23 +2971,6 @@
    ],
    "enriched": "2026-11-09",
    "pending": false
-  },
-  {
-   "id": "drsquatch",
-   "n": "Dr. Squatch",
-   "realm": "retail",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Shipper that expanded its use of GOFO from a monitored pilot to a core carrier arrangement, per the white paper",
-   "al": [],
-   "src": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-09",
-   "story": "a069325035b44"
   }
  ],
  "edges": [
@@ -5231,15 +5214,6 @@
    "t": "Vinted uses SpeedX for US shipping",
    "url": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
    "story": "a87f6e01fb676"
-  },
-  {
-   "a": "gofo",
-   "b": "drsquatch",
-   "k": "partner",
-   "y": "2026",
-   "t": "Dr. Squatch expands GOFO relationship to core carrier",
-   "url": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html",
-   "story": "a069325035b44"
   },
   {
    "a": "gofo",
