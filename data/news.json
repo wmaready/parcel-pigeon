@@ -1,5 +1,51 @@
 [
  {
+  "id": "a069325035b44",
+  "date": "2026-11-09",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "GOFO white paper says US last-mile market is realigning",
+  "sum": "GOFO, a last-mile delivery carrier, highlighted a white paper titled How Fragmenting E-Commerce Is Rebuilding the U.S. Last Mile in a Nov. 9, 2026 release. Citing ShipMatrix data, it said US domestic parcel volume reached 23.9 billion packages in 2025, up 0.4%, with Amazon Logistics ahead of USPS at 6.7 billion packages versus 6.6 billion.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The white paper is GOFO's own analysis of the US parcel market and carrier selection.",
+  "why": "The white paper, from a carrier that sells to shippers, cites 23.9 billion US parcels in 2025 and growth in 'Other Carriers' volume of 13%.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T03:35:36Z",
+  "src": "PR Newswire",
+  "url": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html",
+  "srcs": [
+   {
+    "src": "PR Newswire",
+    "url": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-09",
+  "syn": "GOFO, a last-mile delivery carrier founded in Los Angeles in August 2023, highlighted its white paper How Fragmenting E-Commerce Is Rebuilding the U.S. Last Mile on Nov. 9, 2026. The paper was first introduced at PARCEL Forum 2026 in September. It cites ShipMatrix data showing US domestic parcel volume of 23.9 billion packages in 2025, up 0.4%, and Amazon Logistics at 6.7 billion packages, up 9.9%, ahead of USPS at 6.6 billion. It says ShipMatrix's 'Other Carriers' category reached about 2.5 billion packages, up 13%, and concludes the US last mile is undergoing a long-term structural realignment. The views are GOFO's.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service; the white paper is GOFO's view of the market."
+   },
+   {
+    "who": "Other Carriers segment",
+    "what": "ShipMatrix put volume at about 2.5 billion packages in 2025, up 13%, per the white paper."
+   },
+   {
+    "who": "Amazon-dependent e-commerce",
+    "what": "eMarketer estimates cited put Amazon at about 40.5% of US retail e-commerce sales in 2025."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a4e44a4e3a745",
   "date": "2026-11-09",
   "c": [
@@ -11560,32 +11606,5 @@
   "auto": true,
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "af62a412d9e27",
-  "date": "2026-10-14",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Deals & partnerships",
-  "kind": "News",
-  "title": "Happy Returns integrates with TikTok Shop for box-free returns",
-  "sum": "UPS' Happy Returns is now integrated into TikTok Shop, according to Supply Chain Dive. Retailers on the platform can offer box- and label-free returns, with drop-off at 10,000 nationwide Return Bars. Everlane, Windsor and Pacsun are among the retailers using it.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Retailers on TikTok Shop can now offer Happy Returns as a return method, and shoppers can drop items off at Return Bars without a box or label. Fulfilled by TikTok orders need no setup, while seller-fulfilled orders involve a setup process guided by Happy Returns.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-14T20:52:09Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/ups-happy-returns-comes-to-tiktok-shop/832990/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/ups-happy-returns-comes-to-tiktok-shop/832990/"
-   }
-  ],
-  "auto": true
  }
 ]
