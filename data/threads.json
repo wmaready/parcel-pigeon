@@ -113,7 +113,7 @@
  },
  "de-minimis": {
   "n": "End of de minimis and low-value imports",
-  "s": "Duty-free de minimis treatment remains suspended for all countries, and CBP has proposed earlier filing deadlines for low-value imports.",
+  "s": "De minimis ended for all countries on Aug. 29, 2025, and CBP has extended the postal formal-entry compliance date to Jan. 20, 2027.",
   "ids": [
    "h420",
    "h504",
@@ -123,7 +123,7 @@
    "a2f683da86bf8"
   ],
   "first": "2024-09-13",
-  "last": "2026-10-29",
+  "last": "2026-11-10",
   "c": [
    "FedEx",
    "Industry",
@@ -527,7 +527,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon, Walmart with Zipline, and Wing are expanding drone delivery while the FAA's Part 108 rule remained unpublished as of Oct. 9.",
+  "s": "Amazon has opened its first Chicago-area Prime Air drone site in Markham, with deliveries set to start this fall, while Walmart expands drone delivery with Wing.",
   "ids": [
    "g27",
    "g26",
@@ -539,7 +539,8 @@
    "af4470d3440cc",
    "acad7456be9cb",
    "ae04c4bdd5e4e",
-   "a704b11d94f38"
+   "a704b11d94f38",
+   "a73e290a90706"
   ],
   "first": "2025-03-31",
   "last": "2026-11-10",
@@ -549,17 +550,18 @@
    "Regional"
   ],
   "cx": {
-   "sig": "31d65cb191a1",
+   "sig": "077ef703fcd4",
    "v": 3,
    "beats": {
-    "g27": "Amazon plans to go from 11 U.S. locations to almost 500 towns by end of 2026, with $2.99 fees for Prime ($4.99 for others).",
-    "g26": "The FAA's Part 108 rule went to White House review July 10, after missing a Feb. 1 deadline. As of Oct. 9 it wasn't published.",
-    "af4470d3440cc": "Walmart and Zipline, partners since 2021 with over 2 million deliveries, signed a deal for 300 more sites. Locations weren't disclosed."
+    "g27": "Amazon's plan: go from 11 U.S. locations to almost 500 towns and 30 million people, with Chicago among the sites by end of 2026.",
+    "g26": "The FAA's Part 108 rule was still unpublished Oct. 9; until then, routine BVLOS delivery needs waivers or Part 135 certificates.",
+    "af4470d3440cc": "Walmart and Zipline, partners since 2021 with more than 2 million deliveries, signed on for 300 more sites; locations weren't disclosed.",
+    "a73e290a90706": "Amazon opened its Markham, Ill. site, the Chicago-area debut; drones carry up to five pounds, with deliveries set for \"this fall.\""
    },
-   "intro": "Drone delivery is scaling up, but the FAA's Part 108 rule is still unpublished, a hurdle for routine long-range flights.",
-   "now": "As of Oct. 9, Part 108 was unpublished, so routine BVLOS delivery still needs waivers or Part 135 certificates."
+   "intro": "Drone delivery is scaling up at Amazon and Walmart while the FAA's Part 108 rule is still unpublished.",
+   "now": "Part 108 was still unpublished as of Oct. 9, and Amazon's Markham deliveries are set to begin \"this fall.\""
   },
-  "rv": "d7cfdf9c3d2b",
+  "rv": "914766b73fd5",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -793,7 +795,8 @@
    "a4f6ca9e3591e",
    "a947eb28a3ca3",
    "a069325035b44",
-   "ad4e67498312c"
+   "ad4e67498312c",
+   "ab17dd3c5758e"
   ],
   "first": "2024-02-21",
   "last": "2026-11-10",
@@ -809,7 +812,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "2289c29579ab",
+   "sig": "f4d22e24d95a",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -838,7 +841,9 @@
     "a089340bc097e": "CMA CGM closed its $1.4 billion FedEx Supply Chain purchase (closing date Oct. 1), with multi-year ocean and air freight deals alongside.",
     "a4f6ca9e3591e": "Veho announced Pulse AI on Nov. 4: brands can ask Pulse Agent plain-English questions about service performance, in beta for select clients.",
     "a069325035b44": "On Nov. 9 GOFO's white paper cited ShipMatrix: 23.9 billion US parcels in 2025, up 0.4%, with Amazon (6.7B) just ahead of USPS (6.6B).",
-    "a947eb28a3ca3": "GOFO announced on Nov. 4 that it's now a Shopify tracking partner, so its updates show in merchant order info and natively in the Shop app."
+    "a947eb28a3ca3": "GOFO announced on Nov. 4 that it's now a Shopify tracking partner, so its updates show in merchant order info and natively in the Shop app.",
+    "ad4e67498312c": "Amazon and alternative carriers both gained volume in H1 2026; Amazon, the top U.S. deliverer, is leaning less on UPS.",
+    "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
    "now": "UPS has cut Amazon volume by more than half, and GOFO, Veho and OnTrac keep expanding. UniUni's go-public deal was terminated Oct. 20."

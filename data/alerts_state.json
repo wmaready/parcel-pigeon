@@ -174,14 +174,20 @@
   "a3e9a11040d78",
   "aa5b99c3750c6",
   "ad4e67498312c",
-  "afdc261933474"
+  "afdc261933474",
+  "a52fce88876c7",
+  "a73e290a90706",
+  "a7d0f1bbcbc9e",
+  "a9f97ff5f51a3",
+  "ab17dd3c5758e",
+  "acb9a06a4324c"
  ],
  "clock": [
   "e06:7",
   "e06:1"
  ],
  "fuel": {
-  "OnTrac": "2026-11-09",
+  "OnTrac": "2026-11-16",
   "UPS": "2026-11-09",
   "FedEx": "2026-11-02"
  },
@@ -544,7 +550,15 @@
   "story:nyc councilman wong pulls co sponsorship of delivery protection act",
   "player:locusrobotics",
   "player:ambirobotics",
-  "player:plusonerobotic"
+  "player:plusonerobotic",
+  "fuel:OnTrac:2026-11-16",
+  "more:story:amazon opens prime air drone delivery center in markham ill,story:california privacy agency fines fedex 2 975m over ad tracking opt outs,story:fedex adds duty and tax payment to its fedex import tool,story:otaa fulfills us orders from texas via cart com as de minimis ends,story:scurri survey 67 of uk shoppers would accept slower peak delivery for lower cost,story:shipstation global runs more than 250 ai agents across freight operations",
+  "story:california privacy agency fines fedex 2 975m over ad tracking opt outs",
+  "story:fedex adds duty and tax payment to its fedex import tool",
+  "story:amazon opens prime air drone delivery center in markham ill",
+  "story:otaa fulfills us orders from texas via cart com as de minimis ends",
+  "story:shipstation global runs more than 250 ai agents across freight operations",
+  "story:scurri survey 67 of uk shoppers would accept slower peak delivery for lower cost"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -718,181 +732,95 @@
   "dhl ecommerce report finds 66 of us shoppers abandon carts o",
   "wing walmart add memphis drone delivery on track to serve 40",
   "amazon alternative carriers gain parcel volume in first half",
-  "nampa residents say amazon delivery drones disrupt daily liv"
+  "nampa residents say amazon delivery drones disrupt daily liv",
+  "scurri survey 67 of uk shoppers would accept slower peak del",
+  "amazon opens prime air drone delivery center in markham ill",
+  "shipstation global runs more than 250 ai agents across freig",
+  "fedex adds duty and tax payment to its fedex import tool",
+  "otaa fulfills us orders from texas via cart com as de minimi",
+  "california privacy agency fines fedex 2 975m over ad trackin"
  ],
  "harvested": [
-  "a6ba18049bc99",
-  "wdf959a97bcb6",
-  "ad7d0b7072901",
-  "wf5014bc150e9",
-  "a6e82ba740e99",
-  "af589de326934",
-  "adbdc9a506e95",
-  "a999409ce7860",
-  "a89d7e4beebd9",
-  "acfef8560e2ac",
-  "a831c709e5809",
-  "a40c99078f690",
-  "wbfc38914b368",
-  "aba40a11b6946",
-  "ac89be3e5da8f",
-  "aee6669d325da",
-  "a5d45f26f2219",
-  "a0adb56a55334",
-  "w500a5bdc762c",
-  "adc002570b1d6",
-  "a773d361dac4e",
-  "a9b77b62dcd89",
-  "w86cfd39b48f5",
-  "w68c1687d28a1",
-  "afd8784e2b179",
-  "a2b81ad721cb8",
-  "a57a06c26359c",
-  "aa51e82b50d12",
-  "a663794cc9c55",
-  "a89f005fb1862",
-  "wf7fe771e76cd",
-  "w9c03b8f99b5f",
-  "aead0203aab18",
-  "we85aee3857d1",
-  "a72efb5e01b99",
-  "aaf63e9db25a0",
-  "a351cab9045c7",
-  "wa9c423a83880",
-  "af8ee5ed067c6",
-  "rv5-ups-sbr-fuel",
-  "a2b7282f9b8a5",
-  "a82e057190718",
-  "w91588ddb11ed",
-  "ae0ee67bc4b67",
-  "ae2ec177094e3",
-  "a4f6ca9e3591e",
-  "a6c2418bed0a7",
-  "ae12ca75552ef",
-  "wb8827e8c126e",
-  "w150132868eae",
-  "ad851d9e2eb69",
-  "a84ca5863e582",
-  "a3d768115c0e6",
-  "a2f683da86bf8",
-  "w599d9089a65d",
-  "a312b45efa358",
-  "ac78f72e7f458",
   "a23a4d6fd271d",
   "a74df5c94691e",
-  "a15404304f17b",
+  "a6c2418bed0a7",
+  "a6cc2420ad66e",
+  "rv5-ups-sbr-fuel",
+  "a6ba18049bc99",
+  "a89f005fb1862",
   "aa7358e9cf2dd",
-  "a58373f1b7bc3",
-  "a2def09bc43bb",
-  "a069325035b44",
-  "w84705482dd2f",
-  "a3a45d7f6db20",
-  "a947eb28a3ca3",
+  "wa9c423a83880",
+  "ae12ca75552ef",
   "wacb825361479",
-  "a2f60a03dddd7",
-  "wf7bb9227b2de",
-  "w0b8720b6a0e7",
-  "a260cc6a2e05e",
-  "a3bd243da7c6c",
+  "a663794cc9c55",
+  "a312b45efa358",
+  "wf7fe771e76cd",
+  "aaf63e9db25a0",
+  "a6e82ba740e99",
+  "a3a45d7f6db20",
+  "adc002570b1d6",
+  "wf5014bc150e9",
+  "af8ee5ed067c6",
+  "a0adb56a55334",
+  "a40c99078f690",
+  "we85aee3857d1",
+  "a773d361dac4e",
+  "ae0ee67bc4b67",
   "a567030ffc76c",
   "w8465aa718dc6",
-  "a6cc2420ad66e"
+  "a351cab9045c7",
+  "a9f97ff5f51a3",
+  "wb8827e8c126e",
+  "aead0203aab18",
+  "ad7d0b7072901",
+  "a2def09bc43bb",
+  "a069325035b44",
+  "a9b77b62dcd89",
+  "a2f683da86bf8",
+  "a15404304f17b",
+  "wbfc38914b368",
+  "a84ca5863e582",
+  "w86cfd39b48f5",
+  "a947eb28a3ca3",
+  "a260cc6a2e05e",
+  "a2f60a03dddd7",
+  "a5d45f26f2219",
+  "adbdc9a506e95",
+  "w0b8720b6a0e7",
+  "a3d768115c0e6",
+  "a72efb5e01b99",
+  "a831c709e5809",
+  "a3bd243da7c6c",
+  "afd8784e2b179",
+  "aa51e82b50d12",
+  "a2b81ad721cb8",
+  "w599d9089a65d",
+  "w68c1687d28a1",
+  "ac89be3e5da8f",
+  "ad851d9e2eb69",
+  "w500a5bdc762c",
+  "aba40a11b6946",
+  "wf7bb9227b2de",
+  "w84705482dd2f",
+  "af589de326934",
+  "aee6669d325da",
+  "ae2ec177094e3",
+  "acfef8560e2ac",
+  "a999409ce7860",
+  "a89d7e4beebd9",
+  "ac78f72e7f458",
+  "a2b7282f9b8a5",
+  "a58373f1b7bc3",
+  "w150132868eae",
+  "a82e057190718",
+  "a57a06c26359c",
+  "w91588ddb11ed",
+  "a4f6ca9e3591e",
+  "wdf959a97bcb6",
+  "w9c03b8f99b5f"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a33c3c3ba8e14",
-   "title": "Kirkwood council kills Walmart-Wing drone delivery proposal",
-   "date": "2026-10-15",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.stltoday.com/news/local/government-politics/article_46703613-b7e8-48c3-b09b-264ed468d0ae.html",
-   "srcs": [
-    {
-     "src": "St. Louis Post-Dispatch",
-     "url": "https://www.stltoday.com/news/local/government-politics/article_46703613-b7e8-48c3-b09b-264ed468d0ae.html"
-    }
-   ]
-  },
-  {
-   "id": "a0f38605e4132",
-   "title": "Shipt adds more than 500 Sprouts locations to its marketplace",
-   "date": "2026-10-17",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t",
-   "srcs": [
-    {
-     "src": "Simply Wall Street",
-     "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t"
-    }
-   ]
-  },
-  {
-   "id": "a168f88090691",
-   "title": "Amazon warns it may close 15 New York City warehouses over delivery bill",
-   "date": "2026-10-17",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york",
-   "srcs": [
-    {
-     "src": "Vietnam.vn",
-     "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york"
-    }
-   ]
-  },
-  {
-   "id": "aac92cdbd2591",
-   "title": "Amazon passes 1 million robots in its facilities, Futurism reports",
-   "date": "2026-10-17",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety",
-   "srcs": [
-    {
-     "src": "Futurism",
-     "url": "https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety"
-    }
-   ]
-  },
-  {
-   "id": "ad0f07f43ec5e",
-   "title": "Amazon warns it could pull NYC delivery jobs over Delivery Protection Act",
-   "date": "2026-10-18",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
-   "srcs": [
-    {
-     "src": "The Times of India",
-     "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms"
-    }
-   ]
-  },
-  {
-   "id": "a418fdd3e6f05",
-   "title": "Amazon close to launching Shipping With Amazon, WSJ report says",
-   "date": "2026-10-18",
-   "c": [
-    "Amazon",
-    "UPS",
-    "FedEx",
-    "USPS"
-   ],
-   "url": "https://mashable.com/article/amazon-may-soon-launch-delivery-service",
-   "srcs": [
-    {
-     "src": "Mashable",
-     "url": "https://mashable.com/article/amazon-may-soon-launch-delivery-service"
-    }
-   ]
-  },
   {
    "id": "a511c2951ce03",
    "title": "Maersk adds North American delivery services to Shipstore platform",
@@ -3209,6 +3137,104 @@
      "url": "https://www.kivitv.com/videos/nampa/nampa-neighbors-say-amazon-delivery-drones-are-disrupting-their-daily-lives"
     }
    ]
+  },
+  {
+   "id": "a52fce88876c7",
+   "title": "Scurri survey: 67% of UK shoppers would accept slower Peak delivery for lower cost",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://365retail.co.uk/shoppers-trade-delivery-speed-for-lower-costs-scurri/",
+   "srcs": [
+    {
+     "src": "365 Retail",
+     "url": "https://365retail.co.uk/shoppers-trade-delivery-speed-for-lower-costs-scurri/"
+    }
+   ]
+  },
+  {
+   "id": "a73e290a90706",
+   "title": "Amazon opens Prime Air drone delivery center in Markham, Ill.",
+   "date": "2026-11-10",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://chicago.suntimes.com/business/2026/11/10/amazon-takes-flight-on-drone-delivery-center-in-markham",
+   "srcs": [
+    {
+     "src": "Chicago Sun-Times",
+     "url": "https://chicago.suntimes.com/business/2026/11/10/amazon-takes-flight-on-drone-delivery-center-in-markham"
+    }
+   ]
+  },
+  {
+   "id": "a7d0f1bbcbc9e",
+   "title": "ShipStation Global runs more than 250 AI agents across freight operations",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.freightwaves.com/news/tech-transformation-shipstation-globals-ai-overhauls-freight-operations",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/tech-transformation-shipstation-globals-ai-overhauls-freight-operations"
+    }
+   ]
+  },
+  {
+   "id": "a9f97ff5f51a3",
+   "title": "FedEx adds duty and tax payment to its FedEx Import Tool",
+   "date": "2026-11-10",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-in-the-philippines-with-customs-clearance-and-payment-functionality",
+   "srcs": [
+    {
+     "src": "FedEx newsroom",
+     "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-in-the-philippines-with-customs-clearance-and-payment-functionality"
+    },
+    {
+     "src": "The Manila Times",
+     "url": "https://www.manilatimes.net/2026/11/11/business/top-business/fedex-streamlines-import-process-into-one-digital-platform/2467097"
+    }
+   ]
+  },
+  {
+   "id": "ab17dd3c5758e",
+   "title": "OTAA fulfills US orders from Texas via Cart.com as de minimis ends",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/",
+   "srcs": [
+    {
+     "src": "Supply Chain Dive",
+     "url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/"
+    }
+   ]
+  },
+  {
+   "id": "acb9a06a4324c",
+   "title": "California privacy agency fines FedEx $2.975M over ad-tracking opt-outs",
+   "date": "2026-11-10",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.mediapost.com/publications/article/419354/california-privacy-agency-fines-fedex-nearly-3m.html?.tsrc=rss",
+   "srcs": [
+    {
+     "src": "MediaPost",
+     "url": "https://www.mediapost.com/publications/article/419354/california-privacy-agency-fines-fedex-nearly-3m.html?.tsrc=rss"
+    },
+    {
+     "src": "MLex",
+     "url": "https://www.mlex.com/mlex/data-privacy-security/articles/2548674/fedex-to-pay-3m-fine-for-privacy-violations-in-california"
+    }
+   ]
   }
  ],
  "copy": {
@@ -3779,13 +3805,37 @@
   "afdc261933474": {
    "t": "Amazon drones draw Nampa complaints",
    "m": "Residents say Amazon delivery drones disrupt daily life; no change to shipper rates or service."
+  },
+  "a52fce88876c7": {
+   "t": "UK shoppers open to slower Peak",
+   "m": "Scurri survey: 67% of UK shoppers would accept slower Peak delivery for lower cost."
+  },
+  "a73e290a90706": {
+   "t": "Amazon drone hub opens in Markham",
+   "m": "Prime Air drone deliveries due to start from the site this fall, for packages up to five pounds."
+  },
+  "a7d0f1bbcbc9e": {
+   "t": "ShipStation AI agents for freight",
+   "m": "Its 250-plus AI agents speed quoting and booking for freight customers. No rate change."
+  },
+  "a9f97ff5f51a3": {
+   "t": "FedEx Import Tool adds duty payments",
+   "m": "Philippine importers can now pay duties and taxes online by card, e-wallet or bank transfer."
+  },
+  "ab17dd3c5758e": {
+   "t": "Cart.com ships US orders from Texas",
+   "m": "An overseas seller fulfills U.S. orders from a Texas facility as de minimis ends."
+  },
+  "acb9a06a4324c": {
+   "t": "California fines FedEx $2.975M",
+   "m": "California privacy agency fined FedEx over ad-tracking opt-outs. Shipping data was not involved."
   }
  },
  "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-10",
-  "n": 2
+  "n": 3
  },
- "last_push": "2026-11-10T13:03:22.699530-05:00"
+ "last_push": "2026-11-10T18:35:03.583411-05:00"
 }

@@ -136,6 +136,57 @@
   "exclusive": true
  },
  {
+  "id": "a52fce88876c7",
+  "date": "2026-11-10",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "Scurri survey: 67% of UK shoppers would accept slower Peak delivery for lower cost",
+  "sum": "Scurri research ahead of Peak 2026 found 67% of UK consumers would accept longer delivery times during Peak in return for free or cheaper delivery. Free delivery matters to 61%, against 29% who prioritise next day delivery and 13% same day. The findings come from two Scurri studies of UK retailers and consumers.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The survey describes UK shopper preferences and retailer AI plans ahead of Peak 2026.",
+  "why": "The survey indicates UK shoppers rank free delivery and delivery certainty above speed ahead of Peak 2026, with 61% prioritising free delivery.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:34:07Z",
+  "src": "365 Retail",
+  "url": "https://365retail.co.uk/shoppers-trade-delivery-speed-for-lower-costs-scurri/",
+  "srcs": [
+   {
+    "src": "365 Retail",
+    "url": "https://365retail.co.uk/shoppers-trade-delivery-speed-for-lower-costs-scurri/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "syn": "Scurri, a delivery management software provider, published findings from two studies of UK retailers and consumers carried out ahead of Peak 2026. Free delivery matters to 61% of consumers, compared with 29% prioritising next day delivery and 13% same day, and 67% would accept longer Peak delivery times for free or cheaper delivery. Among retailers, 58% say they are likely to use automated AI to manage ecommerce delivery strategy and carrier operations. Retailers estimate AI automation of carrier management could cut delivery costs by an average of 10.6%.",
+  "aff": [
+   {
+    "who": "UK Peak shoppers",
+    "what": "67% would accept longer delivery times in return for free or cheaper delivery; 47% would accept a late order if warned in advance."
+   },
+   {
+    "who": "UK retailers",
+    "what": "58% are likely to use automated AI for delivery strategy and carrier operations; they estimate an average 10.6% delivery cost reduction."
+   },
+   {
+    "who": "Delivery communications",
+    "what": "53% say real-time tracking matters most and 44% prioritise an accurate delivery date."
+   },
+   {
+    "who": "Customer service",
+    "what": "88% say they should always be able to speak to a human and 85% want to know when they are dealing with AI."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a6954a545e2a4",
   "date": "2026-11-10",
   "c": [
@@ -178,6 +229,157 @@
   "exclusive": true
  },
  {
+  "id": "a73e290a90706",
+  "date": "2026-11-10",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon opens Prime Air drone delivery center in Markham, Ill.",
+  "sum": "Amazon cut the ribbon on a Prime Air drone delivery center at its IGQ1 fulfillment center in Markham, Illinois, on Tuesday, the Chicago-area debut of the service, the Chicago Sun-Times reported. Deliveries are set to begin \"this fall\" from the site at 2201 W. 159th St., according to the company. The drones carry packages weighing up to five pounds.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Amazon's Prime Air drone delivery is due to start from the Markham site this fall, for packages up to five pounds. The sources give no change to rates for other shippers.",
+  "why": "Amazon's drone network is moving from announcement to a first Chicago-area site, with a five-pound package limit that bounds what the service can carry.",
+  "score": 5,
+  "tie": "The opening follows Amazon's August 2026 announcement that it was expanding drone delivery to suburban areas in nearly 500 U.S. cities, including the Chicago metro area.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:32:41Z",
+  "src": "Chicago Sun-Times",
+  "url": "https://chicago.suntimes.com/business/2026/11/10/amazon-takes-flight-on-drone-delivery-center-in-markham",
+  "srcs": [
+   {
+    "src": "Chicago Sun-Times",
+    "url": "https://chicago.suntimes.com/business/2026/11/10/amazon-takes-flight-on-drone-delivery-center-in-markham"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "thread": "drone-delivery",
+  "upd": 12,
+  "new": "Amazon's August plan for Chicago-area drone deliveries now has a physical site in Markham, with deliveries set to begin \"this fall\" for packages up to five pounds.",
+  "syn": "Amazon held a ribbon-cutting on Tuesday for a Prime Air drone delivery center at its IGQ1 fulfillment center in Markham, Illinois, the Chicago-area debut of the service. According to the company, drone deliveries are set to begin \"this fall\" from the site. Amazon says the drones can deliver everyday items in as fast as 30 minutes and can carry only packages weighing up to five pounds. The Sun-Times noted challenges including noise concerns, tree cover and pools that can make drop-off zones hard to find.",
+  "aff": [
+   {
+    "who": "Chicago-area Prime Air customers",
+    "what": "Drone deliveries are set to begin \"this fall\" from the Markham center, with items delivered in as fast as 30 minutes."
+   },
+   {
+    "who": "Packages over five pounds",
+    "what": "The drones can carry only packages weighing up to five pounds."
+   },
+   {
+    "who": "Suburban delivery areas",
+    "what": "Drones will primarily fly in suburbs, with each drone site serving multiple cities."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a7d0f1bbcbc9e",
+  "date": "2026-11-10",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "ShipStation Global runs more than 250 AI agents across freight operations",
+  "sum": "ShipStation Global said it has deployed more than 250 purpose-built AI agents in production, including one that takes an emailed quote request through carrier selection and booking without a dispatcher. Executives described the system in an FreightWaves interview. The company said it serves more than one million annual customers.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is announced. ShipStation Global says its AI agents speed up quoting and booking for its freight customers.",
+  "why": "The company says it serves more than one million annual customers, with a focus on SMB shippers that lack staff and budget to build such automation.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:33:28Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/tech-transformation-shipstation-globals-ai-overhauls-freight-operations",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/tech-transformation-shipstation-globals-ai-overhauls-freight-operations"
+   }
+  ],
+  "auto": true,
+  "syn": "ShipStation Global, formed from the combination of legacy WEX Group and Octane, said it has more than 250 AI agents in production across its freight operations. One agent handles an emailed quote request through carrier selection and booking without a human dispatcher, which the company said resolved a Sunday evening inquiry from a China-based shipper within minutes. Executives Joel Clum and the company's CTO described the system in an interview with FreightWaves. The company is aiming the tools at small and mid-sized shippers and said it has more than one million annual customers.",
+  "aff": [
+   {
+    "who": "Small and mid-sized shippers",
+    "what": "ShipStation says the AI tools give them automation for quoting, booking and carrier selection that they often lack staff to build."
+   },
+   {
+    "who": "Quote requests outside business hours",
+    "what": "One agent books from an emailed quote request in minutes, ShipStation said, instead of waiting for a dispatcher."
+   },
+   {
+    "who": "High-value and refrigerated loads",
+    "what": "Clum said carrier vetting has increased dramatically, with escorts and checkpoint verification for certain loads."
+   },
+   {
+    "who": "Enterprise shippers",
+    "what": "Clum said they are deepening existing broker and carrier relationships, citing liability and cargo theft risk."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "a9f97ff5f51a3",
+  "date": "2026-11-10",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "FedEx adds duty and tax payment to its FedEx Import Tool",
+  "sum": "FedEx added an integrated duty and tax payment function to its FedEx Import Tool (FiT), The Manila Times reported. Customers can handle document submission, clearance processing, tracking and payment on one digital platform, FedEx said. The tool is available in the Philippines and several other Asia-Pacific markets.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Importers using FiT in the Philippines can now pay duties and taxes online with cards, e-wallets or bank transfers. FedEx said FiT is free for account holders and customers without accounts.",
+  "why": "FiT is free to account holders and non-account consignees in the Philippines and eight other Asia-Pacific markets, putting import payment on one platform.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:33:11Z",
+  "src": "FedEx newsroom",
+  "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-in-the-philippines-with-customs-clearance-and-payment-functionality",
+  "srcs": [
+   {
+    "src": "FedEx newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-enhances-digital-import-tool-in-the-philippines-with-customs-clearance-and-payment-functionality"
+   },
+   {
+    "src": "The Manila Times",
+    "url": "https://www.manilatimes.net/2026/11/11/business/top-business/fedex-streamlines-import-process-into-one-digital-platform/2467097"
+   }
+  ],
+  "auto": true,
+  "syn": "FedEx has added an integrated duty and tax payment function to the FedEx Import Tool (FiT), according to The Manila Times. The tool now covers document submission, clearance processing, shipment tracking and payment of duties and taxes on a single digital platform, FedEx said. Customers can pay by card, e-wallet or bank transfer. FiT is free and is available in the Philippines, Australia, New Zealand, Japan, South Korea, Singapore, Indonesia, Malaysia and Thailand.",
+  "aff": [
+   {
+    "who": "Importers in the Philippines",
+    "what": "Can pay duties and taxes online by card, e-wallet or bank transfer inside FiT."
+   },
+   {
+    "who": "FedEx account holders and guest consignees",
+    "what": "Can submit customs documents digitally and download clearance documents for recordkeeping."
+   },
+   {
+    "who": "Importers using FiT",
+    "what": "Get real-time shipment and clearance status updates by SMS, email or social media."
+   },
+   {
+    "who": "FiT users",
+    "what": "The tool is free for FedEx account holders and for customers without accounts."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "aa5b99c3750c6",
   "date": "2026-11-10",
   "c": [
@@ -215,6 +417,94 @@
    {
     "who": "Drone delivery market",
     "what": "The expansion is on track to serve 40 million by 2027, per the Forbes headline."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "ab17dd3c5758e",
+  "date": "2026-11-10",
+  "c": [
+   "Industry"
+  ],
+  "cat": "3PL & fulfillment",
+  "kind": "News",
+  "title": "OTAA fulfills US orders from Texas via Cart.com as de minimis ends",
+  "sum": "Australia-based OTAA, which makes ties and cufflinks, is fulfilling U.S. orders from a facility in Longview, Texas, through a partnership with Cart.com, Supply Chain Dive reported on Nov. 10, 2026. The report links the move to the end of de minimis.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to carrier rates or service. One overseas seller is fulfilling U.S. orders from a Texas facility through Cart.com.",
+  "why": "It shows one overseas apparel-accessory seller using a U.S. fulfillment partner in response to the end of de minimis, per Supply Chain Dive.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:32:57Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/"
+   }
+  ],
+  "auto": true,
+  "new": "A seller based outside the U.S., OTAA, is now fulfilling U.S. orders from a Texas facility through Cart.com, which Supply Chain Dive ties to the end of de minimis; the report gives no change to carrier rates or rules.",
+  "syn": "OTAA, an Australia-based maker of ties and cufflinks, is fulfilling U.S. orders from a facility in Longview, Texas, through a partnership with Cart.com, according to Supply Chain Dive on Nov. 10, 2026. The publication's headline describes the expansion as a way to skirt the end of de minimis. The article text available gives no volumes, costs or start date.",
+  "aff": [
+   {
+    "who": "OTAA U.S. orders",
+    "what": "Fulfilled from a facility in Longview, Texas, through a partnership with Cart.com."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to carrier rates or service."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "acb9a06a4324c",
+  "date": "2026-11-10",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Legal",
+  "kind": "News",
+  "title": "California privacy agency fines FedEx $2.975M over ad-tracking opt-outs",
+  "sum": "The California Privacy Protection Agency fined FedEx $2.975 million over alleged violations of the state's privacy law, MediaPost reported on Nov. 10, 2026. The agency said FedEx misrepresented its online behavioral advertising practices and did not honor opt-out signals such as the Global Privacy Control. FedEx agreed to the order without admitting or denying the findings.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The agency said the personal information involved did not include shipping data.",
+  "why": "The order concerns FedEx's website advertising data practices, not shipping data, and sets a fine of $2.975 million under California's privacy law.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-10T23:32:10Z",
+  "src": "MediaPost",
+  "url": "https://www.mediapost.com/publications/article/419354/california-privacy-agency-fines-fedex-nearly-3m.html?.tsrc=rss",
+  "srcs": [
+   {
+    "src": "MediaPost",
+    "url": "https://www.mediapost.com/publications/article/419354/california-privacy-agency-fines-fedex-nearly-3m.html?.tsrc=rss"
+   },
+   {
+    "src": "MLex",
+    "url": "https://www.mlex.com/mlex/data-privacy-security/articles/2548674/fedex-to-pay-3m-fine-for-privacy-violations-in-california"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "syn": "The California Privacy Protection Agency fined FedEx $2.975 million over alleged violations of the California Consumer Privacy Act, according to MediaPost. The agency said FedEx shared website visitors' personal information with ad-tech companies between July 1, 2023 and October 27, 2025, and did not properly honor opt-out signals such as the Global Privacy Control. FedEx agreed to the order without admitting or denying the findings. The agency said the data did not include shipping data, and MLex reported that FedEx also agreed to adjust its business practices.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service; the agency said the shared data did not include shipping data."
+   },
+   {
+    "who": "FedEx.com visitors",
+    "what": "The agency said their identifiers were shared with ad-tech firms from July 1, 2023 to October 27, 2025."
    }
   ],
   "exclusive": true
@@ -11549,158 +11839,5 @@
   ],
   "auto": true,
   "new": "Mashable reports that Amazon counts cities and towns rather than launch sites, with each site covering roughly 175 square miles, and that Boise is among the next metro areas; no full list of places is published yet, so which shippers' customers qualify remains unclear."
- },
- {
-  "id": "ac152064b8b4f",
-  "date": "2026-10-15",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon seeks permit for Prime Air drone center in Portland",
-  "sum": "Amazon is working with local officials on Prime Air drone delivery in Portland, spokesperson Farah Jad told The Oregonian/OregonLive, without giving a launch or flight-testing date. Permitting records first reported by The Portland Business Journal show Amazon seeking a pre-application conference for a Prime Air Drone Delivery Center at its same-day fulfillment site at 515 N. Schmeer Road.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service yet; Portland has no announced drone delivery start date. Amazon's stated drone fees are free for Prime members on orders over $50 and $2.99 below that, and $4.99 for non-members.",
-  "tie": "Amazon said in an August 2026 news release that Prime Air was in 11 cities and planned to expand to nearly 500 by the end of the year, with Portland on the list.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T04:46:13Z",
-  "src": "Yahoo",
-  "url": "https://www.yahoo.com/news/us/articles/amazons-drone-delivery-program-headed-202708941.html",
-  "srcs": [
-   {
-    "src": "Yahoo",
-    "url": "https://www.yahoo.com/news/us/articles/amazons-drone-delivery-program-headed-202708941.html"
-   }
-  ],
-  "auto": true,
-  "new": "Portland is confirmed as a Prime Air target, with Amazon seeking a pre-application conference for a drone delivery center at an existing Portland-area fulfillment site, but no launch date has been given, so no shipper pricing or service change takes effect yet.",
-  "exclusive": true
- },
- {
-  "id": "acc7a2dcc3b9d",
-  "date": "2026-10-15",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "CWU calls for emergency summit to address Royal Mail crisis",
-  "sum": "The Communication Workers Union called for a summit of the government, employers and union representatives on Royal Mail, saying the company is \"on the brink of collapse.\" General Secretary Dave Ward cited recruitment and retention problems, and the call followed BBC reporting of a \"nightmare Christmas\" for the company.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The union's call concerns staffing and the company's future, and the BBC has reported recruitment and retention problems ahead of Christmas.",
-  "why": "Royal Mail staffing problems reported by the BBC and the union could affect delivery service over the Christmas period for businesses and consumers.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:50:13Z",
-  "src": "Post & Parcel",
-  "url": "https://postandparcel.info/163079/news/parcel/cwu-royal-mail-stands-on-the-brink-of-collapse/",
-  "srcs": [
-   {
-    "src": "Post & Parcel",
-    "url": "https://postandparcel.info/163079/news/parcel/cwu-royal-mail-stands-on-the-brink-of-collapse/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-15",
-  "thread": "royal-mail-cwu-dispute",
-  "edge": true
- },
- {
-  "id": "acc94511885db",
-  "date": "2026-10-15",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "FedEx doubles Taoyuan airport hub in Taiwan to 19,000 square meters",
-  "sum": "FedEx has expanded its cargo hub at Taoyuan International Airport, doubling it to 19,000 square meters, Radio Taiwan International reported. Vice President Hsiao Bi-khim attended the opening ceremony on a Wednesday. The automated sorting system handles 9,000 packages per hour.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or fees was announced. The report says the new automated system raises import efficiency 2.5 times and export efficiency 1.2 times at the Taoyuan hub.",
-  "why": "The expansion adds automated import and export capacity at FedEx's Taiwan hub, which handles 9,000 packages per hour, according to Radio Taiwan International.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T10:56:16Z",
-  "src": "Rti 中央廣播電臺",
-  "url": "https://www.rti.org.tw/en/news?uid=3&pid=196771",
-  "srcs": [
-   {
-    "src": "Rti 中央廣播電臺",
-    "url": "https://www.rti.org.tw/en/news?uid=3&pid=196771"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "ae5f2c699239a",
-  "date": "2026-10-15",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "PRC notices three new USPS standardized competitive contracts",
-  "sum": "The Postal Regulatory Commission published a notice of three Postal Service requests to add standardized distinct products to the Competitive product list. They are PM-GA Contract 1111 and Contract 1113 (Mid-Market) and Contract 1112 (Fulfillment), all accepted October 15, 2026.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "The notice does not state any change to published rates or service. It concerns individual negotiated agreements, with some materials filed under seal.",
-  "why": "The filings add three negotiated Competitive contracts, which are reviewed in summary proceedings with no public comment period.",
-  "score": 3,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:48:50Z",
-  "src": "Federal Register: PRC",
-  "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products",
-  "srcs": [
-   {
-    "src": "Federal Register: PRC",
-    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-15",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a0f925349317e",
-  "date": "2026-10-14",
-  "c": [
-   "UPS",
-   "FedEx"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "UPS, FedEx say holiday-season domestic volume is flat on soft demand",
-  "sum": "UPS said its domestic volume in the first two weeks of the holiday peak season was flat compared with 1999, after growth slowed to 4% in October and November from 5.5% over the first nine months of the year. FedEx said softer volumes, which it tied to a slowing U.S. economy and severe weather, mean domestic growth at FedEx Express and FedEx Ground is expected to be flat or slightly down for the month.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates, fees or service was announced. The carriers reported softer shipment volumes in the holiday season.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T18:59:21Z",
-  "src": "Heavy Duty Trucking",
-  "url": "https://www.truckinginfo.com/news/fedex-ups-holiday-volume-shows-impact-of-slowing-economy",
-  "srcs": [
-   {
-    "src": "Heavy Duty Trucking",
-    "url": "https://www.truckinginfo.com/news/fedex-ups-holiday-volume-shows-impact-of-slowing-economy"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
  }
 ]
