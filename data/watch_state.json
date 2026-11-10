@@ -182,7 +182,7 @@
   "pend": "4d341f89308d"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "checked": "2026-11-08",
+  "checked": "2026-11-10",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
@@ -209,7 +209,8 @@
    "5b616f672a25",
    "7362c35c2fea"
   ],
-  "told_until": "2026-12-03"
+  "told_until": "2026-12-03",
+  "pend": "fe961b2abd55"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-09",
@@ -372,7 +373,7 @@
   "told": []
  },
  "https://developer.ups.com/": {
-  "checked": "2026-11-09",
+  "checked": "2026-11-10",
   "pdfs": [
    "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf"
   ],
