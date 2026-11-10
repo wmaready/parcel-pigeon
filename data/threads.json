@@ -151,14 +151,15 @@
  },
  "tariff-refunds": {
   "n": "IEEPA tariff refunds and carriers",
-  "s": "FedEx's tariff class actions are consolidated in Memphis at the pleading stage, while its own customer refund program proceeds separately.",
+  "s": "UPS has sued CBP at the Court of International Trade for IEEPA refunds and interest on finally liquidated entries, having received some $500m so far.",
   "ids": [
    "g31",
    "a771628a2eca4",
-   "a0b5708b9f70d"
+   "a0b5708b9f70d",
+   "ab649604d2f05"
   ],
   "first": "2026-08-13",
-  "last": "2026-11-02",
+  "last": "2026-11-06",
   "c": [
    "Amazon",
    "DHL",
@@ -167,16 +168,14 @@
    "UPS"
   ],
   "cx": {
-   "sig": "b222fce080c2",
+   "sig": "ccd095dd2f66",
    "v": 3,
    "beats": {
-    "g31": "FedEx started $800M in refunds with no application needed; UPS applied for $500M and DHL filed claims where it was importer.",
-    "a0b5708b9f70d": "Reportedly, 13 suits are now combined in Memphis with interim class counsel; no class is certified and the claims are unproven."
-   },
-   "intro": "Carriers are passing on IEEPA tariff refunds while FedEx faces class actions; shippers want their money back.",
-   "now": "Reportedly, a consolidated complaint is proposed for Nov. 4 and FedEx's reply Dec. 4; refunds still run through its own program."
+    "a0b5708b9f70d": "Reportedly, 13 class actions against FedEx are now combined in Memphis, though refunds still flow through FedEx's own program, not the suit.",
+    "ab649604d2f05": "UPS has received about $500m from CBP and passed on roughly $230m, so it sued to force refunds and interest on finally liquidated entries."
+   }
   },
-  "rv": "9ed4430a8062",
+  "rv": "5667619a4d89",
   "co": "FedEx",
   "apart": [
    "fedex-freight-spin",
@@ -523,7 +522,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is adding drone delivery metros ahead of its year-end target while the FAA's Part 108 rule and state challenges remain unresolved.",
+  "s": "Amazon is expanding Prime Air toward almost 500 towns while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
   "ids": [
    "g27",
    "g26",
@@ -539,7 +538,7 @@
    "a704b11d94f38"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-08",
+  "last": "2026-11-10",
   "c": [
    "Amazon",
    "Industry",
@@ -616,28 +615,31 @@
    "abf7a28de14a5",
    "ad0f07f43ec5e",
    "a45eccf8e24d3",
-   "a831c709e5809"
+   "a831c709e5809",
+   "a3a4fa02bef84"
   ],
   "first": "2026-10-13",
-  "s": "The companies' federal suit against the deactivation law is pending, the law is due to take effect in January, and the Delivery Protection Act (Intro. 518) was still moving through the legislative process as of Oct. 22.",
-  "last": "2026-10-29",
+  "s": "The bill has not been scheduled for a vote as the Law Department reviews it, including whether federal law preempts it.",
+  "last": "2026-11-09",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "d7a31751e5de",
+  "rv": "f0f9c58e1b0e",
   "cx": {
-   "sig": "232e51750f0c",
+   "sig": "6af2e14af7b9",
    "v": 3,
    "beats": {
-    "abf7a28de14a5": "Bronx DSP operators reportedly oppose the bill, which has supermajority council support but hasn't been called for a vote.",
-    "ad0f07f43ec5e": "Amazon warns it could move roughly 5,000 delivery jobs out of the city; analysts say all 15 last-mile stations could close.",
-    "a45eccf8e24d3": "Mamdani reportedly says Amazon and other opponents are spending heavily to scare New Yorkers, and he'll join labor leaders.",
-    "a831c709e5809": "Teamsters rallied at City Hall Oct. 22, saying Amazon spent over $8 million against the bill; Speaker Menin hasn't set a vote."
+    "abf7a28de14a5": "Bronx delivery contractors reportedly oppose it; the bill has supermajority council support but hasn't been called for a vote.",
+    "ad0f07f43ec5e": "Amazon warns it could move roughly 5,000 jobs; analysts say all 15 city last-mile stations could close, citing Montreal.",
+    "a45eccf8e24d3": "Mamdani reportedly says Amazon is spending heavily to scare New Yorkers, and he'll join national labor leaders to push the bill.",
+    "a831c709e5809": "Teamsters and Mamdani rally at City Hall, urging Speaker Menin to schedule a vote; they say Amazon has spent over $8 million.",
+    "a3a4fa02bef84": "Councilman Phil Wong reportedly dropped his co-sponsorship, citing small-business job losses; the Law Department is reviewing."
    },
-   "intro": "NYC's Delivery Protection Act would make Amazon hire its last-mile drivers directly, so shippers watch for delivery changes."
+   "intro": "A NYC bill would bar subcontracted last-mile drivers, putting Amazon's delivery setup in the city at stake.",
+   "now": "Still no vote scheduled; the Law Department is reviewing the bill, including whether federal law preempts it."
   },
   "co": "Amazon",
   "apart": [
@@ -799,7 +801,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "3a12266b1542",
+   "sig": "d3b6d97e66c8",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -827,10 +829,11 @@
     "a9077d9364cd5": "Reportedly, NextSmartShip's CEO argues brands can mix China and U.S. fulfillment post-de minimis; it's opinion, no new rule.",
     "a089340bc097e": "CMA CGM closed its $1.4 billion FedEx Supply Chain purchase (closing date Oct. 1), with multi-year ocean and air freight deals alongside.",
     "a4f6ca9e3591e": "Veho announced Pulse AI on Nov. 4: brands can ask Pulse Agent plain-English questions about service performance, in beta for select clients.",
-    "a069325035b44": "On Nov. 9 GOFO's white paper cited ShipMatrix: 23.9 billion US parcels in 2025, up 0.4%, with Amazon (6.7B) just ahead of USPS (6.6B)."
+    "a069325035b44": "On Nov. 9 GOFO's white paper cited ShipMatrix: 23.9 billion US parcels in 2025, up 0.4%, with Amazon (6.7B) just ahead of USPS (6.6B).",
+    "a947eb28a3ca3": "GOFO announced on Nov. 4 that it's now a Shopify tracking partner, so its updates show in merchant order info and natively in the Shop app."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "UPS has cut Amazon volume by over half, and GOFO, Veho and OnTrac keep expanding. UniUni's go-public deal was terminated on Oct. 20."
+   "now": "UPS has cut Amazon volume by more than half, and GOFO, Veho and OnTrac keep expanding. UniUni's go-public deal was terminated Oct. 20."
   }
  },
  "theme-ups-teamsters": {
@@ -863,7 +866,7 @@
   "theme": true,
   "rv": "f43f274d40c8",
   "cx": {
-   "sig": "32799a418fa2",
+   "sig": "7e5f012e9ff3",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -1052,8 +1055,8 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber announced the Prime benefit on Nov. 5, 2026, and Amazon is ending Grubhub+ as an ongoing Prime perk.",
-  "last": "2026-11-07",
+  "s": "Amazon has announced free Uber Eats delivery for Prime members on orders over $25, and the WSJ reported on Nov. 8 that DoorDash shares sold off.",
+  "last": "2026-11-08",
   "c": [
    "Amazon"
   ],

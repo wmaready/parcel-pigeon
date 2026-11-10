@@ -2971,6 +2971,117 @@
    ],
    "enriched": "2026-11-09",
    "pending": false
+  },
+  {
+   "id": "plusonerobotic",
+   "n": "Plus One Robotics",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "San Antonio, TX, USA",
+   "yr": "2016",
+   "s": "Plus One Robotics provides AI vision software (PickOne), remote human supervision (Yonder) and robotic parcel-induction cells (InductOne) that carriers and logistics operators use to singulate and induct parcels onto sorters.",
+   "al": [
+    "Plus One Robotics, Inc."
+   ],
+   "src": "https://www.prnewswire.com/news-releases/plus-one-robotics-introduces-inductone-a-dual-arm-automated-parcel-induction-solution-to-maximize-throughput-302137634.html",
+   "auto": true,
+   "added": "2026-11-10",
+   "from": "discover",
+   "site": "plusonerobotics.com",
+   "geo": [
+    -98.494,
+    29.424
+   ],
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/plus-one-robotics-introduces-inductone-a-dual-arm-automated-parcel-induction-solution-to-maximize-throughput-302137634.html",
+    "https://www.therobotreport.com/plus-one-robotics-raises-50m-series-c-funding-round/",
+    "https://www.freightwaves.com/news/plus-one-robotics-raises-50m-for-ai-powered-parcel-handling"
+   ],
+   "enriched": "2026-11-10",
+   "pending": false
+  },
+  {
+   "id": "ambirobotics",
+   "n": "Ambi Robotics",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Berkeley, CA, USA",
+   "yr": "2018",
+   "s": "Ambi Robotics builds AI-powered robotic parcel sortation systems (AmbiSort A-Series and B-Series, run on its AmbiOS software) that are deployed in U.S. e-commerce and logistics hubs, including those of Pitney Bowes.",
+   "al": [
+    "Ambi",
+    "Ambidextrous",
+    "Ambidextrous Laboratories"
+   ],
+   "src": "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/269/pitney-bowes-to-deploy-ambi-robotics-ai-powered-robots-in-us-to-support-global-ecommerce-network",
+   "auto": true,
+   "added": "2026-11-10",
+   "from": "discover",
+   "site": "ambirobotics.com",
+   "geo": [
+    -122.273,
+    37.871
+   ],
+   "srcs": [
+    "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/269/pitney-bowes-to-deploy-ambi-robotics-ai-powered-robots-in-us-to-support-global-ecommerce-network",
+    "https://www.finsmes.com/2022/10/ambi-robotics-raises-32m-in-funding.html",
+    "https://www.nasdaq.com/press-release/ambi-robotics-expands-partnership-with-pitney-bowes-to-automate-middle-mile-sorting"
+   ],
+   "enriched": "2026-11-10",
+   "pending": false
+  },
+  {
+   "id": "locusrobotics",
+   "n": "Locus Robotics",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Wilmington, MA, USA",
+   "yr": "2014",
+   "s": "Locus Robotics makes autonomous mobile robots and software that help warehouse workers pick and fulfill e-commerce and retail orders, with customers including 3PLs, retailers and healthcare distributors.",
+   "al": [
+    "Locus",
+    "Locus Robotics Corp.",
+    "Locus Robotics, Inc."
+   ],
+   "src": "https://search.therobotreport.com/listings/locus-robotics/",
+   "auto": true,
+   "added": "2026-11-10",
+   "from": "discover",
+   "site": "locusrobotics.com",
+   "geo": [
+    -71.174,
+    42.547
+   ],
+   "srcs": [
+    "https://search.therobotreport.com/listings/locus-robotics/",
+    "https://locusrobotics.com/customers/",
+    "https://group.dhl.com/en/media-relations/press-releases/2024/dhl-supply-chain-passes-unprecedented-500-million-picks-milestone-using-locus-robotics-autonomous-mobile-robots.html"
+   ],
+   "enriched": "2026-11-10",
+   "pending": false
+  },
+  {
+   "id": "teamsters",
+   "n": "Teamsters",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Labor union campaigning for the Delivery Protection Act",
+   "al": [],
+   "src": "https://nypost.com/2026/11/09/business/nyc-councilman-pulls-support-from-mamdani-backed-amazon-delivery-bill-due-to-potential-job-loss/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-09",
+   "story": "a3a4fa02bef84"
   }
  ],
  "edges": [
@@ -5223,6 +5334,78 @@
    "t": "GOFO joins ShipMonk's Virtual Carrier Network",
    "url": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html",
    "story": "a069325035b44"
+  },
+  {
+   "a": "plusonerobotic",
+   "b": "fedex",
+   "k": "partner",
+   "y": "2020",
+   "t": "Robotic parcel induction at FedEx Memphis hub with Yaskawa",
+   "url": "https://www.plusonerobotics.com/blog/plus-one-robotics-yaskawa-america-announce-partnership-with-fedex",
+   "story": null
+  },
+  {
+   "a": "ambirobotics",
+   "b": "pitneybowes",
+   "k": "partner",
+   "y": "2021",
+   "t": "AmbiSort deployments in Pitney Bowes U.S. ecommerce hubs",
+   "url": "https://investorrelations.pitneybowes.com/news-events/press-releases/detail/269/pitney-bowes-to-deploy-ambi-robotics-ai-powered-robots-in-us-to-support-global-ecommerce-network",
+   "story": null
+  },
+  {
+   "a": "pitneybowes",
+   "b": "ambirobotics",
+   "k": "invested",
+   "y": "2022",
+   "t": "Participated in Ambi's $32M round",
+   "url": "https://www.finsmes.com/2022/10/ambi-robotics-raises-32m-in-funding.html",
+   "story": null
+  },
+  {
+   "a": "tigerglobal",
+   "b": "ambirobotics",
+   "k": "invested",
+   "y": "2022",
+   "t": "Co-led Ambi's $32M round",
+   "url": "https://www.finsmes.com/2022/10/ambi-robotics-raises-32m-in-funding.html",
+   "story": null
+  },
+  {
+   "a": "ambirobotics",
+   "b": "picklerobotcom",
+   "k": "partner",
+   "y": "2026",
+   "t": "Integrated physical-AI solution to automate inbound logistics (Business Wire, June 30, 2026)",
+   "url": "https://equityzen.com/company/ambidextrous/",
+   "story": null
+  },
+  {
+   "a": "locusrobotics",
+   "b": "dhlsupplychain",
+   "k": "partner",
+   "y": "2017",
+   "t": "Robot supplier to DHL Supply Chain; partnership began 2017 and later expanded to a 5,000-robot agreement",
+   "url": "https://www.supplychaindive.com/news/DHL-Supply-Chain-Locus-Robotics-expand-agreement-5K-autonomous-mobile-robots/649965/",
+   "story": null
+  },
+  {
+   "a": "locusrobotics",
+   "b": "upshealthcare",
+   "k": "partner",
+   "y": null,
+   "t": "UPS Healthcare deployed Locus robots at its Louisville, KY facility",
+   "url": "https://locusrobotics.com/customers/",
+   "story": null
+  },
+  {
+   "a": "tigerglobal",
+   "b": "locusrobotics",
+   "k": "invested",
+   "y": "2021",
+   "t": "Led the $150M Series E (with Bond) and added $50M later in 2021",
+   "url": "https://www.freightwaves.com/news/big-game-hunting-locus-robotics-bags-50m-from-tiger-global",
+   "story": null
   }
  ],
  "moves": [
@@ -5607,7 +5790,10 @@
   "tractorsupplyc": "2026-11-08",
   "wisesystems": "2026-11-08",
   "fortnaformerly": "2026-11-09",
-  "picklerobotcom": "2026-11-09"
+  "picklerobotcom": "2026-11-09",
+  "plusonerobotic": "2026-11-10",
+  "ambirobotics": "2026-11-10",
+  "locusrobotics": "2026-11-10"
  },
  "facts": {
   "ups": {

@@ -1,5 +1,5 @@
 {
- "run": "2026-11-10T12:36Z",
+ "run": "2026-11-10T12:49Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,8 +8,8 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 150,
- "doc_cursor": 84,
+ "link_cursor": 190,
+ "doc_cursor": 114,
  "checked_pairs": [
   "73dcfc31b988",
   "454e4f8f6a6b",
@@ -235,36 +235,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
-   "ids": [
-    "a54805bbe5d65",
-    "ab3283b22bb4f"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
-   "ids": [
-    "aa4c45051038a",
-    "a5876cb3ae6f1"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
-   "ids": [
-    "ab3283b22bb4f",
-    "adb9900b3abe7"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
    "ids": [
     "abf7a28de14a5",
@@ -345,20 +315,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Council Member asks DOT to curb Amazon on-foot delivery hubs\"",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Councilman Wong pulls co-sponsorship of Delivery Protection Act\"",
    "ids": [
     "a45eccf8e24d3",
-    "a3fa21d4c267a"
+    "a3a4fa02bef84"
    ],
    "fixed": false
   },
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon MK30 delivery drone goes on display at Seattle's Museum of Flight\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon wins UK CAA approval to expand Darlington drone delivery to 8,000\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a55bc15c5ae50"
+    "a3c674e8d68e4"
    ],
    "fixed": false
   },
@@ -376,6 +346,27 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or Project Aurelian, the 39,400-ZIP-code / 99.9%-of-demand contingency plan by 2029. Nothing about Amazon's ZIP coverage or a USPS deal appears in the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery or any recipient-PIN requirement, nor the $10.70 UPS price. They mention a paid FedEx Authenticated Delivery upgrade in the U.S. and Canada, but give no price, no QR-code requirement, and no 'select express services' limit. The $20 FedEx figure is unsupported.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash, its $7.99 courier returns, the Dasher pickup-without-label process, participating brands (Macy's, Anthropologie, VF), or DoorDash-designed drones. None of this is supported.",
    "ids": [],
    "fixed": false
   }
@@ -522,36 +513,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Lawmakers ask FAA, Amazon for separate review of Westborough drone hub\" and \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\"",
-   "ids": [
-    "a54805bbe5d65",
-    "ab3283b22bb4f"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air starts drone deliveries in Chicago's south suburbs\" and \"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\"",
-   "ids": [
-    "aa4c45051038a",
-    "a5876cb3ae6f1"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Massachusetts lawmakers seek added review of Amazon Westborough drone hub\" and \"Massachusetts Democrats ask FAA to review Amazon drone hub near Boston\"",
-   "ids": [
-    "ab3283b22bb4f",
-    "adb9900b3abe7"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
    "ids": [
     "abf7a28de14a5",
@@ -632,20 +593,20 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Council Member asks DOT to curb Amazon on-foot delivery hubs\"",
+   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Councilman Wong pulls co-sponsorship of Delivery Protection Act\"",
    "ids": [
     "a45eccf8e24d3",
-    "a3fa21d4c267a"
+    "a3a4fa02bef84"
    ],
    "fixed": false
   },
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon MK30 delivery drone goes on display at Seattle's Museum of Flight\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon wins UK CAA approval to expand Darlington drone delivery to 8,000\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a55bc15c5ae50"
+    "a3c674e8d68e4"
    ],
    "fixed": false
   },
@@ -663,6 +624,27 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or Project Aurelian, the 39,400-ZIP-code / 99.9%-of-demand contingency plan by 2029. Nothing about Amazon's ZIP coverage or a USPS deal appears in the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery or any recipient-PIN requirement, nor the $10.70 UPS price. They mention a paid FedEx Authenticated Delivery upgrade in the U.S. and Canada, but give no price, no QR-code requirement, and no 'select express services' limit. The $20 FedEx figure is unsupported.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash, its $7.99 courier returns, the Dasher pickup-without-label process, participating brands (Macy's, Anthropologie, VF), or DoorDash-designed drones. None of this is supported.",
    "ids": [],
    "fixed": false
   }
