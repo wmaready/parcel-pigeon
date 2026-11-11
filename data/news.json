@@ -1,5 +1,90 @@
 [
  {
+  "id": "a531bcaf173d6",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "USPS proposes rule change on postage advances by resetting companies",
+  "sum": "The Postal Service proposed amending its Postage Evidencing Systems regulations to address days when a resetting company's advances exceed the daily average funds advanced amount it keeps on deposit. Comments are due by December 14, 2026, according to the Federal Register notice.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to postage rates or service is stated. The proposal concerns how resetting companies handle advances against the deposit they hold with USPS.",
+  "why": "The rule covers how postage meter resetting companies advance postage funds to customers, a mechanism tied to metered postage.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-11T09:21:45Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23064/authorization-to-manufacture-and-distribute-postage-evidencing-systems",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/12/2026-23064/authorization-to-manufacture-and-distribute-postage-evidencing-systems"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "syn": "The Postal Service published a proposed rule amending its Postage Evidencing Systems regulations. It says the current rules assume the deposit always covers amounts advanced and do not let a resetting company advance more than the deposit. USPS says operational realities make excess advances necessary on some days, and it calls an average daily balance rule a practical and fair way to handle them. Comments must be received by December 14, 2026.",
+  "aff": [
+   {
+    "who": "Resetting companies",
+    "what": "Proposed rule addresses days when advances to customers exceed the daily average funds advanced amount on deposit with USPS."
+   },
+   {
+    "who": "Commenters",
+    "what": "Comments must be received on or before December 14, 2026."
+   },
+   {
+    "who": "Postage customers",
+    "what": "The notice states no change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "ae374e7320420",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS files notice to add domestic shipping contract to NSA list",
+  "sum": "The U.S. Postal Service said it filed a request with the Postal Regulatory Commission to add a domestic shipping services contract to the Negotiated Service Agreements in the Mail Classification Schedule's Competitive Products List. The Federal Register notice is dated November 12, 2026 and covers Priority Mail Express, Priority Mail and USPS Ground Advantage agreements. The text provided does not name the customer or give contract terms.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or service for shippers. The notice covers a negotiated contract with a single customer, and the text provided gives no terms.",
+  "why": "Negotiated agreements set custom USPS rates for individual customers, but the notice text provided names no customer and gives no pricing terms.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-11T09:21:38Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service"
+   }
+  ],
+  "auto": true,
+  "new": "USPS filed a new domestic shipping contract with the regulator in a November 12 notice, but the text provided does not name the customer, so it is not linked to Amazon or DHL eCommerce, and nothing changes for shippers.",
+  "syn": "The Postal Service gave notice on November 12, 2026 that it filed a request with the Postal Regulatory Commission. The request would add a domestic shipping services contract to the list of Negotiated Service Agreements in the Competitive Products List. The notice covers Priority Mail Express, Priority Mail and USPS Ground Advantage agreements. The text provided does not name the contract's counterparty, the filing date or the terms, because the table of filings is not included.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a195de38cb09b",
   "date": "2026-11-10",
   "c": [
@@ -11833,62 +11918,5 @@
   ],
   "auto": true,
   "exclusive": true
- },
- {
-  "id": "a9193cb2bff63",
-  "date": "2026-10-15",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "Opinion",
-  "title": "Opinion: Labor, trade and security policy reshape parcel competition",
-  "sum": "In an opinion piece for FreightWaves, Daniil Davydoff of DHL eCommerce Americas argues that labor rules, geopolitics and data security may shape which parcel carriers succeed as much as operations do. He cites a $131.5 million settlement by DoorDash and Uber with New York City's Department of Consumer and Worker Protection. He also cites an industry analysis showing UPS and FedEx fuel surcharges above 23%, up from about 9% in 2021, and a SpeedX incident that exposed 840 million customer records.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The piece is one author's view of policy pressures on carriers, and it says fuel surcharges for UPS and FedEx are above 23% according to an industry analysis.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-15T16:55:43Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/opinion-how-politics-and-policy-are-rewriting-the-rules-of-parcel-delivery",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/opinion-how-politics-and-policy-are-rewriting-the-rules-of-parcel-delivery"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "a926db30d0707",
-  "date": "2026-10-15",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon Prime Air to expand drone delivery to nearly 500 US cities by end of 2026",
-  "sum": "Amazon said Prime Air will expand to nearly 500 cities and towns in the US by the end of 2026, about six times its current footprint of 11 sites in 10 metro areas, according to Mashable. The next launches are planned for the Chicago, Syracuse, Cleveland, Atlanta and Boise metro areas. Amazon has not yet published a full list of the places included.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Customers at eligible addresses will see drone delivery as an option at checkout, for most items of 5 pounds or less. Prime members pay nothing on orders of $50 or more and $2.99 on smaller orders, and non-Prime customers pay $4.99, according to Amazon.",
-  "why": "Prime Air's planned reach is about six times its current footprint, with drone delivery offered at checkout for eligible items of 5 pounds or less.",
-  "score": 6,
-  "tie": "Amazon outlined the same Prime Air expansion to nearly 500 towns in August 2026, including the $2.99 and $4.99 delivery fees.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T20:53:16Z",
-  "src": "Mashable",
-  "url": "https://mashable.com/tech/amazon-prime-air-drone-delivery-500-cities",
-  "srcs": [
-   {
-    "src": "Mashable",
-    "url": "https://mashable.com/tech/amazon-prime-air-drone-delivery-500-cities"
-   }
-  ],
-  "auto": true,
-  "new": "Mashable reports that Amazon counts cities and towns rather than launch sites, with each site covering roughly 175 square miles, and that Boise is among the next metro areas; no full list of places is published yet, so which shippers' customers qualify remains unclear."
  }
 ]
