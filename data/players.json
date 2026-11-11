@@ -3130,6 +3130,40 @@
    ],
    "enriched": "2026-11-11",
    "pending": false
+  },
+  {
+   "id": "popshelf",
+   "n": "pOpshelf",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Subsidiary of Dollar General, also offering same-day delivery through Instacart.",
+   "al": [],
+   "src": "https://chainstoreage.com/dollar-general-expands-instacart-delivery-nationwide",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-10",
+   "story": "ab3082d84afe6"
+  },
+  {
+   "id": "carpartscom",
+   "n": "CarParts.com",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Online retailer of auto parts that operates a distribution center in Grand Prairie, Texas.",
+   "al": [],
+   "src": "https://www.supplychaindive.com/news/carpartscom-revs-up-in-house-last-mile-delivery-for-cost-speed-benefits/874287/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-11",
+   "story": "a34c88b56c3e2"
   }
  ],
  "edges": [
@@ -5499,6 +5533,15 @@
    "t": "Walmart listed as a user of Geek+ robots",
    "url": "https://www.mmh.com/article/vargo-geekplus-warehouse-automation-partnership",
    "story": null
+  },
+  {
+   "a": "dollargeneral",
+   "b": "popshelf",
+   "k": "owns",
+   "y": "2026",
+   "t": "pOpshelf is a Dollar General subsidiary",
+   "url": "https://chainstoreage.com/dollar-general-expands-instacart-delivery-nationwide",
+   "story": "ab3082d84afe6"
   }
  ],
  "moves": [
