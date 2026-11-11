@@ -1,5 +1,5 @@
 {
- "run": "2026-11-11T12:01Z",
+ "run": "2026-11-11T18:03Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -337,36 +337,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
-   "ids": [
-    "41"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: None of the stories mention Amazon mapping its own delivery to 95% of ZIP codes or a 'Project Aurelian' contingency plan covering 39,400 ZIP codes and 99.9% of demand by 2029. The stories contain no support for this claim.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: None of the stories mention UPS Protected Delivery, its $10.70 PIN requirement, FedEx Authenticated Delivery, or its $20 QR-code requirement. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: None of the stories mention DoorDash courier returns, the $7.99 price, participation by Macy's, Anthropologie or VF brands, or DoorDash's own drones. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -611,36 +581,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='secure.businesswire.com', port=443): Read timed out. (read timeout=15)): https://secure.businesswire.com/news/home/20260730588491/en/UPS-Makes-Shipping-Easier-than-Ever-with-New-Digital-Tools-for-SMB-Customers",
-   "ids": [
-    "41"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: None of the stories mention Amazon mapping its own delivery to 95% of ZIP codes or a 'Project Aurelian' contingency plan covering 39,400 ZIP codes and 99.9% of demand by 2029. The stories contain no support for this claim.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: None of the stories mention UPS Protected Delivery, its $10.70 PIN requirement, FedEx Authenticated Delivery, or its $20 QR-code requirement. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: None of the stories mention DoorDash courier returns, the $7.99 price, participation by Macy's, Anthropologie or VF brands, or DoorDash's own drones. The stories do not support these claims.",
    "ids": [],
    "fixed": false
   }
