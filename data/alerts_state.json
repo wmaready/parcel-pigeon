@@ -183,7 +183,12 @@
   "acb9a06a4324c",
   "a195de38cb09b",
   "a531bcaf173d6",
-  "ae374e7320420"
+  "ae374e7320420",
+  "a62ce553f63fc",
+  "a6bcb2cc6eb9a",
+  "a665de2800485",
+  "a679a283e8a36",
+  "afc24e3e3a5e6"
  ],
  "clock": [
   "e06:7",
@@ -300,7 +305,9 @@
   "picklerobotcom",
   "plusonerobotic",
   "ambirobotics",
-  "locusrobotics"
+  "locusrobotics",
+  "geek",
+  "beumergroup"
  ],
  "sent": [
   "player:pirateship",
@@ -562,7 +569,17 @@
   "story:otaa fulfills us orders from texas via cart com as de minimis ends",
   "story:shipstation global runs more than 250 ai agents across freight operations",
   "story:scurri survey 67 of uk shoppers would accept slower peak delivery for lower cost",
-  "story:usps chief steiner says agency will detail service cuts in q1 2027"
+  "story:usps chief steiner says agency will detail service cuts in q1 2027",
+  "more:player:beumergroup,player:geek,story:amazon launches prime air drone delivery from markham illinois,story:amazon van driver s death ruled carbon monoxide poisoning in florida,story:fedex tech chief talwar aims to use ai to open new revenue streams,story:locus survey 54 of shoppers abandoned a cart over delivery date doubts,story:usps files notice to add domestic shipping contract to nsa list,story:usps proposes rule change on postage advances by resetting companies,story:wing outlines walmart drone delivery plan for union township",
+  "story:amazon launches prime air drone delivery from markham illinois",
+  "story:amazon van driver s death ruled carbon monoxide poisoning in florida",
+  "story:fedex tech chief talwar aims to use ai to open new revenue streams",
+  "story:usps files notice to add domestic shipping contract to nsa list",
+  "story:wing outlines walmart drone delivery plan for union township",
+  "story:locus survey 54 of shoppers abandoned a cart over delivery date doubts",
+  "story:usps proposes rule change on postage advances by resetting companies",
+  "player:beumergroup",
+  "player:geek"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -745,170 +762,98 @@
   "california privacy agency fines fedex 2 975m over ad trackin",
   "usps chief steiner says agency will detail service cuts in q",
   "usps proposes rule change on postage advances by resetting c",
-  "usps files notice to add domestic shipping contract to nsa l"
+  "usps files notice to add domestic shipping contract to nsa l",
+  "fedex tech chief talwar aims to use ai to open new revenue s",
+  "amazon van driver s death ruled carbon monoxide poisoning in",
+  "locus survey 54 of shoppers abandoned a cart over delivery d",
+  "wing outlines walmart drone delivery plan for union township",
+  "amazon launches prime air drone delivery from markham illino"
  ],
  "harvested": [
-  "af589de326934",
-  "ae0ee67bc4b67",
-  "afd8784e2b179",
-  "a58373f1b7bc3",
-  "a999409ce7860",
-  "a4f6ca9e3591e",
-  "a5d45f26f2219",
-  "a40c99078f690",
-  "a567030ffc76c",
-  "w0b8720b6a0e7",
-  "ac89be3e5da8f",
-  "wf5014bc150e9",
-  "w68c1687d28a1",
-  "a9b77b62dcd89",
-  "a2b7282f9b8a5",
-  "a57a06c26359c",
-  "a6ba18049bc99",
   "wacb825361479",
-  "w86cfd39b48f5",
-  "acfef8560e2ac",
   "aba40a11b6946",
-  "adbdc9a506e95",
-  "w84705482dd2f",
-  "wdf959a97bcb6",
-  "a831c709e5809",
-  "a6e82ba740e99",
-  "a89d7e4beebd9",
-  "a9f97ff5f51a3",
-  "a2def09bc43bb",
-  "ac78f72e7f458",
-  "wbfc38914b368",
-  "ad851d9e2eb69",
-  "aa7358e9cf2dd",
-  "ae374e7320420",
-  "a74df5c94691e",
-  "w150132868eae",
-  "a3d768115c0e6",
-  "wb8827e8c126e",
-  "adc002570b1d6",
-  "a0adb56a55334",
-  "w599d9089a65d",
-  "a6cc2420ad66e",
-  "a3bd243da7c6c",
-  "aa51e82b50d12",
-  "wa9c423a83880",
-  "wf7bb9227b2de",
-  "w8465aa718dc6",
-  "ae12ca75552ef",
-  "a23a4d6fd271d",
-  "a312b45efa358",
-  "aead0203aab18",
-  "ae2ec177094e3",
-  "a72efb5e01b99",
-  "ad7d0b7072901",
-  "a773d361dac4e",
+  "ac89be3e5da8f",
+  "a3a45d7f6db20",
   "aee6669d325da",
-  "a195de38cb09b",
+  "a2f60a03dddd7",
+  "a531bcaf173d6",
+  "a9b77b62dcd89",
+  "a74df5c94691e",
+  "acfef8560e2ac",
+  "a15404304f17b",
+  "a999409ce7860",
+  "w9c03b8f99b5f",
+  "a6e82ba740e99",
+  "wf7fe771e76cd",
+  "a5d45f26f2219",
+  "wdf959a97bcb6",
+  "wbfc38914b368",
+  "w86cfd39b48f5",
+  "w84705482dd2f",
+  "a89f005fb1862",
+  "a40c99078f690",
+  "w599d9089a65d",
+  "a3bd243da7c6c",
+  "adc002570b1d6",
+  "a58373f1b7bc3",
+  "rv5-ups-sbr-fuel",
+  "a6cc2420ad66e",
+  "a57a06c26359c",
+  "a2b7282f9b8a5",
+  "a9f97ff5f51a3",
+  "a72efb5e01b99",
+  "a831c709e5809",
+  "a2b81ad721cb8",
+  "ad7d0b7072901",
+  "af8ee5ed067c6",
+  "a6c2418bed0a7",
   "a947eb28a3ca3",
   "a82e057190718",
-  "w9c03b8f99b5f",
-  "w91588ddb11ed",
-  "a351cab9045c7",
-  "af8ee5ed067c6",
-  "wf7fe771e76cd",
-  "a2b81ad721cb8",
-  "a6c2418bed0a7",
-  "a84ca5863e582",
-  "rv5-ups-sbr-fuel",
-  "a89f005fb1862",
-  "a15404304f17b",
-  "a531bcaf173d6",
-  "w500a5bdc762c",
-  "a260cc6a2e05e",
-  "a3a45d7f6db20",
-  "we85aee3857d1",
-  "a663794cc9c55",
+  "a6ba18049bc99",
   "a2f683da86bf8",
-  "a069325035b44",
   "aaf63e9db25a0",
-  "a2f60a03dddd7"
+  "wf5014bc150e9",
+  "wb8827e8c126e",
+  "a260cc6a2e05e",
+  "ae12ca75552ef",
+  "a4f6ca9e3591e",
+  "ae2ec177094e3",
+  "a84ca5863e582",
+  "w8465aa718dc6",
+  "a351cab9045c7",
+  "ae374e7320420",
+  "w150132868eae",
+  "af589de326934",
+  "afd8784e2b179",
+  "w0b8720b6a0e7",
+  "w500a5bdc762c",
+  "wf7bb9227b2de",
+  "ad851d9e2eb69",
+  "a312b45efa358",
+  "we85aee3857d1",
+  "a567030ffc76c",
+  "a665de2800485",
+  "a23a4d6fd271d",
+  "aa51e82b50d12",
+  "a3d768115c0e6",
+  "a663794cc9c55",
+  "a2def09bc43bb",
+  "a069325035b44",
+  "w68c1687d28a1",
+  "a89d7e4beebd9",
+  "a773d361dac4e",
+  "ae0ee67bc4b67",
+  "adbdc9a506e95",
+  "wa9c423a83880",
+  "a195de38cb09b",
+  "ac78f72e7f458",
+  "a0adb56a55334",
+  "w91588ddb11ed",
+  "aa7358e9cf2dd",
+  "aead0203aab18"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a987f817b1285",
-   "title": "Narvar names founder Amit Sharma CEO again",
-   "date": "2026-10-20",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo",
-   "srcs": [
-    {
-     "src": "Retail Technology Innovation Hub",
-     "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo"
-    }
-   ]
-  },
-  {
-   "id": "aeb385569416d",
-   "title": "Police: $963,000 in trading cards stolen from FedEx truck in Southern California",
-   "date": "2026-10-19",
-   "c": [
-    "FedEx",
-    "UPS",
-    "DHL",
-    "Industry"
-   ],
-   "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/",
-   "srcs": [
-    {
-     "src": "finchannel",
-     "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/"
-    }
-   ]
-  },
-  {
-   "id": "ada5797f56ab5",
-   "title": "ShipStation Global details 250+ AI agents running across its platform",
-   "date": "2026-10-20",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://massmarketretailers.com/shipstation-global-puts-ai-to-work-across-its-platform-to-power-shipping-and-logistics-for-growing-businesses/",
-   "srcs": [
-    {
-     "src": "Mass Market Retailers",
-     "url": "https://massmarketretailers.com/shipstation-global-puts-ai-to-work-across-its-platform-to-power-shipping-and-logistics-for-growing-businesses/"
-    }
-   ]
-  },
-  {
-   "id": "afb6fa67940a7",
-   "title": "MAK Acquisition terminates UniUni purchase agreement",
-   "date": "2026-10-20",
-   "c": [
-    "Regional"
-   ],
-   "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899",
-   "srcs": [
-    {
-     "src": "The Manila Times",
-     "url": "https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/mak-acquisition-terminates-purchase-agreement-with-uniuni/2449899"
-    }
-   ]
-  },
-  {
-   "id": "a7708e6818313",
-   "title": "Westborough, Mass., voters ban commercial drone pads in 510-13 vote",
-   "date": "2026-10-19",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/",
-   "srcs": [
-    {
-     "src": "DroneXL",
-     "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/"
-    }
-   ]
-  },
   {
    "id": "a54c3fc6ab060",
    "title": "Business groups urge NYC Council to block Delivery Protection Act",
@@ -3245,6 +3190,85 @@
      "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service"
     }
    ]
+  },
+  {
+   "id": "a62ce553f63fc",
+   "title": "FedEx tech chief Talwar aims to use AI to open new revenue streams",
+   "date": "2026-11-11",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.forbes.com/sites/aliciapark/2026/11/11/fedexs-cio-is-betting-its-next-big-delivery-is-data/",
+   "srcs": [
+    {
+     "src": "Forbes",
+     "url": "https://www.forbes.com/sites/aliciapark/2026/11/11/fedexs-cio-is-betting-its-next-big-delivery-is-data/"
+    }
+   ]
+  },
+  {
+   "id": "a6bcb2cc6eb9a",
+   "title": "Amazon van driver's death ruled carbon monoxide poisoning in Florida",
+   "date": "2026-11-11",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.dailymail.com/news/article-16283303/amazon-delivery-driver-dies-poisoning-van.html",
+   "srcs": [
+    {
+     "src": "Daily Mail",
+     "url": "https://www.dailymail.com/news/article-16283303/amazon-delivery-driver-dies-poisoning-van.html"
+    }
+   ]
+  },
+  {
+   "id": "a665de2800485",
+   "title": "Locus survey: 54% of shoppers abandoned a cart over delivery-date doubts",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.prnewswire.com/news-releases/locus-finds-holiday-delivery-doubts-have-driven-54-of-shoppers-to-abandon-online-carts-302934200.html",
+   "srcs": [
+    {
+     "src": "PR Newswire",
+     "url": "https://www.prnewswire.com/news-releases/locus-finds-holiday-delivery-doubts-have-driven-54-of-shoppers-to-abandon-online-carts-302934200.html"
+    },
+    {
+     "src": "Supply Chain 24/7",
+     "url": "https://www.supplychain247.com/article/holiday-delivery-doubts-locus-survey-2026"
+    }
+   ]
+  },
+  {
+   "id": "a679a283e8a36",
+   "title": "Wing outlines Walmart drone delivery plan for Union Township",
+   "date": "2026-11-10",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://www.wvxu.org/local-news/2026-11-11/wing-aviation-delivery-drones-might-be-flying-over-union-township-soon",
+   "srcs": [
+    {
+     "src": "WVXU",
+     "url": "https://www.wvxu.org/local-news/2026-11-11/wing-aviation-delivery-drones-might-be-flying-over-union-township-soon"
+    }
+   ]
+  },
+  {
+   "id": "afc24e3e3a5e6",
+   "title": "Amazon launches Prime Air drone delivery from Markham, Illinois",
+   "date": "2026-11-10",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://abc7chicago.com/post/amazon-officially-launches-prime-air-drone-delivery-service-markham-tinley-park-midlothian-homewood-flossmoor-dolton/20031207/",
+   "srcs": [
+    {
+     "src": "ABC7 Chicago",
+     "url": "https://abc7chicago.com/post/amazon-officially-launches-prime-air-drone-delivery-service-markham-tinley-park-midlothian-homewood-flossmoor-dolton/20031207/"
+    }
+   ]
   }
  ],
  "copy": {
@@ -3851,46 +3875,33 @@
   "ae374e7320420": {
    "t": "USPS adds domestic deal to NSA list",
    "m": "Notice covers one customer's negotiated contract. No rate or service change for shippers."
+  },
+  "a62ce553f63fc": {
+   "t": "FedEx's Talwar eyes AI revenue",
+   "m": "No rate or service change; the story covers a technology strategy with no dates or pricing."
+  },
+  "a6bcb2cc6eb9a": {
+   "t": "Amazon van death ruled CO poisoning",
+   "m": "No change to rates or service; the report concerns an investigation into a driver's death."
+  },
+  "a665de2800485": {
+   "t": "54% drop carts over delivery doubts",
+   "m": "Shoppers value a promised arrival date and some pay extra for one; no rate change."
+  },
+  "a679a283e8a36": {
+   "t": "Wing plans Walmart drone delivery",
+   "m": "Drone delivery up to 2.5 lbs could start as soon as January, pending township permit approval."
+  },
+  "afc24e3e3a5e6": {
+   "t": "Amazon launches Prime Air in Markham",
+   "m": "Within 7.5 miles: Prime pays $2.99 under $50, free above; non-Prime pays $4.99."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:usps proposes rule change on postage advances by resetting companies",
-   "id": "a531bcaf173d6",
-   "t": "USPS proposes postage advance rule",
-   "m": "Covers how resetting companies draw advances against their USPS deposit; no rate change.",
-   "big": false,
-   "at": "2026-11-11T04:22:29.865727-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": false,
-   "mask": 4,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a531bcaf173d6",
-   "co": "USPS"
-  },
-  {
-   "kind": "story",
-   "key": "story:usps files notice to add domestic shipping contract to nsa list",
-   "id": "ae374e7320420",
-   "t": "USPS adds domestic deal to NSA list",
-   "m": "Notice covers one customer's negotiated contract. No rate or service change for shippers.",
-   "big": false,
-   "at": "2026-11-11T04:22:29.865784-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 4,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=ae374e7320420",
-   "co": "USPS"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-11-10",
-  "n": 4
+  "d": "2026-11-11",
+  "n": 1
  },
- "last_push": "2026-11-10T20:02:31.250143-05:00"
+ "last_push": "2026-11-11T07:00:39.542620-05:00"
 }

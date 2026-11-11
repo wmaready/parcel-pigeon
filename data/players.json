@@ -3065,6 +3065,71 @@
    ],
    "enriched": "2026-11-10",
    "pending": false
+  },
+  {
+   "id": "geek",
+   "n": "Geekplus Technology Co., Ltd.",
+   "realm": "auto",
+   "own": "public",
+   "tk": "2590.HK",
+   "parent": null,
+   "hq": "Beijing, China",
+   "yr": "2015",
+   "s": "Geek+ makes autonomous mobile robots (goods-to-person, sorting and storage systems) and warehouse software that e-commerce, retail and 3PL operators, including UPS Supply Chain Solutions, use for order fulfillment and parcel sortation.",
+   "al": [
+    "Beijing Geekplus Technology Co., Ltd.",
+    "Geek+",
+    "Geekplus"
+   ],
+   "src": "https://finance.yahoo.com/news/geekplus-lists-hkex-main-board-051000357.html",
+   "auto": true,
+   "added": "2026-11-11",
+   "from": "discover",
+   "site": "geekplus.com",
+   "geo": [
+    116.407,
+    39.904
+   ],
+   "srcs": [
+    "https://finance.yahoo.com/news/geekplus-lists-hkex-main-board-051000357.html",
+    "https://www.mmh.com/article/vargo-geekplus-warehouse-automation-partnership",
+    "https://www.ajc.com/news/business/warehouse-automation-is-growing-how-robotics-is-burgeoning-in-atlanta/5RAKD2RONBHM7MDP6UWJJOAZBU/"
+   ],
+   "enriched": "2026-11-11",
+   "pending": false
+  },
+  {
+   "id": "beumergroup",
+   "n": "BEUMER Group",
+   "realm": "auto",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Beckum, Germany",
+   "yr": "1935",
+   "s": "Family-owned German intralogistics manufacturer that builds cross-belt, tilt-tray and loop sortation systems, conveyors and palletizing equipment used in parcel, postal and e-commerce distribution hubs, including in the U.S. through BEUMER Corporation in New Jersey.",
+   "al": [
+    "BEUMER Corporation",
+    "BEUMER Group GmbH & Co. KG",
+    "Beumer",
+    "Crisplant (sortation brand)"
+   ],
+   "src": "https://www.beumergroup.com/press/90-years-of-beumer-group-shaping-the-future-with-tradition-innovation-and-vision/",
+   "auto": true,
+   "added": "2026-11-11",
+   "from": "discover",
+   "site": "beumergroup.com",
+   "geo": [
+    8.038,
+    51.756
+   ],
+   "srcs": [
+    "https://www.beumergroup.com/press/90-years-of-beumer-group-shaping-the-future-with-tradition-innovation-and-vision/",
+    "https://www.mhi.org/members/14332",
+    "https://www.beumergroup.com/products-systems/logistics-systems/bg-sorter-cb-cross-belt/"
+   ],
+   "enriched": "2026-11-11",
+   "pending": false
   }
  ],
  "edges": [
@@ -5398,6 +5463,42 @@
    "t": "Wolt operates within DoorDash's international business",
    "url": "https://www.appeconomyinsights.com/p/doordash-the-17b-instacart-bet",
    "story": "a9e449567399a"
+  },
+  {
+   "a": "geek",
+   "b": "ups",
+   "k": "partner",
+   "y": null,
+   "t": "Robotics supplier to UPS (sorting and returns automation)",
+   "url": "https://www.locate2u.com/logistics/the-robot-effect-ups-taps-geek-for-faster-sorting/",
+   "story": null
+  },
+  {
+   "a": "geek",
+   "b": "happyreturns",
+   "k": "partner",
+   "y": null,
+   "t": "Robots in automated returns hub in Pennsylvania",
+   "url": "https://www.locate2u.com/logistics/the-robot-effect-ups-taps-geek-for-faster-sorting/",
+   "story": null
+  },
+  {
+   "a": "geek",
+   "b": "upsscs",
+   "k": "partner",
+   "y": null,
+   "t": "Robots deployed in UPS Supply Chain Solutions warehouses",
+   "url": "https://www.ajc.com/news/business/warehouse-automation-is-growing-how-robotics-is-burgeoning-in-atlanta/5RAKD2RONBHM7MDP6UWJJOAZBU/",
+   "story": null
+  },
+  {
+   "a": "geek",
+   "b": "walmart",
+   "k": "partner",
+   "y": null,
+   "t": "Walmart listed as a user of Geek+ robots",
+   "url": "https://www.mmh.com/article/vargo-geekplus-warehouse-automation-partnership",
+   "story": null
   }
  ],
  "moves": [
@@ -5785,7 +5886,9 @@
   "picklerobotcom": "2026-11-09",
   "plusonerobotic": "2026-11-10",
   "ambirobotics": "2026-11-10",
-  "locusrobotics": "2026-11-10"
+  "locusrobotics": "2026-11-10",
+  "geek": "2026-11-11",
+  "beumergroup": "2026-11-11"
  },
  "facts": {
   "ups": {

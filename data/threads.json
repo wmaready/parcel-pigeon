@@ -527,7 +527,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon has opened its first Chicago-area Prime Air drone site in Markham, with deliveries set to start this fall, while Walmart expands drone delivery with Wing.",
+  "s": "Drone networks are expanding site by site, while the FAA's Part 108 rule was unpublished as of Oct. 9, per earlier coverage.",
   "ids": [
    "g27",
    "g26",
@@ -540,7 +540,7 @@
    "acad7456be9cb",
    "ae04c4bdd5e4e",
    "a704b11d94f38",
-   "a73e290a90706"
+   "afc24e3e3a5e6"
   ],
   "first": "2025-03-31",
   "last": "2026-11-10",
@@ -550,18 +550,16 @@
    "Regional"
   ],
   "cx": {
-   "sig": "077ef703fcd4",
+   "sig": "a4493b92ec87",
    "v": 3,
    "beats": {
-    "g27": "Amazon's plan: go from 11 U.S. locations to almost 500 towns and 30 million people, with Chicago among the sites by end of 2026.",
-    "g26": "The FAA's Part 108 rule was still unpublished Oct. 9; until then, routine BVLOS delivery needs waivers or Part 135 certificates.",
-    "af4470d3440cc": "Walmart and Zipline, partners since 2021 with more than 2 million deliveries, signed on for 300 more sites; locations weren't disclosed.",
-    "a73e290a90706": "Amazon opened its Markham, Ill. site, the Chicago-area debut; drones carry up to five pounds, with deliveries set for \"this fall.\""
+    "g27": "Amazon's plan: Chicago, Atlanta, Cleveland and Syracuse by end of 2026, reaching almost 500 towns, up from 11 U.S. locations.",
+    "af4470d3440cc": "Walmart signed on for 300 more Zipline sites, building on a partnership since 2021 and 2 million+ deliveries. Locations weren't disclosed."
    },
-   "intro": "Drone delivery is scaling up at Amazon and Walmart while the FAA's Part 108 rule is still unpublished.",
-   "now": "Part 108 was still unpublished as of Oct. 9, and Amazon's Markham deliveries are set to begin \"this fall.\""
+   "intro": "Amazon and Walmart are adding drone delivery sites while the FAA's Part 108 rule stalls; shippers should know who can fly where.",
+   "now": "Part 108 was still unpublished as of Oct. 9, per earlier coverage. Amazon says a second Chicago-area site, in Matteson, is planned in the coming days."
   },
-  "rv": "914766b73fd5",
+  "rv": "f4f7c9dd0992",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -1141,5 +1139,19 @@
    "Industry"
   ],
   "rv": "e33c1ca05a25"
+ },
+ "nalc-contract-arbitration": {
+  "n": "NALC contract arbitration",
+  "ids": [
+   "a7070eb14b830"
+  ],
+  "first": "2026-10-23",
+  "co": "NALC",
+  "s": "James Henry won the NALC presidency on October 23 and takes over from Brian Renfroe in December while contract arbitration with USPS proceeds.",
+  "last": "2026-10-23",
+  "c": [
+   "USPS"
+  ],
+  "rv": "cb69b7881cc6"
  }
 }
