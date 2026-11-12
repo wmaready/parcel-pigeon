@@ -1,5 +1,58 @@
 [
  {
+  "id": "a0740b56c6649",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "USPS files to raise Ground Advantage, Priority Mail prices for 2027",
+  "sum": "The U.S. Postal Service said on Nov. 12, 2026 that it filed notice with its regulator to increase prices for USPS Ground Advantage, Priority Mail, Priority Mail Express, Parcel Select and some competitive special services. USPS said stamp prices do not change. The portion of the release provided gives no percentage or effective date.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "USPS has filed to raise prices on Ground Advantage, Priority Mail, Priority Mail Express, Parcel Select and some special services for 2027. The excerpt gives no amounts or start date, and stamp prices stay the same.",
+  "why": "The filing covers USPS's main ground and express parcel products plus Parcel Select, so it reaches shippers using those services.",
+  "score": 9,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T20:35:03Z",
+  "src": "GlobeNewswire",
+  "url": "https://www.globenewswire.com/news-release/2026/11/12/3402104/0/en/u-s-postal-service-recommends-shipping-price-adjustments-for-2027.html",
+  "srcs": [
+   {
+    "src": "GlobeNewswire",
+    "url": "https://www.globenewswire.com/news-release/2026/11/12/3402104/0/en/u-s-postal-service-recommends-shipping-price-adjustments-for-2027.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "thread": "carrier-gri",
+  "upd": 4,
+  "new": "USPS filed notice with its regulator to raise prices on Ground Advantage, Priority Mail, Priority Mail Express, Parcel Select and some special services, but the excerpt gives no percentage or effective date, so the size of the change for shippers is not yet stated.",
+  "syn": "The U.S. Postal Service said on Nov. 12, 2026 that it filed notice with its regulator to raise prices for USPS Ground Advantage, Priority Mail and Priority Mail Express, Parcel Select, and some competitive special services for 2027. USPS said the actions are part of its modernization plan aimed at financial sustainability, and that stamp prices do not change. The portion of the release provided does not state the size of the increases or when they take effect.",
+  "aff": [
+   {
+    "who": "USPS Ground Advantage shippers",
+    "what": "Prices to rise under the filing for 2027; the excerpt gives no percentage or date."
+   },
+   {
+    "who": "Priority Mail and Priority Mail Express shippers",
+    "what": "Prices to rise under the filing for 2027; the excerpt gives no percentage or date."
+   },
+   {
+    "who": "Parcel Select shippers",
+    "what": "Prices to rise under the filing; some competitive special services are also included."
+   },
+   {
+    "who": "Stamp and First-Class Mail users",
+    "what": "No change to the price of stamps, according to USPS."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a30e480c050e5",
   "date": "2026-11-12",
   "c": [
@@ -1342,6 +1395,10 @@
    {
     "src": "FEDweek",
     "url": "https://www.fedweek.com/fedweek/usps-reports-fewer-hours-and-higher-labor-costs-retirement-squeeze-in-fy2026/"
+   },
+   {
+    "src": "USPS",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOU5aX3N2eUJ2S0JMa2pCTTcya0tWVnRSOHMzNkVBdkpyblVURVY5dW1aaTFqZHF2VWlZdExqSmhxeVo2MDJBb1dlZnl2NnZRemxmaEtteURKZnIyWUhybGNFMzQ4NEIxeEZIQmdqeWp6M0ZLSGdqclR4TUtIR2lCU0NTdHpaQjJCbnhvWm4zY1Y5RV9tS3NrVzhicFpqdmRycnVB?oc=5"
    }
   ],
   "auto": true,
@@ -1364,7 +1421,8 @@
     "what": "Net loss was $6.5 billion; controllable loss was $2.4 billion, against $2.7 billion the prior year."
    }
   ],
-  "exclusive": true
+  "exclusive": true,
+  "updated": "2026-11-11"
  },
  {
   "id": "a3c674e8d68e4",

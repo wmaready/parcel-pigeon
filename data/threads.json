@@ -194,7 +194,7 @@
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
-  "s": "FedEx, DHL Express and UPS have each announced 5.9% average increases for late 2026 or early 2027.",
+  "s": "FedEx, DHL Express and UPS have set 2027 increases averaging 5.9%, and USPS has now filed for 2027 price increases on its parcel products.",
   "ids": [
    "h401",
    "h421",
@@ -204,31 +204,33 @@
    "12",
    "02",
    "07",
-   "w84705482dd2f"
+   "w84705482dd2f",
+   "a0740b56c6649"
   ],
   "first": "2024-01-01",
-  "last": "2026-11-06",
+  "last": "2026-11-12",
   "c": [
    "DHL",
    "FedEx",
-   "UPS"
+   "UPS",
+   "USPS"
   ],
-  "rv": "f612ba1f4fb8",
+  "rv": "82225342511c",
   "cx": {
-   "sig": "d3a31ea17f90",
+   "sig": "ca42b62ea1f2",
    "v": 3,
    "beats": {
-    "h401": "FedEx's 5.9% took effect Jan. 1, 2024, after UPS's matching 5.9% began Dec. 26. Both were down from 6.9% a year earlier.",
-    "h421": "FedEx set 5.9% again for Jan. 6, 2025, with two-day air and long-distance ground rising by more than the average.",
-    "h424": "DHL Express followed with a 5.9% average for U.S. accounts from Jan. 1, 2025, matching FedEx and UPS.",
-    "h426": "UPS also landed on 5.9% for 2025, starting Dec. 23, 2024, a few days ahead of the prior year's Dec. 26 start.",
-    "h529": "FedEx's Jan. 5, 2026 increase stayed at 5.9%, and residential delivery went to $6.95 from $6.55.",
-    "02": "DHL Express also set 5.9% for U.S. accounts on Jan. 1, 2027. Some services and surcharges change too, but DHL didn't list them.",
-    "07": "UPS hasn't announced its 2027 increase yet. In recent years it has followed FedEx by two to three weeks and matched the 5.9% headline.",
-    "w84705482dd2f": "UPS set a 5.9% average increase for Ground, Air and International Daily Rates from Dec. 21, 2026."
+    "h401": "FedEx's 5.9% average hit Jan. 1, 2024, matching UPS's Dec. 26, 2023 start; both were down from 6.9% a year earlier.",
+    "h421": "FedEx set 5.9% again for Jan. 6, 2025, with bigger jumps for two-day air and long-distance ground.",
+    "h424": "DHL Express followed with 5.9% for U.S. accounts from Jan. 1, 2025, the same average as FedEx and UPS.",
+    "h426": "UPS landed on 5.9% too, starting Dec. 23, 2024, so all three big carriers shared the same average.",
+    "12": "FedEx's 2027 average is 5.9% from Jan. 4, but 1–5 lb Ground rises about 6.5%, per an industry analysis.",
+    "02": "DHL Express matches at 5.9% for U.S. accounts on Jan. 1, 2027, with some service and surcharge changes it didn't list.",
+    "w84705482dd2f": "UPS's 5.9% average starts Dec. 21, 2026, and Additional Handling's minimum billable weight moves from 40 to 50 lbs.",
+    "a0740b56c6649": "USPS filed for higher Ground Advantage, Priority Mail and Parcel Select prices; stamps stay put, and no percentage or date yet."
    },
-   "intro": "Carriers keep announcing 5.9% average rate increases each year; UPS, DHL and FedEx have each set 5.9% again.",
-   "now": "UPS's 5.9% average increase takes effect Dec. 21, 2026, DHL's 5.9% on Jan. 1 and FedEx's 5.9% on Jan. 4, 2027."
+   "intro": "FedEx, UPS and DHL have repeatedly landed on 5.9% average increases; here's how the 2027 round stacks up.",
+   "now": "UPS goes first on Dec. 21, then DHL Jan. 1 and FedEx Jan. 4; USPS has filed but no percentage or effective date is out yet."
   },
   "co": "UPS",
   "apart": [

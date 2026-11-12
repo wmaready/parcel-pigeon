@@ -1,5 +1,5 @@
 {
- "run": "2026-11-12T18:29Z",
+ "run": "2026-11-12T20:35Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -76,6 +76,15 @@
    "msg": "Price increase has no effective date, so it is not on the rate clock: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"USPS files to raise Ground Advantage, Priority Mail prices for 2027\"",
+   "ids": [
+    "a0740b56c6649"
    ],
    "fixed": false
   },
@@ -210,20 +219,6 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
@@ -402,6 +397,15 @@
   {
    "sev": "high",
    "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"USPS files to raise Ground Advantage, Priority Mail prices for 2027\"",
+   "ids": [
+    "a0740b56c6649"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "price-no-date",
    "msg": "Price increase has no effective date, so it is not on the rate clock: \"Small retailers report higher holiday shipping costs as fuel rises\"",
    "ids": [
     "adbdc9a506e95"
@@ -494,20 +498,6 @@
    "sev": "high",
    "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Fuel surcharge https://www.fedex.com/en-us/shipping/fuel-surcharge.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service alerts https://www.fedex.com/en-us/service-alerts.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Rate changes hub https://www.fedex.com/en-us/shipping/rate-changes.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
   },
