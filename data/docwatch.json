@@ -1,5 +1,5 @@
 {
- "cursor": 73,
+ "cursor": 88,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -325,7 +325,7 @@
    "first": "2026-10-21",
    "n": "Effective_November_14_Fuel_Increase_Explaination.pdf",
    "hash": "84e1e97a7235",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "snap": {
     "d": "2026-10-26",
     "pdf": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 514,
+   "fails": 515,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-12"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 514,
+   "fails": 515,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-12"
@@ -559,7 +559,7 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
@@ -766,13 +766,15 @@
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf": {
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
-   "hash": "b3b5181ba673",
-   "checked": "2026-11-10",
+   "hash": "26c3346a9315",
+   "checked": "2026-11-12",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-12",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-    "txt": "data/snapshots/678f8f4055c9/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/678f8f4055c9/2026-11-12.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-12"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf": {
    "first": "2026-10-23",
@@ -1301,7 +1303,7 @@
   "https://www.lso.com/lso-fuel-surcharge": {
    "hash": "754605d79931",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "LSO fuel surcharge page",
    "snap": {
     "d": "2026-10-26",
@@ -1310,22 +1312,21 @@
    }
   },
   "https://www.ontrac.com/west-coast-fuel-surcharge": {
-   "hash": "1a3cf932bae7",
+   "hash": "a5af63302c20",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "OnTrac West Coast fuel surcharge",
    "snap": {
-    "d": "2026-11-03",
-    "img": "data/snapshots/b9d4439ee72f/2026-11-03.jpg",
-    "prev": "data/snapshots/b9d4439ee72f/2026-11-02.jpg"
+    "d": "2026-11-12",
+    "img": "data/snapshots/b9d4439ee72f/2026-11-12.jpg",
+    "prev": "data/snapshots/b9d4439ee72f/2026-11-03.jpg"
    },
-   "pic_try": "2026-11-03",
-   "changed": "2026-11-03"
+   "changed": "2026-11-12"
   },
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "OnTrac surcharges and rates page",
    "snap": {
     "d": "2026-10-26",
@@ -1336,7 +1337,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
    "snap": {
     "d": "2026-10-26",
@@ -1347,7 +1348,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "UPS domestic fuel surcharge tables",
    "snap": {
     "d": "2026-10-26",
@@ -1356,20 +1357,22 @@
    }
   },
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
-   "hash": "b3b5181ba673",
+   "hash": "26c3346a9315",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "UPS fuel surcharges page",
    "snap": {
-    "d": "2026-10-26",
-    "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-    "txt": "data/snapshots/a75715f5baf3/2026-10-26.txt"
-   }
+    "d": "2026-11-12",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+    "txt": "data/snapshots/a75715f5baf3/2026-11-12.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-12"
   },
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
@@ -1381,7 +1384,7 @@
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
     "d": "2026-10-26",
@@ -2197,7 +2200,7 @@
   "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
    "hash": "00356ade2f6e",
    "first": "2026-11-04",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
    "snap": {
     "d": "2026-11-04",
@@ -2215,10 +2218,10 @@
   },
   "https://about.usps.com/resources/publications.htm?cat=notices": {
    "n": "Notices",
-   "fails": 14,
+   "fails": 15,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-10"
+   "last_try": "2026-11-12"
   },
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
@@ -2263,14 +2266,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 76,
+   "fails": 77,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-12"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 76,
+   "fails": 77,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-12"
@@ -2300,7 +2303,7 @@
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
    "first": "2026-11-06",
-   "checked": "2026-11-10",
+   "checked": "2026-11-12",
    "n": "Federal Register Notices",
    "snap": {
     "d": "2026-11-06",
@@ -2311,7 +2314,7 @@
   "https://www.federalregister.gov/documents/2026/11/12/2026-23064/authorization-to-manufacture-and-distribute-postage-evidencing-systems": {
    "hash": "011e75a7c956",
    "first": "2026-11-11",
-   "checked": "2026-11-11",
+   "checked": "2026-11-12",
    "n": "Authorization To Manufacture and Distribute Postage Evidencing Systems (Proposed Rule, 91 FR 72838)",
    "snap": {
     "d": "2026-11-11",
@@ -2329,6 +2332,12 @@
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-22963.pdf",
     "txt": "data/snapshots/e374e7320420/2026-11-11.txt"
    }
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf": {
+   "first": "2026-11-12",
+   "n": "fuelsurcharge-us-en.pdf",
+   "hash": "26c3346a9315",
+   "checked": "2026-11-12"
   }
  }
 }

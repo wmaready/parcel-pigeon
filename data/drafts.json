@@ -1,5 +1,548 @@
 [
  {
+  "status": "same as published",
+  "story": {
+   "id": "w4ae100d28409",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS pushes fuel surcharge change to Nov 16, adds international surcharges",
+   "sum": "UPS moved the effective date of its announced fuel surcharge change from November 2, 2026 to November 16, 2026. The change now also covers the International Air-Export and International Ground Export Import fuel surcharges, in addition to U.S. Ground Domestic, Ground Saver and U.S. Domestic Air. The updated rates are due to appear on the Fuel Surcharge webpage from November 12, 2026, instead of October 29, 2026.",
+   "plain": "Shippers using UPS domestic ground, Ground Saver or domestic air see the announced change take effect two weeks later than first stated. Shippers of international air exports and international ground export/import are now also covered by the change. The size of the new rates is not shown on the page.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "Effective date of the announced fuel surcharge change",
+     "before": "November 2, 2026",
+     "after": "November 16, 2026",
+     "effective": "2026-11-16",
+     "who": "Shipments under U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air fuel surcharges",
+     "impact": "Effective date moves 14 days later"
+    },
+    {
+     "what": "Scope of the fuel surcharge change widened to international services",
+     "before": "Change covered only U.S. Ground Domestic, Ground Saver and U.S. Domestic Air fuel surcharges",
+     "after": "Change also covers the International Air-Export and International Ground Export Import fuel surcharges",
+     "effective": "2026-11-16",
+     "who": "International air export and international ground export/import shipments",
+     "impact": null
+    },
+    {
+     "what": "Date the new surcharges appear on the Fuel Surcharge webpage",
+     "before": "October 29, 2026",
+     "after": "November 12, 2026",
+     "effective": "2026-11-12",
+     "who": "Anyone checking published UPS fuel surcharge rates",
+     "impact": "Publication date moves 14 days later"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The new fuel surcharge percentages or table changes are not shown on the page; details sit behind the 'Read More About the Rate Change' link",
+    "Whether the earlier November 2, 2026 date is cancelled or only postponed is not stated"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-12",
+     "w": "UPS: Date the new surcharges appear on the Fuel Surcharge webpage",
+     "imp": "info"
+    },
+    {
+     "d": "2026-11-16",
+     "w": "UPS: Effective date of the announced fuel surcharge change",
+     "imp": "info",
+     "fees": [
+      [
+       "UPS",
+       "Scope of the fuel surcharge change widened to international services",
+       "Change also covers the International Air-Export and International Ground Export Import fuel surcharges"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
+   "srcs": [
+    {
+     "src": "UPS Fuel surcharges",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wecc242716d1b"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w9da2d0a6089f",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS raises domestic Ground and Air fuel surcharge tables 0.50 points from Nov 16",
+   "sum": "UPS's fuel surcharge document now carries tables effective November 16, 2026, replacing those effective November 2, 2026. For the same diesel or jet fuel price band, the surcharge is 0.50 percentage points higher. For example, Ground at $5.53 to under $5.80 goes from 28.50% to 29.00%, and Domestic Air at $4.06 to under $4.11 goes from 31.50% to 32.00%. The band widths and out-of-range extension rules are unchanged.",
+   "plain": "Shippers using UPS Ground, Ground Saver and Domestic Air services pay a surcharge percentage 0.50 points higher at any given fuel price, applied to every charge the surcharge covers. The actual weekly rate still depends on EIA fuel prices.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "UPS Ground Domestic and Ground Saver fuel surcharge table: percentage for the same diesel price band",
+     "before": "$5.53 to under $5.80 = 28.50% (table effective Nov 2, 2026)",
+     "after": "$5.53 to under $5.80 = 29.00% (table effective Nov 16, 2026)",
+     "effective": "2026-11-16",
+     "who": "Ground, Ground Saver and other services subject to the Ground Domestic fuel surcharge",
+     "impact": "+0.50 percentage points in every overlapping band (e.g. $6.61 to under $6.70: 31.00% -> 31.50%)"
+    },
+    {
+     "what": "UPS Domestic Air fuel surcharge table: percentage for the same jet fuel price band",
+     "before": "$4.06 to under $4.11 = 31.50% (table effective Nov 2, 2026)",
+     "after": "$4.06 to under $4.11 = 32.00% (table effective Nov 16, 2026)",
+     "effective": "2026-11-16",
+     "who": "Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
+     "impact": "+0.50 percentage points in every overlapping band (e.g. $4.36 to under $4.41: 33.00% -> 33.50%)"
+    },
+    {
+     "what": "Published Ground table window moved to lower fuel prices",
+     "before": "Table starts at $5.53 (28.50%)",
+     "after": "Table starts at $4.99 (28.50%), adding bands at $4.99-$5.26 and $5.26-$5.53",
+     "effective": "2026-11-16",
+     "who": "Ground and Ground Saver shippers",
+     "impact": "Same 28.50% floor now applies from $4.99 rather than $5.53"
+    },
+    {
+     "what": "UPS International Ground Export/Import fuel surcharge table now shown",
+     "before": null,
+     "after": "$5.30 to under $5.42 = 28.75%, rising in 0.25% steps per $0.12 band; effective Nov 16, 2026",
+     "effective": "2026-11-16",
+     "who": "International Ground export and import shipments",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "International Air-Export table values are not shown, so they could not be compared",
+    "Actual weekly surcharge depends on future EIA fuel price releases",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-16",
+     "w": "UPS: UPS Ground Domestic and Ground Saver fuel surcharge table: percentage for the same diesel price band",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "UPS Domestic Air fuel surcharge table: percentage for the same jet fuel price band",
+       "+0.50 percentage points in every overlapping band (e.g. $4.36 to under $4.41: 33.00% -> 33.50%)"
+      ],
+      [
+       "UPS",
+       "Published Ground table window moved to lower fuel prices",
+       "Same 28.50% floor now applies from $4.99 rather than $5.53"
+      ],
+      [
+       "UPS",
+       "UPS International Ground Export/Import fuel surcharge table now shown",
+       "$5.30 to under $5.42 = 28.75%, rising in 0.25% steps per $0.12 band; effective Nov 16, 2026"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Fuel surcharges",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+    },
+    {
+     "src": "UPS: fuelsurcharge-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+      "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "w4657840c16ef"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w4b8e73262683",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS moves fuel surcharge change to Nov 16, 2026 and adds international fuel surcharges",
+   "sum": "UPS's notice of a fuel surcharge change, previously effective November 2, 2026, now says November 16, 2026. It still covers U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air, and now also covers the International Air-Export and International Ground Export Import fuel surcharges. The notice has moved to the top of the Important Updates section.",
+   "plain": "Shippers using domestic Ground, Ground Saver or Air get two more weeks before the new fuel surcharge applies. International export and import shippers are now also subject to a fuel surcharge change. The size of the change is not stated on this page.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "Effective date of the domestic fuel surcharge change",
+     "before": "Effective November 2, 2026",
+     "after": "Effective November 16, 2026",
+     "effective": "2026-11-16",
+     "who": "Shippers using U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air",
+     "impact": "Start date moved 14 days later (Nov 2 -> Nov 16, 2026)"
+    },
+    {
+     "what": "International fuel surcharges added to the announced fuel surcharge change",
+     "before": "Only the U.S. Ground Domestic, Ground Saver and U.S. Domestic Air fuel surcharges were listed",
+     "after": "The International Air-Export Fuel Surcharge and the International Ground Export Import Fuel Surcharge are also listed as changing",
+     "effective": "2026-11-16",
+     "who": "International export shippers (air and ground) and ground import shippers",
+     "impact": "Two additional fuel surcharges now included; size of the change not stated"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The new fuel surcharge percentages or table values are in a linked page that is not shown",
+    "Whether the November 2, 2026 change is replaced or delayed for the domestic services is not stated"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-16",
+     "w": "UPS: Effective date of the domestic fuel surcharge change",
+     "imp": "info",
+     "fees": [
+      [
+       "UPS",
+       "International fuel surcharges added to the announced fuel surcharge change",
+       "Two additional fuel surcharges now included; size of the change not stated"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://ups.com/rateupdates",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "w08701235bf24"
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w08701235bf24",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026",
+   "sum": "UPS published fuel surcharge tables effective November 16, 2026 that replace the November 2, 2026 tables. For the same fuel price band, the Ground/Ground Saver and Domestic Air percentages are each 0.50 points higher (for example, diesel $5.53–$5.80 moves from 28.50% to 29.00%). The tables also now start at lower fuel prices, and the document now lists an International Ground Export/Import table.",
+   "plain": "Anyone shipping UPS Ground, Ground Saver or Domestic Air pays 0.50 percentage points more fuel surcharge at any given EIA fuel price. The dollar effect depends on each shipper's eligible charges and the weekly fuel price.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+     "before": "$5.53 to under $5.80 diesel: 28.50% (table effective Nov 2, 2026)",
+     "after": "$5.53 to under $5.80 diesel: 29.00% (table effective Nov 16, 2026)",
+     "effective": "2026-11-16",
+     "who": "UPS Ground, Ground Saver and other services covered by the Ground Domestic fuel surcharge",
+     "impact": "+0.50 percentage points at the same fuel price; the same +0.50 applies across the other bands shown (e.g. $6.25–$6.34: 30.00% -> 30.50%)"
+    },
+    {
+     "what": "Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+     "before": "$4.06 to under $4.11 jet fuel: 31.50% (table effective Nov 2, 2026)",
+     "after": "$4.06 to under $4.11 jet fuel: 32.00% (table effective Nov 16, 2026)",
+     "effective": "2026-11-16",
+     "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and other Domestic Air services",
+     "impact": "+0.50 percentage points at the same fuel price; other bands shown also rise by 0.50 (e.g. $4.36–$4.41: 33.00% -> 33.50%)"
+    },
+    {
+     "what": "Ground table now starts at a lower fuel price, with 28.50% beginning at $4.99 diesel",
+     "before": "Table started at $5.53 diesel with a 28.50% surcharge",
+     "after": "Table starts at $4.99 diesel with a 28.50% surcharge",
+     "effective": "2026-11-16",
+     "who": "Ground Domestic and Ground Saver shippers",
+     "impact": "The published range now covers diesel prices from $4.99; the 28.50% rate that applied from $5.53 now applies from $4.99"
+    },
+    {
+     "what": "International Ground Export/Import fuel surcharge table listed",
+     "before": null,
+     "after": "$5.30 to under $5.42 diesel: 28.75%; bands are $0.12 wide, rising 0.25% per band",
+     "effective": "2026-11-16",
+     "who": "UPS International Ground Export and Import shipments",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The International Air Export table is cut off in the new document and can't be reviewed",
+    "The actual weekly EIA fuel prices that determine which band applies are not in the document",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-16",
+     "w": "UPS: Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+       "+0.50 percentage points at the same fuel price; other bands shown also rise by 0.50 (e.g. $4.36–$4.41: 33.00% -> 33.50%)"
+      ],
+      [
+       "UPS",
+       "Ground table now starts at a lower fuel price, with 28.50% beginning at $4.99 diesel",
+       "The published range now covers diesel prices from $4.99; the 28.50% rate that applied from $5.53 now applies from $4.99"
+      ],
+      [
+       "UPS",
+       "International Ground Export/Import fuel surcharge table listed",
+       "$5.30 to under $5.42 diesel: 28.75%; bands are $0.12 wide, rising 0.25% per band"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: fuelsurcharge-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+      "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "wecc242716d1b",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS moves fuel surcharge change to Nov 16, 2026 and adds international fuel surcharges",
+   "sum": "UPS now says the U.S. Ground Domestic, Ground Saver and U.S. Domestic Air fuel surcharges will change effective November 16, 2026, instead of November 2, 2026. The notice now also covers the International Air-Export and International Ground Export Import fuel surcharges. Details are behind a link, and no new percentages are stated.",
+   "plain": "Shippers of U.S. domestic Ground, Ground Saver and Air packages see the fuel surcharge change take effect two weeks later than first announced. International export and import shippers are now also covered by the announced fuel change. The size and direction of the change are not given.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "Effective date of the announced U.S. domestic fuel surcharge change (Ground, Ground Saver, Domestic Air)",
+     "before": "Effective November 2, 2026",
+     "after": "Effective November 16, 2026",
+     "effective": "2026-11-16",
+     "who": "U.S. domestic Ground, UPS Ground Saver and Domestic Air shipments",
+     "impact": "Pushed back 14 days"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "New fuel surcharge percentages or table values are not stated; they are behind the linked details",
+    "Whether the November 2, 2026 date is fully replaced by November 16, 2026 for the domestic fuel surcharges is implied but not stated outright"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-16",
+     "w": "UPS: Effective date of the announced U.S. domestic fuel surcharge change (Ground, Ground Saver, Domestic Air)",
+     "imp": "info"
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 1,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w4657840c16ef",
+   "date": "2026-11-12",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)",
+   "sum": "UPS posted new fuel surcharge tables effective November 16, 2026, replacing the November 2, 2026 tables. At the same fuel price, the Ground Domestic/Ground Saver and Domestic Air percentages are each 0.50 points higher than before. The new tables also start at lower fuel prices. The same file now includes an International Ground Export/Import table.",
+   "plain": "Ground, Ground Saver and domestic air shippers pay a surcharge 0.50 percentage points higher at any given index price. The surcharge each week still depends on the EIA price. International ground shippers get a new table to apply.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-16",
+   "inferred": null,
+   "detected": "2026-11-12",
+   "changes": [
+    {
+     "what": "UPS Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+     "before": "$5.53 to $5.80 diesel band = 28.50% (table effective Nov 2, 2026); the $5.80-$5.89 band was 28.75%",
+     "after": "$5.53 to $5.80 diesel band = 29.00% (table effective Nov 16, 2026); the $5.80-$5.89 band is 29.25%",
+     "effective": "2026-11-16",
+     "who": "UPS Ground, Ground Saver and other services using the Ground Domestic fuel surcharge",
+     "impact": "+0.50 percentage points at the same diesel price (e.g. 28.50% -> 29.00%)"
+    },
+    {
+     "what": "UPS Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+     "before": "$4.06 to $4.11 jet fuel band = 31.50% (table effective Nov 2, 2026)",
+     "after": "$4.06 to $4.11 jet fuel band = 32.00% (table effective Nov 16, 2026)",
+     "effective": "2026-11-16",
+     "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and other services using the Domestic Air fuel surcharge",
+     "impact": "+0.50 percentage points at the same jet fuel price (e.g. 31.50% -> 32.00%)"
+    },
+    {
+     "what": "Table ranges shifted down: the Ground table now starts at $4.99 (28.50%) and the Domestic Air table at $3.76 (30.50%)",
+     "before": "Ground table started at $5.53 (28.50%); Domestic Air table started at $4.06 (31.50%)",
+     "after": "Ground table starts at $4.99 (28.50%); Domestic Air table starts at $3.76 (30.50%)",
+     "effective": "2026-11-16",
+     "who": "Ground and Domestic Air shippers",
+     "impact": "Each table now covers lower fuel prices; the 28.50% Ground band is now $4.99-$5.26"
+    },
+    {
+     "what": "UPS International Ground Export/Import fuel surcharge table published, effective Nov 16, 2026",
+     "before": null,
+     "after": "Table runs from $5.30-$5.42 at 28.75% up to $6.74-$6.86 at 31.75%, in $0.12 diesel price steps",
+     "effective": "2026-11-16",
+     "who": "UPS International Ground Export and Import shipments",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-16",
+     "w": "UPS: UPS Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "UPS Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+       "+0.50 percentage points at the same jet fuel price (e.g. 31.50% -> 32.00%)"
+      ],
+      [
+       "UPS",
+       "Table ranges shifted down: the Ground table now starts at $4.99 (28.50%) and the Domestic Air table at $3.76 (30.50%)",
+       "Each table now covers lower fuel prices; the 28.50% Ground band is now $4.99-$5.26"
+      ],
+      [
+       "UPS",
+       "UPS International Ground Export/Import fuel surcharge table published, effective Nov 16, 2026",
+       "Table runs from $5.30-$5.42 at 28.75% up to $6.74-$6.86 at 31.75%, in $0.12 diesel price steps"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: fuelsurcharge-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+      "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
   "status": "not material",
   "date": "2026-11-11",
   "page": "https://www.ontrac.com/surchargesandrates/",

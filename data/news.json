@@ -85,6 +85,363 @@
   "exclusive": true
  },
  {
+  "id": "w08701235bf24",
+  "date": "2026-11-12",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026",
+  "sum": "UPS published fuel surcharge tables effective November 16, 2026 that replace the November 2, 2026 tables. For the same fuel price band, the Ground/Ground Saver and Domestic Air percentages are each 0.50 points higher (for example, diesel $5.53–$5.80 moves from 28.50% to 29.00%). The tables also now start at lower fuel prices, and the document now lists an International Ground Export/Import table.",
+  "plain": "Anyone shipping UPS Ground, Ground Saver or Domestic Air pays 0.50 percentage points more fuel surcharge at any given EIA fuel price. The dollar effect depends on each shipper's eligible charges and the weekly fuel price.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Fuel",
+  "act": "2026-11-16",
+  "inferred": null,
+  "detected": "2026-11-12",
+  "changes": [
+   {
+    "what": "Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+    "before": "$5.53 to under $5.80 diesel: 28.50% (table effective Nov 2, 2026)",
+    "after": "$5.53 to under $5.80 diesel: 29.00% (table effective Nov 16, 2026)",
+    "effective": "2026-11-16",
+    "who": "UPS Ground, Ground Saver and other services covered by the Ground Domestic fuel surcharge",
+    "impact": "+0.50 percentage points at the same fuel price; the same +0.50 applies across the other bands shown (e.g. $6.25–$6.34: 30.00% -> 30.50%)"
+   },
+   {
+    "what": "Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+    "before": "$4.06 to under $4.11 jet fuel: 31.50% (table effective Nov 2, 2026)",
+    "after": "$4.06 to under $4.11 jet fuel: 32.00% (table effective Nov 16, 2026)",
+    "effective": "2026-11-16",
+    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and other Domestic Air services",
+    "impact": "+0.50 percentage points at the same fuel price; other bands shown also rise by 0.50 (e.g. $4.36–$4.41: 33.00% -> 33.50%)"
+   },
+   {
+    "what": "Ground table now starts at a lower fuel price, with 28.50% beginning at $4.99 diesel",
+    "before": "Table started at $5.53 diesel with a 28.50% surcharge",
+    "after": "Table starts at $4.99 diesel with a 28.50% surcharge",
+    "effective": "2026-11-16",
+    "who": "Ground Domestic and Ground Saver shippers",
+    "impact": "The published range now covers diesel prices from $4.99; the 28.50% rate that applied from $5.53 now applies from $4.99"
+   },
+   {
+    "what": "International Ground Export/Import fuel surcharge table listed",
+    "before": null,
+    "after": "$5.30 to under $5.42 diesel: 28.75%; bands are $0.12 wide, rising 0.25% per band",
+    "effective": "2026-11-16",
+    "who": "UPS International Ground Export and Import shipments",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "The International Air Export table is cut off in the new document and can't be reviewed",
+   "The actual weekly EIA fuel prices that determine which band applies are not in the document",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-16",
+    "w": "UPS: Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+      "+0.50 percentage points at the same fuel price; other bands shown also rise by 0.50 (e.g. $4.36–$4.41: 33.00% -> 33.50%)"
+     ],
+     [
+      "UPS",
+      "Ground table now starts at a lower fuel price, with 28.50% beginning at $4.99 diesel",
+      "The published range now covers diesel prices from $4.99; the 28.50% rate that applied from $5.53 now applies from $4.99"
+     ],
+     [
+      "UPS",
+      "International Ground Export/Import fuel surcharge table listed",
+      "$5.30 to under $5.42 diesel: 28.75%; bands are $0.12 wide, rising 0.25% per band"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS Rate updates and notices",
+    "url": "https://ups.com/rateupdates"
+   },
+   {
+    "src": "UPS: fuelsurcharge-us-en.pdf",
+    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+     "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ]
+  },
+  "offc": true
+ },
+ {
+  "id": "w4657840c16ef",
+  "date": "2026-11-12",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)",
+  "sum": "UPS posted new fuel surcharge tables effective November 16, 2026, replacing the November 2, 2026 tables. At the same fuel price, the Ground Domestic/Ground Saver and Domestic Air percentages are each 0.50 points higher than before. The new tables also start at lower fuel prices. The same file now includes an International Ground Export/Import table.",
+  "plain": "Ground, Ground Saver and domestic air shippers pay a surcharge 0.50 percentage points higher at any given index price. The surcharge each week still depends on the EIA price. International ground shippers get a new table to apply.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Fuel",
+  "act": "2026-11-16",
+  "inferred": null,
+  "detected": "2026-11-12",
+  "changes": [
+   {
+    "what": "UPS Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+    "before": "$5.53 to $5.80 diesel band = 28.50% (table effective Nov 2, 2026); the $5.80-$5.89 band was 28.75%",
+    "after": "$5.53 to $5.80 diesel band = 29.00% (table effective Nov 16, 2026); the $5.80-$5.89 band is 29.25%",
+    "effective": "2026-11-16",
+    "who": "UPS Ground, Ground Saver and other services using the Ground Domestic fuel surcharge",
+    "impact": "+0.50 percentage points at the same diesel price (e.g. 28.50% -> 29.00%)"
+   },
+   {
+    "what": "UPS Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+    "before": "$4.06 to $4.11 jet fuel band = 31.50% (table effective Nov 2, 2026)",
+    "after": "$4.06 to $4.11 jet fuel band = 32.00% (table effective Nov 16, 2026)",
+    "effective": "2026-11-16",
+    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and other services using the Domestic Air fuel surcharge",
+    "impact": "+0.50 percentage points at the same jet fuel price (e.g. 31.50% -> 32.00%)"
+   },
+   {
+    "what": "Table ranges shifted down: the Ground table now starts at $4.99 (28.50%) and the Domestic Air table at $3.76 (30.50%)",
+    "before": "Ground table started at $5.53 (28.50%); Domestic Air table started at $4.06 (31.50%)",
+    "after": "Ground table starts at $4.99 (28.50%); Domestic Air table starts at $3.76 (30.50%)",
+    "effective": "2026-11-16",
+    "who": "Ground and Domestic Air shippers",
+    "impact": "Each table now covers lower fuel prices; the 28.50% Ground band is now $4.99-$5.26"
+   },
+   {
+    "what": "UPS International Ground Export/Import fuel surcharge table published, effective Nov 16, 2026",
+    "before": null,
+    "after": "Table runs from $5.30-$5.42 at 28.75% up to $6.74-$6.86 at 31.75%, in $0.12 diesel price steps",
+    "effective": "2026-11-16",
+    "who": "UPS International Ground Export and Import shipments",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-16",
+    "w": "UPS: UPS Ground Domestic / Ground Saver fuel surcharge table: same diesel price band now carries a higher percentage",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "UPS Domestic Air fuel surcharge table: same jet fuel price band now carries a higher percentage",
+      "+0.50 percentage points at the same jet fuel price (e.g. 31.50% -> 32.00%)"
+     ],
+     [
+      "UPS",
+      "Table ranges shifted down: the Ground table now starts at $4.99 (28.50%) and the Domestic Air table at $3.76 (30.50%)",
+      "Each table now covers lower fuel prices; the 28.50% Ground band is now $4.99-$5.26"
+     ],
+     [
+      "UPS",
+      "UPS International Ground Export/Import fuel surcharge table published, effective Nov 16, 2026",
+      "Table runs from $5.30-$5.42 at 28.75% up to $6.74-$6.86 at 31.75%, in $0.12 diesel price steps"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: fuelsurcharge-us-en.pdf",
+    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   },
+   {
+    "src": "UPS: UPS fuel surcharges page",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+     "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+    }
+   ]
+  },
+  "exclusive": true,
+  "primary": true,
+  "offc": true
+ },
+ {
+  "id": "wa61ef102d1b2",
+  "date": "2026-11-12",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS raises fuel surcharge tables for Nov 16, 2026 and adds international tables",
+  "sum": "UPS's fuel surcharge flyer now shows tables effective November 16, 2026, replacing the November 2, 2026 tables. At the same diesel or jet fuel price, the Ground/Ground Saver and Domestic Air percentages are 0.50 points higher (for example, diesel $5.80-$5.89: 28.75% -> 29.25%). The flyer also lists International Ground Export/Import and International Air-Export fuel tables.",
+  "plain": "Shippers using UPS Ground, Ground Saver or domestic Air services pay a surcharge 0.50 points higher at any given fuel price. International Ground and Air export/import shippers can now see the surcharge tables UPS is publishing for the same date.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-11-16",
+  "inferred": null,
+  "detected": "2026-11-12",
+  "changes": [
+   {
+    "what": "UPS Ground Domestic and Ground Saver fuel surcharge table, same diesel price band",
+    "before": "28.75% for diesel at least $5.80 but less than $5.89",
+    "after": "29.25% for diesel at least $5.80 but less than $5.89",
+    "effective": "2026-11-16",
+    "who": "UPS Ground and UPS Ground Saver shipments",
+    "impact": "+0.50 percentage points at the same diesel price band (28.75% -> 29.25%)"
+   },
+   {
+    "what": "UPS Ground Domestic and Ground Saver table start point shifted lower",
+    "before": "Table starts at $5.53 diesel, 28.50% surcharge",
+    "after": "Table starts at $4.99 diesel, 28.50% surcharge",
+    "effective": "2026-11-16",
+    "who": "UPS Ground and UPS Ground Saver shipments",
+    "impact": "The 28.50% rate now applies at a diesel price $0.54 lower; bands run 0.50 points higher at equal prices"
+   },
+   {
+    "what": "UPS Domestic Air fuel surcharge table, same jet fuel price band",
+    "before": "31.50% for jet fuel at least $4.06 but less than $4.11",
+    "after": "32.00% for jet fuel at least $4.06 but less than $4.11",
+    "effective": "2026-11-16",
+    "who": "UPS Next Day Air, 2nd Day Air and 3 Day Select services and Hundredweight Air",
+    "impact": "+0.50 percentage points at the same jet fuel price band (31.50% -> 32.00%)"
+   },
+   {
+    "what": "UPS Domestic Air table start point shifted lower",
+    "before": "Table starts at $4.06 jet fuel, 31.50% surcharge",
+    "after": "Table starts at $3.76 jet fuel, 30.50% surcharge",
+    "effective": "2026-11-16",
+    "who": "UPS domestic air shipments",
+    "impact": "Table now begins $0.30 lower in jet fuel price"
+   },
+   {
+    "what": "Effective date of the fuel surcharge tables",
+    "before": "Tables effective November 2, 2026",
+    "after": "Tables effective November 16, 2026",
+    "effective": "2026-11-16",
+    "who": "All shippers subject to the listed UPS fuel surcharges",
+    "impact": "Two weeks later than the prior flyer"
+   },
+   {
+    "what": "UPS International Ground Export Import fuel surcharge table listed",
+    "before": null,
+    "after": "Table starts at $5.30 diesel with a 28.75% surcharge, rising 0.25 points per $0.12 band",
+    "effective": "2026-11-16",
+    "who": "UPS International Ground export and import shipments",
+    "impact": null
+   },
+   {
+    "what": "UPS International Air-Export fuel surcharge table listed",
+    "before": null,
+    "after": "Table starts at $3.83 jet fuel with a 42.00% surcharge, rising 0.25 points per $0.04 band",
+    "effective": "2026-11-16",
+    "who": "UPS International Air export shipments",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "The weekly surcharge in force on any date depends on the EIA fuel price published that week, which the flyer does not state",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-16",
+    "w": "UPS: UPS Ground Domestic and Ground Saver fuel surcharge table, same diesel price band",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "UPS Ground Domestic and Ground Saver table start point shifted lower",
+      "The 28.50% rate now applies at a diesel price $0.54 lower; bands run 0.50 points higher at equal prices"
+     ],
+     [
+      "UPS",
+      "UPS Domestic Air fuel surcharge table, same jet fuel price band",
+      "+0.50 percentage points at the same jet fuel price band (31.50% -> 32.00%)"
+     ],
+     [
+      "UPS",
+      "UPS Domestic Air table start point shifted lower",
+      "Table now begins $0.30 lower in jet fuel price"
+     ],
+     [
+      "UPS",
+      "Effective date of the fuel surcharge tables",
+      "Two weeks later than the prior flyer"
+     ],
+     [
+      "UPS",
+      "UPS International Ground Export Import fuel surcharge table listed",
+      "Table starts at $5.30 diesel with a 28.75% surcharge, rising 0.25 points per $0.12 band"
+     ],
+     [
+      "UPS",
+      "UPS International Air-Export fuel surcharge table listed",
+      "Table starts at $3.83 jet fuel with a 42.00% surcharge, rising 0.25 points per $0.04 band"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": false,
+  "src": "UPS",
+  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS: UPS fuel surcharge rate-change flyer (PDF)",
+    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+   },
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+     "old": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "a0e59bd224142",
   "date": "2026-11-11",
   "c": [
@@ -12016,105 +12373,5 @@
    }
   ],
   "auto": true
- },
- {
-  "id": "a43d59b95694c",
-  "date": "2026-10-16",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Ofcom proposes extending Royal Mail Second Class stamp cap to March 2028",
-  "sum": "Ofcom proposed extending its inflation-pegged safeguard cap on Royal Mail Second Class stamp prices by one year, to March 2028. The current cap, set in 2024, expires in March 2027. Ofcom said it plans to consult on its long-term approach to pricing next year, and its Policy Director Fergal Farragher called Royal Mail's financial position \"stark\".",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Under the proposal, the Second Class stamp price would stay flat in real terms until March 2028 rather than the cap lapsing in March 2027. It is a proposal and not yet a final decision.",
-  "why": "The proposal would keep Royal Mail's Second Class stamp price flat in real terms to March 2028, with a longer-term pricing review planned for 2027.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2027-03-01",
-    "w": "Current Royal Mail Second Class price cap expires (month stated)",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-10-21T02:49:59Z",
-  "src": "Post & Parcel",
-  "url": "https://postandparcel.info/163103/news/post/ofcom-royal-mails-financial-position-is-stark/",
-  "srcs": [
-   {
-    "src": "Post & Parcel",
-    "url": "https://postandparcel.info/163103/news/post/ofcom-royal-mails-financial-position-is-stark/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-16",
-  "edge": true
- },
- {
-  "id": "a4cae55f341f1",
-  "date": "2026-10-16",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Westborough drafts rules for FAA on Amazon Prime Air drone deliveries",
-  "sum": "The town of Westborough, Massachusetts, drafted rules it wants the FAA to enforce on Amazon's drone delivery plans during a Thursday meeting, Boston 25 News reported. Some residents raised privacy and noise concerns. Amazon plans to deliver packages under 5 pounds within a 7.5-mile radius of its fulfillment center, and lawmakers requested a response by the end of October.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. Amazon's proposed Prime Air service in Westborough remains a plan, and the town's rules are a request to the FAA.",
-  "why": "Local pushback and a congressional request could bear on where Amazon's Prime Air drone delivery, limited to packages under 5 pounds, can operate.",
-  "score": 4,
-  "tie": "Amazon held a community meeting in Westborough in September to discuss its proposed Prime Air drone delivery service, according to the report.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T13:07:34Z",
-  "src": "Boston 25 News",
-  "url": "https://www.boston25news.com/news/local/westborough-proposes-new-rules-amazon-drone-deliveries-amid-privacy-noise-concerns/7YZIJTWIG5CYHDJRIUWDKJD3HM/",
-  "srcs": [
-   {
-    "src": "Boston 25 News",
-    "url": "https://www.boston25news.com/news/local/westborough-proposes-new-rules-amazon-drone-deliveries-amid-privacy-noise-concerns/7YZIJTWIG5CYHDJRIUWDKJD3HM/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a53691382ee5b",
-  "date": "2026-10-16",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Mfume requests USPS briefing on suspicious mailings to Congress",
-  "sum": "Rep. Kweisi Mfume (D-MD), ranking member of the House Oversight Subcommittee on Government Operations, wrote to Postmaster General David Steiner and Chief Postal Inspector Gary Barksdale asking for a briefing on suspicious mailings sent this week to congressional offices and state election offices. Mfume said state election officials and a Senate office reported that postal employees intercepted several of the letters before delivery.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service.",
-  "why": "The request concerns security of mail handled by USPS employees and the Postal Inspection Service, and asks whether the Inspection Service needs more resources.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T16:56:36Z",
-  "src": "Representative Kweisi Mfume | (.gov)",
-  "url": "https://mfume.house.gov/media/press-releases/rep-mfume-commends-postal-workers-requests-briefing-on-suspicious-mailings-to-congressional-offices",
-  "srcs": [
-   {
-    "src": "Representative Kweisi Mfume | (.gov)",
-    "url": "https://mfume.house.gov/media/press-releases/rep-mfume-commends-postal-workers-requests-briefing-on-suspicious-mailings-to-congressional-offices"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
  }
 ]

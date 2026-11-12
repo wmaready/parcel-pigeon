@@ -10,8 +10,31 @@ X-WR-TIMEZONE:America/New_York
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
+UID:xw08701235bf240@parcel-pigeon
+DTSTAMP:20261112T021325Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:▲ UPS: Ground Domestic / Ground Saver fuel surcharge table: same 
+ diesel price band now carries a higher percentage
+DESCRIPTION:Carriers: UPS\nTakes effect Nov 16\, 2026.\nUPS · Domestic Air
+  fuel surcharge table: same jet fuel price band now carries a higher perce
+ ntage: +0.50 percentage points at the same fuel price\; other bands shown 
+ also rise by 0.50 (e.g. $4.36–$4.41: 33.00% -> 33.50%)\nUPS · Ground ta
+ ble now starts at a lower fuel price\, with 28.50% beginning at $4.99 dies
+ el: The published range now covers diesel prices from $4.99\; the 28.50% r
+ ate that applied from $5.53 now applies from $4.99\nUPS · International G
+ round Export/Import fuel surcharge table listed: $5.30 to under $5.42 dies
+ el: 28.75%\; bands are $0.12 wide\, rising 0.25% per band\nStory: UPS rais
+ es fuel surcharge percentages for each price band\, effective Nov 16\, 202
+ 6\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s=w08701235
+ bf24
+URL:https://wmaready.github.io/parcel-pigeon/#s=w08701235bf24
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
 UID:e08@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261124
 SUMMARY:▲ Peak-week fees rise: home deliveries go to $0.75–$0.80 a pack
@@ -31,7 +54,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c0@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS daily rates rise an average net 5.9%
@@ -45,7 +68,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c0-ann@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Announced: UPS daily rates rise an average net 5.9%
@@ -57,7 +80,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c1@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ Additional Handling minimum billable weight rises to 50 lbs
@@ -71,7 +94,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c1-ann@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Announced: Additional Handling minimum billable weight rises to 50 
@@ -84,7 +107,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c2@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS Small Business Rates rise 4.5%\, new 5% fuel surcharge
@@ -97,7 +120,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c4@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ New UPS Surge Fee starts on Ground and Ground Saver\; amount no
@@ -112,7 +135,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c4-ann@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
 SUMMARY:Announced: New UPS Surge Fee starts on Ground and Ground Saver\; am
@@ -125,7 +148,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xw9c03b8f99b5f0@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS 2027 rate increase: 5.9% average (Ground\, Air\, Internatio
@@ -145,7 +168,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e09@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261229
 SUMMARY:▼ Peak-week fees end: home-delivery peak fee drops back to $0.50 
@@ -163,7 +186,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c5@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:▼ UPS peak demand surcharges step down to lower rates
@@ -176,7 +199,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e15@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:▲ DHL Express 2027 rate increase for U.S. accounts: 5.9% average
@@ -191,7 +214,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e10@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:▲ FedEx 2027 general rate increase: 5.9% average
@@ -204,7 +227,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e11@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270118
 SUMMARY:▼ Peak surcharges end at every major carrier\; USPS holiday price
@@ -221,7 +244,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa23a4d6fd271d0@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:▲ Most Amazon FBA fee changes take effect\; average rise about 0.
@@ -235,7 +258,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e12@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:▲ FedEx paper document fees start
@@ -250,7 +273,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e13@parcel-pigeon
-DTSTAMP:20261107T131750Z
+DTSTAMP:20261112T021325Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:▲ FedEx zones change for select U.S. domestic ZIP pairs
