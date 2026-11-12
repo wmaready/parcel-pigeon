@@ -1,5 +1,49 @@
 [
  {
+  "id": "a30e480c050e5",
+  "date": "2026-11-12",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wing picks Fort Worth for drone plant, plans tens of thousands a year",
+  "sum": "Wing, a subsidiary of Alphabet, chose North Texas as a base for its nationwide drone delivery expansion, CoStar reported on Nov. 12, 2026. The company plans to produce tens of thousands of aircraft annually at a Fort Worth facility, and the headline puts the Texas investment at $125 million.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. Wing's planned drone production in Fort Worth relates to its nationwide delivery expansion, and the sources give no dates for new delivery service.",
+  "why": "Wing plans tens of thousands of drones a year as it works with retailers such as Walmart on a nationwide drone delivery expansion.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T12:49:56Z",
+  "src": "CoStar",
+  "url": "https://www.costar.com/article/1856515732/alphabets-wing-picks-fort-worth-to-build-tens-of-thousands-of-delivery-drones",
+  "srcs": [
+   {
+    "src": "CoStar",
+    "url": "https://www.costar.com/article/1856515732/alphabets-wing-picks-fort-worth-to-build-tens-of-thousands-of-delivery-drones"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "thread": "drone-delivery",
+  "upd": 14,
+  "new": "Wing's plan to manufacture tens of thousands of drones a year in Fort Worth adds a manufacturing build-out to the expansion by Amazon and Zipline; the sources give no new delivery dates or fees for shippers.",
+  "syn": "Wing, the drone delivery subsidiary of Alphabet, picked North Texas as a base for its nationwide drone delivery expansion, according to CoStar. The company plans to produce tens of thousands of aircraft annually at a Fort Worth facility, and CoStar's subhead gives the Texas investment as $125 million. CoStar said Wing is partnering with major retailers such as Walmart. The full article is behind a subscriber paywall, so further detail on timing and delivery locations is not available in the sources.",
+  "aff": [
+   {
+    "who": "Wing drone delivery",
+    "what": "Plans to build tens of thousands of drones a year at a Fort Worth facility, per CoStar."
+   },
+   {
+    "who": "Retail delivery partners",
+    "what": "Wing is partnering with major retailers such as Walmart, according to CoStar."
+   }
+  ]
+ },
+ {
   "id": "a531bcaf173d6",
   "date": "2026-11-12",
   "c": [
@@ -631,6 +675,106 @@
    }
   ],
   "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a4edacc3d5601",
+  "date": "2026-11-11",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Zipline cuts drone flight sound exposure 68% with real-time optimization",
+  "sum": "Zipline said its drones now use onboard sound modeling to optimize flight paths in real time for quieter operation. Based on internal modeling, the company said sound exposure per flight is down 68 percent and peak volume is 24 percent lower than its 2025 fleet.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. Zipline said flights are 53 seconds shorter on average and use 21 percent less energy per flight.",
+  "why": "Quieter, faster drone flights could affect community acceptance and energy use per delivery as Zipline scales its drone delivery network.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T12:50:40Z",
+  "src": "Robotics & Automation News",
+  "url": "https://roboticsandautomationnews.com/2026/11/11/zipline-makes-drone-deliveries-quieter-with-real-time-acoustic-flight-optimization/107003/",
+  "srcs": [
+   {
+    "src": "Robotics & Automation News",
+    "url": "https://roboticsandautomationnews.com/2026/11/11/zipline-makes-drone-deliveries-quieter-with-real-time-acoustic-flight-optimization/107003/"
+   }
+  ],
+  "auto": true,
+  "new": "Zipline said a fleetwide upgrade cut per-flight sound exposure by 68 percent and energy use by 21 percent versus its 2025 fleet; no change to shipper rates or service was stated.",
+  "syn": "Zipline said its drones now use onboard sound modeling and weather sensors to pick the quietest way to transition to on-wing flight, in what it called an industry first. Based on internal modeling against its 2025 fleet, the company said sound exposure per flight is down 68 percent and peak volume is 24 percent lower. Zipline said the upgrade, now deployed fleetwide, also shortens flights by 53 seconds on average and cuts energy use per flight by 21 percent.",
+  "aff": [
+   {
+    "who": "Zipline drone deliveries",
+    "what": "Sound exposure per flight down 68%, peak volume 24% lower than the 2025 fleet, per Zipline's internal modeling."
+   },
+   {
+    "who": "Flight times and energy",
+    "what": "Flights 53 seconds shorter on average; energy use per flight down 21%, Zipline said."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a551f86e524c2",
+  "date": "2026-11-11",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx targets 475 station closures under Network 2.0, 260+ done",
+  "sum": "PennLive reported on Nov. 11 that FedEx's Network 2.0 program targets 475 station closures by the time it ends next year, with more than 260 completed. CEO Raj Subramaniam told investors the program is expected to save $2 billion by the end of 2027, and FedEx plans to pause Network 2.0 activity during peak season.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No rate change is attached to the closures. FedEx has said the changes are not expected to affect transit times, and Network 2.0 activity is to pause during the holiday peak.",
+  "why": "The station consolidation affects pickup and delivery operations across FedEx's U.S. network; the company has said transit times are not expected to change.",
+  "score": 5,
+  "tie": "The program was described in November 2025 as merging FedEx's Ground and Express pickup and delivery, and in November 2026 FedEx was reported to plan extending it to Los Angeles and other markets after the holidays.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T12:49:18Z",
+  "src": "ad-hoc-news.de",
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-faces-475-station-closures-under-network-2-0/70497844",
+  "srcs": [
+   {
+    "src": "ad-hoc-news.de",
+    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-faces-475-station-closures-under-network-2-0/70497844"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-11",
+  "thread": "fedex-network-2",
+  "upd": 6,
+  "new": "The coverage adds a target of 475 station closures with more than 260 completed; FedEx has said transit times are not expected to be affected.",
+  "syn": "FedEx's Network 2.0 restructuring is to close 475 delivery stations by the end of the program next year, with more than 260 already closed, according to a PennLive report cited by ad-hoc-news.de on Nov. 12, 2026. FedEx CEO Raj Subramaniam told investors on a recent earnings call that the program is expected to save $2 billion by the end of 2027. FedEx plans to pause Network 2.0 activity during the peak period and has said the changes are not expected to affect transit times.",
+  "aff": [
+   {
+    "who": "FedEx delivery network",
+    "what": "475 station closures targeted under Network 2.0; more than 260 already completed."
+   },
+   {
+    "who": "Peak-season shipments",
+    "what": "FedEx plans to pause Network 2.0 activity during the holiday peak period."
+   },
+   {
+    "who": "Delivery times",
+    "what": "FedEx has said the changes are not expected to affect transit times."
+   },
+   {
+    "who": "Express and Ground pickups",
+    "what": "FedEx has said the changes should eventually support more consolidated pickups."
+   }
+  ],
   "exclusive": true
  },
  {
@@ -3314,6 +3458,53 @@
   "edge": true
  },
  {
+  "id": "a644b0ea66268",
+  "date": "2026-11-05",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Walmart adds 300 Zipline drone delivery sites; Zipline raises $1.5B",
+  "sum": "Walmart said it is adding 300 Zipline drone delivery sites under a new multi-year agreement, with room for more sites beyond that commitment. Zipline separately announced $1.5 billion in funding that values the company at $21.5 billion after the investment.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Customers with eligible addresses can choose drone delivery in the Walmart app, on Walmart.com or in the Zipline app. The sources give no locations or dates for the 300 new sites.",
+  "why": "Walmart says 90% of Americans live within 10 miles of one of its stores, the base for a drone network now set to grow by 300 sites.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T12:48:49Z",
+  "src": "Supply Chain 24/7",
+  "url": "https://www.supplychain247.com/article/walmart-zipline-300-drone-delivery-sites-funding",
+  "srcs": [
+   {
+    "src": "Supply Chain 24/7",
+    "url": "https://www.supplychain247.com/article/walmart-zipline-300-drone-delivery-sites-funding"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 13,
+  "new": "Walmart's 300-site Zipline agreement and Zipline's $1.5 billion round add detail on the scale and funding behind the expansion, but site locations and timing were not disclosed, so the effect on shippers' options is not yet dated.",
+  "syn": "Walmart is adding 300 Zipline drone delivery sites under a new multi-year agreement that leaves room for more. The service delivers items to homes in as little as 30 minutes. Walmart has worked with Zipline since 2021, and its drone program has completed more than 2 million deliveries. Zipline also announced $1.5 billion in funding at a $21.5 billion valuation to expand U.S. manufacturing, hire staff and build a nationwide network.",
+  "aff": [
+   {
+    "who": "Walmart drone delivery customers",
+    "what": "300 more Zipline sites to be added; eligible addresses can order via the Walmart or Zipline apps."
+   },
+   {
+    "who": "Delivery times",
+    "what": "Zipline said its median October order arrived 19 minutes after checkout, versus 30-plus minutes for traditional delivery."
+   },
+   {
+    "who": "Zipline funding",
+    "what": "$1.5 billion round at a $21.5 billion valuation for U.S. manufacturing, hiring and network build-out."
+   }
+  ]
+ },
+ {
   "id": "a74df5c94691e",
   "date": "2026-11-05",
   "c": [
@@ -3771,8 +3962,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 9,
   "new": "Walmart announced 300 additional Zipline drone delivery sites with locations undisclosed, extending the retail drone expansion that earlier coverage tied to Amazon; the sources give no change to shipper fees or the Part 108 status.",
   "syn": "Walmart signed a new multi-year agreement with Zipline to add 300 drone delivery sites nationwide, with the potential to expand further, according to The Shelby Report. Walmart calls it the nation's largest retail drone delivery program. The companies have worked together since 2021 and have completed more than 2 million deliveries. Walmart said tens of thousands of eligible items can be delivered in as fast as 30 minutes where available, and the locations of the new sites were not disclosed.",
   "aff": [
@@ -4048,6 +4237,10 @@
    {
     "src": "RiverBender.com",
     "url": "https://www.riverbender.com/news/details/budzinski-leads-bipartisan-postal-caucus-in-pressing-usps-for-answers-on-195-billion-borrowing-request-98150.cfm"
+   },
+   {
+    "src": "The Troy Times Tribune",
+    "url": "https://www.timestribunenews.com/2026/11/11/budzinski-leads-bipartisan-postal-caucus-in-pressing-usps-for-answers-on-19-5-billion-borrowing-request/"
    }
   ],
   "auto": true,
@@ -5084,7 +5277,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -5685,7 +5878,7 @@
   "auto": true,
   "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -12250,128 +12443,5 @@
   "auto": true,
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a168f88090691",
-  "date": "2026-10-17",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Amazon warns it may close 15 New York City warehouses over delivery bill",
-  "sum": "Amazon has warned it may close 15 distribution warehouses in New York City, affecting about 7,000 jobs, if the Delivery Protection Act passes as written, Vietnam.vn reported. The bill would require Amazon to directly hire more than 5,000 delivery workers now employed through independent contractors. No voting date has been set.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change yet; the bill has no vote date. Amazon says that if its New York warehouses close, some same-day orders could move to next-day delivery and fewer items could qualify for expedited Prime delivery.",
-  "why": "About 5,000 delivery workers at roughly 40 contractor firms and 2,000 warehouse staff are in scope, and Amazon says same-day and Prime speeds could change.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T10:46:43Z",
-  "src": "Vietnam.vn",
-  "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york",
-  "srcs": [
-   {
-    "src": "Vietnam.vn",
-    "url": "https://www.vietnam.vn/en/hang-ngan-viec-lam-bi-de-doa-neu-amazon-dong-cua-15-kho-hang-tai-new-york"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
- },
- {
-  "id": "a74aa5c2c85c5",
-  "date": "2026-10-17",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "FedEx vehicle carrying PSA card orders is burglarized in Southern California",
-  "sum": "PSA emailed customers that after leaving its Southern California facility, a FedEx vehicle transporting PSA orders was burglarized, according to screenshots card creator SKY-B shared on X on Oct. 17. Resell Calendar reported one collector valued a stolen 104-card submission at over $100,000, and said total losses may top $1 million, which is its own estimate. A list compiled by Boston Card Hunter from user reports mentioned 383 cards.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to FedEx rates or service has been announced. PSA told affected customers it will compensate based on fair market value up to each item's Maximum Insured Value, with more details to follow.",
-  "why": "PSA customers' graded orders were stolen in transit; a user-compiled list cites 383 cards, and PSA says compensation details are due.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T04:48:54Z",
-  "src": "Resell Calendar",
-  "url": "https://resellcalendar.com/news/news/psa-graded-cards-stolen-fedex-burglary-pokemon-theft/",
-  "srcs": [
-   {
-    "src": "Resell Calendar",
-    "url": "https://resellcalendar.com/news/news/psa-graded-cards-stolen-fedex-burglary-pokemon-theft/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "aac92cdbd2591",
-  "date": "2026-10-17",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "Analysis",
-  "title": "Amazon passes 1 million robots in its facilities, Futurism reports",
-  "sum": "Futurism reported that Amazon has surpassed a fleet of 1 million robots, including mechanical arms, floor loaders and pallet sorting machines. It cited an Ars Technica interview with George Mason University business professor Brad Greenwood, who said the robots are physically close to workers and can dictate the pace of work. Joan Moriarty of the Strategic Organizing Center told Ars that Amazon's workplace injuries are a topic the company avoids.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The report concerns Amazon's internal warehouse automation and its workforce.",
-  "why": "Futurism says the robots help speed up delivery times at a company with over 1.5 million full- and part-time workers.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T20:47:26Z",
-  "src": "Futurism",
-  "url": "https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety",
-  "srcs": [
-   {
-    "src": "Futurism",
-    "url": "https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a2cb283a8b077",
-  "date": "2026-10-16",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "News",
-  "title": "Ceva merges Colis Privé into Paack, unifies last-mile brand",
-  "sum": "Ceva Logistics said on Friday it has merged its France-focused last-mile unit Colis Privé into Paack, which it acquired in early August. The unified Paack brand will roll out progressively to customers and partners from January, Ceva said. The combined business delivers 150 million parcels annually through a network of 17,000 out-of-home delivery points.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Retailers using Colis Privé or Paack will see the networks combined under a single Paack brand, rolled out progressively from January. The sources state no rate or service changes.",
-  "why": "The merged unit handles 150 million parcels a year across France, Spain, Portugal, Belgium and Luxembourg, which Ceva said will simplify delivery for multi-market e-commerce retailers.",
-  "score": 5,
-  "tie": "Ceva acquired Paack in early August, and when the tentative deal was first announced last summer the expectation was that Colis Privé would absorb Paack, according to FreightWaves.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T16:56:31Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/ceva-logistics-puts-paack-in-charge-of-last-mile-parcel-delivery",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/ceva-logistics-puts-paack-in-charge-of-last-mile-parcel-delivery"
-   }
-  ],
-  "auto": true
  }
 ]

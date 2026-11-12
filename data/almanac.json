@@ -880,6 +880,31 @@
  {
   "carrier": "UPS",
   "year": 2026,
+  "kind": "fuel_table",
+  "announced": "2026-11-12",
+  "effective": "2026-11-16",
+  "pct": 0.5,
+  "headline": "UPS raises fuel surcharge percentages 0.50 points per price band, effective Nov 16, 2026",
+  "details": [
+   "New fuel surcharge tables effective November 16, 2026 replace the November 2, 2026 tables",
+   "Ground/Ground Saver and Domestic Air percentages are each 0.50 percentage points higher for the same fuel price band",
+   "Example: diesel $5.53–$5.80 moves from 28.50% to 29.00%",
+   "Tables now start at lower fuel prices",
+   "Document now lists an International Ground Export/Import table",
+   "Dollar effect depends on each shipper's eligible charges and the weekly fuel price"
+  ],
+  "id": "ups-2026-fuel-table-2026-11-16",
+  "sources": [
+   "https://ups.com/rateupdates",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
+  ],
+  "story": "w08701235bf24",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
   "kind": "gri",
   "announced": "2025-10-31",
   "effective": "2025-12-22",

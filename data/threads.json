@@ -58,28 +58,34 @@
  },
  "fedex-network-2": {
   "n": "FedEx Network 2.0 integration",
-  "s": "FedEx is integrating Ground and Express pickup and delivery market by market, with completion slated for 2027.",
+  "s": "FedEx has closed more than 260 of 475 targeted stations, plans a holiday pause, and expects the program to run through 2027.",
   "ids": [
    "h411",
    "h413",
    "43",
    "a3623effd6df4",
-   "a920867c2e49d"
+   "a920867c2e49d",
+   "a551f86e524c2"
   ],
   "first": "2024-06-01",
-  "last": "2026-11-03",
+  "last": "2026-11-11",
   "c": [
    "FedEx"
   ],
   "cx": {
-   "sig": "93f256b1c8c6",
+   "sig": "4e04f8e8144d",
    "v": 3,
    "beats": {
-    "a3623effd6df4": "In Mesquite, Texas, Express and Ground parcels now share a building and vans. The CEO said Network 2.0 would be 62% done by year-end."
+    "h411": "On June 1, 2024, FedEx Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
+    "h413": "FedEx said DRIVE cut $1.8 billion in costs, and Network 2.0 reached Canada, its largest market yet.",
+    "43": "By Nov. 2025, FedEx was merging Ground and Express pickup and delivery, with the U.S. rollout due by the end of 2027.",
+    "a3623effd6df4": "In Mesquite, Texas, Express and Ground parcels now share a building and vans; the CEO targets 62% done by year-end.",
+    "a920867c2e49d": "After the holidays, Network 2.0 heads to Los Angeles and other markets; Dallas and San Francisco are already done.",
+    "a551f86e524c2": "FedEx targets 475 station closures, 260+ done; transit times aren't expected to be affected, and it will pause during peak."
    },
-   "now": "Dallas and San Francisco are done, Los Angeles is next after the holidays, and full completion is slated for 2027."
+   "intro": "FedEx is merging Ground and Express pickup and delivery into one network, targeting $2 billion in savings."
   },
-  "rv": "93f256b1c8c6",
+  "rv": "4e04f8e8144d",
   "apart": [
    "fedex-freight-spin"
   ],
@@ -395,19 +401,20 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "Lawmakers are awaiting USPS answers on its $19.5 billion borrowing request, with replies requested by Nov. 13, 2026.",
+  "s": "The caucus has asked USPS for briefings during the November House session on how it would use a higher borrowing limit.",
   "ids": [
    "h429",
    "r14",
    "a2b7282f9b8a5",
-   "a72dc67ee31dc"
+   "a72dc67ee31dc",
+   "aa62902dd36cc"
   ],
   "first": "2024-11-14",
   "last": "2026-11-11",
   "c": [
    "USPS"
   ],
-  "rv": "ff15f9c83862",
+  "rv": "89aaa2f554e2",
   "cx": {
    "sig": "ff15f9c83862",
    "v": 3,
@@ -527,7 +534,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon's Prime Air drone service is expanding across U.S. sites, FAA's Part 108 rule was unpublished as of October, and Nampa is now seeking flight data from Amazon.",
+  "s": "Drone delivery networks are expanding while the FAA's Part 108 BVLOS rule remained unpublished as of the last coverage in October.",
   "ids": [
    "g27",
    "g26",
@@ -536,30 +543,34 @@
    "af529411b3b18",
    "a86fd472c4cfb",
    "a8f4d2b454015",
-   "af4470d3440cc",
    "acad7456be9cb",
    "ae04c4bdd5e4e",
    "a704b11d94f38",
-   "afc24e3e3a5e6"
+   "afc24e3e3a5e6",
+   "a644b0ea66268",
+   "a30e480c050e5"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-11",
+  "last": "2026-11-12",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "a4493b92ec87",
+   "sig": "18f9f12b573b",
    "v": 3,
    "beats": {
-    "g27": "Amazon's plan: Chicago, Atlanta, Cleveland and Syracuse by end of 2026, reaching almost 500 towns, up from 11 U.S. locations.",
-    "af4470d3440cc": "Walmart signed on for 300 more Zipline sites, building on a partnership since 2021 and 2 million+ deliveries. Locations weren't disclosed."
+    "g27": "Amazon planned sites near Chicago, Atlanta, Cleveland and Syracuse by end-2026, reaching almost 500 towns, up from 11 locations.",
+    "g26": "The FAA's BVLOS rule missed its Feb. 1 deadline and was still unpublished Oct. 9, so delivery still runs on waivers or Part 135.",
+    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
+    "afc24e3e3a5e6": "Amazon's Markham, Ill., site has flown since Oct. 12, serving customers within 7.5 miles; a Matteson center is planned next.",
+    "a30e480c050e5": "Wing, an Alphabet subsidiary, will build tens of thousands of drones a year in Fort Worth, a reported $125 million investment."
    },
-   "intro": "Amazon and Walmart are adding drone delivery sites while the FAA's Part 108 rule stalls; shippers should know who can fly where.",
-   "now": "Part 108 was still unpublished as of Oct. 9, per earlier coverage. Amazon says a second Chicago-area site, in Matteson, is planned in the coming days."
+   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule waits, which matters to shippers eyeing new delivery options.",
+   "now": "Part 108 was still unpublished as of the last coverage in October, and these reports give no date for when it will be."
   },
-  "rv": "f4f7c9dd0992",
+  "rv": "09a1025376c0",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",

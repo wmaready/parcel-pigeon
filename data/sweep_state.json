@@ -8,26 +8,51 @@
   "5": "2026-11-03",
   "6": "2026-11-04",
   "7": "2026-11-05",
-  "8": "2026-11-09"
+  "8": "2026-11-09",
+  "9": "2026-11-12"
  },
- "day": "2026-11-09",
+ "day": "2026-11-12",
  "calls": 1,
  "queue": [
   {
-   "n": "Siemens Logistics",
-   "what": "Supplier of singulation, scanning and sortation systems for express and postal parcel hubs, part of Körber since the Körber acquisition.",
-   "url": "https://www.rksort.com/who-are-the-main-parcel-sortation-equipment-manufacturers-globally/",
-   "realm": "software",
-   "seg": 8,
-   "found": "2026-11-09"
+   "n": "Saddle Creek Logistics Services",
+   "what": "Family-owned national 3PL with 46 facilities across the U.S. and a private truck fleet, offering e-commerce, retail and subscription fulfillment plus transportation.",
+   "url": "https://www.fulfill.com/3pl/profile/saddle-creek-logistics-services",
+   "realm": "3pl",
+   "seg": 9,
+   "found": "2026-11-12"
   },
   {
-   "n": "Körber Supply Chain Automation",
-   "what": "Warehouse automation and software group that offers robotic parcel and item handling (VarioPick) and integrates automation for fulfillment and parcel operations.",
-   "url": "https://www.koerber.com/en/about-us/news-and-press/koerber-logimat-2026",
-   "realm": "software",
-   "seg": 8,
-   "found": "2026-11-09"
+   "n": "Kenco Logistics",
+   "what": "Tennessee-based 3PL with more than 90 distribution centers across the U.S. and Canada, offering B2B and D2C e-commerce fulfillment alongside warehousing and transportation management.",
+   "url": "https://www.ciocoverage.com/kenco-group-kenco-provides-reliable-custom-third-party-logistics-solutions-that-scale/",
+   "realm": "3pl",
+   "seg": 9,
+   "found": "2026-11-12"
+  },
+  {
+   "n": "Flowspace",
+   "what": "Los Angeles-based fulfillment technology platform that gives brands access to a nationwide network of warehouses, and has raised roughly $46M or more in funding.",
+   "url": "https://www.builtinla.com/articles/flowspace-raises-31m-series-b-hiring",
+   "realm": "3pl",
+   "seg": 9,
+   "found": "2026-11-12"
+  },
+  {
+   "n": "ShipNetwork (formerly Rakuten Super Logistics)",
+   "what": "E-commerce 3PL with a nationwide U.S. warehouse network for 1-2 day ground delivery, formerly Rakuten Super Logistics and earlier Webgistix.",
+   "url": "https://www.speedcommerce.com/vs/rakuten-super-logistics-reviews/",
+   "realm": "3pl",
+   "seg": 9,
+   "found": "2026-11-12"
+  },
+  {
+   "n": "ShipHero",
+   "what": "Brooklyn-based warehouse management software vendor for e-commerce brands and 3PLs, serving thousands of warehouses and carrying a large share of U.S. e-commerce parcel shipments.",
+   "url": "https://www.shiphero.com/about-us",
+   "realm": "3pl",
+   "seg": 9,
+   "found": "2026-11-12"
   }
  ]
 }

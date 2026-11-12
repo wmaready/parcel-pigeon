@@ -202,7 +202,10 @@
   "a424ddbd302e3",
   "w08701235bf24",
   "w4657840c16ef",
-  "wa61ef102d1b2"
+  "wa61ef102d1b2",
+  "a30e480c050e5",
+  "a4edacc3d5601",
+  "a551f86e524c2"
  ],
  "clock": [
   "e06:7",
@@ -606,7 +609,14 @@
   "story:nampa asks amazon for prime air drone flight data",
   "story:amazon prime air drones deliver from north randall ohio site",
   "story:couriers add 17 400 jobs in october as trucking warehousing stay flat",
-  "story:serve robotics doordash launch australia s first footpath robot delivery"
+  "story:serve robotics doordash launch australia s first footpath robot delivery",
+  "more:story:fedex targets 475 station closures under network 2 0 260 done,story:ups raises fuel surcharge percentages for each price band effective nov 16 2026,story:ups raises fuel surcharge table percentages for nov 16 2026 ground and domestic air,story:ups raises fuel surcharge tables for nov 16 2026 and adds international tables,story:wing picks fort worth for drone plant plans tens of thousands a year,story:zipline cuts drone flight sound exposure 68 with real time optimization",
+  "story:ups raises fuel surcharge tables for nov 16 2026 and adds international tables",
+  "story:ups raises fuel surcharge table percentages for nov 16 2026 ground and domestic air",
+  "story:ups raises fuel surcharge percentages for each price band effective nov 16 2026",
+  "story:fedex targets 475 station closures under network 2 0 260 done",
+  "story:zipline cuts drone flight sound exposure 68 with real time optimization",
+  "story:wing picks fort worth for drone plant plans tens of thousands a year"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -808,149 +818,99 @@
   "amazon s markham drone site hits 300 order daily cap homewoo",
   "ups raises fuel surcharge percentages for each price band ef",
   "ups raises fuel surcharge table percentages for nov 16 2026 ",
-  "ups raises fuel surcharge tables for nov 16 2026 and adds in"
+  "ups raises fuel surcharge tables for nov 16 2026 and adds in",
+  "wing picks fort worth for drone plant plans tens of thousand",
+  "zipline cuts drone flight sound exposure 68 with real time o",
+  "fedex targets 475 station closures under network 2 0 260 don"
  ],
  "harvested": [
-  "rv5-ups-sbr-fuel",
-  "w08701235bf24",
-  "wbfc38914b368",
-  "acfef8560e2ac",
-  "a2f683da86bf8",
-  "a6ba18049bc99",
-  "a9f97ff5f51a3",
-  "a2def09bc43bb",
-  "a6cc2420ad66e",
-  "a3d768115c0e6",
-  "a351cab9045c7",
-  "aaf63e9db25a0",
-  "w500a5bdc762c",
-  "a40c99078f690",
-  "aead0203aab18",
-  "wa61ef102d1b2",
-  "wf7fe771e76cd",
-  "a773d361dac4e",
-  "a312b45efa358",
-  "a6c2418bed0a7",
-  "wf5014bc150e9",
-  "ad851d9e2eb69",
-  "a15404304f17b",
-  "a2f60a03dddd7",
-  "ac78f72e7f458",
-  "a0adb56a55334",
-  "w150132868eae",
-  "a89f005fb1862",
-  "wb8827e8c126e",
-  "a999409ce7860",
-  "a82e057190718",
-  "aa51e82b50d12",
-  "w68c1687d28a1",
-  "a58373f1b7bc3",
-  "adbdc9a506e95",
-  "w84705482dd2f",
-  "a84ca5863e582",
-  "a069325035b44",
-  "wdf959a97bcb6",
-  "we85aee3857d1",
-  "a74df5c94691e",
-  "wacb825361479",
-  "a2b81ad721cb8",
-  "a531bcaf173d6",
-  "afd8784e2b179",
-  "ae2ec177094e3",
-  "a567030ffc76c",
-  "a663794cc9c55",
-  "aba40a11b6946",
-  "w91588ddb11ed",
-  "w9c03b8f99b5f",
-  "af589de326934",
-  "a89d7e4beebd9",
-  "w8465aa718dc6",
-  "a6e82ba740e99",
-  "a57a06c26359c",
-  "a4f6ca9e3591e",
-  "a195de38cb09b",
-  "af8ee5ed067c6",
-  "ae374e7320420",
-  "adc002570b1d6",
-  "wf7bb9227b2de",
-  "ae0ee67bc4b67",
-  "w4657840c16ef",
-  "a9b77b62dcd89",
-  "wa9c423a83880",
-  "a72efb5e01b99",
-  "aa7358e9cf2dd",
-  "a5d45f26f2219",
-  "a3bd243da7c6c",
-  "w599d9089a65d",
   "a2b7282f9b8a5",
-  "w86cfd39b48f5",
-  "ae12ca75552ef",
-  "ad7d0b7072901",
-  "a3a45d7f6db20",
   "a665de2800485",
-  "w0b8720b6a0e7",
-  "a947eb28a3ca3",
-  "a831c709e5809",
-  "ac89be3e5da8f",
-  "a23a4d6fd271d",
+  "wf5014bc150e9",
+  "a6ba18049bc99",
+  "a069325035b44",
+  "aee6669d325da",
+  "aa7358e9cf2dd",
+  "a663794cc9c55",
+  "w86cfd39b48f5",
+  "a567030ffc76c",
+  "w9c03b8f99b5f",
+  "w68c1687d28a1",
+  "adc002570b1d6",
+  "a74df5c94691e",
+  "w500a5bdc762c",
+  "a72efb5e01b99",
+  "w150132868eae",
+  "aa51e82b50d12",
+  "a58373f1b7bc3",
+  "wb8827e8c126e",
+  "a89f005fb1862",
+  "wacb825361479",
+  "ad7d0b7072901",
+  "af589de326934",
+  "w08701235bf24",
   "a260cc6a2e05e",
-  "aee6669d325da"
+  "wbfc38914b368",
+  "we85aee3857d1",
+  "wf7fe771e76cd",
+  "a3d768115c0e6",
+  "a195de38cb09b",
+  "a23a4d6fd271d",
+  "a2b81ad721cb8",
+  "af8ee5ed067c6",
+  "adbdc9a506e95",
+  "a6cc2420ad66e",
+  "a6e82ba740e99",
+  "a3bd243da7c6c",
+  "w0b8720b6a0e7",
+  "rv5-ups-sbr-fuel",
+  "a831c709e5809",
+  "ae374e7320420",
+  "aba40a11b6946",
+  "a312b45efa358",
+  "a2f60a03dddd7",
+  "a6c2418bed0a7",
+  "a9f97ff5f51a3",
+  "w8465aa718dc6",
+  "w84705482dd2f",
+  "w599d9089a65d",
+  "a351cab9045c7",
+  "a2def09bc43bb",
+  "w91588ddb11ed",
+  "a57a06c26359c",
+  "a15404304f17b",
+  "a82e057190718",
+  "wdf959a97bcb6",
+  "a3a45d7f6db20",
+  "a4f6ca9e3591e",
+  "a947eb28a3ca3",
+  "wa61ef102d1b2",
+  "a84ca5863e582",
+  "a773d361dac4e",
+  "ae12ca75552ef",
+  "ad851d9e2eb69",
+  "aead0203aab18",
+  "wf7bb9227b2de",
+  "w4657840c16ef",
+  "a531bcaf173d6",
+  "ac89be3e5da8f",
+  "a9b77b62dcd89",
+  "acfef8560e2ac",
+  "ac78f72e7f458",
+  "aaf63e9db25a0",
+  "a5d45f26f2219",
+  "a2f683da86bf8",
+  "a40c99078f690",
+  "ae2ec177094e3",
+  "wa9c423a83880",
+  "a999409ce7860",
+  "a89d7e4beebd9",
+  "afd8784e2b179",
+  "ae0ee67bc4b67",
+  "a0adb56a55334"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a351cab9045c7",
-   "title": "Stord acquires AMS Fulfillment, adding 10 million annual orders",
-   "date": "2026-10-22",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
-   "srcs": [
-    {
-     "src": "PR Newswire",
-     "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html"
-    },
-    {
-     "src": "Supply Chain Digital",
-     "url": "https://supplychaindigital.com/news/stord-expands-fulfilment-capability-with-ams-acquisition"
-    },
-    {
-     "src": "Pulse 2.0",
-     "url": "https://pulse2.com/stord-acquires-ams-fulfillment-to-expand-logistics-network-and-ai-powered-fulfillment-platform/"
-    }
-   ]
-  },
-  {
-   "id": "a49dce99d3aaa",
-   "title": "UPS completes automation of 4 more sortation facilities before peak",
-   "date": "2026-10-22",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season",
-   "srcs": [
-    {
-     "src": "FreightWaves",
-     "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season"
-    }
-   ]
-  },
-  {
-   "id": "a4a63ed69f438",
-   "title": "Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518",
-   "date": "2026-10-22",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://www.qchron.com/editions/queenswide/little-middle-ground-on-delivery-legislation/article_36dc8efa-da94-56d6-a8e0-c551359ee8e5.html",
-   "srcs": [
-    {
-     "src": "Queens Chronicle",
-     "url": "https://www.qchron.com/editions/queenswide/little-middle-ground-on-delivery-legislation/article_36dc8efa-da94-56d6-a8e0-c551359ee8e5.html"
-    }
-   ]
-  },
   {
    "id": "a72efb5e01b99",
    "title": "USPS says it is set for 2026 holiday peak after 2.5-day 2025 average",
@@ -3328,6 +3288,51 @@
      "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
     }
    ]
+  },
+  {
+   "id": "a30e480c050e5",
+   "title": "Wing picks Fort Worth for drone plant, plans tens of thousands a year",
+   "date": "2026-11-12",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.costar.com/article/1856515732/alphabets-wing-picks-fort-worth-to-build-tens-of-thousands-of-delivery-drones",
+   "srcs": [
+    {
+     "src": "CoStar",
+     "url": "https://www.costar.com/article/1856515732/alphabets-wing-picks-fort-worth-to-build-tens-of-thousands-of-delivery-drones"
+    }
+   ]
+  },
+  {
+   "id": "a4edacc3d5601",
+   "title": "Zipline cuts drone flight sound exposure 68% with real-time optimization",
+   "date": "2026-11-11",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://roboticsandautomationnews.com/2026/11/11/zipline-makes-drone-deliveries-quieter-with-real-time-acoustic-flight-optimization/107003/",
+   "srcs": [
+    {
+     "src": "Robotics & Automation News",
+     "url": "https://roboticsandautomationnews.com/2026/11/11/zipline-makes-drone-deliveries-quieter-with-real-time-acoustic-flight-optimization/107003/"
+    }
+   ]
+  },
+  {
+   "id": "a551f86e524c2",
+   "title": "FedEx targets 475 station closures under Network 2.0, 260+ done",
+   "date": "2026-11-11",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-faces-475-station-closures-under-network-2-0/70497844",
+   "srcs": [
+    {
+     "src": "ad-hoc-news.de",
+     "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-faces-475-station-closures-under-network-2-0/70497844"
+    }
+   ]
   }
  ],
  "copy": {
@@ -4010,62 +4015,25 @@
   "wa61ef102d1b2": {
    "t": "UPS adds international fuel tables",
    "m": "Ground and domestic Air up 0.50 points; international tables added. Takes effect Nov 16."
+  },
+  "a30e480c050e5": {
+   "t": "Wing picks Fort Worth drone plant",
+   "m": "Tied to nationwide delivery expansion; no rate or service change and no start dates given."
+  },
+  "a4edacc3d5601": {
+   "t": "Zipline cuts flight sound 68%",
+   "m": "Flights average 53 seconds shorter and use 21% less energy; no change to rates or service."
+  },
+  "a551f86e524c2": {
+   "t": "FedEx targets 475 station closures",
+   "m": "No rate change; FedEx expects no transit time impact, and Network 2.0 pauses during holiday peak."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:ups raises fuel surcharge percentages for each price band effective nov 16 2026",
-   "id": "w08701235bf24",
-   "t": "UPS raises fuel surcharge Nov 16",
-   "m": "Off-cycle: Ground, Ground Saver and Domestic Air pay 0.50 points more at any fuel price, takes effect Nov 16.",
-   "big": false,
-   "at": "2026-11-11T21:12:32.662732-05:00",
-   "lvl": 2,
-   "unconf": false,
-   "topic": "rates",
-   "notable": true,
-   "mask": 1,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=w08701235bf24",
-   "co": "UPS"
-  },
-  {
-   "kind": "story",
-   "key": "story:ups raises fuel surcharge table percentages for nov 16 2026 ground and domestic air",
-   "id": "w4657840c16ef",
-   "t": "UPS raises fuel surcharge tables",
-   "m": "Off-cycle: Ground and domestic Air rise 0.50 points; new international Ground table. Takes effect Nov 16.",
-   "big": false,
-   "at": "2026-11-11T21:12:32.662780-05:00",
-   "lvl": 2,
-   "unconf": false,
-   "topic": "rates",
-   "notable": true,
-   "mask": 1,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=w4657840c16ef",
-   "co": "UPS"
-  },
-  {
-   "kind": "story",
-   "key": "story:ups raises fuel surcharge tables for nov 16 2026 and adds international tables",
-   "id": "wa61ef102d1b2",
-   "t": "UPS adds international fuel tables",
-   "m": "Ground and domestic Air up 0.50 points; international tables added. Takes effect Nov 16.",
-   "big": false,
-   "at": "2026-11-11T21:12:32.662799-05:00",
-   "lvl": 2,
-   "unconf": false,
-   "topic": "docs",
-   "notable": true,
-   "mask": 1,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=wa61ef102d1b2",
-   "co": "UPS"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-11-11",
-  "n": 3
+  "d": "2026-11-12",
+  "n": 1
  },
- "last_push": "2026-11-11T19:56:07.566812-05:00"
+ "last_push": "2026-11-12T07:52:42.426075-05:00"
 }
