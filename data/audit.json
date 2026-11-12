@@ -1,5 +1,5 @@
 {
- "run": "2026-11-12T12:53Z",
+ "run": "2026-11-12T17:39Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -387,15 +387,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/): https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/",
-   "ids": [
-    "g26"
-   ],
-   "fixed": false
   }
  ],
  "open": [
@@ -679,15 +670,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (404 Client Error: Not Found for url: https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/): https://verticalavi.org/vai-daily/part-108-final-rule-sent-to-oira-for-review/",
-   "ids": [
-    "g26"
-   ],
    "fixed": false
   }
  ]
