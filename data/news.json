@@ -525,6 +525,62 @@
   "offc": true
  },
  {
+  "id": "w7c65824b4bde",
+  "date": "2026-11-12",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS adds revised Surge Emergency Fees notice effective Nov 12, 2026",
+  "sum": "UPS's Rate and Service Guides page now lists revised Surge Emergency Fees that apply to shipments on selected services and lanes from November 12, 2026. The earlier version had no such notice. The page also no longer shows the earlier notice of a per-package surcharge on certain origin ZIP codes for Ground and Ground Saver from December 21, 2026.",
+  "plain": "Shippers using the affected services and lanes may pay revised Surge Emergency Fees from November 12, 2026. The amounts and lanes are not stated on the page, so the size of the change can't be determined.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Fees & rules",
+  "act": "2026-11-12",
+  "inferred": null,
+  "detected": "2026-11-12",
+  "changes": [
+   {
+    "what": "Revised Surge Emergency Fees announced for selected services and lanes",
+    "before": null,
+    "after": "Revised Surge Emergency Fees apply to shipments on selected services and lanes starting November 12, 2026",
+    "effective": "2026-11-12",
+    "who": "Shipments on the selected services and lanes UPS identifies for the fee",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Surge Emergency Fee amounts, the services and lanes covered, and the previous fee levels are not stated on the page.",
+   "The earlier notice of an additional per-package surcharge on Ground and Ground Saver shipments from certain origin ZIP codes for Qualified customers (on or after December 21, 2026) no longer appears. Whether it was cancelled, moved or published elsewhere can't be confirmed.",
+   "Whether the new Surge Emergency Fees replace an existing fee or are additional can't be confirmed."
+  ],
+  "dates": [
+   {
+    "d": "2026-11-12",
+    "w": "UPS: Revised Surge Emergency Fees announced for selected services and lanes",
+    "imp": "info"
+   }
+  ],
+  "kind": "Alert",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS Rate and Service Guides",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change",
+   "dropped": 0,
+   "compared": []
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "wa61ef102d1b2",
   "date": "2026-11-12",
   "c": [

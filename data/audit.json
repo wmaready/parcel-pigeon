@@ -1,5 +1,5 @@
 {
- "run": "2026-11-12T20:35Z",
+ "run": "2026-11-12T23:37Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -349,6 +349,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS adds revised Surge Emergency Fees notice effective Nov 12, 2026\"",
+   "ids": [
+    "w08701235bf24",
+    "w7c65824b4bde"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)\" and \"UPS raises fuel surcharge tables for Nov 16, 2026 and adds international tables\"",
    "ids": [
     "w4657840c16ef",
@@ -622,6 +632,16 @@
    "ids": [
     "w08701235bf24",
     "w4657840c16ef"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS adds revised Surge Emergency Fees notice effective Nov 12, 2026\"",
+   "ids": [
+    "w08701235bf24",
+    "w7c65824b4bde"
    ],
    "fixed": false
   },
