@@ -1,5 +1,5 @@
 {
- "run": "2026-11-12T00:41Z",
+ "run": "2026-11-12T00:56Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -242,16 +242,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
-   "ids": [
-    "abf7a28de14a5",
-    "a4a63ed69f438"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
    "ids": [
     "ad66ad94a48fa",
@@ -330,6 +320,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon launches Prime Air drone delivery from Markham, Illinois\" and \"Amazon Prime Air drones deliver from North Randall, Ohio, site\"",
+   "ids": [
+    "afc24e3e3a5e6",
+    "a3de5c6ac088c"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Councilman Wong pulls co-sponsorship of Delivery Protection Act\"",
@@ -342,20 +342,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon Prime Air wins first SAIL 4 approval from UK CAA\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon Prime Air drones deliver from North Randall, Ohio, site\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a196895400e65"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"DOJ grand jury probes containerboard pricing at three packaging makers\"",
-   "ids": [
-    "a709757714d80",
-    "af1f2354d11b3"
+    "a3de5c6ac088c"
    ],
    "fixed": false
   },
@@ -516,16 +506,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Bronx Amazon DSP operators oppose NYC Delivery Protection Act\" and \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\"",
-   "ids": [
-    "abf7a28de14a5",
-    "a4a63ed69f438"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
    "ids": [
     "ad66ad94a48fa",
@@ -604,6 +584,16 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon launches Prime Air drone delivery from Markham, Illinois\" and \"Amazon Prime Air drones deliver from North Randall, Ohio, site\"",
+   "ids": [
+    "afc24e3e3a5e6",
+    "a3de5c6ac088c"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Councilman Wong pulls co-sponsorship of Delivery Protection Act\"",
@@ -616,20 +606,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon Prime Air wins first SAIL 4 approval from UK CAA\"",
+   "msg": "\"Amazon Prime Air plans Tallahassee drone deliveries by mid-November\" may be out of date: newer story \"Amazon Prime Air drones deliver from North Randall, Ohio, site\"",
    "ids": [
     "a5876cb3ae6f1",
-    "a196895400e65"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"Two Cook County suits accuse Coco, Serve robots of biometric scans\" may be out of date: newer story \"DOJ grand jury probes containerboard pricing at three packaging makers\"",
-   "ids": [
-    "a709757714d80",
-    "af1f2354d11b3"
+    "a3de5c6ac088c"
    ],
    "fixed": false
   },

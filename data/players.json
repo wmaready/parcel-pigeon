@@ -3164,6 +3164,23 @@
    "pending": true,
    "added": "2026-11-11",
    "story": "a34c88b56c3e2"
+  },
+  {
+   "id": "clevelandclini",
+   "n": "Cleveland Clinic",
+   "realm": "cold",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Health system with its own drone delivery area that overlaps Shaker Heights",
+   "al": [],
+   "src": "https://www.news5cleveland.com/news/local-news/amazons-prime-air-drones-are-now-delivering-packages-to-homes-in-parts-of-cuyahoga-county-in-minutes",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-11",
+   "story": "a3de5c6ac088c"
   }
  ],
  "edges": [
@@ -5542,6 +5559,15 @@
    "t": "pOpshelf is a Dollar General subsidiary",
    "url": "https://chainstoreage.com/dollar-general-expands-instacart-delivery-nationwide",
    "story": "ab3082d84afe6"
+  },
+  {
+   "a": "tractorsupplyc",
+   "b": "instacart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Tractor Supply adds same-day store delivery through Instacart partnership",
+   "url": "https://wwd.com/sourcing-journal/logistics/last-mile-deliery-is-hiring-freight-is-not-couriers-bls-jobs-report-october-1239411237/",
+   "story": "afc463ffa65f6"
   }
  ],
  "moves": [

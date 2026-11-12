@@ -395,19 +395,19 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "USPS reported a $6.5 billion fiscal 2026 net loss and renewed its calls for legislative reforms, including a higher borrowing limit.",
+  "s": "Lawmakers are awaiting USPS answers on its $19.5 billion borrowing request, with replies requested by Nov. 13, 2026.",
   "ids": [
    "h429",
    "r14",
-   "a72dc67ee31dc",
-   "a2b7282f9b8a5"
+   "a2b7282f9b8a5",
+   "a72dc67ee31dc"
   ],
   "first": "2024-11-14",
-  "last": "2026-11-10",
+  "last": "2026-11-11",
   "c": [
    "USPS"
   ],
-  "rv": "75531c5f6493",
+  "rv": "ff15f9c83862",
   "cx": {
    "sig": "75531c5f6493",
    "v": 3,
@@ -527,7 +527,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is expanding Prime Air in the U.S. and UK while the FAA's Part 108 BVLOS rule remained unpublished as of Oct. 9.",
+  "s": "Amazon's Prime Air drone service is expanding across U.S. sites, FAA's Part 108 rule was unpublished as of October, and Nampa is now seeking flight data from Amazon.",
   "ids": [
    "g27",
    "g26",
@@ -543,7 +543,7 @@
    "afc24e3e3a5e6"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-10",
+  "last": "2026-11-11",
   "c": [
    "Amazon",
    "Industry",
@@ -636,17 +636,16 @@
   ],
   "rv": "f0f9c58e1b0e",
   "cx": {
-   "sig": "6af2e14af7b9",
+   "sig": "91d33cd71a45",
    "v": 3,
    "beats": {
-    "abf7a28de14a5": "Bronx delivery contractors reportedly oppose it; the bill has supermajority council support but hasn't been called for a vote.",
-    "ad0f07f43ec5e": "Amazon warns it could move roughly 5,000 jobs; analysts say all 15 city last-mile stations could close, citing Montreal.",
-    "a45eccf8e24d3": "Mamdani reportedly says Amazon is spending heavily to scare New Yorkers, and he'll join national labor leaders to push the bill.",
-    "a831c709e5809": "Teamsters and Mamdani rally at City Hall, urging Speaker Menin to schedule a vote; they say Amazon has spent over $8 million.",
-    "a3a4fa02bef84": "Councilman Phil Wong reportedly dropped his co-sponsorship, citing small-business job losses; the Law Department is reviewing."
+    "ad0f07f43ec5e": "Amazon warns it could move about 5,000 delivery jobs out of NYC; analysts say all 15 last-mile stations could close.",
+    "a45eccf8e24d3": "Mamdani reportedly says Amazon and others are spending heavily to scare New Yorkers, and he'll join national labor leaders.",
+    "a831c709e5809": "Teamsters rally at City Hall, saying Amazon has spent over $8 million against the bill; Speaker Menin hasn't scheduled a vote.",
+    "a3a4fa02bef84": "Councilman Phil Wong reportedly drops co-sponsorship over small-business job losses; the Law Department is reviewing the bill."
    },
-   "intro": "A NYC bill would bar subcontracted last-mile drivers, putting Amazon's delivery setup in the city at stake.",
-   "now": "Still no vote scheduled; the Law Department is reviewing the bill, including whether federal law preempts it."
+   "intro": "A NYC bill would make Amazon directly employ its last-mile drivers; Amazon warns it could pull jobs from the city.",
+   "now": "No vote is scheduled while the Law Department reviews the bill, including federal preemption; shippers see no change yet."
   },
   "co": "Amazon",
   "apart": [
@@ -1153,5 +1152,19 @@
    "USPS"
   ],
   "rv": "cb69b7881cc6"
+ },
+ "doordash-instacart-deal": {
+  "n": "DoorDash–Instacart deal",
+  "ids": [
+   "a301ee4ea4257"
+  ],
+  "first": "2026-10-29",
+  "co": "DoorDash",
+  "s": "Announced Oct. 29, 2026; closing is expected between late 2027 and the first half of 2028, pending approvals.",
+  "last": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "rv": "afafbaa08c7c"
  }
 }

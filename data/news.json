@@ -180,6 +180,103 @@
   ]
  },
  {
+  "id": "a3de5c6ac088c",
+  "date": "2026-11-11",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air drones deliver from North Randall, Ohio, site",
+  "sum": "Amazon's Prime Air drones are delivering orders to homes in parts of Cuyahoga County, Ohio, from the North Randall fulfillment center, News 5 Cleveland reported. The site is one of 19 Amazon locations in the country offering the service, with a fleet of 20 drones at North Randall.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Eligible customers near North Randall can choose drone delivery at checkout for items under 5 pounds. Flights run in daylight and when weather permits.",
+  "why": "Amazon says about 60% of its items are drone-eligible within 8 miles of the North Randall site, a sign of the drone program's reach.",
+  "score": 5,
+  "tie": "Amazon said in August 2026 that Prime Air would start drone deliveries by the end of 2026 from sites near Chicago, Atlanta, Cleveland and Syracuse, N.Y.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:53:32Z",
+  "src": "News 5 Cleveland WEWS",
+  "url": "https://www.news5cleveland.com/news/local-news/amazons-prime-air-drones-are-now-delivering-packages-to-homes-in-parts-of-cuyahoga-county-in-minutes",
+  "srcs": [
+   {
+    "src": "News 5 Cleveland WEWS",
+    "url": "https://www.news5cleveland.com/news/local-news/amazons-prime-air-drones-are-now-delivering-packages-to-homes-in-parts-of-cuyahoga-county-in-minutes"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-11",
+  "new": "The report details operations at Amazon's North Randall, Ohio site (20 drones, 8-mile radius, items under 5 pounds, 12-foot drop), so Cleveland-area customers can now select drone delivery at checkout for eligible items.",
+  "syn": "Amazon's Prime Air drones are making home deliveries in parts of Cuyahoga County, Ohio, from the North Randall fulfillment center, according to News 5 Cleveland. The site is one of 19 Amazon locations offering the service and has a fleet of 20 drones. Amazon estimates about 60% of its items are eligible within an 8-mile radius of the center. A Prime Air manager said hundreds of packages leave the site each day and thousands leave across all sites combined.",
+  "aff": [
+   {
+    "who": "Customers near North Randall",
+    "what": "Eligible customers within 8 miles can pick drone delivery at checkout; about 60% of items qualify."
+   },
+   {
+    "who": "Drone-eligible items",
+    "what": "Items must weigh under 5 pounds and fit the Prime Air box; drones drop them from around 12 feet."
+   },
+   {
+    "who": "Delivery times",
+    "what": "Amazon offers a promise of under two hours. Its fastest delivery was 11 minutes and it has delivered in as little as 30 minutes from a site like this."
+   },
+   {
+    "who": "Service hours",
+    "what": "Drones fly only from sunrise to sunset and only when weather permits."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a4a4a51b583bf",
+  "date": "2026-11-11",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Serve Robotics, DoorDash launch Australia's first footpath robot delivery",
+  "sum": "Serve Robotics and DoorDash launched a footpath robot delivery pilot in the Gold Coast Health and Knowledge Precinct, starting at the end of October, according to Robotics & Automation News. It is Serve's first operation outside the United States. Gnocchi Gnocchi in Southport is the first participating restaurant, with more to join in the coming weeks.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "DoorDash customers near the Gold Coast precinct can choose robot delivery for orders from participating restaurants. No change to parcel rates or service.",
+  "why": "The pilot is Serve's first deployment outside the US, where it has delivered for more than 4,500 restaurants, and extends DoorDash's multi-modal strategy to Australia.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:55:20Z",
+  "src": "Robotics & Automation News",
+  "url": "https://roboticsandautomationnews.com/2026/11/11/serve-robotics-expands-beyond-us-with-doordash-robot-delivery-launch-in-australia/107013/",
+  "srcs": [
+   {
+    "src": "Robotics & Automation News",
+    "url": "https://roboticsandautomationnews.com/2026/11/11/serve-robotics-expands-beyond-us-with-doordash-robot-delivery-launch-in-australia/107013/"
+   }
+  ],
+  "auto": true,
+  "syn": "Serve Robotics and DoorDash launched Australia's first footpath robot delivery service in the Gold Coast Health and Knowledge Precinct, with service starting at the end of October. Gnocchi Gnocchi in Southport is the first restaurant, and more local restaurants are due to join in the coming weeks. Serve said it has delivered for more than 4,500 restaurants in the US, and this is its first operation outside the country. DoorDash said the pilot will show how footpath robots can complement existing delivery options for short local trips.",
+  "aff": [
+   {
+    "who": "DoorDash customers in the precinct",
+    "what": "Can opt in to robot delivery at checkout when a participating merchant is nearby and a robot is available."
+   },
+   {
+    "who": "Gold Coast restaurants",
+    "what": "Gnocchi Gnocchi in Southport is first; more restaurants are to join in the coming weeks."
+   },
+   {
+    "who": "Delivery zones",
+    "what": "Pilot learnings will shape how the service grows and any changes to delivery zones."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a62ce553f63fc",
   "date": "2026-11-11",
   "c": [
@@ -255,6 +352,53 @@
   "exclusive": true
  },
  {
+  "id": "a8369bb04fbee",
+  "date": "2026-11-11",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Nampa asks Amazon for Prime Air drone flight data",
+  "sum": "The City of Nampa, Idaho, has asked Amazon for flight data on Prime Air drones that began flying over the city on October 30, BoiseDev reported on November 11. Communications director Amy Bowman said the city has received about 20 to 25 emails and calls from residents. Nampa holds the conditional use permit for Amazon's launch pad, which its Planning and Zoning Commission approved 6-1 on May 26.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to delivery prices or fees. Amazon's drone flights around Nampa continue while the city reviews compliance with the hub's permit.",
+  "why": "Shows how a city that issued a drone hub's permit can seek flight data and review compliance, while other cities say they are preempted.",
+  "score": 4,
+  "tie": "Amazon opened its Prime Air site in Markham, Illinois, in November 2026 with a 7.5-mile eligibility radius, the same radius cited for the Nampa delivery area.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:54:23Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/11/amazon-drones-nampa-complaints-flight-data-permit/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/11/amazon-drones-nampa-complaints-flight-data-permit/"
+   }
+  ],
+  "auto": true,
+  "new": "Nampa, which holds the hub's conditional use permit, has asked Amazon for flight data after resident noise complaints; no rates or fees change for shippers.",
+  "syn": "The City of Nampa, Idaho, has asked Amazon for flight data on Prime Air drones that began flying over the city on October 30, and city staff visited the area last week, BoiseDev reported on November 11. Communications director Amy Bowman said Nampa has received about 20 to 25 emails and calls, and the city is in communication with Amazon about complying with the conditional use permit it holds for the launch pad. The commission approved that permit 6-1 on May 26, and the city's planning director said then that it can be revoked. BoiseDev quotes no city finding that Amazon has broken the permit's terms. The case shows how drone noise complaints are handled where a city holds the hub permit.",
+  "aff": [
+   {
+    "who": "Nampa-area residents",
+    "what": "Residents have complained about drone noise; the city has passed concerns to Amazon and requested flight data."
+   },
+   {
+    "who": "Amazon Prime Air",
+    "what": "The city is in communication with Amazon on permit compliance; the permit can be revoked, per planning director Rodney Ashby."
+   },
+   {
+    "who": "Meridian residents",
+    "what": "Parts of Meridian sit inside the 7.5-mile delivery radius; the city says it has had a handful of complaints and holds no permit."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "aa9caf27524b4",
   "date": "2026-11-11",
   "c": [
@@ -291,6 +435,97 @@
    {
     "who": "Manufacturers shifting sourcing",
     "what": "UPS plans the hub to support moves of manufacturing and sourcing closer to end markets."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "aefb0169d9449",
+  "date": "2026-11-11",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS warns it may close locations if Congress does not act",
+  "sum": "The U.S. Postal Service is warning it might have to close numerous locations if Congress does not act quickly, Atlanta News First reported on Nov. 11, 2026. The report did not give a number of locations, a timeline or the funding involved.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. USPS has warned that locations could close without action from Congress, but the report gives no sites or dates.",
+  "why": "Any closures would affect where postal customers, including shippers using USPS, can drop off and pick up mail and packages, though the report gives no scope.",
+  "score": 6,
+  "tie": "The warning follows USPS's Nov. 10, 2026 report of a $6.5 billion net loss for fiscal 2026 and a Nov. 4, 2026 congressional letter on its request for more borrowing authority.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:52:41Z",
+  "src": "Atlanta News First",
+  "url": "https://www.atlantanewsfirst.com/video/2026/11/12/usps-could-cut-locations-without-funding-congress/",
+  "srcs": [
+   {
+    "src": "Atlanta News First",
+    "url": "https://www.atlantanewsfirst.com/video/2026/11/12/usps-could-cut-locations-without-funding-congress/"
+   }
+  ],
+  "auto": true,
+  "new": "USPS is now warning it may have to close numerous locations if Congress does not act quickly; the earlier coverage covered losses and a borrowing request, not closures, and no rate or service change for shippers has been announced.",
+  "syn": "The U.S. Postal Service is warning that it might have to close numerous locations if Congress does not act quickly, according to a video report from Atlanta News First published Nov. 11, 2026. The report as provided does not say how many locations, which ones or by when. No change to USPS rates or service has been announced.",
+  "aff": [
+   {
+    "who": "USPS locations",
+    "what": "USPS warned it might close numerous locations if Congress does not act quickly; no sites or dates given."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service has been announced."
+   }
+  ]
+ },
+ {
+  "id": "afc463ffa65f6",
+  "date": "2026-11-11",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Couriers add 17,400 jobs in October as trucking, warehousing stay flat",
+  "sum": "Couriers and messengers added 17,400 jobs in October 2026, about 70% of transportation and warehousing growth that month, according to Bureau of Labor Statistics data cited by WWD. Over 12 months the subsector added 10,100 jobs, while trucking and warehousing were roughly flat.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The data show hiring concentrated in last-mile delivery roles rather than freight.",
+  "why": "Courier and messenger hiring drove most of October's transportation and warehousing job growth, according to BLS data, ahead of the holiday peak.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:55:05Z",
+  "src": "WWD",
+  "url": "https://wwd.com/sourcing-journal/logistics/last-mile-deliery-is-hiring-freight-is-not-couriers-bls-jobs-report-october-1239411237/",
+  "srcs": [
+   {
+    "src": "WWD",
+    "url": "https://wwd.com/sourcing-journal/logistics/last-mile-deliery-is-hiring-freight-is-not-couriers-bls-jobs-report-october-1239411237/"
+   }
+  ],
+  "auto": true,
+  "syn": "Couriers and messengers accounted for most of the transportation and warehousing sector's job growth in October 2026, according to preliminary, seasonally adjusted Bureau of Labor Statistics data. The subsector added 17,400 jobs from September, up 1.6%, and 10,100 from October 2025, up 0.92%. The wider sector added 17,000 jobs year over year, up 0.26%. Trucking added no jobs in October and warehousing and storage lost 300. An industry analysis said the courier category now includes thousands of firms that act as delivery agents for large networks. A managing partner at a consulting firm said much of this year's hiring restored jobs lost over the winter, when the subsector fell by 60,900 jobs from October 2025 to February 2026.",
+  "aff": [
+   {
+    "who": "Couriers and messengers",
+    "what": "Added 17,400 jobs in October (up 1.6%) and 27,000 in the 10 months through October (up 2.5%), per BLS."
+   },
+   {
+    "who": "Trucking",
+    "what": "No jobs added in October; down 1,300 (0.09%) from a year earlier, up 5,700 (0.39%) since January."
+   },
+   {
+    "who": "Warehousing and storage",
+    "what": "Lost 300 jobs in October and 700 (0.04%) year over year; up 8,800 (0.48%) since January."
+   },
+   {
+    "who": "Transportation and warehousing sector",
+    "what": "Added 17,000 jobs year over year (0.26%) and 58,100 (0.88%) since January."
    }
   ],
   "edge": true,
@@ -532,6 +767,54 @@
   ],
   "auto": true,
   "ann": "2026-11-10",
+  "exclusive": true
+ },
+ {
+  "id": "a424ddbd302e3",
+  "date": "2026-11-10",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "News",
+  "title": "Amazon's Markham drone site hits 300-order daily cap; Homewood cites no warning",
+  "sum": "Amazon's Markham, Illinois, drone delivery site has generally reached its maximum of 300 orders a day since flights began October 12, Amazon's Sam Bailey said at a November 10 ribbon-cutting, according to DroneXL. Homewood Mayor Rich Hofeld told the Chicago Tribune's Daily Southtown the village got no warning or communication from Amazon before the launch. Bailey said 21 MK30 drones fly from the site and that the Matteson warehouse launches next, without a date.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Customers within 7.5 miles of the Markham site can receive drone deliveries, and Amazon told them to clear the yard and keep children indoors. Rates and fees are unchanged in this report.",
+  "why": "Shows the Chicago-area Prime Air site running at its 300-order daily cap while local officials dispute notice, as Amazon scales drone delivery toward nearly 500 towns.",
+  "score": 4,
+  "tie": "The Markham launch follows Amazon's August 2026 plan to expand Prime Air to nearly 500 towns, including sites near Chicago, and DroneXL's March report that its Richardson, Texas, hub filled about 150 orders a day.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:54:04Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/11/amazon-drones-markham-300-orders-kids-inside-homewood/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/11/amazon-drones-markham-300-orders-kids-inside-homewood/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "new": "Amazon said Markham has generally hit its 300-order daily maximum with 21 drones and Homewood officials say they had no warning, while the FAA index still shows only the July draft; no change to shipper fees is reported.",
+  "syn": "Amazon's Markham, Illinois, drone delivery site has generally hit its 300-order daily maximum since flights began October 12, Amazon economic development manager Sam Bailey said at a November 10 ribbon-cutting, according to DroneXL. Homewood Mayor Rich Hofeld told the Chicago Tribune's Daily Southtown that Amazon gave the village no warning before service started, while the FAA's July notice of the Chicago draft went to village officials, per the draft's Appendix A. Bailey said 21 MK30 drones fly from the site, 60% of the warehouse's inventory can go by drone, and Matteson launches next without a date. DroneXL reported that the FAA's environmental review index still lists only the July draft assessment for the Chicago sites, with no decision posted.",
+  "aff": [
+   {
+    "who": "Markham-area drone customers",
+    "what": "Amazon says to clear the yard and keep children indoors during a delivery; the MK30 releases a package from about 12 feet."
+   },
+   {
+    "who": "Homewood, Harvey, South Holland and Dolton residents",
+    "what": "Inside the 7.5-mile radius, per the Tribune; Homewood said it could not ground the drones."
+   },
+   {
+    "who": "Matteson customers",
+    "what": "Matteson warehouse launches next, Bailey said, without giving a date."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -1212,6 +1495,10 @@
    {
     "src": "PR Newswire",
     "url": "https://www.prnewswire.com/news-releases/gofo-white-paper-highlights-structural-shift-in-us-last-mile-delivery-302934176.html"
+   },
+   {
+    "src": "Fontana Herald News",
+    "url": "https://www.fontanaheraldnews.com/online_features/press_releases/gofo-white-paper-highlights-structural-shift-in-u-s-last-mile-delivery/article_e2a1f513-ac1b-5f48-890c-654ecdac068a.html"
    }
   ],
   "auto": true,
@@ -1285,7 +1572,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -2459,7 +2746,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -2507,7 +2794,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -3328,7 +3615,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -3388,16 +3675,16 @@
   "cat": "Postal",
   "kind": "News",
   "title": "Postal caucus presses USPS on $19.5 billion borrowing request",
-  "sum": "Rep. Nikki Budzinski (IL-13) led 13 members of the Congressional Postal Service Caucus in a bipartisan letter dated Nov. 4, 2026 to Postmaster General David Steiner. The letter asks how USPS would use a requested $19.5 billion increase in borrowing authority, which would raise the limit from $15 billion to $34.5 billion. The lawmakers ask for briefings during the Nov. 9-20 House session and replies by Nov. 13.",
+  "sum": "Rep. Nikki Budzinski (IL-13) led 13 members of the Congressional Postal Service Caucus in a bipartisan letter dated Nov. 4, 2026 to Postmaster General David Steiner. The letter asks how USPS would spend a requested $19.5 billion increase in borrowing authority, which would raise the limit from $15 billion to $34.5 billion. The lawmakers ask for briefings during the Nov. 9-20 House session and written replies by Nov. 13.",
   "imp": "watch",
   "lvl": 1,
-  "plain": "No change to rates or service yet. Congress has not acted on the request to raise USPS's borrowing limit from $15 billion to $34.5 billion.",
-  "why": "The outcome of USPS's borrowing request could affect the finances of a carrier that, per the letter, loses upwards of $9 billion annually.",
+  "plain": "No change to rates or service. The letter requests information and briefings, and Congress has not changed the borrowing limit.",
+  "why": "Congress has not acted on the request, and lawmakers link it to network changes they say slowed mail service, including in rural areas.",
   "score": 6,
-  "tie": null,
+  "tie": "The letter cites the 2024 Regional Transportation Optimization plan, which USPS projected would save about $650 million per year, and the Nov. 29, 2024 filing that loosened Market Dominant service targets by roughly 10%.",
   "act": null,
   "dates": [],
-  "added": "2026-11-07T17:00:20Z",
+  "added": "2026-11-12T00:52:55Z",
   "src": "RiverBender.com",
   "url": "https://www.riverbender.com/news/details/budzinski-leads-bipartisan-postal-caucus-in-pressing-usps-for-answers-on-195-billion-borrowing-request-98150.cfm",
   "srcs": [
@@ -3409,21 +3696,21 @@
   "auto": true,
   "ann": "2026-11-04",
   "thread": "usps-finances",
-  "upd": 3,
-  "new": "Members of Congress are now questioning USPS's $19.5 billion borrowing authority request and asking whether it would fund on-time delivery or more network changes; no rate or service change results yet for shippers.",
-  "syn": "Rep. Nikki Budzinski (IL-13) led 13 members of the Congressional Postal Service Caucus in a bipartisan letter dated Nov. 4, 2026 to Postmaster General David Steiner. The letter seeks details on how USPS would spend a requested $19.5 billion increase in statutory borrowing authority, which would lift the limit from $15 billion to $34.5 billion. The members say service has declined from network changes under the Mail Processing Facility Review and Regional Transportation Optimization, and ask whether the money would improve on-time delivery or fund more such changes. They request briefings during the Nov. 9-20 House session and written answers by Nov. 13.",
+  "upd": 6,
+  "new": "The full text of the Nov. 4 letter adds specific questions on the $19.5 billion, the $650 million projected annual RTO savings and the 2024 service-target changes. The letter does not change shipper rates or service.",
+  "syn": "Thirteen members of the Congressional Postal Service Caucus, led by Rep. Nikki Budzinski, wrote to Postmaster General David Steiner on Nov. 4, 2026 about USPS's request to raise its statutory borrowing authority by $19.5 billion, from $15 billion to $34.5 billion. They ask whether the money would go toward better on-time delivery or toward more network changes, citing the Mail Processing Facility Review and Regional Transportation Optimization. They request briefings during the Nov. 9-20 House session and replies by Nov. 13. The letter says USPS continues to lose upwards of $9 billion annually.",
   "aff": [
    {
-    "who": "USPS borrowing authority",
-    "what": "USPS has asked Congress to raise the limit by $19.5 billion, from $15 billion to $34.5 billion."
+    "who": "USPS",
+    "what": "Asked to detail how it would spend a $19.5 billion borrowing increase, with replies due Nov. 13."
    },
    {
-    "who": "Mail service in rural areas",
-    "what": "The letter says network changes have hurt service, especially in rural communities, and asks how funds would improve on-time delivery."
+    "who": "Mail delivery in rural areas",
+    "what": "Lawmakers say network changes since 2023 have hurt service and ask how new funds would improve on-time delivery."
    },
    {
-    "who": "USPS finances",
-    "what": "The letter says USPS continues to lose upwards of $9 billion annually."
+    "who": "Service performance targets",
+    "what": "The letter asks whether USPS would reverse the 2024 targets change, which loosened Market Dominant targets by roughly 10%."
    }
   ],
   "exclusive": true
@@ -3763,7 +4050,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-11",
+  "tried": "2026-11-12",
   "unconf": true
  },
  {
@@ -6147,6 +6434,58 @@
   "updated": "2026-10-29"
  },
  {
+  "id": "a301ee4ea4257",
+  "date": "2026-10-29",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "DoorDash targets $500 million in synergies from $17 billion Instacart deal",
+  "sum": "DoorDash and Instacart jointly announced on October 29, 2026 that DoorDash will buy Instacart at $65 per share, in a deal valued at about $17 billion. DoorDash expects $500 million in net synergies in the third year after closing. Closing is expected between late 2027 and the first half of 2028.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers now. DoorDash and Instacart will operate as separate companies until all approvals are secured and the deal closes.",
+  "why": "The $17 billion deal would combine two grocery and restaurant delivery platforms; closing needs Instacart stockholder and antitrust approvals.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T00:53:23Z",
+  "src": "Demokratis.co.id",
+  "url": "https://demokratis.co.id/en/doordash-instacart-deal-synergies",
+  "srcs": [
+   {
+    "src": "Demokratis.co.id",
+    "url": "https://demokratis.co.id/en/doordash-instacart-deal-synergies"
+   },
+   {
+    "src": "SuaraGarut.ID",
+    "url": "https://suaragarut.id/en/doordash-instacart-merger-synergies"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-10-29",
+  "thread": "doordash-instacart-deal",
+  "syn": "DoorDash plans to acquire Instacart for $65 per share, a transaction valued at about $17 billion, according to the companies' joint announcement on October 29, 2026. DoorDash expects $500 million in net synergies in the third year after the deal. CFO Ravi Inukonda cited four opportunities on the earnings call: more consumer demand, higher ad spend, software for grocery partners, and fulfillment accuracy. The deal is expected to close between late 2027 and the first half of 2028, subject to Instacart stockholder approval, the Hart-Scott-Rodino waiting period, and approvals in Canada and Israel.",
+  "aff": [
+   {
+    "who": "DoorDash and Instacart customers",
+    "what": "No change for now; the companies operate separately until approvals are secured and the deal closes."
+   },
+   {
+    "who": "Advertisers",
+    "what": "DoorDash expects a larger consumer audience; Instacart reported $331 million in advertising and other revenue for Q3, up 23%."
+   },
+   {
+    "who": "Grocery partners",
+    "what": "DoorDash says it could offer them Instacart's first-party software."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a619cd4242386",
   "date": "2026-10-29",
   "c": [
@@ -6740,59 +7079,6 @@
    }
   ],
   "edge": true
- },
- {
-  "id": "ab2e3fb6c1366",
-  "date": "2026-10-29",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "DoorDash targets $500M in net synergies from Instacart deal",
-  "sum": "DoorDash said it expects 500 million dollars in incremental net synergies by the third year after its roughly 17 billion dollar acquisition of Instacart. The companies announced the $65-per-share deal on October 29, 2026, and it is expected to close between late 2027 and the first half of 2028.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for now. DoorDash and Instacart stay separate companies until the deal closes, expected between late 2027 and the first half of 2028.",
-  "why": "The deal would combine two large grocery delivery platforms, and DoorDash plans to open restaurant and grocery categories across both services.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-08T20:56:18Z",
-  "src": "SuaraGarut.ID",
-  "url": "https://suaragarut.id/en/doordash-instacart-merger-synergies",
-  "srcs": [
-   {
-    "src": "SuaraGarut.ID",
-    "url": "https://suaragarut.id/en/doordash-instacart-merger-synergies"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-29",
-  "syn": "DoorDash plans to acquire Instacart for roughly 17 billion dollars, or 65 dollars per share, according to the companies' joint announcement on October 29, 2026. DoorDash CFO Ravi Inukonda said the company expects 500 million dollars in incremental net synergies by year three, net of investments. DoorDash named four sources: more order volume, advertising, software sold to grocery partners and fulfillment accuracy. Closing is expected between late 2027 and the first half of 2028 and depends on Instacart stockholder approval, the Hart-Scott-Rodino waiting period and approvals in Canada and Israel.",
-  "aff": [
-   {
-    "who": "Order volume",
-    "what": "DoorDash plans to offer its restaurant listings on Instacart; categories exclusive to one platform could become available on both."
-   },
-   {
-    "who": "CPG advertisers",
-    "what": "Inukonda said advertisers would reach a larger customer base; Instacart's Q3 advertising and other revenue was $331M, up 23%."
-   },
-   {
-    "who": "Grocery retail partners",
-    "what": "DoorDash could cross-sell Instacart's software products to grocers already on its platform."
-   },
-   {
-    "who": "Delivery accuracy",
-    "what": "CEO Tony Xu said DashMart accuracy is near perfect, versus the low 90s for third-party stores."
-   }
-  ],
-  "edge": true,
-  "exclusive": true,
-  "tried": "2026-11-08",
-  "unconf": true
  },
  {
   "id": "abfc3f60e3202",
@@ -11825,204 +12111,6 @@
    {
     "src": "Representative Kweisi Mfume | (.gov)",
     "url": "https://mfume.house.gov/media/press-releases/rep-mfume-commends-postal-workers-requests-briefing-on-suspicious-mailings-to-congressional-offices"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a666569771590",
-  "date": "2026-10-16",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Oregon lawmakers press USPS on mail delivery problems on state's north coast",
-  "sum": "Rep. Suzanne Bonamici and Sens. Ron Wyden and Jeff Merkley sent a letter to Postmaster General Steiner on Oct. 16, 2026, about delivery problems in Astoria, Warrenton, Gearhart and Rainier. They asked for a written response within 14 days and an informational session for residents within 60 days.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to USPS rates or service has been announced. The lawmakers say some Astoria businesses and local governments get mail irregularly or not at all, and some Gearhart and Rainier residents lack home delivery.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T22:50:21Z",
-  "src": "Merkley (.gov)",
-  "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/",
-  "srcs": [
-   {
-    "src": "Merkley (.gov)",
-    "url": "https://www.merkley.senate.gov/bonamici-wyden-merkley-demand-answers-from-usps-about-mail-delivery-problems-on-oregon-coast/"
-   }
-  ],
-  "auto": true,
-  "edge": true
- },
- {
-  "id": "a709757714d80",
-  "date": "2026-10-16",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Two Cook County suits accuse Coco, Serve robots of biometric scans",
-  "sum": "Two lawsuits filed in Cook County allege that sidewalk delivery robots run by Coco Robotics and Serve Robotics scan the faces, hands and bodies of customers and passersby in Chicago without consent, according to ABC7 Chicago. Coco said it has not collected biometric data in Chicago, and Serve said it will defend against the complaint and that its systems are not designed to identify individuals.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The suits are pending, and the city's robot pilot is set to expire in May 2027 unless extended, according to CBS Chicago.",
-  "tie": "Serve Robotics entered Chicago in September 2025 through an Uber Eats partnership, according to the sources.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T20:52:18Z",
-  "src": "Hoodline",
-  "url": "https://hoodline.com/2026/10/two-cook-county-lawsuits-accuse-coco-serve-robotics-of-scanning-faces-on-sidewalks/",
-  "srcs": [
-   {
-    "src": "Hoodline",
-    "url": "https://hoodline.com/2026/10/two-cook-county-lawsuits-accuse-coco-serve-robotics-of-scanning-faces-on-sidewalks/"
-   }
-  ],
-  "auto": true,
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
- },
- {
-  "id": "a8095404a5ccb",
-  "date": "2026-10-16",
-  "c": [
-   "DHL"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "DHL Group raises 2026 EBIT outlook to above 7.0 billion euros",
-  "sum": "DHL Group raised its full-year 2026 outlook on Oct. 16, saying reported Group EBIT should exceed 7.0 billion euros, up from more than 6.5 billion euros. In an ad hoc disclosure, it cited earnings momentum at Express and signs of a robust Q4 peak. Preliminary Q3 Group EBIT was around 1.71 billion euros on revenue of around 22.6 billion euros.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The announcement covers DHL Group's earnings and cash-flow outlook.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T18:58:30Z",
-  "src": "Quartz",
-  "url": "https://qz.com/dhl-raises-2026-earnings-guidance-ebit-101626",
-  "srcs": [
-   {
-    "src": "Quartz",
-    "url": "https://qz.com/dhl-raises-2026-earnings-guidance-ebit-101626"
-   },
-   {
-    "src": "TradingView",
-    "url": "https://www.tradingview.com/news/eqs:e63e07ed9094b:0-dhl-ag-dhl-ag-raises-full-year-2026-earnings-guidance/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "aa0e6e5c54025",
-  "date": "2026-10-16",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "Amazon and Teamsters file Fifth Circuit briefs over JFK8 bargaining order",
-  "sum": "Amazon and the Teamsters-aligned ALU-IBT Local 1 filed briefs on October 16 in the Fifth Circuit over an April NLRB order requiring Amazon to bargain at its JFK8 warehouse in Staten Island, FreeightWaves reported. Amazon says it has not bargained because it is seeking court review of the union certification.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The case concerns whether Amazon must bargain with the union at its JFK8 warehouse in Staten Island.",
-  "why": "The case decides whether Amazon must bargain with a union at JFK8, its only warehouse where a union election win has been certified, according to the article.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T15:02:51Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/nlrb-ordered-amazon-to-bargain-with-staten-island-workers-its-now-in-federal-court",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/nlrb-ordered-amazon-to-bargain-with-staten-island-workers-its-now-in-federal-court"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-16",
-  "thread": "amazon-jfk8-nlrb",
-  "syn": "Amazon and ALU-International Brotherhood of Teamsters Local 1 filed briefs on October 16 in the Fifth Circuit in Amazon's challenge to an April National Labor Relations Board order to bargain with the union at JFK8 in Staten Island, FreightWaves reported. Amazon said it has not bargained because an employer cannot directly appeal a union certification and must refuse to bargain to obtain court review. The union's 115-page brief reviews the full history of the dispute, while Amazon's brief rests on narrower legal grounds. The article describes a separate NLRB matter over whether Amazon is a joint employer of delivery service providers as still pending.",
-  "aff": [
-   {
-    "who": "Amazon JFK8 workers",
-    "what": "The Fifth Circuit will review the NLRB's April order requiring Amazon to bargain with ALU-IBT Local 1."
-   },
-   {
-    "who": "Amazon delivery service providers",
-    "what": "A separate NLRB joint-employer dispute continues over an April agreement between Amazon and the NLRB General Counsel."
-   }
-  ],
-  "edge": true
- },
- {
-  "id": "abf7a28de14a5",
-  "date": "2026-10-16",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Bronx Amazon DSP operators oppose NYC Delivery Protection Act",
-  "sum": "Delivery service provider operators in the Bronx are speaking out against the Delivery Protection Act, which the Bronx Times said would effectively eliminate delivery contractors in New York City. The bill has supermajority council support but has not been called for a vote, and Amazon has said it would consider relocating its warehouses outside the city.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service yet. The bill, which has not been scheduled for a vote, would end subcontracted delivery arrangements and create a licensing system and safety standards for distribution facilities in New York City.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-16T20:52:02Z",
-  "src": "Bronx Times",
-  "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/",
-  "srcs": [
-   {
-    "src": "Bronx Times",
-    "url": "https://www.bxtimes.com/bronx-amazon-delivery-contractors-warn-mamdani-backed-bill-could-put-jobs-at-risk/"
-   }
-  ],
-  "auto": true,
-  "thread": "last-mile-facility-legislation",
-  "upd": 2,
-  "new": "The Bronx Times reported DSP operators' opposition, Amazon's statement that it would consider relocating warehouses outside the city, and that over 40 DSPs employing over 5,000 workers operate in New York City; there is still no vote date and no change for shippers.",
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
- },
- {
-  "id": "ad3bb2b386f62",
-  "date": "2026-10-16",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "UPS Capital launches CommerceShield AI delivery risk score for retailers",
-  "sum": "UPS Capital, the financial services arm of UPS, recently launched CommerceShield, which runs large language models on two years of UPS shipping data to predict whether a delivery will succeed. UPS Capital said the data covers more than 26 billion delivery touchpoints across more than 150 million U.S. addresses. The score is combined with other signals, such as device and email data, to give retailers a combined risk score.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Retailers using CommerceShield can see a predicted delivery-success score and attach actions such as requiring a signature or routing a delivery to a staffed pickup point. No change to UPS rates or service levels was announced.",
-  "why": "The tool gives retailers a delivery-risk score from UPS data, and UPS Capital survey data cited in the article shows consumers often blame retailers for lost packages.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:49:42Z",
-  "src": "PYMNTS.com",
-  "url": "https://www.pymnts.com/news/delivery/2026/ups-capital-uses-ai-to-stop-holiday-delivery-disasters/",
-  "srcs": [
-   {
-    "src": "PYMNTS.com",
-    "url": "https://www.pymnts.com/news/delivery/2026/ups-capital-uses-ai-to-stop-holiday-delivery-disasters/"
    }
   ],
   "auto": true,
