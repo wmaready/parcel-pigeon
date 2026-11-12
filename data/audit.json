@@ -1,5 +1,5 @@
 {
- "run": "2026-11-12T17:39Z",
+ "run": "2026-11-12T18:29Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -254,16 +254,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
-   "ids": [
-    "ad66ad94a48fa",
-    "a5aadb5b56a84"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
    "ids": [
     "a4a63ed69f438",
@@ -318,6 +308,16 @@
    "ids": [
     "aaf63e9db25a0",
     "ae12ca75552ef"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Walmart more than doubles planned Zipline drone delivery sites\" and \"Walmart signs Zipline deal to add 300 drone delivery sites\"",
+   "ids": [
+    "a88e5da2464bb",
+    "af4470d3440cc"
    ],
    "fixed": false
   },
@@ -538,16 +538,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS files two new competitive shipping contracts with PRC\" and \"PRC notices USPS filings for two new competitive shipping contracts\"",
-   "ids": [
-    "ad66ad94a48fa",
-    "a5aadb5b56a84"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
    "ids": [
     "a4a63ed69f438",
@@ -602,6 +592,16 @@
    "ids": [
     "aaf63e9db25a0",
     "ae12ca75552ef"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Walmart more than doubles planned Zipline drone delivery sites\" and \"Walmart signs Zipline deal to add 300 drone delivery sites\"",
+   "ids": [
+    "a88e5da2464bb",
+    "af4470d3440cc"
    ],
    "fixed": false
   },

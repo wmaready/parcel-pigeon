@@ -534,7 +534,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery networks are expanding while the FAA's Part 108 BVLOS rule remained unpublished as of the last coverage in October.",
+  "s": "Walmart and Zipline are expanding drone delivery sites, while the FAA's Part 108 rule had not been published as of Oct. 9, 2026.",
   "ids": [
    "g27",
    "g26",
@@ -647,16 +647,15 @@
   ],
   "rv": "f0f9c58e1b0e",
   "cx": {
-   "sig": "91d33cd71a45",
+   "sig": "33b951e1ed0b",
    "v": 3,
    "beats": {
-    "ad0f07f43ec5e": "Amazon warns it could move about 5,000 delivery jobs out of NYC; analysts say all 15 last-mile stations could close.",
-    "a45eccf8e24d3": "Mamdani reportedly says Amazon and others are spending heavily to scare New Yorkers, and he'll join national labor leaders.",
-    "a831c709e5809": "Teamsters rally at City Hall, saying Amazon has spent over $8 million against the bill; Speaker Menin hasn't scheduled a vote.",
-    "a3a4fa02bef84": "Councilman Phil Wong reportedly drops co-sponsorship over small-business job losses; the Law Department is reviewing the bill."
+    "a45eccf8e24d3": "Reportedly, Mamdani says Amazon and others are spending big to scare New Yorkers about licensing and direct-hire rules.",
+    "a831c709e5809": "Teamsters and Mamdani rally at City Hall for a vote; they say Amazon has spent over $8 million against the bill.",
+    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong drops co-sponsorship over small-business job losses; the Law Department is reviewing."
    },
-   "intro": "A NYC bill would make Amazon directly employ its last-mile drivers; Amazon warns it could pull jobs from the city.",
-   "now": "No vote is scheduled while the Law Department reviews the bill, including federal preemption; shippers see no change yet."
+   "intro": "NYC bill would license last-mile hubs and bar subcontracted drivers, a big potential shift for shippers.",
+   "now": "No vote is scheduled while the Law Department reviews the bill, including federal preemption; nothing changes for shippers yet."
   },
   "co": "Amazon",
   "apart": [
@@ -1078,7 +1077,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber launched the Uber Eats Prime benefit on Nov. 5, 2026, with the Prime Visa 5% back offer running through Dec. 5, 2026.",
+  "s": "Amazon and Uber launched the Uber Eats Prime benefit in the U.S. on Nov. 5, 2026, and the Grubhub offer for Prime is winding down.",
   "last": "2026-11-08",
   "c": [
    "Amazon"

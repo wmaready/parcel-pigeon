@@ -91,6 +91,101 @@
   "exclusive": true
  },
  {
+  "id": "a80bb45640b64",
+  "date": "2026-11-12",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "GXO signs LOI for up to 1,000 Apptronik humanoid robots",
+  "sum": "GXO and Apptronik signed a letter of intent that could lead to a global rollout of up to 1,000 Apollo humanoid robots over the next four years, DC Velocity reported. The initial North American deployment would start in late 2027, under a Robotics-as-a-Service model.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The rollout depends on trials meeting agreed performance, safety and operational targets.",
+  "why": "GXO, a contract logistics provider, plans to scale humanoid robots across its warehouse network, from trials to up to 1,000 units over four years.",
+  "score": 4,
+  "tie": "GXO began a proof-of-concept test of Apptronik's robots in 2024 and expanded it in 2026 from a Georgia DC to sites in North Carolina and Tennessee.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:28:14Z",
+  "src": "Forbes",
+  "url": "https://www.forbes.com/sites/johnkoetsier/2026/11/12/gxo-doubles-down-on-humanoids-with-plan-for-up-to-1000-apptronik-robots/",
+  "srcs": [
+   {
+    "src": "Forbes",
+    "url": "https://www.forbes.com/sites/johnkoetsier/2026/11/12/gxo-doubles-down-on-humanoids-with-plan-for-up-to-1000-apptronik-robots/"
+   },
+   {
+    "src": "DC Velocity",
+    "url": "https://www.dcvelocity.com/material-handling/robotics/gxo-could-deploy-1000-apptronik-humanoid-robots-over-four-years"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "syn": "Contract logistics provider GXO and robot maker Apptronik signed a letter of intent that could expand their humanoid robot work to up to 1,000 Apollo robots globally over the next four years, according to DC Velocity. Trials begin in 2027 across warehouse workflows including picking, case and tote movement, packing and sortation. The initial North American deployment would start in late 2027, under a Robotics-as-a-Service model, subject to meeting agreed KPIs.",
+  "aff": [
+   {
+    "who": "GXO warehouse operations",
+    "what": "Joint trials of Apollo robots begin in 2027 across picking, packing, tote movement and sortation."
+   },
+   {
+    "who": "North American sites",
+    "what": "Initial deployment of the robots would start in late 2027, per the letter of intent."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "aa20fce642be2",
+  "date": "2026-11-12",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Market reports",
+  "kind": "Analysis",
+  "title": "ITF Group report links part of $849.9B retail returns to carrier vetting",
+  "sum": "ITF Group, a Missouri-based third-party logistics provider, says in its Retail Reality Check Report that many retail returns trace to how retailers vet and manage carriers. NRF projected consumers would return $849.9 billion in merchandise in 2025, equal to 15.8% of retail sales. ITF's report gives no figure for the share of returns tied to freight handling.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The report is one provider's argument that carrier selection affects return rates, and it sets out five questions for retailers.",
+  "why": "Returns were projected at $849.9B in 2025; ITF argues carrier choices drive part of it, but neither it nor NRF quantifies the freight-related share.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:28:58Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/itf-group-report-retail-returns-freight",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/itf-group-report-retail-returns-freight"
+   }
+  ],
+  "auto": true,
+  "syn": "ITF Group, a third-party logistics provider in Hazelwood, Missouri, argues in its Retail Reality Check Report that retailers book part of the cost of returns in the wrong department. It says a small discount from a lower-cost carrier can shift cost into chargebacks, damaged cargo and returns that no one links to the freight decision. NRF and Happy Returns projected $849.9 billion in 2025 returns, down from $890 billion in 2024. The public data does not show how many returns start in freight, and ITF's report gives no such figure.",
+  "aff": [
+   {
+    "who": "Retailers",
+    "what": "ITF says returns, freight cost and margin timing are handled in separate departments, so freight-driven returns go untracked."
+   },
+   {
+    "who": "Carrier scorecards",
+    "what": "The report says standard scorecards stop at delivery and do not measure how transportation affects return rates."
+   },
+   {
+    "who": "Brokers and shippers",
+    "what": "The Supreme Court ruled 9-0 in May that brokers can face state negligent-hiring suits; it did not decide shipper exposure."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "ae374e7320420",
   "date": "2026-11-12",
   "c": [
@@ -127,6 +222,40 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "ae6abe230efad",
+  "date": "2026-11-12",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Tractor Supply adds Uber on-demand delivery from nearly 2,500 stores",
+  "sum": "Tractor Supply Company announced Thursday that customers can order from nearly 2,500 of its stores for on-demand delivery through the Uber and Uber Eats apps. The retailer has 2,463 stores in 49 states and 209 Petsense stores in 23 states. A $20 discount on orders of $60 or more applies starting Thursday.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Tractor Supply customers can now order same-day delivery from its stores through the Uber and Uber Eats apps. Shipper rates and carrier service are unchanged.",
+  "why": "Tractor Supply's rural and suburban store base gains a second gig-delivery channel, as home improvement and big-box retailers add same-day options.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:27:19Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery"
+   },
+   {
+    "src": "Chain Store Age",
+    "url": "https://chainstoreage.com/tractor-supply-company-adds-new-third-party-delivery-partner"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12"
  },
  {
   "id": "w08701235bf24",
@@ -942,6 +1071,52 @@
   "exclusive": true
  },
  {
+  "id": "ad8c685f386a8",
+  "date": "2026-11-11",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Amazon ends contract with NYC e-bike partner Kaizen; 200 workers face layoff",
+  "sum": "Amazon terminated its contract with Kaizen Management Solutions, a Manhattan delivery service partner running same-day e-cargo bike deliveries, Streetsblog reported. About 200 employees will be terminated on Nov. 18, according to a letter sent to workers. Amazon said it ended the contract after an investigation found safety issues and contract breaches.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers was reported. Kaizen's e-bike same-day delivery workforce of about 200 is being let go on Nov. 18.",
+  "why": "The layoffs come as the NYC Council weighs a bill that would require Amazon to directly hire its delivery workforce, which Amazon has threatened to answer by pulling e-bikes.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:27:53Z",
+  "src": "Streetsblog New York City",
+  "url": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers",
+  "srcs": [
+   {
+    "src": "Streetsblog New York City",
+    "url": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-11",
+  "syn": "Amazon ended its contract with Kaizen Management Solutions, a Delancey Street delivery service partner that handled same-day deliveries on electric cargo bikes in Manhattan, Streetsblog reported. A letter to workers said about 200 employees will be terminated on Nov. 18, with benefits until Jan. 31. Amazon said an investigation found Kaizen returned e-cargo bikes to the road before repairs and breached contract terms, including failing to accurately record drivers' hours. The move comes as the City Council debates the Delivery Protection Act, which would require Amazon to directly hire its delivery workers.",
+  "aff": [
+   {
+    "who": "Kaizen employees",
+    "what": "About 200 positions end Nov. 18; benefits continue until Jan. 31, per the letter to workers."
+   },
+   {
+    "who": "Amazon NYC same-day e-bike deliveries",
+    "what": "Amazon ended Kaizen's contract; it said it is connecting affected employees with other DSPs in the area."
+   },
+   {
+    "who": "Amazon's NYC delivery model",
+    "what": "The Delivery Protection Act under Council debate would require Amazon to directly hire its delivery workforce."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "aefb0169d9449",
   "date": "2026-11-11",
   "c": [
@@ -1519,6 +1694,57 @@
   "exclusive": true
  },
  {
+  "id": "a6c947b956c1d",
+  "date": "2026-11-10",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "ShipBob opens Bobby AI agent to all brands on its platform",
+  "sum": "ShipBob said on Nov. 10 that Bobby, its in-dashboard AI agent, is available to every brand on its fulfillment platform. Bobby answers fulfillment questions and acts on them, and shows each change and waits for approval before it runs. Per Tech Times, the same edits can be made from Claude or ChatGPT through ShipBob's MCP connector, where the AI app sets the approval prompts.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Every ShipBob brand can use Bobby in the dashboard to query and change fulfillment operations, with changes waiting for the brand's approval. No change to ShipBob rates or fees was announced.",
+  "why": "ShipBob says its teams fulfill more than 100 million orders annually, and every brand on the platform can now use the agent to change live orders.",
+  "score": 4,
+  "tie": "Tech Times reported that ShipBob described Bobby as a beta with a waitlist in August 2026 and planned general availability for fall.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:29:09Z",
+  "src": "American Journal of Transportation",
+  "url": "https://www.ajot.com/news/shipbob-opens-ai-agent-bobby-giving-brands-an-ai-supply-chain-partner-that-works-for-them",
+  "srcs": [
+   {
+    "src": "American Journal of Transportation",
+    "url": "https://www.ajot.com/news/shipbob-opens-ai-agent-bobby-giving-brands-an-ai-supply-chain-partner-that-works-for-them"
+   },
+   {
+    "src": "Tech Times",
+    "url": "https://www.techtimes.com/articles/330433/20261111/shipbob-bobby-ai-agent-opens-all-brands-order-edits-via-claude-chatgpt-rely-app-approvals.htm"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "syn": "ShipBob said Bobby, its in-dashboard AI agent, is now available to every brand on its platform. Bobby answers fulfillment questions in plain language and can act on them, such as rerouting shipments or clearing stuck orders, and waits for approval before changing anything. According to Tech Times, the same edits can be made through ShipBob's MCP connector from AI apps such as Claude and ChatGPT, where ShipBob's documentation says the AI app controls approval prompts, not ShipBob. ShipBob said its teams fulfill more than 100 million orders annually.",
+  "aff": [
+   {
+    "who": "ShipBob brands",
+    "what": "Bobby is available to every brand in the dashboard; read access is on by default and account owners decide who can make changes."
+   },
+   {
+    "who": "Order and inventory management",
+    "what": "Bobby can reroute shipments, substitute out-of-stock items in bulk, create replacement orders and flag 30-day stockout risk."
+   },
+   {
+    "who": "Brands using Claude or ChatGPT",
+    "what": "Edits through the MCP connector rely on the AI app's approval prompts; ShipBob's server does not enforce one, per Tech Times."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a73e290a90706",
   "date": "2026-11-10",
   "c": [
@@ -2077,6 +2303,64 @@
   "unconf": true
  },
  {
+  "id": "a45c27cbbef93",
+  "date": "2026-11-09",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx opens Alzenau road hub in Germany, upgrades Madrid airside",
+  "sum": "FedEx opened a road hub in Alzenau, Germany, with 32 loading bays and about 15,500 square metres of warehouse space. It also completed modernisation of its second airside facility at Madrid-Barajas Airport, which brings its Madrid airside footprint to over 4,500 square metres. FedEx tied both projects to the coming peak season.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or fees. FedEx added handling capacity in Germany and Spain, which it said supports freight flows and peak-season volumes.",
+  "why": "The projects add freight and air cargo capacity in Germany and Spain ahead of peak season, and FedEx links them to its European network consolidation.",
+  "score": 4,
+  "tie": "FreightWaves noted that FedEx completed a Netherlands truck terminal expansion in June 2026 and described its European consolidation plans in an Oct. 28 briefing on third-quarter results.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:28:44Z",
+  "src": "Supply Chain Digital Magazine",
+  "url": "https://supplychaindigital.com/articles/fedex-expands-madrid-air-cargo-capacity-adds-rhine-road-hub",
+  "srcs": [
+   {
+    "src": "Supply Chain Digital Magazine",
+    "url": "https://supplychaindigital.com/articles/fedex-expands-madrid-air-cargo-capacity-adds-rhine-road-hub"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/fedex-enhances-european-road-and-air-networks"
+   },
+   {
+    "src": "Air Cargo Week",
+    "url": "https://aircargoweek.com/fedex-enhances-european-road-network-with-new-hub/"
+   },
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163248/news/e-commerce/fedex-expands-german-road-network/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-09",
+  "syn": "FedEx opened a new road hub in Alzenau, in Germany's Rhine-Main region, with about 15,500 square metres of warehouse space, 32 loading bays and parking for up to 50 trailers. FreightWaves reported that the site will create about 85 jobs and that FedEx now runs four road hubs in Germany. FedEx also finished modernising its second airside facility at Madrid-Barajas Airport, adding 1,550 square metres of warehouse space (a 65.5% increase) and 5,700 pieces of storage capacity (a 132% increase). FedEx said both projects support cross-border flows ahead of peak season.",
+  "aff": [
+   {
+    "who": "Freight and parcel customers in Germany",
+    "what": "New Alzenau hub with 32 loading bays handles freight, non-conveyable shipments and parcels."
+   },
+   {
+    "who": "Madrid air cargo customers",
+    "what": "Airside footprint over 4,500 sq m; total cage capacity up to 10,000 pieces."
+   },
+   {
+    "who": "Canary Islands and EU Economy shippers",
+    "what": "Single operation for Canary Islands Express and Economy; more consolidation for EU Economy freight to Latin America and the US."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "a4e44a4e3a745",
   "date": "2026-11-09",
   "c": [
@@ -2114,51 +2398,6 @@
   "auto": true,
   "ann": "2026-11-09",
   "edge": true
- },
- {
-  "id": "a7a2b3653e806",
-  "date": "2026-11-09",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "FedEx opens Alzenau road hub in Germany, adding 85 jobs",
-  "sum": "FedEx announced the opening of a new road hub in Alzenau, Germany, in the Süd B30 industrial area of Lower Franconia. The site has about 15,500 square metres of warehouse space and 32 loading bays, and is set to be operational in time for peak season. It is expected to create approximately 85 jobs.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service is announced. The hub adds handling capacity in Germany, set to be operational for the peak season.",
-  "why": "The hub is FedEx's fourth German road hub and adds freight and parcel handling capacity to a European road network of 700 locations before peak season.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-10T12:45:06Z",
-  "src": "Post & Parcel",
-  "url": "https://postandparcel.info/163248/news/e-commerce/fedex-expands-german-road-network/",
-  "srcs": [
-   {
-    "src": "Post & Parcel",
-    "url": "https://postandparcel.info/163248/news/e-commerce/fedex-expands-german-road-network/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-09",
-  "syn": "FedEx announced a new road hub in Alzenau, Germany, in the Süd B30 industrial area of Lower Franconia. The site is in an existing building with about 15,500 square metres of warehouse space, 32 loading bays and parking for up to 50 trailers, and is designed to handle freight, non-conveyable shipments and parcels. FedEx said it is set to be operational in time for peak season and will create approximately 85 jobs. It is FedEx's fourth road hub in Germany, alongside Hanover, Nuremberg and Wiesbaden, within a European road network of 700 locations and gateways across 45 countries.",
-  "aff": [
-   {
-    "who": "Freight and parcel shippers in Germany and Europe",
-    "what": "New hub to process freight, non-conveyable shipments and parcels; set to be operational for peak season."
-   },
-   {
-    "who": "Lower Franconia region",
-    "what": "Approximately 85 new jobs at the Alzenau facility."
-   },
-   {
-    "who": "FedEx European road network",
-    "what": "Germany now has four road hubs; network links 700 locations and gateways in 45 countries."
-   }
-  ]
  },
  {
   "id": "a87f6e01fb676",
@@ -3597,6 +3836,48 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a88e5da2464bb",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Walmart more than doubles planned Zipline drone delivery sites",
+  "sum": "Walmart is expanding its drone delivery plans with operator Zipline, more than doubling its planned sites, Retail Dive reported on Nov. 12, 2026. The retailer said the expansion would make rapid air delivery available to customers nationwide over the next several years.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Walmart shoppers will see drone delivery as an option in the Walmart app or website if their address is within delivery range. The expansion is planned over the next several years, and no date is given for any one site.",
+  "why": "Walmart's plan for nationwide drone delivery over several years extends a large retailer's own delivery network.",
+  "score": 6,
+  "tie": "Walmart said in November 2026 that it was adding 300 Zipline drone delivery sites under a new multi-year agreement, with room for more sites beyond that commitment.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-12T18:26:43Z",
+  "src": "Retail Dive",
+  "url": "https://www.retaildive.com/news/walmart-more-than-doubles-planned-drone-delivery-sites-zipline/874378/",
+  "srcs": [
+   {
+    "src": "Retail Dive",
+    "url": "https://www.retaildive.com/news/walmart-more-than-doubles-planned-drone-delivery-sites-zipline/874378/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "Walmart more than doubled its planned drone delivery sites with Zipline and said the expansion would offer rapid air delivery nationwide over the next several years, so shoppers' drone options would grow gradually with no dated change.",
+  "syn": "Walmart is more than doubling its planned drone delivery sites in an expanded deal with drone operator Zipline, Retail Dive reported on Nov. 12, 2026. The retailer said the expansion would allow rapid air delivery to reach customers nationwide over the next several years. Earlier coverage put the new agreement at 300 sites, with room for more beyond that commitment. Shoppers will see drone delivery as an option in the Walmart app or website if their address is within delivery range.",
+  "aff": [
+   {
+    "who": "Walmart customers",
+    "what": "Drone delivery appears as an option in the app or website if the address is within delivery range."
+   },
+   {
+    "who": "Nationwide coverage",
+    "what": "Rapid air delivery is planned to reach customers nationwide over the next several years."
+   }
+  ]
  },
  {
   "id": "a97e88eebc599",
@@ -12187,261 +12468,6 @@
   "auto": true,
   "ann": "2026-10-19",
   "new": "Sixteen Massachusetts legislators now ask for a state freeze on drone delivery certificate applications and a task force; no fees or service terms change, but the timing of Amazon's Westborough launch remains uncertain.",
-  "exclusive": true
- },
- {
-  "id": "a58373f1b7bc3",
-  "date": "2026-10-19",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "USPS finalizes live animal mailing rules in Publication 52",
-  "sum": "The Postal Service published a final rule revising Publication 52 to improve package integrity and container identification for live animal shipments, effective October 19, 2026. It follows an August 6, 2026 proposal (91 FR 50741), and USPS said it received 32 formal responses.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Mailers shipping live animals through USPS must individually address and number each container in multi-container shipments bound together. Reuse of fiberboard containers is prohibited for all live animal shipments, effective October 19, 2026.",
-  "why": "The rule changes packaging and labeling requirements for mailers sending live animals, including multi-container shipments and adult birds.",
-  "score": 3,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:49:04Z",
-  "src": "Federal Register: USPS",
-  "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals",
-  "srcs": [
-   {
-    "src": "Federal Register: USPS",
-    "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-19",
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a5efac902522f",
-  "date": "2026-10-19",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "UPS opens $80m+ Clark hub in the Philippines, 15 times its predecessor's size",
-  "sum": "UPS opened a new hub at Clark International Airport in the Philippines, developed from an investment of more than US$80m, according to Supply Chain Digital Magazine. The hub covers 30,000 square meters, is set to process an average of 46,000 packages a day and has capacity for 15,000 packages an hour.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or fees. UPS said service to and from eastern China and other major Asia Pacific markets will be up to two days faster, and Southeast Asia-India service up to two days faster.",
-  "why": "The hub adds capacity across more than 1,100 trade lanes and, UPS said, cuts transit by up to two days between eastern China, Southeast Asia and India.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T16:57:10Z",
-  "src": "Supply Chain Digital Magazine",
-  "url": "https://supplychaindigital.com/news/ups-expands-capabilities-across-asia-pacific-logistics",
-  "srcs": [
-   {
-    "src": "Supply Chain Digital Magazine",
-    "url": "https://supplychaindigital.com/news/ups-expands-capabilities-across-asia-pacific-logistics"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "a7708e6818313",
-  "date": "2026-10-19",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Westborough, Mass., voters ban commercial drone pads in 510-13 vote",
-  "sum": "Westborough, Massachusetts, voters passed a general bylaw on October 19 banning any commercial drone launch pad, landing pad or delivery drop zone in town, by 510 to 13 at a Special Town Meeting, DroneXL reported. The measure was written in response to Amazon's plan to fly Prime Air MK30 drones from its warehouse at 64 Otis Street. It sets a $300 fine per offense and takes effect after the state attorney general approves it or 90 days pass without action.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to shipper rates or service. The bylaw bans commercial drone pads and drop zones in Westborough and takes effect only after attorney general approval or 90 days without action.",
-  "why": "Amazon's Westborough drone hub now faces a town ban, a zoning appeal, a planning hearing and a congressional letter deadline.",
-  "score": 6,
-  "tie": "Amazon presented its pad plan to the Select Board on August 18 and told residents in September it hoped to be flying by late October, according to the article.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-20T14:55:24Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/20/westborough-510-13-drone-bylaw-bans-amazon-prime-air-launch-pads/"
-   }
-  ],
-  "auto": true,
-  "new": "Westborough voters approved a bylaw on October 19 banning commercial drone pads and drop zones, adding a local hurdle to one Amazon site; the attorney general's review is pending, so nothing changes yet for shippers.",
-  "exclusive": true
- },
- {
-  "id": "ad66ad94a48fa",
-  "date": "2026-10-19",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "USPS files two new competitive shipping contracts with PRC",
-  "sum": "The Postal Regulatory Commission noticed two USPS filings on negotiated service agreements, both accepted October 19, 2026. One adds Priority Mail Express, Priority Mail & USPS Ground Advantage Contract 1514 to the Competitive product list, with comments due October 27, 2026. The other adds a fulfillment product, PM-GA Contract 1114, under summary review.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "The notice does not change published rates or service for shippers. It covers two negotiated contracts, with the pricing and customer details filed under seal.",
-  "why": "The filings show USPS adding negotiated competitive contracts for Priority Mail, Ground Advantage and fulfillment, though the notice withholds the customers and the terms.",
-  "score": 4,
-  "tie": "Earlier coverage reported a new USPS agreement with Amazon in April 2026 and an exclusive DHL eCommerce last-mile deal in May 2026, but this notice does not name the counterparties to either contract.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T05:41:05Z",
-  "src": "Federal Register: PRC",
-  "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21620/new-postal-products",
-  "srcs": [
-   {
-    "src": "Federal Register: PRC",
-    "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21620/new-postal-products"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-19",
-  "new": "The PRC notice shows USPS filing Contract 1514 (Priority Mail Express, Priority Mail & USPS Ground Advantage) and fulfillment product PM-GA Contract 1114, with no named customers, so nothing here changes rates or service for shippers.",
-  "exclusive": true
- },
- {
-  "id": "aeb385569416d",
-  "date": "2026-10-19",
-  "c": [
-   "FedEx",
-   "Industry"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Police: $963,000 in trading cards stolen from FedEx truck in Southern California",
-  "sum": "Santa Ana police said on Oct. 19 that thieves took an estimated $963,000 in trading cards from a FedEx truck, with shipments from Professional Sports Authenticator, and that the valuation could rise. No arrests or recoveries had been announced. Verisk CargoNet estimated Q2 2026 cargo theft losses at $304.6 million across the U.S. and Canada, against $135.7 million a year earlier.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The report concerns a theft from a FedEx truck and industry cargo theft statistics.",
-  "why": "CargoNet put Q2 2026 U.S. and Canada cargo theft losses at $304.6 million even as incidents fell, with costly thefts driving the total.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-20T10:52:27Z",
-  "src": "finchannel",
-  "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/",
-  "srcs": [
-   {
-    "src": "finchannel",
-    "url": "https://finchannel.com/fedex-truck-theft-963000-in-cards-stolen-as-cargo-losses-rise/138857/american-business-trends/2026/10/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-22"
- },
- {
-  "id": "ad0f07f43ec5e",
-  "date": "2026-10-18",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "Amazon warns it could pull NYC delivery jobs over Delivery Protection Act",
-  "sum": "Amazon has warned it could shut warehouses and move roughly 5,000 delivery jobs out of New York City if the Delivery Protection Act passes, The Times of India reported. The bill, backed by Mayor Zohran Mamdani, would require Amazon to directly employ drivers who now work for third-party contractors. Analysts cited in the report said the company could close all 15 of its last-mile stations in the city, affecting 2,000 warehouse workers.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service yet, as the bill has not passed. If it passes and Amazon follows through, delivery operations in New York City could be relocated or closed, according to analysts cited in the report.",
-  "why": "The bill would affect about 5,000 Amazon drivers and 40 delivery service partners in New York City, and analysts say Amazon could close all 15 last-mile stations there.",
-  "score": 7,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-18T16:48:24Z",
-  "src": "The Times of India",
-  "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms",
-  "srcs": [
-   {
-    "src": "The Times of India",
-    "url": "https://timesofindia.indiatimes.com/technology/tech-news/unhappy-with-new-york-city-mayor-zohran-mamdanis-labour-bill-amazon-threatens-to-take-5000-delivery-jobs-out-of-the-city-and-experts-point-to-what-the-company-did-in-canada-when-/articleshow/135031122.cms"
-   }
-  ],
-  "auto": true,
-  "thread": "last-mile-facility-legislation",
-  "upd": 4,
-  "new": "Analysts now say Amazon could pull 5,000 contracted driver roles and close all 15 city last-mile stations, citing its Montreal closures, which for shippers points to possible delivery changes in New York City only if the bill passes.",
-  "exclusive": true
- },
- {
-  "id": "a0f38605e4132",
-  "date": "2026-10-17",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "Analysis",
-  "title": "Shipt adds more than 500 Sprouts locations to its marketplace",
-  "sum": "Shipt added more than 500 Sprouts Farmers Market locations to its marketplace, widening same-day delivery access to the grocer, according to a Simply Wall Street article. The article is investor commentary and gives no launch date or terms.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Shoppers can order from more Sprouts stores through Shipt's same-day delivery marketplace. The article gives no change to carrier rates, fees or parcel service.",
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-17T04:45:58Z",
-  "src": "Simply Wall Street",
-  "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t",
-  "srcs": [
-   {
-    "src": "Simply Wall Street",
-    "url": "https://simplywall.st/stocks/us/consumer-retailing/nasdaq-sfm/sprouts-farmers-market/news/sprouts-farmers-market-sfm-expands-shipt-delivery-reach-is-t"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a12a72b2a1787",
-  "date": "2026-10-17",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "PSA says graded cards stolen from FedEx truck; collector reports $100,000+ loss",
-  "sum": "PSA said it is aware of a theft involving a third-party shipping vehicle carrying PSA-graded items and is working with law enforcement and the carrier. A collector named SKY-B said on Oct. 17 that PSA told him a FedEx truck carrying his 104-card order was burglarized after leaving its Southern California location, with more than $100,000 of cards taken.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to FedEx rates or service. PSA said it is arranging compensation for affected customers based on fair market value, up to the Maximum Insured Value selected for each item.",
-  "why": "Reported theft of graded cards in FedEx transit, with one dealer's estimate of $500K declared value, raises questions about insured-value claims on high-value shipments.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-19T22:49:13Z",
-  "src": "IGN",
-  "url": "https://www.ign.com/articles/over-100000-worth-of-psa-graded-trading-cards-stolen-from-fedex-truck",
-  "srcs": [
-   {
-    "src": "IGN",
-    "url": "https://www.ign.com/articles/over-100000-worth-of-psa-graded-trading-cards-stolen-from-fedex-truck"
-   },
-   {
-    "src": "OTIA Sports",
-    "url": "https://otia.com/news/psa-deactivates-stolen-slabs-fedex-truck-theft-100000"
-   }
-  ],
-  "auto": true,
-  "edge": true,
   "exclusive": true
  }
 ]

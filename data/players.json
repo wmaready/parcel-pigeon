@@ -3146,6 +3146,40 @@
    "auto": true,
    "added": "2026-11-12",
    "from": "discover"
+  },
+  {
+   "id": "tractorsupply",
+   "n": "Tractor Supply",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Rural lifestyle retailer headquartered in Brentwood, Tennessee, with 2,463 stores in 49 states",
+   "al": [],
+   "src": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-12",
+   "story": "ae6abe230efad"
+  },
+  {
+   "id": "kaizenmanageme",
+   "n": "Kaizen Management Solutions",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Delancey Street delivery service partner contracted by Amazon for same-day deliveries on electric cargo bikes",
+   "al": [],
+   "src": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-11",
+   "story": "ad8c685f386a8"
   }
  ],
  "edges": [
@@ -5524,6 +5558,33 @@
    "t": "Tractor Supply adds same-day store delivery through Instacart partnership",
    "url": "https://wwd.com/sourcing-journal/logistics/last-mile-deliery-is-hiring-freight-is-not-couriers-bls-jobs-report-october-1239411237/",
    "story": "afc463ffa65f6"
+  },
+  {
+   "a": "tractorsupply",
+   "b": "uber",
+   "k": "partner",
+   "y": "2026",
+   "t": "Tractor Supply and Uber launch on-demand delivery from stores",
+   "url": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+   "story": "ae6abe230efad"
+  },
+  {
+   "a": "tractorsupply",
+   "b": "instacart",
+   "k": "partner",
+   "y": "2026",
+   "t": "Tractor Supply uses Instacart for store-to-door delivery",
+   "url": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+   "story": "ae6abe230efad"
+  },
+  {
+   "a": "amazon",
+   "b": "kaizenmanageme",
+   "k": "partner",
+   "y": "2026",
+   "t": "Amazon ends delivery service partner contract with Kaizen",
+   "url": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers",
+   "story": "ad8c685f386a8"
   }
  ],
  "moves": [
