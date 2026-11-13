@@ -3193,6 +3193,106 @@
     "https://chainstoreage.com/tractor-supply-company-adds-new-third-party-delivery-partner"
    ],
    "enriched": "2026-11-13"
+  },
+  {
+   "id": "saddlecreeklog",
+   "n": "Saddle Creek Logistics Services",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Lakeland, FL, USA",
+   "yr": "1966",
+   "s": "Saddle Creek is a privately held, asset-based third-party logistics provider that offers warehousing, omnichannel e-commerce and retail fulfillment, packaging and transportation (including a private truck fleet and brokerage) through a nationwide U.S. warehouse network.",
+   "al": [
+    "SC Logistics",
+    "Saddle Creek",
+    "Saddle Creek Corp.",
+    "Saddle Creek Corporation"
+   ],
+   "src": "https://www.linkedin.com/company/saddle-creek-logistics-services",
+   "auto": true,
+   "added": "2026-11-13",
+   "from": "discover",
+   "site": "sclogistics.com",
+   "geo": [
+    -81.95,
+    28.04
+   ],
+   "srcs": [
+    "https://www.linkedin.com/company/saddle-creek-logistics-services",
+    "https://www.scmr.com/company/saddle_creek_logistics_services",
+    "https://www.connectcre.com/stories/saddle-creek-acquires-las-vegas-warehouse-for-96-8m/"
+   ],
+   "enriched": "2026-11-13",
+   "pending": false
+  },
+  {
+   "id": "kencologistics",
+   "n": "Kenco Group (Kenco Logistics)",
+   "realm": "3pl",
+   "own": "pe",
+   "tk": null,
+   "parent": null,
+   "hq": "Chattanooga, TN, USA",
+   "yr": "1950",
+   "s": "Kenco is a Chattanooga-based third-party logistics provider that runs a North American network of distribution centers offering warehousing, e-commerce and B2B fulfillment, transportation management and material handling.",
+   "al": [
+    "Cherokee Warehouses",
+    "KLS",
+    "Kenco",
+    "Kenco Group",
+    "Kenco Logistic Services LLC",
+    "Kenco Logistics",
+    "Kenco Logistics Services"
+   ],
+   "src": "https://www.freightwaves.com/news/kenco-celebrates-75-years-in-3pl",
+   "auto": true,
+   "added": "2026-11-13",
+   "from": "discover",
+   "site": "kencogroup.com",
+   "geo": [
+    -85.31,
+    35.046
+   ],
+   "srcs": [
+    "https://www.freightwaves.com/news/kenco-celebrates-75-years-in-3pl",
+    "https://www.freightwaves.com/news/kenco-logistics-will-be-acquired-by-private-equity-firm",
+    "https://www.privsource.com/acquisitions/deal/pritzker-private-capital-invests-in-kenco-logistics-3ASbaw"
+   ],
+   "enriched": "2026-11-13",
+   "pending": false
+  },
+  {
+   "id": "flowspace",
+   "n": "Flowspace",
+   "realm": "3pl",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Los Angeles, CA, USA",
+   "yr": "2017",
+   "s": "Flowspace is a Los Angeles-based fulfillment technology company. Its software platform gives e-commerce and omnichannel brands access to a U.S. network of independently operated fulfillment centers for storage, order fulfillment and shipping.",
+   "al": [
+    "Flow Space",
+    "Flowspace, Inc."
+   ],
+   "src": "https://www.businesswire.com/news/home/20210316005169/en/Flowspace-Raises-31-Million-to-Expand-Fulfillment-Platform",
+   "auto": true,
+   "added": "2026-11-13",
+   "from": "discover",
+   "site": "flow.space",
+   "geo": [
+    -118.244,
+    34.052
+   ],
+   "srcs": [
+    "https://www.businesswire.com/news/home/20210316005169/en/Flowspace-Raises-31-Million-to-Expand-Fulfillment-Platform",
+    "https://www.freightwaves.com/news/flowspace-raises-31m-for-omnichannel-fulfillment",
+    "https://www.pymnts.com/news/retail/2021/ecommerce-fulfillment-tech-firm-flowspace-notches-31-million/"
+   ],
+   "enriched": "2026-11-13",
+   "pending": false
   }
  ],
  "edges": [
@@ -6034,7 +6134,10 @@
   "geek": "2026-11-11",
   "beumergroup": "2026-11-11",
   "cartcom": "2026-11-13",
-  "tractorsupply": "2026-11-13"
+  "tractorsupply": "2026-11-13",
+  "saddlecreeklog": "2026-11-13",
+  "kencologistics": "2026-11-13",
+  "flowspace": "2026-11-13"
  },
  "facts": {
   "ups": {

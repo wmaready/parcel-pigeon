@@ -1,5 +1,5 @@
 {
- "run": "2026-11-13T06:26Z",
+ "run": "2026-11-13T12:21Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,66 +8,68 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 270,
- "doc_cursor": 174,
+ "link_cursor": 310,
+ "doc_cursor": 204,
  "checked_pairs": [
-  "d72a23005aba",
-  "7e4a0a07ad2f",
-  "2988f97e477e",
+  "b54077ea2f7b",
   "61ba27c59dab",
   "a625dd5720a9",
-  "4e8faef9252d",
-  "6157952e9b11",
-  "bb9d125105c0",
-  "b54077ea2f7b",
-  "2f24e1d5d0e2",
   "6004808294c5",
-  "5b4926c2c24d",
-  "c74456d2bddc",
-  "4621e9e86574",
-  "f3a106e02077",
-  "5e124f1a493a",
-  "73dcfc31b988",
-  "2361691e9a1b",
-  "b8d8ea16bc5f",
-  "ed50bd5ade56",
-  "de313bc51fd7",
-  "0ca410a667f8",
-  "21b6ce5b1d5c",
-  "d73b3089178a",
-  "4df67f9b3718",
-  "c61435232c81",
-  "bd74f39e4a2a",
-  "60030262fcea",
-  "558e73ee4967",
-  "0cae9f6a1079",
-  "803f70b9b286",
-  "454e4f8f6a6b",
-  "006e0976c74d",
-  "62cb3ae5df27",
-  "6bef0a5868e5",
-  "0ee2e50bd13d",
-  "f84529cd7bc9",
-  "cf51efba6984",
-  "0b8aff140a01",
   "1bc66c00eda3",
-  "5423312764d9",
-  "70042e1b5ea7",
-  "f6cd68cb0017",
-  "457e37db5347",
-  "87f9bbae47ee",
-  "4d5dedc8cd29",
-  "7679c499e09c",
   "5effb73bc21d",
-  "cc68d548ad73",
-  "94d1ac334f4e",
+  "dbb89994655f",
+  "457e37db5347",
+  "70042e1b5ea7",
+  "73dcfc31b988",
+  "4621e9e86574",
+  "c74456d2bddc",
+  "62cb3ae5df27",
+  "0ca410a667f8",
+  "5423312764d9",
+  "87f9bbae47ee",
+  "4df67f9b3718",
+  "02094abee757",
+  "c61435232c81",
+  "f84529cd7bc9",
+  "5f83fff4b0b8",
   "c1419d4e7cb6",
-  "f7e5ad4ade89",
+  "7e4a0a07ad2f",
+  "f3a106e02077",
+  "4d5dedc8cd29",
+  "cf51efba6984",
+  "94d1ac334f4e",
+  "5b4926c2c24d",
+  "2988f97e477e",
+  "803f70b9b286",
+  "bd74f39e4a2a",
+  "0cae9f6a1079",
+  "f6cd68cb0017",
   "14a3d7429698",
   "e57a450403da",
-  "dbb89994655f",
-  "5f83fff4b0b8",
-  "d46a0aebc57e"
+  "d46a0aebc57e",
+  "c3d4d65922ea",
+  "7679c499e09c",
+  "60030262fcea",
+  "5e124f1a493a",
+  "0b8aff140a01",
+  "2f24e1d5d0e2",
+  "cc68d548ad73",
+  "6157952e9b11",
+  "558e73ee4967",
+  "6bef0a5868e5",
+  "f7e5ad4ade89",
+  "b8d8ea16bc5f",
+  "454e4f8f6a6b",
+  "de313bc51fd7",
+  "bb9d125105c0",
+  "006e0976c74d",
+  "d72a23005aba",
+  "2361691e9a1b",
+  "d73b3089178a",
+  "ed50bd5ade56",
+  "0ee2e50bd13d",
+  "4e8faef9252d",
+  "21b6ce5b1d5c"
  ],
  "issues": [
   {
@@ -302,16 +304,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Walmart signs Zipline deal to add 300 drone delivery sites\" and \"Walmart more than doubles planned Zipline drone delivery sites\"",
-   "ids": [
-    "af4470d3440cc",
-    "a88e5da2464bb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -393,6 +385,54 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/): https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/",
+   "ids": [
+    "g31"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240417690112/en",
+   "ids": [
+    "h408"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240723590067/en/UPS-Releases-2Q-2024-Earnings/",
+   "ids": [
+    "h414"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or the 'Project Aurelian' plan covering 39,400 ZIP codes and 99.9% of demand by 2029. The Business Insider report is not among the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, its $10.70 PIN-based fee, FedEx Authenticated Delivery, or its $20 QR-code fee. The AJC source is not among the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie and VF participation, or DoorDash's self-designed drones. The stories only cover DoorDash's Australian robot delivery launch with Serve Robotics.",
    "ids": [],
    "fixed": false
   }
@@ -594,16 +634,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Walmart signs Zipline deal to add 300 drone delivery sites\" and \"Walmart more than doubles planned Zipline drone delivery sites\"",
-   "ids": [
-    "af4470d3440cc",
-    "a88e5da2464bb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -685,6 +715,54 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (404 Client Error: Not Found for url: https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/): https://www.ajc.com/news/2026/08/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers/",
+   "ids": [
+    "g31"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240417690112/en",
+   "ids": [
+    "h408"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20240723590067/en/UPS-Releases-2Q-2024-Earnings/",
+   "ids": [
+    "h414"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, or the 'Project Aurelian' plan covering 39,400 ZIP codes and 99.9% of demand by 2029. The Business Insider report is not among the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, its $10.70 PIN-based fee, FedEx Authenticated Delivery, or its $20 QR-code fee. The AJC source is not among the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie and VF participation, or DoorDash's self-designed drones. The stories only cover DoorDash's Australian robot delivery launch with Serve Robotics.",
    "ids": [],
    "fixed": false
   }

@@ -202,6 +202,50 @@
   "exclusive": true
  },
  {
+  "id": "a2f060c358424",
+  "date": "2026-11-12",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Fuel",
+  "kind": "News",
+  "title": "FedEx fuel surcharge at 30.5% as holiday shipping costs draw attention",
+  "sum": "TheStreet reported on Nov. 12, 2026 that FedEx's fuel surcharge stands at 30.5%. The outlet said a new shipping-cost calculation could still raise costs for American shoppers even though gasoline prices are falling. The article text provided does not include the details of that calculation.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "TheStreet reports a 30.5% FedEx fuel surcharge and a new shipping-cost calculation that could raise costs. The text provided does not say which services or what effective dates apply.",
+  "why": "A 30.5% FedEx fuel surcharge applies to shipping costs during the holiday season, per TheStreet, but the article text supplied gives no service-level detail.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T12:18:14Z",
+  "src": "TheStreet",
+  "url": "https://www.thestreet.com/economy/fedexs-30-5-fuel-surcharge-comes-with-a-holiday-surprise",
+  "srcs": [
+   {
+    "src": "TheStreet",
+    "url": "https://www.thestreet.com/economy/fedexs-30-5-fuel-surcharge-comes-with-a-holiday-surprise"
+   }
+  ],
+  "auto": true,
+  "thread": "fedex-fuel-surcharge",
+  "syn": "TheStreet reported on Nov. 12, 2026 that FedEx's fuel surcharge is 30.5%. It said a new shipping-cost calculation could still raise costs for American shoppers even as gasoline prices fall. The headline and description point to holiday-season shipping costs. The article text available does not set out the calculation, the services covered or any effective date.",
+  "aff": [
+   {
+    "who": "FedEx shippers",
+    "what": "TheStreet cites a 30.5% fuel surcharge; the text provided does not specify which services it applies to."
+   },
+   {
+    "who": "Holiday-season shoppers",
+    "what": "TheStreet says a new shipping-cost calculation could raise costs despite falling gasoline prices."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-13",
+  "unconf": true
+ },
+ {
   "id": "a30e480c050e5",
   "date": "2026-11-12",
   "c": [
@@ -2345,6 +2389,55 @@
   "edge": true
  },
  {
+  "id": "a898f119e595b",
+  "date": "2026-11-10",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS first-class on-time rate reaches 89.03% for fiscal 2026",
+  "sum": "USPS delivered 89.03% of first-class mail on time in fiscal 2026, up from 83.15% in 2025, Greg White told the USPS Board of Governors. Postmaster General David Steiner said the agency may close post offices and change service standards for non-first-class and marketing mail if Congress does not act, with plans due in the first quarter of calendar 2027.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "No rate change was announced. USPS said it may change service standards for non-first-class and marketing mail, with plans due in the first quarter of calendar 2027.",
+  "why": "USPS said service standards for non-first-class and marketing mail could change if Congress does not act, which would reach shippers of those mail classes.",
+  "score": 5,
+  "tie": "The meeting followed USPS's Nov. 10, 2026 report of a $6.5 billion fiscal 2026 net loss and a Nov. 4, 2026 postal caucus letter on the agency's borrowing authority.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T12:18:52Z",
+  "src": "Maryland Matters",
+  "url": "https://marylandmatters.org/2026/11/12/first-class-mail-on-time-rate-hits-89-as-usps-warns-of-looming-funding-crisis/",
+  "srcs": [
+   {
+    "src": "Maryland Matters",
+    "url": "https://marylandmatters.org/2026/11/12/first-class-mail-on-time-rate-hits-89-as-usps-warns-of-looming-funding-crisis/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "new": "The Board of Governors meeting added fiscal 2026 on-time figures (89.03% for first-class mail), a $85.8 billion fiscal 2027 revenue goal and Steiner's statement that closure and service-standard plans will come in the first quarter of 2027, which could affect non-first-class and marketing mail shippers.",
+  "syn": "USPS delivered 89.03% of first-class mail on time in fiscal 2026, compared with 83.15% in 2025, and met its 89% composite target for the first time since 2022, USPS executive Greg White told the Board of Governors. Postmaster General David Steiner said USPS will need to close post offices and change service standards for non-first-class and marketing mail if Congress does not act. He said he will have plans in the first quarter of calendar 2027. Chief Financial Officer Luke Grossman set a fiscal 2027 revenue goal of $85.8 billion.",
+  "aff": [
+   {
+    "who": "First-class mailers",
+    "what": "On-time delivery was 89.03% in fiscal 2026 versus 83.15% in 2025; the average delivery time was 0.4 days faster."
+   },
+   {
+    "who": "Non-first-class and marketing mail senders",
+    "what": "Steiner said service standards could change if Congress does not act; plans are due in the first quarter of calendar 2027."
+   },
+   {
+    "who": "Post office customers",
+    "what": "Steiner said post office closures are possible if Congress does not act."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-13",
+  "unconf": true
+ },
+ {
   "id": "a9f97ff5f51a3",
   "date": "2026-11-10",
   "c": [
@@ -4097,6 +4190,76 @@
   "exclusive": true
  },
  {
+  "id": "a510885d8fd17",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Walmart adds 300 drone delivery sites with Zipline",
+  "sum": "Walmart said in a Thursday press release that it is adding 300 drone delivery sites nationwide, as of last week. The program, run with Zipline, has completed more than 2 million deliveries since 2021, according to the release. Walmart did not list the locations of the new sites.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Drone delivery becomes available from 300 more Walmart sites, though Walmart has not said where. Tens of thousands of eligible items can arrive in as fast as 30 minutes in cities with the service.",
+  "why": "Walmart runs what it calls the largest U.S. retail drone program, and 90% of Americans live within 10 miles of one of its stores, per the release.",
+  "score": 6,
+  "tie": "Walmart said on Nov. 5, 2026 that it was adding 300 Zipline drone delivery sites under a new multi-year agreement.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T12:18:37Z",
+  "src": "Chain Store Age",
+  "url": "https://chainstoreage.com/walmart-add-300-zipline-drone-delivery-sites-nationwide",
+  "srcs": [
+   {
+    "src": "Chain Store Age",
+    "url": "https://chainstoreage.com/walmart-add-300-zipline-drone-delivery-sites-nationwide"
+   },
+   {
+    "src": "Yahoo",
+    "url": "https://finance.yahoo.com/technology/articles/walmart-rolling-drone-delivery-300-212606616.html"
+   },
+   {
+    "src": "Retail Dive",
+    "url": "https://www.retaildive.com/news/walmart-more-than-doubles-planned-drone-delivery-sites-zipline/874378/"
+   },
+   {
+    "src": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/"
+   },
+   {
+    "src": "Restaurant Technology News",
+    "url": "https://restauranttechnologynews.com/2026/11/zipline-raises-1-5-billion-as-restaurants-test-the-economics-of-drone-delivery/"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites"
+   },
+   {
+    "src": "The Shelby Report",
+    "url": "https://theshelbyreport.com/2026/11/05/walmart-to-add-300-zipline-drone-delivery-sites-nationwide/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "Walmart's release adds program figures (more than 2 million deliveries since 2021, items in as fast as 30 minutes) and no site list; nothing changes yet for shippers' rates.",
+  "syn": "Walmart said in a Thursday press release that it is adding 300 drone delivery sites nationwide, as of last week. The program works with Zipline and has completed more than 2 million deliveries since 2021, according to the release. Walmart did not provide a list of the new sites. It said 90% of Americans live within 10 miles of a Walmart store, which it presented as a base for expanding drone delivery.",
+  "aff": [
+   {
+    "who": "Walmart drone delivery customers",
+    "what": "300 additional sites; tens of thousands of eligible items in as fast as 30 minutes in served cities."
+   },
+   {
+    "who": "Site locations",
+    "what": "Walmart did not provide a list of the areas the 300 new sites will cover."
+   },
+   {
+    "who": "Zipline home delivery",
+    "what": "Drone holds about 330ft above ground while a pod with the order descends on a tether, per the release."
+   }
+  ]
+ },
+ {
   "id": "a51635acddd06",
   "date": "2026-11-05",
   "c": [
@@ -4342,48 +4505,6 @@
   "exclusive": true
  },
  {
-  "id": "a88e5da2464bb",
-  "date": "2026-11-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Walmart more than doubles planned Zipline drone delivery sites",
-  "sum": "Walmart is expanding its drone delivery plans with operator Zipline, more than doubling its planned sites, Retail Dive reported on Nov. 12, 2026. The retailer said the expansion would make rapid air delivery available to customers nationwide over the next several years.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Walmart shoppers will see drone delivery as an option in the Walmart app or website if their address is within delivery range. The expansion is planned over the next several years, and no date is given for any one site.",
-  "why": "Walmart's plan for nationwide drone delivery over several years extends a large retailer's own delivery network.",
-  "score": 6,
-  "tie": "Walmart said in November 2026 that it was adding 300 Zipline drone delivery sites under a new multi-year agreement, with room for more sites beyond that commitment.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-12T18:26:43Z",
-  "src": "Retail Dive",
-  "url": "https://www.retaildive.com/news/walmart-more-than-doubles-planned-drone-delivery-sites-zipline/874378/",
-  "srcs": [
-   {
-    "src": "Retail Dive",
-    "url": "https://www.retaildive.com/news/walmart-more-than-doubles-planned-drone-delivery-sites-zipline/874378/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-05",
-  "new": "Walmart more than doubled its planned drone delivery sites with Zipline and said the expansion would offer rapid air delivery nationwide over the next several years, so shoppers' drone options would grow gradually with no dated change.",
-  "syn": "Walmart is more than doubling its planned drone delivery sites in an expanded deal with drone operator Zipline, Retail Dive reported on Nov. 12, 2026. The retailer said the expansion would allow rapid air delivery to reach customers nationwide over the next several years. Earlier coverage put the new agreement at 300 sites, with room for more beyond that commitment. Shoppers will see drone delivery as an option in the Walmart app or website if their address is within delivery range.",
-  "aff": [
-   {
-    "who": "Walmart customers",
-    "what": "Drone delivery appears as an option in the app or website if the address is within delivery range."
-   },
-   {
-    "who": "Nationwide coverage",
-    "what": "Rapid air delivery is planned to reach customers nationwide over the next several years."
-   }
-  ]
- },
- {
   "id": "a97e88eebc599",
   "date": "2026-11-05",
   "c": [
@@ -4429,58 +4550,6 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "a995fa7407074",
-  "date": "2026-11-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "Zipline raises $1.5B at $21.5B valuation; Walmart adds 300 sites",
-  "sum": "Zipline said on Nov. 5 it raised $1.5 billion at a $21.5 billion post-money valuation, with Uber taking part in the round. Walmart announced a multiyear agreement the same day to add 300 Zipline delivery sites. Zipline plans to expand U.S. manufacturing and hire more staff.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for parcel shippers. Uber plans to offer Zipline deliveries through Uber Eats, starting in existing Zipline markets such as Dallas and Houston.",
-  "why": "Walmart's 300 added Zipline sites and Uber Eats access widen drone delivery in U.S. markets such as Dallas and Houston.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-13T01:16:00Z",
-  "src": "TechCrunch",
-  "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
-  "srcs": [
-   {
-    "src": "TechCrunch",
-    "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/"
-   },
-   {
-    "src": "Restaurant Technology News",
-    "url": "https://restauranttechnologynews.com/2026/11/zipline-raises-1-5-billion-as-restaurants-test-the-economics-of-drone-delivery/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-05",
-  "syn": "Zipline announced on Nov. 5 that it raised $1.5 billion at a $21.5 billion post-money valuation, and plans to expand U.S. manufacturing and hire more staff. Walmart announced a multiyear agreement the same day to add 300 Zipline delivery sites, and Uber, which took part in the round, plans to offer Zipline deliveries through Uber Eats. Zipline said that among its longest-standing restaurant customers, the gross value of delivery orders rose 26% from March to October. Restaurant Technology News noted the announcement did not say how many restaurants were included or how restaurants without drone service fared.",
-  "aff": [
-   {
-    "who": "Walmart customers",
-    "what": "Walmart announced a multiyear agreement on Nov. 5 to add 300 Zipline delivery sites."
-   },
-   {
-    "who": "Uber Eats users",
-    "what": "Uber plans to offer Zipline deliveries, starting in existing Zipline markets such as Dallas and Houston."
-   },
-   {
-    "who": "Zipline restaurant customers",
-    "what": "Zipline's share of delivery revenue at its longest-standing restaurants rose from 10.8% to 34.9% from March to October, Zipline said."
-   }
-  ],
-  "exclusive": true,
-  "tried": "2026-11-13",
-  "updated": "2026-11-05"
  },
  {
   "id": "a9c683935be22",
@@ -4764,55 +4833,6 @@
    {
     "who": "Shippers",
     "what": "No change to rates or service."
-   }
-  ]
- },
- {
-  "id": "af4470d3440cc",
-  "date": "2026-11-05",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Walmart signs Zipline deal to add 300 drone delivery sites",
-  "sum": "Walmart signed a multi-year agreement with Zipline to add 300 drone delivery sites nationwide, with potential to expand further, The Shelby Report reported. The companies have worked together since 2021, and more than 2 million deliveries have been completed to date. The locations of the new sites were not disclosed.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Walmart customers within range of a delivery site can choose drone delivery in the Walmart app or on Walmart.com. The new site locations and start dates were not disclosed.",
-  "why": "Walmart's 300-site drone expansion adds to a retail drone program where more than 2 million deliveries are done and 90% of Americans live within 10 miles of a store.",
-  "score": 7,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-05T13:36:23Z",
-  "src": "Bloomberg.com",
-  "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites",
-  "srcs": [
-   {
-    "src": "Bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-11-05/zipline-tops-21-billion-valuation-adds-300-walmart-drone-sites"
-   },
-   {
-    "src": "The Shelby Report",
-    "url": "https://theshelbyreport.com/2026/11/05/walmart-to-add-300-zipline-drone-delivery-sites-nationwide/"
-   }
-  ],
-  "auto": true,
-  "new": "Walmart announced 300 additional Zipline drone delivery sites with locations undisclosed, extending the retail drone expansion that earlier coverage tied to Amazon; the sources give no change to shipper fees or the Part 108 status.",
-  "syn": "Walmart signed a new multi-year agreement with Zipline to add 300 drone delivery sites nationwide, with the potential to expand further, according to The Shelby Report. Walmart calls it the nation's largest retail drone delivery program. The companies have worked together since 2021 and have completed more than 2 million deliveries. Walmart said tens of thousands of eligible items can be delivered in as fast as 30 minutes where available, and the locations of the new sites were not disclosed.",
-  "aff": [
-   {
-    "who": "Walmart customers",
-    "what": "Drone delivery shows as an option in the Walmart app or Walmart.com when an address is within delivery range."
-   },
-   {
-    "who": "Delivery times",
-    "what": "Tens of thousands of eligible items can arrive in as fast as 30 minutes where available."
-   },
-   {
-    "who": "Drone delivery network",
-    "what": "300 new sites to be added nationwide; locations and dates not disclosed."
    }
   ]
  },
@@ -5437,7 +5457,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-12",
+  "tried": "2026-11-13",
   "unconf": true
  },
  {

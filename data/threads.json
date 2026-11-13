@@ -404,7 +404,7 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "The caucus has asked USPS for briefings during the November House session on how it would use a higher borrowing limit.",
+  "s": "USPS leadership is pressing Congress for funding changes and says it may close post offices and change service standards if lawmakers do not act.",
   "ids": [
    "h429",
    "r14",
@@ -537,7 +537,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon, Walmart-Zipline and Wing are expanding drone delivery, while Amazon's Nampa hub faces resident scrutiny over noise and wildlife.",
+  "s": "Retailers are adding drone delivery sites while the FAA's Part 108 rule was still unpublished as of Oct. 9, per earlier coverage.",
   "ids": [
    "g27",
    "g26",
@@ -1195,5 +1195,24 @@
    "Industry"
   ],
   "rv": "afafbaa08c7c"
+ },
+ "fedex-fuel-surcharge": {
+  "n": "FedEx fuel surcharge",
+  "ids": [
+   "a2f060c358424"
+  ],
+  "first": "2026-11-12",
+  "co": "FedEx",
+  "s": "As of Nov. 12, 2026, TheStreet reports a 30.5% FedEx fuel surcharge and a new shipping-cost calculation for the holidays.",
+  "last": "2026-11-12",
+  "c": [
+   "FedEx"
+  ],
+  "apart": [
+   "fedex-freight-spin",
+   "fedex-network-2",
+   "tariff-refunds"
+  ],
+  "rv": "a33d775a7f43"
  }
 }
