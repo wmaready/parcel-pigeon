@@ -1,5 +1,109 @@
 [
  {
+  "id": "wfd6617806a78",
+  "date": "2026-11-13",
+  "c": [
+   "USPS"
+  ],
+  "title": "USPS posts proposed January 2027 price files and SKU price files",
+  "sum": "The USPS Price Change Center for the price change effective January 17, 2027 now lists proposed price files (Excel and CSV), a price files change log, SKU price files (Excel and pipe-delimited) and a July 2026 SKU Delta Report, all revised 11/12/2026. Previously only the January 2027 Postage Statements redlines and change log were listed. The postage statements redlines now carry a \"Proposed\" status.",
+  "plain": "Shippers and software vendors that rate small parcels with USPS price files can now access the proposed January 2027 prices and SKU-level data. The page does not state price amounts, so the size of any increase cannot be determined from it.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2027-01-17",
+  "inferred": null,
+  "detected": "2026-11-13",
+  "changes": [
+   {
+    "what": "January 2027 Price File posted (Excel and CSV formats)",
+    "before": null,
+    "after": "Listed as Proposed, revised 11/12/2026",
+    "effective": "2027-01-17",
+    "who": "All shippers using USPS prices, and rating software vendors",
+    "impact": null
+   },
+   {
+    "what": "January 2027 Price Files Change Log posted",
+    "before": null,
+    "after": "Listed, revised 11/12/2026",
+    "effective": "2027-01-17",
+    "who": "Shippers comparing the new prices with current ones",
+    "impact": null
+   },
+   {
+    "what": "USPS SKU Price Files posted (Excel and pipe-delimited)",
+    "before": null,
+    "after": "Listed as Proposed, revised 11/12/2026",
+    "effective": "2027-01-17",
+    "who": "Shippers and systems that load SKU-level USPS prices",
+    "impact": null
+   },
+   {
+    "what": "July 2026 SKU Delta Report posted",
+    "before": null,
+    "after": "Listed as Proposed, revised 11/12/2026",
+    "effective": null,
+    "who": "Shippers and systems tracking SKU changes",
+    "impact": null
+   },
+   {
+    "what": "Status of the January 2027 Postage Statements Redlines",
+    "before": "No status shown",
+    "after": "Proposed (revised date unchanged, 11/06/2026)",
+    "effective": "2027-01-17",
+    "who": "Mailers using postage statements",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "Actual proposed price amounts are not shown on the page; they are in the linked files",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS: January 2027 Price File posted (Excel and CSV formats)",
+    "imp": "info",
+    "fees": [
+     [
+      "USPS",
+      "January 2027 Price Files Change Log posted",
+      "Listed, revised 11/12/2026"
+     ],
+     [
+      "USPS",
+      "USPS SKU Price Files posted (Excel and pipe-delimited)",
+      "Listed as Proposed, revised 11/12/2026"
+     ],
+     [
+      "USPS",
+      "Status of the January 2027 Postage Statements Redlines",
+      "Proposed (revised date unchanged, 11/06/2026)"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "src": "USPS Price change center (spotted by Parcel Pigeon)",
+  "url": "https://pe.usps.com/PriceChange/Index",
+  "srcs": [
+   {
+    "src": "USPS Price change center",
+    "url": "https://pe.usps.com/PriceChange/Index"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 0,
+   "compared": []
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "a0740b56c6649",
   "date": "2026-11-12",
   "c": [

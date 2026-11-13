@@ -1,5 +1,5 @@
 {
- "run": "2026-11-13T01:27Z",
+ "run": "2026-11-13T01:49Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -197,13 +197,6 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
@@ -363,6 +356,16 @@
    "ids": [
     "w4657840c16ef",
     "wa61ef102d1b2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
+   "ids": [
+    "af027f4014177",
+    "wfd6617806a78"
    ],
    "fixed": false
   },
@@ -486,13 +489,6 @@
   {
    "sev": "high",
    "type": "watch-blocked",
-   "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Service Guide https://www.fedex.com/en-us/service-guide.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "watch-blocked",
    "msg": "Carrier site is turning our reader away (bot protection), so changes on this page are not being seen: FedEx Surcharges and fees https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html. Fix: add an unblocking proxy as the PP_FETCH_PROXY secret (see pipeline/fetch.py).",
    "ids": [],
    "fixed": false
@@ -652,6 +648,16 @@
    "ids": [
     "w4657840c16ef",
     "wa61ef102d1b2"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
+   "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
+   "ids": [
+    "af027f4014177",
+    "wfd6617806a78"
    ],
    "fixed": false
   },
