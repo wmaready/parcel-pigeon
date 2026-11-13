@@ -1,5 +1,143 @@
 [
  {
+  "id": "we0432db44af6",
+  "date": "2026-11-13",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS surge emergency fee update: China/HK/Macau to U.S. rises to $1.03 per lb",
+  "sum": "UPS's November 12, 2026 posting raises the Surge Emergency Fee on China, Hong Kong or Macau to U.S. shipments from $0.91 to $1.03 per lb., effective November 16, 2026. It also splits India into its own $0.89 per lb. line, ends the Argentina-to-U.S. fee on November 8, and adds Israel to the UAE fee line. New wording says each fee applies to shipments tendered within its listed dates.",
+  "plain": "Shippers sending Worldwide-service shipments from China, Hong Kong or Macau to the U.S. pay $0.12 more per lb. from November 16. India-origin shipments now have a stated $0.89 per lb. fee, and Israel shipments are now covered by the UAE fee line.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-11-16",
+  "inferred": null,
+  "detected": "2026-11-13",
+  "changes": [
+   {
+    "what": "Surge Emergency Fee, China/Hong Kong/Macau to United States (Worldwide Express, Express Saver, Express Plus, Expedited, Saver Pallet, Express Freight Time of Day)",
+    "before": "$0.91 per lb., effective September 27, 2026",
+    "after": "$1.03 per lb., effective November 16, 2026, until further notice",
+    "effective": "2026-11-16",
+    "who": "Shipments from China, Hong Kong or Macau to the U.S. on the listed Worldwide services",
+    "impact": "$0.91 -> $1.03 per lb., +$0.12 per lb. (billable weight, plus fuel surcharge)"
+   },
+   {
+    "what": "Surge Emergency Fee, India to United States now listed on its own line",
+    "before": "Grouped with Australia, New Zealand and Rest of Asia under one line, effective September 27, 2026",
+    "after": "India listed separately at $0.89 per lb., effective November 16, 2026, until further notice",
+    "effective": "2026-11-16",
+    "who": "Shipments from India to the U.S. on the listed Worldwide services",
+    "impact": "New stated rate of $0.89 per lb.; the prior India rate is not shown"
+   },
+   {
+    "what": "Surge Emergency Fee, Argentina to United States: end date added",
+    "before": "Effective October 25, 2026, remaining in effect until further notice",
+    "after": "$0.68 per lb., effective October 25, 2026 through November 8, 2026",
+    "effective": "2026-11-08",
+    "who": "Shipments from Argentina to the U.S. on the listed Worldwide services",
+    "impact": "Open-ended $0.68 per lb. fee now ends November 8, 2026"
+   },
+   {
+    "what": "Israel added to the United Arab Emirates fee lines (both directions)",
+    "before": "Fee line listed United Arab Emirates only; Israel was in the Europe region list",
+    "after": "Fee line covers United Arab Emirates or Israel at $1.50 USD, effective March 22, 2026 for the line; Israel removed from the Europe list",
+    "effective": null,
+    "who": "Shipments to or from Israel on the listed Worldwide services",
+    "impact": "Israel now falls under the $1.50 USD line instead of the Europe grouping"
+   },
+   {
+    "what": "Added wording on which shipments each surge fee applies to",
+    "before": null,
+    "after": "Fees apply to shipments tendered on or after the posting's effective date and within the dates listed for each fee; shipments tendered earlier stay subject to the fees posted when they were tendered",
+    "effective": "2026-11-12",
+    "who": "All shippers subject to Surge Emergency Fees",
+    "impact": null
+   },
+   {
+    "what": "Region Detail table disclaimer added",
+    "before": null,
+    "after": "Countries in the Region Detail table are listed only to determine fee applicability; listing does not mean UPS serves every location",
+    "effective": "2026-11-12",
+    "who": "International shippers",
+    "impact": null
+   },
+   {
+    "what": "Posting date of the update",
+    "before": "Update as of October 30, 2026",
+    "after": "Update effective as of November 12, 2026",
+    "effective": "2026-11-12",
+    "who": "All shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "The prior fee amount for India (grouped with Australia, New Zealand and Rest of Asia) is not shown.",
+   "The fee amount for the Australia/New Zealand/Rest of Asia line and for the U.S.-origin 'all other destinations' row is not shown.",
+   "The origin for one $0.68 per lb. line ahead of the Argentina row is not shown, so any change to it cannot be confirmed.",
+   "The per-package fee lines at the top of the table are only partly shown, so any change to them cannot be confirmed."
+  ],
+  "dates": [
+   {
+    "d": "2026-11-08",
+    "w": "UPS: Surge Emergency Fee, Argentina to United States: end date added",
+    "imp": "up"
+   },
+   {
+    "d": "2026-11-12",
+    "w": "UPS: Added wording on which shipments each surge fee applies to",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Region Detail table disclaimer added",
+      "Countries in the Region Detail table are listed only to determine fee applicability; listing does not mean UPS serves every location"
+     ],
+     [
+      "UPS",
+      "Posting date of the update",
+      "Update effective as of November 12, 2026"
+     ]
+    ]
+   },
+   {
+    "d": "2026-11-16",
+    "w": "UPS: Surge Emergency Fee, China/Hong Kong/Macau to United States (Worldwide Express, Express Saver, Express Plus, Expedited, Saver Pallet, Express Freight Time of Day)",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Surge Emergency Fee, India to United States now listed on its own line",
+      "New stated rate of $0.89 per lb.; the prior India rate is not shown"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "UPS",
+  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS: UPS surge emergency fee update",
+    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change",
+   "dropped": 1,
+   "compared": [
+    {
+     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
+     "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "wfd6617806a78",
   "date": "2026-11-13",
   "c": [
@@ -12760,37 +12898,6 @@
   ],
   "auto": true,
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "aba40a11b6946",
-  "date": "2026-10-20",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Amazon",
-  "kind": "News",
-  "title": "Amazon's Larsen says logistics network opened after seller demand",
-  "sum": "Amazon Vice President Peter Larsen told Supply Chain 24/7 at the Gartner Supply Chain Symposium/Xpo in Orlando that Amazon opened its supply chain and logistics network to all businesses, including those that do not sell on Amazon. He said sellers had asked to use it for off-Amazon volume, and that Amazon had to detach services from its seller ID requirement.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Businesses that do not sell on Amazon can now use its supply chain and logistics network, according to Amazon. The interview gives no prices, rates or effective dates.",
-  "why": "Amazon's network, previously tied to its own sellers, is now open to any business, widening the carrier options available to shippers outside Amazon.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T13:08:44Z",
-  "src": "Supply Chain 24/7",
-  "url": "https://www.supplychain247.com/article/looking_at_amazons_push_to_open_its_logistics_network_to_all/Data_Warehouse",
-  "srcs": [
-   {
-    "src": "Supply Chain 24/7",
-    "url": "https://www.supplychain247.com/article/looking_at_amazons_push_to_open_its_logistics_network_to_all/Data_Warehouse"
-   }
-  ],
-  "auto": true,
-  "new": "Amazon's Peter Larsen explained in an interview that seller requests for off-Amazon volume and the removal of seller ID dependencies led to opening the network, and said bulk distribution capability was only added this year.",
   "exclusive": true
  }
 ]

@@ -67,7 +67,7 @@
  "https://developer.ups.com/": {
   "carrier": "UPS",
   "name": "Developer portal",
-  "fails": 10,
+  "fails": 11,
   "thin": 259,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -82,20 +82,20 @@
  "https://www.fedex.com/en-us/service-guide.html": {
   "carrier": "FedEx",
   "name": "Service Guide",
-  "fails": 1,
+  "fails": 0,
   "thin": 0,
-  "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
+  "err": null,
   "last_try": "2026-11-13",
   "chars": 1732,
   "last_ok": "2026-11-13",
-  "blocked": true,
+  "blocked": false,
   "via": "archive",
   "copy_of": "2026-11-07"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 521,
+  "fails": 522,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -106,7 +106,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
   "carrier": "FedEx",
   "name": "Demand surcharges",
-  "fails": 11,
+  "fails": 12,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -119,7 +119,7 @@
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "carrier": "FedEx",
   "name": "Fuel surcharge",
-  "fails": 10,
+  "fails": 11,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -132,7 +132,7 @@
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
   "name": "Service alerts",
-  "fails": 1,
+  "fails": 2,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -145,7 +145,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
   "carrier": "FedEx",
   "name": "Rate changes hub",
-  "fails": 2,
+  "fails": 3,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-13",
@@ -163,7 +163,7 @@
   "err": null,
   "last_try": "2026-11-13",
   "blocked": false,
-  "chars": 22546,
+  "chars": 22553,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
@@ -176,7 +176,7 @@
   "err": null,
   "last_try": "2026-11-13",
   "blocked": false,
-  "chars": 430407,
+  "chars": 430313,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
@@ -189,7 +189,7 @@
   "err": null,
   "last_try": "2026-11-13",
   "blocked": false,
-  "chars": 173323,
+  "chars": 173322,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
@@ -202,7 +202,7 @@
   "err": null,
   "last_try": "2026-11-13",
   "blocked": false,
-  "chars": 169283,
+  "chars": 169282,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
@@ -215,7 +215,7 @@
   "err": null,
   "last_try": "2026-11-13",
   "blocked": false,
-  "chars": 428211,
+  "chars": 428124,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
@@ -304,7 +304,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-11-13",
-  "chars": 11607,
+  "chars": 11606,
   "last_ok": "2026-11-13",
   "blocked": false,
   "via": "direct",
@@ -317,7 +317,7 @@
   "thin": 0,
   "err": null,
   "last_try": "2026-11-13",
-  "chars": 167708,
+  "chars": 167619,
   "last_ok": "2026-11-13",
   "blocked": false,
   "via": "direct",
@@ -383,7 +383,7 @@
   "err": null,
   "blocked": false,
   "last_try": "2026-11-13",
-  "chars": 751970,
+  "chars": 750253,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-13"
