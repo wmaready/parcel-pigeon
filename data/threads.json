@@ -157,7 +157,7 @@
  },
  "tariff-refunds": {
   "n": "Carriers and IEEPA tariff refunds",
-  "s": "UPS has taken its claim for IEEPA refunds and interest to the Court of International Trade, while CBP's CAPE process is in its third phase.",
+  "s": "UPS has sued CBP at the Court of International Trade for refunds on finally liquidated entries, with about $270 million still owed to customers as of Sept. 30.",
   "ids": [
    "g31",
    "a771628a2eca4",
@@ -537,7 +537,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Retailers are adding drone delivery sites while the FAA's Part 108 rule was still unpublished as of Oct. 9, per earlier coverage.",
+  "s": "Drone delivery is expanding to new markets while the FAA's Part 108 rule remained unpublished as of the last report in October.",
   "ids": [
    "g27",
    "g26",
@@ -549,7 +549,6 @@
    "acad7456be9cb",
    "ae04c4bdd5e4e",
    "a704b11d94f38",
-   "afc24e3e3a5e6",
    "a644b0ea66268",
    "a30e480c050e5"
   ],
@@ -561,19 +560,17 @@
    "Regional"
   ],
   "cx": {
-   "sig": "18f9f12b573b",
+   "sig": "cff1c4c6f2ed",
    "v": 3,
    "beats": {
-    "g27": "Amazon planned sites near Chicago, Atlanta, Cleveland and Syracuse by end-2026, reaching almost 500 towns, up from 11 locations.",
-    "g26": "The FAA's BVLOS rule missed its Feb. 1 deadline and was still unpublished Oct. 9, so delivery still runs on waivers or Part 135.",
-    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "afc24e3e3a5e6": "Amazon's Markham, Ill., site has flown since Oct. 12, serving customers within 7.5 miles; a Matteson center is planned next.",
-    "a30e480c050e5": "Wing, an Alphabet subsidiary, will build tens of thousands of drones a year in Fort Worth, a reported $125 million investment."
+    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations; fees run $2.99 or $4.99.",
+    "g26": "Meanwhile, the FAA's Part 108 rule was still unpublished on Oct. 9, so routine BVLOS delivery needs waivers or Part 135 certificates.",
+    "a30e480c050e5": "Wing, an Alphabet subsidiary, plans to build tens of thousands of drones a year in Fort Worth, adding manufacturing to the expansion."
    },
-   "intro": "Drone delivery is scaling up while the FAA's Part 108 rule waits, which matters to shippers eyeing new delivery options.",
-   "now": "Part 108 was still unpublished as of the last coverage in October, and these reports give no date for when it will be."
+   "intro": "Drone delivery is scaling up fast while the FAA's Part 108 rule is still unpublished. Shippers should watch both.",
+   "now": "Part 108 was still unpublished as of the last report, and the sources give no new date for it."
   },
-  "rv": "09a1025376c0",
+  "rv": "78fbd0d7373e",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -617,17 +614,19 @@
   ]
  },
  "delivery-robot-rules": {
-  "n": "San Jose delivery robot rules",
+  "n": "Miami-Dade delivery robot rules",
   "ids": [
-   "a965bfb9edb0f"
+   "a965bfb9edb0f",
+   "a23eb82ac576d"
   ],
   "first": "2026-10-07",
-  "s": "San Jose approved delivery robot regulations, and officials will evaluate fleet data over nine months before returning to the council next fall to decide on the rules' future.",
-  "last": "2026-10-07",
+  "s": "The Miami-Dade County Commission is scheduled to vote on Nov. 17 on the second reading of ordinance 261932.",
+  "last": "2026-11-13",
   "c": [
+   "Industry",
    "Regional"
   ],
-  "rv": "e00613a8e8ec"
+  "rv": "e5bfaef85743"
  },
  "last-mile-facility-legislation": {
   "n": "NYC Delivery Protection Act fight",

@@ -1,5 +1,96 @@
 [
  {
+  "id": "a23eb82ac576d",
+  "date": "2026-11-13",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Miami-Dade commission to vote Nov. 17 on delivery robot rules",
+  "sum": "The Miami-Dade County Commission is set to vote on Nov. 17 on ordinance 261932, which would regulate sidewalk delivery robots, according to CiberCuba, citing WLRN. It would set speed limits, require permits and liability insurance, and set fines of up to $500.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "If approved, robot operators in Miami-Dade would need a county permit, at least $100,000 in liability insurance and compliant equipment. The ordinance takes effect ten days after approval unless the county mayor vetoes it.",
+  "why": "The ordinance would set permit, insurance and equipment rules for sidewalk delivery robot operators in Miami-Dade, including Serve Robotics, which took part in committee debate.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T17:55:43Z",
+  "src": "CiberCuba",
+  "url": "https://en.cibercuba.com/noticias/2026-11-13-u1-e129488-s27061-nid345615-miami-dade-punto-votar-nuevas-reglas-robots-reparto",
+  "srcs": [
+   {
+    "src": "CiberCuba",
+    "url": "https://en.cibercuba.com/noticias/2026-11-13-u1-e129488-s27061-nid345615-miami-dade-punto-votar-nuevas-reglas-robots-reparto"
+   }
+  ],
+  "auto": true,
+  "thread": "delivery-robot-rules",
+  "syn": "The Miami-Dade County Commission will vote on Nov. 17 on ordinance 261932, a second-reading item led by Commissioner Micky Steinberg, to regulate autonomous sidewalk delivery robots, according to CiberCuba, citing WLRN. It would cap speeds at 8 mph on sidewalks, 6 mph in high pedestrian traffic areas and 10 mph at crosswalks. It would require permits valid for up to one year and at least $100,000 in liability insurance. Fines would be $250 for a first violation and $500 for later ones, and $500 for operating without a permit or insurance. If approved, it takes effect ten days later unless the county mayor vetoes it.",
+  "aff": [
+   {
+    "who": "Robot operators",
+    "what": "Need a permit valid up to one year and at least $100,000 in liability insurance, with a certificate filed annually."
+   },
+   {
+    "who": "Speed and operation",
+    "what": "Limits of 8 mph on sidewalks, 6 mph in busy areas and 10 mph at crosswalks; robots must yield to pedestrians."
+   },
+   {
+    "who": "Violations",
+    "what": "$500 for no permit or insurance; $250 for a first other violation and $500 for later ones."
+   },
+   {
+    "who": "Advertising",
+    "what": "Allowed only under a separate operator agreement with the county approved by the Commission."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-11-13",
+  "unconf": true
+ },
+ {
+  "id": "a7d45b9ebd65b",
+  "date": "2026-11-13",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Peak season",
+  "kind": "Opinion",
+  "title": "Think Tank blog: shipping costs belong in Cyber Monday promotion planning",
+  "sum": "A SupplyChainBrain Think Tank blog post published Nov. 13, 2026 argues that shipping economics belong in promotional planning. It says the estimates used to approve an offer need to reflect the charges the business will ultimately pay. The excerpt provided gives no figures or carrier names.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The item is an opinion piece on promotional planning.",
+  "why": "The post is one writer's view on how Cyber Monday offers are costed, with shipping charges the business ultimately pays at issue.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T17:55:58Z",
+  "src": "SupplyChainBrain",
+  "url": "https://www.supplychainbrain.com/blogs/think-tank/blog/15883282/the-shipping-line-item-that-erases-cyber-monday-profit",
+  "srcs": [
+   {
+    "src": "SupplyChainBrain",
+    "url": "https://www.supplychainbrain.com/blogs/think-tank/blog/15883282/the-shipping-line-item-that-erases-cyber-monday-profit"
+   }
+  ],
+  "auto": true,
+  "syn": "A SupplyChainBrain Think Tank blog post, published Nov. 13, 2026, takes up the shipping line item in Cyber Monday promotions. Its stated view is that shipping economics belong in promotional planning. It also says the estimates used to approve an offer need to reflect the charges the business will ultimately pay. The text available contained no figures, carrier names or rate details.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service; the post is a view on promotional planning."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "we0432db44af6",
   "date": "2026-11-13",
   "c": [
@@ -2876,8 +2967,6 @@
   ],
   "auto": true,
   "ann": "2026-11-10",
-  "thread": "drone-delivery",
-  "upd": 13,
   "new": "Amazon's Chicago-area drone service is operating, and the source says it began Oct. 12, with 7.5-mile eligibility and fees of $2.99 for Prime members on orders under $50 and $4.99 for non-members.",
   "syn": "Amazon held a ribbon-cutting on Tuesday for its Prime Air drone delivery service at its Markham, Ill., fulfillment center, which it said has operated since Oct. 12. Drones deliver eligible items, some in as little as 30 minutes, to customers within a 7.5-mile radius, and more than 20 drones operate from the site in daytime. Amazon said Prime Air flies under an FAA Part 135 air carrier certificate and plans a second Chicago-area center in Matteson in the coming days.",
   "aff": [
@@ -3045,17 +3134,17 @@
   ],
   "cat": "Network & operations",
   "kind": "News",
-  "title": "FedEx opens Alzenau road hub in Germany, upgrades Madrid airside",
-  "sum": "FedEx opened a road hub in Alzenau, Germany, with 32 loading bays and about 15,500 square metres of warehouse space. It also completed modernisation of its second airside facility at Madrid-Barajas Airport, which brings its Madrid airside footprint to over 4,500 square metres. FedEx tied both projects to the coming peak season.",
+  "title": "FedEx opens Alzenau road hub in Germany, upgrades Madrid air facility",
+  "sum": "FedEx opened a road hub in Alzenau, Germany, with about 15,500 square metres of warehouse space, 32 loading bays and trailer parking for up to 50. It also completed the modernisation of its second airside facility at Madrid-Barajas Airport, adding 1,550 square metres of warehouse space, according to the company's announcements as reported by Supply Chain Digital and Yahoo Finance.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or fees. FedEx added handling capacity in Germany and Spain, which it said supports freight flows and peak-season volumes.",
-  "why": "The projects add freight and air cargo capacity in Germany and Spain ahead of peak season, and FedEx links them to its European network consolidation.",
+  "plain": "No change to rates or fees is stated. FedEx has added road and air handling capacity in Germany and Spain, ahead of the peak shipping season.",
+  "why": "The two sites add freight, parcel and air cargo handling capacity in Germany and Spain ahead of peak season, according to FedEx.",
   "score": 4,
-  "tie": "FreightWaves noted that FedEx completed a Netherlands truck terminal expansion in June 2026 and described its European consolidation plans in an Oct. 28 briefing on third-quarter results.",
+  "tie": "In June, FedEx completed the expansion of a large truck terminal in the Netherlands, according to Yahoo Finance.",
   "act": null,
   "dates": [],
-  "added": "2026-11-12T18:28:44Z",
+  "added": "2026-11-13T17:56:17Z",
   "src": "Supply Chain Digital Magazine",
   "url": "https://supplychaindigital.com/articles/fedex-expands-madrid-air-cargo-capacity-adds-rhine-road-hub",
   "srcs": [
@@ -3064,12 +3153,16 @@
     "url": "https://supplychaindigital.com/articles/fedex-expands-madrid-air-cargo-capacity-adds-rhine-road-hub"
    },
    {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/fedex-enhances-european-road-and-air-networks"
-   },
-   {
     "src": "Air Cargo Week",
     "url": "https://aircargoweek.com/fedex-enhances-european-road-network-with-new-hub/"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/articles/fedex-enhances-european-road-air-141218332.html"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/fedex-enhances-european-road-and-air-networks"
    },
    {
     "src": "Post & Parcel",
@@ -3078,19 +3171,23 @@
   ],
   "auto": true,
   "ann": "2026-11-09",
-  "syn": "FedEx opened a new road hub in Alzenau, in Germany's Rhine-Main region, with about 15,500 square metres of warehouse space, 32 loading bays and parking for up to 50 trailers. FreightWaves reported that the site will create about 85 jobs and that FedEx now runs four road hubs in Germany. FedEx also finished modernising its second airside facility at Madrid-Barajas Airport, adding 1,550 square metres of warehouse space (a 65.5% increase) and 5,700 pieces of storage capacity (a 132% increase). FedEx said both projects support cross-border flows ahead of peak season.",
+  "syn": "FedEx opened a new road hub in Alzenau, in Germany's Rhine-Main region, with about 15,500 square metres of warehouse space, 32 loading bays and parking for up to 50 trailers. Yahoo Finance reported that the site will create about 85 jobs and brings FedEx's German road hubs to four. FedEx also completed the modernisation of its second airside facility at Madrid-Barajas Airport, adding 1,550 square metres of warehouse space, a 65.5% increase, and storage for 5,700 more pieces, a 132% increase. FedEx said both projects support freight flows ahead of the peak shipping season.",
   "aff": [
    {
-    "who": "Freight and parcel customers in Germany",
-    "what": "New Alzenau hub with 32 loading bays handles freight, non-conveyable shipments and parcels."
+    "who": "Freight and bulk shippers in Germany and Europe",
+    "what": "New Alzenau hub processes freight, non-conveyable shipments and parcels, with 32 loading bays."
    },
    {
-    "who": "Madrid air cargo customers",
-    "what": "Airside footprint over 4,500 sq m; total cage capacity up to 10,000 pieces."
+    "who": "Madrid air cargo shippers",
+    "what": "Airside footprint rises to over 4,500 square metres; cage capacity up to 10,000 pieces."
    },
    {
-    "who": "Canary Islands and EU Economy shippers",
-    "what": "Single operation for Canary Islands Express and Economy; more consolidation for EU Economy freight to Latin America and the US."
+    "who": "Canary Islands shipments",
+    "what": "Express and Economy shipments are handled in a single operation at the Madrid facility."
+   },
+   {
+    "who": "EU Economy freight to Latin America and the US",
+    "what": "Madrid facility expands consolidation capabilities for these shipments."
    }
   ],
   "edge": true
@@ -3133,6 +3230,53 @@
   "auto": true,
   "ann": "2026-11-09",
   "edge": true
+ },
+ {
+  "id": "a833c497e41ea",
+  "date": "2026-11-09",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Walmart, Wing start drone delivery in Ponchatoula, Louisiana",
+  "sum": "Ponchatoula became the first city in Louisiana with Walmart drone delivery, WBRZ reported. The service, run with Wing Aviation, has been available since October. Wing lists New Orleans as an area for expansion.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Walmart customers in Ponchatoula can get drone delivery through Wing, available since October. No change to rates or service elsewhere is stated.",
+  "why": "Walmart's Wing service reaches Louisiana for the first time, with New Orleans listed by Wing as an expansion area.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T17:54:36Z",
+  "src": "WBRZ",
+  "url": "https://www.wbrz.com/news/ponchatoula-is-first-city-in-louisiana-to-have-drone-delivery-from-walmart/",
+  "srcs": [
+   {
+    "src": "WBRZ",
+    "url": "https://www.wbrz.com/news/ponchatoula-is-first-city-in-louisiana-to-have-drone-delivery-from-walmart/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-09",
+  "new": "Walmart and Wing launched in Ponchatoula, the first Louisiana city, with New Orleans listed for expansion, adding a new state to Walmart's drone footprint.",
+  "syn": "Ponchatoula is the first city in Louisiana to have drone delivery from Walmart, WBRZ reported. The service has been available since October through Walmart's partnership with Wing Aviation. A Wing spokesperson told the city council that the average delivery flight is under five minutes. Wing lists New Orleans as an expansion area, and Walmart offers the service in cities including Dallas, Houston, Atlanta and Charlotte.",
+  "aff": [
+   {
+    "who": "Ponchatoula Walmart customers",
+    "what": "Drone delivery from Walmart through Wing has been available since October."
+   },
+   {
+    "who": "Delivery times",
+    "what": "Wing said the average delivery flight is less than five minutes."
+   },
+   {
+    "who": "New Orleans",
+    "what": "Wing lists New Orleans as an area for expansion."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "a87f6e01fb676",
@@ -3549,23 +3693,27 @@
   ],
   "cat": "Legal",
   "kind": "News",
-  "title": "UPS sues CBP at trade court for IEEPA tariff refunds, interest",
-  "sum": "UPS and two affiliates filed suit at the US Court of International Trade on Friday, The Loadstar reported. They want CBP compelled to re-liquidate entries and refund IEEPA duties plus interest. UPS has received some $500m from CBP and had passed on about $230m by the start of October, according to its quarterly filings.",
+  "title": "UPS sues CBP at trade court to recover IEEPA tariff refunds",
+  "sum": "UPS and two affiliates sued U.S. Customs and Border Protection at the U.S. Court of International Trade, The Loadstar reported. They want CBP ordered to re-liquidate entries and refund IEEPA duties plus interest. UPS has received about $500 million from CBP and had passed about $230 million to customers by Sept. 30, according to its third-quarter filing.",
   "imp": "watch",
   "lvl": 1,
-  "plain": "UPS said it would pass any funds recovered through the suit to the customers that bore the duties. The suit covers entries where UPS was importer of record.",
-  "why": "UPS says it has $270m still owed to customers, and finally liquidated entries need a court order before CBP will repay duties.",
+  "plain": "UPS says it will pass on to customers whatever it recovers through the suit. Shippers can check which shipments qualify in UPS's online refund lookup tool.",
+  "why": "UPS says customers bore the duties in many cases; about $270 million was still owed to them at the end of September.",
   "score": 6,
-  "tie": "In August 2026, coverage said UPS had applied for $500 million in a first phase of refunds after the Supreme Court struck down the IEEPA tariffs in February.",
+  "tie": "In August 2026, UPS said it had paid $5 billion on clients' behalf and applied for $500 million in a first refund phase, according to earlier coverage.",
   "act": null,
   "dates": [],
-  "added": "2026-11-10T18:00:32Z",
+  "added": "2026-11-13T17:54:29Z",
   "src": "The Loadstar",
   "url": "https://theloadstar.com/ups-in-court-bid-to-recover-tariff-payments-ruled-unlawful/",
   "srcs": [
    {
     "src": "The Loadstar",
     "url": "https://theloadstar.com/ups-in-court-bid-to-recover-tariff-payments-ruled-unlawful/"
+   },
+   {
+    "src": "Supply Chain 24/7",
+    "url": "https://www.supplychain247.com/article/ups-sues-government-ieepa-tariff-refunds"
    },
    {
     "src": "The Loadstar",
@@ -3575,21 +3723,25 @@
   "auto": true,
   "ann": "2026-11-06",
   "thread": "tariff-refunds",
-  "upd": 5,
-  "new": "UPS has sued CBP for re-liquidation, refunds and interest, and its filings show about $230m of the roughly $500m received had been passed on by early October, with $270m still owed to customers.",
-  "syn": "UPS, United Parcel Service Oasis Supply Corp and UPS Supply Chain Solutions filed suit at the US Court of International Trade on Friday against US Customs and Border Protection. They seek re-liquidation of entries on which IEEPA duties were assessed, including finally liquidated ones, and refunds with accrued interest, after the Supreme Court ruled the tariffs unlawful in February. CBP says it needs a court re-liquidation order before repaying duties on finally liquidated entries, which are covered by Phase 3 of its CAPE refund process. UPS has received some $500m from CBP and had passed on about $230m by the start of October, leaving $270m owed to customers.",
+  "upd": 6,
+  "new": "Later reporting adds that the Supreme Court ruling was on Feb. 20, that CBP's Phase 3 opened Oct. 6 and requires a court order, and that UPS says it will pass any recovered funds to customers, with first-phase refunds applied to past-due invoices first.",
+  "syn": "UPS, United Parcel Service Oasis Supply Corp and UPS Supply Chain Solutions filed suit at the U.S. Court of International Trade on a Friday, The Loadstar reported. They seek an order for CBP to re-liquidate entries, including finally liquidated ones, and refund IEEPA duties with interest. The Supreme Court ruled on Feb. 20 that the law did not let the president impose the tariffs, according to Supply Chain 24/7. CBP says it needs a court order before repaying finally liquidated entries. UPS says customers paid the duties in many cases and that it would pass recovered funds to them.",
   "aff": [
    {
-    "who": "UPS customers",
-    "what": "UPS said it would pass recovered funds to customers that bore the duties; about $270m was still owed as of early October."
+    "who": "UPS customers owed refunds",
+    "what": "UPS had passed about $230M to customers by Sept. 30, with about $270M still to distribute."
    },
    {
     "who": "Importers with finally liquidated entries",
-    "what": "CBP maintains refunds need a Court of International Trade re-liquidation order; Phase 3 of CAPE opened in October."
+    "what": "CBP's Phase 3, opened Oct. 6, requires a court order for re-liquidation before refunds are processed."
    },
    {
-    "who": "UPS as importer of record",
-    "what": "The suit covers entries where UPS was importer of record and seeks refunds plus accrued interest."
+    "who": "UPS shippers",
+    "what": "First-phase refunds and interest go first to past-due invoices, then any balance to the customer."
+   },
+   {
+    "who": "Shippers checking status",
+    "what": "UPS's online lookup shows each shipment's refund phase, status and amount."
    }
   ]
  },
@@ -12760,144 +12912,6 @@
   "auto": true,
   "ann": "2026-10-20",
   "new": "Amazon gave a mid-November start for Tallahassee, with a $4.99 fee, 5-pound limit and 7.5-mile range, while its drone structure permit is pending; this is a local launch and does not change shipper rates elsewhere.",
-  "exclusive": true
- },
- {
-  "id": "a681e7d298264",
-  "date": "2026-10-20",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Coco, Serve Robotics face Illinois biometric suits over delivery robots",
-  "sum": "Two class-action lawsuits filed in Cook County, Illinois, allege that delivery robots from Coco Robotics and Serve Robotics scan faces and hands and share the data with AI companies without consent. Both companies deny collecting biometric data. The suits cite the Illinois Biometric Information Privacy Act, which carries fines of $1,000 to $5,000 per violation.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The suits are unresolved, and Chicago's robot delivery pilot is set to end in May 2027 unless officials extend it, according to TechEDT.",
-  "why": "Sidewalk robots deliver DoorDash and Uber Eats orders in Chicago, and the suits seek to apply Illinois biometric law to them.",
-  "score": 4,
-  "tie": "The suits were first reported in October 2026, when ABC7 Chicago said Coco and Serve denied collecting biometric data or identifying individuals.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T21:00:16Z",
-  "src": "AP News",
-  "url": "https://apnews.com/article/chicago-food-delivery-robots-biometric-data-lawsuits-16ead54eb7dc7c6eacbf011c53b9b20d",
-  "srcs": [
-   {
-    "src": "AP News",
-    "url": "https://apnews.com/article/chicago-food-delivery-robots-biometric-data-lawsuits-16ead54eb7dc7c6eacbf011c53b9b20d"
-   },
-   {
-    "src": "BroBible",
-    "url": "https://brobible.com/culture/article/food-delivery-robots-accused-scanning-faces-sharing-data-ai/"
-   }
-  ],
-  "auto": true,
-  "new": "The article adds plaintiff details (a September 2025 DoorDash order, three Uber Eats deliveries), the allegation that data went to OpenAI and others, the $1,000-$5,000 per-violation fines and the May 2027 end of Chicago's pilot; shippers see no change to service.",
-  "syn": "Two class-action lawsuits in Cook County, Illinois, claim that autonomous delivery robots from Coco Robotics and Serve Robotics collected facial features and hand shapes without written notice or permission, and shared the data with AI companies. One plaintiff says he ordered groceries through DoorDash in September 2025 and a Coco robot arrived. Another says he received three Uber Eats deliveries by Serve robot. Coco called the suit \"frivolous\" and Serve said its systems are not designed to identify individuals. The Illinois privacy law allows fines of $1,000 to $5,000 per violation.",
-  "aff": [
-   {
-    "who": "Coco Robotics",
-    "what": "Sued over claims its robots captured faces, hands and body shape via cameras and LiDAR; it says it collected no biometric data in Chicago."
-   },
-   {
-    "who": "Serve Robotics",
-    "what": "Sued over claims it collected video and sensor data and licensed it to third parties; it says the data is not used to identify people."
-   },
-   {
-    "who": "Chicago robot delivery pilot",
-    "what": "Set to end in May 2027 unless officials extend it, according to TechEDT."
-   }
-  ]
- },
- {
-  "id": "a6e82ba740e99",
-  "date": "2026-10-20",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "EU to apply €2 per-line handling fee on non-EU shipments from 1 Nov",
-  "sum": "The EU's €2 handling fee applies per line to distance-sales shipments arriving from outside the Union from 1 November, Air Cargo Week reported on 20 October. Product Identifier (PID) data is requested on all shipments from 26 October. The fee follows the €3 charge on low-value goods that began on 1 July.",
-  "imp": "up",
-  "lvl": 1,
-  "plain": "From 1 November, distance-sales shipments entering the EU from outside the Union face a €2 handling fee for each line, not just each parcel. PID data is requested on all shipments from 26 October.",
-  "why": "The fee covers all distance sales into the EU and is charged per line, after small-parcel imports fell 30 to 40 percent in the two months following the July change, per the French Ministry of Economy.",
-  "score": 5,
-  "tie": null,
-  "act": "2026-11-01",
-  "dates": [
-   {
-    "d": "2026-10-26",
-    "w": "EU requests Product Identifier (PID) data on all shipments",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-11-01",
-    "w": "EU €2 per-line handling fee applies to non-EU distance sales",
-    "imp": "up",
-    "fx": {
-     "t": "fee",
-     "car": "EU",
-     "items": [
-      [
-       "handling fee per line on distance sales into the EU",
-       "€2.00",
-       2
-      ]
-     ]
-    }
-   }
-  ],
-  "added": "2026-10-21T13:10:00Z",
-  "src": "DHL",
-  "url": "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026",
-  "srcs": [
-   {
-    "src": "DHL",
-    "url": "https://www.dhl.com/discover/en-th/logistics-advice/import-export-advice/eu-customs-changes-2026"
-   },
-   {
-    "src": "Air Cargo Week",
-    "url": "https://aircargoweek.com/countdown-to-eu-e2-handling-fee-applied-from-1st-november/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a987f817b1285",
-  "date": "2026-10-20",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "Narvar names founder Amit Sharma CEO again",
-  "sum": "Post-purchase platform Narvar said founder Amit Sharma is returning as CEO. Sharma moved to an advisory role in 2024, when Anisa Kumar took over as CEO. Narvar did not respond to a request for comment on Kumar's future role.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The item concerns a leadership change at a post-purchase software provider.",
-  "why": "Narvar says it works with more than 1,500 brands and retailers, which use its post-purchase tools for tracking and returns.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-20T05:28:30Z",
-  "src": "Retail Technology Innovation Hub",
-  "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo",
-  "srcs": [
-   {
-    "src": "Retail Technology Innovation Hub",
-    "url": "https://retailtechinnovationhub.com/home/2026/10/20/post-purchase-intelligence-platform-narvar-announces-the-return-of-founder-amit-sharma-as-ceo"
-   }
-  ],
-  "auto": true,
-  "edge": true,
   "exclusive": true
  }
 ]
