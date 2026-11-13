@@ -118,8 +118,8 @@
   }
  },
  "de-minimis": {
-  "n": "End of de minimis and low-value imports",
-  "s": "De minimis ended for all countries on Aug. 29, 2025, and CBP has extended the postal formal-entry compliance date to Jan. 20, 2027.",
+  "n": "End of de minimis for low-value imports",
+  "s": "De minimis has ended for all countries, CBP has extended the postal formal-entry compliance date to Jan. 20, 2027, and retailers such as Shein are reshaping their logistics.",
   "ids": [
    "h420",
    "h504",
@@ -129,7 +129,7 @@
    "a2f683da86bf8"
   ],
   "first": "2024-09-13",
-  "last": "2026-11-10",
+  "last": "2026-11-12",
   "c": [
    "FedEx",
    "Industry",
@@ -234,7 +234,8 @@
   },
   "co": "UPS",
   "apart": [
-   "ups-driver-choice-lawsuit"
+   "ups-driver-choice-lawsuit",
+   "ups-teamsters-contract"
   ]
  },
  "usps-pricing": {
@@ -536,7 +537,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Walmart and Zipline are expanding drone delivery sites, while the FAA's Part 108 rule had not been published as of Oct. 9, 2026.",
+  "s": "Amazon, Walmart-Zipline and Wing are expanding drone delivery, while Amazon's Nampa hub faces resident scrutiny over noise and wildlife.",
   "ids": [
    "g27",
    "g26",
@@ -740,13 +741,12 @@
    "uniuni-mak-acquisition"
   ],
   "cx": {
-   "sig": "e75dd4edf94f",
+   "sig": "8f9f102564f1",
    "v": 3,
    "beats": {
-    "61": "By March 2026 it had added $30 million in equity and a $55 million RBC credit facility, bringing total funding to $285 million."
+    "61": "Next came $30 million in equity plus a $55 million RBC credit facility, bringing total funding to $285 million."
    },
-   "intro": "UniUni raised money, lined up a $1 billion go-public deal, then watched it fall apart. Shippers using it may want to know why.",
-   "now": "MAK reportedly ended the deal on Oct. 20, so the listing won't proceed. Tacoma delivery complaints have also reached the Washington Attorney General."
+   "intro": "UniUni raised money, then lined up a go-public deal that fell apart. Shippers using the carrier should know how that played out."
   },
   "co": "UniUni",
   "rv": "045c9e317693"
@@ -779,6 +779,7 @@
   "ids": [
    "rv5-fedex-freight-spin-done",
    "a66617050d4e9",
+   "afb6fa67940a7",
    "h404",
    "h417",
    "h501",
@@ -797,7 +798,6 @@
    "nrf79508",
    "54",
    "52",
-   "afb6fa67940a7",
    "ups-origin-zip-surcharge",
    "a9077d9364cd5",
    "a089340bc097e",
@@ -805,10 +805,11 @@
    "a947eb28a3ca3",
    "a069325035b44",
    "ad4e67498312c",
-   "ab17dd3c5758e"
+   "ab17dd3c5758e",
+   "aa8c0e030c519"
   ],
   "first": "2024-02-21",
-  "last": "2026-11-10",
+  "last": "2026-11-12",
   "c": [
    "Amazon",
    "DHL",
@@ -821,7 +822,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "f4d22e24d95a",
+   "sig": "8db0f8c00c0d",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -852,17 +853,20 @@
     "a069325035b44": "On Nov. 9 GOFO's white paper cited ShipMatrix: 23.9 billion US parcels in 2025, up 0.4%, with Amazon (6.7B) just ahead of USPS (6.6B).",
     "a947eb28a3ca3": "GOFO announced on Nov. 4 that it's now a Shopify tracking partner, so its updates show in merchant order info and natively in the Shop app.",
     "ad4e67498312c": "Amazon and alternative carriers both gained volume in H1 2026; Amazon, the top U.S. deliverer, is leaning less on UPS.",
-    "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending."
+    "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending.",
+    "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "UPS has cut Amazon volume by more than half, and GOFO, Veho and OnTrac keep expanding. UniUni's go-public deal was terminated Oct. 20."
+   "now": "Carriers keep reshuffling: UPS has cut Amazon volume by over half, and UniUni's go-public deal was terminated on Oct. 20."
   }
  },
  "theme-ups-teamsters": {
   "n": "Continued battle between UPS and the Teamsters",
-  "s": "The Driver Choice buyout is capped at 7,500 drivers, the Teamsters are challenging UPS over its Roadie gig deliveries, and the union's president has called a strike likely when the contract ends July 31, 2028.",
+  "s": "As of Nov. 12, 2026, UPS' contract with the Teamsters runs to 2028, and experts cited by Supply Chain Dive say shippers should weigh strike risk.",
   "ids": [
    "a13f12c1da7be",
+   "a66617050d4e9",
+   "abaae70647f04",
    "acb44dbafb712",
    "h406",
    "h511",
@@ -871,14 +875,13 @@
    "50",
    "nr59b2c5",
    "35",
-   "a66617050d4e9",
-   "abaae70647f04",
    "a57a06c26359c",
    "aa1bd42ea784a",
-   "ae889f02f359e"
+   "ae889f02f359e",
+   "ae2d14bb375b8"
   ],
   "first": "2024-03-26",
-  "last": "2026-11-05",
+  "last": "2026-11-12",
   "c": [
    "Amazon",
    "FedEx",
@@ -886,9 +889,8 @@
    "USPS"
   ],
   "theme": true,
-  "rv": "f43f274d40c8",
   "cx": {
-   "sig": "7e5f012e9ff3",
+   "sig": "e41881b766db",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -906,12 +908,16 @@
     "aa1bd42ea784a": "A Roadie survey, relevant as the Teamsters challenge UPS's Roadie deliveries: 64% would quit a retailer after one to four bad deliveries."
    },
    "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
-   "now": "Driver Choice is capped at 7,500 drivers; the Teamsters' president calls a strike likely when the contract ends July 31, 2028."
+   "now": "The UPS–Teamsters national contract expires July 31, 2028, so any clash is a way off, and the Amazon organizing dispute is still unresolved."
   },
   "apart": [
    "carrier-gri",
    "ups-amazon-glide-down",
    "ups-driver-choice-lawsuit"
+  ],
+  "co": "UPS",
+  "was": [
+   "ups-teamsters-contract"
   ]
  },
  "theme-amazon-insourcing": {
@@ -984,15 +990,16 @@
   ]
  },
  "usps-fuel-surcharge": {
-  "n": "USPS fuel surcharge",
+  "n": "USPS fuel surcharge and 2027 price increase",
   "ids": [
    "a0adb56a55334",
-   "a106a88d004f4"
+   "a106a88d004f4",
+   "af027f4014177"
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS plans a permanent weekly fuel surcharge on four package services starting in January 2027, replacing the temporary 8% fee that expires January 17.",
-  "last": "2026-10-26",
+  "s": "USPS filed with the PRC on Nov. 12 for an 11% fuel surcharge and a 5.9% average domestic shipping increase effective Jan. 17, pending review.",
+  "last": "2026-11-12",
   "c": [
    "USPS"
   ],
@@ -1002,7 +1009,17 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "40f72b296ce9"
+  "rv": "6c0003936323",
+  "cx": {
+   "sig": "079e50a1f579",
+   "v": 3,
+   "beats": {
+    "a0adb56a55334": "USPS announced a weekly fuel surcharge for January 2027, a percentage of base postage tied to diesel and jet fuel prices.",
+    "af027f4014177": "The Nov. 12 filing turns April's 8% bridge into a permanent 11% surcharge, plus a 5.9% average increase from Jan. 17 if approved."
+   },
+   "intro": "USPS plans an 11% fuel surcharge plus a 5.9% average price rise on its main parcel services in January.",
+   "now": "Awaiting PRC review; the April 8% increase and 2026 peak rates both expire Jan. 17, when the new prices would start."
+  }
  },
  "canada-post-home-delivery-ending": {
   "n": "Canada Post ends home delivery",
@@ -1079,7 +1096,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber launched the Uber Eats Prime benefit in the U.S. on Nov. 5, 2026, and the Grubhub offer for Prime is winding down.",
+  "s": "Amazon and Uber Eats launched the Prime restaurant delivery partnership on Nov. 5, 2026, and the Grubhub agreement ended the same day.",
   "last": "2026-11-08",
   "c": [
    "Amazon"

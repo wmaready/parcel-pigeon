@@ -306,6 +306,28 @@
  {
   "carrier": "USPS",
   "year": 2027,
+  "kind": "price_change",
+  "announced": "2026-11-12",
+  "effective": null,
+  "pct": null,
+  "headline": "USPS files notice to raise Ground Advantage and Priority Mail prices for 2027",
+  "details": [
+   "Filed with regulator on Nov. 12, 2026",
+   "Covers USPS Ground Advantage, Priority Mail, Priority Mail Express, Parcel Select and some competitive special services",
+   "No percentage or effective date given in the excerpt",
+   "Stamp prices do not change"
+  ],
+  "id": "usps-2027-price-change-2026-11-12",
+  "sources": [
+   "https://www.globenewswire.com/news-release/2026/11/12/3402104/0/en/u-s-postal-service-recommends-shipping-price-adjustments-for-2027.html"
+  ],
+  "story": "a0740b56c6649",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "USPS",
+  "year": 2027,
   "kind": "surcharge",
   "announced": "2026-10-26",
   "effective": "2027-01-01",
@@ -323,6 +345,29 @@
    "https://www.supplychaindive.com/news/usps-to-debut-weekly-fuel-fee-in-2027-matching-fedex-ups-practices/872778/"
   ],
   "story": "a0adb56a55334",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "USPS",
+  "year": 2027,
+  "kind": "surcharge",
+  "announced": "2026-11-12",
+  "effective": "2027-01-17",
+  "pct": null,
+  "headline": "USPS proposes making 11% fuel surcharge permanent, replacing 8% April charge",
+  "details": [
+   "Proposes converting the 8% transportation-related price change from April into a permanent 11% fuel surcharge",
+   "The 11% fuel surcharge replaces the 8% charge introduced in April",
+   "Effective Jan. 17, 2027, pending PRC review"
+  ],
+  "id": "usps-2027-surcharge-2027-01-17",
+  "sources": [
+   "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/",
+   "https://www.cnbc.com/2026/11/12/usps-fuel-surcharge-package-deliveries.html",
+   "https://www.bloomberg.com/news/articles/2026-11-12/us-postal-service-to-raise-prices-make-fuel-surcharge-permanent"
+  ],
+  "story": "af027f4014177",
   "conf": "confirmed",
   "auto": true
  },
@@ -1135,6 +1180,28 @@
    "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
   ],
   "story": "ups-origin-zip-surcharge",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": "2026-11-12",
+  "effective": "2026-11-12",
+  "pct": null,
+  "headline": "UPS revised Surge Emergency Fees for selected services and lanes",
+  "details": [
+   "Revised Surge Emergency Fees listed on UPS Rate and Service Guides page",
+   "Apply to shipments on selected services and lanes from November 12, 2026",
+   "Earlier version had no such notice",
+   "Amounts and lanes not stated on the page, so size of change cannot be determined"
+  ],
+  "id": "ups-2026-surcharge-2026-11-12",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+  ],
+  "story": "w7c65824b4bde",
   "conf": "confirmed",
   "auto": true
  },
