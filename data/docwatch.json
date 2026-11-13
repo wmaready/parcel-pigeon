@@ -1,5 +1,5 @@
 {
- "cursor": 9,
+ "cursor": 24,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -241,7 +241,7 @@
    "first": "2026-10-21",
    "n": "2026-OnTrac-AHS%2BLPSRates.pdf",
    "hash": "9e9cbfe236b7",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
@@ -369,14 +369,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 520,
+   "fails": 521,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-13"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 520,
+   "fails": 521,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-13"
@@ -632,7 +632,7 @@
    "first": "2026-10-21",
    "n": "IPIXF_TermsCond.pdf",
    "hash": "9520c595235a",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf",
@@ -712,7 +712,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_Intl_NSS_Demand-Surcharges.pdf",
    "hash": "d1b401132060",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
@@ -723,7 +723,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_US-Export-Demand-Surcharges.pdf",
    "hash": "2b6c209bf5c2",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf",
@@ -734,7 +734,7 @@
    "first": "2026-10-21",
    "n": "9-21-26_US-Import-Demand-Surcharges.pdf",
    "hash": "9f9b1f0b82a6",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf",
@@ -745,7 +745,7 @@
    "first": "2026-10-21",
    "n": "FICE_TermsCond.pdf",
    "hash": "30cb066f3355",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
@@ -756,7 +756,7 @@
    "first": "2026-10-21",
    "n": "IDP_TermsCond.pdf",
    "hash": "787d356e545f",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/IDP_TermsCond.pdf",
@@ -947,14 +947,14 @@
   "https://www.fedex.com/en-us/shipping/freight/tariff.html": {
    "hash": "f866279b9dd1",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "FedEx Freight rules tariff (moved)",
-   "pic_try": "2026-11-11"
+   "pic_try": "2026-11-13"
   },
   "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
    "hash": "d1b401132060",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "FedEx demand surcharges, 2026–27 season",
    "snap": {
     "d": "2026-10-26",
@@ -965,7 +965,7 @@
   "https://gls-group.eu/US/downloads/GLS-US_Billing-Invoice-Guide.pdf": {
    "hash": "12743cee1be9",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "GLS US billing and invoice guide",
    "snap": {
     "d": "2026-10-26",
@@ -975,15 +975,15 @@
   },
   "https://www.gofo.com/us/news/Notice+to+Partners:+Emergency+Fuel+Surcharge+Effective+October+26,+2026": {
    "n": "Notice to Partners: Emergency Fuel Surcharge Effective October 26, 2026",
-   "fails": 52,
+   "fails": 53,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-11"
+   "last_try": "2026-11-13"
   },
   "https://www.ontrac.com/terms-conditions-additional/": {
    "hash": "c8d830c9c53b",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "OnTrac additional terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -993,7 +993,7 @@
   "https://www.ontrac.com/terms-conditions/": {
    "hash": "2bafd025bd0b",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "OnTrac terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -2176,7 +2176,7 @@
    "first": "2026-11-03",
    "n": "11-2-26_US-Import-Demand-Surcharges.pdf",
    "hash": "d1897b4b71f9",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-11-03",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
@@ -2187,7 +2187,7 @@
    "first": "2026-11-03",
    "n": "fuel_surcharge_effective_11-9-26.pdf",
    "hash": "a8112e9226a6",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-11-03",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
@@ -2263,14 +2263,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 82,
+   "fails": 83,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 82,
+   "fails": 83,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
@@ -2346,6 +2346,40 @@
     "pdf": "https://about.usps.com/newsroom/national-releases/2026/1112-usps-recommends-shipping-price-adjustments-for-2027.pdf",
     "txt": "data/snapshots/827fc70e3a7b/2026-11-13.txt"
    }
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Excel.xlsx": {
+   "n": "January 2027 Price Change - SKU Price Files - Excel",
+   "checked": "2026-11-13",
+   "skip": "spreadsheet"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
+   "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-13"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.xlsx": {
+   "n": "January 2027 Price File - Excel",
+   "checked": "2026-11-13",
+   "skip": "spreadsheet"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
+   "n": "January 2027 Price Files - CSV",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-13"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Price Files Change Log.xlsx": {
+   "n": "January 2027 Price Files Change Log",
+   "checked": "2026-11-13",
+   "skip": "spreadsheet"
+  },
+  "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Delta Report.xlsx": {
+   "n": "January 2027 SKU Delta Report",
+   "checked": "2026-11-13",
+   "skip": "spreadsheet"
   }
  }
 }

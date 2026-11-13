@@ -3135,51 +3135,64 @@
    "id": "cartcom",
    "n": "Cart.com",
    "realm": "3pl",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Houston-based commerce and logistics company that combines e-commerce software with a U.S. fulfillment network, and raised $180M in March 2026 led by Springcoast Partners.",
-   "al": [],
-   "src": "https://www.digitalcommerce360.com/2026/03/05/cart-com-180-million-funding-logistics-network-ai/",
+   "hq": "Houston, TX, USA",
+   "yr": "2020",
+   "s": "Cart.com provides unified commerce software and omnichannel fulfillment and logistics services to B2C and B2B brands, operating a nationwide U.S. network of 14 fulfillment centers.",
+   "al": [
+    "Cart.com, Inc."
+   ],
+   "src": "https://www.businesswire.com/news/home/20260304579089/en/Cart.com-Announces-$180-Million-Strategic-Investment-Led-by-Springcoast-Partners",
    "auto": true,
    "added": "2026-11-12",
-   "from": "discover"
+   "from": "discover",
+   "site": "cart.com",
+   "geo": [
+    -95.37,
+    29.76
+   ],
+   "srcs": [
+    "https://www.businesswire.com/news/home/20260304579089/en/Cart.com-Announces-$180-Million-Strategic-Investment-Led-by-Springcoast-Partners",
+    "https://cart.com/newsroom/cart-com-relocates-corporate-headquarters-to-houston",
+    "https://houston.innovationmap.com/cartcom-180m-growth-capital-2675554335.html"
+   ],
+   "enriched": "2026-11-13",
+   "pending": false
   },
   {
    "id": "tractorsupply",
-   "n": "Tractor Supply",
+   "n": "Tractor Supply Company",
    "realm": "retail",
-   "own": null,
-   "tk": null,
+   "own": "public",
+   "tk": "TSCO",
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Rural lifestyle retailer headquartered in Brentwood, Tennessee, with 2,463 stores in 49 states",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+   "hq": "Brentwood, TN, USA",
+   "yr": "1938",
+   "s": "Tractor Supply is the largest U.S. rural lifestyle retailer, and it offers delivery of store and online orders through third-party on-demand platforms (Uber, Uber Eats, Postmates and Instacart) from about 2,500 stores.",
+   "al": [
+    "TSC",
+    "TSCO",
+    "Tractor Supply",
+    "Tractor Supply Co"
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/916365/000091636521000052/tsco-20201226.htm",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-12",
-   "story": "ae6abe230efad"
-  },
-  {
-   "id": "kaizenmanageme",
-   "n": "Kaizen Management Solutions",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Delancey Street delivery service partner contracted by Amazon for same-day deliveries on electric cargo bikes",
-   "al": [],
-   "src": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-11",
-   "story": "ad8c685f386a8"
+   "story": "ae6abe230efad",
+   "site": "tractorsupply.com",
+   "geo": [
+    -86.783,
+    36.033
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/916365/000091636521000052/tsco-20201226.htm",
+    "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+    "https://chainstoreage.com/tractor-supply-company-adds-new-third-party-delivery-partner"
+   ],
+   "enriched": "2026-11-13"
   }
  ],
  "edges": [
@@ -5579,15 +5592,6 @@
   },
   {
    "a": "amazon",
-   "b": "kaizenmanageme",
-   "k": "partner",
-   "y": "2026",
-   "t": "Amazon ends delivery service partner contract with Kaizen",
-   "url": "https://nyc.streetsblog.org/2026/11/12/as-nyc-debates-amazons-delivery-model-its-partner-fires-200-e-bike-workers",
-   "story": "ad8c685f386a8"
-  },
-  {
-   "a": "amazon",
    "b": "grubhub",
    "k": "invested",
    "y": "2026",
@@ -5612,6 +5616,33 @@
    "t": "Uber Eats partners with Kroger on grocery and retail delivery",
    "url": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
    "story": "a11c4cff40ea4"
+  },
+  {
+   "a": "tractorsupply",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2026",
+   "t": "Store delivery via Uber Eats app",
+   "url": "https://www.freightwaves.com/news/tractor-supply-partners-with-uber-to-offer-on-demand-delivery",
+   "story": "ae6abe230efad"
+  },
+  {
+   "a": "tractorsupply",
+   "b": "postmates",
+   "k": "partner",
+   "y": "2026",
+   "t": "Store delivery via Postmates app",
+   "url": "https://chainstoreage.com/tractor-supply-company-adds-new-third-party-delivery-partner",
+   "story": "ae6abe230efad"
+  },
+  {
+   "a": "tractorsupply",
+   "b": "instacartmaple",
+   "k": "partner",
+   "y": "2026",
+   "t": "Same-day delivery from 2,400+ stores via Instacart",
+   "url": "https://chainstoreage.com/tractor-supply-company-adds-new-third-party-delivery-partner",
+   "story": "ae6abe230efad"
   }
  ],
  "moves": [
@@ -6001,7 +6032,9 @@
   "ambirobotics": "2026-11-10",
   "locusrobotics": "2026-11-10",
   "geek": "2026-11-11",
-  "beumergroup": "2026-11-11"
+  "beumergroup": "2026-11-11",
+  "cartcom": "2026-11-13",
+  "tractorsupply": "2026-11-13"
  },
  "facts": {
   "ups": {
