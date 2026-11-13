@@ -1,5 +1,5 @@
 {
- "cursor": 54,
+ "cursor": 69,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -264,13 +264,15 @@
   "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf": {
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
-   "hash": "f659dc634fac",
-   "checked": "2026-11-12",
+   "hash": "8b02a4cf061c",
+   "checked": "2026-11-13",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf",
-    "txt": "data/snapshots/d80e5fe8d290/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/d80e5fe8d290/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-2024-rates.pdf": {
    "first": "2026-10-21",
@@ -287,19 +289,21 @@
   "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf": {
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
-   "hash": "c46e4fcc8b83",
-   "checked": "2026-11-12",
+   "hash": "69018425f7a6",
+   "checked": "2026-11-13",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
-    "txt": "data/snapshots/a800834b113a/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/a800834b113a/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf": {
    "first": "2026-10-21",
    "n": "ImpactedZIPS_08242026.pdf",
    "hash": "aec742c8cd57",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
@@ -374,14 +378,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 523,
+   "fails": 524,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-13"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 523,
+   "fails": 524,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-13"
@@ -674,13 +678,15 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf": {
    "first": "2026-10-21",
    "n": "DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
-   "hash": "228d4702cf23",
-   "checked": "2026-11-12",
+   "hash": "9f825aebf06f",
+   "checked": "2026-11-13",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
-    "txt": "data/snapshots/dbf1cd5b88e5/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/dbf1cd5b88e5/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
    "first": "2026-10-21",
@@ -710,13 +716,15 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf": {
    "first": "2026-10-21",
    "n": "PAS_Contiguous_Extended_Remote_2026.pdf",
-   "hash": "ffa00e94210b",
-   "checked": "2026-11-12",
+   "hash": "5d733c0bce4f",
+   "checked": "2026-11-13",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
-    "txt": "data/snapshots/60a95b7abf39/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/60a95b7abf39/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf": {
    "first": "2026-10-21",
@@ -1197,17 +1205,17 @@
    "changed": "2026-11-02"
   },
   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
-   "hash": "4358be4b1dfc",
+   "hash": "d1a7cc8d494a",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "UPS Small Business Rates page",
    "snap": {
-    "d": "2026-11-01",
+    "d": "2026-11-13",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:c7c5f2c8-58fd-4d2b-91a0-19cfedfeefe8/original/as/preview-ups-small-business-package-rates.pdf",
-    "txt": "data/snapshots/19e15226c749/2026-11-01.txt",
-    "prev_d": "2026-10-31"
+    "txt": "data/snapshots/19e15226c749/2026-11-13.txt",
+    "prev_d": "2026-11-01"
    },
-   "changed": "2026-11-01"
+   "changed": "2026-11-13"
   },
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "9aa6ed76ca22",
@@ -1222,35 +1230,39 @@
    "changed": "2026-11-13"
   },
   "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm": {
-   "hash": "8d1ffdf3d98c",
+   "hash": "d90c8801b1aa",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "USPS 2026 holiday price change announcement",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.pdf",
-    "txt": "data/snapshots/ea5395bda005/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/ea5395bda005/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx": {
    "n": "DHL eCommerce delivery area ZIP list, effective Jan 18, 2026",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf": {
-   "hash": "a2479c22c80b",
+   "hash": "cf9c8e816391",
    "first": "2026-10-25",
-   "checked": "2026-11-11",
+   "checked": "2026-11-13",
    "n": "2026 FedEx Ground Economy delivery area ZIP list",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf",
-    "txt": "data/snapshots/3cd91e511d8d/2026-10-26.txt"
-   }
+    "txt": "data/snapshots/3cd91e511d8d/2026-11-13.txt",
+    "prev_d": "2026-10-26"
+   },
+   "changed": "2026-11-13"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx": {
    "n": "2026 FedEx delivery area ZIP list (Excel)",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en": {
@@ -1262,18 +1274,18 @@
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:5abedc88-3398-4cec-98b7-08e0bb271544/original/as/area-surcharge-zips-us-en.xlsx": {
    "n": "UPS delivery and remote area ZIP list",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "skip": "spreadsheet"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:b38785e4-bf16-448d-ac8c-49e0f7d414d6/original/as/ea-surcharge-en-GLOBAL.xlsx": {
    "n": "UPS international extended area list",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "skip": "spreadsheet"
   },
   "https://www.dhl.com/us-en/home/important-information/2026/express-fuel-surcharge-updates.html": {
    "hash": "1e78bfca5548",
    "first": "2026-10-25",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "n": "DHL Express weekly fuel surcharge updates",
    "pic_try": "2026-11-12"
   },
@@ -2303,14 +2315,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 85,
+   "fails": 86,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 85,
+   "fails": 86,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
@@ -2328,15 +2340,16 @@
    "changed": "2026-11-13"
   },
   "https://postcalc.usps.com/DomesticZoneChart": {
-   "hash": "2aa35e296478",
+   "hash": "c2b28bcf72b4",
    "first": "2026-11-06",
-   "checked": "2026-11-12",
+   "checked": "2026-11-13",
    "n": "Zone Charts",
    "snap": {
     "d": "2026-11-06",
     "pdf": "https://pe.usps.com/cpim/ftp/manuals/dmm300/Notice123.pdf",
     "txt": "data/snapshots/51b22514039a/2026-11-06.txt"
-   }
+   },
+   "changed": "2026-11-13"
   },
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
@@ -2378,7 +2391,7 @@
    "checked": "2026-11-12"
   },
   "https://about.usps.com/newsroom/national-releases/2026/1112-usps-recommends-shipping-price-adjustments-for-2027.htm": {
-   "hash": "6792561239a6",
+   "hash": "ecb60a2ec310",
    "first": "2026-11-13",
    "checked": "2026-11-13",
    "n": "USPS Recommends Shipping Price Adjustments for 2027 (Nov. 12 news release)",
@@ -2386,7 +2399,9 @@
     "d": "2026-11-13",
     "pdf": "https://about.usps.com/newsroom/national-releases/2026/1112-usps-recommends-shipping-price-adjustments-for-2027.pdf",
     "txt": "data/snapshots/827fc70e3a7b/2026-11-13.txt"
-   }
+   },
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-13"
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Excel.xlsx": {
    "n": "January 2027 Price Change - SKU Price Files - Excel",
@@ -2395,7 +2410,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 3,
+   "fails": 4,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
@@ -2407,7 +2422,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 3,
+   "fails": 4,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-13"
