@@ -537,7 +537,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding to new markets while the FAA's Part 108 rule remained unpublished as of the last report in October.",
+  "s": "Drone delivery networks keep expanding under FAA approvals, with local noise complaints and attribution questions emerging in Texas.",
   "ids": [
    "g27",
    "g26",
@@ -553,7 +553,7 @@
    "a30e480c050e5"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-12",
+  "last": "2026-11-13",
   "c": [
    "Amazon",
    "Industry",
@@ -636,28 +636,29 @@
    "ad0f07f43ec5e",
    "a45eccf8e24d3",
    "a831c709e5809",
-   "a3a4fa02bef84"
+   "a3a4fa02bef84",
+   "aef4d017bab80"
   ],
   "first": "2026-10-13",
-  "s": "The bill has not been scheduled for a vote as the Law Department reviews it, including whether federal law preempts it.",
-  "last": "2026-11-09",
+  "s": "The City Council is negotiating a revised bill that FreightWaves says will likely pass before the end of 2026.",
+  "last": "2026-11-13",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "f0f9c58e1b0e",
+  "rv": "79b50e46adc8",
   "cx": {
-   "sig": "33b951e1ed0b",
+   "sig": "6788fd93b686",
    "v": 3,
    "beats": {
-    "a45eccf8e24d3": "Reportedly, Mamdani says Amazon and others are spending big to scare New Yorkers about licensing and direct-hire rules.",
-    "a831c709e5809": "Teamsters and Mamdani rally at City Hall for a vote; they say Amazon has spent over $8 million against the bill.",
-    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong drops co-sponsorship over small-business job losses; the Law Department is reviewing."
+    "a45eccf8e24d3": "Mamdani reportedly accused Amazon and other opponents of spending heavily to scare New Yorkers about the bill.",
+    "a831c709e5809": "Teamsters and Mamdani rallied at City Hall for a vote; the Teamsters say Amazon has spent over $8 million against it.",
+    "a3a4fa02bef84": "Councilman Phil Wong reportedly dropped his co-sponsorship over small-business job losses; Speaker Menin hasn't taken a stance.",
+    "aef4d017bab80": "FreightWaves expects the bill to pass by end of 2026, but amended, possibly short of making Amazon buy its roughly 100 DSPs."
    },
-   "intro": "NYC bill would license last-mile hubs and bar subcontracted drivers, a big potential shift for shippers.",
-   "now": "No vote is scheduled while the Law Department reviews the bill, including federal preemption; nothing changes for shippers yet."
+   "now": "The Council is negotiating a revised bill that FreightWaves says will likely pass before the end of 2026; nothing changes for shippers yet."
   },
   "co": "Amazon",
   "apart": [
@@ -1095,7 +1096,7 @@
   "ids": [],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "Amazon and Uber Eats launched the Prime restaurant delivery partnership on Nov. 5, 2026, and the Grubhub agreement ended the same day.",
+  "s": "Amazon made Uber Eats its US Prime restaurant delivery partner on Nov. 5, 2026, ending its Grubhub agreement the same day.",
   "last": "2026-11-08",
   "c": [
    "Amazon"

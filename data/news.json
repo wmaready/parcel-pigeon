@@ -1,5 +1,53 @@
 [
  {
+  "id": "a0e6a84640e9a",
+  "date": "2026-11-13",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Spring, Texas resident blames Amazon for drone noise; Wing flies nearby",
+  "sum": "A Spring, Texas resident told Chron that about a dozen delivery drones fly over her Bridgestone neighborhood daily, and Chron identified them as Amazon's. DroneXL reported on Nov. 13 that Amazon lists no Prime Air site near Bridgestone, while Wing has flown Walmart orders from a Supercenter about 5 miles away since July.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The report concerns noise complaints and which operator's drones fly over a Houston-area neighborhood.",
+  "why": "It shows how drone delivery noise complaints can be hard to attribute as Amazon and Wing both hold FAA approvals for Houston-area flights.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T23:43:43Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/13/amazon-drone-noise-spring-texas-wing-walmart-richmond-hub/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/13/amazon-drone-noise-spring-texas-wing-walmart-richmond-hub/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-13",
+  "new": "A Houston-area noise complaint shows overlapping Amazon and Wing approvals; the sources report no change to shipper rates or service.",
+  "syn": "DroneXL reported on Nov. 13 on a Chron account from a Spring, Texas resident who says about a dozen drones fly over her Bridgestone home daily; Chron identified them as Amazon's. Amazon's public list names only Richmond, about 30 miles away, for Houston, while an FAA decision from Feb. 5 covers six Houston-area Amazon hubs, including one on FM 1960 about 6.7 miles away that DroneXL found no sign was operating. Wing has flown Walmart orders from a Spring Supercenter about 5 miles away since July. Amazon told Chron the sound is minimal and typically lasts about 30 seconds.",
+  "aff": [
+   {
+    "who": "Bridgestone residents, Spring TX",
+    "what": "A resident reports about a dozen drone flights a day; operator not confirmed by the sources."
+   },
+   {
+    "who": "Amazon Prime Air in Houston",
+    "what": "Lists Richmond only; FAA decision covers six Houston-area hubs at up to 1,000 flights a day each."
+   },
+   {
+    "who": "Wing and Walmart in Houston",
+    "what": "Wing added eight Houston-area Walmart stores in July; FAA decision allows up to 75 nests."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a23eb82ac576d",
   "date": "2026-11-13",
   "c": [
@@ -89,6 +137,38 @@
   ],
   "edge": true,
   "exclusive": true
+ },
+ {
+  "id": "aef4d017bab80",
+  "date": "2026-11-13",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "NYC Council likely to pass Amazon-focused Delivery Protection Act, with changes",
+  "sum": "FreightWaves reported that the New York City Council will likely pass the Delivery Protection Act before the end of 2026, but in a form different from the version introduced in February. The bill would license \"last mile facility operators\" and ban third-party subcontracting. About 100 individually owned Amazon delivery service providers operate in the city, according to the report.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "No rates or service levels change yet. If the bill passes, last-mile facility operators in New York City would need city licenses, and the final terms are still under negotiation.",
+  "why": "About 100 Amazon DSPs in New York City could be affected, and the model is also being proposed in Chicago, according to FreightWaves.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-13T23:42:37Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/amazon-focused-bill-likely-to-pass-in-nyc-but-only-after-changes",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/amazon-focused-bill-likely-to-pass-in-nyc-but-only-after-changes"
+   }
+  ],
+  "auto": true,
+  "thread": "last-mile-facility-legislation",
+  "upd": 7,
+  "new": "FreightWaves reports a growing consensus that the bill will pass in amended form, possibly short of requiring Amazon to buy its DSPs; no change yet for shippers."
  },
  {
   "id": "we0432db44af6",
@@ -12839,79 +12919,5 @@
   ],
   "auto": true,
   "ann": "2026-10-20"
- },
- {
-  "id": "a54c3fc6ab060",
-  "date": "2026-10-20",
-  "c": [
-   "Amazon",
-   "UPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Business groups urge NYC Council to block Delivery Protection Act",
-  "sum": "A coalition including the Taxpayers Protection Alliance and the American Consumer Institute sent a letter to the City Council and Speaker Julie Menin on Tuesday opposing the Delivery Protection Act, the New York Post reported. The bill would bar delivery companies from using third-party contractors or gig workers in fulfillment and set a $500,000 penalty per non-employee worker. The bill has 35 co-sponsors and is laid over in committee, with no vote scheduled.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service at present; the bill remains in committee with no vote scheduled.",
-  "why": "The bill would bar contracted or gig delivery labor in New York City fulfillment operations, which the letter says would affect Amazon and UPS.",
-  "score": 6,
-  "tie": "Amazon had warned in October 2026 that it could close warehouses and move delivery jobs out of New York City if the bill passes.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-20T16:53:33Z",
-  "src": "New York Post",
-  "url": "https://nypost.com/2026/10/20/us-news/lefty-nyc-labor-bill-would-kill-amazon-ups-jobs-warns-dire-letter/",
-  "srcs": [
-   {
-    "src": "New York Post",
-    "url": "https://nypost.com/2026/10/20/us-news/lefty-nyc-labor-bill-would-kill-amazon-ups-jobs-warns-dire-letter/"
-   }
-  ],
-  "auto": true,
-  "new": "Business groups sent a letter opposing the bill, and the co-sponsor count is now 35 versus 33 in earlier coverage; shippers see no direct change while the bill awaits a committee vote.",
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-10-30"
- },
- {
-  "id": "a5876cb3ae6f1",
-  "date": "2026-10-20",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon Prime Air plans Tallahassee drone deliveries by mid-November",
-  "sum": "Amazon Prime Air is slated to start drone deliveries in Tallahassee, Florida, by mid-November, Josh Brundage of Prime Air said at a public showing of the MK30 drone on Oct. 20. Drones will carry items up to 5 pounds from the Mahan Drive fulfillment center to homes within 7.5 miles, and Brundage put the fee at $4.99. The structure that will house the drones is still under permit review, the Tallahassee Democrat reported.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "From mid-November, customers within 7.5 miles of Amazon's Mahan Drive site in Tallahassee could get drone delivery of items up to 5 pounds, with the fee given as $4.99. Brundage said cost varies by market and can be free, and the permit for the drone structure is still pending.",
-  "why": "Shows the range, weight limit and fee for Amazon's drone delivery in a new Florida market, with up to 21 drones planned for the Tallahassee fleet.",
-  "score": 5,
-  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns by the end of 2026, with fees of $2.99 for Prime members and $4.99 for others.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T13:08:23Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/21/amazon-prime-air-tallahassee-mid-november-launch-mk30/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/21/amazon-prime-air-tallahassee-mid-november-launch-mk30/"
-   },
-   {
-    "src": "Miramar News",
-    "url": "https://www.miramarflnews.com/news/article317707493.html"
-   },
-   {
-    "src": "WTXL ABC 27",
-    "url": "https://www.wtxl.com/northeast-tallahassee/amazon-prime-air-drone-deliveries-coming-to-tallahassee"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-20",
-  "new": "Amazon gave a mid-November start for Tallahassee, with a $4.99 fee, 5-pound limit and 7.5-mile range, while its drone structure permit is pending; this is a local launch and does not change shipper rates elsewhere.",
-  "exclusive": true
  }
 ]
