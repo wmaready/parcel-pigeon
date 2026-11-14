@@ -4675,7 +4675,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -5017,9 +5017,17 @@
   "act": null,
   "dates": [],
   "added": "2026-11-14T11:33:13Z",
-  "src": "Robotics & Automation News",
-  "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
+  "src": "TechCrunch",
+  "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/",
   "srcs": [
+   {
+    "src": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/zipline-hits-21-5b-valuation-as-walmart-expands-bet-on-drone-delivery/"
+   },
+   {
+    "src": "WSJ",
+    "url": "https://www.wsj.com/business/drone-startup-zipline-raises-1-5-billion-at-21-5-billion-valuation-1d166eec"
+   },
    {
     "src": "Robotics & Automation News",
     "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/"
@@ -5048,7 +5056,8 @@
    }
   ],
   "exclusive": true,
-  "unconf": true
+  "tried": "2026-11-14",
+  "updated": "2026-11-05"
  },
  {
   "id": "a84ca5863e582",
@@ -5614,7 +5623,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
