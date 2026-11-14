@@ -1,5 +1,5 @@
 {
- "cursor": 84,
+ "cursor": 99,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -378,14 +378,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 525,
+   "fails": 526,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-14"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 525,
+   "fails": 526,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-14"
@@ -1421,7 +1421,7 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
@@ -1433,19 +1433,20 @@
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
    "hash": "7a90d278f5dd",
    "first": "2026-10-26",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
-    "d": "2026-10-26",
+    "d": "2026-11-14",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21317.pdf",
-    "txt": "data/snapshots/58373f1b7bc3/2026-10-26.txt"
+    "txt": "data/snapshots/58373f1b7bc3/2026-11-14.txt",
+    "prev_d": "2026-10-26"
    },
    "last_try": "2026-11-05"
   },
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -1456,7 +1457,7 @@
   "https://public-inspection.federalregister.gov/2026-17656.pdf": {
    "hash": "d032e4e6bd31",
    "first": "2026-10-26",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "PRC Order 9703, Docket CP2026-10 (2026 holiday prices)",
    "snap": {
     "d": "2026-10-26",
@@ -1576,7 +1577,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/790c5b9a-16dd-40fb-9a3f-5615be8b081a.pdf": {
    "hash": "b358c79c4a0f",
    "first": "2026-10-30",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) 10-Q filing",
    "snap": {
     "d": "2026-11-06",
@@ -1590,18 +1591,19 @@
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2024/FedEx-Reports-First-Quarter-Diluted-EPS-of-3.21-and-Adjusted-Diluted-EPS-of-3.60/default.aspx": {
    "hash": "c2c0a5750888",
    "first": "2026-10-30",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "FedEx Fiscal Q1 2025 (Jun–Aug 2024) results release",
    "snap": {
-    "d": "2026-10-30",
+    "d": "2026-11-14",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FedEx-Q1-FY25-Earnings-Release.pdf",
-    "txt": "data/snapshots/7f920799aee5/2026-10-30.txt"
+    "txt": "data/snapshots/7f920799aee5/2026-11-14.txt",
+    "prev_d": "2026-10-30"
    }
   },
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/edf17e3e-640b-438c-808f-99664c427646.pdf": {
    "hash": "74e90f22afc4",
    "first": "2026-10-30",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1612,7 +1614,7 @@
   "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf": {
    "hash": "8ba6b61d9f95",
    "first": "2026-10-30",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) call transcript",
    "snap": {
     "d": "2026-10-30",
@@ -1622,15 +1624,15 @@
   },
   "https://events.q4inc.com/attendee/622711393": {
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) earnings call",
-   "fails": 30,
+   "fails": 31,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-12"
+   "last_try": "2026-11-14"
   },
   "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-First-Quarter-Earnings-Growth-Year-Over-Year/default.aspx": {
    "hash": "2af5fcbbdb62",
    "first": "2026-10-30",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "FedEx Fiscal Q1 2026 (Jun–Aug 2025) results release",
    "snap": {
     "d": "2026-10-30",
@@ -2216,12 +2218,13 @@
   "https://www.federalregister.gov/documents/2026/11/03/2026-22409/new-postal-products": {
    "hash": "be937369d8b6",
    "first": "2026-11-03",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "Postal Regulatory Commission notice: New Postal Products (91 FR 69281)",
    "snap": {
-    "d": "2026-11-03",
+    "d": "2026-11-14",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22409.pdf",
-    "txt": "data/snapshots/c0747e042d57/2026-11-03.txt"
+    "txt": "data/snapshots/c0747e042d57/2026-11-14.txt",
+    "prev_d": "2026-11-03"
    },
    "last_try": "2026-11-10"
   },
@@ -2250,7 +2253,7 @@
   "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
    "hash": "00356ade2f6e",
    "first": "2026-11-04",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
    "snap": {
     "d": "2026-11-04",
@@ -2268,10 +2271,10 @@
   },
   "https://about.usps.com/resources/publications.htm?cat=notices": {
    "n": "Notices",
-   "fails": 15,
+   "fails": 16,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-12"
+   "last_try": "2026-11-14"
   },
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
@@ -2317,14 +2320,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 87,
+   "fails": 88,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-14"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 87,
+   "fails": 88,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-14"
@@ -2356,7 +2359,7 @@
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
    "first": "2026-11-06",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "Federal Register Notices",
    "snap": {
     "d": "2026-11-06",
@@ -2382,12 +2385,13 @@
   "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service": {
    "hash": "aedb75850499",
    "first": "2026-11-11",
-   "checked": "2026-11-12",
+   "checked": "2026-11-14",
    "n": "Product Change: Priority Mail Express, Priority Mail, and USPS Ground Advantage Negotiated Service Agreement (2026)",
    "snap": {
-    "d": "2026-11-11",
+    "d": "2026-11-14",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-22963.pdf",
-    "txt": "data/snapshots/e374e7320420/2026-11-11.txt"
+    "txt": "data/snapshots/e374e7320420/2026-11-14.txt",
+    "prev_d": "2026-11-11"
    }
   },
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf": {
@@ -2416,7 +2420,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 5,
+   "fails": 6,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-14"
@@ -2428,7 +2432,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 5,
+   "fails": 6,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-14"
