@@ -364,14 +364,19 @@
  "updated": "2026-11-14T11:30Z",
  "health": {
   "UPS": {
-   "ok": true,
-   "at": "2026-11-14T11:30Z",
-   "last_ok": "2026-11-14T11:30Z"
+   "ok": false,
+   "via": "page",
+   "why": "could not render the page: Page.goto: Download is starting",
+   "at": "2026-11-14T16:35Z",
+   "last_ok": "2026-11-14T11:30Z",
+   "latest": null
   },
   "FedEx": {
    "ok": true,
-   "at": "2026-11-14T11:30Z",
-   "last_ok": "2026-11-14T11:30Z"
+   "via": "page",
+   "at": "2026-11-14T16:35Z",
+   "last_ok": "2026-11-14T16:35Z",
+   "latest": "2026-11-02"
   },
   "diesel": {
    "ok": true,

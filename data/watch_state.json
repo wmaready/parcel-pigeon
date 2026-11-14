@@ -178,9 +178,14 @@
  "https://www.ups.com/us/en/service-alerts": {
   "checked": "2026-11-14",
   "pdfs": [],
-  "lines": 9,
+  "lines": 12,
   "told": [],
-  "pend": "f65d5bcea5a2"
+  "told2": [
+   "a45a50180e11",
+   "7ffdfd3e9969",
+   "b356cf512c65"
+  ],
+  "told_until": "2026-12-14"
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
   "checked": "2026-11-14",

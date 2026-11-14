@@ -1,7 +1,11 @@
 {
- "run": "2026-11-14T11:43Z",
+ "run": "2026-11-14T16:41Z",
  "clock_add": [],
  "clock_link": [
+  {
+   "clock": "xwe0432db44af61",
+   "story": "wd4f8d600e36d"
+  },
   {
    "clock": "xa3bd243da7c6c0",
    "story": "wf5014bc150e9"
@@ -99,6 +103,15 @@
     "adbdc9a506e95"
    ],
    "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS posts FAA ground stop alert: flight resumption, delays, no guarantee coverage\" to rate clock entry 2026-11-12 \"UPS: Added wording on which shipments each surge fee applies to\"",
+   "ids": [
+    "wd4f8d600e36d"
+   ],
+   "fixed": true
   },
   {
    "sev": "med",
@@ -399,33 +412,6 @@
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
-   "ids": [
-    "ae2ec177094e3"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "ids": [
-    "a89f005fb1862"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261104124607/en/ShipStation-and-Acumatica-Expand-Strategic-Partnership-to-Deliver-AI-Powered-Fulfillment-to-Mid-Market-Merchants",
-   "ids": [
-    "a2f60a03dddd7"
-   ],
-   "fixed": false
   }
  ],
  "open": [
@@ -718,33 +704,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
-   "ids": [
-    "ae2ec177094e3"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
-   "ids": [
-    "a89f005fb1862"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261104124607/en/ShipStation-and-Acumatica-Expand-Strategic-Partnership-to-Deliver-AI-Powered-Fulfillment-to-Mid-Market-Merchants",
-   "ids": [
-    "a2f60a03dddd7"
-   ],
    "fixed": false
   }
  ]

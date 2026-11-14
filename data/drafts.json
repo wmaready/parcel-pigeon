@@ -1,5 +1,72 @@
 [
  {
+  "status": "published",
+  "story": {
+   "id": "wd4f8d600e36d",
+   "date": "2026-11-14",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts FAA ground stop alert: flight resumption, delays, no guarantee coverage",
+   "sum": "UPS added a service alert saying the FAA has restored flight operations after a nationwide U.S. ground stop, and UPS will begin resuming flights, though some shipments may be delayed. The alert states the UPS Service Guarantee or Money-Back Guarantee does not apply to shipments impacted by the ground stop. The existing Middle East and Quantum View Manage notices are unchanged; no effective date is given. The carrier's page doesn't state an effective date. This change was first seen on the carrier's own site on 2026-11-14, so it is treated as in effect from then.",
+   "plain": "Shippers with packages moving by air in the U.S. may see delays on affected shipments and cannot claim service-guarantee refunds for those packages. The number of affected shipments is not stated.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Network & operations",
+   "act": "2026-11-14",
+   "inferred": true,
+   "detected": "2026-11-14",
+   "changes": [
+    {
+     "what": "New service disruption notice: FAA nationwide ground stop, flights resuming, some shipments may be delayed",
+     "before": null,
+     "after": "UPS will begin resuming flights following the FAA's restoration of flight operations, but some shipments may experience delays.",
+     "effective": null,
+     "who": "Shipments moving by air in the U.S. affected by the ground stop",
+     "impact": "Delays possible; extent not stated"
+    },
+    {
+     "what": "Service Guarantee / Money-Back Guarantee exclusion for shipments hit by the FAA ground stop",
+     "before": null,
+     "after": "The UPS Service Guarantee or Money-Back Guarantee does not apply to shipments impacted by the FAA ground stop.",
+     "effective": null,
+     "who": "Shippers with guaranteed-service packages impacted by the ground stop",
+     "impact": "No guarantee refund eligibility for affected shipments"
+    },
+    {
+     "what": "Contingency plans and tracking guidance for ground stop",
+     "before": null,
+     "after": "Contingency plans are in place to minimize service impacts, and customers can track packages at ups.com for the latest delivery information.",
+     "effective": null,
+     "who": "All shippers and recipients with affected packages",
+     "impact": null
+    }
+   ],
+   "verdict": "service change",
+   "unknowns": [
+    "Date of the ground stop and how many shipments or service levels are affected are not stated",
+    "How long the alert will remain posted is not stated",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Service alerts (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/service-alerts",
+   "srcs": [
+    {
+     "src": "UPS Service alerts",
+     "url": "https://www.ups.com/us/en/service-alerts"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "service change",
+    "dropped": 0,
+    "compared": []
+   }
+  }
+ },
+ {
   "status": "not material",
   "date": "2026-11-13",
   "page": "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf",
