@@ -537,7 +537,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery networks keep expanding under FAA approvals, with local noise complaints and attribution questions emerging in Texas.",
+  "s": "Drone delivery is expanding locally while the FAA's Part 108 rule remained unpublished as of the October coverage.",
   "ids": [
    "g27",
    "g26",
@@ -550,27 +550,24 @@
    "ae04c4bdd5e4e",
    "a704b11d94f38",
    "a644b0ea66268",
-   "a30e480c050e5"
+   "a8aa90b423c4a"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-13",
+  "last": "2026-11-14",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "cff1c4c6f2ed",
+   "sig": "18c8702df0bc",
    "v": 3,
    "beats": {
-    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations; fees run $2.99 or $4.99.",
-    "g26": "Meanwhile, the FAA's Part 108 rule was still unpublished on Oct. 9, so routine BVLOS delivery needs waivers or Part 135 certificates.",
-    "a30e480c050e5": "Wing, an Alphabet subsidiary, plans to build tens of thousands of drones a year in Fort Worth, adding manufacturing to the expansion."
+    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation. Locations and timing weren't disclosed."
    },
-   "intro": "Drone delivery is scaling up fast while the FAA's Part 108 rule is still unpublished. Shippers should watch both.",
-   "now": "Part 108 was still unpublished as of the last report, and the sources give no new date for it."
+   "now": "Part 108 was still unpublished as of Oct. 9, while Amazon, Walmart/Zipline and Wing all announced bigger drone plans."
   },
-  "rv": "78fbd0d7373e",
+  "rv": "3e5c34f8551c",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -650,15 +647,15 @@
   ],
   "rv": "79b50e46adc8",
   "cx": {
-   "sig": "6788fd93b686",
+   "sig": "41b95854e6e2",
    "v": 3,
    "beats": {
-    "a45eccf8e24d3": "Mamdani reportedly accused Amazon and other opponents of spending heavily to scare New Yorkers about the bill.",
-    "a831c709e5809": "Teamsters and Mamdani rallied at City Hall for a vote; the Teamsters say Amazon has spent over $8 million against it.",
-    "a3a4fa02bef84": "Councilman Phil Wong reportedly dropped his co-sponsorship over small-business job losses; Speaker Menin hasn't taken a stance.",
-    "aef4d017bab80": "FreightWaves expects the bill to pass by end of 2026, but amended, possibly short of making Amazon buy its roughly 100 DSPs."
+    "a831c709e5809": "Teamsters and Mayor Mamdani pushed Speaker Menin for a vote, saying Amazon spent over $8 million against it.",
+    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong dropped co-sponsorship over small-business job losses; the Law Department is reviewing.",
+    "aef4d017bab80": "FreightWaves expects passage by end of 2026 in amended form; about 100 individually owned Amazon DSPs operate in the city."
    },
-   "now": "The Council is negotiating a revised bill that FreightWaves says will likely pass before the end of 2026; nothing changes for shippers yet."
+   "intro": "A NYC bill aimed at Amazon's last-mile setup could change how delivery drivers are hired across the five boroughs.",
+   "now": "The Council is negotiating a revised bill, and FreightWaves says it will likely pass by end of 2026. Nothing has changed for shippers yet."
   },
   "co": "Amazon",
   "apart": [

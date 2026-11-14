@@ -1,5 +1,53 @@
 [
  {
+  "id": "a764f3ad9ff47",
+  "date": "2026-11-14",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wing plans Walmart drone delivery at Eastgate store in Ohio's Union Township",
+  "sum": "Wing Aviation is preparing drone delivery of groceries and household items from the Eastgate Walmart in Union Township, Ohio, WKRC reported. The service could begin as soon as the new year, pending township approval of the takeoff-and-landing \"nest\" near the store.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Customers near the Eastgate Walmart may be able to get small orders of up to about 2.5 pounds by drone, possibly from the new year. This depends on township approval of Wing's nest.",
+  "why": "Wing's Walmart service in the Cincinnati area covers small orders up to about 2.5 pounds, adding to Walmart's drone delivery footprint.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-14T11:34:52Z",
+  "src": "WKRC",
+  "url": "https://local12.com/news/local/drone-grocery-delivery-could-soon-takeoff-drones-groceries-walmart-shop-shopping-eastgate-union-township-air-flight-flying-tech-technology-development-cincinnati-ohio",
+  "srcs": [
+   {
+    "src": "WKRC",
+    "url": "https://local12.com/news/local/drone-grocery-delivery-could-soon-takeoff-drones-groceries-walmart-shop-shopping-eastgate-union-township-air-flight-flying-tech-technology-development-cincinnati-ohio"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-14",
+  "new": "Wing is expected to start drone delivery from the Eastgate Walmart in Ohio, possibly by the new year, adding a local launch to the scale-up for small orders of up to about 2.5 pounds.",
+  "syn": "Wing Aviation is preparing drone delivery from the Eastgate Walmart in Union Township, Ohio, WKRC reported. The service could start as soon as the new year and may be among the first of its kind in the Tri-State area. The drones fly within a six-mile radius at up to 55 mph and carry items weighing up to about 2.5 pounds, so the service suits smaller orders. Township approval of the nest is expected to be a formality, and only the FAA can regulate the drones once they are airborne.",
+  "aff": [
+   {
+    "who": "Eastgate Walmart customers",
+    "what": "Drone delivery of groceries and household items could begin as soon as the new year, within a six-mile radius."
+   },
+   {
+    "who": "Order size",
+    "what": "Drones carry items weighing up to about 2.5 pounds, so the service is for smaller orders rather than full grocery lists."
+   },
+   {
+    "who": "Union Township residents",
+    "what": "Wing says its drones fly around 150 feet up and stay under 70 decibels at their lowest point, only briefly."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a0e6a84640e9a",
   "date": "2026-11-13",
   "c": [
@@ -97,7 +145,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -551,7 +599,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -583,8 +631,6 @@
   ],
   "auto": true,
   "ann": "2026-11-12",
-  "thread": "drone-delivery",
-  "upd": 14,
   "new": "Wing's plan to manufacture tens of thousands of drones a year in Fort Worth adds a manufacturing build-out to the expansion by Amazon and Zipline; the sources give no new delivery dates or fees for shippers.",
   "syn": "Wing, the drone delivery subsidiary of Alphabet, picked North Texas as a base for its nationwide drone delivery expansion, according to CoStar. The company plans to produce tens of thousands of aircraft annually at a Fort Worth facility, and CoStar's subhead gives the Texas investment as $125 million. CoStar said Wing is partnering with major retailers such as Walmart. The full article is behind a subscriber paywall, so further detail on timing and delivery locations is not available in the sources.",
   "aff": [
@@ -2743,7 +2789,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -3203,7 +3249,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -3483,6 +3529,10 @@
    {
     "src": "Financial Times",
     "url": "https://markets.ft.com/data/announce/detail?dockey=600-202611091603BIZWIRE_USPRX____20261109_BW815770-1"
+   },
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163324/news/e-commerce/katherine-boyle-joins-fedex-board/"
    }
   ],
   "auto": true,
@@ -3764,6 +3814,66 @@
    "checked": "2026-10-24"
   },
   "exclusive": true
+ },
+ {
+  "id": "a8aa90b423c4a",
+  "date": "2026-11-06",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wing to invest $125M in Fort Worth drone plant over two years",
+  "sum": "Wing, Alphabet's drone delivery business, said it will invest $125 million over two years, including a 15,000-square-foot manufacturing facility in Fort Worth, Texas. The plant is to produce tens of thousands of aircraft a year. Wing also plans to expand to nearly 20 U.S. markets reaching more than 40 million people, and to launch in Japan with KDDI.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to current rates or service. Wing says it plans to expand drone delivery to nearly 20 U.S. markets next year, and its capacity is limited to a few metro areas today.",
+  "why": "Wing plans to reach more than 40 million people in nearly 20 U.S. markets next year, with Walmart as a partner, adding a drone option for fast delivery.",
+  "score": 6,
+  "tie": "CoStar reported on Nov. 12, 2026 that Wing had chosen North Texas as a base for its nationwide drone delivery expansion.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-14T11:34:05Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant"
+   },
+   {
+    "src": "Chain Store Age",
+    "url": "https://chainstoreage.com/walmart-drone-partner-wing-invests-125m-rd-manufacturing-hub"
+   },
+   {
+    "src": "Robotics & Automation News",
+    "url": "https://roboticsandautomationnews.com/2026/11/14/wing-invests-125-million-in-us-drone-manufacturing-to-support-nationwide-expansion/107107/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-06",
+  "thread": "drone-delivery",
+  "upd": 14,
+  "new": "Wing put figures on its expansion: $125M over two years, a Fort Worth plant for tens of thousands of aircraft a year, and nearly 20 U.S. markets next year; current service remains limited to five metro areas.",
+  "syn": "Wing, the drone delivery business of Alphabet, said it will invest $125 million (reported as up to $125 million by one outlet) over the next two years in U.S. manufacturing. This includes a 15,000-square-foot facility in Fort Worth, Texas, able to produce tens of thousands of aircraft a year, with some funds going to research and development in California. Wing, which operates from more than 70 sites, plans to reach more than 40 million people across nearly 20 U.S. markets next year through its Walmart partnership. It said a pending FAA beyond-visual-line-of-sight rule would trigger wider expansion.",
+  "aff": [
+   {
+    "who": "Drone delivery capacity",
+    "what": "Fort Worth plant to build tens of thousands of aircraft a year, funded by $125M over two years."
+   },
+   {
+    "who": "Walmart customers in new markets",
+    "what": "Wing plans nearly 20 U.S. markets next year, reaching more than 40 million people; five metro areas have limited service now."
+   },
+   {
+    "who": "Delivery items",
+    "what": "Wing's aircraft carry up to five pounds at speeds up to 60 mph, usually delivering within 30 minutes."
+   },
+   {
+    "who": "Japan",
+    "what": "Wing plans to launch drone delivery there in partnership with KDDI Corp."
+   }
+  ]
  },
  {
   "id": "a9e7e5653557c",
@@ -4453,7 +4563,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-13",
+  "tried": "2026-11-14",
   "unconf": true
  },
  {
@@ -4823,6 +4933,58 @@
     "what": "AI is used to enable fast-but-reliable delivery promises, Iannone said."
    }
   ]
+ },
+ {
+  "id": "a7c57b6597efb",
+  "date": "2026-11-05",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "Zipline raises $1.5B at $21.5B valuation for drone network",
+  "sum": "Zipline said it raised $1.5 billion at a $21.5 billion post-money valuation, led by Paradigm, WCM Investment Management and Layer Global. The company said it will use the money to expand US manufacturing and hiring for a nationwide drone delivery network. It also said Walmart will launch 300 additional sites and Uber is targeting one million deliveries a day with Zipline by 2029.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. Zipline said the funds will go to US manufacturing and hiring for its drone delivery network.",
+  "why": "Funds US drone manufacturing and hiring as Walmart adds 300 sites and Uber targets one million daily deliveries by 2029.",
+  "score": 7,
+  "tie": "Zipline's $1.5 billion round was first reported in November 2026 alongside Walmart's agreement to add 300 Zipline drone delivery sites.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-14T11:33:13Z",
+  "src": "Robotics & Automation News",
+  "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
+  "srcs": [
+   {
+    "src": "Robotics & Automation News",
+    "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "Zipline named the investors in its $1.5 billion round and reported restaurant revenue and delivery-time figures; the article states no change to shipper rates or service.",
+  "syn": "Zipline announced a $1.5 billion raise at a $21.5 billion post-money valuation, led by Paradigm, WCM Investment Management and Layer Global. Valor Equity Partners, Fidelity Management & Research Company, Uber, Tiger Global, J.P. Morgan, ARK Invest and Salesforce Ventures also took part. Zipline said the capital will expand its US manufacturing facilities and hiring. The company said Walmart will launch 300 additional sites under a new multi-year agreement, and Uber is targeting one million deliveries a day with Zipline by 2029.",
+  "aff": [
+   {
+    "who": "Walmart delivery sites",
+    "what": "300 additional Zipline sites under a new national multi-year agreement, which Zipline said could grow further."
+   },
+   {
+    "who": "Restaurants on Zipline",
+    "what": "Zipline's share of a long-tenured cohort's delivery revenue rose from 10.8% to 34.9% between March and October, Zipline said."
+   },
+   {
+    "who": "Delivery times",
+    "what": "In October the median Zipline order arrived 19 minutes after checkout, against 30+ minutes for traditional delivery, Zipline said."
+   },
+   {
+    "who": "Dallas-Ft. Worth customers",
+    "what": "Zipline said it made more than one million deliveries in the metroplex this year."
+   }
+  ],
+  "exclusive": true,
+  "unconf": true
  },
  {
   "id": "a84ca5863e582",
@@ -12735,189 +12897,5 @@
   "ann": "2026-10-21",
   "new": "Wing consolidated seven Charlotte-area Walmart stores into one metro service on Oct. 21, with two more due within a week, giving shippers in range a drone option with a 2.5-pound order cap and, per Business North Carolina, no delivery fee.",
   "exclusive": true
- },
- {
-  "id": "a3697365517fa",
-  "date": "2026-10-20",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "Over a third of self-employed UK parcel drivers say pay is below minimum wage",
-  "sum": "University of Sheffield researchers said more than a third of self-employed delivery drivers believe their hourly pay is below the national minimum wage. The survey covered more than 1,400 parcel delivery drivers across the UK. The researchers also reported intense digital monitoring and weaker employment protections.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The report describes pay and working conditions of UK parcel delivery drivers.",
-  "why": "The survey of more than 1,400 UK parcel drivers compares pay, breaks and costs for self-employed and directly employed drivers in the delivery workforce.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:50:21Z",
-  "src": "AOL.com",
-  "url": "https://www.aol.com/articles/many-self-employed-delivery-drivers-080000000.html",
-  "srcs": [
-   {
-    "src": "AOL.com",
-    "url": "https://www.aol.com/articles/many-self-employed-delivery-drivers-080000000.html"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a3a45d7f6db20",
-  "date": "2026-10-20",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Peak season",
-  "kind": "News",
-  "title": "Amazon plans 300,000 holiday hires, up from 250,000 last year",
-  "sum": "Amazon said Oct. 20 it plans to hire more than 300,000 workers for the holiday season, up 20% from a year ago. Roles are full-time, part-time and seasonal, with seasonal pay averaging $20 per hour. Seasonal workers at 30 or more hours a week will get healthcare coverage from their first day starting Jan. 1, 2027.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates, fees or service. Amazon is adding seasonal staff, with job postings each week from October through December.",
-  "why": "Amazon captures almost 40 cents of every online dollar, per EMarketer, and Adobe projects $275.1 billion in online sales in November and December.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T02:49:29Z",
-  "src": "About Amazon",
-  "url": "https://www.aboutamazon.com/news/workplace/amazon-holiday-jobs-2026-seasonal-hiring-healthcare",
-  "srcs": [
-   {
-    "src": "About Amazon",
-    "url": "https://www.aboutamazon.com/news/workplace/amazon-holiday-jobs-2026-seasonal-hiring-healthcare"
-   },
-   {
-    "src": "Bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-10-20/amazon-to-hire-over-300-000-in-holiday-season-up-20-from-2025"
-   },
-   {
-    "src": "Transport Topics",
-    "url": "https://www.ttnews.com/articles/amazon-hire-300000-holiday"
-   },
-   {
-    "src": "PYMNTS.com",
-    "url": "https://www.pymnts.com/personnel/2026/amazon-uses-healthcare-and-banking-to-woo-more-holiday-workers/"
-   },
-   {
-    "src": "Chain Store Age",
-    "url": "https://chainstoreage.com/amazon-ups-holiday-hires-300000-offer-some-seasonal-employees-healthcare"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-20",
-  "edge": true
- },
- {
-  "id": "a45eccf8e24d3",
-  "date": "2026-10-20",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Mamdani says Amazon seeks to scare New Yorkers over delivery bill",
-  "sum": "Mayor Zohran Mamdani accused Amazon and other opponents of spending heavily to scare New Yorkers about the Delivery Protection Act, PoliticsNY reported. He is preparing to join national labor leaders in a push for the bill, which would require certain last-mile facilities to obtain city licenses and directly employ workers rather than use third-party contractors.",
-  "imp": "watch",
-  "lvl": 2,
-  "plain": "No change to rates or service yet. The bill is still pending, and it would require certain last-mile facilities to hold city licenses and directly employ delivery workers if passed.",
-  "why": "The bill would end third-party contractor use at licensed last-mile facilities in New York City, which could reshape how parcel carriers staff local delivery.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T10:54:49Z",
-  "src": "PoliticsNY",
-  "url": "https://politicsny.com/2026/10/21/mamdani-accuses-amazon-of-trying-to-fear-monger-as-he-gears-up-for-delivery-worker-bill-showdown/",
-  "srcs": [
-   {
-    "src": "PoliticsNY",
-    "url": "https://politicsny.com/2026/10/21/mamdani-accuses-amazon-of-trying-to-fear-monger-as-he-gears-up-for-delivery-worker-bill-showdown/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-20",
-  "thread": "last-mile-facility-legislation",
-  "upd": 6,
-  "new": "Mamdani publicly accused Amazon and other opponents of heavy spending to frighten New Yorkers and said he will join national labor leaders in the push; the earlier coverage did not include the mayor's own remarks, and there is no change yet for shippers.",
-  "exclusive": true,
-  "tried": "2026-10-30",
-  "unconf": true
- },
- {
-  "id": "a4a3cb4eb56f7",
-  "date": "2026-10-20",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "USPS moves light Ground Advantage parcels to Hawaii by ship",
-  "sum": "Effective Oct. 1, USPS extended Ground Advantage delivery expectations to 10 days or more for noncontiguous destinations including Hawaii, Alaska and Puerto Rico, according to Pacific Daily News. Packages under one pound now move primarily by surface transportation, and USPS spokesman John Hyatt said prices are unchanged. A Hawaii jewelry business owner told Pacific Business News that a dozen orders were still undelivered weeks after shipping.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "Since Oct. 1, Ground Advantage parcels to and from noncontiguous destinations are expected to take 10 days or more, with packages under one pound moving mainly by surface. USPS says prices are unchanged; Priority Mail is listed at 2 to 4 business days for Hawaii, Alaska, Puerto Rico, American Samoa and the U.S. Virgin Islands, and 2 to 6 for Guam, the Northern Mariana Islands and the Freely Associated States.",
-  "why": "Ground Advantage shippers sending to Hawaii, Alaska, Puerto Rico and U.S. territories now face standard delivery windows of 10 days or more.",
-  "score": 4,
-  "tie": "USPS first extended delivery estimates for packages to and from Guam, Hawaii and other non-mainland locations on Oct. 1, 2026, with Hyatt saying prices were unchanged.",
-  "act": "2026-10-01",
-  "dates": [
-   {
-    "d": "2026-12-16",
-    "w": "USPS recommended holiday ship date, Ground Advantage to islands",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-10-21T02:48:45Z",
-  "src": "Hoodline",
-  "url": "https://hoodline.com/2026/10/hawaii-sellers-watch-orders-stall-as-usps-shifts-packages-to-slow-boat/",
-  "srcs": [
-   {
-    "src": "Hoodline",
-    "url": "https://hoodline.com/2026/10/hawaii-sellers-watch-orders-stall-as-usps-shifts-packages-to-slow-boat/"
-   }
-  ],
-  "auto": true,
-  "new": "New detail is the operational cause: Ground Advantage parcels under one pound now move primarily by surface, with USPS citing hazardous materials risk on passenger aircraft, plus Priority Mail windows of 2 to 6 business days and a Dec. 16 holiday deadline that USPS kept in place, according to The Conveyor.",
-  "exclusive": true,
-  "tried": "2026-10-30",
-  "unconf": true
- },
- {
-  "id": "a5275af42cee2",
-  "date": "2026-10-20",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Regional & alternative",
-  "kind": "News",
-  "title": "GLS US expands parcel delivery service into El Paso, Texas",
-  "sum": "GLS US said on Oct. 20, 2026 that it is expanding parcel delivery into El Paso, extending its Texas network. The company said the move follows launches in Houston, Austin and San Antonio in 2026 and Dallas-Fort Worth in 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Businesses in El Paso can now ship with GLS US, which offers parcel delivery up to 150 pounds and international options. The release gives no rates or changes to existing customers' pricing.",
-  "why": "El Paso adds a regional carrier option in West Texas; GLS US cites parcels up to 150 pounds and international shipping, with no pricing given.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T13:08:59Z",
-  "src": "Parcel Industry",
-  "url": "https://parcelindustry.com/article-6726-GLS-US-Expands-into-El-Paso-Bringing-Advanced-Shipping-Solutions-to-West-Texas.html",
-  "srcs": [
-   {
-    "src": "Parcel Industry",
-    "url": "https://parcelindustry.com/article-6726-GLS-US-Expands-into-El-Paso-Bringing-Advanced-Shipping-Solutions-to-West-Texas.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-20"
  }
 ]

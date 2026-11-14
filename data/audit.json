@@ -1,5 +1,5 @@
 {
- "run": "2026-11-14T10:14Z",
+ "run": "2026-11-14T11:43Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,68 +8,69 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 310,
- "doc_cursor": 204,
+ "link_cursor": 350,
+ "doc_cursor": 234,
  "checked_pairs": [
-  "b54077ea2f7b",
-  "61ba27c59dab",
+  "6157952e9b11",
+  "60030262fcea",
+  "4df67f9b3718",
+  "2988f97e477e",
+  "0cae9f6a1079",
+  "558e73ee4967",
+  "f3a106e02077",
+  "4e8faef9252d",
+  "5f83fff4b0b8",
+  "5423312764d9",
+  "ab39dca4b258",
+  "0ee2e50bd13d",
+  "bd74f39e4a2a",
   "a625dd5720a9",
-  "6004808294c5",
-  "1bc66c00eda3",
+  "70042e1b5ea7",
+  "5e124f1a493a",
+  "73dcfc31b988",
   "5effb73bc21d",
   "dbb89994655f",
-  "457e37db5347",
-  "70042e1b5ea7",
-  "73dcfc31b988",
-  "4621e9e86574",
-  "c74456d2bddc",
-  "62cb3ae5df27",
-  "0ca410a667f8",
-  "5423312764d9",
-  "87f9bbae47ee",
-  "4df67f9b3718",
-  "02094abee757",
-  "c61435232c81",
-  "f84529cd7bc9",
-  "5f83fff4b0b8",
-  "c1419d4e7cb6",
-  "7e4a0a07ad2f",
-  "f3a106e02077",
-  "4d5dedc8cd29",
-  "cf51efba6984",
-  "94d1ac334f4e",
-  "5b4926c2c24d",
-  "2988f97e477e",
-  "803f70b9b286",
-  "bd74f39e4a2a",
-  "0cae9f6a1079",
-  "f6cd68cb0017",
-  "14a3d7429698",
-  "e57a450403da",
-  "d46a0aebc57e",
   "c3d4d65922ea",
-  "7679c499e09c",
-  "60030262fcea",
-  "5e124f1a493a",
-  "0b8aff140a01",
+  "1bc66c00eda3",
   "2f24e1d5d0e2",
-  "cc68d548ad73",
-  "6157952e9b11",
-  "558e73ee4967",
-  "6bef0a5868e5",
-  "f7e5ad4ade89",
-  "b8d8ea16bc5f",
-  "454e4f8f6a6b",
-  "de313bc51fd7",
-  "bb9d125105c0",
-  "006e0976c74d",
-  "d72a23005aba",
-  "2361691e9a1b",
-  "d73b3089178a",
   "ed50bd5ade56",
-  "0ee2e50bd13d",
-  "4e8faef9252d",
-  "21b6ce5b1d5c"
+  "94d1ac334f4e",
+  "d46a0aebc57e",
+  "b54077ea2f7b",
+  "f84529cd7bc9",
+  "f7e5ad4ade89",
+  "d72a23005aba",
+  "c61435232c81",
+  "cc68d548ad73",
+  "61ba27c59dab",
+  "7e4a0a07ad2f",
+  "cf51efba6984",
+  "02094abee757",
+  "5b4926c2c24d",
+  "de313bc51fd7",
+  "c74456d2bddc",
+  "c1419d4e7cb6",
+  "454e4f8f6a6b",
+  "7679c499e09c",
+  "0ca410a667f8",
+  "6bef0a5868e5",
+  "bb9d125105c0",
+  "4d5dedc8cd29",
+  "21b6ce5b1d5c",
+  "b8d8ea16bc5f",
+  "4621e9e86574",
+  "d73b3089178a",
+  "87f9bbae47ee",
+  "6004808294c5",
+  "457e37db5347",
+  "006e0976c74d",
+  "803f70b9b286",
+  "e57a450403da",
+  "f6cd68cb0017",
+  "0b8aff140a01",
+  "62cb3ae5df27",
+  "14a3d7429698",
+  "2361691e9a1b"
  ],
  "issues": [
   {
@@ -325,6 +326,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing to invest $125M in Fort Worth drone plant over two years\" and \"Wing to invest up to $125M in Texas drone manufacturing\"",
+   "ids": [
+    "a8aa90b423c4a",
+    "ab483d15094ae"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -384,19 +395,36 @@
   },
   {
    "sev": "high",
-   "type": "superseded",
-   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Council likely to pass Amazon-focused Delivery Protection Act, with changes\"",
+   "type": "earnings-sync",
+   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
    "ids": [
-    "a45eccf8e24d3",
-    "aef4d017bab80"
+    "ae2ec177094e3"
    ],
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "earnings-sync",
-   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "ids": [
+    "a89f005fb1862"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261104124607/en/ShipStation-and-Acumatica-Expand-Strategic-Partnership-to-Deliver-AI-Powered-Fulfillment-to-Mid-Market-Merchants",
+   "ids": [
+    "a2f60a03dddd7"
+   ],
    "fixed": false
   }
  ],
@@ -618,6 +646,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing to invest $125M in Fort Worth drone plant over two years\" and \"Wing to invest up to $125M in Texas drone manufacturing\"",
+   "ids": [
+    "a8aa90b423c4a",
+    "ab483d15094ae"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -677,19 +715,36 @@
   },
   {
    "sev": "high",
-   "type": "superseded",
-   "msg": "\"Mamdani says Amazon seeks to scare New Yorkers over delivery bill\" may be out of date: newer story \"NYC Council likely to pass Amazon-focused Delivery Protection Act, with changes\"",
+   "type": "earnings-sync",
+   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
    "ids": [
-    "a45eccf8e24d3",
-    "aef4d017bab80"
+    "ae2ec177094e3"
    ],
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "earnings-sync",
-   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261029605981/en/Matternet-Partners-with-Swisslog-Healthcares-TransLogic-to-Bring-Drone-Delivery-to-Thousands-of-North-American-Hospitals",
+   "ids": [
+    "a89f005fb1862"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=15)): https://www.businesswire.com/news/home/20261104124607/en/ShipStation-and-Acumatica-Expand-Strategic-Partnership-to-Deliver-AI-Powered-Fulfillment-to-Mid-Market-Merchants",
+   "ids": [
+    "a2f60a03dddd7"
+   ],
    "fixed": false
   }
  ]

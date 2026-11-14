@@ -3293,6 +3293,100 @@
    ],
    "enriched": "2026-11-13",
    "pending": false
+  },
+  {
+   "id": "shiphero",
+   "n": "ShipHero",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": "2013",
+   "s": "ShipHero develops cloud-based warehouse management software for e-commerce brands and 3PLs, covering order picking, packing, shipping and carrier rate shopping.",
+   "al": [
+    "Ship Hero, LLC",
+    "ShipHero LLC"
+   ],
+   "src": "https://www.prnewswire.com/news-releases/e-commerce-fulfillment-and-logistics-platform-shiphero-raises-50-million-investment-301319027.html",
+   "auto": true,
+   "added": "2026-11-14",
+   "from": "discover",
+   "site": "shiphero.com",
+   "srcs": [
+    "https://www.prnewswire.com/news-releases/e-commerce-fulfillment-and-logistics-platform-shiphero-raises-50-million-investment-301319027.html",
+    "https://en.wikipedia.org/wiki/ShipHero",
+    "https://www.fulfill.com/partners/shiphero"
+   ],
+   "enriched": "2026-11-14",
+   "pending": false
+  },
+  {
+   "id": "wernerenterpri",
+   "n": "Werner Enterprises, Inc.",
+   "realm": "national",
+   "own": "public",
+   "tk": "WERN",
+   "parent": null,
+   "hq": "Omaha, NE, USA",
+   "yr": "1956",
+   "s": "Werner is a Nebraska-based truckload carrier and logistics provider. Through Werner Final Mile it delivers big and bulky goods such as furniture, appliances and fitness equipment to homes in the U.S. and Canada, using two-person crews in liftgate straight trucks.",
+   "al": [
+    "Werner",
+    "Werner Enterprises",
+    "Werner Final Mile",
+    "Werner Logistics"
+   ],
+   "src": "https://www.werner.com/final-mile-services/",
+   "auto": true,
+   "added": "2026-11-14",
+   "from": "discover",
+   "site": "werner.com",
+   "geo": [
+    -95.934,
+    41.257
+   ],
+   "srcs": [
+    "https://www.werner.com/final-mile-services/",
+    "https://www.sec.gov/Archives/edgar/data/793074/000079307426000071/wern-20251231.htm",
+    "https://www.cnn.com/business/newsfeeds/globenewswire/7956233.html"
+   ],
+   "enriched": "2026-11-14",
+   "pending": false
+  },
+  {
+   "id": "kddicorp",
+   "n": "KDDI Corp.",
+   "realm": "global",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Japanese partner for Wing's planned drone delivery launch in Japan.",
+   "al": [],
+   "src": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-06",
+   "story": "a8aa90b423c4a"
+  },
+  {
+   "id": "provi",
+   "n": "Provi",
+   "realm": "software",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "B2B digital marketplace for the beverage alcohol industry connecting retailers, distributors and suppliers",
+   "al": [],
+   "src": "https://www.prnewswire.com/news-releases/provi-and-instacart-partnership-brings-same-day-grocery-delivery-to-bars-and-restaurants-nationwide-302936978.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-12",
+   "story": "ac253c168ff71"
   }
  ],
  "edges": [
@@ -5752,6 +5846,42 @@
    "t": "Just Eat Takeaway announced plans to sell Grubhub to Wonder",
    "url": "https://techcrunch.com/2026/11/05/amazon-ditches-grubhub-taps-uber-eats-for-prime/",
    "story": "a11c4cff40ea4"
+  },
+  {
+   "a": "paradigm",
+   "b": "zipline",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Investors fund Zipline $1.5B round",
+   "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
+   "story": "a7c57b6597efb"
+  },
+  {
+   "a": "layerglobal",
+   "b": "zipline",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Investors fund Zipline $1.5B round",
+   "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
+   "story": "a7c57b6597efb"
+  },
+  {
+   "a": "wing",
+   "b": "kddicorp",
+   "k": "partner",
+   "y": "2026",
+   "t": "Wing and KDDI partner on drone delivery in Japan",
+   "url": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant",
+   "story": "a8aa90b423c4a"
+  },
+  {
+   "a": "instacart",
+   "b": "provi",
+   "k": "partner",
+   "y": "2026",
+   "t": "Instacart and Provi partner on same-day grocery delivery for bars and restaurants",
+   "url": "https://www.prnewswire.com/news-releases/provi-and-instacart-partnership-brings-same-day-grocery-delivery-to-bars-and-restaurants-nationwide-302936978.html",
+   "story": "ac253c168ff71"
   }
  ],
  "moves": [
@@ -6146,7 +6276,9 @@
   "tractorsupply": "2026-11-13",
   "saddlecreeklog": "2026-11-13",
   "kencologistics": "2026-11-13",
-  "flowspace": "2026-11-13"
+  "flowspace": "2026-11-13",
+  "shiphero": "2026-11-14",
+  "wernerenterpri": "2026-11-14"
  },
  "facts": {
   "ups": {

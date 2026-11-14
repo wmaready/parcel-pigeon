@@ -1206,6 +1206,48 @@
   "auto": true
  },
  {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": "2026-11-12",
+  "effective": "2026-11-16",
+  "pct": null,
+  "headline": "UPS raises China/Hong Kong/Macau to U.S. Surge Emergency Fee to $1.03/lb",
+  "details": [
+   "Surge Emergency Fee on China, Hong Kong or Macau to U.S. shipments rises from $0.91 to $1.03 per lb.",
+   "Increase is $0.12 per lb.",
+   "Applies to Worldwide Express, Express Saver, Express Plus, Expedited, Saver Pallet and Express Freight Time of Day services",
+   "Effective November 16, 2026"
+  ],
+  "id": "ups-2026-surcharge-2026-11-16",
+  "sources": [
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf"
+  ],
+  "story": "we0432db44af6",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": "2026-11-08",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS ends the Argentina-to-U.S. Surge Emergency Fee",
+  "details": [
+   "Argentina to United States Surge Emergency Fee ends on November 8, 2026",
+   "Story describes the end date as added on 2026-11-08"
+  ],
+  "id": "ups-2026-surcharge-2026-11-08",
+  "sources": [
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf"
+  ],
+  "story": "we0432db44af6",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
   "carrier": "USPS",
   "year": 2026,
   "kind": "fee",

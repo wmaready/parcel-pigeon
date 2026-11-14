@@ -9,26 +9,51 @@
   "6": "2026-11-04",
   "7": "2026-11-05",
   "8": "2026-11-09",
-  "9": "2026-11-12"
+  "9": "2026-11-12",
+  "10": "2026-11-14"
  },
- "day": "2026-11-12",
+ "day": "2026-11-14",
  "calls": 1,
  "queue": [
   {
-   "n": "ShipNetwork (formerly Rakuten Super Logistics)",
-   "what": "E-commerce 3PL with a nationwide U.S. warehouse network for 1-2 day ground delivery, formerly Rakuten Super Logistics and earlier Webgistix.",
-   "url": "https://www.speedcommerce.com/vs/rakuten-super-logistics-reviews/",
+   "n": "Averitt Express",
+   "what": "Regional and national LTL carrier that offers final-mile, residential and white-glove delivery of bulky and heavy items that don't suit small-parcel networks.",
+   "url": "https://www.averitt.com/ltl/final-mile",
    "realm": "3pl",
-   "seg": 9,
-   "found": "2026-11-12"
+   "seg": 10,
+   "found": "2026-11-14"
   },
   {
-   "n": "ShipHero",
-   "what": "Brooklyn-based warehouse management software vendor for e-commerce brands and 3PLs, serving thousands of warehouses and carrying a large share of U.S. e-commerce parcel shipments.",
-   "url": "https://www.shiphero.com/about-us",
+   "n": "R+L Carriers",
+   "what": "Family-owned national LTL carrier whose Final Mile service delivers freight curbside or to the doorstep at residences and businesses for e-commerce shippers.",
+   "url": "https://www.rlcarriers.com/freight/shipping-services/final-mile",
    "realm": "3pl",
-   "seg": 9,
-   "found": "2026-11-12"
+   "seg": 10,
+   "found": "2026-11-14"
+  },
+  {
+   "n": "PITT OHIO",
+   "what": "Regional LTL and logistics carrier that took a minority stake in the big-and-bulky final-mile provider Aria Logistics in 2023.",
+   "url": "https://www.freightwaves.com/news/pitt-ohio-makes-investment-in-final-mile-provider",
+   "realm": "3pl",
+   "seg": 10,
+   "found": "2026-11-14"
+  },
+  {
+   "n": "Aria Logistics",
+   "what": "New Jersey-based 3PL running a national final-mile network for home delivery of big and bulky items such as appliances, furniture and fitness equipment.",
+   "url": "https://pittohio.com/myPittOhio/Contents/Item/Display/42594",
+   "realm": "3pl",
+   "seg": 10,
+   "found": "2026-11-14"
+  },
+  {
+   "n": "Universal Logistics Holdings",
+   "what": "Truckload, intermodal and logistics provider in North America that also sells final-mile delivery and ground expedite services (Universal ON-DEMAND).",
+   "url": "https://www.freightcenter.com/carriers/universal-logistics-holdings/",
+   "realm": "3pl",
+   "seg": 10,
+   "found": "2026-11-14"
   }
  ]
 }
