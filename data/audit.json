@@ -1,11 +1,7 @@
 {
- "run": "2026-11-14T22:34Z",
+ "run": "2026-11-15T01:53Z",
  "clock_add": [],
  "clock_link": [
-  {
-   "clock": "xwe0432db44af61",
-   "story": "wd4f8d600e36d"
-  },
   {
    "clock": "xa3bd243da7c6c0",
    "story": "wf5014bc150e9"
@@ -103,15 +99,6 @@
     "adbdc9a506e95"
    ],
    "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts FAA ground stop alert: flight resumption, delays, no guarantee coverage\" to rate clock entry 2026-11-12 \"UPS: Added wording on which shipments each surge fee applies to\"",
-   "ids": [
-    "wd4f8d600e36d"
-   ],
-   "fixed": true
   },
   {
    "sev": "med",
