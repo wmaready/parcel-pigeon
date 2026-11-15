@@ -3353,40 +3353,6 @@
    ],
    "enriched": "2026-11-14",
    "pending": false
-  },
-  {
-   "id": "kddicorp",
-   "n": "KDDI Corp.",
-   "realm": "global",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Japanese partner for Wing's planned drone delivery launch in Japan.",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-06",
-   "story": "a8aa90b423c4a"
-  },
-  {
-   "id": "provi",
-   "n": "Provi",
-   "realm": "software",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "B2B digital marketplace for the beverage alcohol industry connecting retailers, distributors and suppliers",
-   "al": [],
-   "src": "https://www.prnewswire.com/news-releases/provi-and-instacart-partnership-brings-same-day-grocery-delivery-to-bars-and-restaurants-nationwide-302936978.html",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-12",
-   "story": "ac253c168ff71"
   }
  ],
  "edges": [
@@ -5864,24 +5830,6 @@
    "t": "Investors fund Zipline $1.5B round",
    "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
    "story": "a7c57b6597efb"
-  },
-  {
-   "a": "wing",
-   "b": "kddicorp",
-   "k": "partner",
-   "y": "2026",
-   "t": "Wing and KDDI partner on drone delivery in Japan",
-   "url": "https://www.freightwaves.com/news/wing-to-invest-125m-in-drone-manufacturing-plant",
-   "story": "a8aa90b423c4a"
-  },
-  {
-   "a": "instacart",
-   "b": "provi",
-   "k": "partner",
-   "y": "2026",
-   "t": "Instacart and Provi partner on same-day grocery delivery for bars and restaurants",
-   "url": "https://www.prnewswire.com/news-releases/provi-and-instacart-partnership-brings-same-day-grocery-delivery-to-bars-and-restaurants-nationwide-302936978.html",
-   "story": "ac253c168ff71"
   }
  ],
  "moves": [
