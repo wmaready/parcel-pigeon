@@ -3353,6 +3353,165 @@
    ],
    "enriched": "2026-11-14",
    "pending": false
+  },
+  {
+   "id": "averittexpress",
+   "n": "Averitt Express",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Cookeville, TN, USA",
+   "yr": "1958",
+   "s": "Privately held LTL and truckload carrier that also offers final-mile, residential and white-glove delivery of bulky and heavy freight that doesn't suit small-parcel networks.",
+   "al": [
+    "Averitt",
+    "Averitt Express, Inc.",
+    "Livingston Merchants Co-op"
+   ],
+   "src": "https://www.averitt.com/about/corporate-timeline",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "discover",
+   "site": "averitt.com",
+   "geo": [
+    -85.502,
+    36.163
+   ],
+   "srcs": [
+    "https://www.averitt.com/about/corporate-timeline",
+    "https://www.supplychainbrain.com/directories/98-supplier-directory/listing/50-averitt-express",
+    "https://www.logisticsmgmt.com/article/averitt_takes_steps_to_boost_final_mile_network_and_white_glove_services"
+   ],
+   "enriched": "2026-11-15",
+   "pending": false
+  },
+  {
+   "id": "rlcarriers",
+   "n": "R+L Carriers",
+   "realm": "national",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Wilmington, OH, USA",
+   "yr": "1965",
+   "s": "Family-owned national less-than-truckload carrier that also offers a Final Mile service delivering palletized freight curbside or to the doorstep at residences and businesses, including for e-commerce shippers.",
+   "al": [
+    "R&L Carriers",
+    "R+L Carriers, Inc.",
+    "R+L Transfer, Inc.",
+    "RL Carriers",
+    "RLC"
+   ],
+   "src": "https://www.rlcarriers.com/freight/shipping-services/final-mile",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "discover",
+   "site": "rlcarriers.com",
+   "geo": [
+    -83.829,
+    39.445
+   ],
+   "srcs": [
+    "https://www.rlcarriers.com/freight/shipping-services/final-mile",
+    "https://en.wikipedia.org/wiki/R+L_Carriers",
+    "https://www.crunchbase.com/organization/r-carrier-inc"
+   ],
+   "enriched": "2026-11-15",
+   "pending": false
+  },
+  {
+   "id": "pittohio",
+   "n": "PITT OHIO",
+   "realm": "regional",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Pittsburgh, PA, USA",
+   "yr": "1979",
+   "s": "Family-owned regional less-than-truckload carrier and logistics provider serving the Mid-Atlantic, Midwest and Northeast, with truckload, warehousing and expedite services, and a 2023 minority investor in big-and-bulky final-mile provider Aria Logistics.",
+   "al": [
+    "PITT OHIO Express",
+    "PITT OHIO Transportation Group",
+    "Pitt Ohio Express",
+    "Pitt Ohio Express, LLC"
+   ],
+   "src": "https://pittohio.com/myPittOhio/Contents/Item/Display/42594",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "discover",
+   "site": "pittohio.com",
+   "geo": [
+    -79.996,
+    40.441
+   ],
+   "srcs": [
+    "https://pittohio.com/myPittOhio/Contents/Item/Display/42594",
+    "https://en.wikipedia.org/wiki/Pitt_Ohio_Express",
+    "https://www.freightwaves.com/news/pitt-ohio-makes-investment-in-final-mile-provider"
+   ],
+   "enriched": "2026-11-15",
+   "pending": false
+  },
+  {
+   "id": "aitworldwidelogistics",
+   "n": "AIT Worldwide Logistics",
+   "s": "Air and ocean forwarder with expedited and final-mile services",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
+  },
+  {
+   "id": "cevalogisticsnorthameric",
+   "n": "Ceva Logistics (North America)",
+   "s": "Global contract logistics and freight forwarder",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
+  },
+  {
+   "id": "maersklogisticsnorthamer",
+   "n": "Maersk Logistics (North America)",
+   "s": "Ocean carrier's logistics, forwarding and fulfillment arm",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
+  },
+  {
+   "id": "mullengroup",
+   "n": "Mullen Group",
+   "s": "Large Canadian LTL, parcel and logistics operator",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
+  },
+  {
+   "id": "dayross",
+   "n": "Day & Ross",
+   "s": "Major Canadian LTL and truckload carrier (McLeod/TFI)",
+   "al": [],
+   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
+  },
+  {
+   "id": "centraltransport",
+   "n": "Central Transport",
+   "s": "Large LTL carrier and logistics provider",
+   "al": [],
+   "src": "https://www.ttnews.com/top100/for-hire/2026",
+   "auto": true,
+   "added": "2026-11-15",
+   "from": "ranking"
   }
  ],
  "edges": [
@@ -6226,7 +6385,10 @@
   "kencologistics": "2026-11-13",
   "flowspace": "2026-11-13",
   "shiphero": "2026-11-14",
-  "wernerenterpri": "2026-11-14"
+  "wernerenterpri": "2026-11-14",
+  "averittexpress": "2026-11-15",
+  "rlcarriers": "2026-11-15",
+  "pittohio": "2026-11-15"
  },
  "facts": {
   "ups": {

@@ -226,7 +226,8 @@
   "a0e6a84640e9a",
   "aef4d017bab80",
   "a764f3ad9ff47",
-  "wd4f8d600e36d"
+  "wd4f8d600e36d",
+  "aabf6888dc29f"
  ],
  "clock": [
   "e06:7",
@@ -353,7 +354,10 @@
   "kencologistics",
   "flowspace",
   "shiphero",
-  "wernerenterpri"
+  "wernerenterpri",
+  "averittexpress",
+  "rlcarriers",
+  "pittohio"
  ],
  "sent": [
   "player:pirateship",
@@ -676,7 +680,13 @@
   "story:ups posts faa ground stop alert flight resumption delays no guarantee coverage",
   "story:wing plans walmart drone delivery at eastgate store in ohio s union township",
   "player:wernerenterpri",
-  "player:shiphero"
+  "player:shiphero",
+  "more:clock:e08:7,player:averittexpress,player:pittohio,player:rlcarriers,story:copa 737 and ups 767 collide while taxiing at miami airport",
+  "clock:e08:7",
+  "story:copa 737 and ups 767 collide while taxiing at miami airport",
+  "player:pittohio",
+  "player:rlcarriers",
+  "player:averittexpress"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -902,123 +912,105 @@
   "spring texas resident blames amazon for drone noise wing fli",
   "nyc council likely to pass amazon focused delivery protectio",
   "wing plans walmart drone delivery at eastgate store in ohio ",
-  "ups posts faa ground stop alert flight resumption delays no "
+  "ups posts faa ground stop alert flight resumption delays no ",
+  "copa 737 and ups 767 collide while taxiing at miami airport"
  ],
  "harvested": [
-  "a40c99078f690",
-  "w599d9089a65d",
-  "a57a06c26359c",
-  "a3a45d7f6db20",
-  "we85aee3857d1",
-  "aa7358e9cf2dd",
-  "a0adb56a55334",
-  "a2f683da86bf8",
-  "a6ba18049bc99",
-  "a312b45efa358",
-  "a6cc2420ad66e",
-  "acfef8560e2ac",
-  "a0740b56c6649",
-  "w500a5bdc762c",
-  "a773d361dac4e",
-  "af027f4014177",
-  "a5d45f26f2219",
-  "a74df5c94691e",
-  "a4f6ca9e3591e",
-  "w8465aa718dc6",
-  "wb8827e8c126e",
-  "w4657840c16ef",
-  "a89d7e4beebd9",
-  "a7d45b9ebd65b",
-  "a531bcaf173d6",
-  "a351cab9045c7",
-  "wf5014bc150e9",
-  "ae12ca75552ef",
-  "a6e82ba740e99",
-  "a999409ce7860",
-  "ad7d0b7072901",
-  "w91588ddb11ed",
-  "wdf959a97bcb6",
-  "a23a4d6fd271d",
-  "aead0203aab18",
-  "wbfc38914b368",
-  "aee6669d325da",
-  "rv5-ups-sbr-fuel",
-  "a3bd243da7c6c",
-  "a2b7282f9b8a5",
-  "a2f60a03dddd7",
-  "aa51e82b50d12",
-  "af8ee5ed067c6",
-  "a84ca5863e582",
-  "a2b81ad721cb8",
-  "ae374e7320420",
-  "w08701235bf24",
-  "w68c1687d28a1",
-  "a6c2418bed0a7",
-  "af589de326934",
-  "a82e057190718",
-  "a947eb28a3ca3",
-  "wd4f8d600e36d",
-  "a567030ffc76c",
-  "a89f005fb1862",
-  "aba40a11b6946",
-  "a665de2800485",
-  "w9c03b8f99b5f",
-  "we0432db44af6",
-  "a069325035b44",
-  "wf7fe771e76cd",
-  "a260cc6a2e05e",
-  "ac89be3e5da8f",
-  "wa9c423a83880",
-  "wacb825361479",
-  "a15404304f17b",
-  "a9b77b62dcd89",
-  "a195de38cb09b",
-  "adbdc9a506e95",
-  "aaf63e9db25a0",
-  "w86cfd39b48f5",
-  "a2f060c358424",
   "w84705482dd2f",
+  "a999409ce7860",
+  "w86cfd39b48f5",
+  "wbfc38914b368",
+  "af8ee5ed067c6",
+  "af027f4014177",
+  "w9c03b8f99b5f",
+  "a2b81ad721cb8",
+  "wd4f8d600e36d",
   "a2def09bc43bb",
-  "wa61ef102d1b2",
-  "ac78f72e7f458",
-  "a831c709e5809",
-  "a72efb5e01b99",
-  "afd8784e2b179",
-  "w150132868eae",
-  "a3d768115c0e6",
-  "a58373f1b7bc3",
+  "a665de2800485",
+  "rv5-ups-sbr-fuel",
+  "a23a4d6fd271d",
+  "a531bcaf173d6",
+  "a82e057190718",
+  "a40c99078f690",
+  "a3a45d7f6db20",
+  "ad7d0b7072901",
   "a663794cc9c55",
   "ad851d9e2eb69",
-  "wf7bb9227b2de",
+  "w8465aa718dc6",
+  "a58373f1b7bc3",
+  "a6ba18049bc99",
   "adc002570b1d6",
-  "a9f97ff5f51a3",
-  "w7c65824b4bde",
+  "a260cc6a2e05e",
+  "w150132868eae",
+  "a74df5c94691e",
+  "w500a5bdc762c",
+  "w4657840c16ef",
+  "wa9c423a83880",
+  "a6cc2420ad66e",
+  "ac78f72e7f458",
+  "a0740b56c6649",
+  "a4f6ca9e3591e",
   "wfd6617806a78",
-  "ae0ee67bc4b67",
+  "a312b45efa358",
+  "wdf959a97bcb6",
+  "wacb825361479",
+  "we85aee3857d1",
+  "a2f60a03dddd7",
+  "w91588ddb11ed",
+  "wa61ef102d1b2",
+  "aaf63e9db25a0",
+  "af589de326934",
+  "aba40a11b6946",
+  "a2f060c358424",
+  "a567030ffc76c",
+  "a3d768115c0e6",
+  "a0adb56a55334",
+  "a6c2418bed0a7",
+  "we0432db44af6",
+  "a2f683da86bf8",
+  "a6e82ba740e99",
+  "a89f005fb1862",
+  "a2b7282f9b8a5",
+  "w599d9089a65d",
+  "wf7fe771e76cd",
+  "aa51e82b50d12",
+  "a9f97ff5f51a3",
+  "a069325035b44",
+  "a3bd243da7c6c",
+  "wf5014bc150e9",
+  "a831c709e5809",
+  "w08701235bf24",
+  "a84ca5863e582",
+  "ae12ca75552ef",
+  "a15404304f17b",
+  "a773d361dac4e",
   "w0b8720b6a0e7",
-  "ae2ec177094e3"
+  "a89d7e4beebd9",
+  "acfef8560e2ac",
+  "adbdc9a506e95",
+  "wb8827e8c126e",
+  "afd8784e2b179",
+  "wf7bb9227b2de",
+  "w7c65824b4bde",
+  "ae2ec177094e3",
+  "a9b77b62dcd89",
+  "aead0203aab18",
+  "a57a06c26359c",
+  "ac89be3e5da8f",
+  "aee6669d325da",
+  "ae374e7320420",
+  "w68c1687d28a1",
+  "a72efb5e01b99",
+  "aa7358e9cf2dd",
+  "a195de38cb09b",
+  "a351cab9045c7",
+  "a7d45b9ebd65b",
+  "a5d45f26f2219",
+  "a947eb28a3ca3",
+  "ae0ee67bc4b67"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "w8465aa718dc6",
-   "title": "UPS Ship API EU PID guide now says Product Identifier fields are not yet in production",
-   "date": "2026-10-27",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-   "srcs": [
-    {
-     "src": "UPS Developer portal",
-     "url": "https://developer.ups.com/"
-    },
-    {
-     "src": "UPS: UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
-     "url": "https://developer.ups.com/assets/resources/pdf/UPS_Ship_API_EU_PID_Requirements_v1.1.pdf"
-    }
-   ]
-  },
   {
    "id": "wb8827e8c126e",
    "title": "UPS developer portal sets Nov 1, 2026 date for EU Product Identifier rule",
@@ -3420,6 +3412,25 @@
      "url": "https://www.ups.com/us/en/service-alerts"
     }
    ]
+  },
+  {
+   "id": "aabf6888dc29f",
+   "title": "Copa 737 and UPS 767 collide while taxiing at Miami airport",
+   "date": "2026-11-14",
+   "c": [
+    "UPS"
+   ],
+   "url": "https://theopenpress.in/article/two-planes-collide-tarmac-miami-airport-two-passengers-injured",
+   "srcs": [
+    {
+     "src": "theopenpress.in",
+     "url": "https://theopenpress.in/article/two-planes-collide-tarmac-miami-airport-two-passengers-injured"
+    },
+    {
+     "src": "Bloomberg.com",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-15/copa-ups-planes-collide-on-miami-airport-tarmac-while-taxiing"
+    }
+   ]
   }
  ],
  "copy": {
@@ -4198,27 +4209,17 @@
   "wd4f8d600e36d": {
    "t": "UPS air delays after FAA ground stop",
    "m": "Air shipments may be delayed, and those packages aren't eligible for service-guarantee refunds."
+  },
+  "aabf6888dc29f": {
+   "t": "Copa, UPS jets collide at Miami",
+   "m": "No rate or service change announced. Report does not say if the UPS Bogota flight was delayed."
   }
  },
- "queue": [
-  {
-   "kind": "clock",
-   "key": "clock:e08:7",
-   "at": "2026-11-15T04:23:56.350777-05:00",
-   "until": "2026-11-22",
-   "t": "UPS · Amazon · FedEx: takes effect Sun Nov 22",
-   "m": "Peak-week fees rise: home deliveries go to $0.75–$0.80 a package; big-box fees go up too",
-   "lvl": 2,
-   "topic": "rates",
-   "mask": 11,
-   "url": "https://wmaready.github.io/parcel-pigeon/#clock",
-   "topic_id": "pp-clock-e08"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-11-14",
+  "d": "2026-11-15",
   "n": 1
  },
- "last_push": "2026-11-14T11:41:49.469618-05:00"
+ "last_push": "2026-11-15T07:03:54.879488-05:00"
 }

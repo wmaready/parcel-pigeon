@@ -48,6 +48,56 @@
   "exclusive": true
  },
  {
+  "id": "aabf6888dc29f",
+  "date": "2026-11-14",
+  "c": [
+   "UPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "Copa 737 and UPS 767 collide while taxiing at Miami airport",
+  "sum": "A Copa Airlines Boeing 737 and a UPS Boeing 767 cargo plane collided on a taxiway at Miami International Airport at about 9:15 pm local time on Saturday, according to theopenpress.in. Copa said two passengers received attention from paramedics for what appeared to be minor injuries. The UPS freighter was taxiing for departure to Bogota, Colombia.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. The report does not say whether the UPS flight to Bogota was delayed.",
+  "why": "The collision involved a UPS freighter at Miami, a day after a nationwide ground stop disrupted more than 20,000 US flights.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-15T12:02:28Z",
+  "src": "theopenpress.in",
+  "url": "https://theopenpress.in/article/two-planes-collide-tarmac-miami-airport-two-passengers-injured",
+  "srcs": [
+   {
+    "src": "theopenpress.in",
+    "url": "https://theopenpress.in/article/two-planes-collide-tarmac-miami-airport-two-passengers-injured"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-15/copa-ups-planes-collide-on-miami-airport-tarmac-while-taxiing"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-14",
+  "syn": "A Copa Airlines Boeing 737 and a UPS Boeing 767 cargo plane collided on a taxiway at Miami International Airport at about 9:15 pm local time on Saturday, theopenpress.in reported. The Copa wingtip struck the nose of the UPS freighter, which was taxiing for departure to Bogota, Colombia. Copa said two of the 166 passengers on its flight received attention from paramedics for what appeared to be minor injuries, and all 172 people on board disembarked safely. The FAA has opened an investigation, according to the report. The incident followed a nationwide ground stop on Friday that disrupted more than 20,000 flights.",
+  "aff": [
+   {
+    "who": "UPS flight to Bogota",
+    "what": "The Boeing 767 freighter was taxiing for departure when the collision happened; the report gives no information on delays."
+   },
+   {
+    "who": "Copa flight passengers",
+    "what": "Two of 166 passengers received attention from paramedics for what appeared to be minor injuries, Copa said."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service has been announced."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "wd4f8d600e36d",
   "date": "2026-11-14",
   "c": [
@@ -209,7 +259,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -663,7 +713,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -2865,7 +2915,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -3325,7 +3375,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -12953,38 +13003,6 @@
   ],
   "auto": true,
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "af710cc767bac",
-  "date": "2026-10-21",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Wing and Walmart launch drone delivery from 7 Charlotte-area stores",
-  "sum": "Wing announced on Oct. 21 that it and Walmart now fly drone deliveries from seven Walmart Supercenters around Charlotte, N.C., with two more Charlotte stores due within a week. Orders of groceries, household goods and over-the-counter medicine can arrive in as little as 30 minutes for customers within about 6 miles of a participating store. The Charlotte stores are part of 60 Walmart stores nationwide offering the service, toward a target of more than 270 by the end of 2027.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Customers within about 6 miles of the seven participating Charlotte-area Walmart stores can order by drone through the Walmart app, Walmart.com or the Wing app. Orders are capped at 2.5 pounds, and Business North Carolina reports delivery is now free.",
-  "why": "Walmart's drone service is at 60 stores nationwide, toward a target of more than 270 by the end of 2027.",
-  "score": 4,
-  "tie": "Wing and Walmart said in October 2026 they would add Denver and Seattle drone delivery in 2027, with Charlotte counted among Wing's five flying metros at that time.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T10:55:28Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/21/wing-walmart-charlotte-drone-delivery-seven-stores/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/21/wing-walmart-charlotte-drone-delivery-seven-stores/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-21",
-  "new": "Wing consolidated seven Charlotte-area Walmart stores into one metro service on Oct. 21, with two more due within a week, giving shippers in range a drone option with a 2.5-pound order cap and, per Business North Carolina, no delivery fee.",
   "exclusive": true
  }
 ]
