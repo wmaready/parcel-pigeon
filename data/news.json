@@ -4693,7 +4693,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -4741,7 +4741,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-14",
+  "tried": "2026-11-15",
   "unconf": true
  },
  {
@@ -5606,37 +5606,53 @@
   "c": [
    "Amazon"
   ],
-  "cat": "Amazon",
+  "cat": "Technology & tools",
   "kind": "News",
-  "title": "Amazon deploys thousands of smart glasses to delivery drivers",
-  "sum": "Amazon is deploying thousands of smart glasses to its delivery drivers, Supply Chain Dive reported on Nov. 4, 2026. The glasses show navigation and drop-off instructions within the driver's field of view. According to the company, hundreds of drivers have used them since last year.",
+  "title": "Amazon equips 5K delivery drivers with smart glasses",
+  "sum": "Amazon is deploying smart glasses to delivery drivers, with SupplyChainBrain putting the figure at 5K drivers, according to reports on Nov. 4-5, 2026. The glasses show navigation and drop-off instructions in the driver's field of view. Amazon said the glasses are optional for all drivers.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service has been announced. The glasses are a driver tool that gives navigation and drop-off instructions in the driver's view.",
-  "why": "Amazon describes the glasses as part of an effort to boost delivery efficiency; hundreds of its drivers have used them since last year, per the company.",
+  "plain": "No change to shipper rates, fees or service dates is reported. The glasses are tools for Amazon's own delivery drivers.",
+  "why": "Amazon's last-mile tech rollout reaches thousands of drivers; a Loadstar comment cites more than 20,000 by the end of 2027.",
   "score": 5,
-  "tie": null,
+  "tie": "A Loadstar comment piece said Amazon detailed its expansion plans for the delivery glasses in September.",
   "act": null,
   "dates": [],
-  "added": "2026-11-04T15:11:14Z",
+  "added": "2026-11-15T17:17:51Z",
   "src": "Supply Chain Dive",
   "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/",
   "srcs": [
    {
     "src": "Supply Chain Dive",
     "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/"
+   },
+   {
+    "src": "SupplyChainBrain",
+    "url": "https://www.supplychainbrain.com/logistics/last-mile-delivery/article/16424315/amazon-to-equip-5k-delivery-drivers-with-smart-glasses"
+   },
+   {
+    "src": "The Loadstar",
+    "url": "https://theloadstar.com/fast-delivery-amazons-smart-glasses-a-data-moat-in-disguise/"
+   },
+   {
+    "src": "Fast Company",
+    "url": "https://www.fastcompany.com/91639418/amazon-delivery-drivers-are-getting-smart-glasses-what-they-can-see-might-surprise-you"
    }
   ],
   "auto": true,
-  "syn": "Amazon is deploying thousands of smart glasses to its delivery drivers, according to Supply Chain Dive on Nov. 4, 2026. The glasses give drivers navigation and drop-off instructions within their field of view. Supply Chain Dive described the rollout as part of Amazon's effort to boost delivery efficiency. According to the company, hundreds of drivers have used the glasses since last year.",
+  "syn": "Amazon is deploying smart glasses to its delivery drivers, Supply Chain Dive reported on Nov. 4, 2026, and SupplyChainBrain put the number at 5K drivers. The glasses give navigation and drop-off instructions within the driver's field of view, as part of Amazon's effort to boost delivery efficiency. Fast Company reported the eyewear can show gate codes, preferred drop-off locations and pet warnings as drivers approach homes. A Loadstar comment piece, which is the author's view, said Amazon plans more than 20,000 camera-equipped glasses by the end of 2027 and argued the data collected is the competitive advantage.",
   "aff": [
    {
     "who": "Amazon delivery drivers",
-    "what": "Thousands receive glasses showing navigation and drop-off instructions in their field of view."
+    "what": "Glasses show navigation and drop-off instructions in the driver's view; Amazon said they are optional for all drivers."
    },
    {
-    "who": "Shippers",
-    "what": "No change to rates or service has been announced."
+    "who": "Residential deliveries",
+    "what": "Glasses can display gate codes, preferred drop-off locations and warnings about pets, per Fast Company."
+   },
+   {
+    "who": "Image data",
+    "what": "Amazon said no third parties will ever process or review images from the glasses."
    }
   ]
  },
