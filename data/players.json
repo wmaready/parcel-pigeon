@@ -3456,32 +3456,62 @@
   {
    "id": "aitworldwidelogistics",
    "n": "AIT Worldwide Logistics",
-   "s": "Air and ocean forwarder with expedited and final-mile services",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "s": "Itasca, Illinois-based private-equity-backed non-asset freight forwarder offering air, ocean and ground freight, customs clearance, warehousing and final-mile/in-home delivery services to shippers worldwide.",
+   "al": [
+    "AIT",
+    "AIT Freight Systems",
+    "AIT Worldwide Logistics, Inc.",
+    "Air It There"
+   ],
+   "src": "https://www.aitworldwide.com/locations/chicago-illinois-corporate/",
    "auto": true,
    "added": "2026-11-15",
-   "from": "ranking"
-  },
-  {
-   "id": "cevalogisticsnorthameric",
-   "n": "Ceva Logistics (North America)",
-   "s": "Global contract logistics and freight forwarder",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
-   "auto": true,
-   "added": "2026-11-15",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "pe",
+   "hq": "Itasca, IL, USA",
+   "yr": "1979",
+   "realm": "global",
+   "geo": [
+    -88.007,
+    41.975
+   ],
+   "srcs": [
+    "https://www.aitworldwide.com/locations/chicago-illinois-corporate/",
+    "https://www.bbb.org/us/il/itasca/profile/freight-forwarding/ait-worldwide-logistics-inc-0654-23000300",
+    "https://pitchbook.com/profiles/company/144323-20"
+   ],
+   "enriched": "2026-11-16",
+   "pending": false
   },
   {
    "id": "maersklogisticsnorthamer",
    "n": "Maersk Logistics (North America)",
-   "s": "Ocean carrier's logistics, forwarding and fulfillment arm",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "s": "The North American logistics arm of A.P. Moller-Maersk, which provides ocean and air freight forwarding, contract logistics and multi-client warehousing, e-commerce fulfillment, and ground and last-mile freight in the U.S.",
+   "al": [
+    "Maersk Logistics & Services USA Inc.",
+    "Maersk Logistics and Services USA Inc.",
+    "Maersk North America"
+   ],
+   "src": "https://governor.nc.gov/news/press-releases/2025/11/18/global-integrated-logistics-company-maersk-selects-charlotte-north-american-headquarters-bringing",
    "auto": true,
    "added": "2026-11-15",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "sub",
+   "hq": "Charlotte, NC, USA",
+   "site": "maersk.com",
+   "realm": "3pl",
+   "geo": [
+    -80.843,
+    35.227
+   ],
+   "parent": "maersk",
+   "srcs": [
+    "https://governor.nc.gov/news/press-releases/2025/11/18/global-integrated-logistics-company-maersk-selects-charlotte-north-american-headquarters-bringing",
+    "https://www.ttnews.com/logistics/companies/maersk/2026",
+    "https://www.freightwaves.com/news/puma-opens-u-s-distribution-centers-to-third-parties"
+   ],
+   "enriched": "2026-11-16",
+   "pending": false
   },
   {
    "id": "mullengroup",
@@ -5989,6 +6019,51 @@
    "t": "Investors fund Zipline $1.5B round",
    "url": "https://roboticsandautomationnews.com/2026/11/14/zipline-raises-an-unbelievable-1-5-billion-to-build-nationwide-drone-delivery-network/107104/",
    "story": "a7c57b6597efb"
+  },
+  {
+   "a": "greenbriar",
+   "b": "aitworldwidelogistics",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Agreed majority acquisition from The Jordan Company (announced Feb 16, 2026; closing not confirmed)",
+   "url": "https://www.freightwaves.com/news/ait-worldwide-logistics-lands-new-owner",
+   "story": null
+  },
+  {
+   "a": "maersk",
+   "b": "maersklogisticsnorthamer",
+   "k": "owns",
+   "y": null,
+   "t": "Subsidiary of A.P. Moller-Maersk",
+   "url": "https://www.3plogistics.com/product/maersk-logistics-americas/",
+   "story": null
+  },
+  {
+   "a": "maersklogisticsnorthamer",
+   "b": "pilot",
+   "k": "acquired",
+   "y": "2022",
+   "t": "Maersk acquired Pilot Freight Services (big and bulky last mile)",
+   "url": "https://www.maersk.com/news/articles/2022/02/09/apmm-to-acquire-pilot-freight-services",
+   "story": null
+  },
+  {
+   "a": "maersklogisticsnorthamer",
+   "b": "performanceteam",
+   "k": "acquired",
+   "y": "2020",
+   "t": "Maersk acquired Performance Team (B2B warehousing and distribution)",
+   "url": "https://www.supplychaindive.com/news/not-just-ocean-how-maersk-grew-its-us-logistics-capabilities/829105/",
+   "story": null
+  },
+  {
+   "a": "maersklogisticsnorthamer",
+   "b": "visiblescm",
+   "k": "acquired",
+   "y": null,
+   "t": "Maersk acquired Visible SCM (e-commerce warehousing and parcel distribution)",
+   "url": "https://www.maersk.com/news/articles/2022/02/09/apmm-to-acquire-pilot-freight-services",
+   "story": null
   }
  ],
  "moves": [
@@ -6388,7 +6463,9 @@
   "wernerenterpri": "2026-11-14",
   "averittexpress": "2026-11-15",
   "rlcarriers": "2026-11-15",
-  "pittohio": "2026-11-15"
+  "pittohio": "2026-11-15",
+  "aitworldwidelogistics": "2026-11-16",
+  "maersklogisticsnorthamer": "2026-11-16"
  },
  "facts": {
   "ups": {
