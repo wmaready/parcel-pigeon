@@ -328,6 +328,27 @@
  {
   "carrier": "USPS",
   "year": 2027,
+  "kind": "program",
+  "announced": null,
+  "effective": "2027-01-17",
+  "pct": null,
+  "headline": "USPS holiday prices end on Jan. 17, 2027",
+  "details": [
+   "Holiday prices end on Jan. 17, 2027, per story headline"
+  ],
+  "id": "usps-2027-program-2027-01-17",
+  "sources": [
+   "https://www.freightwaves.com/news/small-sellers-free-shipping-usps-fuel-surcharge",
+   "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/",
+   "https://www.cnbc.com/2026/11/12/usps-fuel-surcharge-package-deliveries.html"
+  ],
+  "story": "ab193e6648b0f",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "USPS",
+  "year": 2027,
   "kind": "surcharge",
   "announced": "2026-10-26",
   "effective": "2027-01-01",

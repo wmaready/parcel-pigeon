@@ -534,7 +534,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is expanding Prime Air while the FAA's Part 108 rule was unpublished as of Oct. 9 and local complaints now influence routes.",
+  "s": "Wing and Walmart now deliver by drone in six U.S. metros, while the FAA's Part 108 rule remained in White House review as of Nov. 12, per DroneXL.",
   "ids": [
    "g27",
    "g26",
@@ -547,7 +547,8 @@
    "ae04c4bdd5e4e",
    "a704b11d94f38",
    "a644b0ea66268",
-   "a8aa90b423c4a"
+   "a8aa90b423c4a",
+   "a7445a06ce8cb"
   ],
   "first": "2025-03-31",
   "last": "2026-11-15",
@@ -557,14 +558,19 @@
    "Regional"
   ],
   "cx": {
-   "sig": "18c8702df0bc",
+   "sig": "0c42e2034582",
    "v": 3,
    "beats": {
-    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation. Locations and timing weren't disclosed."
+    "g27": "Amazon's plan: new Prime Air sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
+    "g26": "Part 108 has sat in White House review since July 10; until it's final, BVLOS delivery needs waivers or Part 135 certificates.",
+    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
+    "a8aa90b423c4a": "Wing, Alphabet's drone arm, will invest $125M over two years in a Fort Worth plant, with nearly 20 U.S. markets planned.",
+    "a7445a06ce8cb": "Four days later, Wing began Walmart deliveries in Memphis from three stores: free in the apps, 2.75-pound limit. Amazon has no Memphis date."
    },
-   "now": "Part 108 was still unpublished as of Oct. 9, while Amazon, Walmart/Zipline and Wing all announced bigger drone plans."
+   "intro": "Wing, Walmart, Zipline and Amazon are scaling up drone delivery while the FAA's Part 108 rule waits in review.",
+   "now": "Part 108 was still in White House review as of Nov. 12, per DroneXL, while Wing and Walmart now deliver in six U.S. metros."
   },
-  "rv": "3e5c34f8551c",
+  "rv": "bcac9a551cad",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -645,16 +651,15 @@
   ],
   "rv": "e9d9a1aa3ea6",
   "cx": {
-   "sig": "d09997eadd52",
+   "sig": "b1fd6ab61bfc",
    "v": 3,
    "beats": {
-    "a831c709e5809": "Teamsters and Mayor Mamdani rallied at City Hall for a vote; the Teamsters say Amazon has spent over $8 million against the bill.",
-    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong pulled his co-sponsorship over small-business job losses; the Law Department is reviewing the bill.",
-    "aef4d017bab80": "FreightWaves reports the council will likely pass an amended bill by end of 2026, possibly without forcing Amazon to buy its DSPs.",
-    "ad0e619194837": "Amazon and the National Urban League reportedly could sue if Intro 518 passes as written, citing federal and state law."
+    "a3a4fa02bef84": "Reportedly, co-sponsor Phil Wong pulled his name, citing small-business job losses; the Law Department is reviewing the bill.",
+    "aef4d017bab80": "FreightWaves expects passage by end of 2026 in amended form; about 100 Amazon DSPs operate in the city.",
+    "ad0e619194837": "Amazon's coalition reportedly warned Menin it could sue over Intro 518 as written, citing conflicts with federal and state law."
    },
-   "intro": "NYC bill would license Amazon's last-mile facilities and ban subcontracted drivers, which could reshape local delivery.",
-   "now": "No council movement since an April hearing; Menin is reportedly open to amending the bill, and nothing changes for shippers yet."
+   "intro": "NYC's Delivery Protection Act would license Amazon's last-mile sites and change how it hires drivers.",
+   "now": "No council movement since April's hearing; Menin is reportedly open to amending. No change for shippers yet."
   },
   "co": "Amazon",
   "apart": [
@@ -724,11 +729,12 @@
    "60",
    "nr4f8ee6",
    "accf814d7d663",
-   "afb6fa67940a7"
+   "afb6fa67940a7",
+   "a8a156a22dc4f"
   ],
   "first": "2025-06-26",
-  "s": "MAK terminated the UniUni purchase agreement on Oct. 20, 2026, so the planned go-public deal will not proceed; Tacoma residents' delivery complaints have also gone to the Washington Attorney General's office.",
-  "last": "2026-10-20",
+  "s": "As of Nov. 16, 2026, UniUni is handing some peak packages to other carriers while it works to improve its financial outlook; the provided sources do not say how the MAK breach notice was resolved.",
+  "last": "2026-11-16",
   "c": [
    "Regional"
   ],
@@ -737,15 +743,19 @@
    "uniuni-mak-acquisition"
   ],
   "cx": {
-   "sig": "8f9f102564f1",
+   "sig": "dd6f5d756c51",
    "v": 3,
    "beats": {
-    "61": "Next came $30 million in equity plus a $55 million RBC credit facility, bringing total funding to $285 million."
+    "h521": "A $70 million all-equity Series D, co-led by Bessemer and Sinovation, to keep extending its North American network.",
+    "61": "$30 million in equity led by Rockets Capital plus a $55 million RBC credit facility lifted total funding to $285 million.",
+    "60": "UniUni agreed to a reverse takeover by MAK at about $1.0 billion, citing 1M+ parcels a day and expected $1B+ 2026 revenue.",
+    "nr4f8ee6": "MAK flagged UniUni's finances as a breach, with 15 business days to fix; UniUni announced a private-round term sheet.",
+    "a8a156a22dc4f": "UniUni will pass select peak packages to carriers like Gofo, citing last-mile efficiency as it works on its financial outlook."
    },
-   "intro": "UniUni raised money, then lined up a go-public deal that fell apart. Shippers using the carrier should know how that played out."
+   "intro": "UniUni raised funds and sought a roughly $1B listing, but the deal collapsed; shippers watch the carrier's stability."
   },
   "co": "UniUni",
-  "rv": "045c9e317693"
+  "rv": "d618d1bd1657"
  },
  "amazon-jfk8-nlrb": {
   "n": "Amazon JFK8 union case",
@@ -803,10 +813,11 @@
    "ad4e67498312c",
    "ab17dd3c5758e",
    "aa8c0e030c519",
-   "aa024cc171706"
+   "aa024cc171706",
+   "a8a156a22dc4f"
   ],
   "first": "2024-02-21",
-  "last": "2026-11-12",
+  "last": "2026-11-16",
   "c": [
    "Amazon",
    "DHL",
@@ -819,7 +830,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "db54795192e5",
+   "sig": "95b2f3fdc12b",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -852,10 +863,11 @@
     "ad4e67498312c": "Amazon and alternative carriers both gained volume in H1 2026; Amazon, the top U.S. deliverer, is leaning less on UPS.",
     "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending.",
     "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%.",
-    "aa024cc171706": "Capitol Forum's GOFO report calls it \"Chinese Controlled\" and alleges labor exploitation behind its growth; we lack the details."
+    "aa024cc171706": "Capitol Forum's GOFO report calls it \"Chinese Controlled\" and alleges labor exploitation behind its growth; we lack the details.",
+    "a8a156a22dc4f": "UniUni says it will hand select peak packages to carriers like Gofo; no rate or service changes for shippers were given."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "GOFO, Veho, OnTrac and other alternative carriers keep expanding; the report's specifics aren't in hand, so there's little more to say yet."
+   "now": "UniUni's go-public deal was terminated Oct. 20, and it's now handing some peak parcels to Gofo to help its financial outlook."
   }
  },
  "theme-ups-teamsters": {
@@ -993,11 +1005,12 @@
    "a0adb56a55334",
    "a106a88d004f4",
    "af027f4014177",
-   "af7ecf517c18f"
+   "af7ecf517c18f",
+   "aa27e61a622d0"
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "The 11% surcharge and 5.9% average base increase are filed and await Postal Regulatory Commission review ahead of a Jan. 17, 2027 start.",
+  "s": "USPS filed Nov. 12 for a 5.9% average increase and 11% fuel surcharge effective Jan. 17, 2027, pending PRC review.",
   "last": "2026-11-12",
   "c": [
    "USPS"
@@ -1008,16 +1021,16 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "bfee8f3a2ecc",
+  "rv": "230eab94b1f9",
   "cx": {
-   "sig": "079e50a1f579",
+   "sig": "c3c09f071937",
    "v": 3,
    "beats": {
-    "a0adb56a55334": "USPS announced a weekly fuel surcharge for January 2027, a percentage of base postage tied to diesel and jet fuel prices.",
-    "af027f4014177": "The Nov. 12 filing turns April's 8% bridge into a permanent 11% surcharge, plus a 5.9% average increase from Jan. 17 if approved."
+    "a0adb56a55334": "USPS said a domestic fuel surcharge starts in January 2027, updated weekly from fuel prices; April's 8% hike was the bridge.",
+    "aa27e61a622d0": "The Nov. 12 filing sets the surcharge at 11% from Jan. 17, 2027, replacing the 8% bridge, plus a 5.9% average increase."
    },
-   "intro": "USPS plans an 11% fuel surcharge plus a 5.9% average price rise on its main parcel services in January.",
-   "now": "Awaiting PRC review; the April 8% increase and 2026 peak rates both expire Jan. 17, when the new prices would start."
+   "intro": "USPS plans to swap its temporary 8% charge for an 11% fuel surcharge in January 2027, which matters for parcel costs.",
+   "now": "Pending PRC review. The filing doesn't say which charges the 11% applies to, and USPS will reevaluate it in July 2027."
   }
  },
  "canada-post-home-delivery-ending": {
@@ -1160,10 +1173,11 @@
   ],
   "first": "2026-11-09",
   "co": "eBay",
-  "s": "eBay is hiring to build a US pickup and drop-off network and plans a limited seller drop-off test in Q4, while Depop requires its own shipping for new US listings.",
+  "s": "eBay is hiring to build a US PUDO network and plans a limited seller drop-off test in several large metros in Q4 2026.",
   "last": "2026-11-09",
   "c": [
-   "Industry"
+   "Industry",
+   "Regional"
   ],
   "rv": "e33c1ca05a25"
  },
@@ -1188,8 +1202,8 @@
   ],
   "first": "2026-10-29",
   "co": "DoorDash",
-  "s": "The $17 billion deal is pending stockholder approval, and DoorDash has begun publishing grocer statements of support.",
-  "last": "2026-11-13",
+  "s": "The deal was announced Oct. 29, 2026 and remains pending, with closing expected between late 2027 and the first half of 2028.",
+  "last": "2026-11-16",
   "c": [
    "Industry"
   ],

@@ -1,5 +1,5 @@
 {
- "run": "2026-11-16T20:24Z",
+ "run": "2026-11-16T20:41Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -118,6 +118,15 @@
     "nrb01db6"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source USPS moved ahead of press coverage on \"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\"",
+   "ids": [
+    "ab193e6648b0f"
+   ],
+   "fixed": true
   },
   {
    "sev": "low",
@@ -274,26 +283,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
-   "ids": [
-    "a4a63ed69f438",
-    "a831c709e5809"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT says Amazon needs state approval for Westborough drones\"",
-   "ids": [
-    "a80e5b8dd1671",
-    "a8f4ad910c577"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
    "ids": [
     "a9f4ed4757f82",
@@ -377,16 +366,6 @@
    "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
    "ids": [
     "a0ef7c3f1b1ff",
-    "wfd6617806a78"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
-   "ids": [
-    "af027f4014177",
     "wfd6617806a78"
    ],
    "fixed": false
@@ -564,26 +543,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon, Teamsters dig in over NYC Delivery Protection Act, Intro. 518\" and \"Teamsters rally at City Hall for NYC Delivery Protection Act vote\"",
-   "ids": [
-    "a4a63ed69f438",
-    "a831c709e5809"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT says Amazon needs state approval for Westborough drones\"",
-   "ids": [
-    "a80e5b8dd1671",
-    "a8f4ad910c577"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
    "ids": [
     "a9f4ed4757f82",
@@ -667,16 +626,6 @@
    "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
    "ids": [
     "a0ef7c3f1b1ff",
-    "wfd6617806a78"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
-   "ids": [
-    "af027f4014177",
     "wfd6617806a78"
    ],
    "fixed": false

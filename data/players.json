@@ -3589,6 +3589,23 @@
    "pending": true,
    "added": "2026-11-16",
    "story": "ad0e619194837"
+  },
+  {
+   "id": "unisend",
+   "n": "Unisend",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Parcel delivery provider partnering with Vinted Go in Finland",
+   "al": [],
+   "src": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-10-28",
+   "story": "a87f6e01fb676"
   }
  ],
  "edges": [
@@ -6120,6 +6137,33 @@
    "t": "R+L Carriers is Day & Ross's U.S. LTL/TL partner since 2007",
    "url": "https://parcelsapp.com/en/carriers/sameday-day-ross",
    "story": null
+  },
+  {
+   "a": "uniuni",
+   "b": "gofo",
+   "k": "partner",
+   "y": "2026",
+   "t": "UniUni to hand off select peak season packages to carriers like Gofo",
+   "url": "https://www.supplychaindive.com/news/uniuni-to-tap-carriers-like-gofo-for-some-peak-season-deliveries/874556/",
+   "story": "a8a156a22dc4f"
+  },
+  {
+   "a": "ebay",
+   "b": "depop",
+   "k": "owns",
+   "y": "2026",
+   "t": "eBay owns Depop",
+   "url": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
+   "story": "a87f6e01fb676"
+  },
+  {
+   "a": "vinted",
+   "b": "unisend",
+   "k": "partner",
+   "y": "2026",
+   "t": "Vinted Go launches in Finland with Unisend",
+   "url": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
+   "story": "a87f6e01fb676"
   }
  ],
  "moves": [
