@@ -178,15 +178,14 @@
  "https://www.ups.com/us/en/service-alerts": {
   "checked": "2026-11-16",
   "pdfs": [],
-  "lines": 12,
+  "lines": 9,
   "told": [],
   "told2": [
    "a45a50180e11",
    "7ffdfd3e9969",
    "b356cf512c65"
   ],
-  "told_until": "2026-12-14",
-  "pend": "765b07096444"
+  "told_until": "2026-12-14"
  },
  "https://assets.ups.com/adobe/assets/urn:aaid:aem:bbf2553c-15e5-4b2d-abcd-b7445b13daa0/original/as/small-business-rate-guide-us-en.pdf": {
   "checked": "2026-11-16",
@@ -297,7 +296,8 @@
    "9d017864232b",
    "b30edb4a9e28"
   ],
-  "told_until": "2026-12-06"
+  "told_until": "2026-12-06",
+  "pend": "b30ea36b166f"
  },
  "https://about.usps.com/newsroom/national-releases/": {
   "checked": "2026-11-16",
