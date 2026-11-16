@@ -1,5 +1,5 @@
 {
- "run": "2026-11-16T09:38Z",
+ "run": "2026-11-16T12:54Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,69 +8,70 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 390,
- "doc_cursor": 264,
+ "link_cursor": 430,
+ "doc_cursor": 294,
  "checked_pairs": [
-  "6157952e9b11",
-  "60030262fcea",
-  "4df67f9b3718",
-  "2988f97e477e",
-  "0cae9f6a1079",
-  "558e73ee4967",
-  "f3a106e02077",
-  "4e8faef9252d",
-  "5f83fff4b0b8",
-  "5423312764d9",
-  "ab39dca4b258",
-  "0ee2e50bd13d",
-  "bd74f39e4a2a",
   "a625dd5720a9",
-  "70042e1b5ea7",
-  "5e124f1a493a",
-  "73dcfc31b988",
-  "5effb73bc21d",
-  "dbb89994655f",
-  "c3d4d65922ea",
-  "1bc66c00eda3",
-  "2f24e1d5d0e2",
-  "ed50bd5ade56",
-  "94d1ac334f4e",
-  "d46a0aebc57e",
-  "b54077ea2f7b",
-  "f84529cd7bc9",
-  "f7e5ad4ade89",
-  "d72a23005aba",
-  "c61435232c81",
-  "cc68d548ad73",
-  "61ba27c59dab",
-  "7e4a0a07ad2f",
-  "cf51efba6984",
-  "02094abee757",
-  "5b4926c2c24d",
-  "de313bc51fd7",
-  "c74456d2bddc",
-  "c1419d4e7cb6",
-  "454e4f8f6a6b",
-  "7679c499e09c",
-  "0ca410a667f8",
-  "6bef0a5868e5",
-  "bb9d125105c0",
-  "4d5dedc8cd29",
-  "21b6ce5b1d5c",
-  "b8d8ea16bc5f",
-  "4621e9e86574",
-  "d73b3089178a",
-  "87f9bbae47ee",
-  "6004808294c5",
   "457e37db5347",
-  "006e0976c74d",
-  "803f70b9b286",
-  "e57a450403da",
-  "f6cd68cb0017",
+  "5e124f1a493a",
+  "cf51efba6984",
+  "f7e5ad4ade89",
+  "c1419d4e7cb6",
+  "7e4a0a07ad2f",
+  "0ca410a667f8",
   "0b8aff140a01",
+  "5effb73bc21d",
+  "d46a0aebc57e",
+  "60030262fcea",
+  "0ee2e50bd13d",
+  "70042e1b5ea7",
+  "dbb89994655f",
+  "5b4926c2c24d",
+  "6004808294c5",
+  "4e8faef9252d",
+  "5423312764d9",
+  "454e4f8f6a6b",
+  "e57a450403da",
   "62cb3ae5df27",
+  "f84529cd7bc9",
+  "4df67f9b3718",
+  "21b6ce5b1d5c",
+  "4d5dedc8cd29",
+  "4621e9e86574",
   "14a3d7429698",
-  "2361691e9a1b"
+  "0cae9f6a1079",
+  "2f24e1d5d0e2",
+  "de313bc51fd7",
+  "803f70b9b286",
+  "73dcfc31b988",
+  "ed50bd5ade56",
+  "c3d4d65922ea",
+  "94d1ac334f4e",
+  "006e0976c74d",
+  "5f83fff4b0b8",
+  "bd74f39e4a2a",
+  "d73b3089178a",
+  "558e73ee4967",
+  "02094abee757",
+  "7679c499e09c",
+  "cc68d548ad73",
+  "b8d8ea16bc5f",
+  "b54077ea2f7b",
+  "c61435232c81",
+  "6bef0a5868e5",
+  "1bc66c00eda3",
+  "ab39dca4b258",
+  "d72a23005aba",
+  "f6cd68cb0017",
+  "2361691e9a1b",
+  "6157952e9b11",
+  "c74456d2bddc",
+  "f3a106e02077",
+  "87f9bbae47ee",
+  "8e54de96bdda",
+  "61ba27c59dab",
+  "2988f97e477e",
+  "bb9d125105c0"
  ],
  "issues": [
   {
@@ -286,26 +287,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
-   "ids": [
-    "a80e5b8dd1671",
-    "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon needs state approval for Westborough drones\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
-   "ids": [
-    "a8f4ad910c577",
-    "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
    "ids": [
     "a9f4ed4757f82",
@@ -386,6 +367,16 @@
   {
    "sev": "high",
    "type": "superseded",
+   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
+   "ids": [
+    "a0ef7c3f1b1ff",
+    "wfd6617806a78"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
    "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
    "ids": [
     "af027f4014177",
@@ -397,6 +388,48 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
    "ids": [],
    "fixed": false
   }
@@ -579,26 +612,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon has not applied for Westborough drone pad certificate\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
-   "ids": [
-    "a80e5b8dd1671",
-    "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"MassDOT says Amazon needs state approval for Westborough drones\" and \"MassDOT tells Amazon to get review before Westborough drone ops\"",
-   "ids": [
-    "a8f4ad910c577",
-    "ac198fadf6127"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
    "ids": [
     "a9f4ed4757f82",
@@ -679,6 +692,16 @@
   {
    "sev": "high",
    "type": "superseded",
+   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
+   "ids": [
+    "a0ef7c3f1b1ff",
+    "wfd6617806a78"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "superseded",
    "msg": "\"USPS files for 5.9% average shipping increase, 11% fuel surcharge\" may be out of date: newer story \"USPS posts proposed January 2027 price files and SKU price files\"",
    "ids": [
     "af027f4014177",
@@ -690,6 +713,48 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, Jul 2025 https://www.gls-us.com/getmedia/30f40973-bb7e-417f-a735-7fbfda5daa2d/Fuel-Surcharge-July-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): 2023 GLS priority rates https://www.gls-us.com/getmedia/c2e6ffaa-e711-4ecf-bf57-eac975aa296d/GLS-2023-Priority-Rates.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge matrix, effective Dec 15, 2025 https://www.gls-us.com/getmedia/e7066694-b29b-4609-82b5-d75a72e98774/Fuel-Surcharge-Dec-2025.pdf",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to a home or section page): GLS US 2024 peak season surcharge https://www.gls-us.com/peak-season-surcharge-2024 -> https://gls-group.com/US/en/home/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
    "ids": [],
    "fixed": false
   }

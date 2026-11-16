@@ -274,7 +274,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Peak surcharges from UPS, FedEx and USPS are in effect through the end of the holiday season, and small retailers report rising shipping costs.",
+  "s": "Carriers' peak surcharges and fuel surcharges are in effect, and trucking rates and diesel costs are adding to holiday shipping costs.",
   "ids": [
    "h416",
    "h418",
@@ -283,11 +283,10 @@
    "h525",
    "h527",
    "06",
-   "01",
-   "a663794cc9c55"
+   "01"
   ],
   "first": "2024-07-26",
-  "last": "2026-11-06",
+  "last": "2026-11-16",
   "c": [
    "Amazon",
    "FedEx",
@@ -296,22 +295,20 @@
    "UPS",
    "USPS"
   ],
-  "rv": "9a15926ec048",
+  "rv": "51da35db195e",
   "cx": {
-   "sig": "9a15926ec048",
+   "sig": "51da35db195e",
    "v": 3,
    "beats": {
-    "h416": "UPS posted its 2024 peak tables in July, adding a second demand fee for customers over 20,000 weekly packages.",
-    "h418": "FedEx followed in August with a similar two-tier setup, including $0.30–$0.55 on Ground and Home Delivery residential.",
-    "h419": "USPS proposed its own temporary increase for Oct. 6 to Jan. 19 on Priority Mail Express, Priority Mail and Ground Advantage.",
-    "h523": "FedEx's 2025 peak fees start Sept. 29, with residential demand at $0.40–$0.65 a package, up from $0.30–$0.55 in 2024.",
-    "h527": "UPS's fees start Sept. 28 and demand surcharges Oct. 26; high-volume customers pay up to $8.75, matching FedEx's top rate.",
-    "06": "USPS holiday prices began Oct. 4 on four products, averaging near 6% per trade press, through Jan. 16.",
-    "01": "Oversize peak fees have billed since Sep 26–28; per-package fees start Oct 24–26, then climb to $0.75–$0.80 in late November.",
-    "a663794cc9c55": "At $6.28 diesel, UPS's fuel surcharge is 29.5% and FedEx's 29%; an industry index sees Q4 ground pricing up 5.8%, express 13.8%."
+    "h416": "UPS posted its 2024 peak fees in July, early, with a second demand fee of $1.50–$8.25 for customers above 20,000 weekly packages.",
+    "h418": "FedEx followed in August with a similar two-tier setup, including new $0.30–$0.55 residential fees on Ground and Home Delivery.",
+    "h419": "USPS joined with a temporary increase for Oct. 6 to Jan. 19, including up to $5.50 more on commercial Ground Advantage in Zones 5–9.",
+    "h523": "FedEx's 2025 residential demand fee rose to $0.40–$0.65, and shippers above 20,000 weekly packages face $1.55–$8.75.",
+    "h525": "USPS filed 2025 holiday increases for Oct. 5 to Jan. 18, pending PRC review, with Parcel Select now on the list.",
+    "h527": "UPS set its 2025 peak fees starting Sept. 28, with demand surcharges of $0.40–$2.05 from Oct. 26 and up to $8.75 for big shippers.",
+    "01": "Oversize fees already bill at OnTrac, UPS and FedEx. Per-package fees start Oct 24 at OnTrac ($1.00), then UPS and FedEx at $0.50."
    },
-   "intro": "Carriers keep layering peak fees over the holidays, and shippers pay them on top of base rates and fuel charges.",
-   "now": "Per-package peak fees begin Oct. 24 to 26; UPS and Amazon rise to $0.75 from Nov. 22 and FedEx to $0.80 from Nov. 23."
+   "intro": "Carriers add peak surcharges every holiday season, and the fees have changed again for 2026. Here's how they got here."
   },
   "co": "USPS",
   "apart": [
@@ -634,28 +631,30 @@
    "a45eccf8e24d3",
    "a831c709e5809",
    "a3a4fa02bef84",
-   "aef4d017bab80"
+   "aef4d017bab80",
+   "ad0e619194837"
   ],
   "first": "2026-10-13",
-  "s": "The City Council is negotiating a revised bill that FreightWaves says will likely pass before the end of 2026.",
-  "last": "2026-11-13",
+  "s": "The bill has had no council movement since an April committee hearing, and Speaker Menin is reported to be open to amending it.",
+  "last": "2026-11-16",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "79b50e46adc8",
+  "rv": "e9d9a1aa3ea6",
   "cx": {
-   "sig": "41b95854e6e2",
+   "sig": "d09997eadd52",
    "v": 3,
    "beats": {
-    "a831c709e5809": "Teamsters and Mayor Mamdani pushed Speaker Menin for a vote, saying Amazon spent over $8 million against it.",
-    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong dropped co-sponsorship over small-business job losses; the Law Department is reviewing.",
-    "aef4d017bab80": "FreightWaves expects passage by end of 2026 in amended form; about 100 individually owned Amazon DSPs operate in the city."
+    "a831c709e5809": "Teamsters and Mayor Mamdani rallied at City Hall for a vote; the Teamsters say Amazon has spent over $8 million against the bill.",
+    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong pulled his co-sponsorship over small-business job losses; the Law Department is reviewing the bill.",
+    "aef4d017bab80": "FreightWaves reports the council will likely pass an amended bill by end of 2026, possibly without forcing Amazon to buy its DSPs.",
+    "ad0e619194837": "Amazon and the National Urban League reportedly could sue if Intro 518 passes as written, citing federal and state law."
    },
-   "intro": "A NYC bill aimed at Amazon's last-mile setup could change how delivery drivers are hired across the five boroughs.",
-   "now": "The Council is negotiating a revised bill, and FreightWaves says it will likely pass by end of 2026. Nothing has changed for shippers yet."
+   "intro": "NYC bill would license Amazon's last-mile facilities and ban subcontracted drivers, which could reshape local delivery.",
+   "now": "No council movement since an April hearing; Menin is reportedly open to amending the bill, and nothing changes for shippers yet."
   },
   "co": "Amazon",
   "apart": [
@@ -803,7 +802,8 @@
    "a069325035b44",
    "ad4e67498312c",
    "ab17dd3c5758e",
-   "aa8c0e030c519"
+   "aa8c0e030c519",
+   "aa024cc171706"
   ],
   "first": "2024-02-21",
   "last": "2026-11-12",
@@ -819,7 +819,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "8db0f8c00c0d",
+   "sig": "db54795192e5",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -851,10 +851,11 @@
     "a947eb28a3ca3": "GOFO announced on Nov. 4 that it's now a Shopify tracking partner, so its updates show in merchant order info and natively in the Shop app.",
     "ad4e67498312c": "Amazon and alternative carriers both gained volume in H1 2026; Amazon, the top U.S. deliverer, is leaning less on UPS.",
     "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending.",
-    "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%."
+    "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%.",
+    "aa024cc171706": "Capitol Forum's GOFO report calls it \"Chinese Controlled\" and alleges labor exploitation behind its growth; we lack the details."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "Carriers keep reshuffling: UPS has cut Amazon volume by over half, and UniUni's go-public deal was terminated on Oct. 20."
+   "now": "GOFO, Veho, OnTrac and other alternative carriers keep expanding; the report's specifics aren't in hand, so there's little more to say yet."
   }
  },
  "theme-ups-teamsters": {
@@ -996,7 +997,7 @@
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has filed its 5.9% average increase and 11% fuel surcharge with the Postal Regulatory Commission, with changes scheduled for Jan. 17, 2027.",
+  "s": "The 11% surcharge and 5.9% average base increase are filed and await Postal Regulatory Commission review ahead of a Jan. 17, 2027 start.",
   "last": "2026-11-12",
   "c": [
    "USPS"
@@ -1212,5 +1213,19 @@
    "tariff-refunds"
   ],
   "rv": "a33d775a7f43"
+ },
+ "gofo-us-expansion": {
+  "n": "GOFO US expansion",
+  "ids": [
+   "aa024cc171706"
+  ],
+  "first": "2026-11-12",
+  "co": "GOFO",
+  "s": "The Capitol Forum reported on Nov. 12, 2026 allegations of labor exploitation behind GOFO's rapid expansion.",
+  "last": "2026-11-12",
+  "c": [
+   "Regional"
+  ],
+  "rv": "6234d75de761"
  }
 }

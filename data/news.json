@@ -1,5 +1,107 @@
 [
  {
+  "id": "a48d8a47d9a93",
+  "date": "2026-11-16",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "Retailers hold less big-ticket holiday stock as freight costs rise",
+  "sum": "CNBC reported that retailers are carrying less inventory of big-ticket items this holiday season. Evercore ISI data show general trucking rates up more than 47% year over year in the week of Nov. 2 and fuel surcharges up 64%. ShipMatrix forecasts 2.4 billion packages in the 2026 holiday peak, up 4%.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "According to Evercore ISI data, general trucking rates and fuel surcharges are well above a year earlier. The report does not describe a new carrier price change.",
+  "why": "Higher trucking and fuel costs are raising freight costs into peak; ShipMatrix forecasts 2.4 billion holiday packages, up 4%.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-16T12:52:20Z",
+  "src": "CNBC",
+  "url": "https://www.cnbc.com/2026/11/16/holiday-big-ticket-inventory-shipping-costs.html",
+  "srcs": [
+   {
+    "src": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/16/holiday-big-ticket-inventory-shipping-costs.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "new": "Adds Evercore ISI data on trucking rates (up more than 47%) and fuel surcharges (up 64%), plus retailers cutting big-ticket inventory; no new carrier price change is announced.",
+  "syn": "CNBC reported that retailers are holding less inventory of big-screen TVs, grills and large appliances, citing higher freight, carrying and trucking costs. Evercore ISI data show general trucking rates up more than 47% year over year in the week of Nov. 2, and fuel surcharges up 64% as diesel hit record highs. Industry experts attribute part of the capacity squeeze to a federal crackdown on non-citizen and non-U.S.-based truck drivers. ShipMatrix forecasts 2.4 billion packages in the 2026 holiday peak, a 4% increase, which experts expect to push retailers toward more gig and drone delivery.",
+  "aff": [
+   {
+    "who": "Trucking customers",
+    "what": "General trucking rates up more than 47% year over year in the week of Nov. 2, per Evercore ISI."
+   },
+   {
+    "who": "Shippers paying fuel surcharges",
+    "what": "Fuel surcharge up 64% year over year, per Evercore ISI, with diesel at record highs."
+   },
+   {
+    "who": "Retailers",
+    "what": "Holding less inventory of big-ticket items; Coresight Research expects some of the lowest levels on record."
+   },
+   {
+    "who": "Last-mile delivery",
+    "what": "ShipMatrix forecasts 2.4 billion holiday packages, up 4%; experts expect more gig and drone use."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "ad0e619194837",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Amazon, National Urban League threaten suit over NYC Delivery Protection Act",
+  "sum": "The National Urban League and a business coalition led by Amazon said in a letter sent Monday to Council Speaker Julie Menin that they could sue if the New York City Council passes the Delivery Protection Act (Intro 518) in its current form. Attorney Derek Sells wrote that the bill conflicts with federal and state law, according to City & State.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "No rates or service have changed. Opponents say the bill, if passed, could raise delivery costs and slow package arrivals in New York City.",
+  "why": "The bill would require big delivery firms such as Amazon to hire last-mile workers directly in New York City, and opponents say it could raise costs and slow deliveries.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-16T12:50:32Z",
+  "src": "City & State New York",
+  "url": "https://www.cityandstateny.com/policy/2026/11/amazon-national-urban-league-threaten-sue-city-if-delivery-protection-act-passes/417239/?oref=csny-author-river",
+  "srcs": [
+   {
+    "src": "City & State New York",
+    "url": "https://www.cityandstateny.com/policy/2026/11/amazon-national-urban-league-threaten-sue-city-if-delivery-protection-act-passes/417239/?oref=csny-author-river"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "thread": "last-mile-facility-legislation",
+  "upd": 8,
+  "new": "Amazon, the National Urban League and a business coalition now threaten to sue if the council passes the bill as written, while Menin is reported open to dropping the proposed subcontracting ban; no rules have changed for shippers yet.",
+  "syn": "The National Urban League and a coalition of business groups led by Amazon threatened legal action if the New York City Council passes the Delivery Protection Act (Intro 518) as written. In a Monday letter to Speaker Julie Menin, attorney Derek Sells said the bill conflicts with federal and state law and raises questions about the city's authority. Supporters, including Mayor Zohran Mamdani and the Teamsters, say it would make big delivery companies responsible for last-mile workers. Opponents say it would raise delivery costs and slow deliveries.",
+  "aff": [
+   {
+    "who": "Amazon delivery contractors",
+    "what": "Opponents say the bill could wipe out dozens of independent contractors and eliminate thousands of jobs."
+   },
+   {
+    "who": "Delivery costs and times",
+    "what": "Opponents claim the measure would drive up delivery costs and slow the arrival of packages."
+   },
+   {
+    "who": "Last-mile warehouse operators",
+    "what": "The bill would require operators to obtain licenses from the Department of Consumer and Worker Protection."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-16",
+  "unconf": true
+ },
+ {
   "id": "a3050815c1e52",
   "date": "2026-11-15",
   "c": [
@@ -396,7 +498,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-15",
+  "tried": "2026-11-16",
   "unconf": true
  },
  {
@@ -810,6 +912,76 @@
   "exclusive": true
  },
  {
+  "id": "a0ef7c3f1b1ff",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review",
+  "sum": "The Postal Service filed its 2027 shipping prices with the Postal Regulatory Commission on Nov. 12, according to CNY News. The 8% transportation charge that began in April would become a permanent 11% fuel surcharge from Jan. 17, 2027, alongside an average 5.9% base price increase on four domestic services.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "From Jan. 17, 2027, pending Postal Regulatory Commission review, domestic Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select shippers would pay an 11% fuel surcharge in place of the 8% charge, on base prices that rise an average of 5.9%.",
+  "why": "Domestic Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select shippers face a higher fuel charge and higher base prices from Jan. 17.",
+  "score": 6,
+  "tie": "USPS said in October 2026 it would add a fuel surcharge in January 2027, and the Nov. 12 filing set the surcharge at 11%.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS 11% fuel surcharge replaces 8% charge on four services",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-01-17",
+    "w": "USPS base prices up avg 5.9% on four domestic services",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   }
+  ],
+  "added": "2026-11-16T12:50:54Z",
+  "src": "CNY News",
+  "url": "https://cnynews.com/ixp/498/p/usps-fuel-surcharge-2027-new-york/",
+  "srcs": [
+   {
+    "src": "CNY News",
+    "url": "https://cnynews.com/ixp/498/p/usps-fuel-surcharge-2027-new-york/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "new": "CNY News adds that the 11% replaces the 8% charge, that international rates rise an average of 7.9% without the surcharge, that USPS cited a $225 million rise in transportation costs and will revisit the 11% in July 2027, and that the October holiday prices run until Jan. 17.",
+  "syn": "CNY News reports that the Postal Service filed its 2027 shipping prices with the Postal Regulatory Commission on Nov. 12. The 8% transportation charge in place since April would become a permanent fuel surcharge of 11%, replacing the 8% rather than adding to it, from Jan. 17, 2027. Base prices for Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select would rise an average of 5.9%, and international rates an average of 7.9%. The Postal Service said higher fuel prices raised its transportation costs by $225 million in the 12 months ending Sept. 30.",
+  "aff": [
+   {
+    "who": "Priority Mail, Express, Ground Advantage and Parcel Select s",
+    "what": "Base prices up an average of 5.9% and fuel surcharge up from 8% to 11%, from Jan. 17, 2027, pending PRC review."
+   },
+   {
+    "who": "International shippers",
+    "what": "Rates rise an average of 7.9%; the fuel surcharge does not apply to international packages for now."
+   },
+   {
+    "who": "Holiday shipping prices",
+    "what": "Temporary prices that started in October remain in effect until Jan. 17."
+   },
+   {
+    "who": "Forever stamp users",
+    "what": "The filing covers shipping services only; the 82-cent Forever stamp is not going up in January."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-16",
+  "unconf": true
+ },
+ {
   "id": "a2f060c358424",
   "date": "2026-11-12",
   "c": [
@@ -850,7 +1022,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-15",
+  "tried": "2026-11-16",
   "unconf": true
  },
  {
@@ -1063,6 +1235,45 @@
     "what": "Walmart plans nationwide rapid air delivery with Zipline over the next several years."
    }
   ]
+ },
+ {
+  "id": "aa024cc171706",
+  "date": "2026-11-12",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Labor",
+  "kind": "Analysis",
+  "title": "Capitol Forum report alleges labor exploitation behind GOFO's expansion",
+  "sum": "The Capitol Forum published a report on GOFO, a last-mile deliverer it describes as \"Chinese Controlled.\" According to the headline, the company's rapid expansion relies on alleged labor exploitation. The available text of the article does not include the report's details.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service is stated in the available text.",
+  "why": "The report puts allegations about labor practices at GOFO, a fast-growing last-mile delivery company, in front of parcel shippers and the wider market.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-16T12:51:04Z",
+  "src": "The Capitol Forum",
+  "url": "https://thecapitolforum.com/gofo-chinese-controlled-last-mile-deliverers-rapid-expansion-relies-on-alleged-labor-exploitation/",
+  "srcs": [
+   {
+    "src": "The Capitol Forum",
+    "url": "https://thecapitolforum.com/gofo-chinese-controlled-last-mile-deliverers-rapid-expansion-relies-on-alleged-labor-exploitation/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "thread": "gofo-us-expansion",
+  "syn": "The Capitol Forum published a report on GOFO, a last-mile deliverer it describes as \"Chinese Controlled.\" The headline says the company's rapid expansion relies on alleged labor exploitation. The available text contains only the headline and website consent notices, so the allegations, figures and any response from GOFO are not stated.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service is stated in the available text."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "aa20fce642be2",
@@ -5745,23 +5956,27 @@
   ],
   "cat": "Technology & tools",
   "kind": "News",
-  "title": "Amazon equips 5K delivery drivers with smart glasses",
-  "sum": "Amazon is deploying smart glasses to delivery drivers, with SupplyChainBrain putting the figure at 5K drivers, according to reports on Nov. 4-5, 2026. The glasses show navigation and drop-off instructions in the driver's field of view. Amazon said the glasses are optional for all drivers.",
+  "title": "Amazon plans 5,000 smart glasses for delivery drivers this year",
+  "sum": "Amazon said it plans to deploy 5,000 pairs of smart delivery glasses this year and expand to more than 20,000 by the end of 2027, according to WWD. The glasses show navigation and delivery instructions in the driver's field of view. Supply Chain Dive reported the deployment on Nov. 4, 2026.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to shipper rates, fees or service dates is reported. The glasses are tools for Amazon's own delivery drivers.",
-  "why": "Amazon's last-mile tech rollout reaches thousands of drivers; a Loadstar comment cites more than 20,000 by the end of 2027.",
+  "plain": "No change to rates or service for shippers. The glasses are a driver tool in Amazon's own delivery operation.",
+  "why": "Amazon is scaling a driver tool across its delivery network, with 300+ delivery service partners already using it; the data collected has raised privacy questions.",
   "score": 5,
-  "tie": "A Loadstar comment piece said Amazon detailed its expansion plans for the delivery glasses in September.",
+  "tie": "Amazon first unveiled the glasses to the public in October 2025, according to WWD.",
   "act": null,
   "dates": [],
-  "added": "2026-11-15T17:17:51Z",
+  "added": "2026-11-16T12:51:45Z",
   "src": "Supply Chain Dive",
   "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/",
   "srcs": [
    {
     "src": "Supply Chain Dive",
     "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/"
+   },
+   {
+    "src": "WWD",
+    "url": "https://wwd.com/sourcing-journal/logistics/amazon-smart-glasses-delivery-riders-privacy-1239404883/"
    },
    {
     "src": "SupplyChainBrain",
@@ -5777,19 +5992,20 @@
    }
   ],
   "auto": true,
-  "syn": "Amazon is deploying smart glasses to its delivery drivers, Supply Chain Dive reported on Nov. 4, 2026, and SupplyChainBrain put the number at 5K drivers. The glasses give navigation and drop-off instructions within the driver's field of view, as part of Amazon's effort to boost delivery efficiency. Fast Company reported the eyewear can show gate codes, preferred drop-off locations and pet warnings as drivers approach homes. A Loadstar comment piece, which is the author's view, said Amazon plans more than 20,000 camera-equipped glasses by the end of 2027 and argued the data collected is the competitive advantage.",
+  "ann": "2026-11-04",
+  "syn": "Amazon said it plans to deploy 5,000 pairs of smart delivery glasses this year and more than 20,000 by the end of 2027, WWD reported. The glasses show navigation, delivery instructions and package counts in the driver's field of view, replacing some tasks done on a handheld device. More than 300 delivery service partners and hundreds of Amazon drivers have used them. Amazon said wearing them is optional and that each pair has a privacy switch that turns off the camera.",
   "aff": [
    {
     "who": "Amazon delivery drivers",
-    "what": "Glasses show navigation and drop-off instructions in the driver's view; Amazon said they are optional for all drivers."
+    "what": "5,000 pairs to be deployed this year, with more than 20,000 targeted by the end of 2027."
    },
    {
-    "who": "Residential deliveries",
-    "what": "Glasses can display gate codes, preferred drop-off locations and warnings about pets, per Fast Company."
+    "who": "Delivery service partners",
+    "what": "More than 300 partners have already used the glasses, per Amazon."
    },
    {
-    "who": "Image data",
-    "what": "Amazon said no third parties will ever process or review images from the glasses."
+    "who": "Data and privacy",
+    "what": "Camera captures stills only; faces and license plates are blurred and images deleted after a short period, Amazon said."
    }
   ]
  },
@@ -10996,8 +11212,6 @@
    }
   ],
   "auto": true,
-  "thread": "peak-surcharges",
-  "upd": 3,
   "new": "An industry analysis now puts Q4 2026 ground pricing 5.8% and express 13.8% above a year earlier, and shows fuel surcharges of 29.5% at UPS and 29% at FedEx, adding to the peak fees already covered.",
   "syn": "An industry freight index forecasts fourth-quarter ground parcel pricing 5.8 per cent above the same period last year and express pricing 13.8 per cent above the fourth quarter of 2025. The index draws on anonymized data from 1,800 shippers. At the Energy Information Administration's average diesel price of $6.28 per gallon, up 65 per cent since February 28, company tables put UPS's fuel surcharge at 29.5 per cent and FedEx's at 29 per cent. An analyst said diesel accounts for just under 30 per cent of the surcharge cost, with the rest driven by changes in how carriers calculate it. UPS said its pricing reflects its premium service and infrastructure investments.",
   "aff": [
@@ -12881,218 +13095,5 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "abf75579538e6",
-  "date": "2026-10-22",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Canada Post outlines modernization plan, weekend parcel delivery",
-  "sum": "Canada Post outlined its modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. The plan covers weekend parcel delivery, a retail network review focused largely on urban areas, and conversion of nearly four million addresses to community mailboxes. The Crown corporation reported a $482 million loss before tax for the first six months of 2026.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Canada Post is introducing weekend parcel delivery and expanding options to send, receive and return packages. Nearly four million door-to-door addresses are to move to community mailboxes over the coming years.",
-  "why": "Canada Post is adding weekend parcel delivery and small-business shipping support while converting nearly four million addresses to community mailboxes.",
-  "score": 4,
-  "tie": "The report repeats the Oct. 22 strategy details covered in October 2026 and the GTA conversion schedule reported in November 2026.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-09T11:17:53Z",
-  "src": "DiscoverHumboldt",
-  "url": "https://discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services",
-  "srcs": [
-   {
-    "src": "DiscoverHumboldt",
-    "url": "https://discoverhumboldt.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services"
-   },
-   {
-    "src": "WestCentralOnline",
-    "url": "https://www.westcentralonline.com/articles/canada-post-outlines-major-changes-while-pledging-to-protect-rural-postal-services"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-22",
-  "new": "A further report adds that Canada Post's second-quarter parcel revenue rose 20.7 per cent and operating costs fell $119 million, and that the first conversions began in Sept-Îles and Winnipeg the week of Oct. 19; weekend parcel delivery is described as being introduced.",
-  "syn": "Canada Post set out a modernization strategy at its annual public meeting on Oct. 22, according to DiscoverHumboldt. It includes weekend parcel delivery, more parcel pickup and drop-off locations through alternative retail models, and shipping discounts, marketing tools and e-commerce solutions for small businesses. The corporation recorded a $482 million loss before tax in the first six months of 2026, while second-quarter parcel revenue rose 20.7 per cent from a year earlier and operating costs fell $119 million.",
-  "aff": [
-   {
-    "who": "Parcel shippers",
-    "what": "Weekend parcel delivery is being introduced, with more options to send, receive and return packages."
-   },
-   {
-    "who": "Small businesses",
-    "what": "Canada Post is expanding shipping options, competitive pricing and business services, including shipping discounts and e-commerce tools."
-   },
-   {
-    "who": "Door-to-door addresses",
-    "what": "Nearly four million addresses are to convert to community mailboxes; first conversions began in Sept-Îles and Winnipeg the week of Oct. 19."
-   },
-   {
-    "who": "Post office customers",
-    "what": "Location reviews start largely in urban areas, with rural, remote and Indigenous services to be protected."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "ac198fadf6127",
-  "date": "2026-10-22",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "MassDOT tells Amazon to get review before Westborough drone ops",
-  "sum": "The Massachusetts Department of Transportation sent Amazon a letter on Thursday saying its Aeronautics Division must complete a suitability review before any drone operations begin in Westborough, according to The Boston Globe. Amazon had originally planned to start in October from a parking lot at its Westborough Fulfillment Center, with deliveries of packages under 5 pounds within a 7.5-mile radius.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for current shippers. Amazon's planned Westborough drone launch cannot begin until the state completes its review, and the company had originally targeted October.",
-  "why": "The state review could delay one Amazon Prime Air launch site, where drones would serve a 7.5-mile radius for packages under 5 pounds.",
-  "score": 5,
-  "tie": "Amazon said in August 2026 that Prime Air would start drone deliveries by the end of 2026 from sites near Chicago, Atlanta, Cleveland and Syracuse, N.Y.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T16:56:28Z",
-  "src": "The Boston Globe",
-  "url": "https://www.bostonglobe.com/2026/10/22/business/massdot-demands-public-safety-review-before-amazon-drone-delivery-takes-off-westborough/",
-  "srcs": [
-   {
-    "src": "The Boston Globe",
-    "url": "https://www.bostonglobe.com/2026/10/22/business/massdot-demands-public-safety-review-before-amazon-drone-delivery-takes-off-westborough/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-22",
-  "new": "MassDOT told Amazon it must complete an Aeronautics Division suitability review before operating in Westborough, which was originally planned to start in October, adding a state-level approval step for that site only.",
-  "exclusive": true
- },
- {
-  "id": "a312b45efa358",
-  "date": "2026-10-21",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Deposco: Q3 carrier rates fall 3.3% per package, operator costs fall 0.6%",
-  "sum": "Deposco published its Q3 2026 Commerce Signal report on Oct. 21, saying carrier rates fell 3.3% per package from Q2 while what operators paid declined 0.6%. The company said heavier packages, faster services and more residential deliveries absorbed most of the rate relief.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Deposco says shippers' actual per-package spend fell far less than carrier rates in Q3 because of package mix. The report says peak surcharges begin Oct. 25 and expects per-package costs to rise in peak season.",
-  "why": "Deposco's data suggests lower carrier rates did not carry through to what operators paid, and the report expects peak per-package costs to exceed Q3.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T13:09:00Z",
-  "src": "GlobeNewswire",
-  "url": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html",
-  "srcs": [
-   {
-    "src": "GlobeNewswire",
-    "url": "https://www.globenewswire.com/news-release/2026/10/21/3385611/0/en/deposco-releases-q3-commerce-signal-report-shipping-rates-fall-but-operators-see-little-relief.html"
-   }
-  ],
-  "auto": true,
-  "exclusive": true
- },
- {
-  "id": "a40674eddf824",
-  "date": "2026-10-21",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Pakistan arrests man over $126M counterfeit USPS label scheme",
-  "sum": "Pakistan's cybercrime agency arrested Faheem Akram, 33, of Khanewal, accused of running LabelsBank.com, which allegedly sold counterfeit USPS shipping labels to US customers since 2023. US authorities said a Florida federal grand jury indicted him last month and that the scheme caused about $126 million in losses to USPS.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The case concerns counterfeit postage sold to US customers, and the website has been shut down.",
-  "why": "The case involves more than five million counterfeit labels and about $126 million in reported USPS losses, with over 5,200 buyers identified.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T10:55:12Z",
-  "src": "SSBCrack",
-  "url": "https://news.ssbcrack.com/pakistan-man-arrested-for-126-million-counterfeit-stamp-operation-targeting-us-postal-service/",
-  "srcs": [
-   {
-    "src": "SSBCrack",
-    "url": "https://news.ssbcrack.com/pakistan-man-arrested-for-126-million-counterfeit-stamp-operation-targeting-us-postal-service/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true,
-  "tried": "2026-10-31",
-  "unconf": true
- },
- {
-  "id": "a42293aae6d92",
-  "date": "2026-10-21",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Mass. lawmakers seek drone delivery moratorium over Amazon plan",
-  "sum": "Sixteen Massachusetts legislators sent a letter to Gov. Maura Healey, Lt. Gov. Kim Driscoll and Attorney General Andrea Joy Campbell asking for a task force on commercial delivery drone rules. They also asked for a moratorium on processing commercial drone delivery operator certificates until a review is done. The letter responds to Amazon Prime Air's proposed expansion centered on Westborough, according to the Franklin Observer.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service yet. Amazon's proposed drone delivery from Westborough still faces local zoning review, and the lawmakers' requests are not binding on the state.",
-  "why": "The request targets state oversight of drone takeoff and landing sites, which could affect Amazon's planned first New England drone hub in Westborough.",
-  "score": 4,
-  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns by the end of 2026.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-21T10:55:26Z",
-  "src": "Franklin Observer",
-  "url": "https://franklinobserver.town.news/g/franklin-town-ma/n/393899/westborough-amazon-drone-buzz-reaches-governors-ear",
-  "srcs": [
-   {
-    "src": "Franklin Observer",
-    "url": "https://franklinobserver.town.news/g/franklin-town-ma/n/393899/westborough-amazon-drone-buzz-reaches-governors-ear"
-   }
-  ],
-  "auto": true,
-  "new": "State legislators in Massachusetts asked the governor for a task force and a moratorium on drone operator certificates, and Amazon's Westborough site awaits a Zoning Board of Appeals review, so a planned New England launch may be delayed.",
-  "exclusive": true
- },
- {
-  "id": "a4d34002e71df",
-  "date": "2026-10-21",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "News",
-  "title": "Kohl's adds Uber Eats, DoorDash and Instacart same-day delivery for holidays",
-  "sum": "Kohl's said at an Oct. 21 media briefing that it is live with Instacart and DoorDash and will launch with Uber Eats in November. Chief customer officer Arianne Parisi said about 80% of these partners' same-day customers are new to Kohl's.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to carrier rates or service. Kohl's customers get same-day delivery through DoorDash and Instacart now, and through Uber Eats from November.",
-  "why": "A large retailer is adding three same-day delivery apps for peak; Kohl's says over 50% of holiday digital orders are touched by a store.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T10:56:16Z",
-  "src": "Modern Retail",
-  "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
-  "srcs": [
-   {
-    "src": "Modern Retail",
-    "url": "https://www.modernretail.co/marketing/kohls-leans-into-clearer-pricing-gift-bundles-and-uber-eats-for-the-holidays/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-21",
-  "edge": true
  }
 ]

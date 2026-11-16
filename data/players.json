@@ -3515,33 +3515,80 @@
   },
   {
    "id": "mullengroup",
-   "n": "Mullen Group",
-   "s": "Large Canadian LTL, parcel and logistics operator",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "n": "Mullen Group Ltd.",
+   "s": "Mullen Group is a TSX-listed Canadian logistics holding company. Its independently operated businesses run less-than-truckload (including small packages and parcels), truckload, warehousing and fulfillment, customs brokerage and U.S. third-party logistics.",
+   "al": [
+    "MTL",
+    "Mullen Group"
+   ],
+   "src": "https://www.mullen-group.com/about-us/corporate-profile/",
    "auto": true,
    "added": "2026-11-15",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "public",
+   "tk": "TSX: MTL",
+   "hq": "Okotoks, AB, Canada",
+   "yr": "1949",
+   "site": "mullen-group.com",
+   "realm": "regional",
+   "geo": [
+    -113.975,
+    50.725
+   ],
+   "srcs": [
+    "https://www.mullen-group.com/about-us/corporate-profile/",
+    "https://stockanalysis.com/quote/tsx/MTL/company/",
+    "https://www.fool.ca/company/tsx-mtl-mullen-group/362035/"
+   ],
+   "enriched": "2026-11-16",
+   "pending": false
   },
   {
    "id": "dayross",
    "n": "Day & Ross",
-   "s": "Major Canadian LTL and truckload carrier (McLeod/TFI)",
-   "al": [],
-   "src": "https://www.ttnews.com/logistics/rankings/2026",
+   "s": "Day & Ross is a McCain Foods-owned carrier that runs LTL, truckload, dedicated fleet, temperature-controlled and home-delivery services across Canada and the U.S., including cross-border LTL.",
+   "al": [
+    "Day & Ross Freight",
+    "Day & Ross Inc.",
+    "Day & Ross Transportation Group"
+   ],
+   "src": "https://dayross.com/services",
    "auto": true,
    "added": "2026-11-15",
-   "from": "ranking"
+   "from": "ranking",
+   "own": "sub",
+   "hq": "Hartland, NB, Canada",
+   "yr": "1950",
+   "site": "dayross.com",
+   "realm": "national",
+   "geo": [
+    -67.532,
+    46.3
+   ],
+   "srcs": [
+    "https://dayross.com/services",
+    "https://www.prnewswire.com/news-releases/day--ross-doubles-down-on-growth-strategy-with-new-brand--website-300995541.html",
+    "https://www.freightwaves.com/news/trucking-celadon-sells-subsidiaries-to-day-and-ross"
+   ],
+   "enriched": "2026-11-16",
+   "pending": false
   },
   {
-   "id": "centraltransport",
-   "n": "Central Transport",
-   "s": "Large LTL carrier and logistics provider",
+   "id": "teamsterslocal",
+   "n": "Teamsters Local 804",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Union supporting the Delivery Protection Act",
    "al": [],
-   "src": "https://www.ttnews.com/top100/for-hire/2026",
+   "src": "https://www.cityandstateny.com/policy/2026/11/amazon-national-urban-league-threaten-sue-city-if-delivery-protection-act-passes/417239/?oref=csny-author-river",
    "auto": true,
-   "added": "2026-11-15",
-   "from": "ranking"
+   "pending": true,
+   "added": "2026-11-16",
+   "story": "ad0e619194837"
   }
  ],
  "edges": [
@@ -6064,6 +6111,15 @@
    "t": "Maersk acquired Visible SCM (e-commerce warehousing and parcel distribution)",
    "url": "https://www.maersk.com/news/articles/2022/02/09/apmm-to-acquire-pilot-freight-services",
    "story": null
+  },
+  {
+   "a": "rlcarriers",
+   "b": "dayross",
+   "k": "partner",
+   "y": "2007",
+   "t": "R+L Carriers is Day & Ross's U.S. LTL/TL partner since 2007",
+   "url": "https://parcelsapp.com/en/carriers/sameday-day-ross",
+   "story": null
   }
  ],
  "moves": [
@@ -6465,7 +6521,9 @@
   "rlcarriers": "2026-11-15",
   "pittohio": "2026-11-15",
   "aitworldwidelogistics": "2026-11-16",
-  "maersklogisticsnorthamer": "2026-11-16"
+  "maersklogisticsnorthamer": "2026-11-16",
+  "mullengroup": "2026-11-16",
+  "dayross": "2026-11-16"
  },
  "facts": {
   "ups": {
