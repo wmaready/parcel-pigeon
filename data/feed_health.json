@@ -65,10 +65,10 @@
  },
  "Wire: Business Wire": {
   "direct": false,
-  "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Abusinesswire.com%20UPS%20OR%20F",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-11-17",
-  "entries": 45,
+  "entries": 46,
   "last_ok": "2026-11-17"
  },
  "Wire: GlobeNewswire": {
@@ -81,10 +81,10 @@
  },
  "Newsroom: UPS": {
   "direct": false,
-  "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Aabout.ups.com%20when%3A7d&hl=en",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-11-17",
-  "entries": 9,
+  "entries": 8,
   "last_ok": "2026-11-17"
  },
  "Newsroom: FedEx": {
@@ -98,15 +98,15 @@
  "Newsroom: USPS": {
   "direct": false,
   "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Aabout.usps.com%20when%3A7d&hl=e",
-  "fails": 3,
+  "fails": 4,
   "last_try": "2026-11-17",
   "entries": 15,
   "last_ok": "2026-11-16"
  },
  "Newsroom: Amazon": {
   "direct": false,
-  "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Aaboutamazon.com%20delivery%20OR",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-11-17",
   "entries": 20,
   "last_ok": "2026-11-17"
