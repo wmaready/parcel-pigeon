@@ -137,17 +137,14 @@
    "USPS"
   ],
   "cx": {
-   "sig": "8a4df98750b9",
+   "sig": "9efae7b96e8a",
    "v": 3,
    "beats": {
-    "h420": "Sept. 2024: a proposal to curb the $800 exemption for tariffed goods, as shipments grew from about 140 million to over 1 billion a year.",
-    "h504": "USPS stopped taking China and Hong Kong parcels Feb. 4, then reversed a day later to work with CBP on collecting duties.",
-    "h513": "May 2, 2025: the exemption ends for China and Hong Kong; postal parcels face 120% of value or $100 per item, rising to $200 on June 1.",
-    "h526": "Aug. 29: it ends for all countries, and the UPU says at least 25 countries halted postal shipments to the U.S.",
-    "a2f683da86bf8": "CBP pushed a postal formal-entry date from Oct. 22, 2026 to Jan. 20, 2027; it also proposed earlier filing deadlines Oct. 8."
+    "h504": "USPS said it would stop taking parcels from China and Hong Kong, then reversed a day later to work with CBP on collecting the new duties.",
+    "h513": "De minimis ended for China and Hong Kong on May 2; postal shipments faced 120% of value or $100 per item, rising to $200 on June 1.",
+    "h526": "The end went global on Aug. 29; the UPU said at least 25 countries halted postal shipments to the U.S."
    },
-   "intro": "How duty-free $800 imports ended, first for China and then for everyone, and what that means for shippers.",
-   "now": "De minimis stays suspended for all countries; the formal-entry compliance date for certain postal goods is now Jan. 20, 2027."
+   "intro": "The $800 duty-free de minimis exemption is gone for every country, so low-value parcels now face duties and new entry rules."
   },
   "was": [
    "cbp-low-value-import-filing"
@@ -534,7 +531,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Wing and Walmart now deliver by drone in six U.S. metros, while the FAA's Part 108 rule remained in White House review as of Nov. 12, per DroneXL.",
+  "s": "Wing and others are expanding drone delivery under existing FAA certificates and waivers while the Part 108 rule remained unpublished as of the last coverage.",
   "ids": [
    "g27",
    "g26",
@@ -548,27 +545,31 @@
    "a704b11d94f38",
    "a644b0ea66268",
    "a8aa90b423c4a",
-   "a7445a06ce8cb"
+   "a7445a06ce8cb",
+   "a98002f396fb3",
+   "adb6ff1714824"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-15",
+  "last": "2026-11-17",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "0c42e2034582",
+   "sig": "8812ca86ff94",
    "v": 3,
    "beats": {
-    "g27": "Amazon's plan: new Prime Air sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
-    "g26": "Part 108 has sat in White House review since July 10; until it's final, BVLOS delivery needs waivers or Part 135 certificates.",
-    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "a8aa90b423c4a": "Wing, Alphabet's drone arm, will invest $125M over two years in a Fort Worth plant, with nearly 20 U.S. markets planned.",
-    "a7445a06ce8cb": "Four days later, Wing began Walmart deliveries in Memphis from three stores: free in the apps, 2.75-pound limit. Amazon has no Memphis date."
+    "g27": "Amazon aims for nearly 500 towns and 30M people, up from 11 U.S. locations; $2.99 Prime fee, waived on $50+ orders.",
+    "g26": "Part 108 went to White House review July 10 after a missed Feb. 1 deadline; for now, BVLOS needs waivers or Part 135.",
+    "a644b0ea66268": "Walmart adds 300 Zipline sites; separately, Zipline raised $1.5B at a $21.5B valuation. Locations and timing not disclosed.",
+    "a8aa90b423c4a": "Wing plans $125M over two years, including a Fort Worth plant for tens of thousands of aircraft a year, and nearly 20 U.S. markets.",
+    "a7445a06ce8cb": "Wing began Walmart deliveries in Memphis Nov. 10 from three stores, free in the apps, four days after its Fort Worth plant news.",
+    "a98002f396fb3": "Bondurant council unanimously approved Amazon's Prime Air hub Nov. 16; service could start as early as mid-January.",
+    "adb6ff1714824": "Ponchatoula is Louisiana's first Walmart drone store, covering a six-mile radius; Wing lists New Orleans as a future market."
    },
-   "intro": "Wing, Walmart, Zipline and Amazon are scaling up drone delivery while the FAA's Part 108 rule waits in review.",
-   "now": "Part 108 was still in White House review as of Nov. 12, per DroneXL, while Wing and Walmart now deliver in six U.S. metros."
+   "intro": "Drone delivery is scaling fast, but the FAA's Part 108 rule isn't final, so growth runs on waivers and certificates.",
+   "now": "Part 108 was still unpublished as of Oct. 9, so expansion continues under existing waivers and certificates."
   },
   "rv": "bcac9a551cad",
   "co": "Amazon",
@@ -786,6 +787,7 @@
    "rv5-fedex-freight-spin-done",
    "a66617050d4e9",
    "afb6fa67940a7",
+   "ups-origin-zip-surcharge",
    "h404",
    "h417",
    "h501",
@@ -804,7 +806,6 @@
    "nrf79508",
    "54",
    "52",
-   "ups-origin-zip-surcharge",
    "a9077d9364cd5",
    "a089340bc097e",
    "a4f6ca9e3591e",
@@ -814,7 +815,8 @@
    "ab17dd3c5758e",
    "aa8c0e030c519",
    "aa024cc171706",
-   "a8a156a22dc4f"
+   "a8a156a22dc4f",
+   "a55ff8e77e661"
   ],
   "first": "2024-02-21",
   "last": "2026-11-16",
@@ -830,7 +832,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "95b2f3fdc12b",
+   "sig": "858d13be34f1",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -888,10 +890,11 @@
    "a57a06c26359c",
    "aa1bd42ea784a",
    "ae889f02f359e",
-   "ae2d14bb375b8"
+   "ae2d14bb375b8",
+   "a3b765bce7e5f"
   ],
   "first": "2024-03-26",
-  "last": "2026-11-12",
+  "last": "2026-11-16",
   "c": [
    "Amazon",
    "FedEx",
@@ -900,7 +903,7 @@
   ],
   "theme": true,
   "cx": {
-   "sig": "e41881b766db",
+   "sig": "0b26c40d9ce3",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -1005,12 +1008,11 @@
    "a0adb56a55334",
    "a106a88d004f4",
    "af027f4014177",
-   "af7ecf517c18f",
-   "aa27e61a622d0"
+   "af7ecf517c18f"
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS filed Nov. 12 for a 5.9% average increase and 11% fuel surcharge effective Jan. 17, 2027, pending PRC review.",
+  "s": "USPS has filed with the Postal Regulatory Commission for a 5.9% average increase and a permanent 11% fuel surcharge, scheduled for Jan. 17, 2027.",
   "last": "2026-11-12",
   "c": [
    "USPS"
@@ -1021,7 +1023,7 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "230eab94b1f9",
+  "rv": "bfee8f3a2ecc",
   "cx": {
    "sig": "c3c09f071937",
    "v": 3,
@@ -1147,14 +1149,15 @@
   "rv": "37e9a1ee53e9"
  },
  "amazon-teamsters-organizing": {
-  "n": "Amazon–Teamsters organizing",
+  "n": "Amazon–Teamsters driver organizing",
   "ids": [
-   "ae889f02f359e"
+   "ae889f02f359e",
+   "a3b765bce7e5f"
   ],
   "first": "2026-11-05",
   "co": "Amazon",
-  "s": "The Teamsters claim to have organized TOM drivers at three Amazon sites, including OIL9 in Indiana, while Amazon denies any certified bargaining unit.",
-  "last": "2026-11-05",
+  "s": "The Teamsters are escalating pressure on Amazon, now with a New York rally and a push for a city ordinance banning the DSP model.",
+  "last": "2026-11-16",
   "c": [
    "Amazon"
   ],
@@ -1164,7 +1167,16 @@
    "ups-amazon-glide-down",
    "usps-big-shipper-deals"
   ],
-  "rv": "cbf84f50f7ff"
+  "rv": "0f0b5873a98b",
+  "cx": {
+   "sig": "0f0b5873a98b",
+   "v": 3,
+   "beats": {
+    "ae889f02f359e": "Teamsters say they've organized drivers in Merrillville, Indiana, after Shepherdsville and Liberty; Amazon says no union exists.",
+    "a3b765bce7e5f": "A Nov. 17 New York rally for 200 e-bike drivers whose DSP lost its Amazon contract, with a push for the Delivery Protection Act."
+   },
+   "intro": "The Teamsters' push to organize Amazon drivers has moved from Indiana claims to a New York City ordinance fight."
+  }
  },
  "depop-shipping-shift": {
   "n": "Depop shipping shift",
@@ -1231,15 +1243,23 @@
  "gofo-us-expansion": {
   "n": "GOFO US expansion",
   "ids": [
-   "aa024cc171706"
+   "aa024cc171706",
+   "a55ff8e77e661"
   ],
   "first": "2026-11-12",
   "co": "GOFO",
-  "s": "The Capitol Forum reported on Nov. 12, 2026 allegations of labor exploitation behind GOFO's rapid expansion.",
-  "last": "2026-11-12",
+  "s": "GOFO has signed a full-building Charlotte lease, while a Nov. 12 Capitol Forum report alleges labor exploitation behind its expansion.",
+  "last": "2026-11-16",
   "c": [
    "Regional"
   ],
-  "rv": "6234d75de761"
+  "rv": "f56e7e93a1a9",
+  "cx": {
+   "sig": "f56e7e93a1a9",
+   "v": 3,
+   "beats": {},
+   "intro": "GOFO, a fast-growing last-mile carrier, is adding US space while a report questions its labor practices.",
+   "now": "GOFO has the Charlotte lease signed, and the labor allegations are out there. The sources state no change to shipper rates or service."
+  }
  }
 }

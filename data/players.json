@@ -3574,38 +3574,36 @@
    "pending": false
   },
   {
-   "id": "teamsterslocal",
-   "n": "Teamsters Local 804",
-   "realm": "retail",
-   "own": null,
+   "id": "arialogistics",
+   "n": "Aria Logistics",
+   "realm": "3pl",
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Union supporting the Delivery Protection Act",
-   "al": [],
-   "src": "https://www.cityandstateny.com/policy/2026/11/amazon-national-urban-league-threaten-sue-city-if-delivery-protection-act-passes/417239/?oref=csny-author-river",
+   "hq": "Englewood, NJ, USA",
+   "yr": "2013",
+   "s": "Aria Logistics is a minority woman-owned 3PL that runs a national final-mile network for home delivery of big and bulky items such as appliances, furniture and fitness equipment, and it connects retailers with carriers.",
+   "al": [
+    "ARIA Logistics LLC",
+    "Aria Logistics LLC",
+    "My Home Delivery (MHD)"
+   ],
+   "src": "https://www.freightwaves.com/news/pitt-ohio-makes-investment-in-final-mile-provider",
    "auto": true,
-   "pending": true,
-   "added": "2026-11-16",
-   "story": "ad0e619194837"
-  },
-  {
-   "id": "unisend",
-   "n": "Unisend",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Parcel delivery provider partnering with Vinted Go in Finland",
-   "al": [],
-   "src": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-10-28",
-   "story": "a87f6e01fb676"
+   "added": "2026-11-17",
+   "from": "discover",
+   "site": "arialogistics.com",
+   "geo": [
+    -73.973,
+    40.893
+   ],
+   "srcs": [
+    "https://www.freightwaves.com/news/pitt-ohio-makes-investment-in-final-mile-provider",
+    "https://pittohio.com/myPittOhio/Contents/Item/Display/42594",
+    "https://arialogistics.com/about/"
+   ],
+   "enriched": "2026-11-17",
+   "pending": false
   }
  ],
  "edges": [
@@ -6157,13 +6155,13 @@
    "story": "a87f6e01fb676"
   },
   {
-   "a": "vinted",
-   "b": "unisend",
-   "k": "partner",
-   "y": "2026",
-   "t": "Vinted Go launches in Finland with Unisend",
-   "url": "https://www.valueaddedresource.net/ebay-depop-pickup-drop-off-network/",
-   "story": "a87f6e01fb676"
+   "a": "pittohio",
+   "b": "arialogistics",
+   "k": "invested",
+   "y": "2023",
+   "t": "Pitt Ohio minority investment in Aria Logistics",
+   "url": "https://pittohio.com/myPittOhio/Contents/Item/Display/42594",
+   "story": null
   }
  ],
  "moves": [
@@ -6567,7 +6565,8 @@
   "aitworldwidelogistics": "2026-11-16",
   "maersklogisticsnorthamer": "2026-11-16",
   "mullengroup": "2026-11-16",
-  "dayross": "2026-11-16"
+  "dayross": "2026-11-16",
+  "arialogistics": "2026-11-17"
  },
  "facts": {
   "ups": {

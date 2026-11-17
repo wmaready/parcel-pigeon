@@ -1,5 +1,99 @@
 [
  {
+  "id": "adb6ff1714824",
+  "date": "2026-11-17",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Wing starts Walmart drone delivery in Ponchatoula, Louisiana",
+  "sum": "Wing is running drone deliveries from the Walmart in Ponchatoula, Louisiana, the first store in the state to offer them, WBRZ reported. Drones deliver within a six-mile radius, Mayor Wesley Daniels said, and Wing's website says it plans to expand to New Orleans in the future.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Drone delivery from the Ponchatoula Walmart is available within a six-mile radius of the store. No change to carrier rates or fees is stated.",
+  "why": "Louisiana now has two drone delivery operators, Wing at Walmart and Amazon Prime Air in Baton Rouge, which may draw more companies, per one drone expert.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:40:33Z",
+  "src": "WBRZ",
+  "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future",
+  "srcs": [
+   {
+    "src": "WBRZ",
+    "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 15,
+  "new": "Wing's Walmart drone delivery reaches Louisiana for the first time, in Ponchatoula, with New Orleans listed as a future market; no rate or fee change is stated.",
+  "syn": "Wing, the Alphabet-owned drone operator, is delivering Walmart orders by drone from the Ponchatoula, Louisiana store, the first Walmart location in the state to offer the service, WBRZ reported. The drones operate from a fenced \"nest\" in the parking lot and deliver within a six-mile radius, according to Mayor Wesley Daniels. The FAA has granted Wing a Part 135 Air Carrier Certificate and permission for flights beyond visual line of sight. Wing's website says it plans to expand to New Orleans in the future.",
+  "aff": [
+   {
+    "who": "Ponchatoula-area Walmart customers",
+    "what": "Drone delivery is available within a six-mile radius of the Ponchatoula store."
+   },
+   {
+    "who": "Louisiana drone delivery market",
+    "what": "Wing joins Amazon Prime Air, which serves orders from the Baton Rouge fulfillment center."
+   },
+   {
+    "who": "New Orleans",
+    "what": "Wing's website says it plans to expand there in the future; no date given."
+   }
+  ]
+ },
+ {
+  "id": "afeaf1126aec1",
+  "date": "2026-11-17",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Lawmakers urge USPS to restore air transport for island Ground Advantage parcels",
+  "sum": "U.S. Reps. Jill Tokuda and James Moylan said they led a bipartisan, bicameral letter asking Postmaster General David Steiner to reverse recent USPS Ground Advantage changes for noncontiguous states and territories. They said USPS began moving packages under one pound mainly by boat rather than air from Oct. 1, 2026, and asked for a reply by Nov. 25, 2026.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "According to the lawmakers, USPS has moved Ground Advantage packages under one pound to mainly surface (boat) transport for noncontiguous areas since Oct. 1, 2026, which they say could lengthen delivery to 10 days or more. They have asked USPS to restore air transport.",
+  "why": "Lightweight Ground Advantage parcels to Hawaiʻi, Guam, Alaska and Caribbean communities could take 10 days or more, versus a five-day standard window, the lawmakers said.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:41:37Z",
+  "src": "Quiver Quantitative",
+  "url": "https://www.quiverquant.com/news/Press+Release%3A+Tokuda%2C+Moylan+Urge+USPS+to+Restore+Air+Delivery+for+Island+Communities",
+  "srcs": [
+   {
+    "src": "Quiver Quantitative",
+    "url": "https://www.quiverquant.com/news/Press+Release%3A+Tokuda%2C+Moylan+Urge+USPS+to+Restore+Air+Delivery+for+Island+Communities"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "U.S. Reps. Jill Tokuda and James Moylan said they led a bipartisan, bicameral letter to Postmaster General David Steiner asking USPS to reverse recent Ground Advantage changes for noncontiguous states and territories, including Hawaiʻi, Guam, Alaska and Caribbean communities. The lawmakers said that from Oct. 1, 2026, USPS began moving packages under one pound mainly by boat rather than air. They said this could stretch delivery to 10 days or more, compared with the standard five-day domestic window. They asked USPS to restore air transport for eligible packages and requested a reply by Nov. 25, 2026.",
+  "aff": [
+   {
+    "who": "Ground Advantage packages under one pound",
+    "what": "Moved mainly by boat rather than air since Oct. 1, 2026, according to the lawmakers."
+   },
+   {
+    "who": "Island and territory deliveries",
+    "what": "Delivery could take 10 days or more, versus the standard five-day domestic window, the lawmakers said."
+   },
+   {
+    "who": "Hawaiʻi, Guam, Alaska and Caribbean communities",
+    "what": "Lawmakers describe a disproportionate impact and ask USPS to restore air transport."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a1c5cfbd68bcf",
   "date": "2026-11-16",
   "c": [
@@ -54,6 +148,51 @@
   "edge": true
  },
  {
+  "id": "a3b765bce7e5f",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Teamsters rally for 200 fired Amazon e-bike drivers in New York",
+  "sum": "The Teamsters said they will rally on Nov. 17, 2026 outside Amazon's VXY4 Delivery Station on Delancey Street in New York. They are backing 200 e-bike delivery drivers whose employer, a Delivery Service Partner, lost its Amazon contract, and are pressing the City Council to pass the Delivery Protection Act.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No rate or service change is announced. The Teamsters say 200 Amazon e-bike drivers in New York lost their jobs after a DSP contract ended.",
+  "why": "The proposed New York City ordinance would be the first to ban Amazon's DSP delivery model, according to the Teamsters.",
+  "score": 4,
+  "tie": "On Nov. 5, 2026 the Teamsters said they had unionized Amazon drivers in Merrillville, Indiana, a claim Amazon disputed.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:40:49Z",
+  "src": "Yahoo Finance Singapore",
+  "url": "https://sg.finance.yahoo.com/news/teamsters-rally-support-amazon-e-221500883.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance Singapore",
+    "url": "https://sg.finance.yahoo.com/news/teamsters-rally-support-amazon-e-221500883.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "thread": "amazon-teamsters-organizing",
+  "upd": 2,
+  "new": "The dispute moves from organizing claims in Indiana to a New York rally over 200 terminated e-bike drivers and a pending city ordinance; the source states no change to shipper rates or service.",
+  "syn": "The Teamsters said on Nov. 16, 2026 that they will rally on Nov. 17 at 7 a.m. ET outside Amazon's VXY4 Delivery Station at 38 Delancey Street in New York. The union says 200 e-bike drivers were dismissed by letter after Amazon ended its contract with their employer, a Delivery Service Partner. It is demanding that the City Council pass the Delivery Protection Act, which the union says would be the first ordinance to ban Amazon's DSP model. The act awaits a vote. The claims come from the union's press release.",
+  "aff": [
+   {
+    "who": "Amazon e-bike drivers in New York",
+    "what": "The Teamsters say 200 were terminated after Amazon ended its contract with their DSP employer."
+   },
+   {
+    "who": "Amazon's DSP model in New York City",
+    "what": "The Delivery Protection Act, awaiting a City Council vote, would ban the model, according to the Teamsters."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a48d8a47d9a93",
   "date": "2026-11-16",
   "c": [
@@ -105,6 +244,51 @@
   "edge": true
  },
  {
+  "id": "a55ff8e77e661",
+  "date": "2026-11-16",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "GOFO leases 374,220 SF Charlotte building from Constellation",
+  "sum": "Constellation Real Estate Partners said it signed GOFO to a full-building, 374,220-square-foot lease at Constellation 485 South, at 1850 Continental Boulevard in Charlotte, North Carolina. The property sits on 25.91 acres. GOFO is a last-mile delivery carrier founded in Los Angeles in August 2023.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. GOFO has leased a full building in Charlotte, North Carolina, with no start date given in the source.",
+  "why": "The lease adds a 374,220-square-foot Charlotte facility for GOFO, a last-mile carrier that is expanding its US footprint in the Southeast.",
+  "score": 5,
+  "tie": "The Capitol Forum published a report on Nov. 12, 2026 describing GOFO's rapid expansion as reliant on alleged labor exploitation.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:39:54Z",
+  "src": "citybiz",
+  "url": "https://www.citybiz.co/article/934054/constellation-real-estate-partners-secures-full-building-374220-sf-lease-with-gofo-in-charlotte-nc-industrial-property/",
+  "srcs": [
+   {
+    "src": "citybiz",
+    "url": "https://www.citybiz.co/article/934054/constellation-real-estate-partners-secures-full-building-374220-sf-lease-with-gofo-in-charlotte-nc-industrial-property/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "thread": "gofo-us-expansion",
+  "upd": 2,
+  "new": "GOFO added a 374,220-square-foot Charlotte facility lease, a concrete step in its US footprint; the sources state no change to shipper rates or service.",
+  "syn": "Constellation Real Estate Partners announced a new full-building lease with GOFO at Constellation 485 South in Charlotte, North Carolina. The building has 374,220 square feet on 25.91 acres, with 36-foot clear height, 310 car parking spaces and 84 trailer parking spaces. GOFO describes itself as a technology-driven global last-mile delivery carrier founded in Los Angeles in August 2023. The source gives no opening date and no change to GOFO's rates or service.",
+  "aff": [
+   {
+    "who": "GOFO",
+    "what": "Leases the full 374,220-square-foot Constellation 485 South building in Charlotte, North Carolina."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service is stated in the source."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a8a156a22dc4f",
   "date": "2026-11-16",
   "c": [
@@ -146,6 +330,104 @@
     "what": "UniUni said handing off select packages will benefit last-mile efficiency."
    }
   ]
+ },
+ {
+  "id": "a98002f396fb3",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air gets Bondurant approval for Des Moines drone hub",
+  "sum": "Bondurant City Council unanimously approved Amazon's site plans on Nov. 16 for a Prime Air drone hub at the DSM5 fulfillment center, The Des Moines Register reported. Amazon's Sam Bailey said service could start as early as mid-January, with up to five drones in the air at once and up to 200 flights per day in optimal conditions.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Amazon customers in parts of the Des Moines metro could opt in to drone delivery of 60 minutes or less as early as mid-January, weather permitting for construction. No change to rates for other shippers was reported.",
+  "why": "Bondurant would be Amazon's first Iowa drone site, adding a 60-minute opt-in delivery option for Des Moines-area customers.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:39:43Z",
+  "src": "The Des Moines Register",
+  "url": "https://www.desmoinesregister.com/story/news/local/bondurant/2026/11/16/amazon-prime-air-to-drone-deliver-from-bondurant-to-des-moines-metro/92818715007/",
+  "srcs": [
+   {
+    "src": "The Des Moines Register",
+    "url": "https://www.desmoinesregister.com/story/news/local/bondurant/2026/11/16/amazon-prime-air-to-drone-deliver-from-bondurant-to-des-moines-metro/92818715007/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "thread": "drone-delivery",
+  "upd": 14,
+  "new": "Amazon Prime Air won local approval on Nov. 16 for its first Iowa hub, in Bondurant, with service possible from mid-January for customers who opt in.",
+  "syn": "Bondurant City Council unanimously approved Amazon's site plans on Nov. 16 for a Prime Air drone delivery hub at the DSM5 Amazon Fulfillment Center, 500 32nd St. S.W. Sam Bailey, who manages Prime Air's economic development efforts, said the site will be smaller than others in the country. As early as mid-January, weather permitting for construction, up to five drones could fly at once, for up to 200 flights per day. It would be the first Amazon drone delivery site in Iowa, according to the Register.",
+  "aff": [
+   {
+    "who": "Des Moines-area Amazon customers",
+    "what": "Can opt in to delivery of 60 minutes or less, as early as mid-January, where available."
+   },
+   {
+    "who": "Drone payloads and range",
+    "what": "MK30 drones carry up to 5 pounds as far as 7.5 miles one way."
+   },
+   {
+    "who": "Delivery hours",
+    "what": "Drones fly only during civil twilight hours, so no late-night deliveries."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "aa981f8253bf2",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Amazon gets first North America union contract at B.C. site",
+  "sum": "An arbitrator-set contract now covers a group of workers at Amazon's YVR2 fulfillment center in Delta, British Columbia, according to FreightWaves. Unifor said the three-year deal ends in November 2029. Amazon said the contract was imposed without an employee vote and that it will keep challenging the decisions.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to shipper rates or service. The contract sets pay and conditions for a group of workers at one Amazon facility in Delta, British Columbia.",
+  "why": "It is the first Amazon facility in North America to operate under a collective bargaining agreement, though it covers one Canadian site.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:41:15Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/amazon-workers-union-gets-a-contract-but-its-in-canada",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/amazon-workers-union-gets-a-contract-but-its-in-canada"
+   }
+  ],
+  "auto": true,
+  "syn": "Amazon will operate a facility under a collective bargaining agreement for the first time in North America, according to FreightWaves. The three-year contract covers a group of workers at the YVR2 fulfillment center in Delta, British Columbia, and was set by an arbitrator after the provincial labour board certified Unifor Local 114 in July 2025. Amazon said the contract was imposed without an employee vote being counted and that it will keep challenging the decisions, up to the Supreme Court if necessary. Unifor said it \"won\" the contract.",
+  "aff": [
+   {
+    "who": "Delta, B.C. fulfillment center workers",
+    "what": "Unifor said wages reach CA$29 per hour by the end of the three years, with severance protections of up to 18 weeks."
+   },
+   {
+    "who": "Wage schedule",
+    "what": "An Amazon spokesman said raises are zero in the first year, 3.25% in October 2027 and 3.5% a year later."
+   },
+   {
+    "who": "Workers with 10 years of service",
+    "what": "Unifor said they get an additional week of vacation."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true
  },
  {
   "id": "acb049d81f751",
@@ -244,8 +526,57 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
+ },
+ {
+  "id": "ad71cd24e4ae0",
+  "date": "2026-11-16",
+  "c": [
+   "DHL"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "DHL Supply Chain to hire 7,000 temporary workers, add robotics for peak",
+  "sum": "DHL Supply Chain plans to hire 7,000 temporary workers and expand its robotics footprint ahead of peak season, according to Kraig Foreman, president of e-commerce at the company. Foreman said he expects unit volume to grow 2 to 3%, while dollar sales rise 5 to 10% because of inflation.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. DHL Supply Chain is adding 7,000 temporary workers and more robotics for peak, according to its e-commerce president.",
+  "why": "DHL Supply Chain's staffing and volume outlook shows how one large fulfillment operator is planning for a peak that starts earlier than Black Friday.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:39:03Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/dhl-preps-for-peak-7000-workers-robotics-growth",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/dhl-preps-for-peak-7000-workers-robotics-growth"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "syn": "DHL Supply Chain plans to hire 7,000 temporary workers and expand its robotics footprint heading into peak season, according to Kraig Foreman, president of e-commerce at the company. Foreman said unit volume should grow 2 to 3%, while dollar sales rise 5 to 10% because of inflation. He said major retailers are launching promotions around November 19, a week before Thanksgiving, and that AI shopping tools are expected to intensify price competition. Package volumes, not revenues, drive network demand, the article noted.",
+  "aff": [
+   {
+    "who": "DHL Supply Chain peak staffing",
+    "what": "Plans to add 7,000 temporary workers and expand robotics, according to Foreman."
+   },
+   {
+    "who": "Peak volumes",
+    "what": "Unit volume expected up 2 to 3%, against dollar sales up 5 to 10%, Foreman said."
+   },
+   {
+    "who": "Retail promotions",
+    "what": "Major retailers are launching promotions around November 19, one week before Thanksgiving, per Foreman."
+   },
+   {
+    "who": "DHL air network",
+    "what": "Managed a brief FAA system outage without significant impact, Foreman said."
+   }
+  ]
  },
  {
   "id": "a3050815c1e52",
@@ -644,7 +975,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
  },
  {
@@ -1124,7 +1455,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
  },
  {
@@ -1168,7 +1499,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
  },
  {
@@ -1512,8 +1843,6 @@
   ],
   "auto": true,
   "ann": "2026-11-12",
-  "thread": "usps-fuel-surcharge",
-  "upd": 4,
   "new": "An industry analysis says the filing does not specify which charges the 11% applies to and that USPS will reevaluate it in July 2027, while the Oct. 26 report described a weekly percentage of base postage.",
   "syn": "An industry analysis published after the USPS filing of November 12, 2026 examines how the planned fuel surcharge affects carrier comparisons. USPS filed with the Postal Regulatory Commission for a 5.9% average increase on Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select, and for converting the April 2026 8% change into an 11% fuel surcharge, both effective January 17, 2027. The analysis says USPS previously had no separate fuel percentage while most competing carriers did, so the surcharge narrows that difference. It also says the filing notice does not specify which charges the 11% is calculated against, and USPS will reevaluate the surcharge in July 2027.",
   "aff": [
@@ -1782,6 +2111,83 @@
   ],
   "auto": true,
   "ann": "2026-11-12"
+ },
+ {
+  "id": "af7ecf517c18f",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "USPS files 5.9% average rate increase, permanent 11% fuel surcharge",
+  "sum": "The U.S. Postal Service filed a proposal with the Postal Regulatory Commission on Thursday to raise prices 5.9% on average for four domestic package services and make an 11% fuel surcharge permanent. The changes are scheduled for Jan. 17, 2027, after the Board of Governors approved them this week.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "If the Postal Regulatory Commission lets the filing proceed, domestic prices for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select rise 5.9% on average on Jan. 17, 2027, with an 11% fuel surcharge. International services rise 7.9% on average.",
+  "why": "The 5.9% increase and 11% surcharge cover four domestic USPS package services from Jan. 17, 2027, pending Postal Regulatory Commission review.",
+  "score": 8,
+  "tie": "USPS said on Oct. 26, 2026 it would begin levying a fuel surcharge on its package services in January 2027, and the surcharge builds on the 8% transportation-related increase it introduced in April 2026.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS domestic package prices rise 5.9% on average",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2027-01-17",
+    "w": "USPS 11% fuel surcharge on domestic packages takes effect",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-17T04:38:56Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/"
+   },
+   {
+    "src": "Quartz",
+    "url": "https://qz.com/usps-permanent-fuel-surcharge-shipping-rates-111326"
+   },
+   {
+    "src": "Logistics Management",
+    "url": "https://www.logisticsmgmt.com/article/usps_is_set_to_make_fuel_surcharge_permanent_raise_parcel_prices_5.9_in_2027"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "thread": "usps-fuel-surcharge",
+  "upd": 3,
+  "new": "The filing adds the 5.9% domestic average, the 7.9% average international increase, Board of Governors approval and Postal Regulatory Commission review, and a surcharge that Supply Chain Dive said will not fluctuate at its January launch before moving to weekly adjustments.",
+  "syn": "The U.S. Postal Service filed a proposal on Thursday to raise domestic shipping prices 5.9% on average and to turn the 8% transportation-related increase from April into a permanent fuel surcharge of 11%. The USPS Board of Governors approved the changes this week, and the Postal Regulatory Commission will review them before they take effect on Jan. 17, 2027. The 5.9% increase applies to Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select. The agency said it plans to revisit the surcharge in July 2027, using fuel costs from the first half of that year.",
+  "aff": [
+   {
+    "who": "Domestic package shippers",
+    "what": "Prices for Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select rise 5.9% on average on Jan. 17, 2027."
+   },
+   {
+    "who": "Shippers on the four domestic package services",
+    "what": "An 11% fuel surcharge becomes permanent, up from the 8% April increase; it does not apply to international products."
+   },
+   {
+    "who": "International shippers",
+    "what": "Priority Mail Express International, Priority Mail International, First-Class Package International and Intl Priority Airmail rise 7.9% on average."
+   },
+   {
+    "who": "Special services users",
+    "what": "USPS plans to adjust prices on some competitive special services and introduce new fees."
+   }
+  ]
  },
  {
   "id": "w08701235bf24",
@@ -3530,7 +3936,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
  },
  {
@@ -6174,6 +6580,62 @@
   "exclusive": true
  },
  {
+  "id": "a35aaaeeaf830",
+  "date": "2026-11-04",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "Opinion",
+  "title": "Amazon plans 20,000+ smart glasses for drivers by end of 2027",
+  "sum": "A Loadstar comment piece says Amazon plans to deploy more than 20,000 camera-equipped glasses to delivery drivers by the end of 2027. The author argues that the data collected, more than the efficiency gains, is the competitive advantage. The full text is behind a paywall.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service is described. The piece covers Amazon's driver equipment plans and one commentator's view of their competitive effect.",
+  "why": "The piece gives one commentator's view that Amazon's driver-glasses data could matter to rival delivery networks; the plan covers more than 20,000 devices.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T04:40:25Z",
+  "src": "The Loadstar",
+  "url": "https://theloadstar.com/fast-delivery-amazons-smart-glasses-a-data-moat-in-disguise/",
+  "srcs": [
+   {
+    "src": "The Loadstar",
+    "url": "https://theloadstar.com/fast-delivery-amazons-smart-glasses-a-data-moat-in-disguise/"
+   },
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/"
+   },
+   {
+    "src": "SupplyChainBrain",
+    "url": "https://www.supplychainbrain.com/logistics/last-mile-delivery/article/16424315/amazon-to-equip-5k-delivery-drivers-with-smart-glasses"
+   },
+   {
+    "src": "Fast Company",
+    "url": "https://www.fastcompany.com/91639418/amazon-delivery-drivers-are-getting-smart-glasses-what-they-can-see-might-surprise-you"
+   },
+   {
+    "src": "WWD",
+    "url": "https://wwd.com/sourcing-journal/logistics/amazon-smart-glasses-delivery-riders-privacy-1239404883/"
+   }
+  ],
+  "auto": true,
+  "syn": "The Loadstar published a premium comment piece on Amazon's AI-powered smart delivery glasses. According to the piece, Amazon plans to deploy more than 20,000 camera-equipped glasses to delivery drivers by the end of 2027. The glasses carry a heads-up display that shows drivers which package to grab and overlays walking directions. The author's view is that the efficiency gains are real but the dataset being built is the competitive weapon, and that rivals should watch it closely. Only the opening of the piece is publicly available.",
+  "aff": [
+   {
+    "who": "Amazon delivery drivers",
+    "what": "More than 20,000 camera-equipped glasses are planned for deployment by the end of 2027, per the piece."
+   },
+   {
+    "who": "Rival delivery networks",
+    "what": "The author says they should pay closer attention to the data Amazon is building; this is the author's view."
+   }
+  ]
+ },
+ {
   "id": "a4f6ca9e3591e",
   "date": "2026-11-04",
   "c": [
@@ -6214,67 +6676,6 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "a65c5bec8c7d2",
-  "date": "2026-11-04",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "Amazon plans 5,000 smart glasses for delivery drivers this year",
-  "sum": "Amazon said it plans to deploy 5,000 pairs of smart delivery glasses this year and expand to more than 20,000 by the end of 2027, according to WWD. The glasses show navigation and delivery instructions in the driver's field of view. Supply Chain Dive reported the deployment on Nov. 4, 2026.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The glasses are a driver tool in Amazon's own delivery operation.",
-  "why": "Amazon is scaling a driver tool across its delivery network, with 300+ delivery service partners already using it; the data collected has raised privacy questions.",
-  "score": 5,
-  "tie": "Amazon first unveiled the glasses to the public in October 2025, according to WWD.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-16T12:51:45Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/amazon-deploys-thousands-of-smart-glasses-to-delivery-drivers/873620/"
-   },
-   {
-    "src": "WWD",
-    "url": "https://wwd.com/sourcing-journal/logistics/amazon-smart-glasses-delivery-riders-privacy-1239404883/"
-   },
-   {
-    "src": "SupplyChainBrain",
-    "url": "https://www.supplychainbrain.com/logistics/last-mile-delivery/article/16424315/amazon-to-equip-5k-delivery-drivers-with-smart-glasses"
-   },
-   {
-    "src": "The Loadstar",
-    "url": "https://theloadstar.com/fast-delivery-amazons-smart-glasses-a-data-moat-in-disguise/"
-   },
-   {
-    "src": "Fast Company",
-    "url": "https://www.fastcompany.com/91639418/amazon-delivery-drivers-are-getting-smart-glasses-what-they-can-see-might-surprise-you"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-04",
-  "syn": "Amazon said it plans to deploy 5,000 pairs of smart delivery glasses this year and more than 20,000 by the end of 2027, WWD reported. The glasses show navigation, delivery instructions and package counts in the driver's field of view, replacing some tasks done on a handheld device. More than 300 delivery service partners and hundreds of Amazon drivers have used them. Amazon said wearing them is optional and that each pair has a privacy switch that turns off the camera.",
-  "aff": [
-   {
-    "who": "Amazon delivery drivers",
-    "what": "5,000 pairs to be deployed this year, with more than 20,000 targeted by the end of 2027."
-   },
-   {
-    "who": "Delivery service partners",
-    "what": "More than 300 partners have already used the glasses, per Amazon."
-   },
-   {
-    "who": "Data and privacy",
-    "what": "Camera captures stills only; faces and license plates are blurred and images deleted after a short period, Amazon said."
-   }
-  ]
  },
  {
   "id": "a6b6e2758bc4e",
@@ -12599,535 +13000,5 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "afb439a13ef25",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "FarEye survey: 70% of last-mile operators rank fuel a top cost",
-  "sum": "A FarEye survey of more than 500 delivery operators found 70% ranked fuel among their biggest cost pressures and more than 50% cited labor. DC Velocity reported the results from the \"Eye on the Last Mile America 2026\" report. More than 66% of operators said they were implementing or using AI in 2026, against more than 46% in 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The survey describes cost pressures on last-mile operators and growing use of AI tools.",
-  "why": "The survey of more than 500 U.S. delivery operators points to fuel and labor as the main last-mile cost pressures heading into peak season.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-24T18:57:25Z",
-  "src": "DC Velocity",
-  "url": "https://www.dcvelocity.com/transportation/ready-for-peak",
-  "srcs": [
-   {
-    "src": "DC Velocity",
-    "url": "https://www.dcvelocity.com/transportation/ready-for-peak"
-   }
-  ],
-  "auto": true,
-  "syn": "FarEye's \"Eye on the Last Mile America 2026\" report surveyed more than 500 delivery operators across the country. According to the report, 70% ranked fuel among their biggest cost pressures and more than 50% cited labor. FarEye's Gaurav Srivastava told DC Velocity that the May Supreme Court ruling in Montgomery v. Caribe Transport II LLC, which allows freight brokers to be held liable under state laws for accidents involving carriers they hire, adds pressure to find vetted drivers. The report also found that more than 66% of operators were implementing or using AI in 2026, up from more than 46% in 2025.",
-  "aff": [
-   {
-    "who": "Last-mile operators",
-    "what": "70% ranked fuel among their biggest cost pressures; more than 50% cited labor issues."
-   },
-   {
-    "who": "Shippers using brokers",
-    "what": "The Montgomery v. Caribe Transport II LLC ruling affects shippers too, according to DC Velocity."
-   },
-   {
-    "who": "AI adoption",
-    "what": "More than 66% of operators use or are implementing AI in 2026, versus more than 46% in 2025."
-   },
-   {
-    "who": "Operators with extensive AI use",
-    "what": "Those citing extensive operational adoption rose to nearly 14% from 4%."
-   }
-  ]
- },
- {
-  "id": "ups-origin-zip-surcharge",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS adds a surcharge on Ground and Ground Saver packages from certain origin ZIPs; details not yet released",
-  "sum": "UPS's Important Updates page says a new surcharge will apply to Ground and Ground Saver packages shipped from certain origin ZIP codes by Qualified customers, effective December 21, 2026 or later. UPS has not published the amount, the origin ZIPs or the qualifying criteria, and said details are due in early November. It is not in the 2027 rate and surcharge documents UPS posted October 30.",
-  "plain": "If you ship Ground or Ground Saver from a major origin, expect an extra per-package fee, but the size and the ZIPs are unknown. Watch for UPS's early-November details.",
-  "imp": "up",
-  "lvl": 3,
-  "cat": "Pricing & GRI",
-  "act": "2026-12-21",
-  "inferred": null,
-  "detected": "2026-10-23",
-  "verdict": "price change",
-  "unknowns": [
-   "Amount of the surcharge",
-   "Which origin ZIPs and which customers qualify",
-   "Exact effective date (UPS says December 21, 2026 or later)"
-  ],
-  "changes": [
-   {
-    "what": "New origin-ZIP surcharge, Ground and Ground Saver",
-    "before": null,
-    "after": "Applies to Qualified customers shipping from certain origin ZIPs; amount not stated",
-    "effective": "2026-12-21",
-    "who": "Ground and Ground Saver shippers from the affected origin ZIPs",
-    "impact": "Cost not yet known"
-   }
-  ],
-  "dates": [
-   {
-    "d": "2026-12-21",
-    "w": "UPS: new origin-ZIP surcharge on Ground and Ground Saver (Qualified customers), amount not yet released",
-    "imp": "up",
-    "fees": [
-     [
-      "UPS",
-      "Origin-ZIP surcharge, Ground and Ground Saver",
-      "Amount not yet stated"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-  "srcs": [
-   {
-    "src": "UPS Rate and Service Guides",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-   }
-  ],
-  "auto": true
- },
- {
-  "id": "w599d9089a65d",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026",
-  "sum": "UPS posted a PDF with new fuel surcharge tables for U.S. Ground Domestic, UPS Ground Saver and Domestic Air, effective November 2, 2026. The Ground table runs from 28.50% ($5.53–$5.80 diesel) to 31.50% ($6.79–$6.88), and the Air table runs from 31.50% ($4.06–$4.11 jet fuel) to 34.50% ($4.66–$4.71). The out-of-range anchor prices rose from $4.99 to $5.80 for Ground and from $3.01 to $3.56 for Air, which shows the table was reset. UPS announces U.S. Ground, Ground Saver and Domestic Air fuel surcharge changes Nov 2, 2026.",
-  "plain": "Shippers using UPS Ground, Ground Saver or the Domestic Air services get a different surcharge percentage for any given fuel price from Nov 2, 2026.",
-  "imp": "watch",
-  "lvl": 2,
-  "cat": "Fuel",
-  "act": "2026-11-02",
-  "inferred": null,
-  "detected": "2026-10-23",
-  "changes": [
-   {
-    "what": "U.S. Ground Domestic and Ground Saver fuel surcharge table",
-    "before": null,
-    "after": "New table effective Nov 2, 2026: 28.50% at $5.53–$5.80 diesel, rising 0.25% per step to 31.50% at $6.79–$6.88",
-    "effective": "2026-11-02",
-    "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
-    "impact": null
-   },
-   {
-    "what": "Domestic Air fuel surcharge table",
-    "before": null,
-    "after": "New table effective Nov 2, 2026: 31.50% at $4.06–$4.11 jet fuel, rising 0.25% per step to 34.50% at $4.66–$4.71",
-    "effective": "2026-11-02",
-    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
-    "impact": null
-   },
-   {
-    "what": "Ground diesel price above which the table range extends in $0.09 steps",
-    "before": "above $4.99",
-    "after": "above $5.80",
-    "effective": "2026-11-02",
-    "who": "U.S. Ground Domestic and Ground Saver shipments",
-    "impact": "Anchor price +$0.81 per gallon; the $0.09 and $0.27 increments and the 0.25% steps are unchanged"
-   },
-   {
-    "what": "Jet fuel price above which the Domestic Air table range extends in $0.05 steps",
-    "before": "above $3.01",
-    "after": "above $3.56",
-    "effective": "2026-11-02",
-    "who": "Domestic Air shipments",
-    "impact": "Anchor price +$0.55 per gallon; the $0.05 and $0.21 increments and the 0.25% steps are unchanged"
-   },
-   {
-    "what": "Announced change to U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air fuel surcharges",
-    "before": null,
-    "after": "Effective November 2, 2026, the U.S. Ground Domestic and the UPS Ground Saver Fuel Surcharge and the U.S. Domestic Air Fuel Surcharge will change.",
-    "effective": "2026-11-02",
-    "who": "Shippers using U.S. Ground Domestic, UPS Ground Saver and U.S. Domestic Air services",
-    "impact": "Not quantified on the page; details are in a linked document"
-   },
-   {
-    "what": "Date the changed surcharges will appear on the Fuel Surcharge website",
-    "before": null,
-    "after": "Changes will be reflected on the Fuel Surcharge website beginning October 29, 2026.",
-    "effective": "2026-10-29",
-    "who": "All shippers checking weekly fuel surcharge rates",
-    "impact": null
-   },
-   {
-    "what": "Index basis and weekly adjustment stated to continue",
-    "before": null,
-    "after": "Ground and Ground Saver continue to be based on the National U.S. Average On-Highway Diesel Fuel Price; Domestic Air on the National Average U.S. Gulf Coast Jet Fuel Price; both adjusted weekly.",
-    "effective": null,
-    "who": "Ground, Ground Saver and Domestic Air shippers",
-    "impact": "No change in index or weekly cadence"
-   }
-  ],
-  "verdict": "price change",
-  "unknowns": [
-   "Older version not on file",
-   "Whether the surcharge goes up or down for a given fuel price is not confirmed; the shifted anchor prices only show the table was reset.",
-   "The new PDF covers only Ground, Ground Saver and Domestic Air; the international surcharge tables are not shown, so any change to them can't be confirmed."
-  ],
-  "dates": [
-   {
-    "d": "2026-11-02",
-    "w": "UPS: new Ground, Ground Saver and Domestic Air fuel surcharge tables take effect",
-    "imp": "up",
-    "fees": [
-     [
-      "UPS",
-      "Ground fuel surcharge, same diesel price",
-      "+0.50 point"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
-  "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-  "srcs": [
-   {
-    "src": "UPS Fuel surcharges",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
-   },
-   {
-    "src": "UPS: fuelsurcharge-us-en.pdf",
-    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "relisting (fsc-applicable-charges-us-en.pdf), price change (fuelsurcharge-us-en.pdf), price change",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
-    }
-   ]
-  },
-  "exclusive": true,
-  "primary": true
- },
- {
-  "id": "w84705482dd2f",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS announces Dec 21, 2026 rate increase, 50 lb Additional Handling minimum billable weight, ZIP changes",
-  "sum": "UPS's Important Updates now say that, effective December 21, 2026, Daily Rates for Ground, Air and International services rise an average net 5.9%. The Additional Handling minimum billable weight goes from 40 to 50 lbs., and the Area Surcharge and zone ZIP lists change. Also new: a fuel surcharge change effective November 2, 2026. UPS posts new Ground and Domestic Air fuel surcharge tables effective Nov 2, 2026.",
-  "plain": "Shippers using UPS Ground, Air or International face an average net 5.9% rate increase. Actual cost depends on each shipper's agreement and profile. Shippers in affected ZIPs may see different Area Surcharges or zones. A separate origin-ZIP surcharge is covered in its own story.",
-  "imp": "up",
-  "lvl": 3,
-  "cat": "Pricing & GRI",
-  "act": "2026-12-21",
-  "inferred": null,
-  "detected": "2026-10-23",
-  "changes": [
-   {
-    "what": "Average Daily Rate increase for UPS Ground, UPS Air and International services",
-    "before": null,
-    "after": "Average net increase of 5.9%; detailed rate previews to follow at a later date",
-    "effective": "2026-12-21",
-    "who": "Shippers using UPS Ground, UPS Air and International services",
-    "impact": "+5.9% average net; individual impact varies by shipping profile and UPS agreement"
-   },
-   {
-    "what": "Additional Handling minimum billable weight",
-    "before": null,
-    "after": "Increases from 40 lbs. to 50 lbs.",
-    "effective": "2026-12-21",
-    "who": "Packages subject to Additional Handling",
-    "impact": "Minimum billable weight +10 lbs. (40 -> 50 lbs.)"
-   },
-   {
-    "what": "Area Surcharge ZIP code list",
-    "before": null,
-    "after": "The list of ZIP codes to which Area Surcharges apply will change",
-    "effective": "2026-12-21",
-    "who": "Shipments to ZIP codes added to or removed from the Area Surcharge list",
-    "impact": null
-   },
-   {
-    "what": "ZIP codes aligned to certain zones",
-    "before": null,
-    "after": "The list of ZIP codes aligned to certain Zones will change",
-    "effective": "2026-12-21",
-    "who": "Shipments to or from ZIPs that move zones",
-    "impact": null
-   },
-   {
-    "what": "Fuel surcharge change for U.S. Ground Domestic, Ground Saver and U.S. Domestic Air",
-    "before": null,
-    "after": "Fuel surcharges will change; details are at a linked page",
-    "effective": "2026-11-02",
-    "who": "Domestic Ground, Ground Saver and Air shippers",
-    "impact": null
-   },
-   {
-    "what": "Ground Domestic / Ground Saver fuel surcharge table replaced; new table starts at $5.53 diesel at 28.50%",
-    "before": null,
-    "after": "New table from $5.53 (28.50%) up to $6.79–$6.88 (31.50%), in 0.25% steps per band, effective Nov 2, 2026",
-    "effective": "2026-11-02",
-    "who": "UPS Ground, Ground with Freight Pricing, Hundredweight Ground, Ground Saver and UPS Basic shipments",
-    "impact": null
-   },
-   {
-    "what": "Ground Domestic / Ground Saver table top band published",
-    "before": null,
-    "after": "$6.79–$6.88 diesel band carries a 31.50% surcharge",
-    "effective": "2026-11-02",
-    "who": "Ground and Ground Saver shippers when diesel is in the high range",
-    "impact": null
-   },
-   {
-    "what": "Diesel range-extension anchor price moved up",
-    "before": "Above/below $4.99, extension in $0.09 (above) and $0.27 (below) increments, 0.25% steps",
-    "after": "Above/below $5.80, with the same $0.09 (above) and $0.27 (below) increments and 0.25% steps",
-    "effective": "2026-11-02",
-    "who": "Ground and Ground Saver shipments if diesel falls outside the published range",
-    "impact": "Anchor +$0.81 per gallon ($4.99 -> $5.80); increments unchanged"
-   },
-   {
-    "what": "Domestic Air fuel surcharge table replaced; new table starts at $4.06 jet fuel at 31.50%",
-    "before": null,
-    "after": "New table from $4.06 (31.50%) up to $4.66–$4.71 (34.50%), in 0.25% steps per band, effective Nov 2, 2026",
-    "effective": "2026-11-02",
-    "who": "UPS Next Day Air, 2nd Day Air, 3 Day Select and Hundredweight Air shipments",
-    "impact": null
-   },
-   {
-    "what": "Domestic Air table top band published",
-    "before": null,
-    "after": "$4.66–$4.71 jet fuel band carries a 34.50% surcharge",
-    "effective": "2026-11-02",
-    "who": "Domestic Air shippers when jet fuel is in the high range",
-    "impact": null
-   },
-   {
-    "what": "Jet fuel range-extension anchor price moved up",
-    "before": "Above/below $3.01, extension in $0.05 (above) and $0.21 (below) increments, 0.25% steps",
-    "after": "Above/below $3.56, with the same $0.05 (above) and $0.21 (below) increments and 0.25% steps",
-    "effective": "2026-11-02",
-    "who": "Domestic Air shipments if jet fuel falls outside the published range",
-    "impact": "Anchor +$0.55 per gallon ($3.01 -> $3.56); increments unchanged"
-   }
-  ],
-  "verdict": "price change",
-  "unknowns": [
-   "Whether the fuel surcharge change affects the fuel table itself, and its size; details are on a linked page not shown.",
-   "Whether the 5.9% increase applies uniformly to all services or what the per-service and per-zone rates will be; rate previews come later.",
-   "Older version not on file"
-  ],
-  "dates": [
-   {
-    "d": "2026-12-21",
-    "w": "UPS 2027 rate increase: 5.9% average (Ground, Air, International)",
-    "imp": "up",
-    "fx": {
-     "t": "gri",
-     "car": "UPS",
-     "pct": 5.9,
-     "src": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-    },
-    "fees": [
-     [
-      "UPS",
-      "Additional Handling minimum billable weight",
-      "40 lb to 50 lb"
-     ],
-     [
-      "UPS",
-      "Area Surcharge ZIP list",
-      "Changes"
-     ],
-     [
-      "UPS",
-      "ZIP codes aligned to zones",
-      "Change"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-  "srcs": [
-   {
-    "src": "UPS Rate and Service Guides",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-   },
-   {
-    "src": "UPS: fuelsurcharge-us-en.pdf",
-    "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "price change (fuelsurcharge-us-en.pdf), price change",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
-     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
-    }
-   ]
-  },
-  "exclusive": true,
-  "primary": true
- },
- {
-  "id": "a2cde9f1bc84b",
-  "date": "2026-10-22",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Lowe's starts drone delivery pilot near Charlotte with DoorDash and Wing",
-  "sum": "Lowe's has launched a drone delivery pilot at its Matthews, N.C., store through DoorDash and Wing, the company said. Select products can reach DIY and Pro customers in as fast as 20 minutes, with Wing drones carrying orders of about 2.5 pounds per flight.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for parcel shippers. Customers near the Matthews, N.C., store can order select small items through the DoorDash app.",
-  "why": "A home improvement retailer is testing drone delivery of small items, adding to retail drone programs that carry roughly 2.5 pounds per flight.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T13:08:47Z",
-  "src": "National Association of Wholesaler-Distributors",
-  "url": "https://www.naw.org/mdm/news/lowes-launches-drone-delivery-for-diy-pro-customers/",
-  "srcs": [
-   {
-    "src": "National Association of Wholesaler-Distributors",
-    "url": "https://www.naw.org/mdm/news/lowes-launches-drone-delivery-for-diy-pro-customers/"
-   }
-  ],
-  "auto": true,
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a2f683da86bf8",
-  "date": "2026-10-22",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "CBP extends postal formal-entry compliance date to Jan. 20, 2027",
-  "sum": "U.S. Customs and Border Protection extended the compliance date for formal entry of certain international postal shipments from Oct. 22, 2026 to Jan. 20, 2027, according to a final rule published in the Federal Register (91 FR 66638). It covers mail subject to partner government agency requirements, mail subject to duties under HTSUS Chapter 98 or 99, and mail claiming duty-free treatment under Chapter 98 or a free trade agreement. CBP said importers, brokers and logistics providers need more time to update systems and procedures.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "The formal-entry requirement for these categories of postal goods now applies from Jan. 20, 2027 instead of Oct. 22, 2026. CBP said the process for informal mail entries under the June 24, 2026 interim final rule does not change during the delay.",
-  "why": "The delay gives importers, brokers and logistics providers in the international postal network until Jan. 20, 2027 to comply with the formal-entry requirement for these goods.",
-  "score": 8,
-  "tie": "CBP on Oct. 8, 2026 proposed earlier filing deadlines for low-value imports and more data for postal entries.",
-  "act": "2027-01-20",
-  "dates": [
-   {
-    "d": "2027-01-20",
-    "w": "Postal formal-entry compliance date for PGA, Ch. 98/99, FTA goods",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-10-22T05:40:51Z",
-  "src": "Federal Register: de minimis and postal imports",
-  "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry",
-  "srcs": [
-   {
-    "src": "Federal Register: de minimis and postal imports",
-    "url": "https://www.federalregister.gov/documents/2026/10/22/2026-21600/indefinite-suspension-of-the-de-minimis-exemption-for-mail-shipments-and-new-postal-informal-entry"
-   }
-  ],
-  "auto": true,
-  "thread": "de-minimis",
-  "upd": 7,
-  "new": "CBP pushed the compliance date for formal entry of PGA-regulated, Chapter 98/99 and duty-free-claim postal goods from Oct. 22, 2026 to Jan. 20, 2027, so those shipments have about three more months before the requirement applies.",
-  "exclusive": true
- },
- {
-  "id": "a351cab9045c7",
-  "date": "2026-10-22",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "Stord acquires AMS Fulfillment, adding 10 million annual orders",
-  "sum": "Stord, a fulfillment and commerce technology company, has acquired third-party logistics provider AMS Fulfillment in its largest acquisition to date and its 12th overall. Stord said the deal adds more than 10 million annual orders and facilities in the Los Angeles, Salt Lake City and Philadelphia areas, taking its network to more than 100 locations. Terms were not disclosed in the articles.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to carrier rates or fees. AMS customers are expected over time to gain access to Stord's wider fulfillment network and parcel program, according to Stord.",
-  "why": "Adds more than 10 million annual orders and over 1 million sq ft to a 3PL network that Stord says reaches one in four US households.",
-  "score": 4,
-  "tie": "Stord's October 2026 $400 million credit facility led by Citi and its May 2026 $250 million Series F round, which valued it at $3 billion, preceded the deal.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T10:55:48Z",
-  "src": "PR Newswire",
-  "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html",
-  "srcs": [
-   {
-    "src": "PR Newswire",
-    "url": "https://www.prnewswire.com/news-releases/stord-acquires-ams-fulfillment-enhancing-its-market-leading-scale-and-network-coverage-302915069.html"
-   },
-   {
-    "src": "Supply Chain Digital",
-    "url": "https://supplychaindigital.com/news/stord-expands-fulfilment-capability-with-ams-acquisition"
-   },
-   {
-    "src": "Pulse 2.0",
-    "url": "https://pulse2.com/stord-acquires-ams-fulfillment-to-expand-logistics-network-and-ai-powered-fulfillment-platform/"
-   }
-  ],
-  "auto": true,
-  "edge": true
- },
- {
-  "id": "a49dce99d3aaa",
-  "date": "2026-10-22",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "UPS completes automation of 4 more sortation facilities before peak",
-  "sum": "UPS said it has converted four conventional package sortation centers into automated facilities, in Denver, St. Paul, Syracuse and Portland, ahead of the holiday peak. The company also said it is hiring 100,000 seasonal employees nationwide. FreightWaves reported the details from a UPS news release.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates, fees or service terms was announced. UPS temporarily closed its Portland facility on Swan Island during construction and shifted operations to other locations.",
-  "why": "UPS says automated sites cost about 28% less per piece, and 68.5% of its U.S. volume now moves through automated facilities, so network changes shape its cost base.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-22T16:55:33Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/ups-automates-4-additional-facilities-ahead-of-peak-shipping-season"
-   }
-  ],
-  "auto": true
  }
 ]

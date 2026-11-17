@@ -235,7 +235,14 @@
   "ad0e619194837",
   "acb049d81f751",
   "a1c5cfbd68bcf",
-  "a8a156a22dc4f"
+  "a8a156a22dc4f",
+  "adb6ff1714824",
+  "afeaf1126aec1",
+  "a3b765bce7e5f",
+  "a55ff8e77e661",
+  "a98002f396fb3",
+  "aa981f8253bf2",
+  "ad71cd24e4ae0"
  ],
  "clock": [
   "e06:7",
@@ -368,7 +375,8 @@
   "pittohio",
   "aitworldwidelogistics",
   "mullengroup",
-  "dayross"
+  "dayross",
+  "arialogistics"
  ],
  "sent": [
   "player:pirateship",
@@ -945,243 +953,118 @@
   "amazon national urban league threaten suit over nyc delivery",
   "amazon opens first puerto rico delivery station in dorado",
   "fedex opens guangzhou baiyun international cargo terminal",
-  "uniuni to hand off some peak packages to carriers like gofo"
+  "uniuni to hand off some peak packages to carriers like gofo",
+  "wing starts walmart drone delivery in ponchatoula louisiana",
+  "lawmakers urge usps to restore air transport for island grou",
+  "teamsters rally for 200 fired amazon e bike drivers in new y",
+  "gofo leases 374 220 sf charlotte building from constellation",
+  "amazon prime air gets bondurant approval for des moines dron",
+  "amazon gets first north america union contract at b c site",
+  "dhl supply chain to hire 7 000 temporary workers add robotic"
  ],
  "harvested": [
-  "ac78f72e7f458",
-  "a7d45b9ebd65b",
-  "w08701235bf24",
-  "a57a06c26359c",
-  "aead0203aab18",
-  "a48d8a47d9a93",
-  "wfd6617806a78",
-  "aaf63e9db25a0",
-  "a6ba18049bc99",
-  "wa9c423a83880",
-  "af8ee5ed067c6",
-  "w599d9089a65d",
-  "a665de2800485",
-  "a999409ce7860",
-  "w9c03b8f99b5f",
-  "a567030ffc76c",
-  "a0adb56a55334",
-  "a5d45f26f2219",
-  "w0b8720b6a0e7",
-  "a6e82ba740e99",
-  "a89f005fb1862",
-  "a2b7282f9b8a5",
-  "a260cc6a2e05e",
-  "a3a45d7f6db20",
-  "a15404304f17b",
-  "a23a4d6fd271d",
-  "a40c99078f690",
-  "wa61ef102d1b2",
-  "a3d768115c0e6",
-  "a663794cc9c55",
-  "a0740b56c6649",
-  "ae2ec177094e3",
-  "adbdc9a506e95",
-  "rv5-ups-sbr-fuel",
-  "a2f60a03dddd7",
-  "ad851d9e2eb69",
-  "a72efb5e01b99",
-  "w500a5bdc762c",
-  "wd4f8d600e36d",
-  "af589de326934",
-  "a1c5cfbd68bcf",
-  "ae0ee67bc4b67",
-  "ae374e7320420",
-  "ae12ca75552ef",
-  "a195de38cb09b",
-  "a6c2418bed0a7",
-  "afd8784e2b179",
-  "a89d7e4beebd9",
-  "a8a156a22dc4f",
-  "a312b45efa358",
-  "a069325035b44",
-  "a58373f1b7bc3",
-  "aba40a11b6946",
-  "a4f6ca9e3591e",
-  "a74df5c94691e",
-  "wf7fe771e76cd",
-  "aee6669d325da",
-  "a3bd243da7c6c",
-  "a2f060c358424",
-  "ad7d0b7072901",
-  "acb049d81f751",
-  "a351cab9045c7",
-  "w86cfd39b48f5",
-  "ac89be3e5da8f",
-  "we0432db44af6",
-  "a831c709e5809",
-  "acfef8560e2ac",
-  "a3050815c1e52",
-  "a82e057190718",
-  "wacb825361479",
-  "a6cc2420ad66e",
-  "a773d361dac4e",
-  "w84705482dd2f",
   "wbfc38914b368",
-  "w150132868eae",
-  "w91588ddb11ed",
-  "wf5014bc150e9",
-  "a2def09bc43bb",
-  "a30525214f077",
-  "wf7bb9227b2de",
-  "a947eb28a3ca3",
-  "w8465aa718dc6",
+  "a74df5c94691e",
   "w7c65824b4bde",
-  "af027f4014177",
-  "adc002570b1d6",
-  "a84ca5863e582",
-  "wdf959a97bcb6",
-  "a9f97ff5f51a3",
-  "a9b77b62dcd89",
-  "wb8827e8c126e",
-  "aa51e82b50d12",
-  "a531bcaf173d6",
-  "aa7358e9cf2dd",
-  "w4657840c16ef",
-  "a2b81ad721cb8",
-  "a2f683da86bf8",
   "w68c1687d28a1",
-  "we85aee3857d1"
+  "a7d45b9ebd65b",
+  "a40c99078f690",
+  "aa51e82b50d12",
+  "a195de38cb09b",
+  "ae0ee67bc4b67",
+  "a531bcaf173d6",
+  "a3bd243da7c6c",
+  "af027f4014177",
+  "a665de2800485",
+  "acfef8560e2ac",
+  "a773d361dac4e",
+  "ac89be3e5da8f",
+  "a2def09bc43bb",
+  "af589de326934",
+  "a6e82ba740e99",
+  "a15404304f17b",
+  "a89d7e4beebd9",
+  "a89f005fb1862",
+  "a30525214f077",
+  "a6c2418bed0a7",
+  "we85aee3857d1",
+  "a3d768115c0e6",
+  "w599d9089a65d",
+  "wf7bb9227b2de",
+  "a0adb56a55334",
+  "a567030ffc76c",
+  "w08701235bf24",
+  "wdf959a97bcb6",
+  "wacb825361479",
+  "acb049d81f751",
+  "a0740b56c6649",
+  "afd8784e2b179",
+  "wa9c423a83880",
+  "w500a5bdc762c",
+  "a2f683da86bf8",
+  "ad71cd24e4ae0",
+  "wf7fe771e76cd",
+  "wfd6617806a78",
+  "a6ba18049bc99",
+  "a6cc2420ad66e",
+  "a2b81ad721cb8",
+  "a2f060c358424",
+  "a999409ce7860",
+  "a48d8a47d9a93",
+  "a3050815c1e52",
+  "a2f60a03dddd7",
+  "a4f6ca9e3591e",
+  "af8ee5ed067c6",
+  "adc002570b1d6",
+  "ad7d0b7072901",
+  "ae12ca75552ef",
+  "a260cc6a2e05e",
+  "a58373f1b7bc3",
+  "aead0203aab18",
+  "w4657840c16ef",
+  "wa61ef102d1b2",
+  "wf5014bc150e9",
+  "w9c03b8f99b5f",
+  "a069325035b44",
+  "ae374e7320420",
+  "ae2ec177094e3",
+  "a947eb28a3ca3",
+  "w84705482dd2f",
+  "rv5-ups-sbr-fuel",
+  "w150132868eae",
+  "a82e057190718",
+  "a831c709e5809",
+  "we0432db44af6",
+  "a8a156a22dc4f",
+  "aee6669d325da",
+  "a57a06c26359c",
+  "a2b7282f9b8a5",
+  "w91588ddb11ed",
+  "a72efb5e01b99",
+  "wd4f8d600e36d",
+  "a351cab9045c7",
+  "aa7358e9cf2dd",
+  "a84ca5863e582",
+  "a23a4d6fd271d",
+  "aba40a11b6946",
+  "a3a45d7f6db20",
+  "a9f97ff5f51a3",
+  "a1c5cfbd68bcf",
+  "adbdc9a506e95",
+  "a9b77b62dcd89",
+  "a5d45f26f2219",
+  "aaf63e9db25a0",
+  "w8465aa718dc6",
+  "ac78f72e7f458",
+  "wb8827e8c126e",
+  "w0b8720b6a0e7",
+  "w86cfd39b48f5",
+  "a663794cc9c55",
+  "a312b45efa358",
+  "ad851d9e2eb69"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "afd8784e2b179",
-   "title": "UPS cites revenue growth in all segments for Q3 2026",
-   "date": "2026-10-27",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://about.ups.com/gb/en/our-stories/innovation-driven/top-takeaways-from-ups-s-q3-2026-earnings-announcement.html",
-   "srcs": [
-    {
-     "src": "UPS",
-     "url": "https://about.ups.com/gb/en/our-stories/innovation-driven/top-takeaways-from-ups-s-q3-2026-earnings-announcement.html"
-    },
-    {
-     "src": "UPS",
-     "url": "https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-3q-2026-earnings.html"
-    }
-   ]
-  },
-  {
-   "id": "ae2ec177094e3",
-   "title": "Pitney Bowes reports Q3 revenue of $456 million, down 1%",
-   "date": "2026-10-28",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter",
-   "srcs": [
-    {
-     "src": "Business Wire",
-     "url": "https://www.businesswire.com/news/home/20261028149219/en/Pitney-Bowes-Announces-Strong-Financial-Results-for-Third-Quarter-2026-and-Issues-CEO-Letter"
-    }
-   ]
-  },
-  {
-   "id": "a82e057190718",
-   "title": "FedEx posts $22.9B quarterly revenue, raises 2026 outlook",
-   "date": "2026-10-28",
-   "c": [
-    "FedEx"
-   ],
-   "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-reports-strong-third-quarter-results-cy26",
-   "srcs": [
-    {
-     "src": "FedEx newsroom",
-     "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-reports-strong-third-quarter-results-cy26"
-    },
-    {
-     "src": "FedEx SEC filing",
-     "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000126/fedexrecastexhibit991.htm"
-    }
-   ]
-  },
-  {
-   "id": "a66453dab48f7",
-   "title": "DoorDash to buy Instacart in deal worth about $17 billion",
-   "date": "2026-10-29",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.cnn.com/2026/10/29/business/doordash-instacart-acquisition",
-   "srcs": [
-    {
-     "src": "CNN",
-     "url": "https://www.cnn.com/2026/10/29/business/doordash-instacart-acquisition"
-    },
-    {
-     "src": "Forbes",
-     "url": "https://www.forbes.com/sites/zacharyfolk/2026/10/29/doordash-will-acquire-instacart-in-17-billion-deal/"
-    },
-    {
-     "src": "Bloomberg.com",
-     "url": "https://www.bloomberg.com/news/videos/2026-10-29/doordash-to-buy-rival-instacart-in-17-billion-deal-video"
-    },
-    {
-     "src": "WSJ",
-     "url": "https://www.wsj.com/business/deals/doordash-to-buy-instacart-for-17-billion-7d6a6f3f"
-    }
-   ]
-  },
-  {
-   "id": "w9c03b8f99b5f",
-   "title": "UPS posts 2027 preview package rate tables and flags higher value-added fees",
-   "date": "2026-10-30",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-   "srcs": [
-    {
-     "src": "UPS Rate and Service Guides",
-     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-    }
-   ]
-  },
-  {
-   "id": "wbfc38914b368",
-   "title": "UPS posts 2027 Daily Rates for domestic Next Day Air and Next Day Air Early",
-   "date": "2026-10-30",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf",
-   "srcs": [
-    {
-     "src": "UPS Rate and Service Guides",
-     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
-    },
-    {
-     "src": "UPS: preview-ups-daily-package-rates.pdf",
-     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
-    }
-   ]
-  },
-  {
-   "id": "w91588ddb11ed",
-   "title": "UPS posts 2027 Small Business Hundredweight rates for Tiers 1-7, Alaska and Hawaii",
-   "date": "2026-10-30",
-   "c": [
-    "UPS"
-   ],
-   "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf",
-   "srcs": [
-    {
-     "src": "UPS Small Business Rates page",
-     "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
-    },
-    {
-     "src": "UPS: preview-ups-small-business-cwt-package-rates.pdf",
-     "url": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:deaebea7-08db-442b-b37a-ba77d207f28f/original/as/preview-ups-small-business-cwt-package-rates.pdf"
-    }
-   ]
-  },
   {
    "id": "wa9c423a83880",
    "title": "UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price",
@@ -3477,6 +3360,111 @@
      "url": "https://www.supplychaindive.com/news/uniuni-to-tap-carriers-like-gofo-for-some-peak-season-deliveries/874556/"
     }
    ]
+  },
+  {
+   "id": "adb6ff1714824",
+   "title": "Wing starts Walmart drone delivery in Ponchatoula, Louisiana",
+   "date": "2026-11-17",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future",
+   "srcs": [
+    {
+     "src": "WBRZ",
+     "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future"
+    }
+   ]
+  },
+  {
+   "id": "afeaf1126aec1",
+   "title": "Lawmakers urge USPS to restore air transport for island Ground Advantage parcels",
+   "date": "2026-11-17",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.quiverquant.com/news/Press+Release%3A+Tokuda%2C+Moylan+Urge+USPS+to+Restore+Air+Delivery+for+Island+Communities",
+   "srcs": [
+    {
+     "src": "Quiver Quantitative",
+     "url": "https://www.quiverquant.com/news/Press+Release%3A+Tokuda%2C+Moylan+Urge+USPS+to+Restore+Air+Delivery+for+Island+Communities"
+    }
+   ]
+  },
+  {
+   "id": "a3b765bce7e5f",
+   "title": "Teamsters rally for 200 fired Amazon e-bike drivers in New York",
+   "date": "2026-11-16",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://sg.finance.yahoo.com/news/teamsters-rally-support-amazon-e-221500883.html",
+   "srcs": [
+    {
+     "src": "Yahoo Finance Singapore",
+     "url": "https://sg.finance.yahoo.com/news/teamsters-rally-support-amazon-e-221500883.html"
+    }
+   ]
+  },
+  {
+   "id": "a55ff8e77e661",
+   "title": "GOFO leases 374,220 SF Charlotte building from Constellation",
+   "date": "2026-11-16",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.citybiz.co/article/934054/constellation-real-estate-partners-secures-full-building-374220-sf-lease-with-gofo-in-charlotte-nc-industrial-property/",
+   "srcs": [
+    {
+     "src": "citybiz",
+     "url": "https://www.citybiz.co/article/934054/constellation-real-estate-partners-secures-full-building-374220-sf-lease-with-gofo-in-charlotte-nc-industrial-property/"
+    }
+   ]
+  },
+  {
+   "id": "a98002f396fb3",
+   "title": "Amazon Prime Air gets Bondurant approval for Des Moines drone hub",
+   "date": "2026-11-16",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.desmoinesregister.com/story/news/local/bondurant/2026/11/16/amazon-prime-air-to-drone-deliver-from-bondurant-to-des-moines-metro/92818715007/",
+   "srcs": [
+    {
+     "src": "The Des Moines Register",
+     "url": "https://www.desmoinesregister.com/story/news/local/bondurant/2026/11/16/amazon-prime-air-to-drone-deliver-from-bondurant-to-des-moines-metro/92818715007/"
+    }
+   ]
+  },
+  {
+   "id": "aa981f8253bf2",
+   "title": "Amazon gets first North America union contract at B.C. site",
+   "date": "2026-11-16",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.freightwaves.com/news/amazon-workers-union-gets-a-contract-but-its-in-canada",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/amazon-workers-union-gets-a-contract-but-its-in-canada"
+    }
+   ]
+  },
+  {
+   "id": "ad71cd24e4ae0",
+   "title": "DHL Supply Chain to hire 7,000 temporary workers, add robotics for peak",
+   "date": "2026-11-16",
+   "c": [
+    "DHL"
+   ],
+   "url": "https://www.freightwaves.com/news/dhl-preps-for-peak-7000-workers-robotics-growth",
+   "srcs": [
+    {
+     "src": "FreightWaves",
+     "url": "https://www.freightwaves.com/news/dhl-preps-for-peak-7000-workers-robotics-growth"
+    }
+   ]
   }
  ],
  "copy": {
@@ -4287,9 +4275,161 @@
   "a8a156a22dc4f": {
    "t": "UniUni hands some parcels to Gofo",
    "m": "Some packages move to carriers like Gofo in peak season; no rate or date details given."
+  },
+  "adb6ff1714824": {
+   "t": "Wing drone delivery in Ponchatoula",
+   "m": "Walmart drone delivery covers a six-mile radius of the Ponchatoula, Louisiana store."
+  },
+  "afeaf1126aec1": {
+   "t": "Lawmakers want USPS air for islands",
+   "m": "Per lawmakers, island Ground Advantage parcels under a pound mainly move by boat since Oct. 1."
+  },
+  "a3b765bce7e5f": {
+   "t": "200 Amazon e-bike jobs lost in NY",
+   "m": "Teamsters say a DSP contract ended and 200 New York e-bike drivers lost jobs; no service change."
+  },
+  "a55ff8e77e661": {
+   "t": "GOFO leases Charlotte building",
+   "m": "GOFO leased a full 374,220 sq ft Charlotte, NC building from Constellation; no rate change."
+  },
+  "a98002f396fb3": {
+   "t": "Prime Air Des Moines hub approved",
+   "m": "Bondurant approval lets some Des Moines customers opt in to drone delivery as early as mid-January."
+  },
+  "aa981f8253bf2": {
+   "t": "Amazon Delta, B.C. union contract",
+   "m": "Sets pay and conditions for one Delta, B.C. facility; no change to shipper rates or service."
+  },
+  "ad71cd24e4ae0": {
+   "t": "DHL hires 7,000 temps for peak",
+   "m": "DHL Supply Chain adds 7,000 temporary workers and robotics for peak; no rate or service change."
   }
  },
- "queue": [],
+ "queue": [
+  {
+   "kind": "story",
+   "key": "story:wing starts walmart drone delivery in ponchatoula louisiana",
+   "id": "adb6ff1714824",
+   "t": "Wing drone delivery in Ponchatoula",
+   "m": "Update 15 · Drone delivery scale-up and FAA Part 108: Walmart drone delivery covers a six-mile radius of the Ponchatoula, Louisiana store.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.260528-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": false,
+   "mask": 16,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=adb6ff1714824",
+   "co": null
+  },
+  {
+   "kind": "story",
+   "key": "story:lawmakers urge usps to restore air transport for island ground advantage parcels",
+   "id": "afeaf1126aec1",
+   "t": "Lawmakers want USPS air for islands",
+   "m": "Per lawmakers, island Ground Advantage parcels under a pound mainly move by boat since Oct. 1.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.260582-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 4,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=afeaf1126aec1",
+   "co": "USPS"
+  },
+  {
+   "kind": "story",
+   "key": "story:teamsters rally for 200 fired amazon e bike drivers in new york",
+   "id": "a3b765bce7e5f",
+   "t": "200 Amazon e-bike jobs lost in NY",
+   "m": "Update 2 · Amazon–Teamsters driver organizing: Teamsters say a DSP contract ended and 200 New York e-bike drivers lost jobs; no service change.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.260776-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a3b765bce7e5f",
+   "co": "Amazon"
+  },
+  {
+   "kind": "story",
+   "key": "story:gofo leases 374 220 sf charlotte building from constellation",
+   "id": "a55ff8e77e661",
+   "t": "GOFO leases Charlotte building",
+   "m": "Update 2 · GOFO US expansion: GOFO leased a full 374,220 sq ft Charlotte, NC building from Constellation; no rate change.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.260962-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": false,
+   "mask": 16,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a55ff8e77e661",
+   "co": null
+  },
+  {
+   "kind": "story",
+   "key": "story:amazon prime air gets bondurant approval for des moines drone hub",
+   "id": "a98002f396fb3",
+   "t": "Prime Air Des Moines hub approved",
+   "m": "Update 14 · Drone delivery scale-up and FAA Part 108: Bondurant approval lets some Des Moines customers opt in to drone delivery as early as mid-January.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.261128-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=a98002f396fb3",
+   "co": "Amazon"
+  },
+  {
+   "kind": "story",
+   "key": "story:amazon gets first north america union contract at b c site",
+   "id": "aa981f8253bf2",
+   "t": "Amazon Delta, B.C. union contract",
+   "m": "Sets pay and conditions for one Delta, B.C. facility; no change to shipper rates or service.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.261142-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "news",
+   "notable": true,
+   "mask": 8,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=aa981f8253bf2",
+   "co": "Amazon"
+  },
+  {
+   "kind": "story",
+   "key": "story:dhl supply chain to hire 7 000 temporary workers add robotics for peak",
+   "id": "ad71cd24e4ae0",
+   "t": "DHL hires 7,000 temps for peak",
+   "m": "DHL Supply Chain adds 7,000 temporary workers and robotics for peak; no rate or service change.",
+   "big": false,
+   "at": "2026-11-16T23:43:22.261153-05:00",
+   "lvl": 1,
+   "unconf": false,
+   "topic": "rates",
+   "notable": true,
+   "mask": 16,
+   "url": "https://wmaready.github.io/parcel-pigeon/#story=ad71cd24e4ae0",
+   "co": null
+  },
+  {
+   "kind": "player",
+   "key": "player:arialogistics",
+   "at": "2026-11-16T23:43:22.262266-05:00",
+   "t": "New on the map: Aria Logistics",
+   "m": "Aria Logistics is a minority woman-owned 3PL that runs a national final-mile network for home delivery of big and bulky items such as appliances, furniture and fitness equipment, and it connects retailers with carriers.",
+   "lvl": 0,
+   "topic": "deals",
+   "mask": null,
+   "url": "https://wmaready.github.io/parcel-pigeon/#c=arialogistics"
+  }
+ ],
  "fuelq": {},
  "day": {
   "d": "2026-11-16",
