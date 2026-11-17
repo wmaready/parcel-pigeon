@@ -246,7 +246,12 @@
   "ab904315f1100",
   "a17c2b53e66e5",
   "a348dd40fe288",
-  "a80e2536b6f0a"
+  "a80e2536b6f0a",
+  "a5a12ee8825b7",
+  "a1a241248c085",
+  "a62c178a11f94",
+  "aaee32fc27d1a",
+  "a66cec1c997bb"
  ],
  "clock": [
   "e06:7",
@@ -255,8 +260,8 @@
  ],
  "fuel": {
   "OnTrac": "2026-11-16",
-  "UPS": "2026-11-09",
-  "FedEx": "2026-11-02"
+  "UPS": "2026-11-16",
+  "FedEx": "2026-11-16"
  },
  "players": [
   "indiapostdepar",
@@ -380,7 +385,8 @@
   "aitworldwidelogistics",
   "mullengroup",
   "dayross",
-  "arialogistics"
+  "arialogistics",
+  "sephora"
  ],
  "sent": [
   "player:pirateship",
@@ -731,7 +737,18 @@
   "story:lawmakers urge usps to restore air transport for island ground advantage parcels",
   "story:gofo leases 374 220 sf charlotte building from constellation",
   "story:wing starts walmart drone delivery in ponchatoula louisiana",
-  "player:arialogistics"
+  "player:arialogistics",
+  "fuel:FedEx:2026-11-16",
+  "more:player:sephora,story:amazon contractor says nyc agencies use 85 delivery contractors,story:amazon prime air starts drone deliveries in metro atlanta,story:doj set to review doordash s 17bn instacart deal reuters says,story:fedex adds weekly china us air routes from shanghai and guangzhou,story:fedex ceo discusses panda transport and china ties in cgtn interview,story:home depot rolls out nationwide express delivery within three hours,story:sen cotton urges cfius review of j t express stake in swiftx,story:uber eats launches zipline drone delivery in spring texas",
+  "story:amazon prime air starts drone deliveries in metro atlanta",
+  "story:fedex ceo discusses panda transport and china ties in cgtn interview",
+  "story:fedex adds weekly china us air routes from shanghai and guangzhou",
+  "story:home depot rolls out nationwide express delivery within three hours",
+  "story:sen cotton urges cfius review of j t express stake in swiftx",
+  "story:amazon contractor says nyc agencies use 85 delivery contractors",
+  "story:doj set to review doordash s 17bn instacart deal reuters says",
+  "story:uber eats launches zipline drone delivery in spring texas",
+  "player:sephora"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -977,172 +994,116 @@
   "uber eats launches zipline drone delivery in spring texas",
   "doj set to review doordash s 17bn instacart deal reuters say",
   "fedex adds weekly china us air routes from shanghai and guan",
-  "amazon contractor says nyc agencies use 85 delivery contract"
+  "amazon contractor says nyc agencies use 85 delivery contract",
+  "fedex ceo discusses panda transport and china ties in cgtn i",
+  "amazon prime air starts drone deliveries in metro atlanta",
+  "sen cotton urges cfius review of j t express stake in swiftx",
+  "home depot rolls out nationwide express delivery within thre"
  ],
  "harvested": [
-  "a3d768115c0e6",
-  "aa51e82b50d12",
-  "wacb825361479",
-  "wd4f8d600e36d",
-  "a3a45d7f6db20",
-  "a2b81ad721cb8",
-  "acfef8560e2ac",
-  "a195de38cb09b",
-  "ae12ca75552ef",
-  "w08701235bf24",
-  "a0740b56c6649",
-  "a74df5c94691e",
-  "a260cc6a2e05e",
-  "a351cab9045c7",
-  "wdf959a97bcb6",
-  "a2f683da86bf8",
-  "w0b8720b6a0e7",
-  "w91588ddb11ed",
-  "a2f60a03dddd7",
-  "a3050815c1e52",
-  "af589de326934",
-  "a9f97ff5f51a3",
-  "a2f060c358424",
-  "aba40a11b6946",
-  "a663794cc9c55",
-  "ad851d9e2eb69",
-  "a72efb5e01b99",
-  "w68c1687d28a1",
-  "ae2ec177094e3",
-  "w4657840c16ef",
-  "ad71cd24e4ae0",
-  "w84705482dd2f",
-  "wf5014bc150e9",
-  "w500a5bdc762c",
-  "ae374e7320420",
-  "ae0ee67bc4b67",
-  "w9c03b8f99b5f",
-  "aead0203aab18",
-  "aaf63e9db25a0",
-  "a348dd40fe288",
-  "a069325035b44",
-  "af8ee5ed067c6",
-  "a773d361dac4e",
-  "adbdc9a506e95",
-  "aa7358e9cf2dd",
-  "a567030ffc76c",
-  "a6c2418bed0a7",
-  "a48d8a47d9a93",
-  "acb049d81f751",
-  "ac78f72e7f458",
-  "a89d7e4beebd9",
-  "a0adb56a55334",
-  "we0432db44af6",
-  "a4f6ca9e3591e",
-  "a665de2800485",
-  "af027f4014177",
-  "a23a4d6fd271d",
-  "a89f005fb1862",
-  "ac89be3e5da8f",
-  "a9b77b62dcd89",
-  "w8465aa718dc6",
-  "w150132868eae",
-  "wfd6617806a78",
   "a84ca5863e582",
-  "a40c99078f690",
-  "ad7d0b7072901",
-  "we85aee3857d1",
-  "a15404304f17b",
-  "wf7bb9227b2de",
-  "a531bcaf173d6",
-  "a30525214f077",
-  "a82e057190718",
-  "afd8784e2b179",
-  "w86cfd39b48f5",
-  "a3bd243da7c6c",
-  "a6e82ba740e99",
   "a2b7282f9b8a5",
-  "wa9c423a83880",
-  "a57a06c26359c",
-  "wbfc38914b368",
-  "a999409ce7860",
-  "a5d45f26f2219",
-  "a6cc2420ad66e",
   "wb8827e8c126e",
-  "wf7fe771e76cd",
-  "w7c65824b4bde",
-  "a312b45efa358",
-  "rv5-ups-sbr-fuel",
-  "a58373f1b7bc3",
-  "a8a156a22dc4f",
-  "wa61ef102d1b2",
-  "a2def09bc43bb",
-  "aee6669d325da",
-  "a1c5cfbd68bcf",
-  "adc002570b1d6",
-  "a6ba18049bc99",
-  "a947eb28a3ca3",
-  "a831c709e5809",
+  "a2f60a03dddd7",
   "a7d45b9ebd65b",
-  "w599d9089a65d"
+  "w84705482dd2f",
+  "a2f060c358424",
+  "a72efb5e01b99",
+  "a48d8a47d9a93",
+  "a89d7e4beebd9",
+  "a6cc2420ad66e",
+  "we85aee3857d1",
+  "a947eb28a3ca3",
+  "a6c2418bed0a7",
+  "ad7d0b7072901",
+  "a531bcaf173d6",
+  "a6ba18049bc99",
+  "wf7fe771e76cd",
+  "w08701235bf24",
+  "acfef8560e2ac",
+  "a57a06c26359c",
+  "af8ee5ed067c6",
+  "ae0ee67bc4b67",
+  "a6e82ba740e99",
+  "a3d768115c0e6",
+  "a773d361dac4e",
+  "wa9c423a83880",
+  "w91588ddb11ed",
+  "a82e057190718",
+  "w500a5bdc762c",
+  "af589de326934",
+  "adbdc9a506e95",
+  "a23a4d6fd271d",
+  "w150132868eae",
+  "a5d45f26f2219",
+  "a663794cc9c55",
+  "rv5-ups-sbr-fuel",
+  "we0432db44af6",
+  "a195de38cb09b",
+  "w7c65824b4bde",
+  "w9c03b8f99b5f",
+  "a260cc6a2e05e",
+  "a30525214f077",
+  "a15404304f17b",
+  "a312b45efa358",
+  "w4657840c16ef",
+  "adc002570b1d6",
+  "aaf63e9db25a0",
+  "ae374e7320420",
+  "a0740b56c6649",
+  "ae2ec177094e3",
+  "ae12ca75552ef",
+  "wacb825361479",
+  "a999409ce7860",
+  "w599d9089a65d",
+  "a348dd40fe288",
+  "a4f6ca9e3591e",
+  "wd4f8d600e36d",
+  "aa7358e9cf2dd",
+  "a3bd243da7c6c",
+  "ac89be3e5da8f",
+  "a89f005fb1862",
+  "a74df5c94691e",
+  "a58373f1b7bc3",
+  "w0b8720b6a0e7",
+  "af027f4014177",
+  "a40c99078f690",
+  "w86cfd39b48f5",
+  "w8465aa718dc6",
+  "aead0203aab18",
+  "wf5014bc150e9",
+  "a2f683da86bf8",
+  "a665de2800485",
+  "wbfc38914b368",
+  "afd8784e2b179",
+  "a2def09bc43bb",
+  "a2b81ad721cb8",
+  "a1c5cfbd68bcf",
+  "wfd6617806a78",
+  "acb049d81f751",
+  "a567030ffc76c",
+  "aba40a11b6946",
+  "a351cab9045c7",
+  "a831c709e5809",
+  "a3a45d7f6db20",
+  "ac78f72e7f458",
+  "aa51e82b50d12",
+  "a8a156a22dc4f",
+  "aee6669d325da",
+  "a0adb56a55334",
+  "a3050815c1e52",
+  "a069325035b44",
+  "ad71cd24e4ae0",
+  "wdf959a97bcb6",
+  "a9f97ff5f51a3",
+  "wf7bb9227b2de",
+  "ad851d9e2eb69",
+  "w68c1687d28a1",
+  "wa61ef102d1b2",
+  "a9b77b62dcd89"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a937c0cd57518",
-   "title": "Analyst: on-time rate hides cost of upgrades and split parcels",
-   "date": "2026-10-29",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://parcelindustry.com/article-6731-What-On-Time-Delivery-Misses.html",
-   "srcs": [
-    {
-     "src": "Parcel Industry",
-     "url": "https://parcelindustry.com/article-6731-What-On-Time-Delivery-Misses.html"
-    }
-   ]
-  },
-  {
-   "id": "a9f4ed4757f82",
-   "title": "Amazon Q3 shipping costs rise 11% as units shipped grow 12%",
-   "date": "2026-10-29",
-   "c": [
-    "Amazon"
-   ],
-   "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3",
-   "srcs": [
-    {
-     "src": "FreightWaves",
-     "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3"
-    }
-   ]
-  },
-  {
-   "id": "ab0fbedd02a19",
-   "title": "Kenco survey: 43% of shoppers plan to spend more this peak",
-   "date": "2026-10-29",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.freightwaves.com/news/kenco-survey-shoppers-plan-more-peak-spending",
-   "srcs": [
-    {
-     "src": "FreightWaves",
-     "url": "https://www.freightwaves.com/news/kenco-survey-shoppers-plan-more-peak-spending"
-    }
-   ]
-  },
-  {
-   "id": "ae474dc39ba6c",
-   "title": "Matternet and Swisslog's TransLogic partner on hospital drone delivery",
-   "date": "2026-10-29",
-   "c": [
-    "Regional"
-   ],
-   "url": "https://markets.businessinsider.com/news/stocks/matternet-partners-with-swisslog-healthcare-s-translogic-to-bring-drone-delivery-to-thousands-of-north-american-hospitals-1036684364",
-   "srcs": [
-    {
-     "src": "markets.businessinsider.com",
-     "url": "https://markets.businessinsider.com/news/stocks/matternet-partners-with-swisslog-healthcare-s-translogic-to-bring-drone-delivery-to-thousands-of-north-american-hospitals-1036684364"
-    }
-   ]
-  },
   {
    "id": "a43b1ba7bd71d",
    "title": "FedEx Dataworks and Stripe plan joint SMB financing tool for 2027",
@@ -3479,6 +3440,66 @@
      "url": "https://nypost.com/2026/11/16/business/nyc-uses-twice-as-many-delivery-contractors-as-amazon-does-data-shows-even-as-city-weighs-crackdown/"
     }
    ]
+  },
+  {
+   "id": "a1a241248c085",
+   "title": "FedEx CEO discusses panda transport and China ties in CGTN interview",
+   "date": "2026-11-17",
+   "c": [
+    "FedEx"
+   ],
+   "url": "https://news.cgtn.com/news/2026-11-17/From-Panda-Express-to-Greater-Bay-Area-FedEx-on-China-s-opportunities-1S98QEBV5Qc/share_amp.html",
+   "srcs": [
+    {
+     "src": "CGTN",
+     "url": "https://news.cgtn.com/news/2026-11-17/From-Panda-Express-to-Greater-Bay-Area-FedEx-on-China-s-opportunities-1S98QEBV5Qc/share_amp.html"
+    }
+   ]
+  },
+  {
+   "id": "a62c178a11f94",
+   "title": "Amazon Prime Air starts drone deliveries in metro Atlanta",
+   "date": "2026-11-17",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.wrdw.com/2026/11/17/amazon-drone-delivery-begins-metro-atlanta/",
+   "srcs": [
+    {
+     "src": "WRDW",
+     "url": "https://www.wrdw.com/2026/11/17/amazon-drone-delivery-begins-metro-atlanta/"
+    }
+   ]
+  },
+  {
+   "id": "aaee32fc27d1a",
+   "title": "Sen. Cotton urges CFIUS review of J&T Express stake in SwiftX",
+   "date": "2026-11-17",
+   "c": [
+    "Regional"
+   ],
+   "url": "https://www.forth.news/lists/ussen-cotton/Ch8vRMduuMr4fP756LFDc",
+   "srcs": [
+    {
+     "src": "Forth.News",
+     "url": "https://www.forth.news/lists/ussen-cotton/Ch8vRMduuMr4fP756LFDc"
+    }
+   ]
+  },
+  {
+   "id": "a66cec1c997bb",
+   "title": "Home Depot rolls out nationwide express delivery within three hours",
+   "date": "2026-11-16",
+   "c": [
+    "Industry"
+   ],
+   "url": "https://sg.finance.yahoo.com/news/home-depot-accelerates-express-delivery-162100655.html",
+   "srcs": [
+    {
+     "src": "Yahoo Finance Singapore",
+     "url": "https://sg.finance.yahoo.com/news/home-depot-accelerates-express-delivery-162100655.html"
+    }
+   ]
   }
  ],
  "copy": {
@@ -4333,78 +4354,25 @@
   "a80e2536b6f0a": {
    "t": "Amazon says NYC uses 85 contractors",
    "m": "Bill still before City Council, with amendments under discussion. No rate or service change yet."
+  },
+  "a1a241248c085": {
+   "t": "FedEx CEO discusses panda transport",
+   "m": "Interview on panda transport and China ties; no change to rates or service."
+  },
+  "a62c178a11f94": {
+   "t": "Amazon Prime Air drones in Atlanta",
+   "m": "Prime items under 5 lbs within 7.5 miles of Gwinnett facility; no drone flights in strong winds."
+  },
+  "aaee32fc27d1a": {
+   "t": "Sen. Cotton asks CFIUS to review J&T",
+   "m": "One senator's letter asks for review of J&T's SwiftX stake; no rate or service changes announced."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:fedex adds weekly china us air routes from shanghai and guangzhou",
-   "id": "a348dd40fe288",
-   "t": "FedEx adds China-US air routes",
-   "m": "Weekly Shanghai and Guangzhou flights add China-US air capacity before peak season.",
-   "big": false,
-   "at": "2026-11-17T08:35:17.494288-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": true,
-   "mask": 2,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a348dd40fe288",
-   "co": "FedEx"
-  },
-  {
-   "kind": "story",
-   "key": "story:amazon contractor says nyc agencies use 85 delivery contractors",
-   "id": "a80e2536b6f0a",
-   "t": "Amazon says NYC uses 85 contractors",
-   "m": "Unconfirmed: Bill still before City Council, with amendments under discussion. No rate or service change yet.",
-   "big": false,
-   "at": "2026-11-17T08:35:17.494304-05:00",
-   "lvl": 1,
-   "unconf": true,
-   "topic": "news",
-   "notable": false,
-   "mask": 8,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a80e2536b6f0a",
-   "co": "Amazon"
-  },
-  {
-   "kind": "story",
-   "key": "story:doj set to review doordash s 17bn instacart deal reuters says",
-   "id": "a17c2b53e66e5",
-   "t": "DOJ set to review DoorDash deal",
-   "m": "The $17bn deal stays subject to antitrust review. No change to rates or service for shippers.",
-   "big": false,
-   "at": "2026-11-17T08:35:17.494273-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "deals",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=a17c2b53e66e5",
-   "co": null
-  },
-  {
-   "kind": "story",
-   "key": "story:uber eats launches zipline drone delivery in spring texas",
-   "id": "ab904315f1100",
-   "t": "Uber Eats drone delivery in Texas",
-   "m": "Update 14 · Drone delivery scale-up and FAA Part 108: Restaurant orders in Spring, Texas now go by Zipline drone via Uber app. Parcel rates unchanged.",
-   "big": false,
-   "at": "2026-11-17T08:35:17.494220-05:00",
-   "lvl": 1,
-   "unconf": false,
-   "topic": "news",
-   "notable": false,
-   "mask": null,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=ab904315f1100",
-   "co": null
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
   "d": "2026-11-17",
-  "n": 1
+  "n": 2
  },
- "last_push": "2026-11-17T08:11:46.783393-05:00"
+ "last_push": "2026-11-17T14:19:55.298222-05:00"
 }

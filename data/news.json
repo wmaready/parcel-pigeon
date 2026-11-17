@@ -1,52 +1,193 @@
 [
  {
-  "id": "ab904315f1100",
+  "id": "a1a241248c085",
+  "date": "2026-11-17",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Carrier strategy",
+  "kind": "News",
+  "title": "FedEx CEO discusses panda transport and China ties in CGTN interview",
+  "sum": "FedEx Corporation president and CEO Raj Subramaniam spoke with CGTN about the company's role in transporting giant pandas. According to the CGTN item, FedEx has moved 23 pandas to and from China over the years, using panda-themed aircraft and specially designed trucks.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service.",
+  "why": "The interview is a company profile item; it contains no rate, service or network changes affecting parcel shippers.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T19:17:56Z",
+  "src": "CGTN",
+  "url": "https://news.cgtn.com/news/2026-11-17/From-Panda-Express-to-Greater-Bay-Area-FedEx-on-China-s-opportunities-1S98QEBV5Qc/share_amp.html",
+  "srcs": [
+   {
+    "src": "CGTN",
+    "url": "https://news.cgtn.com/news/2026-11-17/From-Panda-Express-to-Greater-Bay-Area-FedEx-on-China-s-opportunities-1S98QEBV5Qc/share_amp.html"
+   }
+  ],
+  "auto": true,
+  "syn": "FedEx Corporation president and CEO Raj Subramaniam gave an exclusive interview to CGTN about the company's role in transporting giant pandas. According to CGTN, FedEx has carried 23 pandas to and from China, using panda-themed aircraft and specially designed trucks. The item contains no pricing, service or network details for shippers.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
+  "id": "a5a12ee8825b7",
   "date": "2026-11-17",
   "c": [
    "Industry"
   ],
   "cat": "Drones & robots",
   "kind": "News",
-  "title": "Uber Eats launches Zipline drone delivery in Spring, Texas",
-  "sum": "Uber Eats began drone delivery with Zipline in Spring, a Houston suburb in Texas, with Dallas next and more US cities planned, The Verge reported. The companies announced their partnership, including an Uber investment in Zipline, in August 2026, and set a goal of 1 million drone deliveries per day by the end of 2029.",
+  "title": "Uber Eats starts Zipline drone delivery in Spring, Texas",
+  "sum": "Uber Eats began delivering restaurant orders by Zipline drone on Tuesday in Spring, a Houston suburb, with Dallas next and dozens more US cities planned, TechCrunch and The Verge reported. The companies set a goal of 1 million drone deliveries per day by the end of 2029.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to parcel rates or service. Spring, Texas customers can now order restaurant food by drone through the Uber app, with no tipping.",
-  "why": "Uber's launch adds a third large drone delivery network in US markets; Zipline now averages about 4,300 deliveries a day globally, per The Verge.",
-  "score": 5,
-  "tie": null,
+  "plain": "Uber Eats customers in the Spring, Texas service area can now order from participating restaurants for drone delivery of up to 8 pounds. Nothing changes for parcel carrier rates or service.",
+  "why": "Zipline averages about 4,300 deliveries a day, per The Verge, against a stated goal of 1 million a day by the end of 2029.",
+  "score": 6,
+  "tie": "The launch follows the Uber–Zipline partnership and Uber investment announced in August 2026, and Zipline's $1.5 billion funding round announced in November 2026.",
   "act": null,
   "dates": [],
-  "added": "2026-11-17T13:32:15Z",
-  "src": "The Verge",
-  "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas",
+  "added": "2026-11-17T19:16:18Z",
+  "src": "TechCrunch",
+  "url": "https://techcrunch.com/2026/11/17/uber-and-ziplines-drone-delivery-service-takes-off-in-texas-with-dozens-of-cities-to-follow/",
   "srcs": [
+   {
+    "src": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/17/uber-and-ziplines-drone-delivery-service-takes-off-in-texas-with-dozens-of-cities-to-follow/"
+   },
+   {
+    "src": "Axios",
+    "url": "https://www.axios.com/local/houston/2026/11/17/uber-eats-zipline-drone-delivery-houston"
+   },
    {
     "src": "The Verge",
     "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas"
    }
   ],
   "auto": true,
-  "ann": "2026-11-17",
   "thread": "drone-delivery",
-  "upd": 14,
-  "new": "Uber Eats and Zipline launched drone delivery in Spring, Texas, adding another operator to the US market; the change affects restaurant food delivery, not parcel shipper rates.",
-  "syn": "Uber Eats launched drone delivery with Zipline in Spring, Texas, a Houston suburb, according to The Verge. Dallas is next, with more US cities planned. The service runs daily from 8AM to 10PM, according to Uber. Zipline's drones cruise at over 300 feet at speeds up to 70 mph and carry up to 8 pounds within a 10-mile radius of the restaurant. The companies have set a goal of 1 million drone deliveries per day by the end of 2029, while Zipline currently averages around 4,300 a day globally, according to The Verge.",
+  "upd": 15,
+  "new": "Uber Eats opened its first Zipline drone delivery market, Spring, Texas, with Dallas next; shippers see no change to carrier rates or service.",
+  "syn": "Uber Eats launched drone delivery with Zipline on Tuesday in Spring, Texas, the first commercial rollout under the partnership the companies announced in August 2026. Dallas is next, and the companies plan dozens more US cities, with a goal of 1 million drone deliveries per day by the end of 2029. The Verge noted that Zipline currently averages roughly 4,300 deliveries a day globally. Uber also invested in Zipline, which announced a $1.5 billion round last week; neither company has disclosed Uber's amount, according to TechCrunch.",
   "aff": [
    {
-    "who": "Spring, Texas customers",
-    "what": "Can order from participating restaurants by drone in the Uber app; tipping is disabled."
+    "who": "Uber Eats customers in Spring, Texas",
+    "what": "Can order from participating restaurants, including Jersey Mike's and Zaxby's, via a new drone icon in the app."
    },
    {
-    "who": "Drone delivery capacity",
-    "what": "Drones carry up to 8 pounds within a 10-mile radius of the restaurant, flying from 8AM to 10PM daily."
+    "who": "Drone delivery terms",
+    "what": "Orders up to 8 pounds, within a 10-mile radius of the restaurant, daily from 8AM to 10PM, Uber said."
    },
    {
-    "who": "Uber and Zipline expansion",
-    "what": "Dallas is next, with dozens of additional US cities planned; no dates given."
+    "who": "Tipping",
+    "what": "Disabled because the service is fully autonomous; customers can still rate the delivery, per The Verge."
+   },
+   {
+    "who": "Dallas customers",
+    "what": "Next market named for the Uber–Zipline drone service; no date given."
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a62c178a11f94",
+  "date": "2026-11-17",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air starts drone deliveries in metro Atlanta",
+  "sum": "Amazon's Prime Air drone carried out its first deliveries in metro Atlanta last weekend, the company said, according to WRDW. The drones operate within a 7.5-mile radius of a Gwinnett County facility and carry items under 5 pounds, with delivery in under an hour.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Amazon Prime customers within 7.5 miles of the Gwinnett County facility can receive eligible items under 5 pounds by drone. Drones do not fly in heavy rain or strong winds.",
+  "why": "Amazon extends sub-hour drone delivery to Georgia for items under 5 pounds, within 7.5 miles of one Gwinnett County site.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T19:17:41Z",
+  "src": "WRDW",
+  "url": "https://www.wrdw.com/2026/11/17/amazon-drone-delivery-begins-metro-atlanta/",
+  "srcs": [
+   {
+    "src": "WRDW",
+    "url": "https://www.wrdw.com/2026/11/17/amazon-drone-delivery-begins-metro-atlanta/"
+   }
+  ],
+  "auto": true,
+  "thread": "drone-delivery",
+  "upd": 16,
+  "new": "Amazon Prime Air began deliveries in metro Atlanta, extending sub-hour drone delivery for items under 5 pounds to Georgia within a 7.5-mile radius of one Gwinnett County facility.",
+  "syn": "Amazon's Prime Air drone began delivering in metro Atlanta, with first deliveries last weekend, the company said this week, according to WRDW. Gwinnett County is the starting point for Prime Air in Georgia. Amazon's Jeff Cleland said items under 5 pounds that fit in the drone's box can be delivered in under an hour. Operations are limited to a 7.5-mile radius of the Gwinnett County facility and pause in heavy rain or strong winds.",
+  "aff": [
+   {
+    "who": "Amazon Prime customers near Gwinnett County",
+    "what": "Eligible orders under 5 pounds can arrive by drone in under an hour, within 7.5 miles of the facility."
+   },
+   {
+    "who": "Drone delivery operations",
+    "what": "Drones will not fly during heavy rain or strong winds."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "aaee32fc27d1a",
+  "date": "2026-11-17",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Sen. Cotton urges CFIUS review of J&T Express stake in SwiftX",
+  "sum": "Sen. Tom Cotton (R-Ark.) sent a letter dated Nov. 17, 2026 to Treasury Secretary Scott Bessent urging CFIUS to review J&T Express's stake in SwiftX, a parcel carrier delivering to homes in 12 states. The letter also asks CFIUS to examine J&T's other U.S. carrier investments, including SpeedX.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. CFIUS has not been reported to have opened a review; the letter is a request from one senator.",
+  "why": "The request targets J&T-linked carriers that deliver for Temu, TikTok, AliExpress and Shein, and SpeedX says it handles over one million packages a day.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T19:17:05Z",
+  "src": "Forth.News",
+  "url": "https://www.forth.news/lists/ussen-cotton/Ch8vRMduuMr4fP756LFDc",
+  "srcs": [
+   {
+    "src": "Forth.News",
+    "url": "https://www.forth.news/lists/ussen-cotton/Ch8vRMduuMr4fP756LFDc"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "Sen. Tom Cotton (R-Ark.) wrote to Treasury Secretary Scott Bessent on Nov. 17, 2026, urging the Committee on Foreign Investment in the United States (CFIUS) to review J&T Express's stake in SwiftX. The letter cites Chinese business press reports that J&T completed a 40 percent investment in SwiftX in May, and says J&T has also reportedly invested in SpeedX. Cotton asks that J&T be required to sell its stakes or, at a minimum, that CFIUS bar access from China to SwiftX's delivery data and require outside audits.",
+  "aff": [
+   {
+    "who": "SwiftX",
+    "what": "Cotton urges a CFIUS review of J&T's 40 percent stake; SwiftX delivers to homes in 12 states."
+   },
+   {
+    "who": "SpeedX",
+    "what": "Cotton asks CFIUS to examine J&T's reported investment; the letter says SpeedX handles over one million packages a day."
+   },
+   {
+    "who": "Retailers using ProShip",
+    "what": "The letter notes SpeedX joined ProShip in March; ProShip serves 30% of the NRF Top 100 Shippers."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-17",
+  "unconf": true
  },
  {
   "id": "abf82fcdf8fa5",
@@ -431,6 +572,56 @@
     "what": "No change to rates or service is stated in the source."
    }
   ],
+  "exclusive": true
+ },
+ {
+  "id": "a66cec1c997bb",
+  "date": "2026-11-16",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "Analysis",
+  "title": "Home Depot rolls out nationwide express delivery within three hours",
+  "sum": "Home Depot has rolled out express delivery nationwide, according to a Yahoo Finance article. Tens of thousands of eligible products can reach customers within three hours for a small flat fee, and management said most express deliveries are completed in less than an hour.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Home Depot customers can get eligible products within three hours for a small flat fee. No change to carrier rates or surcharges is stated.",
+  "why": "A large home improvement retailer is offering three-hour delivery nationwide, which sets a faster delivery standard for retail parcel and big-and-bulky volume.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T19:18:27Z",
+  "src": "Yahoo Finance Singapore",
+  "url": "https://sg.finance.yahoo.com/news/home-depot-accelerates-express-delivery-162100655.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance Singapore",
+    "url": "https://sg.finance.yahoo.com/news/home-depot-accelerates-express-delivery-162100655.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Home Depot has rolled out express delivery nationwide, according to a Yahoo Finance article. Customers can receive tens of thousands of eligible products within three hours for a small flat fee, and management said most express deliveries are already completed in less than an hour. The article says more than 65% of in-stock parcel deliveries arrive the same day or the next day. It also says about 55% of stocked big-and-bulky products are delivered within two days, after a roughly 45% cut in U.S. delivery lead times over 18 months.",
+  "aff": [
+   {
+    "who": "Home Depot customers",
+    "what": "Tens of thousands of eligible products can be delivered within three hours for a small flat fee."
+   },
+   {
+    "who": "In-stock parcel deliveries",
+    "what": "More than 65% arrive the same day or the next day, according to the article."
+   },
+   {
+    "who": "Big-and-bulky products",
+    "what": "About 55% of stocked items are delivered within two days; U.S. lead times are down roughly 45% over 18 months."
+   },
+   {
+    "who": "Appliance deliveries",
+    "what": "Next-day appliance delivery now covers nearly 60% of the population."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -5852,6 +6043,78 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "a2cf4b58caa41",
+  "date": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "News",
+  "title": "Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution",
+  "sum": "Amazon will apply its 3.5% fuel and logistics surcharge to U.S. transportation fees for Amazon Warehousing and Distribution (AWD) and Multi-Channel Distribution from February 1, 2027, Supply Chain Dive reported. Amazon announced the expansion to sellers on November 5 and said it will keep reviewing the surcharge with no end date.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "From February 1, 2027, third-party sellers using AWD or Multi-Channel Distribution in the U.S. pay a 3.5% surcharge on those transportation fees. Amazon has set no end date for the surcharge.",
+  "why": "The surcharge reaches bulk storage and replenishment fees, so a unit can carry it on both its AWD transportation fee and its FBA fulfillment fee.",
+  "score": 5,
+  "tie": "Amazon introduced the surcharge in April 2026 and extended it to Multi-Channel Fulfillment and Buy with Prime fees in May 2026.",
+  "act": "2027-02-01",
+  "dates": [
+   {
+    "d": "2027-01-15",
+    "w": "Amazon surcharge applies to PanAmericas U.S.-to-Canada fees",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-01-15",
+    "w": "Amazon average FBA fulfillment fee up $0.19 per unit",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-02-01",
+    "w": "Amazon 3.5% surcharge applies to AWD and Multi-Channel Distribution",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-17T19:16:52Z",
+  "src": "TransImpact",
+  "url": "https://transimpact.com/blog/amazon-expands-its-3.5-fuel-and-logistics-surcharge-effective-february-1-2027",
+  "srcs": [
+   {
+    "src": "TransImpact",
+    "url": "https://transimpact.com/blog/amazon-expands-its-3.5-fuel-and-logistics-surcharge-effective-february-1-2027"
+   },
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/amazon-to-expand-fuel-and-logistics-surcharge-to-more-services/874693/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "syn": "Amazon is extending its 3.5% fuel and logistics surcharge to U.S. transportation fees for AWD and Multi-Channel Distribution, effective February 1, 2027. Amazon told sellers on November 5 that fuel and line-haul trucking costs have stayed elevated since it introduced the surcharge in April, and that it will keep reviewing the charge without setting an end date. According to an industry analysis, a unit that moves from AWD to a fulfillment center and then to a customer can carry the surcharge on both its AWD transportation fee and its FBA fulfillment fee. On Amazon's October earnings call, CFO Brian Olsavsky said fuel and line-haul inflation accounted for 3 percentage points of an 11% year-over-year rise in third-quarter shipping costs, and that the surcharge recovers only part of Amazon's fuel costs.",
+  "aff": [
+   {
+    "who": "AWD sellers",
+    "what": "3.5% surcharge applies to U.S. AWD transportation fees from February 1, 2027."
+   },
+   {
+    "who": "Multi-Channel Distribution users",
+    "what": "3.5% surcharge applies to U.S. Multi-Channel Distribution fees from February 1, 2027."
+   },
+   {
+    "who": "Sellers using PanAmericas",
+    "what": "Surcharge applies to PanAmericas fees for U.S.-to-Canada fulfillment from January 15, 2027."
+   },
+   {
+    "who": "FBA sellers",
+    "what": "Surcharge already covers FBA fulfillment fees; an average $0.19 per unit FBA fee increase is set for January 15."
+   }
+  ]
  },
  {
   "id": "a34d0c6e054ad",
@@ -12643,324 +12906,5 @@
   "exclusive": true,
   "tried": "2026-11-03",
   "unconf": true
- },
- {
-  "id": "a63ee5425135a",
-  "date": "2026-10-24",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "Analysis",
-  "title": "UPS profit per U.S. package rises to about $1.16 after Amazon cutback, analysis says",
-  "sum": "An analysis published Oct. 24 says UPS's U.S. domestic adjusted operating profit per package rose to about $1.16 from about $0.93 a year earlier. The figures come from UPS's July 28 second-quarter release, and the per-package math is the author's, not UPS's. UPS reports third-quarter earnings on Oct. 27.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "The item is an analysis and announces no change to UPS rates, fees or service. It describes UPS's shift toward small and mid-sized business, healthcare and B2B volume.",
-  "why": "UPS's U.S. segment handled about 35 million fewer packages in the quarter while profit rose, and Amazon now sells network capacity to other businesses.",
-  "score": 5,
-  "tie": "UPS said in January 2025 it would cut Amazon volume by more than half by the second half of 2026, and in April 2026 it reported completing the reduction.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-24T18:57:52Z",
-  "src": "Business Model Analyst",
-  "url": "https://businessmodelanalyst.com/ups-amazon-glide-down-casey-delivery-department/",
-  "srcs": [
-   {
-    "src": "Business Model Analyst",
-    "url": "https://businessmodelanalyst.com/ups-amazon-glide-down-casey-delivery-department/"
-   }
-  ],
-  "auto": true,
-  "new": "The analysis adds Q2 2026 segment figures (volume down 3.3%, adjusted operating profit up 21.0%) and the author's estimate of about $1.16 profit per package, with no change to shipper rates or service.",
-  "syn": "A Business Model Analyst piece says UPS has finished shedding about 2 million lower-yielding Amazon packages a day, a process CEO Carol Tomé described as complete in the second quarter. In UPS's U.S. Domestic segment, average daily volume fell 3.3% to 16.0 million, revenue per piece rose 9.3% and adjusted operating profit rose 21.0% to $1.19 billion. The author's own calculation puts adjusted operating profit at about $1.16 per package, up from about $0.93. The piece also notes that Amazon Supply Chain Services, launched May 4, 2026, opens Amazon's freight, warehousing and parcel network to other businesses, and it presents analyst views both for and against the threat to UPS.",
-  "aff": [
-   {
-    "who": "UPS U.S. Domestic segment",
-    "what": "Q2 daily volume 16.0M, down 3.3%; revenue per piece up 9.3%; adjusted operating profit $1.19B, up 21.0%."
-   },
-   {
-    "who": "UPS volume mix",
-    "what": "Small and mid-sized businesses were 34.5% of U.S. volume, up 2.5 points in a year; Amazon is about 9% of revenue."
-   },
-   {
-    "who": "UPS network",
-    "what": "68.5% of domestic volume runs through automated buildings, which UPS says cost about 28% less per piece."
-   },
-   {
-    "who": "B2B shippers",
-    "what": "Amazon Supply Chain Services, launched May 4, 2026, offers its network to any business, including P&G, 3M and American Eagle."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "rv5-ups-sbr-fuel",
-  "date": "2026-10-24",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Pricing & GRI",
-  "kind": "News",
-  "title": "UPS adds a 5% fuel surcharge to Small Business Rates and raises them 4.5% on Dec. 21",
-  "sum": "UPS's Small Business Rates page says that from Dec. 21, 2026, Small Business Rates (SBR) rise 4.5% and a 5% fuel surcharge applies to all SBR shipments, domestic and international. The Additional Handling minimum billable weight also goes from 40 to 50 lb. The same page still advertises SBR rates as inclusive of the Delivery Area Surcharge and Fuel Surcharge.",
-  "syn": "UPS's Small Business Rates page says that from Dec. 21, 2026, SBR rates rise 4.5% and a 5% fuel surcharge applies to all SBR shipments, domestic and international. For an SBR customer the two combine to about 9.7% (1.045 x 1.05), before any agreement terms. SBR is advertised as including fuel and delivery area surcharges, so a separate fuel surcharge removes the program's main stated benefit. The Additional Handling minimum billable weight goes from 40 to 50 lb on the same date.",
-  "aff": [
-   {
-    "who": "UPS Small Business Rates shippers",
-    "what": "Rates up 4.5% plus a new 5% fuel surcharge from Dec. 21, 2026: about 9.7% combined before agreement terms."
-   },
-   {
-    "who": "Packages subject to Additional Handling",
-    "what": "Minimum billable weight goes from 40 to 50 lb on Dec. 21, 2026."
-   }
-  ],
-  "imp": "up",
-  "lvl": 3,
-  "plain": "Shippers on UPS Small Business Rates face about 9.7% more (1.045 x 1.05) from Dec. 21, 2026, before any agreement terms. SBR is advertised as including fuel and delivery area surcharges, so this removes the program's main stated benefit.",
-  "why": "Removes a stated SBR benefit: SBR rates are advertised as including the fuel surcharge, and from Dec. 21, 2026 a 5% fuel surcharge applies on top of a 4.5% rate increase.",
-  "tie": null,
-  "act": "2026-12-21",
-  "dates": [
-   {
-    "d": "2026-12-21",
-    "w": "UPS Small Business Rates: 4.5% increase plus a new 5% fuel surcharge (about 9.7% combined)",
-    "imp": "up"
-   }
-  ],
-  "src": "UPS Small Business Rates page",
-  "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
-  "srcs": [
-   {
-    "src": "UPS Small Business Rates page",
-    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
-    "checked": "2026-10-24"
-   }
-  ],
-  "auto": false,
-  "primary": true,
-  "added": "2026-10-25T12:00:00Z"
- },
- {
-  "id": "a3bcc80e64163",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "Instacart explores sale after early talks with Uber, DoorDash",
-  "sum": "Instacart is exploring a sale and has held early talks with Uber and DoorDash, according to The Information. No price or agreement has been announced.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. Talks are preliminary; no buyer, price or agreement has been announced.",
-  "why": "Instacart's market value of roughly $12 billion is less than a third of the $40 billion to $50 billion DoorDash discussed in 2021, per Startup Fortune.",
-  "tie": "Uber partnered with Instacart in 2024; DoorDash discussed buying it in 2021.",
-  "act": null,
-  "dates": [],
-  "src": "The Information",
-  "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks",
-  "srcs": [
-   {
-    "src": "The Information",
-    "url": "https://www.theinformation.com/briefings/instacart-shares-rally-10-information-reports-sale-talks"
-   },
-   {
-    "src": "Startup Fortune",
-    "url": "https://startupfortune.com/instacart-explores-a-sale-to-uber-or-doordash-at-a-fraction-of-its-old-price/"
-   },
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/instacart-talks-sale-information-reports-2026-10-23/"
-   },
-   {
-    "src": "Bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-10-23/instacart-rallies-on-report-of-sale-talks-with-uber-doordash"
-   }
-  ],
-  "auto": true,
-  "added": "2026-10-23T00:00:00Z",
-  "restored": "2026-10-26"
- },
- {
-  "id": "a482164ee9813",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Industry analysis: Q3 freight index shows parcel, LTL and truckload rates rising",
-  "sum": "A third-quarter freight index, released recently by an investment firm and a freight audit and payment company, reflected a significant fuel increase, tight over-the-road capacity and rising parcel rates, according to Logistics Management on Oct. 23, 2026.",
-  "imp": "up",
-  "lvl": 1,
-  "plain": "An industry analysis shows parcel rates rising in the third quarter.",
-  "why": "The index points to rising parcel, LTL and truckload costs for shippers, driven by fuel and tight truck capacity.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T15:03:56Z",
-  "src": "Logistics Management",
-  "url": "https://www.logisticsmgmt.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures",
-  "srcs": [
-   {
-    "src": "Logistics Management",
-    "url": "https://www.logisticsmgmt.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures"
-   }
-  ],
-  "auto": true,
-  "syn": "An industry analysis, the third-quarter edition of a quarterly freight index, reflected a significant increase in fuel, tight over-the-road capacity and rising parcel rates, Logistics Management reported on Oct. 23, 2026. The index covers parcel, LTL and truckload. The source excerpt does not give figures for the changes.",
-  "aff": [
-   {
-    "who": "Parcel shippers",
-    "what": "Parcel rates rose, according to the third-quarter index; no figure is given in the source."
-   },
-   {
-    "who": "LTL and truckload shippers",
-    "what": "Rates rose amid higher fuel costs and tight over-the-road capacity, per the index."
-   }
-  ],
-  "edge": true
- },
- {
-  "id": "a57a06c26359c",
-  "date": "2026-10-23",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Labor",
-  "kind": "News",
-  "title": "Amazon TOM Team drivers at Indiana facility join Teamsters Local 142",
-  "sum": "Amazon Transportation Operations Management (TOM) Team drivers at the OIL9 facility in Merrillville, Indiana, have joined Teamsters Local 142, the union said on Oct. 23, 2026. The drivers marched on their manager to ask Amazon to recognize the union and bargain a contract.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The union is asking Amazon to recognize it and bargain a contract for the OIL9 drivers.",
-  "why": "The drivers move freight between Amazon facilities before last-mile delivery; OIL9 is the first Indiana TOM Team site to join the Teamsters, per the union.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-24T04:36:01Z",
-  "src": "PR Newswire",
-  "url": "https://www.prnewswire.com/news-releases/amazon-tom-team-drivers-at-oil9-facility-join-teamsters-302918209.html",
-  "srcs": [
-   {
-    "src": "PR Newswire",
-    "url": "https://www.prnewswire.com/news-releases/amazon-tom-team-drivers-at-oil9-facility-join-teamsters-302918209.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-23",
-  "syn": "Amazon TOM Team drivers at the OIL9 facility in Merrillville, Indiana, have joined Teamsters Local 142, the International Brotherhood of Teamsters said on Oct. 23, 2026. The drivers marched on their boss to ask Amazon to recognize the union and bargain a contract. According to the union, TOM Team drivers hold a Commercial Driver's License and move freight between Amazon facilities before last-mile delivery. The union said OIL9 is the first Indiana site to unionize with the Teamsters, after the SDF9 facility in Shepherdsville, Ky., and the MCI9 facility in Liberty, Mo.",
-  "aff": [
-   {
-    "who": "OIL9 TOM Team drivers",
-    "what": "Joined Teamsters Local 142 and are seeking recognition and a contract on pay and safety, the union said."
-   },
-   {
-    "who": "Amazon TOM Team sites",
-    "what": "OIL9 joins SDF9 in Kentucky and MCI9 in Missouri as TOM Team locations with Teamsters members."
-   },
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "a6f025bac3520",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Industry analysis projects record parcel and LTL costs in Q4 2026",
-  "sum": "A third-quarter industry freight index, published by an investment firm and a freight audit company, projects parcel and LTL costs at record highs in Q4 2026. It said truckload rates are also expected to keep rising through Q4 2026. It cited higher fuel costs, tight over-the-road capacity and rising parcel rates.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No rates change on a set date. The analysis forecasts record parcel costs in Q4 2026 and said additional surcharge increases are expected into 2027.",
-  "why": "The analysis projects record Q4 2026 costs across parcel, LTL and truckload, the three modes it covers, with fuel and capacity as the stated drivers.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-24T18:58:29Z",
-  "src": "Supply Chain 24/7",
-  "url": "https://www.supplychain247.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures",
-  "srcs": [
-   {
-    "src": "Supply Chain 24/7",
-    "url": "https://www.supplychain247.com/article/parcel_ltl_and_truckload_rates_climb_as_td_cowen_afs_index_signals_more_cost_pressures"
-   }
-  ],
-  "auto": true,
-  "syn": "A third-quarter industry freight index, released recently, points to continued cost pressure across freight modes. It said parcel shipping costs are expected to reach record highs in Q4 2026, driven by years of carrier pricing increases, elevated fuel surcharges, new delivery fees and seasonal holiday demand. The report also projected record LTL costs in Q4 2026, and said truckload rates are recovering as carrier capacity shrinks. It said further surcharge increases are expected into 2027. This is a forecast, not a carrier announcement.",
-  "aff": [
-   {
-    "who": "Parcel shippers",
-    "what": "Costs expected to reach record highs in Q4 2026, with further surcharge increases into 2027, per the analysis."
-   },
-   {
-    "who": "LTL shippers",
-    "what": "Costs projected to hit record highs in Q4 2026 on diesel prices, fuel surcharges and midyear GRIs."
-   },
-   {
-    "who": "Truckload shippers",
-    "what": "Rates expected to keep rising through Q4 2026 as capacity shrinks, even with soft demand."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a7070eb14b830",
-  "date": "2026-10-23",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Labor",
-  "kind": "Opinion",
-  "title": "NALC elects James Henry president as USPS contract heads to arbitration",
-  "sum": "James Henry of the Concerned Letter Carriers slate won the presidency of the National Association of Letter Carriers in the October 23 election, according to the World Socialist Web Site. He replaces Brian Renfroe in December. The outlet says the union has begun binding arbitration over a contract that expired May 22.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service has been announced. The union's new president takes office in December while contract arbitration continues, according to the outlet.",
-  "why": "NALC represents USPS letter carriers; the outlet says 285,881 members were eligible to vote and a new contract is headed to arbitration.",
-  "score": 4,
-  "tie": "The article says carriers rejected a tentative NALC contract in January 2025 and that an arbitrator imposed essentially the same agreement in March.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-11T12:00:02Z",
-  "src": "World Socialist Web Site",
-  "url": "https://www.wsws.org/en/articles/2026/11/05/pvvl-n05.html",
-  "srcs": [
-   {
-    "src": "World Socialist Web Site",
-    "url": "https://www.wsws.org/en/articles/2026/11/05/pvvl-n05.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-23",
-  "thread": "nalc-contract-arbitration",
-  "syn": "In an opinion-driven account, the World Socialist Web Site reports that James Henry won the NALC presidency on October 23 with 23,077 votes. Of 285,881 eligible members, 61,120 returned ballots, a turnout of 21.4 percent. Henry replaces Brian Renfroe in December. The outlet says arbitration over a new national contract has already begun, after the previous contract expired May 22. It also cites a July USPS Office of Inspector General white paper on options for closing the Postal Service's financial gap and an August 7 Board of Governors meeting where Postmaster General David Steiner raised possible service and price changes.",
-  "aff": [
-   {
-    "who": "NALC letter carriers",
-    "what": "Henry replaces Renfroe in December; the contract that expired May 22 is in arbitration, per the outlet."
-   },
-   {
-    "who": "USPS workforce",
-    "what": "The OIG paper examined a 10 percent staff reduction, which it estimated could save up to $5.6 billion a year."
-   },
-   {
-    "who": "Door delivery",
-    "what": "The OIG paper estimated that converting to curbside or cluster boxes could save at least $825 million a year."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
  }
 ]

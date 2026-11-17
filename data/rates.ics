@@ -11,7 +11,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
 UID:e08@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261124
 SUMMARY:▲ Peak-week fees rise: home deliveries go to $0.75–$0.80 a pack
@@ -31,7 +31,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c0@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS daily rates rise an average net 5.9%
@@ -44,7 +44,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c1@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ Additional Handling minimum billable weight rises to 50 lbs
@@ -57,7 +57,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c2@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS Small Business Rates rise 4.5%\, new 5% fuel surcharge
@@ -70,7 +70,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c4@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ New UPS Surge Fee starts on Ground and Ground Saver\; amount no
@@ -84,7 +84,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xw9c03b8f99b5f0@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:▲ UPS 2027 rate increase: 5.9% average (Ground\, Air\, Internatio
@@ -104,7 +104,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e09@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261229
 SUMMARY:▼ Peak-week fees end: home-delivery peak fee drops back to $0.50 
@@ -122,7 +122,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa3bd243da7c6c5@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:▼ UPS peak demand surcharges step down to lower rates
@@ -135,7 +135,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e15@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:▲ DHL Express 2027 rate increase for U.S. accounts: 5.9% average
@@ -150,7 +150,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e10@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:▲ FedEx 2027 general rate increase: 5.9% average
@@ -163,7 +163,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e11@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270118
 SUMMARY:▼ Peak surcharges end at every major carrier\; USPS holiday price
@@ -180,7 +180,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa23a4d6fd271d0@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:▲ Most Amazon FBA fee changes take effect\; average rise about 0.
@@ -193,8 +193,61 @@ TRANSP:TRANSPARENT
 CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
+UID:xa2cf4b58caa410@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:▲ Amazon surcharge applies to PanAmericas U.S.-to-Canada fees
+DESCRIPTION:Carriers: Amazon\nTakes effect Jan 15\, 2027.\nAnnounced Nov 5\
+ , 2026.\nStory: Amazon extends 3.5% fuel surcharge to AWD\, Multi-Channel 
+ Distribution\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#
+ s=a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa2cf4b58caa410-ann@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Announced: Amazon surcharge applies to PanAmericas U.S.-to-Canada f
+ ees
+DESCRIPTION:Takes effect Jan 15\, 2027.\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
+END:VEVENT
+BEGIN:VEVENT
+UID:xa2cf4b58caa411@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:▲ Amazon average FBA fulfillment fee up $0.19 per unit
+DESCRIPTION:Carriers: Amazon\nTakes effect Jan 15\, 2027.\nAnnounced Nov 5\
+ , 2026.\nStory: Amazon extends 3.5% fuel surcharge to AWD\, Multi-Channel 
+ Distribution\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#
+ s=a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa2cf4b58caa411-ann@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Announced: Amazon average FBA fulfillment fee up $0.19 per unit
+DESCRIPTION:Takes effect Jan 15\, 2027.\nOn Parcel Pigeon: https://wmaready
+ .github.io/parcel-pigeon/#s=a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
+END:VEVENT
+BEGIN:VEVENT
 UID:xa0ef7c3f1b1ff0@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:▲ USPS 11% fuel surcharge replaces 8% charge on four services
@@ -208,7 +261,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa0ef7c3f1b1ff0-ann@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Announced: USPS 11% fuel surcharge replaces 8% charge on four servi
@@ -221,7 +274,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xa0ef7c3f1b1ff1@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:▲ USPS base prices up avg 5.9% on four domestic services
@@ -235,7 +288,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xa0ef7c3f1b1ff1-ann@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Announced: USPS base prices up avg 5.9% on four domestic services
@@ -247,7 +300,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xab193e6648b0f1@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:▲ USPS average 5.9% increase on four package products\; holiday p
@@ -262,7 +315,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xab193e6648b0f1-ann@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Announced: USPS average 5.9% increase on four package products\; ho
@@ -275,7 +328,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:xaf7ecf517c18f1@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:▲ USPS 11% fuel surcharge on domestic packages takes effect
@@ -289,7 +342,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:xaf7ecf517c18f1-ann@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:Announced: USPS 11% fuel surcharge on domestic packages takes effec
@@ -302,7 +355,7 @@ CATEGORIES:Announcement
 END:VEVENT
 BEGIN:VEVENT
 UID:e12@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:▲ FedEx paper document fees start
@@ -317,7 +370,7 @@ CATEGORIES:Rate change
 END:VEVENT
 BEGIN:VEVENT
 UID:e13@parcel-pigeon
-DTSTAMP:20261117T133522Z
+DTSTAMP:20261117T192000Z
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
 SUMMARY:▲ FedEx zones change for select U.S. domestic ZIP pairs
@@ -328,5 +381,33 @@ DESCRIPTION:FedEx reclassifies zones for select U.S. domestic origin-destin
 URL:https://wmaready.github.io/parcel-pigeon/#s=12
 TRANSP:TRANSPARENT
 CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa2cf4b58caa412@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:▲ Amazon 3.5% surcharge applies to AWD and Multi-Channel Distribu
+ tion
+DESCRIPTION:Carriers: Amazon\nTakes effect Feb 1\, 2027.\nAnnounced Nov 5\,
+  2026.\nStory: Amazon extends 3.5% fuel surcharge to AWD\, Multi-Channel D
+ istribution\nOn Parcel Pigeon: https://wmaready.github.io/parcel-pigeon/#s
+ =a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Rate change
+END:VEVENT
+BEGIN:VEVENT
+UID:xa2cf4b58caa412-ann@parcel-pigeon
+DTSTAMP:20261117T192000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Announced: Amazon 3.5% surcharge applies to AWD and Multi-Channel D
+ istribution
+DESCRIPTION:Takes effect Feb 1\, 2027.\nOn Parcel Pigeon: https://wmaready.
+ github.io/parcel-pigeon/#s=a2cf4b58caa41
+URL:https://wmaready.github.io/parcel-pigeon/#s=a2cf4b58caa41
+TRANSP:TRANSPARENT
+CATEGORIES:Announcement
 END:VEVENT
 END:VCALENDAR

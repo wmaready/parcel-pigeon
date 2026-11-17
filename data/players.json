@@ -3604,6 +3604,32 @@
    ],
    "enriched": "2026-11-17",
    "pending": false
+  },
+  {
+   "id": "sephora",
+   "n": "Sephora",
+   "realm": "retail",
+   "own": "sub",
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Sephora is an LVMH-owned prestige beauty retailer that sells through its own stores and e-commerce. It offers same-day delivery through Uber Eats from hundreds of U.S. and Canadian stores, and it sells in-store shops inside Kohl's that are also listed on Uber Eats.",
+   "al": [
+    "Sephora USA",
+    "Sephora at Kohl's"
+   ],
+   "src": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
+   "auto": true,
+   "pending": false,
+   "added": "2026-11-17",
+   "story": "aac9428d981a9",
+   "srcs": [
+    "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
+    "https://www.digitalcommerce360.com/2025/09/09/sephora-uber-eats-same-day-delivery/",
+    "https://www.streetinsider.com/Corporate+News/Uber+adds+Sephora+to+delivery+platform+across+US+and+Canada/25311962.html"
+   ],
+   "enriched": "2026-11-17"
   }
  ],
  "edges": [
@@ -6171,6 +6197,51 @@
    "t": "Instacart and Gopuff agree marketplace partnership",
    "url": "https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
    "story": "a17c2b53e66e5"
+  },
+  {
+   "a": "jtexpress",
+   "b": "speedx",
+   "k": "invested",
+   "y": "2026",
+   "t": "J&T Express reportedly invested in SpeedX",
+   "url": "https://www.forth.news/lists/ussen-cotton/Ch8vRMduuMr4fP756LFDc",
+   "story": "aaee32fc27d1a"
+  },
+  {
+   "a": "uber",
+   "b": "sephora",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber and Sephora extend existing relationship to Sephora at Kohl's",
+   "url": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
+   "story": "aac9428d981a9"
+  },
+  {
+   "a": "sephora",
+   "b": "ubereats",
+   "k": "partner",
+   "y": "2025",
+   "t": "Same-day delivery of Sephora from U.S. and Canada stores via Uber Eats",
+   "url": "https://www.digitalcommerce360.com/2025/09/09/sephora-uber-eats-same-day-delivery/",
+   "story": "aac9428d981a9"
+  },
+  {
+   "a": "sephora",
+   "b": "uber",
+   "k": "partner",
+   "y": "2025",
+   "t": "Sephora delivery partnership announced by Uber",
+   "url": "https://www.streetinsider.com/Corporate+News/Uber+adds+Sephora+to+delivery+platform+across+US+and+Canada/25311962.html",
+   "story": "aac9428d981a9"
+  },
+  {
+   "a": "sephora",
+   "b": "kohls",
+   "k": "partner",
+   "y": null,
+   "t": "Sephora at Kohl's in-store shops, delivered via Uber Eats",
+   "url": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
+   "story": "aac9428d981a9"
   }
  ],
  "moves": [
@@ -6575,7 +6646,8 @@
   "maersklogisticsnorthamer": "2026-11-16",
   "mullengroup": "2026-11-16",
   "dayross": "2026-11-16",
-  "arialogistics": "2026-11-17"
+  "arialogistics": "2026-11-17",
+  "sephora": "2026-11-17"
  },
  "facts": {
   "ups": {

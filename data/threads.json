@@ -529,7 +529,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Wing and others are expanding drone delivery while the FAA's Part 108 beyond-visual-line-of-sight rule remains unpublished as of the latest coverage.",
+  "s": "Drone delivery is expanding across US metro areas, with Walmart, Wing, Zipline, Uber Eats and now Amazon Prime Air launching or adding sites in November 2026.",
   "ids": [
    "g27",
    "g26",
@@ -544,7 +544,9 @@
    "a644b0ea66268",
    "a8aa90b423c4a",
    "a7445a06ce8cb",
-   "ab904315f1100"
+   "ab904315f1100",
+   "a5a12ee8825b7",
+   "a62c178a11f94"
   ],
   "first": "2025-03-31",
   "last": "2026-11-17",
@@ -554,18 +556,21 @@
    "Regional"
   ],
   "cx": {
-   "sig": "26980ff297e8",
+   "sig": "91e8eeb42acd",
    "v": 3,
    "beats": {
-    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations, at $2.99 or $4.99 a drop.",
-    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "a8aa90b423c4a": "Wing, Alphabet's drone arm, will put $125M over two years into a Fort Worth plant and aims for nearly 20 U.S. markets, plus Japan with KDDI.",
-    "a7445a06ce8cb": "Four days after the plant news, Wing began Walmart deliveries in Memphis from three stores; Amazon's Memphis launch has no date.",
-    "ab904315f1100": "Uber Eats and Zipline launched in Spring, Texas, with Dallas next, toward a goal of 1 million drone deliveries a day by end of 2029."
+    "g27": "Amazon's August plan: drone sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
+    "g26": "FAA's Part 108 rule went to White House review July 10 but was unpublished as of Oct. 9; waivers or Part 135 still needed.",
+    "a644b0ea66268": "Walmart adds 300 Zipline sites, and Zipline raises $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
+    "a8aa90b423c4a": "Wing plans $125M over two years, including a Fort Worth plant, and nearly 20 U.S. markets, up from five metros today.",
+    "a7445a06ce8cb": "Wing and Walmart start Memphis deliveries Nov. 10 from three stores: free in the apps, 2.75-pound limit, as fast as 30 minutes.",
+    "a5a12ee8825b7": "Uber Eats begins Zipline deliveries in Spring, Texas, with Dallas next and a 1 million-a-day goal by the end of 2029.",
+    "a62c178a11f94": "Amazon makes first Atlanta deliveries, one of its August targets: items under 5 pounds within 7.5 miles of a Gwinnett County facility."
    },
-   "now": "Part 108 was still unpublished as of Oct. 9, so waivers or Part 135 certificates remain the route for routine BVLOS delivery."
+   "intro": "Drone delivery is scaling across US metros while the FAA's Part 108 rule is still pending, a new last-mile option.",
+   "now": "Part 108 was still unpublished as of Oct. 9; Amazon's Chicago, Cleveland and Syracuse sites are still slated to start by end of 2026."
   },
-  "rv": "efadb79c3098",
+  "rv": "2428c8a7c8aa",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -897,7 +902,7 @@
   ],
   "theme": true,
   "cx": {
-   "sig": "0b26c40d9ce3",
+   "sig": "3ee6bc993a95",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -915,7 +920,7 @@
     "aa1bd42ea784a": "A Roadie survey, relevant as the Teamsters challenge UPS's Roadie deliveries: 64% would quit a retailer after one to four bad deliveries."
    },
    "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
-   "now": "The UPS–Teamsters national contract expires July 31, 2028, so any clash is a way off, and the Amazon organizing dispute is still unresolved."
+   "now": "The UPS–Teamsters national contract expires July 31, 2028; the sources state no change to shipper rates or service from the Amazon disputes."
   },
   "apart": [
    "carrier-gri",
@@ -960,7 +965,7 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "703a44ba5778",
+   "sig": "d9573396ea61",
    "v": 3,
    "beats": {
     "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
