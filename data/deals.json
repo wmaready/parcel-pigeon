@@ -1,5 +1,115 @@
 [
  {
+  "title": "UPS buys Smartways Logistics",
+  "buyer": "UPS",
+  "target": "Smartways Logistics",
+  "value": "Undisclosed",
+  "status": "Announced",
+  "ann": "2026-11-17",
+  "closed": null,
+  "ended": null,
+  "latest": "Agreement announced Nov. 17, 2026; closing expected in the first half of 2027, subject to approvals.",
+  "sum": "UPS agreed to acquire Smartways Logistics, a healthcare logistics provider serving Australia and New Zealand. The value and terms were not disclosed.",
+  "who": [
+   [
+    "Buyer",
+    "UPS",
+    "Global package delivery and logistics company that runs UPS Healthcare."
+   ],
+   [
+    "Target",
+    "Smartways Logistics",
+    "Healthcare logistics provider serving Australia and New Zealand, with services for life sciences, medical devices, clinical trials and radiopharmaceuticals."
+   ]
+  ],
+  "why": "UPS said the planned acquisition is part of a broader strategy of investing in healthcare capabilities in Asia Pacific, including the recently opened Clark hub in the Philippines and healthcare cold-chain investments. UPS said healthcare revenue reached $3 billion for the third consecutive quarter in Q3. The transaction is subject to customary regulatory reviews and approvals.",
+  "parties": [
+   {
+    "name": "UPS",
+    "role": "Buyer",
+    "realm": "National parcel carrier",
+    "hq": "Atlanta, United States",
+    "founded": null,
+    "size": "2025 revenue of $88.7 billion; about 460,000 employees",
+    "history": []
+   },
+   {
+    "name": "Smartways Logistics",
+    "role": "Target",
+    "realm": "Cold chain / healthcare logistics",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "The Riverside Company",
+    "role": "Backer",
+    "realm": "Private equity / investor",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "UPS",
+   "c": [
+    {
+     "n": "UPS Healthcare",
+     "nw": 0,
+     "c": [
+      {
+       "n": "Smartways Logistics",
+       "nw": 1,
+       "c": []
+      }
+     ]
+    }
+   ]
+  },
+  "note": "Expected to close in the first half of 2027, subject to regulatory approvals.",
+  "ties": [
+   {
+    "d": "2026-11-02",
+    "t": "Loadstar comment says Amazon Logistics now a carrier for hire",
+    "story": "a0ec7d6444ab6"
+   },
+   {
+    "d": "2026-11-02",
+    "t": "Amazon Logistics tops US parcel volume in 2025 with 6.9B, Pitney Bowes index shows",
+    "story": "a632e64bf8af4"
+   },
+   {
+    "d": "2026-10-06",
+    "t": "Logistics Managers' Index hits 70.2 as transportation prices climb",
+    "story": "r09"
+   },
+   {
+    "d": "2024-06-23",
+    "t": "UPS agrees to sell Coyote Logistics to RXO for $1.025 billion",
+    "story": "h412"
+   }
+  ],
+  "d": "2026-11-17",
+  "story": "aaba50a646259",
+  "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+  "srcs": [
+   {
+    "src": "Business Wire",
+    "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics"
+   }
+  ],
+  "checked": "2026-11-17",
+  "updates": [
+   {
+    "d": "2026-11-17",
+    "t": "UPS agrees to acquire healthcare logistics firm Smartways Logistics",
+    "story": "aaba50a646259"
+   }
+  ]
+ },
+ {
   "title": "Zipline raises $1.5 billion at $21.5 billion valuation",
   "buyer": "Investors including Uber",
   "target": "Zipline",

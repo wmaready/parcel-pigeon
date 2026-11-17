@@ -1,5 +1,94 @@
 [
  {
+  "status": "asked",
+  "issue": "https://github.com/wmaready/parcel-pigeon/issues/319",
+  "story": {
+   "id": "w0a7a1d333937",
+   "date": "2026-11-17",
+   "c": [
+    "FedEx"
+   ],
+   "title": "FedEx doubles U.S. export Demand Surcharge to MEISA to $1.50/lb from Nov. 6, 2026",
+   "sum": "FedEx raised the U.S. export Demand Surcharge for the Middle East and Indian Subcontinent (MEISA) destinations from $0.75 to $1.50 per lb, effective Nov. 6, 2026 until further notice. The Israel rate ($0.50), the Canada/LAC/Europe/Australia/New Zealand rate ($0.30), the India and rest of MEISA rate ($0.50) and the $1 parcel and $50 freight minimums are unchanged. The page is now dated Nov. 5, 2026.",
+   "plain": "Parcel and freight shipments from the U.S. to MEISA countries such as Saudi Arabia, the UAE, Qatar, Kuwait and Pakistan pay $0.75 more per lb. A 10 lb package, for example, carries $7.50 more in surcharge.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-11-06",
+   "inferred": null,
+   "detected": "2026-11-17",
+   "changes": [
+    {
+     "what": "U.S. export Demand Surcharge, U.S. to Middle East and Indian Subcontinent (MEISA), parcel and freight",
+     "before": "$0.75 per lb. (effective April 24, 2026 until further notice)",
+     "after": "$1.50 per lb. (effective Nov. 6, 2026 until further notice)",
+     "effective": "2026-11-06",
+     "who": "U.S. export parcel and freight shipments to the MEISA countries (Bahrain, Bangladesh, Bhutan, Iraq, Jordan, Kuwait, Lebanon, Maldives, Nepal, Oman, Pakistan, Qatar, Saudi Arabia, Sri Lanka, UAE)",
+     "impact": "$0.75 -> $1.50, +$0.75 per lb. (+100%)"
+    },
+    {
+     "what": "The earlier MEISA rate now carries an end date of Nov. 5, 2026",
+     "before": "Effective April 24, 2026 until further notice",
+     "after": "Effective April 24, 2026–Nov. 5, 2026",
+     "effective": "2026-11-05",
+     "who": "U.S. export shipments to MEISA",
+     "impact": "Old $0.75 rate ends after Nov. 5, 2026"
+    },
+    {
+     "what": "U.S. export Demand Surcharge, U.S. to Israel (unchanged)",
+     "before": "$0.50 per lb.",
+     "after": "$0.50 per lb.",
+     "effective": null,
+     "who": "U.S. export parcel and freight shipments to Israel",
+     "impact": "No change"
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The Israel table's new effective-date line is laid out ambiguously, so the Israel rate is read as unchanged at $0.50 with its April 24, 2026 start date.",
+    "The $0.20 Canada/LAC/Europe/Australia/New Zealand table no longer appears. It had been replaced by the $0.30 rate from Sept. 21, 2026, so this is read as removal of an expired rate."
+   ],
+   "dates": [
+    {
+     "d": "2026-11-05",
+     "w": "FedEx: The earlier MEISA rate now carries an end date of Nov. 5, 2026",
+     "imp": "up"
+    },
+    {
+     "d": "2026-11-06",
+     "w": "FedEx: U.S. export Demand Surcharge, U.S. to Middle East and Indian Subcontinent (MEISA), parcel and freight",
+     "imp": "up"
+    }
+   ],
+   "kind": "Alert",
+   "src": "FedEx Demand surcharges (spotted by Parcel Pigeon)",
+   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-6-26_US-Export-Demand-Surcharges.pdf",
+   "srcs": [
+    {
+     "src": "FedEx Demand surcharges",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
+    },
+    {
+     "src": "FedEx: 11-6-26_US-Export-Demand-Surcharges.pdf",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-6-26_US-Export-Demand-Surcharges.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (11-6-26_US-Export-Demand-Surcharges.pdf), cosmetic",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-6-26_US-Export-Demand-Surcharges.pdf",
+      "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
   "status": "not material",
   "date": "2026-11-17",
   "page": "https://pe.usps.com/PriceChange/Index",

@@ -194,7 +194,7 @@
   "told": []
  },
  "https://www.fedex.com/en-us/service-guide.html": {
-  "checked": "2026-11-14",
+  "checked": "2026-11-17",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/FICE_TermsCond.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
@@ -209,21 +209,23 @@
   "pend": "4d341f89308d"
  },
  "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html": {
-  "checked": "2026-11-11",
+  "checked": "2026-11-17",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Export-Demand-Surcharges.pdf"
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-6-26_US-Export-Demand-Surcharges.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_Intl_NSS_Demand-Surcharges.pdf"
   ],
   "lines": 52,
   "told": [],
   "told2": [
    "5f7b3533a2ed",
    "525ba7c8e519",
-   "635a86987c63"
+   "635a86987c63",
+   "10481b5f92cf",
+   "3abae64e06d1",
+   "d809153b711b"
   ],
-  "told_until": "2026-12-03",
-  "pend": "2ac465620801"
+  "told_until": "2026-12-03"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-15",
@@ -245,7 +247,8 @@
    "7f093eb4a814",
    "72368a6e5f29"
   ],
-  "told_until": "2026-12-03"
+  "told_until": "2026-12-03",
+  "pend": "ced9368ca049"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-17",
@@ -267,7 +270,8 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf"
   ],
   "lines": 53,
-  "told": []
+  "told": [],
+  "pend": "19964ecb4670"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-17",

@@ -3630,6 +3630,40 @@
     "https://www.streetinsider.com/Corporate+News/Uber+adds+Sephora+to+delivery+platform+across+US+and+Canada/25311962.html"
    ],
    "enriched": "2026-11-17"
+  },
+  {
+   "id": "smartwayslogis",
+   "n": "Smartways Logistics",
+   "realm": "cold",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Healthcare logistics provider serving Australia and New Zealand",
+   "al": [],
+   "src": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-17",
+   "story": "aaba50a646259"
+  },
+  {
+   "id": "theriversideco",
+   "n": "The Riverside Company",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Investor in Smartways, acknowledged by its chair for its partnership and support",
+   "al": [],
+   "src": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-17",
+   "story": "aaba50a646259"
   }
  ],
  "edges": [
@@ -6242,6 +6276,33 @@
    "t": "Sephora at Kohl's in-store shops, delivered via Uber Eats",
    "url": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
    "story": "aac9428d981a9"
+  },
+  {
+   "a": "ups",
+   "b": "smartwayslogis",
+   "k": "acquired",
+   "y": "2026",
+   "t": "UPS agrees to acquire Smartways Logistics",
+   "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "story": "aaba50a646259"
+  },
+  {
+   "a": "theriversideco",
+   "b": "smartwayslogis",
+   "k": "invested",
+   "y": "2026",
+   "t": "Riverside Company a partner of Smartways, thanked by its chair",
+   "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "story": "aaba50a646259"
+  },
+  {
+   "a": "theriversideco",
+   "b": "ups",
+   "k": "invested",
+   "y": null,
+   "t": "Backs UPS",
+   "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "story": "aaba50a646259"
   }
  ],
  "moves": [
