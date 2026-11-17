@@ -1,6 +1,55 @@
 [
  {
-  "id": "adb6ff1714824",
+  "id": "ab904315f1100",
+  "date": "2026-11-17",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Uber Eats launches Zipline drone delivery in Spring, Texas",
+  "sum": "Uber Eats began drone delivery with Zipline in Spring, a Houston suburb in Texas, with Dallas next and more US cities planned, The Verge reported. The companies announced their partnership, including an Uber investment in Zipline, in August 2026, and set a goal of 1 million drone deliveries per day by the end of 2029.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to parcel rates or service. Spring, Texas customers can now order restaurant food by drone through the Uber app, with no tipping.",
+  "why": "Uber's launch adds a third large drone delivery network in US markets; Zipline now averages about 4,300 deliveries a day globally, per The Verge.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T13:32:15Z",
+  "src": "The Verge",
+  "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas",
+  "srcs": [
+   {
+    "src": "The Verge",
+    "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "thread": "drone-delivery",
+  "upd": 14,
+  "new": "Uber Eats and Zipline launched drone delivery in Spring, Texas, adding another operator to the US market; the change affects restaurant food delivery, not parcel shipper rates.",
+  "syn": "Uber Eats launched drone delivery with Zipline in Spring, Texas, a Houston suburb, according to The Verge. Dallas is next, with more US cities planned. The service runs daily from 8AM to 10PM, according to Uber. Zipline's drones cruise at over 300 feet at speeds up to 70 mph and carry up to 8 pounds within a 10-mile radius of the restaurant. The companies have set a goal of 1 million drone deliveries per day by the end of 2029, while Zipline currently averages around 4,300 a day globally, according to The Verge.",
+  "aff": [
+   {
+    "who": "Spring, Texas customers",
+    "what": "Can order from participating restaurants by drone in the Uber app; tipping is disabled."
+   },
+   {
+    "who": "Drone delivery capacity",
+    "what": "Drones carry up to 8 pounds within a 10-mile radius of the restaurant, flying from 8AM to 10PM daily."
+   },
+   {
+    "who": "Uber and Zipline expansion",
+    "what": "Dallas is next, with dozens of additional US cities planned; no dates given."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "abf82fcdf8fa5",
   "date": "2026-11-17",
   "c": [
    "Regional"
@@ -8,41 +57,42 @@
   "cat": "Drones & robots",
   "kind": "News",
   "title": "Wing starts Walmart drone delivery in Ponchatoula, Louisiana",
-  "sum": "Wing is running drone deliveries from the Walmart in Ponchatoula, Louisiana, the first store in the state to offer them, WBRZ reported. Drones deliver within a six-mile radius, Mayor Wesley Daniels said, and Wing's website says it plans to expand to New Orleans in the future.",
+  "sum": "Wing, Alphabet's drone delivery business, is running Walmart deliveries from the Ponchatoula, Louisiana store, the first Walmart location in the state to offer drone delivery, WBRZ reported. Drones deliver within a six-mile radius, Mayor Wesley Daniels said, and Wing's website says it plans to expand to New Orleans in the future.",
   "imp": "info",
   "lvl": 1,
-  "plain": "Drone delivery from the Ponchatoula Walmart is available within a six-mile radius of the store. No change to carrier rates or fees is stated.",
-  "why": "Louisiana now has two drone delivery operators, Wing at Walmart and Amazon Prime Air in Baton Rouge, which may draw more companies, per one drone expert.",
+  "plain": "Walmart customers near the Ponchatoula, Louisiana store can receive drone deliveries within a six-mile radius. No change to parcel carrier rates or service.",
+  "why": "It is the first Walmart drone delivery site in Louisiana, adding to Amazon's Prime Air service in Baton Rouge and widening drone delivery options in the state.",
   "score": 4,
-  "tie": null,
+  "tie": "The launch follows Wing's November 2026 announcement of a $125 million Fort Worth plant investment and its Memphis Walmart launch on Nov. 10, 2026.",
   "act": null,
   "dates": [],
-  "added": "2026-11-17T04:40:33Z",
+  "added": "2026-11-17T13:34:02Z",
   "src": "WBRZ",
-  "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future",
+  "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future/",
   "srcs": [
+   {
+    "src": "WBRZ",
+    "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future/"
+   },
    {
     "src": "WBRZ",
     "url": "https://www.wbrz.com/news/wing-plans-to-expand-drone-delivery-from-ponchatoula-to-new-orleans-in-the-future"
    }
   ],
   "auto": true,
-  "new": "Wing's Walmart drone delivery reaches Louisiana for the first time, in Ponchatoula, with New Orleans listed as a future market; no rate or fee change is stated.",
-  "syn": "Wing, the Alphabet-owned drone operator, is delivering Walmart orders by drone from the Ponchatoula, Louisiana store, the first Walmart location in the state to offer the service, WBRZ reported. The drones operate from a fenced \"nest\" in the parking lot and deliver within a six-mile radius, according to Mayor Wesley Daniels. The FAA has granted Wing a Part 135 Air Carrier Certificate and permission for flights beyond visual line of sight. Wing's website says it plans to expand to New Orleans in the future.",
+  "new": "Wing's Walmart drone delivery reached Ponchatoula, Louisiana, the state's first Walmart drone site, with New Orleans planned; no change to shipper rates, and WBRZ notes FAA drone rules are still in motion.",
+  "syn": "Wing is operating drone deliveries for Walmart from the Ponchatoula, Louisiana store, the first Walmart location in the state to offer the service, according to WBRZ. Drones deliver within a six-mile radius of the store, Mayor Wesley Daniels said. Amazon's Prime Air began service from a Baton Rouge fulfillment center months earlier. Wing's website says it plans to expand to New Orleans in the future.",
   "aff": [
    {
     "who": "Ponchatoula-area Walmart customers",
-    "what": "Drone delivery is available within a six-mile radius of the Ponchatoula store."
-   },
-   {
-    "who": "Louisiana drone delivery market",
-    "what": "Wing joins Amazon Prime Air, which serves orders from the Baton Rouge fulfillment center."
+    "what": "Drone delivery from the Ponchatoula Walmart within a six-mile radius, run by Wing."
    },
    {
     "who": "New Orleans",
     "what": "Wing's website says it plans to expand there in the future; no date given."
    }
-  ]
+  ],
+  "exclusive": true
  },
  {
   "id": "afeaf1126aec1",
@@ -92,6 +142,55 @@
   "exclusive": true
  },
  {
+  "id": "a17c2b53e66e5",
+  "date": "2026-11-16",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "DOJ set to review DoorDash's $17bn Instacart deal, Reuters says",
+  "sum": "The US Department of Justice is expected to examine DoorDash's proposed acquisition of Instacart, Reuters reported, citing unnamed sources. DoorDash agreed to buy Instacart in a deal valued at about $17bn and would pay a $1.25bn termination fee if the deal does not win antitrust clearance.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers at this time. The deal remains subject to antitrust review.",
+  "why": "The review could decide whether DoorDash, which competes with Instacart in US grocery delivery, can combine with it in a roughly $17bn deal.",
+  "score": 6,
+  "tie": "DoorDash and Instacart announced the roughly $17bn deal on 29 October 2026, with closing expected between late 2027 and the first half of 2028.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T13:31:54Z",
+  "src": "Reuters",
+  "url": "https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+  "srcs": [
+   {
+    "src": "Reuters",
+    "url": "https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/news/doj-reportedly-set-review-doordash-092556129.html"
+   }
+  ],
+  "auto": true,
+  "new": "Reuters reported the DOJ is expected to review the deal, and the $1.25bn termination fee tied to antitrust clearance was disclosed; shippers see no change to rates or service.",
+  "syn": "The US Department of Justice is expected to review DoorDash's proposed purchase of Instacart, Reuters reported, citing unnamed sources. The deal, announced on 29 October 2026, is valued at about $17bn, and DoorDash has agreed to pay Instacart a $1.25bn termination fee if it does not secure antitrust clearance. A DOJ spokesperson did not comment on the transaction specifically but said the department would keep prioritising affordability and competition. Instacart competes with DoorDash and Uber Eats in grocery delivery, and the report notes that states such as New York and California can also bring antitrust challenges.",
+  "aff": [
+   {
+    "who": "DoorDash and Instacart",
+    "what": "The $17bn deal faces an expected DOJ review; a $1.25bn termination fee applies if antitrust clearance is not secured."
+   },
+   {
+    "who": "Grocery delivery market",
+    "what": "The deal would combine two delivery apps that compete with each other and with Uber Eats."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ]
+ },
+ {
   "id": "a1c5cfbd68bcf",
   "date": "2026-11-16",
   "c": [
@@ -124,6 +223,10 @@
    {
     "src": "The STAT Trade Times",
     "url": "https://www.stattimes.com/air-cargo/fedex-opens-45000-sq-m-cargo-terminal-in-guangzhou-1361309"
+   },
+   {
+    "src": "Qatar Tribune",
+    "url": "https://www.qatar-tribune.com/article/264694/business/fedex-triples-capacity-in-southern-china-amid-regional-cargo-growth"
    }
   ],
   "auto": true,
@@ -144,6 +247,50 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "a348dd40fe288",
+  "date": "2026-11-16",
+  "c": [
+   "FedEx"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "FedEx adds weekly China-US air routes from Shanghai and Guangzhou",
+  "sum": "FedEx is launching weekly air routes linking manufacturing hubs in Shanghai and Guangzhou to U.S. destinations ahead of peak season, Supply Chain Dive reported on Nov. 16, 2026. The routes are meant to support demand driven by artificial intelligence.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to FedEx rates or fees was reported. The new weekly routes add China-to-U.S. air capacity ahead of peak season.",
+  "why": "Adds air capacity on the Transpacific corridor, where AI and semiconductor components are the biggest demand driver, Supply Chain Dive said.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T13:33:21Z",
+  "src": "FedEx newsroom",
+  "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
+  "srcs": [
+   {
+    "src": "FedEx newsroom",
+    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing"
+   },
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/fedex-launches-china-us-air-capacity-ahead-of-peak-season/874590/"
+   }
+  ],
+  "auto": true,
+  "syn": "FedEx is launching weekly air routes that connect manufacturing hubs in Shanghai and Guangzhou to U.S. destinations ahead of peak season, according to Supply Chain Dive on Nov. 16, 2026. The routes are intended to support artificial intelligence-driven demand. Supply Chain Dive said air cargo demand for AI- and semiconductor-related components is currently the biggest driver on the Transpacific corridor.",
+  "aff": [
+   {
+    "who": "China-US air cargo shippers",
+    "what": "New weekly FedEx routes connect Shanghai and Guangzhou to U.S. destinations ahead of peak season."
+   },
+   {
+    "who": "AI and semiconductor component shippers",
+    "what": "These components are the biggest driver of demand on the Transpacific corridor, per Supply Chain Dive."
+   }
+  ]
  },
  {
   "id": "a3b765bce7e5f",
@@ -285,6 +432,60 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a80e2536b6f0a",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Amazon contractor says NYC agencies use 85 delivery contractors",
+  "sum": "An analysis by Kris Basmagy of DashWave Delivery, an Amazon contractor, says three New York City agencies rely on some 85 independent delivery-related contractors, against an estimated 40 that deliver Amazon goods in the city. The New York Post reported the analysis as the City Council weighs the Delivery Protection Act (Intro 518). Basmagy called the city's position hypocritical, and the mayor's office did not respond to the Post's requests for comment.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No rates or service levels change yet. The bill is still before the City Council, and amendments are under discussion.",
+  "why": "Intro 518 would force Amazon to stop using about 40 contractors in NYC, where Amazon has 15-plus warehouses and the contractors employ about 5,000 people.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T13:33:39Z",
+  "src": "New York Post",
+  "url": "https://nypost.com/2026/11/16/business/nyc-uses-twice-as-many-delivery-contractors-as-amazon-does-data-shows-even-as-city-weighs-crackdown/",
+  "srcs": [
+   {
+    "src": "New York Post",
+    "url": "https://nypost.com/2026/11/16/business/nyc-uses-twice-as-many-delivery-contractors-as-amazon-does-data-shows-even-as-city-weighs-crackdown/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "new": "An Amazon contractor's analysis says NYC agencies use about 85 delivery-related contractors, twice the estimated 40 serving Amazon, and Menin has publicly said she wants to amend the bill to keep jobs; no change to shipper rates or service yet.",
+  "syn": "The New York Post reported an analysis of City Comptroller data by Kris Basmagy, whose company DashWave Delivery is one of Amazon's New York City contractors. It says the Department of Homeless Services, the Department of Aging and the Department of Transportation use some 85 independent contractors for meal delivery and construction hauling, more than twice the estimated 40 third-party contractors that deliver Amazon goods in the city. The Delivery Protection Act (Intro 518) would bar big last-mile facility operators from outsourcing deliveries to independent contractors. Speaker Julie Menin said she wants to amend it to keep jobs in the city, and Amazon said it remains engaged with her team.",
+  "aff": [
+   {
+    "who": "Amazon delivery contractors",
+    "what": "The delivery companies say their 5,000-person workforce depends on Amazon's warehouses staying in the city."
+   },
+   {
+    "who": "Amazon warehouse employees",
+    "what": "Amazon's 2,000 warehouse employees could lose their jobs if Amazon leaves the city, according to the delivery companies."
+   },
+   {
+    "who": "DashWave Delivery",
+    "what": "Basmagy said the company, with 150 drivers, would cease to exist if Amazon relocates out of the city."
+   },
+   {
+    "who": "COPR Industries drivers",
+    "what": "Van drivers earn $24.75 per hour, e-bike riders $21.50 and walkers $19.50, owner Juan Martinez said."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "tried": "2026-11-17",
+  "unconf": true
  },
  {
   "id": "a8a156a22dc4f",
@@ -3294,22 +3495,26 @@
   "cat": "Drones & robots",
   "kind": "News",
   "title": "Amazon Prime Air wins first SAIL 4 approval from UK CAA",
-  "sum": "Amazon said on Nov. 10, 2026 that Prime Air received a SAIL 4 operating authorization and flightworthiness validation from the UK Civil Aviation Authority, which it described as a world first. The approval lets drones fly over more of Darlington and raises eligible customers from about 600 to roughly 8,000.",
+  "sum": "Amazon said on 10 November 2026 that Prime Air is the first operator in the world to obtain a SAIL 4 Operating Authorisation and Flightworthiness Validation from the UK Civil Aviation Authority. The approval raises the number of eligible customers in Darlington from around 600 to roughly 8,000.",
   "imp": "info",
   "lvl": 1,
-  "plain": "More Darlington customers become eligible for Prime Air drone delivery, rising from about 600 to roughly 8,000. Prime members pay no additional delivery fee, according to Amazon.",
-  "why": "The approval widens Amazon's UK drone delivery area in Darlington from about 600 to roughly 8,000 eligible customers.",
+  "plain": "Amazon's Prime Air drone deliveries in Darlington, UK, now reach roughly 8,000 eligible customers, up from around 600. No change to rates for other shippers.",
+  "why": "The approval widens Amazon's UK drone delivery area in Darlington from around 600 to roughly 8,000 eligible customers.",
   "score": 4,
-  "tie": "Amazon said in August 2026 that Prime Air would expand to nearly 500 U.S. towns by the end of 2026, and on Nov. 10, 2026 it opened a drone site in Markham, Illinois.",
+  "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-11-11T18:08:32Z",
-  "src": "STAT Times",
+  "added": "2026-11-17T13:34:18Z",
+  "src": "The STAT Trade Times",
   "url": "https://www.stattimes.com/drones/amazon-prime-air-secures-worlds-first-sail-4-approval-in-the-uk-1361277",
   "srcs": [
    {
-    "src": "STAT Times",
+    "src": "The STAT Trade Times",
     "url": "https://www.stattimes.com/drones/amazon-prime-air-secures-worlds-first-sail-4-approval-in-the-uk-1361277"
+   },
+   {
+    "src": "sUAS News",
+    "url": "https://www.suasnews.com/2026/11/amazons-prime-air-secures-the-worlds-first-sail-4-approval-from-the-uk-civil-aviation-authority/"
    },
    {
     "src": "Dronelife",
@@ -3318,23 +3523,19 @@
   ],
   "auto": true,
   "ann": "2026-11-10",
-  "new": "Amazon received a UK SAIL 4 approval that raises eligible Darlington customers from about 600 to roughly 8,000; the sources say nothing on U.S. rules or fees.",
-  "syn": "Amazon said on Nov. 10, 2026 that its Prime Air drone service received a SAIL 4 operating authorization and flightworthiness validation from the UK Civil Aviation Authority, the first operator in the world to do so according to Amazon. SAIL 4 is a level the CAA considers medium to high risk. The approval lets Prime Air fly over more of Darlington, where it began service in early 2026, and raises eligible customers from about 600 to roughly 8,000. Deliveries arrive in under two hours, according to Amazon.",
+  "syn": "Amazon announced on 10 November 2026 that Prime Air has become the first operator in the world to obtain a SAIL 4 Operating Authorisation and Flightworthiness Validation from the UK Civil Aviation Authority. The CAA assessed Prime Air's operation, aircraft, organisation and approach to risk. Eligible customers in Darlington grow from around 600 to roughly 8,000, with deliveries in under two hours and approval to serve more densely populated communities in the area. Prime Air began operating in Darlington in early 2026 under authorisation for beyond-visual-line-of-sight flights in less densely populated areas.",
   "aff": [
    {
     "who": "Darlington customers",
-    "what": "Eligible customers grow from about 600 to roughly 8,000; deliveries arrive in under two hours, per Amazon."
+    "what": "Eligible customers grow from around 600 to roughly 8,000, with delivery in under two hours."
    },
    {
-    "who": "Prime members",
-    "what": "No additional delivery fee for Prime Air drone deliveries in Darlington, according to Amazon."
-   },
-   {
-    "who": "Eligible items",
-    "what": "Packages of 5 pounds or less that fit a box about the size of a large shoebox, within 7.5 miles of the fulfillment center."
+    "who": "Prime Air operations in the UK",
+    "what": "Approval covers flights over more of Darlington, including more densely populated communities in the area."
    }
   ],
-  "edge": true
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a2b7282f9b8a5",
@@ -4435,7 +4636,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-16",
+  "tried": "2026-11-17",
   "unconf": true
  },
  {
@@ -9620,7 +9821,6 @@
   ],
   "auto": true,
   "ann": "2026-10-29",
-  "thread": "doordash-instacart-deal",
   "syn": "DoorDash plans to acquire Instacart for $65 per share, a transaction valued at about $17 billion, according to the companies' joint announcement on October 29, 2026. DoorDash expects $500 million in net synergies in the third year after the deal. CFO Ravi Inukonda cited four opportunities on the earnings call: more consumer demand, higher ad spend, software for grocery partners, and fulfillment accuracy. The deal is expected to close between late 2027 and the first half of 2028, subject to Instacart stockholder approval, the Hart-Scott-Rodino waiting period, and approvals in Canada and Israel.",
   "aff": [
    {
@@ -12761,283 +12961,6 @@
    }
   ],
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a8b925f5373a7",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Pricing & GRI",
-  "kind": "Analysis",
-  "title": "UPS 2027 increase runs above 5.9% on light packages, fees, analyses find",
-  "sum": "Two industry analyses of UPS's published 2026 and 2027 rates, both dated Oct. 30, 2026, say the average net 5.9% increase effective Dec. 21, 2026 hides larger rises on the lightest packages, minimum charges and accessorials. One analysis puts the most-used accessorials at an average 9.93% increase. UPS is also raising the Additional Handling minimum billable weight from 40 lbs to 50 lbs.",
-  "imp": "up",
-  "lvl": 3,
-  "plain": "From Dec. 21, 2026, UPS Daily Rates rise an average net 5.9%. According to the analyses, light packages, minimum charges and common surcharges rise faster than that, and the Additional Handling minimum weight rises to 50 lbs.",
-  "why": "The analyses say the 5.9% average masks larger rises on common fees and light packages, which affect most UPS shippers.",
-  "score": 7,
-  "tie": "UPS announced the Dec. 21, 2026 increase, the 50 lb Additional Handling minimum and the ZIP changes in October 2026, and these analyses compare the published rate tables behind that announcement.",
-  "act": "2026-12-21",
-  "dates": [
-   {
-    "d": "2026-11-02",
-    "w": "UPS fuel tables for Ground, Ground Saver, Domestic Air rise by up to 0.5%",
-    "imp": "up",
-    "fx": null
-   },
-   {
-    "d": "2026-11-16",
-    "w": "UPS Protected Delivery launches at $10.70 per shipment",
-    "imp": "info",
-    "fx": {
-     "t": "fee",
-     "car": "UPS",
-     "items": [
-      [
-       "UPS Protected Delivery, per shipment",
-       "$10.70",
-       10.7
-      ]
-     ]
-    }
-   },
-   {
-    "d": "2026-12-21",
-    "w": "UPS Daily Rates rise an average net 5.9%",
-    "imp": "up",
-    "fx": {
-     "t": "gri",
-     "car": "UPS",
-     "pct": 5.9
-    }
-   },
-   {
-    "d": "2026-12-21",
-    "w": "Additional Handling minimum billable weight rises from 40 to 50 lbs",
-    "imp": "up",
-    "fx": null
-   },
-   {
-    "d": "2026-12-21",
-    "w": "Area surcharge ZIP codes and zone alignments change",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2026-12-21",
-    "w": "New Surge Fee for some Ground and Ground Saver origin ZIPs",
-    "imp": "up",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-01T05:07:08Z",
-  "src": "TransImpact",
-  "url": "https://transimpact.com/blog/2027-ups-gri",
-  "srcs": [
-   {
-    "src": "TransImpact",
-    "url": "https://transimpact.com/blog/2027-ups-gri"
-   },
-   {
-    "src": "Parcel Industry",
-    "url": "https://parcelindustry.com/article-6732-Light-Packages-Heavy-Fees-Inside-the-2027-UPS-General-Rate-Increase-(GRI).html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-23",
-  "new": "Industry analyses of UPS's published rate tables say light packages, minimum charges and accessorials rise above the 5.9% average, so shippers' increases depend on package weight and the charges that apply.",
-  "syn": "UPS will raise Daily Rates for Ground, Air and International services by an average net 5.9% on Dec. 21, 2026, the fourth year in a row at that figure. Two industry analyses of the 2026 and 2027 published rates, both dated Oct. 30, 2026, say the increases vary widely by service, weight and charge. One says the most-used accessorials rise an average 9.93%, and that the commercial Large Package Surcharge rises 13.96%, from an average $254.50 to $290. The other says no UPS domestic service reaches 5.9% when averaged across weights from 1 to 150 lbs, because heavier packages rose least. The UPS Ground average is 5.67%. The analyses say the lightest weight breaks, minimum charges and accessorials run above 5.9%.",
-  "aff": [
-   {
-    "who": "Additional Handling shippers",
-    "what": "Minimum billable weight rises from 40 to 50 lbs on Dec. 21, 2026; the charge itself rises an average 8.92%."
-   },
-   {
-    "who": "Light-package shippers",
-    "what": "Ground 1–5 lb rises 6.13%; 3 Day Select 1–10 lb rises 6.41% and Next Day Air 1–10 lb 6.25% (zone 2–8 average)."
-   },
-   {
-    "who": "Minimum-charge shippers",
-    "what": "Ground minimum goes from $11.99 to $12.70 (5.92%); 3 Day Select rises 6.92% to $18.07."
-   },
-   {
-    "who": "Accessorial payers",
-    "what": "Residential Surcharge averages $7.35 from $6.75; Address Correction $27.50 from $25.25; DAS rises 8.97%."
-   }
-  ]
- },
- {
-  "id": "a93db469c6b01",
-  "date": "2026-10-23",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Legal",
-  "kind": "News",
-  "title": "Shein agrees to $100 million FTC settlement over delivery complaints",
-  "sum": "Shein has agreed to pay $100 million to settle a Federal Trade Commission investigation into delivery delays and other customer complaints, Reuters reported. The payment would equal 44% of the retailer's second-quarter profit. Reuters did not detail how the money would be distributed or what changes Shein must make.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The settlement concerns Shein, and Reuters did not report any required operational changes.",
-  "why": "The settlement covers a large cross-border retailer whose marketplace complaints include packages marked delivered that never arrived.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T19:08:11Z",
-  "src": "Reuters",
-  "url": "https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/",
-  "srcs": [
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/retail-consumer/fast-fashion-group-shein-agrees-pay-100-million-settle-us-ftc-probe-2026-10-23/"
-   },
-   {
-    "src": "Supply Chain 24/7",
-    "url": "https://www.supplychain247.com/article/shein-100-million-ftc-settlement-delivery-complaints"
-   }
-  ],
-  "auto": true,
-  "syn": "Shein has agreed to pay $100 million to settle an FTC investigation into delivery delays and other customer complaints, according to Reuters. The sum would equal 44% of the company's second-quarter profit. FTC records show more than 12,000 complaints involving purchases worth more than $11 million between January 2020 and June 2026, though the totals include issues beyond shipping and are not a count of confirmed delivery failures. Reuters did not say how the payment would be distributed or what changes Shein would have to make.",
-  "aff": [
-   {
-    "who": "Shein",
-    "what": "Agrees to pay $100 million, equal to 44% of its second-quarter profit, Reuters reported."
-   },
-   {
-    "who": "Shein customers",
-    "what": "Reuters did not detail how the payment would be distributed to them."
-   },
-   {
-    "who": "Online sellers",
-    "what": "FTC rule requires a reasonable basis for shipping times; 30 days applies when none is stated."
-   }
-  ],
-  "edge": true
- },
- {
-  "id": "ac78f72e7f458",
-  "date": "2026-10-23",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Peak season",
-  "kind": "News",
-  "title": "USPS holiday rates on some package products run through mid-January",
-  "sum": "USPS said temporary higher rates on some Priority Mail, Ground Advantage and Parcel Select shipments began Oct. 4 and stay in place through mid-January. The Postal Service said the adjustment covers extra peak-season handling costs. SHIP.com CEO Joseph DiSorbo said retailers may absorb some of the cost and consumers could eventually bear it.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "Some USPS Priority Mail, Ground Advantage and Parcel Select shipments cost more from Oct. 4 until mid-January. DiSorbo said small retailers may absorb some of the added cost in the short term.",
-  "why": "The temporary USPS prices cover three package products, and DiSorbo said small retailers may absorb costs while margins tighten.",
-  "score": 6,
-  "tie": "USPS filed its holiday surcharge proposal in August 2025 for Oct. 5, 2025 to Jan. 18, 2026, and the 2026 holiday prices took effect on Oct. 4, 2026.",
-  "act": "2026-10-04",
-  "dates": [
-   {
-    "d": "2027-01-16",
-    "w": "USPS temporary holiday package prices end",
-    "imp": "down",
-    "fx": null
-   }
-  ],
-  "added": "2026-10-24T18:56:07Z",
-  "src": "KTRE",
-  "url": "https://www.ktre.com/2026/10/23/usps-raises-some-shipping-rates-ahead-holiday-season/",
-  "srcs": [
-   {
-    "src": "KTRE",
-    "url": "https://www.ktre.com/2026/10/23/usps-raises-some-shipping-rates-ahead-holiday-season/"
-   }
-  ],
-  "auto": true,
-  "new": "The article adds no new rates or dates, only DiSorbo's view that retailers may absorb costs and they could eventually reach consumers.",
-  "syn": "USPS said in a press release that temporary rates on some Priority Mail, Ground Advantage and Parcel Select shipments began Oct. 4 and will remain through mid-January. The Postal Service said the adjustment is meant to cover extra handling costs during peak season. DiSorbo, founder and CEO of SHIP.com, said the increase may be tied to diesel costs and to USPS finances. He said small retailers may absorb some of the cost and that it could eventually be passed to consumers.",
-  "aff": [
-   {
-    "who": "Priority Mail, Ground Advantage and Parcel Select shippers",
-    "what": "Temporary higher rates on some shipments from Oct. 4 through mid-January, per USPS."
-   },
-   {
-    "who": "Small retailers",
-    "what": "DiSorbo said they may absorb some costs, pressuring margins in the short term."
-   },
-   {
-    "who": "Consumers",
-    "what": "DiSorbo said costs could eventually be passed on to shoppers, though he does not expect free shipping to vanish soon."
-   }
-  ],
-  "exclusive": true,
-  "tried": "2026-11-02",
-  "unconf": true
- },
- {
-  "id": "af946d108e1e1",
-  "date": "2026-10-23",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Pricing & GRI",
-  "kind": "News",
-  "title": "UPS sets 5.9% average net rate increase for Dec. 21, 2026",
-  "sum": "UPS says published daily rates for Ground, Air and international services will rise an average net 5.9% from December 21, 2026, according to its shipping rates page as cited by AD HOC NEWS. The Additional Handling minimum billable weight goes from 40 lb to 50 lb, and delivery-area surcharge ZIP codes and zone alignments change. UPS said the effect on individual shippers depends on shipment characteristics and contract terms.",
-  "imp": "up",
-  "lvl": 3,
-  "plain": "UPS daily rates rise an average net 5.9% from Dec. 21, 2026, and Additional Handling packages are billed at a 50 lb minimum instead of 40 lb. The effect on each shipper depends on package profile and contract terms.",
-  "why": "The 5.9% average net increase covers UPS Ground, Air and international daily rates, though UPS says the effect varies by shipment and contract.",
-  "score": 5,
-  "tie": "UPS's Important Updates listed the same Dec. 21, 2026 increase in October 2026, together with new fuel surcharge tables effective Nov. 2, 2026.",
-  "act": "2026-12-21",
-  "dates": [
-   {
-    "d": "2026-12-21",
-    "w": "UPS daily rates rise an average net 5.9%",
-    "imp": "up",
-    "fx": {
-     "t": "gri",
-     "car": "UPS",
-     "pct": 5.9
-    }
-   },
-   {
-    "d": "2026-12-21",
-    "w": "UPS Additional Handling minimum billable weight 50 lb",
-    "imp": "up",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-09T05:21:59Z",
-  "src": "ad-hoc-news.de",
-  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311",
-  "srcs": [
-   {
-    "src": "UPS",
-    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
-   },
-   {
-    "src": "ad-hoc-news.de",
-    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ups-stock-faces-5-9-prozent-rate-lift-as-2027-pricing-takes-shape/70464311"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-23",
-  "new": "The article restates UPS's already announced Dec. 21, 2026 increase with no new figures or dates, so nothing changes for shippers beyond the October announcement.",
-  "syn": "UPS says published daily rates for Ground, Air and international services will rise an average net 5.9% from December 21, 2026, per its shipping rates page as reported by AD HOC NEWS. The Additional Handling minimum billable weight rises from 40 lb to 50 lb, and delivery-area surcharge ZIP codes and the alignment of certain ZIP codes to zones change. UPS said the impact on individual shipping costs depends on shipment characteristics and customer contract terms, so the average will not apply evenly.",
-  "aff": [
-   {
-    "who": "UPS Ground, Air and international shippers",
-    "what": "Published daily rates rise an average net 5.9% from Dec. 21, 2026; impact varies by shipment and contract."
-   },
-   {
-    "who": "Additional Handling packages",
-    "what": "Minimum billable weight rises from 40 lb to 50 lb."
-   },
-   {
-    "who": "Delivery-area surcharge and zone ZIP codes",
-    "what": "The delivery-area surcharge ZIP lists and the zone alignment of certain ZIP codes change."
-   }
-  ],
   "exclusive": true
  }
 ]

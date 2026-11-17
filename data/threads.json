@@ -529,7 +529,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Wing and others are expanding drone delivery under existing FAA certificates and waivers while the Part 108 rule remained unpublished as of the last coverage.",
+  "s": "Wing and others are expanding drone delivery while the FAA's Part 108 beyond-visual-line-of-sight rule remains unpublished as of the latest coverage.",
   "ids": [
    "g27",
    "g26",
@@ -543,7 +543,8 @@
    "a704b11d94f38",
    "a644b0ea66268",
    "a8aa90b423c4a",
-   "a7445a06ce8cb"
+   "a7445a06ce8cb",
+   "ab904315f1100"
   ],
   "first": "2025-03-31",
   "last": "2026-11-17",
@@ -553,19 +554,18 @@
    "Regional"
   ],
   "cx": {
-   "sig": "0c42e2034582",
+   "sig": "26980ff297e8",
    "v": 3,
    "beats": {
-    "g27": "Amazon said Prime Air would reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations.",
-    "g26": "Part 108 hit White House review July 10, but was still unpublished Oct. 9; until then, BVLOS needs waivers or Part 135.",
+    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations, at $2.99 or $4.99 a drop.",
     "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "a8aa90b423c4a": "Wing, Alphabet's drone arm, announced $125M over two years for a Fort Worth plant making tens of thousands of aircraft a year.",
-    "a7445a06ce8cb": "Four days after the plant news, Wing began Walmart deliveries in Memphis on Nov. 10: free in the apps, 2.75-pound limit."
+    "a8aa90b423c4a": "Wing, Alphabet's drone arm, will put $125M over two years into a Fort Worth plant and aims for nearly 20 U.S. markets, plus Japan with KDDI.",
+    "a7445a06ce8cb": "Four days after the plant news, Wing began Walmart deliveries in Memphis from three stores; Amazon's Memphis launch has no date.",
+    "ab904315f1100": "Uber Eats and Zipline launched in Spring, Texas, with Dallas next, toward a goal of 1 million drone deliveries a day by end of 2029."
    },
-   "intro": "Big players are scaling up drone delivery while the FAA's Part 108 rule is still unpublished.",
-   "now": "Part 108 was still unpublished at last report, so growth runs on waivers and certificates; Amazon's Memphis launch has no date."
+   "now": "Part 108 was still unpublished as of Oct. 9, so waivers or Part 135 certificates remain the route for routine BVLOS delivery."
   },
-  "rv": "bcac9a551cad",
+  "rv": "efadb79c3098",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -636,7 +636,7 @@
    "ad0e619194837"
   ],
   "first": "2026-10-13",
-  "s": "The bill has had no council movement since an April committee hearing, and Speaker Menin is reported to be open to amending it.",
+  "s": "Intro 518 awaits a City Council vote while Speaker Menin weighs amendments and opponents threaten legal action.",
   "last": "2026-11-16",
   "c": [
    "Amazon",
@@ -1199,20 +1199,6 @@
    "USPS"
   ],
   "rv": "cb69b7881cc6"
- },
- "doordash-instacart-deal": {
-  "n": "DoorDash–Instacart deal",
-  "ids": [
-   "a301ee4ea4257"
-  ],
-  "first": "2026-10-29",
-  "co": "DoorDash",
-  "s": "The deal was announced Oct. 29, 2026 and remains pending, with closing expected between late 2027 and the first half of 2028.",
-  "last": "2026-11-16",
-  "c": [
-   "Industry"
-  ],
-  "rv": "afafbaa08c7c"
  },
  "fedex-fuel-surcharge": {
   "n": "FedEx fuel surcharge",
