@@ -27,8 +27,6 @@
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 15,
   "new": "Wing's Walmart drone delivery reaches Louisiana for the first time, in Ponchatoula, with New Orleans listed as a future market; no rate or fee change is stated.",
   "syn": "Wing, the Alphabet-owned drone operator, is delivering Walmart orders by drone from the Ponchatoula, Louisiana store, the first Walmart location in the state to offer the service, WBRZ reported. The drones operate from a fenced \"nest\" in the parking lot and deliver within a six-mile radius, according to Mayor Wesley Daniels. The FAA has granted Wing a Part 135 Air Carrier Certificate and permission for flights beyond visual line of sight. Wing's website says it plans to expand to New Orleans in the future.",
   "aff": [
@@ -360,8 +358,6 @@
   ],
   "auto": true,
   "ann": "2026-11-16",
-  "thread": "drone-delivery",
-  "upd": 14,
   "new": "Amazon Prime Air won local approval on Nov. 16 for its first Iowa hub, in Bondurant, with service possible from mid-January for customers who opt in.",
   "syn": "Bondurant City Council unanimously approved Amazon's site plans on Nov. 16 for a Prime Air drone delivery hub at the DSM5 Amazon Fulfillment Center, 500 32nd St. S.W. Sam Bailey, who manages Prime Air's economic development efforts, said the site will be smaller than others in the country. As early as mid-January, weather permitting for construction, up to five drones could fly at once, for up to 200 flights per day. It would be the first Amazon drone delivery site in Iowa, according to the Register.",
   "aff": [
@@ -1712,6 +1708,49 @@
     "what": "Walmart plans nationwide rapid air delivery with Zipline over the next several years."
    }
   ]
+ },
+ {
+  "id": "a89a220069427",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS files to extend international parcel Contract 92 with PRC",
+  "sum": "The Postal Regulatory Commission noticed a Postal Service filing, Docket No. K2026-10, for Modification One to Priority Mail Express International, Priority Mail International & First-Class Package International Service Contract 92. The modification includes an extension of the agreement. The filing was accepted November 12, 2026, and public comments are due November 20, 2026.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or service for shippers. The notice covers one negotiated contract, and the other party and its terms are not named in it.",
+  "why": "The filing shows USPS adjusting a negotiated international parcel contract; the notice does not name the customer or give rates.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-17T13:10:47Z",
+  "src": "Federal Register: PRC",
+  "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23357/new-postal-products",
+  "srcs": [
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23357/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "new": "A PRC notice dated November 17, 2026 covers a modification and extension of USPS international Service Contract 92, with no named counterparty and no link to Amazon or DHL eCommerce in the notice, so it changes nothing stated for shippers.",
+  "syn": "The Postal Regulatory Commission published a notice of a Postal Service request to modify and extend a negotiated international service contract. The request, Docket No. K2026-10, concerns Modification One to Priority Mail Express International, Priority Mail International & First-Class Package International Service Contract 92. It was accepted on November 12, 2026, and comments are due November 20, 2026. The notice does not name the contract's customer or give its pricing.",
+  "aff": [
+   {
+    "who": "Contract 92 customer",
+    "what": "Modification One extends the negotiated international agreement; the notice does not name the customer or give terms."
+   },
+   {
+    "who": "Other shippers",
+    "what": "No change to published rates or service is stated in the notice."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "aa024cc171706",
