@@ -110,6 +110,64 @@
   "primary": true
  },
  {
+  "id": "a0f33fb01d0d5",
+  "date": "2026-11-17",
+  "c": [
+   "UPS"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "UPS agrees to acquire Smartways Logistics in Australia, NZ",
+  "sum": "UPS said on Nov. 17, 2026 that it has agreed to acquire Smartways Logistics, a healthcare courier provider in Australia and New Zealand. The deal is expected to close in the first half of 2027, subject to regulatory approvals. UPS did not disclose the value or terms.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for current shippers. The deal is expected to close in the first half of 2027, subject to regulatory approvals.",
+  "why": "UPS is adding a healthcare courier network in Australia and New Zealand, where Smartways has over 350 medical couriers serving more than 1,300 hospitals daily.",
+  "score": 5,
+  "tie": "The deal follows UPS Healthcare's April 2025 purchase of Canada-based Andlauer Healthcare Group and earlier 2025 acquisitions of Frigo-Trans and BPL, according to FreightWaves.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:15:45Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics"
+   },
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163373/news/e-commerce/ups-expands-specialist-healthcare-logistics-network-in-asia-pacific/"
+   },
+   {
+    "src": "Air Cargo News",
+    "url": "https://www.aircargonews.net/business/2026/11/ups-plans-to-buy-smartways-logistics-to-expand-in-australasia/"
+   },
+   {
+    "src": "Supply Chain Digital Magazine",
+    "url": "https://supplychaindigital.com/news/ups-agrees-to-acquire-smartways-healthcare-logistics"
+   },
+   {
+    "src": "Business Wire",
+    "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "UPS said on Nov. 17, 2026 that it signed a definitive agreement to acquire Smartways Logistics, which provides time-critical healthcare courier services in Australia and New Zealand. Smartways has over 350 medical couriers serving more than 1,300 hospitals daily, according to Supply Chain Digital. The transaction is expected to close in the first half of 2027, subject to regulatory reviews. UPS did not disclose the value or terms. UPS said healthcare revenue reached $3 billion for the third consecutive quarter in Q3.",
+  "aff": [
+   {
+    "who": "Smartways customers",
+    "what": "Connected to UPS's global transportation network for international shipping; the deal is expected to close in the first half of 2027."
+   },
+   {
+    "who": "UPS Healthcare customers",
+    "what": "Gain expanded services in Australia, New Zealand and the Asia Pacific region, according to UPS."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "a16f218767654",
   "date": "2026-11-17",
   "c": [
@@ -240,6 +298,57 @@
     "what": "TIKR said Delivery earned 3.9 cents of profit per booking dollar in 2025, versus 8.1 cents for rides."
    }
   ],
+  "exclusive": true
+ },
+ {
+  "id": "a31a0157fe029",
+  "date": "2026-11-17",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "Velocity launches Vector agentic AI platform for D2C shipping",
+  "sum": "E-commerce enablement startup Velocity launched Vector, an agentic AI platform that automates shipping operations for direct-to-consumer brands, on 17 November 2026. Velocity said more than 700 brands already use it.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to carrier rates or fees. D2C brands using Velocity can now automate address checks, COD confirmation, courier selection and failed-delivery follow-up through Vector.",
+  "why": "Velocity says failed deliveries and RTO shipments can be 25% to 30% of D2C revenue losses at peak; Vector is used by over 700 brands.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:16:51Z",
+  "src": "Equitypandit",
+  "url": "https://www.equitypandit.com/velocity-launches-agentic-ai-platform-to-automate-shipping/",
+  "srcs": [
+   {
+    "src": "Equitypandit",
+    "url": "https://www.equitypandit.com/velocity-launches-agentic-ai-platform-to-automate-shipping/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "Velocity, an e-commerce enablement startup backed by Valar Ventures, launched Vector on 17 November 2026. Vector is an agentic AI platform in which AI agents make and execute shipping decisions for D2C brands. It uses the Model Context Protocol to connect existing AI assistants and business applications to shipping operations, and brands can give instructions in natural language. Velocity said failed deliveries and return-to-origin shipments can account for 25% to 30% of revenue losses during peak shopping periods.",
+  "aff": [
+   {
+    "who": "D2C brands on Velocity",
+    "what": "Vector assesses orders, verifies addresses, confirms COD orders, selects couriers, creates shipments and tracks deliveries."
+   },
+   {
+    "who": "Failed deliveries and RTO",
+    "what": "The platform identifies failed attempts, starts corrective actions and escalates to an operations team when needed."
+   },
+   {
+    "who": "Address and COD checks",
+    "what": "Velocity said its AI interventions validated over 80% of addresses and confirmed 65% of COD orders without human involvement."
+   },
+   {
+    "who": "Brand priorities",
+    "what": "Brands can set goals such as lower RTO rates, better first-attempt delivery success or lower shipping costs."
+   }
+  ],
+  "edge": true,
   "exclusive": true
  },
  {
@@ -406,48 +515,6 @@
   "unconf": true
  },
  {
-  "id": "aaba50a646259",
-  "date": "2026-11-17",
-  "c": [
-   "UPS"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "UPS agrees to acquire healthcare logistics firm Smartways Logistics",
-  "sum": "UPS said it has entered into an agreement to acquire Smartways Logistics, a healthcare logistics provider serving Australia and New Zealand. The transaction is expected to close in the first half of 2027, subject to customary regulatory reviews and approvals. UPS did not disclose the value or terms.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service at this time. The acquisition is expected to close in the first half of 2027, subject to regulatory approvals.",
-  "why": "The deal adds healthcare courier capacity to UPS Healthcare in Australia and New Zealand, where UPS said it is investing across Asia Pacific.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-17T21:36:07Z",
-  "src": "Business Wire",
-  "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
-  "srcs": [
-   {
-    "src": "Business Wire",
-    "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-17",
-  "syn": "UPS announced an agreement to acquire Smartways Logistics, a healthcare logistics provider serving Australia and New Zealand. Smartways offers specialized services for life sciences, medical devices, clinical trials and radiopharmaceuticals. UPS said the deal would expand UPS Healthcare's time-critical transportation capabilities in the region. UPS said healthcare revenue reached $3 billion for the third consecutive quarter in Q3. The transaction is expected to close in the first half of 2027, subject to customary regulatory reviews and approvals, and its value and terms were not disclosed.",
-  "aff": [
-   {
-    "who": "UPS Healthcare customers",
-    "what": "UPS said it would add time-critical healthcare transport in Australia, New Zealand and Asia Pacific once the deal closes."
-   },
-   {
-    "who": "Smartways customers",
-    "what": "Smartways clients would gain access to the UPS global network, according to Smartways' chair. The deal is expected to close in the first half of 2027."
-   }
-  ],
-  "exclusive": true
- },
- {
   "id": "aaee32fc27d1a",
   "date": "2026-11-17",
   "c": [
@@ -542,6 +609,60 @@
   "exclusive": true
  },
  {
+  "id": "ad7a220fc1a51",
+  "date": "2026-11-17",
+  "c": [
+   "Amazon",
+   "FedEx"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "NYC business groups threaten suit over Intro 518 delivery bill",
+  "sum": "A coalition of business groups, through attorney Derek Sells of the Cochran Firm, told New York City Council Speaker Julie Menin it may sue if the Council passes Intro 518, The Center Square reported. The bill would require Amazon and other large online retailers to hire delivery workers directly. Sells said the bill conflicts with federal and state law.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No rates or service change yet, because the bill has not passed. If it does, Amazon and FedEx could not use third-party delivery contractors for last-mile deliveries in the five boroughs.",
+  "why": "Intro 518 would ban Amazon and FedEx from using third-party delivery contractors in the five boroughs; Amazon says it uses over 40 such firms there.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:15:10Z",
+  "src": "Just The News",
+  "url": "https://justthenews.com/nation/states/center-square/business-groups-threaten-lawsuit-over-nyc-delivery-protection-bill",
+  "srcs": [
+   {
+    "src": "Just The News",
+    "url": "https://justthenews.com/nation/states/center-square/business-groups-threaten-lawsuit-over-nyc-delivery-protection-bill"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "new": "The Center Square reported the coalition's lawsuit threat, adding that Sells said the bill could reach facilities outside the five boroughs and quoting Menin's earlier statement; no rate or service change takes effect yet.",
+  "syn": "A coalition of business groups, the Five Borough Jobs Campaign and the New York Delivers Coalition, threatened legal action in a letter to Council Speaker Julie Menin, The Center Square reported. Their attorney, Derek Sells, said Intro 518 \"directly conflicts with existing federal and state law\" and urged the Council to reject it or strike the direct-employment mandate, the subcontracting prohibition and the rehiring provisions. The bill, filed by Councilwoman Tiffany Cabán, would require operators of last-mile warehouses to get city licenses. It would also ban major logistics and delivery companies, including Amazon and FedEx, from using third-party contractors for last-mile deliveries across the five boroughs. Mayor Zohran Mamdani announced his support in August.",
+  "aff": [
+   {
+    "who": "Amazon and FedEx last-mile delivery",
+    "what": "The bill would ban third-party contractors and delivery service providers for last-mile delivery in the five boroughs."
+   },
+   {
+    "who": "Third-party delivery companies",
+    "what": "Amazon says it relies on more than 40 of them in the city, employing more than 5,000 people, and says those jobs would be at risk."
+   },
+   {
+    "who": "Last-mile warehouse operators",
+    "what": "They would need licenses from the Department of Consumer and Worker Protection and must meet new safety, training and employment rules."
+   },
+   {
+    "who": "Operations outside the five boroughs",
+    "what": "Sells said the bill could affect drivers and businesses in New Jersey, Westchester and Long Island."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-18",
+  "unconf": true
+ },
+ {
   "id": "ae5027985518f",
   "date": "2026-11-17",
   "c": [
@@ -582,6 +703,56 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "ae61bca317d56",
+  "date": "2026-11-17",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Uber Eats adds Kohl's from 1,100+ stores for on-demand delivery",
+  "sum": "Uber Technologies and Kohl's announced a nationwide partnership on Tuesday that puts Kohl's products on the Uber Eats marketplace, according to Fashion United. Customers can order from more than 1,100 Kohl's stores for scheduled or on-demand delivery, including Sephora at Kohl's items.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to carrier rates or service. Consumers can order Kohl's items for scheduled or on-demand delivery through Uber Eats, which also carries Sephora at Kohl's products.",
+  "why": "Kohl's stores, more than 1,100 of them, become on-demand delivery points on Uber Eats, extending a retailer's delivery options beyond parcel carriers.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:15:00Z",
+  "src": "Chain Store Age",
+  "url": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats",
+  "srcs": [
+   {
+    "src": "Chain Store Age",
+    "url": "https://chainstoreage.com/kohls-delivers-nationwide-uber-eats"
+   },
+   {
+    "src": "Fashion United",
+    "url": "https://fashionunited.com/news/retail/uber-partners-with-kohls-to-launch-nationwide-on-demand-delivery/2026111875816"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "Uber Technologies and Kohl's announced a nationwide partnership on Tuesday, according to Fashion United. Kohl's apparel, footwear, home, gift and beauty products are now available through the Uber Eats marketplace from more than 1,100 stores, for scheduled or on-demand delivery. Sephora at Kohl's products are included through participating storefronts, which builds on Uber's existing partnership with Sephora. A launch offer gives $10 off a first Kohl's order of $50 or more through December 3, 2026.",
+  "aff": [
+   {
+    "who": "Kohl's customers",
+    "what": "Can order from more than 1,100 Kohl's stores on Uber Eats, scheduled or on demand."
+   },
+   {
+    "who": "Sephora at Kohl's shoppers",
+    "what": "Beauty items are available through participating Kohl's storefronts on Uber Eats."
+   },
+   {
+    "who": "First-time Kohl's orders on Uber Eats",
+    "what": "$10 off a $50+ order through December 3, 2026."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "afeaf1126aec1",
@@ -1766,7 +1937,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -2292,7 +2463,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -2336,7 +2507,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -2919,6 +3090,45 @@
     "what": "Experts quoted said other established carrier relationships can mitigate strike risk."
    }
   ]
+ },
+ {
+  "id": "ae3218d66d69a",
+  "date": "2026-11-12",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "DoorDash trains Dot delivery robot in AWS simulation, AWS feature says",
+  "sum": "DoorDash Labs uses Amazon Web Services to train and test the AI behind its Dot delivery robot, according to an AWS feature published on November 12, 2026. Changes are tested against the equivalent of millions of simulated miles on Amazon EC2 before reaching a real robot.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The article describes how DoorDash trains and tests its Dot delivery robot.",
+  "why": "DoorDash is building robot delivery, which it says could support Dashers in markets where demand outstrips the number of Dashers.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:16:28Z",
+  "src": "AIM Media House",
+  "url": "https://aimmediahouse.com/retail/doordash-tests-its-delivery-robot-on-millions-of-simulated-miles-a-toy-dog-handles-the-rest",
+  "srcs": [
+   {
+    "src": "AIM Media House",
+    "url": "https://aimmediahouse.com/retail/doordash-tests-its-delivery-robot-on-millions-of-simulated-miles-a-toy-dog-handles-the-rest"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "syn": "DoorDash Labs, the company's robotics and automation R&D division, uses Amazon Web Services to train and test the AI behind Dot, its small delivery robot, according to an AWS feature published on November 12, 2026. Each software change is tested against the equivalent of millions of miles of simulated driving on Amazon EC2, across hundreds of GPUs in parallel, before it reaches a real robot. DoorDash product manager Jordan Mesch said nearly all validation happens first in simulation and is then confirmed with real driving. DoorDash said human Dashers remain at the center of its network.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "ae374e7320420",
@@ -3515,6 +3725,10 @@
    {
     "src": "The Robot Report",
     "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/"
+   },
+   {
+    "src": "The National Law Review",
+    "url": "https://natlawreview.com/press-releases/serve-robotics-opens-its-robot-delivery-network-anyone-build"
    }
   ],
   "auto": true,
@@ -3967,6 +4181,10 @@
    {
     "src": "Yahoo Finance Singapore",
     "url": "https://sg.finance.yahoo.com/news/united-parcel-ups-opens-80-171545684.html"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/united-parcel-ups-opens-80-171545684.html"
    }
   ],
   "auto": true,
@@ -4866,7 +5084,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -7965,6 +8183,57 @@
    {
     "who": "Products with a standard code",
     "what": "A Standardized Manufacturer PID (GTIN, EAN or UPC) should be provided where available."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "abcae176dfaa5",
+  "date": "2026-11-04",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Nampa planning director says Amazon asked city to withhold drone complaint contact",
+  "sum": "Nampa, Idaho's planning director told a resident in a Nov. 4 email that the complaint contact Amazon gave under its Prime Air drone permit is for the city, not the public, according to DroneXL. Amazon asked the city to forward residents' complaints to that contact, he wrote. He also wrote that the permit covers the launch site, not the flights.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Nampa residents with drone noise complaints are routed through the city or Amazon's customer service channels, not a local Amazon contact. No rate or service change is reported for shippers.",
+  "why": "Residents near Amazon's Nampa drone hub have no public complaint contact under the permit, and the city says its authority covers the site, not the flights.",
+  "score": 4,
+  "tie": "The emails follow DroneXL's Monday report on the five conditions of Amazon's Nampa drone permit (November 2026), which had not confirmed whether Amazon gave the city a contact.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:16:17Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/17/amazon-nampa-drone-complaint-contact-not-public-wrong-number/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/17/amazon-nampa-drone-complaint-contact-not-public-wrong-number/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-04",
+  "new": "A Nampa city official wrote that Amazon asked the city not to release its drone complaint contact, adding a local permitting and noise dispute to coverage of the drone expansion; the sources report no change to shipper rates or service.",
+  "syn": "Nampa's planning director, Rodney Ashby, wrote to a Cherry Creek Estates resident on Nov. 4 that Amazon's Prime Air permit requires a local contact for the city, not for the public. He said Amazon asked the city not to release the contact and to forward complaints to it. He wrote that the permit covers the launch and landing site while the FAA controls the airspace. The resident sent DroneXL a 10-message email thread from Nov. 2 to 4 and four Remote ID readings of Amazon MK30 drones. Those readings cannot show a flight below the 200-foot minimum in the city's findings, DroneXL said.",
+  "aff": [
+   {
+    "who": "Cherry Creek Estates residents",
+    "what": "The permit does not promise residents their own contact, the planning director wrote on Nov. 4; complaints go through the city."
+   },
+   {
+    "who": "Amazon customer line",
+    "what": "The first number Nampa relayed was one digit off and reached a telemarketing line; Amazon sent the correct one the next morning."
+   },
+   {
+    "who": "Drone flights over Nampa",
+    "what": "Four readings show 176 to 195 feet above takeoff; accuracy is under 10 meters, so they cannot show a flight below 200 feet."
+   },
+   {
+    "who": "City oversight",
+    "what": "The city can act only if permit conditions are violated, Ashby wrote; he said he had no proof of that. Decisions can be appealed to the City Council."
    }
   ],
   "exclusive": true
@@ -12848,231 +13117,5 @@
     "what": "Gartner's Jashinsky said clear returns policies have translated into better conversion rates for many retailers."
    }
   ]
- },
- {
-  "id": "a5aadb5b56a84",
-  "date": "2026-10-26",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "PRC notices USPS filings for two new competitive shipping contracts",
-  "sum": "The Postal Regulatory Commission noticed two Postal Service requests to add negotiated service agreements to the Competitive product list, both accepted October 26, 2026. Comments on one, an international service contract, are due November 3, 2026.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to published rates or service for shippers. The filings concern individual negotiated agreements, and terms are partly filed under seal.",
-  "why": "The filings add negotiated contracts to USPS's Competitive product list, which covers parcel services sold to individual customers at negotiated rates.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-30T05:42:42Z",
-  "src": "Federal Register: PRC",
-  "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22086/new-postal-products",
-  "srcs": [
-   {
-    "src": "Federal Register: PRC",
-    "url": "https://www.federalregister.gov/documents/2026/10/29/2026-22086/new-postal-products"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "exclusive": true
- },
- {
-  "id": "a663794cc9c55",
-  "date": "2026-10-26",
-  "c": [
-   "UPS",
-   "FedEx"
-  ],
-  "cat": "Fuel",
-  "kind": "News",
-  "title": "UPS, FedEx fuel surcharges near 29% as holiday delivery prices climb",
-  "sum": "Ground parcel pricing for the fourth quarter is expected to be 5.8 per cent higher than a year earlier, and express pricing 13.8 per cent higher, according to an industry freight index cited by Reuters via BNN Bloomberg. Based on company tables at an average diesel price of $6.28 per gallon, UPS's fuel surcharge is 29.5 per cent and FedEx's is 29 per cent.",
-  "imp": "up",
-  "lvl": 2,
-  "plain": "Ground shipping is expected to cost 5.8 per cent more and express 13.8 per cent more than in the fourth quarter of 2025. UPS and FedEx fuel surcharges are 29.5 per cent and 29 per cent at current diesel prices.",
-  "why": "Fuel surcharges at UPS and FedEx near 29% of base rates raise fourth-quarter costs for retailers, with the analysis covering data from 1,800 shippers.",
-  "score": 8,
-  "tie": "In October 2026, UPS and FedEx began per-package peak fees on Oct. 25 and Oct. 26, with higher amounts set for late November.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T19:09:34Z",
-  "src": "BNN Bloomberg",
-  "url": "https://www.bnnbloomberg.ca/business/international/2026/10/26/us-retailers-face-record-holiday-delivery-prices-from-surcharges-tied-to-costlier-diesel/",
-  "srcs": [
-   {
-    "src": "BNN Bloomberg",
-    "url": "https://www.bnnbloomberg.ca/business/international/2026/10/26/us-retailers-face-record-holiday-delivery-prices-from-surcharges-tied-to-costlier-diesel/"
-   },
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/retail-consumer/us-retailers-face-record-holiday-delivery-prices-surcharges-tied-costlier-diesel-2026-10-26/"
-   }
-  ],
-  "auto": true,
-  "new": "An industry analysis now puts Q4 2026 ground pricing 5.8% and express 13.8% above a year earlier, and shows fuel surcharges of 29.5% at UPS and 29% at FedEx, adding to the peak fees already covered.",
-  "syn": "An industry freight index forecasts fourth-quarter ground parcel pricing 5.8 per cent above the same period last year and express pricing 13.8 per cent above the fourth quarter of 2025. The index draws on anonymized data from 1,800 shippers. At the Energy Information Administration's average diesel price of $6.28 per gallon, up 65 per cent since February 28, company tables put UPS's fuel surcharge at 29.5 per cent and FedEx's at 29 per cent. An analyst said diesel accounts for just under 30 per cent of the surcharge cost, with the rest driven by changes in how carriers calculate it. UPS said its pricing reflects its premium service and infrastructure investments.",
-  "aff": [
-   {
-    "who": "Ground shippers",
-    "what": "Fourth-quarter ground pricing is expected to be 5.8 per cent higher than a year earlier, per the index."
-   },
-   {
-    "who": "Express shippers",
-    "what": "Express pricing is forecast to jump 13.8 per cent from the fourth quarter of 2025, per the index."
-   },
-   {
-    "who": "UPS and FedEx customers",
-    "what": "Fuel surcharges are 29.5 per cent at UPS and 29 per cent at FedEx at a diesel price of $6.28 per gallon."
-   },
-   {
-    "who": "Shippers using USPS or Amazon",
-    "what": "USPS added an 8 per cent fuel surcharge on most packages in April; Amazon added a 3.5 per cent surcharge to seller fees."
-   }
-  ]
- },
- {
-  "id": "a71e9c34808fa",
-  "date": "2026-10-26",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "News",
-  "title": "FedEx names AutoZone's Jamere Jackson as chief financial officer",
-  "sum": "FedEx announced Monday that Jamere Jackson, CFO of AutoZone since January 2021, will become its chief financial officer effective Nov. 30. He succeeds Claude Russ, who has been interim CFO since June 1 after John Dietrich left.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The appointment is a leadership change at FedEx.",
-  "why": "FedEx is changing its finance chief while it carries out Network 2.0 and plans a FedEx Freight spin-off, per FreightWaves.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T15:02:21Z",
-  "src": "Reuters",
-  "url": "https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/",
-  "srcs": [
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/fedex-appoints-jamere-jackson-chief-financial-officer-2026-10-26/"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/fedex-taps-autozone-executive-to-be-finance-chief"
-   },
-   {
-    "src": "FedEx newsroom",
-    "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-names-jamere-jackson-as-executive-vice-president-and-chief-financial-officer"
-   },
-   {
-    "src": "ad-hoc-news.de",
-    "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/fedex-stock-jamere-jackson-named-as-next-finance-chief/70473837"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "syn": "FedEx announced Monday that AutoZone executive Jamere Jackson will become its chief financial officer, effective Nov. 30. He succeeds interim CFO Claude Russ, who took the role June 1 after John Dietrich's departure. According to FreightWaves, Jackson joins as FedEx carries out its Network 2.0 strategy to consolidate its Ground and Express networks. FreightWaves reported that full-year revenue grew 9% to $94.7 billion and the adjusted operating margin was 7.7%.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ]
- },
- {
-  "id": "a794f973354d4",
-  "date": "2026-10-26",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Technology & tools",
-  "kind": "Analysis",
-  "title": "DoorDash adds $7.99 returns pickup; TikTok Shop links Happy Returns",
-  "sum": "Modern Retail reported that DoorDash added retail returns in September, with a $7.99 customer fee and driver pickup in as little as 30 minutes. TikTok Shop added a Happy Returns integration that allows drop-off at 10,000 nationwide locations.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Customers of DoorDash retail orders can pay $7.99 for a driver pickup of returns, live in select cities. TikTok Shop customers can return items at Happy Returns locations if the brand or retailer opts in.",
-  "why": "Two large marketplaces are adding return options, and a Gartner survey found 35% of U.S. consumers cite returns policy in choosing a platform.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T15:04:09Z",
-  "src": "Modern Retail",
-  "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss",
-  "srcs": [
-   {
-    "src": "Modern Retail",
-    "url": "https://www.modernretail.co/operations/why-returns-are-becoming-a-bigger-focus-for-tiktok-shop-and-doordash/?utm_campaign=modernretaildis&utm_medium=rss&utm_source=general-rss"
-   }
-  ],
-  "auto": true,
-  "syn": "Modern Retail's newsletter reported that DoorDash added retail returns in September, charging customers $7.99 and dispatching a driver in as little as 30 minutes. The service is live in select cities and is expected to go nationwide in November. TikTok Shop announced an integration with Happy Returns, letting customers drop off returns at 10,000 locations where a brand or retailer opts in. Gartner's Brad Jashinsky said a survey found 35% of U.S. consumers cite a good returns policy as a reason for choosing a shopping platform.",
-  "aff": [
-   {
-    "who": "DoorDash retail customers",
-    "what": "Pay a $7.99 return fee for driver pickup in as little as 30 minutes; nationwide rollout expected in November."
-   },
-   {
-    "who": "TikTok Shop customers",
-    "what": "Can drop returns at one of 10,000 Happy Returns locations if the brand or retailer accepts returns that way."
-   },
-   {
-    "who": "Brands and retailers on TikTok Shop",
-    "what": "Choose whether to accept returns through Happy Returns."
-   }
-  ]
- },
- {
-  "id": "a85b9e9638a12",
-  "date": "2026-10-26",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon North Haven drone decision not before 2027, Freda says",
-  "sum": "North Haven First Selectman Michael Freda said after an Oct. 26 regional meeting that no decision on Amazon's plan for up to 1,000 Prime Air drone deliveries a day from its North Haven, Connecticut, warehouse will come until 2027, WTNH reported. Connecticut's DEEP, which is reviewing the plan, has received more than 1,000 public comment letters. DroneXL said DEEP told a CT Mirror columnist its ruling would come by mid-November.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for parcel shippers. Amazon's North Haven drone plan remains under review, with no launch date set.",
-  "why": "Amazon's plan covers up to 1,000 Prime Air drone deliveries a day from one warehouse, across a 7.5-mile zone, and its timing is still unsettled.",
-  "score": 4,
-  "tie": "Amazon told NBC 5 Chicago in October 2026 that it has about 21 MK30 drones at its Markham, Illinois, center, while the FAA index still listed that site's environmental assessment as a July draft.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-30T05:44:37Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/29/amazon-north-haven-drone-decision-2027-deep-1000-comments/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/29/amazon-north-haven-drone-decision-2027-deep-1000-comments/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "new": "A local official now says no North Haven decision will come until 2027, while DEEP reportedly targets mid-November; this changes nothing for shippers' rates or service.",
-  "syn": "North Haven First Selectman Michael Freda said after an Oct. 26 meeting of the region's mayors and first selectmen that no decision on Amazon's North Haven Prime Air plan will be made until 2027, according to WTNH. The plan calls for up to 1,000 drone deliveries a day. Connecticut's DEEP has received more than 1,000 public comment letters. DroneXL reported that DEEP told a CT Mirror columnist its final ruling would come by mid-November, and that it found no DEEP or FAA record carrying a 2027 date. It is unclear which decision Freda's date refers to.",
-  "aff": [
-   {
-    "who": "North Haven-area residents",
-    "what": "Amazon says it will keep meeting community members and stakeholders in the coming months; no public session date is given."
-   },
-   {
-    "who": "Amazon Prime Air North Haven plan",
-    "what": "Up to 1,000 drone deliveries a day within a 7.5-mile zone; DEEP's coastal ruling, per DroneXL, is due by mid-November."
-   },
-   {
-    "who": "Connecticut municipalities",
-    "what": "State law bars towns from regulating commercial drone operations, per DroneXL; North Haven's zoning panel approved the site 5-0 on May 4."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
  }
 ]

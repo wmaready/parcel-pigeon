@@ -10,18 +10,35 @@
   "7": "2026-11-05",
   "8": "2026-11-09",
   "9": "2026-11-12",
-  "10": "2026-11-14"
+  "10": "2026-11-14",
+  "11": "2026-11-18"
  },
- "day": "2026-11-14",
+ "day": "2026-11-18",
  "calls": 1,
  "queue": [
   {
-   "n": "Universal Logistics Holdings",
-   "what": "Truckload, intermodal and logistics provider in North America that also sells final-mile delivery and ground expedite services (Universal ON-DEMAND).",
-   "url": "https://www.freightcenter.com/carriers/universal-logistics-holdings/",
+   "n": "Zonos",
+   "what": "Provides landed-cost calculation (duties, taxes, fees), HS classification and a landed-cost guarantee that includes tax remittance, for cross-border e-commerce checkouts and shipments.",
+   "url": "https://zonos.com/docs/global-ecommerce/landed-cost",
    "realm": "3pl",
-   "seg": 10,
-   "found": "2026-11-14"
+   "seg": 11,
+   "found": "2026-11-18"
+  },
+  {
+   "n": "Avalara",
+   "what": "Tax-compliance software company whose AvaTax Cross-Border product calculates duties, import taxes and landed cost at checkout, and which powers duty and import-tax features in Shopify Markets and eBay",
+   "url": "https://www.avalara.com/us/en/products/global-commerce-offerings/avatax-cross-border.html",
+   "realm": "3pl",
+   "seg": 11,
+   "found": "2026-11-18"
+  },
+  {
+   "n": "ESW (eShopWorld)",
+   "what": "Cross-border direct-to-consumer e-commerce enabler (localized checkout, duty and tax compliance, shipping and returns) with a New York office, owned by Asendia.",
+   "url": "https://www.asendiausa.com/ecommerce/ecommerce-tools",
+   "realm": "3pl",
+   "seg": 11,
+   "found": "2026-11-18"
   }
  ]
 }

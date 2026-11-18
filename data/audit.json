@@ -1,5 +1,5 @@
 {
- "run": "2026-11-18T13:10Z",
+ "run": "2026-11-18T13:20Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -8,73 +8,75 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 470,
- "doc_cursor": 324,
+ "link_cursor": 510,
+ "doc_cursor": 44,
  "checked_pairs": [
-  "cf51efba6984",
-  "d46a0aebc57e",
-  "0cae9f6a1079",
-  "bd74f39e4a2a",
-  "558e73ee4967",
-  "70042e1b5ea7",
-  "a74a789cafba",
-  "73dcfc31b988",
-  "006e0976c74d",
-  "de313bc51fd7",
-  "ab39dca4b258",
-  "4df67f9b3718",
-  "803f70b9b286",
-  "f6cd68cb0017",
-  "2f24e1d5d0e2",
-  "f3a106e02077",
-  "60030262fcea",
-  "dbb89994655f",
-  "c1419d4e7cb6",
-  "0ca410a667f8",
-  "cc68d548ad73",
-  "14a3d7429698",
-  "d73b3089178a",
-  "a625dd5720a9",
-  "5effb73bc21d",
-  "d72a23005aba",
-  "6004808294c5",
-  "457e37db5347",
-  "a8c41927e218",
-  "21b6ce5b1d5c",
-  "4d5dedc8cd29",
-  "61ba27c59dab",
-  "4e8faef9252d",
-  "4621e9e86574",
-  "bb9d125105c0",
-  "7679c499e09c",
-  "b54077ea2f7b",
-  "94d1ac334f4e",
-  "0ee2e50bd13d",
-  "5f83fff4b0b8",
-  "0b8aff140a01",
-  "2361691e9a1b",
-  "6157952e9b11",
-  "c3d4d65922ea",
-  "87f9bbae47ee",
-  "62cb3ae5df27",
   "b8d8ea16bc5f",
+  "de313bc51fd7",
+  "a625dd5720a9",
+  "2361691e9a1b",
+  "dbb89994655f",
+  "62cb3ae5df27",
+  "02094abee757",
+  "bb9d125105c0",
+  "c1419d4e7cb6",
+  "bd74f39e4a2a",
+  "0ca410a667f8",
+  "f7e5ad4ade89",
+  "a8c41927e218",
+  "5b4926c2c24d",
+  "cf51efba6984",
+  "558e73ee4967",
+  "457e37db5347",
+  "f6cd68cb0017",
+  "5effb73bc21d",
+  "2988f97e477e",
+  "803f70b9b286",
+  "b54077ea2f7b",
+  "60030262fcea",
+  "f3a106e02077",
+  "4621e9e86574",
+  "0b8aff140a01",
+  "5e124f1a493a",
+  "4df67f9b3718",
+  "d46a0aebc57e",
+  "f84529cd7bc9",
+  "1bc66c00eda3",
+  "a74a789cafba",
+  "14a3d7429698",
+  "c3d4d65922ea",
+  "ab39dca4b258",
+  "ed50bd5ade56",
+  "94d1ac334f4e",
+  "4d5dedc8cd29",
+  "c61435232c81",
+  "006e0976c74d",
+  "d73b3089178a",
+  "0b3d6d7565cd",
+  "73dcfc31b988",
+  "87f9bbae47ee",
+  "454e4f8f6a6b",
+  "0ee2e50bd13d",
+  "6004808294c5",
+  "5f83fff4b0b8",
+  "61ba27c59dab",
+  "70042e1b5ea7",
+  "a2bd3ac3da71",
+  "d72a23005aba",
+  "7679c499e09c",
+  "62d4a60b8bb3",
+  "c74456d2bddc",
+  "21b6ce5b1d5c",
+  "5423312764d9",
+  "6157952e9b11",
+  "4e8faef9252d",
   "7e4a0a07ad2f",
   "e57a450403da",
-  "8e54de96bdda",
-  "ed50bd5ade56",
-  "5423312764d9",
-  "454e4f8f6a6b",
+  "cc68d548ad73",
+  "0cae9f6a1079",
   "6bef0a5868e5",
-  "f7e5ad4ade89",
-  "c74456d2bddc",
-  "1bc66c00eda3",
-  "62d4a60b8bb3",
-  "02094abee757",
-  "c61435232c81",
-  "5e124f1a493a",
-  "5b4926c2c24d",
-  "2988f97e477e",
-  "f84529cd7bc9"
+  "8e54de96bdda",
+  "2f24e1d5d0e2"
  ],
  "issues": [
   {
@@ -121,6 +123,15 @@
     "nrb01db6"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "primary-not-first",
+   "msg": "Carrier source Business Wire moved ahead of press coverage on \"UPS agrees to acquire Smartways Logistics in Australia, NZ\"",
+   "ids": [
+    "a0f33fb01d0d5"
+   ],
+   "fixed": true
   },
   {
    "sev": "low",
@@ -191,15 +202,6 @@
    "msg": "Carrier source UPS fuel surcharges moved ahead of press coverage on \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\"",
    "ids": [
     "wa9c423a83880"
-   ],
-   "fixed": true
-  },
-  {
-   "sev": "low",
-   "type": "primary-not-first",
-   "msg": "Carrier source FedEx newsroom moved ahead of press coverage on \"FedEx names AutoZone's Jamere Jackson as chief financial officer\"",
-   "ids": [
-    "a71e9c34808fa"
    ],
    "fixed": true
   },
@@ -390,6 +392,33 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
+   "ids": [
+    "nr0ee0b5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
+   "ids": [
+    "h522"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
+   "ids": [
+    "h412"
+   ],
    "fixed": false
   }
  ],
@@ -662,6 +691,33 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
+   "ids": [
+    "nr0ee0b5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
+   "ids": [
+    "h522"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
+   "ids": [
+    "h412"
+   ],
    "fixed": false
   }
  ]

@@ -3657,6 +3657,103 @@
     "https://finance.yahoo.com/healthcare/articles/ups-acquire-australian-healthcare-specialist-224337897.html"
    ],
    "enriched": "2026-11-18"
+  },
+  {
+   "id": "universallogis",
+   "n": "Universal Logistics Holdings, Inc.",
+   "realm": "3pl",
+   "own": "public",
+   "tk": "ULH",
+   "parent": null,
+   "hq": "Warren, MI, USA",
+   "yr": null,
+   "s": "Asset-light holding company whose subsidiaries provide truckload, intermodal drayage and contract logistics services across the U.S., Canada, Mexico and Colombia, and also offer final-mile delivery and ground expedite services.",
+   "al": [
+    "ULH",
+    "Universal Logistics Holdings",
+    "Universal ON-DEMAND",
+    "Universal Truckload Services, Inc."
+   ],
+   "src": "https://www.sec.gov/Archives/edgar/data/1308208/000095017025040283/ulh-20241231.htm",
+   "auto": true,
+   "added": "2026-11-18",
+   "from": "discover",
+   "site": "universallogistics.com",
+   "geo": [
+    -83.028,
+    42.477
+   ],
+   "srcs": [
+    "https://www.sec.gov/Archives/edgar/data/1308208/000095017025040283/ulh-20241231.htm",
+    "https://stockanalysis.com/stocks/ulh/company/",
+    "https://www.zoominfo.com/c/universal-logistics-holdings/88031324"
+   ],
+   "enriched": "2026-11-18",
+   "pending": false
+  },
+  {
+   "id": "sekologistics",
+   "n": "SEKO Logistics",
+   "realm": "global",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Schaumburg, IL, USA",
+   "yr": "1976",
+   "s": "SEKO Logistics is a global freight forwarder, customs broker and 3PL that files Section 321/Type 86 entries for cross-border e-commerce parcels into the U.S. and offers fulfillment, last-mile and returns services.",
+   "al": [
+    "SEKO",
+    "SEKO Worldwide",
+    "SEKO Worldwide, LLC"
+   ],
+   "src": "https://www.sekologistics.com/en/services/ecommerce-logistics-delivery-solutions/international-cross-border-shipping/",
+   "auto": true,
+   "added": "2026-11-18",
+   "from": "discover",
+   "site": "sekologistics.com",
+   "geo": [
+    -88.083,
+    42.033
+   ],
+   "srcs": [
+    "https://www.sekologistics.com/en/services/ecommerce-logistics-delivery-solutions/international-cross-border-shipping/",
+    "https://www.aircargonews.net/technology/2022/02/seko-logistics-streamlines-cross-border-commerce-with-descartes-technology/",
+    "https://www.freightwaves.com/news/seko-logistics-under-new-ownership"
+   ],
+   "enriched": "2026-11-18",
+   "pending": false
+  },
+  {
+   "id": "yunexpress",
+   "n": "YunExpress",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Shenzhen-based cross-border B2C parcel consolidator that handles China-to-U.S. customs clearance and DDP service, with a U.S. hub, and hands parcels to USPS, UPS, FedEx and DHL eCommerce for delivery.",
+   "al": [],
+   "src": "https://www.gp-fulfillment.com/blog/is-yunexpress-legit-tracking-shipping-times-review-2026.html",
+   "auto": true,
+   "added": "2026-11-18",
+   "from": "discover"
+  },
+  {
+   "id": "smartwayslogis",
+   "n": "Smartways Logistics",
+   "realm": "cold",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Healthcare logistics provider with time-critical courier services in Australia and New Zealand.",
+   "al": [],
+   "src": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
+   "auto": true,
+   "added": "2026-11-17",
+   "story": "a0f33fb01d0d5"
   }
  ],
  "edges": [
@@ -6296,6 +6393,33 @@
    "t": "Riverside agreed to sell portfolio company Smartways Logistics to UPS",
    "url": "https://about.ups.com/us/en/newsroom/press-releases/our-strategy/ups-announces-agreement-to-acquire-smartways-logistics.html",
    "story": "aaba50a646259"
+  },
+  {
+   "a": "greenbriar",
+   "b": "sekologistics",
+   "k": "invested",
+   "y": "2015",
+   "t": "Majority owner from 2015, minority investor after Ridgemont's 2021 deal",
+   "url": "https://www.freightwaves.com/news/seko-logistics-under-new-ownership",
+   "story": null
+  },
+  {
+   "a": "descartes",
+   "b": "sekologistics",
+   "k": "partner",
+   "y": "2022",
+   "t": "Provides Section 321 Type 86 and air cargo customs filing technology",
+   "url": "https://www.aircargonews.net/technology/2022/02/seko-logistics-streamlines-cross-border-commerce-with-descartes-technology/",
+   "story": null
+  },
+  {
+   "a": "ups",
+   "b": "smartwayslogis",
+   "k": "acquired",
+   "y": "2026",
+   "t": "UPS buys Smartways Logistics",
+   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
+   "story": "a0f33fb01d0d5"
   }
  ],
  "moves": [
@@ -6702,7 +6826,9 @@
   "dayross": "2026-11-16",
   "arialogistics": "2026-11-17",
   "sephora": "2026-11-17",
-  "theriversideco": "2026-11-18"
+  "theriversideco": "2026-11-18",
+  "universallogis": "2026-11-18",
+  "sekologistics": "2026-11-18"
  },
  "facts": {
   "ups": {
