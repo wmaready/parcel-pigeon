@@ -256,7 +256,7 @@
   "told": []
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
-  "checked": "2026-11-12",
+  "checked": "2026-11-18",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
@@ -266,11 +266,22 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf"
   ],
-  "lines": 53,
+  "lines": 55,
   "told": [],
-  "pend": "19964ecb4670"
+  "told2": [
+   "27993cfb3870",
+   "be6f7d9161a7",
+   "a2ed0b37d8da",
+   "51bfe0e890fe",
+   "761fae83e10b",
+   "eb2f95c85a1e",
+   "c746794ce44d",
+   "6485749096ee"
+  ],
+  "told_until": "2026-12-18"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-18",
@@ -309,7 +320,7 @@
   "told": []
  },
  "https://www.ontrac.com/surchargesandrates/": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-18",
   "pdfs": [
    "https://ontrac.sirv.com/pdf/2026-OnTrac-AHS%2BLPSRates.pdf",
    "https://ontrac.sirv.com/pdf/2026-OnTrac-Rates.pdf",
@@ -318,8 +329,7 @@
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf"
   ],
   "lines": 109,
-  "told": [],
-  "pend": "81a07d18ae98"
+  "told": []
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-18",

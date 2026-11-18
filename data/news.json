@@ -1,5 +1,68 @@
 [
  {
+  "id": "wea2ccfd5fbaf",
+  "date": "2026-11-18",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx updates domestic fuel surcharge tables effective Nov. 9, 2026",
+  "sum": "FedEx added a new entry to its rate changes page saying it will adjust fuel surcharges and update the tables for FedEx domestic services, effective Nov. 9, 2026. The page's updated date moved from Oct. 23, 2026 to Nov. 5, 2026. The existing Feb. 1, 2027 ZIP code zone reclassification entry is still listed.",
+  "plain": "Shippers using FedEx domestic services will pay fuel surcharges based on the revised tables from Nov. 9, 2026. The size and direction of the change can't be determined from this page alone.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Fuel",
+  "act": "2026-11-09",
+  "inferred": null,
+  "detected": "2026-11-18",
+  "changes": [
+   {
+    "what": "FedEx domestic fuel surcharges adjusted and fuel surcharge tables updated",
+    "before": null,
+    "after": "FedEx will adjust the fuel surcharges and update the tables for FedEx domestic services, with new tables effective Nov. 9, 2026.",
+    "effective": "2026-11-09",
+    "who": "Shipments using FedEx domestic services",
+    "impact": null
+   },
+   {
+    "what": "Page updated date changed",
+    "before": "Updated Oct. 23, 2026",
+    "after": "Updated Nov. 5, 2026",
+    "effective": null,
+    "who": "No shipment impact",
+    "impact": null
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "The actual fuel surcharge percentages or table values are not shown on the page text, so the size and direction of the change can't be confirmed",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-09",
+    "w": "FedEx: FedEx domestic fuel surcharges adjusted and fuel surcharge tables updated",
+    "imp": "info"
+   }
+  ],
+  "kind": "Alert",
+  "src": "FedEx Rate changes hub (spotted by Parcel Pigeon)",
+  "url": "https://www.fedex.com/en-us/shipping/rate-changes.html",
+  "srcs": [
+   {
+    "src": "FedEx Rate changes hub",
+    "url": "https://www.fedex.com/en-us/shipping/rate-changes.html"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document (fuel_surcharge_effective_11-9-26.pdf), price change",
+   "dropped": 0,
+   "compared": []
+  },
+  "exclusive": true,
+  "primary": true
+ },
+ {
   "id": "a16f218767654",
   "date": "2026-11-17",
   "c": [
