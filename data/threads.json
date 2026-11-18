@@ -470,14 +470,14 @@
  },
  "usps-big-shipper-deals": {
   "n": "USPS deals with Amazon and DHL eCommerce",
-  "s": "USPS's major contracts with Amazon and DHL eCommerce stand as reported earlier in 2026; this filing is a separate international agreement.",
+  "s": "USPS has agreements with Amazon (April 2026) and DHL eCommerce (May 2026), and a same-day pilot with Amazon began in late September.",
   "ids": [
    "21",
    "g09",
    "09"
   ],
   "first": "2026-04-01",
-  "last": "2026-11-12",
+  "last": "2026-11-13",
   "c": [
    "Amazon",
    "DHL",
@@ -903,7 +903,7 @@
   ],
   "theme": true,
   "cx": {
-   "sig": "3ee6bc993a95",
+   "sig": "ffa0f2efedc0",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -918,10 +918,11 @@
     "a66617050d4e9": "Analysts are split on whether UPS's pivot to premium and logistics services means leaving parts of parcel, as the 2028 talks near.",
     "abaae70647f04": "UPS and the Teamsters agreed to offer Driver Choice nationwide: $150,000 early-retirement payments, capped at 7,500 drivers.",
     "a57a06c26359c": "Amazon TOM Team drivers at an Indiana facility joined Teamsters Local 142 and asked Amazon to recognize the union.",
-    "aa1bd42ea784a": "A Roadie survey, relevant as the Teamsters challenge UPS's Roadie deliveries: 64% would quit a retailer after one to four bad deliveries."
+    "aa1bd42ea784a": "A Roadie survey, relevant as the Teamsters challenge UPS's Roadie deliveries: 64% would quit a retailer after one to four bad deliveries.",
+    "a3b765bce7e5f": "The fight moves to New York, where the Teamsters rally Nov. 17 for 200 e-bike drivers whose Amazon contractor lost its contract."
    },
    "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
-   "now": "The UPS–Teamsters national contract expires July 31, 2028; the sources state no change to shipper rates or service from the Amazon disputes."
+   "now": "The UPS-Teamsters national contract is listed as expiring July 31, 2028, so the UPS side is a long way off; the Amazon disputes are ongoing."
   },
   "apart": [
    "carrier-gri",
@@ -1275,5 +1276,19 @@
    "usps-big-shipper-deals"
   ],
   "rv": "50de74ad8ca6"
+ },
+ "easypost-spac": {
+  "n": "EasyPost SPAC merger",
+  "ids": [
+   "af554b135ab19"
+  ],
+  "first": "2026-11-18",
+  "co": "EasyPost",
+  "s": "EasyPost and American Drive Acquisition Company announced a definitive merger agreement on Nov. 18, 2026; closing is pending.",
+  "last": "2026-11-18",
+  "c": [
+   "Industry"
+  ],
+  "rv": "b1aad339da19"
  }
 }

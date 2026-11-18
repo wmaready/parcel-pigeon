@@ -1,5 +1,85 @@
 [
  {
+  "title": "American Drive Acquisition Company combines with EasyPost",
+  "buyer": "American Drive Acquisition Company",
+  "target": "EasyPost",
+  "value": "$479 million pre-money equity value",
+  "status": "Announced",
+  "ann": "2026-11-18",
+  "closed": null,
+  "ended": null,
+  "latest": "Definitive business combination agreement announced Nov. 18, 2026; closing date not stated.",
+  "sum": "EasyPost and SPAC American Drive Acquisition Company signed a definitive business combination agreement that would make EasyPost a public company. The deal values EasyPost at a pre-money equity value of $479 million.",
+  "who": [
+   [
+    "Acquirer",
+    "American Drive Acquisition Company",
+    "A special purpose acquisition company listed on Nasdaq (ADAC), led by technology and logistics investors."
+   ],
+   [
+    "Target",
+    "EasyPost",
+    "A multi-carrier shipping AI and API platform connecting shippers to carriers for labels, tracking, insurance and analytics."
+   ]
+  ],
+  "why": "The companies put the pro forma enterprise value at $576 million, about 4.1x estimated 2026 revenue of $141 million. They expect about $211 million of net cash proceeds, assuming no redemptions, and say the money would fund organic growth and M&A in a parcel market they estimate at $50 billion.",
+  "parties": [
+   {
+    "name": "EasyPost",
+    "role": "Target",
+    "realm": "Shipping software",
+    "hq": null,
+    "founded": null,
+    "size": "On track to process over 800 million packages in 2026",
+    "history": []
+   },
+   {
+    "name": "American Drive Acquisition Company",
+    "role": "Acquirer",
+    "realm": "SPAC / public markets",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "Combined company (Nasdaq: EZPO)",
+   "c": [
+    {
+     "n": "EasyPost",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Closing date and approvals were not stated in the source excerpt.",
+  "ties": [
+   {
+    "d": "2026-09-22",
+    "t": "Drivers at two DHL Express delivery contractors in Dallas join the Teamsters",
+    "story": "nr8c0659"
+   }
+  ],
+  "d": "2026-11-18",
+  "story": "af554b135ab19",
+  "url": "https://www.businesswire.com/news/home/20261118748771/en/EasyPost-the-Leading-Shipping-AI-and-API-Platform-for-Modern-Commerce-to-Go-Public-on-Nasdaq-Through-Business-Combination-with-American-Drive-Acquisition-Company",
+  "srcs": [
+   {
+    "src": "Business Wire",
+    "url": "https://www.businesswire.com/news/home/20261118748771/en/EasyPost-the-Leading-Shipping-AI-and-API-Platform-for-Modern-Commerce-to-Go-Public-on-Nasdaq-Through-Business-Combination-with-American-Drive-Acquisition-Company"
+   }
+  ],
+  "checked": "2026-11-18",
+  "updates": [
+   {
+    "d": "2026-11-18",
+    "t": "EasyPost to go public on Nasdaq via merger with American Drive Acquisition",
+    "story": "af554b135ab19"
+   }
+  ]
+ },
+ {
   "title": "UPS buys Smartways Logistics",
   "buyer": "UPS",
   "target": "Smartways Logistics",

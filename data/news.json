@@ -1,5 +1,52 @@
 [
  {
+  "id": "af554b135ab19",
+  "date": "2026-11-18",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "EasyPost to go public on Nasdaq via merger with American Drive Acquisition",
+  "sum": "EasyPost and the special purpose acquisition company American Drive Acquisition Company (Nasdaq: ADAC) announced a definitive business combination agreement. The combined company is expected to trade on Nasdaq under the ticker EZPO. The deal values EasyPost at a pre-money equity value of $479 million and a pro forma enterprise value of $576 million.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to carrier rates or service is stated. EasyPost would become a public company once the deal closes.",
+  "why": "EasyPost says it is on track to process over 800 million packages in 2026 and managed $6.7 billion in parcel shipping spend in 2025.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:06:53Z",
+  "src": "Business Wire",
+  "url": "https://www.businesswire.com/news/home/20261118748771/en/EasyPost-the-Leading-Shipping-AI-and-API-Platform-for-Modern-Commerce-to-Go-Public-on-Nasdaq-Through-Business-Combination-with-American-Drive-Acquisition-Company",
+  "srcs": [
+   {
+    "src": "Business Wire",
+    "url": "https://www.businesswire.com/news/home/20261118748771/en/EasyPost-the-Leading-Shipping-AI-and-API-Platform-for-Modern-Commerce-to-Go-Public-on-Nasdaq-Through-Business-Combination-with-American-Drive-Acquisition-Company"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-18",
+  "thread": "easypost-spac",
+  "syn": "EasyPost, a multi-carrier shipping API platform, agreed to a business combination with the SPAC American Drive Acquisition Company (ADAC). The combined company is expected to list on Nasdaq as EZPO. The company said the deal values EasyPost at a pre-money equity value of $479 million, or a pro forma enterprise value of $576 million, about 4.1x estimated 2026 revenue. EasyPost said the deal is expected to bring about $211 million of net cash proceeds if there are no redemptions, and it plans to use the capital for organic growth and acquisitions.",
+  "aff": [
+   {
+    "who": "EasyPost customers",
+    "what": "The company says it serves 12,000+ active enterprise and mid-market customers and is on track for over 800 million packages in 2026."
+   },
+   {
+    "who": "EasyPost financials",
+    "what": "The company expects 2026 revenue of $141 million, up about 31% from $107 million in 2025."
+   },
+   {
+    "who": "Parcel tech market",
+    "what": "EasyPost said the deal would fund its M&A strategy in a parcel market it sizes at an estimated $50 billion."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "wea2ccfd5fbaf",
   "date": "2026-11-18",
   "c": [
@@ -1759,6 +1806,52 @@
   ],
   "edge": true,
   "exclusive": true
+ },
+ {
+  "id": "ab402ee1c5b2d",
+  "date": "2026-11-13",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "PRC notices USPS Priority Mail, Ground Advantage contract filings",
+  "sum": "The Postal Regulatory Commission published a notice of USPS filings on negotiated service agreements for Priority Mail and USPS Ground Advantage. The Postal Service asked to amend Contract 842 and to add Contract 1131 to the Competitive product list. It also filed to add Contracts 1128, 1129 and 1130 as standardized distinct products. Comments on the first two are due November 23, 2026.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or service. The notice covers negotiated contracts, and the filings do not name the customers. Parts of the filings are under seal.",
+  "why": "The filings show USPS adding or amending negotiated Priority Mail and Ground Advantage contracts, whose terms are filed under seal.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T13:07:45Z",
+  "src": "Federal Register: PRC",
+  "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23448/new-postal-products",
+  "srcs": [
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23448/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-13",
+  "new": "The Nov. 18 notice lists five new or amended USPS negotiated contracts without naming customers, so it cannot be tied to the Amazon or DHL eCommerce agreements, and it changes no published rates for shippers.",
+  "syn": "The Postal Regulatory Commission noticed several USPS filings accepted on November 13, 2026, covering negotiated service agreements for Priority Mail and USPS Ground Advantage. Two go through public proceedings: Amendment Two to Contract 842 (docket K2025-1656) and the addition of Contract 1131 (dockets MC2027-35 and K2027-36). Comments on both are due November 23, 2026. Three more are summary proceedings with no public comment: Contract 1128 (a fulfillment product) and Contracts 1129 and 1130 (mid-market products). The notice does not name the customers, and the filings include material under seal.",
+  "aff": [
+   {
+    "who": "Contract 842 and Contract 1131 filings",
+    "what": "Public comment is open until November 23, 2026 on Amendment Two to Contract 842 and the addition of Contract 1131."
+   },
+   {
+    "who": "Contracts 1128, 1129 and 1130",
+    "what": "Reviewed in summary proceedings as standardized distinct products; no Public Representative or public comment."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to published rates or service; the contracts are negotiated and the customers are not named."
+   }
+  ]
  },
  {
   "id": "aef4d017bab80",
@@ -12981,144 +13074,5 @@
   ],
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a8eed9de41636",
-  "date": "2026-10-26",
-  "c": [
-   "DHL"
-  ],
-  "cat": "International",
-  "kind": "News",
-  "title": "Blue Dart launches International Parcel Connect for India-US B2C parcels",
-  "sum": "Blue Dart Express launched International Parcel Connect, a B2C cross-border parcel service, in Mumbai on 26 October 2026. It starts with eligible shipments from India to the United States and is powered by DHL eCommerce. Blue Dart said it plans to extend the service to the UK, EU, Canada and Australia.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Eligible Indian B2C parcels of 50 grammes to 11 kilograms can ship to the US with Standard or Expedited delivery. No pricing or effective rates were stated in the source.",
-  "why": "Gives Indian exporters a Standard and Expedited option between express and postal for B2C parcels of 50 g to 11 kg to the US.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T19:08:35Z",
-  "src": "The STAT Trade Times",
-  "url": "https://www.stattimes.com/amp/supply-chain/blue-dart-targets-us-market-with-international-parcel-connect-1361052",
-  "srcs": [
-   {
-    "src": "The STAT Trade Times",
-    "url": "https://www.stattimes.com/amp/supply-chain/blue-dart-targets-us-market-with-international-parcel-connect-1361052"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "syn": "Blue Dart Express Limited launched International Parcel Connect, a B2C cross-border parcel service, in Mumbai on 26 October 2026. The service starts with eligible shipments from India to the United States and is powered by DHL eCommerce, offering Standard and Expedited options with shipment visibility. Blue Dart said it positions the service between premium-priced express and lower-cost postal options, and plans to add the UK, EU, Canada and Australia. Chief Commercial Officer Dipanjan Banerjee estimated India's B2C e-commerce exports at around $2 billion.",
-  "aff": [
-   {
-    "who": "Indian e-commerce sellers, D2C brands and SMEs",
-    "what": "Can ship eligible B2C parcels from India to the US with Standard or Expedited delivery."
-   },
-   {
-    "who": "Eligible parcels",
-    "what": "Weight range is 50 grammes to 11 kilograms, subject to customs, regulatory and dimensional requirements."
-   },
-   {
-    "who": "Future destinations",
-    "what": "Blue Dart plans to extend to the UK, EU, Canada and Australia; no dates were given."
-   }
-  ],
-  "edge": true
- },
- {
-  "id": "a92007e6e1c20",
-  "date": "2026-10-26",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Technology & tools",
-  "kind": "News",
-  "title": "Amazon plans 20,000 smart glasses for delivery drivers by end of 2027",
-  "sum": "Amazon plans to deploy 5,000 smart delivery glasses this year and more than 20,000 by the end of 2027, according to its latest update. More than 300 Delivery Service Partners and hundreds of their drivers have used the technology since 2025. Amazon said wearing the glasses is optional.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. The glasses are an Amazon driver tool, and Amazon said wearing them is optional.",
-  "why": "Amazon's delivery network moves a large share of U.S. parcels, and the glasses change how its drivers find, scan and confirm packages.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T19:07:31Z",
-  "src": "Supply Chain 24/7",
-  "url": "https://www.supplychain247.com/article/amazon-smart-delivery-glasses-driver-rollout",
-  "srcs": [
-   {
-    "src": "Supply Chain 24/7",
-    "url": "https://www.supplychain247.com/article/amazon-smart-delivery-glasses-driver-rollout"
-   }
-  ],
-  "auto": true,
-  "syn": "Amazon plans to deploy 5,000 smart delivery glasses this year and expand to more than 20,000 by the end of 2027, the company said in an update. The glasses show package counts, walking directions and delivery instructions in the driver's view and capture proof-of-delivery photos. More than 300 Delivery Service Partners and hundreds of their drivers have used the technology since 2025. Amazon said wearing the glasses is optional.",
-  "aff": [
-   {
-    "who": "Amazon delivery drivers",
-    "what": "5,000 glasses planned this year, more than 20,000 by the end of 2027; use is optional."
-   },
-   {
-    "who": "Delivery Service Partners",
-    "what": "More than 300 of them have used the glasses since 2025."
-   },
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "aa1bd42ea784a",
-  "date": "2026-10-26",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Market reports",
-  "kind": "Analysis",
-  "title": "Roadie survey: 64% of shoppers would quit a retailer after one to four bad deliveries",
-  "sum": "Research by Roadie and Studio by Informa found 64% of online shoppers say one to four bad delivery experiences would make them stop ordering from a retailer. A third (33%) consider a delivery late once the promised window passes, and 43% reported at least one stolen package in the previous 12 months.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The survey reports what shoppers say they expect from delivery and how they might react to failures.",
-  "why": "The survey gives retailers and carriers shopper-stated thresholds for late, unsecured and poorly communicated deliveries, though it measures intentions, not attrition.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-26T15:03:06Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/spons/how-shoppers-define-delivery-success-and-what-theyll-do-if-you-fall-shor/833675/"
-   }
-  ],
-  "auto": true,
-  "syn": "Research conducted by Roadie and Studio by Informa found that 64% of online shoppers say one to four bad delivery experiences would be enough to make them stop ordering from a retailer. Respondents defined failure broadly: 33% consider a delivery late the moment the promised window passes, and 18% allow a grace period of two hours. The article notes the survey measures consumers' intentions rather than actual customer attrition. Roadie's chief operating officer, Dennis Moon, is quoted saying retailers can overlook consistency by focusing on speed.",
-  "aff": [
-   {
-    "who": "Online shoppers",
-    "what": "43% reported at least one package stolen after delivery in the previous 12 months."
-   },
-   {
-    "who": "Delivery timing",
-    "what": "33% treat a delivery as late once the window passes; 18% allow a two-hour grace period."
-   },
-   {
-    "who": "Delivery experience factors",
-    "what": "85% rated on-time arrival and package condition very or extremely influential; 80% said the same of following instructions."
-   },
-   {
-    "who": "Proof of delivery and tracking",
-    "what": "72% rated photo proof very or extremely influential; 44% ranked real-time tracking among their most important considerations."
-   }
-  ]
  }
 ]

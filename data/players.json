@@ -3632,38 +3632,31 @@
    "enriched": "2026-11-17"
   },
   {
-   "id": "smartwayslogis",
-   "n": "Smartways Logistics",
-   "realm": "cold",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Healthcare logistics provider serving Australia and New Zealand",
-   "al": [],
-   "src": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-17",
-   "story": "aaba50a646259"
-  },
-  {
    "id": "theriversideco",
    "n": "The Riverside Company",
    "realm": "capital",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
    "hq": null,
-   "yr": null,
-   "s": "Investor in Smartways, acknowledged by its chair for its partnership and support",
-   "al": [],
-   "src": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "yr": "1988",
+   "s": "Global lower-middle-market private equity firm that owns Smartways Logistics, an Australia and New Zealand healthcare courier and logistics provider that it has agreed to sell to UPS. It previously owned MNX Global Logistics, a time-critical logistics company.",
+   "al": [
+    "Riverside",
+    "Riverside Company"
+   ],
+   "src": "https://about.ups.com/us/en/newsroom/press-releases/our-strategy/ups-announces-agreement-to-acquire-smartways-logistics.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-17",
-   "story": "aaba50a646259"
+   "story": "aaba50a646259",
+   "site": "riversidecompany.com",
+   "srcs": [
+    "https://about.ups.com/us/en/newsroom/press-releases/our-strategy/ups-announces-agreement-to-acquire-smartways-logistics.html",
+    "https://www.riversidecompany.com/investment-portfolio/smartways-1",
+    "https://finance.yahoo.com/healthcare/articles/ups-acquire-australian-healthcare-specialist-224337897.html"
+   ],
+   "enriched": "2026-11-18"
   }
  ],
  "edges": [
@@ -6278,30 +6271,30 @@
    "story": "aac9428d981a9"
   },
   {
-   "a": "ups",
-   "b": "smartwayslogis",
-   "k": "acquired",
-   "y": "2026",
-   "t": "UPS agrees to acquire Smartways Logistics",
-   "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
-   "story": "aaba50a646259"
-  },
-  {
-   "a": "theriversideco",
-   "b": "smartwayslogis",
-   "k": "invested",
-   "y": "2026",
-   "t": "Riverside Company a partner of Smartways, thanked by its chair",
-   "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
-   "story": "aaba50a646259"
-  },
-  {
    "a": "theriversideco",
    "b": "ups",
    "k": "invested",
    "y": null,
    "t": "Backs UPS",
    "url": "https://www.businesswire.com/news/home/20261117872136/en/UPS-Announces-Agreement-to-Acquire-Smartways-Logistics",
+   "story": "aaba50a646259"
+  },
+  {
+   "a": "theriversideco",
+   "b": "mnx",
+   "k": "sold",
+   "y": "2018",
+   "t": "Riverside sold MNX to Audax Private Equity",
+   "url": "https://audaxprivateequity.com/news/audax-private-equity-announces-the-acquisition-of-mnx-global-logistics",
+   "story": "aaba50a646259"
+  },
+  {
+   "a": "theriversideco",
+   "b": "ups",
+   "k": "sold",
+   "y": "2026",
+   "t": "Riverside agreed to sell portfolio company Smartways Logistics to UPS",
+   "url": "https://about.ups.com/us/en/newsroom/press-releases/our-strategy/ups-announces-agreement-to-acquire-smartways-logistics.html",
    "story": "aaba50a646259"
   }
  ],
@@ -6708,7 +6701,8 @@
   "mullengroup": "2026-11-16",
   "dayross": "2026-11-16",
   "arialogistics": "2026-11-17",
-  "sephora": "2026-11-17"
+  "sephora": "2026-11-17",
+  "theriversideco": "2026-11-18"
  },
  "facts": {
   "ups": {
