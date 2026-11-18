@@ -1,5 +1,5 @@
 {
- "run": "2026-11-17T21:47Z",
+ "run": "2026-11-18T02:34Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -298,6 +298,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon opens Markham drone delivery center, flights due this fall\"",
+   "ids": [
+    "a73e290a90706",
+    "a8e7ea871bfc7"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon Prime Air starts drone deliveries in metro Atlanta\"",
    "ids": [
     "a73e290a90706",
@@ -554,6 +564,16 @@
    "ids": [
     "a73e290a90706",
     "afc24e3e3a5e6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon opens Markham drone delivery center, flights due this fall\"",
+   "ids": [
+    "a73e290a90706",
+    "a8e7ea871bfc7"
    ],
    "fixed": false
   },

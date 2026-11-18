@@ -1,5 +1,51 @@
 [
  {
+  "id": "a16f218767654",
+  "date": "2026-11-17",
+  "c": [
+   "DHL"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "DHL Express launches AI item identification for U.S. international shipments",
+  "sum": "DHL Express announced on Nov. 17, 2026 that it has launched an AI-powered item identification capability in the U.S. Customers photograph an item and the system generates a customs-compliant description, which they can review, edit or override before submitting a shipment.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "U.S. customers shipping internationally with DHL Express can use a photo to generate a customs description. No DHL Express account is required, and no rate change was announced.",
+  "why": "Small and medium-sized businesses make up about 86% of DHL Express U.S. customers, and the tool targets item descriptions that can cause customs delays.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:31:45Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/technology/ai/articles/dhl-express-u-introduces-ai-200400863.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/technology/ai/articles/dhl-express-u-introduces-ai-200400863.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "DHL Express announced on Nov. 17, 2026 the U.S. launch of an AI-powered item identification capability for international shipping, ahead of the holiday season. Customers take a photo of an item with a smartphone or connected device, and computer vision generates a structured, customs-compliant description in seconds. DHL said inaccurate or incomplete descriptions are a common cause of customs delays and holds, and that small and medium-sized enterprises are about 86% of its U.S. customers.",
+  "aff": [
+   {
+    "who": "U.S. international shippers",
+    "what": "Can generate a customs-compliant item description from a photo; descriptions can be edited or overridden before submission."
+   },
+   {
+    "who": "Small and medium-sized businesses",
+    "what": "About 86% of DHL Express U.S. customers; U.S. SMEs using it for exports rose 6% year over year."
+   },
+   {
+    "who": "Non-account holders",
+    "what": "No DHL Express account is required to use the capability."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a1a241248c085",
   "date": "2026-11-17",
   "c": [
@@ -38,6 +84,55 @@
   "exclusive": true
  },
  {
+  "id": "a2e23b2549e9b",
+  "date": "2026-11-17",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Analysis",
+  "title": "Uber targets 1 million daily drone deliveries by end of 2029",
+  "sum": "Uber Eats customers in Spring, Texas, a Houston suburb, can now get orders by Zipline drone, the partnership's first commercial launch. Uber President and COO Andrew Macdonald said on X that Uber is targeting 1 million drone deliveries a day by the end of 2029. An analysis by TIKR said that figure would be under 3% of Uber's 13.6 billion trips in 2025.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Uber Eats customers in Spring, Texas can now choose Zipline drone delivery, with Dallas planned next. No rate or fee change was stated.",
+  "why": "Uber's 1M-a-day goal would be under 3% of its 13.6 billion 2025 trips, per TIKR's analysis, and drone delivery at that scale has not yet been run.",
+  "score": 5,
+  "tie": "Uber backed Zipline's $1.5 billion funding round, announced earlier in November 2026, according to the TIKR analysis.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:31:13Z",
+  "src": "TIKR.com",
+  "url": "https://www.tikr.com/blog/couriers-sidewalk-robots-and-drones-uber-targets-1m-drone-deliveries-a-day-by-2029?ref=yahoofinance&tlnk=yf-261117-jh4fv6qh",
+  "srcs": [
+   {
+    "src": "TIKR.com",
+    "url": "https://www.tikr.com/blog/couriers-sidewalk-robots-and-drones-uber-targets-1m-drone-deliveries-a-day-by-2029?ref=yahoofinance&tlnk=yf-261117-jh4fv6qh"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "thread": "drone-delivery",
+  "upd": 18,
+  "new": "A TIKR analysis frames Uber's 1M-a-day goal against its 13.6 billion 2025 trips and notes no cost or revenue-split figures; shipper rates and service are unchanged.",
+  "syn": "Uber Eats has added Zipline drone delivery in Spring, Texas, the first commercial launch of the partnership, with Dallas next and dozens more U.S. cities planned. Andrew Macdonald, Uber's president and COO, said on X that Uber targets 1 million drone deliveries a day by the end of 2029. In an analysis, TIKR said that would be under 3% of Uber's 13.6 billion trips in 2025, and that cheaper delivery modes could help close the margin gap between Delivery and rides. TIKR noted that neither company has said what a drone drop costs compared with a courier.",
+  "aff": [
+   {
+    "who": "Uber Eats customers in Spring, Texas",
+    "what": "Can have restaurant orders delivered by Zipline drone, the first commercial launch of the partnership."
+   },
+   {
+    "who": "Dallas and other U.S. cities",
+    "what": "Dallas is next, with dozens more U.S. cities planned after it."
+   },
+   {
+    "who": "Uber Delivery segment",
+    "what": "TIKR said Delivery earned 3.9 cents of profit per booking dollar in 2025, versus 8.1 cents for rides."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a5a12ee8825b7",
   "date": "2026-11-17",
   "c": [
@@ -70,11 +165,21 @@
    {
     "src": "The Verge",
     "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas"
+   },
+   {
+    "src": "qz.com",
+    "url": "https://qz.com/uber-eats-zipline-drone-delivery-spring-texas-111726"
+   },
+   {
+    "src": "Unite.AI",
+    "url": "https://www.unite.ai/zipline-launches-autonomous-drone-delivery-for-uber-eats-in-houston/"
+   },
+   {
+    "src": "Analytics Insight",
+    "url": "https://www.analyticsinsight.net/news/uber-eats-starts-drone-delivery-service-in-texas-dallas-next"
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 15,
   "new": "Uber Eats opened its first Zipline drone delivery market, Spring, Texas, with Dallas next; shippers see no change to carrier rates or service.",
   "syn": "Uber Eats launched drone delivery with Zipline on Tuesday in Spring, Texas, the first commercial rollout under the partnership the companies announced in August 2026. Dallas is next, and the companies plan dozens more US cities, with a goal of 1 million drone deliveries per day by the end of 2029. The Verge noted that Zipline currently averages roughly 4,300 deliveries a day globally. Uber also invested in Zipline, which announced a $1.5 billion round last week; neither company has disclosed Uber's amount, according to TechCrunch.",
   "aff": [
@@ -140,6 +245,55 @@
    }
   ],
   "exclusive": true
+ },
+ {
+  "id": "a748343696456",
+  "date": "2026-11-17",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "Opinion",
+  "title": "NY Post opinion piece opposes NYC Delivery Protection Act over job losses",
+  "sum": "A New York Post opinion piece argues against the Delivery Protection Act before the New York City Council. The bill would outlaw private-sector use of last-mile delivery subcontractors. The piece says it would cost 5,000 delivery jobs, plus 2,000 more if Amazon closes its NYC warehouses.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service yet. The bill is still before the City Council, and this item is an opinion piece, not a vote or a ruling.",
+  "why": "The bill would license Amazon's last-mile facilities in New York City and bar subcontracted delivery, a model used by about 100 Amazon delivery service providers there.",
+  "score": 4,
+  "tie": "The piece follows a Nov. 16, 2026 letter in which an Amazon-led business coalition and the National Urban League said they could sue if the Council passes Intro 518 in its current form.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:33:02Z",
+  "src": "New York Post",
+  "url": "https://nypost.com/2026/11/17/opinion/delivery-protection-act-only-protects-the-teamsters-union/",
+  "srcs": [
+   {
+    "src": "New York Post",
+    "url": "https://nypost.com/2026/11/17/opinion/delivery-protection-act-only-protects-the-teamsters-union/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "new": "A New York Post opinion piece now calls for the bill to be killed, citing 5,000 delivery jobs at risk and Wong's switch to opposition; it changes nothing for shippers yet, since the bill has not passed.",
+  "syn": "A New York Post opinion piece says the Delivery Protection Act would mainly serve the Teamsters union. The bill would outlaw private-sector use of last-mile delivery subcontractors. The piece cites DashWave Delivery, which says city agencies also rely on their own delivery contractors. It says the bill would end 5,000 delivery jobs, plus another 2,000 if Amazon closes its NYC warehouses, and says contractors pay up to $24.75 an hour. It also says Council Speaker Julie Menin is trying to amend the bill.",
+  "aff": [
+   {
+    "who": "Amazon delivery contractors",
+    "what": "The piece says the bill would end 5,000 delivery jobs at local operations that pay up to $24.75 an hour."
+   },
+   {
+    "who": "Amazon NYC warehouses",
+    "what": "The piece says another 2,000 jobs would be lost if Amazon closes its NYC warehouses in response."
+   },
+   {
+    "who": "City agency contractors",
+    "what": "DashWave Delivery says city agencies use their own contractors to deliver meals and haul construction materials."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-18",
+  "unconf": true
  },
  {
   "id": "aaba50a646259",
@@ -228,7 +382,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -278,6 +432,48 @@
   "exclusive": true
  },
  {
+  "id": "ae5027985518f",
+  "date": "2026-11-17",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Fuel",
+  "kind": "News",
+  "title": "Amazon extends 3.5% fuel and logistics surcharge to more services",
+  "sum": "Amazon will expand its fuel and logistics surcharge to transportation fees for bulk storage and replenishment services, Supply Chain Dive reported on Nov. 17, 2026. The surcharge is 3.5% and starts in February, as the company faces fuel cost pressures.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "Transportation fees for Amazon's bulk storage and replenishment services will carry a 3.5% surcharge starting in February. The article does not give a specific day.",
+  "why": "Transportation fees for Amazon's bulk storage and replenishment services will carry a 3.5% surcharge from February, so users of those services pay more.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:32:46Z",
+  "src": "Supply Chain Dive",
+  "url": "https://www.supplychaindive.com/news/amazon-to-expand-fuel-and-logistics-surcharge-to-more-services/874693/",
+  "srcs": [
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/amazon-to-expand-fuel-and-logistics-surcharge-to-more-services/874693/"
+   }
+  ],
+  "auto": true,
+  "thread": "amazon-fuel-surcharge",
+  "syn": "Amazon is expanding its fuel and logistics surcharge to cover more services, according to Supply Chain Dive on Nov. 17, 2026. The 3.5% surcharge will apply to transportation fees for bulk storage and replenishment services starting in February. The outlet linked the change to fuel cost pressures facing the company.",
+  "aff": [
+   {
+    "who": "Bulk storage services users",
+    "what": "3.5% surcharge applies to transportation fees starting in February."
+   },
+   {
+    "who": "Replenishment services users",
+    "what": "3.5% surcharge applies to transportation fees starting in February."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "afeaf1126aec1",
   "date": "2026-11-17",
   "c": [
@@ -323,6 +519,61 @@
   ],
   "edge": true,
   "exclusive": true
+ },
+ {
+  "id": "a0cd4d2833018",
+  "date": "2026-11-16",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Depop launches package drop-off service in New York City",
+  "sum": "Depop launched a Drop-off service on November 16 in New York City, letting eligible sellers ship through participating local businesses instead of USPS, according to Value Added Resource. The network is part of the US logistics effort eBay is building across both marketplaces. Depop said it plans to expand to more cities.",
+  "imp": "info",
+  "lvl": 2,
+  "plain": "Eligible Depop sellers in New York City are automatically assigned to local business drop-off points instead of USPS as of November 16. Depop said buyer shipping prices and protection stay the same.",
+  "why": "Depop sellers in New York City who meet size and value limits are routed to drop-off locations automatically, which shifts some volume away from USPS.",
+  "score": 5,
+  "tie": "The launch follows eBay's October 28 announcement that it would begin limited testing of seller drop-off services in several major US metropolitan areas during Q4.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:31:55Z",
+  "src": "Value Added Resource",
+  "url": "https://www.valueaddedresource.net/depop-drop-off-new-york-city/",
+  "srcs": [
+   {
+    "src": "Value Added Resource",
+    "url": "https://www.valueaddedresource.net/depop-drop-off-new-york-city/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "thread": "depop-shipping-shift",
+  "upd": 2,
+  "new": "Depop moved from eBay's hiring and test plans to a live New York City drop-off service on November 16, with eligible orders now routed automatically away from USPS.",
+  "syn": "Depop launched a Drop-off service in New York City on November 16, letting eligible sellers hand packages to participating neighborhood businesses instead of using USPS, according to Value Added Resource. The service is part of the US network eBay is developing for both marketplaces, and Depop said it plans to expand to more cities. Eligible orders are routed to the service automatically, and packages are held for collection, usually within two business days, then delivered to buyers by local delivery partners. Depop said buyer shipping prices and protection are unchanged whether an order goes through USPS or the new partners.",
+  "aff": [
+   {
+    "who": "Depop sellers in New York City",
+    "what": "Eligible orders are switched to Drop-off automatically from Nov. 16; sellers can pause it in the app settings."
+   },
+   {
+    "who": "Eligible packages",
+    "what": "Up to 25 pounds, 2.4 cubic feet, no side over 48 inches, one item worth $300 or less including taxes."
+   },
+   {
+    "who": "Bundles and ineligible orders",
+    "what": "Continue to ship with USPS."
+   },
+   {
+    "who": "Depop buyers",
+    "what": "Shipping prices and Depop Protection stay the same; packages are delivered to their homes."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-18",
+  "unconf": true
  },
  {
   "id": "a17c2b53e66e5",
@@ -717,7 +968,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -956,7 +1207,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-17",
+  "tried": "2026-11-18",
   "unconf": true
  },
  {
@@ -3490,6 +3741,52 @@
   "exclusive": true
  },
  {
+  "id": "a8e7ea871bfc7",
+  "date": "2026-11-11",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon opens Markham drone delivery center, flights due this fall",
+  "sum": "Amazon cut the ribbon on a drone delivery center at 2201 W. 159th St. in Markham, WBEZ reported. The company said deliveries will begin \"this fall\". Drones carry packages up to five pounds.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service for shippers. Amazon said drone deliveries from the Markham center will begin this fall, for packages up to five pounds.",
+  "why": "Amazon plans drone delivery in nearly 500 U.S. cities, and each drone site serves multiple cities, with a five-pound package limit.",
+  "score": 5,
+  "tie": "In November 2026, Amazon said its Prime Air drone made its first deliveries in metro Atlanta, from a Gwinnett County facility.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-18T02:32:19Z",
+  "src": "WBEZ",
+  "url": "https://www.wbez.org/business/2026/11/10/amazon-drone-delivery-center-in-markham-set-for-takeoff",
+  "srcs": [
+   {
+    "src": "WBEZ",
+    "url": "https://www.wbez.org/business/2026/11/10/amazon-drone-delivery-center-in-markham-set-for-takeoff"
+   }
+  ],
+  "auto": true,
+  "new": "Amazon opened a drone delivery center in Markham with deliveries due this fall, adding to its Atlanta launch; the sources state no change to shipper rates or service.",
+  "syn": "Amazon opened a drone delivery center at 2201 W. 159th St. in Markham, with a ribbon-cutting on Tuesday afternoon, according to WBEZ. The company said deliveries from the site will begin \"this fall\". In August, Amazon announced drone delivery expansion to suburban areas in nearly 500 U.S. cities, including the Chicago, Atlanta, Cleveland and Boise, Idaho, metro areas. The drones carry packages of up to five pounds. The report listed noise, tree cover and pools as challenges.",
+  "aff": [
+   {
+    "who": "Markham-area drone customers",
+    "what": "Amazon said drone deliveries from the new center at 2201 W. 159th St. will begin this fall."
+   },
+   {
+    "who": "Packages over five pounds",
+    "what": "Amazon's drones carry only packages weighing up to five pounds."
+   },
+   {
+    "who": "Chicago, Atlanta, Cleveland and Boise metro areas",
+    "what": "Amazon announced in August it would expand drone shipping to suburban areas in nearly 500 U.S. cities."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "aa9caf27524b4",
   "date": "2026-11-11",
   "c": [
@@ -3807,6 +4104,10 @@
    {
     "src": "USPS",
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOU5aX3N2eUJ2S0JMa2pCTTcya0tWVnRSOHMzNkVBdkpyblVURVY5dW1aaTFqZHF2VWlZdExqSmhxeVo2MDJBb1dlZnl2NnZRemxmaEtteURKZnIyWUhybGNFMzQ4NEIxeEZIQmdqeWp6M0ZLSGdqclR4TUtIR2lCU0NTdHpaQjJCbnhvWm4zY1Y5RV9tS3NrVzhicFpqdmRycnVB?oc=5"
+   },
+   {
+    "src": "USPS",
+    "url": "https://about.usps.com/newsroom/local-releases/pa/2026/1110-usps-reports-fiscal-year-2026-results.htm"
    }
   ],
   "auto": true,
@@ -5476,8 +5777,6 @@
   ],
   "auto": true,
   "ann": "2026-11-06",
-  "thread": "drone-delivery",
-  "upd": 14,
   "new": "Wing put figures on its expansion: $125M over two years, a Fort Worth plant for tens of thousands of aircraft a year, and nearly 20 U.S. markets next year; current service remains limited to five metro areas.",
   "syn": "Wing, the drone delivery business of Alphabet, said it will invest $125 million (reported as up to $125 million by one outlet) over the next two years in U.S. manufacturing. This includes a 15,000-square-foot facility in Fort Worth, Texas, able to produce tens of thousands of aircraft a year, with some funds going to research and development in California. Wing, which operates from more than 70 sites, plans to reach more than 40 million people across nearly 20 U.S. markets next year through its Walmart partnership. It said a pending FAA beyond-visual-line-of-sight rule would trigger wider expansion.",
   "aff": [
@@ -12758,195 +13057,5 @@
     "what": "72% rated photo proof very or extremely influential; 44% ranked real-time tracking among their most important considerations."
    }
   ]
- },
- {
-  "id": "ad354637eaab5",
-  "date": "2026-10-26",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon starts drone deliveries from Markham center near Chicago",
-  "sum": "Amazon's drone delivery service is operating from its fulfillment center in Markham, serving a handful of Chicago suburbs, NBC 5 Chicago reported. Amazon said it has deployed approximately 21 drones that carry packages of up to five pounds as far as eight miles. Some residents have complained about noise and safety, the report said.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Amazon is making drone deliveries to some customers near its Markham fulfillment center, though the company has not officially launched the rollout. Nothing changes in rates for other shippers.",
-  "why": "Amazon says its Markham drones carry up to five pounds up to eight miles at under $5 a delivery, with more sites planned.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-02T17:22:30Z",
-  "src": "NBC 5 Chicago",
-  "url": "https://www.nbcchicago.com/news/local/amazon-drone-deliveries-whir-to-live-over-chicago-suburbs/4007558/",
-  "srcs": [
-   {
-    "src": "NBC 5 Chicago",
-    "url": "https://www.nbcchicago.com/news/local/amazon-drone-deliveries-whir-to-live-over-chicago-suburbs/4007558/"
-   }
-  ],
-  "auto": true,
-  "new": "Amazon's drones are now in use from its Markham, Illinois, facility, with approximately 21 drones deployed and further centers planned, but the company has not yet officially launched the rollout, and nothing changes in shipper rates or service.",
-  "syn": "Amazon's drone delivery service has begun operating from its fulfillment center in Markham, serving a handful of Chicago suburbs, according to NBC 5 Chicago. Amazon said it has deployed approximately 21 drones, each able to carry up to five pounds as far as eight miles, and said each delivery will cost less than $5. The company has not yet officially launched the rollout and plans to deploy drones at additional centers in the coming weeks, the report said. Some residents have raised noise and safety concerns.",
-  "aff": [
-   {
-    "who": "Customers near Markham",
-    "what": "Some south suburban residents are receiving drone deliveries of packages up to five pounds within eight miles."
-   },
-   {
-    "who": "Amazon delivery costs",
-    "what": "Amazon said drone delivery will cost less than $5 per delivery."
-   },
-   {
-    "who": "Nearby residents",
-    "what": "Some residents cited noise and safety concerns about the drones."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "ae89309b5e834",
-  "date": "2026-10-26",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "News",
-  "title": "DoorDash in advanced talks to acquire Instacart, WSJ reports",
-  "sum": "DoorDash is in advanced talks to acquire delivery rival Instacart, according to new Wall Street Journal reporting discussed by CNBC on Oct. 26, 2026. The CNBC video segment gives no price, terms or timetable.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The talks are reported only, and no terms have been announced.",
-  "why": "A deal would combine two delivery companies that CNBC describes as rivals, though the source gives no terms or size.",
-  "score": 7,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T19:06:48Z",
-  "src": "CNBC",
-  "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html",
-  "srcs": [
-   {
-    "src": "CNBC",
-    "url": "https://www.cnbc.com/video/2026/10/26/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-wsj.html"
-   },
-   {
-    "src": "WSJ",
-    "url": "https://www.wsj.com/business/hospitality/doordash-is-in-advanced-talks-to-acquire-delivery-rival-instacart-2b3d3d18"
-   },
-   {
-    "src": "Reuters",
-    "url": "https://www.reuters.com/business/doordash-talks-buy-instacart-wsj-reports-2026-10-26/"
-   },
-   {
-    "src": "MarketWatch",
-    "url": "https://www.marketwatch.com/story/a-possible-doordash-instacart-deal-is-all-about-keeping-up-with-walmart-and-amazon-analysts-say-17049bb1"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "syn": "DoorDash is in advanced talks to acquire delivery rival Instacart, according to new reporting by the Wall Street Journal. CNBC's MacKenzie Sigalos discussed the report on Oct. 26, 2026. The CNBC segment gives no price, terms or timetable, and no agreement is described as signed.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ]
- },
- {
-  "id": "af86a262d4dcb",
-  "date": "2026-10-26",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon flies MK30 drones from Markham, Illinois; FAA file shows draft",
-  "sum": "Amazon told NBC 5 Chicago it has about 21 MK30 drones at its Markham, Illinois, fulfillment center, each carrying up to five pounds as far as eight miles. NBC 5 reported on Oct. 26 that the rollout is not yet official. DroneXL said the FAA's index, last updated Oct. 14, still lists the Chicago environmental assessment as a July draft with no decision.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "Amazon drone delivery is operating from Markham for addresses within about eight miles, for packages up to five pounds. Amazon says a delivery costs it less than $5, and Chicago outlets reported in February that Prime members would pay $4.99 an order.",
-  "why": "Amazon's Chicago-area drone service, with about 21 drones at one site, is flying while the FAA's public file shows only a draft.",
-  "score": 5,
-  "tie": "In October 2026, Massachusetts lawmakers and MassDOT pressed Amazon over its planned Prime Air drone flights from Westborough.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T19:07:49Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/10/26/amazon-drones-fly-markham-chicago-suburbs-faa-draft/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/10/26/amazon-drones-fly-markham-chicago-suburbs-faa-draft/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-26",
-  "new": "Amazon's MK30 drones are now reported flying in the Chicago suburbs, about 21 from Markham, though the FAA's Chicago assessment still shows a draft, which adds a live Illinois service to the Massachusetts permit disputes.",
-  "syn": "Amazon's MK30 delivery drones are flying from its Markham, Illinois, fulfillment center, where the company told NBC 5 Chicago it has about 21 of them. NBC 5 reported on Oct. 26 that Amazon has not officially launched the rollout and plans more centers, while the Village of Homewood told residents the service has launched. DroneXL reported that the FAA's drone review index, last updated Oct. 14, lists the Chicago assessment for three Prime Air hubs as a July 2026 draft, with comment closed Aug. 14 and no final decision posted. DroneXL said no public FAA document names the authorization under which Markham flies.",
-  "aff": [
-   {
-    "who": "Markham-area deliveries",
-    "what": "Drones carry up to five pounds as far as eight miles, according to Amazon; the FAA draft sets the range at 7.5 miles."
-   },
-   {
-    "who": "Prime members",
-    "what": "Chicago outlets reported in February a $4.99 per-order price; Amazon says a delivery costs it less than $5."
-   },
-   {
-    "who": "Homewood residents",
-    "what": "The village said it cannot prohibit drones, set flight limits or regulate their noise; federal and Illinois law govern."
-   },
-   {
-    "who": "Planned Chicago hubs",
-    "what": "The FAA draft proposes up to 1,000 MK30 flights a day from each of Markham, Matteson and West Chicago."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "a2f41e69648f3",
-  "date": "2026-10-24",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "Analysis",
-  "title": "FedEx to report first post-spinoff results Oct. 28",
-  "sum": "FedEx reports earnings Wednesday, Oct. 28, after the bell, its first report since the June 1 FedEx Freight spinoff and the switch to a calendar fiscal year, according to a market preview. The preview cites a consensus of $3.37 quarterly EPS on $22.58 billion in revenue.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The item previews FedEx's first earnings report after the Freight spinoff.",
-  "why": "First results since the Freight spinoff show what FedEx's standalone parcel business earns, per 24/7 Wall St.",
-  "score": 4,
-  "tie": "The report follows FedEx's June 2026 results call, where interim CFO Claude Russ said Q3 would be the weakest quarter seasonally, according to 24/7 Wall St.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-24T18:59:50Z",
-  "src": "24/7 Wall St.",
-  "url": "https://247wallst.com/investing/2026/10/24/leaner-machine-heavier-costs-can-fedex-deliver-margin-growth-on-oct-28-after-freight-spinoff/",
-  "srcs": [
-   {
-    "src": "24/7 Wall St.",
-    "url": "https://247wallst.com/investing/2026/10/24/leaner-machine-heavier-costs-can-fedex-deliver-margin-growth-on-oct-28-after-freight-spinoff/"
-   }
-  ],
-  "auto": true,
-  "syn": "FedEx reports earnings Wednesday, Oct. 28, after the bell. It is the first report since the June 1 FedEx Freight spinoff and the move to a calendar fiscal year. A market preview cites a consensus of $3.37 EPS on $22.58 billion in revenue, against guidance of $16.90 to $18.10 adjusted EPS for CY2026. The preview names a $200 million pilot-contract drag and stranded overhead as the main tests for margins. It says FedEx had allocated a $600 million cost base to Freight, moved about $250 million to the new company and plans to remove $100 million of the rest in 2026.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service; the item previews an earnings report."
-   },
-   {
-    "who": "International priority shippers",
-    "what": "Yield rose 16% last quarter as FedEx targeted premium health care, aerospace and data center shipments, per the preview."
-   }
-  ],
-  "edge": true,
-  "exclusive": true,
-  "tried": "2026-11-03",
-  "unconf": true
  }
 ]

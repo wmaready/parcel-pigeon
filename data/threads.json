@@ -396,20 +396,21 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "USPS leadership is pressing Congress for funding changes and says it may close post offices and change service standards if lawmakers do not act.",
+  "s": "USPS reported a $6.5 billion fiscal 2026 loss; a House caucus has asked how it would use a requested $19.5 billion borrowing increase.",
   "ids": [
    "h429",
    "r14",
    "a2b7282f9b8a5",
    "a72dc67ee31dc",
-   "aa62902dd36cc"
+   "aa62902dd36cc",
+   "ae322a3179422"
   ],
   "first": "2024-11-14",
   "last": "2026-11-11",
   "c": [
    "USPS"
   ],
-  "rv": "89aaa2f554e2",
+  "rv": "74450fdbea1f",
   "cx": {
    "sig": "ff15f9c83862",
    "v": 3,
@@ -529,7 +530,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding across US metro areas, with Walmart, Wing, Zipline, Uber Eats and now Amazon Prime Air launching or adding sites in November 2026.",
+  "s": "Amazon, Wing, Walmart, Uber Eats and Zipline are each expanding drone delivery to new U.S. locations, with Amazon's Markham center the latest to open.",
   "ids": [
    "g27",
    "g26",
@@ -542,11 +543,11 @@
    "ae04c4bdd5e4e",
    "a704b11d94f38",
    "a644b0ea66268",
-   "a8aa90b423c4a",
    "a7445a06ce8cb",
    "ab904315f1100",
-   "a5a12ee8825b7",
-   "a62c178a11f94"
+   "a62c178a11f94",
+   "a7aea8c84dd29",
+   "a2e23b2549e9b"
   ],
   "first": "2025-03-31",
   "last": "2026-11-17",
@@ -556,24 +557,19 @@
    "Regional"
   ],
   "cx": {
-   "sig": "91e8eeb42acd",
+   "sig": "544b67781cf2",
    "v": 3,
    "beats": {
-    "g27": "Amazon's August plan: drone sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations.",
-    "g26": "FAA's Part 108 rule went to White House review July 10 but was unpublished as of Oct. 9; waivers or Part 135 still needed.",
-    "a644b0ea66268": "Walmart adds 300 Zipline sites, and Zipline raises $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "a8aa90b423c4a": "Wing plans $125M over two years, including a Fort Worth plant, and nearly 20 U.S. markets, up from five metros today.",
-    "a7445a06ce8cb": "Wing and Walmart start Memphis deliveries Nov. 10 from three stores: free in the apps, 2.75-pound limit, as fast as 30 minutes.",
-    "a5a12ee8825b7": "Uber Eats begins Zipline deliveries in Spring, Texas, with Dallas next and a 1 million-a-day goal by the end of 2029.",
-    "a62c178a11f94": "Amazon makes first Atlanta deliveries, one of its August targets: items under 5 pounds within 7.5 miles of a Gwinnett County facility."
+    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations."
    },
-   "intro": "Drone delivery is scaling across US metros while the FAA's Part 108 rule is still pending, a new last-mile option.",
-   "now": "Part 108 was still unpublished as of Oct. 9; Amazon's Chicago, Cleveland and Syracuse sites are still slated to start by end of 2026."
+   "intro": "Drone delivery is spreading across U.S. metros, but the FAA rule that would make it routine is still unpublished.",
+   "now": "Drone launches keep rolling out while Part 108 was still unpublished as of Oct. 9, so waivers or Part 135 certificates remain the route."
   },
-  "rv": "2428c8a7c8aa",
+  "rv": "e7d783540dad",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
+   "amazon-fuel-surcharge",
    "amazon-jfk8-nlrb",
    "amazon-labor",
    "amazon-network-buildout",
@@ -641,8 +637,8 @@
    "ad0e619194837"
   ],
   "first": "2026-10-13",
-  "s": "Intro 518 awaits a City Council vote while Speaker Menin weighs amendments and opponents threaten legal action.",
-  "last": "2026-11-16",
+  "s": "The bill is before the City Council, where Speaker Julie Menin is reportedly seeking amendments and Amazon and the National Urban League have raised the possibility of a lawsuit.",
+  "last": "2026-11-17",
   "c": [
    "Amazon",
    "FedEx",
@@ -663,6 +659,7 @@
   },
   "co": "Amazon",
   "apart": [
+   "amazon-fuel-surcharge",
    "amazon-jfk8-nlrb",
    "amazon-labor",
    "parcel-volume-amazon",
@@ -991,6 +988,7 @@
   },
   "apart": [
    "amazon-driver-no-poach-suit",
+   "amazon-fuel-surcharge",
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
    "amazon-teamsters-organizing",
@@ -1177,19 +1175,27 @@
   }
  },
  "depop-shipping-shift": {
-  "n": "Depop shipping shift",
+  "n": "Depop and eBay build US drop-off network",
   "ids": [
-   "a87f6e01fb676"
+   "a87f6e01fb676",
+   "a0cd4d2833018"
   ],
   "first": "2026-11-09",
   "co": "eBay",
-  "s": "eBay is hiring to build a US PUDO network and plans a limited seller drop-off test in several large metros in Q4 2026.",
-  "last": "2026-11-09",
+  "s": "Depop's New York City drop-off service launched November 16, with expansion to more cities planned and eBay's own limited tests under way in Q4.",
+  "last": "2026-11-16",
   "c": [
    "Industry",
    "Regional"
   ],
-  "rv": "e33c1ca05a25"
+  "rv": "dbe91682c02c",
+  "cx": {
+   "sig": "dbe91682c02c",
+   "v": 3,
+   "beats": {},
+   "intro": "eBay and Depop are building a US drop-off network for sellers, a possible alternative to USPS for marketplace parcels.",
+   "now": "Depop's NYC drop-off is reportedly live, with more cities planned, and eBay's limited Q4 tests are under way. No price changes have been stated."
+  }
  },
  "nalc-contract-arbitration": {
   "n": "NALC contract arbitration",
@@ -1245,5 +1251,25 @@
    "intro": "GOFO, a fast-growing last-mile carrier, is adding US space while a report questions its labor practices.",
    "now": "GOFO has the Charlotte lease signed, and the labor allegations are out there. The sources state no change to shipper rates or service."
   }
+ },
+ "amazon-fuel-surcharge": {
+  "n": "Amazon fuel and logistics surcharge",
+  "ids": [
+   "ae5027985518f"
+  ],
+  "first": "2026-11-17",
+  "co": "Amazon",
+  "s": "Amazon will apply a 3.5% fuel and logistics surcharge to transportation fees for bulk storage and replenishment services starting in February, per a Nov. 17, 2026 report.",
+  "last": "2026-11-17",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "amazon-driver-no-poach-suit",
+   "amazon-teamsters-organizing",
+   "amazon-uber-eats-prime",
+   "usps-big-shipper-deals"
+  ],
+  "rv": "50de74ad8ca6"
  }
 }
