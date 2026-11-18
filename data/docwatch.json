@@ -1,5 +1,5 @@
 {
- "cursor": 76,
+ "cursor": 91,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -334,7 +334,7 @@
    "first": "2026-10-21",
    "n": "Effective_November_14_Fuel_Increase_Explaination.pdf",
    "hash": "84e1e97a7235",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "snap": {
     "d": "2026-10-26",
     "pdf": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 545,
+   "fails": 546,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-18"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 545,
+   "fails": 546,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-18"
@@ -585,7 +585,7 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
@@ -803,7 +803,7 @@
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
    "hash": "26c3346a9315",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "snap": {
     "d": "2026-11-12",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -1375,21 +1375,21 @@
    "changed": "2026-11-16"
   },
   "https://www.ontrac.com/west-coast-fuel-surcharge": {
-   "hash": "a5af63302c20",
+   "hash": "de0cf1094cfd",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "OnTrac West Coast fuel surcharge",
    "snap": {
-    "d": "2026-11-12",
-    "img": "data/snapshots/b9d4439ee72f/2026-11-12.jpg",
-    "prev": "data/snapshots/b9d4439ee72f/2026-11-03.jpg"
+    "d": "2026-11-18",
+    "img": "data/snapshots/b9d4439ee72f/2026-11-18.jpg",
+    "prev": "data/snapshots/b9d4439ee72f/2026-11-12.jpg"
    },
-   "changed": "2026-11-12"
+   "changed": "2026-11-18"
   },
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "a616edb34d34",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "OnTrac surcharges and rates page",
    "snap": {
     "d": "2026-11-16",
@@ -1402,7 +1402,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
    "snap": {
     "d": "2026-10-26",
@@ -1413,7 +1413,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "UPS domestic fuel surcharge tables",
    "snap": {
     "d": "2026-10-26",
@@ -1424,7 +1424,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "26c3346a9315",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-11-12",
@@ -1437,38 +1437,33 @@
   "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products": {
    "hash": "a3deb984fc43",
    "first": "2026-10-26",
-   "checked": "2026-11-14",
+   "checked": "2026-11-18",
    "n": "Federal Register notice 2026-21421: New Postal Products (91 FR 66370)",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://public-inspection.federalregister.gov/2026-21421.pdf?1792413913",
     "txt": "data/snapshots/e5f2c699239a/2026-10-26.txt"
    },
-   "last_try": "2026-11-16",
-   "fails": 1,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false
+   "last_try": "2026-11-16"
   },
   "https://www.federalregister.gov/documents/2026/10/19/2026-21317/new-mailing-standards-for-live-animals": {
-   "hash": "7a90d278f5dd",
+   "hash": "5a9c72bb7ccb",
    "first": "2026-10-26",
-   "checked": "2026-11-14",
+   "checked": "2026-11-18",
    "n": "Final rule: Publication 52, Hazardous, Restricted, and Perishable Mail (91 FR 66002) 2026",
    "snap": {
-    "d": "2026-11-14",
+    "d": "2026-11-18",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21317.pdf",
-    "txt": "data/snapshots/58373f1b7bc3/2026-11-14.txt",
-    "prev_d": "2026-10-26"
+    "txt": "data/snapshots/58373f1b7bc3/2026-11-18.txt",
+    "prev_d": "2026-11-14"
    },
    "last_try": "2026-11-16",
-   "fails": 1,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false
+   "changed": "2026-11-18"
   },
   "https://public-inspection.federalregister.gov/2026-06162.pdf": {
    "hash": "97f2d2e31dd1",
    "first": "2026-10-26",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "PRC Order 9490, Docket CP2026-4 (8% temporary increase)",
    "snap": {
     "d": "2026-10-26",
@@ -2301,17 +2296,14 @@
   "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference": {
    "hash": "00356ade2f6e",
    "first": "2026-11-04",
-   "checked": "2026-11-14",
+   "checked": "2026-11-18",
    "n": "International Mail Manual; Incorporation by Reference (Federal Register, 2026)",
    "snap": {
     "d": "2026-11-04",
     "pdf": "https://public-inspection.federalregister.gov/2026-22505.pdf?1793713514",
     "txt": "data/snapshots/e12ca75552ef/2026-11-04.txt"
    },
-   "last_try": "2026-11-16",
-   "fails": 1,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false
+   "last_try": "2026-11-16"
   },
   "https://www.dhl.com/discover/en-sg/logistics-advice/import-export-advice/eu-product-identifier--pid--requirement-for-b2c-shipments": {
    "hash": "2c3a4984e56a",
@@ -2322,10 +2314,10 @@
   },
   "https://about.usps.com/resources/publications.htm?cat=notices": {
    "n": "Notices",
-   "fails": 17,
+   "fails": 18,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
-   "last_try": "2026-11-16"
+   "last_try": "2026-11-18"
   },
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
@@ -2371,14 +2363,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 107,
+   "fails": 108,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-18"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 107,
+   "fails": 108,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-18"
@@ -2410,7 +2402,7 @@
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
    "first": "2026-11-06",
-   "checked": "2026-11-16",
+   "checked": "2026-11-18",
    "n": "Federal Register Notices",
    "snap": {
     "d": "2026-11-06",
@@ -2419,19 +2411,18 @@
    }
   },
   "https://www.federalregister.gov/documents/2026/11/12/2026-23064/authorization-to-manufacture-and-distribute-postage-evidencing-systems": {
-   "hash": "011e75a7c956",
+   "hash": "12792dfa8fab",
    "first": "2026-11-11",
-   "checked": "2026-11-12",
+   "checked": "2026-11-18",
    "n": "Authorization To Manufacture and Distribute Postage Evidencing Systems (Proposed Rule, 91 FR 72838)",
    "snap": {
-    "d": "2026-11-11",
+    "d": "2026-11-18",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23064.pdf",
-    "txt": "data/snapshots/531bcaf173d6/2026-11-11.txt"
+    "txt": "data/snapshots/531bcaf173d6/2026-11-18.txt",
+    "prev_d": "2026-11-11"
    },
-   "fails": 2,
-   "err": "page is blank or blocked; snapshot kept as-is",
-   "blocked": false,
-   "last_try": "2026-11-16"
+   "last_try": "2026-11-16",
+   "changed": "2026-11-18"
   },
   "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service": {
    "hash": "aedb75850499",
@@ -2475,7 +2466,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 25,
+   "fails": 26,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-18"
@@ -2487,7 +2478,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 25,
+   "fails": 26,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-18"
