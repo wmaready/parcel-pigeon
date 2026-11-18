@@ -3754,6 +3754,57 @@
    "auto": true,
    "added": "2026-11-17",
    "story": "a0f33fb01d0d5"
+  },
+  {
+   "id": "geodis",
+   "n": "GEODIS",
+   "realm": "3pl",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Global logistics provider that launched the Final Mile Index",
+   "al": [],
+   "src": "https://www.globenewswire.com/news-release/2026/11/18/3405862/0/en/geodis-launches-u-s-final-mile-index-as-delivery-costs-rise-three-times-faster-than-inflation.html",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-18",
+   "story": "a06e8f72a005a"
+  },
+  {
+   "id": "eliteexpressho",
+   "n": "Elite Express Holding",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Nasdaq-listed last-mile delivery provider based in Laguna Hills, California",
+   "al": [],
+   "src": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-18",
+   "story": "aa2713299bf3a"
+  },
+  {
+   "id": "jartransportat",
+   "n": "JAR Transportation",
+   "realm": "regional",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Wholly owned subsidiary providing last-mile package delivery in California",
+   "al": [],
+   "src": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-18",
+   "story": "aa2713299bf3a"
   }
  ],
  "edges": [
@@ -6420,6 +6471,33 @@
    "t": "UPS buys Smartways Logistics",
    "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
    "story": "a0f33fb01d0d5"
+  },
+  {
+   "a": "ids",
+   "b": "geopost",
+   "k": "partner",
+   "y": "2026",
+   "t": "GLS Group and Geopost announce joint venture for German parcel businesses",
+   "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Z0XL:0-gls-group-and-geopost-announce-joint-venture-for-german-parcel-businesses/",
+   "story": "a728839b5ef80"
+  },
+  {
+   "a": "ids",
+   "b": "geopost",
+   "k": "merged",
+   "y": "2026",
+   "t": "GLS Group and Geopost form German parcel joint venture",
+   "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Z0XL:0-gls-group-and-geopost-announce-joint-venture-for-german-parcel-businesses/",
+   "story": "a728839b5ef80"
+  },
+  {
+   "a": "eliteexpressho",
+   "b": "jartransportat",
+   "k": "owns",
+   "y": "2026",
+   "t": "Elite Express Holding owns JAR Transportation",
+   "url": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
+   "story": "aa2713299bf3a"
   }
  ],
  "moves": [

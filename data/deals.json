@@ -1,5 +1,84 @@
 [
  {
+  "title": "GLS Group and Geopost form German parcel joint venture",
+  "buyer": "GLS Group",
+  "target": "Geopost",
+  "value": "Undisclosed",
+  "status": "Announced",
+  "ann": "2026-11-18",
+  "closed": null,
+  "ended": null,
+  "latest": "Joint venture for German parcel businesses announced, 18 November 2026; terms not available.",
+  "sum": "GLS Group and Geopost announced a joint venture for their German parcel businesses. The accessible source does not state the value or structure.",
+  "who": [
+   [
+    "Merged with",
+    "GLS Group",
+    "A parcel business with German operations that is party to the joint venture."
+   ],
+   [
+    "Merged with",
+    "Geopost",
+    "A parcel business with German operations that is party to the joint venture."
+   ]
+  ],
+  "why": "The two companies plan to combine their German parcel businesses in a joint venture, according to the Reuters headline. The source text does not give the scale, terms or any regulatory steps.",
+  "parties": [
+   {
+    "name": "GLS Group",
+    "role": "Merged with",
+    "realm": "Regional / last-mile carrier",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   },
+   {
+    "name": "Geopost",
+    "role": "Merged with",
+    "realm": "Regional / last-mile carrier",
+    "hq": null,
+    "founded": null,
+    "size": null,
+    "history": []
+   }
+  ],
+  "tree": {
+   "n": "GLS Group–Geopost German parcel joint venture",
+   "c": [
+    {
+     "n": "GLS Group German parcel business",
+     "nw": 1,
+     "c": []
+    },
+    {
+     "n": "Geopost German parcel business",
+     "nw": 1,
+     "c": []
+    }
+   ]
+  },
+  "note": "Source text was paywalled; only the headline was available.",
+  "ties": [],
+  "d": "2026-11-18",
+  "story": "a728839b5ef80",
+  "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Z0XL:0-gls-group-and-geopost-announce-joint-venture-for-german-parcel-businesses/",
+  "srcs": [
+   {
+    "src": "TradingView",
+    "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Z0XL:0-gls-group-and-geopost-announce-joint-venture-for-german-parcel-businesses/"
+   }
+  ],
+  "checked": "2026-11-18",
+  "updates": [
+   {
+    "d": "2026-11-18",
+    "t": "GLS Group and Geopost announce joint venture for German parcel businesses",
+    "story": "a728839b5ef80"
+   }
+  ]
+ },
+ {
   "title": "American Drive Acquisition Company combines with EasyPost",
   "buyer": "American Drive Acquisition Company",
   "target": "EasyPost",

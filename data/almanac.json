@@ -393,6 +393,29 @@
   "auto": true
  },
  {
+  "carrier": "USPS",
+  "year": 2027,
+  "kind": "surcharge",
+  "announced": "2026-11-12",
+  "effective": null,
+  "pct": null,
+  "headline": "USPS files to make 11% fuel surcharge permanent, replacing temporary 8% charge",
+  "details": [
+   "USPS filed on Nov. 12 to make its temporary 8% fuel surcharge permanent at 11%",
+   "The 11% fuel surcharge applies to base postage",
+   "The temporary 8% charge was due to expire Jan. 17, 2027"
+  ],
+  "id": "usps-2027-surcharge-2026-11-12",
+  "sources": [
+   "https://www.bloomberg.com/news/articles/2026-11-12/us-postal-service-to-raise-prices-make-fuel-surcharge-permanent",
+   "https://www.freightwaves.com/news/usps-to-add-11-permanent-fuel-surcharge-along-with-parcel-rate-hike",
+   "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/"
+  ],
+  "story": "ab5dd015b24cb",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
   "carrier": "FedEx",
   "year": 2026,
   "kind": "das",
@@ -530,6 +553,27 @@
   "conf": "partial",
   "note": "Single source: TransImpact's carrier-updates page; not shown on the carrier's own page.",
   "id": "fedex-2026-fuel-table-2026-05-11"
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "fuel_table",
+  "announced": null,
+  "effective": "2026-11-09",
+  "pct": null,
+  "headline": "FedEx adjusts domestic fuel surcharges and updates fuel surcharge tables effective Nov. 9, 2026",
+  "details": [
+   "FedEx said it will adjust fuel surcharges and update the tables for FedEx domestic services, effective Nov. 9, 2026",
+   "The rate changes page's updated date moved from Oct. 23, 2026 to Nov. 5, 2026",
+   "The size and direction of the change cannot be determined from the page alone"
+  ],
+  "id": "fedex-2026-fuel-table-2026-11-09",
+  "sources": [
+   "https://www.fedex.com/en-us/shipping/rate-changes.html"
+  ],
+  "story": "wea2ccfd5fbaf",
+  "conf": "confirmed",
+  "auto": true
  },
  {
   "carrier": "FedEx",

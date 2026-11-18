@@ -1,5 +1,5 @@
 {
- "run": "2026-11-18T13:20Z",
+ "run": "2026-11-18T19:01Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -235,16 +235,6 @@
   },
   {
    "sev": "med",
-   "type": "older-break",
-   "msg": "\"FedEx Network 2.0 puts Express and Ground parcels in one Mesquite facility\" (2026-10-26) looks like a later report of \"FedEx Network 2.0 merges Ground and Express pickup and delivery\" (2025-11-14). Check whether it is new.",
-   "ids": [
-    "a3623effd6df4",
-    "43"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
    "type": "feed-dead",
    "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
@@ -310,10 +300,10 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon Prime Air starts drone deliveries in metro Atlanta\"",
+   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon starts Prime Air drone deliveries in Atlanta; no Georgia FAA file\"",
    "ids": [
     "a73e290a90706",
-    "a62c178a11f94"
+    "a743e307cb77c"
    ],
    "fixed": false
   },
@@ -324,16 +314,6 @@
    "ids": [
     "afc24e3e3a5e6",
     "a3de5c6ac088c"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air drones deliver from North Randall, Ohio, site\" and \"Amazon Prime Air starts drone deliveries in metro Atlanta\"",
-   "ids": [
-    "a3de5c6ac088c",
-    "a62c178a11f94"
    ],
    "fixed": false
   },
@@ -392,33 +372,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
-   "ids": [
-    "nr0ee0b5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
-   "ids": [
-    "h522"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
-   "ids": [
-    "h412"
-   ],
    "fixed": false
   }
  ],
@@ -534,16 +487,6 @@
   },
   {
    "sev": "med",
-   "type": "older-break",
-   "msg": "\"FedEx Network 2.0 puts Express and Ground parcels in one Mesquite facility\" (2026-10-26) looks like a later report of \"FedEx Network 2.0 merges Ground and Express pickup and delivery\" (2025-11-14). Check whether it is new.",
-   "ids": [
-    "a3623effd6df4",
-    "43"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
    "type": "feed-dead",
    "msg": "4 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K",
    "ids": [],
@@ -609,10 +552,10 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon Prime Air starts drone deliveries in metro Atlanta\"",
+   "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon starts Prime Air drone deliveries in Atlanta; no Georgia FAA file\"",
    "ids": [
     "a73e290a90706",
-    "a62c178a11f94"
+    "a743e307cb77c"
    ],
    "fixed": false
   },
@@ -623,16 +566,6 @@
    "ids": [
     "afc24e3e3a5e6",
     "a3de5c6ac088c"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Prime Air drones deliver from North Randall, Ohio, site\" and \"Amazon Prime Air starts drone deliveries in metro Atlanta\"",
-   "ids": [
-    "a3de5c6ac088c",
-    "a62c178a11f94"
    ],
    "fixed": false
   },
@@ -691,33 +624,6 @@
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
    "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.maersk.com', port=443): Read timed out. (read timeout=15)): https://www.maersk.com/news/articles/2026/07/15/maersk-boston-fulfillment-hub-investment-northeast-delivery-capacity",
-   "ids": [
-    "nr0ee0b5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/pitney-bowes-parcel-shipping-index-us-carrier-disruption-increasing-and-thats-good",
-   "ids": [
-    "h522"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (HTTPSConnectionPool(host='www.nasdaq.com', port=443): Read timed out. (read timeout=15)): https://www.nasdaq.com/press-release/rxo-acquire-coyote-logistics-ups-2024-06-23",
-   "ids": [
-    "h412"
-   ],
    "fixed": false
   }
  ]

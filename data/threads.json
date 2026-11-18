@@ -73,17 +73,17 @@
    "FedEx"
   ],
   "cx": {
-   "sig": "4e04f8e8144d",
+   "sig": "7b1bdddac84b",
    "v": 3,
    "beats": {
-    "h411": "On June 1, 2024, FedEx Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
-    "h413": "FedEx said DRIVE cut $1.8 billion in costs, and Network 2.0 reached Canada, its largest market yet.",
-    "43": "By Nov. 2025, FedEx was merging Ground and Express pickup and delivery, with the U.S. rollout due by the end of 2027.",
-    "a3623effd6df4": "In Mesquite, Texas, Express and Ground parcels now share a building and vans; the CEO targets 62% done by year-end.",
-    "a920867c2e49d": "After the holidays, Network 2.0 heads to Los Angeles and other markets; Dallas and San Francisco are already done.",
-    "a551f86e524c2": "FedEx targets 475 station closures, 260+ done; transit times aren't expected to be affected, and it will pause during peak."
+    "h411": "On June 1, 2024, Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
+    "h413": "Network 2.0 launched in Canada, its largest market yet, as FedEx said DRIVE cut $1.8 billion in costs that year.",
+    "43": "By Nov. 2025 the focus was merging Ground and Express pickup and delivery, with the U.S. rollout due by end of 2027.",
+    "a920867c2e49d": "Dallas and San Francisco are done; Los Angeles and others follow after the holidays, with no change to rates or service stated.",
+    "a551f86e524c2": "PennLive: 260+ of 475 targeted station closures are done, and FedEx says transit times aren't expected to be affected."
    },
-   "intro": "FedEx is merging Ground and Express pickup and delivery into one network, targeting $2 billion in savings."
+   "intro": "FedEx is merging Ground and Express pickup and delivery into one network, targeting $2B in savings by 2027.",
+   "now": "Network 2.0 pauses for peak season; Los Angeles and other markets follow after the holidays, with the rollout slated to wrap up in 2027."
   },
   "rv": "4e04f8e8144d",
   "apart": [
@@ -191,7 +191,7 @@
  },
  "carrier-gri": {
   "n": "Annual carrier rate increases",
-  "s": "FedEx, DHL Express and UPS have set 2027 increases averaging 5.9%, and USPS has now filed for 2027 price increases on its parcel products.",
+  "s": "FedEx, DHL Express and SpeedX have announced 2027 increases, and USPS has filed notice of price increases for several products.",
   "ids": [
    "h401",
    "h421",
@@ -202,30 +202,34 @@
    "02",
    "07",
    "w84705482dd2f",
-   "a0740b56c6649"
+   "a0740b56c6649",
+   "a50bdae886ef4"
   ],
   "first": "2024-01-01",
-  "last": "2026-11-12",
+  "last": "2026-11-18",
   "c": [
    "DHL",
    "FedEx",
+   "Regional",
    "UPS",
    "USPS"
   ],
-  "rv": "82225342511c",
+  "rv": "790b53fd0248",
   "cx": {
-   "sig": "58a9b2c2d998",
+   "sig": "5b89b55d9804",
    "v": 3,
    "beats": {
-    "h401": "FedEx's 2024 increase averaged 5.9% from Jan. 1, 2024, matching UPS's from Dec. 26, 2023. Both were down from 6.9% a year earlier.",
-    "h421": "FedEx set another 5.9% average for Jan. 6, 2025. Residential, delivery area and additional handling fees rose too.",
-    "h424": "DHL Express set the same 5.9% average for U.S. accounts, effective Jan. 1, 2025, matching FedEx and UPS.",
-    "h426": "UPS followed with a 5.9% average effective Dec. 23, 2024, starting earlier than the Dec. 26, 2023 date the year before.",
-    "h529": "FedEx held at a 5.9% average for Jan. 5, 2026. Residential delivery went to $6.95 from $6.55.",
-    "12": "FedEx's 2027 average is 5.9% again, but an industry analysis puts 1–5 lb Light Ground at about 6.5%, with many surcharges rising more.",
-    "02": "DHL Express also set 5.9% for U.S. accounts, effective Jan. 1, 2027. It will change some services and surcharges but didn't list them."
+    "h401": "FedEx's 5.9% average took effect Jan. 1, 2024, after UPS's matching 5.9% began Dec. 26, 2023. Both were down from 6.9%.",
+    "h421": "FedEx set another 5.9% average for Jan. 6, 2025, with bigger increases on two-day air and long-distance ground.",
+    "h424": "DHL Express followed with 5.9% for U.S. accounts on Jan. 1, 2025, matching the FedEx and UPS 2025 averages.",
+    "h426": "UPS landed on the same 5.9% average, effective Dec. 23, 2024, versus Dec. 26 the year before.",
+    "12": "FedEx repeats 5.9% from Jan. 4, 2027, but an industry analysis puts 1–5 lb Light Ground near 6.5%, and many surcharges rise more.",
+    "02": "DHL Express also says 5.9% for U.S. accounts from Jan. 1, 2027, three days ahead of FedEx; changed surcharges weren't listed.",
+    "a0740b56c6649": "USPS filed notice Nov. 12 to raise Ground Advantage, Priority Mail and Parcel Select prices; no percentage or date given.",
+    "a50bdae886ef4": "SpeedX adds a 5% average on base rates for shipments tendered on or after Jan. 16, 2027; impact varies by weight and zone."
    },
-   "intro": "Carriers keep setting yearly price hikes, and 5.9% has become the familiar number. Shippers budget around it."
+   "intro": "Carriers' yearly price hikes: FedEx and DHL Express again average 5.9% for 2027, and USPS and SpeedX have followed.",
+   "now": "Next on the clock: DHL Express's 5.9% on Jan. 1, then FedEx's on Jan. 4, and SpeedX's 5% on Jan. 16. USPS hasn't given figures yet."
   },
   "co": "UPS",
   "apart": [
@@ -396,31 +400,34 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "USPS reported a $6.5 billion fiscal 2026 loss; a House caucus has asked how it would use a requested $19.5 billion borrowing increase.",
+  "s": "USPS has warned of service cuts if Congress does not act, with plans due in the first quarter of 2027, and has filed an 11% permanent fuel surcharge.",
   "ids": [
    "h429",
    "r14",
    "a2b7282f9b8a5",
    "a72dc67ee31dc",
    "aa62902dd36cc",
-   "ae322a3179422"
+   "ae322a3179422",
+   "ab5dd015b24cb"
   ],
   "first": "2024-11-14",
-  "last": "2026-11-11",
+  "last": "2026-11-12",
   "c": [
    "USPS"
   ],
-  "rv": "74450fdbea1f",
+  "rv": "e44198965772",
   "cx": {
-   "sig": "ff15f9c83862",
+   "sig": "afdb5c477168",
    "v": 3,
    "beats": {
-    "h429": "FY2024: a $9.5B loss, yet package revenue rose 2% on 7.25B pieces, and transportation expense fell $1.3B.",
-    "r14": "For fiscal 2025, the PRC found package volume fell 6.0% to about 6.5B pieces while revenue rose just 0.1%.",
-    "a72dc67ee31dc": "Lawmakers asked how USPS would spend $19.5B more in borrowing authority, lifting the limit from $15B to $34.5B.",
-    "a2b7282f9b8a5": "FY2026 loss narrowed to $6.5B from $9.0B; package revenue rose 5.1% on 5.3% less volume. USPS says price increases continue."
+    "h429": "Fiscal 2024 ended with a $9.5 billion loss, even as package pieces rose to 7.25 billion from 7.06 billion and revenue grew 2%.",
+    "r14": "A regulator's review of fiscal 2025 found package volume down 6.0% to about 6.5 billion pieces, yet revenue edged up 0.1%.",
+    "a72dc67ee31dc": "A bipartisan letter asks how USPS would use $19.5 billion more borrowing, lifting its limit from $15 billion to $34.5 billion.",
+    "a2b7282f9b8a5": "Fiscal 2026 loss narrowed to $6.5 billion from $9.0 billion, with package revenue up 5.1% on a 5.3% volume drop.",
+    "ab5dd015b24cb": "Steiner warned on Nov. 10 of service cuts without congressional action; two days later USPS filed an 11% permanent fuel surcharge."
    },
-   "intro": "USPS's losses are narrowing as package volume falls, and it now wants $19.5B more borrowing room."
+   "intro": "USPS keeps losing money while package volume slips, and it wants more borrowing power. Shippers see it in prices and surcharges.",
+   "now": "Service-cut plans are due in Q1 2027; the 11% surcharge, pending review, would replace the 8% charge on Jan. 17."
   },
   "apart": [
    "usps-big-shipper-deals"
@@ -532,7 +539,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding at Walmart, Wing, Zipline, Uber and Amazon sites, while local permit and noise disputes continue in Nampa.",
+  "s": "Amazon, Wing and Zipline are expanding drone delivery sites across several U.S. metros, with Amazon now flying in Atlanta.",
   "ids": [
    "g27",
    "g26",
@@ -549,25 +556,26 @@
    "ab904315f1100",
    "a62c178a11f94",
    "a7aea8c84dd29",
-   "a2e23b2549e9b"
+   "a2e23b2549e9b",
+   "a743e307cb77c"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-17",
+  "last": "2026-11-18",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "544b67781cf2",
+   "sig": "5d4c5de19bdd",
    "v": 3,
    "beats": {
-    "g27": "Amazon said Prime Air will reach almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations."
+    "g27": "Amazon's plan: Prime Air drones from sites near Chicago, Atlanta, Cleveland and Syracuse by end of 2026, up from 11 U.S. locations."
    },
-   "intro": "Drone delivery is spreading across U.S. metros, but the FAA rule that would make it routine is still unpublished.",
-   "now": "Drone launches keep rolling out while Part 108 was still unpublished as of Oct. 9, so waivers or Part 135 certificates remain the route."
+   "intro": "Amazon, Wing and Zipline are racing to add drone delivery sites while the FAA's Part 108 rule is still pending.",
+   "now": "Part 108 was unpublished as of Oct. 9; Amazon's plan calls for Chicago, Cleveland and Syracuse sites by the end of 2026."
   },
-  "rv": "e7d783540dad",
+  "rv": "d08d77721f19",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -640,7 +648,7 @@
    "ad0e619194837"
   ],
   "first": "2026-10-13",
-  "s": "Intro 518 awaits a City Council vote while business groups threaten litigation and Amazon says it is working with council members on alternatives.",
+  "s": "The bill remains before the NYC Council, with Speaker Julie Menin seeking amendments, per the New York Post editorial.",
   "last": "2026-11-17",
   "c": [
    "Amazon",
@@ -1290,5 +1298,19 @@
    "Industry"
   ],
   "rv": "b1aad339da19"
+ },
+ "gls-dpd-jv": {
+  "n": "GLS–Geopost German joint venture",
+  "ids": [
+   "a728839b5ef80"
+  ],
+  "first": "2026-11-18",
+  "co": "GLS",
+  "s": "GLS Group and Geopost announced a joint venture for their German parcel businesses on 18 November 2026; terms have not been reported in the available source.",
+  "last": "2026-11-18",
+  "c": [
+   "Regional"
+  ],
+  "rv": "be9d22830ef1"
  }
 }
