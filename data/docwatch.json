@@ -1,5 +1,5 @@
 {
- "cursor": 121,
+ "cursor": 136,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 548,
+   "fails": 549,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-19"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 548,
+   "fails": 549,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-19"
@@ -1877,7 +1877,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10797/q1-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "9dca35058cbe",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2024 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1888,7 +1888,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2119/ups-releases-1q-2024-earnings": {
    "hash": "9dca35058cbe",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2024 results release",
    "snap": {
     "d": "2026-10-31",
@@ -1899,7 +1899,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm": {
    "hash": "dbb20a3b312e",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1909,7 +1909,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10890/q1-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1920,7 +1920,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2142/ups-releases-1q-2025-earnings": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2025 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1931,7 +1931,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-031154/ups-20260331.htm": {
    "hash": "b47f494fa342",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2026 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1941,7 +1941,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10988/q1-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2026 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1952,7 +1952,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q1 2026 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1963,7 +1963,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm": {
    "hash": "8462e8684be8",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q2 2024 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1973,7 +1973,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q2 2024 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1984,7 +1984,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q2 2024 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1995,7 +1995,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm": {
    "hash": "dba218f5950f",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q2 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -2005,7 +2005,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-17",
+   "checked": "2026-11-19",
    "n": "UPS Q2 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -2362,14 +2362,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 110,
+   "fails": 111,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-19"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 110,
+   "fails": 111,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-19"
@@ -2463,7 +2463,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 28,
+   "fails": 29,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-19"
@@ -2475,7 +2475,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 28,
+   "fails": 29,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-19"
@@ -2500,6 +2500,59 @@
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-6-26_US-Export-Demand-Surcharges.pdf",
     "txt": "data/snapshots/adfadce09a1a/2026-11-17.txt"
    }
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "preview-retail-rates-us-en.pdf",
+   "hash": "8c933da1280d",
+   "checked": "2026-11-19",
+   "snap": {
+    "d": "2026-11-19",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+    "txt": "data/snapshots/0c91b7f335a7/2026-11-19.txt"
+   }
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "preview-ak-hi-retail-rates-us-en.pdf",
+   "hash": "8d54f6e29451",
+   "checked": "2026-11-19",
+   "snap": {
+    "d": "2026-11-19",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+    "txt": "data/snapshots/6458ab27e3a0/2026-11-19.txt"
+   }
+  },
+  "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "preview-ground-saver-over-1lb-us-en.pdf",
+   "hash": "173c8233569b",
+   "checked": "2026-11-19"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:55c43bc5-8b95-483e-b515-9e44541b99a8/original/as/ground-saver-terms-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "ground-saver-terms-us-en.pdf",
+   "hash": "4b00a0dd2a43",
+   "checked": "2026-11-19"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "ups-ground-saver-brand-guidelines-us-en.pdf",
+   "hash": "a9929da87903",
+   "checked": "2026-11-19"
+  },
+  "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf": {
+   "first": "2026-11-19",
+   "n": "ground-saver-over-1lb-us-en.pdf",
+   "hash": "826c8434e317",
+   "checked": "2026-11-19"
+  },
+  "https://www.federalregister.gov/documents/2026/11/17/2026-23363/periodic-reporting": {
+   "n": "Periodic Reporting, Notice of proposed rulemaking (Docket No. RM2027-3), 91 FR 73729",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-19"
   }
  }
 }

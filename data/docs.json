@@ -5333,5 +5333,49 @@
    "title": "USPS asks PRC to change data source in Priority Mail cost model",
    "when": "2026-11-06"
   }
+ },
+ {
+  "c": "UPS",
+  "t": "Rate guide",
+  "n": "2027 UPS Retail Rates U.S. En (preview)",
+  "y": 2027,
+  "eff": null,
+  "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+  "d": "Posted on UPS's Rate and Service Guides page (new document)",
+  "cur": true,
+  "added": "2026-11-19",
+  "why": {
+   "how": "replaced",
+   "when": "2026-11-19",
+   "where": "UPS's Rate and Service Guides page",
+   "prev": "retail-rates-us-en.pdf"
+  },
+  "fchk": "2026-11-19",
+  "f": "data/files/ups-2027-ups-retail-rates-u-s-en-preview-0c91b7.pdf",
+  "fh": "9ad24061b421506016ca521ed93e70b86a049ede",
+  "fat": "2026-11-19",
+  "fsz": 643253
+ },
+ {
+  "c": "UPS",
+  "t": "Rate guide",
+  "n": "2027 UPS Ak Hi Retail Rates U.S. En (preview)",
+  "y": 2027,
+  "eff": null,
+  "u": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+  "d": "Posted on UPS's Rate and Service Guides page (new document)",
+  "cur": true,
+  "added": "2026-11-19",
+  "why": {
+   "how": "replaced",
+   "when": "2026-11-19",
+   "where": "UPS's Rate and Service Guides page",
+   "prev": "ak-hi-retail-rates-us-en.pdf"
+  },
+  "fchk": "2026-11-19",
+  "f": "data/files/ups-2027-ups-ak-hi-retail-rates-u-s-en-preview-6458ab.pdf",
+  "fh": "fc646004b5216a1aed581637f429a3e512eb2b4c",
+  "fat": "2026-11-19",
+  "fsz": 681106
  }
 ]

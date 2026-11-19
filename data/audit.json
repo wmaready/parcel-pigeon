@@ -1,9 +1,13 @@
 {
- "run": "2026-11-19T02:56Z",
+ "run": "2026-11-19T03:19Z",
  "clock_add": [],
  "clock_link": [
   {
-   "clock": "xa3bd243da7c6c0",
+   "clock": "xw213989b643cf0",
+   "story": "wa95920935a68"
+  },
+  {
+   "clock": "xw213989b643cf0",
    "story": "wf5014bc150e9"
   }
  ],
@@ -109,7 +113,16 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS daily rates rise an average net 5.9%\"",
+   "msg": "Linked \"UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates\" to rate clock entry 2026-12-21 \"UPS: Rate card effective date (2026 rates replaced by 2027 rates)\"",
+   "ids": [
+    "wa95920935a68"
+   ],
+   "fixed": true
+  },
+  {
+   "sev": "med",
+   "type": "date-not-on-clock",
+   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS: Rate card effective date (2026 rates replaced by 2027 rates)\"",
    "ids": [
     "wf5014bc150e9"
    ],

@@ -1,17 +1,19 @@
 {
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates": {
-  "checked": "2026-11-18",
+  "checked": "2026-11-19",
   "pdfs": [
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
   ],
-  "lines": 36,
+  "lines": 47,
   "told": [
    "11aeeaaf04a5",
    "d3237e6aca1d",
@@ -66,24 +68,39 @@
    "27e2822983b7",
    "41e6023a07a8",
    "c47fd547e408",
-   "862f6c90c3be"
+   "862f6c90c3be",
+   "8153f6589a13",
+   "cdc58f0bd73d",
+   "79cd5e450704",
+   "49d0aef235ab",
+   "d302f7264bb9",
+   "5fba066f38fe",
+   "c5c132ecaa85",
+   "35f56c406cd4",
+   "e8d606fb93c4",
+   "8cb5d7f46720",
+   "147ebf2d216d",
+   "46c3dd143fa3",
+   "ec5b3d52457c",
+   "ee1df5c8e970"
   ],
-  "told_until": "2026-11-29",
-  "pend": "766e186353d0"
+  "told_until": "2026-11-29"
  },
  "https://ups.com/rateupdates": {
-  "checked": "2026-11-18",
+  "checked": "2026-11-19",
   "pdfs": [
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:1ef72ab1-a7b1-49b9-b295-a1a8d376e78a/original/as/preview-changes-package-value-added-services-other-charges.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:356d938a-4f0a-4c71-b50e-bdd890f50b47/original/as/daily-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf",
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:53ad364c-2043-4ca7-a6a4-818a4b915dcf/original/as/preview-ups-daily-package-rates.pdf"
   ],
-  "lines": 36,
+  "lines": 47,
   "told": [
    "832329a1749e",
    "b09cde8bb2ba",
@@ -143,10 +160,25 @@
    "7553c8c9832b",
    "e1775d8ba8e6",
    "22b6be657201",
-   "14f2c2b333dd"
+   "14f2c2b333dd",
+   "187dd7bdc8de",
+   "e5f8e2e06875",
+   "184212b970eb",
+   "98a0438c51a1",
+   "fd2484dab2b4",
+   "f0cf65d942d8",
+   "e20ef0531cb0",
+   "026c2bea4b46",
+   "c4925efeeff8",
+   "04f3d46b9686",
+   "6e65de6457f3",
+   "db2b18d6aac7",
+   "321e85264fa6",
+   "e15e87810cee",
+   "43da25973dac",
+   "015cd36ef6c6"
   ],
-  "told_until": "2026-11-29",
-  "pend": "766e186353d0"
+  "told_until": "2026-11-29"
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
   "checked": "2026-11-19",
@@ -230,7 +262,7 @@
   "told_until": "2026-12-03"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
-  "checked": "2026-11-18",
+  "checked": "2026-11-19",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/IPIXF_TermsCond.pdf"
   ],
@@ -501,16 +533,32 @@
   "told_until": "2026-11-29"
  },
  "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
-  "checked": "2026-11-18",
+  "checked": "2026-11-19",
   "pdfs": [
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:55c43bc5-8b95-483e-b515-9e44541b99a8/original/as/ground-saver-terms-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf",
-   "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf"
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:af1b19f8-dce2-426a-bd91-7eed3f899a2d/original/as/ups-ground-saver-gtl-us-en.pdf",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:55c43bc5-8b95-483e-b515-9e44541b99a8/original/as/ground-saver-terms-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
+   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf"
   ],
-  "lines": 36,
+  "lines": 39,
   "told": [],
-  "pend": "201a585185dd"
+  "told2": [
+   "23a1ae1f0505",
+   "924cda3f41dc",
+   "1fb26b8f0236",
+   "a961f69afca6",
+   "8b1fdd0f4f28",
+   "b69a3332074e",
+   "c3b382829970",
+   "382c3ea98f37",
+   "37b06ab1a077",
+   "425b301894b2",
+   "25eeac976f40",
+   "71668a609bbb",
+   "b5d0e452c9b1"
+  ],
+  "told_until": "2026-12-19"
  },
  "https://www.ups.com/us/en/services/shipping/simple-rate": {
   "checked": "2026-11-19",
@@ -529,11 +577,10 @@
   "told": []
  },
  "https://investors.ups.com/news-events/press-releases": {
-  "checked": "2026-11-18",
+  "checked": "2026-11-19",
   "pdfs": [],
-  "lines": 21,
-  "told": [],
-  "pend": "3eb416223e9e"
+  "lines": 0,
+  "told": []
  },
  "https://about.usps.com/what/financials/": {
   "checked": "2026-11-19",

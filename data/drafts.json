@@ -2,6 +2,881 @@
  {
   "status": "not material",
   "date": "2026-11-19",
+  "page": "https://investors.ups.com/news-events/press-releases",
+  "verdicts": "cosmetic"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w7393c80ab9f5",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS announces 5.9% average net rate increase for Ground Saver effective Dec. 21, 2026",
+   "sum": "UPS added a notice to its Ground Saver page saying rates for all UPS Ground Saver services will increase an average net of 5.9%, effective December 21, 2026. The earlier page carried no rate-increase notice. The $50 per package loss or damage coverage is unchanged.",
+   "plain": "Shippers using any UPS Ground Saver service face an average net increase of 5.9% from December 21, 2026. UPS says the actual impact will vary with each shipper's shipping characteristics.",
+   "imp": "up",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "UPS Ground Saver rate increase for all services",
+     "before": null,
+     "after": "Rates for all UPS Ground Saver services increase an average net of 5.9%",
+     "effective": "2026-12-21",
+     "who": "All shippers using UPS Ground Saver services",
+     "impact": "+5.9% average net; individual impact varies by shipping characteristics"
+    },
+    {
+     "what": "Disclaimer that cost impact varies by shipper",
+     "before": null,
+     "after": "The impact on shipping costs will vary according to shipping characteristics",
+     "effective": null,
+     "who": "All shippers using UPS Ground Saver services",
+     "impact": null
+    },
+    {
+     "what": "Rate previews referenced on the page",
+     "before": null,
+     "after": "The page introduces previews of the new rates",
+     "effective": null,
+     "who": "Shippers reviewing upcoming Ground Saver pricing",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The preview rate tables themselves were not included, so changes by weight or zone cannot be confirmed",
+    "Whether fuel surcharges or other fees change alongside the rates is not stated",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-12-21",
+     "w": "UPS rate increase: 5.9% average (Ground Saver, Ground)",
+     "imp": "up"
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Ground Saver page (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver",
+   "srcs": [
+    {
+     "src": "UPS Ground Saver page",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (preview-ground-saver-over-1lb-us-en.pdf), relisting (ground-saver-terms-us-en.pdf), relisting (ups-ground-saver-brand-guidelines-us-en.pdf), relisting (ground-saver-over-1lb-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   }
+  },
+  "twin": "w213989b643cf"
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w213989b643cf",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS Ground Saver 1 lb+ 2027 rates raise every weight and zone, effective Dec 21, 2026",
+   "sum": "UPS posted a 2027 rate card for Ground Saver packages of 1 lb or more, effective December 21, 2026, in place of the 2026 card effective May 6, 2026. Base rates go up across the table: a 1 lb zone 2 package moves from $13.00 to $13.65, and a 70 lb zone 8 package from $140.23 to $150.12. Delivery area and remote surcharges also rise, and the card now lists non-standard package charges and a $0.00 Remote AK or HI line.",
+   "plain": "Every shipper using Ground Saver for packages of 1 lb or more pays more from December 21, 2026. Increases run from about $0.65 on a light zone 2 package to nearly $25 on a 70 lb package to Alaska, Hawaii, Puerto Rico or other territories (zone 9).",
+   "imp": "up",
+   "lvl": 3,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Rate card effective date (2026 rates replaced by 2027 rates)",
+     "before": "2026 Rates, effective May 6, 2026",
+     "after": "2027 Rates, effective December 21, 2026",
+     "effective": "2026-12-21",
+     "who": "All UPS Ground Saver shipments of 1 lb or more",
+     "impact": null
+    },
+    {
+     "what": "1 lb base rate, zones 2-13",
+     "before": "Zone 2 $13.00; zone 8 $16.26; zone 9 $27.72; zone 13 $23.56",
+     "after": "Zone 2 $13.65; zone 8 $17.41; zone 9 $30.19; zone 13 $25.66",
+     "effective": "2026-12-21",
+     "who": "1 lb Ground Saver packages",
+     "impact": "Zone 2 +$0.65; zone 8 +$1.15; zone 9 +$2.47; zone 13 +$2.10 per package"
+    },
+    {
+     "what": "10 lb base rate, zones 2-13",
+     "before": "Zone 2 $21.77; zone 8 $36.15; zone 9 $60.85; zone 13 $51.82",
+     "after": "Zone 2 $22.86; zone 8 $38.70; zone 9 $66.27; zone 13 $56.43",
+     "effective": "2026-12-21",
+     "who": "10 lb Ground Saver packages",
+     "impact": "Zone 2 +$1.09; zone 8 +$2.55; zone 9 +$5.42; zone 13 +$4.61 per package"
+    },
+    {
+     "what": "70 lb base rate, zones 2-13",
+     "before": "Zone 2 $47.42; zone 8 $140.23; zone 9 $272.65; zone 13 $232.19",
+     "after": "Zone 2 $49.79; zone 8 $150.12; zone 9 $296.92; zone 13 $252.85",
+     "effective": "2026-12-21",
+     "who": "70 lb Ground Saver packages",
+     "impact": "Zone 2 +$2.37; zone 8 +$9.89; zone 9 +$24.27; zone 13 +$20.66 per package"
+    },
+    {
+     "what": "Price per pound for weight over 70 lbs",
+     "before": "Zone 2 $0.93; zone 8 $1.98; zone 9 $5.89; zone 13 $3.73",
+     "after": "Zone 2 $0.98; zone 8 $2.12; zone 9 $6.41; zone 13 $4.06",
+     "effective": "2026-12-21",
+     "who": "Ground Saver packages heavier than 70 lbs",
+     "impact": "Zone 2 +$0.05; zone 8 +$0.14; zone 9 +$0.52; zone 13 +$0.33 per pound"
+    },
+    {
+     "what": "Delivery Area Surcharge (DAS)",
+     "before": "$6.55",
+     "after": "$7.15",
+     "effective": "2026-12-21",
+     "who": "Packages delivered to DAS ZIP Codes in the 48 contiguous states",
+     "impact": "+$0.60 per package"
+    },
+    {
+     "what": "DAS Extended surcharge",
+     "before": "$8.85",
+     "after": "$9.65",
+     "effective": "2026-12-21",
+     "who": "Packages delivered to DAS Extended ZIP Codes in the 48 contiguous states",
+     "impact": "+$0.80 per package"
+    },
+    {
+     "what": "Remote 48 Contiguous States surcharge",
+     "before": "$16.50",
+     "after": "$18.00",
+     "effective": "2026-12-21",
+     "who": "Packages delivered to remote ZIP Codes in the 48 contiguous states",
+     "impact": "+$1.50 per package"
+    },
+    {
+     "what": "Remote AK or HI surcharge line listed at zero",
+     "before": null,
+     "after": "$0.00",
+     "effective": "2026-12-21",
+     "who": "Packages delivered to remote areas of Alaska or Hawaii",
+     "impact": null
+    },
+    {
+     "what": "Non-standard package charges (cube, extra length, length) shown on the rate card",
+     "before": null,
+     "after": "Three per-package charges of $21.00, $7.00 and $2.25 for packages over 2 cubic feet (3456 cubic inches), longest side over 30 up to 48 inches, and longest side over 22 up to 30 inches; not assessed when Additional Handling or Large Package applies",
+     "effective": "2026-12-21",
+     "who": "Oversized Ground Saver packages",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The exact pairing of the $21.00, $7.00 and $2.25 amounts to the three non-standard charges is not clear from the card layout.",
+    "Weights 2-9, 11-69 lb were not individually compared, though the sampled weights all rose.",
+    "Fuel surcharge changes are not part of this card; it refers to ups.com/fuelsurcharge.",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-12-21",
+     "w": "UPS: Rate card effective date (2026 rates replaced by 2027 rates)",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "1 lb base rate, zones 2-13",
+       "Zone 2 +$0.65; zone 8 +$1.15; zone 9 +$2.47; zone 13 +$2.10 per package"
+      ],
+      [
+       "UPS",
+       "10 lb base rate, zones 2-13",
+       "Zone 2 +$1.09; zone 8 +$2.55; zone 9 +$5.42; zone 13 +$4.61 per package"
+      ],
+      [
+       "UPS",
+       "70 lb base rate, zones 2-13",
+       "Zone 2 +$2.37; zone 8 +$9.89; zone 9 +$24.27; zone 13 +$20.66 per package"
+      ],
+      [
+       "UPS",
+       "Price per pound for weight over 70 lbs",
+       "Zone 2 +$0.05; zone 8 +$0.14; zone 9 +$0.52; zone 13 +$0.33 per pound"
+      ],
+      [
+       "UPS",
+       "Delivery Area Surcharge (DAS)",
+       "+$0.60 per package"
+      ],
+      [
+       "UPS",
+       "DAS Extended surcharge",
+       "+$0.80 per package"
+      ],
+      [
+       "UPS",
+       "Remote 48 Contiguous States surcharge",
+       "+$1.50 per package"
+      ],
+      [
+       "UPS",
+       "Remote AK or HI surcharge line listed at zero",
+       "$0.00"
+      ],
+      [
+       "UPS",
+       "Non-standard package charges (cube, extra length, length) shown on the rate card",
+       "Three per-package charges of $21.00, $7.00 and $2.25 for packages over 2 cubic feet (3456 cubic inches), longest side over 30 up to 48 inches, and longest side over 22 up to 30 inches; not assessed when Additional Handling or Large Package applies"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Ground Saver page (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Ground Saver page",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver"
+    },
+    {
+     "src": "UPS: preview-ground-saver-over-1lb-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "price change (preview-ground-saver-over-1lb-us-en.pdf), relisting (ground-saver-terms-us-en.pdf), relisting (ups-ground-saver-brand-guidelines-us-en.pdf), relisting (ground-saver-over-1lb-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf",
+      "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:a52912ab-c359-415d-8d56-69a703748df1/original/as/ground-saver-over-1lb-us-en.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w96e5bebf6c25",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Alaska and Hawaii retail rate preview (Next Day Air Early, Next Day Air)",
+   "sum": "UPS posted a preview of its 2027 Alaska and Hawaii Retail Rates. It appears to replace the 2026 guide, whose rates took effect December 22, 2025. The preview lists domestic Alaska rates for UPS Next Day Air Early and UPS Next Day Air by weight and zone. No effective date appears in the portion reviewed.",
+   "plain": "Shippers using UPS retail or list rates to, from or within Alaska and Hawaii can see the 2027 price points ahead of time. The 2026 rates cannot be compared line by line, so the size of any increase is not confirmed.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Alaska and Hawaii retail rate document moves from the 2026 edition to a 2027 rates preview",
+     "before": "2026 Alaska and Hawaii package rates, effective December 22, 2025",
+     "after": "2027 UPS Alaska and Hawaii Retail Rates preview",
+     "effective": null,
+     "who": "Shippers paying UPS retail or list rates for Alaska and Hawaii shipments",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: letter rate by zone",
+     "before": null,
+     "after": "Letter $78.89 (zone 22, Alaska Metro) and $84.32 (zone 24, 48 contiguous states, Hawaii Metro and Puerto Rico)",
+     "effective": null,
+     "who": "Alaska domestic Next Day Air Early letters",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: 150 lb package rate by zone",
+     "before": null,
+     "after": "150 lbs: $1,333.52 (zone 22) and $1,483.06 (zone 24)",
+     "effective": null,
+     "who": "Heavy Alaska domestic Next Day Air Early packages",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: per-pound rate for dimensional weight over 150 lbs",
+     "before": null,
+     "after": "$8.70 and $9.69 per pound",
+     "effective": null,
+     "who": "Alaska domestic Next Day Air Early packages with dimensional weight over 150 lbs",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air, Alaska domestic: letter rate by zone",
+     "before": null,
+     "after": "Letter $48.89 (zone 22), $54.32 (zone 24), $59.96 (zone 26, Alaska/Hawaii Extended)",
+     "effective": null,
+     "who": "Alaska domestic Next Day Air letters",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rates is not stated in the portion reviewed",
+    "Hawaii domestic rates and other services (2nd Day Air, Ground, Next Day Air Saver) were not visible in the portion reviewed",
+    "Zone columns for the $8.70/$9.69 per-pound rate are inferred to be zones 22 and 24",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: preview-ak-hi-retail-rates-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+      "old": "https://assets.ups.com/adobe/assets/urn%3Aaaid%3Aaem%3A2f5d50bd-53e4-4ad1-882b-f06e9f3ad9f3/original/as/ak-hi-retail-rates-us-en.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wa95920935a68"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w8b8bc9f3b460",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Retail Rates preview with Next Day Air Early rate tables",
+   "sum": "UPS posted a preview of its 2027 retail rates. The visible portion lists Domestic UPS Next Day Air Early rates by weight (letter to 109+ lbs) across zones 102-108 and 124. It sits alongside the 2026 guide dated September 7, 2026, and the visible rate tables do not state an effective date for the 2027 rates.",
+   "plain": "Shippers billed at Retail Rates (those without Daily Rates, including UPS Store customers) can use the tables to see 2027 Next Day Air Early prices. A change versus 2026 cannot be sized because the 2026 rates are not shown for comparison.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "New 2027 Retail Rates preview document posted, starting with Domestic UPS Next Day Air Early",
+     "before": null,
+     "after": "2027 retail rate tables for Domestic UPS Next Day Air Early, by weight and zone (102, 103, 104, 105, 106, 107, 108, 124)",
+     "effective": null,
+     "who": "Shippers paying UPS Retail Rates",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early letter rate",
+     "before": null,
+     "after": "Letter: $66.85 in zone 102, rising to $111.95 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early letters, zones 102-124",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 1 lb package rate",
+     "before": null,
+     "after": "1 lb: $73.81 in zone 102, rising to $156.42 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early 1 lb packages",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 50 lb package rate",
+     "before": null,
+     "after": "50 lbs: $194.22 in zone 102, rising to $684.72 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early 50 lb packages",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 100 lb package rate",
+     "before": null,
+     "after": "100 lbs: $376.44 in zone 102, rising to $1,328.37 in zone 124",
+     "effective": null,
+     "who": "Next Day Air Early 100 lb packages",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 rates is not stated in the visible portion",
+    "Rates for other services (Next Day Air, Next Day Air Saver, 2nd Day Air, Ground), Alaska/Hawaii, and surcharges are not visible",
+    "Weights above 109 lbs and the rest of the document are cut off",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    },
+    {
+     "src": "UPS: preview-retail-rates-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+      "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
+     }
+    ]
+   }
+  },
+  "twin": "wa95920935a68"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w76559bf49174",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS announces 5.9% average rate increase and Additional Handling weight change",
+   "sum": "UPS now lists an average net 5.9% increase for Retail Rates on Ground, Air and International services, and for all UPS Ground Saver services, effective December 21, 2026. It also raises the Additional Handling minimum billable weight from 40 lbs. to 50 lbs. and changes the Area Surcharge and zone ZIP lists on the same date. The Demand Surcharge notice now refers to a new application on Retail Rates effective November 22, 2026, in place of the earlier September 27, 2026 date.",
+   "plain": "Shippers on UPS Ground, Air, International and Ground Saver face an average net 5.9% increase, though UPS says the effect varies with shipping profile and contract terms. Shippers of Additional Handling packages, and those with ZIPs added to or moved in the Area Surcharge and zone lists, may see higher charges.",
+   "imp": "up",
+   "lvl": 3,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Retail Rates increase for UPS Ground, UPS Air and International services",
+     "before": null,
+     "after": "Average net increase of 5.9%, effective December 21, 2026",
+     "effective": "2026-12-21",
+     "who": "Shippers paying UPS Retail Rates on Ground, Air and International services",
+     "impact": "Average net +5.9%; actual impact varies by shipping characteristics and UPS agreement terms"
+    },
+    {
+     "what": "UPS Ground Saver rate increase",
+     "before": null,
+     "after": "Rates for all UPS Ground Saver services increase an average net 5.9%, effective December 21, 2026",
+     "effective": "2026-12-21",
+     "who": "All UPS Ground Saver shippers",
+     "impact": "Average net +5.9%; actual impact varies by shipping characteristics and UPS agreement terms"
+    },
+    {
+     "what": "Additional Handling minimum billable weight",
+     "before": null,
+     "after": "Minimum billable weight for Additional Handling packages increases from 40 lbs. to 50 lbs.",
+     "effective": "2026-12-21",
+     "who": "Shippers of packages subject to the Additional Handling surcharge",
+     "impact": "Minimum billable weight up 10 lbs."
+    },
+    {
+     "what": "Area Surcharge ZIP code list",
+     "before": null,
+     "after": "The list of ZIP codes to which Area Surcharges apply will change",
+     "effective": "2026-12-21",
+     "who": "Shippers delivering to ZIP codes added to or removed from the Area Surcharge list",
+     "impact": null
+    },
+    {
+     "what": "ZIP codes aligned to certain Zones",
+     "before": null,
+     "after": "The list of ZIP codes aligned to certain Zones will change",
+     "effective": "2026-12-21",
+     "who": "Shippers with parcels to ZIP codes whose zone assignment changes",
+     "impact": null
+    },
+    {
+     "what": "Demand Surcharge notice",
+     "before": "Demand Surcharge rates for certain domestic shipments effective September 27, 2026",
+     "after": "A new application of Demand Surcharge rates for domestic shipments on Retail Rates effective November 22, 2026",
+     "effective": "2026-11-22",
+     "who": "Domestic shippers paying Retail Rates",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The page does not give the Demand Surcharge amounts or say whether the September 27, 2026 Demand Surcharge rates still apply",
+    "Which ZIP codes are added, removed or re-zoned is not stated on the page",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-22",
+     "w": "UPS: Demand Surcharge notice",
+     "imp": "up"
+    },
+    {
+     "d": "2026-12-21",
+     "w": "UPS rate increase: 5.9% average (Ground, Air, International)",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "UPS Ground Saver rate increase",
+       "Average net +5.9%; actual impact varies by shipping characteristics and UPS agreement terms"
+      ],
+      [
+       "UPS",
+       "Additional Handling minimum billable weight",
+       "Minimum billable weight up 10 lbs."
+      ],
+      [
+       "UPS",
+       "Area Surcharge ZIP code list",
+       "The list of ZIP codes to which Area Surcharges apply will change"
+      ],
+      [
+       "UPS",
+       "ZIP codes aligned to certain Zones",
+       "The list of ZIP codes aligned to certain Zones will change"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate updates and notices (spotted by Parcel Pigeon)",
+   "url": "https://ups.com/rateupdates",
+   "srcs": [
+    {
+     "src": "UPS Rate updates and notices",
+     "url": "https://ups.com/rateupdates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "w50cdb890fc1d"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "w9408aca5ff6a",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Alaska and Hawaii Retail Rates preview with new rate tables",
+   "sum": "UPS posted a preview titled '2027 UPS Rates – Alaska and Hawaii Retail Rates'. It replaces the 2026 Rate & Service Guide file dated December 22, 2025. The preview lists 2027 Alaska domestic rates, including Next Day Air Early at $78.89 for a Letter (Alaska Metro, zone 22) and Next Day Air at $48.89 for a Letter (zone 22). No effective date is shown in the preview.",
+   "plain": "Shippers sending parcels from Alaska or Hawaii at retail rates will use these tables for 2027 pricing. A like-for-like comparison with 2026 rates cannot be made because the 2026 rate tables are not on file.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: Letter and 1 lb rates for zones 22 (Alaska Metro) and 24 (48 Contiguous States, Hawaii Metro and Puerto Rico)",
+     "before": null,
+     "after": "Letter $78.89 (zone 22) / $84.32 (zone 24); 1 lb $106.63 / $115.14",
+     "effective": null,
+     "who": "Next Day Air Early shipments from Alaska to zones 22 and 24",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: 150 lb package rate",
+     "before": null,
+     "after": "150 lbs: $1,333.52 (zone 22) / $1,483.06 (zone 24)",
+     "effective": null,
+     "who": "Heavy Next Day Air Early shipments from Alaska",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air Early, Alaska domestic: price per pound for dimensional weight of more than 150 lbs",
+     "before": null,
+     "after": "$8.70 (zone 22) / $9.69 (zone 24) per pound",
+     "effective": null,
+     "who": "Next Day Air Early shipments from Alaska with a dimensional weight over 150 lbs",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air, Alaska domestic: Letter rates for zones 22, 24 and 26 (Alaska/Hawaii Extended)",
+     "before": null,
+     "after": "Letter $48.89 (zone 22) / $54.32 (zone 24) / $59.96 (zone 26); 1 lb $76.63 / $85.14 / $93.64",
+     "effective": null,
+     "who": "Next Day Air shipments from Alaska",
+     "impact": null
+    },
+    {
+     "what": "UPS Next Day Air, Alaska domestic: 50 lb package rate",
+     "before": null,
+     "after": "50 lbs: $403.60 (zone 22) / $448.43 (zone 24) / $493.31 (zone 26)",
+     "effective": null,
+     "who": "Mid-weight Next Day Air shipments from Alaska",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "No effective date for the 2027 rates is stated in the preview.",
+    "The preview is labeled as a preview, so it is unconfirmed whether these rates are final.",
+    "Only part of the preview was available; rates for other services (2nd Day Air, Ground) and for Hawaii origins could not be reviewed.",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-ak-hi-retail-rates-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:ae885b20-c975-4f99-8f12-0f0b4c18f19b/original/as/preview-ak-hi-retail-rates-us-en.pdf",
+      "old": "https://assets.ups.com/adobe/assets/urn%3Aaaid%3Aaem%3A2f5d50bd-53e4-4ad1-882b-f06e9f3ad9f3/original/as/ak-hi-retail-rates-us-en.pdf"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wa95920935a68"
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "wa95920935a68",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates",
+   "sum": "UPS posted a preview of its 2027 Retail Rates that appears to replace the 2026 U.S. 48, Alaska & Hawaii Retail Rates guide, which was marked updated September 7, 2026. The preview opens with Next Day Air Early prices for zones 102-108 and 124, from a Letter at $66.85 in zone 102 up to $1,435.76 for 108 lbs in zone 124. No effective date appears in the available text.",
+   "plain": "Shippers paying Retail Rates (including packages processed at The UPS Store and other retail locations) will use these 2027 prices once they take effect. The earlier guide's rate tables are not on file, so the size of any increase or decrease cannot be measured.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Retail Rates guide moves from the 2026 edition to a 2027 rates preview",
+     "before": "2026 UPS Rate & Service Guide, U.S. 48, Alaska & Hawaii Retail Rates, updated September 7, 2026",
+     "after": "2027 UPS Retail Rates, with a 2027 Rates domestic section",
+     "effective": null,
+     "who": "Shippers who do not receive Daily Rates, and packages processed at The UPS Store and other retail locations",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early Letter rate, zones 102-108 and 124",
+     "before": null,
+     "after": "Letter: $66.85 (zone 102), $73.73 (103), $85.40 (104), $88.40 (105), $89.48 (106), $94.67 (107), $97.60 (108), $111.95 (124)",
+     "effective": null,
+     "who": "Next Day Air Early letter shipments at Retail Rates",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 1 lb package rate, zones 102-108 and 124",
+     "before": null,
+     "after": "1 lb: $73.81 (zone 102), $97.36 (103), $114.89 (104), $124.38 (105), $130.99 (106), $134.89 (107), $138.49 (108), $156.42 (124)",
+     "effective": null,
+     "who": "Next Day Air Early 1 lb packages at Retail Rates",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 50 lb package rate, zones 102-108 and 124",
+     "before": null,
+     "after": "50 lbs: $194.22 (zone 102), $274.90 (103), $470.95 (104), $525.04 (105), $560.26 (106), $596.61 (107), $633.64 (108), $684.72 (124)",
+     "effective": null,
+     "who": "Next Day Air Early heavier packages at Retail Rates",
+     "impact": null
+    },
+    {
+     "what": "Next Day Air Early 100 lb package rate, zones 102-108 and 124",
+     "before": null,
+     "after": "100 lbs: $376.44 (zone 102), $517.32 (103), $923.00 (104), $997.51 (105), $1,021.27 (106), $1,106.17 (107), $1,167.36 (108), $1,328.37 (124)",
+     "effective": null,
+     "who": "Next Day Air Early heavy packages at Retail Rates",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Effective date of the 2027 Retail Rates is not stated in the available text",
+    "Only the start of the Next Day Air Early table is available; other services, Alaska/Hawaii rates, surcharges and zone charts could not be reviewed",
+    "Which ZIP codes or origin-destination pairs fall into zones 102-108 and 124 is not shown",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    },
+    {
+     "src": "UPS: preview-retail-rates-us-en.pdf",
+     "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+      "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "status": "published",
+  "story": {
+   "id": "w50cdb890fc1d",
+   "date": "2026-11-19",
+   "c": [
+    "UPS"
+   ],
+   "title": "UPS announces 5.9% average rate increase and Additional Handling weight change",
+   "sum": "UPS says that effective December 21, 2026, Retail Rates for Ground, Air and International services and all UPS Ground Saver rates will rise an average net 5.9%. The same date brings a higher minimum billable weight for Additional Handling (40 lbs. to 50 lbs.) and revised Area Surcharge and zone ZIP lists. Demand Surcharge information now cites Retail Rates effective November 22, 2026, in place of the September 27, 2026 date listed before.",
+   "plain": "Shippers on UPS Ground, Air, International and Ground Saver face an average net 5.9% increase, which varies by shipping profile and agreement terms. Shippers of packages between 40 and 50 lbs. flagged for Additional Handling, and those with addresses whose Area Surcharge or zone status changes, may see higher charges.",
+   "imp": "up",
+   "lvl": 3,
+   "cat": "Pricing & GRI",
+   "act": "2026-12-21",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "UPS Ground, UPS Air and International Retail Rates general increase",
+     "before": null,
+     "after": "Retail Rates for UPS Ground, UPS Air and International services increase an average net 5.9%",
+     "effective": "2026-12-21",
+     "who": "Shippers paying UPS Retail Rates on Ground, Air and International services",
+     "impact": "Average net +5.9%; varies by shipping characteristics and agreement terms"
+    },
+    {
+     "what": "UPS Ground Saver rate increase",
+     "before": null,
+     "after": "Rates for all UPS Ground Saver services increase an average net 5.9%",
+     "effective": "2026-12-21",
+     "who": "Shippers using UPS Ground Saver",
+     "impact": "Average net +5.9%; varies by shipping characteristics and agreement terms"
+    },
+    {
+     "what": "Additional Handling minimum billable weight",
+     "before": null,
+     "after": "Minimum billable weight for Additional Handling packages rises from 40 lbs. to 50 lbs.",
+     "effective": "2026-12-21",
+     "who": "Shippers of packages subject to Additional Handling",
+     "impact": "Minimum billable weight +10 lbs. (40 lbs. to 50 lbs.)"
+    },
+    {
+     "what": "Demand Surcharge application",
+     "before": "Demand Surcharge rates for certain domestic shipments effective September 27, 2026",
+     "after": "New application of Demand Surcharge rates for domestic shipments on Retail Rates effective November 22, 2026",
+     "effective": "2026-11-22",
+     "who": "Domestic shipments on Retail Rates",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "Which ZIP codes are added to or removed from the Area Surcharge and zone lists is not stated on the page",
+    "Demand Surcharge amounts are not stated on the page",
+    "Whether the September 27, 2026 Demand Surcharge date still applies is not stated",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-22",
+     "w": "UPS: Demand Surcharge application",
+     "imp": "up"
+    },
+    {
+     "d": "2026-12-21",
+     "w": "UPS rate increase: 5.9% average (Ground, Air, International)",
+     "imp": "up",
+     "fees": [
+      [
+       "UPS",
+       "UPS Ground Saver rate increase",
+       "Average net +5.9%; varies by shipping characteristics and agreement terms"
+      ],
+      [
+       "UPS",
+       "Additional Handling minimum billable weight",
+       "Minimum billable weight +10 lbs. (40 lbs. to 50 lbs.)"
+      ]
+     ]
+    }
+   ],
+   "kind": "Alert",
+   "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+   "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "srcs": [
+    {
+     "src": "UPS Rate and Service Guides",
+     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  }
+ },
+ {
+  "status": "not material",
+  "date": "2026-11-19",
   "page": "https://www.fedex.com/en-us/shipping/rate-changes.html",
   "verdicts": "cosmetic"
  },
