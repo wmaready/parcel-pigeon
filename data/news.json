@@ -1,5 +1,107 @@
 [
  {
+  "id": "w3357740d1efd",
+  "date": "2026-11-19",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS posts Nov 17, 2026 Demand Surcharge schedule for 2026–27 peak",
+  "sum": "UPS posted a Demand Surcharge update dated November 17, 2026. It sets per-package surcharges for Additional Handling, Large Package and Over Maximum shipments, plus UPS Air, Ground Residential and Ground Saver packages. The surcharges run in three periods from 9/27/26 (or 10/25/26 for Section B) through 1/16/27, with the highest amounts from 11/22/26 to 12/26/26.",
+  "plain": "Every shipper sending these package types in the demand periods pays the surcharges on top of other charges. Shippers billed for more than 20,000 packages in a week face volume-based surcharges of up to $9.35 per package.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Guide changes",
+  "act": "2026-09-27",
+  "inferred": null,
+  "detected": "2026-11-19",
+  "changes": [
+   {
+    "what": "Demand Surcharge on Additional Handling packages (U.S. domestic)",
+    "before": null,
+    "after": "$8.75 per package (9/27/26–11/21/26), $11.90 (11/22/26–12/26/26), $8.75 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic packages that require Additional Handling",
+    "impact": "+$3.15 per package in the 11/22–12/26 period versus the other two periods"
+   },
+   {
+    "what": "Demand Surcharge on Large Packages (U.S. domestic)",
+    "before": null,
+    "after": "$96.25 per package (9/27/26–11/21/26), $117.50 (11/22/26–12/26/26), $96.25 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic Large Packages",
+    "impact": "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
+   },
+   {
+    "what": "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
+    "before": null,
+    "after": "$530 per package (9/27/26–11/21/26), $590 (11/22/26–12/26/26), $530 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic packages over maximum limits",
+    "impact": "+$60 per package in the 11/22–12/26 period versus the other two periods"
+   },
+   {
+    "what": "Baseline volume used to set the higher-volume tiers",
+    "before": null,
+    "after": "Baseline is the customer's average weekly volume for the service level in June 2026 (May 31–June 27, 2026), with a lower-volume fallback to Aug 30–Sep 26, 2026 if that volume is under 80% of the June volume",
+    "effective": "2026-10-25",
+    "who": "Higher-volume shippers",
+    "impact": null
+   }
+  ],
+  "verdict": "new document",
+  "unknowns": [
+   "The text is cut off partway through the 11/22–12/26 Higher Volume Shipper Table, so the later tables are not confirmed.",
+   "Retail Demand Surcharges in Sections C and D are not shown.",
+   "The header for the third Section B demand period omits the start year of its December 27 start date.",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-09-27",
+    "w": "UPS: Demand Surcharge on Additional Handling packages (U.S. domestic)",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Demand Surcharge on Large Packages (U.S. domestic)",
+      "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
+     ],
+     [
+      "UPS",
+      "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
+      "+$60 per package in the 11/22–12/26 period versus the other two periods"
+     ]
+    ]
+   },
+   {
+    "d": "2026-10-25",
+    "w": "UPS: Baseline volume used to set the higher-volume tiers",
+    "imp": "up"
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": false,
+  "src": "UPS",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS: UPS Shipping Zones and Rates hub",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "new document",
+   "dropped": 3,
+   "compared": [
+    {
+     "new": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "a06e8f72a005a",
   "date": "2026-11-18",
   "c": [
@@ -6600,6 +6702,53 @@
   "exclusive": true
  },
  {
+  "id": "a11632770438c",
+  "date": "2026-11-06",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "USPS asks PRC to change data source in Priority Mail cost model",
+  "sum": "The Postal Service petitioned the Postal Regulatory Commission on Nov. 6, 2026, to replace ODIS-RPW sample data with Product Tracking and Reporting (PTR) data in its Priority Mail transportation model. The Commission opened Docket No. RM2027-3, with comments due Nov. 27, 2026.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to Priority Mail rates or service results from the filing itself. The Commission is taking comment on a change to the data behind the Postal Service's cost model.",
+  "why": "The change affects the cost model USPS uses in its periodic reports on Priority Mail, though USPS says the effect on unit cost by zone is minimal.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-19T02:56:40Z",
+  "src": "Federal Register: PRC",
+  "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23363/periodic-reporting",
+  "srcs": [
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23363/periodic-reporting"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-06",
+  "syn": "The Postal Service filed a petition on Nov. 6, 2026, asking the Postal Regulatory Commission to start a rulemaking on its Priority Mail transportation model. It proposes replacing ODIS-RPW sample data with PTR census data to measure Priority Mail weight and volume by origin-destination ZIP pair, saying the underlying methodology stays the same. The Commission opened Docket No. RM2027-3 and set Nov. 27, 2026 as the comment deadline. The Postal Service said the change has minimal impact on final unit cost by zone.",
+  "aff": [
+   {
+    "who": "Priority Mail cost model",
+    "what": "USPS proposes PTR census data in place of the ODIS-RPW sample; the conceptual methodology is unchanged."
+   },
+   {
+    "who": "Alaska, Hawaii and Air Taxi cost weights",
+    "what": "USPS reports weights by zone change because these networks relied on ODIS-RPW inputs."
+   },
+   {
+    "who": "Priority Mail unit costs by zone",
+    "what": "USPS says the effect is minimal; model outputs were filed under seal."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a3bd243da7c6c",
   "date": "2026-11-06",
   "c": [
@@ -13067,96 +13216,6 @@
    {
     "who": "SMB shippers",
     "what": "Small and medium-sized businesses were 35.1% of UPS U.S. volume in Q3, up about 240 basis points."
-   }
-  ]
- },
- {
-  "id": "ad3e669e92093",
-  "date": "2026-10-27",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Walmart and Wing seek about seven drone hubs in St. Louis region",
-  "sum": "Walmart and Wing Aviation have approached six St. Louis-area cities about operating drone \"nests\" from Walmart stores, according to city meeting minutes cited by the St. Louis Business Journal. None of the cities has approved a hub so far. Wing said it aims to launch about seven hubs at once.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. Drone delivery in the St. Louis area has not launched, and no city has approved a hub.",
-  "why": "A seven-hub launch would open Walmart drone delivery to tens of thousands of St. Louis-area households at once, but no city has approved a site.",
-  "score": 4,
-  "tie": "Walmart and Wing said in October 2026 that they would add Denver and Seattle drone delivery in 2027, and the St. Louis plan is a separate market rollout.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-02T17:23:31Z",
-  "src": "Yahoo Finance",
-  "url": "https://finance.yahoo.com/technology/articles/walmarts-drone-delivery-push-expands-135621546.html",
-  "srcs": [
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/technology/articles/walmarts-drone-delivery-push-expands-135621546.html"
-   }
-  ],
-  "auto": true,
-  "new": "Wing and Walmart are now seeking about seven hubs in the St. Louis region, with six cities approached and none yet approving; this does not change rates or service for shippers.",
-  "syn": "Walmart and its drone delivery provider, Wing Aviation, have approached St. Charles, Wentzville, Kirkwood, Maplewood, Manchester and Glen Carbon about running drone nests from local Walmart stores, according to city meeting minutes cited by the St. Louis Business Journal. None of the cities has approved a hub so far. Wing spokeswoman Jessie Poole-Strang said the goal is to open about seven hubs at once rather than a single pilot site, which would make the service available to tens of thousands of households at launch.",
-  "aff": [
-   {
-    "who": "St. Louis-area households",
-    "what": "A launch of about seven hubs would reach tens of thousands of households at once, per Wing."
-   },
-   {
-    "who": "Six St. Louis-area cities",
-    "what": "St. Charles, Wentzville, Kirkwood, Maplewood, Manchester and Glen Carbon have been approached; none has approved a hub."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "ae9948d192dd1",
-  "date": "2026-10-27",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Peak season",
-  "kind": "Opinion",
-  "title": "ProShip author says peak plans should cover variability, not just volume",
-  "sum": "A ProShip strategic marketing manager argues in an opinion piece that peak performance depends on labor, carrier constraints and cost swings as well as volume. The piece cites Challenger, Gray & Christmas data showing retailers added 461,500 seasonal jobs in the fourth quarter of 2025, the fewest since 2008.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service comes from this piece. It is an opinion article recommending that shippers set carrier contingency plans and response thresholds before peak.",
-  "why": "The piece collects peak-season labor, surcharge and fuel figures that bear on shippers' costs and delivery performance, as seen by a shipping software vendor.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T05:09:03Z",
-  "src": "Parcel Industry",
-  "url": "https://parcelindustry.com/article-6727-Plan-for-Peak-Variability-Not-Just-Volume.html",
-  "srcs": [
-   {
-    "src": "Parcel Industry",
-    "url": "https://parcelindustry.com/article-6727-Plan-for-Peak-Variability-Not-Just-Volume.html"
-   }
-  ],
-  "auto": true,
-  "syn": "In an opinion piece published by Parcel Industry, Evan Knauss of ProShip, a multi-carrier shipping software provider, argues that peak season is a variability challenge as much as a volume one. She cites Challenger, Gray & Christmas figures: retailers added 461,500 seasonal jobs in the fourth quarter of 2025, the fewest since 2008, and the firm expects 450,000 this year. She also cites U.S. Census Bureau data showing e-commerce sales grew nearly 6% in the fourth quarter of 2025, and says UPS plans to hire more than 100,000 seasonal workers this year, down from 125,000 in 2024. The piece says USPS added a 6% peak surcharge on top of an 8% increase earlier this year, and that UPS ground fuel surcharges reached over 29% in October.",
-  "aff": [
-   {
-    "who": "Parcel shippers",
-    "what": "The author urges cross-training staff, early onboarding of alternative carriers and predefined triggers for rerouting shipments."
-   },
-   {
-    "who": "USPS shippers",
-    "what": "The piece says USPS added a 6% peak surcharge on top of the 8% increase implemented earlier this year."
-   },
-   {
-    "who": "UPS Ground shippers",
-    "what": "The piece says UPS ground fuel surcharges reached over 29%, effective in October."
-   },
-   {
-    "who": "Seasonal labor",
-    "what": "The piece says retailers added 461,500 seasonal jobs in the fourth quarter of 2025, and UPS plans to hire more than 100,000 this year."
    }
   ]
  }
