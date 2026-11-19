@@ -17,13 +17,14 @@
    "UPS"
   ],
   "cx": {
-   "sig": "155222208660",
+   "sig": "551074e69101",
    "v": 3,
    "beats": {
-    "h511": "In April 2025 UPS put numbers on the cuts: about 20,000 jobs and 73 buildings by the end of June, targeting about $1 billion in savings."
+    "h503": "Then the Amazon piece: UPS said it would cut volume from Amazon, nearly 12% of its revenue, by more than half. Shares fell over 14%.",
+    "h511": "The cuts got specific: about 20,000 jobs and 73 buildings by end of June, targeting $1 billion in savings, as Q1 revenue slipped 0.7%.",
+    "18": "The 2025 job cuts ended up at 48,000, not 20,000. UPS closed 23 more buildings in early 2026 and planned about 30,000 more cuts."
    },
-   "intro": "UPS is shrinking its Amazon business and rebuilding its network; shippers now face their first peak season after the cutback.",
-   "now": "UPS says the Amazon volume reduction and network reconfiguration are complete."
+   "intro": "UPS is scaling back Amazon, its biggest customer, and rebuilding its network around fewer, more automated buildings."
   },
   "was": [
    "ups-parcel-pivot"
@@ -645,28 +646,28 @@
    "a831c709e5809",
    "a3a4fa02bef84",
    "aef4d017bab80",
-   "ad0e619194837"
+   "ad0e619194837",
+   "a65867ee1ae2e"
   ],
   "first": "2026-10-13",
-  "s": "The bill remains before the NYC Council, with Speaker Julie Menin seeking amendments, per the New York Post editorial.",
-  "last": "2026-11-17",
+  "s": "The New York City Council is still considering Intro 518, and Amazon is urging customers to contact their Council members.",
+  "last": "2026-11-19",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "e9d9a1aa3ea6",
+  "rv": "d101ea91c6fb",
   "cx": {
-   "sig": "b1fd6ab61bfc",
+   "sig": "914432241c40",
    "v": 3,
    "beats": {
-    "a3a4fa02bef84": "Reportedly, co-sponsor Phil Wong pulled his name, citing small-business job losses; the Law Department is reviewing the bill.",
-    "aef4d017bab80": "FreightWaves expects passage by end of 2026 in amended form; about 100 Amazon DSPs operate in the city.",
-    "ad0e619194837": "Amazon's coalition reportedly warned Menin it could sue over Intro 518 as written, citing conflicts with federal and state law."
+    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong dropped co-sponsorship over small-business job losses; the Law Department is reviewing it.",
+    "ad0e619194837": "Reportedly, Amazon, the National Urban League and a business coalition warned Speaker Menin they could sue if the bill passes as written.",
+    "a65867ee1ae2e": "Amazon told NYC customers the bill could add up to $5 per order, and asked them to contact their Council members."
    },
-   "intro": "NYC's Delivery Protection Act would license Amazon's last-mile sites and change how it hires drivers.",
-   "now": "No council movement since April's hearing; Menin is reportedly open to amending. No change for shippers yet."
+   "now": "Intro 518 is still under Council consideration and hasn't passed; Amazon is urging customers to contact their Council members."
   },
   "co": "Amazon",
   "apart": [
@@ -841,7 +842,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "858d13be34f1",
+   "sig": "82d855156101",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -875,7 +876,8 @@
     "ab17dd3c5758e": "Meanwhile, Australian tie maker OTAA now fills U.S. orders from Longview, Texas via Cart.com, a move tied to de minimis ending.",
     "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%.",
     "aa024cc171706": "Capitol Forum's GOFO report calls it \"Chinese Controlled\" and alleges labor exploitation behind its growth; we lack the details.",
-    "a8a156a22dc4f": "UniUni says it will hand select peak packages to carriers like Gofo; no rate or service changes for shippers were given."
+    "a8a156a22dc4f": "UniUni says it will hand select peak packages to carriers like Gofo; no rate or service changes for shippers were given.",
+    "w213989b643cf": "UPS posted a 2027 Ground Saver 1 lb+ card, effective Dec. 21, 2026, raising every weight and zone: 1 lb zone 2 goes from $13.00 to $13.65."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
    "now": "UniUni's go-public deal was terminated Oct. 20, and it's now handing some peak parcels to Gofo to help its financial outlook."
@@ -976,7 +978,7 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "d9573396ea61",
+   "sig": "11859957cb78",
    "v": 3,
    "beats": {
     "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
@@ -1014,17 +1016,18 @@
   ]
  },
  "usps-fuel-surcharge": {
-  "n": "USPS fuel surcharge and 2027 price increase",
+  "n": "USPS 2027 price increase and fuel surcharge",
   "ids": [
    "a0adb56a55334",
    "a106a88d004f4",
    "af027f4014177",
-   "af7ecf517c18f"
+   "af7ecf517c18f",
+   "aa516eddc83e2"
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has filed with the Postal Regulatory Commission for a 5.9% average increase and a permanent 11% fuel surcharge, scheduled for Jan. 17, 2027.",
-  "last": "2026-11-12",
+  "s": "The USPS final rule is published, with the new competitive prices taking effect Jan. 17, 2027.",
+  "last": "2026-11-19",
   "c": [
    "USPS"
   ],
@@ -1034,7 +1037,7 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "bfee8f3a2ecc",
+  "rv": "3a536a66098f",
   "cx": {
    "sig": "6fea36758f7d",
    "v": 3,

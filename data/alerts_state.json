@@ -275,7 +275,9 @@
   "w3357740d1efd",
   "w213989b643cf",
   "w50cdb890fc1d",
-  "wa95920935a68"
+  "wa95920935a68",
+  "aa516eddc83e2",
+  "a65867ee1ae2e"
  ],
  "clock": [
   "e06:7",
@@ -413,7 +415,9 @@
   "sephora",
   "theriversideco",
   "universallogis",
-  "sekologistics"
+  "sekologistics",
+  "yunexpress",
+  "geodis"
  ],
  "sent": [
   "player:pirateship",
@@ -799,7 +803,12 @@
   "story:velocity launches vector agentic ai platform for d2c shipping",
   "player:sekologistics",
   "player:universallogis",
-  "story:dhl express survey finds most smes expect steady or higher holiday sales"
+  "story:dhl express survey finds most smes expect steady or higher holiday sales",
+  "more:player:geodis,player:yunexpress,story:amazon warns nyc customers intro 518 could add up to 5 per order,story:ups posts 2027 retail rates preview starting with next day air early rates",
+  "story:amazon warns nyc customers intro 518 could add up to 5 per order",
+  "story:ups posts 2027 retail rates preview starting with next day air early rates",
+  "player:geodis",
+  "player:yunexpress"
  ],
  "titles": [
   "amazon shipping posts full service guide with list rates eff",
@@ -1072,157 +1081,127 @@
   "ups posts nov 17 2026 demand surcharge schedule for 2026 27 ",
   "ups ground saver 1 lb 2027 rates raise every weight and zone",
   "ups announces 5 9 average rate increase and additional handl",
-  "ups posts 2027 retail rates preview starting with next day a"
+  "ups posts 2027 retail rates preview starting with next day a",
+  "usps final rule sets 5 9 increase for competitive products",
+  "amazon warns nyc customers intro 518 could add up to 5 per o"
  ],
  "harvested": [
-  "a665de2800485",
-  "a0f33fb01d0d5",
-  "wf5014bc150e9",
-  "ac89be3e5da8f",
-  "ae374e7320420",
-  "a9b77b62dcd89",
-  "afd8784e2b179",
-  "w4657840c16ef",
-  "wf7fe771e76cd",
-  "a3bd243da7c6c",
-  "wb8827e8c126e",
-  "wf7bb9227b2de",
-  "aead0203aab18",
-  "a3a45d7f6db20",
-  "w08701235bf24",
-  "ad71cd24e4ae0",
-  "a0740b56c6649",
   "a74df5c94691e",
-  "a2f060c358424",
-  "a260cc6a2e05e",
-  "wa95920935a68",
-  "aaf63e9db25a0",
-  "a947eb28a3ca3",
-  "a2b7282f9b8a5",
-  "a831c709e5809",
-  "a3d768115c0e6",
-  "w9c03b8f99b5f",
-  "a89f005fb1862",
-  "wea2ccfd5fbaf",
-  "a50bdae886ef4",
-  "w0b8720b6a0e7",
-  "a312b45efa358",
-  "w91588ddb11ed",
-  "ae12ca75552ef",
-  "a6c2418bed0a7",
-  "wfd6617806a78",
-  "a069325035b44",
-  "a348dd40fe288",
-  "ae5027985518f",
-  "a999409ce7860",
-  "w7c65824b4bde",
-  "a84ca5863e582",
-  "a6cc2420ad66e",
-  "a7d45b9ebd65b",
-  "a351cab9045c7",
-  "a23a4d6fd271d",
-  "adc002570b1d6",
-  "aa51e82b50d12",
-  "wa9c423a83880",
-  "a48d8a47d9a93",
-  "ae0ee67bc4b67",
-  "a531bcaf173d6",
-  "a89d7e4beebd9",
-  "a40c99078f690",
-  "af589de326934",
-  "w84705482dd2f",
-  "ae2ec177094e3",
-  "aaba50a646259",
-  "w599d9089a65d",
-  "a773d361dac4e",
-  "we0432db44af6",
-  "wacb825361479",
-  "a30525214f077",
-  "a72efb5e01b99",
-  "w213989b643cf",
-  "a06e8f72a005a",
-  "a6ba18049bc99",
-  "a57a06c26359c",
-  "a9f97ff5f51a3",
-  "w86cfd39b48f5",
-  "a2b81ad721cb8",
-  "w500a5bdc762c",
-  "acb049d81f751",
-  "wa61ef102d1b2",
-  "a3050815c1e52",
-  "aa7358e9cf2dd",
   "a2def09bc43bb",
-  "w68c1687d28a1",
-  "a6e82ba740e99",
-  "a15404304f17b",
-  "a5d45f26f2219",
-  "ad851d9e2eb69",
-  "a58373f1b7bc3",
-  "a0adb56a55334",
-  "ac78f72e7f458",
-  "w3357740d1efd",
-  "a2f683da86bf8",
-  "a1c5cfbd68bcf",
-  "af554b135ab19",
-  "we85aee3857d1",
-  "aee6669d325da",
-  "w50cdb890fc1d",
-  "w8465aa718dc6",
-  "a4f6ca9e3591e",
+  "adc002570b1d6",
+  "w4657840c16ef",
+  "w599d9089a65d",
+  "aead0203aab18",
   "af8ee5ed067c6",
-  "adbdc9a506e95",
-  "w150132868eae",
-  "af027f4014177",
-  "a8a156a22dc4f",
-  "a2f60a03dddd7",
-  "wdf959a97bcb6",
-  "a195de38cb09b",
-  "a663794cc9c55",
+  "a9f97ff5f51a3",
+  "w7c65824b4bde",
   "aba40a11b6946",
+  "a6c2418bed0a7",
+  "a0adb56a55334",
+  "a312b45efa358",
+  "aa516eddc83e2",
+  "af589de326934",
+  "a15404304f17b",
+  "a40c99078f690",
+  "wdf959a97bcb6",
+  "w9c03b8f99b5f",
+  "rv5-ups-sbr-fuel",
+  "a2b81ad721cb8",
+  "a260cc6a2e05e",
+  "a3050815c1e52",
+  "a2b7282f9b8a5",
+  "a30525214f077",
+  "w8465aa718dc6",
+  "ac89be3e5da8f",
+  "ad71cd24e4ae0",
+  "ae0ee67bc4b67",
+  "a773d361dac4e",
+  "a89f005fb1862",
+  "a2f683da86bf8",
+  "a4f6ca9e3591e",
+  "w50cdb890fc1d",
+  "a195de38cb09b",
+  "a1c5cfbd68bcf",
+  "w213989b643cf",
+  "wacb825361479",
+  "wfd6617806a78",
+  "acfef8560e2ac",
+  "wa9c423a83880",
+  "a3d768115c0e6",
+  "w84705482dd2f",
+  "ad851d9e2eb69",
+  "a348dd40fe288",
+  "ac78f72e7f458",
+  "ae12ca75552ef",
+  "a663794cc9c55",
+  "aa51e82b50d12",
+  "a89d7e4beebd9",
+  "a72efb5e01b99",
+  "we0432db44af6",
+  "ae374e7320420",
+  "ae2ec177094e3",
+  "aee6669d325da",
+  "a6ba18049bc99",
   "wd4f8d600e36d",
+  "wf7bb9227b2de",
+  "aa7358e9cf2dd",
+  "afd8784e2b179",
+  "a9b77b62dcd89",
+  "af027f4014177",
+  "w91588ddb11ed",
+  "aaf63e9db25a0",
+  "wb8827e8c126e",
+  "wf5014bc150e9",
+  "w68c1687d28a1",
+  "a947eb28a3ca3",
+  "wea2ccfd5fbaf",
+  "a06e8f72a005a",
+  "a567030ffc76c",
+  "a65867ee1ae2e",
+  "a999409ce7860",
+  "w08701235bf24",
+  "w0b8720b6a0e7",
+  "acb049d81f751",
+  "w500a5bdc762c",
+  "ae5027985518f",
+  "a6cc2420ad66e",
+  "a0f33fb01d0d5",
+  "a84ca5863e582",
+  "a57a06c26359c",
+  "w3357740d1efd",
+  "a6e82ba740e99",
+  "a82e057190718",
+  "wf7fe771e76cd",
   "wbfc38914b368",
   "ad7d0b7072901",
-  "a82e057190718",
-  "a567030ffc76c",
-  "acfef8560e2ac",
-  "rv5-ups-sbr-fuel"
+  "a3a45d7f6db20",
+  "a531bcaf173d6",
+  "a0740b56c6649",
+  "w150132868eae",
+  "aaba50a646259",
+  "a8a156a22dc4f",
+  "a7d45b9ebd65b",
+  "af554b135ab19",
+  "a48d8a47d9a93",
+  "a58373f1b7bc3",
+  "a665de2800485",
+  "a5d45f26f2219",
+  "a2f060c358424",
+  "we85aee3857d1",
+  "a351cab9045c7",
+  "a069325035b44",
+  "a2f60a03dddd7",
+  "a831c709e5809",
+  "w86cfd39b48f5",
+  "a23a4d6fd271d",
+  "a50bdae886ef4",
+  "wa61ef102d1b2",
+  "a3bd243da7c6c",
+  "adbdc9a506e95",
+  "wa95920935a68"
  ],
  "backfilled": true,
  "recent": [
-  {
-   "id": "a40c99078f690",
-   "title": "Benchmark diesel price falls 6 cts to $6.292/gal as futures slide",
-   "date": "2026-11-02",
-   "c": [
-    "Industry"
-   ],
-   "url": "https://www.freightwaves.com/news/benchmark-diesel-price-is-down-so-is-futures-market-in-a-big-way",
-   "srcs": [
-    {
-     "src": "FreightWaves",
-     "url": "https://www.freightwaves.com/news/benchmark-diesel-price-is-down-so-is-futures-market-in-a-big-way"
-    }
-   ]
-  },
-  {
-   "id": "w0b8720b6a0e7",
-   "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
-   "date": "2026-11-03",
-   "c": [
-    "FedEx"
-   ],
-   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-   "srcs": [
-    {
-     "src": "FedEx Demand surcharges",
-     "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
-    },
-    {
-     "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
-     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
-    }
-   ]
-  },
   {
    "id": "wf7bb9227b2de",
    "title": "FedEx posts fuel surcharge tables effective Nov. 9, 2026",
@@ -3598,6 +3577,36 @@
      "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
     }
    ]
+  },
+  {
+   "id": "a65867ee1ae2e",
+   "title": "Amazon warns NYC customers Intro 518 could add up to $5 per order",
+   "date": "2026-11-19",
+   "c": [
+    "Amazon"
+   ],
+   "url": "https://www.aboutamazon.com/news/policy-news-views/amazon-new-york-city-delivery-protection-act-costs",
+   "srcs": [
+    {
+     "src": "About Amazon",
+     "url": "https://www.aboutamazon.com/news/policy-news-views/amazon-new-york-city-delivery-protection-act-costs"
+    }
+   ]
+  },
+  {
+   "id": "aa516eddc83e2",
+   "title": "USPS final rule sets 5.9% increase for competitive products",
+   "date": "2026-11-19",
+   "c": [
+    "USPS"
+   ],
+   "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23595/domestic-competitive-products-pricing-and-mailing-standards-changes",
+   "srcs": [
+    {
+     "src": "Federal Register: USPS",
+     "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23595/domestic-competitive-products-pricing-and-mailing-standards-changes"
+    }
+   ]
   }
  ],
  "copy": {
@@ -4548,30 +4557,21 @@
   "w50cdb890fc1d": {
    "t": "UPS raises rates 5.9% on average",
    "m": "Average net 5.9% rise; 40–50 lb packages may pay more for Additional Handling. Takes effect Dec 21."
+  },
+  "a65867ee1ae2e": {
+   "t": "Amazon warns Intro 518 could add $5",
+   "m": "No changes yet. If Intro 518 passes, NYC orders could cost up to $5 more and ship slower."
+  },
+  "aa516eddc83e2": {
+   "t": "USPS raises competitive rates 5.9%",
+   "m": "Priority Mail, Express and Ground Advantage rise 5.9%; takes effect Jan 17, 2027."
   }
  },
- "queue": [
-  {
-   "kind": "story",
-   "key": "story:ups posts 2027 retail rates preview starting with next day air early rates",
-   "id": "wa95920935a68",
-   "t": "UPS previews 2027 Retail Rates",
-   "m": "Retail Rates, including UPS Store shipments, move to 2027 prices. Takes effect Dec 21.",
-   "big": false,
-   "at": "2026-11-18T22:18:41.744220-05:00",
-   "lvl": 2,
-   "unconf": false,
-   "topic": "rates",
-   "notable": true,
-   "mask": 1,
-   "url": "https://wmaready.github.io/parcel-pigeon/#story=wa95920935a68",
-   "co": "UPS"
-  }
- ],
+ "queue": [],
  "fuelq": {},
  "day": {
-  "d": "2026-11-18",
-  "n": 3
+  "d": "2026-11-19",
+  "n": 1
  },
- "last_push": "2026-11-18T20:58:05.476249-05:00"
+ "last_push": "2026-11-19T08:00:43.855665-05:00"
 }

@@ -3726,68 +3726,71 @@
   {
    "id": "yunexpress",
    "n": "YunExpress",
-   "realm": "3pl",
-   "own": null,
+   "realm": "global",
+   "own": "sub",
    "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Shenzhen-based cross-border B2C parcel consolidator that handles China-to-U.S. customs clearance and DDP service, with a U.S. hub, and hands parcels to USPS, UPS, FedEx and DHL eCommerce for delivery.",
-   "al": [],
-   "src": "https://www.gp-fulfillment.com/blog/is-yunexpress-legit-tracking-shipping-times-review-2026.html",
+   "parent": "zongteng",
+   "hq": "Shenzhen, China",
+   "yr": "2014",
+   "s": "Shenzhen-based cross-border B2C small-parcel logistics provider, owned by Zongteng Group, that consolidates e-commerce parcels from China, flies them on dedicated freighters including trans-Pacific flights to the U.S., and hands them to local carriers for final delivery.",
+   "al": [
+    "Shenzhen Qianhai YunExpress Logistics Co., Ltd.",
+    "Yun Express",
+    "YunExpress USA",
+    "YunTrack",
+    "YunTu Logistics",
+    "Yuntu"
+   ],
+   "src": "https://www.yunexpress.com/about-us",
    "auto": true,
    "added": "2026-11-18",
-   "from": "discover"
-  },
-  {
-   "id": "smartwayslogis",
-   "n": "Smartways Logistics",
-   "realm": "cold",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Healthcare logistics provider with time-critical courier services in Australia and New Zealand.",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "auto": true,
-   "added": "2026-11-17",
-   "story": "a0f33fb01d0d5"
+   "from": "discover",
+   "site": "yunexpress.com",
+   "geo": [
+    114.058,
+    22.543
+   ],
+   "srcs": [
+    "https://www.yunexpress.com/about-us",
+    "https://www.freightwaves.com/news/yunexpress-charters-atlas-air-freighters-for-us-e-commerce-service",
+    "https://www.cbinsights.com/company/yunexpress"
+   ],
+   "enriched": "2026-11-19",
+   "pending": false
   },
   {
    "id": "geodis",
    "n": "GEODIS",
-   "realm": "3pl",
-   "own": null,
+   "realm": "global",
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
+   "hq": "Levallois-Perret, France",
    "yr": null,
-   "s": "Global logistics provider that launched the Final Mile Index",
-   "al": [],
+   "s": "GEODIS is a global logistics provider owned by SNCF. It offers freight forwarding, contract logistics, distribution and express, and road transport, and in the U.S. it runs final mile delivery through its Need It Now Delivers acquisition.",
+   "al": [
+    "GEODIS Calberson",
+    "GEODIS Group",
+    "Geodis",
+    "Geodis Wilson",
+    "SNCF Geodis"
+   ],
    "src": "https://www.globenewswire.com/news-release/2026/11/18/3405862/0/en/geodis-launches-u-s-final-mile-index-as-delivery-costs-rise-three-times-faster-than-inflation.html",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-18",
-   "story": "a06e8f72a005a"
-  },
-  {
-   "id": "eliteexpressho",
-   "n": "Elite Express Holding",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Nasdaq-listed last-mile delivery provider based in Laguna Hills, California",
-   "al": [],
-   "src": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-18",
-   "story": "aa2713299bf3a"
+   "story": "a06e8f72a005a",
+   "site": "geodis.com",
+   "geo": [
+    2.288,
+    48.894
+   ],
+   "srcs": [
+    "https://www.globenewswire.com/news-release/2026/11/18/3405862/0/en/geodis-launches-u-s-final-mile-index-as-delivery-costs-rise-three-times-faster-than-inflation.html",
+    "https://geodis.com/us-en/newsroom/geodis-completes-acquisition-need-it-now-delivers",
+    "https://www.crunchbase.com/organization/geodis"
+   ],
+   "enriched": "2026-11-19"
   },
   {
    "id": "jartransportat",
@@ -6464,15 +6467,6 @@
    "story": null
   },
   {
-   "a": "ups",
-   "b": "smartwayslogis",
-   "k": "acquired",
-   "y": "2026",
-   "t": "UPS buys Smartways Logistics",
-   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "story": "a0f33fb01d0d5"
-  },
-  {
    "a": "ids",
    "b": "geopost",
    "k": "partner",
@@ -6491,13 +6485,31 @@
    "story": "a728839b5ef80"
   },
   {
-   "a": "eliteexpressho",
-   "b": "jartransportat",
+   "a": "zongteng",
+   "b": "yunexpress",
    "k": "owns",
-   "y": "2026",
-   "t": "Elite Express Holding owns JAR Transportation",
-   "url": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
-   "story": "aa2713299bf3a"
+   "y": "2018",
+   "t": "Zongteng Group parent/subsidiary",
+   "url": "https://www.freightwaves.com/news/yunexpress-charters-atlas-air-freighters-for-us-e-commerce-service",
+   "story": null
+  },
+  {
+   "a": "atlasair",
+   "b": "yunexpress",
+   "k": "partner",
+   "y": null,
+   "t": "Dedicated 777 freighter charter, China-U.S.",
+   "url": "https://www.freightwaves.com/news/yunexpress-charters-atlas-air-freighters-for-us-e-commerce-service",
+   "story": null
+  },
+  {
+   "a": "geodis",
+   "b": "geodisnorthamerica",
+   "k": "owns",
+   "y": null,
+   "t": "North American operating arm (Brentwood, TN)",
+   "url": "https://leadiq.com/c/geodis/5a1d7dfd2400002400578954",
+   "story": "a06e8f72a005a"
   }
  ],
  "moves": [
@@ -6906,7 +6918,9 @@
   "sephora": "2026-11-17",
   "theriversideco": "2026-11-18",
   "universallogis": "2026-11-18",
-  "sekologistics": "2026-11-18"
+  "sekologistics": "2026-11-18",
+  "yunexpress": "2026-11-19",
+  "geodis": "2026-11-19"
  },
  "facts": {
   "ups": {

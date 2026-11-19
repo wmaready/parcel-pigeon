@@ -1,5 +1,102 @@
 [
  {
+  "id": "a65867ee1ae2e",
+  "date": "2026-11-19",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Amazon warns NYC customers Intro 518 could add up to $5 per order",
+  "sum": "Amazon sent a message to New York City customers saying Intro 518, under consideration by the City Council, could add up to $5 per order. Amazon said it would no longer be able to work with its network of small delivery businesses if the bill passes and would consider moving operations outside the city. The company asked customers to contact their Council members.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "Nothing has changed in rates or service yet. Amazon says that if Intro 518 passes, New York City customers could pay up to $5 more per order and face slower, more expensive delivery.",
+  "why": "The bill could change how Amazon delivers to New York City, where Amazon says it uses a network of small delivery businesses and millions of customers could see slower, costlier delivery.",
+  "score": 5,
+  "tie": "Amazon, the National Urban League and a business coalition warned in a Nov. 2026 letter to Speaker Julie Menin that they could sue if the Council passes Intro 518 in its current form.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-19T12:58:45Z",
+  "src": "About Amazon",
+  "url": "https://www.aboutamazon.com/news/policy-news-views/amazon-new-york-city-delivery-protection-act-costs",
+  "srcs": [
+   {
+    "src": "About Amazon",
+    "url": "https://www.aboutamazon.com/news/policy-news-views/amazon-new-york-city-delivery-protection-act-costs"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-19",
+  "thread": "last-mile-facility-legislation",
+  "upd": 9,
+  "new": "Amazon is now telling New York City customers directly that Intro 518 could add up to $5 per order and slow delivery, a cost claim not in earlier coverage; the bill has not passed and no rates have changed.",
+  "exclusive": true
+ },
+ {
+  "id": "aa516eddc83e2",
+  "date": "2026-11-19",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "USPS final rule sets 5.9% increase for competitive products",
+  "sum": "The Postal Service published a final rule amending the Domestic Mail Manual for competitive product prices and mailing standards, effective January 17, 2027. Priority Mail Express, Priority Mail and USPS Ground Advantage prices rise 5.9 percent overall, and Parcel Select Destination Entry rises an average of 5.9 percent.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "From January 17, 2027, USPS competitive product prices rise 5.9 percent overall for Priority Mail Express, Priority Mail and USPS Ground Advantage. Several extra and mailer service fees rise by 8.0 to 9.1 percent.",
+  "why": "Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select prices all rise on Jan. 17, 2027, with some service fees rising faster.",
+  "score": 7,
+  "tie": "The rule follows USPS's Nov. 12, 2026 filing with the Postal Regulatory Commission proposing a 5.9% average increase and a permanent 11% fuel surcharge for the same Jan. 17, 2027 date.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS competitive prices rise 5.9% overall; service fees change",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   }
+  ],
+  "added": "2026-11-19T12:58:20Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23595/domestic-competitive-products-pricing-and-mailing-standards-changes",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23595/domestic-competitive-products-pricing-and-mailing-standards-changes"
+   }
+  ],
+  "auto": true,
+  "thread": "usps-fuel-surcharge",
+  "upd": 2,
+  "new": "The Federal Register final rule confirms the 5.9% overall increase and the Jan. 17, 2027 effective date, and gives specific fees, including 8.0% to 9.1% rises for several mailer services, that the earlier filing coverage did not detail.",
+  "syn": "The Postal Service published a final rule in the Federal Register amending the Domestic Mail Manual to reflect competitive product price and mailing standards changes effective January 17, 2027. Priority Mail Express, Priority Mail and USPS Ground Advantage prices rise 5.9 percent overall, Parcel Select Destination Entry rises an average of 5.9 percent, and USPS Connect Local rises 6.0 percent. Extra service and other fees also rise, and the Dimension Noncompliance Fee is renamed and revised in its second phase. The new prices are available under Docket Number CP2027-1 on the Postal Regulatory Commission website.",
+  "aff": [
+   {
+    "who": "Priority Mail Express and Priority Mail shippers",
+    "what": "Prices rise 5.9 percent overall from January 17, 2027; the Express Flat Rate Envelope goes to $34.90."
+   },
+   {
+    "who": "USPS Ground Advantage shippers",
+    "what": "Retail and Commercial prices each rise 5.9 percent from January 17, 2027."
+   },
+   {
+    "who": "Parcel Select shippers",
+    "what": "Destination Entry rises an average of 5.9 percent; USPS Connect Local rises 6.0 percent."
+   },
+   {
+    "who": "Users of extra and other services",
+    "what": "Adult Signature up 8.2 and 8.0 percent, Package Intercept up 8.0 percent, Nonstandard Fees up an average of 16 percent."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "w213989b643cf",
   "date": "2026-11-19",
   "c": [
@@ -185,91 +282,103 @@
   "primary": true
  },
  {
-  "id": "wa95920935a68",
+  "id": "w3357740d1efd",
   "date": "2026-11-19",
   "c": [
    "UPS"
   ],
-  "title": "UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates",
-  "sum": "UPS posted a preview of its 2027 Retail Rates that appears to replace the 2026 U.S. 48, Alaska & Hawaii Retail Rates guide, which was marked updated September 7, 2026. The preview opens with Next Day Air Early prices for zones 102-108 and 124, from a Letter at $66.85 in zone 102 up to $1,435.76 for 108 lbs in zone 124. No effective date appears in the available text.",
-  "plain": "Shippers paying Retail Rates (including packages processed at The UPS Store and other retail locations) will use these 2027 prices once they take effect. The earlier guide's rate tables are not on file, so the size of any increase or decrease cannot be measured.",
-  "imp": "watch",
-  "lvl": 2,
-  "cat": "Pricing & GRI",
-  "act": "2026-12-21",
+  "title": "UPS posts Nov 17, 2026 Demand Surcharge schedule for 2026–27 peak",
+  "sum": "UPS posted a Demand Surcharge update dated November 17, 2026. It sets per-package surcharges for Additional Handling, Large Package and Over Maximum shipments, plus UPS Air, Ground Residential and Ground Saver packages. The surcharges run in three periods from 9/27/26 (or 10/25/26 for Section B) through 1/16/27, with the highest amounts from 11/22/26 to 12/26/26.",
+  "plain": "Every shipper sending these package types in the demand periods pays the surcharges on top of other charges. Shippers billed for more than 20,000 packages in a week face volume-based surcharges of up to $9.35 per package.",
+  "imp": "up",
+  "lvl": 3,
+  "cat": "Guide changes",
+  "act": "2026-09-27",
   "inferred": null,
   "detected": "2026-11-19",
   "changes": [
    {
-    "what": "Retail Rates guide moves from the 2026 edition to a 2027 rates preview",
-    "before": "2026 UPS Rate & Service Guide, U.S. 48, Alaska & Hawaii Retail Rates, updated September 7, 2026",
-    "after": "2027 UPS Retail Rates, with a 2027 Rates domestic section",
-    "effective": null,
-    "who": "Shippers who do not receive Daily Rates, and packages processed at The UPS Store and other retail locations",
-    "impact": null
+    "what": "Demand Surcharge on Additional Handling packages (U.S. domestic)",
+    "before": null,
+    "after": "$8.75 per package (9/27/26–11/21/26), $11.90 (11/22/26–12/26/26), $8.75 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic packages that require Additional Handling",
+    "impact": "+$3.15 per package in the 11/22–12/26 period versus the other two periods"
    },
    {
-    "what": "Next Day Air Early Letter rate, zones 102-108 and 124",
+    "what": "Demand Surcharge on Large Packages (U.S. domestic)",
     "before": null,
-    "after": "Letter: $66.85 (zone 102), $73.73 (103), $85.40 (104), $88.40 (105), $89.48 (106), $94.67 (107), $97.60 (108), $111.95 (124)",
-    "effective": null,
-    "who": "Next Day Air Early letter shipments at Retail Rates",
-    "impact": null
+    "after": "$96.25 per package (9/27/26–11/21/26), $117.50 (11/22/26–12/26/26), $96.25 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic Large Packages",
+    "impact": "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
    },
    {
-    "what": "Next Day Air Early 1 lb package rate, zones 102-108 and 124",
+    "what": "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
     "before": null,
-    "after": "1 lb: $73.81 (zone 102), $97.36 (103), $114.89 (104), $124.38 (105), $130.99 (106), $134.89 (107), $138.49 (108), $156.42 (124)",
-    "effective": null,
-    "who": "Next Day Air Early 1 lb packages at Retail Rates",
-    "impact": null
+    "after": "$530 per package (9/27/26–11/21/26), $590 (11/22/26–12/26/26), $530 (12/27/26–1/16/27)",
+    "effective": "2026-09-27",
+    "who": "All U.S. domestic packages over maximum limits",
+    "impact": "+$60 per package in the 11/22–12/26 period versus the other two periods"
    },
    {
-    "what": "Next Day Air Early 50 lb package rate, zones 102-108 and 124",
+    "what": "Baseline volume used to set the higher-volume tiers",
     "before": null,
-    "after": "50 lbs: $194.22 (zone 102), $274.90 (103), $470.95 (104), $525.04 (105), $560.26 (106), $596.61 (107), $633.64 (108), $684.72 (124)",
-    "effective": null,
-    "who": "Next Day Air Early heavier packages at Retail Rates",
-    "impact": null
-   },
-   {
-    "what": "Next Day Air Early 100 lb package rate, zones 102-108 and 124",
-    "before": null,
-    "after": "100 lbs: $376.44 (zone 102), $517.32 (103), $923.00 (104), $997.51 (105), $1,021.27 (106), $1,106.17 (107), $1,167.36 (108), $1,328.37 (124)",
-    "effective": null,
-    "who": "Next Day Air Early heavy packages at Retail Rates",
+    "after": "Baseline is the customer's average weekly volume for the service level in June 2026 (May 31–June 27, 2026), with a lower-volume fallback to Aug 30–Sep 26, 2026 if that volume is under 80% of the June volume",
+    "effective": "2026-10-25",
+    "who": "Higher-volume shippers",
     "impact": null
    }
   ],
   "verdict": "new document",
   "unknowns": [
-   "Effective date of the 2027 Retail Rates is not stated in the available text",
-   "Only the start of the Next Day Air Early table is available; other services, Alaska/Hawaii rates, surcharges and zone charts could not be reviewed",
-   "Which ZIP codes or origin-destination pairs fall into zones 102-108 and 124 is not shown",
+   "The text is cut off partway through the 11/22–12/26 Higher Volume Shipper Table, so the later tables are not confirmed.",
+   "Retail Demand Surcharges in Sections C and D are not shown.",
+   "The header for the third Section B demand period omits the start year of its December 27 start date.",
    "Older version not on file"
   ],
-  "dates": [],
-  "kind": "Alert",
-  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
-  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
-  "srcs": [
+  "dates": [
    {
-    "src": "UPS Rate and Service Guides",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+    "d": "2026-09-27",
+    "w": "UPS: Demand Surcharge on Additional Handling packages (U.S. domestic)",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Demand Surcharge on Large Packages (U.S. domestic)",
+      "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
+     ],
+     [
+      "UPS",
+      "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
+      "+$60 per package in the 11/22–12/26 period versus the other two periods"
+     ]
+    ]
    },
    {
-    "src": "UPS: preview-retail-rates-us-en.pdf",
-    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf"
+    "d": "2026-10-25",
+    "w": "UPS: Baseline volume used to set the higher-volume tiers",
+    "imp": "up"
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": false,
+  "src": "UPS",
+  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "srcs": [
+   {
+    "src": "UPS: UPS Shipping Zones and Rates hub",
+    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
    }
   ],
   "auto": true,
   "audit": {
-   "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
-   "dropped": 0,
+   "verdicts": "new document",
+   "dropped": 3,
    "compared": [
     {
-     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
-     "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
+     "new": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates (previous version)"
     }
    ]
   }
@@ -373,103 +482,91 @@
   "primary": true
  },
  {
-  "id": "w3357740d1efd",
+  "id": "wa95920935a68",
   "date": "2026-11-19",
   "c": [
    "UPS"
   ],
-  "title": "UPS posts Nov 17, 2026 Demand Surcharge schedule for 2026–27 peak",
-  "sum": "UPS posted a Demand Surcharge update dated November 17, 2026. It sets per-package surcharges for Additional Handling, Large Package and Over Maximum shipments, plus UPS Air, Ground Residential and Ground Saver packages. The surcharges run in three periods from 9/27/26 (or 10/25/26 for Section B) through 1/16/27, with the highest amounts from 11/22/26 to 12/26/26.",
-  "plain": "Every shipper sending these package types in the demand periods pays the surcharges on top of other charges. Shippers billed for more than 20,000 packages in a week face volume-based surcharges of up to $9.35 per package.",
-  "imp": "up",
-  "lvl": 3,
-  "cat": "Guide changes",
-  "act": "2026-09-27",
+  "title": "UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates",
+  "sum": "UPS posted a preview of its 2027 Retail Rates that appears to replace the 2026 U.S. 48, Alaska & Hawaii Retail Rates guide, which was marked updated September 7, 2026. The preview opens with Next Day Air Early prices for zones 102-108 and 124, from a Letter at $66.85 in zone 102 up to $1,435.76 for 108 lbs in zone 124. No effective date appears in the available text.",
+  "plain": "Shippers paying Retail Rates (including packages processed at The UPS Store and other retail locations) will use these 2027 prices once they take effect. The earlier guide's rate tables are not on file, so the size of any increase or decrease cannot be measured.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Pricing & GRI",
+  "act": "2026-12-21",
   "inferred": null,
   "detected": "2026-11-19",
   "changes": [
    {
-    "what": "Demand Surcharge on Additional Handling packages (U.S. domestic)",
-    "before": null,
-    "after": "$8.75 per package (9/27/26–11/21/26), $11.90 (11/22/26–12/26/26), $8.75 (12/27/26–1/16/27)",
-    "effective": "2026-09-27",
-    "who": "All U.S. domestic packages that require Additional Handling",
-    "impact": "+$3.15 per package in the 11/22–12/26 period versus the other two periods"
+    "what": "Retail Rates guide moves from the 2026 edition to a 2027 rates preview",
+    "before": "2026 UPS Rate & Service Guide, U.S. 48, Alaska & Hawaii Retail Rates, updated September 7, 2026",
+    "after": "2027 UPS Retail Rates, with a 2027 Rates domestic section",
+    "effective": null,
+    "who": "Shippers who do not receive Daily Rates, and packages processed at The UPS Store and other retail locations",
+    "impact": null
    },
    {
-    "what": "Demand Surcharge on Large Packages (U.S. domestic)",
+    "what": "Next Day Air Early Letter rate, zones 102-108 and 124",
     "before": null,
-    "after": "$96.25 per package (9/27/26–11/21/26), $117.50 (11/22/26–12/26/26), $96.25 (12/27/26–1/16/27)",
-    "effective": "2026-09-27",
-    "who": "All U.S. domestic Large Packages",
-    "impact": "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
+    "after": "Letter: $66.85 (zone 102), $73.73 (103), $85.40 (104), $88.40 (105), $89.48 (106), $94.67 (107), $97.60 (108), $111.95 (124)",
+    "effective": null,
+    "who": "Next Day Air Early letter shipments at Retail Rates",
+    "impact": null
    },
    {
-    "what": "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
+    "what": "Next Day Air Early 1 lb package rate, zones 102-108 and 124",
     "before": null,
-    "after": "$530 per package (9/27/26–11/21/26), $590 (11/22/26–12/26/26), $530 (12/27/26–1/16/27)",
-    "effective": "2026-09-27",
-    "who": "All U.S. domestic packages over maximum limits",
-    "impact": "+$60 per package in the 11/22–12/26 period versus the other two periods"
+    "after": "1 lb: $73.81 (zone 102), $97.36 (103), $114.89 (104), $124.38 (105), $130.99 (106), $134.89 (107), $138.49 (108), $156.42 (124)",
+    "effective": null,
+    "who": "Next Day Air Early 1 lb packages at Retail Rates",
+    "impact": null
    },
    {
-    "what": "Baseline volume used to set the higher-volume tiers",
+    "what": "Next Day Air Early 50 lb package rate, zones 102-108 and 124",
     "before": null,
-    "after": "Baseline is the customer's average weekly volume for the service level in June 2026 (May 31–June 27, 2026), with a lower-volume fallback to Aug 30–Sep 26, 2026 if that volume is under 80% of the June volume",
-    "effective": "2026-10-25",
-    "who": "Higher-volume shippers",
+    "after": "50 lbs: $194.22 (zone 102), $274.90 (103), $470.95 (104), $525.04 (105), $560.26 (106), $596.61 (107), $633.64 (108), $684.72 (124)",
+    "effective": null,
+    "who": "Next Day Air Early heavier packages at Retail Rates",
+    "impact": null
+   },
+   {
+    "what": "Next Day Air Early 100 lb package rate, zones 102-108 and 124",
+    "before": null,
+    "after": "100 lbs: $376.44 (zone 102), $517.32 (103), $923.00 (104), $997.51 (105), $1,021.27 (106), $1,106.17 (107), $1,167.36 (108), $1,328.37 (124)",
+    "effective": null,
+    "who": "Next Day Air Early heavy packages at Retail Rates",
     "impact": null
    }
   ],
   "verdict": "new document",
   "unknowns": [
-   "The text is cut off partway through the 11/22–12/26 Higher Volume Shipper Table, so the later tables are not confirmed.",
-   "Retail Demand Surcharges in Sections C and D are not shown.",
-   "The header for the third Section B demand period omits the start year of its December 27 start date.",
+   "Effective date of the 2027 Retail Rates is not stated in the available text",
+   "Only the start of the Next Day Air Early table is available; other services, Alaska/Hawaii rates, surcharges and zone charts could not be reviewed",
+   "Which ZIP codes or origin-destination pairs fall into zones 102-108 and 124 is not shown",
    "Older version not on file"
   ],
-  "dates": [
-   {
-    "d": "2026-09-27",
-    "w": "UPS: Demand Surcharge on Additional Handling packages (U.S. domestic)",
-    "imp": "up",
-    "fees": [
-     [
-      "UPS",
-      "Demand Surcharge on Large Packages (U.S. domestic)",
-      "+$21.25 per package in the 11/22–12/26 period versus the other two periods"
-     ],
-     [
-      "UPS",
-      "Demand Surcharge on Over Maximum Limits packages (U.S. domestic)",
-      "+$60 per package in the 11/22–12/26 period versus the other two periods"
-     ]
-    ]
-   },
-   {
-    "d": "2026-10-25",
-    "w": "UPS: Baseline volume used to set the higher-volume tiers",
-    "imp": "up"
-   }
-  ],
+  "dates": [],
   "kind": "Alert",
-  "exclusive": false,
-  "src": "UPS",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+  "src": "UPS Rate and Service Guides (spotted by Parcel Pigeon)",
+  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
   "srcs": [
    {
-    "src": "UPS: UPS Shipping Zones and Rates hub",
+    "src": "UPS Rate and Service Guides",
     "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+   },
+   {
+    "src": "UPS: preview-retail-rates-us-en.pdf",
+    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf"
    }
   ],
   "auto": true,
   "audit": {
-   "verdicts": "new document",
-   "dropped": 3,
+   "verdicts": "new document (preview-retail-rates-us-en.pdf), new document (preview-ak-hi-retail-rates-us-en.pdf), price change",
+   "dropped": 0,
    "compared": [
     {
-     "new": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
-     "old": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates (previous version)"
+     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf",
+     "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:47caed8a-c6fe-41e9-b98f-63f89d3d3f6c/original/as/retail-rates-us-en.pdf"
     }
    ]
   }
@@ -2932,6 +3029,10 @@
    {
     "src": "Federal Register: PRC",
     "url": "https://www.federalregister.gov/documents/2026/11/18/2026-23448/new-postal-products"
+   },
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23585/new-postal-products"
    }
   ],
   "auto": true,
@@ -13345,251 +13446,5 @@
   ],
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a239a5a2c2a5e",
-  "date": "2026-10-27",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "News",
-  "title": "Sprouts adds Shipt same-day delivery from more than 500 stores",
-  "sum": "Sprouts Farmers Market has partnered with Shipt to offer same-day delivery from more than 500 stores nationwide, according to Simply Wall St. Customers can order through the Shipt Marketplace. Separately, Chief Technology Officer James Bahrenburg has stepped down and will stay on as an advisor during a transition period.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "Sprouts customers can now place orders through the Shipt Marketplace for same-day delivery from local Sprouts stores. No change to carrier rates or surcharges is reported.",
-  "why": "The Shipt tie-up gives a grocery chain with 500+ stores a same-day delivery channel that uses an existing network instead of in-house delivery.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T21:00:46Z",
-  "src": "Yahoo Finance",
-  "url": "https://finance.yahoo.com/markets/stocks/articles/sprouts-farmers-market-sfm-brings-221725975.html",
-  "srcs": [
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/markets/stocks/articles/sprouts-farmers-market-sfm-brings-221725975.html"
-   }
-  ],
-  "auto": true,
-  "syn": "Sprouts Farmers Market (NasdaqGS:SFM) has partnered with Shipt to offer same-day delivery from more than 500 stores nationwide, according to Simply Wall St. Customers can place Sprouts orders directly through the Shipt Marketplace for delivery from local stores. The grocer also said its Chief Technology Officer, James Bahrenburg, has stepped down and will stay on as an advisor during a transition period. Simply Wall St's commentary says the advisory period runs through March 2027 and describes the Shipt arrangement as a link to an existing same-day network rather than an in-house build.",
-  "aff": [
-   {
-    "who": "Sprouts customers",
-    "what": "Can order through the Shipt Marketplace for same-day delivery from local Sprouts stores."
-   },
-   {
-    "who": "Sprouts store network",
-    "what": "More than 500 stores nationwide are covered by the same-day delivery offer."
-   },
-   {
-    "who": "Sprouts technology leadership",
-    "what": "CTO James Bahrenburg has stepped down and will advise during a transition period."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a7a5696865d95",
-  "date": "2026-10-27",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "UPS raises 2026 revenue and profit forecasts after third quarter",
-  "sum": "UPS raised its annual revenue and profit forecasts after third-quarter adjusted earnings of $1.69 per share, above analysts' average estimate of $1.63. The company now expects 2026 revenue of $92.6 billion, up from $91.2 billion, and adjusted profit of about $7.28 per share. It expects fourth-quarter average daily volume to be down 1.3 per cent.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service was announced. UPS expects total average daily volume to be down 1.3 per cent in the fourth quarter as it becomes more selective about the packages it delivers.",
-  "why": "UPS, the largest U.S. parcel carrier, is projecting higher revenue on lower peak-quarter volume, which indicates it is prioritizing revenue per parcel.",
-  "score": 6,
-  "tie": "UPS said in January 2025 it would cut Amazon volume by more than half, and in April 2026 it said it had completed the reconfiguration.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-30T05:40:40Z",
-  "src": "BNN Bloomberg",
-  "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/27/ups-raises-annual-forecasts-as-higher-margin-parcels-drive-quarterly-profit-beat/",
-  "srcs": [
-   {
-    "src": "BNN Bloomberg",
-    "url": "https://www.bnnbloomberg.ca/business/company-news/2026/10/27/ups-raises-annual-forecasts-as-higher-margin-parcels-drive-quarterly-profit-beat/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-27",
-  "new": "UPS raised its 2026 forecasts to $92.6 billion in revenue and $7.28 adjusted EPS and projected Q4 total daily volume down 1.3%, with no change to shipper rates or service announced.",
-  "syn": "UPS raised its 2026 revenue forecast to $92.6 billion from $91.2 billion and its adjusted profit forecast to about $7.28 per share from $7.22, after third-quarter adjusted profit of $1.69 per share beat analysts' average estimate of $1.63. CEO Carol Tome said the focus on more lucrative business lets UPS earn more on slightly fewer peak-season packages. UPS expects fourth-quarter average daily volume to be down 1.3 per cent, with domestic revenue up roughly 3 per cent and international revenue up an estimated 7 per cent.",
-  "aff": [
-   {
-    "who": "Peak-season volume",
-    "what": "UPS expects total average daily volume down 1.3 per cent in the fourth quarter as it is more selective about packages."
-   },
-   {
-    "who": "UPS domestic unit",
-    "what": "Third-quarter adjusted operating margin rose to 7 per cent from 6.4 per cent a year earlier."
-   },
-   {
-    "who": "UPS international package unit",
-    "what": "Third-quarter adjusted operating margin was 14.9 per cent, against 14.8 per cent last year."
-   },
-   {
-    "who": "UPS cost savings",
-    "what": "UPS has saved $1.8 billion through September against a $3 billion target for this year."
-   }
-  ]
- },
- {
-  "id": "a8523160884a0",
-  "date": "2026-10-27",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "News",
-  "title": "Key Food Co-Op brings 300+ member stores to Uber Eats",
-  "sum": "Uber Technologies and Key Food Stores Co-Operative announced on October 27, 2026 a partnership to offer grocery delivery from more than 300 Key Food member stores in the Northeast and Florida through Uber Eats. Customers can order on-demand or scheduled delivery from participating stores, according to the companies.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to parcel rates or service. Shoppers in the Northeast and Florida can order from participating Key Food member stores via the Uber Eats app.",
-  "why": "The tie-up adds more than 300 independent supermarkets across the Northeast and Florida to Uber Eats' grocery delivery marketplace.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T20:59:30Z",
-  "src": "Logistics Manager",
-  "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/",
-  "srcs": [
-   {
-    "src": "Logistics Manager",
-    "url": "https://www.logisticsmanager.com/key-food-stores-co-operative-partners-with-uber-eats-in-the-us/"
-   },
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/small-business/articles/key-food-stores-co-op-120000698.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-27",
-  "syn": "Uber Technologies and Key Food Stores Co-Operative announced on October 27, 2026 a partnership to bring grocery delivery from more than 300 Key Food member stores across the Northeast and Florida to Uber Eats. Customers can shop stores in Key Food's Family of Supermarkets, including Key Food, Food Universe, SuperFresh, The Food Emporium and Food Dynasty, with on-demand and scheduled delivery. Uber said the partnership builds on its investment in grocery and retail with national and regional supermarket brands. According to Logistics Manager, the offer is open to eligible Co-Op stores, which can opt in as the rollout continues.",
-  "aff": [
-   {
-    "who": "Key Food member stores",
-    "what": "More than 300 stores in the Northeast and Florida can offer delivery via Uber Eats; eligible stores can opt in as the rollout continues."
-   },
-   {
-    "who": "Grocery shoppers in the Northeast and Florida",
-    "what": "Can order from participating stores in the Uber Eats app, with on-demand and scheduled delivery."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "a97f1a35db884",
-  "date": "2026-10-27",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "UPS raises 2026 forecasts, expects fourth-quarter volume down 1.3%",
-  "sum": "UPS raised its 2026 revenue and adjusted profit forecasts after third-quarter results on Oct. 27, Reuters reported. The company expects total average daily volume to fall 1.3% in the fourth quarter as it becomes more selective about the packages it delivers. CEO Carol Tome said the focus on more lucrative business lets UPS earn more on slightly fewer packages.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "The sources describe no change to UPS rates or service for shippers. UPS expects slightly lower fourth-quarter volume as it focuses on more profitable packages.",
-  "why": "UPS is the largest parcel carrier, and its fourth-quarter plan for lower volume and higher revenue per parcel shapes holiday capacity.",
-  "score": 5,
-  "tie": "UPS said it completed its Amazon delivery reductions in the second quarter, and the July forecast it has now raised was $7.22 per share.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T23:03:14Z",
-  "src": "Central Oregon Daily",
-  "url": "https://www.centraloregondaily.com/news/consumer/united-parcel-service-expects-fatter-holiday-profits-on-slightly-slimmer-volume/article_767d6715-8af0-565b-ac18-31bc8677400f.html",
-  "srcs": [
-   {
-    "src": "Central Oregon Daily",
-    "url": "https://www.centraloregondaily.com/news/consumer/united-parcel-service-expects-fatter-holiday-profits-on-slightly-slimmer-volume/article_767d6715-8af0-565b-ac18-31bc8677400f.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-27",
-  "syn": "UPS raised its annual forecasts after third-quarter earnings on Oct. 27, according to Reuters. It now expects 2026 adjusted profit of around $7.28 per share, up from $7.22 forecast in July, and revenue of $92.6 billion, up from $91.2 billion. Total average daily volume is expected to fall 1.3% in the fourth quarter as UPS becomes more selective, after it cut deliveries of unprofitable packages for Amazon, its largest customer. Executives said a widening gap between cost per parcel and revenue per parcel will improve margins.",
-  "aff": [
-   {
-    "who": "UPS fourth-quarter volume",
-    "what": "Total average daily volume is expected to be down 1.3% as UPS becomes more selective."
-   },
-   {
-    "who": "UPS domestic and international revenue",
-    "what": "Executives forecast a roughly 3% rise in domestic revenue and an estimated 7% rise in international revenue."
-   },
-   {
-    "who": "UPS full-year outlook",
-    "what": "Adjusted profit forecast is around $7.28 per share and revenue $92.6 billion for 2026."
-   },
-   {
-    "who": "Amazon deliveries",
-    "what": "UPS said it completed its Amazon delivery reductions in the second quarter."
-   }
-  ],
-  "exclusive": true,
-  "tried": "2026-11-06",
-  "unconf": true
- },
- {
-  "id": "aa3051ff662bd",
-  "date": "2026-10-27",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "UPS expects Q4 U.S. volume to dip as Amazon cutback meets peak",
-  "sum": "UPS said on its Q3 earnings call that it expects average daily U.S. volume to rise about 25% from Q3 to Q4 but to fall slightly year over year because of reduced Amazon deliveries. CEO Carol Tomé said about 100 customers drive roughly 80% of the peak volume spike. UPS projects Q4 U.S. revenue up 3% year over year, according to CFO Brian Dykes.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "UPS will offer Protected Delivery at $10.70 per shipment starting Nov. 16, according to UPS' website. UPS said it expects peak volumes in line with last year's seasonal ramp.",
-  "why": "UPS's first peak since halving Amazon volume shows how the carrier's mix is shifting toward small business and healthcare shippers.",
-  "score": 6,
-  "tie": "UPS said in January 2025 it would cut Amazon volume by more than half by the second half of 2026, and in April 2026 it said it had completed the reduction.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-27T17:03:45Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/ups-gears-up-for-peak-season-with-less-amazon-volume-in-tow/872845/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/ups-gears-up-for-peak-season-with-less-amazon-volume-in-tow/872845/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-27",
-  "thread": "ups-amazon-glide-down",
-  "upd": 6,
-  "new": "UPS gave its Q4 outlook (volume up about 25% from Q3, down slightly year over year, U.S. revenue up 3%) and said about 1,500 drivers left in Q3 buyouts; shippers face a peak with less Amazon volume in the network and a new $10.70 Protected Delivery service from Nov. 16.",
-  "syn": "UPS said on its Q3 earnings call that it expects average daily volume to climb about 25% from Q3 to Q4, in line with last peak season, but to fall slightly year over year because of its planned reduction in Amazon deliveries. U.S. revenue is projected to rise 3% in Q4 on higher per-package revenue and premium segment growth, according to CFO Brian Dykes. In Q3, U.S. revenue per piece rose 6.1% while average daily volume fell 3.3%. UPS plans to hire 100,000 seasonal employees.",
-  "aff": [
-   {
-    "who": "Peak-season shippers",
-    "what": "UPS expects average daily volume up about 25% from Q3 to Q4, in line with last year."
-   },
-   {
-    "who": "Protected Delivery users",
-    "what": "New PIN-code delivery service costs $10.70 per shipment starting Nov. 16, per UPS' website."
-   },
-   {
-    "who": "UPS drivers",
-    "what": "About 1,500 drivers took buyouts in Q3 under the Driver Choice Program."
-   },
-   {
-    "who": "SMB shippers",
-    "what": "Small and medium-sized businesses were 35.1% of UPS U.S. volume in Q3, up about 240 basis points."
-   }
-  ]
  }
 ]
