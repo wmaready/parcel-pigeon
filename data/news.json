@@ -195,7 +195,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-18",
+  "tried": "2026-11-19",
   "unconf": true
  },
  {
@@ -235,7 +235,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-18",
+  "tried": "2026-11-19",
   "unconf": true
  },
  {
@@ -453,6 +453,56 @@
    {
     "who": "UPS Healthcare customers",
     "what": "Gain expanded services in Australia, New Zealand and the Asia Pacific region, according to UPS."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "a11c9c2813155",
+  "date": "2026-11-17",
+  "c": [
+   "DHL"
+  ],
+  "cat": "International",
+  "kind": "News",
+  "title": "DHL Express survey finds most SMEs expect steady or higher holiday sales",
+  "sum": "DHL Express surveyed more than 400 small and mid-sized business decision-makers. It found 50% expect 2026 holiday sales to match 2025 and 42% expect an increase, while 8% expect a decline. Separately, DHL Express launched an AI-powered item identification service for international shipping.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service from the survey. DHL Express's new photo-based tool generates customs-compliant item descriptions for international shipments.",
+  "why": "DHL's survey of more than 400 SME leaders ranks tariffs and trade policy as the top peak headwind (28%), and its new tool targets customs-description delays.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-19T01:57:37Z",
+  "src": "DC Velocity",
+  "url": "https://www.dcvelocity.com/small-businesses-upbeat-about-holiday-peak",
+  "srcs": [
+   {
+    "src": "DC Velocity",
+    "url": "https://www.dcvelocity.com/small-businesses-upbeat-about-holiday-peak"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-17",
+  "syn": "DHL Express surveyed more than 400 decision-makers at small and mid-sized businesses and found 50% expect 2026 holiday sales to be about the same as 2025, while 42% expect an increase, including 12% who predict significant growth. Another 8% expect a decline. Tariff and trade policies led anticipated headwinds at 28%, followed by delivery delays due to new regulations at 21%. For 2027, nearly 45% named inflation and operating costs as their biggest challenges, although 74% expect stronger business performance. Separately, DHL Express announced an AI-powered item identification service that analyzes a customer's photo to generate a customs-compliant description.",
+  "aff": [
+   {
+    "who": "Small and mid-sized businesses",
+    "what": "42% expect higher 2026 holiday sales, 50% expect about the same as 2025 and 8% expect a decline, per DHL's survey."
+   },
+   {
+    "who": "Holiday shippers",
+    "what": "Tariff and trade policies top the headwinds at 28%; delivery delays due to new regulations follow at 21%."
+   },
+   {
+    "who": "International shippers using DHL Express",
+    "what": "A new AI tool turns a photo of an item into a customs-compliant description, which DHL said can reduce customs delays."
+   },
+   {
+    "who": "2027 outlook",
+    "what": "Nearly 45% cite inflation and operating costs as the biggest challenge; more than a third plan to focus on cutting expenses."
    }
   ],
   "edge": true
@@ -756,7 +806,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-18",
+  "tried": "2026-11-19",
   "unconf": true
  },
  {
@@ -855,7 +905,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-18",
+  "tried": "2026-11-19",
   "unconf": true
  },
  {
@@ -955,7 +1005,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-18",
+  "tried": "2026-11-19",
   "unconf": true
  },
  {
@@ -5840,6 +5890,60 @@
    {
     "who": "UPS",
     "what": "Amazon relies less on UPS for shipping, according to the report."
+   }
+  ]
+ },
+ {
+  "id": "ae99be51e3f47",
+  "date": "2026-11-10",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon withdraws Westborough, Mass., drone hub application",
+  "sum": "Westborough's Planning Board accepted Amazon's request on November 10 to withdraw its site-plan application for a Prime Air drone hub at 64 Otis Street, without prejudice, according to DroneXL. The town had voted 510 to 13 to ban drone launch pads and drop zones. Amazon told the Boston Globe it will file a revised project soon.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to shipper rates or service. Amazon's Westborough drone hub application is withdrawn, and the company says it will file a revised project.",
+  "why": "Amazon, which says it wants nearly 500 US towns by year-end, withdrew a Westborough hub filing after a local vote to ban drone pads.",
+  "score": 5,
+  "tie": "DroneXL reported in November 2026 that Amazon made its first Prime Air deliveries in metro Atlanta on November 14 and 15, with no Georgia document in the FAA's public environmental review index.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-19T01:57:14Z",
+  "src": "The New York Times",
+  "url": "https://www.nytimes.com/2026/11/18/us/politics/amazon-delivery-drones-massachusetts.html",
+  "srcs": [
+   {
+    "src": "The New York Times",
+    "url": "https://www.nytimes.com/2026/11/18/us/politics/amazon-delivery-drones-massachusetts.html"
+   },
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/18/amazon-westborough-drone-nyt-would-probably-not-happen-withdrew/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "new": "Earlier coverage covered launches and funding by Walmart, Zipline, Wing, Uber and Amazon. This article adds a local zoning setback for an Amazon hub, with no stated change to shipper rates or service.",
+  "syn": "The Planning Board in Westborough, Massachusetts, accepted Amazon's request on November 10 to withdraw its site-plan application for a Prime Air drone hub, without prejudice, according to DroneXL citing the town's Prime Air page. The withdrawal followed a 510 to 13 town vote to ban drone launch pads and drop zones. Amazon told the Boston Globe it will file a revised project soon. The Zoning Board of Appeals meets December 7 on the residents' appeal, and the town's bylaw is under state attorney general review. Amazon has 20 drone hubs and says it wants nearly 500 US cities and towns by the end of the year, the New York Times reported.",
+  "aff": [
+   {
+    "who": "Westborough Prime Air hub",
+    "what": "Site-plan application for 64 Otis Street withdrawn without prejudice on November 10; Amazon says it will refile."
+   },
+   {
+    "who": "Town drone bylaw",
+    "what": "Sent to the attorney general October 22; the 90-day review runs to January 20, 2027, per the date the office gave the Times."
+   },
+   {
+    "who": "Amazon drone expansion",
+    "what": "Amazon has 20 hubs and says it wants nearly 500 US cities and towns by the end of the year, the Times reported."
+   },
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
    }
   ]
  },
@@ -13055,99 +13159,5 @@
     "what": "The piece says retailers added 461,500 seasonal jobs in the fourth quarter of 2025, and UPS plans to hire more than 100,000 this year."
    }
   ]
- },
- {
-  "id": "aef1ff74eee53",
-  "date": "2026-10-27",
-  "c": [
-   "UPS"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "UPS CFO says core volume returned to growth in Q3 2026",
-  "sum": "UPS CFO Brian Dykes told Fortune on Oct. 27 that core volume returned to growth in the third quarter, with revenue of $22.9 billion against $22.29 billion expected. UPS raised full-year revenue, profit and free-cash-flow guidance for a second consecutive quarter and is targeting 100,000 seasonal hires in the U.S.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service was announced. UPS expects U.S. daily volume to rise about 25% from Q3 to Q4 and plans 100,000 seasonal hires.",
-  "why": "UPS's shift away from lower-return volume shapes capacity and peak staffing at a major U.S. carrier, which targets 100,000 seasonal hires.",
-  "score": 6,
-  "tie": "The interview follows UPS's April 2026 report that it had completed its Amazon volume reduction and network reconfiguration, and its Oct. 27, 2026 earnings-call outlook for Q4 U.S. volume.",
-  "act": null,
-  "dates": [],
-  "added": "2026-10-30T05:40:19Z",
-  "src": "Fortune",
-  "url": "https://fortune.com/2026/10/28/ups-cfo-strategic-overhaul-behind-22-billion-quarter/",
-  "srcs": [
-   {
-    "src": "Fortune",
-    "url": "https://fortune.com/2026/10/28/ups-cfo-strategic-overhaul-behind-22-billion-quarter/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-27",
-  "new": "UPS's CFO said core volume grew in Q3 2026 and the company raised full-year guidance, and UPS expects needing fewer rented aircraft, trailers and trucks for peak because of less lower-return e-commerce volume.",
-  "syn": "UPS CFO Brian Dykes told Fortune that the company's strategy of shedding lower-return volume, including scaling back Amazon, is beginning to pay off, with core volume returning to growth in the third quarter. UPS reported Q3 2026 revenue of $22.9 billion, versus $22.29 billion expected, and operating profit of $1.7 billion, or $2.1 billion adjusted. U.S. small and midsize business volume rose 3.7% and enterprise volume about 1%, Dykes said. For the holiday season, UPS expects U.S. daily volume to rise about 25% from Q3 to Q4 and is targeting 100,000 seasonal hires to handle an additional 4 million pieces per day.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service was announced."
-   },
-   {
-    "who": "Peak season capacity",
-    "what": "UPS expects U.S. daily volume up about 25% Q3 to Q4, with 100,000 seasonal hires targeted."
-   },
-   {
-    "who": "Seasonal hiring",
-    "what": "UPS will try to hire at least 40,000 people during its peak hiring weekend, Nov. 6-7."
-   },
-   {
-    "who": "Data center shippers",
-    "what": "UPS said it is pursuing roughly 100 active prospects in data center construction freight."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "af856b9bd82fe",
-  "date": "2026-10-27",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon Prime Air recruits EU drone approvals head",
-  "sum": "Amazon Prime Air is advertising for an EU Head of Regulatory Approvals for drone delivery, according to Unmanned Airspace. The listing says the role would own the EU approval programme from first authority conversation to authorisation granted. It follows a recent Prime Air advertisement for a regulatory expert in Australia.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. The listing describes preparation for EU drone approvals; no EU service has been announced.",
-  "why": "The listing shows Amazon preparing to seek drone delivery approvals in the EU, though it states no launch date, location or service terms.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T21:01:31Z",
-  "src": "Unmanned airspace",
-  "url": "https://www.unmannedairspace.info/uncategorized/amazon-eyes-eu-entry-for-prime-air/",
-  "srcs": [
-   {
-    "src": "Unmanned airspace",
-    "url": "https://www.unmannedairspace.info/uncategorized/amazon-eyes-eu-entry-for-prime-air/"
-   }
-  ],
-  "auto": true,
-  "new": "Amazon Prime Air is seeking EU regulatory approvals, a step outside the US-focused earlier coverage, but the listing gives no launch date, so nothing changes yet for shippers.",
-  "syn": "Amazon Prime Air has advertised for an EU Head of Regulatory Approvals for drone delivery, Unmanned Airspace reported. The listing says the hire would be Amazon's named contact with the European Union Aviation Safety Agency (EASA) and national aviation authorities, and would sign submissions and cover both operational and airworthiness sides of each application. Amazon says that after securing initial authorisations it intends to scale across EU member states. The listing follows a recent advertisement for a regulatory expert in Australia.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   },
-   {
-    "who": "Prime Air EU plans",
-    "what": "Amazon is hiring to secure initial authorisations, then intends to scale across EU member states."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
  }
 ]
