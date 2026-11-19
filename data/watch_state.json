@@ -284,7 +284,7 @@
   "told_until": "2026-12-03"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
-  "checked": "2026-11-17",
+  "checked": "2026-11-19",
   "pdfs": [],
   "lines": 69,
   "told": []
@@ -300,9 +300,10 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf"
   ],
-  "lines": 53,
+  "lines": 55,
   "told": [],
   "told2": [
    "27993cfb3870",
@@ -312,10 +313,16 @@
    "761fae83e10b",
    "eb2f95c85a1e",
    "c746794ce44d",
-   "6485749096ee"
+   "6485749096ee",
+   "09a3820131b8",
+   "04820894c719",
+   "1dbd71ee0f35",
+   "078275bc557c",
+   "f3fa69c7e12e",
+   "3374d0ffaca7",
+   "2a3ab4c20141"
   ],
-  "told_until": "2026-12-18",
-  "pend": "19964ecb4670"
+  "told_until": "2026-12-18"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-19",
@@ -419,8 +426,7 @@
   "checked": "2026-11-19",
   "pdfs": [],
   "lines": 178,
-  "told": [],
-  "pend": "f565211f5f70"
+  "told": []
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-11-19",

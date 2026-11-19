@@ -2,6 +2,175 @@
  {
   "status": "not material",
   "date": "2026-11-19",
+  "page": "https://www.uniuni.com/news/",
+  "verdicts": "cosmetic"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "wde77ac131ac6",
+   "date": "2026-11-19",
+   "c": [
+    "FedEx"
+   ],
+   "title": "FedEx posts domestic fuel surcharge tables effective Nov. 9, 2026",
+   "sum": "FedEx posted new domestic fuel surcharge tables effective Nov. 9, 2026. They cover package services (34.00%-35.50% at jet fuel $4.46-$4.81), express freight ($0.740-$0.764 per lb) and Ground/Home Delivery/International Ground (30.00%-31.50% at diesel $6.07-$6.70). The document appears to replace the fuel surcharge web page.",
+   "plain": "Applies to domestic and U.S.-to-Puerto Rico FedEx shipments, and to Ground, Home Delivery and International Ground shipments. The surcharge moves in 0.25% steps as the jet fuel or diesel index changes. Which row applies at any given time depends on the index value.",
+   "imp": "info",
+   "lvl": 1,
+   "cat": "Fuel",
+   "act": "2026-11-09",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Domestic and U.S. to Puerto Rico package services fuel surcharge table (jet fuel index)",
+     "before": null,
+     "after": "34.00% at jet fuel $4.46-$4.51, rising in 0.25% steps to 35.50% at $4.76-$4.81; table extends if the index falls below $4.46 or rises above $4.81",
+     "effective": "2026-11-09",
+     "who": "Domestic and U.S.-to-Puerto Rico FedEx package shipments",
+     "impact": null
+    },
+    {
+     "what": "Domestic and U.S. to Puerto Rico express freight fuel surcharge table (per rated pound)",
+     "before": null,
+     "after": "$0.740 per lb at jet fuel $4.46-$4.51, rising by $0.004 per lb per step to $0.764 per lb at $4.76-$4.81",
+     "effective": "2026-11-09",
+     "who": "Domestic and U.S.-to-Puerto Rico FedEx express freight shipments",
+     "impact": null
+    },
+    {
+     "what": "FedEx Ground, Home Delivery, International Ground and pickup services fuel surcharge table (diesel index)",
+     "before": null,
+     "after": "30.00% at diesel $6.07-$6.16, rising in 0.25% steps to 31.50% at $6.61-$6.70; table extends if the index falls below $6.07 or rises above $6.70",
+     "effective": "2026-11-09",
+     "who": "FedEx Ground, Home Delivery and International Ground shipments, and pickup services",
+     "impact": null
+    },
+    {
+     "what": "Step rules for the jet fuel tables",
+     "before": null,
+     "after": "Jet fuel at or above $3.51: surcharge changes 0.25% per $0.05 change in the fuel price. Below $3.51: 0.25% per $0.21.",
+     "effective": "2026-11-09",
+     "who": "Package and express freight shippers",
+     "impact": null
+    },
+    {
+     "what": "Step rules for the diesel table",
+     "before": null,
+     "after": "Diesel at or above $5.71: surcharge changes 0.25% per $0.09 change in the fuel price. Below $5.71: 0.25% per $0.27.",
+     "effective": "2026-11-09",
+     "who": "Ground, Home Delivery and International Ground shippers",
+     "impact": null
+    }
+   ],
+   "verdict": "new document",
+   "unknowns": [
+    "Which fuel surcharge percentage is in effect at any given time, since that depends on the published jet fuel and diesel index values",
+    "How these tables compare with the fuel surcharge rates in effect before Nov. 9, 2026",
+    "Older version not on file"
+   ],
+   "dates": [],
+   "kind": "Alert",
+   "src": "FedEx Rate changes hub (spotted by Parcel Pigeon)",
+   "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
+   "srcs": [
+    {
+     "src": "FedEx Rate changes hub",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes.html"
+    },
+    {
+     "src": "FedEx: fuel_surcharge_effective_11-9-26.pdf",
+     "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (fuel_surcharge_effective_11-9-26.pdf), price change",
+    "dropped": 0,
+    "compared": [
+     {
+      "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
+      "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
+     }
+    ]
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wea2ccfd5fbaf"
+ },
+ {
+  "status": "same as published",
+  "story": {
+   "id": "wc7fd2e5adb34",
+   "date": "2026-11-19",
+   "c": [
+    "FedEx"
+   ],
+   "title": "FedEx adjusts domestic fuel surcharges and updates fuel tables effective Nov. 9, 2026",
+   "sum": "FedEx added a notice to its rate changes page saying it will adjust fuel surcharges and update the fuel surcharge tables for FedEx domestic services, effective Nov. 9, 2026. The earlier version of the page had no Nov. 9 entry. The page's updated date moved from Oct. 23, 2026 to Nov. 5, 2026.",
+   "plain": "Shippers using FedEx domestic services will see different fuel surcharge percentages from Nov. 9, 2026. The size and direction of the change can't be determined from the notice alone.",
+   "imp": "watch",
+   "lvl": 2,
+   "cat": "Fuel",
+   "act": "2026-11-09",
+   "inferred": null,
+   "detected": "2026-11-19",
+   "changes": [
+    {
+     "what": "Fuel surcharge adjustment and updated fuel surcharge tables for FedEx domestic services",
+     "before": null,
+     "after": "FedEx will adjust the fuel surcharges and update the tables for FedEx domestic services, effective Nov. 9, 2026.",
+     "effective": "2026-11-09",
+     "who": "Shipments on FedEx domestic services",
+     "impact": null
+    },
+    {
+     "what": "Page 'Updated' date",
+     "before": "Updated Oct. 23, 2026",
+     "after": "Updated Nov. 5, 2026",
+     "effective": null,
+     "who": "No shipper impact",
+     "impact": null
+    }
+   ],
+   "verdict": "price change",
+   "unknowns": [
+    "The new fuel surcharge percentages and table thresholds are not shown on this page",
+    "Whether surcharges rise or fall, and by how much",
+    "Older version not on file"
+   ],
+   "dates": [
+    {
+     "d": "2026-11-09",
+     "w": "FedEx: Fuel surcharge adjustment and updated fuel surcharge tables for FedEx domestic services",
+     "imp": "info"
+    }
+   ],
+   "kind": "Alert",
+   "src": "FedEx Rate changes hub (spotted by Parcel Pigeon)",
+   "url": "https://www.fedex.com/en-us/shipping/rate-changes.html",
+   "srcs": [
+    {
+     "src": "FedEx Rate changes hub",
+     "url": "https://www.fedex.com/en-us/shipping/rate-changes.html"
+    }
+   ],
+   "auto": true,
+   "audit": {
+    "verdicts": "new document (fuel_surcharge_effective_11-9-26.pdf), price change",
+    "dropped": 0,
+    "compared": []
+   },
+   "exclusive": true,
+   "primary": true
+  },
+  "twin": "wea2ccfd5fbaf"
+ },
+ {
+  "status": "not material",
+  "date": "2026-11-19",
   "page": "https://investors.ups.com/news-events/press-releases",
   "verdicts": "cosmetic"
  },
