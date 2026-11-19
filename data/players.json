@@ -3793,21 +3793,61 @@
    "enriched": "2026-11-19"
   },
   {
-   "id": "jartransportat",
-   "n": "JAR Transportation",
-   "realm": "regional",
-   "own": null,
+   "id": "zonos",
+   "n": "Zonos",
+   "realm": "software",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "St. George, UT, USA",
+   "yr": "2009",
+   "s": "Zonos is a cross-border commerce software company whose APIs calculate landed cost (duties, taxes and fees), classify goods by HS code and support duty and tax collection, for e-commerce merchants, carriers and postal operators.",
+   "al": [
+    "Zonos Inc."
+   ],
+   "src": "https://techcrunch.com/2021/09/15/zonos-banks-69m-to-develop-apis-for-democratizing-cross-border-commerce/",
+   "auto": true,
+   "added": "2026-11-19",
+   "from": "discover",
+   "site": "zonos.com",
+   "geo": [
+    -113.568,
+    37.096
+   ],
+   "srcs": [
+    "https://techcrunch.com/2021/09/15/zonos-banks-69m-to-develop-apis-for-democratizing-cross-border-commerce/",
+    "https://www.businesswire.com/news/home/20240904490189/en/Modernizing-the-Global-Postal-System-Zonos-Selected-by-the-Universal-Postal-Union-UPU-to-Power-Enhanced-Compliance-Processing-Speed-and-Transparency-for-Posts-Worldwide",
+    "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/zonos-to-expand-uspss-international-services.html"
+   ],
+   "enriched": "2026-11-19",
+   "pending": false
+  },
+  {
+   "id": "avalara",
+   "n": "Avalara",
+   "realm": "software",
+   "own": "pe",
    "tk": null,
    "parent": null,
    "hq": null,
-   "yr": null,
-   "s": "Wholly owned subsidiary providing last-mile package delivery in California",
-   "al": [],
-   "src": "https://www.citybiz.co/article/935431/elite-express-holding-targets-20-million-to-30-million-in-strategic-acquisitions-to-expand-last-mile-delivery-business/",
+   "yr": "2004",
+   "s": "Avalara is a tax-compliance software company whose AvaTax Cross-Border product calculates customs duties and import taxes in real time at checkout, and it powers the duty and import-tax features in Shopify Markets and eBay International Shipping.",
+   "al": [
+    "Avalara AvaTax Cross-Border",
+    "Avalara, Inc."
+   ],
+   "src": "https://www.geekwire.com/2022/avalara-officially-goes-private-as-vista-equity-partners-completes-acquisition/",
    "auto": true,
-   "pending": true,
-   "added": "2026-11-18",
-   "story": "aa2713299bf3a"
+   "added": "2026-11-19",
+   "from": "discover",
+   "site": "avalara.com",
+   "srcs": [
+    "https://www.geekwire.com/2022/avalara-officially-goes-private-as-vista-equity-partners-completes-acquisition/",
+    "https://www.businesswire.com/news/home/20211102005291/en/Avalara-and-Shopify-Help-Solve-Duty-and-Import-Tax-for-Merchants",
+    "https://salestechstar.com/partner-management-channel-enablement/avalara-and-ebay-partner-to-solve-cross-border-compliance-for-global-sellers/"
+   ],
+   "enriched": "2026-11-19",
+   "pending": false
   }
  ],
  "edges": [
@@ -6510,6 +6550,60 @@
    "t": "North American operating arm (Brentwood, TN)",
    "url": "https://leadiq.com/c/geodis/5a1d7dfd2400002400578954",
    "story": "a06e8f72a005a"
+  },
+  {
+   "a": "zonos",
+   "b": "usps",
+   "k": "partner",
+   "y": "2022",
+   "t": "USPS awarded Zonos a contract for duty/tax quotes and HS classification on international shipments",
+   "url": "https://www.parcelandpostaltechnologyinternational.com/news/cross-border/zonos-to-expand-uspss-international-services.html",
+   "story": null
+  },
+  {
+   "a": "zonos",
+   "b": "universalposta",
+   "k": "partner",
+   "y": "2024",
+   "t": "UPU selected Zonos to improve customs data and DDP for posts via its Customs Declaration System",
+   "url": "https://www.businesswire.com/news/home/20240904490189/en/Modernizing-the-Global-Postal-System-Zonos-Selected-by-the-Universal-Postal-Union-UPU-to-Power-Enhanced-Compliance-Processing-Speed-and-Transparency-for-Posts-Worldwide",
+   "story": null
+  },
+  {
+   "a": "avalara",
+   "b": "shopify",
+   "k": "partner",
+   "y": "2021",
+   "t": "Powers duty and import-tax features of Shopify Markets",
+   "url": "https://www.businesswire.com/news/home/20211102005291/en/Avalara-and-Shopify-Help-Solve-Duty-and-Import-Tax-for-Merchants",
+   "story": null
+  },
+  {
+   "a": "avalara",
+   "b": "ebay",
+   "k": "partner",
+   "y": null,
+   "t": "Cross-border duty/tax compliance for eBay International Shipping",
+   "url": "https://salestechstar.com/partner-management-channel-enablement/avalara-and-ebay-partner-to-solve-cross-border-compliance-for-global-sellers/",
+   "story": null
+  },
+  {
+   "a": "wonder",
+   "b": "zipline",
+   "k": "partner",
+   "y": "2026",
+   "t": "Wonder partners with Zipline on drone food delivery in Texas from January 2027",
+   "url": "https://techcrunch.com/2026/11/17/uber-and-ziplines-drone-delivery-service-takes-off-in-texas-with-dozens-of-cities-to-follow/",
+   "story": "a5a12ee8825b7"
+  },
+  {
+   "a": "ups",
+   "b": "roadie",
+   "k": "owns",
+   "y": "2026",
+   "t": "UPS owns gig delivery subsidiary Roadie",
+   "url": "https://finance.yahoo.com/small-business/articles/ups-teamsters-contract-expires-2028-153400844.html",
+   "story": "a8cbae3d2cccf"
   }
  ],
  "moves": [
@@ -6920,7 +7014,9 @@
   "universallogis": "2026-11-18",
   "sekologistics": "2026-11-18",
   "yunexpress": "2026-11-19",
-  "geodis": "2026-11-19"
+  "geodis": "2026-11-19",
+  "zonos": "2026-11-19",
+  "avalara": "2026-11-19"
  },
  "facts": {
   "ups": {

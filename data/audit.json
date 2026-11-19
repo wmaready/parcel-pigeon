@@ -1,5 +1,5 @@
 {
- "run": "2026-11-19T13:00Z",
+ "run": "2026-11-19T13:21Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -12,75 +12,82 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 510,
- "doc_cursor": 44,
+ "link_cursor": 550,
+ "doc_cursor": 74,
  "checked_pairs": [
-  "b8d8ea16bc5f",
-  "de313bc51fd7",
-  "a625dd5720a9",
-  "2361691e9a1b",
-  "dbb89994655f",
-  "62cb3ae5df27",
-  "02094abee757",
-  "bb9d125105c0",
-  "c1419d4e7cb6",
-  "bd74f39e4a2a",
-  "0ca410a667f8",
-  "f7e5ad4ade89",
-  "a8c41927e218",
-  "5b4926c2c24d",
-  "cf51efba6984",
-  "558e73ee4967",
-  "457e37db5347",
-  "f6cd68cb0017",
-  "5effb73bc21d",
-  "2988f97e477e",
-  "803f70b9b286",
-  "b54077ea2f7b",
-  "60030262fcea",
-  "f3a106e02077",
-  "4621e9e86574",
-  "0b8aff140a01",
-  "5e124f1a493a",
-  "4df67f9b3718",
-  "d46a0aebc57e",
-  "f84529cd7bc9",
-  "1bc66c00eda3",
-  "a74a789cafba",
-  "14a3d7429698",
-  "c3d4d65922ea",
-  "ab39dca4b258",
-  "ed50bd5ade56",
-  "94d1ac334f4e",
-  "4d5dedc8cd29",
-  "c61435232c81",
-  "006e0976c74d",
-  "d73b3089178a",
-  "0b3d6d7565cd",
-  "73dcfc31b988",
-  "87f9bbae47ee",
-  "454e4f8f6a6b",
-  "0ee2e50bd13d",
-  "6004808294c5",
-  "5f83fff4b0b8",
-  "61ba27c59dab",
-  "70042e1b5ea7",
-  "a2bd3ac3da71",
-  "d72a23005aba",
-  "7679c499e09c",
-  "62d4a60b8bb3",
-  "c74456d2bddc",
+  "e57a450403da",
   "21b6ce5b1d5c",
+  "bb9d125105c0",
+  "5b4926c2c24d",
+  "94d1ac334f4e",
+  "a625dd5720a9",
+  "f7e5ad4ade89",
+  "f6cd68cb0017",
+  "4621e9e86574",
+  "02094abee757",
+  "5f83fff4b0b8",
+  "2988f97e477e",
+  "558e73ee4967",
   "5423312764d9",
   "6157952e9b11",
-  "4e8faef9252d",
-  "7e4a0a07ad2f",
-  "e57a450403da",
-  "cc68d548ad73",
-  "0cae9f6a1079",
-  "6bef0a5868e5",
+  "4df67f9b3718",
   "8e54de96bdda",
-  "2f24e1d5d0e2"
+  "803f70b9b286",
+  "4e8faef9252d",
+  "61ba27c59dab",
+  "cf51efba6984",
+  "6bef0a5868e5",
+  "a2bd3ac3da71",
+  "62d4a60b8bb3",
+  "2f24e1d5d0e2",
+  "d72a23005aba",
+  "14a3d7429698",
+  "e4c3917d270c",
+  "17a5c7c64a5b",
+  "70042e1b5ea7",
+  "457e37db5347",
+  "c1419d4e7cb6",
+  "454e4f8f6a6b",
+  "1bc66c00eda3",
+  "f3a106e02077",
+  "0cae9f6a1079",
+  "cc68d548ad73",
+  "b8d8ea16bc5f",
+  "9c2deb73a3b0",
+  "ab39dca4b258",
+  "7e4a0a07ad2f",
+  "c61435232c81",
+  "0b8aff140a01",
+  "5e124f1a493a",
+  "2361691e9a1b",
+  "f84529cd7bc9",
+  "4d5dedc8cd29",
+  "6004808294c5",
+  "ee73f1e9bc3e",
+  "d73b3089178a",
+  "a8c41927e218",
+  "b54077ea2f7b",
+  "0ca410a667f8",
+  "62cb3ae5df27",
+  "5effb73bc21d",
+  "c3d4d65922ea",
+  "900f16306b29",
+  "c74456d2bddc",
+  "60030262fcea",
+  "7679c499e09c",
+  "76e751c6f45c",
+  "ed50bd5ade56",
+  "d46a0aebc57e",
+  "0ee2e50bd13d",
+  "a3c486ca67d3",
+  "dbb89994655f",
+  "87f9bbae47ee",
+  "de313bc51fd7",
+  "bd74f39e4a2a",
+  "a74a789cafba",
+  "006e0976c74d",
+  "0b3d6d7565cd",
+  "73dcfc31b988"
  ],
  "issues": [
   {
@@ -333,6 +340,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air drones deliver from North Randall, Ohio, site\" and \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\"",
+   "ids": [
+    "a3de5c6ac088c",
+    "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)\"",
    "ids": [
     "w08701235bf24",
@@ -361,6 +378,36 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone deliveries in Atlanta; no Georgia FAA file\" and \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\"",
+   "ids": [
+    "a743e307cb77c",
+    "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing starts Walmart drone delivery in Ponchatoula, Louisiana\" and \"Wing targets 2027 Walmart drone delivery launch in Salt Lake City\"",
+   "ids": [
+    "abf82fcdf8fa5",
+    "a0cdd3528f2e6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon Prime Air to launch drone delivery in Suffolk, Virginia\"",
+   "ids": [
+    "a258cb77ab792",
+    "a5cb136f38f3b"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS final rule sets 5.9% increase for competitive products\"",
@@ -384,6 +431,56 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
+   "ids": [
+    "r15"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
+   "ids": [
+    "a34d0c6e054ad"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+   "ids": [
+    "a17c2b53e66e5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to an error page): GLS US fuel surcharge matrix https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf -> https://gls-group.eu/GROUP/en/error/404/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }
@@ -585,6 +682,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon Prime Air drones deliver from North Randall, Ohio, site\" and \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\"",
+   "ids": [
+    "a3de5c6ac088c",
+    "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)\"",
    "ids": [
     "w08701235bf24",
@@ -613,6 +720,36 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone deliveries in Atlanta; no Georgia FAA file\" and \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\"",
+   "ids": [
+    "a743e307cb77c",
+    "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing starts Walmart drone delivery in Ponchatoula, Louisiana\" and \"Wing targets 2027 Walmart drone delivery launch in Salt Lake City\"",
+   "ids": [
+    "abf82fcdf8fa5",
+    "a0cdd3528f2e6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon Prime Air to launch drone delivery in Suffolk, Virginia\"",
+   "ids": [
+    "a258cb77ab792",
+    "a5cb136f38f3b"
+   ],
+   "fixed": false
+  },
+  {
    "sev": "high",
    "type": "superseded",
    "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS final rule sets 5.9% increase for competitive products\"",
@@ -636,6 +773,56 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
+   "ids": [
+    "r15"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
+   "ids": [
+    "a34d0c6e054ad"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+   "ids": [
+    "a17c2b53e66e5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-wrong-page",
+   "msg": "Library link lands on the wrong page (redirected to an error page): GLS US fuel surcharge matrix https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf -> https://gls-group.eu/GROUP/en/error/404/",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "doc-link-broken",
+   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }
