@@ -540,7 +540,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon, Wing and Uber/Zipline are each expanding drone delivery to new U.S. metros, with Amazon targeting nearly 500 cities and towns by the end of 2026.",
+  "s": "Drone delivery is expanding through carrier and retailer launches, while the FAA's Part 108 rule remains unpublished and local opposition to Amazon's Westborough hub has emerged.",
   "ids": [
    "g27",
    "g26",
@@ -647,7 +647,7 @@
    "a65867ee1ae2e"
   ],
   "first": "2026-10-13",
-  "s": "The New York City Council is still considering Intro 518, and Amazon is urging customers to contact their Council members.",
+  "s": "The New York City Council is still weighing the bill, with talks among Amazon, labor representatives and council leaders ongoing and possible changes under consideration.",
   "last": "2026-11-19",
   "c": [
    "Amazon",
@@ -1319,17 +1319,43 @@
   "rv": "be9d22830ef1"
  },
  "wing-walmart-drone": {
-  "n": "Wing–Walmart drone delivery",
+  "n": "Wing–Walmart drone delivery expansion",
   "ids": [
-   "a0cdd3528f2e6"
+   "a0cdd3528f2e6",
+   "a7445a06ce8cb"
   ],
   "first": "2026-11-18",
   "co": "Wing",
-  "s": "Wing and Walmart target Salt Lake City service as early as 2027 as part of a plan for more than 270 drone locations nationwide.",
+  "s": "Wing delivers Walmart orders in the Memphis area since Nov. 10, its sixth Walmart metro, while other June-named cities have not started.",
   "last": "2026-11-18",
   "c": [
+   "Industry",
    "Regional"
   ],
-  "rv": "3440cf02059b"
+  "rv": "88b1b8e00126",
+  "cx": {
+   "sig": "88b1b8e00126",
+   "v": 3,
+   "beats": {
+    "a7445a06ce8cb": "Nov. 10: Wing began Walmart drone delivery from three Memphis-area Supercenters; free in the apps, 2.75 lb per flight.",
+    "a0cdd3528f2e6": "Alphabet-owned Wing eyes a Salt Lake City-area Walmart as early as 2027; it and Walmart aim for 270+ locations that year."
+   },
+   "intro": "Wing is expanding drone delivery for Walmart, with Memphis live now and a big 2027 target.",
+   "now": "Memphis is live, Wing's sixth Walmart metro; other June-named cities haven't started. Salt Lake City is eyed for 2027."
+  }
+ },
+ "uber-zipline-drones": {
+  "n": "Uber–Zipline drone delivery",
+  "ids": [
+   "ab904315f1100"
+  ],
+  "first": "2026-11-17",
+  "co": "Zipline",
+  "s": "Uber Eats and Zipline began drone delivery in Spring, Texas on Nov. 17, 2026, with Dallas next and a goal of 1 million daily deliveries by end of 2029.",
+  "last": "2026-11-17",
+  "c": [
+   "Industry"
+  ],
+  "rv": "eabee2a6582a"
  }
 }

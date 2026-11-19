@@ -1,5 +1,5 @@
 {
- "run": "2026-11-19T13:21Z",
+ "run": "2026-11-19T19:10Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -300,6 +300,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing outlines Walmart drone delivery plan for Union Township\" and \"Wing starts Walmart drone delivery in Memphis area, free in apps\"",
+   "ids": [
+    "a679a283e8a36",
+    "a7445a06ce8cb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -390,6 +400,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"NY Post editorial opposes NYC Delivery Protection Act\" and \"Amazon runs in-app notices opposing NYC Delivery Protection Act\"",
+   "ids": [
+    "a748343696456",
+    "a88ad1820dfba"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Wing starts Walmart drone delivery in Ponchatoula, Louisiana\" and \"Wing targets 2027 Walmart drone delivery launch in Salt Lake City\"",
    "ids": [
     "abf82fcdf8fa5",
@@ -420,10 +440,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"Lawmakers urge USPS to restore air transport for island Ground Advantage parcels\"",
+   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"USPS OIG report finds criminal groups recruiting postal employees\"",
    "ids": [
     "ab193e6648b0f",
-    "afeaf1126aec1"
+    "a87c4674dbcf4"
    ],
    "fixed": false
   },
@@ -431,56 +451,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
-   "ids": [
-    "a34d0c6e054ad"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
-   "ids": [
-    "a9262c9dbbf32"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
-   "ids": [
-    "a17c2b53e66e5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-wrong-page",
-   "msg": "Library link lands on the wrong page (redirected to an error page): GLS US fuel surcharge matrix https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf -> https://gls-group.eu/GROUP/en/error/404/",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }
@@ -642,6 +612,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Wing outlines Walmart drone delivery plan for Union Township\" and \"Wing starts Walmart drone delivery in Memphis area, free in apps\"",
+   "ids": [
+    "a679a283e8a36",
+    "a7445a06ce8cb"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon opens Prime Air drone delivery center in Markham, Ill.\" and \"Amazon launches Prime Air drone delivery from Markham, Illinois\"",
    "ids": [
     "a73e290a90706",
@@ -732,6 +712,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"NY Post editorial opposes NYC Delivery Protection Act\" and \"Amazon runs in-app notices opposing NYC Delivery Protection Act\"",
+   "ids": [
+    "a748343696456",
+    "a88ad1820dfba"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Wing starts Walmart drone delivery in Ponchatoula, Louisiana\" and \"Wing targets 2027 Walmart drone delivery launch in Salt Lake City\"",
    "ids": [
     "abf82fcdf8fa5",
@@ -762,10 +752,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"Lawmakers urge USPS to restore air transport for island Ground Advantage parcels\"",
+   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"USPS OIG report finds criminal groups recruiting postal employees\"",
    "ids": [
     "ab193e6648b0f",
-    "afeaf1126aec1"
+    "a87c4674dbcf4"
    ],
    "fixed": false
   },
@@ -773,56 +763,6 @@
    "sev": "high",
    "type": "earnings-sync",
    "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth): https://www.oversight.gov/reports/audit/evaluating-mail-recovery-center-package-growth",
-   "ids": [
-    "r15"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
-   "ids": [
-    "a34d0c6e054ad"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
-   "ids": [
-    "a9262c9dbbf32"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
-   "ids": [
-    "a17c2b53e66e5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-wrong-page",
-   "msg": "Library link lands on the wrong page (redirected to an error page): GLS US fuel surcharge matrix https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf -> https://gls-group.eu/GROUP/en/error/404/",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): GLS US fuel surcharge, ground and priority, Sep 2024 https://gls-us.com/getmedia/3f87caf2-038f-4035-b828-8f8f1d5a333f/GLSUS_Fuel_Surcharge_Ground_Priority_2024_Sept.pdf",
    "ids": [],
    "fixed": false
   }

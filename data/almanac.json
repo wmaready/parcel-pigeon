@@ -154,6 +154,32 @@
  {
   "carrier": "UPS",
   "year": 2027,
+  "kind": "gri",
+  "announced": "2026-11-19",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS posts preview of 2027 Retail Rates starting with Next Day Air Early prices",
+  "details": [
+   "Preview appears to replace the 2026 U.S. 48, Alaska & Hawaii Retail Rates guide, marked updated September 7, 2026",
+   "Preview covers Next Day Air Early prices for zones 102-108 and 124",
+   "Letter rate is $66.85 in zone 102",
+   "Price reaches $1,435.76 for 108 lbs in zone 124",
+   "No effective date appears in the available text",
+   "Applies to Retail Rates customers, including packages processed at The UPS Store and other retail locations",
+   "Earlier guide's rate tables are not on file, so the size of any change cannot be measured"
+  ],
+  "id": "ups-2027-gri-2026-11-19",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:5e7a9caa-cf5d-4f88-aa30-1b4c3241b40d/original/as/preview-retail-rates-us-en.pdf"
+  ],
+  "story": "wa95920935a68",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2027,
   "kind": "price_change",
   "announced": null,
   "effective": "2026-12-21",
@@ -234,6 +260,49 @@
    "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf"
   ],
   "story": "w84705482dd2f",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2027,
+  "kind": "surcharge",
+  "announced": "2026-11-19",
+  "effective": "2026-12-21",
+  "pct": null,
+  "headline": "UPS Ground Saver 2027 card raises delivery area and remote surcharges, adds non-standard charges",
+  "details": [
+   "Delivery area surcharges rise",
+   "Remote surcharges rise",
+   "Card now lists non-standard package charges",
+   "Card now includes a $0.00 Remote AK or HI line"
+  ],
+  "id": "ups-2027-surcharge-2026-12-21",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver",
+   "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf"
+  ],
+  "story": "w213989b643cf",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "USPS",
+  "year": 2027,
+  "kind": "fee",
+  "announced": "2026-11-19",
+  "effective": "2027-01-17",
+  "pct": null,
+  "headline": "Several USPS extra and mailer service fees rise 8.0% to 9.1%",
+  "details": [
+   "Several extra and mailer service fees rise by 8.0 to 9.1 percent",
+   "Service fee changes take effect January 17, 2027"
+  ],
+  "id": "usps-2027-fee-2027-01-17",
+  "sources": [
+   "https://www.federalregister.gov/documents/2026/11/19/2026-23595/domestic-competitive-products-pricing-and-mailing-standards-changes"
+  ],
+  "story": "aa516eddc83e2",
   "conf": "confirmed",
   "auto": true
  },
@@ -792,6 +861,27 @@
  {
   "carrier": "UPS",
   "year": 2026,
+  "kind": "das",
+  "announced": "2026-11-19",
+  "effective": "2026-12-21",
+  "pct": null,
+  "headline": "UPS revises Area Surcharge and zone ZIP lists",
+  "details": [
+   "Area Surcharge ZIP list revised effective December 21, 2026",
+   "Zone ZIP list revised effective December 21, 2026",
+   "Addresses whose Area Surcharge or zone status changes may see higher charges"
+  ],
+  "id": "ups-2026-das-2026-12-21",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+  ],
+  "story": "w50cdb890fc1d",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
   "kind": "deal",
   "date": "2026-01",
   "headline": "UPS and USPS finalize renewed Ground Saver final-mile agreement",
@@ -1104,6 +1194,26 @@
  {
   "carrier": "UPS",
   "year": 2026,
+  "kind": "peak",
+  "announced": null,
+  "effective": "2026-11-22",
+  "pct": null,
+  "headline": "UPS Demand Surcharge information now cites Retail Rates effective November 22, 2026",
+  "details": [
+   "Demand Surcharge information now cites Retail Rates effective November 22, 2026",
+   "Replaces the September 27, 2026 date previously listed"
+  ],
+  "id": "ups-2026-peak-2026-11-22",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+  ],
+  "story": "w50cdb890fc1d",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
   "kind": "program",
   "announced": "2026-01-09",
   "effective": null,
@@ -1121,6 +1231,25 @@
   "conf": "confirmed",
   "note": "The announced date is SCD's report date. Pricing changes from the deal not confirmed.",
   "id": "ups-2026-program-2026-01-09"
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "program",
+  "announced": "2026-10-25",
+  "effective": null,
+  "pct": null,
+  "headline": "UPS sets baseline volume used to determine higher-volume surcharge tiers",
+  "details": [
+   "Baseline volume is used to set the higher-volume tiers of the Demand Surcharge"
+  ],
+  "id": "ups-2026-program-2026-10-25",
+  "sources": [
+   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates"
+  ],
+  "story": "w3357740d1efd",
+  "conf": "confirmed",
+  "auto": true
  },
  {
   "carrier": "UPS",
