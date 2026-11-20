@@ -1,5 +1,5 @@
 {
- "cursor": 39,
+ "cursor": 54,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -345,7 +345,7 @@
    "first": "2026-10-21",
    "n": "LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
    "hash": "468e0a6a5046",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-11-13",
     "pdf": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 553,
+   "fails": 554,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-20"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 553,
+   "fails": 554,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-20"
@@ -602,7 +602,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
    "hash": "bffd7b9dbf5b",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
@@ -613,7 +613,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
    "hash": "23ab895007fa",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
@@ -708,7 +708,7 @@
    "first": "2026-10-21",
    "n": "OneRate-Pricing_2026.pdf",
    "hash": "6c659d266317",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
@@ -1141,7 +1141,7 @@
   "https://shipveho.com/client/terms": {
    "hash": "016c9d745ba3",
    "first": "2026-10-25",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "Veho client terms and conditions",
    "snap": {
     "d": "2026-10-26",
@@ -1151,9 +1151,9 @@
   "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html": {
    "hash": "b1ab54f802c4",
    "first": "2026-10-25",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "DHL Express 2027 U.S. price adjustment",
-   "pic_try": "2026-11-18"
+   "pic_try": "2026-11-20"
   },
   "https://www.fedex.com/en-us/shipping/fedex-smartpost/rates-zones/chart.html": {
    "hash": "881d27575ab8",
@@ -1171,7 +1171,7 @@
   "https://www.fedex.com/en-us/shipping/rate-changes.html": {
    "hash": "b494efbdeb2d",
    "first": "2026-10-25",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "FedEx rate changes page",
    "snap": {
     "d": "2026-11-13",
@@ -1206,13 +1206,13 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
    "hash": "a9929da87903",
    "first": "2026-10-25",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "UPS Ground Saver page",
    "snap": {
-    "d": "2026-11-13",
-    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:61d1d7e3-be9c-4123-ac0c-7f3de0eba68e/original/as/ups-ground-saver-brand-guidelines-us-en.pdf",
-    "txt": "data/snapshots/bff5806b523a/2026-11-13.txt",
-    "prev_d": "2026-10-26"
+    "d": "2026-11-20",
+    "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:b78c0dfe-6ee2-48e8-be76-5f7e472dfab8/original/as/preview-ground-saver-over-1lb-us-en.pdf",
+    "txt": "data/snapshots/bff5806b523a/2026-11-20.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -1492,7 +1492,7 @@
    "first": "2026-10-27",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "hash": "b9c9c052a073",
-   "checked": "2026-11-08",
+   "checked": "2026-11-20",
    "last_try": "2026-11-18",
    "snap": {
     "d": "2026-11-08",
@@ -1500,10 +1500,7 @@
     "txt": "data/snapshots/04e3e48834d1/2026-11-08.txt",
     "prev_d": "2026-11-07"
    },
-   "changed": "2026-11-08",
-   "fails": 5,
-   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectTimeout)",
-   "blocked": true
+   "changed": "2026-11-08"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf": {
    "first": "2026-10-30",
@@ -1566,7 +1563,7 @@
    "first": "2026-10-30",
    "n": "Policy-on-Political-Contributions.pdf",
    "hash": "2146851d55e2",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-10-31",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/10/Policy-on-Political-Contributions.pdf",
@@ -1577,7 +1574,7 @@
    "first": "2026-10-30",
    "n": "CodeConduct-English.pdf",
    "hash": "ac5ec9ac9e3a",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/09/CodeConduct-English.pdf",
@@ -1590,7 +1587,7 @@
    "first": "2026-10-30",
    "n": "Policy-on-Limitation-of-Severance-Benefits.pdf",
    "hash": "be56b4eb3f8b",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "snap": {
     "d": "2026-10-31",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/guidelines/Policy-on-Limitation-of-Severance-Benefits.pdf",
@@ -2326,7 +2323,7 @@
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
    "first": "2026-11-05",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "Financial Highlights Q3 2026 pdf 107.7 KB",
    "snap": {
     "d": "2026-11-05",
@@ -2337,7 +2334,7 @@
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-q3-2026-20261105.pdf": {
    "hash": "87a82c8ddbad",
    "first": "2026-11-05",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "Press release pdf 164.5 KB",
    "snap": {
     "d": "2026-11-13",
@@ -2350,7 +2347,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf": {
    "hash": "29cf733c9f9c",
    "first": "2026-11-05",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "n": "Shipping Deadlines",
    "snap": {
     "d": "2026-11-13",
@@ -2367,14 +2364,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 115,
+   "fails": 116,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-20"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 115,
+   "fails": 116,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-20"
@@ -2468,7 +2465,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 33,
+   "fails": 34,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-20"
@@ -2480,7 +2477,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 33,
+   "fails": 34,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-20"
