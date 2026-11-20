@@ -11,18 +11,59 @@
   "8": "2026-11-09",
   "9": "2026-11-12",
   "10": "2026-11-14",
-  "11": "2026-11-18"
+  "11": "2026-11-18",
+  "12": "2026-11-20"
  },
- "day": "2026-11-18",
+ "day": "2026-11-20",
  "calls": 1,
  "queue": [
   {
-   "n": "ESW (eShopWorld)",
-   "what": "Cross-border direct-to-consumer e-commerce enabler (localized checkout, duty and tax compliance, shipping and returns) with a New York office, owned by Asendia.",
-   "url": "https://www.asendiausa.com/ecommerce/ecommerce-tools",
-   "realm": "3pl",
-   "seg": 11,
-   "found": "2026-11-18"
+   "n": "SkyNet Worldwide Express",
+   "what": "Independently owned international express courier network with a Miami hub and U.S. services since 1972, serving cross-border and e-commerce shippers.",
+   "url": "https://www.skynet.net/about_us",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
+  },
+  {
+   "n": "Singapore Post (SingPost)",
+   "what": "Singapore's national postal and e-commerce logistics operator, which offers U.S.-bound cross-border parcel services such as Speedpost Direct International.",
+   "url": "https://www.singpost.com/business/delivery-solutions/international-delivery/SDI-us",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
+  },
+  {
+   "n": "Poste Italiane",
+   "what": "Italy's national postal and parcel operator, which sends U.S.-bound parcels and offers Poste Delivery International Express for U.S. shipments.",
+   "url": "https://www.cep-research.com/2025/08/22/more-postal-operators-suspend-us-parcel-services/",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
+  },
+  {
+   "n": "Austrian Post (Österreichische Post)",
+   "what": "Austria's national postal and logistics operator, which ships parcels to the U.S. including Puerto Rico and offers the Post Express International product for U.S. shipments.",
+   "url": "https://www.cep-research.com/2025/08/22/more-postal-operators-suspend-us-parcel-services/",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
+  },
+  {
+   "n": "PostNord",
+   "what": "Nordic postal and logistics group (Sweden and Denmark) that sends U.S.-bound commercial parcels.",
+   "url": "https://www.fastcompany.com/91391906/why-germany-italy-have-suspended-shipments-merchandise-u-s-effective-immediately",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
+  },
+  {
+   "n": "Swiss Post",
+   "what": "Switzerland's national postal operator, which provides international parcel and express delivery including U.S.-bound postal goods consignments.",
+   "url": "https://akta.pro/company-profiles/0009z1l/swiss-post",
+   "realm": "global",
+   "seg": 12,
+   "found": "2026-11-20"
   }
  ]
 }

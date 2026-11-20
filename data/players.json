@@ -3880,6 +3880,70 @@
     "https://www.thescxchange.com/articles/7337-project44-gains-80-million-in-latest-funding-round"
    ],
    "enriched": "2026-11-20"
+  },
+  {
+   "id": "esweshopworld",
+   "n": "ESW",
+   "realm": "software",
+   "own": "sub",
+   "tk": null,
+   "parent": "asendia",
+   "hq": "Dublin, Ireland",
+   "yr": "2010",
+   "s": "ESW is a cross-border direct-to-consumer e-commerce enabler that provides localized checkout, payments, duty and tax compliance, shipping and returns services for global brands and retailers.",
+   "al": [
+    "ESW (eShopWorld)",
+    "U.S. Direct E-Commerce Limited",
+    "eShopWorld"
+   ],
+   "src": "https://www.asendia.co.uk/e-commerce/global-digital-e-commerce-solutions",
+   "auto": true,
+   "added": "2026-11-20",
+   "from": "discover",
+   "site": "esw.com",
+   "geo": [
+    -6.26,
+    53.35
+   ],
+   "srcs": [
+    "https://www.asendia.co.uk/e-commerce/global-digital-e-commerce-solutions",
+    "https://www.rte.ie/news/business/2021/0331/1207294-asendia-buys-remaining-stake-in-dublin-based-eshopworld/",
+    "https://www.irishtimes.com/business/2025/04/09/esw-to-cut-up-to-45-roles-at-dublin-head-office-partly-driven-by-ai-efficiencies/"
+   ],
+   "enriched": "2026-11-20",
+   "pending": false
+  },
+  {
+   "id": "yanwenlogistic",
+   "n": "Yanwen Logistics (Beijing Yanwen Logistics Co., Ltd.)",
+   "realm": "global",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Chinese cross-border e-commerce logistics provider that moves parcels to the U.S. and runs its own U.S. sorting centers and last-mile network, Yanwen Express.",
+   "al": [],
+   "src": "https://www.als-int.com/insights/posts/cross-border-ecommerce-last-mile-revolution-us-2026/",
+   "auto": true,
+   "added": "2026-11-20",
+   "from": "discover"
+  },
+  {
+   "id": "ar",
+   "n": "A&R",
+   "realm": "capital",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Consortium member holding 16%.",
+   "al": [],
+   "src": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "auto": true,
+   "added": "2026-11-20",
+   "story": "a318dc3f022f7"
   }
  ],
  "edges": [
@@ -6672,6 +6736,60 @@
    "t": "Participated in $202M Series E",
    "url": "https://markets.financialcontent.com/fourptsmedia.kutv/news/read/41413083/goldman_sachs_leads_$202m_investment_in_project44",
    "story": "a76a20586ecac"
+  },
+  {
+   "a": "asendia",
+   "b": "esweshopworld",
+   "k": "acquired",
+   "y": "2021",
+   "t": "Asendia took full ownership of ESW (majority holder since 2017)",
+   "url": "https://www.asendia.com/asendia-insights/asendia-acquires-full-ownership-of-eshopworld",
+   "story": null
+  },
+  {
+   "a": "advent",
+   "b": "inpost",
+   "k": "acquired",
+   "y": "2026",
+   "t": "Advent International joins consortium that completes InPost acquisition",
+   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "story": "a318dc3f022f7"
+  },
+  {
+   "a": "fedex",
+   "b": "inpost",
+   "k": "acquired",
+   "y": "2026",
+   "t": "FedEx joins consortium that completes InPost acquisition",
+   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "story": "a318dc3f022f7"
+  },
+  {
+   "a": "fedex",
+   "b": "inpost",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx and InPost enter commercial agreements for last-mile delivery in Europe",
+   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "story": "a318dc3f022f7"
+  },
+  {
+   "a": "ar",
+   "b": "inpost",
+   "k": "acquired",
+   "y": "2026",
+   "t": "FedEx-led group buys control of InPost",
+   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "story": "a318dc3f022f7"
+  },
+  {
+   "a": "ppf",
+   "b": "inpost",
+   "k": "sold",
+   "y": "2026",
+   "t": "FedEx-led group buys control of InPost (seller)",
+   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "story": "a318dc3f022f7"
   }
  ],
  "moves": [
@@ -7085,7 +7203,8 @@
   "geodis": "2026-11-19",
   "zonos": "2026-11-19",
   "avalara": "2026-11-19",
-  "project44": "2026-11-20"
+  "project44": "2026-11-20",
+  "esweshopworld": "2026-11-20"
  },
  "facts": {
   "ups": {

@@ -540,7 +540,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding through carrier and retailer launches, while the FAA's Part 108 rule remains unpublished and local opposition to Amazon's Westborough hub has emerged.",
+  "s": "Drone delivery networks keep expanding in Texas and other states, while the FAA's Part 108 rule had not been published as of October 9 coverage.",
   "ids": [
    "g27",
    "g26",
@@ -1026,7 +1026,7 @@
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS published a final rule on Nov. 19, 2026 setting the 5.9% increase for competitive products effective Jan. 17, 2027.",
+  "s": "USPS has set Jan. 17, 2027 for the 11% fuel surcharge and 5.9% average increase, with a July 2027 reevaluation of the surcharge planned.",
   "last": "2026-11-19",
   "c": [
    "USPS"
@@ -1357,5 +1357,23 @@
    "Industry"
   ],
   "rv": "eabee2a6582a"
+ },
+ "robots-leaving-uber-eats": {
+  "n": "Robots leaving Uber platform",
+  "ids": [
+   "a4d6b2f9686dc"
+  ],
+  "first": "2026-11-20",
+  "co": "Uber Eats",
+  "s": "Waymo plans to end its exclusive Uber deal from January 2028 and Serve Robotics will not renew its Uber Eats partnership expiring in 2027.",
+  "last": "2026-11-20",
+  "c": [
+   "Industry"
+  ],
+  "apart": [
+   "amazon-uber-eats-prime",
+   "philly-delivery-robot-tax"
+  ],
+  "rv": "e1ae90cab402"
  }
 }

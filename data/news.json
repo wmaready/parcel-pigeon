@@ -1,5 +1,106 @@
 [
  {
+  "id": "a318dc3f022f7",
+  "date": "2026-11-20",
+  "c": [
+   "Regional",
+   "FedEx"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "Advent, FedEx, A&R and PPF complete InPost acquisition",
+  "sum": "A consortium of Advent International, FedEx, A&R and PPF completed its acquisition of InPost, which is now fully privately owned. The consortium exercised squeeze-out rights over the remaining shares on November 17, after reaching 98.49% ownership. InPost will stay operationally independent under its brand, with headquarters in Poland.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service has been announced. InPost and FedEx have entered commercial agreements that let selected recipients use InPost's last-mile network in Europe.",
+  "why": "InPost runs over 100,000 out-of-home locations, and FedEx is now a 37% co-owner of the consortium that controls the network.",
+  "score": 6,
+  "tie": "Settlement of the public takeover offer took place on September 30, followed by the consortium's rise to 98.49% ownership and its November 17 exercise of squeeze-out rights, according to grafa.com.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-20T13:01:20Z",
+  "src": "Post & Parcel",
+  "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+  "srcs": [
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/"
+   },
+   {
+    "src": "grafa.com",
+    "url": "https://grafa.com/en/news/united-states/inpost-acquisition-completed-consortium-takes-full-ownership"
+   },
+   {
+    "src": "LIGA.net",
+    "url": "https://biz.liga.net/en/transport/news/polish-parcel-locker-operator-inpost-comes-under-control-of-a-consortium-that-includes-fedex"
+   }
+  ],
+  "auto": true,
+  "syn": "InPost S.A. was acquired by a consortium of Advent International, FedEx, A&R and PPF, which completed the deal after settlement of the public takeover offer on September 30. The consortium reached 98.49% ownership after the post-acceptance period and exercised squeeze-out rights over the remaining shares on November 17. InPost will remain operationally independent with its headquarters in Poland and Rafał Brzoska as CEO. The consortium plans to speed up investment in InPost's European out-of-home network, and InPost and FedEx have entered commercial agreements giving selected recipients access to InPost's last-mile network.",
+  "aff": [
+   {
+    "who": "InPost ownership",
+    "what": "Advent International and FedEx each hold 37% of the consortium, A&R holds 16% and PPF holds 10%."
+   },
+   {
+    "who": "FedEx recipients in Europe",
+    "what": "Selected recipients can use InPost's last-mile capabilities and out-of-home infrastructure under commercial agreements."
+   },
+   {
+    "who": "InPost merchants",
+    "what": "The consortium plans more investment in the technology and network, which spans over 100,000 locations."
+   }
+  ],
+  "edge": true
+ },
+ {
+  "id": "a4d6b2f9686dc",
+  "date": "2026-11-20",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "Analysis",
+  "title": "Waymo, Serve Robotics move away from exclusive Uber deals, The Verge reports",
+  "sum": "The Verge reported that Waymo plans to end its exclusive robotaxi partnership with Uber in Austin and Atlanta, with riders able to hail rides in the Waymo app from January 2028. Serve Robotics said it will not renew its Uber Eats partnership when it expires in 2027 and has launched a direct developer API.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to parcel rates or service. Waymo riders in Austin and Atlanta can use the Waymo app directly from January 2028, and Serve's Uber Eats partnership expires in 2027.",
+  "why": "Serve runs more than 2,000 sidewalk robots; its exit from Uber Eats in 2027 points robot delivery toward direct business access instead of delivery apps.",
+  "score": 5,
+  "tie": "The report says Uber's CEO described the Waymo partnership as very strong on an August earnings call, weeks before Waymo's co-CEO said it would end the exclusive deal.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-20T13:02:53Z",
+  "src": "The Verge",
+  "url": "https://www.theverge.com/transportation/1037667/waymo-serve-robotics-ditch-uber-autonomous-partnerships",
+  "srcs": [
+   {
+    "src": "The Verge",
+    "url": "https://www.theverge.com/transportation/1037667/waymo-serve-robotics-ditch-uber-autonomous-partnerships"
+   }
+  ],
+  "auto": true,
+  "thread": "robots-leaving-uber-eats",
+  "syn": "The Verge reported that Waymo and Serve Robotics are walking away from exclusive arrangements with Uber. Waymo co-CEO Tekedra Mawakana said the company would end its exclusive robotaxi partnership in Austin and Atlanta, calling the mixed-fleet experience a \"crapshoot\"; riders can hail driverless rides in the Waymo app from January 2028. Serve, which operates more than 2,000 sidewalk robots, will not renew its Uber Eats deal when it expires in 2027 and launched a direct developer API. Uber said it raised concerns about Serve's operational performance and reliability beginning in early 2026.",
+  "aff": [
+   {
+    "who": "Waymo riders in Austin and Atlanta",
+    "what": "Can hail driverless rides directly in the Waymo app starting January 2028."
+   },
+   {
+    "who": "Uber Eats robot delivery",
+    "what": "Serve Robotics will not renew its partnership when it expires in 2027."
+   },
+   {
+    "who": "Small businesses",
+    "what": "Serve's developer API lets any small business build robot delivery on Serve's fleet, without delivery-app fees of 15 to 30 percent."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
+ },
+ {
   "id": "a004f3480b886",
   "date": "2026-11-19",
   "c": [
@@ -610,6 +711,52 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "af98e1e81204a",
+  "date": "2026-11-19",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Same-day & gig delivery",
+  "kind": "News",
+  "title": "Tractor Supply adds Uber on-demand delivery at nearly 2,500 stores",
+  "sum": "Tractor Supply and Uber Technologies announced that shoppers can now order from nearly 2,500 Tractor Supply stores for on-demand delivery through Uber, Uber Eats and Postmates, according to Retail Dive. The retailer added its store fleet to Instacart's platform over the summer.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Consumers can order pet food, garden and lawn supplies, tools and animal care products from nearly 2,500 Tractor Supply stores for on-demand delivery through Uber, Uber Eats and Postmates. The announcement did not state delivery fees.",
+  "why": "Nearly 2,500 stores gain on-demand delivery, extending the retailer's same-day reach into rural, exurban and suburban communities.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-20T13:03:02Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/small-business/articles/tractor-supply-boosts-same-day-155500128.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/small-business/articles/tractor-supply-boosts-same-day-155500128.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Tractor Supply and Uber Technologies announced that nearly 2,500 Tractor Supply stores are now available for on-demand delivery through Uber, Uber Eats and Postmates, according to Retail Dive. The offering covers pet food, garden and lawn supplies, tools and animal care products, and extends on-demand delivery into rural, exurban and suburban communities. Over the summer, the retailer added its store fleet to Instacart's platform. CEO Hal Lawton said digital sales rose approximately 16% in the quarter.",
+  "aff": [
+   {
+    "who": "Tractor Supply shoppers",
+    "what": "Can order from nearly 2,500 stores for on-demand delivery via Uber, Uber Eats and Postmates."
+   },
+   {
+    "who": "Rural, exurban and suburban communities",
+    "what": "Gain on-demand delivery of Tractor Supply products through the Uber partnership."
+   },
+   {
+    "who": "Uber users",
+    "what": "Get access to Tractor Supply's product assortment on the Uber platforms."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "w213989b643cf",
@@ -2235,7 +2382,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-20",
   "unconf": true
  },
  {
@@ -2335,7 +2482,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-20",
   "unconf": true
  },
  {
@@ -2529,7 +2676,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-20",
   "unconf": true
  },
  {
@@ -2980,7 +3127,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-20",
   "unconf": true
  },
  {
@@ -3219,7 +3366,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-20",
   "unconf": true
  },
  {
@@ -3634,18 +3781,18 @@
    "Amazon"
   ],
   "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Spring, Texas resident blames Amazon for drone noise; Wing flies nearby",
-  "sum": "A Spring, Texas resident told Chron that about a dozen delivery drones fly over her Bridgestone neighborhood daily, and Chron identified them as Amazon's. DroneXL reported on Nov. 13 that Amazon lists no Prime Air site near Bridgestone, while Wing has flown Walmart orders from a Supercenter about 5 miles away since July.",
+  "kind": "Analysis",
+  "title": "Spring, Texas drone noise complaint names Amazon; Wing flies nearby",
+  "sum": "A Spring, Texas resident told Chron about a dozen delivery drones fly over her home daily, and Chron identified them as Amazon's. DroneXL reported that Amazon lists no Houston-area Prime Air site near the neighborhood, while Wing has flown Walmart orders from a Supercenter about 5 miles away since July.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to rates or service. The report concerns noise complaints and which operator's drones fly over a Houston-area neighborhood.",
-  "why": "It shows how drone delivery noise complaints can be hard to attribute as Amazon and Wing both hold FAA approvals for Houston-area flights.",
-  "score": 4,
-  "tie": null,
+  "plain": "No change to rates or service for shippers. The report concerns noise from drone delivery over a Houston-area neighborhood and which operator is flying there.",
+  "why": "Shows how drone delivery near homes draws noise complaints; FAA approvals cover up to 1,000 flights a day per Amazon hub and 75 Wing nests in Houston.",
+  "score": 5,
+  "tie": "DroneXL reported that Amazon was flying from Markham, Illinois by October 26 and from Nampa, Idaho since October 30, which its public location list does not yet reflect.",
   "act": null,
   "dates": [],
-  "added": "2026-11-13T23:43:43Z",
+  "added": "2026-11-20T13:02:15Z",
   "src": "DroneXL",
   "url": "https://dronexl.co/2026/11/13/amazon-drone-noise-spring-texas-wing-walmart-richmond-hub/",
   "srcs": [
@@ -3656,23 +3803,22 @@
   ],
   "auto": true,
   "ann": "2026-11-13",
-  "new": "A Houston-area noise complaint shows overlapping Amazon and Wing approvals; the sources report no change to shipper rates or service.",
-  "syn": "DroneXL reported on Nov. 13 on a Chron account from a Spring, Texas resident who says about a dozen drones fly over her Bridgestone home daily; Chron identified them as Amazon's. Amazon's public list names only Richmond, about 30 miles away, for Houston, while an FAA decision from Feb. 5 covers six Houston-area Amazon hubs, including one on FM 1960 about 6.7 miles away that DroneXL found no sign was operating. Wing has flown Walmart orders from a Spring Supercenter about 5 miles away since July. Amazon told Chron the sound is minimal and typically lasts about 30 seconds.",
+  "new": "A Spring, Texas noise complaint raises the question of whether Amazon or Wing drones fly there, per DroneXL; there is no change to shipper rates or service.",
+  "syn": "Chron published a Spring, Texas resident's account on November 13 saying about a dozen delivery drones pass over her home daily, and identified them as Amazon's. DroneXL reported that Amazon's public list names only a Richmond, Texas site for Houston, about 30 miles from the neighborhood. It added that Wing has flown Walmart orders from a Supercenter about 5 miles away since July. The FAA's February 5 decision covers six Amazon Houston-area hubs, including one on FM 1960 about 6.7 miles from the neighborhood that Amazon's list omits.",
   "aff": [
    {
-    "who": "Bridgestone residents, Spring TX",
-    "what": "A resident reports about a dozen drone flights a day; operator not confirmed by the sources."
+    "who": "Spring, Texas residents",
+    "what": "One resident reports about a dozen drone overflights a day; DroneXL says the operator is not confirmed in the public record."
    },
    {
     "who": "Amazon Prime Air in Houston",
-    "what": "Lists Richmond only; FAA decision covers six Houston-area hubs at up to 1,000 flights a day each."
+    "what": "FAA approved six Houston-area hubs at up to 1,000 flights a day each; Amazon's list shows only Richmond."
    },
    {
     "who": "Wing and Walmart in Houston",
-    "what": "Wing added eight Houston-area Walmart stores in July; FAA decision allows up to 75 nests."
+    "what": "Wing's FAA decision of August 13 allows up to 75 nests across ten counties at 400 deliveries a day each."
    }
   ],
-  "edge": true,
   "exclusive": true
  },
  {
@@ -4818,37 +4964,41 @@
   "c": [
    "USPS"
   ],
-  "cat": "Postal",
+  "cat": "Fees & rules",
   "kind": "News",
-  "title": "Small sellers rethink free shipping as USPS plans 11% fuel surcharge",
-  "sum": "Small online sellers are raising free-shipping minimums, charging for returns and absorbing higher label costs as USPS moves to make its fuel surcharge permanent, FreightWaves reported. USPS filed notice Nov. 12 to replace the 8% charge added in April with an 11% fuel surcharge on Jan. 17, with an average 5.9% price increase on the same day, pending Postal Regulatory Commission review.",
+  "title": "Small sellers rework free shipping as USPS sets 11% fuel fee",
+  "sum": "Small online sellers are raising free-shipping minimums, charging for returns and absorbing label costs as USPS moves to make its fuel surcharge permanent, FreightWaves reported. USPS filed notice Nov. 12 to replace the 8% charge with an 11% surcharge on Jan. 17, the same day prices for four package services rise an average of 5.9%.",
   "imp": "up",
   "lvl": 3,
-  "plain": "From Jan. 17, USPS would charge an 11% fuel surcharge in place of the 8% charge and raise Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select prices an average of 5.9%, pending Postal Regulatory Commission review.",
-  "why": "Small sellers face an 11% USPS fuel surcharge and a 5.9% average increase from Jan. 17, and some are raising free-shipping minimums.",
+  "plain": "On Jan. 17, USPS replaces the 8% fuel charge with an 11% surcharge on Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select, and raises those prices an average of 5.9%. Some small sellers are changing free-shipping thresholds and return policies in response.",
+  "why": "USPS's 11% fuel surcharge and 5.9% average increase on Jan. 17 reach small sellers already reporting higher label costs.",
   "score": 6,
-  "tie": "USPS added the 8% charge on package prices in April 2026 after proposing it in March, and the Nov. 12 filing would convert it into an 11% fuel surcharge.",
+  "tie": "USPS proposed the 8% fuel charge in March and it took effect April 26, before the Nov. 12 filing to make an 11% surcharge permanent.",
   "act": "2027-01-17",
   "dates": [
    {
     "d": "2027-01-17",
-    "w": "USPS 11% fuel surcharge replaces 8% charge on package services",
+    "w": "USPS 11% fuel surcharge replaces 8% charge",
     "imp": "up",
     "fx": null
    },
    {
     "d": "2027-01-17",
-    "w": "USPS average 5.9% increase on four package products; holiday prices end",
+    "w": "USPS package prices rise 5.9% on average",
     "imp": "up",
-    "fx": null
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
    }
   ],
-  "added": "2026-11-16T20:36:11Z",
-  "src": "FreightWaves",
+  "added": "2026-11-20T13:00:57Z",
+  "src": "FreightWaves Parcel",
   "url": "https://www.freightwaves.com/news/small-sellers-free-shipping-usps-fuel-surcharge",
   "srcs": [
    {
-    "src": "FreightWaves",
+    "src": "FreightWaves Parcel",
     "url": "https://www.freightwaves.com/news/small-sellers-free-shipping-usps-fuel-surcharge"
    },
    {
@@ -4878,24 +5028,24 @@
   ],
   "auto": true,
   "ann": "2026-11-12",
-  "new": "Seller accounts and survey data show small shippers raising free-shipping minimums and absorbing label costs ahead of Jan. 17, and USPS said it will reevaluate the surcharge in July 2027.",
-  "syn": "USPS filed notice Nov. 12 to convert the 8% charge it added to package prices in April into an 11% fuel surcharge on Jan. 17, according to its price announcement. The same day, prices for Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select would rise an average of 5.9%, subject to Postal Regulatory Commission review. FreightWaves reported that small sellers are responding by raising free-shipping minimums, charging for returns or absorbing label costs, and that one seller saw conversion fall by more than half after raising a minimum. USPS said it will reevaluate the surcharge in July 2027 based on fuel prices in the first half of the year.",
+  "new": "The coverage adds how small sellers are responding and survey data on shipping costs, with no change to the USPS prices or Jan. 17 date already reported.",
+  "syn": "USPS filed notice Nov. 12 to convert the 8% fuel charge it added in April into an 11% surcharge on Jan. 17, the same day prices for Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select rise an average of 5.9%. FreightWaves reported that small sellers are responding by raising free-shipping minimums, dropping flat fees or deducting return shipping from refunds. One seller said conversion fell by more than half after raising its minimum, and a ShipStation survey found 52% of small businesses named rising carrier fees and fuel surcharges as a major difficulty. USPS said it will reevaluate the surcharge in July 2027.",
   "aff": [
    {
-    "who": "Priority Mail, Priority Mail Express, Ground Advantage and P",
-    "what": "11% fuel surcharge replaces the 8% charge and prices rise an average of 5.9% on Jan. 17, pending review."
+    "who": "Priority Mail, Ground Advantage and Parcel Select shippers",
+    "what": "11% fuel surcharge replaces the 8% charge and prices rise an average of 5.9% on Jan. 17."
    },
    {
     "who": "Small online sellers",
-    "what": "Some raised free-shipping minimums to $100 from $75, switched to calculated shipping or deduct return shipping from refunds."
+    "what": "Some raise free-shipping minimums, charge for returns or absorb label costs; one reverted after conversion fell by more than half."
    },
    {
-    "who": "Retail Ground Advantage holiday prices",
-    "what": "Packages up to 3 pounds cost 50 cents more in Zones 1-4 and 75 cents more in Zones 5-9 from Oct. 4 through Jan. 17."
+    "who": "Small-business shippers",
+    "what": "In a ShipStation survey, 52% named carrier fees and fuel surcharges a major difficulty, up from 31%."
    },
    {
-    "who": "Small-business shipping costs",
-    "what": "In a September survey, 52% named rising carrier fees and fuel surcharges as a major difficulty, up from 31%."
+    "who": "Holiday-priced Ground Advantage packages",
+    "what": "Holiday prices run from Oct. 4 through Jan. 17, when the surcharge change takes effect."
    }
   ]
  },
@@ -5175,19 +5325,19 @@
   ],
   "cat": "Pricing & GRI",
   "kind": "News",
-  "title": "USPS proposes 5.9% average increase, permanent 11% fuel surcharge",
-  "sum": "The U.S. Postal Service filed a proposal with the Postal Regulatory Commission on Thursday, Nov. 12, 2026, to raise prices 5.9% on average for four domestic package services. It also proposed making an 11% fuel surcharge permanent. Both changes are scheduled for Jan. 17, 2027, after the Board of Governors approved them.",
+  "title": "USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17",
+  "sum": "The U.S. Postal Service filed a proposal with the Postal Regulatory Commission on Nov. 12, 2026 to raise prices 5.9% on average for four domestic package services and make a fuel surcharge permanent at 11%. The Board of Governors approved the changes, which are scheduled for Jan. 17, 2027.",
   "imp": "up",
   "lvl": 3,
-  "plain": "If the Postal Regulatory Commission's review leaves the plan unchanged, domestic Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select prices rise 5.9% on average from Jan. 17, 2027. An 11% fuel surcharge applies from the same date.",
-  "why": "The 5.9% average applies to Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select, and the surcharge would become permanent.",
-  "score": 7,
-  "tie": "The surcharge began in April 2026 as a temporary 8% transportation-related increase, and the proposal would add 3 percentage points to it and make it permanent.",
+  "plain": "If the Postal Regulatory Commission's review clears the proposal, prices for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select would rise 5.9% on average from Jan. 17, 2027. An 11% fuel surcharge would replace the temporary 8% charge.",
+  "why": "The increase covers four domestic package services and makes the fuel charge permanent at 11%, according to USPS.",
+  "score": 8,
+  "tie": "USPS added the fuel-related charge as an 8% transportation-related increase in April 2026 and raised the Forever stamp to 82 cents from 78 cents in July 2026, according to the articles.",
   "act": "2027-01-17",
   "dates": [
    {
     "d": "2027-01-17",
-    "w": "USPS 5.9% average increase on four domestic package services",
+    "w": "USPS 5.9% avg increase on four domestic package services",
     "imp": "up",
     "fx": {
      "t": "gri",
@@ -5202,7 +5352,7 @@
     "fx": null
    }
   ],
-  "added": "2026-11-20T01:51:14Z",
+  "added": "2026-11-20T13:00:27Z",
   "src": "Supply Chain Dive",
   "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/",
   "srcs": [
@@ -5219,6 +5369,10 @@
     "url": "https://www.logisticsmgmt.com/article/usps_is_set_to_make_fuel_surcharge_permanent_raise_parcel_prices_5.9_in_2027"
    },
    {
+    "src": "The Hill",
+    "url": "https://thehill.com/business/6219224-usps-fuel-surcharge-2027/"
+   },
+   {
     "src": "NewsNation",
     "url": "https://www.newsnationnow.com/business/your-money/usps-fuel-surcharge-price-increase-2027/"
    }
@@ -5227,23 +5381,23 @@
   "ann": "2026-11-12",
   "thread": "usps-fuel-surcharge",
   "upd": 3,
-  "new": "These reports add that the surcharge is the April 8% increase, which was set to expire Jan. 17, becoming permanent at 11%, that international services rise 7.9% on average, and that USPS plans to revisit the surcharge in July 2027, which gives shippers more detail on what changes on Jan. 17.",
-  "syn": "The U.S. Postal Service filed a proposal with the Postal Regulatory Commission on Thursday, Nov. 12, 2026, after its Board of Governors approved it. The proposal would raise prices 5.9% on average for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select, and make an 11% fuel surcharge permanent, both from Jan. 17, 2027. The surcharge began in April as a temporary 8% transportation-related increase set to expire Jan. 17, and USPS cited rising fuel prices for the 3-point increase. The agency plans to revisit the surcharge in July 2027 using fuel costs from the first six months of that year.",
+  "new": "The articles add that the surcharge began in April as a temporary 8% charge set to expire Jan. 17, that USPS plans to revisit it in July 2027, and that international services would rise 7.9% on average with a reworked country rate group structure, so international shippers face a price rise but no surcharge.",
+  "syn": "The U.S. Postal Service filed notice with the Postal Regulatory Commission on Thursday, Nov. 12, 2026, after its Board of Governors approved the changes. It proposes a 5.9% average price increase for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select. It also proposes an 11% permanent fuel surcharge, up from the 8% transportation-related increase introduced in April, with both changes scheduled for Jan. 17, 2027. The agency said it plans to revisit the surcharge in July 2027, and the filing also covers international prices and new fees.",
   "aff": [
    {
     "who": "Domestic package shippers",
-    "what": "Priority Mail Express, Priority Mail, Ground Advantage and Parcel Select prices rise 5.9% on average from Jan. 17, 2027."
+    "what": "Prices for four services would rise 5.9% on average on Jan. 17, 2027, pending Postal Regulatory Commission review."
    },
    {
-    "who": "Shippers paying the fuel surcharge",
-    "what": "The surcharge goes from a temporary 8% to a permanent 11% on Jan. 17, 2027; it does not apply to international products."
+    "who": "Domestic package shippers (fuel)",
+    "what": "An 11% fuel surcharge would replace the temporary 8% charge, which was set to expire Jan. 17."
    },
    {
     "who": "International shippers",
-    "what": "Priority Mail Express International, Priority Mail International, First-Class Package International Service and International Priority Airmail rise 7.9% on average."
+    "what": "Four international services would rise 7.9% on average; the surcharge would not apply to international products."
    },
    {
-    "who": "Competitive special services users",
+    "who": "Special services users",
     "what": "USPS plans to adjust prices on some competitive special services and introduce new fees."
    }
   ]
@@ -13345,142 +13499,6 @@
    }
   ],
   "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a9f4ed4757f82",
-  "date": "2026-10-29",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Earnings & markets",
-  "kind": "News",
-  "title": "Amazon Q3 shipping costs rise 11% as units shipped grow 12%",
-  "sum": "Amazon reported third-quarter revenue of $201.9 billion, up 12%, and operating income of $28.1 billion on Thursday. Shipping costs rose 11% year over year against 12% growth in units shipped. CEO Andy Jassy said transportation cost pressure is expected to continue into the fourth quarter.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No new rate or fee change was announced. Amazon said its existing fuel surcharge for Fulfillment by Amazon sellers does not fully offset higher fuel and linehaul costs.",
-  "why": "Amazon said fuel and linehaul costs will weigh more in Q4 and that its FBA fuel surcharge does not fully offset them.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-10-30T05:41:14Z",
-  "src": "FreightWaves",
-  "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3",
-  "srcs": [
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/amazon-battles-freight-inflation-as-shipping-costs-jump-11-in-q3"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/amazon-retailers-paid-more-for-freight-in-3q"
-   }
-  ],
-  "auto": true,
-  "syn": "Amazon reported third-quarter revenue of $201.9 billion, up 12% from $180.2 billion, and operating income of $28.1 billion, up 61%, after the market closed on Thursday. Shipping costs rose 11% year over year, compared with 12% growth in units shipped, and 8% excluding fuel and linehaul inflation. CFO Brian Olsavsky cited higher fuel and line haul rates. Jassy said the impact would be somewhat higher in the fourth quarter than in the third, and that the fuel surcharge Amazon applied earlier this year to Fulfillment by Amazon sellers does not fully offset the increases.",
-  "aff": [
-   {
-    "who": "Fulfillment by Amazon sellers",
-    "what": "A fuel surcharge introduced earlier this year remains; Jassy said it does not fully offset Amazon's higher costs."
-   },
-   {
-    "who": "Amazon's transportation costs",
-    "what": "Fuel and linehaul pressure is expected to be somewhat higher in Q4 than in Q3, according to Jassy."
-   },
-   {
-    "who": "Prime members",
-    "what": "Amazon said it delivered more than 1.5 billion items same-day or overnight in the quarter ended Sept. 30."
-   }
-  ]
- },
- {
-  "id": "aa86ca7d6b23c",
-  "date": "2026-10-29",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Manna moves HQ to Tulsa, pauses European expansion",
-  "sum": "Irish drone delivery firm Manna has moved CEO Bobby Healy and its headquarters to Oklahoma and plans to hire 1,000 people over three years, The Drone Girl reported. Healy said Manna has paused European operations because it believes U.S. operations are open, with the FAA preparing to finalize Part 108.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers. Manna's Tulsa bases are capable of 24 deliveries per hour, according to the company.",
-  "why": "A drone delivery firm with nearly 400,000 commercial flights is shifting its operations and manufacturing to the U.S. ahead of the FAA's Part 108 BVLOS rule.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-02T17:22:04Z",
-  "src": "The Drone Girl",
-  "url": "https://www.thedronegirl.com/2026/11/02/why-manna-paused-europe-to-go-all-in-on-us-drone-delivery/amp/",
-  "srcs": [
-   {
-    "src": "The Drone Girl",
-    "url": "https://www.thedronegirl.com/2026/11/02/why-manna-paused-europe-to-go-all-in-on-us-drone-delivery/amp/"
-   }
-  ],
-  "auto": true,
-  "syn": "Irish drone delivery company Manna has relocated CEO Bobby Healy to Oklahoma, where its new headquarters and manufacturing are based, The Drone Girl reported. The company plans to hire 1,000 people over the next three years and has paused everything in Europe, Healy said. He cited the FAA's expected finalization of 14 CFR Part 108, the framework for routine beyond visual line of sight drone operations, proposed in August 2025. Manna has opened three additional operational bases in Tulsa, each capable of 24 deliveries per hour, and has nearly 400,000 commercial delivery flights.",
-  "aff": [
-   {
-    "who": "Manna European operations",
-    "what": "Paused; no current plans to expand across Europe, per Healy."
-   },
-   {
-    "who": "Tulsa, Oklahoma",
-    "what": "New HQ, manufacturing and three additional operational bases; 1,000 jobs planned over three years."
-   },
-   {
-    "who": "Drone delivery operators",
-    "what": "FAA Part 108 would replace case-by-case BVLOS waivers under Part 107, per the article."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "aaeb8e06115e4",
-  "date": "2026-10-29",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Zipline says new flight software cuts drone sound exposure 68% per flight",
-  "sum": "Zipline said its sound-optimized dynamic flying technology is now running across its entire drone fleet. The company said that, with other hardware and software changes, it cut overall sound exposure per flight by 68% and peak-volume noise by 24% versus its 2025 fleet, based on internal modeling, DroneDJ reported.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. Zipline said its drones now fly with less noise and shorter flight times, but the figures come from its own modeling.",
-  "why": "Noise complaints about drone delivery, such as those in Richardson, Texas, are a community concern as services expand into more US neighborhoods.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T16:59:36Z",
-  "src": "DroneDJ",
-  "url": "https://dronedj.com/2026/10/28/delivery-drone-noise-zipline-software/",
-  "srcs": [
-   {
-    "src": "DroneDJ",
-    "url": "https://dronedj.com/2026/10/28/delivery-drone-noise-zipline-software/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-29",
-  "new": "Zipline reported a fleet-wide software update that it said cuts per-flight sound exposure by 68%, addressing community noise concerns, with no change to shipper rates or service.",
-  "syn": "Zipline announced that its sound-optimized dynamic flying technology now runs across its whole drone fleet. The system uses onboard weather sensors and a custom acoustics model to adjust speed, altitude and movements in real time. Zipline said that, combined with other upgrades, it reduced overall sound exposure per flight by 68% and peak-volume noise by 24% versus its 2025 fleet, according to internal modeling rather than independent measurement. DroneDJ noted that noise has become a source of complaint in some communities as drone delivery expands.",
-  "aff": [
-   {
-    "who": "Residents near drone routes",
-    "what": "Zipline said sound exposure per flight is down 68% and peak noise down 24% versus its 2025 fleet (internal modeling)."
-   },
-   {
-    "who": "Zipline deliveries",
-    "what": "Zipline said average flight time is 53 seconds shorter and energy use per flight is 21% lower."
-   }
-  ],
   "exclusive": true
  }
 ]

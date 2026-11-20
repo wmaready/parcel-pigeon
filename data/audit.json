@@ -1,5 +1,5 @@
 {
- "run": "2026-11-20T11:25Z",
+ "run": "2026-11-20T13:05Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -12,82 +12,88 @@
   }
  ],
  "clock_unlink": [],
- "link_cursor": 550,
- "doc_cursor": 74,
+ "link_cursor": 590,
+ "doc_cursor": 104,
  "checked_pairs": [
-  "e57a450403da",
-  "21b6ce5b1d5c",
-  "bb9d125105c0",
-  "5b4926c2c24d",
-  "94d1ac334f4e",
-  "a625dd5720a9",
-  "f7e5ad4ade89",
-  "f6cd68cb0017",
-  "4621e9e86574",
-  "02094abee757",
   "5f83fff4b0b8",
-  "2988f97e477e",
-  "558e73ee4967",
-  "5423312764d9",
-  "6157952e9b11",
-  "4df67f9b3718",
-  "8e54de96bdda",
-  "803f70b9b286",
-  "4e8faef9252d",
-  "61ba27c59dab",
-  "cf51efba6984",
-  "6bef0a5868e5",
-  "a2bd3ac3da71",
-  "62d4a60b8bb3",
-  "2f24e1d5d0e2",
-  "d72a23005aba",
-  "14a3d7429698",
-  "e4c3917d270c",
-  "17a5c7c64a5b",
-  "70042e1b5ea7",
-  "457e37db5347",
-  "c1419d4e7cb6",
-  "454e4f8f6a6b",
-  "1bc66c00eda3",
-  "f3a106e02077",
-  "0cae9f6a1079",
   "cc68d548ad73",
+  "d4258517f723",
+  "0ee2e50bd13d",
+  "f6cd68cb0017",
+  "2361691e9a1b",
+  "62cb3ae5df27",
+  "e4c3917d270c",
+  "94d1ac334f4e",
+  "5b4926c2c24d",
+  "ed50bd5ade56",
+  "dbb89994655f",
   "b8d8ea16bc5f",
-  "9c2deb73a3b0",
-  "ab39dca4b258",
-  "7e4a0a07ad2f",
+  "4df67f9b3718",
   "c61435232c81",
+  "4d5dedc8cd29",
+  "60030262fcea",
+  "0b3d6d7565cd",
+  "5423312764d9",
+  "4e8faef9252d",
+  "7e4a0a07ad2f",
   "0b8aff140a01",
   "5e124f1a493a",
-  "2361691e9a1b",
-  "f84529cd7bc9",
-  "4d5dedc8cd29",
-  "6004808294c5",
-  "ee73f1e9bc3e",
-  "d73b3089178a",
-  "a8c41927e218",
-  "b54077ea2f7b",
-  "0ca410a667f8",
-  "62cb3ae5df27",
-  "5effb73bc21d",
-  "c3d4d65922ea",
-  "900f16306b29",
+  "d72a23005aba",
+  "1bc66c00eda3",
   "c74456d2bddc",
-  "60030262fcea",
-  "7679c499e09c",
-  "76e751c6f45c",
-  "ed50bd5ade56",
-  "d46a0aebc57e",
-  "0ee2e50bd13d",
+  "6157952e9b11",
+  "9c2deb73a3b0",
+  "d73b3089178a",
+  "8e54de96bdda",
+  "6004808294c5",
   "a3c486ca67d3",
-  "dbb89994655f",
-  "87f9bbae47ee",
+  "4621e9e86574",
+  "33ac0386781a",
+  "ee73f1e9bc3e",
+  "73dcfc31b988",
+  "7679c499e09c",
+  "f3a106e02077",
+  "a625dd5720a9",
+  "2128fca52dd5",
   "de313bc51fd7",
-  "bd74f39e4a2a",
+  "f84529cd7bc9",
+  "2f24e1d5d0e2",
+  "457e37db5347",
+  "21b6ce5b1d5c",
+  "cf51efba6984",
+  "803f70b9b286",
+  "489e2f32f008",
+  "87f9bbae47ee",
+  "5effb73bc21d",
+  "d46a0aebc57e",
+  "bb9d125105c0",
   "a74a789cafba",
+  "e57a450403da",
+  "a2bd3ac3da71",
+  "c3d4d65922ea",
+  "02094abee757",
+  "c1419d4e7cb6",
+  "558e73ee4967",
   "006e0976c74d",
-  "0b3d6d7565cd",
-  "73dcfc31b988"
+  "ce34a6cdd2da",
+  "62d4a60b8bb3",
+  "76e751c6f45c",
+  "a8c41927e218",
+  "6bef0a5868e5",
+  "0cae9f6a1079",
+  "b54077ea2f7b",
+  "17a5c7c64a5b",
+  "bd74f39e4a2a",
+  "454e4f8f6a6b",
+  "2988f97e477e",
+  "ab39dca4b258",
+  "14a3d7429698",
+  "61ba27c59dab",
+  "900f16306b29",
+  "f7e5ad4ade89",
+  "d6deca8f0830",
+  "0ca410a667f8",
+  "70042e1b5ea7"
  ],
  "issues": [
   {
@@ -156,7 +162,7 @@
   {
    "sev": "low",
    "type": "primary-not-first",
-   "msg": "Carrier source USPS moved ahead of press coverage on \"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\"",
+   "msg": "Carrier source USPS moved ahead of press coverage on \"Small sellers rework free shipping as USPS sets 11% fuel fee\"",
    "ids": [
     "ab193e6648b0f"
    ],
@@ -165,7 +171,7 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes 5.9% average increase, permanent 11% fuel surcharge\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
    "ids": [
     "af7ecf517c18f"
    ],
@@ -421,13 +427,60 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"USPS OIG report finds criminal groups recruiting postal employees\"",
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
    "ids": [
-    "ab193e6648b0f",
-    "a87c4674dbcf4"
+    "a34d0c6e054ad"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+   "ids": [
+    "a17c2b53e66e5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
+   "ids": [
+    "36"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, the 39,400 ZIP codes, or the 99.9% demand target by 2029. This line is unsupported by the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. This line is unsupported by the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, Macy's, Anthropologie or VF joining, or DoorDash's own drones. This line is unsupported by the stories.",
+   "ids": [],
    "fixed": false
   }
  ],
@@ -471,7 +524,7 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes 5.9% average increase, permanent 11% fuel surcharge\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
    "ids": [
     "af7ecf517c18f"
    ],
@@ -709,13 +762,60 @@
    "fixed": false
   },
   {
-   "sev": "high",
-   "type": "superseded",
-   "msg": "\"Small sellers rethink free shipping as USPS plans 11% fuel surcharge\" may be out of date: newer story \"USPS OIG report finds criminal groups recruiting postal employees\"",
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
    "ids": [
-    "ab193e6648b0f",
-    "a87c4674dbcf4"
+    "a34d0c6e054ad"
    ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
+   "ids": [
+    "a9262c9dbbf32"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+   "ids": [
+    "a17c2b53e66e5"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "link-broken",
+   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
+   "ids": [
+    "36"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, the 39,400 ZIP codes, or the 99.9% demand target by 2029. This line is unsupported by the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. This line is unsupported by the stories.",
+   "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "brief-stale",
+   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, Macy's, Anthropologie or VF joining, or DoorDash's own drones. This line is unsupported by the stories.",
+   "ids": [],
    "fixed": false
   }
  ]
