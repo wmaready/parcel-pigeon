@@ -3882,6 +3882,22 @@
    "pending": true,
    "added": "2026-11-19",
    "story": "a76a20586ecac"
+  },
+  {
+   "id": "smartwayslogis",
+   "n": "Smartways Logistics",
+   "realm": "cold",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": "Macquarie Park, Australia",
+   "yr": null,
+   "s": "Macquarie Park, Australia-based provider of time-critical healthcare logistics in Australia and New Zealand.",
+   "al": [],
+   "src": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
+   "auto": true,
+   "added": "2026-11-17",
+   "story": "a0f33fb01d0d5"
   }
  ],
  "edges": [
@@ -6638,6 +6654,24 @@
    "t": "UPS owns gig delivery subsidiary Roadie",
    "url": "https://finance.yahoo.com/small-business/articles/ups-teamsters-contract-expires-2028-153400844.html",
    "story": "a8cbae3d2cccf"
+  },
+  {
+   "a": "instacart",
+   "b": "grubhub",
+   "k": "partner",
+   "y": "2026",
+   "t": "Instacart and Grubhub partner on grocery delivery",
+   "url": "https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
+   "story": "a379658dabd2a"
+  },
+  {
+   "a": "ups",
+   "b": "smartwayslogis",
+   "k": "acquired",
+   "y": "2026",
+   "t": "UPS buys Smartways Logistics",
+   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
+   "story": "a0f33fb01d0d5"
   }
  ],
  "moves": [

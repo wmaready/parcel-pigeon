@@ -1,13 +1,13 @@
 {
- "run": "2026-11-19T21:29Z",
+ "run": "2026-11-20T01:55Z",
  "clock_add": [],
  "clock_link": [
   {
-   "clock": "xw213989b643cf0",
+   "clock": "xabe32fb4690c90",
    "story": "wa95920935a68"
   },
   {
-   "clock": "xw213989b643cf0",
+   "clock": "xabe32fb4690c90",
    "story": "wf5014bc150e9"
   }
  ],
@@ -120,7 +120,7 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates\" to rate clock entry 2026-12-21 \"UPS: Rate card effective date (2026 rates replaced by 2027 rates)\"",
+   "msg": "Linked \"UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates\" to rate clock entry 2026-12-21 \"UPS minimums rise with 2027 Daily Rates; Ground to $12.70\"",
    "ids": [
     "wa95920935a68"
    ],
@@ -129,7 +129,7 @@
   {
    "sev": "med",
    "type": "date-not-on-clock",
-   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS: Rate card effective date (2026 rates replaced by 2027 rates)\"",
+   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS minimums rise with 2027 Daily Rates; Ground to $12.70\"",
    "ids": [
     "wf5014bc150e9"
    ],
@@ -147,7 +147,7 @@
   {
    "sev": "low",
    "type": "primary-not-first",
-   "msg": "Carrier source Business Wire moved ahead of press coverage on \"UPS agrees to acquire Smartways Logistics in Australia, NZ\"",
+   "msg": "Carrier source Business Wire moved ahead of press coverage on \"UPS agrees to acquire Smartways Logistics in Australia and New Zealand\"",
    "ids": [
     "a0f33fb01d0d5"
    ],
@@ -165,7 +165,7 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS files 5.9% average rate increase, permanent 11% fuel surcharge\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes 5.9% average increase, permanent 11% fuel surcharge\"",
    "ids": [
     "af7ecf517c18f"
    ],
@@ -263,16 +263,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
-   "ids": [
-    "a9f4ed4757f82",
-    "abfc3f60e3202"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
    "ids": [
     "aaf63e9db25a0",
@@ -439,13 +429,6 @@
     "a87c4674dbcf4"
    ],
    "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "earnings-sync",
-   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -488,7 +471,7 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS files 5.9% average rate increase, permanent 11% fuel surcharge\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes 5.9% average increase, permanent 11% fuel surcharge\"",
    "ids": [
     "af7ecf517c18f"
    ],
@@ -568,16 +551,6 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon Q3 shipping costs rise 11% as units shipped grow 12%\" and \"Amazon's Q3 shipping costs rise 11% to $28.3B as cost to serve falls\"",
-   "ids": [
-    "a9f4ed4757f82",
-    "abfc3f60e3202"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
    "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
    "ids": [
     "aaf63e9db25a0",
@@ -743,13 +716,6 @@
     "ab193e6648b0f",
     "a87c4674dbcf4"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "earnings-sync",
-   "msg": "FedEx Freight reported on 2026-10-29 (Jun–Sep 2026 transition period) but there is no earnings row, so the Today card and bar graph are not updated",
-   "ids": [],
    "fixed": false
   }
  ]
