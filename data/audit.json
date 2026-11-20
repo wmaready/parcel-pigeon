@@ -1,5 +1,5 @@
 {
- "run": "2026-11-20T13:05Z",
+ "run": "2026-11-20T18:47Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -158,6 +158,15 @@
     "a0f33fb01d0d5"
    ],
    "fixed": true
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\"",
+   "ids": [
+    "a9303a60a74b3"
+   ],
+   "fixed": false
   },
   {
    "sev": "low",
@@ -349,6 +358,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "ids": [
+    "a9303a60a74b3",
+    "af7ecf517c18f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)\"",
    "ids": [
     "w08701235bf24",
@@ -383,6 +402,16 @@
    "ids": [
     "a743e307cb77c",
     "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"DOJ set to review DoorDash's $17bn Instacart deal, Reuters says\" and \"Justice Department to review DoorDash's $17B Instacart deal, sources say\"",
+   "ids": [
+    "a17c2b53e66e5",
+    "aee5be6ce4062"
    ],
    "fixed": false
   },
@@ -425,63 +454,6 @@
     "aa516eddc83e2"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
-   "ids": [
-    "a34d0c6e054ad"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
-   "ids": [
-    "a9262c9dbbf32"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
-   "ids": [
-    "a17c2b53e66e5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
-   "ids": [
-    "36"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, the 39,400 ZIP codes, or the 99.9% demand target by 2029. This line is unsupported by the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. This line is unsupported by the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, Macy's, Anthropologie or VF joining, or DoorDash's own drones. This line is unsupported by the stories.",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -518,6 +490,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\"",
+   "ids": [
+    "a9303a60a74b3"
    ],
    "fixed": false
   },
@@ -684,6 +665,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "ids": [
+    "a9303a60a74b3",
+    "af7ecf517c18f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"UPS raises fuel surcharge percentages for each price band, effective Nov 16, 2026\" and \"UPS raises fuel surcharge table percentages for Nov 16, 2026 (Ground and Domestic Air)\"",
    "ids": [
     "w08701235bf24",
@@ -718,6 +709,16 @@
    "ids": [
     "a743e307cb77c",
     "a258cb77ab792"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"DOJ set to review DoorDash's $17bn Instacart deal, Reuters says\" and \"Justice Department to review DoorDash's $17B Instacart deal, sources say\"",
+   "ids": [
+    "a17c2b53e66e5",
+    "aee5be6ce4062"
    ],
    "fixed": false
   },
@@ -759,63 +760,6 @@
     "a0ef7c3f1b1ff",
     "aa516eddc83e2"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/): https://www.reuters.com/business/dhl-expects-hit-2026-targets-helped-by-peak-end-of-year-demand-despite-high-fuel-2026-11-05/",
-   "ids": [
-    "a34d0c6e054ad"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/): https://www.reuters.com/legal/litigation/amazon-uber-instacart-sue-block-nyc-law-over-delivery-worker-deactivation-2026-10-29/",
-   "ids": [
-    "a9262c9dbbf32"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/): https://www.reuters.com/world/doordash-instacart-merger-be-reviewed-by-doj-sources-say-2026-11-16/",
-   "ids": [
-    "a17c2b53e66e5"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/): https://www.reuters.com/world/us-postal-service-chief-told-associates-he-wants-quit-sources-say-2026-09-16/",
-   "ids": [
-    "36"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: The stories do not mention Amazon mapping its own delivery to 95% of ZIP codes, Project Aurelian, the 39,400 ZIP codes, or the 99.9% demand target by 2029. This line is unsupported by the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: The stories do not mention UPS Protected Delivery, FedEx Authenticated Delivery, the recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. This line is unsupported by the stories.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: The stories do not mention DoorDash's $7.99 courier returns, Macy's, Anthropologie or VF joining, or DoorDash's own drones. This line is unsupported by the stories.",
-   "ids": [],
    "fixed": false
   }
  ]

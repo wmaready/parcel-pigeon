@@ -540,7 +540,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery networks keep expanding in Texas and other states, while the FAA's Part 108 rule had not been published as of October 9 coverage.",
+  "s": "Drone delivery sites keep expanding while the FAA's Part 108 beyond-visual-line-of-sight rule was still unpublished as of the last earlier coverage.",
   "ids": [
    "g27",
    "g26",
@@ -560,7 +560,7 @@
    "a743e307cb77c"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-18",
+  "last": "2026-11-19",
   "c": [
    "Amazon",
    "Industry",
@@ -644,27 +644,31 @@
    "a3a4fa02bef84",
    "aef4d017bab80",
    "ad0e619194837",
-   "a65867ee1ae2e"
+   "a65867ee1ae2e",
+   "a93a4b5f9ae34"
   ],
   "first": "2026-10-13",
-  "s": "The New York City Council is still weighing the bill, with talks among Amazon, labor representatives and council leaders ongoing and possible changes under consideration.",
-  "last": "2026-11-19",
+  "s": "The Delivery Protection Act remains before the New York City Council, with Amazon warning of fee increases of up to $5 per order if it passes.",
+  "last": "2026-11-20",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "d101ea91c6fb",
+  "rv": "bb0617396e99",
   "cx": {
-   "sig": "914432241c40",
+   "sig": "335bcc793491",
    "v": 3,
    "beats": {
-    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong dropped co-sponsorship over small-business job losses; the Law Department is reviewing it.",
-    "ad0e619194837": "Reportedly, Amazon, the National Urban League and a business coalition warned Speaker Menin they could sue if the bill passes as written.",
-    "a65867ee1ae2e": "Amazon told NYC customers the bill could add up to $5 per order, and asked them to contact their Council members."
+    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong pulled co-sponsorship over job losses; the bill would license Amazon's 15 city facilities.",
+    "aef4d017bab80": "FreightWaves says passage by year-end is likely but in amended form; about 100 Amazon DSPs operate in the city.",
+    "ad0e619194837": "Reportedly, Amazon and the National Urban League warned Speaker Menin of a lawsuit if Intro 518 passes as written.",
+    "a65867ee1ae2e": "Amazon told NYC customers Intro 518 could add up to $5 per order and it might move operations outside the city.",
+    "a93a4b5f9ae34": "Lawmakers are weighing a menu of options instead of direct hiring, including UPS, USPS or independent operators."
    },
-   "now": "Intro 518 is still under Council consideration and hasn't passed; Amazon is urging customers to contact their Council members."
+   "intro": "A NYC bill would overhaul Amazon's local delivery setup, and Amazon says it could add fees.",
+   "now": "Still before the Council; if lawmakers strike a deal, a vote could come within a few weeks."
   },
   "co": "Amazon",
   "apart": [
@@ -839,7 +843,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "82d855156101",
+   "sig": "60538c8ddb8f",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -877,7 +881,7 @@
     "w213989b643cf": "UPS posted a 2027 Ground Saver 1 lb+ card, effective Dec. 21, 2026, raising every weight and zone: 1 lb zone 2 goes from $13.00 to $13.65."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "UniUni's go-public deal was terminated Oct. 20, and it's now handing some peak parcels to Gofo to help its financial outlook."
+   "now": "GOFO is still expanding while UniUni's go-public deal was terminated on Oct. 20. The sources state no change to shipper rates or service."
   }
  },
  "theme-ups-teamsters": {
@@ -1026,7 +1030,7 @@
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has set Jan. 17, 2027 for the 11% fuel surcharge and 5.9% average increase, with a July 2027 reevaluation of the surcharge planned.",
+  "s": "USPS has proposed a 5.9% average package increase and an 11% fuel surcharge for Jan. 17, 2027, and a final rule on competitive prices has since been published.",
   "last": "2026-11-19",
   "c": [
    "USPS"
@@ -1358,22 +1362,18 @@
   ],
   "rv": "eabee2a6582a"
  },
- "robots-leaving-uber-eats": {
-  "n": "Robots leaving Uber platform",
+ "doordash-instacart-deal": {
+  "n": "DoorDash–Instacart deal",
   "ids": [
-   "a4d6b2f9686dc"
+   "aee5be6ce4062"
   ],
-  "first": "2026-11-20",
-  "co": "Uber Eats",
-  "s": "Waymo plans to end its exclusive Uber deal from January 2028 and Serve Robotics will not renew its Uber Eats partnership expiring in 2027.",
-  "last": "2026-11-20",
+  "first": "2026-11-16",
+  "co": "DoorDash",
+  "s": "The Justice Department will review DoorDash's roughly $17 billion Instacart deal, per two people familiar, as of Nov. 16, 2026.",
+  "last": "2026-11-16",
   "c": [
    "Industry"
   ],
-  "apart": [
-   "amazon-uber-eats-prime",
-   "philly-delivery-robot-tax"
-  ],
-  "rv": "e1ae90cab402"
+  "rv": "ed80fc4355f3"
  }
 }
