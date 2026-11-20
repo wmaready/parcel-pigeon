@@ -1,5 +1,5 @@
 {
- "run": "2026-11-20T01:55Z",
+ "run": "2026-11-20T02:43Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -228,7 +228,7 @@
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 369 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
    "ids": [],
    "fixed": false
   },
@@ -516,7 +516,7 @@
   {
    "sev": "med",
    "type": "watch-thin",
-   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 371 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
+   "msg": "Carrier page reads back almost empty (probably hidden behind scripts or drop-downs): UPS Developer portal https://developer.ups.com/. Server said: HTTP 403, text/html, 369 bytes, starts: '<HTML><HEAD>\\n<TITLE>Access Denied</TITLE>\\n</HEAD><BODY>\\n<H1>Access Denied</H1>\\n \\nYou don\\'t have permission to access \"http&#58;&#47;&#47;dev'",
    "ids": [],
    "fixed": false
   },
