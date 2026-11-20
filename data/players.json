@@ -3850,54 +3850,36 @@
    "pending": false
   },
   {
-   "id": "newyorkdeliver",
-   "n": "New York Delivers Coalition",
-   "realm": "regional",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Collection of direct service providers operating under one banner to oppose the Delivery Protection Act.",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/nyc-push-against-delivery-bill-brings-in-legal-and-racial-arguments",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-19",
-   "story": "a004f3480b886"
-  },
-  {
    "id": "project44",
    "n": "project44",
    "realm": "software",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Supply chain decision intelligence platform offering visibility, transportation management and last mile solutions",
-   "al": [],
-   "src": "https://markets.businessinsider.com/news/stocks/project44-survey-54-of-shoppers-would-pay-more-to-guarantee-on-time-holiday-delivery-1036783772",
+   "hq": "Chicago, IL, USA",
+   "yr": "2014",
+   "s": "project44 is a venture-backed supply chain visibility software company. Its platform tracks shipments across modes, including parcel and last-mile delivery (via its Convey acquisition), and gives shippers, 3PLs and carriers predictive ETAs and delivery-exception workflows.",
+   "al": [
+    "Project44",
+    "p44",
+    "project44, Inc."
+   ],
+   "src": "https://www.project44.com/press-releases/project44-acquires-convey/",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-19",
-   "story": "a76a20586ecac"
-  },
-  {
-   "id": "smartwayslogis",
-   "n": "Smartways Logistics",
-   "realm": "cold",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": "Macquarie Park, Australia",
-   "yr": null,
-   "s": "Macquarie Park, Australia-based provider of time-critical healthcare logistics in Australia and New Zealand.",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "auto": true,
-   "added": "2026-11-17",
-   "story": "a0f33fb01d0d5"
+   "story": "a76a20586ecac",
+   "site": "project44.com",
+   "geo": [
+    -87.63,
+    41.878
+   ],
+   "srcs": [
+    "https://www.project44.com/press-releases/project44-acquires-convey/",
+    "https://www.thomabravo.com/press-releases/project44-receives-420-million-investment-led-by-thoma-bravo-tpg-and-goldman-sachs-valuing-business-at-2.2-billion-pre-money",
+    "https://www.thescxchange.com/articles/7337-project44-gains-80-million-in-latest-funding-round"
+   ],
+   "enriched": "2026-11-20"
   }
  ],
  "edges": [
@@ -6665,13 +6647,31 @@
    "story": "a379658dabd2a"
   },
   {
-   "a": "ups",
-   "b": "smartwayslogis",
-   "k": "acquired",
-   "y": "2026",
-   "t": "UPS buys Smartways Logistics",
-   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "story": "a0f33fb01d0d5"
+   "a": "thomabravo",
+   "b": "project44",
+   "k": "invested",
+   "y": "2022",
+   "t": "Co-led $420M investment",
+   "url": "https://www.thomabravo.com/press-releases/project44-receives-420-million-investment-led-by-thoma-bravo-tpg-and-goldman-sachs-valuing-business-at-2.2-billion-pre-money",
+   "story": "a76a20586ecac"
+  },
+  {
+   "a": "cmacgm",
+   "b": "project44",
+   "k": "invested",
+   "y": "2022",
+   "t": "Joined $80M round",
+   "url": "https://www.thescxchange.com/articles/7337-project44-gains-80-million-in-latest-funding-round",
+   "story": "a76a20586ecac"
+  },
+  {
+   "a": "lineage",
+   "b": "project44",
+   "k": "invested",
+   "y": "2021",
+   "t": "Participated in $202M Series E",
+   "url": "https://markets.financialcontent.com/fourptsmedia.kutv/news/read/41413083/goldman_sachs_leads_$202m_investment_in_project44",
+   "story": "a76a20586ecac"
   }
  ],
  "moves": [
@@ -7084,7 +7084,8 @@
   "yunexpress": "2026-11-19",
   "geodis": "2026-11-19",
   "zonos": "2026-11-19",
-  "avalara": "2026-11-19"
+  "avalara": "2026-11-19",
+  "project44": "2026-11-20"
  },
  "facts": {
   "ups": {

@@ -290,7 +290,7 @@
   "told": []
  },
  "https://www.fedex.com/en-us/shipping/rate-changes.html": {
-  "checked": "2026-11-19",
+  "checked": "2026-11-20",
   "pdfs": [
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf",
@@ -322,9 +322,7 @@
    "3374d0ffaca7",
    "2a3ab4c20141"
   ],
-  "told_until": "2026-12-18",
-  "pend": "6642f6b904ab",
-  "fail_runs": 1
+  "told_until": "2026-12-18"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-20",
