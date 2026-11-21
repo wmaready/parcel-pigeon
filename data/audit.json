@@ -1,5 +1,5 @@
 {
- "run": "2026-11-21T23:16Z",
+ "run": "2026-11-21T23:33Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -231,6 +231,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
+   "ids": [
+    "acfad007d564b"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Whatnot makes US sellers pay USPS weight adjustments from Nov. 4\"",
    "ids": [
     "a260cc6a2e05e"
@@ -268,10 +277,10 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
    "ids": [
-    "aaf63e9db25a0",
-    "ae12ca75552ef"
+    "a2cf4b58caa41",
+    "acfad007d564b"
    ],
    "fixed": false
   },
@@ -408,6 +417,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"DHL Express launches AI item identification for U.S. international shipments\" and \"DHL Express launches AI item-identification tool for customs forms\"",
+   "ids": [
+    "a16f218767654",
+    "a1ec24ff9702c"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"NY Post editorial opposes NYC Delivery Protection Act\" and \"Amazon runs in-app notices opposing NYC Delivery Protection Act\"",
    "ids": [
     "a748343696456",
@@ -432,6 +451,16 @@
    "ids": [
     "a258cb77ab792",
     "a5cb136f38f3b"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon warns NYC customers Intro 518 could add up to $5 per order\" and \"Amazon says NYC delivery bill could add up to $5 per order\"",
+   "ids": [
+    "a65867ee1ae2e",
+    "ad70e5d1d5b7e"
    ],
    "fixed": false
   },
@@ -549,6 +578,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
+   "ids": [
+    "acfad007d564b"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Whatnot makes US sellers pay USPS weight adjustments from Nov. 4\"",
    "ids": [
     "a260cc6a2e05e"
@@ -586,10 +624,10 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4\" and \"USPS issues new International Mail Manual, effective Nov. 4, 2026\"",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
    "ids": [
-    "aaf63e9db25a0",
-    "ae12ca75552ef"
+    "a2cf4b58caa41",
+    "acfad007d564b"
    ],
    "fixed": false
   },
@@ -726,6 +764,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"DHL Express launches AI item identification for U.S. international shipments\" and \"DHL Express launches AI item-identification tool for customs forms\"",
+   "ids": [
+    "a16f218767654",
+    "a1ec24ff9702c"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"NY Post editorial opposes NYC Delivery Protection Act\" and \"Amazon runs in-app notices opposing NYC Delivery Protection Act\"",
    "ids": [
     "a748343696456",
@@ -750,6 +798,16 @@
    "ids": [
     "a258cb77ab792",
     "a5cb136f38f3b"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon warns NYC customers Intro 518 could add up to $5 per order\" and \"Amazon says NYC delivery bill could add up to $5 per order\"",
+   "ids": [
+    "a65867ee1ae2e",
+    "ad70e5d1d5b7e"
    ],
    "fixed": false
   },

@@ -47,6 +47,50 @@
   "exclusive": true
  },
  {
+  "id": "a1ec24ff9702c",
+  "date": "2026-11-21",
+  "c": [
+   "DHL"
+  ],
+  "cat": "Technology & tools",
+  "kind": "News",
+  "title": "DHL Express launches AI item-identification tool for customs forms",
+  "sum": "DHL Express said its AI-powered smart identification capability is now available in the U.S. and nine other markets in the Americas. Customers photograph an item and receive a structured, customs-compliant description in seconds, according to DHL Express. The company said it will roll the tool out to more markets in 2027.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "DHL Express customers in the U.S. and nine other Americas markets can photograph an item to generate a customs description, with no account required. Rates and fees are not changed.",
+  "why": "DHL Express said small and medium-sized enterprises are about 86% of its U.S. customers, and the tool targets customs-description errors that can delay shipments.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T23:32:04Z",
+  "src": "FreightWaves",
+  "url": "https://www.freightwaves.com/news/dhl-express-makes-customs-clearance-easier-for-small-cross-border-shippers",
+  "srcs": [
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/dhl-express-makes-customs-clearance-easier-for-small-cross-border-shippers"
+   }
+  ],
+  "auto": true,
+  "syn": "DHL Express said last week that its AI-powered smart identification capability is live in the U.S. and nine other markets in the Americas: Brazil, Canada, Chile, Colombia, Costa Rica, Ecuador, Guatemala, Mexico and Peru. Customers photograph an item, and computer vision generates a structured description for the customs declaration within seconds. Customers can review, edit or override it, and no DHL Express account is required. DHL Express said small and medium-sized enterprises are approximately 86% of its U.S. customers, and the company plans to extend the tool to more markets in 2027.",
+  "aff": [
+   {
+    "who": "Small and medium-sized exporters",
+    "what": "Can generate a customs-compliant item description from a photo; no DHL Express account is required."
+   },
+   {
+    "who": "DHL Express shippers in 10 Americas markets",
+    "what": "Tool is live in the U.S. and nine other markets; more markets are planned for 2027."
+   },
+   {
+    "who": "Rates and fees",
+    "what": "No change to rates or fees was stated."
+   }
+  ]
+ },
+ {
   "id": "a171cbd2a6af0",
   "date": "2026-11-20",
   "c": [
@@ -93,6 +137,51 @@
     "what": "Deposco is tracking rising peak shipping costs relative to Q3 and near-daily fuel-surcharge shifts, Lemus said."
    }
   ]
+ },
+ {
+  "id": "a21944034a98c",
+  "date": "2026-11-20",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "Opinion",
+  "title": "Strader-Ferris executive outlines CBSA, CBP importer audit expectations",
+  "sum": "In a column in Parcel Industry's Cross-Border/Global 2026 issue, Jesse Mitchell of Strader-Ferris International describes what the CBSA and CBP expect from importers. He writes that both agencies look at classification, valuation and origin, and that CARM became Canada's system of record in October 2024.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The column is one executive's view of how customs audits are assessed.",
+  "why": "The column sets out the records and controls that Canadian and US customs agencies evaluate in importer audits, which applies to shippers moving goods across the border.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T23:32:41Z",
+  "src": "Parcel Industry",
+  "url": "https://parcelindustry.com/article-6750-What-Canadian-and-US-Customs-Agencies-Expect-from-Importers.html",
+  "srcs": [
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6750-What-Canadian-and-US-Customs-Agencies-Expect-from-Importers.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Jesse Mitchell, Director of Business Development at customs brokerage Strader-Ferris International, wrote a column on what Canadian and US customs agencies expect from importers. In his view, the CBSA and CBP both want importers to know their goods, control their data, keep records and show reasonable decision-making. He says audits test whether an agency can trust an importer's overall process, not a single shipment. The column was published in Parcel Industry's Cross-Border/Global 2026 issue.",
+  "aff": [
+   {
+    "who": "Importers",
+    "what": "Mitchell says CBSA and CBP evaluate classification, valuation and origin across import declarations."
+   },
+   {
+    "who": "Canadian importers",
+    "what": "Per the column, CARM became the official system of record for duties and taxes in October 2024, making importer accounts visible."
+   },
+   {
+    "who": "US importers",
+    "what": "Mitchell writes that brokers can file entries but the importer stays legally responsible for accuracy under CBP's reasonable care concept."
+   }
+  ],
+  "edge": true
  },
  {
   "id": "a25954b66fed8",
@@ -490,6 +579,60 @@
     "what": "No change to rates or service."
    }
   ]
+ },
+ {
+  "id": "ad70e5d1d5b7e",
+  "date": "2026-11-20",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "News",
+  "title": "Amazon says NYC delivery bill could add up to $5 per order",
+  "sum": "Amazon has shown New York City shoppers a pop-up saying a bill backed by Mayor Zohran Mamdani, the Delivery Protection Act, could raise delivery prices by up to $5 per order, according to Yahoo Finance. The outlet reported the cost could reach up to $664 extra per household per year. Amazon told Moneywise the fee would cover regulatory compliance.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No fee has taken effect, because the bill has not passed. Amazon says New York City customers could face up to $5 more per order if it becomes law.",
+  "why": "The bill would license last-mile delivery firms and require direct hiring, which Amazon says would end its work with more than 40 small delivery businesses in the city.",
+  "score": 5,
+  "tie": "Amazon first sent New York City customers a message on the bill, Intro 518, on Nov. 19, 2026, saying it could add up to $5 per order.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T23:32:30Z",
+  "src": "WSJ",
+  "url": "https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54",
+  "srcs": [
+   {
+    "src": "WSJ",
+    "url": "https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54"
+   },
+   {
+    "src": "Forbes",
+    "url": "https://www.forbes.com/sites/nathangoldman/2026/11/20/mamdani-amazon-fight-comes-with-a-5-per-order-surcharge-warning/"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/policy/articles/amazon-tells-nyc-shoppers-mamdani-193000343.html"
+   }
+  ],
+  "auto": true,
+  "new": "The report adds an up-to-$664 annual household cost figure, the $500 license fee and Amazon's description of the $5 as a compliance cost. It also cites Amazon's count of more than 40 affected delivery businesses and reported opposition spending of over $8 million in 2026; no fee is in effect.",
+  "syn": "Amazon has told New York City shoppers, through a pop-up, that the Delivery Protection Act backed by Mayor Zohran Mamdani could raise delivery prices by up to $5 per order, Yahoo Finance reported. Amazon told Moneywise the charge would be a per-order cost to cover regulatory compliance, and the outlet reported it could cost households up to $664 extra per year. The bill would require last-mile delivery businesses to hold a city license costing $500 per year and to directly employ their delivery workers rather than use contractors. Amazon says it could not keep working with its delivery partners under those terms and would consider moving operations outside the city.",
+  "aff": [
+   {
+    "who": "New York City Amazon customers",
+    "what": "Amazon says the bill could add up to $5 per order; the report cites up to $664 per household per year."
+   },
+   {
+    "who": "Last-mile delivery businesses",
+    "what": "The bill would require a $500 annual city license and direct employment of delivery workers instead of contractors."
+   },
+   {
+    "who": "Amazon's small delivery partners",
+    "what": "Amazon spokesperson Kelly Nantel said the bill would threaten the livelihoods of more than 40 small delivery businesses."
+   }
+  ],
+  "edge": true
  },
  {
   "id": "ae6bb259f8581",
@@ -3173,7 +3316,6 @@
    }
   ],
   "auto": true,
-  "thread": "amazon-fuel-surcharge",
   "syn": "Amazon is expanding its fuel and logistics surcharge to cover more services, according to Supply Chain Dive on Nov. 17, 2026. The 3.5% surcharge will apply to transportation fees for bulk storage and replenishment services starting in February. The outlet linked the change to fuel cost pressures facing the company.",
   "aff": [
    {
@@ -3640,6 +3782,54 @@
    }
   ],
   "edge": true
+ },
+ {
+  "id": "a52a841ed7d7d",
+  "date": "2026-11-16",
+  "c": [
+   "Industry"
+  ],
+  "cat": "International",
+  "kind": "Opinion",
+  "title": "Trade agreements do not clear parcels, trade writer says",
+  "sum": "An article in Parcel Industry, written by Hardeep Singh of Universal Delivery Solutions Ltd, says a trade agreement does not automatically clear parcels or remove an importer's duty to declare shipments accurately. It sets out classification, rules of origin and proof of origin as the three conditions for preferential duty treatment, using UK imports from India as the example.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The article is a writer's guidance on customs paperwork for commercial parcels under trade agreements.",
+  "why": "The piece sets out the customs paperwork a commercial importer needs, using UK imports from India as its example. It is one writer's view, not a rule change.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T23:32:11Z",
+  "src": "Parcel Industry",
+  "url": "https://parcelindustry.com/article-6741-Trade-Agreements-Don&rsquot-Clear-Parcels.html",
+  "srcs": [
+   {
+    "src": "Parcel Industry",
+    "url": "https://parcelindustry.com/article-6741-Trade-Agreements-Don&rsquot-Clear-Parcels.html"
+   }
+  ],
+  "auto": true,
+  "syn": "Hardeep Singh of Universal Delivery Solutions Ltd wrote in Parcel Industry that a trade agreement does not clear parcels automatically, produce customs documents or remove the importer's duty to declare a shipment accurately. He says preferential duty treatment requires correct commodity classification, goods that originate in the exporting country under the agreement's rules, and adequate proof of origin. For UK imports from India, he says a claim may rest on a self-certified origin declaration, a certificate of origin issued by an Indian authority, or the importer's knowledge supported by records. He lists eight items a commercial parcel needs, including item descriptions, commodity codes, declared values and a commercial invoice. This is the author's view and not a regulatory notice.",
+  "aff": [
+   {
+    "who": "Commercial importers",
+    "what": "Duty liability stays with the importer; the article says to confirm commodity code and origin rules before the first shipment."
+   },
+   {
+    "who": "UK importers of Indian goods",
+    "what": "Origin can be proven by self-certified declaration, an Indian authority certificate, or importer's knowledge with records."
+   },
+   {
+    "who": "Parcels with incomplete paperwork",
+    "what": "The article says vague descriptions or missing documents can leave a parcel held at customs."
+   },
+   {
+    "who": "Import costs",
+    "what": "A preferential duty rate does not remove import VAT or clearance charges, according to the article."
+   }
+  ]
  },
  {
   "id": "a55ff8e77e661",
@@ -4129,7 +4319,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -4628,7 +4818,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -5162,7 +5352,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -5206,7 +5396,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-19",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -5953,7 +6143,8 @@
    }
   ],
   "exclusive": true,
-  "unconf": true
+  "unconf": true,
+  "tried": "2026-11-21"
  },
  {
   "id": "ab5dd015b24cb",
@@ -10826,6 +11017,77 @@
   "updated": "2026-11-05"
  },
  {
+  "id": "acfad007d564b",
+  "date": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Amazon extends 3.5% fuel and logistics surcharge to more services",
+  "sum": "Amazon will apply its 3.5% fuel and logistics surcharge to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S. from Feb. 1, 2027, according to its website. The surcharge, introduced in April 2026, currently covers FBA fulfillment fees in the U.S. and Canada, among other offerings.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "From Feb. 1, 2027, third-party sellers using Amazon's Multi-Channel Distribution and Warehousing and Distribution services in the U.S. will pay the 3.5% surcharge on transportation fees. FBA fulfillment fees already carry it.",
+  "why": "The surcharge reaches bulk replenishment and storage transport services used by third-party sellers, adding to other Amazon fee changes in early 2027.",
+  "score": 6,
+  "tie": null,
+  "act": "2027-02-01",
+  "dates": [
+   {
+    "d": "2027-01-15",
+    "w": "Amazon FBA fulfillment fees rise $0.19 per unit on average",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-02-01",
+    "w": "Amazon 3.5% fuel and logistics surcharge extends to more services",
+    "imp": "up",
+    "fx": {
+     "t": "fee",
+     "car": "Amazon",
+     "items": [
+      [
+       "Fuel and logistics surcharge on MCF and WD transportation fees",
+       "3.5%",
+       3.5
+      ]
+     ]
+    }
+   }
+  ],
+  "added": "2026-11-21T23:29:25Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/economy/policy/articles/amazon-expand-fuel-logistics-surcharge-143617300.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/economy/policy/articles/amazon-expand-fuel-logistics-surcharge-143617300.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "The update adds Amazon's Nov. 5 seller announcement, Q3 cost figures (shipping costs up 11%, three points tied to fuel and linehaul) and separate fee changes starting Jan. 15, 2027.",
+  "syn": "Amazon is expanding its 3.5% fuel and logistics surcharge to more services for third-party sellers, according to its website. From Feb. 1, 2027, it will also apply to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S., which are used for bulk inventory replenishment and storage. Amazon said in a Nov. 5 announcement to sellers that costs, especially fuel and line-haul trucking, have remained elevated since the surcharge began in April 2026. The change comes alongside other fulfillment fee changes starting in early 2027.",
+  "aff": [
+   {
+    "who": "Multi-Channel Distribution and Warehousing and Distribution ",
+    "what": "3.5% surcharge applies to U.S. transportation fees from Feb. 1, 2027."
+   },
+   {
+    "who": "FBA sellers",
+    "what": "Average fulfillment fee rises $0.19 per unit sold from Jan. 15, 2027; impact varies by product."
+   },
+   {
+    "who": "Sellers with stored inventory",
+    "what": "Storage utilization surcharge is eliminated; aged inventory surcharge merges into an age-based monthly storage rate."
+   }
+  ],
+  "exclusive": true,
+  "unconf": true
+ },
+ {
   "id": "ad7d0b7072901",
   "date": "2026-11-05",
   "c": [
@@ -12935,161 +13197,5 @@
   "exclusive": true,
   "tried": "2026-11-12",
   "unconf": true
- },
- {
-  "id": "ae12ca75552ef",
-  "date": "2026-11-02",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "USPS issues new International Mail Manual, effective Nov. 4, 2026",
-  "sum": "The Postal Service issued a new edition of the International Mail Manual on Nov. 2, 2026, and incorporated it by reference in the Code of Federal Regulations in a final rule effective Nov. 4, 2026. The edition includes Postal Bulletin revisions through Oct. 1, 2026, and replaces all previous editions.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "The new International Mail Manual replaces all earlier editions as of Nov. 4, 2026. The filing does not state any price change.",
-  "why": "The manual sets USPS standards for all international mailing services, so the new edition is the current reference for shippers using those services.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-04T13:06:37Z",
-  "src": "Federal Register: USPS",
-  "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference",
-  "srcs": [
-   {
-    "src": "Federal Register: USPS",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22505/international-mail-manual-incorporation-by-reference"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-02",
-  "syn": "The Postal Service issued a new edition of the International Mail Manual on Nov. 2, 2026. A final rule published in the Federal Register (91 FR 69504) incorporates it by reference in the Code of Federal Regulations, effective Nov. 4, 2026. The manual gives USPS standards for all international mailing services and references the applicable prices. It was updated with Postal Bulletin revisions through Oct. 1, 2026, and replaces all previous editions.",
-  "aff": [
-   {
-    "who": "International mail users",
-    "what": "New manual edition replaces all previous editions, effective Nov. 4, 2026."
-   },
-   {
-    "who": "Mail preparation standards",
-    "what": "The edition reflects standards and preparation changes implemented since the April 7, 2025 version."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "aeb57c7f2b89f",
-  "date": "2026-11-02",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Same-day & gig delivery",
-  "kind": "Analysis",
-  "title": "Costco expands Uber Eats delivery from 17 states to nationwide",
-  "sum": "Costco said on its fourth-quarter fiscal 2026 earnings call that its Uber Eats partnership has grown from 17 states to nationwide coverage, alongside a broader DoorDash rollout, according to a Zacks Investment Research analysis. Management said digitally enabled sales topped $33 billion in fiscal 2026, up more than 20%.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to shipper rates or service. Costco members can order same-day delivery through Uber Eats nationwide and through a wider DoorDash rollout.",
-  "why": "Costco's same-day delivery now runs through three marketplaces (Uber Eats, DoorDash, Instacart), widening on-demand delivery volume for gig networks.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T13:32:51Z",
-  "src": "The Globe and Mail",
-  "url": "https://www.theglobeandmail.com/investing/markets/stocks/WMT/pressreleases/8596269/can-costcos-doordash-and-uber-eats-expansion-drive-incremental-sales/",
-  "srcs": [
-   {
-    "src": "The Globe and Mail",
-    "url": "https://www.theglobeandmail.com/investing/markets/stocks/WMT/pressreleases/8596269/can-costcos-doordash-and-uber-eats-expansion-drive-incremental-sales/"
-   }
-  ],
-  "auto": true,
-  "syn": "An analysis from Zacks Investment Research, published by The Globe and Mail on Nov. 2, 2026, reports that Costco's Uber Eats partnership expanded from 17 states to nationwide coverage, with a broader rollout of its DoorDash partnership. Costco management said on its fourth-quarter fiscal 2026 earnings call that these sales have been largely incremental and that average delivery times across the three platforms, including Instacart, are under an hour. Management said digitally enabled sales exceeded $33 billion in fiscal 2026, growing more than 20%, and rose 19% in September. The article is an analysis and includes the author's own view of the stock.",
-  "aff": [
-   {
-    "who": "Costco members",
-    "what": "Uber Eats delivery now covers all states, up from 17; the DoorDash partnership is rolling out more widely."
-   },
-   {
-    "who": "Delivery times",
-    "what": "Average delivery across Uber Eats, DoorDash and Instacart is under an hour; most same-day orders can be done in 45 minutes on request."
-   },
-   {
-    "who": "Costco digital sales",
-    "what": "Digitally enabled sales exceeded $33 billion in fiscal 2026, up more than 20%; September rose 19%."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "a9eac1c65a497",
-  "date": "2026-11-01",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "Analysis",
-  "title": "ParcelHero: EU €2 handling fee and product IDs start 1 November",
-  "sum": "ParcelHero said the EU's new €2 handling fee per item and mandatory Product Identifiers took effect on 1 November 2026, on top of the €3 customs duty introduced on 1 July. According to ParcelHero, both charges are counted per product line, so a parcel with three product lines carries €15 in charges.",
-  "imp": "up",
-  "lvl": 1,
-  "plain": "From 1 November 2026, B2C parcels entering the EU carry a €2 handling fee per product line on top of the €3 duty, and every item needs product identifiers or risks a hold or rejection.",
-  "why": "UK and other non-EU sellers shipping B2C parcels to the EU face per-product-line charges and data requirements as peak season volumes build.",
-  "score": 5,
-  "tie": null,
-  "act": "2026-11-01",
-  "dates": [
-   {
-    "d": "2026-11-01",
-    "w": "EU €2 handling fee and mandatory product IDs apply to B2C parcels",
-    "imp": "up",
-    "fx": {
-     "t": "fee",
-     "car": "EU customs",
-     "items": [
-      [
-       "Handling fee per product line",
-       "€2.00",
-       2
-      ]
-     ]
-    }
-   }
-  ],
-  "added": "2026-11-03T17:20:04Z",
-  "src": "Post & Parcel",
-  "url": "https://postandparcel.info/163227/news/e-commerce/parcelhero-the-eus-customs-changes-were-aimed-at-the-flood-of-ultra-cheap-e-commerce-imports/",
-  "srcs": [
-   {
-    "src": "Post & Parcel",
-    "url": "https://postandparcel.info/163227/news/e-commerce/parcelhero-the-eus-customs-changes-were-aimed-at-the-flood-of-ultra-cheap-e-commerce-imports/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-01",
-  "thread": "eu-low-value-imports",
-  "syn": "ParcelHero, in an industry commentary, said the EU brought in a €2 handling fee and mandatory Product Identifiers (PIDs) on 1 November 2026. These follow the 1 July 2026 end of duty-free treatment for low-value parcels and a flat €3 duty on most B2C parcels worth €150 or less. ParcelHero's David Jinks said both charges are counted per HS code line, giving a minimum of €5 before VAT and postage. ParcelHero said customs can hold, delay or reject parcels with missing data.",
-  "aff": [
-   {
-    "who": "B2C parcels to the EU",
-    "what": "€2 handling fee per product line from 1 November 2026, also applying to parcels above €150."
-   },
-   {
-    "who": "Parcels worth €150 or less",
-    "what": "€3 customs duty per product line since 1 July 2026; ParcelHero says minimum charges are €5."
-   },
-   {
-    "who": "Merchants selling to EU consumers",
-    "what": "Each item needs up to three product identifiers at variant level; missing data risks hold, delay or rejection."
-   },
-   {
-    "who": "Private senders",
-    "what": "Personal gifts worth €45 or under sent person to person remain exempt if declared correctly, ParcelHero said."
-   }
-  ],
-  "edge": true
  }
 ]
