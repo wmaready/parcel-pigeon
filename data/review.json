@@ -1,5 +1,12 @@
 [
  {
+  "type": "page-picture",
+  "title": "FedEx: FedEx Freight rules tariff (moved)",
+  "url": "https://www.fedex.com/en-us/shipping/freight/tariff.html",
+  "date": "2026-11-21",
+  "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
+ },
+ {
   "type": "headline-only",
   "title": "Royal Mail slips on delivery targets, revenue rises",
   "url": "https://www.printweek.com/content/news/royal-mail-slips-on-delivery-targets-revenue-rises",
@@ -1606,13 +1613,6 @@
   "key": "fuel-event-flat|2022-02-24|Russia invades Ukraine",
   "event": "Russia invades Ukraine",
   "d": "2022-02-24",
-  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
- },
- {
-  "type": "fuel-event",
-  "key": "fuel-event-flat|2022-06-20|Diesel record at the time: $5.81",
-  "event": "Diesel record at the time: $5.81",
-  "d": "2022-06-20",
   "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
  }
 ]
