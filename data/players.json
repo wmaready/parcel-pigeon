@@ -3915,52 +3915,53 @@
   },
   {
    "id": "yanwenlogistic",
-   "n": "Yanwen Logistics (Beijing Yanwen Logistics Co., Ltd.)",
+   "n": "Yanwen Logistics Co., Ltd.",
    "realm": "global",
-   "own": null,
+   "own": "private",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Chinese cross-border e-commerce logistics provider that moves parcels to the U.S. and runs its own U.S. sorting centers and last-mile network, Yanwen Express.",
-   "al": [],
-   "src": "https://www.als-int.com/insights/posts/cross-border-ecommerce-last-mile-revolution-us-2026/",
+   "hq": "Beijing, China",
+   "yr": "1998",
+   "s": "Beijing-based third-party cross-border e-commerce logistics provider that collects, sorts, ships and clears parcels from China to over 200 countries, and since 2024 has run a U.S. last-mile delivery service (Yanwen Express) through Delivery Service Partner networks.",
+   "al": [
+    "Beijing Yanwen Logistics Co., Ltd.",
+    "YW56",
+    "Yanwen",
+    "Yanwen Express",
+    "燕文物流"
+   ],
+   "src": "https://www.sohu.com/a/1027809995_122014422",
    "auto": true,
    "added": "2026-11-20",
-   "from": "discover"
+   "from": "discover",
+   "site": "yw56.com.cn",
+   "geo": [
+    116.407,
+    39.904
+   ],
+   "srcs": [
+    "https://www.sohu.com/a/1027809995_122014422",
+    "https://www.yanwenexpress.com/about.html",
+    "https://www.17track.net/en/carriers/yanwen"
+   ],
+   "enriched": "2026-11-21",
+   "pending": false
   },
   {
-   "id": "ar",
-   "n": "A&R",
-   "realm": "capital",
-   "own": null,
+   "id": "smartwayslogis",
+   "n": "Smartways Logistics",
+   "realm": "3pl",
+   "own": "sub",
    "tk": null,
    "parent": null,
    "hq": null,
    "yr": null,
-   "s": "Consortium member holding 16%.",
+   "s": "Healthcare courier and logistics in Australia and New Zealand",
+   "role": "Healthcare courier and logistics in Australia and New Zealan",
    "al": [],
-   "src": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
+   "src": "https://www.ups.com/us/en/healthcare/news/press-releases/ups-logistics-news-update",
    "auto": true,
-   "added": "2026-11-20",
-   "story": "a318dc3f022f7"
-  },
-  {
-   "id": "diligentroboti",
-   "n": "Diligent Robotics",
-   "realm": "auto",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Hospital service robot provider acquired by Serve earlier this year",
-   "al": [],
-   "src": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-11",
-   "story": "ac65ae6b550d7"
+   "added": "2026-11-21"
   }
  ],
  "edges": [
@@ -6791,15 +6792,6 @@
    "story": "a318dc3f022f7"
   },
   {
-   "a": "ar",
-   "b": "inpost",
-   "k": "acquired",
-   "y": "2026",
-   "t": "FedEx-led group buys control of InPost",
-   "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
-   "story": "a318dc3f022f7"
-  },
-  {
    "a": "ppf",
    "b": "inpost",
    "k": "sold",
@@ -6807,15 +6799,6 @@
    "t": "FedEx-led group buys control of InPost (seller)",
    "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
    "story": "a318dc3f022f7"
-  },
-  {
-   "a": "serve",
-   "b": "diligentroboti",
-   "k": "acquired",
-   "y": "2026",
-   "t": "Serve Robotics acquires Diligent Robotics",
-   "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
-   "story": "ac65ae6b550d7"
   }
  ],
  "moves": [
@@ -7102,6 +7085,18 @@
    "url": "https://www.ryder.com/en-us/newsroom",
    "t": "Ryder said it completed its acquisition of Efficiency Enterprises, a regional fleet management, maintenance and leasing provider with six East Coast locations, ",
    "role": "Regional truck and trailer leasing, rental and maintenance"
+  },
+  {
+   "id": "smartwayslogis",
+   "k": "pending",
+   "parent": null,
+   "from": null,
+   "pend": "ups",
+   "into": null,
+   "d": "2026-11-17",
+   "url": "https://www.ups.com/us/en/healthcare/news/press-releases/ups-logistics-news-update",
+   "t": "UPS signed an agreement to acquire Smartways Logistics, to join UPS Healthcare. The deal needs regulatory approval and is expected to close in the first half of",
+   "role": "Healthcare courier and logistics in Australia and New Zealan"
   }
  ],
  "checks": {
@@ -7230,7 +7225,8 @@
   "zonos": "2026-11-19",
   "avalara": "2026-11-19",
   "project44": "2026-11-20",
-  "esweshopworld": "2026-11-20"
+  "esweshopworld": "2026-11-20",
+  "yanwenlogistic": "2026-11-21"
  },
  "facts": {
   "ups": {

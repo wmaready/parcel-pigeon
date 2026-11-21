@@ -1,5 +1,52 @@
 [
  {
+  "id": "ae83e0d0c081f",
+  "date": "2026-11-23",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS files new shipping services contract with PRC for competitive products list",
+  "sum": "The Postal Service gave notice on Nov. 23, 2026 that it filed a request with the Postal Regulatory Commission to add a domestic shipping services contract to the Negotiated Service Agreements in the Mail Classification Schedule's Competitive Products List. The Federal Register headline refers to Priority Mail, USPS Ground Advantage and Parcel Select agreements. The PRC published a notice of the filing the same day and invited public comment.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to published rates or service for shippers generally. The filing concerns a single negotiated contract, and the text provided does not name the customer or give its terms.",
+  "why": "Negotiated service agreements set contract terms for individual USPS shipping customers, and the PRC filing opens a public comment step.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T09:40:11Z",
+  "src": "Federal Register: USPS",
+  "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23737/product-change-priority-mail-and-usps-ground-advantage-negotiated-service-agreements-priority-mail",
+  "srcs": [
+   {
+    "src": "Federal Register: USPS",
+    "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23737/product-change-priority-mail-and-usps-ground-advantage-negotiated-service-agreements-priority-mail"
+   },
+   {
+    "src": "Federal Register: PRC",
+    "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23783/new-postal-products"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-23",
+  "new": "The Nov. 23, 2026 filings add a newly noticed USPS negotiated shipping contract, but the text provided does not name Amazon, DHL eCommerce or any other party, so nothing changes for shippers from these notices.",
+  "syn": "The Postal Service said it filed a request with the Postal Regulatory Commission to add a domestic shipping services contract to the list of Negotiated Service Agreements in the Competitive Products List. The notice was dated Nov. 23, 2026, and its headline covers Priority Mail, USPS Ground Advantage and Parcel Select agreements. The PRC published a notice of the filing, invited public comment and said it would take other administrative steps. The text provided does not name the contract's customer or give its price terms.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to published rates or service; the filing covers a single negotiated contract."
+   },
+   {
+    "who": "Contract parties",
+    "what": "A new domestic shipping services contract is proposed for the Competitive Products List; the PRC invites public comment."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a171cbd2a6af0",
   "date": "2026-11-20",
   "c": [
@@ -13194,61 +13241,5 @@
   ],
   "edge": true,
   "exclusive": true
- },
- {
-  "id": "a4702db049fcd",
-  "date": "2026-10-30",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon withdraws Westborough drone delivery application",
-  "sum": "Amazon withdrew its site plan review application for a Prime Air drone delivery launch site in Westborough, Mass., according to local lawmakers' statement on Friday. Amazon's letter to the town was dated Oct. 30 and asked to withdraw without prejudice. The plan covered packages under 5 pounds within a 7.5-mile radius of its Westborough fulfillment center.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. Prime Air drone delivery will not launch from the Westborough site under this application.",
-  "why": "The withdrawal removes one proposed Prime Air launch site in Massachusetts, where residents and officials had raised noise, safety and privacy concerns.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T13:15:56Z",
-  "src": "WBUR",
-  "url": "https://www.wbur.org/news/2026/10/31/amazon-drops-westborough-drone-delivery-plan-after-pushback",
-  "srcs": [
-   {
-    "src": "WBUR",
-    "url": "https://www.wbur.org/news/2026/10/31/amazon-drops-westborough-drone-delivery-plan-after-pushback"
-   },
-   {
-    "src": "MassLive",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPb2k3UU1iVzdCMldYVUNPQWJHR1U4VEM1dHlvN1lPd2NheVNfcXpzMDRKNUR6bUQ5Nm5SZUcxUXNMMXZ6dEFPZ1dhWTMtMmdIelVvTEdQN1RnNkIxbDh3UW9iTFlYQXpEdTZFWFU2cmVkVUp1UmdRb2RKN0VMWXJWUzBudmNnd3hDNjNzMUFiNGROS0FPRTV2aXBKVlBwWVdGcGJlNG5HNENlU0oxMzYtY1BLOVdCQ09VVlJsRU5oeF9uZDZyWDAzdmlnLXlqUkw2QklR?oc=5"
-   },
-   {
-    "src": "Lowell Sun",
-    "url": "https://www.lowellsun.com/2026/11/06/amazon-drops-westboro-drone-delivery-plan-after-pushback/"
-   },
-   {
-    "src": "NBC Boston",
-    "url": "https://www.nbcboston.com/news/local/amazon-drops-westborough-drone-delivery-plan-after-pushback/4042282/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-10-30",
-  "new": "Amazon withdrew its Westborough, Mass., drone launch site application after local opposition, so that site will not proceed under this application; the earlier coverage did not mention this location.",
-  "syn": "Amazon withdrew its application to the Town of Westborough, Mass., for a Prime Air drone package delivery launch site, according to a statement from Sen. Michael Moore and Reps. Hannah Kane and Kate Donaghue. Amazon's letter, dated Oct. 30, asked the Planning Board to allow withdrawal without prejudice. The proposal would have delivered packages under 5 pounds within a 7.5-mile radius of the Westborough fulfillment center and drew pushback from state and federal lawmakers, local officials and residents. Amazon wrote that it looks forward to working with town officials on next steps.",
-  "aff": [
-   {
-    "who": "Westborough-area deliveries",
-    "what": "Proposed Prime Air drone deliveries within 7.5 miles of the fulfillment center will not proceed under this application."
-   },
-   {
-    "who": "Amazon Prime Air",
-    "what": "Amazon withdrew the site plan application without prejudice, per its Oct. 30 letter."
-   }
-  ],
-  "exclusive": true,
-  "updated": "2026-10-31"
  }
 ]
