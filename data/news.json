@@ -2184,6 +2184,51 @@
   "unconf": true
  },
  {
+  "id": "a8556bb006fc8",
+  "date": "2026-11-18",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Regulation & trade",
+  "kind": "Analysis",
+  "title": "Trade consultant sees post-midterm window for North America tariff deal",
+  "sum": "In a Logistics Management interview, a tariff and trade consultant said the administration keeps authority over tariffs until January and could still pursue a USMCA-based agreement before the holiday slowdown. He also described a Section 338 revision that shifts tariff burdens between states, and said CBP document requirements are causing rejections for importers.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No tariff rate changes are announced in this interview. The consultant's view is that current tariffs are likely to stay in place for now and that CBP paperwork rejections are rising.",
+  "why": "Shippers importing goods face Section 338, 301 and 232 tariffs; the consultant outlines how midterm results could affect policy.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T17:40:33Z",
+  "src": "Logistics Management",
+  "url": "https://www.logisticsmgmt.com/article/qa_kyle_peacock_principal_peacock_tariff_consulting",
+  "srcs": [
+   {
+    "src": "Logistics Management",
+    "url": "https://www.logisticsmgmt.com/article/qa_kyle_peacock_principal_peacock_tariff_consulting"
+   }
+  ],
+  "auto": true,
+  "syn": "Logistics Management published a Q&A with Kyle Peacock, a tariff and trade consultant, on trade policy after the midterms. Peacock said the administration retains authority over tariffs until January and could reset talks toward a comprehensive USMCA agreement. He described a Section 338 revision annex that, in his view, rewards states seen as supportive, and said Congress may try to attach tariff limits to must-pass spending bills. He also said roughly half of his firm's clients see rejections of importer documents that must now be signed in blue ink and scanned.",
+  "aff": [
+   {
+    "who": "Cross-border shippers",
+    "what": "Consultant says Section 338, 301 and 232 tariffs are likely to stay in place for now; no rate change is announced."
+   },
+   {
+    "who": "Importers of record",
+    "what": "Consultant says documents now need blue-ink signatures and scans; roughly half of his clients report rejections."
+   },
+   {
+    "who": "Maine and Vermont businesses",
+    "what": "Consultant says the Section 338 revision moved pressure from Maine to Vermont."
+   }
+  ],
+  "edge": true
+ },
+ {
   "id": "aa2713299bf3a",
   "date": "2026-11-18",
   "c": [
@@ -3097,7 +3142,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -3291,7 +3336,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -3742,7 +3787,7 @@
   ],
   "edge": true,
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -3981,7 +4026,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -5989,6 +6034,70 @@
   "exclusive": true,
   "tried": "2026-11-18",
   "updated": "2026-11-13"
+ },
+ {
+  "id": "acd2218c494e3",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "USPS to raise domestic shipping prices 5.9% on average Jan. 17",
+  "sum": "The Postal Service is raising domestic shipping prices by 5.9% on average, Federal News Network reported on Nov. 17, 2026. USPS will convert the 8% transportation-related surcharge that began in April into a permanent fuel surcharge and add 3%, for 11% in fuel-related surcharges. All changes take effect Jan. 17, 2027.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "USPS domestic shipping prices rise 5.9% on average from Jan. 17, 2027. Fuel-related surcharges total 11%, made up of the 8% surcharge in place since April, now permanent, plus a new 3%.",
+  "why": "The 5.9% average increase and 11% in fuel-related surcharges apply to USPS domestic shipping from Jan. 17, 2027.",
+  "score": 8,
+  "tie": "The Postal Service filed the proposal with the Postal Regulatory Commission on Nov. 12, 2026, with the same 5.9% average increase and 11% permanent fuel surcharge.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS domestic shipping prices rise 5.9% on average",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2027-01-17",
+    "w": "Permanent fuel-related surcharges total 11%",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-21T17:39:22Z",
+  "src": "USPS",
+  "url": "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/",
+  "srcs": [
+   {
+    "src": "USPS",
+    "url": "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/"
+   },
+   {
+    "src": "Federal News Network",
+    "url": "https://federalnewsnetwork.com/federal-newscast/2026/11/postal-service-to-raise-domestic-shipping-costs/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "new": "Federal News Network reports USPS's statement that the changes support modernization, financial stability and competitiveness, and describes the 11% as the 8% April surcharge made permanent plus 3%; the 5.9% figure and Jan. 17 date are unchanged.",
+  "syn": "The Postal Service is raising domestic shipping prices by 5.9% on average, according to Federal News Network. USPS said the changes are part of its modernization efforts to reach financial stability and remain competitive. It will convert the 8% transportation-related surcharge that began in April into a permanent fuel surcharge and add 3% for higher fuel prices, for 11% in fuel-related surcharges. All changes take effect Jan. 17, 2027.",
+  "aff": [
+   {
+    "who": "USPS domestic shippers",
+    "what": "Prices rise 5.9% on average, effective Jan. 17, 2027."
+   },
+   {
+    "who": "Fuel-related surcharges",
+    "what": "The 8% surcharge from April becomes permanent and a 3% charge is added, for 11% total, from Jan. 17, 2027."
+   }
+  ],
+  "exclusive": true
  },
  {
   "id": "ae3218d66d69a",
@@ -12982,243 +13091,5 @@
    }
   ],
   "edge": true
- },
- {
-  "id": "af46ea22d168d",
-  "date": "2026-11-01",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "DoorDash, Serve Robotics launch footpath robot delivery pilot on Gold Coast",
-  "sum": "DoorDash and Serve Robotics have launched what Retail World describes as Australia's first footpath robot delivery service, starting in the Gold Coast Health and Knowledge Precinct. Gnocchi Gnocchi in Southport is the first participating restaurant, and more local restaurants are to join in the coming weeks.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "DoorDash customers near participating Gold Coast restaurants can pick robot delivery at checkout when a robot is available. No change to rates or service elsewhere.",
-  "why": "The pilot is Serve Robotics' first location outside the US and adds a robot option alongside existing DoorDash delivery on short, local trips.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-02T13:35:24Z",
-  "src": "Retail World",
-  "url": "https://retailworldmagazine.com.au/doordash-and-serve-robotics-trial-robot-delivery/",
-  "srcs": [
-   {
-    "src": "Retail World",
-    "url": "https://retailworldmagazine.com.au/doordash-and-serve-robotics-trial-robot-delivery/"
-   }
-  ],
-  "auto": true,
-  "syn": "DoorDash and US-based Serve Robotics have launched a footpath robot delivery pilot in the Gold Coast Health and Knowledge Precinct, which Retail World describes as Australia's first. Gnocchi Gnocchi in Southport is the first participating restaurant, with more local restaurants to join in the coming weeks. Serve's CEO said the Gold Coast is the company's first location outside the US. DoorDash's APAC vice president said the pilot will help it understand how footpath robots can complement existing delivery options for short, local trips.",
-  "aff": [
-   {
-    "who": "DoorDash customers in the precinct",
-    "what": "Robot delivery appears at checkout when a participating merchant is nearby and a robot is available."
-   },
-   {
-    "who": "Participating restaurants",
-    "what": "Gnocchi Gnocchi in Southport is first; more local restaurants are to join in the coming weeks."
-   },
-   {
-    "who": "Gold Coast footpath users",
-    "what": "Robots travel at walking pace, give way to pedestrians and display a contact number for questions."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "wf5014bc150e9",
-  "date": "2026-11-01",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide",
-  "sum": "UPS replaced the 2026 Small Business Rates guide (effective January 26, 2026) with a 2027 rate table. Every Next Day Air Early cell compared is higher; for example the Zone 102 letter rate rose from $46.75 to $47.50 and the 5 lb Zone 106 rate from $82.00 to $84.34.",
-  "plain": "Small Business Rates accounts shipping Next Day Air Early pay more per package. In the cells compared the increase ranges from $0.75 on a Zone 102 letter to $9.66 on heavy Zone 107/108 packages.",
-  "imp": "up",
-  "lvl": 2,
-  "cat": "Guide changes",
-  "act": "2026-12-21",
-  "inferred": null,
-  "detected": "2026-11-01",
-  "changes": [
-   {
-    "what": "Next Day Air Early letter rate, Zone 102",
-    "before": "$46.75",
-    "after": "$47.50",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping Next Day Air Early letters in Zone 102",
-    "impact": "$46.75 -> $47.50, +$0.75 per letter"
-   },
-   {
-    "what": "Next Day Air Early letter rate, Zone 124",
-    "before": "$92.39",
-    "after": "$95.20",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping Next Day Air Early letters in Zone 124",
-    "impact": "$92.39 -> $95.20, +$2.81 per letter"
-   },
-   {
-    "what": "Next Day Air Early 5 lb rate, Zone 106",
-    "before": "$82.00",
-    "after": "$84.34",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping 5 lb Next Day Air Early packages to Zone 106",
-    "impact": "$82.00 -> $84.34, +$2.34 per package"
-   },
-   {
-    "what": "Next Day Air Early 35 lb rate, Zone 108",
-    "before": "$244.63",
-    "after": "$254.29",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping 35 lb Next Day Air Early packages to Zone 108",
-    "impact": "$244.63 -> $254.29, +$9.66 per package"
-   },
-   {
-    "what": "Next Day Air Early 36 lb rate, Zone 102",
-    "before": "$91.15",
-    "after": "$93.90",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping 36 lb Next Day Air Early packages to Zone 102",
-    "impact": "$91.15 -> $93.90, +$2.75 per package"
-   },
-   {
-    "what": "Next Day Air Early 36 lb rate, Zone 107",
-    "before": "$244.77",
-    "after": "$254.43",
-    "effective": null,
-    "who": "Small Business Rates accounts shipping 36 lb Next Day Air Early packages to Zone 107",
-    "impact": "$244.77 -> $254.43, +$9.66 per package"
-   }
-  ],
-  "verdict": "price change",
-  "unknowns": [
-   "Whether the 2026 note that Next Day Air Early is billed as a rate plus a separate $30.00 surcharge still applies in 2027 cannot be confirmed",
-   "Rates for Ground, other domestic services, international services, and value-added or other charges in the 2027 guide are not shown, so changes to them cannot be confirmed",
-   "Zone 124 rates for 36 lb and above could not be compared because the 2026 figures are cut off"
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "exclusive": false,
-  "src": "UPS",
-  "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
-  "srcs": [
-   {
-    "src": "UPS: UPS Small Business Rates page",
-    "url": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "price change",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates",
-     "old": "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates (previous version)"
-    }
-   ]
-  }
- },
- {
-  "id": "a43b1ba7bd71d",
-  "date": "2026-10-31",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Partnerships",
-  "kind": "News",
-  "title": "FedEx Dataworks and Stripe plan joint SMB financing tool for 2027",
-  "sum": "FedEx Dataworks and Stripe announced a collaboration to link FedEx shipment data with Stripe Capital financing for small and medium-sized businesses. The first joint solution is planned for early 2027. FedEx also plans to add Stripe as a payment option, introducing over 50 new payment methods globally.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to FedEx rates or service. The first joint financing solution is planned for early 2027, and FedEx plans to add over 50 payment methods through Stripe.",
-  "why": "FedEx shipment data would inform Stripe Capital funding decisions for logistics-heavy small businesses, and FedEx customers would get 50+ payment methods.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-01T13:17:39Z",
-  "src": "Small Business Trends",
-  "url": "https://smallbiztrends.com/fedex-and-stripe-team-up-to-transform-financing-for-small-businesses/",
-  "srcs": [
-   {
-    "src": "Small Business Trends",
-    "url": "https://smallbiztrends.com/fedex-and-stripe-team-up-to-transform-financing-for-small-businesses/"
-   }
-  ],
-  "auto": true,
-  "syn": "FedEx Dataworks and Stripe announced a collaboration that would use FedEx operational data, such as shipment activity and fulfillment performance, in Stripe Capital's evaluation of funding requests from small and medium-sized businesses. The first joint solution is planned for early 2027. FedEx also plans to add Stripe as a payment option, which the companies said would introduce over 50 new payment methods for customers globally.",
-  "aff": [
-   {
-    "who": "Logistics-heavy SMBs",
-    "what": "Stripe Capital to use FedEx operational signals in funding decisions; first joint solution planned for early 2027."
-   },
-   {
-    "who": "FedEx customers",
-    "what": "Stripe to add over 50 new payment methods globally."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a6077c6ca1c53",
-  "date": "2026-10-31",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Philadelphia bill would tax sidewalk robot deliveries, driverless freight",
-  "sum": "Philadelphia Councilmember Jim Harrity has proposed charging robot delivery operators 50 cents per delivery or 5% of the order's cost, whichever is larger, according to Yahoo Finance. The measure would also tax driverless taxis and add a 3% tax on driverless freight vehicles, and the rates could change in committee, per PhillyVoice.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No charge is in effect. If the bill passes, robot delivery operators in Philadelphia would pay 50 cents per delivery or 5% of the order, whichever is larger.",
-  "why": "The proposal would add a per-delivery charge for robot delivery operators in Philadelphia, though a 2020 state law limits how far the city can regulate the devices.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T19:16:57Z",
-  "src": "CNN",
-  "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec",
-  "srcs": [
-   {
-    "src": "CNN",
-    "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec"
-   },
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/economy/policy/articles/78-old-arrested-blocking-uber-130000649.html"
-   }
-  ],
-  "auto": true,
-  "thread": "philly-delivery-robot-tax",
-  "upd": 2,
-  "new": "The latest coverage adds the bill's reach to driverless taxis and a 3% tax on driverless freight vehicles, registration and quarterly reporting requirements, and the state-law limits on city authority; it is still a proposal, so nothing changes for shippers yet.",
-  "syn": "Philadelphia Councilmember Jim Harrity has proposed charging robot delivery operators 50 cents per delivery or 5% of the order's cost, whichever is larger, with proceeds to help fund free transit passes for low-income residents, according to Yahoo Finance. The bill would also charge driverless taxis like Waymo $1 per ride or 5% of the fare and add a 3% tax on driverless freight vehicles, with company registration and quarterly reports required. Harrity said it aims to protect jobs and to help cover city wage and business tax revenue the technologies could displace. A 2020 state law, Act 106, gives PennDOT regulatory authority over the devices and bars municipalities from regulating how they operate, with exceptions such as banning them where deemed hazardous.",
-  "aff": [
-   {
-    "who": "Robot delivery operators in Philadelphia",
-    "what": "Would pay 50 cents per delivery or 5% of the order's cost, whichever is larger, and register with the city."
-   },
-   {
-    "who": "Driverless freight vehicles",
-    "what": "Would face a 3% tax under the proposal."
-   },
-   {
-    "who": "Driverless taxi services",
-    "what": "Would pay $1 per ride or 5% of the fare, per Yahoo Finance."
-   },
-   {
-    "who": "Uber Eats robot deliveries",
-    "what": "Robots are run by third-party company Avride, not Uber itself, per Yahoo Finance."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
  }
 ]

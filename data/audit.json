@@ -1,14 +1,10 @@
 {
- "run": "2026-11-21T17:27Z",
+ "run": "2026-11-21T17:41Z",
  "clock_add": [],
  "clock_link": [
   {
    "clock": "xabe32fb4690c90",
    "story": "wa95920935a68"
-  },
-  {
-   "clock": "xabe32fb4690c90",
-   "story": "wf5014bc150e9"
   }
  ],
  "clock_unlink": [],
@@ -139,15 +135,6 @@
    "msg": "Linked \"UPS posts 2027 Retail Rates preview, starting with Next Day Air Early rates\" to rate clock entry 2026-12-21 \"UPS minimums rise with 2027 Daily Rates; Ground to $12.70\"",
    "ids": [
     "wa95920935a68"
-   ],
-   "fixed": true
-  },
-  {
-   "sev": "med",
-   "type": "date-not-on-clock",
-   "msg": "Linked \"UPS Small Business Rates: 2027 Next Day Air Early rates higher than 2026 guide\" to rate clock entry 2026-12-21 \"UPS minimums rise with 2027 Daily Rates; Ground to $12.70\"",
-   "ids": [
-    "wf5014bc150e9"
    ],
    "fixed": true
   },
