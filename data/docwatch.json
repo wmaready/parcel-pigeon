@@ -1,5 +1,5 @@
 {
- "cursor": 144,
+ "cursor": 0,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 560,
+   "fails": 561,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-21"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 560,
+   "fails": 561,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-21"
@@ -2100,7 +2100,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10946/q3-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "658f3ee32de5",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q3 2025 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -2111,7 +2111,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2150/ups-releases-3q-2025-earnings": {
    "hash": "658f3ee32de5",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q3 2025 results release",
    "snap": {
     "d": "2026-10-30",
@@ -2122,7 +2122,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/11022/q3-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "aed34c75f794",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q3 2026 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -2133,7 +2133,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings": {
    "hash": "aed34c75f794",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q3 2026 results release",
    "snap": {
     "d": "2026-10-30",
@@ -2144,7 +2144,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000019/ups-20241231.htm": {
    "hash": "dcb577838f60",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2024 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -2154,7 +2154,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10852/q4-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "48cc86f6d8fe",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2024 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -2165,7 +2165,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2135/ups-releases-4q-2024-earnings-and-provides-2025-guidance": {
    "hash": "48cc86f6d8fe",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2024 results release",
    "snap": {
     "d": "2026-10-31",
@@ -2176,7 +2176,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-008432/ups-20251231.htm": {
    "hash": "e54e5c2f97e2",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2025 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -2186,7 +2186,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10960/q4-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "75515863f11e",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2025 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -2197,7 +2197,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2154/ups-releases-4q-2025-earnings-and-provides-2026-guidance": {
    "hash": "75515863f11e",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "UPS Q4 2025 results release",
    "snap": {
     "d": "2026-10-30",
@@ -2208,7 +2208,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0205-usps-reports-first-quarter-fiscal-year-2026-results.pdf": {
    "hash": "8971a6e37b25",
    "first": "2026-10-30",
-   "checked": "2026-11-19",
+   "checked": "2026-11-21",
    "n": "USPS FY26 Q1 results release",
    "snap": {
     "d": "2026-10-30",
@@ -2361,14 +2361,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 122,
+   "fails": 123,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-21"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 122,
+   "fails": 123,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-21"
@@ -2462,7 +2462,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 40,
+   "fails": 41,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-21"
@@ -2474,7 +2474,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 40,
+   "fails": 41,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-21"
@@ -2566,6 +2566,28 @@
     "d": "2026-11-19",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23595.pdf",
     "txt": "data/snapshots/a516eddc83e2/2026-11-19.txt"
+   }
+  },
+  "https://www.federalregister.gov/documents/2026/11/23/2026-23783/new-postal-products": {
+   "hash": "5487ea119fb6",
+   "first": "2026-11-21",
+   "checked": "2026-11-21",
+   "n": "New Postal Products (2026)",
+   "snap": {
+    "d": "2026-11-21",
+    "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23783.pdf",
+    "txt": "data/snapshots/5e131fedee00/2026-11-21.txt"
+   }
+  },
+  "https://www.federalregister.gov/documents/2026/11/23/2026-23737/product-change-priority-mail-and-usps-ground-advantage-negotiated-service-agreements-priority-mail": {
+   "hash": "27c014e59dce",
+   "first": "2026-11-21",
+   "checked": "2026-11-21",
+   "n": "Product Change: Priority Mail and USPS Ground Advantage Negotiated Service Agreements (2026)",
+   "snap": {
+    "d": "2026-11-21",
+    "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23737.pdf",
+    "txt": "data/snapshots/e83e0d0c081f/2026-11-21.txt"
    }
   }
  }
