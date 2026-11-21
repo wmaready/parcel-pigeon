@@ -1,5 +1,5 @@
 {
- "run": "2026-11-21T01:29Z",
+ "run": "2026-11-21T01:40Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -108,6 +108,15 @@
   {
    "sev": "high",
    "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
+   "ids": [
+    "ac3a182b6b020"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "price-no-date",
    "msg": "Price increase has no effective date, so it is not on the rate clock: \"USPS files to raise Ground Advantage, Priority Mail prices for 2027\"",
    "ids": [
     "a0740b56c6649"
@@ -147,6 +156,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
+   "ids": [
+    "ac3a182b6b020"
    ],
    "fixed": false
   },
@@ -230,15 +248,6 @@
     "a260cc6a2e05e"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "primary-not-first",
-   "msg": "Carrier source UPS fuel surcharges moved ahead of press coverage on \"UPS's new Nov 2 fuel table adds 0.5 point to Ground fuel at the same diesel price\"",
-   "ids": [
-    "wa9c423a83880"
-   ],
-   "fixed": true
   },
   {
    "sev": "med",
@@ -462,6 +471,15 @@
   {
    "sev": "high",
    "type": "price-no-date",
+   "msg": "Price increase has no effective date, so it is not on the rate clock: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
+   "ids": [
+    "ac3a182b6b020"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "price-no-date",
    "msg": "Price increase has no effective date, so it is not on the rate clock: \"USPS files to raise Ground Advantage, Priority Mail prices for 2027\"",
    "ids": [
     "a0740b56c6649"
@@ -483,6 +501,15 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"FedEx reclassifies 239 ZIP codes into higher delivery area tiers and adds EU inbound fee\"",
    "ids": [
     "nrb01db6"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
+   "ids": [
+    "ac3a182b6b020"
    ],
    "fixed": false
   },

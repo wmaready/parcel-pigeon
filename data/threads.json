@@ -274,7 +274,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Carriers' peak surcharges and fuel surcharges are in effect, and trucking rates and diesel costs are adding to holiday shipping costs.",
+  "s": "Peak surcharges and USPS holiday prices are in effect for 2026, and consumer press now reports higher holiday delivery bills.",
   "ids": [
    "h416",
    "h418",
@@ -286,7 +286,7 @@
    "01"
   ],
   "first": "2024-07-26",
-  "last": "2026-11-16",
+  "last": "2026-11-19",
   "c": [
    "Amazon",
    "FedEx",
@@ -540,7 +540,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery sites keep expanding while the FAA's Part 108 beyond-visual-line-of-sight rule was still unpublished as of the last earlier coverage.",
+  "s": "Amazon is adding Prime Air sites, with Jacksonville next, while the FAA's Part 108 rule was last reported unpublished as of October 9.",
   "ids": [
    "g27",
    "g26",
@@ -1349,18 +1349,30 @@
   }
  },
  "uber-zipline-drones": {
-  "n": "Uber–Zipline drone delivery",
+  "n": "Zipline drone delivery rollout",
   "ids": [
-   "ab904315f1100"
+   "ab904315f1100",
+   "a5a12ee8825b7",
+   "a6058d4f53b74"
   ],
   "first": "2026-11-17",
   "co": "Zipline",
-  "s": "Uber Eats and Zipline began drone delivery in Spring, Texas on Nov. 17, 2026, with Dallas next and a goal of 1 million daily deliveries by end of 2029.",
-  "last": "2026-11-17",
+  "s": "Zipline is planning a Phoenix launch for early 2027 while the FAA reviews a draft environmental assessment open for comment through Dec. 7, 2026.",
+  "last": "2026-11-20",
   "c": [
-   "Industry"
+   "Industry",
+   "Regional"
   ],
-  "rv": "eabee2a6582a"
+  "rv": "1a7235bb61e2",
+  "cx": {
+   "sig": "6c1fdbc74239",
+   "v": 3,
+   "beats": {
+    "a5a12ee8825b7": "Uber Eats began Zipline drone deliveries in Spring, Texas, with Dallas next. The goal is 1 million drone deliveries a day by end of 2029.",
+    "a6058d4f53b74": "Zipline hopes to serve Phoenix in early 2027. An FAA draft assessment outlines up to 65,000 deliveries a day each in Phoenix and Tucson."
+   },
+   "now": "The FAA is taking public comments on the draft assessment through Dec. 7, 2026, with Phoenix service targeted for early 2027."
+  }
  },
  "doordash-instacart-deal": {
   "n": "DoorDash–Instacart deal",
