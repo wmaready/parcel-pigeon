@@ -3948,20 +3948,37 @@
    "pending": false
   },
   {
-   "id": "smartwayslogis",
-   "n": "Smartways Logistics",
-   "realm": "3pl",
-   "own": "sub",
-   "tk": null,
+   "id": "singaporeposts",
+   "n": "Singapore Post Limited",
+   "realm": "national",
+   "own": "public",
+   "tk": "SGX: S08",
    "parent": null,
-   "hq": null,
+   "hq": "Singapore, Singapore",
    "yr": null,
-   "s": "Healthcare courier and logistics in Australia and New Zealand",
-   "role": "Healthcare courier and logistics in Australia and New Zealan",
-   "al": [],
-   "src": "https://www.ups.com/us/en/healthcare/news/press-releases/ups-logistics-news-update",
+   "s": "Singapore's designated public postal licensee and an e-commerce logistics provider. It handles domestic and international mail and parcels and offers Speedpost Direct International, a delivery-duty-paid service for U.S.-bound shipments.",
+   "al": [
+    "SingPost",
+    "Singapore Post",
+    "Singapore Post (SingPost)",
+    "Speedpost"
+   ],
+   "src": "https://www.singpost.com/business/delivery-solutions/international-delivery/SDI-us",
    "auto": true,
-   "added": "2026-11-21"
+   "added": "2026-11-21",
+   "from": "discover",
+   "site": "singpost.com",
+   "geo": [
+    103.893,
+    1.319
+   ],
+   "srcs": [
+    "https://www.singpost.com/business/delivery-solutions/international-delivery/SDI-us",
+    "https://www.singpost.com/corporate/media-centre/singpost-launches-lower-cost-us-shipping-retail-customers-supporting",
+    "https://sg.linkedin.com/company/singapore-post"
+   ],
+   "enriched": "2026-11-21",
+   "pending": false
   }
  ],
  "edges": [
@@ -6799,6 +6816,15 @@
    "t": "FedEx-led group buys control of InPost (seller)",
    "url": "https://postandparcel.info/163391/news/e-commerce/inpost-this-partnership-delivers-long-term-capital-global-reach-and-deep-technology-expertise/",
    "story": "a318dc3f022f7"
+  },
+  {
+   "a": "alibaba",
+   "b": "singaporeposts",
+   "k": "invested",
+   "y": null,
+   "t": "Alibaba Group shareholder (about 11.21%)",
+   "url": "https://en.wikipedia.org/wiki/Singapore_Post",
+   "story": null
   }
  ],
  "moves": [
@@ -7226,7 +7252,8 @@
   "avalara": "2026-11-19",
   "project44": "2026-11-20",
   "esweshopworld": "2026-11-20",
-  "yanwenlogistic": "2026-11-21"
+  "yanwenlogistic": "2026-11-21",
+  "singaporeposts": "2026-11-21"
  },
  "facts": {
   "ups": {

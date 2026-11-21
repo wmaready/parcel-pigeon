@@ -410,6 +410,48 @@
   "unconf": true
  },
  {
+  "id": "aa25d28809c2c",
+  "date": "2026-11-20",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Labor",
+  "kind": "News",
+  "title": "Union leaders from 19 countries urge governments to end Amazon contracts",
+  "sum": "More than 30 labor union leaders from 19 countries are calling on governments to stop awarding public contracts to Amazon and Amazon Web Services, according to SupplyChainBrain on Nov. 20, 2026. The source text available gives no further detail on the demands.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The call is aimed at governments' public contracts with Amazon and Amazon Web Services.",
+  "why": "The call targets Amazon's public-sector contracts, not its parcel rates or delivery service, and adds to the labor scrutiny around its delivery operations.",
+  "score": 5,
+  "tie": "In early November 2026, the Teamsters said they had organized Amazon drivers in Indiana, which Amazon disputed.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-21T12:44:20Z",
+  "src": "SupplyChainBrain",
+  "url": "https://www.supplychainbrain.com/general-scm/hr-labor-management/article/16542232/global-unions-target-amazons-poor-labor-history",
+  "srcs": [
+   {
+    "src": "SupplyChainBrain",
+    "url": "https://www.supplychainbrain.com/general-scm/hr-labor-management/article/16542232/global-unions-target-amazons-poor-labor-history"
+   }
+  ],
+  "auto": true,
+  "new": "Union leaders from 19 countries now call on governments to stop awarding public contracts to Amazon and AWS; this does not change shipper rates or service.",
+  "syn": "More than 30 labor union leaders from 19 countries are calling on governments to stop awarding public contracts to Amazon and Amazon Web Services, SupplyChainBrain reported on Nov. 20, 2026. The call widens labor pressure on Amazon beyond U.S. driver organizing. It does not alter Amazon's shipping rates or delivery service.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   },
+   {
+    "who": "Government contracts with Amazon and AWS",
+    "what": "Union leaders from 19 countries ask governments to stop awarding them."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "ad0649319694e",
   "date": "2026-11-20",
   "c": [
@@ -2090,7 +2132,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -2138,7 +2180,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -2178,7 +2220,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -2856,7 +2898,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -2955,7 +2997,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-20",
+  "tried": "2026-11-21",
   "unconf": true
  },
  {
@@ -3372,16 +3414,16 @@
   "cat": "Drones & robots",
   "kind": "News",
   "title": "Bondurant, Iowa, approves Amazon drone site with sound-study condition",
-  "sum": "Bondurant, Iowa, approved a Prime Air drone launch site at Amazon's DSM5 fulfillment center on Nov. 16, 2026, according to the Des Moines Register. The approval is conditioned on a sound study showing the drones are no louder than the decibel levels Amazon presented. Amazon said deliveries to the Des Moines area could begin in mid-January.",
+  "sum": "Bondurant, Iowa, approved a Prime Air drone launch site at Amazon's DSM5 fulfillment center on Nov. 16, the Des Moines Register reported. The resolution requires a sound study showing drone noise does not exceed the decibel levels Amazon presented to the city. Amazon says deliveries to the Des Moines area could begin in mid-January.",
   "imp": "watch",
   "lvl": 1,
-  "plain": "Amazon plans drone delivery from its Bondurant fulfillment center, with a start in mid-January that depends on weather and FAA approval. According to the Register, orders are free for Prime members on $50 or more, $2.99 on smaller orders and $4.99 without Prime.",
-  "why": "Amazon's first Iowa drone hub is approved with a noise condition, showing how local approvals can shape where Prime Air launches.",
-  "score": 4,
-  "tie": "Amazon's Prime Air began drone deliveries in metro Atlanta in November 2026, a week before this Iowa approval.",
+  "plain": "Amazon says Prime Air drone delivery could start in the Des Moines area in mid-January, for opted-in customers within 7.5 miles of the Bondurant site. The start depends on weather during construction and on FAA approval, according to the Register.",
+  "why": "Amazon's first Iowa hub would serve customers within 7.5 miles of its DSM5 site in the Des Moines area, adding to its Prime Air drone network.",
+  "score": 5,
+  "tie": "Amazon made its first Prime Air deliveries in metro Atlanta on Nov. 14 and 15, 2026, and DroneXL said the FAA's review index listed no Amazon document for Georgia.",
   "act": null,
   "dates": [],
-  "added": "2026-11-18T18:58:07Z",
+  "added": "2026-11-21T12:44:37Z",
   "src": "DroneXL",
   "url": "https://dronexl.co/2026/11/18/amazon-bondurant-iowa-drone-hub-sound-study-condition/",
   "srcs": [
@@ -3392,24 +3434,24 @@
   ],
   "auto": true,
   "ann": "2026-11-16",
-  "new": "Bondurant approved Amazon's first Iowa drone hub on Nov. 16 with a sound-study condition, and a mid-January start is planned, adding the Des Moines area to Prime Air's expansion after Atlanta.",
-  "syn": "Bondurant's City Council approved a drone launch site for Amazon's Prime Air at its DSM5 fulfillment center on Nov. 16, 2026, four days after the Planning and Zoning Commission recommended it 7-0. The resolution carries one condition: a sound study showing drone noise does not exceed the decibel levels Amazon presented, with no deadline and no named party to run it. Amazon's Sam Bailey said a mid-January start depends on weather during construction and FAA approval, and DroneXL reported the FAA's public index listed no Iowa review on Nov. 18. The MK30 carries packages up to 5 pounds within 7.5 miles. The article's closing section is the author's own view.",
+  "new": "Bondurant approved Amazon's first Iowa drone site on Nov. 16 with a sound-study condition, and Amazon says deliveries could begin in mid-January, extending Prime Air's reach beyond Atlanta and Nampa.",
+  "syn": "The Bondurant City Council approved a site plan for an Amazon Prime Air drone launch site at the DSM5 fulfillment center on Monday, Nov. 16, four days after the Planning and Zoning Commission recommended it 7-0. Resolution 261116-415 carries one condition: a sound study showing drone sound does not exceed the decibel levels presented to the city. The text sets no deadline and names no one to run the study, according to DroneXL's reading of the council packet. Amazon's Sam Bailey said a mid-January start depends on weather and FAA approval, the Des Moines Register reported. The site would be Amazon's first in Iowa.",
   "aff": [
    {
     "who": "Des Moines-area customers",
-    "what": "Amazon says drone deliveries could begin in mid-January; customers must opt in and the drones carry up to 5 pounds within 7.5 miles."
+    "what": "Amazon says drone deliveries could begin in mid-January, for opted-in customers within 7.5 miles of the hub."
    },
    {
-    "who": "Prime Air delivery fees",
-    "what": "Per the Register: free for Prime members on orders of $50 or more, $2.99 on smaller orders, $4.99 without Prime."
+    "who": "Drone delivery orders",
+    "what": "The Register lists the price as free for Prime members on $50+ orders, $2.99 on smaller ones, $4.99 without Prime."
    },
    {
     "who": "Residents near the DSM5 site",
-    "what": "Approval requires a sound study; the land directly south is zoned for single-family homes."
+    "what": "Approval is conditioned on a sound study; Amazon presented 53 to 55 decibels at 500 feet and 68 in a backyard."
    },
    {
-    "who": "Amazon's launch timeline",
-    "what": "Start depends on construction weather and FAA approval; DroneXL found no Iowa entry on the FAA index on Nov. 18."
+    "who": "Package size",
+    "what": "The MK30 drone carries packages of up to 5 pounds."
    }
   ],
   "exclusive": true
@@ -13174,69 +13216,6 @@
    {
     "who": "Uber Eats robot deliveries",
     "what": "Robots are run by third-party company Avride, not Uber itself, per Yahoo Finance."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "a6077c6ca1c53",
-  "date": "2026-10-31",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Regulation & trade",
-  "kind": "News",
-  "title": "Philadelphia councilmember proposes per-delivery fee on sidewalk robots",
-  "sum": "Philadelphia Councilmember Jim Harrity has proposed charging robot operators 50 cents per delivery or 5% of the order's cost, whichever is larger, according to MoneyWise. The proposal follows the October 14 arrest of 78-year-old Carolyn Marvin for blocking an Uber Eats delivery robot, CNN reported.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No fee is in effect. If the Council passes the bill, it would not take effect until January 2028, and the sources do not say whether operators would pass the cost to customers.",
-  "why": "A per-trip fee on robot deliveries would differ from the flat permit fees MoneyWise says most other cities charge, and applies to operators of delivery robots.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2028-01-01",
-    "w": "Proposed Philadelphia robot delivery fee would start if bill passes",
-    "imp": "up",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-03T13:34:00Z",
-  "src": "CNN",
-  "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec",
-  "srcs": [
-   {
-    "src": "CNN",
-    "url": "https://www.cnn.com/2026/10/31/us/philadelphia-woman-delivery-robots-cec"
-   },
-   {
-    "src": "MoneyWise.com",
-    "url": "https://moneywise.com/news/top-stories/philadelphia-robot-delivery-tax-proposal"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-03",
-  "thread": "philly-delivery-robot-tax",
-  "syn": "Philadelphia Councilmember Jim Harrity has proposed a fee on sidewalk delivery robots: 50 cents per delivery or 5% of the order's cost, whichever is larger, with proceeds meant to fund free transit passes for low-income residents, according to MoneyWise. The bill would also charge driverless taxi services $1 per ride or 5% of the fare and add a 3% tax on driverless freight vehicles. It follows the October 14 arrest of retired professor Carolyn Marvin, who was cited for disorderly conduct after blocking an Uber Eats robot, CNN reported. MoneyWise said a 2020 state law, Act 106, limits how municipalities can regulate the devices, and the rates could change in committee.",
-  "aff": [
-   {
-    "who": "Robot delivery operators",
-    "what": "Would pay 50 cents per delivery or 5% of the order, whichever is larger, and register with the city and file quarterly reports."
-   },
-   {
-    "who": "Customers of robot delivery",
-    "what": "A $40 order would carry a $2 fee and an $8 order the 50-cent minimum; the sources do not say if it would be passed on."
-   },
-   {
-    "who": "Driverless taxi and freight services",
-    "what": "Would face $1 per ride or 5% of the fare, and a 3% tax on driverless freight vehicles."
-   },
-   {
-    "who": "Timing",
-    "what": "If passed, the fee would not take effect until January 2028."
    }
   ],
   "edge": true,

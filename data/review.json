@@ -1,5 +1,32 @@
 [
  {
+  "type": "headline-only",
+  "title": "Amazon launches its own line of prepared meals — with same-day delivery",
+  "url": "https://chainstoreage.com/amazon-launches-its-own-line-prepared-meals-same-day-delivery",
+  "src": "Chain Store Age",
+  "date": "2026-11-17",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "Royal Mail slips on delivery targets, revenue rises",
+  "url": "https://www.printweek.com/content/news/royal-mail-slips-on-delivery-targets-revenue-rises",
+  "src": "Printweek",
+  "date": "2026-11-19",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "Opinion | Mamdani’s Amazon Drive-By Hit",
+  "url": "https://www.wsj.com/opinion/new-york-city-amazon-contractors-zohran-mamdani-julie-menin-60145c3e",
+  "src": "WSJ",
+  "date": "2026-11-20",
+  "retried": true,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
   "type": "page-picture",
   "title": "FedEx: FedEx Fiscal Q4 2026 (Mar–May 2026) 10-Q filing",
   "url": "https://www.sec.gov/Archives/edgar/data/0001048911/000104891126000105/fdx-20260531.htm",
@@ -17,33 +44,6 @@
  },
  {
   "type": "headline-only",
-  "title": "Amazon launches its own line of prepared meals — with same-day delivery",
-  "url": "https://chainstoreage.com/amazon-launches-its-own-line-prepared-meals-same-day-delivery",
-  "src": "Chain Store Age",
-  "date": "2026-11-17",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "Companies Are Getting Billions In Tariff Refunds—What Happens To Consumers?",
-  "url": "https://www.forbes.com/sites/nathangoldman/2026/11/20/walmart-apple-and-fedex-are-getting-tariff-refunds-will-consumers/",
-  "src": "Forbes",
-  "date": "2026-11-20",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
-  "title": "New York City legislation could upend Amazon's delivery model (AMZN:NASDAQ)",
-  "url": "https://seekingalpha.com/news/4674722-new-york-city-legislation-could-upend-amazons-delivery-model",
-  "src": "Seeking Alpha",
-  "date": "2026-11-19",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "headline-only",
   "title": "Walmart Taps Restaurant Delivery to Capture More Meal Occasions",
   "url": "https://progressivegrocer.com/walmart-taps-restaurant-delivery-capture-more-meal-occasions",
   "src": "Progressive Grocer",
@@ -56,15 +56,6 @@
   "story_id": "ac3a182b6b020",
   "title": "ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills",
   "note": "Price change with no effective date in the sources, so it is not on the rate clock. Add the date from the carrier's own notice."
- },
- {
-  "type": "headline-only",
-  "title": "Opinion | Mamdani’s Amazon Drive-By Hit",
-  "url": "https://www.wsj.com/opinion/new-york-city-amazon-contractors-zohran-mamdani-julie-menin-60145c3e",
-  "src": "WSJ",
-  "date": "2026-11-20",
-  "retried": false,
-  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
  },
  {
   "type": "page-picture",
@@ -1611,6 +1602,13 @@
   "key": "fuel-event-flat|2022-10-05|OPEC+ cuts output targets by 2 million b",
   "event": "OPEC+ cuts output targets by 2 million barrels a day",
   "d": "2022-10-05",
+  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
+ },
+ {
+  "type": "fuel-event",
+  "key": "fuel-event-flat|2026-02-28|U.S. and Israel strike Iran; Strait of H",
+  "event": "U.S. and Israel strike Iran; Strait of Hormuz shipping halts",
+  "d": "2026-02-28",
   "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
  }
 ]
