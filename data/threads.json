@@ -373,25 +373,31 @@
   "co": "USPS"
  },
  "usps-service-network": {
-  "n": "USPS service standards and processing changes",
-  "s": "USPS service standards have changed in phases since 2025, while local audits and reports continue to document delivery problems and scan accuracy issues.",
+  "n": "USPS service standards and network changes",
+  "s": "Lawmakers have asked USPS to restore air transport for light Hawaii-bound Ground Advantage parcels and requested a response by Nov. 25, 2026.",
   "ids": [
    "h410",
    "h505",
-   "a4af485c67766"
+   "a4af485c67766",
+   "a5a249a650059"
   ],
   "first": "2024-05-14",
-  "last": "2026-10-20",
+  "last": "2026-11-22",
   "c": [
    "USPS"
   ],
   "cx": {
-   "sig": "dabed7cbdad8",
+   "sig": "4d1d6a1fecdc",
    "v": 3,
-   "beats": {},
-   "intro": "USPS has been reshaping how and how fast mail moves, and shippers feel it in delivery times and tracking."
+   "beats": {
+    "h410": "DeJoy paused consolidation until at least Jan. 1, 2025; senators cited Palmetto, Ga., with 36% of inbound mail on time.",
+    "h505": "Standards phase in starting April 1, 2025; some mail may take an extra day, with at least $36 billion in projected savings.",
+    "a5a249a650059": "Reportedly, since Oct. 1, 2026, sub-1 lb Hawaii parcels go mostly by ocean: two weeks to a month, versus under five days."
+   },
+   "intro": "USPS keeps reshaping its network and delivery timing, and shippers feel it in transit times, most recently to Hawaii.",
+   "now": "Lawmakers want air transport restored and asked USPS to respond by Nov. 25, 2026; the Hawaii change itself is still unconfirmed."
   },
-  "rv": "1eced18a2ca4",
+  "rv": "c97f136aea80",
   "apart": [
    "usps-big-shipper-deals",
    "usps-finances",
@@ -540,7 +546,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding through local approvals and a growing site count while the FAA's Part 108 rule remained unpublished as of Oct. 9.",
+  "s": "Drone delivery is expanding across carriers and retailers while the FAA's Part 108 rule was still unpublished as of early October.",
   "ids": [
    "g27",
    "g26",
@@ -557,23 +563,24 @@
    "a62c178a11f94",
    "a7aea8c84dd29",
    "a2e23b2549e9b",
-   "a743e307cb77c"
+   "a743e307cb77c",
+   "a24d86d8168cb"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-19",
+  "last": "2026-11-20",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "6afcf5775ddc",
+   "sig": "e8549208309c",
    "v": 3,
-   "beats": {},
-   "intro": "Amazon, Wing and Uber/Zipline are pushing drone delivery into new U.S. metros while the FAA's Part 108 rule stays unpublished.",
-   "now": "Rollouts keep moving ahead of Part 108, which was still unpublished as of Oct. 9, so waivers or Part 135 certificates remain the route for now."
+   "beats": {
+    "a24d86d8168cb": "Amazon's guide now says most drone orders arrive in under 90 minutes, versus about 60 in August. The fastest is still 30 minutes."
+   }
   },
-  "rv": "83a680e3cb3e",
+  "rv": "b3b765110ed3",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -1030,7 +1037,7 @@
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has said the 5.9% average increase and 11% fuel-related surcharges take effect Jan. 17, 2027.",
+  "s": "USPS has proposed a permanent 11% fuel surcharge and a 5.9% average increase for Jan. 17, with the fuel surcharge pending Postal Regulatory Commission review.",
   "last": "2026-11-19",
   "c": [
    "USPS"
@@ -1353,20 +1360,6 @@
    },
    "now": "The FAA is taking public comments on the draft assessment through Dec. 7, 2026, with Phoenix service targeted for early 2027."
   }
- },
- "doordash-instacart-deal": {
-  "n": "DoorDash–Instacart deal",
-  "ids": [
-   "aee5be6ce4062"
-  ],
-  "first": "2026-11-16",
-  "co": "DoorDash",
-  "s": "The Justice Department will review DoorDash's roughly $17 billion Instacart deal, per two people familiar, as of Nov. 16, 2026.",
-  "last": "2026-11-16",
-  "c": [
-   "Industry"
-  ],
-  "rv": "ed80fc4355f3"
  },
  "doordash-ftc-pricing": {
   "n": "DoorDash FTC pricing inquiry",
