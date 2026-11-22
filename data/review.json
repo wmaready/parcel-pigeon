@@ -1,5 +1,12 @@
 [
  {
+  "type": "page-picture",
+  "title": "FedEx: FedEx rate tools (zone locator, rate downloads)",
+  "url": "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en",
+  "date": "2026-11-22",
+  "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
+ },
+ {
   "type": "headline-only",
   "title": "CXT Software and Dispatch Science Combine to Create the Largest, Unified Agentic Last-Mile TMS",
   "url": "https://www.knoxnews.com/press-release/story/265254/cxt-software-and-dispatch-science-combine-to-create-the-largest-unified-agentic-last-mile-tms/",
@@ -1606,13 +1613,6 @@
   "key": "fuel-event-flat|2020-03-11|COVID-19 declared a pandemic",
   "event": "COVID-19 declared a pandemic",
   "d": "2020-03-11",
-  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
- },
- {
-  "type": "fuel-event",
-  "key": "fuel-event-flat|2022-02-24|Russia invades Ukraine",
-  "event": "Russia invades Ukraine",
-  "d": "2022-02-24",
   "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
  }
 ]
