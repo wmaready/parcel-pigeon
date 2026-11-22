@@ -47,6 +47,128 @@
   "exclusive": true
  },
  {
+  "id": "w9d297068a7a2",
+  "date": "2026-11-22",
+  "c": [
+   "UPS"
+  ],
+  "title": "UPS adds separate retail-rate demand surcharges for Nov 22 – Dec 26, 2026",
+  "sum": "UPS's November 17, 2026 update adds a UPS Retail Demand Surcharges section (C and D) for packages on Retail Rates, with its own amounts for Nov 22 – Dec 26, 2026. It includes $11.90 Additional Handling, $117.50 Large Package, $590 Over Maximum, $0.75 per package for Ground and Ground Saver, and $2.50 per package for Next Day Air and All Other Air. The existing commercial tables appear unchanged apart from footnote renumbering.",
+  "plain": "Shippers on Retail Rates now have a defined set of peak surcharges, starting November 22, 2026. The per-package amounts range from $0.75 to $590, depending on the service or oversize charge.",
+  "imp": "up",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-11-22",
+  "inferred": null,
+  "detected": "2026-11-22",
+  "changes": [
+   {
+    "what": "Pointer sending Retail Rate shippers to separate retail demand surcharge sections",
+    "before": null,
+    "after": "Packages subject to Retail Rates use the Demand Surcharges in Sections C & D (UPS Retail Demand Surcharges)",
+    "effective": null,
+    "who": "Shippers whose packages are billed at Retail Rates",
+    "impact": null
+   },
+   {
+    "what": "Retail demand surcharge on Additional Handling packages",
+    "before": null,
+    "after": "$11.90 per package, 11/22/26 through 12/26/26",
+    "effective": "2026-11-22",
+    "who": "Retail-rate U.S. domestic packages requiring Additional Handling",
+    "impact": "$11.90 per package added on top of other charges"
+   },
+   {
+    "what": "Retail demand surcharge on Large Packages",
+    "before": null,
+    "after": "$117.50 per package, 11/22/26 through 12/26/26",
+    "effective": "2026-11-22",
+    "who": "Retail-rate U.S. domestic Large Packages",
+    "impact": "$117.50 per package added on top of other charges"
+   },
+   {
+    "what": "Retail demand surcharge on Over Maximum Limits packages",
+    "before": null,
+    "after": "$590 per package, 11/22/26 through 12/26/26",
+    "effective": "2026-11-22",
+    "who": "Retail-rate U.S. domestic packages over maximum limits",
+    "impact": "$590 per package added on top of other charges"
+   },
+   {
+    "what": "Retail demand surcharge on UPS Ground and UPS Ground Saver packages",
+    "before": null,
+    "after": "$0.75 per package for each, Nov 22 – Dec 26, 2026",
+    "effective": "2026-11-22",
+    "who": "Retail-rate UPS Ground and Ground Saver packages",
+    "impact": "$0.75 per package"
+   },
+   {
+    "what": "Retail demand surcharge on UPS Next Day Air and All Other UPS Air packages",
+    "before": null,
+    "after": "$2.50 per package for each, Nov 22 – Dec 26, 2026",
+    "effective": "2026-11-22",
+    "who": "Retail-rate Next Day Air, 2nd Day Air A.M., 2nd Day Air and 3 Day Select packages",
+    "impact": "$2.50 per package"
+   }
+  ],
+  "verdict": "price change",
+  "unknowns": [
+   "Which accounts count as 'Retail Rates' customers is not defined in the document",
+   "Whether the retail amounts replace or differ from any earlier retail treatment is not stated",
+   "Older version not on file"
+  ],
+  "dates": [
+   {
+    "d": "2026-11-22",
+    "w": "UPS: Retail demand surcharge on Additional Handling packages",
+    "imp": "up",
+    "fees": [
+     [
+      "UPS",
+      "Retail demand surcharge on Large Packages",
+      "$117.50 per package added on top of other charges"
+     ],
+     [
+      "UPS",
+      "Retail demand surcharge on Over Maximum Limits packages",
+      "$590 per package added on top of other charges"
+     ],
+     [
+      "UPS",
+      "Retail demand surcharge on UPS Ground and UPS Ground Saver packages",
+      "$0.75 per package"
+     ],
+     [
+      "UPS",
+      "Retail demand surcharge on UPS Next Day Air and All Other UPS Air packages",
+      "$2.50 per package"
+     ]
+    ]
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "UPS",
+  "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+  "srcs": [
+   {
+    "src": "UPS: UPS demand surcharges, 2026–27 season",
+    "url": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "price change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf",
+     "old": "https://assets.ups.com/adobe/assets/urn:aaid:aem:2c542692-de10-4fa3-b507-3b4f181e0953/original/as/demand-surcharges-us-en.pdf (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "a1ec24ff9702c",
   "date": "2026-11-21",
   "c": [
@@ -13164,38 +13286,5 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "acb0ee4be247f",
-  "date": "2026-11-02",
-  "c": [
-   "Industry"
-  ],
-  "cat": "M&A",
-  "kind": "Analysis",
-  "title": "GlobalData: DoorDash-Instacart profit hinges on efficiency, retailer trust",
-  "sum": "GlobalData, cited by Retail Insight Network, said DoorDash's proposed $17bn acquisition of Instacart could reshape grocery delivery. GlobalData said profitability depends on efficiency and retailer trust. The piece was published on 2026-11-02.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service for shippers has been announced. The analysis covers how the proposed deal could affect grocery delivery economics.",
-  "why": "GlobalData's view of a proposed $17bn deal between two grocery delivery platforms; the sources state no change to shipper rates.",
-  "score": 5,
-  "tie": "DoorDash agreed on Oct. 29, 2026 to buy Instacart for $65.00 a share, an equity value of about $17 billion, according to a joint release.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-02T13:34:09Z",
-  "src": "Retail Insight Network",
-  "url": "https://www.retail-insight-network.com/features/doordash-instacart-deal-puts-grocery-delivery-economics-in-focus/",
-  "srcs": [
-   {
-    "src": "Retail Insight Network",
-    "url": "https://www.retail-insight-network.com/features/doordash-instacart-deal-puts-grocery-delivery-economics-in-focus/"
-   }
-  ],
-  "auto": true,
-  "new": "GlobalData's analysis says the deal's profitability hinges on efficiency and retailer trust; deal terms and shipper rates are unchanged.",
-  "exclusive": true,
-  "tried": "2026-11-12",
-  "unconf": true
  }
 ]
