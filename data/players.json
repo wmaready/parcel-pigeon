@@ -3996,6 +3996,23 @@
    "pending": true,
    "added": "2026-11-09",
    "story": "ada0476433eae"
+  },
+  {
+   "id": "autopartscom",
+   "n": "AutoParts.com",
+   "realm": "retail",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Operates a digital marketplace and fulfillment network connecting inventory from distributors, independent suppliers and retail locations.",
+   "al": [],
+   "src": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-19",
+   "story": "a9d697dc90273"
   }
  ],
  "edges": [
@@ -6851,6 +6868,24 @@
    "t": "FedEx and China Southern Air Logistics share network resources",
    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
    "story": "ada0476433eae"
+  },
+  {
+   "a": "uber",
+   "b": "autopartscom",
+   "k": "partner",
+   "y": "2026",
+   "t": "Uber Eats and AutoParts.com partner on auto parts delivery",
+   "url": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
+   "story": "a9d697dc90273"
+  },
+  {
+   "a": "doordash",
+   "b": "autopartscom",
+   "k": "partner",
+   "y": "2026",
+   "t": "DoorDash offers AutoParts.com items for on-demand delivery",
+   "url": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
+   "story": "a9d697dc90273"
   }
  ],
  "moves": [

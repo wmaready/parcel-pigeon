@@ -1,5 +1,5 @@
 {
- "run": "2026-11-22T18:35Z",
+ "run": "2026-11-22T23:43Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -155,6 +155,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge\"",
+   "ids": [
+    "a9fbb927a026c"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
    "ids": [
     "ac3a182b6b020"
@@ -185,15 +194,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\"",
    "ids": [
     "a98dc9ba3a102"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Joe & Bella conversion falls after free-shipping minimum rises to $100\"",
-   "ids": [
-    "a9fbb927a026c"
    ],
    "fixed": false
   },
@@ -254,15 +254,6 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
-   "ids": [
-    "acfad007d564b"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Whatnot makes US sellers pay USPS weight adjustments from Nov. 4\"",
    "ids": [
     "a260cc6a2e05e"
@@ -300,7 +291,7 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more seller services\"",
    "ids": [
     "a2cf4b58caa41",
     "acfad007d564b"
@@ -510,10 +501,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS final rule sets 5.9% increase for competitive products\"",
+   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge\"",
    "ids": [
     "a0ef7c3f1b1ff",
-    "aa516eddc83e2"
+    "a9fbb927a026c"
    ],
    "fixed": false
   }
@@ -567,6 +558,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge\"",
+   "ids": [
+    "a9fbb927a026c"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"ConsumerAffairs says higher rates, surcharges raise 2026 holiday shipping bills\"",
    "ids": [
     "ac3a182b6b020"
@@ -588,15 +588,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\"",
    "ids": [
     "a98dc9ba3a102"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Joe & Bella conversion falls after free-shipping minimum rises to $100\"",
-   "ids": [
-    "a9fbb927a026c"
    ],
    "fixed": false
   },
@@ -633,15 +624,6 @@
    "msg": "No carrier source for a price story; figures rest on press reports: \"EBay cuts Depop shipping rates, adds delivery features\"",
    "ids": [
     "a74df5c94691e"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
-   "ids": [
-    "acfad007d564b"
    ],
    "fixed": false
   },
@@ -685,7 +667,7 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more services\"",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more seller services\"",
    "ids": [
     "a2cf4b58caa41",
     "acfad007d564b"
@@ -895,10 +877,10 @@
   {
    "sev": "high",
    "type": "superseded",
-   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"USPS final rule sets 5.9% increase for competitive products\"",
+   "msg": "\"USPS 11% fuel surcharge to replace 8% charge on Jan. 17, pending review\" may be out of date: newer story \"Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge\"",
    "ids": [
     "a0ef7c3f1b1ff",
-    "aa516eddc83e2"
+    "a9fbb927a026c"
    ],
    "fixed": false
   }

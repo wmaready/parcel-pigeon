@@ -134,6 +134,75 @@
   "unconf": true
  },
  {
+  "id": "a9fbb927a026c",
+  "date": "2026-11-22",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge",
+  "sum": "The Cool Down, citing Modern Retail, CNBC and FreightWaves, reported that small retailers are changing free-shipping thresholds and shipping charges as carrier costs rise. Joe & Bella said its conversion rate fell by more than half after it moved its threshold from $75 to $100. USPS has proposed a permanent 11% fuel surcharge and a 5.9% average rate increase, both for Jan. 17.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "USPS plans an 11% permanent fuel surcharge, replacing the current 8%, and a 5.9% average rate increase on Jan. 17. The surcharge needs Postal Regulatory Commission review before it takes effect.",
+  "why": "A ShipStation poll found 52% of 1,600 small-business decision-makers rate carrier fee and fuel surcharge rises a major challenge.",
+  "score": 4,
+  "tie": "USPS told the Postal Regulatory Commission on Nov. 12 of the permanent 11% fuel surcharge, which replaces the temporary 8% charge imposed in April, and published a final rule on Nov. 19 for the 5.9% increase.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS permanent fuel surcharge rises to 11% from 8%, pending review",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-01-17",
+    "w": "USPS average 5.9% increase for competitive shipping services",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   }
+  ],
+  "added": "2026-11-22T23:42:26Z",
+  "src": "The Cool Down",
+  "url": "https://www.thecooldown.com/green-business/joe-bella-free-shipping-threshold-conversion/",
+  "srcs": [
+   {
+    "src": "The Cool Down",
+    "url": "https://www.thecooldown.com/green-business/joe-bella-free-shipping-threshold-conversion/"
+   }
+  ],
+  "auto": true,
+  "new": "The article adds how small sellers are responding, including higher free-shipping thresholds and a poll of 1,600 small-company decision-makers, with no change to USPS's proposed figures or dates.",
+  "syn": "Small retailers are changing their free-shipping minimums and shipping charges as carrier costs rise, according to reports from Modern Retail, CNBC and FreightWaves summarized by The Cool Down. Joe & Bella said its conversion rate fell by more than half after it raised its free-shipping threshold from $75 to $100. USPS filed notice on Nov. 12 of a permanent 11% fuel surcharge to replace its 8% charge on Jan. 17, along with a 5.9% average increase for Ground Advantage, Parcel Select, Priority Mail and Priority Mail Express. An industry analysis cited in the report lists an average 5.9% UPS increase on Dec. 21 and a FedEx increase on Jan. 4.",
+  "aff": [
+   {
+    "who": "USPS shippers",
+    "what": "Permanent 11% fuel surcharge proposed for Jan. 17, replacing 8%, pending Postal Regulatory Commission review."
+   },
+   {
+    "who": "Ground Advantage, Parcel Select, Priority Mail and Priority ",
+    "what": "Average 5.9% rate increase scheduled for Jan. 17."
+   },
+   {
+    "who": "Small online sellers",
+    "what": "Some raised free-shipping minimums, began calculating shipping on orders under $150, or deducted return shipping from refunds."
+   },
+   {
+    "who": "Small businesses (ShipStation poll)",
+    "what": "52% of 1,600 decision-makers called carrier fee increases and fuel surcharges a major challenge."
+   }
+  ],
+  "exclusive": true,
+  "tried": "2026-11-22",
+  "unconf": true
+ },
+ {
   "id": "w4d42b194c9f2",
   "date": "2026-11-22",
   "c": [
@@ -1285,6 +1354,10 @@
    {
     "src": "Traction News",
     "url": "https://www.tractionnews.com/uber-eats-adds-auto-parts-delivery-autoparts-com/"
+   },
+   {
+    "src": "Retail Technology Innovation Hub",
+    "url": "https://retailtechinnovationhub.com/home/2026/11/20/first-for-uber-eats-as-online-retailer-autopartscom-joins-on-demand-delivery-platform"
    }
   ],
   "auto": true,
@@ -2855,7 +2928,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -3533,7 +3606,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -3632,7 +3705,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -3732,7 +3805,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -11485,42 +11558,32 @@
   "c": [
    "Amazon"
   ],
-  "cat": "Fees & rules",
+  "cat": "Amazon",
   "kind": "News",
-  "title": "Amazon extends 3.5% fuel and logistics surcharge to more services",
-  "sum": "Amazon will apply its 3.5% fuel and logistics surcharge to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S. from Feb. 1, 2027, according to its website. The surcharge, introduced in April 2026, currently covers FBA fulfillment fees in the U.S. and Canada, among other offerings.",
+  "title": "Amazon extends 3.5% fuel and logistics surcharge to more seller services",
+  "sum": "Amazon will apply its 3.5% fuel and logistics surcharge to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S. from Feb. 1, 2027, according to its website. Amazon announced the change to sellers on Nov. 5. The surcharge, introduced in April 2026, currently covers fulfillment fees for Fulfillment by Amazon in the U.S. and Canada, among other offerings.",
   "imp": "up",
   "lvl": 2,
-  "plain": "From Feb. 1, 2027, third-party sellers using Amazon's Multi-Channel Distribution and Warehousing and Distribution services in the U.S. will pay the 3.5% surcharge on transportation fees. FBA fulfillment fees already carry it.",
-  "why": "The surcharge reaches bulk replenishment and storage transport services used by third-party sellers, adding to other Amazon fee changes in early 2027.",
+  "plain": "From Feb. 1, 2027, sellers using Amazon's Multi-Channel Distribution and Warehousing and Distribution services in the U.S. will pay the 3.5% surcharge on transportation fees. Fulfillment by Amazon fulfillment fees already carry it.",
+  "why": "Third-party sellers using Multi-Channel Distribution and Warehousing and Distribution face the 3.5% surcharge on U.S. transportation fees.",
   "score": 6,
-  "tie": null,
+  "tie": "Amazon introduced the surcharge in April 2026 and said costs have stayed elevated since then.",
   "act": "2027-02-01",
   "dates": [
    {
     "d": "2027-01-15",
-    "w": "Amazon FBA fulfillment fees rise $0.19 per unit on average",
+    "w": "FBA fulfillment fees rise $0.19 per unit on average",
     "imp": "up",
     "fx": null
    },
    {
     "d": "2027-02-01",
-    "w": "Amazon 3.5% fuel and logistics surcharge extends to more services",
+    "w": "3.5% surcharge extends to MCF and WD U.S. transportation fees",
     "imp": "up",
-    "fx": {
-     "t": "fee",
-     "car": "Amazon",
-     "items": [
-      [
-       "Fuel and logistics surcharge on MCF and WD transportation fees",
-       "3.5%",
-       3.5
-      ]
-     ]
-    }
+    "fx": null
    }
   ],
-  "added": "2026-11-21T23:29:25Z",
+  "added": "2026-11-22T23:41:28Z",
   "src": "Yahoo Finance",
   "url": "https://finance.yahoo.com/economy/policy/articles/amazon-expand-fuel-logistics-surcharge-143617300.html",
   "srcs": [
@@ -11531,8 +11594,8 @@
   ],
   "auto": true,
   "ann": "2026-11-05",
-  "new": "The update adds Amazon's Nov. 5 seller announcement, Q3 cost figures (shipping costs up 11%, three points tied to fuel and linehaul) and separate fee changes starting Jan. 15, 2027.",
-  "syn": "Amazon is expanding its 3.5% fuel and logistics surcharge to more services for third-party sellers, according to its website. From Feb. 1, 2027, it will also apply to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S., which are used for bulk inventory replenishment and storage. Amazon said in a Nov. 5 announcement to sellers that costs, especially fuel and line-haul trucking, have remained elevated since the surcharge began in April 2026. The change comes alongside other fulfillment fee changes starting in early 2027.",
+  "thread": "amazon-fuel-surcharge",
+  "syn": "Amazon is widening its 3.5% fuel and logistics surcharge for third-party sellers. From Feb. 1, 2027, it will also cover U.S. transportation fees for Multi-Channel Distribution and Warehousing and Distribution, which are used for bulk inventory replenishment and storage. Amazon told sellers on Nov. 5 that fuel and line-haul trucking costs have stayed elevated since the April 2026 launch and that it will keep reviewing the surcharge. CFO Brian Olsavsky said on an October earnings call that the surcharge recovers some, but not all, of Amazon's fuel costs. Amazon is also changing FBA fulfillment and storage fees in early 2027.",
   "aff": [
    {
     "who": "Multi-Channel Distribution and Warehousing and Distribution ",
@@ -11540,11 +11603,15 @@
    },
    {
     "who": "FBA sellers",
-    "what": "Average fulfillment fee rises $0.19 per unit sold from Jan. 15, 2027; impact varies by product."
+    "what": "Average fulfillment fee rises $0.19 per unit sold from Jan. 15, 2027, up from $0.08 in 2026; impact varies by product."
    },
    {
-    "who": "Sellers with stored inventory",
-    "what": "Storage utilization surcharge is eliminated; aged inventory surcharge merges into an age-based monthly storage rate."
+    "who": "Sellers holding aged inventory",
+    "what": "Aged inventory surcharge (181 days or more) is folded into monthly storage fees as an age-based rate; Amazon says fees for aged stock rise."
+   },
+   {
+    "who": "Sellers stocking for high-demand events",
+    "what": "Amazon is eliminating the storage utilization surcharge."
    }
   ],
   "exclusive": true,
@@ -13288,56 +13355,5 @@
    }
   ],
   "edge": true
- },
- {
-  "id": "aa55fa1542116",
-  "date": "2026-11-02",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Westborough official withdraws zoning ruling on Amazon drone pad",
-  "sum": "Westborough, Massachusetts building commissioner William Hezlitt withdrew on Nov. 2 the Aug. 26 zoning ruling that classified Amazon's Prime Air drone pad at 64 Otis Street as an accessory use, according to DroneXL. The letter followed Amazon's Oct. 30 request to withdraw its site-plan application. An Amazon spokesperson said the company will file a revised project soon.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "No change to rates or service. Amazon's Westborough drone pad has no zoning classification, and any revised proposal needs a new zoning review.",
-  "why": "Westborough would have been New England's first drone delivery facility, and its town voted 510 to 13 on Oct. 19 to ban commercial drone launch pads.",
-  "score": 5,
-  "tie": "Amazon said in August 2026 that Prime Air would reach almost 500 cities and towns, and in October 2026 its drone deliveries were reported operating from Markham, near Chicago.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-04T21:11:13Z",
-  "src": "DroneXL",
-  "url": "https://dronexl.co/2026/11/04/amazon-westborough-drone-zoning-ruling-vacated-new-review/",
-  "srcs": [
-   {
-    "src": "DroneXL",
-    "url": "https://dronexl.co/2026/11/04/amazon-westborough-drone-zoning-ruling-vacated-new-review/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-02",
-  "new": "Westborough withdrew its Aug. 26 zoning ruling after Amazon pulled its application, so any revised Westborough plan starts over; no change to Prime Air service elsewhere was reported.",
-  "syn": "Westborough's building commissioner, William Hezlitt, withdrew the Aug. 26 zoning ruling on Amazon's Prime Air drone pad in a Nov. 2 letter. The ruling had classified the pad at the 64 Otis Street warehouse as an accessory use. The letter says Amazon's own withdrawal left it with no active application to cover, and that a revised proposal needs a new zoning review. Amazon had asked on Oct. 30 to withdraw its site-plan application, and its spokesperson said a revised project will be filed after talks with local stakeholders. The town voted 510 to 13 on Oct. 19 to ban commercial drone launch pads and drop zones.",
-  "aff": [
-   {
-    "who": "Amazon Prime Air Westborough pad",
-    "what": "Revised proposal needs a new zoning review; the Aug. 26 ruling no longer covers it."
-   },
-   {
-    "who": "Residents' zoning appeal",
-    "what": "The Zoning Board of Appeals continued the appeal without ruling; it is to return in early December, per the Boston Globe."
-   },
-   {
-    "who": "Town drone ban bylaw",
-    "what": "Sent to the attorney general Oct. 22; MassDOT's Aeronautics Division must also approve it, per the town."
-   },
-   {
-    "who": "Amazon's drone pad plan",
-    "what": "MassDOT told Amazon on Oct. 22 it needs a state certificate of approval and had no application."
-   }
-  ],
-  "exclusive": true
  }
 ]

@@ -695,6 +695,27 @@
  {
   "carrier": "FedEx",
   "year": 2026,
+  "kind": "peak",
+  "announced": "2026-11-22",
+  "effective": null,
+  "pct": null,
+  "headline": "FedEx 2026 peak chart: Puerto Rico Economy deadline moves up a day; Priority Distribution added",
+  "details": [
+   "U.S. to Puerto Rico FedEx International Economy last day to ship moves from Tuesday, December 22 to Monday, December 21",
+   "FedEx International Priority Distribution added to the international and Puerto Rico deadline lists",
+   "FedEx Ground Economy row no longer appears in the package services table"
+  ],
+  "id": "fedex-2026-peak-2026-11-22",
+  "sources": [
+   "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf"
+  ],
+  "story": "w4d42b194c9f2",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "FedEx",
+  "year": 2026,
   "kind": "price_change",
   "announced": null,
   "effective": "2026-04-20",

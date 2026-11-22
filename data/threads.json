@@ -1037,8 +1037,8 @@
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has proposed a permanent 11% fuel surcharge and a 5.9% average increase for Jan. 17, 2027, and the article says the Postal Regulatory Commission must review the changes.",
-  "last": "2026-11-19",
+  "s": "USPS has proposed an 11% permanent fuel surcharge and a 5.9% average increase for Jan. 17, 2027, and the surcharge awaits Postal Regulatory Commission review.",
+  "last": "2026-11-22",
   "c": [
    "USPS"
   ],
@@ -1142,6 +1142,7 @@
   ],
   "apart": [
    "amazon-driver-no-poach-suit",
+   "amazon-fuel-surcharge",
    "amazon-jfk8-nlrb",
    "amazon-network-buildout",
    "amazon-teamsters-organizing",
@@ -1165,6 +1166,7 @@
    "Amazon"
   ],
   "apart": [
+   "amazon-fuel-surcharge",
    "amazon-network-buildout",
    "amazon-teamsters-organizing",
    "last-mile-facility-legislation",
@@ -1187,6 +1189,7 @@
    "Amazon"
   ],
   "apart": [
+   "amazon-fuel-surcharge",
    "amazon-network-buildout",
    "last-mile-facility-legislation",
    "ups-amazon-glide-down",
@@ -1375,5 +1378,22 @@
    "doordash-instacart-deal"
   ],
   "rv": "da39a3ee5e6b"
+ },
+ "amazon-fuel-surcharge": {
+  "n": "Amazon fuel and logistics surcharge",
+  "ids": [
+   "acfad007d564b"
+  ],
+  "first": "2026-11-05",
+  "co": "Amazon",
+  "s": "Amazon will extend its 3.5% surcharge to Multi-Channel Distribution and Warehousing and Distribution transportation fees on Feb. 1, 2027.",
+  "last": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "apart": [
+   "usps-big-shipper-deals"
+  ],
+  "rv": "eb729b681591"
  }
 }
