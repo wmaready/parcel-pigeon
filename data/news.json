@@ -134,6 +134,102 @@
   "unconf": true
  },
  {
+  "id": "w4d42b194c9f2",
+  "date": "2026-11-22",
+  "c": [
+   "FedEx"
+  ],
+  "title": "FedEx 2026 peak deadlines: Puerto Rico Economy cutoff moves a day earlier",
+  "sum": "FedEx's 2026 peak last-day-to-ship chart moves the U.S. to Puerto Rico FedEx International Economy deadline from Tuesday, December 22 to Monday, December 21. It also adds FedEx International Priority Distribution to the international and Puerto Rico deadline lists. The FedEx Ground Economy row no longer appears in the package services table.",
+  "plain": "Shippers sending FedEx International Economy to Puerto Rico have one day less to hand off parcels for holiday delivery. Shippers using Priority Distribution now have published deadlines, and those using Ground Economy no longer see one in this chart.",
+  "imp": "watch",
+  "lvl": 2,
+  "cat": "Guide changes",
+  "act": "2026-12-21",
+  "inferred": null,
+  "detected": "2026-11-22",
+  "changes": [
+   {
+    "what": "U.S. to Puerto Rico FedEx International Economy last day to ship",
+    "before": "Tuesday, December 22",
+    "after": "Monday, December 21",
+    "effective": "2026-12-21",
+    "who": "FedEx International Economy shipments from the U.S. to Puerto Rico",
+    "impact": "Deadline moves one day earlier (12/22 -> 12/21)"
+   },
+   {
+    "what": "FedEx International Priority Distribution added to the international last-day-to-ship list",
+    "before": null,
+    "after": "Monday, December 21",
+    "effective": "2026-12-21",
+    "who": "FedEx International Priority Distribution shipments to international destinations",
+    "impact": "New deadline listed; no earlier deadline on file"
+   },
+   {
+    "what": "FedEx International Priority Distribution added to the U.S. to Puerto Rico deadlines",
+    "before": null,
+    "after": "Tuesday, December 22",
+    "effective": "2026-12-22",
+    "who": "FedEx International Priority Distribution shipments from the U.S. to Puerto Rico",
+    "impact": "New deadline listed; no earlier deadline on file"
+   },
+   {
+    "what": "FedEx Ground Economy row in the domestic package services last-day-to-ship table",
+    "before": "Row listed",
+    "after": "Row no longer appears after FedEx Home Delivery",
+    "effective": null,
+    "who": "FedEx Ground Economy shippers checking peak deadlines",
+    "impact": null
+   }
+  ],
+  "verdict": "service change",
+  "unknowns": [
+   "Whether FedEx Ground Economy was dropped from the chart or only moved elsewhere in the document is not confirmed",
+   "Whether FedEx International Priority Distribution deadlines are new this year or were previously published elsewhere is not confirmed",
+   "Whether the Puerto Rico Economy change is a correction or an operational change is not stated"
+  ],
+  "dates": [
+   {
+    "d": "2026-12-21",
+    "w": "FedEx: U.S. to Puerto Rico FedEx International Economy last day to ship",
+    "imp": "info",
+    "fees": [
+     [
+      "FedEx",
+      "FedEx International Priority Distribution added to the international last-day-to-ship list",
+      "New deadline listed; no earlier deadline on file"
+     ]
+    ]
+   },
+   {
+    "d": "2026-12-22",
+    "w": "FedEx: FedEx International Priority Distribution added to the U.S. to Puerto Rico deadlines",
+    "imp": "info"
+   }
+  ],
+  "kind": "Alert",
+  "exclusive": true,
+  "src": "FedEx",
+  "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf",
+  "srcs": [
+   {
+    "src": "FedEx: Shipping Deadlines",
+    "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf"
+   }
+  ],
+  "auto": true,
+  "audit": {
+   "verdicts": "service change",
+   "dropped": 0,
+   "compared": [
+    {
+     "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf",
+     "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf (previous version)"
+    }
+   ]
+  }
+ },
+ {
   "id": "w9d297068a7a2",
   "date": "2026-11-22",
   "c": [
