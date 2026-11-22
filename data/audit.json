@@ -1,5 +1,5 @@
 {
- "run": "2026-11-22T12:44Z",
+ "run": "2026-11-22T17:58Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -182,6 +182,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\"",
+   "ids": [
+    "a98dc9ba3a102"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Joe & Bella conversion falls after free-shipping minimum rises to $100\"",
    "ids": [
     "a9fbb927a026c"
@@ -200,9 +209,9 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS files permanent 11% fuel surcharge, 5.9% rate rise for Jan. 17\"",
    "ids": [
-    "af7ecf517c18f"
+    "af027f4014177"
    ],
    "fixed": false
   },
@@ -311,6 +320,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"FedEx adds four weekly China-US air cargo flights on Boeing 777F\" and \"FedEx adds weekly China-US air routes from Shanghai and Guangzhou\"",
+   "ids": [
+    "ada0476433eae",
+    "a348dd40fe288"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Wing outlines Walmart drone delivery plan for Union Township\" and \"Wing starts Walmart drone delivery in Memphis area, free in apps\"",
    "ids": [
     "a679a283e8a36",
@@ -371,10 +390,20 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS files permanent 11% fuel surcharge, 5.9% rate rise for Jan. 17\"",
    "ids": [
     "a9303a60a74b3",
-    "af7ecf517c18f"
+    "af027f4014177"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\" and \"Small sellers rework free shipping as USPS sets 11% fuel fee\"",
+   "ids": [
+    "a98dc9ba3a102",
+    "ab193e6648b0f"
    ],
    "fixed": false
   },
@@ -487,55 +516,6 @@
     "aa516eddc83e2"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.uber.com/us/en/newsroom/uber-eats-launches-returns/): https://www.uber.com/us/en/newsroom/uber-eats-launches-returns/",
-   "ids": [
-    "g05"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b): https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b",
-   "ids": [
-    "ab483d15094ae"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "numbers",
-   "msg": "The clock entry says Amazon FBA fulfillment fees rise $0.19 per unit on average effective 2027-01-15, but the story covers a 3.5% fuel and logistics surcharge extended to other services on Feb. 1, 2027, so the date and fee do not match. (clock 2027-01-15 vs \"Amazon extends 3.5% fuel and logistics surcharge to more services\")",
-   "ids": [
-    "acfad007d564b",
-    "xacfad007d564b0"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: No story mentions Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian' plan, 39,400 ZIP codes, or 99.9% of demand by 2029. The stories contain nothing on this claim.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: No story mentions UPS Protected Delivery, FedEx Authenticated Delivery, recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. The stories do not support this line.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: No story mentions DoorDash launching $7.99 courier returns, Dashers picking up returns without a box or label, Macy's, Anthropologie or VF joining, or DoorDash's own drones. The only DoorDash story concerns the California AG reviewing its $17B Instacart deal.",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -605,6 +585,15 @@
   {
    "sev": "high",
    "type": "no-primary",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\"",
+   "ids": [
+    "a98dc9ba3a102"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "high",
+   "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Joe & Bella conversion falls after free-shipping minimum rises to $100\"",
    "ids": [
     "a9fbb927a026c"
@@ -614,9 +603,9 @@
   {
    "sev": "high",
    "type": "no-primary",
-   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "msg": "No carrier source for a price story; figures rest on press reports: \"USPS files permanent 11% fuel surcharge, 5.9% rate rise for Jan. 17\"",
    "ids": [
-    "af7ecf517c18f"
+    "af027f4014177"
    ],
    "fixed": false
   },
@@ -716,6 +705,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"FedEx adds four weekly China-US air cargo flights on Boeing 777F\" and \"FedEx adds weekly China-US air routes from Shanghai and Guangzhou\"",
+   "ids": [
+    "ada0476433eae",
+    "a348dd40fe288"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Wing outlines Walmart drone delivery plan for Union Township\" and \"Wing starts Walmart drone delivery in Memphis area, free in apps\"",
    "ids": [
     "a679a283e8a36",
@@ -776,10 +775,20 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17\"",
+   "msg": "Possible duplicate stories: \"USPS plans 11% fuel surcharge, near 6% average rise for 2027\" and \"USPS files permanent 11% fuel surcharge, 5.9% rate rise for Jan. 17\"",
    "ids": [
     "a9303a60a74b3",
-    "af7ecf517c18f"
+    "af027f4014177"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge\" and \"Small sellers rework free shipping as USPS sets 11% fuel fee\"",
+   "ids": [
+    "a98dc9ba3a102",
+    "ab193e6648b0f"
    ],
    "fixed": false
   },
@@ -891,55 +900,6 @@
     "a0ef7c3f1b1ff",
     "aa516eddc83e2"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (406 Client Error: Not Acceptable for url: https://www.uber.com/us/en/newsroom/uber-eats-launches-returns/): https://www.uber.com/us/en/newsroom/uber-eats-launches-returns/",
-   "ids": [
-    "g05"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b): https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b",
-   "ids": [
-    "ab483d15094ae"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "high",
-   "type": "numbers",
-   "msg": "The clock entry says Amazon FBA fulfillment fees rise $0.19 per unit on average effective 2027-01-15, but the story covers a 3.5% fuel and logistics surcharge extended to other services on Feb. 1, 2027, so the date and fee do not match. (clock 2027-01-15 vs \"Amazon extends 3.5% fuel and logistics surcharge to more services\")",
-   "ids": [
-    "acfad007d564b",
-    "xacfad007d564b0"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: No story mentions Amazon mapping its own delivery to 95% of ZIP codes, Business Insider's 'Project Aurelian' plan, 39,400 ZIP codes, or 99.9% of demand by 2029. The stories contain nothing on this claim.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: No story mentions UPS Protected Delivery, FedEx Authenticated Delivery, recipient PIN or QR code requirements, or the $10.70 and $20 per-package prices. The stories do not support this line.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: No story mentions DoorDash launching $7.99 courier returns, Dashers picking up returns without a box or label, Macy's, Anthropologie or VF joining, or DoorDash's own drones. The only DoorDash story concerns the California AG reviewing its $17B Instacart deal.",
-   "ids": [],
    "fixed": false
   }
  ]

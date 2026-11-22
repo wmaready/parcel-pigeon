@@ -101,6 +101,39 @@
   "unconf": true
  },
  {
+  "id": "a7b3eaeb033ec",
+  "date": "2026-11-22",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "Hawaii businesses press USPS to reverse Ground Advantage ocean shift",
+  "sum": "Hawaii business owners say a USPS change moving Ground Advantage packages under one pound between the mainland and noncontiguous areas mainly to boat from air, effective Oct. 1, is delaying shipments during the holiday season. Rep. Jill Tokuda and Guam Delegate James Moylan led a bipartisan group of lawmakers urging USPS to restore air transport and asked for a response by Nov. 25.",
+  "imp": "watch",
+  "lvl": 2,
+  "plain": "Since Oct. 1, Ground Advantage packages under one pound between the continental U.S. and noncontiguous areas, including Hawaii, move mainly by boat. Businesses report transit of two weeks to a month, and faster options cost more.",
+  "why": "Lightweight Ground Advantage parcels to and from Hawaii and other noncontiguous areas now move slower, and shippers face costlier upgrades such as Priority Mail.",
+  "score": 5,
+  "tie": "The report follows earlier coverage that USPS has carried Ground Advantage parcels under one pound between the continental U.S. and Hawaii mainly by ocean since Oct. 1, 2026.",
+  "act": "2026-10-01",
+  "dates": [],
+  "added": "2026-11-22T17:56:10Z",
+  "src": "Hawaii News Now",
+  "url": "https://www.hawaiinewsnow.com/2026/11/22/hawaii-businesses-push-usps-reverse-shipping-policy/?outputType=amp",
+  "srcs": [
+   {
+    "src": "Hawaii News Now",
+    "url": "https://www.hawaiinewsnow.com/2026/11/22/hawaii-businesses-push-usps-reverse-shipping-policy/?outputType=amp"
+   }
+  ],
+  "auto": true,
+  "new": "Hawaii business owners and a bipartisan group of lawmakers are now publicly pressing USPS to reverse the policy, with a Nov. 25 response deadline, while shippers report delays and higher costs for faster options.",
+  "exclusive": true,
+  "tried": "2026-11-22",
+  "unconf": true
+ },
+ {
   "id": "w9d297068a7a2",
   "date": "2026-11-22",
   "c": [
@@ -1560,7 +1593,7 @@
    }
   ],
   "edge": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -1652,7 +1685,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -2593,7 +2626,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -2641,7 +2674,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-21",
+  "tried": "2026-11-22",
   "unconf": true
  },
  {
@@ -6047,6 +6080,76 @@
   "exclusive": true
  },
  {
+  "id": "a98dc9ba3a102",
+  "date": "2026-11-12",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Pricing & GRI",
+  "kind": "News",
+  "title": "Retailers adjust free-shipping terms as USPS proposes 11% fuel surcharge",
+  "sum": "Adaptive clothing retailer Joe & Bella raised its free-shipping minimum from $75 to $100, and its conversion rate fell by more than half, Modern Retail reported. The report comes as USPS proposes a permanent 11% package fuel surcharge and a 5.9% average increase for Jan. 17.",
+  "imp": "up",
+  "lvl": 1,
+  "plain": "USPS has proposed replacing its 8% package fuel surcharge with a permanent 11% one on Jan. 17, alongside a 5.9% average increase on four package services. Some small retailers are changing free-shipping minimums and shipping charges in response to higher costs.",
+  "why": "USPS's proposed 11% fuel surcharge and 5.9% average increase land on small shippers already reporting higher label costs and fee pressure.",
+  "score": 4,
+  "tie": "USPS filed its proposal with the Postal Regulatory Commission on Nov. 12, 2026, and an earlier report said a final rule on competitive prices followed on Nov. 19, 2026.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS 5.9% average increase on four package services",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   },
+   {
+    "d": "2027-01-17",
+    "w": "USPS permanent 11% fuel surcharge replaces 8% (proposed)",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-22T17:57:02Z",
+  "src": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/small-business/articles/retailer-raises-free-shipping-minimum-120700085.html",
+  "srcs": [
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/small-business/articles/retailer-raises-free-shipping-minimum-120700085.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-12",
+  "new": "Small retailers' responses are now reported: Joe & Bella's conversion fell by more than half after it raised its free-shipping minimum to $100, and ShipStation's survey found 52% of small firms cite carrier fee increases and fuel surcharges as a major challenge.",
+  "syn": "Joe & Bella, an adaptive clothing retailer, tried a $100 free-shipping minimum in place of $75, and its purchase conversion rate fell by more than half, according to Modern Retail. USPS filed notice on Nov. 12 of a permanent 11% package fuel surcharge to replace the 8% surcharge, and a 5.9% average increase for Ground Advantage, Parcel Select, Priority Mail and Priority Mail Express, both for Jan. 17. The Postal Regulatory Commission must review the proposed changes, the article said. Other small sellers described raising minimums, calculating shipping by order size or deducting return shipping from refunds.",
+  "aff": [
+   {
+    "who": "USPS package shippers",
+    "what": "Proposed permanent 11% fuel surcharge replaces the 8% surcharge on Jan. 17, per the Nov. 12 filing."
+   },
+   {
+    "who": "Ground Advantage, Parcel Select, Priority Mail, Priority Mai",
+    "what": "Average 5.9% rate increase proposed for Jan. 17."
+   },
+   {
+    "who": "Small online retailers",
+    "what": "Some raised free-shipping minimums, e.g. $75 to $100, or began charging by order size; Joe & Bella's conversion fell by over half."
+   },
+   {
+    "who": "UPS and FedEx shippers",
+    "what": "An industry analysis lists average 5.9% increases for UPS on Dec. 21 and for FedEx on Jan. 4."
+   }
+  ],
+  "edge": true,
+  "exclusive": true,
+  "unconf": true
+ },
+ {
   "id": "a9fbb927a026c",
   "date": "2026-11-12",
   "c": [
@@ -6407,164 +6510,6 @@
   ]
  },
  {
-  "id": "ab5dd015b24cb",
-  "date": "2026-11-12",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Steiner tells Congress to reform USPS mandates or face service cuts",
-  "sum": "Postmaster General David Steiner told the USPS board on Nov. 10 that Congress must act on retirement costs and mandates, or USPS will cut service, with plans due in the first quarter of 2027. On Nov. 12 USPS filed to make its temporary 8% fuel surcharge permanent at 11%, and it proposes a 5.9% average domestic price increase from Jan. 17, 2027, according to WWD.",
-  "imp": "up",
-  "lvl": 3,
-  "plain": "USPS has filed to keep a fuel surcharge in place at 11% rather than let the 8% temporary charge expire, and proposes a 5.9% average domestic price increase from Jan. 17, 2027. USPS says the surcharge does not apply to international products at this time.",
-  "why": "USPS's proposed 5.9% average domestic increase and permanent 11% fuel surcharge would reach shippers from January, and service cuts could follow.",
-  "score": 6,
-  "tie": "The Nov. 10, 2026 fiscal 2026 results showed a $6.5 billion net loss, the figure Steiner cited in his remarks to the board.",
-  "act": "2027-01-17",
-  "dates": [
-   {
-    "d": "2027-01-17",
-    "w": "USPS proposed 5.9% average domestic price increase starts",
-    "imp": "up",
-    "fx": {
-     "t": "gri",
-     "car": "USPS",
-     "pct": 5.9
-    }
-   },
-   {
-    "d": "2027-01-17",
-    "w": "Date the temporary 8% fuel surcharge was set to expire",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2027-07-01",
-    "w": "USPS to reevaluate the 11% fuel surcharge rate (July 2027)",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-20T01:51:46Z",
-  "src": "WWD",
-  "url": "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/",
-  "srcs": [
-   {
-    "src": "WWD",
-    "url": "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-12",
-  "thread": "usps-finances",
-  "upd": 8,
-  "new": "Compared with earlier coverage, the article adds Reuters' report of a $2 billion request to Congress, the July 2027 fuel surcharge reevaluation with later weekly adjustment, a proposed 7.9% international increase, and Steiner's two paths, which means the surcharge stays in place after January for shippers.",
-  "syn": "Postmaster General David Steiner told the USPS board on Nov. 10 that Congress must act on retirement costs and \"money-losing mandates\" or USPS will cut service. He said management's options include shrinking the retail footprint and softening service standards for non-First-Class and marketing mail, with plans due in the first quarter of 2027. Two days later USPS filed to make its temporary 8% fuel surcharge permanent at 11%, to be reevaluated in July 2027 and later adjusted weekly, WWD reported. USPS also proposes a 5.9% average domestic price increase from Jan. 17, 2027 and a 7.9% international increase.",
-  "aff": [
-   {
-    "who": "Shippers using USPS shipping services",
-    "what": "Temporary 8% fuel surcharge made permanent at 11% in a Nov. 12 filing; to be reevaluated in July 2027."
-   },
-   {
-    "who": "Domestic USPS prices",
-    "what": "USPS proposes a 5.9% average increase starting Jan. 17, 2027."
-   },
-   {
-    "who": "International USPS prices",
-    "what": "USPS aims for a 7.9% increase; the fuel surcharge does not apply to international products at this time."
-   },
-   {
-    "who": "Mailers and rural communities",
-    "what": "Per WWD, likely to face the sharpest cuts if Congress chooses neither path Steiner described."
-   }
-  ],
-  "exclusive": true,
-  "unconf": true,
-  "tried": "2026-11-21"
- },
- {
-  "id": "ab5dd015b24cb",
-  "date": "2026-11-12",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "USPS makes fuel surcharge permanent at 11% as Steiner warns of service cuts",
-  "sum": "Postmaster General David Steiner told the USPS board on Nov. 10 that Congress must act on retirement costs and mandates or USPS will cut service, with plans due in the first quarter of 2027. Two days later USPS filed to make its temporary 8% fuel surcharge permanent at 11%. USPS also proposes a 5.9% average domestic price increase from Jan. 17, 2027, according to WWD.",
-  "imp": "up",
-  "lvl": 3,
-  "plain": "USPS shippers face an 11% fuel surcharge on base postage, replacing the temporary 8% charge that was due to expire Jan. 17, 2027. A 5.9% average domestic price increase is proposed from Jan. 17, 2027.",
-  "why": "The permanent fuel surcharge and the proposed 5.9% domestic increase would reach USPS shippers in January 2027, and service-standard cuts are under review.",
-  "score": 6,
-  "tie": "The warning follows USPS's Nov. 10, 2026 report of a $6.5 billion fiscal 2026 net loss and a Nov. 4, 2026 caucus letter on its request for more borrowing authority.",
-  "act": null,
-  "dates": [
-   {
-    "d": "2027-01-17",
-    "w": "USPS proposed 5.9% average domestic price increase",
-    "imp": "up",
-    "fx": {
-     "t": "gri",
-     "car": "USPS",
-     "pct": 5.9
-    }
-   },
-   {
-    "d": "2027-01-17",
-    "w": "USPS aims for 7.9% international price increase",
-    "imp": "up",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-18T18:56:34Z",
-  "src": "Bloomberg.com",
-  "url": "https://www.bloomberg.com/news/articles/2026-11-12/us-postal-service-to-raise-prices-make-fuel-surcharge-permanent",
-  "srcs": [
-   {
-    "src": "Bloomberg.com",
-    "url": "https://www.bloomberg.com/news/articles/2026-11-12/us-postal-service-to-raise-prices-make-fuel-surcharge-permanent"
-   },
-   {
-    "src": "FreightWaves",
-    "url": "https://www.freightwaves.com/news/usps-to-add-11-permanent-fuel-surcharge-along-with-parcel-rate-hike"
-   },
-   {
-    "src": "WWD",
-    "url": "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-12",
-  "thread": "usps-finances",
-  "upd": 7,
-  "new": "USPS filed to make its fuel surcharge permanent at 11% and Steiner said service-cut plans are due in the first quarter of 2027, so shippers will not see the April surcharge end in January.",
-  "syn": "Postmaster General David Steiner told the USPS board of governors on Nov. 10 that Congress must change retirement funding and remove money-losing mandates, or USPS will cut service, including post office numbers and service standards for non-First-Class and marketing mail. He said USPS will have plans in the first quarter of 2027. Two days later USPS filed to make its temporary 8% fuel surcharge, in place since April, permanent at 11%, to be reevaluated in July 2027 and later adjusted weekly. USPS also proposes a 5.9% average domestic increase and a 7.9% international increase starting Jan. 17, WWD reported.",
-  "aff": [
-   {
-    "who": "USPS domestic shippers",
-    "what": "Fuel surcharge becomes permanent at 11%, up from a temporary 8% that was set to expire Jan. 17, 2027."
-   },
-   {
-    "who": "Domestic shipping prices",
-    "what": "USPS proposes a 5.9% average increase starting Jan. 17, 2027."
-   },
-   {
-    "who": "International shippers",
-    "what": "USPS aims to raise prices 7.9%; the fuel surcharge does not apply to international products at this time."
-   },
-   {
-    "who": "Mailers and rural communities",
-    "what": "WWD reported they are likely to face the sharpest cuts if Congress does not act."
-   }
-  ],
-  "exclusive": true,
-  "tried": "2026-11-18",
-  "updated": "2026-11-13"
- },
- {
   "id": "acd2218c494e3",
   "date": "2026-11-12",
   "c": [
@@ -6740,26 +6685,26 @@
   "ann": "2026-11-12"
  },
  {
-  "id": "af7ecf517c18f",
+  "id": "af027f4014177",
   "date": "2026-11-12",
   "c": [
    "USPS"
   ],
   "cat": "Pricing & GRI",
   "kind": "News",
-  "title": "USPS proposes permanent 11% fuel surcharge, 5.9% average increase for Jan. 17",
-  "sum": "The U.S. Postal Service filed a proposal with the Postal Regulatory Commission on Nov. 12, 2026 to raise prices 5.9% on average for four domestic package services and make a fuel surcharge permanent at 11%. The Board of Governors approved the changes, which are scheduled for Jan. 17, 2027.",
+  "title": "USPS files permanent 11% fuel surcharge, 5.9% rate rise for Jan. 17",
+  "sum": "The U.S. Postal Service told the Postal Regulatory Commission on Nov. 12 it plans a permanent 11% fuel surcharge and a 5.9% average increase for domestic shipping services, scheduled for Jan. 17, 2027. The surcharge replaces the temporary 8% charge imposed in April, and the Postal Regulatory Commission must review the changes before they take effect.",
   "imp": "up",
   "lvl": 3,
-  "plain": "If the Postal Regulatory Commission's review clears the proposal, prices for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select would rise 5.9% on average from Jan. 17, 2027. An 11% fuel surcharge would replace the temporary 8% charge.",
-  "why": "The increase covers four domestic package services and makes the fuel charge permanent at 11%, according to USPS.",
-  "score": 8,
-  "tie": "USPS added the fuel-related charge as an 8% transportation-related increase in April 2026 and raised the Forever stamp to 82 cents from 78 cents in July 2026, according to the articles.",
+  "plain": "If the Postal Regulatory Commission allows it, domestic USPS package prices rise 5.9% on average and an 11% fuel surcharge on base postage starts Jan. 17, 2027. International prices rise 7.9% on average, without the surcharge.",
+  "why": "Applies to Priority Mail, Priority Mail Express, Ground Advantage and Parcel Select shippers; the surcharge becomes permanent.",
+  "score": 7,
+  "tie": "The temporary 8% transportation surcharge took effect in April 2026, and USPS disclosed plans for an 8% fuel surcharge in October 2026, according to the sources.",
   "act": "2027-01-17",
   "dates": [
    {
     "d": "2027-01-17",
-    "w": "USPS 5.9% avg increase on four domestic package services",
+    "w": "USPS domestic shipping prices rise 5.9% on average",
     "imp": "up",
     "fx": {
      "t": "gri",
@@ -6769,22 +6714,34 @@
    },
    {
     "d": "2027-01-17",
-    "w": "USPS fuel surcharge becomes permanent at 11%, up from 8%",
+    "w": "Permanent 11% USPS fuel surcharge replaces temporary 8% charge",
     "imp": "up",
     "fx": null
    }
   ],
-  "added": "2026-11-20T13:00:27Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/",
+  "added": "2026-11-22T17:55:33Z",
+  "src": "CNBC",
+  "url": "https://www.cnbc.com/2026/11/12/usps-fuel-surcharge-package-deliveries.html",
   "srcs": [
    {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/"
+    "src": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/12/usps-fuel-surcharge-package-deliveries.html"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/usps-to-add-11-permanent-fuel-surcharge-along-with-parcel-rate-hike"
    },
    {
     "src": "Quartz",
     "url": "https://qz.com/usps-permanent-fuel-surcharge-shipping-rates-111326"
+   },
+   {
+    "src": "Wisevoter",
+    "url": "https://wisevoter.com/world/us/2026/11/22/usps-proposes-11-percent-fuel-surcharge"
+   },
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/usps-readies-2027-rate-increase-permanent-fuel-surcharge/874524/"
    },
    {
     "src": "Logistics Management",
@@ -6803,24 +6760,24 @@
   "ann": "2026-11-12",
   "thread": "usps-fuel-surcharge",
   "upd": 3,
-  "new": "The articles add that the surcharge began in April as a temporary 8% charge set to expire Jan. 17, that USPS plans to revisit it in July 2027, and that international services would rise 7.9% on average with a reworked country rate group structure, so international shippers face a price rise but no surcharge.",
-  "syn": "The U.S. Postal Service filed notice with the Postal Regulatory Commission on Thursday, Nov. 12, 2026, after its Board of Governors approved the changes. It proposes a 5.9% average price increase for Priority Mail Express, Priority Mail, USPS Ground Advantage and Parcel Select. It also proposes an 11% permanent fuel surcharge, up from the 8% transportation-related increase introduced in April, with both changes scheduled for Jan. 17, 2027. The agency said it plans to revisit the surcharge in July 2027, and the filing also covers international prices and new fees.",
+  "new": "Coverage adds that the 11% surcharge applies to base postage only, excludes international products and will be reevaluated in July 2027, with new fees and a 7.9% international average increase also proposed.",
+  "syn": "USPS filed a proposal with the Postal Regulatory Commission on Nov. 12 to make its fuel surcharge permanent at 11%, up from the temporary 8% charge in place since April. Domestic prices for Priority Mail, Priority Mail Express, USPS Ground Advantage and Parcel Select would rise 5.9% on average, and international prices 7.9% on average. The Board of Governors approved the changes, which are scheduled for Jan. 17, 2027 pending commission review. USPS cited higher diesel costs and declining mail volume.",
   "aff": [
    {
     "who": "Domestic package shippers",
-    "what": "Prices for four services would rise 5.9% on average on Jan. 17, 2027, pending Postal Regulatory Commission review."
+    "what": "Prices rise 5.9% on average for four services from Jan. 17, 2027, if approved."
    },
    {
-    "who": "Domestic package shippers (fuel)",
-    "what": "An 11% fuel surcharge would replace the temporary 8% charge, which was set to expire Jan. 17."
+    "who": "Shippers paying the fuel surcharge",
+    "what": "11% of base postage, up from the temporary 8%; to be reevaluated in July 2027, FreightWaves reported."
    },
    {
     "who": "International shippers",
-    "what": "Four international services would rise 7.9% on average; the surcharge would not apply to international products."
+    "what": "Prices rise 7.9% on average; the fuel surcharge does not apply to international products at this time."
    },
    {
-    "who": "Special services users",
-    "what": "USPS plans to adjust prices on some competitive special services and introduce new fees."
+    "who": "Shippers using special services",
+    "what": "Some competitive special service prices rise and new fees are introduced, USPS said."
    }
   ]
  },
@@ -8919,6 +8876,78 @@
   "exclusive": true
  },
  {
+  "id": "ab5dd015b24cb",
+  "date": "2026-11-10",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Postal",
+  "kind": "News",
+  "title": "USPS makes fuel surcharge permanent at 11%, Steiner warns of service cuts",
+  "sum": "Postmaster General David Steiner told the USPS board on Nov. 10, 2026 that Congress must act on retirement costs and mandates or USPS will cut service, with plans due in the first quarter of 2027. USPS filed two days later to make its temporary 8% fuel surcharge permanent at 11%, according to WWD. It also proposes a 5.9% average domestic price increase from Jan. 17, 2027.",
+  "imp": "up",
+  "lvl": 3,
+  "plain": "USPS shippers would pay a permanent fuel surcharge of 11%, up from the temporary 8%, and a proposed 5.9% average domestic price increase from Jan. 17, 2027. International prices would rise 7.9% under the proposal, and the surcharge does not apply to international products for now.",
+  "why": "USPS shippers face a permanent 11% fuel surcharge and a proposed 5.9% average domestic price rise from Jan. 17, 2027, with service cuts possible.",
+  "score": 6,
+  "tie": "The remarks follow USPS's Nov. 10, 2026 report of a $6.5 billion fiscal 2026 net loss and a Nov. 4, 2026 congressional caucus letter on its $19.5 billion borrowing request.",
+  "act": "2027-01-17",
+  "dates": [
+   {
+    "d": "2027-01-17",
+    "w": "USPS proposed 5.9% average domestic price increase takes effect",
+    "imp": "up",
+    "fx": {
+     "t": "gri",
+     "car": "USPS",
+     "pct": 5.9
+    }
+   }
+  ],
+  "added": "2026-11-22T17:55:57Z",
+  "src": "WWD",
+  "url": "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/",
+  "srcs": [
+   {
+    "src": "WWD",
+    "url": "https://wwd.com/sourcing-journal/logistics/usps-postmaster-general-david-steiner-congress-retirement-drastic-service-cuts-1239422099/"
+   },
+   {
+    "src": "Bloomberg.com",
+    "url": "https://www.bloomberg.com/news/articles/2026-11-12/us-postal-service-to-raise-prices-make-fuel-surcharge-permanent"
+   },
+   {
+    "src": "FreightWaves",
+    "url": "https://www.freightwaves.com/news/usps-to-add-11-permanent-fuel-surcharge-along-with-parcel-rate-hike"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "thread": "usps-finances",
+  "upd": 8,
+  "new": "WWD adds that the fuel surcharge rises to 11% and becomes permanent, to be reevaluated in July 2027, and that USPS asked Congress for $2 billion, which means shippers will not see the April surcharge expire in January.",
+  "syn": "Postmaster General David Steiner told the USPS board on Nov. 10, 2026 that Congress must act on retirement costs and \"money-losing mandates\" or USPS will cut service sharply, with plans due in the first quarter of 2027. Two days later USPS filed to make its temporary 8% fuel surcharge, in place since April, permanent at 11%, to be reevaluated in July 2027 and later adjusted weekly with fuel prices. USPS also proposes a 5.9% average domestic price increase from Jan. 17, 2027 and a 7.9% international increase, according to WWD.",
+  "aff": [
+   {
+    "who": "USPS shippers",
+    "what": "Fuel surcharge becomes permanent at 11%, up from a temporary 8% that was set to expire Jan. 17, 2027."
+   },
+   {
+    "who": "Domestic shipping prices",
+    "what": "USPS proposes a 5.9% average increase starting Jan. 17, 2027."
+   },
+   {
+    "who": "International shipping prices",
+    "what": "USPS aims to raise prices 7.9%; the fuel surcharge does not apply to international products at this time."
+   },
+   {
+    "who": "Postal service levels",
+    "what": "Steiner said options include fewer post offices and softer service standards for non-First-Class and marketing mail."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "acb9a06a4324c",
   "date": "2026-11-10",
   "c": [
@@ -9549,47 +9578,47 @@
   "exclusive": true
  },
  {
-  "id": "adc002570b1d6",
+  "id": "ada0476433eae",
   "date": "2026-11-09",
   "c": [
    "FedEx"
   ],
   "cat": "Network & operations",
   "kind": "News",
-  "title": "FedEx adds weekly 777F flights between China and U.S. ahead of peak",
-  "sum": "FedEx said on Nov. 9, 2026 that it has expanded China-U.S. connectivity, with four of five new weekly Boeing 777F flights linking Shanghai and Guangzhou to the United States. It also introduced a five-times-weekly connection from China to Dallas–Fort Worth via Anchorage.",
+  "title": "FedEx adds four weekly China-US air cargo flights on Boeing 777F",
+  "sum": "FedEx is expanding China-U.S. air cargo connectivity with new weekly flights, according to a Nov. 9 press release cited by Supply Chain Dive. Three weekly flights link Shanghai to Anchorage and Memphis via Osaka, and a fourth links Guangzhou to both hubs.",
   "imp": "info",
   "lvl": 1,
-  "plain": "FedEx has added weekly Boeing 777F capacity between China and the U.S., and a new five-times-weekly China connection to Dallas–Fort Worth. FedEx did not announce any rate or fee changes.",
-  "why": "The added trans-Pacific lift gives China-U.S. air cargo shippers more weekly FedEx capacity, including a new gateway to Dallas–Fort Worth.",
-  "score": 6,
-  "tie": "The company's release says the expansion follows a five-times-weekly Guangzhou-Sydney flight launched earlier in 2026 and 2025 upgrades to China's links with Southeast Asia and Paris.",
+  "plain": "FedEx has added four weekly China-U.S. flights, giving a five-times-weekly service connection from China to Dallas-Fort Worth via Anchorage. No change to rates was reported.",
+  "why": "The flights add transpacific air capacity as Xeneta reported chargeable weight between Asia Pacific and North America up 15% year over year in October.",
+  "score": 5,
+  "tie": "The expansion follows a June deal in which FedEx agreed to share network resources with China Southern Air Logistics, according to Supply Chain Dive.",
   "act": null,
   "dates": [],
-  "added": "2026-11-09T20:49:53Z",
+  "added": "2026-11-22T17:56:28Z",
   "src": "FedEx newsroom",
   "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
   "srcs": [
    {
     "src": "FedEx newsroom",
     "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/markets/commodities/articles/fedex-launches-china-us-air-122500307.html"
    }
   ],
   "auto": true,
   "ann": "2026-11-09",
-  "syn": "FedEx announced on Nov. 9, 2026 that it expanded China-U.S. connectivity with four of five new weekly Boeing 777F flights. Three weekly flights link Shanghai to Anchorage and Memphis via Osaka, Japan, and a fourth links Guangzhou directly to Anchorage and Memphis. FedEx also introduced a five-times-weekly connection for China customers to Dallas–Fort Worth via Anchorage. FedEx said the added capacity is meant to serve semiconductor, AI infrastructure, advanced manufacturing and premium e-commerce shippers ahead of year-end demand.",
+  "syn": "FedEx is expanding its China-U.S. air cargo network with new weekly flights, according to a Nov. 9 press release. Three weekly flights connect Shanghai to Anchorage and Memphis via Osaka, and a fourth connects Guangzhou to Anchorage and Memphis. The flights create a five-times-weekly connection from China to Dallas-Fort Worth via Anchorage and use Boeing 777F aircraft. FedEx said the capacity targets sectors including AI infrastructure, advanced industrial manufacturing, semiconductor production and premium e-commerce.",
   "aff": [
    {
-    "who": "Shanghai shippers",
-    "what": "Three new weekly 777F flights to Anchorage and Memphis via Osaka, Japan, according to FedEx."
+    "who": "China-based shippers",
+    "what": "Four new weekly flights from Shanghai and Guangzhou to Anchorage and Memphis, per the Nov. 9 release."
    },
    {
-    "who": "Guangzhou shippers",
-    "what": "A new weekly direct 777F flight to Anchorage and Memphis, according to FedEx."
-   },
-   {
-    "who": "China customers shipping to Dallas–Fort Worth",
-    "what": "A new five-times-weekly connection via Anchorage, according to FedEx."
+    "who": "Dallas-Fort Worth shippers",
+    "what": "Five-times-weekly service connection from China via Anchorage."
    }
   ],
   "exclusive": true
@@ -13211,48 +13240,6 @@
    {
     "who": "Amazon's drone pad plan",
     "what": "MassDOT told Amazon on Oct. 22 it needs a state certificate of approval and had no application."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "aaf63e9db25a0",
-  "date": "2026-11-02",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "USPS issues Domestic Mail Manual updated Nov. 2, 2026, effective Nov. 4",
-  "sum": "The Postal Service announced in the Federal Register the issuance of its Domestic Mail Manual, updated November 2, 2026, and its incorporation by reference into the Code of Federal Regulations. The rule is effective November 4, 2026.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service is stated in the notice. It incorporates the DMM updated November 2, 2026, by reference, effective November 4, 2026.",
-  "why": "The DMM sets USPS's official prices and standards for all domestic mailing services, so the updated issue is the reference text for mailers.",
-  "score": 6,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-04T13:30:49Z",
-  "src": "Federal Register: USPS",
-  "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22498/domestic-mail-manual-incorporation-by-reference",
-  "srcs": [
-   {
-    "src": "Federal Register: USPS",
-    "url": "https://www.federalregister.gov/documents/2026/11/04/2026-22498/domestic-mail-manual-incorporation-by-reference"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-02",
-  "syn": "The Postal Service announced in the Federal Register that it has issued the Mailing Standards of the United States Postal Service, Domestic Mail Manual (DMM), updated November 2, 2026. The rule amends 39 CFR part 111 to incorporate the issue by reference, effective November 4, 2026. According to the notice, the DMM provides USPS's official prices and standards for all domestic mailing services, and this issue adds standards to support mail preparation changes implemented since the version updated on April 7, 2025.",
-  "aff": [
-   {
-    "who": "Domestic mailers",
-    "what": "The DMM updated Nov. 2, 2026, is incorporated by reference in 39 CFR part 111, effective Nov. 4, 2026."
-   },
-   {
-    "who": "Mail preparation standards",
-    "what": "New standards support changes implemented since the April 7, 2025, version, per the notice."
    }
   ],
   "exclusive": true

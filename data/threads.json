@@ -374,7 +374,7 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and network changes",
-  "s": "Lawmakers have asked USPS to restore air transport for light Hawaii-bound Ground Advantage parcels and requested a response by Nov. 25, 2026.",
+  "s": "Lawmakers have asked USPS to restore air transport for lightweight Ground Advantage parcels and to respond by Nov. 25.",
   "ids": [
    "h410",
    "h505",
@@ -407,7 +407,7 @@
  },
  "usps-finances": {
   "n": "USPS losses, package volume and borrowing",
-  "s": "USPS has asked Congress for support, filed for a permanent 11% fuel surcharge, and says service-cut plans will be ready in the first quarter of 2027.",
+  "s": "USPS has asked Congress for action on mandates and retirement costs, with service-cut plans due in the first quarter of 2027.",
   "ids": [
    "h429",
    "r14",
@@ -1031,13 +1031,13 @@
   "ids": [
    "a0adb56a55334",
    "a106a88d004f4",
-   "af027f4014177",
    "aa516eddc83e2",
-   "af7ecf517c18f"
+   "af7ecf517c18f",
+   "af027f4014177"
   ],
   "first": "2026-10-26",
   "co": "USPS",
-  "s": "USPS has proposed a permanent 11% fuel surcharge and a 5.9% average increase for Jan. 17, with the fuel surcharge pending Postal Regulatory Commission review.",
+  "s": "USPS has proposed a permanent 11% fuel surcharge and a 5.9% average increase for Jan. 17, 2027, and the article says the Postal Regulatory Commission must review the changes.",
   "last": "2026-11-19",
   "c": [
    "USPS"
@@ -1048,16 +1048,16 @@
    "usps-leadership",
    "usps-service-network"
   ],
-  "rv": "57b454b3724b",
+  "rv": "4d33425b5355",
   "cx": {
-   "sig": "aea8e6eb4dc2",
+   "sig": "b1bab98bc661",
    "v": 3,
    "beats": {
-    "af7ecf517c18f": "USPS filed Nov. 12: 5.9% average on four package services, plus a permanent 11% fuel surcharge, up from April's temporary 8%.",
-    "aa516eddc83e2": "The final rule confirms 5.9% for Priority Mail Express, Priority Mail and Ground Advantage; several mailer fees rise 8.0% to 9.1%."
+    "af027f4014177": "On Nov. 12 USPS told the PRC it wants a permanent 11% fuel surcharge, replacing the temporary 8% charge from April.",
+    "aa516eddc83e2": "The final rule confirms 5.9% overall rises for Priority Mail Express, Priority Mail and Ground Advantage from Jan. 17, 2027."
    },
-   "intro": "USPS is raising package prices 5.9% on average from Jan. 17, 2027, and proposed a permanent fuel surcharge.",
-   "now": "Final rule published Nov. 19; new prices take effect Jan. 17, 2027, the same day the temporary 8% increase was set to expire."
+   "intro": "USPS wants a permanent 11% fuel surcharge and a 5.9% average rise from Jan. 17, 2027, which affects domestic shippers.",
+   "now": "Both changes are slated for Jan. 17, 2027; the PRC must review, and the 11% surcharge is set to be reevaluated in July 2027."
   }
  },
  "canada-post-home-delivery-ending": {

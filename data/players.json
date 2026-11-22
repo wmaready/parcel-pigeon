@@ -3979,6 +3979,23 @@
    ],
    "enriched": "2026-11-21",
    "pending": false
+  },
+  {
+   "id": "chinasoutherna",
+   "n": "China Southern Air Logistics",
+   "realm": "global",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Chinese air logistics firm that agreed in June to share network resources with FedEx",
+   "al": [],
+   "src": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
+   "auto": true,
+   "pending": true,
+   "added": "2026-11-09",
+   "story": "ada0476433eae"
   }
  ],
  "edges": [
@@ -6825,6 +6842,15 @@
    "t": "Alibaba Group shareholder (about 11.21%)",
    "url": "https://en.wikipedia.org/wiki/Singapore_Post",
    "story": null
+  },
+  {
+   "a": "fedex",
+   "b": "chinasoutherna",
+   "k": "partner",
+   "y": "2026",
+   "t": "FedEx and China Southern Air Logistics share network resources",
+   "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
+   "story": "ada0476433eae"
   }
  ],
  "moves": [
