@@ -74,17 +74,15 @@
    "FedEx"
   ],
   "cx": {
-   "sig": "7b1bdddac84b",
+   "sig": "17fd8879b14f",
    "v": 3,
    "beats": {
     "h411": "On June 1, 2024, Express, Ground and Services became one company, Federal Express Corp.; Freight stayed separate.",
-    "h413": "Network 2.0 launched in Canada, its largest market yet, as FedEx said DRIVE cut $1.8 billion in costs that year.",
-    "43": "By Nov. 2025 the focus was merging Ground and Express pickup and delivery, with the U.S. rollout due by end of 2027.",
-    "a920867c2e49d": "Dallas and San Francisco are done; Los Angeles and others follow after the holidays, with no change to rates or service stated.",
-    "a551f86e524c2": "PennLive: 260+ of 475 targeted station closures are done, and FedEx says transit times aren't expected to be affected."
+    "h413": "FedEx said DRIVE cut $1.8 billion in costs, and Network 2.0 launched in Canada, its largest market yet.",
+    "43": "Reported Nov. 14, 2025: Ground and Express pickup and delivery are merging, with the U.S. rollout due by end of 2027.",
+    "a551f86e524c2": "Reported Nov. 11: 475 station closures targeted, 260+ done, with $2 billion in savings expected by end of 2027."
    },
-   "intro": "FedEx is merging Ground and Express pickup and delivery into one network, targeting $2B in savings by 2027.",
-   "now": "Network 2.0 pauses for peak season; Los Angeles and other markets follow after the holidays, with the rollout slated to wrap up in 2027."
+   "intro": "FedEx is merging Ground and Express pickup and delivery and closing stations; here's how far along it is."
   },
   "rv": "4e04f8e8144d",
   "apart": [
@@ -273,7 +271,7 @@
  },
  "peak-surcharges": {
   "n": "Holiday peak surcharges, 2024–2026",
-  "s": "Peak surcharges and USPS holiday prices are in effect for 2026, and consumer press now reports higher holiday delivery bills.",
+  "s": "UPS and FedEx holiday oversize surcharges are in effect, ending Dec. 26 and Dec. 27 respectively.",
   "ids": [
    "h416",
    "h418",
@@ -282,10 +280,11 @@
    "h525",
    "h527",
    "06",
-   "01"
+   "01",
+   "a6ca4e9e1dc7a"
   ],
   "first": "2024-07-26",
-  "last": "2026-11-19",
+  "last": "2026-11-23",
   "c": [
    "Amazon",
    "FedEx",
@@ -294,20 +293,21 @@
    "UPS",
    "USPS"
   ],
-  "rv": "51da35db195e",
+  "rv": "1a7579bcfbaa",
   "cx": {
-   "sig": "51da35db195e",
+   "sig": "1a7579bcfbaa",
    "v": 3,
    "beats": {
-    "h416": "UPS posted its 2024 peak fees in July, early, with a second demand fee of $1.50–$8.25 for customers above 20,000 weekly packages.",
-    "h418": "FedEx followed in August with a similar two-tier setup, including new $0.30–$0.55 residential fees on Ground and Home Delivery.",
-    "h419": "USPS joined with a temporary increase for Oct. 6 to Jan. 19, including up to $5.50 more on commercial Ground Advantage in Zones 5–9.",
-    "h523": "FedEx's 2025 residential demand fee rose to $0.40–$0.65, and shippers above 20,000 weekly packages face $1.55–$8.75.",
-    "h525": "USPS filed 2025 holiday increases for Oct. 5 to Jan. 18, pending PRC review, with Parcel Select now on the list.",
-    "h527": "UPS set its 2025 peak fees starting Sept. 28, with demand surcharges of $0.40–$2.05 from Oct. 26 and up to $8.75 for big shippers.",
-    "01": "Oversize fees already bill at OnTrac, UPS and FedEx. Per-package fees start Oct 24 at OnTrac ($1.00), then UPS and FedEx at $0.50."
+    "h416": "UPS went first in July 2024, adding a second demand fee of $1.50–$8.25 for customers above 20,000 weekly packages. FedEx followed in August.",
+    "h418": "FedEx matched that two-tier setup, adding new $0.30–$0.55 residential fees on Ground and Home Delivery from Oct. 28.",
+    "h419": "USPS joined in with a temporary hike from Oct. 6 to Jan. 19, including a $0.35 rise to $5.50 on commercial Ground Advantage in Zones 5–9.",
+    "h523": "In 2025 FedEx moved first, in July. Its additional handling fee rose to $8.25–$10.90 and residential demand to $0.40–$0.65.",
+    "h527": "UPS followed in early September 2025, with a large-package peak fee topping out at $107 and demand fees reaching $8.75 for big shippers.",
+    "01": "Per-package fees roll in: OnTrac $1.00 Oct 24, UPS and Amazon $0.50 Oct 25, FedEx $0.50 Oct 26, stepping up in late November.",
+    "a6ca4e9e1dc7a": "Reportedly (one outlet so far): UPS $117.50 from Nov. 22, FedEx $117.25 from Nov. 23, up from $107 and $108.50 in 2025."
    },
-   "intro": "Carriers add peak surcharges every holiday season, and the fees have changed again for 2026. Here's how they got here."
+   "intro": "How UPS, FedEx and USPS holiday peak fees have changed from 2024 to 2026, and what shippers pay on top of base rates.",
+   "now": "Oversize surcharges run to Dec. 26 (UPS) and Dec. 27 (FedEx); home-delivery fee falls back to $0.50 Dec. 27, peak fees end Jan. 15."
   },
   "co": "USPS",
   "apart": [
@@ -373,7 +373,7 @@
  },
  "usps-service-network": {
   "n": "USPS service standards and network changes",
-  "s": "Lawmakers have asked USPS to restore air transport for lightweight Ground Advantage parcels and to respond by Nov. 25.",
+  "s": "USPS says network modernization is improving delivery times, while an audit and local residents point to continuing delays in Michigan.",
   "ids": [
    "h410",
    "h505",
@@ -510,14 +510,14 @@
  },
  "amazon-network-buildout": {
   "n": "Amazon opens its delivery network to all",
-  "s": "Amazon has opened its logistics network to outside businesses and sellers, and a Loadstar comment on 2 November 2026 describes it as a carrier for hire.",
+  "s": "Amazon is extending its own delivery network, with a first Caribbean station now open in Puerto Rico alongside its outside-business logistics offering.",
   "ids": [
    "17",
    "34",
    "05"
   ],
   "first": "2025-04-30",
-  "last": "2026-11-02",
+  "last": "2026-11-16",
   "c": [
    "Amazon",
    "FedEx",
@@ -545,7 +545,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Amazon is adding Prime Air drone delivery in new metro areas, with Tampa now live and Tallahassee and Jacksonville planned for the coming months.",
+  "s": "Amazon is opening Prime Air drone delivery in additional U.S. metro areas in November 2026, while Walmart and Zipline expand their own drone network.",
   "ids": [
    "g27",
    "g26",
@@ -563,7 +563,8 @@
    "a7aea8c84dd29",
    "a743e307cb77c",
    "a41a669613101",
-   "ab14195d70f10"
+   "ab14195d70f10",
+   "ab4ebde739879"
   ],
   "first": "2025-03-31",
   "last": "2026-11-23",
@@ -573,19 +574,15 @@
    "Regional"
   ],
   "cx": {
-   "sig": "e31d7a9184d0",
+   "sig": "6fd7bf180428",
    "v": 3,
    "beats": {
-    "g27": "Amazon's plan: Prime Air to almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations.",
-    "g26": "Meanwhile, Part 108 was still unpublished as of Oct. 9, so routine beyond-line-of-sight flights need waivers or Part 135 certificates.",
-    "a644b0ea66268": "Walmart is adding 300 Zipline sites and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
-    "a743e307cb77c": "Amazon's first Atlanta-area drone deliveries came Nov. 14-15 from Gwinnett County; DroneXL found no Georgia FAA file for Amazon listed.",
-    "a41a669613101": "An Amazon MK30 crashed on a Michigan home Nov. 20. Nobody was hurt, and the NTSB hasn't decided whether to investigate.",
-    "ab14195d70f10": "Tampa-area deliveries began from Ruskin, Amazon's first Florida site: up to five pounds, 7.5 miles, free for Prime on $50+."
+    "a644b0ea66268": "Walmart is adding 300 Zipline sites, and Zipline raised $1.5B at a $21.5B valuation. Site locations and timing weren't disclosed.",
+    "a41a669613101": "An Amazon MK30 crashed on a Michigan garage roof Nov. 20. Nobody was hurt, and the NTSB hasn't decided whether to open a probe."
    },
-   "now": "Amazon is live in Tampa, and Part 108 was still unpublished as of Oct. 9, so waivers and Part 135 remain the route for routine flights."
+   "intro": "Amazon and Walmart-Zipline are scaling up drone delivery while the FAA's Part 108 rule is still pending. Here's what's moving."
   },
-  "rv": "c105e33c0498",
+  "rv": "6ecb1664bf69",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -656,31 +653,29 @@
    "a3a4fa02bef84",
    "aef4d017bab80",
    "ad0e619194837",
-   "a65867ee1ae2e",
-   "a93a4b5f9ae34"
+   "a65867ee1ae2e"
   ],
   "first": "2026-10-13",
-  "s": "The bill remains before the New York City Council, and Amazon is campaigning against it with customer messages and paid opposition.",
-  "last": "2026-11-20",
+  "s": "The City Council bill is nearing passage while lawmakers weigh a rewrite and Amazon and allies threaten a lawsuit.",
+  "last": "2026-11-23",
   "c": [
    "Amazon",
    "FedEx",
    "Regional",
    "UPS"
   ],
-  "rv": "bb0617396e99",
+  "rv": "d101ea91c6fb",
   "cx": {
-   "sig": "335bcc793491",
+   "sig": "914432241c40",
    "v": 3,
    "beats": {
-    "a3a4fa02bef84": "Reportedly, Councilman Phil Wong pulled co-sponsorship over job losses; the bill would license Amazon's 15 city facilities.",
-    "aef4d017bab80": "FreightWaves says passage by year-end is likely but in amended form; about 100 Amazon DSPs operate in the city.",
-    "ad0e619194837": "Reportedly, Amazon and the National Urban League warned Speaker Menin of a lawsuit if Intro 518 passes as written.",
-    "a65867ee1ae2e": "Amazon told NYC customers Intro 518 could add up to $5 per order and it might move operations outside the city.",
-    "a93a4b5f9ae34": "Lawmakers are weighing a menu of options instead of direct hiring, including UPS, USPS or independent operators."
+    "a3a4fa02bef84": "Reportedly, Phil Wong dropped co-sponsorship over small-business job losses; the bill would license Amazon's 15 city facilities.",
+    "aef4d017bab80": "FreightWaves expects passage by year-end, but amended from February's version; about 100 Amazon DSPs operate in the city.",
+    "ad0e619194837": "Amazon and allies reportedly threaten to sue over the current text; Menin is reportedly open to dropping the subcontracting ban.",
+    "a65867ee1ae2e": "Amazon told NYC customers the bill could add up to $5 per order and said it would consider moving operations out of the city."
    },
-   "intro": "A NYC bill would overhaul Amazon's local delivery setup, and Amazon says it could add fees.",
-   "now": "Still before the Council; if lawmakers strike a deal, a vote could come within a few weeks."
+   "intro": "NYC's Council is moving on a bill aimed at Amazon's local delivery network, and shippers are watching for cost and legal fallout.",
+   "now": "Not law yet and no rates have changed; FreightWaves expects an amended version to pass before the end of 2026."
   },
   "co": "Amazon",
   "apart": [
@@ -906,6 +901,9 @@
    "a66617050d4e9",
    "abaae70647f04",
    "acb44dbafb712",
+   "a57a06c26359c",
+   "aa1bd42ea784a",
+   "ae2d14bb375b8",
    "h406",
    "h511",
    "g33",
@@ -913,15 +911,14 @@
    "50",
    "nr59b2c5",
    "35",
-   "a57a06c26359c",
-   "aa1bd42ea784a",
    "ae889f02f359e",
-   "ae2d14bb375b8",
+   "a8cbae3d2cccf",
    "a3b765bce7e5f",
-   "a8cbae3d2cccf"
+   "a6109ec87dec2",
+   "aac567f4095cf"
   ],
   "first": "2024-03-26",
-  "last": "2026-11-16",
+  "last": "2026-11-23",
   "c": [
    "Amazon",
    "FedEx",
@@ -930,7 +927,7 @@
   ],
   "theme": true,
   "cx": {
-   "sig": "79a6fb33a563",
+   "sig": "8e4fae5f1326",
    "v": 3,
    "beats": {
     "h406": "UPS's Network of the Future plan: close or consolidate about 200 U.S. facilities and reach 400 automated buildings by the end of 2028.",
@@ -948,7 +945,9 @@
     "aa1bd42ea784a": "A Roadie survey, relevant as the Teamsters challenge UPS's Roadie deliveries: 64% would quit a retailer after one to four bad deliveries.",
     "a3b765bce7e5f": "The fight moves to New York, where the Teamsters rally Nov. 17 for 200 e-bike drivers whose Amazon contractor lost its contract.",
     "ae889f02f359e": "Teamsters say they unionized Amazon drivers in Merrillville, Ind., after sites in KY and Mo.; Amazon says that didn't happen.",
-    "a8cbae3d2cccf": "O'Brien said in September a strike is likely when the contract ends; UPS is already signing shipper deals past 2028."
+    "a8cbae3d2cccf": "O'Brien said in September a strike is likely when the contract ends; UPS is already signing shipper deals past 2028.",
+    "a6109ec87dec2": "Not about the contract itself: Roadie COO Dennis Moon talks 2026 peak delivery strategy, shifting demand and resilient networks.",
+    "aac567f4095cf": "Reportedly, an op-ed says NYC's Delivery Protection Act would raise costs and favor Teamsters; it cites a $500,000 worker bond."
    },
    "intro": "UPS is working to control labor costs while the Teamsters push back, and both are positioning for the contract that ends July 31, 2028.",
    "now": "The national contract covering about 300,000 UPS employees expires July 31, 2028, and UPS keeps locking in long-term shipper deals."
@@ -1291,20 +1290,6 @@
    "now": "GOFO has the Charlotte lease signed, and the labor allegations are out there. The sources state no change to shipper rates or service."
   }
  },
- "easypost-spac": {
-  "n": "EasyPost SPAC merger",
-  "ids": [
-   "af554b135ab19"
-  ],
-  "first": "2026-11-18",
-  "co": "EasyPost",
-  "s": "EasyPost and American Drive Acquisition Company announced a definitive merger agreement on Nov. 18, 2026; closing is pending.",
-  "last": "2026-11-18",
-  "c": [
-   "Industry"
-  ],
-  "rv": "b1aad339da19"
- },
  "gls-dpd-jv": {
   "n": "GLS–Geopost German joint venture",
   "ids": [
@@ -1346,27 +1331,32 @@
   }
  },
  "uber-zipline-drones": {
-  "n": "Zipline drone delivery rollout",
+  "n": "Zipline drone delivery expansion",
   "ids": [
    "ab904315f1100",
-   "a5a12ee8825b7",
    "a6058d4f53b74",
-   "a3cf9f1f7ed58"
+   "a3cf9f1f7ed58",
+   "a5a12ee8825b7"
   ],
   "first": "2026-11-17",
   "co": "Zipline",
-  "s": "Zipline has raised $1.5 billion at a $21.5 billion valuation and operates in 31 U.S. municipalities, with a Phoenix launch planned for early 2027.",
-  "last": "2026-11-20",
+  "s": "Zipline says partners want over a million deliveries a day each, while the largest signed FAA approval covers 30,000 a day, per DroneXL.",
+  "last": "2026-11-22",
   "c": [
    "Industry",
    "Regional"
   ],
-  "rv": "5a670c1b1156",
+  "rv": "fbc2c269133d",
   "cx": {
-   "sig": "7faa12ae3a93",
+   "sig": "31c7e04da663",
    "v": 3,
-   "beats": {},
-   "now": "Zipline's Phoenix launch is planned for early 2027, and the FAA is taking public comments on its draft assessment through Dec. 7, 2026."
+   "beats": {
+    "a5a12ee8825b7": "Uber Eats began Zipline drone deliveries in Spring, Texas, with Dallas next; the partners aim for 1 million a day by end of 2029.",
+    "a3cf9f1f7ed58": "Zipline raised $1.5B at a $21.5B valuation, has made 2.5M deliveries, and reportedly costs under $10 per delivery.",
+    "a6058d4f53b74": "Zipline hopes to launch in Phoenix in early 2027; an FAA draft assessment covers up to 65,000 daily deliveries each in Phoenix and Tucson."
+   },
+   "intro": "Zipline is scaling drone delivery fast, with Uber as a partner. Shippers watch how big last-mile drones can get.",
+   "now": "The FAA is taking public comments on the Arizona draft through Dec. 7, 2026; Dallas is the next Uber Eats city."
   }
  },
  "doordash-ftc-pricing": {
@@ -1383,22 +1373,5 @@
    "doordash-instacart-deal"
   ],
   "rv": "da39a3ee5e6b"
- },
- "amazon-fuel-surcharge": {
-  "n": "Amazon fuel and logistics surcharge",
-  "ids": [
-   "acfad007d564b"
-  ],
-  "first": "2026-11-05",
-  "co": "Amazon",
-  "s": "Amazon will extend its 3.5% surcharge to Multi-Channel Distribution and Warehousing and Distribution transportation fees on Feb. 1, 2027.",
-  "last": "2026-11-05",
-  "c": [
-   "Amazon"
-  ],
-  "apart": [
-   "usps-big-shipper-deals"
-  ],
-  "rv": "eb729b681591"
  }
 }

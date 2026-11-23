@@ -1,5 +1,5 @@
 {
- "run": "2026-11-23T21:16Z",
+ "run": "2026-11-23T22:16Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -161,6 +161,15 @@
    "fixed": false
   },
   {
+   "sev": "med",
+   "type": "primary-attached",
+   "msg": "Attached carrier-site source https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf to \"UPS, FedEx set holiday oversize surcharges above $117 through December\"",
+   "ids": [
+    "a6ca4e9e1dc7a"
+   ],
+   "fixed": true
+  },
+  {
    "sev": "high",
    "type": "no-primary",
    "msg": "No carrier source for a price story; figures rest on press reports: \"Retailers raise free-shipping minimums ahead of USPS 11% fuel surcharge\"",
@@ -181,7 +190,7 @@
   {
    "sev": "low",
    "type": "primary-not-first",
-   "msg": "Carrier source Business Wire moved ahead of press coverage on \"UPS agrees to acquire Smartways Logistics in Australia and New Zealand\"",
+   "msg": "Carrier source Business Wire moved ahead of press coverage on \"UPS agrees to acquire Australian healthcare courier Smartways\"",
    "ids": [
     "a0f33fb01d0d5"
    ],
@@ -294,6 +303,16 @@
    "type": "feed-dead",
    "msg": "5 news feeds failing or empty: SEC: UPS 8-K; SEC: FedEx 8-K; SEC: Amazon 8-K; SEC: Pitney Bowes 8-K; Federal Register: de minimis and postal imports",
    "ids": [],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel surcharge to distribution fees from Feb. 1\"",
+   "ids": [
+    "a2cf4b58caa41",
+    "aa2b69f7ae47d"
+   ],
    "fixed": false
   },
   {
@@ -499,10 +518,20 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon starts Prime Air drone delivery in Tampa area from Ruskin\"",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon launches Prime Air drone delivery in Toledo area from Rossford\"",
    "ids": [
     "a258cb77ab792",
-    "ab14195d70f10"
+    "a36d59d9b3c9f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon delays Tallahassee Prime Air drone launch to end of year\" and \"Amazon pushes Tallahassee, Jacksonville drone launch to 'coming months'\"",
+   "ids": [
+    "aeafeee4b17da",
+    "ae4ef12cf16bb"
    ],
    "fixed": false
   },
@@ -513,16 +542,6 @@
    "ids": [
     "a65867ee1ae2e",
     "ad70e5d1d5b7e"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon confirms Prime Air drone delivery for Jacksonville; pad approved\" and \"Amazon starts Prime Air drone delivery in Tampa area from Ruskin\"",
-   "ids": [
-    "ac9087097e0b5",
-    "ab14195d70f10"
    ],
    "fixed": false
   },
@@ -695,6 +714,16 @@
   {
    "sev": "med",
    "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel surcharge to distribution fees from Feb. 1\"",
+   "ids": [
+    "a2cf4b58caa41",
+    "aa2b69f7ae47d"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
    "msg": "Possible duplicate stories: \"Amazon extends 3.5% fuel surcharge to AWD, Multi-Channel Distribution\" and \"Amazon extends 3.5% fuel and logistics surcharge to more seller services\"",
    "ids": [
     "a2cf4b58caa41",
@@ -895,10 +924,20 @@
   {
    "sev": "med",
    "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon starts Prime Air drone delivery in Tampa area from Ruskin\"",
+   "msg": "Possible duplicate stories: \"Amazon starts Prime Air drone delivery in eastern Columbus, Ohio\" and \"Amazon launches Prime Air drone delivery in Toledo area from Rossford\"",
    "ids": [
     "a258cb77ab792",
-    "ab14195d70f10"
+    "a36d59d9b3c9f"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "med",
+   "type": "duplicate",
+   "msg": "Possible duplicate stories: \"Amazon delays Tallahassee Prime Air drone launch to end of year\" and \"Amazon pushes Tallahassee, Jacksonville drone launch to 'coming months'\"",
+   "ids": [
+    "aeafeee4b17da",
+    "ae4ef12cf16bb"
    ],
    "fixed": false
   },
@@ -909,16 +948,6 @@
    "ids": [
     "a65867ee1ae2e",
     "ad70e5d1d5b7e"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "duplicate",
-   "msg": "Possible duplicate stories: \"Amazon confirms Prime Air drone delivery for Jacksonville; pad approved\" and \"Amazon starts Prime Air drone delivery in Tampa area from Ruskin\"",
-   "ids": [
-    "ac9087097e0b5",
-    "ab14195d70f10"
    ],
    "fixed": false
   },

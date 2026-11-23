@@ -1,55 +1,165 @@
 [
  {
-  "id": "ab14195d70f10",
+  "id": "a6109ec87dec2",
+  "date": "2026-11-23",
+  "c": [
+   "Regional"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "Roadie COO Moon discusses retail delivery strategies for 2026 peak season",
+  "sum": "Logistics Management published a podcast episode with Dennis Moon, chief operating officer of Roadie. Topics included how retailers can optimize delivery strategies for a successful 2026 peak season, shifting demand patterns and consumer preferences, and building a resilient delivery network.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The item is a podcast discussion of retail delivery strategy ahead of the 2026 peak season.",
+  "why": "The discussion covers how retailers plan delivery networks for the 2026 peak season, but the source gives no rates, fees or service changes.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:12:35Z",
+  "src": "Logistics Management",
+  "url": "https://www.logisticsmgmt.com/podcast/roadies_moon_addresses_retail_fulfillment_delivery_strategies_navigating_shifting_consumer_experiences",
+  "srcs": [
+   {
+    "src": "Logistics Management",
+    "url": "https://www.logisticsmgmt.com/podcast/roadies_moon_addresses_retail_fulfillment_delivery_strategies_navigating_shifting_consumer_experiences"
+   }
+  ],
+  "auto": true,
+  "syn": "Logistics Management published a podcast episode featuring Dennis Moon, Roadie's COO. The listed topics were how retailers can optimize delivery strategies for the 2026 peak season, key trends in the retail and delivery landscape, how retailers are handling shifting demand patterns and consumer preferences, and the keys to building a resilient delivery network. The episode is a discussion of views and announces no pricing or service changes.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   }
+  ]
+ },
+ {
+  "id": "a6ca4e9e1dc7a",
+  "date": "2026-11-23",
+  "c": [
+   "UPS",
+   "FedEx"
+  ],
+  "cat": "Peak season",
+  "kind": "News",
+  "title": "UPS, FedEx set holiday oversize surcharges above $117 through December",
+  "sum": "UPS is charging $117.50 on qualifying oversized packages from Nov. 22 through Dec. 26, and FedEx $117.25 from Nov. 23 through Dec. 27, according to the New York Post, citing the carriers' published rate schedules. The Post put the increase from 2025 at nearly 10% for UPS and roughly 8% for FedEx.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "Qualifying oversized packages carry a $117.50 holiday surcharge at UPS (Nov. 22 to Dec. 26) and $117.25 at FedEx (Nov. 23 to Dec. 27), on top of regular oversize and other charges.",
+  "why": "The seasonal fees apply to oversized packages on top of regular oversize charges that the Post said can exceed $300, at the two largest U.S. carriers.",
+  "score": 6,
+  "tie": "UPS's 2025 large-package peak surcharge topped out at $107, set in September 2025 coverage, and UPS and FedEx per-package peak fees of $0.75 and $0.80 for these dates were reported in October 2026.",
+  "act": "2026-11-22",
+  "dates": [
+   {
+    "d": "2026-12-26",
+    "w": "Last day of UPS holiday oversize surcharge",
+    "imp": "down",
+    "fx": null
+   },
+   {
+    "d": "2026-12-27",
+    "w": "Last day of FedEx holiday oversize surcharge",
+    "imp": "down",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-23T22:09:36Z",
+  "src": "New York Post",
+  "url": "https://nypost.com/2026/11/23/business/ups-fedex-slap-117-holiday-surcharge-on-oversized-christmas-packages/",
+  "srcs": [
+   {
+    "src": "FedEx",
+    "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf"
+   },
+   {
+    "src": "New York Post",
+    "url": "https://nypost.com/2026/11/23/business/ups-fedex-slap-117-holiday-surcharge-on-oversized-christmas-packages/"
+   }
+  ],
+  "auto": true,
+  "thread": "peak-surcharges",
+  "upd": 3,
+  "new": "The Post reports the oversize holiday surcharges at $117.50 for UPS and $117.25 for FedEx, up from $107 and $108.50 in 2025, with example bills of $525.17 at UPS and $681.14 at FedEx for a 97-inch package.",
+  "syn": "UPS and FedEx are applying holiday surcharges of more than $117 to oversized packages, according to the New York Post, which cited the carriers' published rate schedules. UPS charges $117.50 from Nov. 22 through Dec. 26 and FedEx $117.25 from Nov. 23 through Dec. 27. The Post said the fees are higher than in 2025, when UPS's maximum was $107 and FedEx's was $108.50. The charges come on top of regular oversize fees, shipping costs, residential delivery fees and fuel surcharges.",
+  "aff": [
+   {
+    "who": "Oversized-package shippers at UPS",
+    "what": "$117.50 holiday surcharge from Nov. 22 to Dec. 26, up from $107 in 2025; over-maximum packages face a $590 demand surcharge."
+   },
+   {
+    "who": "Oversized-package shippers at FedEx",
+    "what": "$117.25 holiday surcharge from Nov. 23 to Dec. 27, up from $108.50 in 2025; the unauthorized-package charge can reach $595."
+   },
+   {
+    "who": "Residential ground shippers",
+    "what": "UPS adds 75 cents and FedEx 80 cents to ordinary residential ground shipments during the peak stretch."
+   },
+   {
+    "who": "Special-handling shippers",
+    "what": "Peak demand surcharges of $11.90 at UPS and $11.85 at FedEx apply to packages that need special handling but are not oversized."
+   }
+  ],
+  "offc": true,
+  "exclusive": true,
+  "tried": "2026-11-23",
+  "unconf": true
+ },
+ {
+  "id": "aac567f4095cf",
   "date": "2026-11-23",
   "c": [
    "Amazon"
   ],
-  "cat": "Drones & robots",
-  "kind": "News",
-  "title": "Amazon starts Prime Air drone delivery in Tampa area from Ruskin",
-  "sum": "Amazon has begun Prime Air drone deliveries to customers in the Tampa area from its Ruskin fulfillment center, the first Florida community to get the service, Wisevoter reported, citing the Daytona Beach News-Journal. Items must weigh up to five pounds and the delivery radius is 7.5 miles. Prime members get free delivery on orders of $50 or more; non-Prime customers pay $4.99.",
-  "imp": "info",
+  "cat": "Regulation & trade",
+  "kind": "Opinion",
+  "title": "Op-ed argues NYC Delivery Protection Act would raise costs, favor Teamsters",
+  "sum": "In an op-ed in amNewYork, Geoffrey A. Manne of the International Center for Law & Economics argues that the Delivery Protection Act would raise delivery costs and strengthen the Teamsters' bargaining position. He says the 2025 comptroller's report cited by supporters does not show that contract drivers make streets less safe. The piece describes the bill as nearing passage.",
+  "imp": "watch",
   "lvl": 1,
-  "plain": "Customers within 7.5 miles of the Ruskin facility can get eligible items of up to five pounds by drone. Delivery is free for Prime members on orders of $50 or more and $4.99 for non-Prime customers.",
-  "why": "Amazon extends drone delivery to Florida for items up to five pounds within 7.5 miles of one facility, with a stated target of nearly 500 cities by end of 2026.",
+  "plain": "No change to rates or service has taken effect. The op-ed says the bill is nearing passage, and Amazon has warned that it could add up to $5 per order.",
+  "why": "The bill would reshape Amazon's New York delivery model, covering more than 40 partners and over 5,000 drivers, and a vote could come within weeks.",
   "score": 4,
-  "tie": "The launch follows Amazon's first Prime Air drone deliveries in metro Atlanta on November 14 and 15, 2026, and its November 19, 2026 update to its Prime Air customer guide.",
+  "tie": null,
   "act": null,
   "dates": [],
-  "added": "2026-11-23T14:46:59Z",
-  "src": "Wisevoter",
-  "url": "https://wisevoter.com/world/us/fl/tampa/2026/11/23/amazon-prime-air-drone-delivery-tampa",
+  "added": "2026-11-23T22:13:02Z",
+  "src": "amNewYork",
+  "url": "https://www.amny.com/law/op-ed-mamdani-teamsters-delivery-fee/",
   "srcs": [
    {
-    "src": "Wisevoter",
-    "url": "https://wisevoter.com/world/us/fl/tampa/2026/11/23/amazon-prime-air-drone-delivery-tampa"
+    "src": "amNewYork",
+    "url": "https://www.amny.com/law/op-ed-mamdani-teamsters-delivery-fee/"
    }
   ],
   "auto": true,
-  "thread": "drone-delivery",
-  "upd": 19,
-  "new": "Amazon's Prime Air service reached Tampa, its first Florida location, with stated pricing of free for Prime members on orders of $50 or more and $4.99 for non-Prime customers.",
-  "syn": "Amazon has begun Prime Air drone deliveries in the Tampa area, flying from its Ruskin fulfillment center, according to Wisevoter, which cited the Daytona Beach News-Journal. Tampa is the first Florida community to get the service, which uses the 78-pound MK30 drone. Eligible items must weigh no more than five pounds and fit inside a large shoebox. The report said Amazon plans to launch in Tallahassee and Jacksonville in the coming months and to add more Florida locations in 2027.",
+  "ann": "2026-11-23",
+  "new": "An op-ed by Geoffrey A. Manne of the International Center for Law & Economics criticizes the bill, citing the $500,000 per-worker bond and the comptroller's report, adding opposition argument but no change to the bill's status for shippers.",
+  "syn": "In an op-ed, Geoffrey A. Manne, president and founder of the International Center for Law & Economics, argues that the Delivery Protection Act would raise costs for New Yorkers and shift bargaining leverage to the Teamsters. The bill would require online retailers that run delivery services to employ drivers directly and would require a $500,000 bond for each nonemployee delivery worker retained. Manne says the 2025 comptroller's report cited by supporters did not compare areas with and without warehouses. The piece, an opinion, says lawmakers are weighing a rewrite, according to Bloomberg.",
   "aff": [
    {
-    "who": "Tampa-area customers near Ruskin",
-    "what": "Drone delivery is available within a 7.5-mile radius of the Ruskin fulfillment center for eligible items."
+    "who": "Amazon customers in New York City",
+    "what": "Amazon has said the bill could add up to $5 per order; the op-ed says Amazon has not shown how it got that figure."
    },
    {
-    "who": "Prime members",
-    "what": "Free drone delivery on orders of $50 or more."
+    "who": "Amazon delivery partners",
+    "what": "Amazon counts more than 40 local delivery partners employing over 5,000 drivers that it would have to replace under the bill."
    },
    {
-    "who": "Non-Prime customers",
-    "what": "Drone delivery costs $4.99."
+    "who": "Retailers using nonemployee drivers",
+    "what": "The bill would require a $500,000 bond for each nonemployee delivery worker a retailer keeps, according to the op-ed."
    },
    {
-    "who": "Items ordered by drone",
-    "what": "Limited to five pounds and a large shoebox size."
+    "who": "UPS and USPS",
+    "what": "A possible rewrite would let Amazon hand packages to UPS or the Postal Service for last-mile delivery, according to Bloomberg as cited."
    }
   ],
-  "exclusive": true
+  "edge": true,
+  "tried": "2026-11-23",
+  "unconf": true
  },
  {
   "id": "ad0045f0e6d82",
@@ -140,6 +250,57 @@
   "exclusive": true
  },
  {
+  "id": "ae4ef12cf16bb",
+  "date": "2026-11-23",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon pushes Tallahassee, Jacksonville drone launch to 'coming months'",
+  "sum": "Amazon said it hopes to launch Prime Air drone delivery in Tallahassee and Jacksonville \"in the coming months,\" in a statement to USA TODAY Network-Florida for a story published November 23. An Amazon manager had given mid-November for Tallahassee on October 20, and a company statement reported November 18 said it hoped to start by year's end. Tampa, served from Ruskin, is the only Florida location Amazon lists as available.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "Prime Air drone delivery is not yet available in Tallahassee or Jacksonville, and Amazon has given no firm start date. In Florida, only the Tampa area is listed as available.",
+  "why": "Amazon's Prime Air launch timing in two more Florida cities has slipped, so shippers and residents there have no fixed start date for the drone service.",
+  "score": 5,
+  "tie": "DroneXL's Ruskin guide dates the Tampa-area hub's first deliveries to March 9, 2026, and Amazon lists Tampa as the only Florida location available.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:11:29Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/23/amazon-prime-air-tallahassee-jacksonville-coming-months-ruskin-tampa/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/23/amazon-prime-air-tallahassee-jacksonville-coming-months-ruskin-tampa/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-23",
+  "new": "Amazon dropped its mid-November and year-end Tallahassee targets for a looser \"coming months\" window that also covers Jacksonville, so shippers in both cities have no firm start date.",
+  "syn": "Amazon said it hopes to launch Prime Air drone delivery in Tallahassee and Jacksonville \"in the coming months,\" according to a statement emailed to USA TODAY Network-Florida for a November 23 story. It is the third wording of the Tallahassee timeline in five weeks: an Amazon manager said mid-November on October 20, and a company statement reported November 18 said it hoped to start by the end of the year. Amazon's Prime Air site listed Tampa as available now and Tallahassee as coming soon on November 23, and did not list Jacksonville. Neither report gives a reason for the missed mid-November date, according to DroneXL.",
+  "aff": [
+   {
+    "who": "Tallahassee customers",
+    "what": "Launch target moved from mid-November to year's end to \"the coming months\"; Amazon's site lists it as coming soon."
+   },
+   {
+    "who": "Jacksonville customers",
+    "what": "Amazon hopes to launch in the coming months; its planning commission approved a launch pad on November 19."
+   },
+   {
+    "who": "Tampa-area customers",
+    "what": "Service runs from Ruskin; the FAA's June 1 assessment covers up to 1,000 MK30 flights a day per site."
+   },
+   {
+    "who": "Prime Air delivery pricing",
+    "what": "Free for Prime members on orders of $50 or more, $2.99 below that, $4.99 without Prime, per Amazon's announcement."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "ae83e0d0c081f",
   "date": "2026-11-23",
   "c": [
@@ -182,6 +343,112 @@
    {
     "who": "Contract parties",
     "what": "A new domestic shipping services contract is proposed for the Competitive Products List; the PRC invites public comment."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a1027bf76e0ce",
+  "date": "2026-11-22",
+  "c": [
+   "Industry"
+  ],
+  "cat": "Drones & robots",
+  "kind": "Analysis",
+  "title": "Zipline CEO says three partners each seek 1M drone deliveries a day",
+  "sum": "Zipline CEO Keller Rinaudo Cliffton said three or more partners are each trying to buy more than a million drone deliveries a day, according to a Sourcery podcast interview published November 22. He named Uber Eats and Walmart as two of them. DroneXL noted that the largest FAA approval signed for Zipline covers 30,000 deliveries a day in Dallas-Fort Worth.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service. The interview describes Zipline's expansion plans for drone delivery, including a Walmart agreement that expands from 22 to 300 supercenters in a first phase.",
+  "why": "DroneXL counts four FAA documents covering 410,000 deliveries a day, well below the volumes Zipline's partners are seeking.",
+  "score": 5,
+  "tie": "The interview follows Zipline's November 2026 launch of Uber Eats drone delivery in Spring, Texas, and the Uber-Zipline target, set in August 2026, of 1 million deliveries a day by the end of 2029.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:11:49Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/23/zipline-ceo-three-partners-million-drone-deliveries-a-day-faa-30000/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/23/zipline-ceo-three-partners-million-drone-deliveries-a-day-faa-30000/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-22",
+  "new": "The CEO's interview adds the claim that three or more partners each want a million daily deliveries and gives Walmart and Uber Eats figures; no change to shipper rates or service.",
+  "syn": "Zipline CEO Keller Rinaudo Cliffton told the Sourcery podcast, in an interview published November 22, that three or more partners are each trying to buy more than a million drone deliveries a day. He named Uber Eats and Walmart. He said Uber Eats' target equals about a quarter of its US deliveries, and that the Walmart agreement announced November 5 expands Zipline from 22 supercenters to 300 in a first phase. DroneXL said the largest FAA approval signed for Zipline, for Dallas-Fort Worth, allows 30,000 deliveries a day, and that Part 108, the FAA's BVLOS rule, has been in White House review since July 10.",
+  "aff": [
+   {
+    "who": "Walmart customers",
+    "what": "Zipline grew to 22 supercenters and expands to 300 in a first phase under the November 5 agreement, per the CEO."
+   },
+   {
+    "who": "Uber Eats customers",
+    "what": "Uber Eats' target of a million deliveries a day is about a quarter of its US deliveries, the CEO said."
+   },
+   {
+    "who": "Drone delivery volume",
+    "what": "The largest FAA approval signed for Zipline allows 30,000 deliveries a day; other metro-scale requests are drafts, per DroneXL."
+   },
+   {
+    "who": "Growth rate",
+    "what": "The CEO said Zipline is growing 10% to 15% week over week, without stating the period."
+   }
+  ],
+  "exclusive": true
+ },
+ {
+  "id": "a36d59d9b3c9f",
+  "date": "2026-11-22",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon launches Prime Air drone delivery in Toledo area from Rossford",
+  "sum": "Amazon announced on November 22 that Prime Air drone delivery is live in the Toledo area, according to WTOL as cited by DroneXL. Drones fly from the Rossford fulfillment center to customers within 7.5 miles. It is Amazon's third Ohio drone site in 59 days, after North Randall on September 24 and Etna on November 17.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Eligible customers within 7.5 miles of Amazon's Rossford fulfillment center can order drone delivery on items up to 5 pounds, as of the November 22 announcement. Prime members pay nothing on orders of $50 or more and $2.99 below that; others pay $4.99.",
+  "why": "Customers within 7.5 miles of Amazon's Rossford center can now order drone delivery, and Amazon has three Ohio drone sites in 59 days.",
+  "score": 6,
+  "tie": "Amazon began Prime Air deliveries in metro Atlanta in mid-November 2026, and a Prime Air MK30 came down on a garage roof in Huntington Woods, Michigan, on November 20, 2026, according to DroneXL.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:08:46Z",
+  "src": "DroneXL",
+  "url": "https://dronexl.co/2026/11/23/amazon-prime-air-toledo-rossford-ohio-drone-delivery-launch/",
+  "srcs": [
+   {
+    "src": "DroneXL",
+    "url": "https://dronexl.co/2026/11/23/amazon-prime-air-toledo-rossford-ohio-drone-delivery-launch/"
+   },
+   {
+    "src": "Wisevoter",
+    "url": "https://wisevoter.com/world/us/fl/tampa/2026/11/23/amazon-prime-air-drone-delivery-tampa"
+   },
+   {
+    "src": "News Channel 5 Nashville",
+    "url": "https://www.newschannel5.com/news/amazon-launches-drone-delivery-in-nashville-area-with-orders-arriving-in-as-little-as-30-minutes"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-22",
+  "new": "Amazon's Prime Air service went live in the Toledo area on November 22, adding a third Ohio site to earlier launches in Atlanta and Tampa, so more customers within 7.5 miles of Rossford can order drone delivery on items up to 5 pounds.",
+  "syn": "Amazon announced on November 22 that Prime Air drone delivery is live in the Toledo area, flying from its Rossford fulfillment center to customers within 7.5 miles, WTOL reported. It is the company's third Ohio drone site in 59 days, after North Randall on September 24 and Etna on November 17. Packages can weigh up to 5 pounds, and Amazon says certain orders arrive in about 30 minutes. DroneXL reported that the FAA's public drone environmental review index listed no Amazon document for Ohio on November 23. It said the FAA has not required one since July 28 for a hub that fits its national environmental finding, though DroneXL said it is not public whether each hub was checked against that finding.",
+  "aff": [
+   {
+    "who": "Toledo-area customers",
+    "what": "Most customers within 7.5 miles of the Rossford center are eligible, per WTOL citing Amazon; an address checker confirms."
+   },
+   {
+    "who": "Prime members",
+    "what": "Drone delivery costs nothing on orders of $50 or more and $2.99 on orders below that."
+   },
+   {
+    "who": "Non-Prime customers",
+    "what": "Drone delivery costs $4.99; packages can weigh up to 5 pounds."
    }
   ],
   "exclusive": true
@@ -981,6 +1248,49 @@
   "exclusive": true
  },
  {
+  "id": "a5bba9f8eb644",
+  "date": "2026-11-20",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Drones & robots",
+  "kind": "News",
+  "title": "Amazon Prime Air drone lands on Huntington Woods garage after hitting line",
+  "sum": "A Prime Air delivery drone landed on a Huntington Woods, Michigan, garage on Friday night after apparently striking a fiber-optic line, a neighbor told WDIV. Amazon said no one was injured, the drone was removed and it is in contact with the resident.",
+  "imp": "watch",
+  "lvl": 1,
+  "plain": "No change to rates or service was announced. Amazon said it investigates deliveries that do not go as planned and uses the findings to improve the service.",
+  "why": "Amazon is adding Prime Air drone deliveries to residential areas, and this incident involves a drone on a delivery in a Michigan neighborhood.",
+  "score": 6,
+  "tie": "The crash follows Amazon's first Prime Air drone deliveries in metro Atlanta in November 2026, and the NTSB said it had not yet decided whether to open an investigation, according to earlier coverage.",
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:10:11Z",
+  "src": "ClickOnDetroit | WDIV Local 4",
+  "url": "https://www.clickondetroit.com/news/local/2026/11/23/amazon-delivery-drone-crashes-onto-huntington-woods-garage-after-hitting-fiber-optic-line-neighbor-says/",
+  "srcs": [
+   {
+    "src": "ClickOnDetroit | WDIV Local 4",
+    "url": "https://www.clickondetroit.com/news/local/2026/11/23/amazon-delivery-drone-crashes-onto-huntington-woods-garage-after-hitting-fiber-optic-line-neighbor-says/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-20",
+  "new": "A neighbor's account and Amazon's statement add detail on the Huntington Woods crash (a fiber-optic line strike, a damaged propeller, no injuries), with no change to rates or service for shippers.",
+  "syn": "A Prime Air delivery drone landed on a garage in Huntington Woods, Michigan, on Friday night during a delivery, according to Amazon. A neighbor, Jim Brennan, said the drone hit a thin fiber-optic line, damaged a propeller and wobbled before lodging between the garage roof and an electrical line. Amazon said there were no injuries and the drone has been removed. Amazon spokesman Jack Stelzner said safety is the company's top priority and called such incidents \"extremely rare.\"",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   },
+   {
+    "who": "Huntington Woods resident",
+    "what": "Amazon said it is in contact with the resident whose garage the drone landed on; the resident said the garage was damaged."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a6058d4f53b74",
   "date": "2026-11-20",
   "c": [
@@ -1098,8 +1408,6 @@
    }
   ],
   "auto": true,
-  "thread": "last-mile-facility-legislation",
-  "upd": 10,
   "new": "Lawmakers are weighing replacing the direct-hire mandate with a menu of options, which would let Amazon keep its delivery partners if they gain independence, and a vote could follow within a few weeks.",
   "syn": "New York City lawmakers are discussing a compromise on the Delivery Protection Act that would drop the requirement that Amazon directly hire delivery workers, according to people with knowledge of the matter cited by Transport Topics. Amazon would instead choose between direct employment, carriers such as UPS or the U.S. Postal Service, or fully independent third-party operators, which would control their own routes, quotas and hiring. Amazon and local delivery companies had opposed the original bill; about 40 Amazon delivery service partners operate in the city. A Council vote could come within a few weeks if an agreement is reached.",
   "aff": [
@@ -1453,7 +1761,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-22",
+  "tried": "2026-11-23",
   "unconf": true
  },
  {
@@ -1837,7 +2145,7 @@
    }
   ],
   "exclusive": true,
-  "tried": "2026-11-22",
+  "tried": "2026-11-23",
   "unconf": true
  },
  {
@@ -1997,7 +2305,7 @@
    }
   ],
   "edge": true,
-  "tried": "2026-11-22",
+  "tried": "2026-11-23",
   "unconf": true
  },
  {
@@ -3218,6 +3526,53 @@
   "exclusive": true
  },
  {
+  "id": "adec2629d47df",
+  "date": "2026-11-18",
+  "c": [
+   "Industry"
+  ],
+  "cat": "M&A",
+  "kind": "News",
+  "title": "EasyPost to go public via ADAC SPAC at $576M enterprise value",
+  "sum": "EasyPost and American Drive Acquisition Company (Nasdaq: ADAC) announced a definitive business combination agreement on Nov. 18, 2026. The deal values EasyPost at a $479 million pre-money equity value and a $576 million pro forma enterprise value. The combined company is expected to list on Nasdaq as EZPO in the first half of 2027.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service. The item concerns EasyPost's corporate structure and planned stock market listing.",
+  "why": "EasyPost, a shipping API that connects businesses to multiple carriers, would become Nasdaq-listed with about $211M in cash.",
+  "score": 6,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:09:15Z",
+  "src": "Seeking Alpha",
+  "url": "https://seekingalpha.com/news/4674111-easypost-to-go-public-at-479m-valuation-via-adac-spac-deal",
+  "srcs": [
+   {
+    "src": "Seeking Alpha",
+    "url": "https://seekingalpha.com/news/4674111-easypost-to-go-public-at-479m-valuation-via-adac-spac-deal"
+   },
+   {
+    "src": "IPO Edge",
+    "url": "https://ipo-edge.com/easypost-to-go-public-via-american-drive-acquisition-co-spac/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-18",
+  "new": "IPO Edge adds that the deal is to provide EasyPost about $211 million in cash and gives the first-half 2027 listing timing; nothing changes for shippers' rates or service.",
+  "syn": "EasyPost, a shipping technology company, and the special purpose acquisition company American Drive Acquisition Company (Nasdaq: ADAC) announced a definitive business combination agreement on Nov. 18, 2026. The deal values EasyPost at a $479 million pre-money equity value and a $576 million pro forma enterprise value, or 4.1 times estimated 2026 revenue of $141 million, according to Seeking Alpha. EasyPost said the transaction will provide about $211 million in cash for growth and acquisitions in the parcel-shipping market. The combined company is expected to trade on Nasdaq under the ticker EZPO in the first half of 2027.",
+  "aff": [
+   {
+    "who": "Shippers",
+    "what": "No change to rates or service."
+   },
+   {
+    "who": "EasyPost",
+    "what": "Expects about $211M in cash for growth and acquisitions; Nasdaq listing as EZPO expected in first half of 2027."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "adfbfa1a7bf77",
   "date": "2026-11-18",
   "c": [
@@ -3348,7 +3703,6 @@
   ],
   "auto": true,
   "ann": "2026-11-18",
-  "thread": "easypost-spac",
   "syn": "EasyPost, a multi-carrier shipping API platform, agreed to a business combination with the SPAC American Drive Acquisition Company (ADAC). The combined company is expected to list on Nasdaq as EZPO. The company said the deal values EasyPost at a pre-money equity value of $479 million, or a pro forma enterprise value of $576 million, about 4.1x estimated 2026 revenue. EasyPost said the deal is expected to bring about $211 million of net cash proceeds if there are no redemptions, and it plans to use the capital for organic growth and acquisitions.",
   "aff": [
    {
@@ -3437,17 +3791,17 @@
   ],
   "cat": "M&A",
   "kind": "News",
-  "title": "UPS agrees to acquire Smartways Logistics in Australia and New Zealand",
-  "sum": "UPS said it has agreed to acquire Smartways Logistics, a healthcare courier serving Australia, New Zealand and the Asia Pacific region. The deal is expected to close in the first half of 2027, subject to customary regulatory reviews. UPS did not disclose the value or terms.",
+  "title": "UPS agrees to acquire Australian healthcare courier Smartways",
+  "sum": "UPS said it has agreed to acquire Smartways Logistics, a time-critical healthcare courier in Australia and New Zealand owned by The Riverside Company. Closing is expected in the first half of 2027, subject to customary regulatory reviews and approvals. Terms were not disclosed.",
   "imp": "info",
   "lvl": 1,
-  "plain": "No change to UPS rates or service at this time. The deal is expected to close in the first half of 2027, subject to approvals.",
-  "why": "UPS adds a healthcare courier in Australia and New Zealand; its healthcare revenue was $3 billion in the third quarter.",
+  "plain": "No change to UPS rates or service for shippers now. The deal is expected to close in the first half of 2027, after which Smartways customers would connect to the UPS global network.",
+  "why": "UPS is adding healthcare courier capacity in Oceania, where Smartways has more than 350 drivers, as UPS healthcare revenue ran at $3 billion a quarter.",
   "score": 4,
-  "tie": "UPS bought Canada-based Andlauer Healthcare Group in April 2025, after buying Frigo-Trans and sister company BPL earlier that year.",
+  "tie": "The deal follows UPS's April 2025 purchase of Andlauer Healthcare Group and its earlier 2025 purchase of Frigo-Trans and BPL, according to FreightWaves.",
   "act": null,
   "dates": [],
-  "added": "2026-11-20T01:53:56Z",
+  "added": "2026-11-23T22:13:54Z",
   "src": "FreightWaves",
   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
   "srcs": [
@@ -3456,20 +3810,24 @@
     "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics"
    },
    {
-    "src": "Post & Parcel",
-    "url": "https://postandparcel.info/163373/news/e-commerce/ups-expands-specialist-healthcare-logistics-network-in-asia-pacific/"
-   },
-   {
-    "src": "Logistics Management",
-    "url": "https://www.logisticsmgmt.com/article/ups_is_set_to_expand_asia_pacific_healthcare_operations_with_planned_acquisition_of_smartways_logistics"
-   },
-   {
     "src": "The STAT Trade Times",
     "url": "https://www.stattimes.com/logistics/ups-to-acquire-smartways-to-expand-healthcare-logistics-in-apac-1361336"
    },
    {
     "src": "Air Cargo News",
     "url": "https://www.aircargonews.net/business/2026/11/ups-plans-to-buy-smartways-logistics-to-expand-in-australasia/"
+   },
+   {
+    "src": "Investing.com",
+    "url": "https://www.investing.com/news/company-news/ups-to-acquire-smartways-logistics-in-australia-new-zealand-93CH-5033966"
+   },
+   {
+    "src": "Post & Parcel",
+    "url": "https://postandparcel.info/163373/news/e-commerce/ups-expands-specialist-healthcare-logistics-network-in-asia-pacific/"
+   },
+   {
+    "src": "Logistics Management",
+    "url": "https://www.logisticsmgmt.com/article/ups_is_set_to_expand_asia_pacific_healthcare_operations_with_planned_acquisition_of_smartways_logistics"
    },
    {
     "src": "Supply Chain Digital Magazine",
@@ -3482,19 +3840,19 @@
   ],
   "auto": true,
   "ann": "2026-11-17",
-  "syn": "UPS said it has agreed to acquire Smartways Logistics, a provider of time-critical healthcare courier services in Australia and New Zealand. The deal is expected to close in the first half of 2027, subject to customary regulatory reviews and approvals. UPS did not disclose the value or terms. According to the company, healthcare revenue reached $3 billion for the third consecutive quarter in Q3. FreightWaves reported that Smartways is the latest in a series of UPS Healthcare investments.",
+  "syn": "UPS has agreed to acquire Smartways Logistics, which provides same-day and next-day transport of medical devices, life sciences products, clinical trials and radiopharmaceuticals in Australia and New Zealand. Smartways has more than 350 drivers and is owned by The Riverside Company. Terms were not disclosed, though The Australian Financial Review reported that UPS had offered A$600 million, or $405 million. The deal is part of UPS's push to expand healthcare logistics in Asia-Pacific, and closing is expected in the first half of 2027.",
   "aff": [
    {
     "who": "Smartways customers",
-    "what": "Healthcare customers in Australia and New Zealand would be connected to UPS's global network after closing, expected in the first half of 2027."
+    "what": "Connected to the UPS global network for end-to-end international shipping after the deal closes."
    },
    {
     "who": "UPS Healthcare",
-    "what": "Gains time-critical courier services for life sciences, medical devices, clinical trials and radiopharmaceuticals in Asia Pacific."
+    "what": "Adds time-critical courier capability in Australia, New Zealand and the wider Asia-Pacific region."
    },
    {
     "who": "Shippers",
-    "what": "No change to rates or service at this time."
+    "what": "No change to rates or service announced."
    }
   ],
   "edge": true
@@ -3740,16 +4098,16 @@
   "cat": "Drones & robots",
   "kind": "News",
   "title": "Uber Eats starts Zipline drone delivery in Spring, Texas",
-  "sum": "Uber Eats began delivering orders by Zipline drone on Tuesday in Spring, Texas, a Houston suburb, with Dallas next, TechCrunch and The Verge reported. Uber and Zipline announced the partnership in August 2026 and aim for 1 million drone deliveries per day by the end of 2029.",
+  "sum": "Uber Eats began delivering orders by Zipline drone in Spring, a Houston suburb, TechCrunch and The Verge reported. Dallas is next, and Zipline said further US cities will follow in the coming months. The companies aim for 1 million drone deliveries per day by the end of 2029.",
   "imp": "info",
   "lvl": 1,
-  "plain": "Uber Eats customers in the Spring, Texas service area can now choose drone delivery for orders weighing up to 8 pounds. Dallas is next, and dozens of other U.S. cities are planned.",
-  "why": "Uber Eats and Zipline target 1 million drone deliveries per day by end-2029; The Verge put Zipline's current average at about 4,300 a day.",
-  "score": 5,
-  "tie": "The launch follows the Uber–Zipline partnership and Uber's investment in Zipline announced in August 2026, and Zipline's $1.5 billion funding round announced the week before.",
+  "plain": "Uber Eats customers in the Spring, Texas service area can order from participating restaurants for drone delivery. No change to parcel carrier rates or service.",
+  "why": "Uber and Zipline target 1 million drone deliveries a day by end of 2029; The Verge put Zipline's current average at about 4,300 a day.",
+  "score": 6,
+  "tie": "The launch follows the Uber and Zipline partnership, including an Uber investment in Zipline, announced in August 2026.",
   "act": null,
   "dates": [],
-  "added": "2026-11-21T01:38:44Z",
+  "added": "2026-11-23T22:10:38Z",
   "src": "TechCrunch",
   "url": "https://techcrunch.com/2026/11/17/uber-and-ziplines-drone-delivery-service-takes-off-in-texas-with-dozens-of-cities-to-follow/",
   "srcs": [
@@ -3764,6 +4122,10 @@
    {
     "src": "The Verge",
     "url": "https://www.theverge.com/transportation/1034794/uber-eats-zipline-drone-delivery-launch-texas-houston-dallas"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/news/zipline-launches-drone-delivery-uber-122932182.html"
    },
    {
     "src": "KHOU",
@@ -3784,14 +4146,28 @@
    {
     "src": "Analytics Insight",
     "url": "https://www.analyticsinsight.net/news/uber-eats-starts-drone-delivery-service-in-texas-dallas-next"
-   },
-   {
-    "src": "Yahoo Finance",
-    "url": "https://finance.yahoo.com/news/zipline-launches-drone-delivery-uber-122932182.html"
    }
   ],
   "auto": true,
+  "ann": "2026-11-17",
   "thread": "uber-zipline-drones",
+  "upd": 5,
+  "new": "Reports add service details: orders up to 8 pounds within a 10-mile radius, 8AM to 10PM daily at first, tipping disabled, and Zipline averaging about 4,300 deliveries a day globally according to The Verge.",
+  "syn": "Uber Eats began delivering restaurant orders by Zipline drone on Tuesday in Spring, Texas, a Houston suburb, the first commercial launch under the partnership the companies announced in August 2026. Dallas is next, and Zipline said it expects to reach other US cities in the coming months. The companies aim for 1 million drone deliveries per day by the end of 2029. The Verge noted that Zipline currently averages around 4,300 deliveries a day globally.",
+  "aff": [
+   {
+    "who": "Uber Eats customers in Spring, Texas",
+    "what": "Can order from participating restaurants by drone through a new icon in the app; tipping is disabled."
+   },
+   {
+    "who": "Drone orders",
+    "what": "Carry up to 8 pounds within a 10-mile radius of the restaurant, from 8AM to 10PM daily, Uber said."
+   },
+   {
+    "who": "Dallas and other US cities",
+    "what": "Zipline said service is expected to expand there in the coming months."
+   }
+  ],
   "exclusive": true
  },
  {
@@ -4183,6 +4559,62 @@
   "exclusive": true,
   "tried": "2026-11-21",
   "unconf": true
+ },
+ {
+  "id": "a0f5a0053e33b",
+  "date": "2026-11-16",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Amazon",
+  "kind": "News",
+  "title": "Amazon opens first Caribbean delivery station in Dorado, Puerto Rico",
+  "sum": "Amazon opened a 100,000-square-foot delivery station in Dorado, Puerto Rico, its first operations site in the Caribbean, according to a Nov. 16 press release. The site has made deliveries since August, and orders that took up to two weeks can now arrive in about two days, per the release.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "Amazon orders for San Juan metro customers can now arrive in about two days, down from as long as two weeks, according to Amazon. No change to carrier rates is stated.",
+  "why": "Amazon says its first Puerto Rico station cuts delivery to about two days from up to two weeks for San Juan metro customers.",
+  "score": 4,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:13:28Z",
+  "src": "About Amazon",
+  "url": "https://www.aboutamazon.com/news/company-news/amazon-puerto-rico-delivery-station-dorado",
+  "srcs": [
+   {
+    "src": "About Amazon",
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-puerto-rico-delivery-station-dorado"
+   },
+   {
+    "src": "Chain Store Age",
+    "url": "https://chainstoreage.com/amazon-opens-first-operations-facility-puerto-rico"
+   },
+   {
+    "src": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/small-business/articles/amazon-first-puerto-rico-delivery-173500632.html"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-16",
+  "new": "Amazon opened its first Caribbean delivery station in Dorado, Puerto Rico on Nov. 16, cutting some delivery times to about two days from up to two weeks, a local service gain rather than a stated change to shipper rates.",
+  "syn": "Amazon opened a 100,000-square-foot delivery station in Dorado, Puerto Rico, its first operations site in the Caribbean, according to a Nov. 16 press release. The facility has been making deliveries since August and serves the San Juan metro area. Packages can now be sorted and sent locally, and orders that took as long as two weeks can arrive in about two days, per the release. Supply Chain Dive reported the details.",
+  "aff": [
+   {
+    "who": "San Juan metro customers",
+    "what": "Orders that took as long as two weeks can now arrive in about two days, per Amazon."
+   },
+   {
+    "who": "Delivery service partners",
+    "what": "Six delivery service partners use the site, which supports about 300 drivers in total."
+   },
+   {
+    "who": "Amazon workforce",
+    "what": "The station employs more than 100 people, according to the release."
+   }
+  ],
+  "edge": true,
+  "exclusive": true
  },
  {
   "id": "a17c2b53e66e5",
@@ -4821,55 +5253,6 @@
    }
   ],
   "edge": true
- },
- {
-  "id": "acb049d81f751",
-  "date": "2026-11-16",
-  "c": [
-   "Amazon"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "Amazon opens first Puerto Rico delivery station in Dorado",
-  "sum": "Amazon opened its first delivery station in Puerto Rico, a 100,000-square-foot site in Dorado, on November 16, according to the company. Deliveries began in August, and orders for San Juan metro customers that took up to two weeks now arrive in about two days, Amazon said.",
-  "imp": "info",
-  "lvl": 2,
-  "plain": "Amazon customers in the San Juan metro area get delivery in about two days, down from up to two weeks, Amazon said. No change to carrier rates is stated.",
-  "why": "Amazon says San Juan metro orders that took up to two weeks now take about two days, from its first Caribbean operations site.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-16T20:24:42Z",
-  "src": "About Amazon",
-  "url": "https://www.aboutamazon.com/news/company-news/amazon-puerto-rico-delivery-station-dorado",
-  "srcs": [
-   {
-    "src": "About Amazon",
-    "url": "https://www.aboutamazon.com/news/company-news/amazon-puerto-rico-delivery-station-dorado"
-   },
-   {
-    "src": "Chain Store Age",
-    "url": "https://chainstoreage.com/amazon-opens-first-operations-facility-puerto-rico"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-16",
-  "syn": "Amazon officially opened its first delivery station in Puerto Rico on November 16. The 100,000-square-foot site in Dorado is the company's first operations facility on the island and in the Caribbean, and it began making deliveries in August. Amazon said orders for San Juan metro customers that once took as long as two weeks now arrive in about two days because packages are sorted and dispatched locally. The station employs more than 100 people, and six Delivery Service Partners support about 300 driver roles.",
-  "aff": [
-   {
-    "who": "San Juan metro customers",
-    "what": "Orders now arrive in about two days, down from up to two weeks, Amazon said."
-   },
-   {
-    "who": "Delivery jobs",
-    "what": "More than 100 station jobs and about 300 driver roles across six Delivery Service Partners."
-   },
-   {
-    "who": "Dorado station",
-    "what": "100,000-square-foot site; deliveries began in August, with the official opening on Nov. 16."
-   }
-  ]
  },
  {
   "id": "ad0e619194837",
@@ -9096,6 +9479,53 @@
   "unconf": true
  },
  {
+  "id": "a9be1e0efb972",
+  "date": "2026-11-10",
+  "c": [
+   "USPS"
+  ],
+  "cat": "Network & operations",
+  "kind": "News",
+  "title": "USPS cites facility upgrades for 2.5-day holiday delivery average",
+  "sum": "USPS said its network modernization, including a new Flint, Mich., sorting and delivery center, is intended to reduce delays, and that mail and packages are being delivered in 2.5 days on average versus 2.8 days during last year's holiday season. A 2026 USPS Inspector General audit described delayed mail and scanning failures at the Detroit processing center, and a Michigan resident said she has seen no improvement.",
+  "imp": "info",
+  "lvl": 1,
+  "plain": "No change to rates or service terms. USPS reports a 2.5-day average delivery time this holiday season, against 2.8 days a year earlier.",
+  "why": "USPS says its $21 billion modernization is speeding delivery, while an Inspector General audit and local shippers point to continuing delays in Michigan.",
+  "score": 5,
+  "tie": null,
+  "act": null,
+  "dates": [],
+  "added": "2026-11-23T22:12:29Z",
+  "src": "The Gander",
+  "url": "https://gandernewsroom.com/news/infrastructure/us-post-office-hopes-improvements-will-ease-holiday-shipping/",
+  "srcs": [
+   {
+    "src": "The Gander",
+    "url": "https://gandernewsroom.com/news/infrastructure/us-post-office-hopes-improvements-will-ease-holiday-shipping/"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-10",
+  "new": "USPS reported a 2.5-day average holiday delivery time against 2.8 days a year earlier and cited a new Flint center, while a 2026 OIG audit found delays at the Detroit facility; no change to rates or service standards.",
+  "syn": "USPS said new facilities and sorting technology under its Delivering for America plan are intended to reduce delays, including a new Flint, Mich., sorting and delivery center. The agency said the Flint site is one of more than 150 new facilities in a $21 billion modernization effort over five years, and that mail and packages are delivered in 2.5 days on average, compared with 2.8 days in last year's holiday season. A 2026 Office of Inspector General audit found delayed mail, scanning failures and security lapses at the Detroit processing and distribution center, and a Saginaw County resident said she has seen no improvement.",
+  "aff": [
+   {
+    "who": "Delivery times",
+    "what": "USPS says the average is 2.5 days this holiday season versus 2.8 days the previous year."
+   },
+   {
+    "who": "Flint-area shippers",
+    "what": "New Flint center serves 19 ZIP codes; its package-sorting equipment can reportedly process 5,000 packages per hour."
+   },
+   {
+    "who": "Detroit-area mail and packages",
+    "what": "A 2026 OIG audit cited delayed mail, scanning failures and security lapses at the Detroit processing center."
+   }
+  ],
+  "exclusive": true
+ },
+ {
   "id": "a9f97ff5f51a3",
   "date": "2026-11-10",
   "c": [
@@ -11690,6 +12120,73 @@
   "exclusive": true
  },
  {
+  "id": "aa2b69f7ae47d",
+  "date": "2026-11-05",
+  "c": [
+   "Amazon"
+  ],
+  "cat": "Fees & rules",
+  "kind": "News",
+  "title": "Amazon extends 3.5% fuel surcharge to distribution fees from Feb. 1",
+  "sum": "Amazon told sellers on Nov. 5 that its 3.5% fuel and logistics surcharge will apply to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S. from Feb. 1, 2027. It also plans to raise Fulfillment by Amazon fees by $0.19 per unit on average from Jan. 15, 2027, according to the report.",
+  "imp": "up",
+  "lvl": 2,
+  "plain": "From Jan. 15, 2027, FBA fees rise by $0.19 per unit on average. From Feb. 1, 2027, the 3.5% surcharge also applies to Multi-Channel Distribution and Warehousing and Distribution transportation fees in the U.S.",
+  "why": "The surcharge and a $0.19 average FBA fee increase raise costs for sellers using Amazon fulfillment and distribution services in early 2027.",
+  "score": 6,
+  "tie": "Amazon introduced the 3.5% surcharge in April 2026 for U.S. and Canada fulfillment fees, and the Nov. 5 notice widens it to more services.",
+  "act": "2027-02-01",
+  "dates": [
+   {
+    "d": "2027-01-15",
+    "w": "Amazon FBA fees rise $0.19 per unit on average",
+    "imp": "up",
+    "fx": null
+   },
+   {
+    "d": "2027-02-01",
+    "w": "Amazon 3.5% surcharge extends to MCD and WD transportation fees",
+    "imp": "up",
+    "fx": null
+   }
+  ],
+  "added": "2026-11-23T22:11:12Z",
+  "src": "USPS",
+  "url": "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/",
+  "srcs": [
+   {
+    "src": "USPS",
+    "url": "https://news.usps.com/2026/11/12/usps-recommends-shipping-price-changes/"
+   },
+   {
+    "src": "Supply Chain Dive",
+    "url": "https://www.supplychaindive.com/news/amazon-to-expand-fuel-and-logistics-surcharge-to-more-services/874693/"
+   },
+   {
+    "src": "Wisevoter",
+    "url": "https://wisevoter.com/world/us/2026/11/17/amazon-expands-fuel-surcharge-more-services"
+   }
+  ],
+  "auto": true,
+  "ann": "2026-11-05",
+  "new": "Coverage adds the Jan. 15, 2027 FBA increase of $0.19 per unit on average, the storage fee restructuring and Amazon's 11% third-quarter shipping cost rise, on top of the Feb. 1, 2027 surcharge extension.",
+  "syn": "Amazon announced to sellers on Nov. 5 that its 3.5% fuel and logistics surcharge, introduced in April 2026, will extend to transportation fees for Multi-Channel Distribution and Warehousing and Distribution in the U.S. from Feb. 1, 2027. The company also plans to raise Fulfillment by Amazon fees by $0.19 per unit on average from Jan. 15, 2027, compared with an $0.08 average increase at the start of 2026. Amazon's shipping costs rose 11% year over year in the third quarter, with three percentage points tied to fuel and linehaul inflation, according to the report. Amazon has not said how long the surcharge will stay in effect beyond saying it will keep reviewing it.",
+  "aff": [
+   {
+    "who": "Fulfillment by Amazon sellers",
+    "what": "FBA fees rise by $0.19 per unit on average from Jan. 15, 2027; some products rise and others fall."
+   },
+   {
+    "who": "Multi-Channel Distribution and Warehousing and Distribution ",
+    "what": "The 3.5% surcharge applies to U.S. transportation fees from Feb. 1, 2027."
+   },
+   {
+    "who": "Sellers paying storage fees",
+    "what": "Amazon is ending the storage utilization surcharge and merging aged inventory surcharge with monthly storage into one age-based rate."
+   }
+  ]
+ },
+ {
   "id": "aa51e82b50d12",
   "date": "2026-11-05",
   "c": [
@@ -11827,7 +12324,6 @@
   ],
   "auto": true,
   "ann": "2026-11-05",
-  "thread": "amazon-fuel-surcharge",
   "syn": "Amazon is widening its 3.5% fuel and logistics surcharge for third-party sellers. From Feb. 1, 2027, it will also cover U.S. transportation fees for Multi-Channel Distribution and Warehousing and Distribution, which are used for bulk inventory replenishment and storage. Amazon told sellers on Nov. 5 that fuel and line-haul trucking costs have stayed elevated since the April 2026 launch and that it will keep reviewing the surcharge. CFO Brian Olsavsky said on an October earnings call that the surcharge recovers some, but not all, of Amazon's fuel costs. Amazon is also changing FBA fulfillment and storage fees in early 2027.",
   "aff": [
    {
@@ -12794,520 +13290,5 @@
    }
   ],
   "exclusive": true
- },
- {
-  "id": "a6f1220bef28a",
-  "date": "2026-11-03",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Technology & tools",
-  "kind": "Opinion",
-  "title": "Op-ed: Healthcare audit lessons apply to parcel billing, executive says",
-  "sum": "In an opinion piece published by Parcel Industry, Rob Gelb, a chief executive in the parcel cost-management field, argues that parcel shipping shares healthcare's concentrated market and information imbalance. He calls for auditing rights, independent billing verification and ongoing review of carrier charges.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The piece is one executive's view on auditing carrier billing.",
-  "why": "The piece gives one executive's case for ongoing carrier-bill auditing; it announces no rate, fee or service change.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T19:17:09Z",
-  "src": "Parcel Industry",
-  "url": "https://parcelindustry.com/article-6734-What-Healthcare-Taught-Me-About-the-Economics-of-Parcel-Shipping.html",
-  "srcs": [
-   {
-    "src": "Parcel Industry",
-    "url": "https://parcelindustry.com/article-6734-What-Healthcare-Taught-Me-About-the-Economics-of-Parcel-Shipping.html"
-   }
-  ],
-  "auto": true,
-  "syn": "This is an opinion piece by Rob Gelb, a chief executive in the parcel cost-management field, published by Parcel Industry. He draws on his healthcare background to argue that parcel buyers face a concentrated carrier market and an information imbalance. He says shippers should seek clear auditing rights and independent verification of billing. He also says AI combined with expert review delivered savings six to ten percentage points higher than purely AI-driven models in healthcare. For a company with $10 million to $25 million in annual revenue, he says cutting expenses by five to ten percentage points of revenue equals $500,000 to $2.5 million in annual savings, assuming no offsetting costs.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ]
- },
- {
-  "id": "a920867c2e49d",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Network & operations",
-  "kind": "News",
-  "title": "FedEx to bring Network 2.0 to Los Angeles, other markets after holidays",
-  "sum": "FedEx plans to extend its Network 2.0 integration to Los Angeles and other markets after the holiday season, Supply Chain Dive reported on Nov. 3, 2026. The integration is already complete in markets including Dallas and San Francisco, and the plan is slated to wrap up in 2027.",
-  "imp": "watch",
-  "lvl": 1,
-  "plain": "FedEx is expected to bring its combined Express and Ground network to Los Angeles and other markets after the holidays. The source does not state any change to rates or service levels.",
-  "why": "Network 2.0 merges FedEx's Ground and Express pickup and delivery, and more markets, including Los Angeles, are slated to follow after the holidays.",
-  "score": 6,
-  "tie": "In October 2026, Supply Chain Dive reported from a FedEx facility in Mesquite, Texas, where Express and Ground shipments move together, and FedEx's CEO had said in September that Network 2.0 would be 62% done by the end of the year.",
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T17:19:26Z",
-  "src": "Supply Chain Dive",
-  "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/",
-  "srcs": [
-   {
-    "src": "Supply Chain Dive",
-    "url": "https://www.supplychaindive.com/news/fedex-network-20-headed-to-los-angeles-other-markets-post-holidays/873453/"
-   }
-  ],
-  "auto": true,
-  "thread": "fedex-network-2",
-  "upd": 5,
-  "new": "FedEx will bring Network 2.0 to Los Angeles and other markets after the holidays, while Dallas and San Francisco are already complete; the source states no change to shipper rates or service.",
-  "syn": "FedEx plans to bring its Network 2.0 integration to Los Angeles and other markets after the holiday season, according to Supply Chain Dive on Nov. 3, 2026. The integration is already complete in markets such as Dallas and San Francisco as the carrier prepares for peak season. The plan is slated to wrap up in 2027. Network 2.0 merges FedEx's historically separate Ground and Express pickup and delivery operations.",
-  "aff": [
-   {
-    "who": "Los Angeles and other markets",
-    "what": "Network 2.0 integration of Ground and Express operations is slated to arrive after the holidays."
-   },
-   {
-    "who": "Dallas and San Francisco",
-    "what": "Integration is already complete, ahead of peak season."
-   },
-   {
-    "who": "Shippers",
-    "what": "The source does not state any change to rates or service."
-   }
-  ]
- },
- {
-  "id": "a9b77b62dcd89",
-  "date": "2026-11-03",
-  "c": [
-   "USPS"
-  ],
-  "cat": "Peak season",
-  "kind": "News",
-  "title": "USPS says it is ready for 2026 peak with 164 new sorting machines",
-  "sum": "USPS said on Nov. 3, 2026 that it is prepared for the holiday season, citing 673 package sorting machines added over six years, 164 of them this year. It plans to hire a little more than 10,000 seasonal employees, down from 40,000 a few years ago. USPS said it delivered mail and packages in 2.5 days on average in 2025.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service levels was announced. USPS said Ground Advantage, Priority Mail and Priority Mail Express remain available during the holidays.",
-  "why": "USPS is cutting seasonal hiring to about 10,000 from 40,000 while adding sorting capacity, which shows how it plans to handle peak parcel volume.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T13:31:14Z",
-  "src": "USPS",
-  "url": "https://news.usps.com/2026/11/03/usps-is-geared-up-to-deliver-for-the-holidays/",
-  "srcs": [
-   {
-    "src": "USPS",
-    "url": "https://news.usps.com/2026/11/03/usps-is-geared-up-to-deliver-for-the-holidays/"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-03",
-  "syn": "USPS announced on Nov. 3, 2026 that it is prepared for the holiday peak, pointing to investment in technology and infrastructure. Postmaster General David Steiner said USPS has enough capacity for peak season. USPS said it added 673 package sorting machines over six years, including 164 this year, and will hire a little more than 10,000 seasonal employees, down from 40,000 a few years ago. It also cited new tracking, facilities, vehicles and returns options.",
-  "aff": [
-   {
-    "who": "Package processing",
-    "what": "673 sorting machines added in six years, including 164 this year, per USPS."
-   },
-   {
-    "who": "Seasonal staffing",
-    "what": "USPS will hire a little more than 10,000 seasonal employees, versus 40,000 a few years ago."
-   },
-   {
-    "who": "Package tracking",
-    "what": "New platform is nearly four times faster and can update within a minute of scanning, USPS said."
-   },
-   {
-    "who": "Returns",
-    "what": "31,000+ retail drop-off locations, 3,000+ kiosks and free carrier pickup are available, USPS said."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "acc610f835616",
-  "date": "2026-11-03",
-  "c": [
-   "Industry"
-  ],
-  "cat": "Drones & robots",
-  "kind": "Opinion",
-  "title": "Aviation Week column says drone delivery noise holds lessons for air mobility",
-  "sum": "Aviation Week's Waypoint column, published in its Business Aviation & Advanced Air Mobility Report, discusses noise from drone delivery. The excerpt says advanced air mobility brings aviation closer to users, which carries a greater responsibility to be good neighbors. The full text is behind a subscription.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service. The item is a commentary on drone delivery noise.",
-  "why": "The column links drone delivery to noise and neighbor impact, a question for operators of home-delivery drones; the excerpt gives no figures.",
-  "score": 4,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-05T13:39:46Z",
-  "src": "Aviation Week",
-  "url": "https://aviationweek.com/aerospace/advanced-air-mobility/waypoint-listen-lessons-drone-delivery-noise",
-  "srcs": [
-   {
-    "src": "Aviation Week",
-    "url": "https://aviationweek.com/aerospace/advanced-air-mobility/waypoint-listen-lessons-drone-delivery-noise"
-   }
-  ],
-  "auto": true,
-  "syn": "Aviation Week's Waypoint column looks at noise from drone delivery and what it means for advanced air mobility. The excerpt says the sector's aim is to bring aviation closer to the user, through drone deliveries to doorsteps and backyards or air taxi flights from parking garages to airport terminals. It says greater proximity brings greater responsibility to be good neighbors. The remainder of the piece is behind a subscription, so its specific lessons are not available here.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "ad1631e1cb62c",
-  "date": "2026-11-03",
-  "c": [
-   "Regional"
-  ],
-  "cat": "Postal",
-  "kind": "News",
-  "title": "Canada Post publishes schedule to end GTA home delivery through 2031",
-  "sum": "Canada Post has released a schedule for converting Greater Toronto Area neighbourhoods from home delivery to community mailboxes, according to the Toronto Star. The earliest conversions, covering 18,000 Etobicoke addresses, take effect later this month, and the last areas are scheduled for 2031. Canada Post also said it will begin weekend parcel delivery to community mailboxes and post offices in the GTA this weekend.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "GTA addresses will move from home delivery to community mailboxes in phases, starting later this month in northwestern Etobicoke and ending in 2031. Weekend parcel delivery to community mailboxes and post offices in the GTA begins this weekend.",
-  "why": "Canada Post is moving the four million homes that still get door delivery to community mailboxes, with GTA areas converting in stages through 2031.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [
-   {
-    "d": "2027-01-01",
-    "w": "Canada Post converts parts of Durham and Peel to community mailboxes",
-    "imp": "info",
-    "fx": null
-   },
-   {
-    "d": "2031-01-01",
-    "w": "Canada Post converts downtown Toronto and North York areas",
-    "imp": "info",
-    "fx": null
-   }
-  ],
-  "added": "2026-11-03T13:30:55Z",
-  "src": "Toronto Star",
-  "url": "https://www.thestar.com/business/canada-post-is-ending-home-delivery-in-toronto-use-our-interactive-map-to-see-when-your-area-changes/article_75576656-978b-4775-85a5-f334d25b0776.html",
-  "srcs": [
-   {
-    "src": "Toronto Star",
-    "url": "https://www.thestar.com/business/canada-post-is-ending-home-delivery-in-toronto-use-our-interactive-map-to-see-when-your-area-changes/article_75576656-978b-4775-85a5-f334d25b0776.html"
-   }
-  ],
-  "auto": true,
-  "ann": "2026-11-03",
-  "thread": "canada-post-home-delivery-ending",
-  "syn": "Canada Post has issued a full schedule for converting Greater Toronto Area neighbourhoods from home delivery to community mailboxes, the Toronto Star reported. The earliest conversions, in northwestern Etobicoke, take effect later this month and cover 18,000 addresses announced in March. Parts of Durham and Peel regions follow in 2027, and dense downtown and North York areas are scheduled last, in 2031. Canada Post said the order reflects national planning, operational requirements and logistical considerations rather than a single geographic criterion. The conversions follow federal approval in September 2025 of a restructuring that includes ending home delivery for the four million homes that still receive it.",
-  "aff": [
-   {
-    "who": "Etobicoke addresses",
-    "what": "18,000 addresses in northwestern Etobicoke convert to community mailboxes, with the first changes taking effect later this month."
-   },
-   {
-    "who": "Durham and Peel residents",
-    "what": "Parts of Pickering, Ajax, Mississauga and Brampton are scheduled to convert in 2027."
-   },
-   {
-    "who": "Downtown Toronto and North York residents",
-    "what": "The most densely populated areas are scheduled to convert last, in 2031."
-   },
-   {
-    "who": "GTA parcel recipients",
-    "what": "Weekend parcel delivery to community mailboxes and post offices begins in the GTA this weekend."
-   }
-  ],
-  "edge": true,
-  "exclusive": true
- },
- {
-  "id": "ade0362073c48",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "cat": "Carrier strategy",
-  "kind": "Analysis",
-  "title": "FedEx CEO shifts focus from commodity parcels, TheStreet analysis says",
-  "sum": "A TheStreet analysis published Nov. 3, 2026 says FedEx CEO Raj Subramaniam is moving the company away from commodity parcels and toward data centers, healthcare and automotive customers. The piece says the company's Q3 results show the shift is working. The retrieved text contains no figures.",
-  "imp": "info",
-  "lvl": 1,
-  "plain": "No change to rates or service is stated. The article describes FedEx's strategy and customer mix, not a pricing or service change.",
-  "why": "The analysis describes a change in the customer mix FedEx is pursuing, away from commodity parcel volume toward other sectors.",
-  "score": 5,
-  "tie": null,
-  "act": null,
-  "dates": [],
-  "added": "2026-11-03T17:19:56Z",
-  "src": "TheStreet",
-  "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base",
-  "srcs": [
-   {
-    "src": "TheStreet",
-    "url": "https://www.thestreet.com/investing/stocks/fedex-ceo-is-seeing-a-shift-in-its-customer-base"
-   }
-  ],
-  "auto": true,
-  "syn": "A TheStreet analysis published Nov. 3, 2026 describes FedEx CEO Raj Subramaniam as shifting the company away from commodity parcels and toward data centers, healthcare and automotive customers. The article, tagged as opinion and analysis, says the company's Q3 numbers show the approach is working. The retrieved text does not include the underlying figures or any change to shipper rates or service.",
-  "aff": [
-   {
-    "who": "Shippers",
-    "what": "No change to rates or service is stated in the source."
-   }
-  ],
-  "exclusive": true
- },
- {
-  "id": "w0b8720b6a0e7",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "title": "FedEx raises U.S. import Demand Surcharge for Europe and Israel; adds Vietnam",
-  "sum": "FedEx's U.S. import Demand Surcharge for Europe and Israel origins rises from $0.25 to $0.28 per lb. for parcel and freight, effective Nov. 2, 2026 until further notice. The same date brings a new Vietnam-to-U.S. surcharge of $0.36 per lb. for the priority-class services and $0.27 per lb. for the economy-class services. The $0.25 rate now applies only through Nov. 1, 2026. All other listed origins keep their rates.",
-  "plain": "Importers shipping from Europe or Israel to the U.S. pay $0.03 more per lb. from Nov. 2. Vietnam-origin U.S. imports now carry a per-lb. demand surcharge. The $1 parcel and $50 freight minimums are unchanged.",
-  "imp": "up",
-  "lvl": 2,
-  "cat": "Pricing & GRI",
-  "act": "2026-11-02",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Europe-to-U.S. Demand Surcharge, parcel and freight",
-    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
-    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
-    "effective": "2026-11-02",
-    "who": "U.S. import parcel and freight shipments originating in Europe",
-    "impact": "$0.25 -> $0.28, +$0.03 per lb."
-   },
-   {
-    "what": "Israel-to-U.S. Demand Surcharge, parcel and freight",
-    "before": "$0.25 per lb., effective Sept. 21, 2026 until further notice",
-    "after": "$0.28 per lb., effective Nov. 2, 2026 until further notice ($0.25 applies Sept. 21–Nov. 1, 2026)",
-    "effective": "2026-11-02",
-    "who": "U.S. import parcel and freight shipments originating in Israel",
-    "impact": "$0.25 -> $0.28, +$0.03 per lb."
-   },
-   {
-    "what": "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
-    "before": null,
-    "after": "$0.36 per lb. (priority-class services) and $0.27 per lb. (economy-class services), effective Nov. 2, 2026 until further notice",
-    "effective": "2026-11-02",
-    "who": "U.S. import shipments originating in Vietnam",
-    "impact": "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
-   }
-  ],
-  "verdict": "price change",
-  "unknowns": [
-   "Whether the page and document date change (Sept. 4 to Oct. 23, 2026) reflects any other edits is not confirmed.",
-   "Older version not on file"
-  ],
-  "dates": [
-   {
-    "d": "2026-11-02",
-    "w": "FedEx: Europe-to-U.S. Demand Surcharge, parcel and freight",
-    "imp": "up",
-    "fees": [
-     [
-      "FedEx",
-      "Israel-to-U.S. Demand Surcharge, parcel and freight",
-      "$0.25 -> $0.28, +$0.03 per lb."
-     ],
-     [
-      "FedEx",
-      "New Vietnam-to-U.S. Demand Surcharge: $0.36 per lb. for International First, Priority Express, Priority, Connect Plus and Priority Freight; $0.27 per lb. for International Economy, Economy Freight and Deferred Freight",
-      "New per-lb. surcharge: $0.36 priority-class, $0.27 economy-class"
-     ]
-    ]
-   }
-  ],
-  "kind": "Alert",
-  "src": "FedEx Demand surcharges (spotted by Parcel Pigeon)",
-  "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-  "srcs": [
-   {
-    "src": "FedEx Demand surcharges",
-    "url": "https://www.fedex.com/en-us/shipping/rate-changes/demand-surcharges.html"
-   },
-   {
-    "src": "FedEx: 11-2-26_US-Import-Demand-Surcharges.pdf",
-    "url": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "price change (11-2-26_US-Import-Demand-Surcharges.pdf), cosmetic",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.fedex.com/content/dam/fedex/us-united-states/services/11-2-26_US-Import-Demand-Surcharges.pdf",
-     "old": "https://www.fedex.com/content/dam/fedex/us-united-states/services/9-21-26_US-Import-Demand-Surcharges.pdf"
-    }
-   ]
-  },
-  "exclusive": true,
-  "primary": true
- },
- {
-  "id": "wf7bb9227b2de",
-  "date": "2026-11-03",
-  "c": [
-   "FedEx"
-  ],
-  "title": "FedEx posts fuel surcharge tables effective Nov. 9, 2026",
-  "sum": "FedEx's fuel surcharge page now shows tables effective Nov. 9, 2026. The domestic package table runs from 34.00% to 35.50% and the Ground, Home Delivery and International Ground table runs from 30.00% to 31.50%. The express freight table runs from $0.740 to $0.764 per lb. The earlier version on file is a different document (International Premium terms effective Jan. 5, 2026), so no old-versus-new percentage comparison is possible.",
-  "plain": "Shippers using FedEx Express, Ground, Home Delivery, International Ground or express freight services pay surcharges set by these tables from Nov. 9, 2026. The size of the move from the prior week's rates cannot be determined.",
-  "imp": "info",
-  "lvl": 1,
-  "cat": "Guide changes",
-  "act": "2026-11-09",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Domestic and U.S.–Puerto Rico package services fuel surcharge table (jet fuel index)",
-    "before": null,
-    "after": "34.00% at $4.46–$4.51 per gallon, rising 0.25 point per bracket to 35.50% at $4.76–$4.81",
-    "effective": "2026-11-09",
-    "who": "FedEx domestic and U.S. to Puerto Rico package shipments",
-    "impact": null
-   },
-   {
-    "what": "FedEx Ground, Home Delivery, International Ground and pickup services fuel surcharge table (diesel index)",
-    "before": null,
-    "after": "30.00% at $6.07–$6.16 per gallon, rising 0.25 point per bracket to 31.50% at $6.61–$6.70",
-    "effective": "2026-11-09",
-    "who": "FedEx Ground, Home Delivery, International Ground and pickup shipments",
-    "impact": null
-   },
-   {
-    "what": "Domestic express freight fuel surcharge table (per rated pound)",
-    "before": null,
-    "after": "$0.740 per lb. at $4.46–$4.51 jet fuel, rising to $0.764 per lb. at $4.76–$4.81",
-    "effective": "2026-11-09",
-    "who": "FedEx domestic and U.S. to Puerto Rico express freight shipments",
-    "impact": null
-   },
-   {
-    "what": "Step rule for jet fuel based percentages",
-    "before": null,
-    "after": "Below $3.51 jet fuel, surcharge moves 0.25% per $0.21 change; at and above $3.51, 0.25% per $0.05 change",
-    "effective": "2026-11-09",
-    "who": "Package services shippers on the jet fuel based surcharge",
-    "impact": null
-   },
-   {
-    "what": "Step rule for diesel fuel based percentages",
-    "before": null,
-    "after": "Below $5.71 diesel, surcharge moves 0.25% per $0.27 change; at and above $5.71, 0.25% per $0.09 change",
-    "effective": "2026-11-09",
-    "who": "Ground, Home Delivery and International Ground shippers",
-    "impact": null
-   },
-   {
-    "what": "Table extension trigger points for the Ground and diesel table",
-    "before": null,
-    "after": "Table is extended if the diesel index falls below $6.07 or rises above $6.70",
-    "effective": "2026-11-09",
-    "who": "Ground, Home Delivery and International Ground shippers",
-    "impact": null
-   }
-  ],
-  "verdict": "new document",
-  "unknowns": [
-   "Whether the table structure changed or only the weekly percentages were updated cannot be confirmed.",
-   "Older version not on file"
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "exclusive": true,
-  "src": "FedEx",
-  "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-  "srcs": [
-   {
-    "src": "FedEx: FedEx fuel surcharge page",
-    "url": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "new document",
-   "dropped": 0,
-   "compared": [
-    {
-     "new": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html",
-     "old": "https://www.fedex.com/en-us/shipping/fuel-surcharge.html (previous version)"
-    }
-   ]
-  }
- },
- {
-  "id": "wf7fe771e76cd",
-  "date": "2026-11-03",
-  "c": [
-   "UPS"
-  ],
-  "title": "UPS raises fuel surcharge table extension thresholds for diesel and jet fuel",
-  "sum": "UPS changed the price point at which its fuel surcharge extension formula applies. For the diesel-indexed table it moved from $4.99 to $5.80 (+$0.81), and for the jet-fuel-indexed table from $3.01 to $3.56 (+$0.55). The increment sizes (0.25% steps in surcharge, $0.09/$0.27 diesel and $0.05/$0.21 jet price ranges) are unchanged. No effective date is stated.",
-  "plain": "Shippers paying UPS fuel surcharges are affected only if fuel prices fall outside the published range, where the extension formula applies. The change suggests the published table now covers higher fuel prices, but the surcharge percentages in the table itself can't be compared.",
-  "imp": "watch",
-  "lvl": 2,
-  "cat": "Fuel",
-  "act": "2026-11-02",
-  "inferred": null,
-  "detected": "2026-11-03",
-  "changes": [
-   {
-    "what": "Diesel fuel surcharge table: price point above/below which the range extension rules apply",
-    "before": "$4.99",
-    "after": "$5.80",
-    "effective": null,
-    "who": "Shipments whose fuel surcharge is based on the diesel price table",
-    "impact": "$4.99 -> $5.80, +$0.81 per gallon; increments unchanged ($0.09 above, $0.27 below, 0.25% surcharge steps)"
-   },
-   {
-    "what": "Jet fuel surcharge table: price point above/below which the range extension rules apply",
-    "before": "$3.01",
-    "after": "$3.56",
-    "effective": null,
-    "who": "Shipments whose fuel surcharge is based on the jet fuel price table",
-    "impact": "$3.01 -> $3.56, +$0.55 per gallon; increments unchanged ($0.05 above, $0.21 below, 0.25% surcharge steps)"
-   }
-  ],
-  "verdict": "rule change",
-  "unknowns": [
-   "The surcharge percentages and price bands in the fuel tables themselves are not shown, so any change in the percentage charged can't be confirmed.",
-   "No effective date is stated for the new thresholds.",
-   "Which UPS services each table applies to is not stated in the changed sections."
-  ],
-  "dates": [],
-  "kind": "Alert",
-  "src": "UPS Fuel surcharges (spotted by Parcel Pigeon)",
-  "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges",
-  "srcs": [
-   {
-    "src": "UPS Fuel surcharges",
-    "url": "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges"
-   }
-  ],
-  "auto": true,
-  "audit": {
-   "verdicts": "rule change",
-   "dropped": 0,
-   "compared": []
-  },
-  "exclusive": true,
-  "primary": true
  }
 ]

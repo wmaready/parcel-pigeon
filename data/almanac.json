@@ -820,6 +820,28 @@
   "auto": true
  },
  {
+  "carrier": "FedEx",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-11-23",
+  "pct": null,
+  "headline": "FedEx holiday oversize surcharge of $117.25 applies Nov 23 to Dec 27",
+  "details": [
+   "Holiday surcharge of $117.25 on qualifying oversized packages",
+   "Applies Nov 23 through Dec 27, 2026",
+   "Charged on top of regular oversize and other charges",
+   "Increase from 2025 described as roughly 8% (per New York Post, citing published rate schedules)"
+  ],
+  "id": "fedex-2026-surcharge-2026-11-23",
+  "sources": [
+   "https://nypost.com/2026/11/23/business/ups-fedex-slap-117-holiday-surcharge-on-oversized-christmas-packages/"
+  ],
+  "story": "a6ca4e9e1dc7a",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
   "carrier": "Industry",
   "year": 2026,
   "kind": "policy",
@@ -1459,6 +1481,28 @@
    "https://assets.ups.com/adobe/assets/urn:aaid:aem:2840054d-e7bd-47d5-925d-a940bcd4efe5/original/as/surge-fee-us-en.pdf"
   ],
   "story": "we0432db44af6",
+  "conf": "confirmed",
+  "auto": true
+ },
+ {
+  "carrier": "UPS",
+  "year": 2026,
+  "kind": "surcharge",
+  "announced": null,
+  "effective": "2026-11-22",
+  "pct": null,
+  "headline": "UPS holiday oversize surcharge of $117.50 applies Nov 22 to Dec 26",
+  "details": [
+   "Holiday surcharge of $117.50 on qualifying oversized packages",
+   "Applies Nov 22 through Dec 26, 2026",
+   "Charged on top of regular oversize and other charges",
+   "Increase from 2025 described as nearly 10% (per New York Post, citing published rate schedules)"
+  ],
+  "id": "ups-2026-surcharge-2026-11-22",
+  "sources": [
+   "https://nypost.com/2026/11/23/business/ups-fedex-slap-117-holiday-surcharge-on-oversized-christmas-packages/"
+  ],
+  "story": "a6ca4e9e1dc7a",
   "conf": "confirmed",
   "auto": true
  },
