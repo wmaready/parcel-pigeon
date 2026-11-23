@@ -3982,37 +3982,37 @@
   },
   {
    "id": "chinasoutherna",
-   "n": "China Southern Air Logistics",
+   "n": "China Southern Air Logistics Company Limited",
    "realm": "global",
-   "own": null,
+   "own": "sub",
    "tk": null,
    "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Chinese air logistics firm that agreed in June to share network resources with FedEx",
-   "al": [],
-   "src": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
+   "hq": "Guangzhou, China",
+   "yr": "2018",
+   "s": "Air cargo and logistics subsidiary of China Southern Airlines that operates Boeing 777 freighters and sells passenger-aircraft belly capacity, with freighter routes linking China to Europe, the U.S. and Southeast Asia.",
+   "al": [
+    "CSA Logistics",
+    "CSAL",
+    "China Southern Airlines Cargo",
+    "China Southern Airlines Logistics Co., Ltd.",
+    "China Southern Cargo",
+    "南航物流"
+   ],
+   "src": "https://www.aircargonews.net/airlines/china-southern-airlines-logistics-business-withdraws-sse-listing-application/1079728.article",
    "auto": true,
-   "pending": true,
+   "pending": false,
    "added": "2026-11-09",
-   "story": "ada0476433eae"
-  },
-  {
-   "id": "autopartscom",
-   "n": "AutoParts.com",
-   "realm": "retail",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Operates a digital marketplace and fulfillment network connecting inventory from distributors, independent suppliers and retail locations.",
-   "al": [],
-   "src": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
-   "auto": true,
-   "pending": true,
-   "added": "2026-11-19",
-   "story": "a9d697dc90273"
+   "story": "ada0476433eae",
+   "geo": [
+    113.264,
+    23.129
+   ],
+   "srcs": [
+    "https://www.aircargonews.net/airlines/china-southern-airlines-logistics-business-withdraws-sse-listing-application/1079728.article",
+    "https://www.ch-aviation.com/news/122057-china-southern-mulls-listing-of-logistics-subsidiary",
+    "https://www.ch-aviation.com/news/98618-china-southern-offloads-45-stake-in-logistics-unit"
+   ],
+   "enriched": "2026-11-23"
   }
  ],
  "edges": [
@@ -6868,24 +6868,6 @@
    "t": "FedEx and China Southern Air Logistics share network resources",
    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
    "story": "ada0476433eae"
-  },
-  {
-   "a": "uber",
-   "b": "autopartscom",
-   "k": "partner",
-   "y": "2026",
-   "t": "Uber Eats and AutoParts.com partner on auto parts delivery",
-   "url": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
-   "story": "a9d697dc90273"
-  },
-  {
-   "a": "doordash",
-   "b": "autopartscom",
-   "k": "partner",
-   "y": "2026",
-   "t": "DoorDash offers AutoParts.com items for on-demand delivery",
-   "url": "https://chainstoreage.com/uber-eats-enters-auto-parts-category-autopartscom",
-   "story": "a9d697dc90273"
   }
  ],
  "moves": [
@@ -7314,7 +7296,8 @@
   "project44": "2026-11-20",
   "esweshopworld": "2026-11-20",
   "yanwenlogistic": "2026-11-21",
-  "singaporeposts": "2026-11-21"
+  "singaporeposts": "2026-11-21",
+  "chinasoutherna": "2026-11-23"
  },
  "facts": {
   "ups": {
