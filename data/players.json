@@ -4013,6 +4013,88 @@
     "https://www.ch-aviation.com/news/98618-china-southern-offloads-45-stake-in-logistics-unit"
    ],
    "enriched": "2026-11-23"
+  },
+  {
+   "id": "swisspost",
+   "n": "Swiss Post",
+   "realm": "national",
+   "own": "public",
+   "tk": null,
+   "parent": null,
+   "hq": "Bern, Switzerland",
+   "yr": "1849",
+   "s": "Switzerland's state-owned national postal operator, which delivers domestic parcels and sends international parcels, postal goods consignments and FedEx-network express items, including to the U.S.",
+   "al": [
+    "Die Schweizerische Post",
+    "La Poste Suisse",
+    "Post CH AG",
+    "Post CH Ltd",
+    "Swiss Post Ltd"
+   ],
+   "src": "https://www.post.ch/en/about-us/news/2025/us-customs-regulations-hamper-the-shipping-of-goods-to-the-usa",
+   "auto": true,
+   "added": "2026-11-23",
+   "from": "discover",
+   "site": "post.ch",
+   "geo": [
+    7.447,
+    46.948
+   ],
+   "srcs": [
+    "https://www.post.ch/en/about-us/news/2025/us-customs-regulations-hamper-the-shipping-of-goods-to-the-usa",
+    "https://www.swissinfo.ch/eng/trade-policy/swiss-post-sends-gifts-to-the-usa-again/89935366",
+    "https://www.swissinfo.ch/eng/trade-policy/postal-items-switzerland-usa-for-business-customers-partly-possible-again/90027726"
+   ],
+   "enriched": "2026-11-23",
+   "pending": false
+  },
+  {
+   "id": "kalittaair",
+   "n": "Kalitta Air",
+   "realm": "global",
+   "own": "private",
+   "tk": null,
+   "parent": null,
+   "hq": "Ypsilanti, MI, USA",
+   "yr": null,
+   "s": "Kalitta Air is a Michigan-based all-cargo airline that flies Boeing 747 and 777 freighters on scheduled, charter and ACMI services for express carriers, freight forwarders and the U.S. government, including flights for DHL Express.",
+   "al": [
+    "American International Airways",
+    "Connie Kalitta Services",
+    "Kalitta Air, LLC"
+   ],
+   "src": "https://www.kalittaair.com/post/aercap-cargo-delivers-first-two-boeing-777-300ersf-passenger-to-freighter-converted-aircraft-to-kalitta-air",
+   "auto": true,
+   "added": "2026-11-23",
+   "from": "discover",
+   "site": "kalittaair.com",
+   "geo": [
+    -83.613,
+    42.241
+   ],
+   "srcs": [
+    "https://www.kalittaair.com/post/aercap-cargo-delivers-first-two-boeing-777-300ersf-passenger-to-freighter-converted-aircraft-to-kalitta-air",
+    "https://aircargoweek.com/kalitta-air-returns-to-brussels-with-dhl-express-flights-to-cincinnati/",
+    "https://www.freightwaves.com/news/kalitta-air-deploys-1st-777-converted-freighters-for-dedicated-customers"
+   ],
+   "enriched": "2026-11-23",
+   "pending": false
+  },
+  {
+   "id": "cathaycargocat",
+   "n": "Cathay Cargo (Cathay Pacific)",
+   "realm": "global",
+   "own": null,
+   "tk": null,
+   "parent": null,
+   "hq": null,
+   "yr": null,
+   "s": "Hong Kong-based air cargo carrier whose transpacific freighter flights to Miami, Chicago and Los Angeles carry China-origin e-commerce for U.S. networks.",
+   "al": [],
+   "src": "https://www.aircargonews.net/airlines/2026/10/cathay-cargo-boosts-capacity-to-three-us-locations-and-mexico/",
+   "auto": true,
+   "added": "2026-11-23",
+   "from": "discover"
   }
  ],
  "edges": [
@@ -6868,6 +6950,60 @@
    "t": "FedEx and China Southern Air Logistics share network resources",
    "url": "https://newsroom.fedex.com/newsroom/asia-english/fedex-expands-china-u-s-connectivity-ahead-of-peak-season-to-support-semiconductors-ai-supply-chains-premium-e-commerce-and-advanced-industrial-manufacturing",
    "story": "ada0476433eae"
+  },
+  {
+   "a": "swisspost",
+   "b": "asendia",
+   "k": "owns",
+   "y": "2012",
+   "t": "Co-owner (joint venture with La Poste/Geopost) of cross-border e-commerce and mail firm Asendia",
+   "url": "https://postandparcel.info/48932/news/swiss-post-and-la-poste-name-international-alliance-asendia/",
+   "story": null
+  },
+  {
+   "a": "swisspost",
+   "b": "laposte",
+   "k": "partner",
+   "y": "2012",
+   "t": "Joint venture partner in Asendia",
+   "url": "https://www.asendiausa.com/destination/europe/switzerland",
+   "story": null
+  },
+  {
+   "a": "swisspost",
+   "b": "fdxexpress",
+   "k": "partner",
+   "y": null,
+   "t": "U.S.-bound express items run via FedEx Express Swiss Post GmbH (URGENT Express International)",
+   "url": "https://www.swissinfo.ch/eng/trade-policy/swiss-post-sends-gifts-to-the-usa-again/89935366",
+   "story": null
+  },
+  {
+   "a": "kalittaair",
+   "b": "dhlexpress",
+   "k": "partner",
+   "y": null,
+   "t": "Flies freighter routes for DHL Express (long-time customer)",
+   "url": "https://aircargoweek.com/kalitta-air-returns-to-brussels-with-dhl-express-flights-to-cincinnati/",
+   "story": null
+  },
+  {
+   "a": "a16z",
+   "b": "zipline",
+   "k": "invested",
+   "y": "2026",
+   "t": "Andreessen Horowitz is an investor in Zipline",
+   "url": "https://inc-1-smart-business-story.beehiiv.com/p/amazon-made-drone-delivery-famous-zipline-is-making-it-a-21-billion-business",
+   "story": "a3cf9f1f7ed58"
+  },
+  {
+   "a": "ontrac",
+   "b": "shopify",
+   "k": "partner",
+   "y": "2026",
+   "t": "OnTrac launches tracking integration with Shopify",
+   "url": "https://www.prnewswire.com/news-releases/ontrac-launches-tracking-integration-with-shopify-ahead-of-the-holidays-302947409.html",
+   "story": "ad1c6f9269df3"
   }
  ],
  "moves": [
@@ -7297,7 +7433,9 @@
   "esweshopworld": "2026-11-20",
   "yanwenlogistic": "2026-11-21",
   "singaporeposts": "2026-11-21",
-  "chinasoutherna": "2026-11-23"
+  "chinasoutherna": "2026-11-23",
+  "swisspost": "2026-11-23",
+  "kalittaair": "2026-11-23"
  },
  "facts": {
   "ups": {

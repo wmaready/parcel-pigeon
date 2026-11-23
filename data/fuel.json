@@ -346,7 +346,7 @@
  },
  "current": {
   "OnTrac": {
-   "ground": 26.25
+   "ground": 25.75
   },
   "UPS": {
    "air": 32.75,
@@ -354,38 +354,33 @@
   },
   "FedEx": {
    "air": 33.25,
-   "ground": 29.25,
+   "ground": 30.0,
    "intlExport": 45.75,
    "intlImport": 45.75,
    "intlGround": 29.25
   }
  },
  "eff": {
-  "OnTrac": "2026-11-16",
+  "OnTrac": "2026-11-23",
   "UPS": "2026-11-16",
-  "FedEx": "2026-11-02"
+  "FedEx": "2026-11-16"
  },
- "updated": "2026-11-22T23:39Z",
+ "updated": "2026-11-23T14:42Z",
  "health": {
   "UPS": {
-   "ok": false,
-   "via": "page",
-   "why": "could not render the page: Page.goto: Download is starting",
-   "at": "2026-11-23T08:54Z",
-   "last_ok": "2026-11-22T23:39Z",
-   "latest": null
+   "ok": true,
+   "at": "2026-11-23T14:42Z",
+   "last_ok": "2026-11-23T14:42Z"
   },
   "FedEx": {
    "ok": true,
-   "via": "page",
-   "at": "2026-11-23T08:54Z",
-   "last_ok": "2026-11-23T08:54Z",
-   "latest": "2026-11-02"
+   "at": "2026-11-23T14:42Z",
+   "last_ok": "2026-11-23T14:42Z"
   },
   "diesel": {
    "ok": true,
-   "at": "2026-11-22T23:39Z",
-   "last_ok": "2026-11-22T23:39Z",
+   "at": "2026-11-23T14:42Z",
+   "last_ok": "2026-11-23T14:42Z",
    "latest": "2026-11-16"
   }
  },

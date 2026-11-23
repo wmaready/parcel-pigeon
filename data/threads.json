@@ -173,15 +173,14 @@
    "UPS"
   ],
   "cx": {
-   "sig": "873651560c1b",
+   "sig": "7bbecd5a9c14",
    "v": 3,
    "beats": {
-    "g31": "After the February ruling, FedEx began $800M in refunds, UPS applied for $500M, and DHL filed claims as importer of record.",
-    "a0b5708b9f70d": "Reportedly, 13 FedEx tariff suits are combined in Tennessee; no class is certified, and refunds run through FedEx's own program.",
-    "a9e7e5653557c": "UPS sued CBP at the trade court for refunds plus interest; it had passed on about $230M of ~$500M received by early October."
+    "g31": "Post-ruling, FedEx started $800M in refunds with no application; UPS applied for $500M of the $5B it paid; DHL filed claims.",
+    "a9e7e5653557c": "UPS and two affiliates sued CBP for refunds plus interest; it had received about $500M and passed on about $230M by Sept. 30."
    },
-   "intro": "Carriers are passing along IEEPA tariff refunds, and shippers want to know when their share arrives.",
-   "now": "UPS's suit against CBP is now at the trade court; in the FedEx case, a response is reportedly proposed for Dec. 4."
+   "intro": "Carriers are passing IEEPA tariff refunds on to shippers, and UPS is now suing Customs for the rest.",
+   "now": "About $270M was still owed to customers at Sept. 30; UPS says it will pass any recovered funds on, and CBP's Phase 3 needs a court order."
   },
   "rv": "2c749d2ced41",
   "co": "FedEx",
@@ -546,7 +545,7 @@
  },
  "drone-delivery": {
   "n": "Drone delivery scale-up and FAA Part 108",
-  "s": "Drone delivery is expanding across carriers and retailers while the FAA's Part 108 rule was still unpublished as of early October.",
+  "s": "Amazon is adding Prime Air drone delivery in new metro areas, with Tampa now live and Tallahassee and Jacksonville planned for the coming months.",
   "ids": [
    "g27",
    "g26",
@@ -562,25 +561,31 @@
    "ab904315f1100",
    "a62c178a11f94",
    "a7aea8c84dd29",
-   "a2e23b2549e9b",
    "a743e307cb77c",
-   "a24d86d8168cb"
+   "a41a669613101",
+   "ab14195d70f10"
   ],
   "first": "2025-03-31",
-  "last": "2026-11-20",
+  "last": "2026-11-23",
   "c": [
    "Amazon",
    "Industry",
    "Regional"
   ],
   "cx": {
-   "sig": "e8549208309c",
+   "sig": "e31d7a9184d0",
    "v": 3,
    "beats": {
-    "a24d86d8168cb": "Amazon's guide now says most drone orders arrive in under 90 minutes, versus about 60 in August. The fastest is still 30 minutes."
-   }
+    "g27": "Amazon's plan: Prime Air to almost 500 towns and 30 million people by end of 2026, up from 11 U.S. locations.",
+    "g26": "Meanwhile, Part 108 was still unpublished as of Oct. 9, so routine beyond-line-of-sight flights need waivers or Part 135 certificates.",
+    "a644b0ea66268": "Walmart is adding 300 Zipline sites and Zipline raised $1.5B at a $21.5B valuation; locations and timing weren't disclosed.",
+    "a743e307cb77c": "Amazon's first Atlanta-area drone deliveries came Nov. 14-15 from Gwinnett County; DroneXL found no Georgia FAA file for Amazon listed.",
+    "a41a669613101": "An Amazon MK30 crashed on a Michigan home Nov. 20. Nobody was hurt, and the NTSB hasn't decided whether to investigate.",
+    "ab14195d70f10": "Tampa-area deliveries began from Ruskin, Amazon's first Florida site: up to five pounds, 7.5 miles, free for Prime on $50+."
+   },
+   "now": "Amazon is live in Tampa, and Part 108 was still unpublished as of Oct. 9, so waivers and Part 135 remain the route for routine flights."
   },
-  "rv": "b3b765110ed3",
+  "rv": "c105e33c0498",
   "co": "Amazon",
   "apart": [
    "amazon-driver-no-poach-suit",
@@ -805,6 +810,7 @@
    "a66617050d4e9",
    "afb6fa67940a7",
    "ups-origin-zip-surcharge",
+   "a9077d9364cd5",
    "h404",
    "h417",
    "h501",
@@ -823,7 +829,6 @@
    "nrf79508",
    "54",
    "52",
-   "a9077d9364cd5",
    "a089340bc097e",
    "a4f6ca9e3591e",
    "a947eb28a3ca3",
@@ -834,10 +839,11 @@
    "aa024cc171706",
    "a8a156a22dc4f",
    "a55ff8e77e661",
-   "w213989b643cf"
+   "w213989b643cf",
+   "ad1c6f9269df3"
   ],
   "first": "2024-02-21",
-  "last": "2026-11-19",
+  "last": "2026-11-23",
   "c": [
    "Amazon",
    "DHL",
@@ -850,7 +856,7 @@
   "theme": true,
   "rv": "97810dfadc30",
   "cx": {
-   "sig": "60538c8ddb8f",
+   "sig": "430c2d151e53",
    "v": 3,
    "beats": {
     "h404": "Shein and Temu together sent almost 600,000 U.S. packages a day, a marketplace flow big enough to tighten air cargo out of China.",
@@ -885,10 +891,11 @@
     "aa8c0e030c519": "An industry analysis says Shein's H1 profit fell 52.9% to US$493m on 1% revenue growth, with Q2 fulfilment expenses up 50%.",
     "aa024cc171706": "Capitol Forum's GOFO report calls it \"Chinese Controlled\" and alleges labor exploitation behind its growth; we lack the details.",
     "a8a156a22dc4f": "UniUni says it will hand select peak packages to carriers like Gofo; no rate or service changes for shippers were given.",
-    "w213989b643cf": "UPS posted a 2027 Ground Saver 1 lb+ card, effective Dec. 21, 2026, raising every weight and zone: 1 lb zone 2 goes from $13.00 to $13.65."
+    "w213989b643cf": "UPS posted a 2027 Ground Saver 1 lb+ card, effective Dec. 21, 2026, raising every weight and zone: 1 lb zone 2 goes from $13.00 to $13.65.",
+    "ad1c6f9269df3": "OnTrac, part of American Securities, now shows tracking events in Shopify and the Shop app. Merchants need not change anything."
    },
    "intro": "E-commerce parcel is splitting from B2B and premium parcel: alternative carriers gain share while UPS and FedEx pull back from e-commerce.",
-   "now": "GOFO is still expanding while UniUni's go-public deal was terminated on Oct. 20. The sources state no change to shipper rates or service."
+   "now": "Next on the rate clock: peak surcharges end at every major carrier on Jan. 15, 2027, and USPS holiday prices end too."
   }
  },
  "theme-ups-teamsters": {
@@ -989,7 +996,7 @@
   "theme": true,
   "rv": "9a635b8c7a0a",
   "cx": {
-   "sig": "11859957cb78",
+   "sig": "8aefcc949ad7",
    "v": 3,
    "beats": {
     "h408": "Pitney Bowes counted Amazon Logistics at 5.9 billion U.S. parcels in 2023, passing UPS at 4.6 billion; USPS led at 6.6 billion.",
@@ -1343,25 +1350,23 @@
   "ids": [
    "ab904315f1100",
    "a5a12ee8825b7",
-   "a6058d4f53b74"
+   "a6058d4f53b74",
+   "a3cf9f1f7ed58"
   ],
   "first": "2026-11-17",
   "co": "Zipline",
-  "s": "Zipline is planning a Phoenix launch for early 2027 while the FAA reviews a draft environmental assessment open for comment through Dec. 7, 2026.",
+  "s": "Zipline has raised $1.5 billion at a $21.5 billion valuation and operates in 31 U.S. municipalities, with a Phoenix launch planned for early 2027.",
   "last": "2026-11-20",
   "c": [
    "Industry",
    "Regional"
   ],
-  "rv": "1a7235bb61e2",
+  "rv": "5a670c1b1156",
   "cx": {
-   "sig": "6c1fdbc74239",
+   "sig": "7faa12ae3a93",
    "v": 3,
-   "beats": {
-    "a5a12ee8825b7": "Uber Eats began Zipline drone deliveries in Spring, Texas, with Dallas next. The goal is 1 million drone deliveries a day by end of 2029.",
-    "a6058d4f53b74": "Zipline hopes to serve Phoenix in early 2027. An FAA draft assessment outlines up to 65,000 deliveries a day each in Phoenix and Tucson."
-   },
-   "now": "The FAA is taking public comments on the draft assessment through Dec. 7, 2026, with Phoenix service targeted for early 2027."
+   "beats": {},
+   "now": "Zipline's Phoenix launch is planned for early 2027, and the FAA is taking public comments on its draft assessment through Dec. 7, 2026."
   }
  },
  "doordash-ftc-pricing": {

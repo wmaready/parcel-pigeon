@@ -12,18 +12,43 @@
   "9": "2026-11-12",
   "10": "2026-11-14",
   "11": "2026-11-18",
-  "12": "2026-11-20"
+  "12": "2026-11-20",
+  "13": "2026-11-23"
  },
- "day": "2026-11-20",
+ "day": "2026-11-23",
  "calls": 1,
  "queue": [
   {
-   "n": "Swiss Post",
-   "what": "Switzerland's national postal operator, which provides international parcel and express delivery including U.S.-bound postal goods consignments.",
-   "url": "https://akta.pro/company-profiles/0009z1l/swiss-post",
+   "n": "Hellmann Worldwide Logistics",
+   "what": "Global freight forwarder and contract logistics provider with a U.S. base in Doral, Florida; it has expanded its HEX courier platform to the U.S. and Canada and runs e-commerce fulfillment and cross-b",
+   "url": "https://centreforaviation.com/news/hellmann-worldwide-logistics-opens-three-new-branches-in-the-us-1377867",
    "realm": "global",
-   "seg": 12,
-   "found": "2026-11-20"
+   "seg": 13,
+   "found": "2026-11-23"
+  },
+  {
+   "n": "Yusen Logistics (Americas) Inc.",
+   "what": "U.S. arm of NYK Group's forwarder that provides air and ocean freight plus e-commerce fulfillment, and bought the 3PL Taylored Services with 11 distribution centers.",
+   "url": "https://www.yusen-logistics.com/us_en/insights-news/press-releases/8351",
+   "realm": "global",
+   "seg": 13,
+   "found": "2026-11-23"
+  },
+  {
+   "n": "Radiant Logistics",
+   "what": "NYSE-listed U.S. freight forwarder and 3PL that has grown by acquiring regional air and ocean forwarders, and also offers customs brokerage and order fulfillment.",
+   "url": "https://radiantdelivers.com/about/history",
+   "realm": "global",
+   "seg": 13,
+   "found": "2026-11-23"
+  },
+  {
+   "n": "Cargojet",
+   "what": "Canadian overnight air cargo airline that moves e-commerce and courier parcels for Amazon, DHL and Canada Post/Purolator, and flies charters for China-to-North America e-commerce.",
+   "url": "https://www.freightwaves.com/news/cargojet-enters-charter-deal-for-chinese-e-commerce",
+   "realm": "global",
+   "seg": 13,
+   "found": "2026-11-23"
   }
  ]
 }

@@ -1,5 +1,32 @@
 [
  {
+  "type": "headline-only",
+  "title": "Walmart Taps Restaurant Delivery to Capture More Meal Occasions",
+  "url": "https://progressivegrocer.com/walmart-taps-restaurant-delivery-capture-more-meal-occasions",
+  "src": "Progressive Grocer",
+  "date": "2026-11-20",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "CXT Software and Dispatch Science Combine to Create the Largest, Unified Agentic Last-Mile TMS",
+  "url": "https://www.courier-journal.com/press-release/story/258247/cxt-software-and-dispatch-science-combine-to-create-the-largest-unified-agentic-last-mile-tms/",
+  "src": "The Courier-Journal",
+  "date": "2026-11-18",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
+  "type": "headline-only",
+  "title": "Amazon delivery drone crashes into homeowner's garage in Huntington Woods",
+  "url": "https://www.freep.com/videos/news/local/michigan/2026/11/22/amazon-delivery-drone-crashes-into-homeowners-garage-in-huntington-woods/92915876007/",
+  "src": "Detroit Free Press",
+  "date": "2026-11-22",
+  "retried": false,
+  "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
+ },
+ {
   "type": "page-picture",
   "title": "FedEx: FedEx historical fuel surcharges",
   "url": "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html",
@@ -1587,30 +1614,5 @@
   "q": "Q3 2026",
   "url": "https://investors.ups.com/news-events/press-releases/detail/2172/ups-releases-3q-2026-earnings",
   "note": "Added automatically from the release (checked: false). Check revenue, EPS and the period against the release; add the summary line, call and filing links, and packages a day, operating days and revenue per piece from the 10-Q with its address and check date; then set checked: true."
- },
- {
-  "type": "earnings-next-missing",
-  "key": "earnings-next|UPS|2026-10",
-  "company": "UPS",
-  "ir": "https://investors.ups.com/news-events/press-releases",
-  "note": "UPS's latest results are in and no next call is listed. Add the next date to data/earnings_next.json from the company's investor-relations calendar (time, session, quarter and the release address text to match)."
- },
- {
-  "type": "earnings-missing",
-  "key": "earnings-new|FedEx Freight|Jun–Sep 2026 transition period|missing",
-  "company": "FedEx Freight",
-  "q": "Jun–Sep 2026 transition period",
-  "d": "2026-10-29",
-  "ir": "https://ir.fedexfreight.com/financial-information/quarterly-results",
-  "note": "The release wasn't found automatically. Add this quarter by hand from the company's release: revenue, adjusted EPS, then packages a day, operating days and revenue per piece from the 10-Q."
- },
- {
-  "type": "earnings-missing",
-  "key": "earnings-new|FedEx|Jun–Sep 2026 transition period|missing",
-  "company": "FedEx",
-  "q": "Jun–Sep 2026 transition period",
-  "d": "2026-10-28",
-  "ir": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
-  "note": "The release wasn't found automatically. Add this quarter by hand from the company's release: revenue, adjusted EPS, then packages a day, operating days and revenue per piece from the 10-Q."
  }
 ]
