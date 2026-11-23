@@ -1,5 +1,5 @@
 {
- "run": "2026-11-23T14:49Z",
+ "run": "2026-11-23T21:16Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -535,54 +535,6 @@
     "a9fbb927a026c"
    ],
    "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b): https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b",
-   "ids": [
-    "ab483d15094ae"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/drone-startup-zipline-raises-1-5-billion-at-21-5-billion-valuation-1d166eec): https://www.wsj.com/business/drone-startup-zipline-raises-1-5-billion-at-21-5-billion-valuation-1d166eec",
-   "ids": [
-    "a7c57b6597efb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54): https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54",
-   "ids": [
-    "ad70e5d1d5b7e"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: None of the stories mention Amazon's delivery coverage of 95% of ZIP codes, Project Aurelian, 39,400 ZIP codes, or 99.9% of demand by 2029. The stories do not support any of these figures.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: None of the stories mention UPS Protected Delivery, its $10.70 price, FedEx Authenticated Delivery, or its $20 price. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: None of the stories mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie, or VF participation, or DoorDash's self-designed drones. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -978,54 +930,6 @@
     "a0ef7c3f1b1ff",
     "a9fbb927a026c"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b): https://www.wsj.com/business/alphabets-drone-unit-to-invest-up-to-125-million-in-new-texas-facility-d9725c3b",
-   "ids": [
-    "ab483d15094ae"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/drone-startup-zipline-raises-1-5-billion-at-21-5-billion-valuation-1d166eec): https://www.wsj.com/business/drone-startup-zipline-raises-1-5-billion-at-21-5-billion-valuation-1d166eec",
-   "ids": [
-    "a7c57b6597efb"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "low",
-   "type": "link-broken",
-   "msg": "Source link failed (401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54): https://www.wsj.com/business/logistics/amazon-urges-nyc-customers-to-oppose-mamdani-backed-delivery-bill-0461ea54",
-   "ids": [
-    "ad70e5d1d5b7e"
-   ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 1: None of the stories mention Amazon's delivery coverage of 95% of ZIP codes, Project Aurelian, 39,400 ZIP codes, or 99.9% of demand by 2029. The stories do not support any of these figures.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 2: None of the stories mention UPS Protected Delivery, its $10.70 price, FedEx Authenticated Delivery, or its $20 price. The stories do not support these claims.",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "brief-stale",
-   "msg": "Brief line 3: None of the stories mention DoorDash's $7.99 courier returns, the Macy's, Anthropologie, or VF participation, or DoorDash's self-designed drones. The stories do not support these claims.",
-   "ids": [],
    "fixed": false
   }
  ]

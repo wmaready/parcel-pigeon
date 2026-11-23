@@ -259,7 +259,8 @@
    "3abae64e06d1",
    "d809153b711b"
   ],
-  "told_until": "2026-12-03"
+  "told_until": "2026-12-03",
+  "pend": "d94516de7fec"
  },
  "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
   "checked": "2026-11-23",
@@ -300,10 +301,9 @@
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2027.pdf",
-   "https://www.fedex.com/content/dam/fedex/us-united-states/services/fuel_surcharge_effective_11-9-26.pdf",
    "https://www.fedex.com/content/dam/fedex/us-united-states/services/surcharge_and_fee_changes_2027.pdf"
   ],
-  "lines": 55,
+  "lines": 53,
   "told": [],
   "told2": [
    "27993cfb3870",
@@ -322,8 +322,7 @@
    "3374d0ffaca7",
    "2a3ab4c20141"
   ],
-  "told_until": "2026-12-18",
-  "pend": "6642f6b904ab"
+  "told_until": "2026-12-18"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-23",
@@ -371,7 +370,8 @@
    "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf"
   ],
   "lines": 109,
-  "told": []
+  "told": [],
+  "pend": "9c57e444b3c3"
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-23",
@@ -421,7 +421,8 @@
    "https://www.speedeedelivery.com/files/2025/2025_EXPANSION_LETTER_UPDATE.pdf"
   ],
   "lines": 27,
-  "told": []
+  "told": [],
+  "pend": "d6fef3f323bc"
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-11-23",
