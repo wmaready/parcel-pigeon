@@ -4095,38 +4095,6 @@
    "auto": true,
    "added": "2026-11-23",
    "from": "discover"
-  },
-  {
-   "id": "americandrivea",
-   "n": "American Drive Acquisition Company",
-   "realm": "capital",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Special purpose acquisition company listed on Nasdaq under the ticker ADAC.",
-   "al": [],
-   "src": "https://seekingalpha.com/news/4674111-easypost-to-go-public-at-479m-valuation-via-adac-spac-deal",
-   "auto": true,
-   "added": "2026-11-18",
-   "story": "adec2629d47df"
-  },
-  {
-   "id": "smartwayslogis",
-   "n": "Smartways Logistics",
-   "realm": "cold",
-   "own": null,
-   "tk": null,
-   "parent": null,
-   "hq": null,
-   "yr": null,
-   "s": "Courier handling same-day and next-day healthcare shipments in Australia and New Zealand.",
-   "al": [],
-   "src": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "auto": true,
-   "added": "2026-11-17",
-   "story": "a0f33fb01d0d5"
   }
  ],
  "edges": [
@@ -7038,15 +7006,6 @@
    "story": "ad1c6f9269df3"
   },
   {
-   "a": "americandrivea",
-   "b": "easypost",
-   "k": "acquired",
-   "y": "2026",
-   "t": "American Drive Acquisition Company combines with EasyPost",
-   "url": "https://seekingalpha.com/news/4674111-easypost-to-go-public-at-479m-valuation-via-adac-spac-deal",
-   "story": "adec2629d47df"
-  },
-  {
    "a": "ups",
    "b": "andlauer",
    "k": "acquired",
@@ -7070,24 +7029,6 @@
    "k": "acquired",
    "y": "2026",
    "t": "UPS acquired BPL in 2025",
-   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "story": "a0f33fb01d0d5"
-  },
-  {
-   "a": "ups",
-   "b": "smartwayslogis",
-   "k": "acquired",
-   "y": "2026",
-   "t": "UPS buys Smartways Logistics",
-   "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
-   "story": "a0f33fb01d0d5"
-  },
-  {
-   "a": "theriversideco",
-   "b": "smartwayslogis",
-   "k": "sold",
-   "y": "2026",
-   "t": "UPS buys Smartways Logistics (seller)",
    "url": "https://www.freightwaves.com/news/ups-to-acquire-australian-healthcare-specialist-smartway-logistics",
    "story": "a0f33fb01d0d5"
   }

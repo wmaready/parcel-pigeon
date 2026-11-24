@@ -282,7 +282,8 @@
    "72368a6e5f29"
   ],
   "told_until": "2026-12-03",
-  "pend": "4433d25c3b68"
+  "pend": "4433d25c3b68",
+  "fail_runs": 1
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-24",
@@ -371,7 +372,8 @@
   ],
   "lines": 109,
   "told": [],
-  "pend": "8f29921d7527"
+  "pend": "8f29921d7527",
+  "fail_runs": 1
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-24",
@@ -423,7 +425,7 @@
   "lines": 27,
   "told": [],
   "pend": "d6fef3f323bc",
-  "fail_runs": 1
+  "fail_runs": 2
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-11-24",
