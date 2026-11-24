@@ -283,7 +283,7 @@
   ],
   "told_until": "2026-12-03",
   "pend": "4433d25c3b68",
-  "fail_runs": 2
+  "fail_runs": 3
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-24",
@@ -323,7 +323,8 @@
    "3374d0ffaca7",
    "2a3ab4c20141"
   ],
-  "told_until": "2026-12-18"
+  "told_until": "2026-12-18",
+  "pend": "d1dfe6539994"
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-24",
@@ -359,7 +360,8 @@
   "checked": "2026-11-24",
   "pdfs": [],
   "lines": 477,
-  "told": []
+  "told": [],
+  "pend": "735187f6668f"
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "checked": "2026-11-23",
@@ -372,7 +374,7 @@
   ],
   "lines": 109,
   "told": [],
-  "pend": "8f29921d7527",
+  "pend": "e2f2127ed96c",
   "fail_runs": 2
  },
  "https://www.ontrac.com/service-alerts/": {
@@ -425,7 +427,7 @@
   "lines": 27,
   "told": [],
   "pend": "d6fef3f323bc",
-  "fail_runs": 3
+  "fail_runs": 4
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-11-24",
