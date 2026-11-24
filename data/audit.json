@@ -1,5 +1,5 @@
 {
- "run": "2026-11-23T22:16Z",
+ "run": "2026-11-24T00:30Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -159,15 +159,6 @@
     "nrb01db6"
    ],
    "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "primary-attached",
-   "msg": "Attached carrier-site source https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf to \"UPS, FedEx set holiday oversize surcharges above $117 through December\"",
-   "ids": [
-    "a6ca4e9e1dc7a"
-   ],
-   "fixed": true
   },
   {
    "sev": "high",
