@@ -1,6 +1,20 @@
 [
  {
   "type": "page-picture",
+  "title": "FedEx: FedEx Freight rules tariff (moved)",
+  "url": "https://www.fedex.com/en-us/shipping/freight/tariff.html",
+  "date": "2026-11-25",
+  "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
+ },
+ {
+  "type": "page-picture",
+  "title": "FedEx: FedEx rate tools (zone locator, rate downloads)",
+  "url": "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en",
+  "date": "2026-11-25",
+  "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
+ },
+ {
+  "type": "page-picture",
   "title": "FedEx: FedEx rate tools (zone locator, rate downloads)",
   "url": "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en",
   "date": "2026-11-24",
@@ -1590,20 +1604,6 @@
   "key": "fuel-event-flat|2020-03-11|COVID-19 declared a pandemic",
   "event": "COVID-19 declared a pandemic",
   "d": "2020-03-11",
-  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
- },
- {
-  "type": "fuel-event",
-  "key": "fuel-event-flat|2022-02-24|Russia invades Ukraine",
-  "event": "Russia invades Ukraine",
-  "d": "2022-02-24",
-  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
- },
- {
-  "type": "fuel-event",
-  "key": "fuel-event-flat|2022-06-20|Diesel record at the time: $5.81",
-  "event": "Diesel record at the time: $5.81",
-  "d": "2022-06-20",
   "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
  }
 ]
