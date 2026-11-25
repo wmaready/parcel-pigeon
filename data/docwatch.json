@@ -1,5 +1,5 @@
 {
- "cursor": 51,
+ "cursor": 66,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -267,7 +267,7 @@
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
    "hash": "8b02a4cf061c",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://ontrac.sirv.com/pdf/ontrac-area-surcharge-zip-codes.pdf",
@@ -292,7 +292,7 @@
    "first": "2026-10-21",
    "n": "ontrac-area-surcharge-zip-codes.pdf",
    "hash": "69018425f7a6",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://www.ontrac.com/wp-content/uploads/pdf/ontrac-area-surcharge-zip-codes.pdf",
@@ -305,7 +305,7 @@
    "first": "2026-10-21",
    "n": "ImpactedZIPS_08242026.pdf",
    "hash": "aec742c8cd57",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://ontrac.sirv.com/Service%20Alerts/ImpactedZIPS_08242026.pdf",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 575,
+   "fails": 576,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-25"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 575,
+   "fails": 576,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -613,7 +613,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
    "hash": "23ab895007fa",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Delivery_PRESS-RELEASE-shipit.pdf",
@@ -683,7 +683,7 @@
    "first": "2026-10-21",
    "n": "DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
    "hash": "9f825aebf06f",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.pdf",
@@ -721,7 +721,7 @@
    "first": "2026-10-21",
    "n": "PAS_Contiguous_Extended_Remote_2026.pdf",
    "hash": "5d733c0bce4f",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/PAS_Contiguous_Extended_Remote_2026.pdf",
@@ -1207,7 +1207,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/ups-ground-saver": {
    "hash": "173c8233569b",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "UPS Ground Saver page",
    "snap": {
     "d": "2026-11-22",
@@ -1220,15 +1220,15 @@
   "https://www.ups.com/us/en/services/shipping/simple-rate": {
    "hash": "0891bcac2bee",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "UPS Simple Rate page",
-   "pic_try": "2026-11-22",
+   "pic_try": "2026-11-25",
    "changed": "2026-11-02"
   },
   "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
    "hash": "d1a7cc8d494a",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "UPS Small Business Rates page",
    "snap": {
     "d": "2026-11-13",
@@ -1253,7 +1253,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0825-usps-announces-temporary-price-change-for-2026-holiday-shipping-season.htm": {
    "hash": "d90c8801b1aa",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "USPS 2026 holiday price change announcement",
    "snap": {
     "d": "2026-11-13",
@@ -1265,13 +1265,13 @@
   },
   "https://www.dhl.com/content/dam/dhl/local/us/dhl-ecommerce/documents/docs/dec-us-das-zip-20260118.xlsx": {
    "n": "DHL eCommerce delivery area ZIP list, effective Jan 18, 2026",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_DAS_Contiguous_Extended_Alaska_Hawaii_2026.pdf": {
    "hash": "cf9c8e816391",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "2026 FedEx Ground Economy delivery area ZIP list",
    "snap": {
     "d": "2026-11-13",
@@ -1283,7 +1283,7 @@
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2026.xlsx": {
    "n": "2026 FedEx delivery area ZIP list (Excel)",
-   "checked": "2026-11-23",
+   "checked": "2026-11-25",
    "skip": "spreadsheet"
   },
   "https://www.fedex.com/ratetools/RateToolsMain.do?locale=US_en": {
@@ -1490,7 +1490,7 @@
    "first": "2026-10-27",
    "n": "UPS_Ship_API_EU_PID_Requirements_v1.1.pdf",
    "hash": "b9c9c052a073",
-   "checked": "2026-11-20",
+   "checked": "2026-11-25",
    "last_try": "2026-11-22",
    "snap": {
     "d": "2026-11-08",
@@ -1498,10 +1498,7 @@
     "txt": "data/snapshots/04e3e48834d1/2026-11-08.txt",
     "prev_d": "2026-11-07"
    },
-   "changed": "2026-11-08",
-   "fails": 1,
-   "err": "blocked by the carrier's site (plain: refused; impersonate: refused; browser: refused; proxy: refused; archive: ConnectionError)",
-   "blocked": true
+   "changed": "2026-11-08"
   },
   "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:12c2ff94-f16f-4549-a475-8b7299b5070c/original/as/preview-ups-hundredweight-service-package-rates.pdf": {
    "first": "2026-10-30",
@@ -2365,14 +2362,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 137,
+   "fails": 138,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 137,
+   "fails": 138,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -2449,7 +2446,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/1112-usps-recommends-shipping-price-adjustments-for-2027.htm": {
    "hash": "ecb60a2ec310",
    "first": "2026-11-13",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "USPS Recommends Shipping Price Adjustments for 2027 (Nov. 12 news release)",
    "snap": {
     "d": "2026-11-13",
@@ -2466,7 +2463,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 55,
+   "fails": 56,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -2478,7 +2475,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 55,
+   "fails": 56,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
