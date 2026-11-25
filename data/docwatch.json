@@ -1,5 +1,5 @@
 {
- "cursor": 36,
+ "cursor": 51,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -345,7 +345,7 @@
    "first": "2026-10-21",
    "n": "LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
    "hash": "468e0a6a5046",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "http://www.speedeedelivery.com/files/LETTER%20-%20UNBOXED%20AND%20ANIMAL%20SHIPPING.pdf",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 574,
+   "fails": 575,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-25"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 574,
+   "fails": 575,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -602,7 +602,7 @@
    "first": "2026-10-21",
    "n": "Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
    "hash": "bffd7b9dbf5b",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://speedeedelivery.com/wp-content/uploads/2025/08/Spee-Dee-Deliver_HOT-SOLUTIONS-COMPANIES.pdf",
@@ -708,7 +708,7 @@
    "first": "2026-10-21",
    "n": "OneRate-Pricing_2026.pdf",
    "hash": "6c659d266317",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/OneRate-Pricing_2026.pdf",
@@ -1119,7 +1119,7 @@
   "https://about.usps.com/who/legal/terms-of-use.htm": {
    "hash": "7b29a8b90772",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Terms of use",
    "snap": {
     "d": "2026-10-26",
@@ -1129,7 +1129,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.pdf": {
    "hash": "8be8bbb949c0",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "USPS transportation-related temporary price change",
    "snap": {
     "d": "2026-10-26",
@@ -1141,19 +1141,20 @@
   "https://shipveho.com/client/terms": {
    "hash": "016c9d745ba3",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Veho client terms and conditions",
    "snap": {
-    "d": "2026-10-26",
-    "img": "data/snapshots/f8046a7fd0b3/2026-10-26.jpg"
+    "d": "2026-11-25",
+    "img": "data/snapshots/f8046a7fd0b3/2026-11-25.jpg",
+    "prev": "data/snapshots/f8046a7fd0b3/2026-10-26.jpg"
    }
   },
   "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-express-announces-annual-price-adjustments-in-the-u-s.html": {
    "hash": "b1ab54f802c4",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "DHL Express 2027 U.S. price adjustment",
-   "pic_try": "2026-11-22"
+   "pic_try": "2026-11-25"
   },
   "https://www.fedex.com/en-us/shipping/fedex-smartpost/rates-zones/chart.html": {
    "hash": "881d27575ab8",
@@ -1171,7 +1172,7 @@
   "https://www.fedex.com/en-us/shipping/rate-changes.html": {
    "hash": "b494efbdeb2d",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "FedEx rate changes page",
    "snap": {
     "d": "2026-11-13",
@@ -1240,7 +1241,7 @@
   "https://about.usps.com/newsroom/national-releases/2026/1022-postal-service-prepped-to-deliver-for-2026-holiday-season.pdf": {
    "hash": "9aa6ed76ca22",
    "first": "2026-10-25",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Printable version",
    "snap": {
     "d": "2026-10-26",
@@ -1563,7 +1564,7 @@
    "first": "2026-10-30",
    "n": "Policy-on-Political-Contributions.pdf",
    "hash": "2146851d55e2",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-10-31",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/10/Policy-on-Political-Contributions.pdf",
@@ -1574,7 +1575,7 @@
    "first": "2026-10-30",
    "n": "CodeConduct-English.pdf",
    "hash": "ac5ec9ac9e3a",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-11-13",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/09/CodeConduct-English.pdf",
@@ -1587,7 +1588,7 @@
    "first": "2026-10-30",
    "n": "Policy-on-Limitation-of-Severance-Benefits.pdf",
    "hash": "be56b4eb3f8b",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "snap": {
     "d": "2026-10-31",
     "pdf": "https://s21.q4cdn.com/665674268/files/doc_downloads/guidelines/Policy-on-Limitation-of-Severance-Benefits.pdf",
@@ -2323,7 +2324,7 @@
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/events/2026/q3/dhl-group-financial-highlights-q3-2026.pdf": {
    "hash": "d0b4faa9654d",
    "first": "2026-11-05",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Financial Highlights Q3 2026 pdf 107.7 KB",
    "snap": {
     "d": "2026-11-05",
@@ -2334,7 +2335,7 @@
   "https://group.dhl.com/content/dam/deutschepostdhl/en/media-relations/press-releases/2026/pr-q3-2026-20261105.pdf": {
    "hash": "87a82c8ddbad",
    "first": "2026-11-05",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Press release pdf 164.5 KB",
    "snap": {
     "d": "2026-11-13",
@@ -2347,7 +2348,7 @@
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/2026_Peak_Last_Day_to_ship.pdf": {
    "hash": "5bdc1fce51f4",
    "first": "2026-11-05",
-   "checked": "2026-11-22",
+   "checked": "2026-11-25",
    "n": "Shipping Deadlines",
    "snap": {
     "d": "2026-11-22",
@@ -2364,14 +2365,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 136,
+   "fails": 137,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 136,
+   "fails": 137,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -2465,7 +2466,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 54,
+   "fails": 55,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
@@ -2477,7 +2478,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 54,
+   "fails": 55,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-25"
