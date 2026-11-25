@@ -283,7 +283,7 @@
   ],
   "told_until": "2026-12-03",
   "pend": "4433d25c3b68",
-  "fail_runs": 7
+  "fail_runs": 8
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-25",
@@ -325,7 +325,7 @@
   ],
   "told_until": "2026-12-18",
   "pend": "d1dfe6539994",
-  "fail_runs": 3
+  "fail_runs": 4
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-25",
@@ -363,7 +363,7 @@
   "lines": 477,
   "told": [],
   "pend": "735187f6668f",
-  "fail_runs": 4
+  "fail_runs": 5
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "checked": "2026-11-23",
@@ -377,7 +377,7 @@
   "lines": 109,
   "told": [],
   "pend": "e2f2127ed96c",
-  "fail_runs": 6
+  "fail_runs": 7
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-25",
@@ -429,14 +429,15 @@
   "lines": 27,
   "told": [],
   "pend": "d6fef3f323bc",
-  "fail_runs": 8
+  "fail_runs": 9
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-11-25",
   "pdfs": [],
   "lines": 178,
   "told": [],
-  "pend": "3fde2ddb0511"
+  "pend": "3fde2ddb0511",
+  "fail_runs": 1
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-11-25",

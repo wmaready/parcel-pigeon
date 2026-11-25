@@ -1,6 +1,13 @@
 [
  {
   "type": "page-picture",
+  "title": "FedEx: FedEx historical fuel surcharges",
+  "url": "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html",
+  "date": "2026-11-25",
+  "note": "Doc watch didn't save a picture of this page (page text under 500 characters). The previous picture is kept. Check the page by hand."
+ },
+ {
+  "type": "page-picture",
   "title": "FedEx: FedEx Freight rules tariff (moved)",
   "url": "https://www.fedex.com/en-us/shipping/freight/tariff.html",
   "date": "2026-11-25",
@@ -1598,12 +1605,5 @@
   "date": "2026-10-16",
   "retried": true,
   "note": "Couldn't read the article automatically. Write it up by hand or delete this entry."
- },
- {
-  "type": "fuel-event",
-  "key": "fuel-event-flat|2020-03-11|COVID-19 declared a pandemic",
-  "event": "COVID-19 declared a pandemic",
-  "d": "2020-03-11",
-  "note": "No diesel move of $0.25 within 28 days of this event. Check it still belongs on the chart."
  }
 ]
