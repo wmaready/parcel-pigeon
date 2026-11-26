@@ -1,5 +1,5 @@
 {
- "cursor": 126,
+ "cursor": 141,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 580,
+   "fails": 581,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-26"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 580,
+   "fails": 581,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-26"
@@ -398,10 +398,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Ground Economy Bound Printed Matter rates",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_BoundPrint_2026.pdf",
-    "txt": "data/snapshots/5fe5c90a413f/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/5fe5c90a413f/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -411,10 +411,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Ground Economy Media Mail rates",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf",
-    "txt": "data/snapshots/d891fbd0b966/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/d891fbd0b966/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -424,10 +424,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Ground Economy rates, by ounce",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf",
-    "txt": "data/snapshots/4b47fe9ee7cb/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/4b47fe9ee7cb/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -437,10 +437,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Ground Economy rates, by pound",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf",
-    "txt": "data/snapshots/7027e9aaf648/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/7027e9aaf648/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -450,10 +450,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Retail Rates (PDF)",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf",
-    "txt": "data/snapshots/3baad68751ad/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/3baad68751ad/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -463,10 +463,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Service Guide",
    "snap": {
-    "d": "2026-11-19",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf",
-    "txt": "data/snapshots/9fa62bf8dd6d/2026-11-19.txt",
-    "prev_d": "2026-11-13"
+    "txt": "data/snapshots/9fa62bf8dd6d/2026-11-26.txt",
+    "prev_d": "2026-11-19"
    },
    "last_try": "2026-11-04",
    "changed": "2026-11-19"
@@ -477,10 +477,10 @@
    "checked": "2026-11-26",
    "n": "2026 FedEx Standard List Rates (PDF)",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf",
-    "txt": "data/snapshots/ae150d6897dc/2026-11-13.txt",
-    "prev_d": "2026-10-25"
+    "txt": "data/snapshots/ae150d6897dc/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -1162,10 +1162,10 @@
    "checked": "2026-11-26",
    "n": "FedEx Ground Economy rates and zones page",
    "snap": {
-    "d": "2026-11-13",
+    "d": "2026-11-26",
     "pdf": "https://www.fedex.com/content/dam/fedex-com/hdn/FGE_ByOunce_2026.pdf",
-    "txt": "data/snapshots/4e47138847fc/2026-11-13.txt",
-    "prev_d": "2026-10-26"
+    "txt": "data/snapshots/4e47138847fc/2026-11-26.txt",
+    "prev_d": "2026-11-13"
    },
    "changed": "2026-11-13"
   },
@@ -1888,7 +1888,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2119/ups-releases-1q-2024-earnings": {
    "hash": "9dca35058cbe",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2024 results release",
    "snap": {
     "d": "2026-10-31",
@@ -1899,7 +1899,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000049/ups-20250331.htm": {
    "hash": "dbb20a3b312e",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -1909,7 +1909,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10890/q1-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -1920,7 +1920,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2142/ups-releases-1q-2025-earnings": {
    "hash": "e94b8cb31c7c",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2025 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1931,7 +1931,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-031154/ups-20260331.htm": {
    "hash": "b47f494fa342",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2026 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1941,7 +1941,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10988/q1-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2026 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1952,7 +1952,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2158/ups-releases-1q-2026-earnings": {
    "hash": "0837c8483059",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q1 2026 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1963,7 +1963,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-24-000045/ups-20240630.htm": {
    "hash": "8462e8684be8",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2024 10-Q filing",
    "snap": {
     "d": "2026-10-30",
@@ -1973,7 +1973,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10827/q2-2024-united-parcel-service-inc-earnings-conference-call": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2024 earnings call",
    "snap": {
     "d": "2026-10-30",
@@ -1984,7 +1984,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2127/ups-releases-2q-2024-earnings": {
    "hash": "7f66733ea160",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2024 results release",
    "snap": {
     "d": "2026-10-30",
@@ -1995,7 +1995,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001090727-25-000064/ups-20250630.htm": {
    "hash": "dba218f5950f",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2025 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -2005,7 +2005,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/10929/q2-2025-united-parcel-service-inc-earnings-conference-call": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2025 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -2016,7 +2016,7 @@
   "https://investors.ups.com/news-events/press-releases/detail/2146/ups-releases-2q-2025-earnings": {
    "hash": "57928862e1e9",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2025 results release",
    "snap": {
     "d": "2026-10-31",
@@ -2027,7 +2027,7 @@
   "https://investors.ups.com/sec-filings/all-sec-filings/content/0001628280-26-053249/ups-20260630.htm": {
    "hash": "39c2fd911d95",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2026 10-Q filing",
    "snap": {
     "d": "2026-10-31",
@@ -2037,7 +2037,7 @@
   "https://investors.ups.com/news-events/ir-calendar/detail/11021/q2-2026-united-parcel-service-inc-earnings-conference-call": {
    "hash": "f6578815130d",
    "first": "2026-10-30",
-   "checked": "2026-11-24",
+   "checked": "2026-11-26",
    "n": "UPS Q2 2026 earnings call",
    "snap": {
     "d": "2026-10-31",
@@ -2362,14 +2362,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 142,
+   "fails": 143,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-26"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 142,
+   "fails": 143,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-26"
@@ -2463,7 +2463,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 60,
+   "fails": 61,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-26"
@@ -2475,7 +2475,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 60,
+   "fails": 61,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-26"

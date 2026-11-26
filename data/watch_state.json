@@ -283,7 +283,7 @@
   ],
   "told_until": "2026-12-03",
   "pend": "4433d25c3b68",
-  "fail_runs": 11
+  "fail_runs": 12
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "checked": "2026-11-26",
@@ -325,7 +325,7 @@
   ],
   "told_until": "2026-12-18",
   "pend": "d1dfe6539994",
-  "fail_runs": 7
+  "fail_runs": 8
  },
  "https://developer.fedex.com/": {
   "checked": "2026-11-26",
@@ -363,7 +363,7 @@
   "lines": 477,
   "told": [],
   "pend": "735187f6668f",
-  "fail_runs": 8
+  "fail_runs": 9
  },
  "https://www.ontrac.com/surchargesandrates/": {
   "checked": "2026-11-23",
@@ -377,7 +377,7 @@
   "lines": 109,
   "told": [],
   "pend": "e2f2127ed96c",
-  "fail_runs": 10
+  "fail_runs": 11
  },
  "https://www.ontrac.com/service-alerts/": {
   "checked": "2026-11-26",
@@ -429,7 +429,7 @@
   "lines": 27,
   "told": [],
   "pend": "d6fef3f323bc",
-  "fail_runs": 12
+  "fail_runs": 13
  },
  "https://www.uniuni.com/news/": {
   "checked": "2026-11-25",
@@ -437,7 +437,7 @@
   "lines": 178,
   "told": [],
   "pend": "3fde2ddb0511",
-  "fail_runs": 4
+  "fail_runs": 5
  },
  "https://shipping.amazon.com/insights-and-news/peak-surcharge-2026": {
   "checked": "2026-11-26",
@@ -476,7 +476,8 @@
   "checked": "2026-11-26",
   "pdfs": [],
   "lines": 17770,
-  "told": []
+  "told": [],
+  "pend": "c510ff4e4cba"
  },
  "https://developer.ups.com/": {
   "checked": "2026-11-26",
@@ -503,7 +504,8 @@
   "checked": "2026-11-26",
   "pdfs": [],
   "lines": 42172,
-  "told": []
+  "told": [],
+  "pend": "1537045473cf"
  },
  "https://www.fedex.com/content/dam/fedex/us-united-states/services/DAS_Contiguous_Extended_Remote_Alaska_Hawaii_2027.pdf": {
   "checked": "2026-11-26",
@@ -521,7 +523,8 @@
   "checked": "2026-11-26",
   "pdfs": [],
   "lines": 41844,
-  "told": []
+  "told": [],
+  "pend": "a216705e4b8b"
  },
  "https://www.ups.com/us/en/shipping/zones-and-rates/small-business-rates": {
   "checked": "2026-11-26",

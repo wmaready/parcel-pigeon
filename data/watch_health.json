@@ -68,7 +68,7 @@
   "carrier": "UPS",
   "name": "Developer portal",
   "fails": 0,
-  "thin": 294,
+  "thin": 295,
   "err": null,
   "last_try": "2026-11-26",
   "blocked": false,
@@ -95,7 +95,7 @@
  "https://www.fedex.com/en-us/shipping/rate-changes/additional-shipping-fees.html": {
   "carrier": "FedEx",
   "name": "Surcharges and fees",
-  "fails": 580,
+  "fails": 581,
   "thin": 0,
   "err": "blocked by the carrier's site (block page after rendering; no proxy or archive copy)",
   "last_try": "2026-11-26",
@@ -127,7 +127,7 @@
   "last_ok": "2026-11-26",
   "blocked": false,
   "via": "archive",
-  "copy_of": "2026-11-24"
+  "copy_of": "2026-11-26"
  },
  "https://www.fedex.com/en-us/service-alerts.html": {
   "carrier": "FedEx",
@@ -163,7 +163,7 @@
   "err": null,
   "last_try": "2026-11-26",
   "blocked": false,
-  "chars": 22553,
+  "chars": 22546,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-26"
@@ -176,7 +176,7 @@
   "err": null,
   "last_try": "2026-11-26",
   "blocked": false,
-  "chars": 430313,
+  "chars": 430229,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-26"
@@ -215,7 +215,7 @@
   "err": null,
   "last_try": "2026-11-26",
   "blocked": false,
-  "chars": 428124,
+  "chars": 428041,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-26"
@@ -383,7 +383,7 @@
   "err": null,
   "blocked": false,
   "last_try": "2026-11-26",
-  "chars": 750253,
+  "chars": 750006,
   "via": "chrome-tls",
   "copy_of": null,
   "last_ok": "2026-11-26"
