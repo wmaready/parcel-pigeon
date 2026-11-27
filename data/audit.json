@@ -1,5 +1,5 @@
 {
- "run": "2026-11-27T13:55Z",
+ "run": "2026-11-27T18:14Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -558,20 +558,6 @@
     "aa27e61a622d0"
    ],
    "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
-   "ids": [],
-   "fixed": false
   }
  ],
  "open": [
@@ -986,20 +972,6 @@
    "ids": [
     "aa27e61a622d0"
    ],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): Supplemental Surcharges https://www.ontrac.com/supplemental-surcharges",
-   "ids": [],
-   "fixed": false
-  },
-  {
-   "sev": "med",
-   "type": "doc-link-broken",
-   "msg": "Library document no longer opens (HTTP 404): Veho service guide: last-mile delivery https://www.shipveho.com/service-guide/last-mile-delivery",
-   "ids": [],
    "fixed": false
   }
  ]
