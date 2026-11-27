@@ -1,5 +1,5 @@
 {
- "run": "2026-11-26T23:48Z",
+ "run": "2026-11-27T02:57Z",
  "clock_add": [],
  "clock_link": [
   {
@@ -549,6 +549,15 @@
     "a9fbb927a026c"
    ],
    "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"USPS fuel surcharge narrows carrier cost gap, industry analysis says\" is 15 days old; check whether it has been announced",
+   "ids": [
+    "aa27e61a622d0"
+   ],
+   "fixed": false
   }
  ],
  "open": [
@@ -953,6 +962,15 @@
    "ids": [
     "a0ef7c3f1b1ff",
     "a9fbb927a026c"
+   ],
+   "fixed": false
+  },
+  {
+   "sev": "low",
+   "type": "superseded",
+   "msg": "\"USPS fuel surcharge narrows carrier cost gap, industry analysis says\" is 15 days old; check whether it has been announced",
+   "ids": [
+    "aa27e61a622d0"
    ],
    "fixed": false
   }
