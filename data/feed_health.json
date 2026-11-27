@@ -60,13 +60,13 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-11-27",
-  "entries": 59,
+  "entries": 67,
   "last_ok": "2026-11-27"
  },
  "Wire: Business Wire": {
   "direct": false,
-  "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Abusinesswire.com%20UPS%20OR%20F",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-11-27",
   "entries": 31,
   "last_ok": "2026-11-27"
@@ -76,13 +76,13 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-11-27",
-  "entries": 99,
+  "entries": 71,
   "last_ok": "2026-11-27"
  },
  "Newsroom: UPS": {
   "direct": false,
-  "err": "429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=site%3Aabout.ups.com%20when%3A7d&hl=en",
-  "fails": 1,
+  "err": null,
+  "fails": 0,
   "last_try": "2026-11-27",
   "entries": 5,
   "last_ok": "2026-11-27"
@@ -100,7 +100,7 @@
   "err": null,
   "fails": 0,
   "last_try": "2026-11-27",
-  "entries": 8,
+  "entries": 9,
   "last_ok": "2026-11-27"
  },
  "Newsroom: Amazon": {
