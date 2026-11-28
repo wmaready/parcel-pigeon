@@ -1,5 +1,5 @@
 {
- "cursor": 72,
+ "cursor": 87,
  "docs": {
   "https://m.media-amazon.com/images/G/01/amazonshipping/Guides/US_Service_Guide.pdf": {
    "hash": "2b6d3ac0bc55",
@@ -334,7 +334,7 @@
    "first": "2026-10-21",
    "n": "Effective_November_14_Fuel_Increase_Explaination.pdf",
    "hash": "84e1e97a7235",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "http://www.speedeedelivery.com/files/Effective_November_14_Fuel_Increase_Explaination.pdf",
@@ -380,14 +380,14 @@
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/service-and-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express Service and Rate Guide, U.S.",
-   "fails": 587,
+   "fails": 588,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-28"
   },
   "https://www.dhl.com/content/dam/dhl/global/dhl-express/documents/pdf/retail-rate-guide-us-en.pdf": {
    "n": "2026 DHL Express U.S. domestic retail rate and service guide",
-   "fails": 587,
+   "fails": 588,
    "err": "cryptography>=3.1 is required for AES algorithm",
    "blocked": false,
    "last_try": "2026-11-28"
@@ -403,7 +403,8 @@
     "txt": "data/snapshots/5fe5c90a413f/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_MediaMail_2026.pdf": {
    "hash": "7b21b70dcaec",
@@ -416,7 +417,8 @@
     "txt": "data/snapshots/d891fbd0b966/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByOunce_2026.pdf": {
    "hash": "881d27575ab8",
@@ -429,7 +431,8 @@
     "txt": "data/snapshots/4b47fe9ee7cb/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FGE_ByPound_2026.pdf": {
    "hash": "95210a9d584c",
@@ -442,7 +445,8 @@
     "txt": "data/snapshots/7027e9aaf648/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Retail_Rates_2026.pdf": {
    "hash": "1eb3b5b8a4eb",
@@ -455,7 +459,8 @@
     "txt": "data/snapshots/3baad68751ad/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/Service_Guide_2026.pdf": {
    "hash": "e6e67068433b",
@@ -469,7 +474,8 @@
     "prev_d": "2026-11-27"
    },
    "last_try": "2026-11-04",
-   "changed": "2026-11-19"
+   "changed": "2026-11-19",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/content/dam/fedex/us-united-states/services/FedEx_Standard_List_Rates_2026.pdf": {
    "hash": "b494efbdeb2d",
@@ -482,7 +488,8 @@
     "txt": "data/snapshots/ae150d6897dc/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/en-us/service-guide.html": {
    "hash": "e6e67068433b",
@@ -585,7 +592,7 @@
    "first": "2026-10-21",
    "n": "fsc-applicable-charges-us-en.pdf",
    "hash": "7ddd1ae59c63",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "snap": {
     "d": "2026-10-26",
     "pdf": "https://assets.ups.com/adobe/assets/urn:aaid:aem:7ddafaf6-0ce6-4428-b169-4b27311a1797/original/as/fsc-applicable-charges-us-en.pdf",
@@ -803,7 +810,7 @@
    "first": "2026-10-23",
    "n": "fuelsurcharge-us-en.pdf",
    "hash": "26c3346a9315",
-   "checked": "2026-11-26",
+   "checked": "2026-11-28",
    "snap": {
     "d": "2026-11-12",
     "pdf": "https://delivery-p55671-e392469.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8ea98d87-766b-4135-8267-b9c4d3a6daad/original/as/fuelsurcharge-us-en.pdf",
@@ -1167,7 +1174,8 @@
     "txt": "data/snapshots/4e47138847fc/2026-11-28.txt",
     "prev_d": "2026-11-27"
    },
-   "changed": "2026-11-13"
+   "changed": "2026-11-13",
+   "pic_try": "2026-11-28"
   },
   "https://www.fedex.com/en-us/shipping/rate-changes.html": {
    "hash": "b494efbdeb2d",
@@ -1335,7 +1343,7 @@
   "https://www.fedex.com/en-us/shipping/fuel-surcharge.html": {
    "hash": "9af54f64ad77",
    "first": "2026-10-25",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "FedEx fuel surcharge page",
    "snap": {
     "d": "2026-11-16",
@@ -1348,7 +1356,7 @@
   "https://www.fedex.com/en-us/shipping/historical-fuel-surcharge.html": {
    "hash": "9ee3799f14d0",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "FedEx historical fuel surcharges",
    "pic_try": "2026-11-25",
    "changed": "2026-11-20"
@@ -1356,7 +1364,7 @@
   "https://gls-group.eu/US/downloads/GLSUSFuelSurchargeMatrix.pdf": {
    "hash": "d95e3ea3de42",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "GLS US fuel surcharge matrix",
    "snap": {
     "d": "2026-10-26",
@@ -1368,7 +1376,7 @@
   "https://www.lso.com/lso-fuel-surcharge": {
    "hash": "1d3fe6d24aae",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "LSO fuel surcharge page",
    "snap": {
     "d": "2026-11-16",
@@ -1381,7 +1389,7 @@
   "https://www.ontrac.com/west-coast-fuel-surcharge": {
    "hash": "de0cf1094cfd",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "OnTrac West Coast fuel surcharge",
    "snap": {
     "d": "2026-11-25",
@@ -1393,7 +1401,7 @@
   "https://www.ontrac.com/surchargesandrates/": {
    "hash": "a616edb34d34",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "OnTrac surcharges and rates page",
    "snap": {
     "d": "2026-11-16",
@@ -1406,7 +1414,7 @@
   "https://speedeedelivery.com/wp-content/uploads/2025/11/Index-Based-Fuel-Surcharges-2025.pdf": {
    "hash": "482d5b7bc9e6",
    "first": "2026-10-26",
-   "checked": "2026-11-25",
+   "checked": "2026-11-28",
    "n": "Spee-Dee index-based fuel surcharges, effective Nov 17, 2025",
    "snap": {
     "d": "2026-10-26",
@@ -1417,7 +1425,7 @@
   "https://assets.ups.com/adobe/assets/urn:aaid:aem:13ea22a9-bd18-49ee-a87c-c3b6f761a002/original/as/us-domestic-fuel-flyer.pdf": {
    "hash": "8ccf18fc37c2",
    "first": "2026-10-26",
-   "checked": "2026-11-26",
+   "checked": "2026-11-28",
    "n": "UPS domestic fuel surcharge tables",
    "snap": {
     "d": "2026-10-26",
@@ -1428,7 +1436,7 @@
   "https://www.ups.com/us/en/support/shipping-support/shipping-costs-rates/fuel-surcharges": {
    "hash": "26c3346a9315",
    "first": "2026-10-26",
-   "checked": "2026-11-26",
+   "checked": "2026-11-28",
    "n": "UPS fuel surcharges page",
    "snap": {
     "d": "2026-11-12",
@@ -2362,14 +2370,14 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 110626 - Postage Statement Draft Redlines.zip": {
    "n": "January 2027 Postage Statements Redlines",
-   "fails": 149,
+   "fails": 150,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-28"
   },
   "https://pe.usps.com/resources/PriceChange/July 2026 - 062626 - Final Postage Statements.zip": {
    "n": "July 2026 Postage Statements",
-   "fails": 149,
+   "fails": 150,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-28"
@@ -2401,7 +2409,7 @@
   "https://pe.usps.com/FederalRegisterNotice/Index": {
    "hash": "e6babc6a9b6c",
    "first": "2026-11-06",
-   "checked": "2026-11-26",
+   "checked": "2026-11-28",
    "n": "Federal Register Notices",
    "snap": {
     "d": "2026-11-06",
@@ -2420,8 +2428,11 @@
     "txt": "data/snapshots/531bcaf173d6/2026-11-18.txt",
     "prev_d": "2026-11-11"
    },
-   "last_try": "2026-11-16",
-   "changed": "2026-11-18"
+   "last_try": "2026-11-28",
+   "changed": "2026-11-18",
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false
   },
   "https://www.federalregister.gov/documents/2026/11/12/2026-22963/product-change-priority-mail-express-priority-mail-and-usps-ground-advantage-negotiated-service": {
    "hash": "a1fa6ece4680",
@@ -2463,7 +2474,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - SKU Price Files - Piped.zip": {
    "n": "January 2027 Price Change - SKU Price Files - Pipe-Delimited",
-   "fails": 67,
+   "fails": 68,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-28"
@@ -2475,7 +2486,7 @@
   },
   "https://pe.usps.com/resources/PriceChange/January 2027 Price Change - 11122026 - Notice 123.zip": {
    "n": "January 2027 Price Files - CSV",
-   "fails": 67,
+   "fails": 68,
    "err": "page is blank or blocked; snapshot kept as-is",
    "blocked": false,
    "last_try": "2026-11-28"
@@ -2567,7 +2578,11 @@
     "d": "2026-11-19",
     "pdf": "https://www.govinfo.gov/content/pkg/FR-2026-11-19/pdf/2026-23595.pdf",
     "txt": "data/snapshots/a516eddc83e2/2026-11-19.txt"
-   }
+   },
+   "fails": 1,
+   "err": "page is blank or blocked; snapshot kept as-is",
+   "blocked": false,
+   "last_try": "2026-11-28"
   },
   "https://www.federalregister.gov/documents/2026/11/23/2026-23783/new-postal-products": {
    "hash": "5487ea119fb6",
